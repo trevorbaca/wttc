@@ -111,8 +111,8 @@ metronome_marks = {
 short_instrument_names = {
     "Afl.": abjad.ShortInstrumentName(r"\wttc-afl-markup"),
     "Ob.": abjad.ShortInstrumentName(r"\wttc-ob-markup"),
-    "Gt. I": abjad.ShortInstrumentName(r"\wttc-gt-i-markup"),
-    "Gt. II": abjad.ShortInstrumentName(r"\wttc-gt-ii-markup"),
+    "Gt. 1": abjad.ShortInstrumentName(r"\wttc-gt-i-markup"),
+    "Gt. 2": abjad.ShortInstrumentName(r"\wttc-gt-ii-markup"),
     "Vn.": abjad.ShortInstrumentName(r"\wttc-vn-markup"),
     "Vc.": abjad.ShortInstrumentName(r"\wttc-vc-markup"),
 }
