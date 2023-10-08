@@ -1,4 +1,3 @@
-# import abjad
 import baca
 
 from wttc import library
@@ -6,6 +5,20 @@ from wttc import library
 #########################################################################################
 ########################################### 03 ##########################################
 #########################################################################################
+
+AG = baca.rhythm.AG
+T = baca.rhythm.T
+TC = baca.rhythm.TC
+bl = baca.rhythm.bl
+br = baca.rhythm.br
+h = baca.rhythm.h
+rt = baca.rhythm.rt
+t = baca.rhythm.t
+w = baca.rhythm.w
+
+OBGC = library.OBGC
+mmrests = library.mmrests
+rhythm = library.rhythm
 
 
 def GLOBALS(skips):
@@ -33,8 +46,26 @@ def GT2(voice, time_signatures):
 
 
 def VN(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures())
-    voice.extend(music)
+    rhythm(
+        voice,
+        [TC(2, [1, 1]), TC(2, [1, 1])],
+    )
+    rhythm(
+        voice,
+        [1, 6, 1],
+    )
+    rhythm(
+        voice,
+        [TC(2, [1, 1]), TC(2, [1, 1])],
+    )
+    rhythm(
+        voice,
+        [2, 4, 1, 3, 4, 2],
+    )
+    rhythm(
+        voice,
+        [TC(2, [1, 1]), TC(2, [1, 1])],
+    )
 
 
 def VC(voice, time_signatures):
@@ -100,7 +131,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     baca.section.set_up_score(
         score,
         time_signatures(),
-        # append_anchor_skip=True,
+        append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
         # score_persistent_indicators=previous_persistent_indicators["Score"],
@@ -136,6 +167,10 @@ def persist_score(score, environment):
     baca.tags.activate(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
+    )
+    baca.tags.deactivate(
+        score,
+        baca.tags.EXPLICIT_INSTRUMENT_ALERT,
     )
     lilypond_file = baca.lilypond.file(
         score,

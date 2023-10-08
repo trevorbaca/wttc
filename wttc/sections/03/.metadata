@@ -22,10 +22,10 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1],
-    "duration": "0'47''",
+    "duration": "0'48''",
     "final_measure_number": 13,
     "first_measure_number": 1,
-    "has_anchor_skip": False,
+    "has_anchor_skip": True,
     "persistent_indicators": {
         "AltoFlute.Staff": [
             baca.Memento(
@@ -203,7 +203,7 @@
         ],
     },
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'47''",
+    "stop_clock_time": "0'48''",
     "time_signatures": [
         "4/4",
         "6/4",

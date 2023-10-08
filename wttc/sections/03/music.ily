@@ -282,7 +282,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'37'']" "[0'42'']"
+    %@% - \baca-start-ct-left-only "[0'37'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -300,10 +300,46 @@ number.3.Skips = {
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
-      %! EOS_STOP_MM_SPANNER
-    \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-both "[0'42'']" "[0'47'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "13"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "13"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+      %! ANCHOR_SKIP
+    % [anchor skip]
+      %! ANCHOR_SKIP
+    \baca-time-signature-transparent
+      %! ANCHOR_SKIP
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 1/4
+      %! ANCHOR_SKIP
+    s1 * 1/4
+      %! ANCHOR_SKIP
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! ANCHOR_SKIP
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! ANCHOR_SKIP
+      %! EOS_STOP_MM_SPANNER
+    \bacaStopTextSpanMM
+      %! ANCHOR_SKIP
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! ANCHOR_SKIP
+    \once \override Score.BarLine.transparent = ##t
+      %! ANCHOR_SKIP
+    \once \override Score.SpanBar.transparent = ##t
 
 }
 
@@ -380,7 +416,7 @@ number.3.AltoFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
-    ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
+    %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -491,7 +527,7 @@ number.3.Oboe.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
-    ^ \baca-explicit-instrument-markup "(“Oboe”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Oboe”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -599,7 +635,7 @@ number.3.Guitar.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
-    ^ \baca-explicit-instrument-markup "(“Guitar”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -707,7 +743,7 @@ number.3.Guitar.2.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
-    ^ \baca-explicit-instrument-markup "(“Guitar”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -789,100 +825,146 @@ number.3.Guitar.2.Staff = <<
 
 number.3.Violin.Music = {
 
-    % [Violin.Music measure 1]
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-violin-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    ^ \baca-explicit-instrument-markup "(“Violin”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup
+    \repeat tremolo 2 {
 
-    % [Violin.Music measure 2]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+        % [Violin.Music measure 1]
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \once \override Staff.InstrumentName.color = #blue
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-violin-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vn-markup
+          %! EXPLICIT_CLEF
+        \clef "treble"
+        c'16
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vn-markup
 
-    % [Violin.Music measure 3]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
 
-    % [Violin.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    }
 
-    % [Violin.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \repeat tremolo 2 {
 
-    % [Violin.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
 
-    % [Violin.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
 
-    % [Violin.Music measure 8]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    }
 
-    % [Violin.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'16
 
-    % [Violin.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'4.
 
-    % [Violin.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'16
 
-    % [Violin.Music measure 12]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \repeat tremolo 2 {
 
-    % [Violin.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+        % [Violin.Music measure 2]
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+    }
+
+    \repeat tremolo 2 {
+
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+    }
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'8
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'4
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'16
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'8.
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'4
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'8
+
+    \repeat tremolo 2 {
+
+        % [Violin.Music measure 3]
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+    }
+
+    \repeat tremolo 2 {
+
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
+        c'16
+
+    }
 
 }
 
@@ -923,7 +1005,7 @@ number.3.Cello.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
-    ^ \baca-explicit-instrument-markup "(“Cello”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
