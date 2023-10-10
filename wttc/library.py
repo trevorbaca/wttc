@@ -1,3 +1,4 @@
+import dataclasses
 import inspect
 
 import abjad
@@ -11,6 +12,14 @@ def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
         nongrace_note_numerator,
         grace_leaf_duration=abjad.Duration(1, 20),
     )
+
+
+@dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
+class Rhythm:
+    voice: abjad.Voice
+
+    def __call__(self, *arguments):
+        return rhythm(self.voice, *arguments)
 
 
 def _reference_meters():

@@ -828,8 +828,6 @@ number.3.Violin.Music = {
     \repeat tremolo 2 {
 
         % [Violin.Music measure 1]
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -862,109 +860,98 @@ number.3.Violin.Music = {
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
     }
 
     \repeat tremolo 2 {
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
     }
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'16
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'4.
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'16
 
     \repeat tremolo 2 {
 
         % [Violin.Music measure 2]
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
     }
 
     \repeat tremolo 2 {
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
     }
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'8
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'4
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'16
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'8.
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'4
 
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
     c'8
 
     \repeat tremolo 2 {
 
         % [Violin.Music measure 3]
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
     }
 
     \repeat tremolo 2 {
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
         c'16
 
     }
+
+    c'8
+
+    c'16
+
+    c'4.
+
+    c'16
+
+    c'8
+
+    c'4
+
+    c'16
+
+    c'8.
+
+    c'4
+
+    c'8
+
+    c'16
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
 
 }
 

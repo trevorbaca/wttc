@@ -46,25 +46,24 @@ def GT2(voice, time_signatures):
 
 
 def VN(voice, time_signatures):
+    rhythm = library.Rhythm(voice)
     rhythm(
-        voice,
         [TC(2, [1, 1]), TC(2, [1, 1])],
     )
     rhythm(
-        voice,
         [1, 6, 1],
     )
     rhythm(
-        voice,
         [TC(2, [1, 1]), TC(2, [1, 1])],
     )
     rhythm(
-        voice,
         [2, 4, 1, 3, 4, 2],
     )
     rhythm(
-        voice,
         [TC(2, [1, 1]), TC(2, [1, 1])],
+    )
+    rhythm(
+        [2, 1, 6, 1, 2, 4, 1, 3, 4, 2, 1, 5],
     )
 
 
@@ -162,6 +161,7 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
+        do_not_color_repeat_pitch_classes=True,
         global_rests_in_topmost_staff=True,
     )
     baca.tags.activate(
