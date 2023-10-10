@@ -182,6 +182,8 @@ number.3.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 8]
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -514,6 +516,8 @@ number.3.Oboe.Music = {
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
@@ -730,6 +734,8 @@ number.3.Guitar.2.Music = {
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
@@ -953,6 +959,164 @@ number.3.Violin.Music = {
     c'16
     \repeatTie
 
+    \repeat tremolo 4 {
+
+        % [Violin.Music measure 5]
+        c'16
+
+        c'16
+
+    }
+
+    \repeat tremolo 4 {
+
+        c'16
+
+        c'16
+
+    }
+
+    \repeat tremolo 4 {
+
+        % [Violin.Music measure 6]
+        c'16
+
+        c'16
+
+    }
+
+    \repeat tremolo 4 {
+
+        c'16
+
+        c'16
+
+    }
+
+    % [Violin.Music measure 7]
+    c'16
+
+    c'16
+
+    c'8
+
+    c'4
+
+    c'16
+
+    c'8.
+
+    r4
+
+    % [Violin.Music measure 8]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Violin.Music measure 9]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Violin.Music measure 10]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Violin.Music measure 11]
+    r4
+
+    r16
+
+    \acciaccatura {
+
+        c'16
+
+    }
+
+    \override NoteHead.style = #'harmonic
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+    \revert NoteHead.style
+
+    r8
+
+    \repeat tremolo 4 {
+
+        % [Violin.Music measure 12]
+        c'16
+
+        c'16
+
+    }
+
+    r4
+
+    r16
+
+    \acciaccatura {
+
+        c'16
+
+    }
+
+    \override NoteHead.style = #'harmonic
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+    \revert NoteHead.style
+
+    r16
+
+    r16
+
+    \acciaccatura {
+
+        c'16
+
+    }
+
+    \override NoteHead.style = #'harmonic
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 13]
+    c'8.
+    \repeatTie
+    \revert NoteHead.style
+
+    r16
+
+    r2.
+
+    r8
+
+    \acciaccatura {
+
+        c'16
+
+    }
+
+    \override NoteHead.style = #'harmonic
+    c'8
+    ~
+
+    c'16
+    \revert NoteHead.style
+
+    r8.
+
 }
 
 
@@ -979,6 +1143,8 @@ number.3.Cello.Music = {
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS

@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -7,6 +8,7 @@ from wttc import library
 #########################################################################################
 
 AG = baca.rhythm.AG
+BG = baca.rhythm.BG
 T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
@@ -23,26 +25,29 @@ rhythm = library.rhythm
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
+    baca.literal(
+        skips[8 - 1],
+        [
+            r"\tweak padding 1.5",
+            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        ],
+    )
 
 
 def FL(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures())
-    voice.extend(music)
+    library.mmrests(voice, time_signatures())
 
 
 def OB(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures())
-    voice.extend(music)
+    library.mmrests(voice, time_signatures())
 
 
 def GT1(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures())
-    voice.extend(music)
+    library.mmrests(voice, time_signatures())
 
 
 def GT2(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures())
-    voice.extend(music)
+    library.mmrests(voice, time_signatures())
 
 
 def VN(voice, time_signatures):
@@ -65,11 +70,32 @@ def VN(voice, time_signatures):
     rhythm(
         [2, 1, 6, 1, 2, 4, 1, 3, 4, 2, 1, 5],
     )
+    rhythm(
+        4 * [TC(4, [1, 1])],
+    )
+    rhythm(
+        [1, 1, 2, 4, 1, 3, -4],
+    )
+    library.mmrests(voice, time_signatures(8, 10))
+    components = rhythm(
+        [-5, BG([1], 5), -2],
+    )
+    for run in abjad.select.runs(components):
+        baca.note_head_style_harmonic(run)
+    rhythm(
+        [TC(4, [1, 1]), -4],
+    )
+    components = rhythm([-1, BG([1], t(3)), 1, -1, -1, BG([1], t(1)), t(4), 3, -1])
+    components_ = rhythm(
+        [-12, -2, BG([1], t(2)), 1, -3],
+    )
+    components.extend(components_)
+    for run in abjad.select.runs(components):
+        baca.note_head_style_harmonic(run)
 
 
 def VC(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures())
-    voice.extend(music)
+    library.mmrests(voice, time_signatures())
 
 
 def fl(m):
@@ -86,6 +112,13 @@ def ob(m):
         baca.instrument_name(o.leaf(0), r"\wttc-oboe-markup")
         baca.short_instrument_name(o.leaf(0), "Ob.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+        baca.literal(
+            o.leaf(0),
+            [
+                r"\override Staff.RehearsalMark.direction = #down",
+                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+            ],
+        )
 
 
 def gt1(m):
@@ -102,6 +135,13 @@ def gt2(m):
         baca.instrument_name(o.leaf(0), r"\wttc-guitar-ii-markup")
         baca.short_instrument_name(o.leaf(0), "Gt. 2", library.manifests)
         baca.clef(o.leaf(0), "treble")
+        baca.literal(
+            o.leaf(0),
+            [
+                r"\override Staff.RehearsalMark.direction = #down",
+                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+            ],
+        )
 
 
 def vn(m):
@@ -118,6 +158,13 @@ def vc(m):
         baca.instrument_name(o.leaf(0), r"\wttc-cello-markup")
         baca.short_instrument_name(o.leaf(0), "Vc.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+        baca.literal(
+            o.leaf(0),
+            [
+                r"\override Staff.RehearsalMark.direction = #down",
+                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+            ],
+        )
 
 
 @baca.build.timed("make_score")
