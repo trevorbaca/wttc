@@ -81,7 +81,7 @@ def VN(voice, time_signatures):
         [-5, BG([1], 5), -2],
     )
     for run in abjad.select.runs(components):
-        baca.note_head_style_harmonic(run)
+        baca.override.note_head_style_harmonic(run)
     rhythm(
         [TC(4, [1, 1]), -4],
     )
@@ -91,7 +91,7 @@ def VN(voice, time_signatures):
     )
     components.extend(components_)
     for run in abjad.select.runs(components):
-        baca.note_head_style_harmonic(run)
+        baca.override.note_head_style_harmonic(run)
 
 
 def VC(voice, time_signatures):
