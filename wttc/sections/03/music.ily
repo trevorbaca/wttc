@@ -414,9 +414,9 @@ number.3.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    R1 * 4/4
+    f'4 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -427,65 +427,242 @@ number.3.AltoFlute.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
 
-    % [AltoFlute.Music measure 2]
-    R1 * 6/4
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 2]
+    f'4
+    \repeatTie
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    \repeatTie
+
+    r4
+
+    r4
+
+    f'4
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 3]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    f'4
+    \repeatTie
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    \repeatTie
+
+    r4
 
     % [AltoFlute.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    f'4
 
     % [AltoFlute.Music measure 5]
-    R1 * 4/4
+    f'2 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 6]
-    R1 * 4/4
+    f'2 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    f'4
+    \repeatTie
+
+    r8.
+
+    f'16
+
+    \afterGrace
+    f'2
+    {
+
+        f'8
+
+    }
+
 
     % [AltoFlute.Music measure 8]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    f'1
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \afterGrace
+    f'1
+    \repeatTie
+    {
+
+        f'8
+
+    }
+
 
     % [AltoFlute.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \afterGrace
+    f'1
+    {
+
+        f'8
+
+    }
+
 
     % [AltoFlute.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    \afterGrace
+    f'8.
+    {
+
+        f'8
+
+    }
+
+
+    r16
+
+    r8.
+
+    f'16
+    ~
+
+    f'8
+
+    r8
 
     % [AltoFlute.Music measure 12]
-    R1 * 6/4
+    f'2 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    \afterGrace
+    f'8.
+    {
+
+        f'8
+
+    }
+
+
+    r16
+
+    r4
+
+    r8.
+
+    f'16
+    ~
+
+    f'8
+
+    r8
 
     % [AltoFlute.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \afterGrace
+    f'8.
+    {
+
+        f'8
+
+    }
+
+
+    r16
+
+    r2.
+
+    r8.
+
+    f'16
+    ~
+
+    f'8
+
+    r8
 
 }
 
@@ -635,9 +812,7 @@ number.3.Guitar.1.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r4
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -648,10 +823,32 @@ number.3.Guitar.1.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
 
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r2
+
     % [Guitar.1.Music measure 2]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+
+        r4
+
+    }
 
     % [Guitar.1.Music measure 3]
     R1 * 4/4
@@ -659,9 +856,21 @@ number.3.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r4
 
     % [Guitar.1.Music measure 5]
     R1 * 4/4
@@ -673,10 +882,20 @@ number.3.Guitar.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
-    % [Guitar.1.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 7]
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r2.
 
     % [Guitar.1.Music measure 8]
     R1 * 4/4
@@ -694,19 +913,72 @@ number.3.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r2
 
-    % [Guitar.1.Music measure 12]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 12]
+        c''8
+
+        r4
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+        ~
+
+    }
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+        \repeatTie
+
+        r4
+
+    }
 
     % [Guitar.1.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''4
+
+    }
+
+    r4
 
 }
 
@@ -745,9 +1017,7 @@ number.3.Guitar.2.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -758,10 +1028,34 @@ number.3.Guitar.2.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
 
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+
+        r4
+
+    }
+
+    r4
+
     % [Guitar.2.Music measure 2]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r4
 
     % [Guitar.2.Music measure 3]
     R1 * 4/4
@@ -773,15 +1067,33 @@ number.3.Guitar.2.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Guitar.2.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.2.Music measure 5]
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r2.
 
     % [Guitar.2.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
 
     % [Guitar.2.Music measure 7]
     R1 * 4/4
@@ -804,9 +1116,30 @@ number.3.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+        \repeatTie
+
+        r4
+
+    }
 
     % [Guitar.2.Music measure 12]
     R1 * 6/4
@@ -814,9 +1147,21 @@ number.3.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r2
 
 }
 
@@ -878,11 +1223,16 @@ number.3.Violin.Music = {
 
     }
 
-    c'16
+    r16
 
-    c'4.
+    c'8.
+    - \tweak stencil ##f
+    ~
 
-    c'16
+    c'8.
+    \repeatTie
+
+    r16
 
     \repeat tremolo 2 {
 
@@ -901,17 +1251,34 @@ number.3.Violin.Music = {
 
     }
 
-    c'8
+    r8
 
-    c'4
+    c'8
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
 
     c'16
 
-    c'8.
-
-    c'4
+    c'16
+    ]
+    ~
 
     c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    \repeatTie
+
+    r8
 
     \repeat tremolo 2 {
 
@@ -930,34 +1297,49 @@ number.3.Violin.Music = {
 
     }
 
-    c'8
+    r8
 
     c'16
-
-    c'4.
-
-    c'16
-
-    c'8
-
-    c'4
+    [
 
     c'16
-
-    c'8.
-
-    c'4
-
-    c'8
-
-    c'16
+    ]
+    ~
 
     c'4
     - \tweak stencil ##f
     ~
 
+    % [Violin.Music measure 4]
     c'16
+    [
     \repeatTie
+
+    c'16
+
+    c'8
+    ]
+
+    c'4
+
+    c'16
+    [
+
+    c'8.
+    ]
+
+    c'4
+
+    c'8
+    [
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'4
 
     \repeat tremolo 4 {
 
@@ -994,17 +1376,21 @@ number.3.Violin.Music = {
     }
 
     % [Violin.Music measure 7]
-    c'16
+    r16
 
     c'16
+    [
 
     c'8
+    ]
 
     c'4
 
     c'16
+    [
 
     c'8.
+    ]
 
     r4
 
@@ -1034,14 +1420,12 @@ number.3.Violin.Music = {
 
     }
 
-    \override NoteHead.style = #'harmonic
     c'4
     - \tweak stencil ##f
     ~
 
     c'16
     \repeatTie
-    \revert NoteHead.style
 
     r8
 
@@ -1064,14 +1448,12 @@ number.3.Violin.Music = {
 
     }
 
-    \override NoteHead.style = #'harmonic
     c'8.
     - \tweak stencil ##f
     ~
 
     c'16
     \repeatTie
-    \revert NoteHead.style
 
     r16
 
@@ -1083,7 +1465,6 @@ number.3.Violin.Music = {
 
     }
 
-    \override NoteHead.style = #'harmonic
     c'16
     ~
 
@@ -1094,7 +1475,6 @@ number.3.Violin.Music = {
     % [Violin.Music measure 13]
     c'8.
     \repeatTie
-    \revert NoteHead.style
 
     r16
 
@@ -1108,12 +1488,12 @@ number.3.Violin.Music = {
 
     }
 
-    \override NoteHead.style = #'harmonic
     c'8
+    - \tweak stencil ##f
     ~
 
     c'16
-    \revert NoteHead.style
+    \repeatTie
 
     r8.
 
@@ -1154,9 +1534,7 @@ number.3.Cello.Music = {
     \set Staff.shortInstrumentName = \wttc-vc-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r4
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1167,65 +1545,309 @@ number.3.Cello.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
 
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
     % [Cello.Music measure 2]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'8
+
+    r8
+
+    r8.
+
+    c'16
+    ~
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 3]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    \repeatTie
+
+    r8.
+
+    r8.
+
+    c'16
+    ~
+
+    c'8
+    [
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'16
+    [
+    \repeatTie
+
+    c'16
+
+    c'8
+    ]
+
+    c'4
+
+    c'16
+    [
+
+    c'8.
+    ]
+
+    c'4
+
+    c'8
+    [
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    [
+    \repeatTie
+
+    c'16
+
+    c'8
+    ]
+
+    c'4
+
+    c'16
+
+    r8.
+
+    r4
 
     % [Cello.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
+
+    r8.
+
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    [
+    \repeatTie
+
+    c'16
+
+    c'8
+    ]
+
+    c'8.
+    [
+
+    c'16
+    ]
+    ~
+
+    c'2
 
     % [Cello.Music measure 8]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'1
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    \afterGrace
+    c'4
+    {
+
+        c'8
+
+    }
+
 
     % [Cello.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'2.
+    - \tweak stencil ##f
+    ~
+
+    \afterGrace
+    c'4
+    \repeatTie
+    {
+
+        c'8
+
+    }
+
 
     % [Cello.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    \afterGrace
+    c'8.
+    {
+
+        c'8
+
+    }
+
+
+    r16
+
+    r4
+
+    r16
+
+    \acciaccatura {
+
+        c'8
+
+    }
+
+    c'8.
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 12]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'8
+    \repeatTie
+
+    r16
+
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    \repeatTie
+
+    r16
+
+    r8.
+
+    \acciaccatura {
+
+        c'8
+
+    }
+
+    c'16
+    ~
+
+    c'8.
+
+    r16
+
+    r4
 
     % [Cello.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'8.
+
+    r16
+
+    r4
+
+    r16
+
+    \acciaccatura {
+
+        c'8
+
+    }
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r8.
+
+    r2
 
 }
 

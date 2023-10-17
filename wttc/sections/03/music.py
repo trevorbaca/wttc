@@ -14,6 +14,7 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
+pair = library.pair
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
@@ -35,7 +36,49 @@ def GLOBALS(skips):
 
 
 def FL(voice, time_signatures):
-    library.mmrests(voice, time_signatures())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        [pair(2, 4, 2, 4), pair(4, 8, 4, 8), t(4)],
+    )
+    rhythm(
+        [4, t(4), 4, -4, -4, t(4)],
+    )
+    rhythm(
+        [4, t(4), 4, -4],
+    )
+    rhythm(
+        ["-", 4],
+        time_signatures(4),
+    )
+    rhythm(
+        2 * [pair(4, 8, 4, 8)],
+    )
+    rhythm(
+        2 * [pair(4, 8, 4, 8)],
+    )
+    rhythm(
+        [rt(4), -3, 1, AG([2], 8)],
+    )
+    #
+    rhythm(
+        [16, AG([2], rt(16))],
+    )
+    rhythm(
+        AG([2], 16),
+    )
+    rhythm(
+        [AG([2], 3), -1, -3, 3, -2],
+        time_signatures(11),
+    )
+    rhythm(
+        [pair(4, 8, 4, 8), AG([2], 3), -1, -4, -3, 3, -2],
+        time_signatures(12),
+    )
+    rhythm(
+        [AG([2], 3), -1, -4, "-", 3, -2],
+        time_signatures(13),
+    )
+    library.force_repeat_tie(voice)
 
 
 def OB(voice, time_signatures):
@@ -43,59 +86,183 @@ def OB(voice, time_signatures):
 
 
 def GT1(voice, time_signatures):
-    library.mmrests(voice, time_signatures())
+    rhythm = library.Rhythm(voice)
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(1),
+        [-5, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(2),
+        [-15, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.mmrests(voice, time_signatures(3))
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(4),
+        [-12, -1, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.mmrests(voice, time_signatures(5, 6))
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(7),
+        [-1, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.mmrests(voice, time_signatures(8, 10))
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(11, 12),
+        [-8, 2, "-", 5, -2],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(13),
+        [-12, -1, 2, "-"],
+        extra_counts=[-1],
+    )
 
 
 def GT2(voice, time_signatures):
-    library.mmrests(voice, time_signatures())
+    rhythm = library.Rhythm(voice)
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(1),
+        [-6, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(2),
+        [-13, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.mmrests(voice, time_signatures(3, 4))
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(5),
+        [-1, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(6),
+        ["-", 1],
+        extra_counts=[-1],
+    )
+    library.mmrests(voice, time_signatures(7))
+    library.mmrests(voice, time_signatures(8, 10))
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(11),
+        [-3, -1, 3, "-"],
+        extra_counts=[-1],
+    )
+    library.mmrests(voice, time_signatures(12))
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(13),
+        [-3, -3, -3, -1, 1, "-"],
+        extra_counts=[-1],
+    )
 
 
 def VN(voice, time_signatures):
     rhythm = library.Rhythm(voice)
     rhythm(
-        [TC(2, [1, 1]), TC(2, [1, 1])],
+        [TC(2, [1, 1]), TC(2, [1, 1]), -1, 6, -1],
+        time_signatures(1),
     )
     rhythm(
-        [1, 6, 1],
+        2 * [TC(2, [1, 1])] + [-2, 4, 1, 3, 4, -2],
+        time_signatures(2),
     )
     rhythm(
-        [TC(2, [1, 1]), TC(2, [1, 1])],
+        2 * [TC(2, [1, 1])] + [-2, 1, t(5)],
+        time_signatures(3),
     )
     rhythm(
-        [2, 4, 1, 3, 4, 2],
-    )
-    rhythm(
-        [TC(2, [1, 1]), TC(2, [1, 1])],
-    )
-    rhythm(
-        [2, 1, 6, 1, 2, 4, 1, 3, 4, 2, 1, 5],
+        [1, 1, 2, 4, 1, 3, 4, 2, 1, 5],
+        time_signatures(4),
     )
     rhythm(
         4 * [TC(4, [1, 1])],
     )
     rhythm(
-        [1, 1, 2, 4, 1, 3, -4],
+        [-1, 1, 2, 4, 1, 3, -4],
+        time_signatures(7),
     )
     library.mmrests(voice, time_signatures(8, 10))
-    components = rhythm(
+    rhythm(
         [-5, BG([1], 5), -2],
     )
-    for run in abjad.select.runs(components):
-        baca.override.note_head_style_harmonic(run)
     rhythm(
         [TC(4, [1, 1]), -4],
     )
-    components = rhythm([-1, BG([1], t(3)), 1, -1, -1, BG([1], t(1)), t(4), 3, -1])
-    components_ = rhythm(
+    rhythm(
+        [-1, BG([1], t(3)), 1, -1, -1, BG([1], t(1)), t(4), 3, -1],
+    )
+    rhythm(
         [-12, -2, BG([1], t(2)), 1, -3],
     )
-    components.extend(components_)
-    for run in abjad.select.runs(components):
-        baca.override.note_head_style_harmonic(run)
+    library.force_repeat_tie(voice)
 
 
 def VC(voice, time_signatures):
-    library.mmrests(voice, time_signatures())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        ["-", 4, 6, t(1)],
+        time_signatures(1),
+    )
+    rhythm(
+        [2, "-", 3, 4, 1, 3, 4, t(2)],
+        time_signatures(2),
+    )
+    rhythm(
+        [1, "-", 3, 1, t(5)],
+        time_signatures(3),
+    )
+    rhythm(
+        [1, 1, 2, 4, 1, 3, 4, 2, 1, t(5)],
+        time_signatures(4),
+    )
+    rhythm(
+        [1, 1, 2, 4, 1, "-"],
+        time_signatures(5),
+    )
+    rhythm(
+        ["-", t(5)],
+        time_signatures(6),
+    )
+    rhythm(
+        [(1, 1, 2, 4 - 1), "+"],
+        time_signatures(7),
+    )
+    rhythm(
+        ["+", t(1), AG([2], 4)],
+        time_signatures(8, 9),
+    )
+    rhythm(
+        [12, AG([2], rt(4))],
+    )
+    rhythm(
+        [AG([2], 3), -1, "-", BG([2], 3)],
+        time_signatures(11),
+    )
+    rhythm(
+        [rt(2), -1, 8, -1, -3, BG([2], 4), -5],
+        time_signatures(12),
+    )
+    rhythm(
+        [3, -1, -4, -1, BG([2], 4), "-"],
+        time_signatures(13),
+    )
+    library.force_repeat_tie(voice)
 
 
 def fl(m):
@@ -237,9 +404,10 @@ def make_layout():
     spacing = baca.make_layout(
         baca.page(
             1,
-            baca.system(measure=1, y_offset=30, distances=(20, 20, 20, 20)),
+            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
+            baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
         ),
-        spacing=(1, 24),
+        spacing=(1, 32),
     )
     baca.section.make_layout_ly(spacing)
 

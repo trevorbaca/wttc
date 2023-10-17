@@ -29,6 +29,11 @@ def _reference_meters():
     )
 
 
+def force_repeat_tie(components):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    rmakers.force_repeat_tie(components, threshold=(1, 8), tag=tag)
+
+
 def make_empty_score():
     tag = baca.helpers.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
@@ -115,12 +120,45 @@ def make_empty_score():
     return score
 
 
+def make_one_beat_tuplets(
+    voice,
+    time_signatures,
+    counts,
+    *,
+    extra_counts=(),
+):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    durations = [_.duration for _ in time_signatures]
+    durations = [sum(durations)]
+    durations = baca.sequence.quarters(durations)
+    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    rmakers.rewrite_rest_filled(voice_, tag=tag)
+    rmakers.rewrite_sustained(voice_, tag=tag)
+    rmakers.extract_trivial(voice_)
+    rmakers.force_fraction(voice_)
+    rmakers.force_diminution(voice_)
+    rmakers.rewrite_meter(
+        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+    )
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    components = abjad.mutate.eject_contents(voice_)
+    voice.extend(components)
+    return components
+
+
 def mmrests(voice, time_signatures, *, head=False):
     if head:
         music = baca.make_mmrests(time_signatures, head=voice.name)
     else:
         music = baca.make_mmrests(time_signatures)
     voice.extend(music)
+
+
+def pair(first_real_n, first_written_n, second_real_n, second_written_n):
+    first = baca.rhythm.w(first_real_n, first_written_n)
+    second = baca.rhythm.h(baca.rhythm.w(second_real_n, second_written_n))
+    return first, second
 
 
 def rhythm(
