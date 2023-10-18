@@ -58,9 +58,58 @@ def FL(voice, time_signatures):
         [1, -2, -2, 4],
         extra_counts=[-1],
     )
+    container = abjad.AfterGraceContainer("e'16")
+    leaf = abjad.select.leaf(components, -1)
+    abjad.attach(container, leaf)
     rhythm(
-        [BG([2], 1), "-"],
-        time_signatures(4),
+        [1, -14, 3, -2, 3, -9],
+        time_signatures(4, 5),
+    )
+    rhythm(
+        [-1, 3, "-"],
+        time_signatures(6),
+    )
+    rhythm(
+        ["-", t(3)],
+        time_signatures(7),
+    )
+    rhythm(
+        [1, -3, T([-2, BG([1], t(4))], -2), t(4)],
+        time_signatures(8),
+        do_not_rewrite_meter=True,
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        time_signatures(9),
+        [10, "-"],
+        extra_counts=[-1],
+    )
+    rhythm(
+        ["-", 1, -4],
+        time_signatures(10),
+    )
+    components = library.make_one_beat_tuplets(
+        voice,
+        time_signatures(11, 13),
+        [-2, 8, 4, 14, -2, -3],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components)[-2:]:
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    components = library.make_one_beat_tuplets(
+        voice,
+        time_signatures(14),
+        [-4, -1, 1, -2, -1, 5],
+        extra_counts=[0, 0, -1, -1],
+    )
+    leaf = abjad.select.leaf(components, -1)
+    baca.tie(leaf)
+    components = library.make_one_beat_tuplets(
+        voice,
+        time_signatures(15, 16),
+        [2, -1, -3, -3, -1, 3, -2, -3, -3, -3],
+        extra_counts=[-1],
     )
     library.force_repeat_tie(voice)
 

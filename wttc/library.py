@@ -18,8 +18,8 @@ def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
 class Rhythm:
     voice: abjad.Voice
 
-    def __call__(self, *arguments):
-        return rhythm(self.voice, *arguments)
+    def __call__(self, *arguments, **keywords):
+        return rhythm(self.voice, *arguments, **keywords)
 
 
 def _reference_meters():
@@ -141,7 +141,6 @@ def make_one_beat_tuplets(
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components

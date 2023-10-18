@@ -654,18 +654,249 @@ number.4.AltoFlute.Music = {
 
     }
 
+    \afterGrace
     f'4
+    {
 
-    % [AltoFlute.Music measure 4]
-    \acciaccatura {
-
-        f'8
+        a'16
 
     }
 
+
+    % [AltoFlute.Music measure 4]
     f'16
 
     r8.
+
+    r2
+
+    r8.
+
+    f'16
+    ~
+
+    % [AltoFlute.Music measure 5]
+    f'8
+
+    r8
+
+    f'8.
+
+    r16
+
+    r2
+
+    % [AltoFlute.Music measure 6]
+    r16
+
+    f'8.
+
+    r2.
+
+    % [AltoFlute.Music measure 7]
+    r2.
+
+    r16
+
+    f'8.
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 8]
+    f'16
+    \repeatTie
+
+    r8.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        \acciaccatura {
+
+            f'16
+
+        }
+
+        f'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [AltoFlute.Music measure 9]
+    f'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        f'8
+        \repeatTie
+
+        r4
+
+    }
+
+    % [AltoFlute.Music measure 10]
+    r2
+
+    r8.
+
+    f'16
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [AltoFlute.Music measure 11]
+        r4
+
+        f'8
+        ~
+
+    }
+
+    f'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [AltoFlute.Music measure 12]
+        f'8
+        \repeatTie
+
+        \grace {
+
+            a'16
+
+        }
+
+        f'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        f'4
+        \repeatTie
+
+        \grace {
+
+            a'16
+
+        }
+
+        f'8
+        ~
+
+    }
+
+    f'2
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 13]
+    f'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        f'8
+        \repeatTie
+
+        r4
+
+    }
+
+    r4
+
+    % [AltoFlute.Music measure 14]
+    r4
+
+    r16
+
+    f'16
+
+    r8
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        f'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [AltoFlute.Music measure 15]
+        f'4
+        \repeatTie
+
+        r8
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        f'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [AltoFlute.Music measure 16]
+        f'8
+        \repeatTie
+
+        r4
+
+    }
 
     r2.
 

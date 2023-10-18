@@ -951,7 +951,6 @@ number.3.Guitar.1.Music = {
     }
 
     c''4
-    - \tweak stencil ##f
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -959,7 +958,6 @@ number.3.Guitar.1.Music = {
     {
 
         c''8
-        \repeatTie
 
         r4
 
@@ -1125,7 +1123,6 @@ number.3.Guitar.2.Music = {
         r8
 
         c''4
-        - \tweak stencil ##f
         ~
 
     }
@@ -1135,7 +1132,6 @@ number.3.Guitar.2.Music = {
     {
 
         c''8
-        \repeatTie
 
         r4
 
