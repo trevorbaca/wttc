@@ -2,7 +2,7 @@
 
 \paper
 {
-  evenFooterMarkup = \markup \if \should-print-page-number \fill-line
+  evenFooterMarkup = \markup \fill-line
   {
     \fontsize #3
     \override #'(font-name . "Adobe Garamond Pro")
@@ -16,7 +16,6 @@
     }
   }
   oddFooterMarkup = \evenFooterMarkup
-  print-first-page-number = ##t
 }
 
 \layout { \context { \Score barNumberVisibility = #all-bar-numbers-visible } }
