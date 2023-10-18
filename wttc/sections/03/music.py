@@ -1,4 +1,3 @@
-import abjad
 import baca
 
 from wttc import library
@@ -86,7 +85,6 @@ def OB(voice, time_signatures):
 
 
 def GT1(voice, time_signatures):
-    rhythm = library.Rhythm(voice)
     library.make_one_beat_tuplets(
         voice,
         time_signatures(1),
@@ -129,7 +127,6 @@ def GT1(voice, time_signatures):
 
 
 def GT2(voice, time_signatures):
-    rhythm = library.Rhythm(voice)
     library.make_one_beat_tuplets(
         voice,
         time_signatures(1),
