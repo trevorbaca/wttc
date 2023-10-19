@@ -1039,110 +1039,349 @@ number.4.Oboe.Staff = <<
 
 number.4.Guitar.1.Music = {
 
-    % [Guitar.1.Music measure 1]
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-guitar-i-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
 
-    % [Guitar.1.Music measure 2]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+        % [Guitar.1.Music measure 1]
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \once \override Staff.InstrumentName.color = #blue
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-guitar-i-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-i-markup
+          %! EXPLICIT_CLEF
+        \clef "treble"
+        c''4
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-i-markup
 
-    % [Guitar.1.Music measure 3]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+        r8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 2]
+        r4
+
+        c''8
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+        [
+
+        c''8
+        ]
+
+        r8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 3]
+        r8
+
+        c''4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''4
+        \repeatTie
+
+        c''8
+
+    }
+
+    r4
 
     % [Guitar.1.Music measure 4]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r16
+
+    c''16
+
+    r8
+
+    r2
+
+    r16
+
+    c''16
+
+    r8
 
     % [Guitar.1.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
 
-    % [Guitar.1.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+        \repeatTie
+
+        r8
+
+        c''8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 6]
+        r4
+
+        c''8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r4
+
+    r16
+
+    c''8.
 
     % [Guitar.1.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''4
 
-    % [Guitar.1.Music measure 8]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r8.
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 8]
+        r8
+
+        c''4
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
 
     % [Guitar.1.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''16
+
+    r8.
+
+    c''16
+
+    r8.
+
+    r4
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.1.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''4
+    \repeatTie
+
+    c''2
+
+    r4
 
     % [Guitar.1.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
 
     % [Guitar.1.Music measure 12]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r16
+
+    c''16
+
+    r8
+
+    r16
+
+    c''16
+
+    r8
+
+    r16
+
+    c''16
+
+    r8
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.1.Music measure 13]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''2.
+    \repeatTie
+
+    c''4
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.1.Music measure 14]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''4
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r2
 
     % [Guitar.1.Music measure 15]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+
+        r4
+
+    }
+
+    r4
 
     % [Guitar.1.Music measure 16]
     R1 * 4/4
@@ -1162,110 +1401,345 @@ number.4.Guitar.1.Staff = <<
 
 number.4.Guitar.2.Music = {
 
-    % [Guitar.2.Music measure 1]
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-guitar-ii-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
 
-    % [Guitar.2.Music measure 2]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+        % [Guitar.2.Music measure 1]
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \once \override Staff.InstrumentName.color = #blue
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-guitar-ii-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-ii-markup
+          %! EXPLICIT_CLEF
+        \clef "treble"
+        r16
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-ii-markup
 
-    % [Guitar.2.Music measure 3]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+        c''8.
+
+        r16
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r16
+
+        c''16
+
+        r8.
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r16
+
+        c''16
+
+        r8.
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Guitar.2.Music measure 2]
+        c''4
+
+        r16
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c''16
+
+        r4
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Guitar.2.Music measure 3]
+        r8.
+
+        c''8
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c''16
+
+        r4
+
+    }
+
+    r4
 
     % [Guitar.2.Music measure 4]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''16
 
-    % [Guitar.2.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r8.
 
-    % [Guitar.2.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
+
+    c''16
+
+    r8.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Guitar.2.Music measure 5]
+        r16
+
+        c''4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r8
+
+        c''8.
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Guitar.2.Music measure 6]
+        c''8
+
+        r8.
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r16
+
+        c''16
+
+        r8
+
+        c''16
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c''16
+
+        r4
+
+    }
+
+    r16
+
+    c''8.
 
     % [Guitar.2.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''4
 
-    % [Guitar.2.Music measure 8]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r8.
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Guitar.2.Music measure 8]
+        r16
+
+        c''8
+
+        r16
+
+        c''16
+
+    }
+
+    r2
 
     % [Guitar.2.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''16
+
+    r8.
+
+    c''16
+
+    r8.
+
+    r4
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.2.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''4
+    \repeatTie
 
-    % [Guitar.2.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    c''2
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Guitar.2.Music measure 11]
+        r8.
+
+        c''8
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c''8
+
+        r8.
+
+    }
+
+    r4
 
     % [Guitar.2.Music measure 12]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''16
+
+    r8.
+
+    c''16
+
+    r8.
+
+    c''16
+
+    r8.
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.2.Music measure 13]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''2.
+    \repeatTie
+
+    c''4
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.2.Music measure 14]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c''4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c''16
+        [
+        \repeatTie
+
+        c''16
+        ]
+
+        r8
+
+        c''16
+
+    }
+
+    r2
 
     % [Guitar.2.Music measure 15]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r16
+
+        c''16
+
+        r8.
+
+    }
+
+    r4
 
     % [Guitar.2.Music measure 16]
     R1 * 4/4
@@ -1285,75 +1759,177 @@ number.4.Guitar.2.Staff = <<
 
 number.4.Violin.Music = {
 
-    % [Violin.Music measure 1]
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-violin-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
 
-    % [Violin.Music measure 2]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+        % [Violin.Music measure 1]
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \once \override Staff.InstrumentName.color = #blue
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-violin-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vn-markup
+          %! EXPLICIT_CLEF
+        \clef "treble"
+        r8
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vn-markup
 
-    % [Violin.Music measure 3]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+        c'8
+
+        r8
+
+    }
+
+    c'16
+
+    r8.
+
+    r8.
+
+    c'16
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 2]
+        r4
+
+        c'8
+
+    }
+
+    r4
+
+    r16
+
+    c'16
+
+    r8
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 3]
+        c'8
+
+        r4
+
+    }
+
+    r8.
+
+    c'16
+
+    r4
 
     % [Violin.Music measure 4]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2.
 
-    % [Violin.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c'8
+
+        r8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 5]
+        r4
+
+        c'8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+
+        r8
+
+    }
+
+    r2
 
     % [Violin.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r4
+
+    r8.
+
+    c'16
+
+    r8
+
+    c'16
+
+    r16
+
+    r4
 
     % [Violin.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r4
+
+    r16
+
+    c'16
+
+    r8
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c'8
+
+    }
 
     % [Violin.Music measure 8]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r8.
+
+    c'16
+
+    r2
 
     % [Violin.Music measure 9]
     R1 * 4/4
@@ -1361,39 +1937,133 @@ number.4.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c'8
+
+        r8
+
+    }
+
+    r4
 
     % [Violin.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r4
+
+    c'16
+
+    r8.
+
+    r4
 
     % [Violin.Music measure 12]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r8.
+
+    c'16
+
+    r2.
 
     % [Violin.Music measure 13]
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
-    % [Violin.Music measure 14]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
 
-    % [Violin.Music measure 15]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+        % [Violin.Music measure 14]
+        r16
 
-    % [Violin.Music measure 16]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+        c'16
+
+        r4
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        % [Violin.Music measure 15]
+        r16
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        c'4
+        \repeatTie
+
+        r8
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 16]
+        r16
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8
+
+        r4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c'8
+
+        r8
+
+    }
 
 }
 
@@ -1408,115 +2078,434 @@ number.4.Violin.Staff = <<
 
 number.4.Cello.Music = {
 
-    % [Cello.Music measure 1]
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_14
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-cello-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vc-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vc-markup
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
 
-    % [Cello.Music measure 2]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+        % [Cello.Music measure 1]
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_14
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \once \override Staff.InstrumentName.color = #blue
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-cello-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vc-markup
+          %! EXPLICIT_CLEF
+        \clef "treble"
+        r8.
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vc-markup
 
-    % [Cello.Music measure 3]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+        c'8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r4
+
+        c'16
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8.
+
+        r8
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r4
+
+        c'16
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 2]
+        c'8
+
+        r8.
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 3]
+        r16
+
+        c'8
+
+        r8
+
+    }
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 4]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    \repeatTie
+
+    r8.
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r8.
+
+        c'8
+
+    }
+
+    r4
 
     % [Cello.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r8
+
+        c'8
+
+        r16
+
+    }
+
+    r2
 
     % [Cello.Music measure 7]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2.
 
-    % [Cello.Music measure 8]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r4
+
+        c'16
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 8]
+        c'8
+
+        r8.
+
+    }
+
+    r4
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    \repeatTie
+
+    r8.
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        r8.
+
+        c'16
+
+        r16
+
+    }
 
     % [Cello.Music measure 11]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r2
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 12]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 13]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    c'16
+    \repeatTie
 
-    % [Cello.Music measure 14]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r8.
 
-    % [Cello.Music measure 15]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2.
 
-    % [Cello.Music measure 16]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        % [Cello.Music measure 14]
+        r16
+
+        c'16
+
+        r4
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        % [Cello.Music measure 15]
+        r16
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        c'4
+        \repeatTie
+
+        r8
+
+    }
+
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Cello.Music measure 16]
+        r16
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8.
+
+        c'8
+
+        r16
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r16
+
+        c'8
+
+        r16
+
+        c'8
+
+    }
 
 }
 

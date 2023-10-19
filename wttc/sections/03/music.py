@@ -77,7 +77,6 @@ def FL(voice, time_signatures):
         [AG([2], 3), -1, -4, "-", 3, -2],
         time_signatures(13),
     )
-    library.force_repeat_tie(voice)
 
 
 def OB(voice, time_signatures):
@@ -207,7 +206,6 @@ def VN(voice, time_signatures):
     rhythm(
         [-12, -2, BG([1], t(2)), 1, -3],
     )
-    library.force_repeat_tie(voice)
 
 
 def VC(voice, time_signatures):
@@ -259,7 +257,6 @@ def VC(voice, time_signatures):
         [3, -1, -4, -1, BG([2], 4), "-"],
         time_signatures(13),
     )
-    library.force_repeat_tie(voice)
 
 
 def fl(m):
@@ -353,6 +350,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     GT2(voices.gt2, time_signatures)
     VN(voices.vn, time_signatures)
     VC(voices.vc, time_signatures)
+    library.force_repeat_tie(score)
     cache = baca.section.cache_leaves(
         score,
         len(time_signatures()),
