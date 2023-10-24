@@ -64,6 +64,23 @@ def VN(voice, meters):
         meters(4),
         do_not_rewrite_meter=True,
     )
+    rhythm(
+        [AG([2], 16), 8],
+        meters(5),
+    )
+    rhythm(
+        [-1, t(3), 4, 4, 4, t(4), 1, t(3), 4, 4, 4, 4, t(4), 3, -1],
+        meters(6),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [16, AG([2], 8), 8, -1, t(3), 4, t(4), 1, "-"],
+        meters(7),
+    )
+    rhythm(
+        [16, AG([2], 8), -4, -4, -4, -3, t(1), 2, -2, "-"],
+        meters(8),
+    )
 
 
 def VC(voice, meters):
@@ -122,7 +139,8 @@ def vc(m):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [9, 12, 12, 12, 6, 12, 15, 12, 6, 14, 11, 13]
+    # numerators = [9, 12, 12, 12, 6, 12, 15, 12, 6, 14, 11, 13]
+    numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 16, 23]
     numerators += [10, 8, 8, 8, 10, 4, 6, 10, 8, 8]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)

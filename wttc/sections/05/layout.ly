@@ -2,8 +2,8 @@
 % page_count = 2
 % measure_count = 22 + 1
 % time_signatures = [
-% '9/4', '12/4', '12/4', '12/4', '6/4', '12/4', '15/4', '12/4', '6/4', '14/4',
-%  '11/4', '13/4', '10/4', '8/4', '8/4', '8/4', '10/4', '4/4', '6/4', '10/4',
+% '9/4', '12/4', '12/4', '12/4', '6/4', '12/4', '15/4', '15/4', '8/4', '9/4',
+%  '16/4', '23/4', '10/4', '8/4', '8/4', '8/4', '10/4', '4/4', '6/4', '10/4',
 %  '8/4', '8/4'
 %  ]
 
@@ -115,7 +115,7 @@
             \baca-new-spacing-section #35 #480
               %! BREAK
             \noBreak
-            s1 * 12/4
+            s1 * 15/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
@@ -130,7 +130,7 @@
             \baca-new-spacing-section #1 #20
               %! BREAK
             \break
-            s1 * 6/4
+            s1 * 8/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
@@ -143,7 +143,7 @@
             \baca-new-spacing-section #1 #20
               %! BREAK
             \noBreak
-            s1 * 14/4
+            s1 * 9/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
@@ -156,7 +156,7 @@
             \baca-new-spacing-section #1 #20
               %! BREAK
             \noBreak
-            s1 * 11/4
+            s1 * 16/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
@@ -169,7 +169,7 @@
             \baca-new-spacing-section #35 #480
               %! BREAK
             \noBreak
-            s1 * 13/4
+            s1 * 23/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
