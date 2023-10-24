@@ -25,6 +25,13 @@ rhythm = library.rhythm
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
+    baca.literal(
+        skips[9 - 1],
+        [
+            r"\tweak padding 1.5",
+            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        ],
+    )
     baca.metronome_mark(skips[13 - 1], "60", manifests=library.manifests)
 
 
@@ -78,8 +85,13 @@ def VN(voice, meters):
         meters(7),
     )
     rhythm(
-        [16, AG([2], 8), -4, -4, -4, -3, t(1), 2, -2, "-"],
+        [16, AG([2], 8), -4, -4, -4, -3, t(1), 2, -2, -12, 4],
         meters(8),
+    )
+    rhythm(
+        [-1, t(3), 4, t(4), 1, -3, "-"],
+        meters(9),
+        do_not_rewrite_meter=True,
     )
 
 
@@ -101,6 +113,13 @@ def ob(m):
         baca.instrument_name(o.leaf(0), r"\wttc-oboe-markup")
         baca.short_instrument_name(o.leaf(0), "Ob.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+        baca.literal(
+            o.leaf(0),
+            [
+                r"\override Staff.RehearsalMark.direction = #down",
+                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+            ],
+        )
 
 
 def gt1(m):
@@ -117,6 +136,13 @@ def gt2(m):
         baca.instrument_name(o.leaf(0), r"\wttc-guitar-ii-markup")
         baca.short_instrument_name(o.leaf(0), "Gt. 2", library.manifests)
         baca.clef(o.leaf(0), "treble")
+        baca.literal(
+            o.leaf(0),
+            [
+                r"\override Staff.RehearsalMark.direction = #down",
+                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+            ],
+        )
 
 
 def vn(m):
@@ -133,13 +159,19 @@ def vc(m):
         baca.instrument_name(o.leaf(0), r"\wttc-cello-markup")
         baca.short_instrument_name(o.leaf(0), "Vc.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+        baca.literal(
+            o.leaf(0),
+            [
+                r"\override Staff.RehearsalMark.direction = #down",
+                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+            ],
+        )
 
 
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    # numerators = [9, 12, 12, 12, 6, 12, 15, 12, 6, 14, 11, 13]
     numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 16, 23]
     numerators += [10, 8, 8, 8, 10, 4, 6, 10, 8, 8]
     pairs = [(_, 4) for _ in numerators]

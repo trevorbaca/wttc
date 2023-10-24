@@ -205,6 +205,8 @@ number.5.Skips = {
     % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
       %! EXPLICIT_TIME_SIGNATURE
     \time 8/4
     s1 * 8/4
@@ -824,6 +826,8 @@ number.5.Oboe.Music = {
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
@@ -1130,6 +1134,8 @@ number.5.Guitar.2.Music = {
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
@@ -1513,6 +1519,27 @@ number.5.Violin.Music = {
 
     r8
 
+    r2.
+
+    c'4
+
+    % [Violin.Music measure 9]
+    r16
+
+    c'8.
+    ~
+
+    c'4
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r8.
+
     r1
 
 }
@@ -1541,6 +1568,8 @@ number.5.Cello.Music = {
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
