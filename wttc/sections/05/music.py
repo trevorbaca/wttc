@@ -25,6 +25,7 @@ rhythm = library.rhythm
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
+    baca.metronome_mark(skips[13 - 1], "60", manifests=library.manifests)
 
 
 def FL(voice, meters):
