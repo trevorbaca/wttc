@@ -26,12 +26,14 @@ def _reference_meters():
     return (
         abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
         abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
+        abjad.Meter("(9/4 (1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4))"),
+        abjad.Meter("(12/4 (1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4))"),
     )
 
 
-def force_repeat_tie(components):
+def force_repeat_tie(components, threshold=(1, 8)):
     tag = baca.helpers.function_name(inspect.currentframe())
-    rmakers.force_repeat_tie(components, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
 
 
 def make_empty_score():
@@ -183,7 +185,6 @@ def rhythm(
     for tuplet in abjad.select.tuplets(voice_):
         rmakers.beam([tuplet])
     rmakers.force_fraction(voice_)
-    rmakers.force_repeat_tie(voice_, threshold=(3, 16), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components

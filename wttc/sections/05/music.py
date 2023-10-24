@@ -45,7 +45,25 @@ def GT2(voice, meters):
 
 
 def VN(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        [-4, BG([2], 8), BG([2], 8), w(8, 16), AG([2], h(w(8, 16)))],
+        meters(1),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [8, w(4, 8), h(w(4, 8)), 28, -4],
+        meters(2),
+    )
+    rhythm(
+        [16, 8, 16, 8],
+        meters(3),
+    )
+    rhythm(
+        [-1, t(3), 4, 4, 4, 4, 4, t(4), 1, t(3), 4, 4, t(4), 1, 2, -1],
+        meters(4),
+        do_not_rewrite_meter=True,
+    )
 
 
 def VC(voice, meters):
@@ -123,7 +141,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     GT2(voices.gt2, meters)
     VN(voices.vn, meters)
     VC(voices.vc, meters)
-    library.force_repeat_tie(score)
+    library.force_repeat_tie(score, (1, 4))
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
