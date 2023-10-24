@@ -15,7 +15,9 @@
       Bača
     }
   }
+  evenHeaderMarkup = \markup \null
   oddFooterMarkup = \evenFooterMarkup
+  oddHeaderMarkup = \evenHeaderMarkup
 }
 
 \layout { \context { \Score barNumberVisibility = #all-bar-numbers-visible } }
