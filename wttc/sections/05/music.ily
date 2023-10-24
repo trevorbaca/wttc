@@ -258,8 +258,8 @@ number.5.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 16/4
-    s1 * 16/4
+    \time 10/4
+    s1 * 10/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -283,8 +283,8 @@ number.5.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 23/4
-    s1 * 23/4
+    \time 6/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -292,7 +292,7 @@ number.5.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[2'54'']"
+    %@% - \baca-start-ct-left-only "[2'52'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -305,6 +305,56 @@ number.5.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 13]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 10/4
+    s1 * 10/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[2'54'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "13"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "42"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 14]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 13/4
+    s1 * 13/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[2'58'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "14"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "43"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 15]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -334,15 +384,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "13"
+    - \baca-start-lmn-left-only "15"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "42"
+    %@% - \baca-start-mn-left-only "44"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 14]
+    % [Skips measure 16]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -359,15 +409,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "14"
+    - \baca-start-lmn-left-only "16"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "43"
+    %@% - \baca-start-mn-left-only "45"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 15]
+    % [Skips measure 17]
     s1 * 8/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -380,15 +430,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "15"
+    - \baca-start-lmn-left-only "17"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "44"
+    %@% - \baca-start-mn-left-only "46"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 16]
+    % [Skips measure 18]
     s1 * 8/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -401,15 +451,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "16"
+    - \baca-start-lmn-left-only "18"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "45"
+    %@% - \baca-start-mn-left-only "47"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 17]
+    % [Skips measure 19]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -426,15 +476,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "17"
+    - \baca-start-lmn-left-only "19"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "46"
+    %@% - \baca-start-mn-left-only "48"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 18]
+    % [Skips measure 20]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -451,15 +501,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "18"
+    - \baca-start-lmn-left-only "20"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "47"
+    %@% - \baca-start-mn-left-only "49"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 19]
+    % [Skips measure 21]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -476,15 +526,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "19"
+    - \baca-start-lmn-left-only "21"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "48"
+    %@% - \baca-start-mn-left-only "50"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 20]
+    % [Skips measure 22]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -501,15 +551,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "20"
+    - \baca-start-lmn-left-only "22"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "49"
+    %@% - \baca-start-mn-left-only "51"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 21]
+    % [Skips measure 23]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -526,15 +576,15 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "21"
+    - \baca-start-lmn-left-only "23"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "50"
+    %@% - \baca-start-mn-left-only "52"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 22]
+    % [Skips measure 24]
     s1 * 8/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -547,11 +597,11 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "22"
+    - \baca-start-lmn-left-only "24"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "51"
+    %@% - \baca-start-mn-left-only "53"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -617,39 +667,45 @@ number.5.Rests = {
     R1 * 9/4
 
     % [Rests measure 11]
-    R1 * 16/4
+    R1 * 10/4
 
     % [Rests measure 12]
-    R1 * 23/4
+    R1 * 6/4
 
     % [Rests measure 13]
     R1 * 10/4
 
     % [Rests measure 14]
-    R1 * 8/4
+    R1 * 13/4
 
     % [Rests measure 15]
-    R1 * 8/4
+    R1 * 10/4
 
     % [Rests measure 16]
     R1 * 8/4
 
     % [Rests measure 17]
-    R1 * 10/4
-
-    % [Rests measure 18]
-    R1 * 4/4
-
-    % [Rests measure 19]
-    R1 * 6/4
-
-    % [Rests measure 20]
-    R1 * 10/4
-
-    % [Rests measure 21]
     R1 * 8/4
 
+    % [Rests measure 18]
+    R1 * 8/4
+
+    % [Rests measure 19]
+    R1 * 10/4
+
+    % [Rests measure 20]
+    R1 * 4/4
+
+    % [Rests measure 21]
+    R1 * 6/4
+
     % [Rests measure 22]
+    R1 * 10/4
+
+    % [Rests measure 23]
+    R1 * 8/4
+
+    % [Rests measure 24]
     R1 * 8/4
 
 }
@@ -738,14 +794,14 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [AltoFlute.Music measure 11]
-    R1 * 16/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"16" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [AltoFlute.Music measure 12]
-    R1 * 23/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"23" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 13]
     R1 * 10/4
@@ -753,14 +809,14 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [AltoFlute.Music measure 14]
-    R1 * 8/4
+    R1 * 13/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
 
     % [AltoFlute.Music measure 15]
-    R1 * 8/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [AltoFlute.Music measure 16]
     R1 * 8/4
@@ -768,31 +824,41 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [AltoFlute.Music measure 17]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [AltoFlute.Music measure 18]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [AltoFlute.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [AltoFlute.Music measure 20]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [AltoFlute.Music measure 21]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
+    % [AltoFlute.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [AltoFlute.Music measure 19]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [AltoFlute.Music measure 20]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [AltoFlute.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
     % [AltoFlute.Music measure 22]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [AltoFlute.Music measure 23]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [AltoFlute.Music measure 24]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
@@ -896,14 +962,14 @@ number.5.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Oboe.Music measure 11]
-    R1 * 16/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"16" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Oboe.Music measure 12]
-    R1 * 23/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"23" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 13]
     R1 * 10/4
@@ -911,14 +977,14 @@ number.5.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Oboe.Music measure 14]
-    R1 * 8/4
+    R1 * 13/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
 
     % [Oboe.Music measure 15]
-    R1 * 8/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Oboe.Music measure 16]
     R1 * 8/4
@@ -926,31 +992,41 @@ number.5.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Oboe.Music measure 17]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Oboe.Music measure 18]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Oboe.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Oboe.Music measure 20]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Oboe.Music measure 21]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
+    % [Oboe.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Oboe.Music measure 19]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Oboe.Music measure 20]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Oboe.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
     % [Oboe.Music measure 22]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Oboe.Music measure 23]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Oboe.Music measure 24]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
@@ -1049,14 +1125,14 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Guitar.1.Music measure 11]
-    R1 * 16/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"16" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.1.Music measure 12]
-    R1 * 23/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"23" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 13]
     R1 * 10/4
@@ -1064,14 +1140,14 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.1.Music measure 14]
-    R1 * 8/4
+    R1 * 13/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
 
     % [Guitar.1.Music measure 15]
-    R1 * 8/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.1.Music measure 16]
     R1 * 8/4
@@ -1079,31 +1155,41 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Guitar.1.Music measure 17]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.1.Music measure 18]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Guitar.1.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 20]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.1.Music measure 21]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
+    % [Guitar.1.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.1.Music measure 19]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Guitar.1.Music measure 20]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.1.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
     % [Guitar.1.Music measure 22]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Guitar.1.Music measure 23]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.1.Music measure 24]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
@@ -1204,14 +1290,14 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Guitar.2.Music measure 11]
-    R1 * 16/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"16" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.2.Music measure 12]
-    R1 * 23/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"23" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 13]
     R1 * 10/4
@@ -1219,14 +1305,14 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.2.Music measure 14]
-    R1 * 8/4
+    R1 * 13/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
 
     % [Guitar.2.Music measure 15]
-    R1 * 8/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.2.Music measure 16]
     R1 * 8/4
@@ -1234,31 +1320,41 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Guitar.2.Music measure 17]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.2.Music measure 18]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Guitar.2.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.2.Music measure 20]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.2.Music measure 21]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
+    % [Guitar.2.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.2.Music measure 19]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Guitar.2.Music measure 20]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.2.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
     % [Guitar.2.Music measure 22]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Guitar.2.Music measure 23]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.2.Music measure 24]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
@@ -1542,6 +1638,95 @@ number.5.Violin.Music = {
 
     r1
 
+    % [Violin.Music measure 10]
+    r2
+
+    c'4
+
+    r16
+
+    c'8.
+    ~
+
+    c'4
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r8.
+
+    r4
+
+    r8.
+
+    c'16
+    ~
+
+    % [Violin.Music measure 11]
+    c'8.
+
+    r16
+
+    r2
+
+    r2
+
+    r2.
+
+    r2
+
+    % [Violin.Music measure 12]
+    r4
+
+    r16
+
+    c'8.
+    ~
+
+    c'4
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r8.
+
+    r16
+
+    c'16
+    [
+    ~
+
+    c'16
+    ]
+
+    r16
+
+    % [Violin.Music measure 13]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Violin.Music measure 14]
+    r1..
+
+    r2
+
+    r2
+
+    r4
+
+    c'8.
+
+    r16
+
 }
 
 
@@ -1638,14 +1823,14 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Cello.Music measure 11]
-    R1 * 16/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"16" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Cello.Music measure 12]
-    R1 * 23/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"23" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 13]
     R1 * 10/4
@@ -1653,14 +1838,14 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Cello.Music measure 14]
-    R1 * 8/4
+    R1 * 13/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
 
     % [Cello.Music measure 15]
-    R1 * 8/4
+    R1 * 10/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Cello.Music measure 16]
     R1 * 8/4
@@ -1668,31 +1853,41 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Cello.Music measure 17]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 18]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Cello.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Cello.Music measure 20]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 21]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
+    % [Cello.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Cello.Music measure 19]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Cello.Music measure 20]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Cello.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
     % [Cello.Music measure 22]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Cello.Music measure 23]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Cello.Music measure 24]
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"

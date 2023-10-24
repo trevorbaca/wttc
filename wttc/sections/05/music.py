@@ -32,7 +32,7 @@ def GLOBALS(skips):
             r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
         ],
     )
-    baca.metronome_mark(skips[13 - 1], "60", manifests=library.manifests)
+    baca.metronome_mark(skips[15 - 1], "60", manifests=library.manifests)
 
 
 def FL(voice, meters):
@@ -92,6 +92,23 @@ def VN(voice, meters):
         [-1, t(3), 4, t(4), 1, -3, "-"],
         meters(9),
         do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [-8, 4, -1, t(3), 4, t(4), 1, "-", t(1)],
+        meters(10),
+    )
+    rhythm(
+        [3, "-"],
+        meters(11),
+    )
+    rhythm(
+        ["-", -1, t(3), 4, t(4), 1, -3, -1, 2, -1],
+        meters(12),
+    )
+    mmrests(voice, meters(13))
+    rhythm(
+        ["-", 3, -1],
+        meters(14),
     )
 
 
@@ -172,7 +189,8 @@ def vc(m):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 16, 23]
+    # numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 16, 23]
+    numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 10, 6, 10, 13]
     numerators += [10, 8, 8, 8, 10, 4, 6, 10, 8, 8]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
@@ -245,8 +263,8 @@ def make_layout():
         ),
         baca.page(
             2,
-            baca.system(measure=13, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=18, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=15, y_offset=10, distances=(15, 20, 20, 20)),
+            baca.system(measure=20, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 20),
         overrides=[baca.space((13, 22), (1, 24))],
