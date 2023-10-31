@@ -1561,40 +1561,29 @@ number.5.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 6]
-    r16
-
-    c'8.
-    - \tweak stencil ##f
-    ~
-
-    c'4
-    \repeatTie
-
-    c'4
-
-    c'4
-
-    c'4
-    - \tweak stencil ##f
-    ~
+    r8.
 
     c'16
-    \repeatTie
+    ~
 
-    c'8.
+    c'4
     - \tweak stencil ##f
     ~
 
     c'4
+    - \tweak stencil ##f
+    ~
     \repeatTie
 
     c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     c'4
+    \repeatTie
 
-    c'4
-
-    c'4
+    c'1.
     - \tweak stencil ##f
     ~
 
@@ -1604,18 +1593,16 @@ number.5.Violin.Music = {
     r16
 
     % [Violin.Music measure 7]
-    c'1
+    c'2
 
     \afterGrace
-    c'2
+    c'1.
     {
 
         c'8
 
     }
 
-
-    c'2
 
     r16
 
@@ -1626,20 +1613,21 @@ number.5.Violin.Music = {
     c'4
     \repeatTie
 
+    r2
+
+    r8.
+
+    c'16
+    ~
+
     c'4
     - \tweak stencil ##f
     ~
 
-    c'16
+    c'4
     \repeatTie
-
-    r8.
-
-    r2.
 
     % [Violin.Music measure 8]
-    c'1
-
     \afterGrace
     c'2
     {
@@ -1651,119 +1639,164 @@ number.5.Violin.Music = {
 
     r2.
 
-    r8.
-
-    c'16
-    ~
-
-    c'8
-
-    r8
-
-    r2.
-
-    c'4
-
-    % [Violin.Music measure 9]
     r16
 
     c'8.
     - \tweak stencil ##f
     ~
 
-    c'4
-    \repeatTie
-
-    c'4
+    c'1..
     - \tweak stencil ##f
     ~
-
-    c'16
     \repeatTie
-
-    r8.
-
-    r1
-
-    % [Violin.Music measure 10]
-    r2
-
-    c'4
-
-    r16
-
-    c'8.
-    - \tweak stencil ##f
-    ~
-
-    c'4
-    \repeatTie
-
-    c'4
-    - \tweak stencil ##f
-    ~
-
-    c'16
-    \repeatTie
-
-    r8.
-
-    r4
-
-    r8.
-
-    c'16
-    ~
-
-    % [Violin.Music measure 11]
-    c'8.
-
-    r16
-
-    r2
-
-    r2
-
-    r2.
-
-    r2
-
-    % [Violin.Music measure 12]
-    r4
-
-    r16
-
-    c'8.
-    - \tweak stencil ##f
-    ~
-
-    c'4
-    \repeatTie
-
-    c'4
-    - \tweak stencil ##f
-    ~
-
-    c'16
-    \repeatTie
-
-    r8.
-
-    r16
 
     c'16
     [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
+
+    % [Violin.Music measure 9]
+    r8.
+
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \afterGrace
+    c'4
+    \repeatTie
+    {
+
+        c'8
+
+    }
+
+
+    % [Violin.Music measure 10]
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
+
+    r8.
+
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
     ~
 
     c'16
+    [
+    \repeatTie
+
+    c'8.
     ]
+    - \tweak stencil ##f
+    ~
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 11]
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4..
+    \repeatTie
 
     r16
 
+    % [Violin.Music measure 12]
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
     % [Violin.Music measure 13]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4..
+    \repeatTie
+
+    r16
 
     % [Violin.Music measure 14]
     r1..
@@ -1772,11 +1805,9 @@ number.5.Violin.Music = {
 
     r2
 
-    r4
-
-    c'8.
-
     r16
+
+    c'4..
 
 }
 

@@ -76,38 +76,44 @@ def VN(voice, meters):
         meters(5),
     )
     rhythm(
-        [-1, t(3), 4, 4, 4, t(4), 1, t(3), 4, 4, 4, 4, t(4), 3, -1],
+        [-3, t(1), t(4), t(4), t(4), 4, t(24), 3, -1],
         meters(6),
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [16, AG([2], 8), 8, -1, t(3), 4, t(4), 1, "-"],
+        [8, AG([2], 24), -1, t(3), 4, -8, -3, t(1), t(4), 4],
         meters(7),
+        do_not_rewrite_meter=True,
     )
     rhythm(
-        [16, AG([2], 8), -4, -4, -4, -3, t(1), 2, -2, -12, 4],
+        [AG([2], 8), "-", 32, 7],
         meters(8),
     )
     rhythm(
-        [-1, t(3), 4, t(4), 1, -3, "-"],
+        [-3, t(1), t(4), t(4), t(4), t(4), t(4), t(4), AG([2], 4)],
         meters(9),
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [-8, 4, -1, t(3), 4, t(4), 1, "-", t(1)],
+        [-1, 7, -3, t(1), t(4), 1, t(19)],
         meters(10),
     )
     rhythm(
-        [3, "-"],
+        [t(16), t(16), 7, -1],
         meters(11),
+        do_not_rewrite_meter=True,
     )
     rhythm(
-        ["-", -1, t(3), 4, t(4), 1, -3, -1, 2, -1],
+        [-1, t(7), 1, t(15)],
         meters(12),
     )
-    mmrests(voice, meters(13))
     rhythm(
-        ["-", 3, -1],
+        [t(16), t(16), 7, -1],
+        meters(13),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        ["-", -1, 7],
         meters(14),
     )
 
@@ -258,7 +264,7 @@ def make_layout():
         baca.page(
             1,
             baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=9, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         baca.page(
             2,
