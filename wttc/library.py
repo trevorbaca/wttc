@@ -6,6 +6,10 @@ import baca
 from abjadext import rmakers
 
 
+def BG(*arguments):
+    return baca.rhythm.BG(*arguments, slur=False)
+
+
 def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
     return baca.OBGC(
         grace_note_numerators,

@@ -7,7 +7,7 @@ from wttc import library
 #########################################################################################
 
 AG = baca.rhythm.AG
-BG = baca.rhythm.BG
+BG = library.BG
 T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
@@ -54,25 +54,25 @@ def GT2(voice, meters):
 def VN(voice, meters):
     rhythm = library.Rhythm(voice)
     rhythm(
-        [-4, BG([2], 8), BG([2], 8), w(8, 16), AG([2], h(w(8, 16)))],
+        [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
         meters(1),
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [8, w(4, 8), h(w(4, 8)), 28, -4],
+        [8, 8, -4, -1, 7, -8, -1, 7, "-"],
         meters(2),
     )
     rhythm(
-        [16, 8, 16, 8],
+        [16, 8, -1, 15, -1, 7],
         meters(3),
     )
     rhythm(
-        [-1, t(3), 4, 4, 4, 4, 4, t(4), 1, t(3), 4, 4, t(4), 1, 2, -1],
+        [-3, t(1), t(4), t(4), t(4), t(4), t(4), 4, 16, rt(1), 2, -1],
         meters(4),
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [AG([2], 16), 8],
+        [AG([2], 16), -1, 7],
         meters(5),
     )
     rhythm(
@@ -189,7 +189,6 @@ def vc(m):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    # numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 16, 23]
     numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 10, 6, 10, 13]
     numerators += [10, 8, 8, 8, 10, 4, 6, 10, 8, 8]
     pairs = [(_, 4) for _ in numerators]
@@ -209,7 +208,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     GT2(voices.gt2, meters)
     VN(voices.vn, meters)
     VC(voices.vc, meters)
-    library.force_repeat_tie(score, (1, 4))
+    library.force_repeat_tie(score)
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
