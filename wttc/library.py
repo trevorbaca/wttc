@@ -197,6 +197,12 @@ def rhythm(
     return components
 
 
+def swell(n):
+    assert n % 2 == 0, repr(n)
+    half = int(n / 2)
+    return pair(half, n, half, n)
+
+
 instruments = {
     "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, E6]")),
     "Oboe": abjad.Oboe(),

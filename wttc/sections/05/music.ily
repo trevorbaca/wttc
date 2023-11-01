@@ -1411,7 +1411,13 @@ number.5.Violin.Music = {
 
     }
 
-    c'4.
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
 
     \slashedGrace {
 
@@ -1420,6 +1426,7 @@ number.5.Violin.Music = {
     }
 
     c'8
+    ]
     - \tweak stencil ##f
     ~
 
@@ -1446,11 +1453,34 @@ number.5.Violin.Music = {
 
 
     % [Violin.Music measure 2]
-    c'2
+    c'4
+    - \tweak stencil ##f
+    ~
 
-    c'2
+    c'16
+    [
+    \repeatTie
 
-    r4
+    \slashedGrace {
+
+        c'8
+
+    }
+
+    c'8.
+    ]
+
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     r16
 
@@ -1846,9 +1876,7 @@ number.5.Cello.Music = {
     \set Staff.shortInstrumentName = \wttc-vc-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r4
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1859,15 +1887,103 @@ number.5.Cello.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
 
-    % [Cello.Music measure 2]
-    R1 * 12/4
+    r8.
+
+    \slashedGrace {
+
+        c'8
+
+    }
+
+    c'16
+    ~
+
+    c'8.
+    [
+
+    \slashedGrace {
+
+        c'8
+
+    }
+
+    c'16
+    ]
+    ~
+
+    c'2
+
+    c'1 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"12" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    \afterGrace
+    c'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    {
+
+        c'8
+
+    }
+
+
+    % [Cello.Music measure 2]
+    c'8.
+    [
+
+    c'16
+    ]
+    ~
+
+    c'4
+
+    c'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    c'2
+
+    r4
+
+    c'2
+
+    r4
 
     % [Cello.Music measure 3]
-    R1 * 12/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"12" #"4"
+    c'1
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
+
+    c'1
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
 
     % [Cello.Music measure 4]
     R1 * 12/4
@@ -1875,9 +1991,9 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"12" #"4"
 
     % [Cello.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    c'2
 
     % [Cello.Music measure 6]
     R1 * 12/4
@@ -1885,94 +2001,20 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"12" #"4"
 
     % [Cello.Music measure 7]
-    R1 * 15/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"15" #"4"
+    r\breve
+
+    c'2
+
+    r1
+
+    r4
 
     % [Cello.Music measure 8]
-    R1 * 15/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"15" #"4"
+    r\breve.
 
-    % [Cello.Music measure 9]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r4
 
-    % [Cello.Music measure 10]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
-
-    % [Cello.Music measure 11]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 12]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Cello.Music measure 13]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 14]
-    R1 * 13/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
-
-    % [Cello.Music measure 15]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 16]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Cello.Music measure 17]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Cello.Music measure 18]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Cello.Music measure 19]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 20]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Cello.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Cello.Music measure 22]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Cello.Music measure 23]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Cello.Music measure 24]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    c'2
 
 }
 

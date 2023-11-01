@@ -15,6 +15,7 @@ br = baca.rhythm.br
 h = baca.rhythm.h
 pair = library.pair
 rt = baca.rhythm.rt
+swell = library.swell
 t = baca.rhythm.t
 w = baca.rhythm.w
 
@@ -56,11 +57,13 @@ def VN(voice, meters):
     rhythm(
         [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
         meters(1),
-        do_not_rewrite_meter=True,
     )
     rhythm(
-        [8, 8, -4, -1, 7, -8, -1, 7, "-"],
+        # [5, BG([2], 3), 12, -1, 7, -8, -1, 7, "-"],
+        # [t(4), bl(1), BG([2], br(3)), 12, -1, t(3), 4, -8, -1, t(3), 4, -4],
+        [t(4), bl(1), BG([2], br(3)), swell(12), -1, t(3), 4, -8, -1, t(3), 4, -4],
         meters(2),
+        do_not_rewrite_meter=True,
     )
     rhythm(
         [16, 8, -1, 15, -1, 7],
@@ -119,7 +122,33 @@ def VN(voice, meters):
 
 
 def VC(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        [-4, -3, BG([2], t(1)), 3, BG([2], t(1)), 8, w(8, 16), AG([2], h(w(8, 16)))],
+        meters(1),
+    )
+    rhythm(
+        [3, 5, swell(16), 8, -4, 8, "-"],
+        meters(2),
+    )
+    rhythm(
+        [16, -1, 7, 16, -1, 7],
+        meters(3),
+    )
+    mmrests(voice, meters(4))
+    rhythm(
+        ["-", 8],
+        meters(5),
+    )
+    mmrests(voice, meters(6))
+    rhythm(
+        [-32, 8, "-"],
+        meters(7),
+    )
+    rhythm(
+        ["-", 8],
+        meters(8),
+    )
 
 
 def fl(m):
