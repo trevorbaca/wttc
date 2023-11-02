@@ -37,7 +37,35 @@ def GLOBALS(skips):
 
 
 def FL(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        ["-", 16, -58, 16, -58, 16, -8],
+        meters(1, 5),
+    )
+    mmrests(voice, meters(6))
+    rhythm(
+        [8, AG([2], 24), "-"],
+        meters(7),
+    )
+    rhythm(
+        [8, AG([2], 24), "-", -1, 16, -3],
+        meters(8),
+    )
+    mmrests(voice, meters(9))
+    rhythm(
+        [-16, -4, -3, t(1), t(12), t(16), t(16), t(7), -1],
+        meters(10, 11),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [-20, -1, t(3), t(16), t(16), t(7), -1],
+        meters(12, 13),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        ["-", -1, 7, -4],
+        meters(14),
+    )
 
 
 def OB(voice, meters):
@@ -59,8 +87,6 @@ def VN(voice, meters):
         meters(1),
     )
     rhythm(
-        # [5, BG([2], 3), 12, -1, 7, -8, -1, 7, "-"],
-        # [t(4), bl(1), BG([2], br(3)), 12, -1, t(3), 4, -8, -1, t(3), 4, -4],
         [t(4), bl(1), BG([2], br(3)), swell(12), -1, t(3), 4, -8, -1, t(3), 4, -4],
         meters(2),
         do_not_rewrite_meter=True,

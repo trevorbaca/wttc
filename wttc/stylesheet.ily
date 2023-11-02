@@ -223,16 +223,16 @@
 %%% MARGIN MARKUP %%%
 
 wttc-alto-flute-markup = \markup \hcenter-in #22 "Alto flute"
-wttc-afl-markup = \markup \hcenter-in #12 "Afl."
+wttc-afl-markup = \markup \hcenter-in #12 "Al. fl."
 
 wttc-oboe-markup = \markup \hcenter-in #22 "Oboe"
 wttc-ob-markup = \markup \hcenter-in #12 "Ob."
 
 wttc-guitar-i-markup = \markup \hcenter-in #22 "Guitar 1"
-wttc-gt-i-markup = \markup \hcenter-in #12 "Gt. I"
+wttc-gt-i-markup = \markup \hcenter-in #12 "Gt. 1"
 
 wttc-guitar-ii-markup = \markup \hcenter-in #22 "Guitar 2"
-wttc-gt-ii-markup = \markup \hcenter-in #12 "Gt. II"
+wttc-gt-ii-markup = \markup \hcenter-in #12 "Gt. 2"
 
 wttc-violin-markup = \markup \hcenter-in #22 "Violin"
 wttc-vn-markup = \markup \hcenter-in #12 "Vn."

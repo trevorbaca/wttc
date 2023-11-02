@@ -735,9 +735,7 @@ number.5.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r\breve
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -748,25 +746,48 @@ number.5.AltoFlute.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
 
+    f'4
+    - \tweak stencil ##f
+    ~
+
     % [AltoFlute.Music measure 2]
-    R1 * 12/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"12" #"4"
+    f'2.
+    \repeatTie
+
+    r\breve
+
+    r4
 
     % [AltoFlute.Music measure 3]
-    R1 * 12/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"12" #"4"
+    r1
+
+    r4
+
+    r8
+
+    f'8
+    - \tweak stencil ##f
+    ~
+
+    f'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'8
+    \repeatTie
+
+    r8
+
+    r2
 
     % [AltoFlute.Music measure 4]
-    R1 * 12/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"12" #"4"
+    r\breve.
 
     % [AltoFlute.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    f'1
+
+    r2
 
     % [AltoFlute.Music measure 6]
     R1 * 12/4
@@ -774,14 +795,48 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"12" #"4"
 
     % [AltoFlute.Music measure 7]
-    R1 * 15/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"15" #"4"
+    f'2
+
+    \afterGrace
+    f'1.
+    {
+
+        f'8
+
+    }
+
+
+    r1..
 
     % [AltoFlute.Music measure 8]
-    R1 * 15/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"15" #"4"
+    f'2
+
+    \afterGrace
+    f'1.
+    {
+
+        f'8
+
+    }
+
+
+    r2
+
+    r16
+
+    f'8.
+    - \tweak stencil ##f
+    ~
+
+    f'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'16
+    \repeatTie
+
+    r8.
 
     % [AltoFlute.Music measure 9]
     R1 * 8/4
@@ -789,79 +844,81 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [AltoFlute.Music measure 10]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r1
+
+    r4
+
+    r8.
+
+    f'16
+    ~
+
+    f'2.
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 11]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    f'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'4..
+    \repeatTie
+    ~
+
+    r16
 
     % [AltoFlute.Music measure 12]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    r16
+
+    f'8.
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 13]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    f'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'4..
+    \repeatTie
+    ~
+
+    r16
 
     % [AltoFlute.Music measure 14]
-    R1 * 13/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
+    r\breve
 
-    % [AltoFlute.Music measure 15]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    r4
 
-    % [AltoFlute.Music measure 16]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r4
 
-    % [AltoFlute.Music measure 17]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r16
 
-    % [AltoFlute.Music measure 18]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    f'8.
+    - \tweak stencil ##f
+    ~
 
-    % [AltoFlute.Music measure 19]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    f'4
+    \repeatTie
 
-    % [AltoFlute.Music measure 20]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [AltoFlute.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [AltoFlute.Music measure 22]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [AltoFlute.Music measure 23]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [AltoFlute.Music measure 24]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r4
 
 }
 
