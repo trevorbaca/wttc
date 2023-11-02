@@ -21,7 +21,6 @@ w = baca.rhythm.w
 
 OBGC = library.OBGC
 mmrests = library.mmrests
-rhythm = library.rhythm
 
 
 def GLOBALS(skips):
@@ -73,11 +72,53 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    mmrests(voice, meters(1, 4))
+    rhythm(
+        ["-", 1],
+        meters(5),
+    )
+    mmrests(voice, meters(6))
+    rhythm(
+        ["-", 1],
+        meters(7),
+    )
+    mmrests(voice, meters(8))
+    mmrests(voice, meters(9))
+    rhythm(
+        ["-", 2, -10],
+        meters(10),
+    )
+    mmrests(voice, meters(11, 12))
+    rhythm(
+        [2, "-"],
+        meters(13),
+    )
+    mmrests(voice, meters(14))
 
 
 def GT2(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    mmrests(voice, meters(1, 5))
+    rhythm(
+        ["-", 1],
+        meters(6),
+    )
+    mmrests(voice, meters(7))
+    rhythm(
+        ["-", 2, -14],
+        meters(8),
+    )
+    mmrests(voice, meters(9, 10))
+    rhythm(
+        [-2, 2, "-"],
+        meters(11),
+    )
+    mmrests(voice, meters(12, 13))
+    rhythm(
+        ["-", 2, -2, -4],
+        meters(14),
+    )
 
 
 def VN(voice, meters):

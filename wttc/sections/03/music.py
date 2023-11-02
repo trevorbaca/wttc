@@ -20,7 +20,6 @@ w = baca.rhythm.w
 
 OBGC = library.OBGC
 mmrests = library.mmrests
-rhythm = library.rhythm
 
 
 def GLOBALS(skips):

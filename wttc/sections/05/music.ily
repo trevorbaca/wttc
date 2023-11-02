@@ -1152,9 +1152,13 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"12" #"4"
 
     % [Guitar.1.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    r8.
+
+    c''16
 
     % [Guitar.1.Music measure 6]
     R1 * 12/4
@@ -1162,9 +1166,11 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"12" #"4"
 
     % [Guitar.1.Music measure 7]
-    R1 * 15/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"15" #"4"
+    r\breve..
+
+    r8.
+
+    c''16
 
     % [Guitar.1.Music measure 8]
     R1 * 15/4
@@ -1177,9 +1183,13 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Guitar.1.Music measure 10]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r1.
+
+    c''8
+
+    r8
+
+    r2
 
     % [Guitar.1.Music measure 11]
     R1 * 10/4
@@ -1192,64 +1202,18 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 13]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    c''8
+
+    r8
+
+    r\breve
+
+    r4
 
     % [Guitar.1.Music measure 14]
     R1 * 13/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"13" #"4"
-
-    % [Guitar.1.Music measure 15]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.1.Music measure 16]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Guitar.1.Music measure 17]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Guitar.1.Music measure 18]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Guitar.1.Music measure 19]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.1.Music measure 20]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Guitar.1.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 22]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.1.Music measure 23]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Guitar.1.Music measure 24]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
 }
 
@@ -1322,9 +1286,17 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 6]
-    R1 * 12/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"12" #"4"
+    r\breve
+
+    r4
+
+    r4
+
+    r4
+
+    r8.
+
+    c''16
 
     % [Guitar.2.Music measure 7]
     R1 * 15/4
@@ -1332,9 +1304,19 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"15" #"4"
 
     % [Guitar.2.Music measure 8]
-    R1 * 15/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"15" #"4"
+    r\breve
+
+    r4
+
+    r4
+
+    r4
+
+    c''8
+
+    r8
+
+    r2.
 
     % [Guitar.2.Music measure 9]
     R1 * 8/4
@@ -1347,9 +1329,13 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Guitar.2.Music measure 11]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    r8
+
+    c''8
+
+    r\breve
+
+    r4
 
     % [Guitar.2.Music measure 12]
     R1 * 6/4
@@ -1362,59 +1348,19 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"10" #"4"
 
     % [Guitar.2.Music measure 14]
-    R1 * 13/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"13" #"4"
+    r\breve
 
-    % [Guitar.2.Music measure 15]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    r4
 
-    % [Guitar.2.Music measure 16]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r4
 
-    % [Guitar.2.Music measure 17]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r4
 
-    % [Guitar.2.Music measure 18]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    c''8
 
-    % [Guitar.2.Music measure 19]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+    r8
 
-    % [Guitar.2.Music measure 20]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-
-    % [Guitar.2.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.2.Music measure 22]
-    R1 * 10/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
-
-    % [Guitar.2.Music measure 23]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
-
-    % [Guitar.2.Music measure 24]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    r4
 
 }
 
