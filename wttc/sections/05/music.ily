@@ -1829,15 +1829,22 @@ number.5.Violin.Music = {
     r16
 
     % [Violin.Music measure 14]
-    r1..
+    r\breve
 
-    r2
+    r4
 
-    r2
+    r4
+
+    r4
 
     r16
 
-    c'4..
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
 
 }
 
@@ -2015,6 +2022,98 @@ number.5.Cello.Music = {
     r4
 
     c'2
+
+    % [Cello.Music measure 9]
+    r2
+
+    c'1.
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 10]
+    c'4
+    \repeatTie
+
+    r1..
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 11]
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Cello.Music measure 12]
+    c'1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Cello.Music measure 13]
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Cello.Music measure 14]
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    \repeatTie
+    ~
+
+    r2
 
 }
 

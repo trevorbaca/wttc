@@ -149,6 +149,33 @@ def VC(voice, meters):
         ["-", 8],
         meters(8),
     )
+    rhythm(
+        ["-", 24],
+        meters(9),
+    )
+    rhythm(
+        [rt(4), "-", t(4)],
+        meters(10),
+    )
+    rhythm(
+        [t(16), t(4), t(16), t(4)],
+        meters(11),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [t(24)],
+        meters(12),
+    )
+    rhythm(
+        [t(16), t(4), t(16), t(4)],
+        meters(13),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [t(16), t(4), t(16), t(4), t(4), "-"],
+        meters(14),
+        do_not_rewrite_meter=True,
+    )
 
 
 def fl(m):
