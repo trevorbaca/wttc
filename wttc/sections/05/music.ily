@@ -201,12 +201,12 @@ number.5.Skips = {
     %@% - \baca-start-mn-left-only "37"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
-    \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
       %! EXPLICIT_TIME_SIGNATURE
     \time 8/4
     s1 * 8/4
@@ -483,6 +483,8 @@ number.5.Skips = {
     %@% - \baca-start-mn-left-only "48"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 20]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -583,6 +585,8 @@ number.5.Skips = {
     %@% - \baca-start-mn-left-only "52"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 24]
     s1 * 8/4
@@ -604,6 +608,8 @@ number.5.Skips = {
     %@% - \baca-start-mn-left-only "53"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -870,7 +876,6 @@ number.5.AltoFlute.Music = {
 
     f'4..
     \repeatTie
-    ~
 
     r16
 
@@ -898,7 +903,6 @@ number.5.AltoFlute.Music = {
 
     f'4..
     \repeatTie
-    ~
 
     r16
 
@@ -919,6 +923,471 @@ number.5.AltoFlute.Music = {
     \repeatTie
 
     r4
+
+    % [AltoFlute.Music measure 15]
+    r1.
+
+    r8.
+
+    f'16
+
+    f'2
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 16]
+    f'4.
+    \repeatTie
+
+    f'16
+    [
+
+    f'16
+    ]
+    ~
+
+    f'4.
+
+    f'16
+    [
+
+    f'16
+    ]
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'8.
+    [
+    \repeatTie
+
+    f'16
+    ]
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    % [AltoFlute.Music measure 17]
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    % [AltoFlute.Music measure 18]
+    r2
+
+    r4
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    r1
+
+    % [AltoFlute.Music measure 19]
+    r4
+
+    r8.
+
+    f'16
+
+    f'4
+
+    f'16
+    [
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'8
+    [
+    \repeatTie
+
+    f'16
+
+    f'16
+    ]
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'2.
+    \repeatTie
+
+    % [AltoFlute.Music measure 20]
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    r4
+
+    f'16
+    [
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    \repeatTie
+
+    % [AltoFlute.Music measure 21]
+    f'4
+
+    r8.
+
+    f'16
+    ~
+
+    f'8.
+
+    r16
+
+    r8
+
+    f'16
+    [
+
+    f'16
+    ]
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+
+    % [AltoFlute.Music measure 22]
+    f'4
+
+    r8.
+
+    f'16
+    ~
+
+    f'8.
+
+    r16
+
+    r16
+
+    f'8.
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    \repeatTie
+
+    r16
+
+    r16
+
+    f'16
+    ~
+
+    f'8.
+
+    r16
+
+    f'4
+
+    r16
+
+    f'8.
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+
+    % [AltoFlute.Music measure 23]
+    f'16
+    [
+
+    f'16
+    ~
+
+    f'16
+    ]
+
+    r16
+
+    r8
+
+    f'16
+    [
+
+    f'16
+    ]
+    ~
+
+    f'8
+
+    r8
+
+    r16
+
+    f'16
+    [
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'8
+    \repeatTie
+
+    r8
+
+    r16
+
+    f'16
+    [
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'8.
+    \repeatTie
+
+    r16
+
+    r4
+
+    % [AltoFlute.Music measure 24]
+    f'16
+    [
+
+    f'8.
+    - \tweak stencil ##f
+    ~
+
+    f'8
+    \repeatTie
+
+    f'16
+
+    f'16
+    ]
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'16
+    [
+    \repeatTie
+
+    f'16
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'2
+    \repeatTie
 
 }
 
@@ -1215,6 +1684,247 @@ number.5.Guitar.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"13" #"4"
 
+    % [Guitar.1.Music measure 15]
+    r1..
+
+    c''2
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    % [Guitar.1.Music measure 16]
+    c''4.
+    \repeatTie
+
+    r16
+
+    c''16
+    ~
+
+    c''4.
+
+    r16
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''8.
+    \repeatTie
+
+    r16
+
+    r16
+
+    c''16
+
+    r8
+
+    % [Guitar.1.Music measure 17]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.1.Music measure 18]
+    r2
+
+    r16
+
+    c''16
+
+    r4.
+
+    r1
+
+    % [Guitar.1.Music measure 19]
+    r2
+
+    c''4
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    \repeatTie
+
+    r16
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''2.
+    \repeatTie
+
+    % [Guitar.1.Music measure 20]
+    r2
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
+
+    c''4
+    \repeatTie
+
+    % [Guitar.1.Music measure 21]
+    r2.
+
+    r8.
+
+    c''16
+    ~
+
+    c''4
+
+    r16
+
+    c''8.
+
+    % [Guitar.1.Music measure 22]
+    r\breve
+
+    r8
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+
+    % [Guitar.1.Music measure 23]
+    r16
+
+    c''16
+    [
+    ~
+
+    c''16
+    ]
+
+    r16
+
+    r8.
+
+    c''16
+    ~
+
+    c''8
+
+    r8
+
+    r8
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    \repeatTie
+
+    r8
+
+    r8
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''8.
+    \repeatTie
+
+    r16
+
+    r4
+
+    % [Guitar.1.Music measure 24]
+    r16
+
+    c''8.
+    [
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    ]
+    \repeatTie
+
+    r16
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''2
+    \repeatTie
+
 }
 
 
@@ -1361,6 +2071,241 @@ number.5.Guitar.2.Music = {
     r8
 
     r4
+
+    % [Guitar.2.Music measure 15]
+    r1..
+
+    c''2
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    % [Guitar.2.Music measure 16]
+    c''4.
+    \repeatTie
+
+    r16
+
+    c''16
+    ~
+
+    c''4.
+
+    r16
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''8.
+    \repeatTie
+
+    r16
+
+    r16
+
+    c''16
+
+    r8
+
+    % [Guitar.2.Music measure 17]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.2.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Guitar.2.Music measure 19]
+    r2
+
+    c''4
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    \repeatTie
+
+    r16
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''2.
+    \repeatTie
+
+    % [Guitar.2.Music measure 20]
+    r2
+
+    r16
+
+    c''8.
+    - \tweak stencil ##f
+    ~
+
+    c''4
+    \repeatTie
+
+    % [Guitar.2.Music measure 21]
+    r2.
+
+    r8.
+
+    c''16
+    ~
+
+    c''4
+
+    r16
+
+    c''8.
+
+    % [Guitar.2.Music measure 22]
+    r\breve
+
+    r8
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+
+    % [Guitar.2.Music measure 23]
+    r16
+
+    c''16
+    [
+    ~
+
+    c''16
+    ]
+
+    r16
+
+    r8.
+
+    c''16
+    ~
+
+    c''8
+
+    r8
+
+    r8
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    \repeatTie
+
+    r8
+
+    r8
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''8.
+    \repeatTie
+
+    r16
+
+    r4
+
+    % [Guitar.2.Music measure 24]
+    r16
+
+    c''8.
+    [
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    ]
+    \repeatTie
+
+    r16
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c''16
+    \repeatTie
+
+    r16
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''2
+    \repeatTie
 
 }
 
@@ -1849,6 +2794,125 @@ number.5.Violin.Music = {
     c'4
     \repeatTie
 
+    % [Violin.Music measure 15]
+    R1 * 10/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"10" #"4"
+
+    % [Violin.Music measure 16]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Violin.Music measure 17]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Violin.Music measure 18]
+    R1 * 8/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Violin.Music measure 19]
+    r\breve
+
+    r4
+
+    c'4
+
+    % [Violin.Music measure 20]
+    c'4
+
+    r2.
+
+    % [Violin.Music measure 21]
+    c'4
+
+    r8.
+
+    c'16
+    ~
+
+    c'8.
+
+    r16
+
+    r2.
+
+    % [Violin.Music measure 22]
+    c'4
+
+    r8.
+
+    c'16
+    ~
+
+    c'8.
+
+    r16
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r16
+
+    r16
+
+    c'16
+    ~
+
+    c'8.
+
+    r16
+
+    c'4
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r8.
+
+    r4
+
+    % [Violin.Music measure 23]
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    r4
+
+    r2
+
+    % [Violin.Music measure 24]
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    r1
+
 }
 
 
@@ -2114,9 +3178,203 @@ number.5.Cello.Music = {
 
     c'4
     \repeatTie
-    ~
 
     r2
+
+    % [Cello.Music measure 15]
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Cello.Music measure 16]
+    c'4.
+    \repeatTie
+
+    r16
+
+    c'16
+    ~
+
+    c'4.
+
+    r16
+
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r16
+
+    c'8
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    \repeatTie
+
+    r16
+
+    c'4
+
+    % [Cello.Music measure 17]
+    c'1
+
+    r2
+
+    r4
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 18]
+    c'2
+    \repeatTie
+
+    r2
+
+    c'1
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 19]
+    c'2.
+    \repeatTie
+
+    r16
+
+    c'8.
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    \repeatTie
+
+    r16
+
+    c'16
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r16
+
+    c'8
+    - \tweak stencil ##f
+    ~
+
+    c'2.
+    \repeatTie
+
+    % [Cello.Music measure 20]
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
+
+    % [Cello.Music measure 21]
+    c'2.
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'4
+
+    r16
+
+    c'8.
+
+    % [Cello.Music measure 22]
+    c'\breve
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r16
+
+    c'8
+
+    % [Cello.Music measure 23]
+    c'1
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
+
+    r4
+
+    r2
+
+    % [Cello.Music measure 24]
+    c'1
+
+    r1
 
 }
 

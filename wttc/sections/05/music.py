@@ -26,11 +26,36 @@ mmrests = library.mmrests
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.literal(
-        skips[9 - 1],
+        skips[8 - 1],
         [
             r"\tweak padding 1.5",
             r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
         ],
+        site="after",
+    )
+    baca.literal(
+        skips[19 - 1],
+        [
+            r"\tweak padding 1.5",
+            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        ],
+        site="after",
+    )
+    baca.literal(
+        skips[23 - 1],
+        [
+            r"\tweak padding 1.5",
+            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        ],
+        site="after",
+    )
+    baca.literal(
+        skips[24 - 1],
+        [
+            r"\tweak padding 1.5",
+            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        ],
+        site="after",
     )
     baca.metronome_mark(skips[15 - 1], "60", manifests=library.manifests)
 
@@ -52,18 +77,54 @@ def FL(voice, meters):
     )
     mmrests(voice, meters(9))
     rhythm(
-        [-16, -4, -3, t(1), t(12), t(16), t(16), t(7), -1],
+        [-16, -4, -3, t(1), t(12), t(16), t(16), 7, -1],
         meters(10, 11),
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [-20, -1, t(3), t(16), t(16), t(7), -1],
+        [-20, -1, t(3), t(16), t(16), 7, -1],
         meters(12, 13),
         do_not_rewrite_meter=True,
     )
     rhythm(
         ["-", -1, 7, -4],
         meters(14),
+    )
+    rhythm(
+        ["-", 1, 9, 1, 8, 1, 7, 1, 6, 1, 5, 1, swell(4)],
+        meters(15, 16),
+    )
+    rhythm(
+        8 * [swell(4)],
+        meters(17),
+    )
+    rhythm(
+        [-12, swell(4), "-"],
+        meters(18),
+    )
+    rhythm(
+        [-4, -3, 1, 4, 1, 5, 1, 6, 1, "+"],
+        meters(19),
+    )
+    rhythm(
+        [swell(4), -4, 1, 7],
+        meters(20),
+    )
+    rhythm(
+        [4, -3, 4, -3, 1, 6, 1, 5],
+        meters(21),
+    )
+    rhythm(
+        [4, -3, 4, -2, 4, -2, 4, -1, 4, -1, 4, 1, 3, 1, 2],
+        meters(22),
+    )
+    rhythm(
+        [1, 2, -3, 1, 3, -3, 1, 4, -3, 1, 5, "-"],
+        meters(23),
+    )
+    rhythm(
+        [1, 5, 1, 6, 1, 7, 1, "+"],
+        meters(24),
     )
 
 
@@ -95,6 +156,39 @@ def GT1(voice, meters):
         meters(13),
     )
     mmrests(voice, meters(14))
+    rhythm(
+        ["-", -1, 9, -1, 8, -1, 7, -1, 6, -1, 5, -1, -1, 1, -2],
+        meters(15, 16),
+    )
+    mmrests(voice, meters(17))
+    rhythm(
+        [-8, -1, 1, -2, "-"],
+        meters(18),
+    )
+    rhythm(
+        [-8, 4, -1, 5, -1, 6, -1, "+"],
+        meters(19),
+    )
+    rhythm(
+        ["-", 7],
+        meters(20),
+    )
+    rhythm(
+        ["-", -1, 5, -1, 3],
+        meters(21),
+    )
+    rhythm(
+        ["-", -1, 3, -1, 2],
+        meters(22),
+    )
+    rhythm(
+        [-1, 2, -3, -1, 3, -3, -1, 4, -3, -1, 5, "-"],
+        meters(23),
+    )
+    rhythm(
+        [-1, 5, -1, 6, -1, 7, -1, "+"],
+        meters(24),
+    )
 
 
 def GT2(voice, meters):
@@ -118,6 +212,35 @@ def GT2(voice, meters):
     rhythm(
         ["-", 2, -2, -4],
         meters(14),
+    )
+    rhythm(
+        ["-", -1, 9, -1, 8, -1, 7, -1, 6, -1, 5, -1, -1, 1, -2],
+        meters(15, 16),
+    )
+    mmrests(voice, meters(17, 18))
+    rhythm(
+        [-8, 4, -1, 5, -1, 6, -1, "+"],
+        meters(19),
+    )
+    rhythm(
+        ["-", 7],
+        meters(20),
+    )
+    rhythm(
+        ["-", -1, 5, -1, 3],
+        meters(21),
+    )
+    rhythm(
+        ["-", -1, 3, -1, 2],
+        meters(22),
+    )
+    rhythm(
+        [-1, 2, -3, -1, 3, -3, -1, 4, -3, -1, 5, "-"],
+        meters(23),
+    )
+    rhythm(
+        [-1, 5, -1, 6, -1, 7, -1, "+"],
+        meters(24),
     )
 
 
@@ -186,6 +309,31 @@ def VN(voice, meters):
         ["-", -1, 7],
         meters(14),
     )
+    mmrests(voice, meters(15, 18))
+    rhythm(
+        ["-", 4],
+        meters(19),
+    )
+    rhythm(
+        [4, "-"],
+        meters(20),
+    )
+    rhythm(
+        [4, -3, 4, "-"],
+        meters(21),
+    )
+    rhythm(
+        [4, -3, 4, -2, 4, -2, 4, -1, 4, -1, 4, "-"],
+        meters(22),
+    )
+    rhythm(
+        [4, 4, 4, 4, 4, "-"],
+        meters(23),
+    )
+    rhythm(
+        [4, 4, 4, 4, "-"],
+        meters(24),
+    )
 
 
 def VC(voice, meters):
@@ -239,9 +387,50 @@ def VC(voice, meters):
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [t(16), t(4), t(16), t(4), t(4), "-"],
+        [t(16), t(4), t(16), t(4), 4, "-"],
         meters(14),
         do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [t(4), t(4), t(4), t(8), t(8), t(12)],
+        meters(15),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [6, -1, 7, -1, 6, -1, 5, -1, 4],
+        meters(16),
+    )
+    rhythm(
+        [16, -12, t(4)],
+        meters(17),
+    )
+    rhythm(
+        [8, -8, t(16)],
+        meters(18),
+    )
+    rhythm(
+        [12, -1, 5, -1, 6, -1, "+"],
+        meters(19),
+    )
+    rhythm(
+        [9, 7],
+        meters(20),
+    )
+    rhythm(
+        [15, 5, -1, 3],
+        meters(21),
+    )
+    rhythm(
+        ["+", 3, -1, 2],
+        meters(22),
+    )
+    rhythm(
+        [20, "-"],
+        meters(23),
+    )
+    rhythm(
+        [16, "-"],
+        meters(24),
     )
 
 
