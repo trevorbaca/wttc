@@ -43,19 +43,45 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
+        meters(1, 2),
+    )
+    rhythm(
+        [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
+        meters(3, 7),
+    )
 
 
 def GT2(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
+        meters(1, 2),
+    )
+    rhythm(
+        [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
+        meters(3, 7),
+    )
 
 
 def VN(voice, meters):
-    mmrests(voice, meters())
+    library.make_one_beat_tuplets(
+        voice,
+        meters(1, 7),
+        [1, -12, 1, -8, 1, -6],
+        extra_counts=[-1],
+    )
 
 
 def VC(voice, meters):
-    mmrests(voice, meters())
+    library.make_one_beat_tuplets(
+        voice,
+        meters(1, 7),
+        [1, -7, 1, -9, 1, -13],
+        extra_counts=[-1],
+    )
 
 
 def fl(m):
