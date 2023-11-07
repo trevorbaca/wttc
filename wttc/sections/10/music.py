@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -35,7 +36,11 @@ def GLOBALS(skips):
 
 
 def FL(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice)
+    rhythm(
+        ["-", 20, -12, 36, -14],
+        meters(1, 7),
+    )
 
 
 def OB(voice, meters):
@@ -43,27 +48,29 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
         meters(1, 2),
     )
     rhythm(
         [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
-        meters(3, 7),
+        meters(3, 5),
     )
+    rhythm.mmrests(6)
 
 
 def GT2(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
         meters(1, 2),
     )
     rhythm(
         [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
-        meters(3, 7),
+        meters(3, 5),
     )
+    rhythm.mmrests(6)
 
 
 def VN(voice, meters):
@@ -73,6 +80,28 @@ def VN(voice, meters):
         [1, -12, 1, -8, 1, -6],
         extra_counts=[-1],
     )
+    note = abjad.Note("c'", voice[4][-1].written_duration)
+    voice[4][-1] = note
+    note = abjad.Note("c'", voice[5].written_duration)
+    voice[5] = note
+    note = abjad.Note("c'", voice[6].multiplied_duration)
+    voice[6] = note
+    tuplet_1 = abjad.Tuplet("3:2", "c'8 r4")
+    tuplet_1.force_fraction = True
+    tuplet_2 = abjad.Tuplet("3:2", "r4 c'8")
+    tuplet_2.force_fraction = True
+    voice[7:8] = [tuplet_1, abjad.Rest("r2"), tuplet_2]
+    abjad.tie(abjad.select.notes(voice)[3:7])
+    #
+    container = abjad.Container(r"c'2. \repeatTie ~ \times 2/3 { c'8 c'4 }")
+    components = abjad.mutate.eject_contents(container)
+    components[-1].force_fraction = True
+    library.replace_measure(voice, 4, components)
+    #
+    rest = abjad.select.group_by_measure(voice)[5 - 1][0]
+    tuplet = abjad.Tuplet("3:2", r"c'8 \repeatTie r4")
+    tuplet.force_fraction = True
+    abjad.mutate.replace([rest], [tuplet])
 
 
 def VC(voice, meters):
@@ -82,6 +111,18 @@ def VC(voice, meters):
         [1, -7, 1, -9, 1, -13],
         extra_counts=[-1],
     )
+    container = abjad.Container("r8. c'16 r c' r8 r8. c'16 r8 c'16 r")
+    components = abjad.mutate.eject_contents(container)
+    library.replace_measure(voice, 3, components)
+    #
+    components = library.make_rhythm(
+        voice,
+        10 * [-3, 1],
+        meters(5, 6),
+    )
+    library.replace_measure(voice, (5, 6), components)
+    #
+    library.replace(voice, voice[-1], "r4 r8. c'16")
 
 
 def fl(m):

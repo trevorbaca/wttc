@@ -1,5 +1,6 @@
 import dataclasses
 import inspect
+import typing
 
 import abjad
 import baca
@@ -21,9 +22,14 @@ def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
 @dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
 class Rhythm:
     voice: abjad.Voice
+    meters: typing.Any = None
 
     def __call__(self, *arguments, **keywords):
         return rhythm(self.voice, *arguments, **keywords)
+
+    def mmrests(self, *arguments):
+        meters = self.meters(*arguments)
+        mmrests(self.voice, meters)
 
 
 def _reference_meters():
@@ -172,6 +178,31 @@ def pair(first_real_n, first_written_n, second_real_n, second_written_n):
     return first, second
 
 
+def replace(voice, component, string):
+    index = voice.index(component)
+    container = abjad.Container(string)
+    components = abjad.mutate.eject_contents(container)
+    voice[index : index + 1] = components
+
+
+def replace_measure(voice, measure_number, components):
+    assert isinstance(components, list), repr(components)
+    groups = abjad.select.group_by_measure(voice[:])
+    if isinstance(measure_number, int):
+        group = groups[measure_number - 1]
+        start_index = voice.index(group[0])
+        stop_index = voice.index(group[-1])
+    else:
+        assert isinstance(measure_number, tuple)
+        assert len(measure_number) == 2
+        start, stop = measure_number
+        start_group = groups[start - 1]
+        start_index = voice.index(start_group[0])
+        stop_group = groups[stop - 1]
+        stop_index = voice.index(stop_group[-1])
+    voice[start_index : stop_index + 1] = components
+
+
 def rhythm(
     voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
 ):
@@ -197,6 +228,34 @@ def rhythm(
     rmakers.force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
+    return components
+
+
+def make_rhythm(
+    voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
+):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    if isinstance(items, list):
+        items = abjad.sequence.flatten(items)
+    else:
+        items = [items]
+    if time_signatures is None:
+        do_not_rewrite_meter = True
+    voice_ = baca.make_rhythm(
+        items,
+        denominator,
+        time_signatures,
+        boundary_depth=1,
+        do_not_rewrite_meter=do_not_rewrite_meter,
+        reference_meters=_reference_meters(),
+        tag=tag,
+        voice_name=voice.name,
+    )
+    for tuplet in abjad.select.tuplets(voice_):
+        rmakers.beam([tuplet])
+    rmakers.force_fraction(voice_)
+    components = abjad.mutate.eject_contents(voice_)
+    # voice.extend(components)
     return components
 
 
