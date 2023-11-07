@@ -255,7 +255,6 @@ def make_rhythm(
         rmakers.beam([tuplet])
     rmakers.force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
-    # voice.extend(components)
     return components
 
 

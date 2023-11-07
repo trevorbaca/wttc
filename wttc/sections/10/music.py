@@ -21,6 +21,7 @@ w = baca.rhythm.w
 
 OBGC = library.OBGC
 mmrests = library.mmrests
+swell = library.swell
 
 
 def GLOBALS(skips):
@@ -36,10 +37,15 @@ def GLOBALS(skips):
 
 
 def FL(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         ["-", 20, -12, 36, -14],
         meters(1, 7),
+    )
+    rhythm.mmrests(8, 9)
+    rhythm(
+        ["-", 3, -1, 2],
+        meters(10),
     )
 
 
@@ -57,7 +63,16 @@ def GT1(voice, meters):
         [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
         meters(3, 5),
     )
-    rhythm.mmrests(6)
+    rhythm(
+        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
+        meters(6, 9),
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(10),
+        ["-", -2, 1, -2, 1],
+        extra_counts=[-1],
+    )
 
 
 def GT2(voice, meters):
@@ -70,13 +85,21 @@ def GT2(voice, meters):
         [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
         meters(3, 5),
     )
-    rhythm.mmrests(6)
+    rhythm(
+        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
+        meters(6, 9),
+    )
+    rhythm(
+        [-16, -4, 1, -3],
+        meters(10),
+    )
 
 
 def VN(voice, meters):
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
-        meters(1, 7),
+        meters(1, 8),
         [1, -12, 1, -8, 1, -6],
         extra_counts=[-1],
     )
@@ -102,12 +125,19 @@ def VN(voice, meters):
     tuplet = abjad.Tuplet("3:2", r"c'8 \repeatTie r4")
     tuplet.force_fraction = True
     abjad.mutate.replace([rest], [tuplet])
+    #
+    rhythm(
+        3 * [AG([2], 7), -1] + [swell(16)],
+        meters(9, 10),
+        do_not_rewrite_meter=True,
+    )
 
 
 def VC(voice, meters):
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
-        meters(1, 7),
+        meters(1, 9),
         [1, -7, 1, -9, 1, -13],
         extra_counts=[-1],
     )
@@ -122,7 +152,10 @@ def VC(voice, meters):
     )
     library.replace_measure(voice, (5, 6), components)
     #
-    library.replace(voice, voice[-1], "r4 r8. c'16")
+    group = abjad.select.group_by_measure(voice)[7 - 1]
+    library.replace(voice, group[-1], "r4 r8. c'16")
+    #
+    rhythm.mmrests(10)
 
 
 def fl(m):

@@ -708,6 +708,32 @@ number.10.AltoFlute.Music = {
 
     r2.
 
+    % [AltoFlute.Music measure 8]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [AltoFlute.Music measure 9]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [AltoFlute.Music measure 10]
+    r1
+
+    r8
+
+    f'8
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    \repeatTie
+
+    r16
+
+    f'8
+
 }
 
 
@@ -991,9 +1017,83 @@ number.10.Guitar.1.Music = {
     r4
 
     % [Guitar.1.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2.
+
+    c''16
+
+    r8.
+
+    % [Guitar.1.Music measure 7]
+    r4
+
+    r16
+
+    c''16
+
+    r8
+
+    r4
+
+    r16
+
+    c''16
+
+    r8
+
+    % [Guitar.1.Music measure 8]
+    r4
+
+    c''16
+
+    r8.
+
+    r8
+
+    c''16
+
+    r16
+
+    r8.
+
+    c''16
+
+    % [Guitar.1.Music measure 9]
+    r4
+
+    r8
+
+    c''16
+
+    r16
+
+    c''16
+
+    r8.
+
+    r4
+
+    % [Guitar.1.Music measure 10]
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
 
 }
 
@@ -1122,9 +1222,69 @@ number.10.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 6]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2.
+
+    c''16
+
+    r8.
+
+    % [Guitar.2.Music measure 7]
+    r4
+
+    r16
+
+    c''16
+
+    r8
+
+    r4
+
+    r16
+
+    c''16
+
+    r8
+
+    % [Guitar.2.Music measure 8]
+    r4
+
+    c''16
+
+    r8.
+
+    r8
+
+    c''16
+
+    r16
+
+    r8.
+
+    c''16
+
+    % [Guitar.2.Music measure 9]
+    r4
+
+    r8
+
+    c''16
+
+    r16
+
+    c''16
+
+    r8.
+
+    r4
+
+    % [Guitar.2.Music measure 10]
+    r1
+
+    r4
+
+    c''16
+
+    r8.
 
 }
 
@@ -1328,6 +1488,68 @@ number.10.Violin.Music = {
 
     }
 
+    % [Violin.Music measure 8]
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c'8
+
+        r8
+
+    }
+
+    % [Violin.Music measure 9]
+    \afterGrace
+    c'4..
+    {
+
+        c'8
+
+    }
+
+
+    r16
+
+    \afterGrace
+    c'4..
+    {
+
+        c'8
+
+    }
+
+
+    r16
+
+    % [Violin.Music measure 10]
+    \afterGrace
+    c'4..
+    {
+
+        c'8
+
+    }
+
+
+    r16
+
+    c'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
 }
 
 
@@ -1503,6 +1725,39 @@ number.10.Cello.Music = {
     r8.
 
     c'16
+
+    % [Cello.Music measure 8]
+    r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8
+
+        r4
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Cello.Music measure 9]
+        r4
+
+        c'8
+
+    }
+
+    r2.
+
+    % [Cello.Music measure 10]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 
