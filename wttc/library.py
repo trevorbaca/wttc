@@ -47,6 +47,21 @@ def _reference_meters():
     )
 
 
+def canon_e(twelfths=False):
+    if twelfths is False:
+        counts = list(range(1, 14 + 1))
+        assert sum(counts) == 105
+        permutation = [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9]
+        assert set(permutation) == set(range(14))
+    else:
+        counts = list(range(1, 12 + 1))
+        assert sum(counts) == 78
+        permutation = [0, 5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7]
+        assert set(permutation) == set(range(12))
+    counts = abjad.sequence.permute(counts, permutation)
+    return counts
+
+
 def force_repeat_tie(components, threshold=(1, 8)):
     tag = baca.helpers.function_name(inspect.currentframe())
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)

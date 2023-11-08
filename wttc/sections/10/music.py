@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from wttc import library
 
@@ -24,7 +25,7 @@ mmrests = library.mmrests
 swell = library.swell
 
 
-def GLOBALS(skips):
+def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
     baca.literal(
         skips[10 - 1],
@@ -34,6 +35,9 @@ def GLOBALS(skips):
         ],
         site="after",
     )
+    baca.open_volta(skips[21 - 1], first_measure_number)
+    baca.double_volta(skips[22 - 1], first_measure_number)
+    baca.close_volta(skips[23 - 1], first_measure_number)
 
 
 def FL(voice, meters):
@@ -47,6 +51,19 @@ def FL(voice, meters):
         ["-", 3, -1, 2],
         meters(10),
     )
+    counts = library.canon_e()
+    counts = baca.math.negate_elements(counts, indices=[0], period=2)
+    rhythm(
+        counts + ["-"],
+        meters(11, 16),
+    )
+    note = abjad.Note("c'4")
+    abjad.mutate.replace(voice[-1:], [note])
+    rhythm(
+        [rt(8), rt(2), -5, 10, -7],
+        meters(17, 18),
+    )
+    rhythm.mmrests(19, 22)
 
 
 def OB(voice, meters):
@@ -73,6 +90,40 @@ def GT1(voice, meters):
         ["-", -2, 1, -2, 1],
         extra_counts=[-1],
     )
+    counts = library.canon_e(twelfths=True)
+    counts = baca.math.negate_elements(counts, indices=[1], period=2)
+    counts_ = []
+    for count in counts:
+        if 1 < count:
+            counts_.extend([1, -(count - 1)])
+        else:
+            counts_.append(count)
+    counts_.append("-")
+    library.make_one_beat_tuplets(
+        voice,
+        meters(11, 16),
+        counts_,
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(17, 18),
+        [-7, 1, "-"],
+        extra_counts=[-1],
+    )
+    rhythm(
+        [-5, 1, "-"],
+        meters(19),
+    )
+    rhythm(
+        [-10, 1, "-"],
+        meters(20),
+    )
+    rhythm(
+        [-10, 1, "-"],
+        meters(21),
+    )
+    rhythm.mmrests(22)
 
 
 def GT2(voice, meters):
@@ -93,6 +144,36 @@ def GT2(voice, meters):
         [-16, -4, 1, -3],
         meters(10),
     )
+    counts = library.canon_e()
+    counts = abjad.sequence.rotate(counts, -2)
+    counts = baca.math.negate_elements(counts, indices=[0], period=2)
+    counts_ = []
+    for count in counts:
+        if 1 < count:
+            counts_.extend([1, -(count - 1)])
+        else:
+            counts_.append(count)
+    rhythm(
+        counts_ + ["-"],
+        meters(11, 16),
+    )
+    rhythm(
+        [-8, 1, -7, -3, 1, -12],
+        meters(17, 18),
+    )
+    rhythm(
+        [-5, 1, "-"],
+        meters(19),
+    )
+    rhythm(
+        [-10, 1, "-"],
+        meters(20),
+    )
+    rhythm(
+        [-10, 1, "-"],
+        meters(21),
+    )
+    rhythm.mmrests(22)
 
 
 def VN(voice, meters):
@@ -115,21 +196,54 @@ def VN(voice, meters):
     tuplet_2.force_fraction = True
     voice[7:8] = [tuplet_1, abjad.Rest("r2"), tuplet_2]
     abjad.tie(abjad.select.notes(voice)[3:7])
-    #
     container = abjad.Container(r"c'2. \repeatTie ~ \times 2/3 { c'8 c'4 }")
     components = abjad.mutate.eject_contents(container)
     components[-1].force_fraction = True
     library.replace_measure(voice, 4, components)
-    #
     rest = abjad.select.group_by_measure(voice)[5 - 1][0]
     tuplet = abjad.Tuplet("3:2", r"c'8 \repeatTie r4")
     tuplet.force_fraction = True
     abjad.mutate.replace([rest], [tuplet])
-    #
     rhythm(
         3 * [AG([2], 7), -1] + [swell(16)],
         meters(9, 10),
         do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [8, swell(8)],
+        meters(11),
+    )
+    rhythm(
+        [-15, t(9)],
+        meters(12),
+    )
+    rhythm(
+        [1, "-"],
+        meters(13),
+    )
+    rhythm(
+        [-15, 9],
+        meters(14),
+    )
+    rhythm(
+        4 * [rt(1), 15],
+        meters(15, 18),
+        do_not_rewrite_meter=True,
+    )
+    abjad.attach(abjad.Tie(), voice[-1])
+    library.make_one_beat_tuplets(
+        voice,
+        meters(19, 20),
+        [1, -1, 1, -6, 1, -2, -9, -1, 1, -1, 3],
+        extra_counts=[-1],
+    )
+    rhythm(
+        ["-", swell(4)],
+        meters(21),
+    )
+    rhythm(
+        ["-", swell(4)],
+        meters(22),
     )
 
 
@@ -156,6 +270,15 @@ def VC(voice, meters):
     library.replace(voice, group[-1], "r4 r8. c'16")
     #
     rhythm.mmrests(10)
+    rhythm.mmrests(11, 18)
+    voice.extend(r"r4 \times 2/3 { r8 c'8 r8 } r4 r8. c'16")
+    voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. c'16 c'4")
+    voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. c'16 c'4")
+    rhythm(
+        ["-", 1, swell(4)],
+        meters(22),
+    )
+    rmakers.force_fraction(voice)
 
 
 def fl(m):
@@ -243,7 +366,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         manifests=library.manifests,
         # score_persistent_indicators=previous_persistent_indicators["Score"],
     )
-    GLOBALS(score["Skips"])
+    GLOBALS(score["Skips"], first_measure_number)
     FL(voices.afl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
