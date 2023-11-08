@@ -42,12 +42,31 @@ def FL(voice, meters):
         meters(1),
     )
     rhythm(
-        [48, 48],
-        meters(2, 3),
+        [48, 48, 48],
+        meters(2, 4),
     )
     rhythm(
-        [20, "-"],
-        meters(4),
+        [t(24)],
+        meters(5),
+    )
+    rhythm(
+        [8, "-"],
+        meters(6),
+    )
+    rhythm.mmrests(7, 8)
+    rhythm(
+        ["-", 18],
+        meters(9),
+    )
+    rhythm.mmrests(10)
+    rhythm(
+        [18, 18],
+        meters(11),
+    )
+    rhythm.mmrests(12)
+    rhythm(
+        [18, 18, 18, 18, "-"],
+        meters(13, 14),
     )
 
 
@@ -76,9 +95,15 @@ def GT1(voice, meters):
         meters(7),
     )
     rhythm(
-        [-4, 4, -2, 2, "-"],
+        [-4, 4, -2, 2, -6, 2, 4, -10, 2, -14, 2, "-"],
         meters(8),
     )
+    rhythm.mmrests(9)
+    rhythm(
+        ["-", -1, 3],
+        meters(10),
+    )
+    rhythm.mmrests(11, 14)
 
 
 def GT2(voice, meters):
@@ -97,7 +122,18 @@ def GT2(voice, meters):
     voice.extend(r"r16 c'8. r\breve r4 \times 2/3 { r8 c'4 } r4")
     voice.extend(r"\times 2/3 { r8 c'4 } \times 2/3 { r8 c'4 } c'4 r1.")
     voice.extend(r"r16 c'8. r2. \times 2/3 { r8 c'4 } r4")
-    voice.extend(r"\times 2/3 { r8 c'4 } \times 2/3 { r8 c'4 } c'4 r\breve.")
+    library.make_one_beat_tuplets(
+        voice,
+        meters(8),
+        [-1, 2, -1, 2, 2, -5, 2, -6, 2, -11, 2, "-"],
+        extra_counts=[-1],
+    )
+    rhythm.mmrests(9)
+    rhythm(
+        ["-", -1, 3],
+        meters(10),
+    )
+    rhythm.mmrests(11, 14)
 
 
 def VN(voice, meters):
@@ -111,6 +147,49 @@ def VN(voice, meters):
         meters(2),
     )
     rhythm.mmrests(3)
+    rhythm(
+        ["-", 1],
+        meters(4),
+    )
+    rhythm(
+        [-16, -3, 1, -3, 1],
+        meters(5),
+    )
+    rhythm(
+        [-28, -3, 1, -12, -3, 1],
+        meters(6),
+    )
+    rhythm(
+        [-3, 1, -8, -3, 1, -24, -3, 1, -3, 1, -3, 1, -3, 1, -3, t(1)],
+        meters(7),
+    )
+    rhythm(
+        [60],
+        meters(8),
+    )
+    rhythm.mmrests(9)
+    rhythm(
+        T([32], "8:9"),
+        meters(10),
+    )
+    rhythm(
+        T([32], "8:9"),
+        meters(11),
+    )
+    rhythm(
+        [24],
+        meters(12),
+    )
+    rhythm(
+        T([32], "8:9"),
+        meters(13),
+    )
+    rhythm(
+        # TODO: make this work: [T([32], "8:9"), w(11, 12), h(1)],
+        [T([32], "8:9"), w(8, 12), h(3), h(1)],
+        meters(14),
+        do_not_rewrite_meter=True,
+    )
 
 
 def VC(voice, meters):
@@ -124,6 +203,43 @@ def VC(voice, meters):
         meters(2),
     )
     rhythm.mmrests(3)
+    rhythm(
+        [16, 16, 16],
+        meters(4),
+    )
+    rhythm(
+        [-8, 16],
+        meters(5),
+    )
+    rhythm(
+        [8, 16, 8, 16],
+        meters(6),
+    )
+    rhythm(
+        [4, -12, 4, 4, -16, 4, 4, -20, 4, 4, -24, 4, 4, -28, 4, 4, "-"],
+        meters(7, 8),
+    )
+    rhythm(
+        ["-", 4],
+        meters(9),
+    )
+    rhythm(
+        T([32], "8:9"),
+        meters(10),
+    )
+    rhythm(
+        T([32], "8:9"),
+        meters(11),
+    )
+    rhythm(
+        [24],
+        meters(12),
+    )
+    rhythm(
+        [4, "-"],
+        meters(13),
+    )
+    rhythm.mmrests(14)
 
 
 def fl(m):
