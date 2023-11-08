@@ -37,7 +37,18 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-12, 24],
+        meters(1),
+    )
+    rhythm(
+        [48, 48],
+        meters(2, 3),
+    )
+    rhythm(
+        [20, "-"],
+        meters(4),
+    )
 
 
 def OB(voice, meters):
@@ -47,22 +58,72 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(
+        [-28, -1, 3, -24, -1, 3, -24, -1, 3, -8],
+        meters(2, 3),
+    )
+    rhythm(
+        [-40, -2, 2, 4, -4, 4, -2, 2, -12],
+        meters(4, 5),
+    )
+    rhythm(
+        [-1, 3, -36, -2, 2, 4],
+        meters(6),
+    )
+    rhythm(
+        [-4, 4, -2, 2, -24, -1, 3, -14, 2, 4],
+        meters(7),
+    )
+    rhythm(
+        [-4, 4, -2, 2, "-"],
+        meters(8),
+    )
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(
+        [-28, -1, 3, -24, -1, 3, -24, -1, 3, -8],
+        meters(2, 3),
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(4, 5),
+        [-30, -1, 2, -3, -1, 2, -1, 2, 3, -9],
+        extra_counts=[-1],
+    )
+    voice.extend(r"r16 c'8. r\breve r4 \times 2/3 { r8 c'4 } r4")
+    voice.extend(r"\times 2/3 { r8 c'4 } \times 2/3 { r8 c'4 } c'4 r1.")
+    voice.extend(r"r16 c'8. r2. \times 2/3 { r8 c'4 } r4")
+    voice.extend(r"\times 2/3 { r8 c'4 } \times 2/3 { r8 c'4 } c'4 r\breve.")
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [12, 24],
+        meters(1),
+    )
+    rhythm(
+        [48],
+        meters(2),
+    )
+    rhythm.mmrests(3)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [12, 24],
+        meters(1),
+    )
+    rhythm(
+        [48],
+        meters(2),
+    )
+    rhythm.mmrests(3)
 
 
 def fl(m):
