@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -6,8 +7,10 @@ from wttc import library
 ########################################### 12 ##########################################
 #########################################################################################
 
+A = baca.rhythm.A
 AG = baca.rhythm.AG
 BG = baca.rhythm.BG
+R = baca.rhythm.R
 T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
@@ -29,7 +32,88 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [swell(12), R([rt(1), 1, 1, 1, 1, 1], 12)],
+        meters(1),
+        do_not_rewrite_meter=True,
+    )
+    components = rhythm(
+        [rt(1), 3, -4] + 5 * [-1, 3, -4],
+        meters(2, 3),
+    )
+    note = abjad.Note(0, components[-1].written_duration)
+    abjad.mutate.replace(components[-1:], [note])
+    rhythm(
+        [rt(w(6, 12)), h(6), R([rt(1), 1, 1, 1, 1, 1, 1, 1], 12)],
+        meters(4),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [rt(1), 3, -4, -1, 3, -4, -1, 3, 4],
+        meters(5),
+    )
+    rhythm(
+        [rt(w(6, 12)), h(6), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        meters(6),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [rt(1), 3, "-"],
+        meters(7),
+    )
+    rhythm(
+        [-12, w(6, 12), h(6)],
+        meters(8),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        4 * [w(6, 12), h(6)],
+        meters(9, 10),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [12, A([rt(1)] + 8 * [1] + [t(1)], 24), A(9 * [1] + [t(1)], 24), t(8), 1, 3],
+        meters(11, 13),
+    )
+    rhythm(
+        [-2, 7, 11, t(4)],
+        meters(14),
+    )
+    rhythm(
+        [rt(w(6, 12)), h(6), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        meters(15),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [rt(1), 3, "-"],
+        meters(16),
+    )
+    rhythm.mmrests(17, 19)
+    rhythm(
+        [-12, -12, w(6, 12), h(6)],
+        meters(20),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        [rt(1), 3, "-"],
+        meters(21),
+    )
+    rhythm(
+        [-18, 24, 24, 10, -4],
+        meters(22, 25),
+    )
+    rhythm(
+        [-12, -12, w(6, 12), h(6)],
+        meters(26),
+        do_not_rewrite_meter=True,
+    )
+    rhythm.mmrests(27)
+    rhythm(
+        [-12, w(6, 12), h(6)],
+        meters(28),
+        do_not_rewrite_meter=True,
+    )
+    rhythm.mmrests(29)
 
 
 def OB(voice, meters):
@@ -39,22 +123,217 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(
+        6 * [-1, 3, -4],
+        meters(2, 3),
+    )
+    rhythm(
+        # TODO: start with rest
+        A(10 * [1], 24),
+        meters(4),
+    )
+    rhythm(
+        3 * [-1, 3, -4],
+        meters(5),
+    )
+    rhythm(
+        [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        meters(6),
+    )
+    rhythm(
+        [-1, 3] + [-5, 2, -7, 1, -7, 2, -5, 1, -7, 2, -5],
+        meters(7, 8),
+    )
+    rhythm(
+        [-2, 1, -5, 2, -7, "+"],
+        meters(9),
+    )
+    del voice[-2:]
+    rhythm(
+        [A([1, 1, 1, 1, 1], 15), -16],
+        # TODO: remove dummy meter
+        meters(9, 10),
+        do_not_rewrite_meter=True,
+    )
+    rhythm.mmrests(11, 14)
+    rhythm(
+        [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        meters(15),
+    )
+    tuplets = library.make_one_beat_tuplets(
+        voice,
+        meters(16, 18),
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
+        extra_counts=[-1],
+    )
+    abjad.mutate.replace(tuplets[:1], abjad.Container("r16 c'8.")[:])
+    rhythm.mmrests(19)
+    rhythm(
+        [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        meters(20),
+    )
+    tuplets = library.make_one_beat_tuplets(
+        voice,
+        meters(21, 23),
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
+        extra_counts=[-1],
+    )
+    abjad.mutate.replace(tuplets[:1], abjad.Container("r16 c'8.")[:])
+    rhythm(["-", 1], meters(24))
+    rhythm.mmrests(25)
+    rhythm.mmrests(26)
+    rhythm([-1, 1, -3, 1, "-", 1], meters(27))
+    rhythm.mmrests(28)
+    rhythm([-4, -2, 1, -1, -16, -1, 1, -2, 1, "-"], meters(29))
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    voice.extend(r"r4 r4 r4 \times 3/5 { r2 c'4 c' c' }")
+    voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
+    voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
+    voice.extend(r"\times 3/5 { c'4 c' c' c'2 }")
+    rhythm(
+        R([rt(1)] + 9 * [1] + [t(1)], 24),
+        # TODO: remove dummy meter
+        meters(5),
+        do_not_rewrite_meter=True,
+    )
+    voice.extend(r"\times 3/5 { c'4 c' c' c' c' }")
+    voice.extend(r"\times 3/5 { c'4 c' c' c' c' }")
+    rhythm(
+        A([rt(1)] + 5 * [1], 12),
+        # TODO: remove dummy meter
+        meters(6),
+        do_not_rewrite_meter=True,
+    )
+    voice.extend("r8. c'16 ~ c'8 r8 r8. c'16 ~")
+    rhythm(
+        [2, -12, 3, -16, 2, -14],
+        meters(7, 8),
+    )
+    rhythm(
+        [-2, 3, -12, "+"],
+        meters(9),
+    )
+    del voice[-2:]
+    rhythm(
+        [A([1, 1, 1, 1, 1, 1], 15), -16],
+        # TODO: remove dummy meter
+        meters(9, 10),
+        do_not_rewrite_meter=True,
+    )
+    rhythm.mmrests(11, 14)
+    voice.extend(r"\times 3/5 { r1 c'4 }")
+    rhythm(
+        A([rt(1)] + 5 * [1], 12),
+        # TODO: remove dummy meter
+        meters(15),
+        do_not_rewrite_meter=True,
+    )
+    voice.extend("r8. c'16 ~ c'8 r8 r4")
+    library.make_one_beat_tuplets(
+        voice,
+        meters(16, 18),
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
+        extra_counts=[-1],
+    )
+    rhythm.mmrests(19)
+    rhythm(
+        [A(5 * [1] + [t(1)], 12), R(10 * [1], 24)],
+        meters(20),
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(21, 23),
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
+        extra_counts=[-1],
+    )
+    rhythm.mmrests(24)
+    rhythm([-2, 1, "-"], meters(25))
+    rhythm.mmrests(26)
+    rhythm([-8, 1, "-"], meters(27))
+    rhythm.mmrests(28)
+    rhythm([-1, 1, -2, -4, -1, 1, -2, "-"], meters(29))
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 11)
+    rhythm(
+        [-6, 20, 3, 7, 5, 9, 7, 11, 9, 13, "-"],
+        meters(12, 15),
+    )
+    rhythm.mmrests(16)
+    rhythm(
+        [-6, 15, 11, 13, 9, 11, 7, 9, 5, 7, 3, "-"],
+        meters(17, 20),
+    )
+    rhythm.mmrests(21)
+    rhythm(
+        [-18, 24, 24, 10, -4],
+        meters(22, 25),
+    )
+    rhythm.mmrests(26, 29)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 4)
+    rhythm(
+        [-8, -1, t(3), t(12)],
+        meters(5),
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(6),
+        ["+", 1, -7, 2, -6],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(7, 8),
+        [-1, 1, -5, 2, -7, 1, -7, 2, -5, 1, "+"],
+        extra_counts=[-1],
+    )
+    rhythm(
+        [rt(24), rt(24), rt(24), 16, -6, t(2)],
+        meters(9, 12),
+    )
+    rhythm([2, 3, 8, 5, 10, 7, "+"], meters(13, 14))
+    library.make_one_beat_tuplets(
+        voice,
+        meters(15),
+        ["+", 1, -7, 2, -6],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(16, 17),
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, "-"],
+        extra_counts=[-1],
+    )
+    rhythm(
+        [rt(14), 9, 12, 7, 10, 5, 8, 3, 6, "-"],
+        meters(18, 20),
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(21, 22),
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
+        extra_counts=[-1],
+    )
+    abjad.mutate.replace(voice[-2:], abjad.Container("r4 r8 c'8 ~ c'4")[:])
+    rhythm(
+        [rt(16), rt(2), 24, 10, t(4)],
+        meters(23, 25),
+    )
+    rhythm(
+        ["+"],
+        meters(26, 28),
+    )
+    rhythm.mmrests(29)
 
 
 def fl(m):
