@@ -659,7 +659,7 @@ number.12.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[8'44'']" "[8'49'']"
+    %@% - \baca-start-ct-left-only "[8'44'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -668,6 +668,117 @@ number.12.Skips = {
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
     %@% - \baca-start-mn-left-only "118"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 30]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 5/4
+    s1 * 5/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+    \bacaStopTextSpanMM
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "50" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    \bacaStartTextSpanMM
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "50"
+      %! EXPLICIT_METRONOME_MARK
+    %@% \bacaStartTextSpanMM
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[8'49'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "30"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "119"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 31]
+    s1 * 5/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[8'55'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "31"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "120"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 32]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[9'01'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "32"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "121"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+
+    % [Skips measure 33]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 7/4
+    s1 * 7/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-both "[9'08'']" "[9'16'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "33"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "122"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -788,6 +899,18 @@ number.12.Rests = {
 
     % [Rests measure 29]
     R1 * 8/4
+
+    % [Rests measure 30]
+    R1 * 5/4
+
+    % [Rests measure 31]
+    R1 * 5/4
+
+    % [Rests measure 32]
+    R1 * 6/4
+
+    % [Rests measure 33]
+    R1 * 7/4
 
 }
 
@@ -1519,6 +1642,41 @@ number.12.AltoFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
+    % [AltoFlute.Music measure 30]
+    f'2.
+
+    f'4
+
+    f'4
+
+    % [AltoFlute.Music measure 31]
+    f'2
+
+    f'4
+
+    f'4
+
+    f'4
+
+    % [AltoFlute.Music measure 32]
+    f'2
+
+    f'4
+
+    f'4
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    \repeatTie
+
+    % [AltoFlute.Music measure 33]
+    R1 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"4"
+
 }
 
 
@@ -1711,6 +1869,26 @@ number.12.Oboe.Music = {
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Oboe.Music measure 30]
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+
+    % [Oboe.Music measure 31]
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+
+    % [Oboe.Music measure 32]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 33]
+    R1 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"4"
 
 }
 
@@ -2475,18 +2653,16 @@ number.12.Guitar.1.Music = {
     }
 
     % [Guitar.1.Music measure 24]
-    r1
-
-    r4
-
-    r8.
-
-    c''16
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 25]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    r4
+
+    c''8
+
+    r8
 
     % [Guitar.1.Music measure 26]
     R1 * 9/4
@@ -2494,12 +2670,45 @@ number.12.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Guitar.1.Music measure 27]
-    r16
-
-    c''16
+    c''8
 
     r8
 
+    r4
+
+    c''8
+
+    r8
+
+    c''8
+
+    r8
+
+    % [Guitar.1.Music measure 28]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 29]
+    r2
+
+    r4.
+
+    c''8
+
+    r4
+
+    c''8
+
+    r8
+
+    r8
+
+    c''8
+
+    r4
+
+    % [Guitar.1.Music measure 30]
     r16
 
     c''16
@@ -2508,23 +2717,29 @@ number.12.Guitar.1.Music = {
 
     r4
 
-    r8.
-
-    c''16
-
-    % [Guitar.1.Music measure 28]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 29]
-    r4.
+    r16
 
     c''16
 
     r16
 
+    c''16
+
+    r2
+
+    % [Guitar.1.Music measure 31]
+    r8.
+
+    c''16
+
     r1
+
+    % [Guitar.1.Music measure 32]
+    r4
+
+    c''16
+
+    r16
 
     r16
 
@@ -2534,7 +2749,14 @@ number.12.Guitar.1.Music = {
 
     c''16
 
-    r8.
+    r16
+
+    r2.
+
+    % [Guitar.1.Music measure 33]
+    R1 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"4"
 
 }
 
@@ -3327,9 +3549,7 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 25]
     r8
 
-    c''16
-
-    r16
+    c''8
 
     r4
 
@@ -3339,13 +3559,13 @@ number.12.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [Guitar.2.Music measure 27]
-    r2
-
-    c''16
-
-    r8.
-
     r4
+
+    r8
+
+    c''8
+
+    r2
 
     % [Guitar.2.Music measure 28]
     R1 * 6/4
@@ -3353,19 +3573,55 @@ number.12.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 29]
-    r16
+    r1
+
+    r8
+
+    c''8
+
+    r4
+
+    r4
+
+    c''8
+
+    r8
+
+    % [Guitar.2.Music measure 30]
+    r8
 
     c''16
 
-    r4.
-
     r16
-
-    c''16
-
-    r4.
 
     r1
+
+    % [Guitar.2.Music measure 31]
+    c''16
+
+    r8.
+
+    r1
+
+    % [Guitar.2.Music measure 32]
+    r16
+
+    c''16
+
+    r8
+
+    r8
+
+    c''16
+
+    r16
+
+    r1
+
+    % [Guitar.2.Music measure 33]
+    R1 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"4"
 
 }
 
@@ -3775,6 +4031,94 @@ number.12.Violin.Music = {
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Violin.Music measure 30]
+    c'2.
+
+    c'4
+
+    c'4
+
+    % [Violin.Music measure 31]
+    c'2
+
+    c'4
+
+    c'4
+
+    c'4
+
+    % [Violin.Music measure 32]
+    c'2
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
+
+    % [Violin.Music measure 33]
+    c'2.
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
 
 }
 
@@ -4432,6 +4776,84 @@ number.12.Cello.Music = {
     R1 * 8/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+
+    % [Cello.Music measure 30]
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+
+    % [Cello.Music measure 31]
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+
+    % [Cello.Music measure 32]
+    r1
+
+    r4
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
+
+    % [Cello.Music measure 33]
+    c'2.
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
+
+    c'8
+    [
+    - \tweak stencil ##f
+    ~
+
+    c'32
+    \repeatTie
+
+    c'16
+
+    c'32
+    ]
 
 }
 

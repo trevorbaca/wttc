@@ -21,9 +21,9 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [90, 98, 105, 112],
-    "duration": "1'49''",
-    "final_measure_number": 118,
+    "bol_measure_numbers": [90, 98, 105, 112, 119],
+    "duration": "2'18''",
+    "final_measure_number": 122,
     "first_measure_number": 90,
     "has_anchor_skip": True,
     "persistent_indicators": {
@@ -164,7 +164,7 @@
                 manifest="metronome_marks",
                 prototype=None,
                 synthetic_offset=None,
-                value="100",
+                value="50",
             ),
             baca.Memento(
                 context="Skips",
@@ -172,7 +172,7 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="8/4",
+                value="7/4",
             ),
         ],
         "Violin.Staff": [
@@ -203,7 +203,7 @@
         ],
     },
     "start_clock_time": "7'00''",
-    "stop_clock_time": "8'49''",
+    "stop_clock_time": "9'18''",
     "time_signatures": [
         "6/4",
         "6/4",
@@ -234,5 +234,9 @@
         "4/4",
         "6/4",
         "8/4",
+        "5/4",
+        "5/4",
+        "6/4",
+        "7/4",
     ],
 }
