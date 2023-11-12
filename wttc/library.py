@@ -158,6 +158,7 @@ def make_one_beat_tuplets(
     time_signatures,
     counts,
     *,
+    do_not_extend=False,
     extra_counts=(),
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
@@ -175,7 +176,8 @@ def make_one_beat_tuplets(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
     components = abjad.mutate.eject_contents(voice_)
-    voice.extend(components)
+    if not do_not_extend:
+        voice.extend(components)
     return components
 
 

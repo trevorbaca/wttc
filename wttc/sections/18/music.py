@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -9,6 +10,7 @@ from wttc import library
 A = baca.rhythm.A
 AG = baca.rhythm.AG
 BG = baca.rhythm.BG
+OBGC = baca.rhythm.OBGC
 R = baca.rhythm.R
 T = baca.rhythm.T
 TC = baca.rhythm.TC
@@ -39,7 +41,65 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        # [-1, 4, 4 + 2, 2, 4, 4, 12, 12, 12],
+        # [-1, 4, 4 + 2, 2, 4, 4, 12, 11, -4],
+        [-1, 4, 4 + 2, 2, 4, 4, 12, 10, -1, -4],
+        meters(1, 2),
+    )
+    # del(voice[-1:])
+    del voice[-2:]
+    components = library.make_rhythm(
+        voice,
+        # [-1, 4, 6, 2, 4, 4, 12],
+        # [-3, 4, 6, 2, 4, 4],
+        # [-3, 1, -3, 1, -5, 1, -1, 1, -3, 1, -3, 1],
+        # [-3, BG([1], 1), -3, BG([1], 1)]
+        # + [-4, -1, BG([1], 1), -1, BG([1], 1), -3, BG([1], 1)]
+        # + [-3, BG([1], 1)],
+        [-3, BG([1], 1), -3, BG([1], 1), -11, BG([1], 1), -3, BG([1], 1)],
+        [abjad.TimeSignature((1, 4)), meters(3)[0], abjad.TimeSignature((2, 4))],
+    )
+    del components[:1]
+    voice.extend(components)
+    assert abjad.get.duration(voice[-2:]) == abjad.Duration(1, 4)
+    components = library.make_rhythm(
+        voice,
+        # [3, 6, 4, 7, 5, 8],
+        # [-3, 6, 4, 7, 4],
+        [-3, 1, -5, 1, -3, 1, -6, 1, -3],
+        meters(4),
+    )
+    assert abjad.get.duration(components[:2]) == abjad.Duration(1, 4)
+    del components[:2]
+    voice.extend(components)
+    assert abjad.get.duration(voice[-3:]) == abjad.Duration(2, 4)
+    del voice[-3:]
+    components = library.make_rhythm(
+        voice,
+        # [-1, 4, 6, 2, 4, 4, 12],
+        # [-3, 4, 6, 2, 4, 4],
+        # [-3, 1, -3, 1, -5, 1, -1, 1, -3, 1, -3, 1],
+        # [-3, BG([1], 1), -3, BG([1], 1)]
+        # + [-4, -1, BG([1], 1), -1, BG([1], 1), -3, BG([1], 1)]
+        # + [-3, BG([1], 1)],
+        # [-3, BG([1], 1), -3, BG([1], 1), -11, BG([1], 1), -3, BG([1], 1)],
+        # [-3, BG([1], 1), -3, BG([1], 1)]
+        # + [-4, -1, BG([1], 1), -1, BG([1], 1), -3, BG([1], 1)]
+        # + [-3, BG([1], 1), "+"],
+        [-3, BG([1], 1), -3, BG([1], 1)]
+        + [-4, -1, BG([1], 1), -1, BG([1], 1), -3, BG([1], t(1)), w(6, 12), h(6)],
+        [abjad.TimeSignature((2, 4)), meters(5)[0]],
+        do_not_rewrite_meter=True,
+    )
+    voice.extend(components)
+    rhythm(
+        # [3, 6, 4, 7, 5, 8],
+        # [3, 6, 4, 7]
+        # [6, 4, 7, 3]
+        (3 * [1, -5, 1, -3, 1, -6, 1, -2])[:-3] + ["-"],
+        meters(6, 8),
+    )
 
 
 def OB(voice, meters):
@@ -49,12 +109,84 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        # [12, 18, 6, 12, 12],
+        # [12, -18, 6, -12, 12],
+        # [2, -10, -18, 2, -4, -12, 2, -10],
+        # [2, -2, -16, -4, -4, -2, 2, -16, 2, -2, -8],
+        [OBGC([1, 1, 1], [2, -2]), -16, -4]
+        + [-4, -2, OBGC([1, 1], [2]), -16, OBGC([1, 1], [2]), -2, -8],
+        meters(1, 3),
+    )
+    assert abjad.get.duration(voice[-1:]) == abjad.Duration(2, 4)
+    del voice[-1:]
+    components = library.make_one_beat_tuplets(
+        voice,
+        meters(3),
+        # [3, 6, 4, 7],
+        # [7, 4, 6, 3],
+        # [6, 3],
+        [1, -5, 1, -2],
+        do_not_extend=True,
+        extra_counts=[-1],
+    )
+    assert abjad.get.duration(components[:1]) == abjad.Duration(1, 4)
+    del components[:1]
+    voice.extend(components)
+    library.make_one_beat_tuplets(
+        voice,
+        meters(4, 5),
+        # [3, 6, 4, 7, 5, 8, 6, 9],
+        # [-3, 1, -5, 1, -3, 1, -6],
+        # [-3, 1, -5, 1, -3, 1, -6, 1, -4, 1, -7, 1, -5],
+        [-3, 1, -5, 1, -3, 1, -6, 1, -4, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(6, 8),
+        # [3, 6, 4, 7, 5, 8, 6, 9],
+        # [3, 6, 4, 7],
+        # [6, 4, 7, 3],
+        2 * [1, -5, 1, -3, 1, -6, 1, -3] + ["-"],
+        extra_counts=[-1],
+    )
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        # [-12, 18, -6, 12, -12],
+        # [-12, 2, -16, -6, 2, -10, -12],
+        [-12, OBGC([1, 1], [2]), -2, -8, -12, OBGC([1, 1, 1], [2, -2]), -8],
+        meters(1, 2),
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(3),
+        # [4, 7, 5, 8],
+        # [8, 5, 7, 4],
+        # [-5, 4],
+        ["-", 1, -3],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(4, 5),
+        # [4, 7, 5, 8, 6, 9, 7, 10],
+        # [1, -3, 1, -6, 1, -4, 1, -7],
+        [1, -3, 1, -6, 1, -4, 1, -7, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(6, 7),
+        # [4, 7, 5, 8, 6, 9, 7, 10],
+        # [4, 7, 5, 8],
+        # [7, 5, 8, 4],
+        [1, -6, 1, -4, 1, -7, 1, -3],
+        extra_counts=[-1],
+    )
 
 
 def VN(voice, meters):
@@ -64,7 +196,28 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(
+        # [6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17],
+        # [17, 11, 16, 10, 15, 9, 14, 8, 13, 7, 12, 6],
+        # [-13, 7, -12, 6],
+        # [-11, 7, -12, 6],
+        # [-11, 1, -6, 1, -11, 1, -5],
+        [-11, 1, -6, -1, -11, 1, -5],
+        meters(2, 3),
+    )
+    rhythm(
+        # [6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17],
+        # [1, -5, 1, -11, 1, -6, 1, -12],
+        [1, -5, 1, -11, 1, -6, 1, -12, 1, -7, 1, -13],
+        meters(4, 5),
+    )
+    rhythm(
+        # [6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17],
+        # [1, -5, 1, -11, 1, -6, 1, -12],
+        4 * [1, -5, 1, -11],
+        meters(6, 7),
+    )
 
 
 def fl(m):
@@ -217,6 +370,9 @@ def make_layout():
             baca.system(measure=23, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 20),
+        overrides=[
+            ((4, 5), (1, 32)),
+        ],
     )
     baca.section.make_layout_ly(spacing)
 
