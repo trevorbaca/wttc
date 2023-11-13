@@ -23,6 +23,7 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
+beat = library.beat
 mmrests = library.mmrests
 swell = library.swell
 
@@ -42,15 +43,14 @@ def GLOBALS(skips, first_measure_number):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        # [-1, 4, 4 + 2, 2, 4, 4, 12, 12, 12],
-        # [-1, 4, 4 + 2, 2, 4, 4, 12, 11, -4],
-        [-1, 4, 4 + 2, 2, 4, 4, 12, 10, -1, -4],
+        # [4, 6, 2, 4, 4, 12, 12, 12],
+        [-1, 4, 6, 2, 4, 4, 12, 10, -1, -4],
         meters(1, 2),
     )
-    # del(voice[-1:])
     del voice[-2:]
     components = library.make_rhythm(
         voice,
+        # [4, 6, 2, 4, 4, 12, 12, 12],
         # [-1, 4, 6, 2, 4, 4, 12],
         # [-3, 4, 6, 2, 4, 4],
         # [-3, 1, -3, 1, -5, 1, -1, 1, -3, 1, -3, 1],
@@ -99,6 +99,40 @@ def FL(voice, meters):
         # [6, 4, 7, 3]
         (3 * [1, -5, 1, -3, 1, -6, 1, -2])[:-3] + ["-"],
         meters(6, 8),
+    )
+    duration = abjad.Duration(1, 4)
+    library.split_and_keep_left(voice, duration)
+    components = library.make_rhythm(
+        voice,
+        # 2 * [3, 6, 4, 7, 5, 8, 6, 9, 7, 10][-2:],
+        2 * [1, -6, 1, -9],
+        meters(8),
+    )
+    components = library.split_and_keep_right(components, duration)
+    voice.extend(components)
+    library.split_and_keep_left(voice, -duration)
+    rhythm(
+        # [4, 6, 2, 4, 4, 12, 12, 12],
+        # [12, 12, 12, 4, 4, 2, 6, 4],
+        # [12, 4, 4, 2, 6, 4],
+        [-1, 12, 4, 4, 2, 6, 4, "-"],
+        [abjad.TimeSignature((1, 4))] + meters(9, 10),
+    )
+    library.split_and_keep_left(voice, duration)
+    components = library.make_rhythm(
+        voice,
+        [12, 12],
+        meters(10),
+    )
+    components = library.split_and_keep_right(components, duration)
+    voice.extend(components)
+    rhythm(
+        # [4, 6, 2, 4, 4, 12, 12, 12],
+        # [8, 12, 4, 8, 8, 24],
+        # [-3, 8, 12, 4, 8, "-"],
+        # [-3, 1, -7, 1, -11, 1, -3, 1, -7, "-"],
+        [rt(3), BG([1], 1), -7, BG([1], 1), -11, BG([1], 1), -3, BG([1], 1), -7, "-"],
+        meters(11, 12),
     )
 
 
@@ -151,6 +185,35 @@ def GT1(voice, meters):
         2 * [1, -5, 1, -3, 1, -6, 1, -3] + ["-"],
         extra_counts=[-1],
     )
+    library.split_and_keep_left(voice, beat())
+    components = library.make_rhythm(
+        voice,
+        [-4, -2, OBGC([1, 1], [2]), "-"],
+        meters(8),
+    )
+    components = library.split_and_keep_right(components, beat())
+    voice.extend(components)
+    library.split_and_keep_left(voice, -beat())
+    components = library.make_one_beat_tuplets(
+        voice,
+        meters(8, 9),
+        # [3, 6, 4, 7, 5, 8, 6, 9, 7, 10],
+        # [7, 10],
+        [1, -6, 1, -9],
+        do_not_extend=True,
+        extra_counts=[-1],
+    )
+    components = library.split_and_keep_middle(components, [beat(5), beat(1)])
+    voice.extend(components)
+    rhythm(
+        # [4, 6, 2, 4, 4, 12, 12, 12],
+        # [12, 18, 6, 12, 12, 36, 36, 36],
+        # [2, -10, 2, -16, 2, -4, 2, -10, 2, -10, 2, -34, 2, -34, 2, -34],
+        # [-2, 2, -10, 2, -16, 2, -4, 2, -10],
+        [-2, 2, -10, -2, -16, 2, -4, 2, -10],
+        meters(9, 10),
+    )
+    rhythm.mmrests(11, 12)
 
 
 def GT2(voice, meters):
@@ -187,11 +250,23 @@ def GT2(voice, meters):
         [1, -6, 1, -4, 1, -7, 1, -3],
         extra_counts=[-1],
     )
+    rhythm.mmrests(8)
+    rhythm(
+        # [4, 6, 2, 4, 4, 12, 12, 12],
+        # [12, 18, 6, 12, 12, 36, 36, 36],
+        # [2, -10, 2, -16, 2, -4, 2, -10, 2, -10, 2, -34, 2, -34, 2, -34],
+        [2, -16, 2, -4, 2, -10, 2, -10],
+        meters(9, 10),
+    )
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 8)
+    rhythm(
+        [21, 20, 15, 14, 9, 8, 3, 2],
+        meters(9, 12),
+    )
 
 
 def VC(voice, meters):

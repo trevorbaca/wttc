@@ -47,6 +47,10 @@ def _reference_meters():
     )
 
 
+def beat(n=1):
+    return abjad.Duration(n, 4)
+
+
 def canon_e(twelfths=False):
     if twelfths is False:
         counts = list(range(1, 14 + 1))
@@ -62,9 +66,23 @@ def canon_e(twelfths=False):
     return counts
 
 
+def delete_components_in_previous_measure(voice, *, count=1):
+    components = get_components_in_previous_measure(voice, count=count)
+    index = voice.index(components[0])
+    del voice[index:]
+
+
 def force_repeat_tie(components, threshold=(1, 8)):
     tag = baca.helpers.function_name(inspect.currentframe())
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
+
+
+def get_components_in_previous_measure(voice, *, count=1):
+    components = voice[:]
+    groups = abjad.select.group_by_measure(components)
+    groups = groups[-count:]
+    components = abjad.sequence.flatten(groups)
+    return components
 
 
 def make_empty_score():
@@ -273,6 +291,35 @@ def make_rhythm(
     rmakers.force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     return components
+
+
+def split_and_keep_left(voice, duration, *, count=1):
+    assert isinstance(duration, abjad.Duration), repr(duration)
+    components = get_components_in_previous_measure(voice, count=count)
+    if duration < 0:
+        components_duration = abjad.get.duration(components)
+        duration = components_duration + duration
+    lists = abjad.mutate.split(components, [duration])
+    assert len(lists) == 2, repr(lists)
+    components = get_components_in_previous_measure(voice, count=count)
+    lists = abjad.select.partition_by_durations(components, [duration], overhang=True)
+    assert len(lists) == 2, repr(lists)
+    index = voice.index(lists[1][0])
+    del voice[index:]
+
+
+def split_and_keep_middle(components, durations):
+    assert len(durations) == 2, repr(durations)
+    lists = abjad.mutate.split(components, durations)
+    assert len(lists) == 3, repr(lists)
+    return lists[1]
+
+
+def split_and_keep_right(components, duration):
+    assert isinstance(duration, abjad.Duration), repr(duration)
+    lists = abjad.mutate.split(components, [duration])
+    assert len(lists) == 2, repr(lists)
+    return lists[1]
 
 
 def swell(n):
