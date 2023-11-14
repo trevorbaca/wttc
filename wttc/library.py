@@ -124,12 +124,25 @@ def get_components_in_previous_measure(voice, *, count=1):
     return components
 
 
-def attacks(counts):
+def attach_obgcs(counts, grace_lists):
+    result = []
+    cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
+    for i, count in enumerate(counts):
+        if count <= 0:
+            result.append(count)
+        else:
+            grace_list = cyclic_grace_lists[i]
+            obgc = OBGC(grace_list, [count])
+            result.append(obgc)
+    return result
+
+
+def attacks(counts, *, n=1):
     result = []
     for count in counts:
-        if 1 < count:
-            result.append(1)
-            result.append(-(count - 1))
+        if n < count:
+            result.append(n)
+            result.append(-(count - n))
         else:
             result.append(count)
     return result
