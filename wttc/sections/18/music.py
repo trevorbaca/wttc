@@ -258,6 +258,7 @@ def GT2(voice, meters):
         [2, -16, 2, -4, 2, -10, 2, -10],
         meters(9, 10),
     )
+    rhythm.mmrests(11, 12)
 
 
 def VN(voice, meters):
@@ -271,28 +272,14 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1)
+    counts = [7, 13, 8, 14, 9, 15]
+    assert sum(counts) == 66
+    assert 4 * sum(_.numerator for _ in meters(1, 12)) == 264
     rhythm(
-        # [6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17],
-        # [17, 11, 16, 10, 15, 9, 14, 8, 13, 7, 12, 6],
-        # [-13, 7, -12, 6],
-        # [-11, 7, -12, 6],
-        # [-11, 1, -6, 1, -11, 1, -5],
-        [-11, 1, -6, -1, -11, 1, -5],
-        meters(2, 3),
+        library.attacks(4 * counts),
+        meters(1, 12),
     )
-    rhythm(
-        # [6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17],
-        # [1, -5, 1, -11, 1, -6, 1, -12],
-        [1, -5, 1, -11, 1, -6, 1, -12, 1, -7, 1, -13],
-        meters(4, 5),
-    )
-    rhythm(
-        # [6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17],
-        # [1, -5, 1, -11, 1, -6, 1, -12],
-        4 * [1, -5, 1, -11],
-        meters(6, 7),
-    )
+    library.mask_measures(voice, [1, "(2, 3)/1:", "5/1:", "8/:-1", "(9, 12)/1:"])
 
 
 def fl(m):

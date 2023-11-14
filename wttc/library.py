@@ -66,6 +66,22 @@ def canon_e(twelfths=False):
     return counts
 
 
+def clean_up_rhythmic_spelling(components, time_signatures, *, tag=None):
+    tag = tag or abjad.Tag()
+    tag = tag.append(baca.helpers.function_name(inspect.currentframe()))
+    voice = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+    rmakers.rewrite_rest_filled(voice, tag=tag)
+    rmakers.rewrite_sustained(voice, tag=tag)
+    rmakers.extract_trivial(voice)
+    rmakers.force_fraction(voice)
+    rmakers.force_diminution(voice)
+    rmakers.rewrite_meter(
+        voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+    )
+    components = abjad.mutate.eject_contents(voice)
+    return components
+
+
 def delete_components_in_previous_measure(voice, *, count=1):
     components = get_components_in_previous_measure(voice, count=count)
     index = voice.index(components[0])
@@ -77,12 +93,46 @@ def force_repeat_tie(components, threshold=(1, 8)):
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
 
 
+def get_measures(voice, measure_numbers):
+    groups = abjad.select.group_by_measure(voice[:])
+    if isinstance(measure_numbers, int):
+        assert 0 < measure_numbers, repr(measure_numbers)
+        measure_index = measure_numbers - 1
+        groups = groups[measure_index : measure_index + 1]
+    else:
+        assert isinstance(measure_numbers, tuple), repr(measure_numbers)
+        assert len(measure_numbers) == 2, repr(measure_numbers)
+        start_number, stop_number = measure_numbers
+        assert start_number <= stop_number, repr(measure_numbers)
+        start_index = start_number - 1
+        stop_index = stop_number - 1
+        groups = groups[start_index : stop_index + 1]
+    time_signatures = []
+    for group in groups:
+        time_signature = abjad.get.effective(group[0], abjad.TimeSignature)
+        time_signatures.append(time_signature)
+    assert len(groups) == len(time_signatures)
+    components = abjad.sequence.flatten(groups)
+    return components, time_signatures
+
+
 def get_components_in_previous_measure(voice, *, count=1):
     components = voice[:]
     groups = abjad.select.group_by_measure(components)
     groups = groups[-count:]
     components = abjad.sequence.flatten(groups)
     return components
+
+
+def attacks(counts):
+    result = []
+    for count in counts:
+        if 1 < count:
+            result.append(1)
+            result.append(-(count - 1))
+        else:
+            result.append(count)
+    return result
 
 
 def make_empty_score():
@@ -184,19 +234,62 @@ def make_one_beat_tuplets(
     durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
-    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.rewrite_rest_filled(voice_, tag=tag)
-    rmakers.rewrite_sustained(voice_, tag=tag)
-    rmakers.extract_trivial(voice_)
-    rmakers.force_fraction(voice_)
-    rmakers.force_diminution(voice_)
-    rmakers.rewrite_meter(
-        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
-    )
-    components = abjad.mutate.eject_contents(voice_)
+    components = clean_up_rhythmic_spelling(tuplets, time_signatures, tag=tag)
     if not do_not_extend:
         voice.extend(components)
     return components
+
+
+def mask_measures(voice, items):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    for item in items:
+        if isinstance(item, int):
+            assert 0 < item, repr(item)
+            components, time_signatures = get_measures(voice, item)
+            mmrests = baca.make_mmrests(time_signatures)
+            start = voice.index(components[0])
+            stop = voice.index(components[-1])
+            voice[start : stop + 1] = mmrests
+        elif isinstance(item, tuple):
+            assert len(item) == 2, repr(item)
+            start_number, stop_number = item
+            assert start_number <= stop_number, repr(item)
+            for measure_number in range(start_number, stop_number + 1):
+                mask_measures(voice, [measure_number])
+        elif isinstance(item, str):
+            assert "/" in item, repr(item)
+            left, right = item.split("/")
+            measure_numbers = eval(left)
+            components, time_signatures = get_measures(voice, measure_numbers)
+            plts = baca.select.plts(components)
+            if right.endswith(":"):
+                start = eval(right.removesuffix(":"))
+                plts = plts[start:]
+            elif right.startswith(":"):
+                stop = eval(right.removeprefix(":"))
+                plts = plts[:stop]
+            else:
+                assert ":" in right, repr(right)
+                start_string, stop_string = right.split(":")
+                start, stop = eval(start_string), eval(stop_string)
+                plts = plts[start:stop]
+            for plt in plts:
+                for pleaf in plt:
+                    rest = abjad.Rest(pleaf.written_duration)
+                    abjad.mutate.replace(pleaf, rest)
+            components, time_signatures = get_measures(voice, measure_numbers)
+            mmrests = baca.make_mmrests(time_signatures)
+            start = voice.index(components[0])
+            stop = voice.index(components[-1])
+            voice[start : stop + 1] = mmrests
+            components = clean_up_rhythmic_spelling(
+                components, time_signatures, tag=tag
+            )
+            start = voice.index(mmrests[0])
+            stop = voice.index(mmrests[-1])
+            voice[start : stop + 1] = components
+        else:
+            raise ValueError(item)
 
 
 def mmrests(voice, time_signatures, *, head=False):

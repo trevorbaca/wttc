@@ -2131,6 +2131,16 @@ number.18.Guitar.2.Music = {
 
     r2
 
+    % [Guitar.2.Music measure 11]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 12]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
 }
 
 
@@ -2337,7 +2347,66 @@ number.18.Cello.Music = {
     \set Staff.shortInstrumentName = \wttc-vc-markup
 
     % [Cello.Music measure 2]
+    r4
+
+    c'16
+
+    r8.
+
+    r1
+
+    % [Cello.Music measure 3]
+    r2.
+
+    % [Cello.Music measure 4]
+    r4
+
+    r8
+
+    c'16
+
+    r16
+
+    r4
+
+    r16
+
+    c'16
+
+    r8
+
     r2
+
+    % [Cello.Music measure 5]
+    r8
+
+    c'16
+
+    r16
+
+    r1
+
+    r4
+
+    % [Cello.Music measure 6]
+    c'16
+
+    r8.
+
+    r4
+
+    r16
+
+    c'16
+
+    r8
+
+    r2.
+
+    % [Cello.Music measure 7]
+    c'16
+
+    r8.
 
     r8.
 
@@ -2345,29 +2414,12 @@ number.18.Cello.Music = {
 
     r2.
 
-    % [Cello.Music measure 3]
-    r4
-
-    r8
-
-    c'16
-
-    r16
-
-    r4
-
-    % [Cello.Music measure 4]
     c'16
 
     r8.
 
-    r8
-
-    c'16
-
-    r16
-
-    r2
+    % [Cello.Music measure 8]
+    r1
 
     r8
 
@@ -2377,68 +2429,23 @@ number.18.Cello.Music = {
 
     r4
 
-    % [Cello.Music measure 5]
-    r16
-
-    c'16
-
-    r8
-
-    r2
-
-    r8
-
-    c'16
-
-    r16
-
-    r4
-
-    r8
-
-    c'16
-
-    r16
-
-    % [Cello.Music measure 6]
-    c'16
-
+    % [Cello.Music measure 9]
     r8.
 
-    r8
-
     c'16
 
-    r16
-
-    r2
-
-    r8
-
-    c'16
-
-    r16
+    r1
 
     r4
 
-    % [Cello.Music measure 7]
-    c'16
+    % [Cello.Music measure 10]
+    r1.
 
-    r8.
+    % [Cello.Music measure 11]
+    r1.
 
-    r2
-
-    c'16
-
-    r8.
-
-    r8
-
-    c'16
-
-    r16
-
-    r4
+    % [Cello.Music measure 12]
+    r2.
 
 }
 
