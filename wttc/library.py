@@ -127,13 +127,21 @@ def get_components_in_previous_measure(voice, *, count=1):
 def attach_obgcs(counts, grace_lists):
     result = []
     cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
-    for i, count in enumerate(counts):
-        if count <= 0:
-            result.append(count)
+    count_lists = []
+    for count in counts:
+        if count_lists and len(count_lists[-1]) == 1 and 0 < count_lists[-1][0]:
+            count_lists[-1].append(count)
         else:
+            count_lists.append([count])
+    i = 0
+    for count_list in count_lists:
+        if 1 < len(count_list):
             grace_list = cyclic_grace_lists[i]
-            obgc = OBGC(grace_list, [count])
+            obgc = OBGC(grace_list, count_list)
             result.append(obgc)
+            i += 1
+        else:
+            result.extend(count_list)
     return result
 
 
