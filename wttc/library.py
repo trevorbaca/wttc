@@ -11,11 +11,19 @@ def BG(*arguments):
     return baca.rhythm.BG(*arguments, slur=False)
 
 
-def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
+def OBGC(grace_note_numerators, nongrace_note_numerator):
     return baca.OBGC(
         grace_note_numerators,
         nongrace_note_numerator,
         grace_leaf_duration=abjad.Duration(1, 20),
+    )
+
+
+def OBGCF(grace_note_numerators, nongrace_note_numerator):
+    return baca.OBGC(
+        grace_note_numerators,
+        nongrace_note_numerator,
+        grace_leaf_duration=True,
     )
 
 
@@ -45,6 +53,35 @@ def _reference_meters():
             "(15/4 (1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4))"
         ),
     )
+
+
+def attach_obgcs(counts, grace_lists):
+    result = []
+    cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
+    i = 0
+    for count in counts:
+        if count < 0:
+            result.append(count)
+        else:
+            grace_list = cyclic_grace_lists[i]
+            if grace_list:
+                obgc = OBGCF(grace_list, [count])
+                result.append(obgc)
+            else:
+                result.append(count)
+            i += 1
+    return result
+
+
+def attacks(counts, *, n=1):
+    result = []
+    for count in counts:
+        if n < count:
+            result.append(n)
+            result.append(-(count - n))
+        else:
+            result.append(count)
+    return result
 
 
 def beat(n=1):
@@ -122,38 +159,6 @@ def get_components_in_previous_measure(voice, *, count=1):
     groups = groups[-count:]
     components = abjad.sequence.flatten(groups)
     return components
-
-
-def attach_obgcs(counts, grace_lists):
-    result = []
-    cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
-    count_lists = []
-    for count in counts:
-        if count_lists and len(count_lists[-1]) == 1 and 0 < count_lists[-1][0]:
-            count_lists[-1].append(count)
-        else:
-            count_lists.append([count])
-    i = 0
-    for count_list in count_lists:
-        if 1 < len(count_list):
-            grace_list = cyclic_grace_lists[i]
-            obgc = OBGC(grace_list, count_list)
-            result.append(obgc)
-            i += 1
-        else:
-            result.extend(count_list)
-    return result
-
-
-def attacks(counts, *, n=1):
-    result = []
-    for count in counts:
-        if n < count:
-            result.append(n)
-            result.append(-(count - n))
-        else:
-            result.append(count)
-    return result
 
 
 def make_empty_score():
@@ -258,6 +263,33 @@ def make_one_beat_tuplets(
     components = clean_up_rhythmic_spelling(tuplets, time_signatures, tag=tag)
     if not do_not_extend:
         voice.extend(components)
+    return components
+
+
+def make_rhythm(
+    voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
+):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    if isinstance(items, list):
+        items = abjad.sequence.flatten(items)
+    else:
+        items = [items]
+    if time_signatures is None:
+        do_not_rewrite_meter = True
+    voice_ = baca.make_rhythm(
+        items,
+        denominator,
+        time_signatures,
+        boundary_depth=1,
+        do_not_rewrite_meter=do_not_rewrite_meter,
+        reference_meters=_reference_meters(),
+        tag=tag,
+        voice_name=voice.name,
+    )
+    for tuplet in abjad.select.tuplets(voice_):
+        rmakers.beam([tuplet])
+    rmakers.force_fraction(voice_)
+    components = abjad.mutate.eject_contents(voice_)
     return components
 
 
@@ -377,33 +409,6 @@ def rhythm(
     rmakers.force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
-    return components
-
-
-def make_rhythm(
-    voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
-):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    if isinstance(items, list):
-        items = abjad.sequence.flatten(items)
-    else:
-        items = [items]
-    if time_signatures is None:
-        do_not_rewrite_meter = True
-    voice_ = baca.make_rhythm(
-        items,
-        denominator,
-        time_signatures,
-        boundary_depth=1,
-        do_not_rewrite_meter=do_not_rewrite_meter,
-        reference_meters=_reference_meters(),
-        tag=tag,
-        voice_name=voice.name,
-    )
-    for tuplet in abjad.select.tuplets(voice_):
-        rmakers.beam([tuplet])
-    rmakers.force_fraction(voice_)
-    components = abjad.mutate.eject_contents(voice_)
     return components
 
 

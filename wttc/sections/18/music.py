@@ -143,6 +143,8 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+
+    """
     rhythm(
         # [12, 18, 6, 12, 12],
         # [12, -18, 6, -12, 12],
@@ -214,8 +216,8 @@ def GT1(voice, meters):
         meters(9, 10),
     )
     rhythm.mmrests(11, 12)
-
     """
+
     sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
     assert sixteenths == 264
     counts = [-12, 18, -6, 10, -12, 14, -16]
@@ -223,17 +225,17 @@ def GT1(voice, meters):
     assert 3 * abjad.sequence.weight(counts) == sixteenths
     counts = library.attacks(counts, n=2)
     assert counts == [-12, 2, -16, -6, 2, -8, -12, 2, -12, -16]
-    counts = library.attach_obgcs(counts, [[1, 1]])
-    rhythm(
-        3 * counts,
-        meters(1, 12)
-    )
+    counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
+    rhythm(3 * counts, meters(1, 12))
+    # library.mask_measures(voice, [1, "(2, 3)/1:", "5/1:", "8/:-1", "(9, 12)/1:"])
+    # library.mask_measures(voice, [3])
     rhythm.mmrests(13, 28)
-    """
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+
+    """
     rhythm(
         # [-12, 18, -6, 12, -12],
         # [-12, 2, -16, -6, 2, -10, -12],
@@ -275,8 +277,8 @@ def GT2(voice, meters):
         meters(9, 10),
     )
     rhythm.mmrests(11, 12)
-
     """
+
     sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
     assert sixteenths == 264
     counts = [12, -18, 6, -10, 12, -14, 16]
@@ -285,12 +287,8 @@ def GT2(voice, meters):
     counts = library.attacks(counts, n=2)
     assert counts == [2, -10, -18, 2, -4, -10, 2, -10, -14, 2, -14]
     counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
-    rhythm(
-        3 * counts,
-        meters(1, 12)
-    )
+    rhythm(3 * counts, meters(1, 12))
     rhythm.mmrests(13, 28)
-    """
 
 
 def VN(voice, meters):
