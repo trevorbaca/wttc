@@ -113,7 +113,7 @@ def is_obgc_polyphony_container(component):
     return True
 
 
-def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=None):
+def clean_up_rhythmic_spelling(components, time_signatures, *, tag=None):
     tag = tag or abjad.Tag()
     tag = tag.append(baca.helpers.function_name(inspect.currentframe()))
     protected_components = []
@@ -323,7 +323,7 @@ def make_rhythm(
     return components
 
 
-def mask_measures(voice, items, *, use_components=False):
+def mask_measures(voice, items):
     tag = baca.helpers.function_name(inspect.currentframe())
     for item in items:
         if isinstance(item, int):
@@ -344,8 +344,6 @@ def mask_measures(voice, items, *, use_components=False):
             left, right = item.split("/")
             measure_numbers = eval(left)
             components, time_signatures = get_measures(voice, measure_numbers)
-            if not use_components:
-                components = baca.select.plts(components)
             if right.endswith(":"):
                 start = eval(right.removesuffix(":"))
                 components = components[start:]
@@ -357,26 +355,20 @@ def mask_measures(voice, items, *, use_components=False):
                 start_string, stop_string = right.split(":")
                 start, stop = eval(start_string), eval(stop_string)
                 components = components[start:stop]
-            if use_components is True:
-                for component in components:
-                    if isinstance(component, abjad.Rest | abjad.MultimeasureRest):
-                        continue
-                    duration = getattr(component, "written_duration", None)
-                    duration = duration or abjad.get.duration(component)
-                    rest = abjad.Rest(duration)
-                    abjad.mutate.replace(component, rest)
-            else:
-                for plt in components:
-                    for pleaf in plt:
-                        rest = abjad.Rest(pleaf.written_duration)
-                        abjad.mutate.replace(pleaf, rest)
+            for component in components:
+                if isinstance(component, abjad.Rest | abjad.MultimeasureRest):
+                    continue
+                duration = getattr(component, "written_duration", None)
+                duration = duration or abjad.get.duration(component)
+                rest = abjad.Rest(duration)
+                abjad.mutate.replace(component, rest)
             components, time_signatures = get_measures(voice, measure_numbers)
             mmrests = baca.make_mmrests(time_signatures)
             start = voice.index(components[0])
             stop = voice.index(components[-1])
             voice[start : stop + 1] = mmrests
             components = clean_up_rhythmic_spelling(
-                components, time_signatures, debug=use_components, tag=tag
+                components, time_signatures, tag=tag
             )
             start = voice.index(mmrests[0])
             stop = voice.index(mmrests[-1])

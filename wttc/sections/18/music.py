@@ -287,7 +287,7 @@ def GT2(voice, meters):
     assert counts == [2, -10, -18, 2, -4, -10, 2, -10, -14, 2, -14]
     counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
     rhythm(3 * counts, meters(1, 12))
-    library.mask_measures(voice, [(3, 7), "10/2:", (11, 12)], use_components=True)
+    library.mask_measures(voice, [(3, 7), "10/2:", (11, 12)])
     rhythm.mmrests(13, 28)
 
 
@@ -309,7 +309,7 @@ def VC(voice, meters):
         library.attacks(4 * counts),
         meters(1, 12),
     )
-    library.mask_measures(voice, [1, "(2, 3)/1:", "5/1:", "8/:-1", "(9, 12)/1:"])
+    library.mask_measures(voice, [1, "(2, 3)/2:", "5/2:", "8/:-3", "(9, 12)/2:"])
 
 
 def fl(m):
