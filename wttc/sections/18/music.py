@@ -227,8 +227,7 @@ def GT1(voice, meters):
     assert counts == [-12, 2, -16, -6, 2, -8, -12, 2, -12, -16]
     counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
     rhythm(3 * counts, meters(1, 12))
-    # library.mask_measures(voice, [1, "(2, 3)/1:", "5/1:", "8/:-1", "(9, 12)/1:"])
-    # library.mask_measures(voice, [3])
+    library.mask_measures(voice, [(3, 8), (11, 12)])
     rhythm.mmrests(13, 28)
 
 
@@ -288,6 +287,7 @@ def GT2(voice, meters):
     assert counts == [2, -10, -18, 2, -4, -10, 2, -10, -14, 2, -14]
     counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
     rhythm(3 * counts, meters(1, 12))
+    library.mask_measures(voice, [(3, 7), "10/2:", (11, 12)], use_components=True)
     rhythm.mmrests(13, 28)
 
 

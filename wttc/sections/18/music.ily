@@ -1416,46 +1416,6 @@ number.18.Guitar.1.Music.item.4 = {
 }
 
 
-number.18.Guitar.1.Music.item.5 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.1.Music.item.6 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.1.Music.item.7 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.1.Music.item.8 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.1.Music.item.9 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
 number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
@@ -1569,160 +1529,34 @@ number.18.Guitar.1.Music = {
     r2
 
     % [Guitar.1.Music measure 3]
-    r2
-
-    r8
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.3 }
-
-    >>
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 4]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 5]
-    r1
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.4 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r8
-
-    r4
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 6]
-    r1
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            [
-            (
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.5 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r8
-
-    r4
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 7]
-    r2.
-
-    r8
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.6 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r2
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 8]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 9]
     r2
@@ -1750,7 +1584,7 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.7 }
+        { \number.18.Guitar.1.Music.item.3 }
 
     >>
 
@@ -1794,7 +1628,7 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.8 }
+        { \number.18.Guitar.1.Music.item.4 }
 
     >>
 
@@ -1805,43 +1639,14 @@ number.18.Guitar.1.Music = {
     r2.
 
     % [Guitar.1.Music measure 11]
-    r4
-
-    r8
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.9 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r1
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 12]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 13]
     R1 * 6/4
@@ -1975,54 +1780,6 @@ number.18.Guitar.2.Music.item.5 = {
 
 
 number.18.Guitar.2.Music.item.6 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.2.Music.item.7 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.2.Music.item.8 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.2.Music.item.9 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.2.Music.item.10 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.2.Music.item.11 = {
-
-    \voiceTwo
-    c''8
-
-}
-
-
-number.18.Guitar.2.Music.item.12 = {
 
     \voiceTwo
     c''8
@@ -2184,10 +1941,32 @@ number.18.Guitar.2.Music = {
     % [Guitar.2.Music measure 3]
       %! ONE_VOICE_COMMAND
     \oneVoice
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.2.Music measure 4]
-    r2.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 5]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 6]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 7]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 8]
+    r4
 
     <<
 
@@ -2220,10 +1999,7 @@ number.18.Guitar.2.Music = {
     \oneVoice
     r8
 
-    r2
-
-    % [Guitar.2.Music measure 5]
-    r4
+    r2.
 
     <<
 
@@ -2264,11 +2040,10 @@ number.18.Guitar.2.Music = {
     \oneVoice
     r8
 
-    r1
+    % [Guitar.2.Music measure 9]
+    r1.
 
-    % [Guitar.2.Music measure 6]
-    r2
-
+    % [Guitar.2.Music measure 10]
     r8
 
     <<
@@ -2300,243 +2075,19 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-    r2.
-
-    % [Guitar.2.Music measure 7]
-    r8
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            [
-            (
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.7 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
     r1
 
-    r4
-
-    % [Guitar.2.Music measure 8]
-    r4
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.8 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r8
-
-    r2.
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            [
-            (
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.9 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r8
-
-    % [Guitar.2.Music measure 9]
-    r1.
-
-    % [Guitar.2.Music measure 10]
-    r8
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.10 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r2.
-
-    r8
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            [
-            (
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-
-            c''16 * 2/3
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.11 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
     r4
 
     % [Guitar.2.Music measure 11]
-    r1
-
-    r4
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-
-            \set fontSize = #-3
-            \slash
-            \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c''
-            >16
-            [
-            (
-
-            c''16
-            )
-            ]
-
-        }
-
-        \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.12 }
-
-    >>
-
-      %! ONE_VOICE_COMMAND
-    \oneVoice
-    r8
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 12]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.2.Music measure 13]
     R1 * 6/4
