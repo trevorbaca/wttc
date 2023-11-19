@@ -402,6 +402,80 @@ def mask_measures(voice, items):
             raise ValueError(item)
 
 
+def match(component_1, component_2):
+    if type(component_1) is not type(component_2):
+        return False
+    string_1 = abjad.lilypond(component_1)
+    string_2 = abjad.lilypond(component_2)
+    if string_1 != string_2:
+        return False
+    return True
+
+
+def merge(components_1, components_2, time_signature):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    assert abjad.get.duration(components_1) == abjad.get.duration(components_2)
+    assert abjad.get.duration(components_1) == time_signature.duration
+    voice_1 = abjad.Voice(components_1)
+    voice_2 = abjad.Voice(components_2)
+    voice_1_nonrest_timespans = abjad.TimespanList()
+    voice_2_nonrest_timespans = abjad.TimespanList()
+    for component in voice_1:
+        if not isinstance(component, abjad.Rest | abjad.MultimeasureRest):
+            timespan = abjad.get.timespan(component)
+            timespan.annotation = component
+            voice_1_nonrest_timespans.append(timespan)
+    for component in voice_2:
+        if not isinstance(component, abjad.Rest | abjad.MultimeasureRest):
+            timespan = abjad.get.timespan(component)
+            timespan.annotation = component
+            voice_2_nonrest_timespans.append(timespan)
+    voice_1[:] = []
+    voice_2[:] = []
+    for voice_1_nonrest_timespan in voice_1_nonrest_timespans:
+        for voice_2_nonrest_timespan in voice_2_nonrest_timespans[:]:
+            if voice_1_nonrest_timespan & voice_2_nonrest_timespan:
+                if voice_1_nonrest_timespan != voice_2_nonrest_timespan:
+                    message = "overlapping nonrest components:"
+                    message += f"\n    {voice_1_nonrest_timespan}"
+                    message += f"\n    {voice_2_nonrest_timespan}"
+                    raise Exception(message)
+                component_1 = voice_1_nonrest_timespan.annotation
+                component_2 = voice_2_nonrest_timespan.annotation
+                if match(component_1, component_2):
+                    voice_2_nonrest_timespans.remove(voice_2_nonrest_timespan)
+                else:
+                    message = "simultaneous nonrest components are unequal:"
+                    message += f"\n    {voice_1_nonrest_timespan}"
+                    message += f"\n    {voice_2_nonrest_timespan}"
+                    raise Exception(message)
+    nonrest_timespans = abjad.TimespanList()
+    nonrest_timespans.extend(voice_1_nonrest_timespans)
+    nonrest_timespans.extend(voice_2_nonrest_timespans)
+    measure_timespan = abjad.Timespan(0, time_signature.duration)
+    rest_timespans = abjad.TimespanList([measure_timespan])
+    for nonrest_timespan in nonrest_timespans:
+        rest_timespans = rest_timespans - nonrest_timespan
+    merged_timespans = abjad.TimespanList()
+    merged_timespans.extend(voice_1_nonrest_timespans)
+    merged_timespans.extend(voice_2_nonrest_timespans)
+    merged_timespans.extend(rest_timespans)
+    merged_timespans.sort()
+    assert merged_timespans.all_are_contiguous, repr(merged_timespans)
+    merged_components = []
+    for timespan in merged_timespans:
+        if isinstance(timespan.annotation, abjad.Component):
+            merged_components.append(timespan.annotation)
+        else:
+            duration = timespan.duration
+            rests = abjad.makers.make_leaves([None], [duration], tag=tag)
+            merged_components.extend(rests)
+    voice = abjad.Voice(merged_components)
+    components = abjad.mutate.eject_contents(voice)
+    components = clean_up_rhythmic_spelling(components, [time_signature], tag=tag)
+    return components
+
+
 def mmrests(voice, time_signatures, *, head=False):
     if head:
         music = baca.make_mmrests(time_signatures, head=voice.name)

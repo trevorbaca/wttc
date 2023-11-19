@@ -1529,37 +1529,181 @@ number.18.Guitar.1.Music = {
     r2
 
     % [Guitar.1.Music measure 3]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r2
 
-    % [Guitar.1.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+
+        r4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 4]
+        r4
+
+        c''8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r4
 
     % [Guitar.1.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
 
     % [Guitar.1.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
 
-    % [Guitar.1.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
 
-    % [Guitar.1.Music measure 8]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+        r4
 
-    % [Guitar.1.Music measure 9]
+        c''8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
     r2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 7]
+        c''8
+
+        r4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+
+        r4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 8]
+        r4
+
+        c''8
+
+    }
+
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c''8
+
+        r4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 9]
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r4
 
     <<
 
@@ -1639,94 +1783,14 @@ number.18.Guitar.1.Music = {
     r2.
 
     % [Guitar.1.Music measure 11]
-    R1 * 6/4
+    R1 * 3/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
 
     % [Guitar.1.Music measure 12]
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
-    % [Guitar.1.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 14]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 15]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
-    % [Guitar.1.Music measure 16]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 17]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 18]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
-    % [Guitar.1.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 20]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 22]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 23]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 24]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 25]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 26]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Guitar.1.Music measure 27]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
-
-    % [Guitar.1.Music measure 28]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 
