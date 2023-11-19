@@ -103,16 +103,6 @@ def canon_e(twelfths=False):
     return counts
 
 
-def is_obgc_polyphony_container(component):
-    if type(component) is not abjad.Container:
-        return False
-    if len(component) != 2:
-        return False
-    if not isinstance(component[0], abjad.OnBeatGraceContainer):
-        return False
-    return True
-
-
 def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=None):
     tag = tag or abjad.Tag()
     tag = tag.append(baca.helpers.function_name(inspect.currentframe()))
@@ -208,6 +198,16 @@ def get_components_in_previous_measure(voice, *, count=1):
     groups = groups[-count:]
     components = abjad.sequence.flatten(groups)
     return components
+
+
+def is_obgc_polyphony_container(component):
+    if type(component) is not abjad.Container:
+        return False
+    if len(component) != 2:
+        return False
+    if not isinstance(component[0], abjad.OnBeatGraceContainer):
+        return False
+    return True
 
 
 def make_empty_score():
@@ -361,6 +361,9 @@ def mask_measures(voice, items):
             assert start_number <= stop_number, repr(item)
             for measure_number in range(start_number, stop_number + 1):
                 mask_measures(voice, [measure_number])
+        elif isinstance(item, str) and "/" not in item:
+            item_ = eval(item)
+            mask_measures(voice, [item_])
         elif isinstance(item, str):
             assert "/" in item, repr(item)
             left, right = item.split("/")
@@ -464,6 +467,16 @@ def rhythm(
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
+
+
+def series_g(width, offset, start, length):
+    pairs = []
+    for i in range(length):
+        left = start + offset * i
+        right = left + width
+        pairs.append((left, right))
+    counts = abjad.sequence.flatten(pairs)
+    return counts
 
 
 def split_and_keep_left(voice, duration, *, count=1):

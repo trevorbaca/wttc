@@ -142,31 +142,39 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
-    # rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
-        meters(1, 12),
-        # [3, 6, 4, 7, 5, 8, 6, 9],
-        # [-3, 1, -5, 1, -3, 1, -6],
-        # [-3, 1, -5, 1, -3, 1, -6, 1, -4, 1, -7, 1, -5],
-        [-3, 1, -5, 1, -3, 1, -6, 1, -4, "-"],
-        debug=True,
-        extra_counts=[-1],
-    )
+    rhythm = library.Rhythm(voice, meters)
 
-    """
-    sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
-    assert sixteenths == 264
-    counts = [-12, 18, -6, 10, -12, 14, -16]
-    assert abjad.sequence.weight(counts) == 88
-    assert 3 * abjad.sequence.weight(counts) == sixteenths
-    counts = library.attacks(counts, n=2)
-    assert counts == [-12, 2, -16, -6, 2, -8, -12, 2, -12, -16]
-    counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
-    rhythm(3 * counts, meters(1, 12))
-    library.mask_measures(voice, [(3, 8), (11, 12)])
-    rhythm.mmrests(13, 28)
-    """
+    @baca.call
+    def block():
+        return
+        twelfths = 3 * sum(_.numerator for _ in meters(1, 12))
+        assert twelfths == 198
+        counts = library.series_g(1, 1, 4, 3)
+        assert counts == [4, 5, 5, 6, 6, 7]
+        counts = library.attacks(counts)
+        assert counts == [1, -3, 1, -4, 1, -4, 1, -5, 1, -5, 1, -6]
+        assert twelfths == 6 * abjad.math.weight(counts)
+        library.make_one_beat_tuplets(
+            voice,
+            meters(1, 12),
+            counts,
+            extra_counts=[-1],
+        )
+        library.mask_measures(voice, ["(1, 3)/:-1", "5/1:-1", "8/1:-1", "(9, 12)/1:"])
+
+    @baca.call
+    def block():
+        sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
+        assert sixteenths == 264
+        counts = [-12, 18, -6, 10, -12, 14, -16]
+        assert abjad.sequence.weight(counts) == 88
+        assert 3 * abjad.sequence.weight(counts) == sixteenths
+        counts = library.attacks(counts, n=2)
+        assert counts == [-12, 2, -16, -6, 2, -8, -12, 2, -12, -16]
+        counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
+        rhythm(3 * counts, meters(1, 12))
+        library.mask_measures(voice, [(3, 8), (11, 12)])
+        rhythm.mmrests(13, 28)
 
 
 def GT2(voice, meters):
@@ -401,7 +409,8 @@ def make_layout():
         ),
         spacing=(1, 20),
         overrides=[
-            ((4, 5), (1, 32)),
+            ((1, 7), (1, 32)),
+            ((8, 12), (1, 32)),
         ],
     )
     baca.section.make_layout_ly(spacing)

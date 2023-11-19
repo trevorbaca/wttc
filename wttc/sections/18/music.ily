@@ -1384,6 +1384,38 @@ number.18.Oboe.Staff = <<
 >>
 
 
+number.18.Guitar.1.Music.item.1 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
+number.18.Guitar.1.Music.item.2 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
+number.18.Guitar.1.Music.item.3 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
+number.18.Guitar.1.Music.item.4 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
 number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
@@ -1408,7 +1440,7 @@ number.18.Guitar.1.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
       %! EXPLICIT_CLEF
     \clef "treble"
-    r4
+    r2.
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1419,56 +1451,82 @@ number.18.Guitar.1.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
+    <<
 
-        c''8
+        \context Voice = "On_Beat_Grace_Container"
+        {
 
-        r4
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16
+            [
+            (
 
-    }
+            c''16
+            )
+            ]
 
-    r4
+        }
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
+        \context Voice = "Guitar.1.Music"
+        { \number.18.Guitar.1.Music.item.1 }
 
-        c''8
+    >>
 
-        r4
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
 
-    }
+    r2
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
+    % [Guitar.1.Music measure 2]
+    r2.
 
-        r8
+    <<
 
-        c''8
+        \context Voice = "On_Beat_Grace_Container"
+        {
 
-        r8
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
 
-    }
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
 
-    r4
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
+        }
 
-        % [Guitar.1.Music measure 2]
-        r4
+        \context Voice = "Guitar.1.Music"
+        { \number.18.Guitar.1.Music.item.2 }
 
-        c''8
+    >>
 
-    }
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
 
-    r1
-
-    r4
+    r2
 
     % [Guitar.1.Music measure 3]
     R1 * 3/4
@@ -1476,49 +1534,199 @@ number.18.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 4]
-    R1 * 3/2
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 5]
-    R1 * 3/2
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 6]
-    R1 * 3/2
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 7]
-    R1 * 3/2
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 8]
-    R1 * 3/2
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 9]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    r2
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16
+            [
+            (
+
+            c''16
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.1.Music"
+        { \number.18.Guitar.1.Music.item.3 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r2.
 
     % [Guitar.1.Music measure 10]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    r2
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
+
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.1.Music"
+        { \number.18.Guitar.1.Music.item.4 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r2.
 
     % [Guitar.1.Music measure 11]
-    R1 * 3/2
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 12]
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Guitar.1.Music measure 13]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 14]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 15]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Guitar.1.Music measure 16]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 17]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 18]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Guitar.1.Music measure 19]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 20]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 22]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 23]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 24]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 25]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 26]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 27]
+    R1 * 9/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+
+    % [Guitar.1.Music measure 28]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 
