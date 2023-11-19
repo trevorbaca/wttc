@@ -142,82 +142,19 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
-    rhythm = library.Rhythm(voice, meters)
-
-    """
-    rhythm(
-        # [12, 18, 6, 12, 12],
-        # [12, -18, 6, -12, 12],
-        # [2, -10, -18, 2, -4, -12, 2, -10],
-        # [2, -2, -16, -4, -4, -2, 2, -16, 2, -2, -8],
-        [OBGC([1, 1, 1], [2, -2]), -16, -4]
-        + [-4, -2, OBGC([1, 1], [2]), -16, OBGC([1, 1], [2]), -2, -8],
-        meters(1, 3),
-    )
-    assert abjad.get.duration(voice[-1:]) == abjad.Duration(2, 4)
-    del voice[-1:]
-    components = library.make_one_beat_tuplets(
-        voice,
-        meters(3),
-        # [3, 6, 4, 7],
-        # [7, 4, 6, 3],
-        # [6, 3],
-        [1, -5, 1, -2],
-        do_not_extend=True,
-        extra_counts=[-1],
-    )
-    assert abjad.get.duration(components[:1]) == abjad.Duration(1, 4)
-    del components[:1]
-    voice.extend(components)
+    # rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
-        meters(4, 5),
+        meters(1, 12),
         # [3, 6, 4, 7, 5, 8, 6, 9],
         # [-3, 1, -5, 1, -3, 1, -6],
         # [-3, 1, -5, 1, -3, 1, -6, 1, -4, 1, -7, 1, -5],
         [-3, 1, -5, 1, -3, 1, -6, 1, -4, "-"],
+        debug=True,
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
-        meters(6, 8),
-        # [3, 6, 4, 7, 5, 8, 6, 9],
-        # [3, 6, 4, 7],
-        # [6, 4, 7, 3],
-        2 * [1, -5, 1, -3, 1, -6, 1, -3] + ["-"],
-        extra_counts=[-1],
-    )
-    library.split_and_keep_left(voice, beat())
-    components = library.make_rhythm(
-        voice,
-        [-4, -2, OBGC([1, 1], [2]), "-"],
-        meters(8),
-    )
-    components = library.split_and_keep_right(components, beat())
-    voice.extend(components)
-    library.split_and_keep_left(voice, -beat())
-    components = library.make_one_beat_tuplets(
-        voice,
-        meters(8, 9),
-        # [3, 6, 4, 7, 5, 8, 6, 9, 7, 10],
-        # [7, 10],
-        [1, -6, 1, -9],
-        do_not_extend=True,
-        extra_counts=[-1],
-    )
-    components = library.split_and_keep_middle(components, [beat(5), beat(1)])
-    voice.extend(components)
-    rhythm(
-        # [4, 6, 2, 4, 4, 12, 12, 12],
-        # [12, 18, 6, 12, 12, 36, 36, 36],
-        # [2, -10, 2, -16, 2, -4, 2, -10, 2, -10, 2, -34, 2, -34, 2, -34],
-        # [-2, 2, -10, 2, -16, 2, -4, 2, -10],
-        [-2, 2, -10, -2, -16, 2, -4, 2, -10],
-        meters(9, 10),
-    )
-    rhythm.mmrests(11, 12)
-    """
 
+    """
     sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
     assert sixteenths == 264
     counts = [-12, 18, -6, 10, -12, 14, -16]
@@ -229,6 +166,7 @@ def GT1(voice, meters):
     rhythm(3 * counts, meters(1, 12))
     library.mask_measures(voice, [(3, 8), (11, 12)])
     rhythm.mmrests(13, 28)
+    """
 
 
 def GT2(voice, meters):

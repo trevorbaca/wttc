@@ -113,7 +113,7 @@ def is_obgc_polyphony_container(component):
     return True
 
 
-def clean_up_rhythmic_spelling(components, time_signatures, *, tag=None):
+def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=None):
     tag = tag or abjad.Tag()
     tag = tag.append(baca.helpers.function_name(inspect.currentframe()))
     protected_components = []
@@ -146,6 +146,25 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, tag=None):
             unwrapped_components.append(obgc_polyphony_container)
         else:
             unwrapped_components.append(component)
+    mmrests = baca.make_mmrests(time_signatures)
+    assert abjad.get.duration(unwrapped_components) == abjad.get.duration(mmrests)
+    measure_timespans = []
+    start_offset = abjad.Offset(0)
+    for mmrest in mmrests:
+        stop_offset = start_offset + abjad.get.duration(mmrest)
+        measure_timespan = abjad.Timespan(start_offset, stop_offset)
+        measure_timespans.append(measure_timespan)
+        start_offset = stop_offset
+    start_offset = abjad.Offset(0)
+    for i, component in enumerate(unwrapped_components[:]):
+        stop_offset = start_offset + abjad.get.duration(component)
+        timespan = abjad.Timespan(start_offset, stop_offset)
+        if timespan in measure_timespans:
+            mmrests = baca.make_mmrests([timespan.duration])
+            assert len(mmrests) == 1
+            mmrest = mmrests[0]
+            unwrapped_components[i] = mmrest
+        start_offset = stop_offset
     return unwrapped_components
 
 
@@ -282,6 +301,7 @@ def make_one_beat_tuplets(
     time_signatures,
     counts,
     *,
+    debug=False,
     do_not_extend=False,
     extra_counts=(),
 ):
@@ -290,7 +310,9 @@ def make_one_beat_tuplets(
     durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
-    components = clean_up_rhythmic_spelling(tuplets, time_signatures, tag=tag)
+    components = clean_up_rhythmic_spelling(
+        tuplets, time_signatures, debug=debug, tag=tag
+    )
     if not do_not_extend:
         voice.extend(components)
     return components
