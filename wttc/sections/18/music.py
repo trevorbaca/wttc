@@ -163,7 +163,8 @@ def GT1(voice, meters):
     j1_components = abjad.mutate.eject_contents(voice_)
     # voice.extend(j1_components)
     #
-    twelfths = 3 * sum(_.numerator for _ in meters(1, 12))
+    time_signatures = meters(1, 12)
+    twelfths = 3 * sum(_.numerator for _ in time_signatures)
     assert twelfths == 198
     counts = library.series_g(1, 1, 4, 3)
     assert counts == [4, 5, 5, 6, 6, 7]
@@ -172,24 +173,23 @@ def GT1(voice, meters):
     assert twelfths == 6 * abjad.math.weight(counts)
     components = library.make_one_beat_tuplets(
         voice,
-        meters(1, 12),
+        time_signatures,
         counts,
         do_not_extend=True,
         extra_counts=[-1],
     )
-    voice_ = rmakers.wrap_in_time_signature_staff(components, meters(1, 12))
+    voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
     library.mask_measures(voice_, ["(1, 3)/:-1", "5/1:-1", "8/1:-1", "(9, 12)/1:"])
     j3_components = abjad.mutate.eject_contents(voice_)
     # voice.extend(j3_components)
     #
-    durations = [_.duration for _ in meters(1, 12)]
+    durations = [_.duration for _ in time_signatures]
     j1_measure_lists = abjad.select.partition_by_durations(
         j1_components, durations, overhang=abjad.EXACT
     )
     j3_measure_lists = abjad.select.partition_by_durations(
         j3_components, durations, overhang=abjad.EXACT
     )
-    time_signatures = meters(1, 12)
     assert len(j1_measure_lists) == len(j3_measure_lists) == len(time_signatures)
     triples = zip(j1_measure_lists, j3_measure_lists, time_signatures)
     merged_measures = []
@@ -201,52 +201,8 @@ def GT1(voice, meters):
 
 
 def GT2(voice, meters):
-    rhythm = library.Rhythm(voice, meters)
-
-    """
-    rhythm(
-        # [-12, 18, -6, 12, -12],
-        # [-12, 2, -16, -6, 2, -10, -12],
-        [-12, OBGC([1, 1], [2]), -2, -8, -12, OBGC([1, 1, 1], [2, -2]), -8],
-        meters(1, 2),
-    )
-    library.make_one_beat_tuplets(
-        voice,
-        meters(3),
-        # [4, 7, 5, 8],
-        # [8, 5, 7, 4],
-        # [-5, 4],
-        ["-", 1, -3],
-        extra_counts=[-1],
-    )
-    library.make_one_beat_tuplets(
-        voice,
-        meters(4, 5),
-        # [4, 7, 5, 8, 6, 9, 7, 10],
-        # [1, -3, 1, -6, 1, -4, 1, -7],
-        [1, -3, 1, -6, 1, -4, 1, -7, "-"],
-        extra_counts=[-1],
-    )
-    library.make_one_beat_tuplets(
-        voice,
-        meters(6, 7),
-        # [4, 7, 5, 8, 6, 9, 7, 10],
-        # [4, 7, 5, 8],
-        # [7, 5, 8, 4],
-        [1, -6, 1, -4, 1, -7, 1, -3],
-        extra_counts=[-1],
-    )
-    rhythm.mmrests(8)
-    rhythm(
-        # [4, 6, 2, 4, 4, 12, 12, 12],
-        # [12, 18, 6, 12, 12, 36, 36, 36],
-        # [2, -10, 2, -16, 2, -4, 2, -10, 2, -10, 2, -34, 2, -34, 2, -34],
-        [2, -16, 2, -4, 2, -10, 2, -10],
-        meters(9, 10),
-    )
-    rhythm.mmrests(11, 12)
-    """
-
+    # rhythm = library.Rhythm(voice, meters)
+    #
     sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
     assert sixteenths == 264
     counts = [12, -18, 6, -10, 12, -14, 16]
@@ -255,9 +211,53 @@ def GT2(voice, meters):
     counts = library.attacks(counts, n=2)
     assert counts == [2, -10, -18, 2, -4, -10, 2, -10, -14, 2, -14]
     counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
-    rhythm(3 * counts, meters(1, 12))
-    library.mask_measures(voice, [(3, 7), "10/2:", (11, 12)])
-    rhythm.mmrests(13, 28)
+    time_signatures = meters(1, 12)
+    j1_components = library.make_rhythm(
+        voice,
+        3 * counts,
+        time_signatures,
+    )
+    voice_ = rmakers.wrap_in_time_signature_staff(j1_components, time_signatures)
+    library.mask_measures(voice_, [(3, 7), "10/2:", (11, 12)])
+    j1_components = abjad.mutate.eject_contents(voice_)
+    # voice.extend(j1_components)
+    #
+    twelfths = 3 * sum(_.numerator for _ in meters(1, 12))
+    assert twelfths == 198
+    counts = library.series_g(1, 1, 4, 3)
+    assert counts == [4, 5, 5, 6, 6, 7]
+    counts = abjad.sequence.reverse(counts)
+    assert counts == [7, 6, 6, 5, 5, 4]
+    counts = library.attacks(counts)
+    assert counts == [1, -6, 1, -5, 1, -5, 1, -4, 1, -4, 1, -3]
+    assert twelfths == 6 * abjad.math.weight(counts)
+    components = library.make_one_beat_tuplets(
+        voice,
+        meters(1, 12),
+        counts,
+        do_not_extend=True,
+        extra_counts=[-1],
+    )
+    voice_ = rmakers.wrap_in_time_signature_staff(components, meters(1, 12))
+    library.mask_measures(voice_, ["(1, 3)/:-2", "5/1:-1", "8/:1", "8/-1:", (9, 12)])
+    j3_components = abjad.mutate.eject_contents(voice_)
+    # voice.extend(j3_components)
+    #
+    durations = [_.duration for _ in time_signatures]
+    j1_measure_lists = abjad.select.partition_by_durations(
+        j1_components, durations, overhang=abjad.EXACT
+    )
+    j3_measure_lists = abjad.select.partition_by_durations(
+        j3_components, durations, overhang=abjad.EXACT
+    )
+    assert len(j1_measure_lists) == len(j3_measure_lists) == len(time_signatures)
+    triples = zip(j1_measure_lists, j3_measure_lists, time_signatures)
+    merged_measures = []
+    for j1_measure_list, j3_measure_list, time_signature in triples:
+        merged_measure = library.merge(j1_measure_list, j3_measure_list, time_signature)
+        merged_measures.append(merged_measure)
+    merged_components = abjad.sequence.flatten(merged_measures)
+    voice.extend(merged_components)
 
 
 def VN(voice, meters):
