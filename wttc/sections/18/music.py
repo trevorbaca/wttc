@@ -135,6 +135,7 @@ def FL(voice, meters):
         [rt(3), BG([1], 1), -7, BG([1], 1), -11, BG([1], 1), -3, BG([1], 1), -7, "-"],
         meters(11, 12),
     )
+    rhythm.mmrests(13, 28)
 
 
 def OB(voice, meters):
@@ -143,7 +144,7 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
-    # rhythm = library.Rhythm(voice, meters)
+    rhythm = library.Rhythm(voice, meters)
     #
     sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
     assert sixteenths == 264
@@ -198,10 +199,12 @@ def GT1(voice, meters):
         merged_measures.append(merged_measure)
     merged_components = abjad.sequence.flatten(merged_measures)
     voice.extend(merged_components)
+    #
+    rhythm.mmrests(13, 28)
 
 
 def GT2(voice, meters):
-    # rhythm = library.Rhythm(voice, meters)
+    rhythm = library.Rhythm(voice, meters)
     #
     sixteenths = 4 * sum(_.numerator for _ in meters(1, 12))
     assert sixteenths == 264
@@ -258,6 +261,8 @@ def GT2(voice, meters):
         merged_measures.append(merged_measure)
     merged_components = abjad.sequence.flatten(merged_measures)
     voice.extend(merged_components)
+    #
+    rhythm.mmrests(13, 28)
 
 
 def VN(voice, meters):
@@ -267,6 +272,8 @@ def VN(voice, meters):
         [21, 20, 15, 14, 9, 8, 3, 2],
         meters(9, 12),
     )
+    #
+    rhythm.mmrests(13, 28)
 
 
 def VC(voice, meters):
@@ -279,6 +286,8 @@ def VC(voice, meters):
         meters(1, 12),
     )
     library.mask_measures(voice, [1, "(2, 3)/2:", "5/2:", "8/:-3", "(9, 12)/2:"])
+    #
+    rhythm.mmrests(13, 28)
 
 
 def fl(m):
