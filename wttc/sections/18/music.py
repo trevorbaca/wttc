@@ -302,8 +302,28 @@ def VN(voice, meters):
         overlap=True,
     )
     #
-    pleaves = baca.select.pleaves(voice)
-    abjad.label.with_durations(pleaves, denominator=16)
+    components = library.make_rhythm(
+        voice,
+        [-11, 2, 3, 2, 3, 8, 3, 8, 9, 8, "-"],
+        meters(18, 20),
+        overlap=True,
+    )
+    #
+    components = library.make_rhythm(
+        voice,
+        [-24 + 1, 3, 2, 3, 8, 3, 8, 9, 14, "-"],
+        meters(20, 23),
+        overlap=True,
+    )
+    #
+    components = library.make_rhythm(
+        voice,
+        [-24 + 7, 8, 9, 14, 15, 20, "-"],
+        meters(23, 26),
+        overlap=True,
+    )
+    #
+    rhythm.mmrests(27, 28)
 
 
 def VC(voice, meters):
