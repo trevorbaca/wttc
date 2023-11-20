@@ -55,6 +55,24 @@ def _reference_meters():
     )
 
 
+def attach_bgs(counts, grace_lists):
+    result = []
+    cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
+    i = 0
+    for count in counts:
+        if count < 0:
+            result.append(count)
+        else:
+            grace_list = cyclic_grace_lists[i]
+            if grace_list:
+                bg = BG(grace_list, count)
+                result.append(bg)
+            else:
+                result.append(count)
+            i += 1
+    return result
+
+
 def attach_obgcs(counts, grace_lists):
     result = []
     cyclic_grace_lists = abjad.CyclicTuple(grace_lists)

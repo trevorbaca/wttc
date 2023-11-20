@@ -863,96 +863,110 @@ number.18.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
-    f'4
+    f'2
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    f'8.
+    f'16
+    [
     \repeatTie
 
-    \acciaccatura {
+    \slashedGrace {
 
         f'16
 
     }
 
     f'16
+    ]
 
-    r8.
-
-    \acciaccatura {
-
-        f'16
-
-    }
-
-    f'16
+    r8
 
     % [AltoFlute.Music measure 3]
-    r2
+    r16
 
-    r8.
-
-    \acciaccatura {
+    \slashedGrace {
 
         f'16
 
     }
 
     f'16
+
+    r8
+
+    r16
+
+    \slashedGrace {
+
+        f'16
+
+    }
+
+    f'16
+
+    r16
+
+    \slashedGrace {
+
+        f'16
+
+    }
+
+    f'16
+
+    r4
 
     % [AltoFlute.Music measure 4]
-    r8.
+    r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         f'16
 
     }
 
     f'16
+
+    r8
+
+    r16
+
+    f'16
+
+    r8
+
+    r8
+
+    f'16
+
+    r16
 
     r4
 
-    r16
-
     f'16
-
-    r8
-
-    r16
-
-    f'16
-
-    r8
 
     r8.
 
-    \acciaccatura {
+    f'16
+    [
+
+    \slashedGrace {
 
         f'16
 
     }
 
     f'16
+    ]
 
-    r8.
-
-    \acciaccatura {
-
-        f'16
-
-    }
-
-    f'16
+    r8
 
     % [AltoFlute.Music measure 5]
-    r4
-
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         f'16
 
@@ -961,46 +975,35 @@ number.18.AltoFlute.Music = {
     f'16
 
     r16
-
-    \acciaccatura {
-
-        f'16
-
-    }
-
-    f'16
-
-    r8.
-
-    \acciaccatura {
-
-        f'16
-
-    }
 
     f'16
     ~
 
-    f'2. * 1/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    f'4
+    - \tweak stencil ##f
+    ~
 
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-    f'4.
+    f'8.
+    [
+    \repeatTie
+
+    f'16
+    ]
+    ~
+
+    f'2.
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 6]
-    f'16
-
-    r8.
-
-    r8
+    f'8.
+    [
+    \repeatTie
 
     f'16
+    ]
 
-    r16
+    r4
 
     r8
 
@@ -1010,22 +1013,22 @@ number.18.AltoFlute.Music = {
 
     r4
 
-    r16
-
-    f'16
-
-    r8
-
     f'16
 
     r8.
+
+    r4
 
     % [AltoFlute.Music measure 7]
-    r8
+    f'16
+
+    r8.
+
+    r4
 
     f'16
 
-    r16
+    r8.
 
     r8
 
@@ -1040,16 +1043,6 @@ number.18.AltoFlute.Music = {
     f'16
 
     r8
-
-    f'16
-
-    r8.
-
-    r8
-
-    f'16
-
-    r16
 
     % [AltoFlute.Music measure 8]
     r8
@@ -1058,11 +1051,15 @@ number.18.AltoFlute.Music = {
 
     r16
 
+    r4
+
+    f'16
+
     r8.
 
     f'16
 
-    r2
+    r8.
 
     r16
 
@@ -1070,9 +1067,11 @@ number.18.AltoFlute.Music = {
 
     r8
 
-    r16
+    f'16
+    [
 
     f'8.
+    ]
     - \tweak stencil ##f
     ~
 
@@ -1127,19 +1126,79 @@ number.18.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
-    f'2
-    \repeatTie
-
-    f'2.
-    - \tweak stencil ##f
-    ~
-
-    % [AltoFlute.Music measure 11]
-    f'8.
+    f'16
     [
     \repeatTie
 
-    \acciaccatura {
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [AltoFlute.Music measure 11]
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [AltoFlute.Music measure 12]
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'16
+    [
+    \repeatTie
+
+    \slashedGrace {
 
         f'16
 
@@ -1148,42 +1207,17 @@ number.18.AltoFlute.Music = {
     f'16
     ]
 
+    r16
+
+    \slashedGrace {
+
+        f'16
+
+    }
+
+    f'16
+
     r4
-
-    r8.
-
-    \acciaccatura {
-
-        f'16
-
-    }
-
-    f'16
-
-    r2
-
-    r8.
-
-    \acciaccatura {
-
-        f'16
-
-    }
-
-    f'16
-
-    % [AltoFlute.Music measure 12]
-    r8.
-
-    \acciaccatura {
-
-        f'16
-
-    }
-
-    f'16
-
-    r2
 
     % [AltoFlute.Music measure 13]
     R1 * 6/4
@@ -2637,21 +2671,13 @@ number.18.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 9]
-    c'1
-    - \tweak stencil ##f
-    ~
+    r1
 
-    c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    r4
 
-    c'16
-    [
-    \repeatTie
+    r16
 
     c'8.
-    ]
     - \tweak stencil ##f
     ~
 
