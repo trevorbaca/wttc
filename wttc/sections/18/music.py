@@ -147,7 +147,73 @@ def FL(voice, meters):
             overlap=True,
         )
 
-    rhythm.mmrests(13, 28)
+    @baca.call
+    def block():
+        counts = [4, 4, 2, 6, 4]
+        counts = abjad.sequence.rotate(counts, -3)
+        assert counts == [6, 4, 4, 4, 2]
+        counts = library.attacks(counts)
+        assert counts == [1, -5, 1, -3, 1, -3, 1, -3, 1, -1]
+        counts = library.attach_bgs(counts, [[1]])
+        rhythm(
+            [-12 + 3] + counts + ["-"],
+            meters(13, 14),
+        )
+
+    @baca.call
+    def block():
+        counts = [4, 4, 2, 6, 4]
+        counts = abjad.sequence.rotate(counts, -4)
+        assert counts == [4, 4, 4, 2, 6]
+        counts = counts[:2]
+        assert counts == [4, 4]
+        counts = library.attacks(counts)
+        assert counts == [1, -3, 1, -3]
+        library.make_rhythm(
+            voice,
+            [-24 + 3] + counts + [8] + ["-"],
+            meters(14, 16),
+            overlap=True,
+        )
+
+    @baca.call
+    def block():
+        rhythm(["-", 15], meters(17, 18))
+        rhythm([48], meters(19, 20))
+        rhythm([48], meters(21, 22))
+
+    def make_j3_measures():
+        time_signatures = meters(13, 28)
+        sixteenths = 4 * sum(_.numerator for _ in time_signatures)
+        assert sixteenths == 372
+        counts = library.series_g(3, 4, 4, 6)
+        assert counts == [4, 7, 8, 11, 12, 15, 16, 19, 20, 23, 24, 27]
+        counts = counts + abjad.sequence.reverse(counts)
+        counts = library.attacks(counts)
+        assert abjad.math.weight(counts) == 372
+        assert abjad.math.weight(counts) == sixteenths
+        components = library.make_rhythm(voice, counts, meters(13, 28))
+        voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+        j3_measures = abjad.select.group_by_measure(voice_)
+        return j3_measures
+
+    j3_measures = make_j3_measures()
+    before_fermata = 13
+
+    @baca.call
+    def block():
+        voice.extend(j3_measures[23 - before_fermata])
+        library.make_rhythm(
+            voice,
+            [-24 + 1] + [1 + 24 + 24 + 12] + ["-"],
+            meters(23, 26),
+            overlap=True,
+        )
+        start = 27 - before_fermata
+        measures = j3_measures[start : start + 2]
+        components = abjad.sequence.flatten(measures)
+        voice.extend(components)
+        library.mask_measures(voice, ["(27, 28)/:2", "(27, 28)/-2:"])
 
 
 def OB(voice, meters):
