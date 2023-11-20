@@ -164,6 +164,22 @@ def delete_components_in_previous_measure(voice, *, count=1):
     del voice[index:]
 
 
+def eject_components_in_measures(voice, measure_numbers):
+    components, time_signatures = get_measures(voice, measure_numbers)
+    start = voice.index(components[0])
+    stop = voice.index(components[-1])
+    voice[start : stop + 1] = []
+    return components, time_signatures
+
+
+def eject_components_in_previous_measure(voice, *, count=1):
+    components = get_components_in_previous_measure(voice, count=count)
+    start = voice.index(components[0])
+    stop = voice.index(components[-1])
+    voice[start : stop + 1] = []
+    return components
+
+
 def end_at_right(sequence, total):
     assert total <= abjad.math.weight(sequence), repr((sequence, total))
     sequence_ = abjad.sequence.reverse(sequence)
@@ -327,7 +343,13 @@ def make_one_beat_tuplets(
 
 
 def make_rhythm(
-    voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
+    voice,
+    items,
+    time_signatures=None,
+    *,
+    denominator=16,
+    do_not_rewrite_meter=False,
+    overlap=False,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):
@@ -350,7 +372,10 @@ def make_rhythm(
         rmakers.beam([tuplet])
     rmakers.force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
-    return components
+    if overlap is True:
+        overlap_previous_measure(voice, components, time_signatures)
+    else:
+        return components
 
 
 def mask_measures(voice, items):
@@ -490,6 +515,16 @@ def mmrests(voice, time_signatures, *, head=False):
     else:
         music = baca.make_mmrests(time_signatures)
     voice.extend(music)
+
+
+def overlap_previous_measure(voice, components, time_signatures):
+    voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+    first_measure, time_signatures_ = eject_components_in_measures(voice_, 1)
+    nonfirst_measures = abjad.mutate.eject_contents(voice_)
+    previous_measure = eject_components_in_previous_measure(voice)
+    merged_measure = merge(previous_measure, first_measure, time_signatures_[0])
+    components = merged_measure + nonfirst_measures
+    voice.extend(components)
 
 
 def pair(first_real_n, first_written_n, second_real_n, second_written_n):

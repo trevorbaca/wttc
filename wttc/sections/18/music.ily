@@ -2638,6 +2638,7 @@ number.18.Violin.Music = {
 
     % [Violin.Music measure 9]
     c'1
+    ^ \markup \fraction 21 16
     - \tweak stencil ##f
     ~
 
@@ -2651,6 +2652,7 @@ number.18.Violin.Music = {
     \repeatTie
 
     c'8.
+    ^ \markup \fraction 20 16
     ]
     - \tweak stencil ##f
     ~
@@ -2666,6 +2668,7 @@ number.18.Violin.Music = {
     \repeatTie
 
     c'8.
+    ^ \markup \fraction 15 16
     ]
     - \tweak stencil ##f
     ~
@@ -2680,6 +2683,7 @@ number.18.Violin.Music = {
     \repeatTie
 
     c'2.
+    ^ \markup \fraction 14 16
     - \tweak stencil ##f
     ~
 
@@ -2688,6 +2692,7 @@ number.18.Violin.Music = {
     \repeatTie
 
     c'8
+    ^ \markup \fraction 9 16
     ]
     - \tweak stencil ##f
     ~
@@ -2703,6 +2708,7 @@ number.18.Violin.Music = {
     \repeatTie
 
     c'16
+    ^ \markup \fraction 5 16
     ]
     ~
 
@@ -2719,51 +2725,43 @@ number.18.Violin.Music = {
 
     r8.
 
-    r2.
-
-    % [Violin.Music measure 14]
-    c'2
-    ^ \markup \fraction 9 16
-    - \tweak stencil ##f
-    ~
-
-    c'16
-    [
-    \repeatTie
-
-    c'8.
-    ^ \markup \fraction 8 16
-    ]
-    - \tweak stencil ##f
-    ~
-
-    c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    c'16
-    [
-    \repeatTie
-
-    c'8.
-    ^ \markup \fraction 3 16
-    ]
-
-    c'4
-    ^ \markup \fraction 8 16
-    - \tweak stencil ##f
-    ~
-
-    % [Violin.Music measure 15]
-    c'4
-    \repeatTie
-
     r2
 
-    % [Violin.Music measure 16]
-    c'2
+    r16
+
+    c'8.
     ^ \markup \fraction 9 16
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 14]
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ^ \markup \fraction 8 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ^ \markup \fraction 3 16
+    ]
     - \tweak stencil ##f
     ~
 
@@ -2782,93 +2780,97 @@ number.18.Violin.Music = {
     ~
     \repeatTie
 
+    % [Violin.Music measure 15]
     c'16
-    [
+    \repeatTie
+
+    r8.
+
+    r4
+
+    r8
+
+    c'8
+    ^ \markup \fraction 9 16
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 16]
+    c'4
+    - \tweak stencil ##f
+    ~
     \repeatTie
 
     c'8.
-    ^ \markup \fraction 9 16
+    [
+    \repeatTie
+
+    c'16
+    ^ \markup \fraction 8 16
     ]
-    - \tweak stencil ##f
     ~
 
     c'4
     - \tweak stencil ##f
     ~
+
+    c'8.
+    [
     \repeatTie
+
+    c'16
+    ^ \markup \fraction 9 16
+    ]
+    ~
+
+    c'2
 
     % [Violin.Music measure 17]
-    c'8
-    [
-    \repeatTie
+    c'2
+    ^ \markup \fraction 8 16
 
-    c'8
+    c'8.
+    ^ \markup \fraction 3 16
+    [
+
+    c'16
     ^ \markup \fraction 8 16
     ]
-    - \tweak stencil ##f
     ~
 
     c'4
     - \tweak stencil ##f
     ~
-    \repeatTie
-
-    c'8
-    [
-    \repeatTie
-
-    c'8
-    ^ \markup \fraction 3 16
-    ]
-    - \tweak stencil ##f
-    ~
-
-    c'16
-    [
-    \repeatTie
 
     c'8.
-    ^ \markup \fraction 8 16
-    ]
-    - \tweak stencil ##f
-    ~
-
-    c'4
-    - \tweak stencil ##f
-    ~
+    [
     \repeatTie
 
     c'16
-    [
-    \repeatTie
-
-    c'8.
     ^ \markup \fraction 3 16
+    ]
+    ~
+
+    c'8
+    [
+
+    c'8
+    ^ \markup \fraction 2 16
     ]
 
     % [Violin.Music measure 18]
-    c'8
-    ^ \markup \fraction 2 16
-    [
-
-    c'8
+    c'8.
     ^ \markup \fraction 3 16
-    ]
-    - \tweak stencil ##f
-    ~
-
-    c'16
     [
-    \repeatTie
 
     c'16
     ^ \markup \fraction 2 16
+    ]
     ~
 
     c'16
-    ]
 
-    r16
+    r8.
 
     r4
 
