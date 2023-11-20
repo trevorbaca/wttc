@@ -2709,84 +2709,168 @@ number.18.Violin.Music = {
     c'4
 
     % [Violin.Music measure 13]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'2
+    ^ \markup \fraction 9 16
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    \repeatTie
+
+    r8.
+
+    r2.
 
     % [Violin.Music measure 14]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'2
+    ^ \markup \fraction 9 16
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ^ \markup \fraction 8 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ^ \markup \fraction 3 16
+    ]
+
+    c'4
+    ^ \markup \fraction 8 16
+    - \tweak stencil ##f
+    ~
 
     % [Violin.Music measure 15]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    c'4
+    \repeatTie
+
+    r2
 
     % [Violin.Music measure 16]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'2
+    ^ \markup \fraction 9 16
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ^ \markup \fraction 8 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ^ \markup \fraction 9 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Violin.Music measure 17]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ^ \markup \fraction 8 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ^ \markup \fraction 3 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ^ \markup \fraction 8 16
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ^ \markup \fraction 3 16
+    ]
 
     % [Violin.Music measure 18]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    c'8
+    ^ \markup \fraction 2 16
+    [
 
-    % [Violin.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'8
+    ^ \markup \fraction 3 16
+    ]
+    - \tweak stencil ##f
+    ~
 
-    % [Violin.Music measure 20]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'16
+    [
+    \repeatTie
 
-    % [Violin.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'16
+    ^ \markup \fraction 2 16
+    ~
 
-    % [Violin.Music measure 22]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c'16
+    ]
 
-    % [Violin.Music measure 23]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r16
 
-    % [Violin.Music measure 24]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Violin.Music measure 25]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Violin.Music measure 26]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Violin.Music measure 27]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
-
-    % [Violin.Music measure 28]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
 
 }
 

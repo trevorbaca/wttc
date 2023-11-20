@@ -164,6 +164,14 @@ def delete_components_in_previous_measure(voice, *, count=1):
     del voice[index:]
 
 
+def end_at_right(sequence, total):
+    assert total <= abjad.math.weight(sequence), repr((sequence, total))
+    sequence_ = abjad.sequence.reverse(sequence)
+    sequence_ = abjad.sequence.split(sequence_, [total])[0]
+    sequence_ = abjad.sequence.reverse(sequence_)
+    return sequence_
+
+
 def force_repeat_tie(components, threshold=(1, 8)):
     tag = baca.helpers.function_name(inspect.currentframe())
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)

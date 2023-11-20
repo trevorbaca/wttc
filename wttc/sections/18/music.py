@@ -268,12 +268,43 @@ def GT2(voice, meters):
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1, 8)
-    rhythm(
-        [21, 20, 15, 14, 9, 8, 3, 2],
+    counts = library.series_g(1, 6, 2, 4)
+    assert counts == [2, 3, 8, 9, 14, 15, 20, 21]
+    counts = abjad.sequence.reverse(counts)
+    assert counts == [21, 20, 15, 14, 9, 8, 3, 2]
+    components = library.make_rhythm(
+        voice,
+        counts,
         meters(9, 12),
     )
+    voice.extend(components)
     #
-    rhythm.mmrests(13, 28)
+    counts = library.series_g(1, 6, 2, 5)
+    assert counts == [2, 3, 8, 9, 14, 15, 20, 21, 26, 27]
+    counts = abjad.sequence.reverse(counts)
+    assert counts == [27, 26, 21, 20, 15, 14, 9, 8, 3, 2]
+    components = rhythm(
+        [9, "-"],
+        meters(13),
+    )
+    pleaves = baca.select.pleaves(components)
+    abjad.label.with_durations(pleaves, denominator=16)
+    #
+    components = rhythm(
+        [9, 8, 3, 8, "-"],
+        meters(14, 15),
+    )
+    pleaves = baca.select.pleaves(components)
+    abjad.label.with_durations(pleaves, denominator=16)
+    #
+    components = rhythm(
+        [9, 8, 9, 8, 3, 8, 3, 2, 3, 2, "-"],
+        meters(16, 18),
+    )
+    pleaves = baca.select.pleaves(components)
+    abjad.label.with_durations(pleaves, denominator=16)
+    #
+    # rhythm.mmrests(18, 28)
 
 
 def VC(voice, meters):
