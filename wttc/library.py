@@ -211,11 +211,12 @@ def force_repeat_tie(components, threshold=(1, 8)):
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
 
 
-def get_measures(voice, measure_numbers):
+def get_measures(voice, measure_numbers, *, first=1):
     groups = abjad.select.group_by_measure(voice[:])
     if isinstance(measure_numbers, int):
         assert 0 < measure_numbers, repr(measure_numbers)
         measure_index = measure_numbers - 1
+        measure_index = measure_index - first + 1
         groups = groups[measure_index : measure_index + 1]
     else:
         assert isinstance(measure_numbers, tuple), repr(measure_numbers)
@@ -223,7 +224,9 @@ def get_measures(voice, measure_numbers):
         start_number, stop_number = measure_numbers
         assert start_number <= stop_number, repr(measure_numbers)
         start_index = start_number - 1
+        start_index = start_index - first + 1
         stop_index = stop_number - 1
+        stop_index = stop_index - first + 1
         groups = groups[start_index : stop_index + 1]
     time_signatures = []
     for group in groups:
@@ -396,12 +399,12 @@ def make_rhythm(
         return components
 
 
-def mask_measures(voice, items):
+def mask_measures(voice, items, *, first=1):
     tag = baca.helpers.function_name(inspect.currentframe())
     for item in items:
         if isinstance(item, int):
             assert 0 < item, repr(item)
-            components, time_signatures = get_measures(voice, item)
+            components, time_signatures = get_measures(voice, item, first=first)
             mmrests = baca.make_mmrests(time_signatures)
             start = voice.index(components[0])
             stop = voice.index(components[-1])
@@ -411,15 +414,17 @@ def mask_measures(voice, items):
             start_number, stop_number = item
             assert start_number <= stop_number, repr(item)
             for measure_number in range(start_number, stop_number + 1):
-                mask_measures(voice, [measure_number])
+                mask_measures(voice, [measure_number], first=first)
         elif isinstance(item, str) and "/" not in item:
             item_ = eval(item)
-            mask_measures(voice, [item_])
+            mask_measures(voice, [item_], first=first)
         elif isinstance(item, str):
             assert "/" in item, repr(item)
             left, right = item.split("/")
             measure_numbers = eval(left)
-            components, time_signatures = get_measures(voice, measure_numbers)
+            components, time_signatures = get_measures(
+                voice, measure_numbers, first=first
+            )
             if right.endswith(":"):
                 start = eval(right.removesuffix(":"))
                 components = components[start:]
@@ -438,7 +443,9 @@ def mask_measures(voice, items):
                 duration = duration or abjad.get.duration(component)
                 rest = abjad.Rest(duration)
                 abjad.mutate.replace(component, rest)
-            components, time_signatures = get_measures(voice, measure_numbers)
+            components, time_signatures = get_measures(
+                voice, measure_numbers, first=first
+            )
             mmrests = baca.make_mmrests(time_signatures)
             start = voice.index(components[0])
             stop = voice.index(components[-1])

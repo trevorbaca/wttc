@@ -298,6 +298,31 @@ def GT1(voice, meters):
     )
     rhythm.mmrests(23, 28)
 
+    """
+    def make_j1_components(time_signatures):
+        sixteenths = 4 * sum(_.numerator for _ in time_signatures)
+        assert sixteenths == 372
+        counts = [12, 18, 6, 12, 18, 6, 10, 12, 14, 16]
+        assert sum(counts) == 124
+        assert 3 * sum(counts) == sixteenths
+        counts = baca.math.negate_elements(counts, indices=[0], period=2)
+        counts = library.attacks(counts, n=2)
+        counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
+        components = library.make_rhythm(
+            voice,
+            3 * counts,
+            time_signatures,
+        )
+        voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+        library.mask_measures(voice_, [(13, 24), "(27, 28)/2:"], first=13)
+        j1_components = abjad.mutate.eject_contents(voice_)
+        return j1_components
+
+    time_signatures = meters(13, 28)
+    j1_components = make_j1_components(time_signatures)
+    voice.extend(j1_components)
+    """
+
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
@@ -379,6 +404,31 @@ def GT2(voice, meters):
         meters(19, 22),
     )
     rhythm.mmrests(23, 28)
+
+    """
+    def make_j1_components(time_signatures):
+        sixteenths = 4 * sum(_.numerator for _ in time_signatures)
+        assert sixteenths == 372
+        counts = [12, 18, 6, 12, 18, 6, 10, 12, 14, 16]
+        assert sum(counts) == 124
+        assert 3 * sum(counts) == sixteenths
+        counts = baca.math.negate_elements(counts, indices=[1], period=2)
+        counts = library.attacks(counts, n=2)
+        counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
+        components = library.make_rhythm(
+            voice,
+            3 * counts,
+            time_signatures,
+        )
+        voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+        library.mask_measures(voice_, [(13, 22), (24, 25), "(27, 28)/2:"], first=13)
+        j1_components = abjad.mutate.eject_contents(voice_)
+        return j1_components
+
+    time_signatures = meters(13, 28)
+    j1_components = make_j1_components(time_signatures)
+    voice.extend(j1_components)
+    """
 
 
 def VN(voice, meters):
