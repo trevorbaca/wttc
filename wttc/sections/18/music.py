@@ -305,7 +305,7 @@ def GT1(voice, meters):
         counts = [12, 18, 6, 12, 18, 6, 10, 12, 14, 16]
         assert sum(counts) == 124
         assert 3 * sum(counts) == sixteenths
-        counts = baca.math.negate_elements(counts, indices=[0], period=2)
+        counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
         counts = library.attacks(counts, n=2)
         counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
         components = library.make_rhythm(
@@ -412,7 +412,7 @@ def GT2(voice, meters):
         counts = [12, 18, 6, 12, 18, 6, 10, 12, 14, 16]
         assert sum(counts) == 124
         assert 3 * sum(counts) == sixteenths
-        counts = baca.math.negate_elements(counts, indices=[1], period=2)
+        counts = baca.sequence.negate_elements(counts, indices=[1], period=2)
         counts = library.attacks(counts, n=2)
         counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
         components = library.make_rhythm(
@@ -439,7 +439,7 @@ def VN(voice, meters):
     def block():
         counts = library.series_g(1, 6, 2, 4)
         assert counts == [2, 3, 8, 9, 14, 15, 20, 21]
-        counts = baca.math.negate_elements(counts, indices=[-1])
+        counts = baca.sequence.negate_elements(counts, indices=[-1])
         assert counts == [2, 3, 8, 9, 14, 15, 20, -21]
         counts = abjad.sequence.reverse(counts)
         assert counts == [-21, 20, 15, 14, 9, 8, 3, 2]

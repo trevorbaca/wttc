@@ -52,7 +52,7 @@ def FL(voice, meters):
         meters(10),
     )
     counts = library.canon_e()
-    counts = baca.math.negate_elements(counts, indices=[0], period=2)
+    counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
     rhythm(
         counts + ["-"],
         meters(11, 16),
@@ -91,7 +91,7 @@ def GT1(voice, meters):
         extra_counts=[-1],
     )
     counts = library.canon_e(twelfths=True)
-    counts = baca.math.negate_elements(counts, indices=[1], period=2)
+    counts = baca.sequence.negate_elements(counts, indices=[1], period=2)
     counts_ = []
     for count in counts:
         if 1 < count:
@@ -146,7 +146,7 @@ def GT2(voice, meters):
     )
     counts = library.canon_e()
     counts = abjad.sequence.rotate(counts, -2)
-    counts = baca.math.negate_elements(counts, indices=[0], period=2)
+    counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
     counts_ = []
     for count in counts:
         if 1 < count:
