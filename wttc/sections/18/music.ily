@@ -2074,20 +2074,8 @@ number.18.Guitar.1.Music = {
     % [Guitar.1.Music measure 22]
     c''1.
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        % [Guitar.1.Music measure 23]
-        r8
-
-        c''8
-
-        r8
-
-    }
-
-    r2.
+    % [Guitar.1.Music measure 23]
+    r1
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -2200,21 +2188,7 @@ number.18.Guitar.1.Music = {
 
     }
 
-    r2
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        r8
-
-        c''8
-
-        r8
-
-    }
-
-    r4
+    r1
 
     % [Guitar.1.Music measure 28]
     r2
@@ -2283,6 +2257,30 @@ number.18.Guitar.2.Music.item.5 = {
 
 
 number.18.Guitar.2.Music.item.6 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
+number.18.Guitar.2.Music.item.7 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
+number.18.Guitar.2.Music.item.8 = {
+
+    \voiceTwo
+    c''8
+
+}
+
+
+number.18.Guitar.2.Music.item.9 = {
 
     \voiceTwo
     c''8
@@ -2791,34 +2789,200 @@ number.18.Guitar.2.Music = {
     c''1.
 
     % [Guitar.2.Music measure 23]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r8
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
+
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.2.Music"
+        { \number.18.Guitar.2.Music.item.7 }
+
+    >>
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+          %! ONE_VOICE_COMMAND
+        \oneVoice
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
 
     % [Guitar.2.Music measure 24]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c''1.
+    - \tweak stencil ##f
+    ~
 
     % [Guitar.2.Music measure 25]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    c''1.
+    \repeatTie
 
     % [Guitar.2.Music measure 26]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
+
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+
+            c''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.2.Music"
+        { \number.18.Guitar.2.Music.item.8 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r2.
 
     % [Guitar.2.Music measure 27]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r2
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                c''
+            >16
+            [
+            (
+
+            c''16
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.2.Music"
+        { \number.18.Guitar.2.Music.item.9 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        c''8
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
 
     % [Guitar.2.Music measure 28]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        c''8
+
+        r8
+
+    }
+
+    r2
 
 }
 
