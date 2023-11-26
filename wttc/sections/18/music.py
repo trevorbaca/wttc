@@ -226,7 +226,7 @@ def OB(voice, meters):
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
 
-    def make_j1_components(time_signatures):
+    def make_j1_measures(time_signatures):
         sixteenths = 4 * sum(_.numerator for _ in time_signatures)
         assert sixteenths == 264
         counts = [-12, 18, -6, 10, -12, 14, -16]
@@ -242,10 +242,11 @@ def GT1(voice, meters):
         )
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, [(3, 8), (11, 12)])
-        j1_components = abjad.mutate.eject_contents(voice_)
-        return j1_components
+        j1_measures = abjad.select.group_by_measure(voice_)
+        voice_[:] = []
+        return j1_measures
 
-    def make_j3_components(time_signatures):
+    def make_j3_measures(time_signatures):
         twelfths = 3 * sum(_.numerator for _ in time_signatures)
         assert twelfths == 198
         counts = library.series_g(1, 1, 4, 3)
@@ -262,23 +263,16 @@ def GT1(voice, meters):
         )
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, ["(1, 3)/:-1", "5/1:-1", "8/1:-1", "(9, 12)/1:"])
-        j3_components = abjad.mutate.eject_contents(voice_)
-        return j3_components
+        j3_measures = abjad.select.group_by_measure(voice_)
+        voice_[:] = []
+        return j3_measures
 
     @baca.call
     def block():
         time_signatures = meters(1, 12)
-        j1_components = make_j1_components(time_signatures)
-        j3_components = make_j3_components(time_signatures)
-        durations = [_.duration for _ in time_signatures]
-        j1_measure_lists = abjad.select.partition_by_durations(
-            j1_components, durations, overhang=abjad.EXACT
-        )
-        j3_measure_lists = abjad.select.partition_by_durations(
-            j3_components, durations, overhang=abjad.EXACT
-        )
-        assert len(j1_measure_lists) == len(j3_measure_lists) == len(time_signatures)
-        triples = zip(j1_measure_lists, j3_measure_lists, time_signatures)
+        j1_measures = make_j1_measures(time_signatures)
+        j3_measures = make_j3_measures(time_signatures)
+        triples = zip(j1_measures, j3_measures, time_signatures)
         merged_measures = []
         for j1_measure_list, j3_measure_list, time_signature in triples:
             merged_measure = library.merge(
@@ -299,7 +293,7 @@ def GT1(voice, meters):
         meters(19, 22),
     )
 
-    def make_j1_components(time_signatures):
+    def make_j1_measures(time_signatures):
         sixteenths = 4 * sum(_.numerator for _ in time_signatures)
         assert sixteenths == 372
         counts = [12, 18, 6, 12, 18, 6, 10, 12, 14, 16]
@@ -348,7 +342,7 @@ def GT1(voice, meters):
     @baca.call
     def block():
         time_signatures = meters(13, 28)
-        j1_measures = make_j1_components(time_signatures)
+        j1_measures = make_j1_measures(time_signatures)
         j3_measures = make_j3_measures(time_signatures)
         before_fermata = 13
         voice.extend(j3_measures[23 - before_fermata])
@@ -368,7 +362,7 @@ def GT1(voice, meters):
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
 
-    def make_j1_components(time_signatures):
+    def make_j1_measures(time_signatures):
         sixteenths = 4 * sum(_.numerator for _ in time_signatures)
         assert sixteenths == 264
         counts = [12, -18, 6, -10, 12, -14, 16]
@@ -384,10 +378,11 @@ def GT2(voice, meters):
         )
         voice_ = rmakers.wrap_in_time_signature_staff(j1_components, time_signatures)
         library.mask_measures(voice_, [(3, 7), "10/2:", (11, 12)])
-        j1_components = abjad.mutate.eject_contents(voice_)
-        return j1_components
+        j1_measures = abjad.select.group_by_measure(voice_)
+        voice_[:] = []
+        return j1_measures
 
-    def make_j3_components(time_signatures):
+    def make_j3_measures(time_signatures):
         twelfths = 3 * sum(_.numerator for _ in time_signatures)
         assert twelfths == 198
         counts = library.series_g(1, 1, 4, 3)
@@ -408,23 +403,16 @@ def GT2(voice, meters):
         library.mask_measures(
             voice_, ["(1, 3)/:-2", "5/1:-1", "8/:1", "8/-1:", (9, 12)]
         )
-        j3_components = abjad.mutate.eject_contents(voice_)
-        return j3_components
+        j3_measures = abjad.select.group_by_measure(voice_)
+        voice_[:] = []
+        return j3_measures
 
     @baca.call
     def block():
         time_signatures = meters(1, 12)
-        j1_components = make_j1_components(time_signatures)
-        j3_components = make_j3_components(time_signatures)
-        durations = [_.duration for _ in time_signatures]
-        j1_measure_lists = abjad.select.partition_by_durations(
-            j1_components, durations, overhang=abjad.EXACT
-        )
-        j3_measure_lists = abjad.select.partition_by_durations(
-            j3_components, durations, overhang=abjad.EXACT
-        )
-        assert len(j1_measure_lists) == len(j3_measure_lists) == len(time_signatures)
-        triples = zip(j1_measure_lists, j3_measure_lists, time_signatures)
+        j1_measures = make_j1_measures(time_signatures)
+        j3_measures = make_j3_measures(time_signatures)
+        triples = zip(j1_measures, j3_measures, time_signatures)
         merged_measures = []
         for j1_measure_list, j3_measure_list, time_signature in triples:
             merged_measure = library.merge(
@@ -434,17 +422,19 @@ def GT2(voice, meters):
         merged_components = abjad.sequence.flatten(merged_measures)
         voice.extend(merged_components)
 
-    rhythm.mmrests(13, 15)
-    rhythm(
-        [24, 24],
-        meters(16, 17),
-    )
-    rhythm.mmrests(18)
-    rhythm(
-        4 * [24],
-        meters(19, 22),
-    )
-    rhythm.mmrests(23, 28)
+    @baca.call
+    def block():
+        rhythm.mmrests(13, 15)
+        rhythm(
+            [24, 24],
+            meters(16, 17),
+        )
+        rhythm.mmrests(18)
+        rhythm(
+            4 * [24],
+            meters(19, 22),
+        )
+        rhythm.mmrests(23, 28)
 
     """
     def make_j1_components(time_signatures):
