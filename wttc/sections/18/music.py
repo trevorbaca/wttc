@@ -571,18 +571,72 @@ def VN(voice, meters):
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
 
+    def make_j3_measures(time_signatures):
+        sixteenths = 4 * sum(_.numerator for _ in time_signatures)
+        assert sixteenths == 264
+        counts = library.series_g(6, 1, 7, 3)
+        assert counts == [7, 13, 8, 14, 9, 15]
+        counts = library.attacks(counts)
+        assert counts == [1, -6, 1, -12, 1, -7, 1, -13, 1, -8, 1, -14]
+        assert abjad.math.weight(counts) == 66
+        assert 4 * abjad.math.weight(counts) == sixteenths
+        components = library.make_rhythm(voice, 4 * counts, time_signatures)
+        voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+        library.mask_measures(voice_, [1, "(2, 3)/2:", "5/2:", "8/:-3", "(9, 12)/2:"])
+        j3_measures = abjad.select.group_by_measure(voice_)
+        voice_[:] = []
+        return j3_measures
+
     @baca.call
     def block():
-        counts = [7, 13, 8, 14, 9, 15]
-        assert sum(counts) == 66
-        assert 4 * sum(_.numerator for _ in meters(1, 12)) == 264
-        rhythm(
-            library.attacks(4 * counts),
-            meters(1, 12),
-        )
-        library.mask_measures(voice, [1, "(2, 3)/2:", "5/2:", "8/:-3", "(9, 12)/2:"])
+        time_signatures = meters(1, 12)
+        j3_measures = make_j3_measures(time_signatures)
+        j3_components = abjad.sequence.flatten(j3_measures)
+        voice.extend(j3_components)
+        rhythm.mmrests(13, 22)
 
-    rhythm.mmrests(13, 28)
+    def make_j3_measures(time_signatures):
+        sixteenths = 4 * sum(_.numerator for _ in time_signatures)
+        assert sixteenths == 372
+        counts = library.series_g(3, 4, 8, 4)
+        assert counts == [8, 11, 12, 15, 16, 19, 20, 23]
+        assert sum(counts) == 124
+        counts = library.attacks(counts)
+        assert counts == [1, -7, 1, -10, 1, -11, 1, -14, 1, -15, 1, -18, 1, -19, 1, -22]
+        assert 3 * abjad.math.weight(counts) == sixteenths
+        components = library.make_rhythm(voice, 3 * counts, time_signatures)
+        voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
+        library.mask_measures(voice_, [(13, 22), (24, 26)], first=13)
+        j3_measures = abjad.select.group_by_measure(voice_)
+        voice_[:] = []
+        return j3_measures
+
+    @baca.call
+    def block():
+        time_signatures = meters(13, 28)
+        j3_measures = make_j3_measures(time_signatures)
+        before_fermata = 13
+        voice.extend(j3_measures[23 - before_fermata])
+        rhythm.mmrests(24, 25)
+        rhythm(
+            [-8, 8, 8, 4, "-"],
+            meters(26, 27),
+        )
+        components = j3_measures[27 - before_fermata]
+        library.overlap_previous_measure(voice, components, meters(27))
+        components = library.make_rhythm(
+            voice,
+            ["-", 8, 8],
+            meters(27),
+        )
+        library.overlap_previous_measure(voice, components, meters(27))
+        voice.extend(j3_measures[28 - before_fermata])
+        components = library.make_rhythm(
+            voice,
+            [-8, 8, 8],
+            meters(28),
+        )
+        library.overlap_previous_measure(voice, components, meters(28))
 
 
 def fl(m):

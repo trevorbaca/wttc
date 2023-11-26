@@ -3713,9 +3713,15 @@ number.18.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 23]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2
+
+    r16
+
+    c'16
+
+    r8
+
+    r2.
 
     % [Cello.Music measure 24]
     R1 * 6/4
@@ -3728,19 +3734,39 @@ number.18.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 26]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2
+
+    c'2
+
+    c'2
 
     % [Cello.Music measure 27]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    c'4
+
+    r2.
+
+    r16
+
+    c'16
+
+    r8
+
+    c'2
+
+    c'2
 
     % [Cello.Music measure 28]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r16
+
+    c'16
+
+    r8
+
+    r4
+
+    c'2
+
+    c'2
 
 }
 
