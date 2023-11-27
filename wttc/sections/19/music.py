@@ -217,18 +217,16 @@ def make_layout():
         baca.page(
             2,
             baca.system(measure=20, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=25, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=26, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         baca.page(
             3,
-            baca.system(measure=34, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=39, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=32, y_offset=10, distances=(15, 20, 20, 20)),
+            baca.system(measure=38, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 24),
         overrides=[
-            ((20, 24), (1, 32)),
-            ((25, 33), (1, 20)),
-            ((34, 43), (1, 32)),
+            ((20, 43), (1, 28)),
         ],
     )
     baca.section.make_layout_ly(spacing)
