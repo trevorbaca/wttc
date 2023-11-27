@@ -39,7 +39,24 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-4, -1, 1, 3, -4, 2, 6, -4, 4, 12, -12, 8, "-"],
+        meters(1, 3),
+    )
+
+    @baca.call
+    def block():
+        counts = [4, 6, 2, 4, 4, 12, 12, 12]
+        counts.insert(0, -1)
+        assert counts == [-1, 4, 6, 2, 4, 4, 12, 12, 12]
+        counts = [-56] + [-1] + [4, 6, 2]
+        counts += [-12] + [4, 6, 2, 4, 4, 4]
+        counts += [-8] + [4, 6, 2, 4, 4, 12, 12 + 3]
+        rhythm(
+            counts,
+            meters(4, 6),
+            denominator=32,
+        )
 
 
 def OB(voice, meters):
@@ -49,22 +66,82 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [OBGC(4 * [1], [8]), OBGC(3 * [1], [12])],
+        meters(1),
+    )
+    rhythm(
+        T([OBGC(4 * [1], [16])], "4:5"),
+        meters(2),
+    )
+    rhythm(
+        [A(12 * [1], 16), 1, "-", 1],
+        meters(3),
+    )
+    rhythm(
+        [-1, 1, -15, 1, -7, 1, "-"],
+        meters(4),
+    )
+    rhythm(
+        T([OBGC(4 * [1], [16])], "4:5"),
+        meters(5),
+    )
+    rhythm.mmrests(6)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [OBGC(3 * [1], [8]), OBGC(4 * [1], [12])],
+        meters(1),
+    )
+    rhythm(
+        T([OBGC(3 * [1], [16])], "4:5"),
+        meters(2),
+    )
+    rhythm(
+        [A(15 * [1], 16), 1, "-", 1],
+        meters(3),
+    )
+    rhythm(
+        [-1, 1, -15, 1, -7, 1, "-"],
+        meters(4),
+    )
+    rhythm(
+        T([OBGC(3 * [1], [16])], "4:5"),
+        meters(5),
+    )
+    rhythm.mmrests(6)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-4, -1, -1, 3, -4, -2, 6, -4, -4, 12, "-"],
+        meters(1, 3),
+    )
+    rhythm.mmrests(4, 6)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-4, -1, -1, 2, 1, -4, -2, 5, 1, -4, -4, 11, 1, -7, 12, 3, 1],
+        meters(1, 3),
+    )
+    rhythm(
+        [1, 3, 12, 1, 3, 4, 1, t(7)],
+        meters(4),
+    )
+    rhythm(
+        [t(4), 1, t(3), t(12)],
+        meters(5),
+    )
+    rhythm(
+        [1, t(3), t(8), w(15, 16), h(1)],
+        meters(6),
+        do_not_rewrite_meter=True,
+    )
 
 
 def fl(m):
