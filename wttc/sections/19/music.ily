@@ -1411,6 +1411,1078 @@ number.19.AltoFlute.Music = {
 
     f'4
 
+    % [AltoFlute.Music measure 20]
+    f'4
+
+    f'4
+
+    f'4
+
+    r2.
+
+    % [AltoFlute.Music measure 21]
+    r1.
+
+    % [AltoFlute.Music measure 22]
+    r1
+
+    r4
+
+    f'4
+
+    % [AltoFlute.Music measure 23]
+    f'4
+
+    f'4
+
+    f'4
+
+    r2.
+
+    % [AltoFlute.Music measure 24]
+    r1
+
+    r4
+
+    f'4
+
+    % [AltoFlute.Music measure 25]
+    f'4
+
+    f'4
+
+    f'4
+
+    r1.
+
+    % [AltoFlute.Music measure 26]
+    r1.
+
+    % [AltoFlute.Music measure 27]
+    r1
+
+    r4
+
+    f'4
+
+    % [AltoFlute.Music measure 28]
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    % [AltoFlute.Music measure 29]
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    % [AltoFlute.Music measure 30]
+    r1.
+
+    % [AltoFlute.Music measure 31]
+    r2
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 32]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 33]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'4
+
+    % [AltoFlute.Music measure 34]
+    f'4
+
+    f'4
+
+    f'4
+
+    r1.
+
+    % [AltoFlute.Music measure 35]
+    r1.
+
+    % [AltoFlute.Music measure 36]
+    r2
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 37]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 38]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 39]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    r2.
+
+    % [AltoFlute.Music measure 40]
+    r1.
+
+    % [AltoFlute.Music measure 41]
+    r2
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 42]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 43]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
 }
 
 
@@ -1998,6 +3070,110 @@ number.19.Guitar.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
+    % [Guitar.1.Music measure 20]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 21]
+    c''8
+
+    r8
+
+    r1
+
+    r4
+
+    % [Guitar.1.Music measure 22]
+    r1.
+
+    % [Guitar.1.Music measure 23]
+    r1.
+
+    % [Guitar.1.Music measure 24]
+    c''8
+
+    r8
+
+    r1
+
+    r4
+
+    % [Guitar.1.Music measure 25]
+    r1.
+
+    r8
+
+    c''8
+
+    r2
+
+    % [Guitar.1.Music measure 26]
+    r1.
+
+    % [Guitar.1.Music measure 27]
+    r1.
+
+    % [Guitar.1.Music measure 28]
+    r1.
+
+    % [Guitar.1.Music measure 29]
+    r1.
+
+    % [Guitar.1.Music measure 30]
+    r1.
+
+    % [Guitar.1.Music measure 31]
+    r1.
+
+    % [Guitar.1.Music measure 32]
+    r1.
+
+    % [Guitar.1.Music measure 33]
+    r1.
+
+    % [Guitar.1.Music measure 34]
+    r1.
+
+    r8
+
+    c''8
+
+    r2
+
+    % [Guitar.1.Music measure 35]
+    r1.
+
+    % [Guitar.1.Music measure 36]
+    r1.
+
+    % [Guitar.1.Music measure 37]
+    r1.
+
+    % [Guitar.1.Music measure 38]
+    r1.
+
+    % [Guitar.1.Music measure 39]
+    r1.
+
+    r8
+
+    c''8
+
+    r2
+
+    % [Guitar.1.Music measure 40]
+    r1.
+
+    % [Guitar.1.Music measure 41]
+    r1.
+
+    % [Guitar.1.Music measure 42]
+    r1.
+
+    % [Guitar.1.Music measure 43]
+    r1.
+
 }
 
 
@@ -2350,6 +3526,110 @@ number.19.Guitar.2.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
+    % [Guitar.2.Music measure 20]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 21]
+    c''8
+
+    r8
+
+    r1
+
+    r4
+
+    % [Guitar.2.Music measure 22]
+    r1.
+
+    % [Guitar.2.Music measure 23]
+    r1.
+
+    % [Guitar.2.Music measure 24]
+    c''8
+
+    r8
+
+    r1
+
+    r4
+
+    % [Guitar.2.Music measure 25]
+    r1.
+
+    r8
+
+    c''8
+
+    r2
+
+    % [Guitar.2.Music measure 26]
+    r1.
+
+    % [Guitar.2.Music measure 27]
+    r1.
+
+    % [Guitar.2.Music measure 28]
+    r1.
+
+    % [Guitar.2.Music measure 29]
+    r1.
+
+    % [Guitar.2.Music measure 30]
+    r1.
+
+    % [Guitar.2.Music measure 31]
+    r1.
+
+    % [Guitar.2.Music measure 32]
+    r1.
+
+    % [Guitar.2.Music measure 33]
+    r1.
+
+    % [Guitar.2.Music measure 34]
+    r1.
+
+    r8
+
+    c''8
+
+    r2
+
+    % [Guitar.2.Music measure 35]
+    r1.
+
+    % [Guitar.2.Music measure 36]
+    r1.
+
+    % [Guitar.2.Music measure 37]
+    r1.
+
+    % [Guitar.2.Music measure 38]
+    r1.
+
+    % [Guitar.2.Music measure 39]
+    r1.
+
+    r8
+
+    c''8
+
+    r2
+
+    % [Guitar.2.Music measure 40]
+    r1.
+
+    % [Guitar.2.Music measure 41]
+    r1.
+
+    % [Guitar.2.Music measure 42]
+    r1.
+
+    % [Guitar.2.Music measure 43]
+    r1.
+
 }
 
 
@@ -2659,6 +3939,1091 @@ number.19.Violin.Music = {
     c'4
 
     c'4
+
+    % [Violin.Music measure 20]
+    r2
+
+    c'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'2
+
+    % [Violin.Music measure 21]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Violin.Music measure 22]
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    % [Violin.Music measure 23]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+
+    r8.
+
+    c'2
+
+    c'2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Violin.Music measure 24]
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    % [Violin.Music measure 25]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+
+    r8.
+
+    c'2
+
+    c'2
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    % [Violin.Music measure 26]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8.
+        [
+        \repeatTie
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Violin.Music measure 27]
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'4
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'4
+        \repeatTie
+
+        c'16
+        ~
+
+    }
+
+    % [Violin.Music measure 28]
+    c'4
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8.
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'16
+
+    r8.
+
+    r2
+
+    % [Violin.Music measure 29]
+    r2
+
+    c'2
+
+    c'2
+
+    % [Violin.Music measure 30]
+    c'1.
+
+    % [Violin.Music measure 31]
+    c'1.
+
+    % [Violin.Music measure 32]
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        \repeatTie
+
+        c'4
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 33]
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'2
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 34]
+    c'4
+    \repeatTie
+
+    r4
+
+    c'1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    % [Violin.Music measure 35]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8
+        [
+
+        c'8.
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'8.
+    [
+
+    c'16
+    ]
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 36]
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+        c'16
+        \repeatTie
+        ~
+
+    }
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'16
+    [
+    \repeatTie
+
+    c'16
+    ~
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 37]
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'4
+        \repeatTie
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    % [Violin.Music measure 38]
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    c'16
+    [
+    \repeatTie
+
+    c'16
+    ~
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 39]
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'2.
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    % [Violin.Music measure 40]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+    ~
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'16
+    [
+    \repeatTie
+
+    c'16
+    ~
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'4
+
+    % [Violin.Music measure 41]
+    c'4
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    \repeatTie
+
+    c'2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    % [Violin.Music measure 42]
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        \repeatTie
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Violin.Music measure 43]
+        c'16
+        \repeatTie
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'2
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'2
+    \repeatTie
 
 }
 
@@ -3082,6 +5447,1158 @@ number.19.Cello.Music = {
     ]
 
     r2
+
+    % [Cello.Music measure 20]
+    c'4
+
+    c'4
+
+    c'4
+
+    r2.
+
+    % [Cello.Music measure 21]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    % [Cello.Music measure 22]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    % [Cello.Music measure 23]
+    c'4
+
+    c'4
+
+    c'2
+
+    r2
+
+    % [Cello.Music measure 24]
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    % [Cello.Music measure 25]
+    c'4
+
+    c'4
+
+    c'2
+
+    c'2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    % [Cello.Music measure 26]
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+        \repeatTie
+
+        c'8
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        \repeatTie
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    % [Cello.Music measure 27]
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'8.
+        [
+        \repeatTie
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'4
+
+        c'16
+        ~
+
+    }
+
+    c'8
+    [
+
+    c'8
+    ]
+
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Cello.Music measure 28]
+        c'16
+        \repeatTie
+
+        c'4
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    % [Cello.Music measure 29]
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'2
+
+    c'2
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 30]
+        c'8
+        [
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'2
+    \repeatTie
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    % [Cello.Music measure 31]
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    % [Cello.Music measure 32]
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Cello.Music measure 33]
+        c'4
+        - \tweak stencil ##f
+        ~
+        \repeatTie
+
+        c'16
+        [
+        \repeatTie
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'4
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+
+    }
+
+    % [Cello.Music measure 34]
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8.
+        [
+        \repeatTie
+
+        c'8
+        ]
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    \repeatTie
+
+    r8
+
+    r2
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    % [Cello.Music measure 35]
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        \repeatTie
+
+        c'4
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Cello.Music measure 36]
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'2
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 37]
+    c'4
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'2
+    \repeatTie
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 38]
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 39]
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        \repeatTie
+
+        r8.
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        [
+
+        c'16
+
+        c'16
+
+        c'16
+
+        c'16
+        ]
+
+    }
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    c'16
+    [
+
+    c'16
+
+    c'16
+
+    c'16
+    ]
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Cello.Music measure 40]
+        c'8
+        [
+
+        c'8.
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'8.
+    [
+
+    c'16
+    ]
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+        c'16
+        \repeatTie
+        ~
+
+    }
+
+    % [Cello.Music measure 41]
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'16
+    [
+    \repeatTie
+
+    c'16
+    ~
+
+    c'16
+
+    c'16
+    ]
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 42]
+        c'4
+        \repeatTie
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 43]
+    c'16
+    [
+    \repeatTie
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    \repeatTie
 
 }
 
