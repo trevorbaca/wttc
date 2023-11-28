@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -40,7 +41,43 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 5)
+    rhythm(
+        [-1, 7, 1, -7, -1, 10, 1, "-"],
+        meters(6, 7),
+    )
+    library.make_rhythm(
+        voice,
+        [-12] + 3 * [4] + ["-"],
+        meters(7, 9),
+        overlap=True,
+    )
+    rhythm(
+        ["-"] + 5 * [4],
+        meters(10, 11),
+    )
+    rhythm(
+        ["-"] + 9 * [4] + [-8],
+        meters(12, 14),
+    )
+    rhythm(
+        [-6] + 3 * [2] + ["-"],
+        meters(15),
+    )
+    library.make_rhythm(
+        voice,
+        [-19, 1, 7, 1, 4, 4],
+        meters(15, 16),
+        overlap=True,
+    )
+    rhythm(
+        6 * [2] + [-3, 4, 1],
+        meters(17),
+    )
+    rhythm(
+        [4, 4] + 12 * [2] + [4, 4],
+        meters(18, 19),
+    )
 
 
 def OB(voice, meters):
@@ -50,22 +87,180 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 5)
+    library.make_one_beat_tuplets(
+        voice,
+        meters(6, 7),
+        [-1, 1, -1, 1, -2, -14, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(8),
+        [1, 1, -2, 1, "-"],
+        extra_counts=[-1],
+    )
+    rhythm.mmrests(9, 10)
+    library.make_one_beat_tuplets(
+        voice,
+        meters(11, 12),
+        [-2, 1, -3, 1, 1, -2, 1, -3, 1, "-"],
+        extra_counts=[-1],
+    )
+    library.make_one_beat_tuplets(
+        voice,
+        meters(13, 14),
+        [-3, 1, 1, -2, 1, -3, 1, 1, -2, 1, -3, 1, 1, -2, 1, "-"],
+        extra_counts=[-1],
+    )
+    rhythm.mmrests(15, 16)
+    library.make_one_beat_tuplets(
+        voice,
+        meters(17),
+        [-9, -1, 1, "-"],
+        extra_counts=[-1],
+    )
+    rhythm.mmrests(18, 19)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 5)
+    rhythm(
+        [-1, 2, -3, 3, -7, -1, 1, -1, 1, -6, 1, -2, 1, -3],
+        meters(6, 7),
+    )
+    rhythm(
+        [-1, 1, -5, 1, -2, 1, "-"],
+        meters(8),
+    )
+    rhythm(
+        8 * [-1, 2, -1],
+        meters(9, 10),
+    )
+    rhythm(
+        [-2, 1, -2, 1, -5, 1, -2, 1, -2, 1, -2, -4] + 4 * [-1, 3],
+        meters(11, 12),
+    )
+    rhythm(
+        [-5, 1, -2, 1, -2, 1, -2, 1, -5, 1, -2, 1, -2, 1, -2, 1, -5, 1, "-"],
+        meters(13, 14),
+    )
+    rhythm.mmrests(15, 19)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 5)
+    rhythm(
+        [-1, 2, -3, 3, -7, -1, 1, -1, 1, -6, 1, -2, 1, -3],
+        meters(6, 7),
+    )
+    rhythm(
+        [4, 4, "-"],
+        meters(8),
+    )
+    rhythm(
+        8 * [-1, 2, -1],
+        meters(9, 10),
+    )
+    rhythm(
+        4 * [4],
+        meters(11),
+    )
+    rhythm(
+        [-8] + 4 * [-1, 3],
+        meters(12),
+    )
+    rhythm(
+        8 * [4] + ["-"],
+        meters(13, 14),
+    )
+    rhythm(
+        [-1, "+", -4],
+        meters(15),
+    )
+    rhythm(
+        [-4] + 4 * [4] + [12] + 4 * [4] + [16] + 3 * [4],
+        meters(16, 19),
+    )
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+
+    @baca.call
+    def block():
+        rhythm(
+            [w(4, 8), h(4), w(6, 12), h(6), 4],
+            meters(1),
+            do_not_rewrite_meter=True,
+        )
+        rhythm(
+            [w(8, 16), h(8), 12, "-"],
+            meters(2, 3),
+        )
+
+    @baca.call
+    def block():
+        counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
+        library.make_rhythm(
+            voice,
+            [-12] + counts,
+            meters(3, 5),
+            overlap=True,
+        )
+        rhythm(
+            [rt(16), t(rt(16)), 5, "-"],
+            meters(6, 8),
+        )
+
+    @baca.call
+    def block():
+        counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
+        counts = abjad.sequence.reverse(counts)
+        assert counts == [1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8]
+        library.make_rhythm(
+            voice,
+            [-7] + counts + ["-"],
+            meters(8, 11),
+            overlap=True,
+        )
+
+    @baca.call
+    def block():
+        counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
+        counts = abjad.sequence.reverse(counts)
+        counts = counts[6:-2]
+        assert counts == [1, 5, 1, 6, 1, 7]
+        library.make_rhythm(
+            voice,
+            [-11] + counts + ["-"],
+            meters(11, 12),
+            overlap=True,
+        )
+
+    @baca.call
+    def block():
+        counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
+        counts = abjad.sequence.reverse(counts)
+        counts = counts[8:-2]
+        assert counts == [1, 6, 1, 7]
+        rhythm(
+            [-16, -11] + counts + ["-"],
+            meters(13, 14),
+        )
+
+    @baca.call
+    def block():
+        rhythm(
+            [-6, 2, 2, 2, 6, 1, 14, "-"],
+            meters(15, 16),
+        )
+        rhythm(
+            [2, 2, 2, 2, 2, 2, -3, 10, -3] + 6 * [2, 2] + ["-"],
+            meters(17, 19),
+        )
 
 
 def fl(m):
