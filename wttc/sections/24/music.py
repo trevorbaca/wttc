@@ -88,30 +88,21 @@ def GT1(voice, meters):
 
     @baca.call
     def block():
-        counts = [3, 6, 6]
-        counts = abjad.sequence.rotate(counts, 0)
-        counts = abjad.sequence.repeat_to_length(counts, 2)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B1(0, 2)
         assert counts == [-3, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
             [-12] + counts + ["+"],
             meters(1, 3),
         )
-        counts = [3, 6, 6]
-        counts = abjad.sequence.rotate(counts, -1)
-        counts = abjad.sequence.repeat_to_length(counts, 2)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B1(-1, 2)
         assert counts == [-6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
             [rt(t(4)), 1, -7] + counts + [t(24)],
             meters(4, 5),
         )
-        counts = [3, 6, 6]
-        counts = abjad.sequence.rotate(counts, -2)
-        counts = abjad.sequence.repeat_to_length(counts, 4)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B1(-2, 4)
         assert counts == [-6, 3, 6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
@@ -122,10 +113,7 @@ def GT1(voice, meters):
 
     @baca.call
     def block():
-        counts = [3, 6, 6]
-        counts = abjad.sequence.rotate(counts, -3)
-        counts = abjad.sequence.repeat_to_length(counts, 10)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B1(-3, 10)
         assert counts == [-3, 6, 6, 3, 6, 6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
@@ -136,10 +124,7 @@ def GT1(voice, meters):
             A(4 * [1] + [-1], 48),
             meters(13, 14),
         )
-        counts = [3, 6, 6]
-        counts = abjad.sequence.rotate(counts, -4)
-        counts = abjad.sequence.repeat_to_length(counts, 6)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B1(-4, 6)
         assert counts == [-6, 6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
@@ -150,15 +135,45 @@ def GT1(voice, meters):
 
     @baca.call
     def block():
-        counts = [3, 6, 6]
-        counts = abjad.sequence.rotate(counts, -4)
-        counts = abjad.sequence.repeat_to_length(counts, 6)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
-        assert counts == [-6, 6, 3, 6, 6, 3]
-        counts[1] = BG([2], counts[1])
         rhythm(
             A([-1, 1, -1, -1, -1, -1, 1], 48),
             meters(18, 19),
+        )
+        counts = B1(-5, 5)
+        assert counts == [-6, 3, 6, 6, 3]
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            [-12] + counts + ["-"],
+            meters(20, 21),
+        )
+        rhythm.mmrests(22)
+        rhythm(
+            A([1, 1, -1, -1, -1, 1, -1], 48),
+            meters(23, 24),
+        )
+        rhythm(
+            R([-1, -1, 1, -1], 24),
+            meters(25),
+        )
+
+    @baca.call
+    def block():
+        counts = B1(-6, 3)
+        assert counts == [-3, 6, 6]
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            [-12] + counts + ["+"],
+            meters(26, 28),
+        )
+
+    @baca.call
+    def block():
+        counts = B1(-7, 2)
+        assert counts == [-6, 6]
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            counts + ["+"],
+            meters(29, 33),
         )
 
 
@@ -175,30 +190,21 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        counts = [5, 5, 3]
-        counts = abjad.sequence.rotate(counts, 0)
-        counts = abjad.sequence.repeat_to_length(counts, 2)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B2(0, 2)
         assert counts == [-5, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
             [-12] + counts + ["+"],
             meters(1, 3),
         )
-        counts = [5, 5, 3]
-        counts = abjad.sequence.rotate(counts, -1)
-        counts = abjad.sequence.repeat_to_length(counts, 3)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B2(-1, 3)
         assert counts == [-5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
             [rt(t(4)), 1, -7] + counts + ["+"],
             meters(4, 5),
         )
-        counts = [5, 5, 3]
-        counts = abjad.sequence.rotate(counts, -2)
-        counts = abjad.sequence.repeat_to_length(counts, 5)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B2(-2, 5)
         assert counts == [-3, 5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
@@ -209,10 +215,7 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        counts = [5, 5, 3]
-        counts = abjad.sequence.rotate(counts, -3)
-        counts = abjad.sequence.repeat_to_length(counts, 11)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B2(-3, 11)
         assert counts == [-5, 5, 3, 5, 5, 3, 5, 5, 3, 5, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
@@ -223,10 +226,7 @@ def GT2(voice, meters):
             R([rt(1)] + 4 * [1], 48),
             meters(13, 14),
         )
-        counts = [5, 5, 3]
-        counts = abjad.sequence.rotate(counts, -4)
-        counts = abjad.sequence.repeat_to_length(counts, 6)
-        counts = baca.sequence.negate_elements(counts, indices=[0])
+        counts = B2(-4, 6)
         assert counts == [-5, 3, 5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
@@ -234,13 +234,48 @@ def GT2(voice, meters):
             meters(15, 16),
         )
         rhythm.mmrests(17)
+
+    @baca.call
+    def block():
         rhythm(
             R([1, -1, -1, -1, 1, -1, 1], 48),
             meters(18, 19),
         )
+        counts = B2(-5, 5)
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            [-12] + counts + ["-"],
+            meters(20, 21),
+        )
+        rhythm.mmrests(22)
+        rhythm(
+            R([-1, 1, -1, -1, -1, -1, 1], 48),
+            meters(23, 24),
+        )
+        rhythm(
+            A([-1, 1, -1, -1], 24),
+            meters(25),
+        )
 
-    pleaves = baca.select.pleaves(voice, grace=False)
-    abjad.label.with_durations(pleaves, denominator=16)
+    @baca.call
+    def block():
+        counts = B2(-6, 4)
+        assert counts == [-5, 5, 3, 5]
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            [-12] + counts + ["+"],
+            meters(26, 28),
+        )
+
+    @baca.call
+    def block():
+        counts = B2(-7, 3)
+        assert counts == [-5, 3, 5]
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            counts + ["+"],
+            meters(29, 33),
+        )
 
 
 def VN(voice, meters):

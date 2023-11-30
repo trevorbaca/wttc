@@ -1996,6 +1996,220 @@ number.24.Guitar.1.Music = {
     }
     \revert TupletNumber.text
 
+    % [Guitar.1.Music measure 20]
+    r1
+
+    r8
+
+    \acciaccatura {
+
+        c''8
+
+    }
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    [
+    \repeatTie
+
+    c''8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c''8.
+    [
+    \repeatTie
+
+    c''16
+    ]
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    [
+    \repeatTie
+
+    c''8.
+    ]
+
+    % [Guitar.1.Music measure 21]
+    r1.
+
+    % [Guitar.1.Music measure 22]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
+    \times 1/1
+    {
+
+        % [Guitar.1.Music measure 23]
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #right
+        c''16 * 102144/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"102144" #"7168"
+        [
+
+        c''16 * 55296/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"55296" #"7168"
+
+        r16 * 45312/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"45312" #"7168"
+
+        r16 * 39936/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"39936" #"7168"
+
+        r16 * 36096/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"36096" #"7168"
+
+        c''16 * 33792/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"33792" #"7168"
+
+        r16 * 31488/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"31488" #"7168"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
+
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
+    \times 1/1
+    {
+
+        % [Guitar.1.Music measure 25]
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #left
+        r16 * 2592/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"2592" #"1024"
+        [
+
+        r16 * 5376/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"5376" #"1024"
+
+        c''16 * 7392/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"7392" #"1024"
+
+        r16 * 9216/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"9216" #"1024"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
+
+    % [Guitar.1.Music measure 26]
+    r2.
+
+    r8.
+
+    \acciaccatura {
+
+        c''8
+
+    }
+
+    c''16
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    [
+    \repeatTie
+
+    c''8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c''8.
+    [
+    \repeatTie
+
+    c''16
+    ]
+    ~
+
+    c''2
+    - \tweak stencil ##f
+    ~
+
+    % [Guitar.1.Music measure 27]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.1.Music measure 28]
+    c''1.
+    \repeatTie
+
+    % [Guitar.1.Music measure 29]
+    r4
+
+    r8
+
+    \acciaccatura {
+
+        c''8
+
+    }
+
+    c''8
+    - \tweak stencil ##f
+    ~
+
+    c''4
+    \repeatTie
+
+    c''2.
+    - \tweak stencil ##f
+    ~
+
+    % [Guitar.1.Music measure 30]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.1.Music measure 31]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.1.Music measure 32]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.1.Music measure 33]
+    c''1.
+    \repeatTie
+
 }
 
 
@@ -2053,7 +2267,6 @@ number.24.Guitar.2.Music = {
     }
 
     c''8.
-    ^ \markup \fraction 5 16
     - \tweak stencil ##f
     ~
 
@@ -2062,7 +2275,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8
-    ^ \markup \fraction 55 16
     ]
     - \tweak stencil ##f
     ~
@@ -2101,10 +2313,8 @@ number.24.Guitar.2.Music = {
     }
 
     c''8.
-    ^ \markup \fraction 3 16
 
     c''4
-    ^ \markup \fraction 5 16
     - \tweak stencil ##f
     ~
 
@@ -2114,7 +2324,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8.
-    ^ \markup \fraction 28 16
     ]
     - \tweak stencil ##f
     ~
@@ -2151,13 +2360,11 @@ number.24.Guitar.2.Music = {
     }
 
     c''16
-    ^ \markup \fraction 5 16
     ~
 
     c''4
 
     c''4
-    ^ \markup \fraction 5 16
     - \tweak stencil ##f
     ~
 
@@ -2166,11 +2373,9 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8.
-    ^ \markup \fraction 3 16
     ]
 
     c''4
-    ^ \markup \fraction 5 16
     - \tweak stencil ##f
     ~
 
@@ -2211,7 +2416,6 @@ number.24.Guitar.2.Music = {
     }
 
     c''8.
-    ^ \markup \fraction 5 16
     - \tweak stencil ##f
     ~
 
@@ -2220,7 +2424,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8
-    ^ \markup \fraction 3 16
     ]
     - \tweak stencil ##f
     ~
@@ -2230,7 +2433,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8.
-    ^ \markup \fraction 5 16
     ]
     - \tweak stencil ##f
     ~
@@ -2240,7 +2442,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8
-    ^ \markup \fraction 5 16
     ]
     - \tweak stencil ##f
     ~
@@ -2250,7 +2451,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''16
-    ^ \markup \fraction 3 16
     ]
     ~
 
@@ -2259,7 +2459,6 @@ number.24.Guitar.2.Music = {
     [
 
     c''8
-    ^ \markup \fraction 5 16
     ]
     - \tweak stencil ##f
     ~
@@ -2269,25 +2468,21 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''16
-    ^ \markup \fraction 5 16
     ]
     ~
 
     c''4
 
     c''8.
-    ^ \markup \fraction 3 16
     [
 
     c''16
-    ^ \markup \fraction 5 16
     ]
     ~
 
     c''4
 
     c''4
-    ^ \markup \fraction 149 320
     - \tweak stencil ##f
     ~
 
@@ -2306,22 +2501,18 @@ number.24.Guitar.2.Music = {
         c''16 * 37632/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"37632" #"5120"
-        ^ \markup \fraction 147 320
 
         c''16 * 51456/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"51456" #"5120"
-        ^ \markup \fraction 201 320
 
         c''16 * 63744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"63744" #"5120"
-        ^ \markup \fraction 249 320
 
         c''16 * 75264/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"75264" #"5120"
-        ^ \markup \fraction 147 160
         ]
 
     }
@@ -2339,10 +2530,8 @@ number.24.Guitar.2.Music = {
     }
 
     c''8.
-    ^ \markup \fraction 3 16
 
     c''4
-    ^ \markup \fraction 5 16
     - \tweak stencil ##f
     ~
 
@@ -2351,7 +2540,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8.
-    ^ \markup \fraction 5 16
     ]
     - \tweak stencil ##f
     ~
@@ -2361,7 +2549,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8
-    ^ \markup \fraction 3 16
     ]
     - \tweak stencil ##f
     ~
@@ -2371,7 +2558,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     c''8.
-    ^ \markup \fraction 5 16
     ]
     - \tweak stencil ##f
     ~
@@ -2401,7 +2587,6 @@ number.24.Guitar.2.Music = {
         c''16 * 14592/7168
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"14592" #"7168"
-        ^ \markup \fraction 57 448
         [
 
         r16 * 30720/7168
@@ -2419,7 +2604,6 @@ number.24.Guitar.2.Music = {
         c''16 * 60672/7168
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"60672" #"7168"
-        ^ \markup \fraction 237 448
 
         r16 * 68352/7168
           %! DURATION_MULTIPLIER
@@ -2428,12 +2612,235 @@ number.24.Guitar.2.Music = {
         c''16 * 76032/7168
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"76032" #"7168"
-        ^ \markup \fraction 297 448
         ]
         \revert Staff.Stem.stemlet-length
 
     }
     \revert TupletNumber.text
+
+    % [Guitar.2.Music measure 20]
+    r2.
+
+    r8.
+
+    \acciaccatura {
+
+        c''8
+
+    }
+
+    c''16
+    ~
+
+    c''4
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    [
+    \repeatTie
+
+    c''8.
+    ]
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    \repeatTie
+
+    r8.
+
+    % [Guitar.2.Music measure 21]
+    r1.
+
+    % [Guitar.2.Music measure 22]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
+    \times 1/1
+    {
+
+        % [Guitar.2.Music measure 23]
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #left
+        r16 * 14592/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"14592" #"7168"
+        [
+
+        c''16 * 30720/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"30720" #"7168"
+
+        r16 * 42240/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"42240" #"7168"
+
+        r16 * 51456/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"51456" #"7168"
+
+        r16 * 60672/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"60672" #"7168"
+
+        r16 * 68352/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"68352" #"7168"
+
+        c''16 * 76032/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"76032" #"7168"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
+
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
+    \times 1/1
+    {
+
+        % [Guitar.2.Music measure 25]
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #right
+        r16 * 10368/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"10368" #"1024"
+        [
+
+        c''16 * 5568/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"5568" #"1024"
+
+        r16 * 4608/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"4608" #"1024"
+
+        r16 * 4032/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"4032" #"1024"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
+
+    % [Guitar.2.Music measure 26]
+    r1
+
+    r16
+
+    \acciaccatura {
+
+        c''8
+
+    }
+
+    c''8.
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    [
+    \repeatTie
+
+    c''8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    [
+    \repeatTie
+
+    c''8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c''8
+    [
+    \repeatTie
+
+    c''8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c''4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.2.Music measure 27]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.2.Music measure 28]
+    c''1.
+    \repeatTie
+
+    % [Guitar.2.Music measure 29]
+    r4
+
+    r16
+
+    \acciaccatura {
+
+        c''8
+
+    }
+
+    c''8.
+
+    c''4
+    - \tweak stencil ##f
+    ~
+
+    c''16
+    [
+    \repeatTie
+
+    c''8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c''2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.2.Music measure 30]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.2.Music measure 31]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.2.Music measure 32]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Guitar.2.Music measure 33]
+    c''1.
+    \repeatTie
 
 }
 
