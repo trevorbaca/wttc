@@ -2292,49 +2292,15 @@ number.24.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
 
-    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
-    \times 1/1
-    {
+    % [Guitar.2.Music measure 13]
+    c''1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
-        % [Guitar.2.Music measure 13]
-        \once \override Beam.grow-direction = #left
-        c''16 * 1632/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"1632" #"1024"
-        [
-        \repeatTie
-
-        c''16 * 3456/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"3456" #"1024"
-
-        c''16 * 4800/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"4800" #"1024"
-
-        c''16 * 5952/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"5952" #"1024"
-
-        c''16 * 7008/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"7008" #"1024"
-
-        c''16 * 7872/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"7872" #"1024"
-
-        c''16 * 8736/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"8736" #"1024"
-
-        c''16 * 9696/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"9696" #"1024"
-        ]
-
-    }
-    \revert TupletNumber.text
+    % [Guitar.2.Music measure 14]
+    c''1.
+    \repeatTie
 
     % [Guitar.2.Music measure 15]
     r2.
@@ -2398,48 +2364,37 @@ number.24.Guitar.2.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
-    \times 1/1
-    {
+    % [Guitar.2.Music measure 18]
+    r8.
 
-        % [Guitar.2.Music measure 18]
-        \override Staff.Stem.stemlet-length = 0.75
-        \once \override Beam.grow-direction = #left
-        c''16 * 14592/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"14592" #"7168"
+    c''16
 
-        r16 * 30720/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"30720" #"7168"
+    r2.
 
-        c''16 * 42240/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"42240" #"7168"
-        [
+    r16
 
-        c''16 * 51456/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"51456" #"7168"
-        ]
+    c''16
 
-        r16 * 60672/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"60672" #"7168"
+    r8
 
-        c''16 * 68352/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"68352" #"7168"
-        [
+    r4
 
-        c''16 * 76032/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"76032" #"7168"
-        ]
-        \revert Staff.Stem.stemlet-length
+    % [Guitar.2.Music measure 19]
+    r8
 
-    }
-    \revert TupletNumber.text
+    c''16
+
+    r16
+
+    r2.
+
+    r16
+
+    c''16
+
+    r8
+
+    r4
 
 }
 
