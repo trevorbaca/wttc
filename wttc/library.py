@@ -606,8 +606,6 @@ def rhythm(
         tag=tag,
         voice_name=voice.name,
     )
-    for tuplet in abjad.select.tuplets(voice_):
-        rmakers.beam([tuplet])
     rmakers.force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)

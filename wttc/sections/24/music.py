@@ -115,17 +115,8 @@ def GT1(voice, meters):
             meters(15, 16),
         )
         rhythm.mmrests(17)
-
-    @baca.call
-    def block():
-        counts = [16, 16, 16]
-        counts = [16 + 5, 16, 16 - 5]
-        counts = [21, 16, 11]
-        counts = [-15, 21 - 15, 16, 11]
-        counts = [-15, 6, 16, 11]
-        counts = [-15, 1, -5, 1, -15, 1, -10]
         rhythm(
-            counts,
+            A([1, 1, -1, -1, -1, 1, -1], 48),
             meters(18, 19),
         )
 
@@ -162,8 +153,7 @@ def GT2(voice, meters):
             meters(11, 12),
         )
         rhythm(
-            # R(8 * [1], 48),
-            [48],
+            R(8 * [1], 48),
             meters(13, 14),
         )
         rhythm(
@@ -171,27 +161,10 @@ def GT2(voice, meters):
             meters(15, 16),
         )
         rhythm.mmrests(17)
-
-    @baca.call
-    def block():
-        counts = [12, 12, 12, 12]
-        counts = [12 + 5, 12 - 3, 12 + 3, 12 - 5]
-        assert counts == [17, 9, 15, 7]
-        counts = [-3, 17 - 3, 9, 15, 7]
-        assert counts == [-3, 14, 9, 15, 7]
-        counts = [-3, 1, -13, 1, -8, 1, -14, 1, -6]
         rhythm(
-            counts,
+            R([-1, 1, -1, -1, -1, 1, 1], 48),
             meters(18, 19),
         )
-
-    """
-    rhythm(
-        R([1, -1, 1, 1, -1, 1, 1], 48),
-        meters(18, 19),
-        do_not_rewrite_meter=True,
-    )
-    """
 
 
 def VN(voice, meters):
