@@ -583,6 +583,9 @@ def replace_measure(voice, measure_number, components):
     voice[start_index : stop_index + 1] = components
 
 
+# TODO: make time_signatures positional instead of keyword
+# TODO: change signature to voice, time_signatures, items
+# TODO: update every rhythm() call in music.py files
 def rhythm(
     voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
 ):
