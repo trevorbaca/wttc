@@ -27,11 +27,53 @@ swell = library.swell
 
 def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
+    baca.literal(
+        skips[14 - 1],
+        [
+            r"\tweak padding 1.5",
+            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        ],
+        site="after",
+    )
 
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-5, 16, 32, 32, "-"],
+        meters(1, 5),
+    )
+    rhythm(
+        [5, 32, "-"],
+        meters(6, 8),
+    )
+    library.make_rhythm(
+        voice,
+        [-5, "+"],
+        meters(8),
+        overlap=True,
+    )
+    rhythm(
+        [5, 32, "-"],
+        meters(9, 11),
+    )
+    library.make_rhythm(
+        voice,
+        [-13, "+"],
+        meters(11),
+        overlap=True,
+    )
+    rhythm(
+        [5, 32, "-"],
+        meters(12, 14),
+    )
+
+    library.make_rhythm(
+        voice,
+        [-13, "+"],
+        meters(14),
+        overlap=True,
+    )
 
 
 def OB(voice, meters):
@@ -41,12 +83,34 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-21, 32, t(32), "+"],
+        meters(1, 6),
+    )
+    rhythm(
+        [-4, -1, 1, -2, -8, 1, "+"],
+        meters(7, 9),
+    )
+    rhythm(
+        [-4, -1, 1, -2, -8, 1, 27, -1, 1, -10, 1, "+"],
+        meters(10, 14),
+    )
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        [-21, 32, t(32), "+"],
+        meters(1, 6),
+    )
+    rhythm(
+        [-4, -1, 1, -2, -8, 1, "+"],
+        meters(7, 9),
+    )
+    rhythm(
+        [-4, -1, 1, -2, -8, 1, 27, -1, 1, -10, 1, "+"],
+        meters(10, 14),
+    )
 
 
 def VN(voice, meters):
