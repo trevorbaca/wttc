@@ -27,6 +27,16 @@
     "first_measure_number": 233,
     "has_anchor_skip": True,
     "persistent_indicators": {
+        "AltoFlute.Music": [
+            baca.Memento(
+                context="AltoFlute.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.VoiceNumber",
+                synthetic_offset=None,
+                value=2,
+            )
+        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -174,6 +184,16 @@
                 synthetic_offset=None,
                 value="7/4",
             ),
+        ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.VoiceNumber",
+                synthetic_offset=None,
+                value=2,
+            )
         ],
         "Violin.Staff": [
             baca.Memento(

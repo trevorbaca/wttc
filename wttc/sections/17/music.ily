@@ -411,9 +411,11 @@ number.17.AltoFlute.Music = {
     f'32
 
     f'16.
+    ]
     ~
 
     f'16.
+    [
 
     f'32
     ~
@@ -441,9 +443,16 @@ number.17.AltoFlute.Music = {
     ~
 
     f'32
+    [
     \repeatTie
 
-    f'4...
+    f'8..
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'4
+    \repeatTie
 
 }
 

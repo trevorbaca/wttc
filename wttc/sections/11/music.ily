@@ -1468,11 +1468,7 @@ number.11.Cello.Music = {
     r2.
 
     % [Cello.Music measure 9]
-    r2.
-
-    r2
-
-    r4
+    r1.
 
     c'4
 
