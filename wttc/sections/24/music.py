@@ -122,6 +122,7 @@ def GT1(voice, meters):
         rhythm(
             meters(13, 14),
             A(4 * [1] + [-1], 48),
+            do_not_beam_tuplets=True,
         )
         counts = B1(-4, 6)
         assert counts == [-6, 6, 3, 6, 6, 3]
@@ -137,6 +138,7 @@ def GT1(voice, meters):
         rhythm(
             meters(18, 19),
             A([-1, 1, -1, -1, -1, -1, 1], 48),
+            do_not_beam_tuplets=True,
         )
         counts = B1(-5, 5)
         assert counts == [-6, 3, 6, 6, 3]
@@ -149,10 +151,12 @@ def GT1(voice, meters):
         rhythm(
             meters(23, 24),
             A([1, 1, -1, -1, -1, 1, -1], 48),
+            do_not_beam_tuplets=True,
         )
         rhythm(
             meters(25),
             R([-1, -1, 1, -1], 24),
+            do_not_beam_tuplets=True,
         )
 
     @baca.call
@@ -239,6 +243,7 @@ def GT2(voice, meters):
         rhythm(
             meters(18, 19),
             R([1, -1, -1, -1, 1, -1, 1], 48),
+            do_not_beam_tuplets=True,
         )
         counts = B2(-5, 5)
         counts[1] = BG([2], counts[1])
@@ -250,10 +255,12 @@ def GT2(voice, meters):
         rhythm(
             meters(23, 24),
             R([-1, 1, -1, -1, -1, -1, 1], 48),
+            do_not_beam_tuplets=True,
         )
         rhythm(
             meters(25),
             A([-1, 1, -1, -1], 24),
+            do_not_beam_tuplets=True,
         )
 
     @baca.call
@@ -428,6 +435,7 @@ def VC(voice, meters):
         rhythm(
             meters(12, 14),
             [-16, R([-1] + 5 * [1], 56)],
+            do_not_beam_tuplets=True,
         )
         rhythm(
             meters(15, 17),
@@ -436,6 +444,7 @@ def VC(voice, meters):
         rhythm(
             meters(18, 19),
             [R([-1, 1, -1, -1, 1, 1], 48)],
+            do_not_beam_tuplets=True,
         )
 
     @baca.call
@@ -447,6 +456,7 @@ def VC(voice, meters):
         rhythm(
             meters(23, 24),
             [R([1, -1, -1, -1, 1, 1], 48)],
+            do_not_beam_tuplets=True,
         )
         rhythm(
             meters(25),

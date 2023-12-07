@@ -35,8 +35,47 @@ class Rhythm:
         assert isinstance(self.voice, abjad.Voice), repr(self.voice)
         assert isinstance(self.meters, baca.section.TimeSignatureServer)
 
-    def __call__(self, *arguments, **keywords):
-        return rhythm(self.voice, *arguments, **keywords)
+    def __call__(
+        self,
+        time_signatures,
+        items,
+        *,
+        denominator=16,
+        do_not_beam_tuplets=False,
+        do_not_extend=False,
+        do_not_rewrite_meter=False,
+        overlap=False,
+    ):
+        assert time_signatures is not None, repr(time_signatures)
+        tag = baca.helpers.function_name(inspect.currentframe())
+        if isinstance(items, list):
+            items = abjad.sequence.flatten(items)
+        else:
+            items = [items]
+        if time_signatures is None:
+            do_not_rewrite_meter = True
+        voice_ = baca.make_rhythm(
+            items,
+            denominator,
+            time_signatures,
+            boundary_depth=1,
+            do_not_rewrite_meter=do_not_rewrite_meter,
+            reference_meters=_reference_meters(),
+            tag=tag,
+            voice_name=self.voice.name,
+        )
+        rmakers.force_fraction(voice_)
+        if not do_not_beam_tuplets:
+            for tuplet in abjad.select.tuplets(voice_):
+                rmakers.beam([tuplet])
+        components = abjad.mutate.eject_contents(voice_)
+        if do_not_extend is True:
+            return components
+        elif overlap is True:
+            overlap_previous_measure(self.voice, components, time_signatures)
+        else:
+            self.voice.extend(components)
+        return components
 
     def make_one_beat_tuplets(
         self,
@@ -585,11 +624,7 @@ def replace_measure(voice, measure_number, components):
     voice[start_index : stop_index + 1] = components
 
 
-# TODO: make time_signatures positional instead of keyword
-# TODO: change signature to voice, time_signatures, items
-# TODO: update every rhythm() call in music.py files
 def rhythm(
-    # voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
     voice,
     time_signatures,
     items,
