@@ -50,12 +50,12 @@ def GLOBALS(skips, first_measure_number):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        [-1, OBGC(24 * [1], [31]), 1, -4, 2, -1],
         meters(1, 2),
+        [-1, OBGC(24 * [1], [31]), 1, -4, 2, -1],
     )
     rhythm(
-        [5, 10, -1],
         meters(3),
+        [5, 10, -1],
     )
     library.make_rhythm(
         voice,
@@ -64,78 +64,78 @@ def FL(voice, meters):
         overlap=True,
     )
     rhythm(
-        [5, 11, 3, 13],
         meters(5, 6),
+        [5, 11, 3, 13],
     )
     rhythm(
-        [rt(1), OBGC(6 * [1], [7]), 1, 7],
         meters(7),
+        [rt(1), OBGC(6 * [1], [7]), 1, 7],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [rt(1), OBGC(12 * [1], [14]), 1],
         meters(8),
+        [rt(1), OBGC(12 * [1], [14]), 1],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [-5, 2, -7] + 3 * [1, -5, 2, -7],
         meters(9, 10),
+        [-5, 2, -7] + 3 * [1, -5, 2, -7],
     )
     rhythm(
-        [-7, "+"],
         meters(11),
+        [-7, "+"],
     )
     rhythm(
-        [-15, "+"],
         meters(12),
+        [-15, "+"],
     )
     # 32 = 2 + 4 + 6 + 8 + 12
     rhythm(
+        meters(13, 14),
         # [12, 4, 8, 2, 6 - 1, 9],
         [12, 4, 8, 2, t(2), w(2, 3), h(1), 9],
-        meters(13, 14),
     )
     rhythm(
-        [8, 6, 2, 12, w(3, 4), h(1)],
         meters(15, 16),
+        [8, 6, 2, 12, w(3, 4), h(1)],
     )
     rhythm(
-        [6, 4, 12, 8, 2],
         meters(17, 18),
+        [6, 4, 12, 8, 2],
     )
     rhythm(
-        [-1, OBGC(6 * [1], [15])],
         meters(19),
+        [-1, OBGC(6 * [1], [15])],
     )
     rhythm(
-        [4, 2, 12, 8, 6],
         meters(20, 21),
+        [4, 2, 12, 8, 6],
     )
     rhythm(
-        [-1, OBGC(6 * [1], [t(7)]), 12],
         meters(22),
+        [-1, OBGC(6 * [1], [t(7)]), 12],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [rt(16), rt(1), -3],
         meters(23),
+        [rt(16), rt(1), -3],
     )
     rhythm.mmrests(24)
     rhythm(
-        ["-", t(3 + 12)],
         meters(25),
+        ["-", t(3 + 12)],
     )
     rhythm(
-        [3, "-", t(3 + 12)],
         meters(26),
+        [3, "-", t(3 + 12)],
     )
     rhythm(
-        [12 + 3, "-", t(3)],
         meters(27),
+        [12 + 3, "-", t(3)],
     )
     rhythm(
-        [24 + 24 + 3, "-"],
         meters(28, 30),
+        [24 + 24 + 3, "-"],
     )
     rhythm.mmrests(31, 36)
 
@@ -149,69 +149,69 @@ def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1)
     rhythm(
-        ["-", 1, -2],
         meters(2),
-    )
-    rhythm(
-        [-2, 1, "-"],
-        meters(3),
-    )
-    rhythm(
         ["-", 1, -2],
+    )
+    rhythm(
+        meters(3),
+        [-2, 1, "-"],
+    )
+    rhythm(
         meters(4),
+        ["-", 1, -2],
     )
     rhythm(
-        [-2, 1, -9, 1, "-"],
         meters(5, 6),
+        [-2, 1, -9, 1, "-"],
     )
     rhythm(
-        [-8, -3, 1, "-"],
         meters(7),
+        [-8, -3, 1, "-"],
     )
     rhythm.mmrests(8, 9)
     rhythm(
-        ["-", -1, 1, -6],
         meters(10),
+        ["-", -1, 1, -6],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(11),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(12),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(13, 14),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(15, 16),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(17, 18),
-    )
-    rhythm(
-        [-8, -3, 1, "-"],
-        meters(19),
-    )
-    rhythm(
         [-1, 1, "-"],
+    )
+    rhythm(
+        meters(19),
+        [-8, -3, 1, "-"],
+    )
+    rhythm(
         meters(20, 21),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-8, -3, 1, "-"],
         meters(22),
-    )
-    rhythm(
         [-8, -3, 1, "-"],
-        meters(23),
     )
     rhythm(
-        [1, "-"],
+        meters(23),
+        [-8, -3, 1, "-"],
+    )
+    rhythm(
         meters(24),
+        [1, "-"],
     )
     rhythm.mmrests(25, 27)
 
@@ -220,8 +220,8 @@ def GT1(voice, meters):
         counts = [8, 12, 16, 20, 24, 28, 32]
         counts = library.attacks(counts)
         rhythm(
-            counts + ["-"],
             meters(28, 32),
+            counts + ["-"],
         )
 
     rhythm.mmrests(33, 36)
@@ -262,28 +262,28 @@ def GT2(voice, meters):
     )
     rhythm.mmrests(8, 9)
     rhythm(
-        ["-", -1, 1, -6],
         meters(10),
+        ["-", -1, 1, -6],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(11),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(12),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(13, 14),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(15, 16),
+        [-1, 1, "-"],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(17, 18),
+        [-1, 1, "-"],
     )
     library.make_one_beat_tuplets(
         voice,
@@ -292,8 +292,8 @@ def GT2(voice, meters):
         extra_counts=[-1],
     )
     rhythm(
-        [-1, 1, "-"],
         meters(20, 21),
+        [-1, 1, "-"],
     )
     library.make_one_beat_tuplets(
         voice,
@@ -320,8 +320,8 @@ def GT2(voice, meters):
         counts = [8, 12, 16, 20, 24, 28, 32]
         counts = library.attacks(counts)
         rhythm(
-            counts + ["-"],
             meters(28, 32),
+            counts + ["-"],
         )
 
     rhythm.mmrests(33, 36)
@@ -331,12 +331,12 @@ def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     # counts = [1, -6, 3, -3]
     rhythm(
-        [-1, OBGC(25 * [1], [31]), 1, -6, t(1)],
         meters(1, 2),
+        [-1, OBGC(25 * [1], [31]), 1, -6, t(1)],
     )
     rhythm(
-        [2, "-"],
         meters(3),
+        [2, "-"],
     )
     library.make_rhythm(
         voice,
@@ -346,21 +346,21 @@ def VN(voice, meters):
     )
     rhythm.mmrests(6)
     rhythm(
-        [-1, OBGC(7 * [1], [15])],
         meters(7),
+        [-1, OBGC(7 * [1], [15])],
     )
     rhythm(
-        [rt(1), OBGC(7 * [1], [14]), 1],
         meters(8),
+        [rt(1), OBGC(7 * [1], [14]), 1],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        3 * [-6, 3, -3, 1] + ["-"],
         meters(9, 10),
+        3 * [-6, 3, -3, 1] + ["-"],
     )
     rhythm(
-        [-6] + [1, -6, 3, -3, 1, -6] + ["-"],
         meters(11, 12),
+        [-6] + [1, -6, 3, -3, 1, -6] + ["-"],
     )
     library.make_rhythm(
         voice,
@@ -369,57 +369,57 @@ def VN(voice, meters):
         overlap=True,
     )
     rhythm(
-        [-17] + [3, -3, 1, -6, 3, -3] + ["-"],
         meters(14, 15),
+        [-17] + [3, -3, 1, -6, 3, -3] + ["-"],
     )
     rhythm.mmrests(16, 18)
     rhythm(
-        [-1, OBGC(7 * [1], [t(7)]), t(8)],
         meters(19),
+        [-1, OBGC(7 * [1], [t(7)]), t(8)],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [9, "-"],
         meters(20, 21),
+        [9, "-"],
     )
     rhythm(
-        [-1, OBGC(7 * [1], [t(7)]), 12],
         meters(22),
+        [-1, OBGC(7 * [1], [t(7)]), 12],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [rt(16), rt(1), -3],
         meters(23),
+        [rt(16), rt(1), -3],
     )
     rhythm.mmrests(24, 25)
     rhythm(
-        ["-", t(3 + 12)],
         meters(26),
+        ["-", t(3 + 12)],
     )
     rhythm(
-        [t(12 + 3), "-", t(3)],
         meters(27),
+        [t(12 + 3), "-", t(3)],
     )
     rhythm(
-        [24 + 24 + 3, "-"],
         meters(28, 30),
+        [24 + 24 + 3, "-"],
     )
     rhythm.mmrests(31)
     rhythm(
-        [-12] + 2 * [4] + [AG([2], 4)],
         meters(32),
+        [-12] + 2 * [4] + [AG([2], 4)],
     )
     rhythm(
-        11 * [4] + [AG([2], 4)],
         meters(33, 34),
+        11 * [4] + [AG([2], 4)],
     )
     rhythm(
-        5 * [4] + [AG([2], 4)],
         meters(35),
+        5 * [4] + [AG([2], 4)],
     )
     rhythm(
-        2 * [4] + [AG([2], 4)],
         meters(36),
+        2 * [4] + [AG([2], 4)],
     )
 
 
@@ -464,56 +464,56 @@ def VC(voice, meters):
     )
     library.overlap_previous_measure(voice, components, meters(12, 13))
     rhythm(
-        ["-", 11],
         meters(14),
+        ["-", 11],
     )
     rhythm(
-        [rt(1), 26, 4, 1],
         meters(15, 16),
-    )
-    rhythm(
         [rt(1), 26, 4, 1],
+    )
+    rhythm(
         meters(17, 18),
+        [rt(1), 26, 4, 1],
     )
     rhythm(
-        [rt(1), 10, 4, 1],
         meters(19),
+        [rt(1), 10, 4, 1],
     )
     rhythm(
-        [rt(1), "+"],
         meters(20, 21),
+        [rt(1), "+"],
     )
     rhythm(
-        [rt(15), 5],
         meters(22),
+        [rt(15), 5],
     )
     rhythm(
-        [rt(1), "+", 5],
         meters(23),
+        [rt(1), "+", 5],
     )
     rhythm(
-        [rt(1), "+", t(5)],
         meters(24),
+        [rt(1), "+", t(5)],
     )
     rhythm(
-        [15, "-", t(3)],
         meters(25),
+        [15, "-", t(3)],
     )
     rhythm(
-        [15, "-"],
         meters(26),
+        [15, "-"],
     )
     rhythm(
-        ["-", t(15)],
         meters(27),
+        ["-", t(15)],
     )
     rhythm(
-        [3, "-"],
         meters(28),
+        [3, "-"],
     )
     rhythm(
-        [-21, "+", -9],
         meters(29, 32),
+        [-21, "+", -9],
     )
     rhythm.mmrests(33, 36)
 

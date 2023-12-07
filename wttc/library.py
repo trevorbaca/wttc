@@ -371,6 +371,8 @@ def make_one_beat_tuplets(
     return components
 
 
+# TODO: make time_signatures mandatory
+# TODO: signature: voice, time_signatures, items
 def make_rhythm(
     voice,
     items,
@@ -588,7 +590,13 @@ def replace_measure(voice, measure_number, components):
 # TODO: change signature to voice, time_signatures, items
 # TODO: update every rhythm() call in music.py files
 def rhythm(
-    voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
+    # voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
+    voice,
+    time_signatures,
+    items,
+    *,
+    denominator=16,
+    do_not_rewrite_meter=False,
 ):
     assert time_signatures is not None, repr(time_signatures)
     tag = baca.helpers.function_name(inspect.currentframe())

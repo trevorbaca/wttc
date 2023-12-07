@@ -39,8 +39,8 @@ def FL(voice, meters):
         counts = 4 * counts
         counts = counts[:-2]
         rhythm(
-            [-12, -12, -4, -1] + counts + ["-"],
             meters(6, 9),
+            [-12, -12, -4, -1] + counts + ["-"],
         )
         rhythm.mmrests(10, 14)
 
@@ -51,8 +51,8 @@ def FL(voice, meters):
         counts = 4 * counts
         counts = counts[:-3]
         rhythm(
-            [-12, -12, -4, -1] + counts + ["-"],
             meters(15, 18),
+            [-12, -12, -4, -1] + counts + ["-"],
         )
         rhythm.mmrests(19)
 
@@ -63,8 +63,8 @@ def FL(voice, meters):
         counts = 4 * counts
         counts = counts[:-3]
         rhythm(
-            [-12, -12, -4, -1] + counts + ["-"],
             meters(20, 23),
+            [-12, -12, -4, -1] + counts + ["-"],
         )
         rhythm.mmrests(24, 33)
 
@@ -91,22 +91,22 @@ def GT1(voice, meters):
         assert counts == [-3, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["+"],
             meters(1, 3),
+            [-12] + counts + ["+"],
         )
         counts = B1(-1, 2)
         assert counts == [-6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [rt(t(4)), 1, -7] + counts + [t(24)],
             meters(4, 5),
+            [rt(t(4)), 1, -7] + counts + [t(24)],
         )
         counts = B1(-2, 4)
         assert counts == [-6, 3, 6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [5, -7] + counts + ["-"],
             meters(6),
+            [5, -7] + counts + ["-"],
         )
         rhythm.mmrests(7, 10)
 
@@ -116,43 +116,43 @@ def GT1(voice, meters):
         assert counts == [-3, 6, 6, 3, 6, 6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
-            counts,
             meters(11, 12),
+            counts,
         )
         rhythm(
-            A(4 * [1] + [-1], 48),
             meters(13, 14),
+            A(4 * [1] + [-1], 48),
         )
         counts = B1(-4, 6)
         assert counts == [-6, 6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["-"],
             meters(15, 16),
+            [-12] + counts + ["-"],
         )
         rhythm.mmrests(17)
 
     @baca.call
     def block():
         rhythm(
-            A([-1, 1, -1, -1, -1, -1, 1], 48),
             meters(18, 19),
+            A([-1, 1, -1, -1, -1, -1, 1], 48),
         )
         counts = B1(-5, 5)
         assert counts == [-6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["-"],
             meters(20, 21),
+            [-12] + counts + ["-"],
         )
         rhythm.mmrests(22)
         rhythm(
-            A([1, 1, -1, -1, -1, 1, -1], 48),
             meters(23, 24),
+            A([1, 1, -1, -1, -1, 1, -1], 48),
         )
         rhythm(
-            R([-1, -1, 1, -1], 24),
             meters(25),
+            R([-1, -1, 1, -1], 24),
         )
 
     @baca.call
@@ -161,8 +161,8 @@ def GT1(voice, meters):
         assert counts == [-3, 6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["+"],
             meters(26, 28),
+            [-12] + counts + ["+"],
         )
 
     @baca.call
@@ -171,8 +171,8 @@ def GT1(voice, meters):
         assert counts == [-6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            counts + ["+"],
             meters(29, 33),
+            counts + ["+"],
         )
 
 
@@ -193,22 +193,22 @@ def GT2(voice, meters):
         assert counts == [-5, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["+"],
             meters(1, 3),
+            [-12] + counts + ["+"],
         )
         counts = B2(-1, 3)
         assert counts == [-5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [rt(t(4)), 1, -7] + counts + ["+"],
             meters(4, 5),
+            [rt(t(4)), 1, -7] + counts + ["+"],
         )
         counts = B2(-2, 5)
         assert counts == [-3, 5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [rt(t(4)), 1, -7] + counts + ["-"],
             meters(6),
+            [rt(t(4)), 1, -7] + counts + ["-"],
         )
         rhythm.mmrests(7, 10)
 
@@ -218,42 +218,42 @@ def GT2(voice, meters):
         assert counts == [-5, 5, 3, 5, 5, 3, 5, 5, 3, 5, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            counts + ["-"],
             meters(11, 12),
+            counts + ["-"],
         )
         rhythm(
-            R([rt(1)] + 4 * [1], 48),
             meters(13, 14),
+            R([rt(1)] + 4 * [1], 48),
         )
         counts = B2(-4, 6)
         assert counts == [-5, 3, 5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["-"],
             meters(15, 16),
+            [-12] + counts + ["-"],
         )
         rhythm.mmrests(17)
 
     @baca.call
     def block():
         rhythm(
-            R([1, -1, -1, -1, 1, -1, 1], 48),
             meters(18, 19),
+            R([1, -1, -1, -1, 1, -1, 1], 48),
         )
         counts = B2(-5, 5)
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["-"],
             meters(20, 21),
+            [-12] + counts + ["-"],
         )
         rhythm.mmrests(22)
         rhythm(
-            R([-1, 1, -1, -1, -1, -1, 1], 48),
             meters(23, 24),
+            R([-1, 1, -1, -1, -1, -1, 1], 48),
         )
         rhythm(
-            A([-1, 1, -1, -1], 24),
             meters(25),
+            A([-1, 1, -1, -1], 24),
         )
 
     @baca.call
@@ -262,8 +262,8 @@ def GT2(voice, meters):
         assert counts == [-5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            [-12] + counts + ["+"],
             meters(26, 28),
+            [-12] + counts + ["+"],
         )
 
     @baca.call
@@ -272,8 +272,8 @@ def GT2(voice, meters):
         assert counts == [-5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            counts + ["+"],
             meters(29, 33),
+            counts + ["+"],
         )
 
 
@@ -295,8 +295,8 @@ def VN(voice, meters):
             extra_counts=[-1],
         )
         rhythm(
-            [-19, 3, 3, 3, "-"],
             meters(5, 6),
+            [-19, 3, 3, 3, "-"],
         )
 
     @baca.call
@@ -314,8 +314,8 @@ def VN(voice, meters):
     @baca.call
     def block():
         rhythm(
-            [19, 3, 3, 3, 2, 2, "-"],
             meters(9, 10),
+            [19, 3, 3, 3, 2, 2, "-"],
         )
         components = library.make_one_beat_tuplets(
             voice,
@@ -329,24 +329,24 @@ def VN(voice, meters):
     @baca.call
     def block():
         rhythm(
-            [11, 3, 2, 2, 4, "-"],
             meters(15),
+            [11, 3, 2, 2, 4, "-"],
         )
         rhythm.mmrests(16, 19)
 
     @baca.call
     def block():
         rhythm(
-            [24, "-"],
             meters(20, 23),
-        )
-        rhythm(
-            [-18, "+"],
-            meters(24, 25),
-        )
-        rhythm(
             [24, "-"],
+        )
+        rhythm(
+            meters(24, 25),
+            [-18, "+"],
+        )
+        rhythm(
             meters(26),
+            [24, "-"],
         )
         library.make_rhythm(
             voice,
@@ -368,8 +368,8 @@ def VC(voice, meters):
             extra_counts=[-1],
         )
         rhythm(
-            [-1, 19, -4],
             meters(3),
+            [-1, 19, -4],
         )
 
     @baca.call
@@ -386,8 +386,8 @@ def VC(voice, meters):
     @baca.call
     def block():
         rhythm(
-            [-1, 4, 10, "-"],
             meters(5),
+            [-1, 4, 10, "-"],
         )
         library.make_rhythm(
             voice,
@@ -419,8 +419,8 @@ def VC(voice, meters):
     @baca.call
     def block():
         rhythm(
-            [22, 2, 2, 4, "-"],
             meters(9, 10),
+            [22, 2, 2, 4, "-"],
         )
         components = library.make_one_beat_tuplets(
             voice,
@@ -434,35 +434,35 @@ def VC(voice, meters):
     @baca.call
     def block():
         rhythm(
-            [-16, R([-1] + 5 * [1], 56)],
             meters(12, 14),
+            [-16, R([-1] + 5 * [1], 56)],
         )
         rhythm(
-            [14, 2, 2, 3, 3, -11, 16, 12, 8, 4, "-"],
             meters(15, 17),
+            [14, 2, 2, 3, 3, -11, 16, 12, 8, 4, "-"],
         )
         rhythm(
-            [R([-1, 1, -1, -1, 1, 1], 48)],
             meters(18, 19),
+            [R([-1, 1, -1, -1, 1, 1], 48)],
         )
 
     @baca.call
     def block():
         rhythm(
-            [24, -11, 16, "-"],
             meters(20, 22),
+            [24, -11, 16, "-"],
         )
         rhythm(
-            [R([1, -1, -1, -1, 1, 1], 48)],
             meters(23, 24),
+            [R([1, -1, -1, -1, 1, 1], 48)],
         )
         rhythm(
-            [24],
             meters(25),
+            [24],
         )
         rhythm(
-            [24, -6, 6 + 24 + 24 + 2, -16, "+"],
             meters(26, 33),
+            [24, -6, 6 + 24 + 24 + 2, -16, "+"],
         )
 
 

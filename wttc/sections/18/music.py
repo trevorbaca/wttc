@@ -68,8 +68,8 @@ def FL(voice, meters):
         counts.insert(0, -1)
         assert counts == [-1, 4, 6, 2, 4, 4, 12, 12, 12]
         rhythm(
-            counts,
             meters(1, 2),
+            counts,
         )
         library.mask_measures(voice, ["(1, 2)/-1:"])
 
@@ -156,8 +156,8 @@ def FL(voice, meters):
         assert counts == [1, -5, 1, -3, 1, -3, 1, -3, 1, -1]
         counts = library.attach_bgs(counts, [[1]])
         rhythm(
-            [-12 + 3] + counts + ["-"],
             meters(13, 14),
+            [-12 + 3] + counts + ["-"],
         )
 
     @baca.call
@@ -178,9 +178,18 @@ def FL(voice, meters):
 
     @baca.call
     def block():
-        rhythm(["-", 15], meters(17, 18))
-        rhythm([48], meters(19, 20))
-        rhythm([48], meters(21, 22))
+        rhythm(
+            meters(17, 18),
+            ["-", 15],
+        )
+        rhythm(
+            meters(19, 20),
+            [48],
+        )
+        rhythm(
+            meters(21, 22),
+            [48],
+        )
 
     def make_j3_measures():
         time_signatures = meters(13, 28)
@@ -283,13 +292,13 @@ def GT1(voice, meters):
 
     rhythm.mmrests(13, 15)
     rhythm(
-        2 * [24],
         meters(16, 17),
+        2 * [24],
     )
     rhythm.mmrests(18)
     rhythm(
-        4 * [24],
         meters(19, 22),
+        4 * [24],
     )
 
     def make_j1_measures(time_signatures):
@@ -348,8 +357,8 @@ def GT1(voice, meters):
         before_fermata = 13
         voice.extend(j3_measures[23 - before_fermata])
         rhythm(
-            [24, rt(16), -8],
             meters(24, 25),
+            [24, rt(16), -8],
         )
         components = j1_measures[25 - before_fermata]
         library.overlap_previous_measure(voice, components, meters(25))
@@ -427,13 +436,13 @@ def GT2(voice, meters):
     def block():
         rhythm.mmrests(13, 15)
         rhythm(
-            [24, 24],
             meters(16, 17),
+            [24, 24],
         )
         rhythm.mmrests(18)
         rhythm(
-            4 * [24],
             meters(19, 22),
+            4 * [24],
         )
 
     def make_j1_measures(time_signatures):
@@ -494,8 +503,8 @@ def GT2(voice, meters):
         components = j3_measures[23 - before_fermata]
         library.overlap_previous_measure(voice, components, meters(23))
         rhythm(
-            [24, rt(24)],
             meters(24, 25),
+            [24, rt(24)],
         )
         voice.extend(j1_measures[26 - before_fermata])
         voice.extend(j1_measures[27 - before_fermata])
@@ -530,8 +539,8 @@ def VN(voice, meters):
         counts = abjad.sequence.reverse(counts)
         assert counts == [27, 26, 21, 20, 15, 14, 9, 8, 3, 2]
         rhythm(
-            [9, "-"],
             meters(13),
+            [9, "-"],
         )
 
     library.make_rhythm(
@@ -618,8 +627,8 @@ def VC(voice, meters):
         voice.extend(j3_measures[23 - before_fermata])
         rhythm.mmrests(24, 25)
         rhythm(
-            [-8, 8, 8, 4, "-"],
             meters(26, 27),
+            [-8, 8, 8, 4, "-"],
         )
         components = j3_measures[27 - before_fermata]
         library.overlap_previous_measure(voice, components, meters(27))

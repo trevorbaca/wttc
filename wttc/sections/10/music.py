@@ -42,25 +42,25 @@ def GLOBALS(skips, first_measure_number):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        ["-", 20, -12, 36, -14],
         meters(1, 7),
+        ["-", 20, -12, 36, -14],
     )
     rhythm.mmrests(8, 9)
     rhythm(
-        ["-", 3, -1, 2],
         meters(10),
+        ["-", 3, -1, 2],
     )
     counts = library.canon_e()
     counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
     rhythm(
-        counts + ["-"],
         meters(11, 16),
+        counts + ["-"],
     )
     note = abjad.Note("c'4")
     abjad.mutate.replace(voice[-1:], [note])
     rhythm(
-        [rt(8), rt(2), -5, 10, -7],
         meters(17, 18),
+        [rt(8), rt(2), -5, 10, -7],
     )
     rhythm.mmrests(19, 22)
 
@@ -73,16 +73,16 @@ def OB(voice, meters):
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
         meters(1, 2),
+        [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
     )
     rhythm(
-        [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
         meters(3, 5),
+        [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
     )
     rhythm(
-        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
         meters(6, 9),
+        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
     )
     library.make_one_beat_tuplets(
         voice,
@@ -112,16 +112,16 @@ def GT1(voice, meters):
         extra_counts=[-1],
     )
     rhythm(
-        [-5, 1, "-"],
         meters(19),
+        [-5, 1, "-"],
     )
     rhythm(
-        [-10, 1, "-"],
         meters(20),
+        [-10, 1, "-"],
     )
     rhythm(
-        [-10, 1, "-"],
         meters(21),
+        [-10, 1, "-"],
     )
     rhythm.mmrests(22)
 
@@ -129,20 +129,20 @@ def GT1(voice, meters):
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
         meters(1, 2),
+        [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
     )
     rhythm(
-        [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
         meters(3, 5),
+        [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
     )
     rhythm(
-        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
         meters(6, 9),
+        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
     )
     rhythm(
-        [-16, -4, 1, -3],
         meters(10),
+        [-16, -4, 1, -3],
     )
     counts = library.canon_e()
     counts = abjad.sequence.rotate(counts, -2)
@@ -154,24 +154,24 @@ def GT2(voice, meters):
         else:
             counts_.append(count)
     rhythm(
-        counts_ + ["-"],
         meters(11, 16),
+        counts_ + ["-"],
     )
     rhythm(
-        [-8, 1, -7, -3, 1, -12],
         meters(17, 18),
+        [-8, 1, -7, -3, 1, -12],
     )
     rhythm(
-        [-5, 1, "-"],
         meters(19),
+        [-5, 1, "-"],
     )
     rhythm(
-        [-10, 1, "-"],
         meters(20),
+        [-10, 1, "-"],
     )
     rhythm(
-        [-10, 1, "-"],
         meters(21),
+        [-10, 1, "-"],
     )
     rhythm.mmrests(22)
 
@@ -205,29 +205,29 @@ def VN(voice, meters):
     tuplet.force_fraction = True
     abjad.mutate.replace([rest], [tuplet])
     rhythm(
-        3 * [AG([2], 7), -1] + [swell(16)],
         meters(9, 10),
+        3 * [AG([2], 7), -1] + [swell(16)],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [8, swell(8)],
         meters(11),
+        [8, swell(8)],
     )
     rhythm(
-        [-15, t(9)],
         meters(12),
+        [-15, t(9)],
     )
     rhythm(
-        [1, "-"],
         meters(13),
+        [1, "-"],
     )
     rhythm(
-        [-15, 9],
         meters(14),
+        [-15, 9],
     )
     rhythm(
-        4 * [rt(1), 15],
         meters(15, 18),
+        4 * [rt(1), 15],
         do_not_rewrite_meter=True,
     )
     abjad.attach(abjad.Tie(), voice[-1])
@@ -238,12 +238,12 @@ def VN(voice, meters):
         extra_counts=[-1],
     )
     rhythm(
-        ["-", swell(4)],
         meters(21),
+        ["-", swell(4)],
     )
     rhythm(
-        ["-", swell(4)],
         meters(22),
+        ["-", swell(4)],
     )
 
 
@@ -275,8 +275,8 @@ def VC(voice, meters):
     voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. c'16 c'4")
     voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. c'16 c'4")
     rhythm(
-        ["-", 1, swell(4)],
         meters(22),
+        ["-", 1, swell(4)],
     )
     rmakers.force_fraction(voice)
 

@@ -35,55 +35,55 @@ def GLOBALS(skips):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        [pair(2, 4, 2, 4), pair(4, 8, 4, 8), t(4)],
         meters(1),
+        [pair(2, 4, 2, 4), pair(4, 8, 4, 8), t(4)],
     )
     rhythm(
-        [4, t(4), 4, -4, -4, t(4)],
         meters(2),
+        [4, t(4), 4, -4, -4, t(4)],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [4, t(4), 4, -4],
         meters(3),
+        [4, t(4), 4, -4],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        ["-", 4],
         meters(4),
+        ["-", 4],
     )
     rhythm(
-        2 * [pair(4, 8, 4, 8)],
         meters(5),
-    )
-    rhythm(
         2 * [pair(4, 8, 4, 8)],
-        meters(6),
     )
     rhythm(
-        [rt(4), -3, 1, AG([2], 8)],
+        meters(6),
+        2 * [pair(4, 8, 4, 8)],
+    )
+    rhythm(
         meters(7),
+        [rt(4), -3, 1, AG([2], 8)],
     )
     #
     rhythm(
-        [16, AG([2], rt(16))],
         meters(8, 9),
+        [16, AG([2], rt(16))],
     )
     rhythm(
-        AG([2], 16),
         meters(10),
+        AG([2], 16),
     )
     rhythm(
-        [AG([2], 3), -1, -3, 3, -2],
         meters(11),
+        [AG([2], 3), -1, -3, 3, -2],
     )
     rhythm(
-        [pair(4, 8, 4, 8), AG([2], 3), -1, -4, -3, 3, -2],
         meters(12),
+        [pair(4, 8, 4, 8), AG([2], 3), -1, -4, -3, 3, -2],
     )
     rhythm(
-        [AG([2], 3), -1, -4, "-", 3, -2],
         meters(13),
+        [AG([2], 3), -1, -4, "-", 3, -2],
     )
 
 
@@ -182,93 +182,93 @@ def GT2(voice, meters):
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        [TC(2, [1, 1]), TC(2, [1, 1]), -1, 6, -1],
         meters(1),
+        [TC(2, [1, 1]), TC(2, [1, 1]), -1, 6, -1],
     )
     rhythm(
-        2 * [TC(2, [1, 1])] + [-2, 4, 1, 3, 4, -2],
         meters(2),
+        2 * [TC(2, [1, 1])] + [-2, 4, 1, 3, 4, -2],
     )
     rhythm(
-        2 * [TC(2, [1, 1])] + [-2, 1, t(5)],
         meters(3),
+        2 * [TC(2, [1, 1])] + [-2, 1, t(5)],
     )
     rhythm(
-        [1, 1, 2, 4, 1, 3, 4, 2, 1, 5],
         meters(4),
+        [1, 1, 2, 4, 1, 3, 4, 2, 1, 5],
     )
     rhythm(
-        4 * [TC(4, [1, 1])],
         meters(5, 6),
+        4 * [TC(4, [1, 1])],
     )
     rhythm(
-        [-1, 1, 2, 4, 1, 3, -4],
         meters(7),
+        [-1, 1, 2, 4, 1, 3, -4],
     )
     rhythm.mmrests(8, 10)
     rhythm(
-        [-5, BG([1], 5), -2],
         meters(11),
+        [-5, BG([1], 5), -2],
         do_not_rewrite_meter=True,
     )
     rhythm(
+        meters(12, 13),
         [TC(4, [1, 1]), -4]
         + [-1, BG([1], t(3)), 1, -1, -1, BG([1], t(1)), t(4), 3, -1]
         + [-12, -2, BG([1], t(2)), 1, -3],
-        meters(12, 13),
     )
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        ["-", 4, 6, t(1)],
         meters(1),
+        ["-", 4, 6, t(1)],
     )
     rhythm(
-        [2, "-", 3, 4, 1, 3, 4, t(2)],
         meters(2),
+        [2, "-", 3, 4, 1, 3, 4, t(2)],
     )
     rhythm(
-        [1, "-", 3, 1, t(5)],
         meters(3),
+        [1, "-", 3, 1, t(5)],
     )
     rhythm(
-        [1, 1, 2, 4, 1, 3, 4, 2, 1, t(5)],
         meters(4),
+        [1, 1, 2, 4, 1, 3, 4, 2, 1, t(5)],
     )
     rhythm(
-        [1, 1, 2, 4, 1, "-"],
         meters(5),
+        [1, 1, 2, 4, 1, "-"],
     )
     rhythm(
-        ["-", t(5)],
         meters(6),
+        ["-", t(5)],
     )
     rhythm(
-        [(1, 1, 2, 4 - 1), "+"],
         meters(7),
+        [(1, 1, 2, 4 - 1), "+"],
     )
     rhythm(
-        ["+", t(1), AG([2], 4)],
         meters(8, 9),
+        ["+", t(1), AG([2], 4)],
     )
     rhythm(
-        [12, AG([2], rt(4))],
         meters(10),
+        [12, AG([2], rt(4))],
         do_not_rewrite_meter=True,
     )
     rhythm(
-        [AG([2], 3), -1, "-", BG([2], 3)],
         meters(11),
+        [AG([2], 3), -1, "-", BG([2], 3)],
     )
     rhythm(
-        [rt(2), -1, 8, -1, -3, BG([2], 4), -5],
         meters(12),
+        [rt(2), -1, 8, -1, -3, BG([2], 4), -5],
     )
     rhythm(
-        [3, -1, -4, -1, BG([2], 4), "-"],
         meters(13),
+        [3, -1, -4, -1, BG([2], 4), "-"],
     )
 
 
