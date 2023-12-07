@@ -26,12 +26,10 @@ swell = library.swell
 
 def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
-    baca.literal(
+    baca.mark(
         skips[10 - 1],
-        [
-            r"\tweak padding 1.5",
-            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-        ],
+        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
     baca.open_volta(skips[21 - 1], first_measure_number)

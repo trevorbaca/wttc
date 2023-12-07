@@ -180,10 +180,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "7"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-
-    % [Skips measure 8]
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+
+    % [Skips measure 8]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT

@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -28,21 +29,17 @@ def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
     baca.metronome_mark(skips[25 - 1], "100", manifests=library.manifests)
     for n in [32, 36]:
-        baca.literal(
+        baca.mark(
             skips[n - 1],
-            [
-                r"\tweak padding 1.5",
-                r'\mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"',
-            ],
+            r'\markup \smaller \smaller \musicglyph #"scripts.ulongfermata"',
+            abjad.Tweak(r"\tweak padding 1.5"),
             site="after",
         )
     for n in [34, 35]:
-        baca.literal(
+        baca.mark(
             skips[n - 1],
-            [
-                r"\tweak padding 1.5",
-                r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-            ],
+            r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+            abjad.Tweak(r"\tweak padding 1.5"),
             site="after",
         )
 

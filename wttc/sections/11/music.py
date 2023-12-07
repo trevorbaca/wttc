@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -24,12 +25,10 @@ swell = library.swell
 
 def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
-    baca.literal(
+    baca.mark(
         skips[8 - 1],
-        [
-            r"\tweak padding 1.5",
-            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-        ],
+        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
 

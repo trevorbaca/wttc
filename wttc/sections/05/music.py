@@ -31,31 +31,25 @@ def GLOBALS(skips):
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
-    baca.literal(
-        skips[19 - 1],
-        [
-            r"\tweak padding 1.5",
-            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-        ],
-        site="after",
-    )
-    baca.literal(
-        skips[23 - 1],
-        [
-            r"\tweak padding 1.5",
-            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-        ],
-        site="after",
-    )
-    baca.literal(
-        skips[24 - 1],
-        [
-            r"\tweak padding 1.5",
-            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-        ],
-        site="after",
-    )
     baca.metronome_mark(skips[15 - 1], "60", manifests=library.manifests)
+    baca.mark(
+        skips[19 - 1],
+        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        abjad.Tweak(r"\tweak padding 1.5"),
+        site="after",
+    )
+    baca.mark(
+        skips[23 - 1],
+        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        abjad.Tweak(r"\tweak padding 1.5"),
+        site="after",
+    )
+    baca.mark(
+        skips[24 - 1],
+        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        abjad.Tweak(r"\tweak padding 1.5"),
+        site="after",
+    )
 
 
 def FL(voice, meters):
