@@ -262,8 +262,7 @@ def GT1(voice, meters):
         counts = library.attacks(counts)
         assert counts == [1, -3, 1, -4, 1, -4, 1, -5, 1, -5, 1, -6]
         assert twelfths == 6 * abjad.math.weight(counts)
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
             do_not_extend=True,
@@ -334,8 +333,7 @@ def GT1(voice, meters):
         counts = library.attacks(counts)
         assert counts == [1, -7, 1, -10, 1, -11]
         assert twelfths == 9 * abjad.math.weight(counts)
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
             do_not_extend=True,
@@ -402,8 +400,7 @@ def GT2(voice, meters):
         counts = library.attacks(counts)
         assert counts == [1, -6, 1, -5, 1, -5, 1, -4, 1, -4, 1, -3]
         assert twelfths == 6 * abjad.math.weight(counts)
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
             do_not_extend=True,
@@ -480,8 +477,7 @@ def GT2(voice, meters):
         counts = library.attacks(counts)
         assert counts == [1, -10, 1, -11, 1, -7]
         assert twelfths == 9 * abjad.math.weight(counts)
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
             do_not_extend=True,

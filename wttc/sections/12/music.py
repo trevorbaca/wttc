@@ -183,8 +183,7 @@ def GT1(voice, meters):
         meters(15),
         [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
     )
-    tuplets = library.make_one_beat_tuplets(
-        voice,
+    tuplets = rhythm.make_one_beat_tuplets(
         meters(16, 18),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
@@ -195,8 +194,7 @@ def GT1(voice, meters):
         meters(20),
         [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
     )
-    tuplets = library.make_one_beat_tuplets(
-        voice,
+    tuplets = rhythm.make_one_beat_tuplets(
         meters(21, 23),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
@@ -277,8 +275,7 @@ def GT2(voice, meters):
         do_not_rewrite_meter=True,
     )
     voice.extend("r8. c'16 ~ c'8 r8 r4")
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(16, 18),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
@@ -288,8 +285,7 @@ def GT2(voice, meters):
         meters(20),
         [A(5 * [1] + [t(1)], 12), R(10 * [1], 24)],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(21, 23),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
@@ -371,14 +367,12 @@ def VC(voice, meters):
         meters(5),
         [-8, -1, t(3), t(12)],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(6),
         ["+", 1, -7, 2, -6],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(7, 8),
         [-1, 1, -5, 2, -7, 1, -7, 2, -5, 1, "+"],
         extra_counts=[-1],
@@ -391,14 +385,12 @@ def VC(voice, meters):
         meters(13, 14),
         [2, 3, 8, 5, 10, 7, "+"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(15),
         ["+", 1, -7, 2, -6],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(16, 17),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, "-"],
         extra_counts=[-1],
@@ -407,8 +399,7 @@ def VC(voice, meters):
         meters(18, 20),
         [rt(14), 9, 12, 7, 10, 5, 8, 3, 6, "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(21, 22),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],

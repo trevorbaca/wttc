@@ -124,34 +124,29 @@ def OB(voice, meters):
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1, 5)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(6, 7),
         [-1, 1, -1, 1, -2, -14, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(8),
         [1, 1, -2, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(9, 10)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(11, 12),
         [-2, 1, -3, 1, 1, -2, 1, -3, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(13, 14),
         [-3, 1, 1, -2, 1, -3, 1, 1, -2, 1, -3, 1, 1, -2, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(15, 16)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(17),
         [-9, -1, 1, "-"],
         extra_counts=[-1],
@@ -266,8 +261,7 @@ def VN(voice, meters):
         meters(20),
         [-8, w(8, 16), h(8)],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(21, 23),
         60 * [1] + ["-"],
         extra_counts=[0, 1, 0, 0, 2],
@@ -278,8 +272,7 @@ def VN(voice, meters):
         [-8, 8, 8],
         overlap=True,
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(24, 25),
         33 * [1] + ["-"],
         extra_counts=[1, 0, 0, 2, 0],
@@ -293,8 +286,7 @@ def VN(voice, meters):
 
     @baca.call
     def block():
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             [abjad.TimeSignature((9, 4))],
             23 * [1] + ["-"],
             extra_counts=[0, 0, 2, 0, 1],
@@ -306,8 +298,7 @@ def VN(voice, meters):
     @baca.call
     def block():
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(26, 28),
             [-9] + [1] + counts + ["-"],
             extra_counts=[0, 1, 0, 0, 2],  # by hand
@@ -325,8 +316,7 @@ def VN(voice, meters):
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
-        library.make_one_beat_tuplets(
-            voice,
+        rhythm.make_one_beat_tuplets(
             meters(32, 34),
             counts + ["-"],
             extra_counts=[0, 2, 0, 1, 0],
@@ -345,8 +335,7 @@ def VN(voice, meters):
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
         counts += [2, 11, 12, 2, 13, 14]
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(34, 39),
             6 * [-4] + 23 * [1] + counts + ["-"],
             extra_counts=6 * [0] + 10 * [2, 0, 1, 0, 0],
@@ -367,8 +356,7 @@ def VN(voice, meters):
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
         counts += [2, 11, 12, 2, 13, 14]
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(39, 43),
             6 * [-4] + 24 * [1] + counts + ["-"],
             extra_counts=6 * [0] + 10 * [0, 1, 0, 0, 2],
@@ -459,8 +447,7 @@ def VC(voice, meters):
             meters(20),
             [4, 4, 4, "-"],
         )
-        library.make_one_beat_tuplets(
-            voice,
+        rhythm.make_one_beat_tuplets(
             meters(21, 22),
             [1],
             extra_counts=[0, 0, 2, 0, 1],
@@ -469,8 +456,7 @@ def VC(voice, meters):
             meters(23),
             [4, 4, 8, "-"],
         )
-        library.make_one_beat_tuplets(
-            voice,
+        rhythm.make_one_beat_tuplets(
             meters(24),
             [1],
             extra_counts=[0, 2, 0, 1, 0],
@@ -486,8 +472,7 @@ def VC(voice, meters):
         counts = counts[1:] + abjad.sequence.reverse(counts)
         counts += [2, 11, 12, 2, 13, 14, 2, 15, 16]
         counts += [2, 3, 4, 2, 5, 6, 2, 7, 8]
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(25, 34),
             6 * [-4] + 15 * [1] + counts + ["-"],
             extra_counts=6 * [0] + 20 * [2, 0, 1, 0, 0],
@@ -500,8 +485,7 @@ def VC(voice, meters):
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         counts = abjad.sequence.reverse(counts)
         counts += [2, 11, 12, 2, 13, 14, 2, 15]
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(34, 39),
             6 * [-4] + 13 * [1] + counts + ["-"],
             extra_counts=6 * [0] + 20 * [0, 1, 0, 0, 2],
@@ -514,8 +498,7 @@ def VC(voice, meters):
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         counts = abjad.sequence.reverse(counts)
         counts += [2, 11, 12, 99]
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(39, 43),
             6 * [-4] + 13 * [1] + counts + ["-"],
             extra_counts=6 * [0] + 20 * [1, 0, 0, 2, 0],

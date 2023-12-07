@@ -64,7 +64,6 @@ def FL(voice, meters):
         meters(7),
         [rt(4), -3, 1, AG([2], 8)],
     )
-    #
     rhythm(
         meters(8, 9),
         [16, AG([2], rt(16))],
@@ -94,41 +93,35 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1),
         [-5, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(2),
         [-15, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(3)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(4),
         [-12, -1, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(5, 6)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(7),
         [-1, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(8, 10)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(11, 12),
         [-8, 2, "-", 5, -2],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(13),
         [-12, -1, 2, "-"],
         extra_counts=[-1],
@@ -137,42 +130,36 @@ def GT1(voice, meters):
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1),
         [-6, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(2),
         [-13, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(3, 4)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(5),
         [-1, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(6),
         ["-", 1],
         extra_counts=[-1],
     )
     rhythm.mmrests(7)
     rhythm.mmrests(8, 10)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(11),
         [-3, -1, 3, "-"],
         extra_counts=[-1],
     )
     rhythm.mmrests(12)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(13),
         [-3, -3, -3, -1, 1, "-"],
         extra_counts=[-1],

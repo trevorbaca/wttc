@@ -282,14 +282,12 @@ def VN(voice, meters):
 
     @baca.call
     def block():
-        library.make_one_beat_tuplets(
-            voice,
+        rhythm.make_one_beat_tuplets(
             meters(1, 2),
             [6, 1, 5, 1, "-"],
             extra_counts=[-1],
         )
-        library.make_one_beat_tuplets(
-            voice,
+        rhythm.make_one_beat_tuplets(
             meters(3, 4),
             [-13, 3, 1, 4, 1, -7, 3, 1, "-"],
             extra_counts=[-1],
@@ -301,8 +299,7 @@ def VN(voice, meters):
 
     @baca.call
     def block():
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(6),
             [-3, 3, 1, 4, 1, -7, 3, 1, "-"],
             do_not_extend=True,
@@ -317,8 +314,7 @@ def VN(voice, meters):
             meters(9, 10),
             [19, 3, 3, 3, 2, 2, "-"],
         )
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(10, 14),
             [-6, 4, 1, -3, 5, 1, -6, 6, 1, "-"],
             do_not_extend=True,
@@ -361,8 +357,7 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        library.make_one_beat_tuplets(
-            voice,
+        rhythm.make_one_beat_tuplets(
             meters(1, 2),
             [-4, 1, 1, 2, 1, -8, 4, 1, "-"],
             extra_counts=[-1],
@@ -374,8 +369,7 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(3, 4),
             [-15, 1, 3, 1, 11, 1, "-"],
             do_not_extend=True,
@@ -398,8 +392,7 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(6),
             [-8, 3, 1, -1, 3, 1, "-"],
             do_not_extend=True,
@@ -422,8 +415,7 @@ def VC(voice, meters):
             meters(9, 10),
             [22, 2, 2, 4, "-"],
         )
-        components = library.make_one_beat_tuplets(
-            voice,
+        components = rhythm.make_one_beat_tuplets(
             meters(10, 11),
             [-6, -3, -2, 4, 1, 5, 1, -6, 6, 1, "-"],
             do_not_extend=True,

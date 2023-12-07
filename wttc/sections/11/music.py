@@ -112,8 +112,7 @@ def GT2(voice, meters):
         meters(2, 3),
         [-28, -1, 3, -24, -1, 3, -24, -1, 3, -8],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(4, 5),
         [-30, -1, 2, -3, -1, 2, -1, 2, 3, -9],
         extra_counts=[-1],
@@ -121,8 +120,7 @@ def GT2(voice, meters):
     voice.extend(r"r16 c'8. r\breve r4 \times 2/3 { r8 c'4 } r4")
     voice.extend(r"\times 2/3 { r8 c'4 } \times 2/3 { r8 c'4 } c'4 r1.")
     voice.extend(r"r16 c'8. r2. \times 2/3 { r8 c'4 } r4")
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(8),
         [-1, 2, -1, 2, 2, -5, 2, -6, 2, -11, 2, "-"],
         extra_counts=[-1],

@@ -38,6 +38,23 @@ class Rhythm:
     def __call__(self, *arguments, **keywords):
         return rhythm(self.voice, *arguments, **keywords)
 
+    def make_one_beat_tuplets(
+        self,
+        time_signatures,
+        counts,
+        *,
+        debug=False,
+        do_not_extend=False,
+        extra_counts=(),
+    ):
+        return make_one_beat_tuplets(
+            self.voice,
+            time_signatures,
+            counts,
+            do_not_extend=do_not_extend,
+            extra_counts=extra_counts,
+        )
+
     def mmrests(self, *arguments, head=False):
         meters = self.meters(*arguments)
         if head:

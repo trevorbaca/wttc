@@ -84,8 +84,7 @@ def GT1(voice, meters):
         meters(6, 9),
         [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(10),
         ["-", -2, 1, -2, 1],
         extra_counts=[-1],
@@ -99,14 +98,12 @@ def GT1(voice, meters):
         else:
             counts_.append(count)
     counts_.append("-")
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(11, 16),
         counts_,
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(17, 18),
         [-7, 1, "-"],
         extra_counts=[-1],
@@ -178,8 +175,7 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1, 8),
         [1, -12, 1, -8, 1, -6],
         extra_counts=[-1],
@@ -231,8 +227,7 @@ def VN(voice, meters):
         do_not_rewrite_meter=True,
     )
     abjad.attach(abjad.Tie(), voice[-1])
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(19, 20),
         [1, -1, 1, -6, 1, -2, -9, -1, 1, -1, 3],
         extra_counts=[-1],
@@ -249,8 +244,7 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1, 9),
         [1, -7, 1, -9, 1, -13],
         extra_counts=[-1],

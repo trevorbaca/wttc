@@ -28,8 +28,7 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(1),
         [-1, 1, -2, -2, 3, 4, 3, 2, 1],
         extra_counts=[0, -1, -1, -1, -1, -1],
@@ -39,8 +38,7 @@ def FL(voice, meters):
         abjad.attach(container, plt.head)
     leaf = abjad.select.leaf(components, -1)
     baca.tie(leaf)
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(2),
         [1, -1, 1, -2, 2, 1, 3, 1],
         extra_counts=[-1],
@@ -50,8 +48,7 @@ def FL(voice, meters):
         abjad.attach(container, plt.head)
     leaf = abjad.select.leaf(components, -1)
     baca.tie(leaf)
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(3),
         [1, -2, -2, 4],
         extra_counts=[-1],
@@ -76,8 +73,7 @@ def FL(voice, meters):
         [1, -3, T([-2, BG([1], t(4))], -2), t(4)],
         do_not_rewrite_meter=True,
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(9),
         [10, "-"],
         extra_counts=[-1],
@@ -86,8 +82,7 @@ def FL(voice, meters):
         meters(10),
         ["-", 1, -4],
     )
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(11, 13),
         [-2, 8, 4, 14, -2, -3],
         extra_counts=[-1],
@@ -95,16 +90,14 @@ def FL(voice, meters):
     for plt in baca.select.plts(components)[-2:]:
         container = abjad.BeforeGraceContainer("e'16")
         abjad.attach(container, plt.head)
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(14),
         [-4, -1, 1, -2, -1, 5],
         extra_counts=[0, 0, -1, -1],
     )
     leaf = abjad.select.leaf(components, -1)
     baca.tie(leaf)
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(15, 16),
         [2, -1, -3, -3, -1, 3, -2, -3, -3, -3],
         extra_counts=[-1],
@@ -118,20 +111,17 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1),
         [2, -1, -1, 1, -1, -2, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(2),
         [-2, 2, 1, -1, -3, -1, 1, -1],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(3),
         [-1, 4, 1, "-"],
         extra_counts=[-1],
@@ -140,14 +130,12 @@ def GT1(voice, meters):
         meters(4),
         [-1, 1, -2, -8, -1, 1, -2],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(5),
         [-3, -3, -1, 3, -1, 1],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(6),
         [-2, 1, -1, 1, -1, -4, -1, 3],
         extra_counts=[-1, -1, 0, 0],
@@ -156,8 +144,7 @@ def GT1(voice, meters):
         meters(7),
         [4, 5, "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(8),
         [-1, 2, -3, -2, 1],
         extra_counts=[-1],
@@ -166,8 +153,7 @@ def GT1(voice, meters):
         meters(9, 10),
         [1, -3, 1, -3, -4, -1, 7, 8, "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(11),
         [-3, -3, -1, 1, -1],
         extra_counts=[-1],
@@ -176,14 +162,12 @@ def GT1(voice, meters):
         meters(12, 13),
         3 * [-1, 1, -2] + [-1, 15, t(4)],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(14),
         [3, -2, 1, "-"],
         extra_counts=[-1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(15),
         [-3, -3, 1, -2, "-"],
         extra_counts=[-1],
@@ -193,20 +177,17 @@ def GT1(voice, meters):
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1),
         [-1, 3, -1, -1, 1, -3, -5, -1, 1, -3, "-"],
         extra_counts=[1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(2),
         [4, -1, 1, -4, "-"],
         extra_counts=[1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(3),
         [-3, 3, "-"],
         extra_counts=[1],
@@ -215,14 +196,12 @@ def GT2(voice, meters):
         meters(4),
         [1, -3, "-", 1, -3],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(5),
         [-1, 4, -2, 3, "-"],
         extra_counts=[1],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(6),
         [2, -3, -1, 1, -2, 1, 1, -4, -1, 3],
         extra_counts=[1, 1, 1, 0],
@@ -231,8 +210,7 @@ def GT2(voice, meters):
         meters(7),
         [4, 5, "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(8),
         [-1, 2, -1, 1, "-"],
         extra_counts=[1],
@@ -241,8 +219,7 @@ def GT2(voice, meters):
         meters(9, 10),
         [1, -3, 1, -3, -4, -1, 7, 8, "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(11),
         [-3, 4, -3, "-"],
         extra_counts=[1],
@@ -251,16 +228,14 @@ def GT2(voice, meters):
         meters(12, 13),
         [1, -3, 1, -3, 1, -3, -1, 15, t(4)],
     )
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(14),
         [4, 1, 1, -2, 1, "-"],
         extra_counts=[0, 1, 1, 1],
     )
     leaf = abjad.select.leaf(components, 0)
     baca.tie(leaf)
-    components = library.make_one_beat_tuplets(
-        voice,
+    components = rhythm.make_one_beat_tuplets(
         meters(15),
         [-5, -5, -1, 1, -3, "-"],
         extra_counts=[1],
@@ -324,8 +299,7 @@ def VN(voice, meters):
         meters(15),
         [T([-1, 1, t(4)], "6:4"), T([4, -2], "6:4"), "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(16),
         [-1, 1, 4 + 4, 2, 2, -4, -2, 2, -2],
         extra_counts=[2],
@@ -334,8 +308,7 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(1, 2),
         [-3, 2, -4, 4, -2, -14, 1 + 2, -3, -15],
         extra_counts=[1],
@@ -380,8 +353,7 @@ def VC(voice, meters):
         meters(15),
         [T([-1, 1, t(4)], "6:4"), T([4, -2], "6:4"), "-"],
     )
-    library.make_one_beat_tuplets(
-        voice,
+    rhythm.make_one_beat_tuplets(
         meters(16),
         [-1, 1, 4 + 4, 2, -3, 2, -2, 2, -1, 2],
         extra_counts=[2],
