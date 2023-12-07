@@ -373,6 +373,7 @@ def make_rhythm(
     do_not_rewrite_meter=False,
     overlap=False,
 ):
+    assert time_signatures is not None, repr(time_signatures)
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):
         items = abjad.sequence.flatten(items)
@@ -590,6 +591,7 @@ def replace_measure(voice, measure_number, components):
 def rhythm(
     voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
 ):
+    assert time_signatures is not None, repr(time_signatures)
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):
         items = abjad.sequence.flatten(items)

@@ -37,12 +37,17 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice)
     rhythm(
         [pair(2, 4, 2, 4), pair(4, 8, 4, 8), t(4)],
+        meters(1),
     )
     rhythm(
         [4, t(4), 4, -4, -4, t(4)],
+        meters(2),
+        do_not_rewrite_meter=True,
     )
     rhythm(
         [4, t(4), 4, -4],
+        meters(3),
+        do_not_rewrite_meter=True,
     )
     rhythm(
         ["-", 4],
@@ -50,19 +55,24 @@ def FL(voice, meters):
     )
     rhythm(
         2 * [pair(4, 8, 4, 8)],
+        meters(5),
     )
     rhythm(
         2 * [pair(4, 8, 4, 8)],
+        meters(6),
     )
     rhythm(
         [rt(4), -3, 1, AG([2], 8)],
+        meters(7),
     )
     #
     rhythm(
         [16, AG([2], rt(16))],
+        meters(8, 9),
     )
     rhythm(
         AG([2], 16),
+        meters(10),
     )
     rhythm(
         [AG([2], 3), -1, -3, 3, -2],
@@ -83,6 +93,7 @@ def OB(voice, meters):
 
 
 def GT1(voice, meters):
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
         meters(1),
@@ -95,7 +106,7 @@ def GT1(voice, meters):
         [-15, 1, "-"],
         extra_counts=[-1],
     )
-    library.mmrests(voice, meters(3))
+    rhythm.mmrests(3)
     library.make_one_beat_tuplets(
         voice,
         meters(4),
@@ -187,6 +198,7 @@ def VN(voice, meters):
     )
     rhythm(
         4 * [TC(4, [1, 1])],
+        meters(5, 6),
     )
     rhythm(
         [-1, 1, 2, 4, 1, 3, -4],
@@ -195,15 +207,14 @@ def VN(voice, meters):
     library.mmrests(voice, meters(8, 10))
     rhythm(
         [-5, BG([1], 5), -2],
+        meters(11),
+        do_not_rewrite_meter=True,
     )
     rhythm(
-        [TC(4, [1, 1]), -4],
-    )
-    rhythm(
-        [-1, BG([1], t(3)), 1, -1, -1, BG([1], t(1)), t(4), 3, -1],
-    )
-    rhythm(
-        [-12, -2, BG([1], t(2)), 1, -3],
+        [TC(4, [1, 1]), -4]
+        + [-1, BG([1], t(3)), 1, -1, -1, BG([1], t(1)), t(4), 3, -1]
+        + [-12, -2, BG([1], t(2)), 1, -3],
+        meters(12, 13),
     )
 
 
@@ -243,6 +254,8 @@ def VC(voice, meters):
     )
     rhythm(
         [12, AG([2], rt(4))],
+        meters(10),
+        do_not_rewrite_meter=True,
     )
     rhythm(
         [AG([2], 3), -1, "-", BG([2], 3)],
