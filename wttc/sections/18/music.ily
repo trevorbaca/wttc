@@ -769,6 +769,8 @@ number.18.Rests = {
 number.18.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_129
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -788,8 +790,6 @@ number.18.AltoFlute.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
     r16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
@@ -1430,6 +1430,8 @@ number.18.AltoFlute.Staff = <<
 number.18.Oboe.Music = {
 
     % [Oboe.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_129
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1451,8 +1453,6 @@ number.18.Oboe.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -1663,6 +1663,8 @@ number.18.Guitar.1.Music.item.6 = {
 number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_129
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1682,8 +1684,6 @@ number.18.Guitar.1.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
     r2.
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
@@ -2296,6 +2296,8 @@ number.18.Guitar.2.Music = {
         {
 
             % [Guitar.2.Music measure 1]
+              %! EXPLICIT_CLEF
+            \clef "treble"
               %! MEASURE_129
               %! SHIFTED_CLEF
         %%% \once \override Staff.Clef.X-extent = ##f
@@ -2320,8 +2322,6 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-              %! EXPLICIT_CLEF
-            \clef "treble"
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2998,6 +2998,8 @@ number.18.Guitar.2.Staff = <<
 number.18.Violin.Music = {
 
     % [Violin.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_129
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -3017,8 +3019,6 @@ number.18.Violin.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -3517,6 +3517,8 @@ number.18.Violin.Staff = <<
 number.18.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_129
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -3538,8 +3540,6 @@ number.18.Cello.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
-      %! EXPLICIT_CLEF
-    \clef "treble"
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
