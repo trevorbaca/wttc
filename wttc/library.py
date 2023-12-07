@@ -1,6 +1,5 @@
 import dataclasses
 import inspect
-import typing
 
 import abjad
 import baca
@@ -30,14 +29,22 @@ def OBGCF(grace_note_numerators, nongrace_note_numerator):
 @dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
 class Rhythm:
     voice: abjad.Voice
-    meters: typing.Any = None
+    meters: baca.section.TimeSignatureServer
+
+    def __post_init__(self):
+        assert isinstance(self.voice, abjad.Voice), repr(self.voice)
+        assert isinstance(self.meters, baca.section.TimeSignatureServer)
 
     def __call__(self, *arguments, **keywords):
         return rhythm(self.voice, *arguments, **keywords)
 
-    def mmrests(self, *arguments):
+    def mmrests(self, *arguments, head=False):
         meters = self.meters(*arguments)
-        mmrests(self.voice, meters)
+        if head:
+            music = baca.make_mmrests(meters, head=self.voice.name)
+        else:
+            music = baca.make_mmrests(meters)
+        self.voice.extend(music)
 
 
 def _reference_meters():
@@ -534,14 +541,6 @@ def merge(components_1, components_2, time_signature):
     components = abjad.mutate.eject_contents(voice)
     components = clean_up_rhythmic_spelling(components, [time_signature], tag=tag)
     return components
-
-
-def mmrests(voice, time_signatures, *, head=False):
-    if head:
-        music = baca.make_mmrests(time_signatures, head=voice.name)
-    else:
-        music = baca.make_mmrests(time_signatures)
-    voice.extend(music)
 
 
 def overlap_previous_measure(voice, components, time_signatures):

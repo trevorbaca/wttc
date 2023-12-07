@@ -19,7 +19,6 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
-mmrests = library.mmrests
 
 
 def GLOBALS(skips):
@@ -34,7 +33,7 @@ def GLOBALS(skips):
 
 
 def FL(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         [pair(2, 4, 2, 4), pair(4, 8, 4, 8), t(4)],
         meters(1),
@@ -89,7 +88,8 @@ def FL(voice, meters):
 
 
 def OB(voice, meters):
-    library.mmrests(voice, meters())
+    rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
 
 
 def GT1(voice, meters):
@@ -113,14 +113,14 @@ def GT1(voice, meters):
         [-12, -1, 1, "-"],
         extra_counts=[-1],
     )
-    library.mmrests(voice, meters(5, 6))
+    rhythm.mmrests(5, 6)
     library.make_one_beat_tuplets(
         voice,
         meters(7),
         [-1, 1, "-"],
         extra_counts=[-1],
     )
-    library.mmrests(voice, meters(8, 10))
+    rhythm.mmrests(8, 10)
     library.make_one_beat_tuplets(
         voice,
         meters(11, 12),
@@ -136,6 +136,7 @@ def GT1(voice, meters):
 
 
 def GT2(voice, meters):
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
         meters(1),
@@ -148,7 +149,7 @@ def GT2(voice, meters):
         [-13, 1, "-"],
         extra_counts=[-1],
     )
-    library.mmrests(voice, meters(3, 4))
+    rhythm.mmrests(3, 4)
     library.make_one_beat_tuplets(
         voice,
         meters(5),
@@ -161,15 +162,15 @@ def GT2(voice, meters):
         ["-", 1],
         extra_counts=[-1],
     )
-    library.mmrests(voice, meters(7))
-    library.mmrests(voice, meters(8, 10))
+    rhythm.mmrests(7)
+    rhythm.mmrests(8, 10)
     library.make_one_beat_tuplets(
         voice,
         meters(11),
         [-3, -1, 3, "-"],
         extra_counts=[-1],
     )
-    library.mmrests(voice, meters(12))
+    rhythm.mmrests(12)
     library.make_one_beat_tuplets(
         voice,
         meters(13),
@@ -179,7 +180,7 @@ def GT2(voice, meters):
 
 
 def VN(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         [TC(2, [1, 1]), TC(2, [1, 1]), -1, 6, -1],
         meters(1),
@@ -204,7 +205,7 @@ def VN(voice, meters):
         [-1, 1, 2, 4, 1, 3, -4],
         meters(7),
     )
-    library.mmrests(voice, meters(8, 10))
+    rhythm.mmrests(8, 10)
     rhythm(
         [-5, BG([1], 5), -2],
         meters(11),
@@ -219,7 +220,7 @@ def VN(voice, meters):
 
 
 def VC(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         ["-", 4, 6, t(1)],
         meters(1),

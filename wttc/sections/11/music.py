@@ -19,7 +19,6 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
-mmrests = library.mmrests
 swell = library.swell
 
 

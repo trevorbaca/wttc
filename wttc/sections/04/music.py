@@ -20,7 +20,6 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
-mmrests = library.mmrests
 
 
 def GLOBALS(skips):
@@ -28,7 +27,7 @@ def GLOBALS(skips):
 
 
 def FL(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     components = library.make_one_beat_tuplets(
         voice,
         meters(1),
@@ -113,11 +112,12 @@ def FL(voice, meters):
 
 
 def OB(voice, meters):
-    library.mmrests(voice, meters())
+    rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
 
 
 def GT1(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
         meters(1),
@@ -188,11 +188,11 @@ def GT1(voice, meters):
         [-3, -3, 1, -2, "-"],
         extra_counts=[-1],
     )
-    mmrests(voice, meters(16))
+    rhythm.mmrests(16)
 
 
 def GT2(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
         meters(1),
@@ -265,11 +265,11 @@ def GT2(voice, meters):
         [-5, -5, -1, 1, -3, "-"],
         extra_counts=[1],
     )
-    mmrests(voice, meters(16))
+    rhythm.mmrests(16)
 
 
 def VN(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     rhythm(
         [T([-2, 2, -2], -2), 1, -3, -3, 1, "-"],
         meters(1),
@@ -302,7 +302,7 @@ def VN(voice, meters):
         [-3, 1, "-"],
         meters(8),
     )
-    mmrests(voice, meters(9))
+    rhythm.mmrests(9)
     rhythm(
         ["-", T([-2, 2, -2], -2), -4],
         meters(10),
@@ -315,7 +315,7 @@ def VN(voice, meters):
         [-3, 1, "-"],
         meters(12),
     )
-    mmrests(voice, meters(13))
+    rhythm.mmrests(13)
     rhythm(
         [T([-1, 1, -4], "6:4"), "-"],
         meters(14),
@@ -333,7 +333,7 @@ def VN(voice, meters):
 
 
 def VC(voice, meters):
-    rhythm = library.Rhythm(voice)
+    rhythm = library.Rhythm(voice, meters)
     library.make_one_beat_tuplets(
         voice,
         meters(1, 2),

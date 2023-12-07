@@ -21,7 +21,6 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
-mmrests = library.mmrests
 swell = library.swell
 
 
@@ -67,7 +66,8 @@ def FL(voice, meters):
 
 
 def OB(voice, meters):
-    mmrests(voice, meters())
+    rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
 
 
 def GT1(voice, meters):
