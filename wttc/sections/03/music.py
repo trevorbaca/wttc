@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -23,12 +24,10 @@ OBGC = library.OBGC
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
-    baca.literal(
+    baca.mark(
         skips[8 - 1],
-        [
-            r"\tweak padding 1.5",
-            r'\mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"',
-        ],
+        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        abjad.Tweak(r"\tweak padding 1.5"),
     )
 
 
