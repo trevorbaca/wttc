@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 26 ##########################################
@@ -31,14 +31,14 @@ def GLOBALS(skips, first_measure_number):
     for n in [32, 36]:
         baca.mark(
             skips[n - 1],
-            r'\markup \smaller \smaller \musicglyph #"scripts.ulongfermata"',
+            strings.long_fermata,
             abjad.Tweak(r"\tweak padding 1.5"),
             site="after",
         )
     for n in [34, 35]:
         baca.mark(
             skips[n - 1],
-            r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+            strings.fermata,
             abjad.Tweak(r"\tweak padding 1.5"),
             site="after",
         )

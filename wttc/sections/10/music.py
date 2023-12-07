@@ -2,7 +2,7 @@ import abjad
 import baca
 from abjadext import rmakers
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 10 ##########################################
@@ -28,7 +28,7 @@ def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
     baca.mark(
         skips[10 - 1],
-        r'\markup \smaller \smaller \musicglyph #"scripts.ufermata"',
+        strings.fermata,
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
