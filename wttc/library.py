@@ -47,13 +47,19 @@ class Rhythm:
         do_not_extend=False,
         extra_counts=(),
     ):
-        return make_one_beat_tuplets(
-            self.voice,
-            time_signatures,
-            counts,
-            do_not_extend=do_not_extend,
-            extra_counts=extra_counts,
+        tag = baca.helpers.function_name(inspect.currentframe())
+        durations = [_.duration for _ in time_signatures]
+        durations = [sum(durations)]
+        durations = baca.sequence.quarters(durations)
+        tuplets = rmakers.talea(
+            durations, counts, 16, extra_counts=extra_counts, tag=tag
         )
+        components = clean_up_rhythmic_spelling(
+            tuplets, time_signatures, debug=debug, tag=tag
+        )
+        if not do_not_extend:
+            self.voice.extend(components)
+        return components
 
     def mmrests(self, *arguments, head=False):
         meters = self.meters(*arguments)
@@ -364,28 +370,6 @@ def make_empty_score():
     baca.score.assert_lilypond_identifiers(score)
     baca.score.assert_unique_context_names(score)
     return score
-
-
-def make_one_beat_tuplets(
-    voice,
-    time_signatures,
-    counts,
-    *,
-    debug=False,
-    do_not_extend=False,
-    extra_counts=(),
-):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    durations = [_.duration for _ in time_signatures]
-    durations = [sum(durations)]
-    durations = baca.sequence.quarters(durations)
-    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
-    components = clean_up_rhythmic_spelling(
-        tuplets, time_signatures, debug=debug, tag=tag
-    )
-    if not do_not_extend:
-        voice.extend(components)
-    return components
 
 
 def make_rhythm(
