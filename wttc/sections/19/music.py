@@ -47,8 +47,8 @@ def FL(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-12] + 3 * [4] + ["-"],
         meters(7, 9),
+        [-12] + 3 * [4] + ["-"],
         overlap=True,
     )
     rhythm(
@@ -65,8 +65,8 @@ def FL(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-19, 1, 7, 1, 4, 4],
         meters(15, 16),
+        [-19, 1, 7, 1, 4, 4],
         overlap=True,
     )
     rhythm(
@@ -100,8 +100,8 @@ def FL(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-20, 4, 4, 4, 4, "-"],
         meters(33, 35),
+        [-20, 4, 4, 4, 4, "-"],
         overlap=True,
     )
     rhythm(
@@ -274,8 +274,8 @@ def VN(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-8, 8, 8],
         meters(23),
+        [-8, 8, 8],
         overlap=True,
     )
     library.make_one_beat_tuplets(
@@ -286,8 +286,8 @@ def VN(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-8, 8, 8, "-"],
         meters(25),
+        [-8, 8, 8, "-"],
         overlap=True,
     )
 
@@ -334,8 +334,8 @@ def VN(voice, meters):
 
     library.make_rhythm(
         voice,
-        [-8, 16, "-"],
         meters(34),
+        [-8, 16, "-"],
         overlap=True,
     )
 
@@ -356,8 +356,8 @@ def VN(voice, meters):
 
     library.make_rhythm(
         voice,
-        [-11, 13, "-"],
         meters(39),
+        [-11, 13, "-"],
         overlap=True,
     )
 
@@ -397,8 +397,8 @@ def VC(voice, meters):
         counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
         library.make_rhythm(
             voice,
-            [-12] + counts,
             meters(3, 5),
+            [-12] + counts,
             overlap=True,
         )
         rhythm(
@@ -413,8 +413,8 @@ def VC(voice, meters):
         assert counts == [1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8]
         library.make_rhythm(
             voice,
-            [-7] + counts + ["-"],
             meters(8, 11),
+            [-7] + counts + ["-"],
             overlap=True,
         )
 
@@ -426,8 +426,8 @@ def VC(voice, meters):
         assert counts == [1, 5, 1, 6, 1, 7]
         library.make_rhythm(
             voice,
-            [-11] + counts + ["-"],
             meters(11, 12),
+            [-11] + counts + ["-"],
             overlap=True,
         )
 

@@ -261,8 +261,8 @@ def VC(voice, meters):
     #
     components = library.make_rhythm(
         voice,
-        10 * [-3, 1],
         meters(5, 6),
+        10 * [-3, 1],
     )
     library.replace_measure(voice, (5, 6), components)
     #

@@ -59,8 +59,8 @@ def FL(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-15] + 2 * [2, -7, 1, -5],
         meters(3, 4),
+        [-15] + 2 * [2, -7, 1, -5],
         overlap=True,
     )
     rhythm(
@@ -340,8 +340,8 @@ def VN(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-13] + 2 * [3, -3, 1, -6] + ["-"],
         meters(3, 5),
+        [-13] + 2 * [3, -3, 1, -6] + ["-"],
         overlap=True,
     )
     rhythm.mmrests(6)
@@ -364,8 +364,8 @@ def VN(voice, meters):
     )
     library.make_rhythm(
         voice,
-        [-18] + [3, -3, 1, -6, 3, -3] + ["-"],
         meters(12, 13),
+        [-18] + [3, -3, 1, -6, 3, -3] + ["-"],
         overlap=True,
     )
     rhythm(

@@ -371,12 +371,10 @@ def make_one_beat_tuplets(
     return components
 
 
-# TODO: make time_signatures mandatory
-# TODO: signature: voice, time_signatures, items
 def make_rhythm(
     voice,
+    time_signatures,
     items,
-    time_signatures=None,
     *,
     denominator=16,
     do_not_rewrite_meter=False,

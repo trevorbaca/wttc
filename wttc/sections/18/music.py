@@ -54,7 +54,7 @@ def FL(voice, meters):
         counts = library.attacks(counts)
         assert abjad.math.weight(counts) == 88
         assert 3 * abjad.math.weight(counts) == sixteenths
-        components = library.make_rhythm(voice, 3 * counts, meters(1, 12))
+        components = library.make_rhythm(voice, meters(1, 12), 3 * counts)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         j3_measures = abjad.select.group_by_measure(voice_)
         voice_[:] = []
@@ -85,8 +85,8 @@ def FL(voice, meters):
         counts = library.attach_bgs(counts, [[1]])
         library.make_rhythm(
             voice,
-            [-24 + 3] + counts + ["-"],
             meters(2, 4),
+            [-24 + 3] + counts + ["-"],
             overlap=True,
         )
 
@@ -104,8 +104,8 @@ def FL(voice, meters):
         counts = library.attach_bgs(counts, [[1]])
         library.make_rhythm(
             voice,
-            [-24 + 3] + counts + [8, 16] + ["-"],
             meters(4, 6),
+            [-24 + 3] + counts + [8, 16] + ["-"],
             overlap=True,
         )
 
@@ -125,8 +125,8 @@ def FL(voice, meters):
         counts = [12, 4, 4, 2, 6, 4]
         library.make_rhythm(
             voice,
-            [-24 + 3] + counts + ["-"],
             meters(8, 10),
+            [-24 + 3] + counts + ["-"],
             overlap=True,
         )
 
@@ -142,8 +142,8 @@ def FL(voice, meters):
         counts = library.attach_bgs(counts, [[1]])
         library.make_rhythm(
             voice,
-            [-5] + [8, 16, 8, 16] + counts,
             meters(10, 12),
+            [-5] + [8, 16, 8, 16] + counts,
             overlap=True,
         )
 
@@ -171,8 +171,8 @@ def FL(voice, meters):
         assert counts == [1, -3, 1, -3]
         library.make_rhythm(
             voice,
-            [-24 + 3] + counts + [8] + ["-"],
             meters(14, 16),
+            [-24 + 3] + counts + [8] + ["-"],
             overlap=True,
         )
 
@@ -201,7 +201,7 @@ def FL(voice, meters):
         counts = library.attacks(counts)
         assert abjad.math.weight(counts) == 372
         assert abjad.math.weight(counts) == sixteenths
-        components = library.make_rhythm(voice, counts, meters(13, 28))
+        components = library.make_rhythm(voice, meters(13, 28), counts)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         j3_measures = abjad.select.group_by_measure(voice_)
         voice_[:] = []
@@ -215,8 +215,8 @@ def FL(voice, meters):
         voice.extend(j3_measures[23 - before_fermata])
         library.make_rhythm(
             voice,
-            [-24 + 1] + [1 + 24 + 24 + 12] + ["-"],
             meters(23, 26),
+            [-24 + 1] + [1 + 24 + 24 + 12] + ["-"],
             overlap=True,
         )
         start = 27 - before_fermata
@@ -245,8 +245,8 @@ def GT1(voice, meters):
         counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
         components = library.make_rhythm(
             voice,
-            3 * counts,
             time_signatures,
+            3 * counts,
         )
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, [(3, 8), (11, 12)])
@@ -312,8 +312,8 @@ def GT1(voice, meters):
         counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
         components = library.make_rhythm(
             voice,
-            3 * counts,
             time_signatures,
+            3 * counts,
         )
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, [(13, 24), "(27, 28)/2:"], first=13)
@@ -383,8 +383,8 @@ def GT2(voice, meters):
         counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
         j1_components = library.make_rhythm(
             voice,
-            3 * counts,
             time_signatures,
+            3 * counts,
         )
         voice_ = rmakers.wrap_in_time_signature_staff(j1_components, time_signatures)
         library.mask_measures(voice_, [(3, 7), "10/2:", (11, 12)])
@@ -456,8 +456,8 @@ def GT2(voice, meters):
         counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])
         components = library.make_rhythm(
             voice,
-            3 * counts,
             time_signatures,
+            3 * counts,
         )
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, [(13, 22), (24, 25), "(27, 28)/2:"], first=13)
@@ -527,8 +527,8 @@ def VN(voice, meters):
         assert counts == [-21, 20, 15, 14, 9, 8, 3, 2]
         components = library.make_rhythm(
             voice,
-            counts,
             meters(9, 12),
+            counts,
         )
         voice.extend(components)
 
@@ -545,32 +545,32 @@ def VN(voice, meters):
 
     library.make_rhythm(
         voice,
-        [-21, 9, 8, 3, 8, "-"],
         meters(13, 15),
+        [-21, 9, 8, 3, 8, "-"],
         overlap=True,
     )
     library.make_rhythm(
         voice,
-        [-10, 9, 8, 9, 8, 3, 8, 3, 2, 3, 2, "-"],
         meters(15, 18),
+        [-10, 9, 8, 9, 8, 3, 8, 3, 2, 3, 2, "-"],
         overlap=True,
     )
     library.make_rhythm(
         voice,
-        [-11, 2, 3, 2, 3, 8, 3, 8, 9, 8, "-"],
         meters(18, 20),
+        [-11, 2, 3, 2, 3, 8, 3, 8, 9, 8, "-"],
         overlap=True,
     )
     library.make_rhythm(
         voice,
-        [-24 + 1, 3, 2, 3, 8, 3, 8, 9, 14, "-"],
         meters(20, 23),
+        [-24 + 1, 3, 2, 3, 8, 3, 8, 9, 14, "-"],
         overlap=True,
     )
     library.make_rhythm(
         voice,
-        [-24 + 7, 8, 9, 14, 15, 20, "-"],
         meters(23, 26),
+        [-24 + 7, 8, 9, 14, 15, 20, "-"],
         overlap=True,
     )
     rhythm.mmrests(27, 28)
@@ -588,7 +588,7 @@ def VC(voice, meters):
         assert counts == [1, -6, 1, -12, 1, -7, 1, -13, 1, -8, 1, -14]
         assert abjad.math.weight(counts) == 66
         assert 4 * abjad.math.weight(counts) == sixteenths
-        components = library.make_rhythm(voice, 4 * counts, time_signatures)
+        components = library.make_rhythm(voice, time_signatures, 4 * counts)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, [1, "(2, 3)/2:", "5/2:", "8/:-3", "(9, 12)/2:"])
         j3_measures = abjad.select.group_by_measure(voice_)
@@ -612,7 +612,7 @@ def VC(voice, meters):
         counts = library.attacks(counts)
         assert counts == [1, -7, 1, -10, 1, -11, 1, -14, 1, -15, 1, -18, 1, -19, 1, -22]
         assert 3 * abjad.math.weight(counts) == sixteenths
-        components = library.make_rhythm(voice, 3 * counts, time_signatures)
+        components = library.make_rhythm(voice, time_signatures, 3 * counts)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         library.mask_measures(voice_, [(13, 22), (24, 26)], first=13)
         j3_measures = abjad.select.group_by_measure(voice_)
@@ -634,15 +634,15 @@ def VC(voice, meters):
         library.overlap_previous_measure(voice, components, meters(27))
         components = library.make_rhythm(
             voice,
-            ["-", 8, 8],
             meters(27),
+            ["-", 8, 8],
         )
         library.overlap_previous_measure(voice, components, meters(27))
         voice.extend(j3_measures[28 - before_fermata])
         components = library.make_rhythm(
             voice,
-            [-8, 8, 8],
             meters(28),
+            [-8, 8, 8],
         )
         library.overlap_previous_measure(voice, components, meters(28))
 
