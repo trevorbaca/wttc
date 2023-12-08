@@ -251,10 +251,10 @@ def VC(voice, meters):
     components = abjad.mutate.eject_contents(container)
     library.replace_measure(voice, 3, components)
     #
-    components = library.make_rhythm(
-        voice,
+    components = rhythm(
         meters(5, 6),
         10 * [-3, 1],
+        do_not_extend=True,
     )
     library.replace_measure(voice, (5, 6), components)
     #

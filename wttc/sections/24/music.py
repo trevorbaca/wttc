@@ -351,8 +351,7 @@ def VN(voice, meters):
             meters(26),
             [24, "-"],
         )
-        library.make_rhythm(
-            voice,
+        rhythm(
             meters(26, 33),
             [-30, 6 + 24 + 24 + 2, -16, "+"],
             overlap=True,
@@ -390,8 +389,7 @@ def VC(voice, meters):
             meters(5),
             [-1, 4, 10, "-"],
         )
-        library.make_rhythm(
-            voice,
+        rhythm(
             meters(5, 6),
             [-22, 2, 2, 4, "-"],
             overlap=True,
@@ -409,8 +407,7 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        library.make_rhythm(
-            voice,
+        rhythm(
             meters(6, 8),
             [-33, 4, 8, 12, 16, "-"],
             overlap=True,

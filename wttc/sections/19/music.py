@@ -43,8 +43,7 @@ def FL(voice, meters):
         meters(6, 7),
         [-1, 7, 1, -7, -1, 10, 1, "-"],
     )
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(7, 9),
         [-12] + 3 * [4] + ["-"],
         overlap=True,
@@ -61,8 +60,7 @@ def FL(voice, meters):
         meters(15),
         [-6] + 3 * [2] + ["-"],
     )
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(15, 16),
         [-19, 1, 7, 1, 4, 4],
         overlap=True,
@@ -96,8 +94,7 @@ def FL(voice, meters):
         2 * [-8] + 120 * [1] + ["-"],
         denominator=32,
     )
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(33, 35),
         [-20, 4, 4, 4, 4, "-"],
         overlap=True,
@@ -264,8 +261,7 @@ def VN(voice, meters):
         60 * [1] + ["-"],
         extra_counts=[0, 1, 0, 0, 2],
     )
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(23),
         [-8, 8, 8],
         overlap=True,
@@ -275,8 +271,7 @@ def VN(voice, meters):
         33 * [1] + ["-"],
         extra_counts=[1, 0, 0, 2, 0],
     )
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(25),
         [-8, 8, 8, "-"],
         overlap=True,
@@ -320,8 +315,7 @@ def VN(voice, meters):
             extra_counts=[0, 2, 0, 1, 0],
         )
 
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(34),
         [-8, 16, "-"],
         overlap=True,
@@ -341,8 +335,7 @@ def VN(voice, meters):
         )
         library.overlap_previous_measure(voice, components, meters(34, 39))
 
-    library.make_rhythm(
-        voice,
+    rhythm(
         meters(39),
         [-11, 13, "-"],
         overlap=True,
@@ -381,8 +374,7 @@ def VC(voice, meters):
     @baca.call
     def block():
         counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
-        library.make_rhythm(
-            voice,
+        rhythm(
             meters(3, 5),
             [-12] + counts,
             overlap=True,
@@ -397,8 +389,7 @@ def VC(voice, meters):
         counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
         counts = abjad.sequence.reverse(counts)
         assert counts == [1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8]
-        library.make_rhythm(
-            voice,
+        rhythm(
             meters(8, 11),
             [-7] + counts + ["-"],
             overlap=True,
@@ -410,8 +401,7 @@ def VC(voice, meters):
         counts = abjad.sequence.reverse(counts)
         counts = counts[6:-2]
         assert counts == [1, 5, 1, 6, 1, 7]
-        library.make_rhythm(
-            voice,
+        rhythm(
             meters(11, 12),
             [-11] + counts + ["-"],
             overlap=True,
