@@ -25,39 +25,27 @@ OBGC = library.OBGC
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
-    baca.rehearsal_mark(
-        skips[1 - 1],
-        "C",
-        abjad.Tweak(r"\tweak padding 1.5"),
-        font_size=6,
-    )
     baca.mark(
-        skips[8 - 1],
+        skips[17 - 1],
         strings.fermata,
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
-    baca.metronome_mark(skips[15 - 1], "60", manifests=library.manifests)
-    baca.rehearsal_mark(
-        skips[15 - 1],
-        "D",
-        abjad.Tweak(r"\tweak padding 1.5"),
-        font_size=6,
-    )
+    baca.metronome_mark(skips[31 - 1], "60", manifests=library.manifests)
     baca.mark(
-        skips[19 - 1],
+        skips[40 - 1],
         strings.fermata,
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
     baca.mark(
-        skips[23 - 1],
+        skips[46 - 1],
         strings.fermata,
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
     )
     baca.mark(
-        skips[24 - 1],
+        skips[48 - 1],
         strings.fermata,
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
@@ -67,18 +55,19 @@ def GLOBALS(skips):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1, 5),
+        meters(1, 9),
         ["-", 16, -58, 16, -58, 16, -8],
     )
-    rhythm.mmrests(6)
+    rhythm.mmrests(10, 11)
     rhythm(
-        meters(7),
+        meters(12, 14),
         [8, AG([2], 24), "-"],
     )
     rhythm(
-        meters(8),
+        meters(15, 17),
         [8, AG([2], 24), "-", -1, 16, -3],
     )
+    return
     rhythm.mmrests(9)
     rhythm(
         meters(10, 11),
@@ -139,6 +128,8 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
+    return
     rhythm.mmrests(1, 4)
     rhythm(
         meters(5),
@@ -198,6 +189,8 @@ def GT1(voice, meters):
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
+    return
     rhythm.mmrests(1, 5)
     rhythm(
         meters(6),
@@ -251,6 +244,8 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
+    return
     rhythm(
         meters(1),
         [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
@@ -343,6 +338,8 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+    rhythm.mmrests()
+    return
     rhythm(
         meters(1),
         [-4, -3, BG([2], t(1)), 3, BG([2], t(1)), 8, w(8, 16), AG([2], h(w(8, 16)))],
@@ -512,8 +509,12 @@ def vc(m):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 10, 6, 10, 13]
-    numerators += [10, 8, 8, 8, 10, 4, 6, 10, 8, 8]
+    # numerators = [9, 12, 12, 12, 6, 12, 15, 15, 8, 9, 10, 6, 10, 13]
+    # numerators += [10, 8, 8, 8, 10, 4, 6, 10, 8, 8]
+    numerators = [3, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 3, 6]
+    numerators += [6, 6, 3, 3, 5, 3, 3, 3, 5, 5, 6, 5, 5, 5, 5, 3]
+    numerators += [4, 6, 4, 4, 4, 4, 4, 4, 4, 6]
+    numerators += [4, 6, 4, 6, 4, 4, 4, 4]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -581,12 +582,12 @@ def make_layout():
         baca.page(
             1,
             baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=15, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         baca.page(
             2,
-            baca.system(measure=15, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=20, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=31, y_offset=10, distances=(15, 20, 20, 20)),
+            baca.system(measure=41, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 20),
         overrides=[baca.space((13, 22), (1, 24))],

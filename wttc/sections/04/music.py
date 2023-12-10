@@ -24,6 +24,12 @@ OBGC = library.OBGC
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "50", manifests=library.manifests)
+    baca.rehearsal_mark(
+        skips[1 - 1],
+        "B",
+        abjad.Tweak(r"\tweak padding 1.5"),
+        font_size=6,
+    )
 
 
 def FL(voice, meters):

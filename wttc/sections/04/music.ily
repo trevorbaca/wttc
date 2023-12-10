@@ -14,6 +14,8 @@ number.4.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "04"
     s1 * 6/4
+    \tweak padding 1.5
+    - \baca-rehearsal-mark-markup "B" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

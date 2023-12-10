@@ -27,6 +27,12 @@ swell = library.swell
 
 def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
+    baca.rehearsal_mark(
+        skips[1 - 1],
+        "K",
+        abjad.Tweak(r"\tweak padding 1.5"),
+        font_size=6,
+    )
     baca.mark(
         skips[14 - 1],
         strings.fermata,
@@ -34,6 +40,12 @@ def GLOBALS(skips, first_measure_number):
         site="after",
     )
     baca.metronome_mark(skips[20 - 1], "150", manifests=library.manifests)
+    baca.rehearsal_mark(
+        skips[20 - 1],
+        "L",
+        abjad.Tweak(r"\tweak padding 1.5"),
+        font_size=6,
+    )
 
 
 def FL(voice, meters):

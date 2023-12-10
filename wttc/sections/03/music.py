@@ -24,6 +24,12 @@ OBGC = library.OBGC
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
+    baca.rehearsal_mark(
+        skips[1 - 1],
+        "A",
+        abjad.Tweak(r"\tweak padding 1.5"),
+        font_size=6,
+    )
     baca.mark(
         skips[7 - 1],
         strings.fermata,
