@@ -37,7 +37,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "171"
+    %@% - \baca-start-mn-left-only "175"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -62,7 +62,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "172"
+    %@% - \baca-start-mn-left-only "176"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -83,7 +83,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "173"
+    %@% - \baca-start-mn-left-only "177"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -104,7 +104,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "174"
+    %@% - \baca-start-mn-left-only "178"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -125,7 +125,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "175"
+    %@% - \baca-start-mn-left-only "179"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -146,7 +146,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "176"
+    %@% - \baca-start-mn-left-only "180"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -167,7 +167,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "177"
+    %@% - \baca-start-mn-left-only "181"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -188,7 +188,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "178"
+    %@% - \baca-start-mn-left-only "182"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -209,7 +209,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "179"
+    %@% - \baca-start-mn-left-only "183"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -230,7 +230,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "180"
+    %@% - \baca-start-mn-left-only "184"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -251,7 +251,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "181"
+    %@% - \baca-start-mn-left-only "185"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -276,7 +276,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "182"
+    %@% - \baca-start-mn-left-only "186"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -301,7 +301,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "183"
+    %@% - \baca-start-mn-left-only "187"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -326,7 +326,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "184"
+    %@% - \baca-start-mn-left-only "188"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
     \tweak padding 1.5
@@ -353,7 +353,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "185"
+    %@% - \baca-start-mn-left-only "189"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -378,7 +378,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "186"
+    %@% - \baca-start-mn-left-only "190"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -403,7 +403,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "187"
+    %@% - \baca-start-mn-left-only "191"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -424,7 +424,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "188"
+    %@% - \baca-start-mn-left-only "192"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -445,7 +445,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "189"
+    %@% - \baca-start-mn-left-only "193"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -485,7 +485,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "190"
+    %@% - \baca-start-mn-left-only "194"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -506,7 +506,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "191"
+    %@% - \baca-start-mn-left-only "195"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -527,7 +527,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "192"
+    %@% - \baca-start-mn-left-only "196"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -548,7 +548,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "193"
+    %@% - \baca-start-mn-left-only "197"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -569,7 +569,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "194"
+    %@% - \baca-start-mn-left-only "198"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -594,7 +594,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "195"
+    %@% - \baca-start-mn-left-only "199"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -619,7 +619,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "196"
+    %@% - \baca-start-mn-left-only "200"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -640,7 +640,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "197"
+    %@% - \baca-start-mn-left-only "201"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -661,7 +661,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "198"
+    %@% - \baca-start-mn-left-only "202"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -682,7 +682,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "199"
+    %@% - \baca-start-mn-left-only "203"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -703,7 +703,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "200"
+    %@% - \baca-start-mn-left-only "204"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -724,7 +724,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "201"
+    %@% - \baca-start-mn-left-only "205"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -745,7 +745,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "202"
+    %@% - \baca-start-mn-left-only "206"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -766,7 +766,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "203"
+    %@% - \baca-start-mn-left-only "207"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -791,7 +791,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "204"
+    %@% - \baca-start-mn-left-only "208"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -816,7 +816,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "205"
+    %@% - \baca-start-mn-left-only "209"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -837,7 +837,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "206"
+    %@% - \baca-start-mn-left-only "210"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -858,7 +858,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "207"
+    %@% - \baca-start-mn-left-only "211"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -879,7 +879,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "208"
+    %@% - \baca-start-mn-left-only "212"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -904,7 +904,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "209"
+    %@% - \baca-start-mn-left-only "213"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -929,7 +929,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "210"
+    %@% - \baca-start-mn-left-only "214"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -950,7 +950,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "211"
+    %@% - \baca-start-mn-left-only "215"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -971,7 +971,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "212"
+    %@% - \baca-start-mn-left-only "216"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -992,7 +992,7 @@ number.19.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "213"
+    %@% - \baca-start-mn-left-only "217"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -1164,12 +1164,12 @@ number.19.AltoFlute.Music = {
     % [AltoFlute.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -2506,12 +2506,12 @@ number.19.Oboe.Music = {
     % [Oboe.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -2766,12 +2766,12 @@ number.19.Guitar.1.Music = {
     % [Guitar.1.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -3194,12 +3194,12 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -3650,12 +3650,12 @@ number.19.Violin.Music = {
     % [Violin.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -5045,12 +5045,12 @@ number.19.Cello.Music = {
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
+      %! MEASURE_175
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
