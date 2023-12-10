@@ -32,7 +32,7 @@ def GLOBALS(skips, first_measure_number):
         font_size=6,
     )
     baca.mark(
-        skips[8 - 1],
+        skips[17 - 1],
         strings.fermata,
         abjad.Tweak(r"\tweak padding 1.5"),
         site="after",
@@ -42,34 +42,34 @@ def GLOBALS(skips, first_measure_number):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1),
+        meters(1, 2),
         [-12, 24],
     )
     rhythm(
-        meters(2, 4),
+        meters(3, 8),
         [48, 48, 48],
     )
     rhythm(
-        meters(5),
+        meters(9),
         [t(24)],
     )
     rhythm(
-        meters(6),
+        meters(10, 11),
         [8, "-"],
     )
-    rhythm.mmrests(7, 8)
+    rhythm.mmrests(12, 17)
     rhythm(
-        meters(9),
+        meters(18, 19),
         ["-", 18],
     )
-    rhythm.mmrests(10)
+    rhythm.mmrests(20, 22)
     rhythm(
-        meters(11),
+        meters(23),
         [18, 18],
     )
-    rhythm.mmrests(12)
+    rhythm.mmrests(24, 25)
     rhythm(
-        meters(13, 14),
+        meters(26, 28),
         [18, 18, 18, 18, "-"],
     )
 
@@ -81,44 +81,44 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1)
+    rhythm.mmrests(1, 2)
     rhythm(
-        meters(2, 3),
+        meters(3, 6),
         [-28, -1, 3, -24, -1, 3, -24, -1, 3, -8],
     )
     rhythm(
-        meters(4, 5),
+        meters(7, 9),
         [-40, -2, 2, 4, -4, 4, -2, 2, -12],
     )
     rhythm(
-        meters(6),
+        meters(10, 11),
         [-1, 3, -36, -2, 2, 4],
     )
     rhythm(
-        meters(7),
+        meters(12, 14),
         [-4, 4, -2, 2, -24, -1, 3, -14, 2, 4],
     )
     rhythm(
-        meters(8),
+        meters(15, 17),
         [-4, 4, -2, 2, -6, 2, 4, -10, 2, -14, 2, "-"],
     )
-    rhythm.mmrests(9)
+    rhythm.mmrests(18, 19)
     rhythm(
-        meters(10),
+        meters(20, 22),
         ["-", -1, 3],
     )
-    rhythm.mmrests(11, 14)
+    rhythm.mmrests(23, 28)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1)
+    rhythm.mmrests(1, 2)
     rhythm(
-        meters(2, 3),
+        meters(3, 6),
         [-28, -1, 3, -24, -1, 3, -24, -1, 3, -8],
     )
     rhythm.make_one_beat_tuplets(
-        meters(4, 5),
+        meters(7, 9),
         [-30, -1, 2, -3, -1, 2, -1, 2, 3, -9],
         extra_counts=[-1],
     )
@@ -126,68 +126,68 @@ def GT2(voice, meters):
     voice.extend(r"\times 2/3 { r8 c'4 } \times 2/3 { r8 c'4 } c'4 r1.")
     voice.extend(r"r16 c'8. r2. \times 2/3 { r8 c'4 } r4")
     rhythm.make_one_beat_tuplets(
-        meters(8),
+        meters(15, 17),
         [-1, 2, -1, 2, 2, -5, 2, -6, 2, -11, 2, "-"],
         extra_counts=[-1],
     )
-    rhythm.mmrests(9)
+    rhythm.mmrests(18, 19)
     rhythm(
-        meters(10),
+        meters(20, 22),
         ["-", -1, 3],
     )
-    rhythm.mmrests(11, 14)
+    rhythm.mmrests(23, 28)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1),
+        meters(1, 2),
         [12, 24],
     )
     rhythm(
-        meters(2),
+        meters(3, 4),
         [48],
     )
-    rhythm.mmrests(3)
+    rhythm.mmrests(5, 6)
     rhythm(
-        meters(4),
+        meters(7, 8),
         ["-", 1],
     )
     rhythm(
-        meters(5),
+        meters(9),
         [-16, -3, 1, -3, 1],
     )
     rhythm(
-        meters(6),
+        meters(10, 11),
         [-28, -3, 1, -12, -3, 1],
     )
     rhythm(
-        meters(7),
+        meters(12, 14),
         [-3, 1, -8, -3, 1, -24, -3, 1, -3, 1, -3, 1, -3, 1, -3, t(1)],
     )
     rhythm(
-        meters(8),
+        meters(15, 17),
         [60],
     )
-    rhythm.mmrests(9)
+    rhythm.mmrests(18, 19)
     rhythm(
-        meters(10),
+        meters(20, 22),
         T([32], "8:9"),
     )
     rhythm(
-        meters(11),
+        meters(23),
         T([32], "8:9"),
     )
     rhythm(
-        meters(12),
+        meters(24, 25),
         [24],
     )
     rhythm(
-        meters(13),
+        meters(26),
         T([32], "8:9"),
     )
     rhythm(
-        meters(14),
+        meters(27, 28),
         # TODO: make this work: [T([32], "8:9"), w(11, 12), h(1)],
         [T([32], "8:9"), w(8, 12), h(3), h(1)],
         do_not_rewrite_meter=True,
@@ -197,51 +197,51 @@ def VN(voice, meters):
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1),
+        meters(1, 2),
         [12, 24],
     )
     rhythm(
-        meters(2),
+        meters(3, 4),
         [48],
     )
-    rhythm.mmrests(3)
+    rhythm.mmrests(5, 6)
     rhythm(
-        meters(4),
+        meters(7, 8),
         [16, 16, 16],
     )
     rhythm(
-        meters(5),
+        meters(9),
         [-8, 16],
     )
     rhythm(
-        meters(6),
+        meters(10, 11),
         [8, 16, 8, 16],
     )
     rhythm(
-        meters(7, 8),
+        meters(12, 17),
         [4, -12, 4, 4, -16, 4, 4, -20, 4, 4, -24, 4, 4, -28, 4, 4, "-"],
     )
     rhythm(
-        meters(9),
+        meters(18, 19),
         ["-", 4],
     )
     rhythm(
-        meters(10),
+        meters(20, 22),
         T([32], "8:9"),
     )
     rhythm(
-        meters(11),
+        meters(23),
         T([32], "8:9"),
     )
     rhythm(
-        meters(12),
+        meters(24, 25),
         [24],
     )
     rhythm(
-        meters(13),
+        meters(26),
         [4, "-"],
     )
-    rhythm.mmrests(14)
+    rhythm.mmrests(27, 28)
 
 
 def fl(m):
@@ -317,8 +317,8 @@ def vc(m):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [9, 12, 12, 12, 6, 12, 15, 15]
-    numerators += [7, 9, 9, 6, 9, 12]
+    numerators = [3, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 3, 6, 6, 6, 3]
+    numerators += [3, 4, 3, 3, 3, 9, 3, 3, 9, 9, 3]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -386,7 +386,7 @@ def make_layout():
         baca.page(
             1,
             baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=9, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=18, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 32),
     )
