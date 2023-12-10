@@ -29,7 +29,7 @@ number.25.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'32'']"
+    %@% - \baca-start-ct-left-only "[15'12'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -37,7 +37,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "281"
+    %@% - \baca-start-mn-left-only "233"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -54,7 +54,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'36'']"
+    %@% - \baca-start-ct-left-only "[15'16'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -62,7 +62,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "282"
+    %@% - \baca-start-mn-left-only "234"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -75,7 +75,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'40'']"
+    %@% - \baca-start-ct-left-only "[15'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -83,7 +83,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "283"
+    %@% - \baca-start-mn-left-only "235"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -96,7 +96,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'43'']"
+    %@% - \baca-start-ct-left-only "[15'23'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -104,7 +104,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "284"
+    %@% - \baca-start-mn-left-only "236"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -117,7 +117,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'46'']"
+    %@% - \baca-start-ct-left-only "[15'26'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -125,7 +125,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "285"
+    %@% - \baca-start-mn-left-only "237"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -138,7 +138,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'49'']"
+    %@% - \baca-start-ct-left-only "[15'29'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -146,7 +146,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "286"
+    %@% - \baca-start-mn-left-only "238"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -159,7 +159,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'52'']"
+    %@% - \baca-start-ct-left-only "[15'32'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -167,7 +167,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "287"
+    %@% - \baca-start-mn-left-only "239"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -180,7 +180,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'56'']"
+    %@% - \baca-start-ct-left-only "[15'36'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -188,7 +188,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "288"
+    %@% - \baca-start-mn-left-only "240"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -201,7 +201,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[17'59'']"
+    %@% - \baca-start-ct-left-only "[15'39'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -209,7 +209,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "289"
+    %@% - \baca-start-mn-left-only "241"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -222,7 +222,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'02'']"
+    %@% - \baca-start-ct-left-only "[15'42'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -230,7 +230,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "290"
+    %@% - \baca-start-mn-left-only "242"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -247,7 +247,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'05'']"
+    %@% - \baca-start-ct-left-only "[15'45'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -255,7 +255,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "291"
+    %@% - \baca-start-mn-left-only "243"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -272,7 +272,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'10'']"
+    %@% - \baca-start-ct-left-only "[15'50'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -280,7 +280,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "292"
+    %@% - \baca-start-mn-left-only "244"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -293,7 +293,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'13'']"
+    %@% - \baca-start-ct-left-only "[15'53'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -301,7 +301,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "293"
+    %@% - \baca-start-mn-left-only "245"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -318,7 +318,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'16'']"
+    %@% - \baca-start-ct-left-only "[15'56'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -326,7 +326,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "294"
+    %@% - \baca-start-mn-left-only "246"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
     \tweak padding 1.5
@@ -341,7 +341,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'21'']"
+    %@% - \baca-start-ct-left-only "[16'01'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -349,7 +349,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "295"
+    %@% - \baca-start-mn-left-only "247"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -366,7 +366,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'26'']"
+    %@% - \baca-start-ct-left-only "[16'06'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -374,7 +374,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "296"
+    %@% - \baca-start-mn-left-only "248"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -391,7 +391,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'29'']"
+    %@% - \baca-start-ct-left-only "[16'09'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -399,7 +399,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "297"
+    %@% - \baca-start-mn-left-only "249"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -416,7 +416,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'33'']"
+    %@% - \baca-start-ct-left-only "[16'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -424,7 +424,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "298"
+    %@% - \baca-start-mn-left-only "250"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -441,7 +441,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[18'36'']"
+    %@% - \baca-start-ct-left-only "[16'16'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -449,7 +449,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "299"
+    %@% - \baca-start-mn-left-only "251"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -466,7 +466,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[18'40'']" "[18'46'']"
+    %@% - \baca-start-ct-both "[16'20'']" "[16'26'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -474,7 +474,7 @@ number.25.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "300"
+    %@% - \baca-start-mn-left-only "252"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -622,12 +622,12 @@ number.25.AltoFlute.Music = {
     % [AltoFlute.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -1128,12 +1128,12 @@ number.25.Oboe.Music = {
     % [Oboe.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -1273,12 +1273,12 @@ number.25.Guitar.1.Music = {
     % [Guitar.1.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -1518,12 +1518,12 @@ number.25.Guitar.2.Music = {
     % [Guitar.2.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -1810,12 +1810,12 @@ number.25.Violin.Music = {
     % [Violin.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -2488,12 +2488,12 @@ number.25.Cello.Music = {
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_281
+      %! MEASURE_233
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
