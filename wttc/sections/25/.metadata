@@ -23,8 +23,8 @@
     ],
     "bol_measure_numbers": [251, 259, 265],
     "duration": "1'15''",
-    "final_measure_number": 270,
-    "first_measure_number": 251,
+    "final_measure_number": 294,
+    "first_measure_number": 275,
     "has_anchor_skip": True,
     "persistent_indicators": {
         "AltoFlute.Music": [

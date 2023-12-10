@@ -23,8 +23,8 @@
     ],
     "bol_measure_numbers": [175, 186, 194, 200, 206, 212],
     "duration": "2'10''",
-    "final_measure_number": 217,
-    "first_measure_number": 175,
+    "final_measure_number": 241,
+    "first_measure_number": 199,
     "has_anchor_skip": True,
     "persistent_indicators": {
         "AltoFlute.Staff": [

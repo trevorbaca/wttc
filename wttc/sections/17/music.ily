@@ -37,7 +37,7 @@ number.17.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "141"
+    %@% - \baca-start-mn-left-only "165"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -58,7 +58,7 @@ number.17.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "142"
+    %@% - \baca-start-mn-left-only "166"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -83,7 +83,7 @@ number.17.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "143"
+    %@% - \baca-start-mn-left-only "167"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
     \tweak padding 1.5
@@ -110,7 +110,7 @@ number.17.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "144"
+    %@% - \baca-start-mn-left-only "168"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -135,7 +135,7 @@ number.17.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "145"
+    %@% - \baca-start-mn-left-only "169"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -160,7 +160,7 @@ number.17.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "146"
+    %@% - \baca-start-mn-left-only "170"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -221,14 +221,14 @@ number.17.AltoFlute.Music = {
     % [AltoFlute.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -475,14 +475,14 @@ number.17.Oboe.Music = {
     % [Oboe.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -587,14 +587,14 @@ number.17.Guitar.1.Music = {
             % [Guitar.1.Music measure 1]
               %! EXPLICIT_CLEF
             \clef "treble"
-              %! MEASURE_141
+              %! MEASURE_165
               %! SHIFTED_CLEF
-        %%% \once \override Staff.Clef.X-extent = ##f
+            \once \override Staff.Clef.X-extent = ##f
               %! EXPLICIT_CLEF_COLOR
             \once \override Staff.Clef.color = #blue
-              %! MEASURE_141
+              %! MEASURE_165
               %! SHIFTED_CLEF
-        %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
               %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
             \once \override Staff.InstrumentName.color = #blue
               %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -926,14 +926,14 @@ number.17.Guitar.2.Music = {
             % [Guitar.2.Music measure 1]
               %! EXPLICIT_CLEF
             \clef "treble"
-              %! MEASURE_141
+              %! MEASURE_165
               %! SHIFTED_CLEF
-        %%% \once \override Staff.Clef.X-extent = ##f
+            \once \override Staff.Clef.X-extent = ##f
               %! EXPLICIT_CLEF_COLOR
             \once \override Staff.Clef.color = #blue
-              %! MEASURE_141
+              %! MEASURE_165
               %! SHIFTED_CLEF
-        %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
               %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
             \once \override Staff.InstrumentName.color = #blue
               %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -1234,14 +1234,14 @@ number.17.Violin.Music = {
     % [Violin.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -1344,14 +1344,14 @@ number.17.Cello.Music = {
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_141
+      %! MEASURE_165
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
