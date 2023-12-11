@@ -23,6 +23,19 @@ OBGC = library.OBGC
 
 
 def GLOBALS(skips):
+    stage_markup = (
+        ("A1 [h] + A2 [l]", 1),
+        ("A1 [m] + A2 [l_m]", 2),
+        ("A1 [l] + A2 [l_h]", 3),
+        ("A1 [l_h]", 5),
+        ("A2 [h] + A3 [h]", 7),
+        ("A3 [l_h]", 8),
+        ("A3 [l_h]", 10),
+        ("A3 [l] + B1 [l]", 11),
+        ("A1 [l] + A3 [l]", 12),
+        ("A3 [l] + B1 [l]", 13),
+    )
+    baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
     baca.rehearsal_mark(
         skips[1 - 1],
@@ -271,6 +284,22 @@ def fl(m):
         baca.instrument_name(o.leaf(0), r"\wttc-alto-flute-markup")
         baca.short_instrument_name(o.leaf(0), "Afl.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+    with baca.scope(m[1, 6]) as o:
+        for run in o.runs():
+            run = baca.select.plts(run)
+            library.material_annotation_spanner(run, 1)
+    with baca.scope(m[7]) as o:
+        library.material_annotation_spanner(o.run(-1), 3)
+    with baca.scope(m[8, 11]) as o:
+        library.material_annotation_spanner(o.run(0), 3)
+        library.material_annotation_spanner(o.run(1), 99)
+    with baca.scope(m[12]) as o:
+        library.material_annotation_spanner(o.pleaves()[:2], 1)
+        library.material_annotation_spanner(o.pleaves()[2:4], 3)
+        library.material_annotation_spanner(o.run(1), 99)
+    with baca.scope(m[13]) as o:
+        library.material_annotation_spanner(o.run(0), 3)
+        library.material_annotation_spanner(o.run(1), 99)
 
 
 def ob(m):
@@ -294,6 +323,14 @@ def gt1(m):
         baca.instrument_name(o.leaf(0), r"\wttc-guitar-i-markup")
         baca.short_instrument_name(o.leaf(0), "Gt. 1", library.manifests)
         baca.clef(o.leaf(0), "treble")
+    with baca.scope(m[1, 7]) as o:
+        for run in o.runs():
+            run = baca.select.plts(run)
+            library.material_annotation_spanner(run, 1)
+    with baca.scope(m[11, 13]) as o:
+        for run in o.runs():
+            run = baca.select.plts(run)
+            library.material_annotation_spanner(run, 99)
 
 
 def gt2(m):
@@ -309,6 +346,14 @@ def gt2(m):
                 r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
             ],
         )
+    with baca.scope(m[1, 7]) as o:
+        for run in o.runs():
+            run = baca.select.plts(run)
+            library.material_annotation_spanner(run, 1)
+    with baca.scope(m[11, 13]) as o:
+        for run in o.runs():
+            run = baca.select.plts(run)
+            library.material_annotation_spanner(run, 99)
 
 
 def vn(m):
@@ -317,6 +362,24 @@ def vn(m):
         baca.instrument_name(o.leaf(0), r"\wttc-violin-markup")
         baca.short_instrument_name(o.leaf(0), "Vn.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+    with baca.scope(m[1]) as o:
+        library.material_annotation_spanner(o.run(0), 1)
+        library.material_annotation_spanner(o.run(1), 2)
+    with baca.scope(m[2]) as o:
+        library.material_annotation_spanner(o.run(0), 1)
+        library.material_annotation_spanner(o.run(1), 2)
+    with baca.scope(m[3, 4]) as o:
+        library.material_annotation_spanner(o.run(0), 1)
+        library.material_annotation_spanner(o.run(1), 2)
+    library.material_annotation_spanner(m[5, 6], 1)
+    with baca.scope(m[7]) as o:
+        library.material_annotation_spanner(o.run(0), 2)
+    with baca.scope(m[11, 13]) as o:
+        library.material_annotation_spanner(o.run(0), 99)
+        library.material_annotation_spanner(o.run(1), 1)
+        library.material_annotation_spanner(o.run(2), 99)
+        library.material_annotation_spanner(o.run(3), 99)
+        library.material_annotation_spanner(o.run(4), 99)
 
 
 def vc(m):
@@ -332,6 +395,20 @@ def vc(m):
                 r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
             ],
         )
+    with baca.scope(m[1, 5]) as o:
+        for run in o.runs():
+            run = baca.select.plts(run)
+            library.material_annotation_spanner(run, 2)
+    with baca.scope(m[6, 7]) as o:
+        library.material_annotation_spanner(o.plts()[:-1], 2)
+        library.material_annotation_spanner(o.plts()[-1:], 3)
+    with baca.scope(m[8, 13]) as o:
+        library.material_annotation_spanner(o.run(0), 3)
+        library.material_annotation_spanner(o.run(1), 99)
+        library.material_annotation_spanner(o.run(2), 3)
+        library.material_annotation_spanner(o.run(3), 99)
+        library.material_annotation_spanner(o.run(4), 3)
+        library.material_annotation_spanner(o.run(5), 99)
 
 
 @baca.build.timed("make_score")
@@ -382,6 +459,7 @@ def persist_score(score, environment):
     baca.tags.activate(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.STAGE_NUMBER,
     )
     baca.tags.deactivate(
         score,

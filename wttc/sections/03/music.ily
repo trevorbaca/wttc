@@ -40,6 +40,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "1"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A1 [h] + A2 [l]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 2]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -53,6 +57,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'03'']"
       %! CLOCK_TIME
@@ -65,6 +71,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "2"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A1 [m] + A2 [l_m]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 3]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -78,6 +88,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'08'']"
       %! CLOCK_TIME
@@ -90,6 +102,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "3"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A1 [l] + A2 [l_h]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 4]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -128,6 +144,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'16'']"
       %! CLOCK_TIME
@@ -140,6 +158,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "5"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A1 [l_h]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 6]
     s1 * 4/4
@@ -170,6 +192,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'22'']"
       %! CLOCK_TIME
@@ -182,6 +206,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "7"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A2 [h] + A3 [h]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -193,6 +221,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'25'']"
       %! CLOCK_TIME
@@ -205,6 +235,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "8"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A3 [l_h]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 9]
     s1 * 4/4
@@ -235,6 +269,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'32'']"
       %! CLOCK_TIME
@@ -247,6 +283,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "10"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A3 [l_h]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 11]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -260,6 +300,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'35'']"
       %! CLOCK_TIME
@@ -272,6 +314,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "11"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A3 [l] + B1 [l]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 12]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -285,6 +331,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'37'']"
       %! CLOCK_TIME
@@ -297,6 +345,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "12"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A1 [l] + A3 [l]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 13]
     s1 * 6/4
@@ -306,6 +358,8 @@ number.3.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-both "[0'42'']" "[0'47'']"
       %! CLOCK_TIME
@@ -318,6 +372,10 @@ number.3.Skips = {
     %@% - \baca-start-mn-left-only "13"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "A3 [l] + B1 [l]"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -340,6 +398,9 @@ number.3.Skips = {
       %! ANCHOR_SKIP
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! ANCHOR_SKIP
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! ANCHOR_SKIP
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP
@@ -416,6 +477,8 @@ number.3.AltoFlute.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgrey
     f'4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -464,10 +527,14 @@ number.3.AltoFlute.Music = {
     f'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgrey
     f'4
     - \tweak stencil ##f
     ~
@@ -483,6 +550,8 @@ number.3.AltoFlute.Music = {
     f'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [AltoFlute.Music measure 4]
@@ -490,6 +559,8 @@ number.3.AltoFlute.Music = {
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgrey
     f'4
 
     % [AltoFlute.Music measure 5]
@@ -548,8 +619,12 @@ number.3.AltoFlute.Music = {
     f'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'16
 
     \afterGrace
@@ -562,6 +637,10 @@ number.3.AltoFlute.Music = {
 
 
     % [AltoFlute.Music measure 8]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'1
     - \tweak stencil ##f
     ~
@@ -597,18 +676,26 @@ number.3.AltoFlute.Music = {
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     f'16
     ~
 
     f'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [AltoFlute.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgrey
     f'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -621,6 +708,10 @@ number.3.AltoFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     \afterGrace
     f'8.
     {
@@ -630,20 +721,28 @@ number.3.AltoFlute.Music = {
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     f'16
     ~
 
     f'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [AltoFlute.Music measure 13]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     \afterGrace
     f'8.
     {
@@ -653,17 +752,23 @@ number.3.AltoFlute.Music = {
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2.
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     f'16
     ~
 
     f'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
 }
@@ -831,10 +936,14 @@ number.3.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 2]
@@ -846,8 +955,12 @@ number.3.Guitar.1.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -866,8 +979,12 @@ number.3.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -891,8 +1008,12 @@ number.3.Guitar.1.Music = {
         % [Guitar.1.Music measure 7]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -923,6 +1044,8 @@ number.3.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c''8
         ~
 
@@ -935,6 +1058,8 @@ number.3.Guitar.1.Music = {
         % [Guitar.1.Music measure 12]
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -947,6 +1072,8 @@ number.3.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c''8
         ~
 
@@ -963,6 +1090,8 @@ number.3.Guitar.1.Music = {
         c''8
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -976,10 +1105,14 @@ number.3.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c''4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
 }
@@ -1034,8 +1167,12 @@ number.3.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -1051,8 +1188,12 @@ number.3.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -1076,8 +1217,12 @@ number.3.Guitar.2.Music = {
         % [Guitar.2.Music measure 5]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -1093,11 +1238,15 @@ number.3.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c''8
 
     }
 
     % [Guitar.2.Music measure 7]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -1126,6 +1275,8 @@ number.3.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c''4
         - \tweak stencil ##f
         ~
@@ -1139,6 +1290,8 @@ number.3.Guitar.2.Music = {
         c''8
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -1157,8 +1310,12 @@ number.3.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -1202,6 +1359,8 @@ number.3.Violin.Music = {
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c'16
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
@@ -1225,8 +1384,12 @@ number.3.Violin.Music = {
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'8.
     - \tweak stencil ##f
     ~
@@ -1234,11 +1397,15 @@ number.3.Violin.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     \repeat tremolo 2 {
 
         % [Violin.Music measure 2]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c'16
 
         c'16
@@ -1253,8 +1420,12 @@ number.3.Violin.Music = {
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'8
     - \tweak stencil ##f
     ~
@@ -1280,11 +1451,15 @@ number.3.Violin.Music = {
     c'8
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     \repeat tremolo 2 {
 
         % [Violin.Music measure 3]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c'16
 
         c'16
@@ -1299,8 +1474,12 @@ number.3.Violin.Music = {
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'16
     [
 
@@ -1346,6 +1525,10 @@ number.3.Violin.Music = {
     \repeat tremolo 4 {
 
         % [Violin.Music measure 5]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'16
 
         c'16
@@ -1378,8 +1561,12 @@ number.3.Violin.Music = {
     }
 
     % [Violin.Music measure 7]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'16
     [
 
@@ -1394,6 +1581,8 @@ number.3.Violin.Music = {
     c'8.
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Violin.Music measure 8]
@@ -1418,6 +1607,8 @@ number.3.Violin.Music = {
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'16
 
     }
@@ -1429,23 +1620,31 @@ number.3.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     \repeat tremolo 4 {
 
         % [Violin.Music measure 12]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgrey
         c'16
 
         c'16
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'16
 
     }
@@ -1457,12 +1656,16 @@ number.3.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r16
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'16
 
     }
@@ -1478,6 +1681,8 @@ number.3.Violin.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2.
@@ -1486,6 +1691,8 @@ number.3.Violin.Music = {
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'16
 
     }
@@ -1497,6 +1704,8 @@ number.3.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
 }
@@ -1549,6 +1758,8 @@ number.3.Cello.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'8.
     - \tweak stencil ##f
     ~
@@ -1573,10 +1784,14 @@ number.3.Cello.Music = {
     % [Cello.Music measure 2]
     c'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'16
     ~
 
@@ -1619,10 +1834,14 @@ number.3.Cello.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'16
     ~
 
@@ -1686,6 +1905,8 @@ number.3.Cello.Music = {
 
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
@@ -1695,6 +1916,8 @@ number.3.Cello.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightblue
     c'16
     ~
 
@@ -1715,6 +1938,10 @@ number.3.Cello.Music = {
     c'8.
     [
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'16
     ]
     ~
@@ -1722,6 +1949,10 @@ number.3.Cello.Music = {
     c'2
 
     % [Cello.Music measure 8]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'1
     - \tweak stencil ##f
     ~
@@ -1774,6 +2005,8 @@ number.3.Cello.Music = {
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
@@ -1782,6 +2015,8 @@ number.3.Cello.Music = {
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'8
 
     }
@@ -1794,8 +2029,12 @@ number.3.Cello.Music = {
     c'8
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
     ~
 
@@ -1806,12 +2045,16 @@ number.3.Cello.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r8.
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'8
 
     }
@@ -1821,13 +2064,19 @@ number.3.Cello.Music = {
 
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     % [Cello.Music measure 13]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
@@ -1836,6 +2085,8 @@ number.3.Cello.Music = {
 
     \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
         c'8
 
     }
@@ -1847,6 +2098,8 @@ number.3.Cello.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
