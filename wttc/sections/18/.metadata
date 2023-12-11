@@ -23,7 +23,7 @@
     ],
     "bol_measure_numbers": [171, 178, 183, 193],
     "duration": "1'36''",
-    "final_measure_number": 198,
+    "final_measure_number": 199,
     "first_measure_number": 171,
     "has_anchor_skip": True,
     "persistent_indicators": {
@@ -231,7 +231,8 @@
         "6/4",
         "6/4",
         "6/4",
-        "9/4",
+        "6/4",
+        "3/4",
         "6/4",
     ],
 }

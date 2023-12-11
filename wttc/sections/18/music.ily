@@ -601,11 +601,7 @@ number.18.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 27]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -629,6 +625,31 @@ number.18.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
+    \time 3/4
+    s1 * 3/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[11'32'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "28"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "198"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 29]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
@@ -642,11 +663,11 @@ number.18.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "28"
+    - \baca-start-lmn-left-only "29"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "198"
+    %@% - \baca-start-mn-left-only "199"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -760,9 +781,12 @@ number.18.Rests = {
     R1 * 6/4
 
     % [Rests measure 27]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 28]
+    R1 * 3/4
+
+    % [Rests measure 29]
     R1 * 6/4
 
 }
@@ -1386,7 +1410,10 @@ number.18.AltoFlute.Music = {
 
     r16
 
-    r2
+    r4
+
+    % [AltoFlute.Music measure 28]
+    r4
 
     r8
 
@@ -1396,7 +1423,7 @@ number.18.AltoFlute.Music = {
 
     r4
 
-    % [AltoFlute.Music measure 28]
+    % [AltoFlute.Music measure 29]
     r4
 
     r16
@@ -1594,11 +1621,16 @@ number.18.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 27]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 28]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Oboe.Music measure 29]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2190,9 +2222,14 @@ number.18.Guitar.1.Music = {
 
     }
 
-    r1
+    r4
 
     % [Guitar.1.Music measure 28]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Guitar.1.Music measure 29]
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2955,7 +2992,10 @@ number.18.Guitar.2.Music = {
 
     }
 
-    r2.
+    r4
+
+    % [Guitar.2.Music measure 28]
+    r2
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -2969,7 +3009,7 @@ number.18.Guitar.2.Music = {
 
     }
 
-    % [Guitar.2.Music measure 28]
+    % [Guitar.2.Music measure 29]
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3496,11 +3536,16 @@ number.18.Violin.Music = {
     r2.
 
     % [Violin.Music measure 27]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 28]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Violin.Music measure 29]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -3753,11 +3798,17 @@ number.18.Cello.Music = {
 
     r8
 
-    c'2
-
-    c'2
+    c'4
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 28]
+    c'4
+    \repeatTie
+
+    c'2
+
+    % [Cello.Music measure 29]
     r16
 
     c'16

@@ -1,10 +1,10 @@
 % first_page_number = 2
 % page_count = 2
-% measure_count = 28 + 1
+% measure_count = 29 + 1
 % time_signatures = [
 % '6/4', '6/4', '3/4', '6/4', '6/4', '6/4', '6/4', '6/4', '6/4', '6/4', '6/4',
 %  '3/4', '6/4', '6/4', '3/4', '6/4', '6/4', '3/4', '6/4', '6/4', '6/4', '6/4',
-%  '6/4', '6/4', '6/4', '6/4', '9/4', '6/4'
+%  '6/4', '6/4', '6/4', '6/4', '6/4', '3/4', '6/4'
 %  ]
 
 
@@ -368,7 +368,7 @@
             \baca-new-spacing-section #1 #20
               %! BREAK
             \noBreak
-            s1 * 9/4
+            s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
@@ -377,6 +377,19 @@
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 28]
+              %! SPACING_COMMAND
+            \baca-new-spacing-section #1 #20
+              %! BREAK
+            \noBreak
+            s1 * 3/4
+              %! SPACING
+            %@% \bacaStopTextSpanSPM
+              %! SPACING
+            %@% - \baca-start-spm-left-only "[1/20]"
+              %! SPACING
+            %@% \bacaStartTextSpanSPM
+
+            % [PageLayout measure 29]
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #20
               %! BREAK
