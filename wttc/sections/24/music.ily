@@ -126,11 +126,7 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 6]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -154,8 +150,8 @@ number.24.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
-    s1 * 6/4
+    \time 3/4
+    s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -163,7 +159,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'03'']"
+    %@% - \baca-start-ct-left-only "[14'02'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -176,6 +172,10 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 8]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -184,7 +184,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'06'']"
+    %@% - \baca-start-ct-left-only "[14'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -205,7 +205,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'08'']"
+    %@% - \baca-start-ct-left-only "[14'06'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -226,7 +226,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'10'']"
+    %@% - \baca-start-ct-left-only "[14'08'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -247,7 +247,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'13'']"
+    %@% - \baca-start-ct-left-only "[14'10'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -268,7 +268,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'15'']"
+    %@% - \baca-start-ct-left-only "[14'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -289,7 +289,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'18'']"
+    %@% - \baca-start-ct-left-only "[14'15'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -310,7 +310,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'20'']"
+    %@% - \baca-start-ct-left-only "[14'18'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -323,11 +323,7 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 15]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -335,7 +331,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'22'']"
+    %@% - \baca-start-ct-left-only "[14'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -348,6 +344,52 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 16]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[14'22'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "16"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "260"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 17]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 3/4
+    s1 * 3/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[14'25'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "17"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "261"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 18]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -361,48 +403,6 @@ number.24.Skips = {
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[14'26'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "16"
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "260"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
-
-    % [Skips measure 17]
-    s1 * 6/4
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'28'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "17"
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "261"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
-
-    % [Skips measure 18]
-    s1 * 6/4
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'31'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -423,7 +423,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'33'']"
+    %@% - \baca-start-ct-left-only "[14'28'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -436,11 +436,7 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 20]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -448,7 +444,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'36'']"
+    %@% - \baca-start-ct-left-only "[14'31'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -461,10 +457,6 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 21]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -473,7 +465,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'39'']"
+    %@% - \baca-start-ct-left-only "[14'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -494,7 +486,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'42'']"
+    %@% - \baca-start-ct-left-only "[14'36'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -507,7 +499,11 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 23]
-    s1 * 6/4
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 3/4
+    s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -515,7 +511,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'44'']"
+    %@% - \baca-start-ct-left-only "[14'38'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -528,6 +524,10 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 24]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -536,7 +536,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'46'']"
+    %@% - \baca-start-ct-left-only "[14'39'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -557,7 +557,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'49'']"
+    %@% - \baca-start-ct-left-only "[14'42'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -570,11 +570,7 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 26]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -582,7 +578,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'51'']"
+    %@% - \baca-start-ct-left-only "[14'44'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -595,10 +591,6 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 27]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -607,7 +599,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'55'']"
+    %@% - \baca-start-ct-left-only "[14'46'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -628,7 +620,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[14'57'']"
+    %@% - \baca-start-ct-left-only "[14'49'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -649,7 +641,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[15'00'']"
+    %@% - \baca-start-ct-left-only "[14'51'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -662,7 +654,11 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 30]
-    s1 * 6/4
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 3/4
+    s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -670,7 +666,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[15'02'']"
+    %@% - \baca-start-ct-left-only "[14'54'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -683,6 +679,10 @@ number.24.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 31]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -691,7 +691,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[15'04'']"
+    %@% - \baca-start-ct-left-only "[14'55'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -712,7 +712,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[15'07'']"
+    %@% - \baca-start-ct-left-only "[14'57'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -733,7 +733,7 @@ number.24.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[15'09'']" "[15'12'']"
+    %@% - \baca-start-ct-left-only "[15'00'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -742,6 +742,90 @@ number.24.Skips = {
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
     %@% - \baca-start-mn-left-only "277"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 34]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[15'02'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "34"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "278"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 35]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[15'04'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "35"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "279"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 36]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[15'07'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "36"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "280"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 37]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-both "[15'09'']" "[15'12'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "37"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "281"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -792,10 +876,10 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 6]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 7]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 8]
     R1 * 6/4
@@ -819,13 +903,13 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 15]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 16]
     R1 * 6/4
 
     % [Rests measure 17]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 18]
     R1 * 6/4
@@ -834,7 +918,7 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 20]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 21]
     R1 * 6/4
@@ -843,7 +927,7 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 23]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 24]
     R1 * 6/4
@@ -852,7 +936,7 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 26]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 27]
     R1 * 6/4
@@ -864,7 +948,7 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 30]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 31]
     R1 * 6/4
@@ -873,6 +957,18 @@ number.24.Rests = {
     R1 * 6/4
 
     % [Rests measure 33]
+    R1 * 6/4
+
+    % [Rests measure 34]
+    R1 * 6/4
+
+    % [Rests measure 35]
+    R1 * 6/4
+
+    % [Rests measure 36]
+    R1 * 6/4
+
+    % [Rests measure 37]
     R1 * 6/4
 
 }
@@ -936,7 +1032,10 @@ number.24.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 6]
-    r1..
+    r1.
+
+    % [AltoFlute.Music measure 7]
+    r4
 
     r16
 
@@ -949,53 +1048,9 @@ number.24.AltoFlute.Music = {
     ]
     ~
 
-    % [AltoFlute.Music measure 7]
-    f'8
-    [
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'8.
-    [
-    \repeatTie
-
-    f'16
-    ]
-    ~
-
-    f'4
-
-    f'8.
-    [
-
-    f'16
-    ]
-    ~
-
-    f'8
-    [
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'8.
-    ]
-    - \tweak stencil ##f
-    ~
-
     % [AltoFlute.Music measure 8]
     f'8
     [
-    \repeatTie
 
     f'8
     ]
@@ -1009,23 +1064,21 @@ number.24.AltoFlute.Music = {
     f'16
     ]
     ~
-
-    f'8
-    [
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'8.
-    ]
 
     f'4
+
+    f'8.
+    [
+
+    f'16
+    ]
+    ~
+
+    f'8
+    [
+
+    f'8
+    ]
     - \tweak stencil ##f
     ~
 
@@ -1048,6 +1101,52 @@ number.24.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
+    f'8.
+    [
+    \repeatTie
+
+    f'16
+    ]
+    ~
+
+    f'8
+    [
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 10]
+    f'8
+    [
+    \repeatTie
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
     f'16
     [
     \repeatTie
@@ -1060,11 +1159,6 @@ number.24.AltoFlute.Music = {
     r16
 
     r2.
-
-    % [AltoFlute.Music measure 10]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 11]
     R1 * 6/4
@@ -1087,7 +1181,15 @@ number.24.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 15]
-    r1..
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 16]
+    r1.
+
+    % [AltoFlute.Music measure 17]
+    r4
 
     r16
 
@@ -1102,90 +1204,90 @@ number.24.AltoFlute.Music = {
     f'8
     ]
     - \tweak stencil ##f
-    ~
-
-    % [AltoFlute.Music measure 16]
-    f'8.
-    [
-    \repeatTie
-
-    f'16
-    ]
-    ~
-
-    f'8
-    [
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'8.
-    ]
-
-    f'4
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'8.
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'8
-    [
-    \repeatTie
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    % [AltoFlute.Music measure 17]
-    f'16
-    [
-    \repeatTie
-
-    f'8.
-    ]
-
-    f'8.
-    [
-
-    f'16
-    ]
-    ~
-
-    f'4
-
-    f'4
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'8.
-    ]
-
-    f'8.
-    [
-
-    f'16
-    ]
     ~
 
     % [AltoFlute.Music measure 18]
+    f'8.
+    [
+    \repeatTie
+
+    f'16
+    ]
+    ~
+
+    f'8
+    [
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+    f'8
+    [
+    \repeatTie
+
+    f'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 19]
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+
+    f'8.
+    [
+
+    f'16
+    ]
+    ~
+
+    f'4
+
+    f'4
+    - \tweak stencil ##f
+    ~
+
+    f'16
+    [
+    \repeatTie
+
+    f'8.
+    ]
+
+    f'8.
+    [
+
+    f'16
+    ]
+    ~
+
+    % [AltoFlute.Music measure 20]
     f'8
     [
 
@@ -1206,13 +1308,16 @@ number.24.AltoFlute.Music = {
 
     r2.
 
-    % [AltoFlute.Music measure 19]
+    % [AltoFlute.Music measure 21]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [AltoFlute.Music measure 20]
-    r1..
+    % [AltoFlute.Music measure 22]
+    r1.
+
+    % [AltoFlute.Music measure 23]
+    r4
 
     r16
 
@@ -1229,7 +1334,7 @@ number.24.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
-    % [AltoFlute.Music measure 21]
+    % [AltoFlute.Music measure 24]
     f'8.
     [
     \repeatTie
@@ -1275,7 +1380,7 @@ number.24.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
-    % [AltoFlute.Music measure 22]
+    % [AltoFlute.Music measure 25]
     f'16
     [
     \repeatTie
@@ -1310,7 +1415,7 @@ number.24.AltoFlute.Music = {
     ]
     ~
 
-    % [AltoFlute.Music measure 23]
+    % [AltoFlute.Music measure 26]
     f'8
     [
 
@@ -1330,21 +1435,6 @@ number.24.AltoFlute.Music = {
     f'4
 
     r2.
-
-    % [AltoFlute.Music measure 24]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [AltoFlute.Music measure 25]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [AltoFlute.Music measure 26]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
 
     % [AltoFlute.Music measure 27]
     R1 * 6/4
@@ -1362,9 +1452,9 @@ number.24.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 30]
-    R1 * 6/4
+    R1 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [AltoFlute.Music measure 31]
     R1 * 6/4
@@ -1377,6 +1467,26 @@ number.24.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 33]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 34]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 35]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 36]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 37]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -1455,14 +1565,14 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 6]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
-
-    % [Oboe.Music measure 7]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 7]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 8]
     R1 * 6/4
@@ -1500,9 +1610,9 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 15]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 16]
     R1 * 6/4
@@ -1510,9 +1620,9 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 17]
-    R1 * 6/4
+    R1 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 18]
     R1 * 6/4
@@ -1525,9 +1635,9 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 20]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 21]
     R1 * 6/4
@@ -1540,9 +1650,9 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 23]
-    R1 * 6/4
+    R1 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 24]
     R1 * 6/4
@@ -1555,9 +1665,9 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 26]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 27]
     R1 * 6/4
@@ -1575,9 +1685,9 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 30]
-    R1 * 6/4
+    R1 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 31]
     R1 * 6/4
@@ -1590,6 +1700,26 @@ number.24.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 33]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 34]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 35]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 36]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 37]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -1743,6 +1873,7 @@ number.24.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.1.Music measure 7]
     c''8.
     [
     \repeatTie
@@ -1760,11 +1891,6 @@ number.24.Guitar.1.Music = {
 
     r8.
 
-    % [Guitar.1.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
     % [Guitar.1.Music measure 8]
     R1 * 6/4
       %! DURATION_MULTIPLIER
@@ -1781,6 +1907,11 @@ number.24.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 11]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 12]
     r8.
 
     \acciaccatura {
@@ -1824,7 +1955,7 @@ number.24.Guitar.1.Music = {
     c''4
     \repeatTie
 
-    % [Guitar.1.Music measure 12]
+    % [Guitar.1.Music measure 13]
     c''4
     - \tweak stencil ##f
     ~
@@ -1870,7 +2001,7 @@ number.24.Guitar.1.Music = {
     \times 1/1
     {
 
-        % [Guitar.1.Music measure 13]
+        % [Guitar.1.Music measure 14]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #right
         c''16 * 89856/5120
@@ -1899,7 +2030,7 @@ number.24.Guitar.1.Music = {
     }
     \revert TupletNumber.text
 
-    % [Guitar.1.Music measure 15]
+    % [Guitar.1.Music measure 16]
     r1
 
     r8
@@ -1917,6 +2048,7 @@ number.24.Guitar.1.Music = {
     c''4
     \repeatTie
 
+    % [Guitar.1.Music measure 17]
     c''8.
     [
 
@@ -1937,7 +2069,7 @@ number.24.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Guitar.1.Music measure 16]
+    % [Guitar.1.Music measure 18]
     c''8.
     [
     \repeatTie
@@ -1952,7 +2084,7 @@ number.24.Guitar.1.Music = {
 
     r1
 
-    % [Guitar.1.Music measure 17]
+    % [Guitar.1.Music measure 19]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -1961,7 +2093,7 @@ number.24.Guitar.1.Music = {
     \times 1/1
     {
 
-        % [Guitar.1.Music measure 18]
+        % [Guitar.1.Music measure 20]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #right
         r16 * 102144/7168
@@ -1998,7 +2130,7 @@ number.24.Guitar.1.Music = {
     }
     \revert TupletNumber.text
 
-    % [Guitar.1.Music measure 20]
+    % [Guitar.1.Music measure 22]
     r1
 
     r8
@@ -2022,6 +2154,7 @@ number.24.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.1.Music measure 23]
     c''8.
     [
     \repeatTie
@@ -2041,10 +2174,10 @@ number.24.Guitar.1.Music = {
     c''8.
     ]
 
-    % [Guitar.1.Music measure 21]
+    % [Guitar.1.Music measure 24]
     r1.
 
-    % [Guitar.1.Music measure 22]
+    % [Guitar.1.Music measure 25]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2053,7 +2186,7 @@ number.24.Guitar.1.Music = {
     \times 1/1
     {
 
-        % [Guitar.1.Music measure 23]
+        % [Guitar.1.Music measure 26]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #right
         c''16 * 102144/7168
@@ -2094,7 +2227,7 @@ number.24.Guitar.1.Music = {
     \times 1/1
     {
 
-        % [Guitar.1.Music measure 25]
+        % [Guitar.1.Music measure 28]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #left
         r16 * 2592/1024
@@ -2119,7 +2252,7 @@ number.24.Guitar.1.Music = {
     }
     \revert TupletNumber.text
 
-    % [Guitar.1.Music measure 26]
+    % [Guitar.1.Music measure 29]
     r2.
 
     r8.
@@ -2146,6 +2279,7 @@ number.24.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.1.Music measure 30]
     c''8.
     [
     \repeatTie
@@ -2158,17 +2292,17 @@ number.24.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Guitar.1.Music measure 27]
+    % [Guitar.1.Music measure 31]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.1.Music measure 28]
+    % [Guitar.1.Music measure 32]
     c''1.
     \repeatTie
 
-    % [Guitar.1.Music measure 29]
+    % [Guitar.1.Music measure 33]
     r4
 
     r8
@@ -2190,25 +2324,25 @@ number.24.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Guitar.1.Music measure 30]
+    % [Guitar.1.Music measure 34]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.1.Music measure 31]
+    % [Guitar.1.Music measure 35]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.1.Music measure 32]
+    % [Guitar.1.Music measure 36]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.1.Music measure 33]
+    % [Guitar.1.Music measure 37]
     c''1.
     \repeatTie
 
@@ -2370,6 +2504,7 @@ number.24.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.2.Music measure 7]
     c''16
     [
     \repeatTie
@@ -2385,11 +2520,6 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     r8.
-
-    % [Guitar.2.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 8]
     R1 * 6/4
@@ -2407,6 +2537,11 @@ number.24.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 11]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 12]
     r4
 
     r16
@@ -2456,7 +2591,7 @@ number.24.Guitar.2.Music = {
     ]
     ~
 
-    % [Guitar.2.Music measure 12]
+    % [Guitar.2.Music measure 13]
     c''8
     [
 
@@ -2492,7 +2627,7 @@ number.24.Guitar.2.Music = {
     \times 1/1
     {
 
-        % [Guitar.2.Music measure 13]
+        % [Guitar.2.Music measure 14]
         \once \override Beam.grow-direction = #left
         c''16 * 17664/5120
           %! DURATION_MULTIPLIER
@@ -2520,7 +2655,7 @@ number.24.Guitar.2.Music = {
     }
     \revert TupletNumber.text
 
-    % [Guitar.2.Music measure 15]
+    % [Guitar.2.Music measure 16]
     r1
 
     r16
@@ -2537,6 +2672,7 @@ number.24.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.2.Music measure 17]
     c''16
     [
     \repeatTie
@@ -2564,7 +2700,7 @@ number.24.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Guitar.2.Music measure 16]
+    % [Guitar.2.Music measure 18]
     c''8
     \repeatTie
 
@@ -2574,7 +2710,7 @@ number.24.Guitar.2.Music = {
 
     r4
 
-    % [Guitar.2.Music measure 17]
+    % [Guitar.2.Music measure 19]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2583,7 +2719,7 @@ number.24.Guitar.2.Music = {
     \times 1/1
     {
 
-        % [Guitar.2.Music measure 18]
+        % [Guitar.2.Music measure 20]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #left
         c''16 * 14592/7168
@@ -2620,7 +2756,7 @@ number.24.Guitar.2.Music = {
     }
     \revert TupletNumber.text
 
-    % [Guitar.2.Music measure 20]
+    % [Guitar.2.Music measure 22]
     r2.
 
     r8.
@@ -2640,6 +2776,7 @@ number.24.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.2.Music measure 23]
     c''16
     [
     \repeatTie
@@ -2656,10 +2793,10 @@ number.24.Guitar.2.Music = {
 
     r8.
 
-    % [Guitar.2.Music measure 21]
+    % [Guitar.2.Music measure 24]
     r1.
 
-    % [Guitar.2.Music measure 22]
+    % [Guitar.2.Music measure 25]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2668,7 +2805,7 @@ number.24.Guitar.2.Music = {
     \times 1/1
     {
 
-        % [Guitar.2.Music measure 23]
+        % [Guitar.2.Music measure 26]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #left
         r16 * 14592/7168
@@ -2709,7 +2846,7 @@ number.24.Guitar.2.Music = {
     \times 1/1
     {
 
-        % [Guitar.2.Music measure 25]
+        % [Guitar.2.Music measure 28]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #right
         r16 * 10368/1024
@@ -2734,7 +2871,7 @@ number.24.Guitar.2.Music = {
     }
     \revert TupletNumber.text
 
-    % [Guitar.2.Music measure 26]
+    % [Guitar.2.Music measure 29]
     r1
 
     r16
@@ -2758,6 +2895,7 @@ number.24.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
 
+    % [Guitar.2.Music measure 30]
     c''16
     [
     \repeatTie
@@ -2781,17 +2919,17 @@ number.24.Guitar.2.Music = {
     ~
     \repeatTie
 
-    % [Guitar.2.Music measure 27]
+    % [Guitar.2.Music measure 31]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.2.Music measure 28]
+    % [Guitar.2.Music measure 32]
     c''1.
     \repeatTie
 
-    % [Guitar.2.Music measure 29]
+    % [Guitar.2.Music measure 33]
     r4
 
     r16
@@ -2822,25 +2960,25 @@ number.24.Guitar.2.Music = {
     ~
     \repeatTie
 
-    % [Guitar.2.Music measure 30]
+    % [Guitar.2.Music measure 34]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.2.Music measure 31]
+    % [Guitar.2.Music measure 35]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.2.Music measure 32]
+    % [Guitar.2.Music measure 36]
     c''1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Guitar.2.Music measure 33]
+    % [Guitar.2.Music measure 37]
     c''1.
     \repeatTie
 
@@ -3046,6 +3184,7 @@ number.24.Violin.Music = {
     \times 2/3
     {
 
+        % [Violin.Music measure 7]
         r8
 
         c'4
@@ -3071,17 +3210,17 @@ number.24.Violin.Music = {
 
     r4
 
-    % [Violin.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
     % [Violin.Music measure 8]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 9]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Violin.Music measure 10]
     c'1
     - \tweak stencil ##f
     ~
@@ -3102,7 +3241,7 @@ number.24.Violin.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Violin.Music measure 10]
+    % [Violin.Music measure 11]
     c'16
     [
     \repeatTie
@@ -3154,7 +3293,7 @@ number.24.Violin.Music = {
     \times 2/3
     {
 
-        % [Violin.Music measure 11]
+        % [Violin.Music measure 12]
         c'8
         [
         \repeatTie
@@ -3196,11 +3335,6 @@ number.24.Violin.Music = {
 
     r4
 
-    % [Violin.Music measure 12]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
-
     % [Violin.Music measure 13]
     R1 * 3/2
       %! DURATION_MULTIPLIER
@@ -3212,6 +3346,11 @@ number.24.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"2"
 
     % [Violin.Music measure 15]
+    R1 * 3/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+
+    % [Violin.Music measure 16]
     c'2
     - \tweak stencil ##f
     ~
@@ -3243,17 +3382,10 @@ number.24.Violin.Music = {
 
     r8
 
-    r2.
-
-    % [Violin.Music measure 16]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
     % [Violin.Music measure 17]
-    R1 * 6/4
+    R1 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Violin.Music measure 18]
     R1 * 6/4
@@ -3266,20 +3398,31 @@ number.24.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 20]
-    c'1.
-
-    r2.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 21]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 22]
-    r1.
+    c'1.
 
     % [Violin.Music measure 23]
-    r1.
+    r2.
 
     % [Violin.Music measure 24]
+    r1.
+
+    % [Violin.Music measure 25]
+    r1.
+
+    % [Violin.Music measure 26]
+    r1.
+
+    % [Violin.Music measure 27]
     r1
 
     r8
@@ -3293,13 +3436,14 @@ number.24.Violin.Music = {
     ~
     \repeatTie
 
-    % [Violin.Music measure 25]
+    % [Violin.Music measure 28]
     c'1.
     \repeatTie
 
-    % [Violin.Music measure 26]
+    % [Violin.Music measure 29]
     c'1.
 
+    % [Violin.Music measure 30]
     r4
 
     r8
@@ -3309,43 +3453,6 @@ number.24.Violin.Music = {
     ~
 
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [Violin.Music measure 27]
-    c'1.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [Violin.Music measure 28]
-    c'1.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [Violin.Music measure 29]
-    c'8
-    \repeatTie
-
-    r8
-
-    r2.
-
-    r8
-
-    c'8
-    - \tweak stencil ##f
-    ~
-
-    c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [Violin.Music measure 30]
-    c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -3363,6 +3470,43 @@ number.24.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 33]
+    c'8
+    \repeatTie
+
+    r8
+
+    r2.
+
+    r8
+
+    c'8
+    - \tweak stencil ##f
+    ~
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 34]
+    c'1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 35]
+    c'1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 36]
+    c'1.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 37]
     c'1.
     \repeatTie
 
@@ -3620,6 +3764,7 @@ number.24.Cello.Music = {
 
     }
 
+    % [Cello.Music measure 7]
     r2
 
     r16
@@ -3628,7 +3773,7 @@ number.24.Cello.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Cello.Music measure 7]
+    % [Cello.Music measure 8]
     c'16
     [
     \repeatTie
@@ -3666,7 +3811,7 @@ number.24.Cello.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Cello.Music measure 8]
+    % [Cello.Music measure 9]
     c'2.
     - \tweak stencil ##f
     ~
@@ -3679,7 +3824,7 @@ number.24.Cello.Music = {
 
     r2
 
-    % [Cello.Music measure 9]
+    % [Cello.Music measure 10]
     c'1
     - \tweak stencil ##f
     ~
@@ -3696,7 +3841,7 @@ number.24.Cello.Music = {
     c'8
     ]
 
-    % [Cello.Music measure 10]
+    % [Cello.Music measure 11]
     c'8
     [
 
@@ -3737,7 +3882,7 @@ number.24.Cello.Music = {
 
     }
 
-    % [Cello.Music measure 11]
+    % [Cello.Music measure 12]
     c'4
     \repeatTie
 
@@ -3785,7 +3930,7 @@ number.24.Cello.Music = {
 
     }
 
-    % [Cello.Music measure 12]
+    % [Cello.Music measure 13]
     r1
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve.. }
@@ -3824,7 +3969,7 @@ number.24.Cello.Music = {
     }
     \revert TupletNumber.text
 
-    % [Cello.Music measure 15]
+    % [Cello.Music measure 16]
     c'2.
     - \tweak stencil ##f
     ~
@@ -3851,6 +3996,7 @@ number.24.Cello.Music = {
     c'8.
     ]
 
+    % [Cello.Music measure 17]
     r2
 
     r8.
@@ -3858,7 +4004,7 @@ number.24.Cello.Music = {
     c'16
     ~
 
-    % [Cello.Music measure 16]
+    % [Cello.Music measure 18]
     c'2.
     - \tweak stencil ##f
     ~
@@ -3875,7 +4021,7 @@ number.24.Cello.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Cello.Music measure 17]
+    % [Cello.Music measure 19]
     c'8.
     [
     \repeatTie
@@ -3906,7 +4052,7 @@ number.24.Cello.Music = {
     \times 1/1
     {
 
-        % [Cello.Music measure 18]
+        % [Cello.Music measure 20]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #left
         r16 * 2688/1024
@@ -3939,9 +4085,10 @@ number.24.Cello.Music = {
     }
     \revert TupletNumber.text
 
-    % [Cello.Music measure 20]
+    % [Cello.Music measure 22]
     c'1.
 
+    % [Cello.Music measure 23]
     r2
 
     r8.
@@ -3949,7 +4096,7 @@ number.24.Cello.Music = {
     c'16
     ~
 
-    % [Cello.Music measure 21]
+    % [Cello.Music measure 24]
     c'2.
     - \tweak stencil ##f
     ~
@@ -3961,14 +4108,14 @@ number.24.Cello.Music = {
 
     r2
 
-    % [Cello.Music measure 22]
+    % [Cello.Music measure 25]
     r1.
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
     \times 1/1
     {
 
-        % [Cello.Music measure 23]
+        % [Cello.Music measure 26]
         \override Staff.Stem.stemlet-length = 0.75
         \once \override Beam.grow-direction = #left
         c'16 * 2688/1024
@@ -4001,12 +4148,13 @@ number.24.Cello.Music = {
     }
     \revert TupletNumber.text
 
-    % [Cello.Music measure 25]
+    % [Cello.Music measure 28]
     c'1.
 
-    % [Cello.Music measure 26]
+    % [Cello.Music measure 29]
     c'1.
 
+    % [Cello.Music measure 30]
     r4
 
     r8
@@ -4020,19 +4168,19 @@ number.24.Cello.Music = {
     ~
     \repeatTie
 
-    % [Cello.Music measure 27]
+    % [Cello.Music measure 31]
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Cello.Music measure 28]
+    % [Cello.Music measure 32]
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Cello.Music measure 29]
+    % [Cello.Music measure 33]
     c'8
     \repeatTie
 
@@ -4051,25 +4199,25 @@ number.24.Cello.Music = {
     ~
     \repeatTie
 
-    % [Cello.Music measure 30]
+    % [Cello.Music measure 34]
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Cello.Music measure 31]
+    % [Cello.Music measure 35]
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Cello.Music measure 32]
+    % [Cello.Music measure 36]
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Cello.Music measure 33]
+    % [Cello.Music measure 37]
     c'1.
     \repeatTie
 
