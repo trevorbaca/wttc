@@ -41,7 +41,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J1.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -93,7 +93,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -124,7 +124,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J3.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -151,7 +151,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -178,7 +178,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -226,7 +226,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J1.l + J3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -253,7 +253,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J1.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -280,7 +280,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -332,7 +332,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J4.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5
@@ -365,7 +365,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J4.l + J2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -392,7 +392,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J4.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -423,7 +423,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2.m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -454,7 +454,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J4.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -506,7 +506,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -537,7 +537,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2+4.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -585,7 +585,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2+4.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -633,7 +633,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J1.l + J3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -660,7 +660,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J2+4.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -708,7 +708,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J1.l + K1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -735,7 +735,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J1.l + J3.l + K1.m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -766,7 +766,7 @@ number.18.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "J3.l + K1.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

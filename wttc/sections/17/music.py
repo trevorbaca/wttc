@@ -27,12 +27,12 @@ swell = library.swell
 
 def GLOBALS(skips, first_measure_number):
     stage_markup = (
-        ("", 1),
-        ("", 2),
-        ("", 3),
-        ("", 4),
-        ("", 5),
-        ("", 6),
+        ("I1.h + I2.l + I1.m + I2.l_m", 1),
+        ("I1.l + I2.l_h", 2),
+        ("I1.l_h + I2.h + I3.h", 3),
+        ("I3.l_h + I3.l_m + I3.l + J1.l", 4),
+        ("I1.l + I3.l + J1.l", 5),
+        ("I3.l + J1.l", 6),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "50", manifests=library.manifests)

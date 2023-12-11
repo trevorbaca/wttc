@@ -41,7 +41,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O1.h_l + O2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -97,7 +97,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O3.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -124,7 +124,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O2.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -151,7 +151,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -199,7 +199,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O1.l + O3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -226,7 +226,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O1.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -253,7 +253,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O2.h_l + O4.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -309,7 +309,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O4.l + O2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -340,7 +340,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O4.l_m + O2.m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -371,7 +371,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O4.l_h + O2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -427,7 +427,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O2.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -475,7 +475,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O2.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -523,7 +523,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O1.l + O3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -550,7 +550,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O2.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -602,7 +602,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O1.l + O3.l + P1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -629,7 +629,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O1.l + O3.l + P1.lm"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -660,7 +660,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "O3.l + P1.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -706,7 +706,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P1.h + P2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -733,7 +733,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P1.m + P2.l_m + P1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -781,7 +781,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P2.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -829,7 +829,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P1.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -877,7 +877,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P2.h + P3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5
@@ -906,7 +906,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P3.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -956,7 +956,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P3.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5
@@ -989,7 +989,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "P3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5

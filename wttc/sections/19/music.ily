@@ -41,7 +41,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K1.l + K1.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -72,7 +72,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K1.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -120,7 +120,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -168,7 +168,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -216,7 +216,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K3.l + K1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -243,7 +243,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -291,7 +291,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K3.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -322,7 +322,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K1.l + K2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -353,7 +353,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K3.l_h + K1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -411,7 +411,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K2.h + L1.l + K1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -442,7 +442,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K2.l + K3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -473,7 +473,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.l_m + K2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -500,7 +500,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "K3.l + L1.l_h + K3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -567,7 +567,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.l + L2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -594,7 +594,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L3.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -642,7 +642,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.m + L2.m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -669,7 +669,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L3.m_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -696,7 +696,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.h + L2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -727,7 +727,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -758,7 +758,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L4.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -806,7 +806,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -854,7 +854,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L2.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -866,8 +866,6 @@ number.19.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[13'14'']"
       %! CLOCK_TIME
@@ -880,10 +878,6 @@ number.19.Skips = {
     %@% - \baca-start-mn-left-only "231"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 33]
     s1 * 6/4
@@ -893,6 +887,8 @@ number.19.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[13'16'']"
       %! CLOCK_TIME
@@ -905,6 +901,10 @@ number.19.Skips = {
     %@% - \baca-start-mn-left-only "232"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "L5.h_l"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 34]
     s1 * 6/4
@@ -950,7 +950,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.h + L2.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -981,7 +981,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -1012,7 +1012,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L4.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -1060,7 +1060,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L5.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -1108,7 +1108,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L1.l + L2.m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -1139,7 +1139,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -1170,7 +1170,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L4.h_l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -1218,7 +1218,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "L5.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

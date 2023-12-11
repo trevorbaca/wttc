@@ -41,7 +41,7 @@ number.17.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "I1.h + I2.l + I1.m + I2.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -68,7 +68,7 @@ number.17.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "I1.l + I2.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -99,7 +99,7 @@ number.17.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "I1.l_h + I2.h + I3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5
@@ -132,7 +132,7 @@ number.17.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "I3.l_h + I3.l_m + I3.l + J1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -163,7 +163,7 @@ number.17.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "I1.l + I3.l + J1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -194,7 +194,7 @@ number.17.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only ""
+    - \baca-start-snm-left-only "I3.l + J1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
