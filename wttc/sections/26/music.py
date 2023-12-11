@@ -429,13 +429,12 @@ def VC(voice, meters):
         [-11] + [2, -6, 1, -4] + ["-"],
         extra_counts=[-1],
     )
-    components = rhythm.make_one_beat_tuplets(
+    rhythm.make_one_beat_tuplets(
         meters(3, 5),
         [-11] + [1, -4, 2, -6, 1, -4, 2, -6] + ["-"],
-        do_not_extend=True,
         extra_counts=[-1],
+        overlap=True,
     )
-    library.overlap_previous_measure(voice, components, meters(3, 5))
     rhythm.mmrests(6, 7)
     rhythm.make_one_beat_tuplets(
         meters(8, 10),
@@ -444,17 +443,15 @@ def VC(voice, meters):
     )
     rhythm.make_one_beat_tuplets(
         meters(11, 12),
-        # [-7] + [1, -4, 2, -6] + ["-"],
         [-7] + [1, -4, 2] + [10] + ["-"],
         extra_counts=[-1],
     )
-    components = rhythm.make_one_beat_tuplets(
+    rhythm.make_one_beat_tuplets(
         meters(12, 13),
         [-12] + [1] + [2, -6, 1, -4, 2, -6] + ["-"],
-        do_not_extend=True,
         extra_counts=[-1],
+        overlap=True,
     )
-    library.overlap_previous_measure(voice, components, meters(12, 13))
     rhythm(
         meters(14),
         ["-", 11],

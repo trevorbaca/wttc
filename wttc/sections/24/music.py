@@ -312,13 +312,12 @@ def VN(voice, meters):
 
     @baca.call
     def block():
-        components = rhythm.make_one_beat_tuplets(
+        rhythm.make_one_beat_tuplets(
             meters(6, 7),
             [-3, 3, 1, 4, 1, -7, 3, 1, "-"],
-            do_not_extend=True,
             extra_counts=[-1],
+            overlap=True,
         )
-        library.overlap_previous_measure(voice, components, meters(6))
         rhythm.mmrests(8, 9)
 
     @baca.call
@@ -379,13 +378,12 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        components = rhythm.make_one_beat_tuplets(
+        rhythm.make_one_beat_tuplets(
             meters(3, 4),
             [-15, 1, 3, 1, 11, 1, "-"],
-            do_not_extend=True,
             extra_counts=[-1],
+            overlap=True,
         )
-        library.overlap_previous_measure(voice, components, meters(3))
 
     @baca.call
     def block():
@@ -401,13 +399,12 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        components = rhythm.make_one_beat_tuplets(
+        rhythm.make_one_beat_tuplets(
             meters(6, 7),
             [-8, 3, 1, -1, 3, 1, "-"],
-            do_not_extend=True,
             extra_counts=[-1],
+            overlap=True,
         )
-        library.overlap_previous_measure(voice, components, meters(6))
 
     @baca.call
     def block():
@@ -423,13 +420,12 @@ def VC(voice, meters):
             meters(10, 11),
             [22, 2, 2, 4, "-"],
         )
-        components = rhythm.make_one_beat_tuplets(
+        rhythm.make_one_beat_tuplets(
             meters(11, 12),
             [-6, -3, -2, 4, 1, 5, 1, -6, 6, 1, "-"],
-            do_not_extend=True,
             extra_counts=[-1],
+            overlap=True,
         )
-        library.overlap_previous_measure(voice, components, meters(11))
 
     @baca.call
     def block():
