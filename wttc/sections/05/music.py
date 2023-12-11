@@ -24,6 +24,42 @@ OBGC = library.OBGC
 
 
 def GLOBALS(skips):
+    stage_markup = (
+        ("C1.l", 1),
+        ("C1.l_m", 2),
+        ("C1.l_h", 3),
+        ("C1.l", 5),
+        ("C2.h", 7),
+        ("C3.l + C1.l", 9),
+        ("C2.h", 10),
+        ("C3.l_m", 12),
+        ("C1.l", 13),
+        ("C2.h", 14),
+        ("C3.l_h", 15),
+        ("C1.l", 17),
+        ("C2.h", 18),
+        ("D1.l", 19),
+        ("C1.l", 20),
+        ("C2.l", 21),
+        ("C3.l", 22),
+        ("D1.l_m", 23),
+        ("C2.l + C3.l", 25),
+        ("D1.l_h + C3.l", 26),
+        ("C3.l", 30),
+        ("D1.h_l + D2.l", 31),
+        ("D3.h_l", 33),
+        ("D2.l_h", 34),
+        ("D3.h", 35),
+        ("D1.l", 37),
+        ("D1.l_h", 38),
+        ("D2.h_l + D4.l", 39),
+        ("D4.l + D2.l", 41),
+        ("D4.l_m + D2.m", 42),
+        ("D4.l_h + D2.h", 43),
+        ("D2+4.h_l", 45),
+        ("D2+4.h_l", 47),
+    )
+    baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.rehearsal_mark(
         skips[1 - 1],
@@ -559,6 +595,7 @@ def persist_score(score, environment):
     baca.tags.activate(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.STAGE_NUMBER,
     )
     baca.tags.deactivate(
         score,

@@ -26,6 +26,40 @@ swell = library.swell
 
 
 def GLOBALS(skips, first_measure_number):
+    stage_markup = (
+        ("", 1),
+        ("", 2),
+        ("", 4),
+        ("", 6),
+        ("", 8),
+        ("", 9),
+        ("", 11),
+        ("", 12),
+        ("", 13),
+        ("", 15),
+        ("", 16),
+        ("", 17),
+        ("", 18),
+        ("", 20),
+        ("", 21),
+        ("", 23),
+        ("", 24),
+        ("", 25),
+        ("", 26),
+        ("", 27),
+        ("", 29),
+        ("", 31),
+        ("", 32),
+        ("", 35),
+        ("", 36),
+        ("", 37),
+        ("", 39),
+        ("", 41),
+        ("", 42),
+        ("", 43),
+        ("", 45),
+    )
+    baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
     baca.rehearsal_mark(
         skips[1 - 1],
@@ -610,6 +644,7 @@ def persist_score(score, environment):
     baca.tags.activate(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.STAGE_NUMBER,
     )
     baca.tags.deactivate(
         score,
