@@ -574,11 +574,7 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 25]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -602,8 +598,8 @@ number.19.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
-    s1 * 6/4
+    \time 3/4
+    s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -611,7 +607,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'02'']"
+    %@% - \baca-start-ct-left-only "[13'01'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -624,6 +620,10 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 27]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -632,7 +632,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'04'']"
+    %@% - \baca-start-ct-left-only "[13'02'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -653,7 +653,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'07'']"
+    %@% - \baca-start-ct-left-only "[13'04'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -674,7 +674,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'09'']"
+    %@% - \baca-start-ct-left-only "[13'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -695,7 +695,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'12'']"
+    %@% - \baca-start-ct-left-only "[13'09'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -716,7 +716,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'14'']"
+    %@% - \baca-start-ct-left-only "[13'12'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -737,7 +737,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'16'']"
+    %@% - \baca-start-ct-left-only "[13'14'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -758,7 +758,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'19'']"
+    %@% - \baca-start-ct-left-only "[13'16'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -771,11 +771,7 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 34]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -783,7 +779,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'21'']"
+    %@% - \baca-start-ct-left-only "[13'19'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -796,6 +792,52 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 35]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[13'21'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "35"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "233"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 36]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 3/4
+    s1 * 3/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[13'24'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "36"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "234"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 37]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -809,48 +851,6 @@ number.19.Skips = {
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[13'25'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "35"
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "233"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
-
-    % [Skips measure 36]
-    s1 * 6/4
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'27'']"
-      %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "36"
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "234"
-      %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
-
-    % [Skips measure 37]
-    s1 * 6/4
-      %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
-      %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'30'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -871,7 +871,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'32'']"
+    %@% - \baca-start-ct-left-only "[13'27'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -884,11 +884,7 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 39]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 9/4
-    s1 * 9/4
+    s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -896,7 +892,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'34'']"
+    %@% - \baca-start-ct-left-only "[13'30'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -909,10 +905,6 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 40]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -921,7 +913,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'38'']"
+    %@% - \baca-start-ct-left-only "[13'32'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -942,7 +934,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'40'']"
+    %@% - \baca-start-ct-left-only "[13'34'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -955,7 +947,11 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 42]
-    s1 * 6/4
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 3/4
+    s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -963,7 +959,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[13'43'']"
+    %@% - \baca-start-ct-left-only "[13'37'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -976,6 +972,73 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 43]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[13'38'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "43"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "241"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 44]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[13'40'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "44"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "242"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 45]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[13'43'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "45"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "243"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 46]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -988,11 +1051,11 @@ number.19.Skips = {
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "43"
+    - \baca-start-lmn-left-only "46"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "241"
+    %@% - \baca-start-mn-left-only "244"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -1100,10 +1163,10 @@ number.19.Rests = {
     R1 * 6/4
 
     % [Rests measure 25]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 26]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 27]
     R1 * 6/4
@@ -1127,13 +1190,13 @@ number.19.Rests = {
     R1 * 6/4
 
     % [Rests measure 34]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 35]
     R1 * 6/4
 
     % [Rests measure 36]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 37]
     R1 * 6/4
@@ -1142,7 +1205,7 @@ number.19.Rests = {
     R1 * 6/4
 
     % [Rests measure 39]
-    R1 * 9/4
+    R1 * 6/4
 
     % [Rests measure 40]
     R1 * 6/4
@@ -1151,9 +1214,18 @@ number.19.Rests = {
     R1 * 6/4
 
     % [Rests measure 42]
-    R1 * 6/4
+    R1 * 3/4
 
     % [Rests measure 43]
+    R1 * 6/4
+
+    % [Rests measure 44]
+    R1 * 6/4
+
+    % [Rests measure 45]
+    R1 * 6/4
+
+    % [Rests measure 46]
     R1 * 6/4
 
 }
@@ -1166,12 +1238,12 @@ number.19.AltoFlute.Music = {
     \clef "treble"
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -1457,28 +1529,18 @@ number.19.AltoFlute.Music = {
 
     f'4
 
-    r1.
+    r2.
 
     % [AltoFlute.Music measure 26]
-    r1.
+    r2.
 
     % [AltoFlute.Music measure 27]
+    r1.
+
+    % [AltoFlute.Music measure 28]
     r1
 
     r4
-
-    f'4
-
-    % [AltoFlute.Music measure 28]
-    f'4
-
-    f'4
-
-    f'4
-
-    f'4
-
-    f'4
 
     f'4
 
@@ -1496,119 +1558,23 @@ number.19.AltoFlute.Music = {
     f'4
 
     % [AltoFlute.Music measure 30]
-    r1.
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
+
+    f'4
 
     % [AltoFlute.Music measure 31]
-    r2
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
+    r1.
 
     % [AltoFlute.Music measure 32]
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
+    r2
 
     f'32
     [
@@ -1773,240 +1739,134 @@ number.19.AltoFlute.Music = {
     f'32
     ]
 
-    f'4
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
 
     % [AltoFlute.Music measure 34]
-    f'4
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
 
     f'4
-
-    f'4
-
-    r1.
 
     % [AltoFlute.Music measure 35]
-    r1.
+    f'4
+
+    f'4
+
+    f'4
+
+    r2.
 
     % [AltoFlute.Music measure 36]
-    r2
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
+    r2.
 
     % [AltoFlute.Music measure 37]
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
+    r1.
 
     % [AltoFlute.Music measure 38]
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
+    r2
 
     f'32
     [
@@ -2189,13 +2049,151 @@ number.19.AltoFlute.Music = {
     f'32
     ]
 
-    r2.
-
     % [AltoFlute.Music measure 40]
-    r1.
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
 
     % [AltoFlute.Music measure 41]
-    r2
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
 
     f'32
     [
@@ -2270,115 +2268,196 @@ number.19.AltoFlute.Music = {
     ]
 
     % [AltoFlute.Music measure 42]
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
-
-    f'32
-    [
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-
-    f'32
-    ]
+    r2.
 
     % [AltoFlute.Music measure 43]
+    r1.
+
+    % [AltoFlute.Music measure 44]
+    r2
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 45]
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    f'32
+    [
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+
+    f'32
+    ]
+
+    % [AltoFlute.Music measure 46]
     f'32
     [
 
@@ -2508,12 +2587,12 @@ number.19.Oboe.Music = {
     \clef "treble"
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -2656,14 +2735,14 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 25]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
-
-    % [Oboe.Music measure 26]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 26]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 27]
     R1 * 6/4
@@ -2701,9 +2780,9 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 34]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 35]
     R1 * 6/4
@@ -2711,9 +2790,9 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 36]
-    R1 * 6/4
+    R1 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 37]
     R1 * 6/4
@@ -2726,9 +2805,9 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 39]
-    R1 * 9/4
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 40]
     R1 * 6/4
@@ -2741,11 +2820,26 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 42]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Oboe.Music measure 43]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Oboe.Music measure 43]
+    % [Oboe.Music measure 44]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 45]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 46]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2768,12 +2862,12 @@ number.19.Guitar.1.Music = {
     \clef "treble"
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -3106,14 +3200,12 @@ number.19.Guitar.1.Music = {
     % [Guitar.1.Music measure 25]
     r1.
 
+    % [Guitar.1.Music measure 26]
     r8
 
     c''8
 
     r2
-
-    % [Guitar.1.Music measure 26]
-    r1.
 
     % [Guitar.1.Music measure 27]
     r1.
@@ -3139,17 +3231,15 @@ number.19.Guitar.1.Music = {
     % [Guitar.1.Music measure 34]
     r1.
 
+    % [Guitar.1.Music measure 35]
+    r1.
+
+    % [Guitar.1.Music measure 36]
     r8
 
     c''8
 
     r2
-
-    % [Guitar.1.Music measure 35]
-    r1.
-
-    % [Guitar.1.Music measure 36]
-    r1.
 
     % [Guitar.1.Music measure 37]
     r1.
@@ -3160,12 +3250,6 @@ number.19.Guitar.1.Music = {
     % [Guitar.1.Music measure 39]
     r1.
 
-    r8
-
-    c''8
-
-    r2
-
     % [Guitar.1.Music measure 40]
     r1.
 
@@ -3173,9 +3257,22 @@ number.19.Guitar.1.Music = {
     r1.
 
     % [Guitar.1.Music measure 42]
-    r1.
+    r8
+
+    c''8
+
+    r2
 
     % [Guitar.1.Music measure 43]
+    r1.
+
+    % [Guitar.1.Music measure 44]
+    r1.
+
+    % [Guitar.1.Music measure 45]
+    r1.
+
+    % [Guitar.1.Music measure 46]
     r1.
 
 }
@@ -3196,12 +3293,12 @@ number.19.Guitar.2.Music = {
     \clef "treble"
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -3562,14 +3659,12 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 25]
     r1.
 
+    % [Guitar.2.Music measure 26]
     r8
 
     c''8
 
     r2
-
-    % [Guitar.2.Music measure 26]
-    r1.
 
     % [Guitar.2.Music measure 27]
     r1.
@@ -3595,17 +3690,15 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 34]
     r1.
 
+    % [Guitar.2.Music measure 35]
+    r1.
+
+    % [Guitar.2.Music measure 36]
     r8
 
     c''8
 
     r2
-
-    % [Guitar.2.Music measure 35]
-    r1.
-
-    % [Guitar.2.Music measure 36]
-    r1.
 
     % [Guitar.2.Music measure 37]
     r1.
@@ -3616,12 +3709,6 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 39]
     r1.
 
-    r8
-
-    c''8
-
-    r2
-
     % [Guitar.2.Music measure 40]
     r1.
 
@@ -3629,9 +3716,22 @@ number.19.Guitar.2.Music = {
     r1.
 
     % [Guitar.2.Music measure 42]
-    r1.
+    r8
+
+    c''8
+
+    r2
 
     % [Guitar.2.Music measure 43]
+    r1.
+
+    % [Guitar.2.Music measure 44]
+    r1.
+
+    % [Guitar.2.Music measure 45]
+    r1.
+
+    % [Guitar.2.Music measure 46]
     r1.
 
 }
@@ -3652,12 +3752,12 @@ number.19.Violin.Music = {
     \clef "treble"
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -4248,6 +4348,7 @@ number.19.Violin.Music = {
 
     c'2
 
+    % [Violin.Music measure 26]
     c'16
     [
 
@@ -4288,7 +4389,7 @@ number.19.Violin.Music = {
 
     }
 
-    % [Violin.Music measure 26]
+    % [Violin.Music measure 27]
     c'16
     [
 
@@ -4354,7 +4455,7 @@ number.19.Violin.Music = {
     \times 4/5
     {
 
-        % [Violin.Music measure 27]
+        % [Violin.Music measure 28]
         c'8
         [
         \repeatTie
@@ -4401,7 +4502,7 @@ number.19.Violin.Music = {
 
     }
 
-    % [Violin.Music measure 28]
+    % [Violin.Music measure 29]
     c'4
 
     c'8
@@ -4434,20 +4535,20 @@ number.19.Violin.Music = {
 
     r2
 
-    % [Violin.Music measure 29]
+    % [Violin.Music measure 30]
     r2
 
     c'2
 
     c'2
 
-    % [Violin.Music measure 30]
-    c'1.
-
     % [Violin.Music measure 31]
     c'1.
 
     % [Violin.Music measure 32]
+    c'1.
+
+    % [Violin.Music measure 33]
     c'8
     [
 
@@ -4513,7 +4614,7 @@ number.19.Violin.Music = {
     \times 2/3
     {
 
-        % [Violin.Music measure 33]
+        % [Violin.Music measure 34]
         c'4
         \repeatTie
 
@@ -4548,7 +4649,7 @@ number.19.Violin.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Violin.Music measure 34]
+    % [Violin.Music measure 35]
     c'4
     \repeatTie
 
@@ -4560,6 +4661,7 @@ number.19.Violin.Music = {
     \times 2/3
     {
 
+        % [Violin.Music measure 36]
         c'16
         [
 
@@ -4604,7 +4706,7 @@ number.19.Violin.Music = {
 
     }
 
-    % [Violin.Music measure 35]
+    % [Violin.Music measure 37]
     c'16
     [
 
@@ -4668,7 +4770,7 @@ number.19.Violin.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Violin.Music measure 36]
+    % [Violin.Music measure 38]
     c'8.
     [
     \repeatTie
@@ -4727,7 +4829,7 @@ number.19.Violin.Music = {
     \times 2/3
     {
 
-        % [Violin.Music measure 37]
+        % [Violin.Music measure 39]
         c'4
         \repeatTie
 
@@ -4777,7 +4879,7 @@ number.19.Violin.Music = {
 
     }
 
-    % [Violin.Music measure 38]
+    % [Violin.Music measure 40]
     c'2
     - \tweak stencil ##f
     ~
@@ -4808,7 +4910,7 @@ number.19.Violin.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Violin.Music measure 39]
+    % [Violin.Music measure 41]
     c'2
     - \tweak stencil ##f
     ~
@@ -4824,6 +4926,7 @@ number.19.Violin.Music = {
 
     c'2.
 
+    % [Violin.Music measure 42]
     c'16
     [
 
@@ -4862,7 +4965,7 @@ number.19.Violin.Music = {
     c'16
     ]
 
-    % [Violin.Music measure 40]
+    % [Violin.Music measure 43]
     c'16
     [
 
@@ -4934,7 +5037,7 @@ number.19.Violin.Music = {
 
     c'4
 
-    % [Violin.Music measure 41]
+    % [Violin.Music measure 44]
     c'4
 
     c'8
@@ -4962,7 +5065,7 @@ number.19.Violin.Music = {
 
     }
 
-    % [Violin.Music measure 42]
+    % [Violin.Music measure 45]
     c'4
     - \tweak stencil ##f
     ~
@@ -5001,7 +5104,7 @@ number.19.Violin.Music = {
     \times 4/5
     {
 
-        % [Violin.Music measure 43]
+        % [Violin.Music measure 46]
         c'16
         \repeatTie
 
@@ -5047,12 +5150,12 @@ number.19.Cello.Music = {
     \clef "treble"
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_199
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -5720,6 +5823,7 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
+        % [Cello.Music measure 26]
         c'16
         [
 
@@ -5763,56 +5867,56 @@ number.19.Cello.Music = {
         ]
 
     }
-
-    % [Cello.Music measure 26]
-    c'2
-    - \tweak stencil ##f
-    ~
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        c'16
-        [
-        \repeatTie
-
-        c'8
-
-        c'8.
-        ]
-        - \tweak stencil ##f
-        ~
-
-    }
-
-    c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
-    {
-
-        c'16
-        \repeatTie
-
-        c'4
-        - \tweak stencil ##f
-        ~
-
-    }
-
-    c'8.
-    [
-    \repeatTie
-
-    c'16
-    ]
-    ~
 
     % [Cello.Music measure 27]
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        [
+        \repeatTie
+
+        c'8
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'16
+        \repeatTie
+
+        c'4
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    % [Cello.Music measure 28]
     c'16
     [
 
@@ -5872,7 +5976,7 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
-        % [Cello.Music measure 28]
+        % [Cello.Music measure 29]
         c'16
         \repeatTie
 
@@ -5934,7 +6038,7 @@ number.19.Cello.Music = {
 
     }
 
-    % [Cello.Music measure 29]
+    % [Cello.Music measure 30]
     c'4
     - \tweak stencil ##f
     ~
@@ -5963,7 +6067,7 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-        % [Cello.Music measure 30]
+        % [Cello.Music measure 31]
         c'8
         [
 
@@ -5996,37 +6100,37 @@ number.19.Cello.Music = {
         ~
 
     }
-
-    % [Cello.Music measure 31]
-    c'2
-    - \tweak stencil ##f
-    ~
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        c'4
-        \repeatTie
-
-        c'8
-        ~
-
-    }
-
-    c'2
-    - \tweak stencil ##f
-    ~
-
-    c'8.
-    [
-    \repeatTie
-
-    c'16
-    ]
-    ~
 
     % [Cello.Music measure 32]
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    c'8.
+    [
+    \repeatTie
+
+    c'16
+    ]
+    ~
+
+    % [Cello.Music measure 33]
     c'16
     [
 
@@ -6064,7 +6168,7 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
-        % [Cello.Music measure 33]
+        % [Cello.Music measure 34]
         c'4
         - \tweak stencil ##f
         ~
@@ -6125,7 +6229,7 @@ number.19.Cello.Music = {
 
     }
 
-    % [Cello.Music measure 34]
+    % [Cello.Music measure 35]
     c'4
     - \tweak stencil ##f
     ~
@@ -6155,6 +6259,7 @@ number.19.Cello.Music = {
 
     r2
 
+    % [Cello.Music measure 36]
     c'16
     [
 
@@ -6192,111 +6297,37 @@ number.19.Cello.Music = {
 
     c'16
     ]
-
-    % [Cello.Music measure 35]
-    c'8
-    [
-
-    c'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        c'16
-        \repeatTie
-
-        c'4
-
-        c'16
-        ~
-
-    }
-
-    c'16
-    [
-
-    c'8.
-    ]
-    - \tweak stencil ##f
-    ~
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
-    {
-
-        c'8
-        [
-        \repeatTie
-
-        c'8.
-        ]
-        - \tweak stencil ##f
-        ~
-
-    }
-
-    c'8.
-    [
-    \repeatTie
-
-    c'16
-    ]
-    ~
-
-    c'16
-    [
-
-    c'8.
-    ]
-    - \tweak stencil ##f
-    ~
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        % [Cello.Music measure 36]
-        c'4
-        \repeatTie
-
-        c'8
-        ~
-
-    }
-
-    c'4
-    - \tweak stencil ##f
-    ~
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
-    {
-
-        c'8
-        [
-        \repeatTie
-
-        c'8
-
-        c'16
-        ]
-        ~
-
-    }
-
-    c'2
-
-    c'4
-    - \tweak stencil ##f
-    ~
 
     % [Cello.Music measure 37]
-    c'4
-    \repeatTie
+    c'8
+    [
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'16
+        \repeatTie
+
+        c'4
+
+        c'16
+        ~
+
+    }
+
+    c'16
+    [
+
+    c'8.
+    ]
+    - \tweak stencil ##f
+    ~
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
@@ -6304,6 +6335,7 @@ number.19.Cello.Music = {
 
         c'8
         [
+        \repeatTie
 
         c'8.
         ]
@@ -6312,18 +6344,43 @@ number.19.Cello.Music = {
 
     }
 
-    c'2
+    c'8.
+    [
     \repeatTie
 
-    c'2
+    c'16
+    ]
+    ~
+
+    c'16
+    [
+
+    c'8.
+    ]
     - \tweak stencil ##f
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \times 2/3
     {
 
         % [Cello.Music measure 38]
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'4
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
         c'8
         [
         \repeatTie
@@ -6337,26 +6394,74 @@ number.19.Cello.Music = {
     }
 
     c'2
-    - \tweak stencil ##f
-    ~
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        c'4
-        \repeatTie
-
-        c'8
-        ~
-
-    }
-
-    c'2
+    c'4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 39]
+    c'4
+    \repeatTie
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        c'8
+        [
+
+        c'8.
+        ]
+        - \tweak stencil ##f
+        ~
+
+    }
+
+    c'2
+    \repeatTie
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/5
+    {
+
+        % [Cello.Music measure 40]
+        c'8
+        [
+        \repeatTie
+
+        c'8
+
+        c'16
+        ]
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        c'4
+        \repeatTie
+
+        c'8
+        ~
+
+    }
+
+    c'2
+    - \tweak stencil ##f
+    ~
+
+    % [Cello.Music measure 41]
     c'8.
     [
     \repeatTie
@@ -6395,6 +6500,7 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
+        % [Cello.Music measure 42]
         c'16
         [
 
@@ -6433,7 +6539,7 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
-        % [Cello.Music measure 40]
+        % [Cello.Music measure 43]
         c'8
         [
 
@@ -6497,7 +6603,7 @@ number.19.Cello.Music = {
 
     }
 
-    % [Cello.Music measure 41]
+    % [Cello.Music measure 44]
     c'8
     [
 
@@ -6548,7 +6654,7 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-        % [Cello.Music measure 42]
+        % [Cello.Music measure 45]
         c'4
         \repeatTie
 
@@ -6586,7 +6692,7 @@ number.19.Cello.Music = {
     - \tweak stencil ##f
     ~
 
-    % [Cello.Music measure 43]
+    % [Cello.Music measure 46]
     c'16
     [
     \repeatTie

@@ -40,6 +40,7 @@ class Rhythm:
         time_signatures,
         items,
         *,
+        debug=False,
         denominator=16,
         do_not_beam_tuplets=False,
         do_not_extend=False,
@@ -85,6 +86,7 @@ class Rhythm:
         debug=False,
         do_not_extend=False,
         extra_counts=(),
+        overlap=False,
     ):
         tag = baca.helpers.function_name(inspect.currentframe())
         durations = [_.duration for _ in time_signatures]
@@ -96,7 +98,9 @@ class Rhythm:
         components = clean_up_rhythmic_spelling(
             tuplets, time_signatures, debug=debug, tag=tag
         )
-        if not do_not_extend:
+        if overlap is True:
+            overlap_previous_measure(self.voice, components, time_signatures)
+        elif not do_not_extend:
             self.voice.extend(components)
         return components
 

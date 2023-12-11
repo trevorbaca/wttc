@@ -21,10 +21,10 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [251, 259, 265],
+    "bol_measure_numbers": [275, 283, 289],
     "duration": "1'15''",
-    "final_measure_number": 294,
-    "first_measure_number": 275,
+    "final_measure_number": 297,
+    "first_measure_number": 278,
     "has_anchor_skip": True,
     "persistent_indicators": {
         "AltoFlute.Music": [

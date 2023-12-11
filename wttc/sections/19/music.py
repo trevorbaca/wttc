@@ -94,30 +94,30 @@ def FL(voice, meters):
         [-20, 4, 4, 4, 4, "-"],
     )
     rhythm(
-        meters(24, 26),
+        meters(24, 27),
         [-20, 4, 4, 4, 4, "-"],
     )
     rhythm(
-        meters(27, 30),
+        meters(28, 31),
         [-20, 4] + 12 * [4] + ["-"],
     )
     rhythm(
-        meters(31, 33),
+        meters(32, 34),
         2 * [-8] + 120 * [1] + ["-"],
         denominator=32,
     )
     rhythm(
-        meters(33, 35),
+        meters(34, 37),
         [-20, 4, 4, 4, 4, "-"],
         overlap=True,
     )
     rhythm(
-        meters(36, 40),
+        meters(38, 43),
         2 * [-8] + 176 * [1] + ["-"],
         denominator=32,
     )
     rhythm(
-        meters(41, 43),
+        meters(44, 46),
         2 * [-8] + 128 * [1],
         denominator=32,
     )
@@ -169,15 +169,15 @@ def GT1(voice, meters):
         [2, "-"],
     )
     rhythm(
-        meters(25, 33),
+        meters(25, 34),
         [-24, -2, 2, "-"],
     )
     rhythm(
-        meters(34, 38),
+        meters(35, 40),
         [-24, -2, 2, "-"],
     )
     rhythm(
-        meters(39, 43),
+        meters(41, 46),
         [-24, -2, 2, "-"],
     )
 
@@ -216,15 +216,15 @@ def GT2(voice, meters):
         [2, "-"],
     )
     rhythm(
-        meters(25, 33),
+        meters(25, 34),
         [-24, -2, 2, "-"],
     )
     rhythm(
-        meters(34, 38),
+        meters(35, 40),
         [-24, -2, 2, "-"],
     )
     rhythm(
-        meters(39, 43),
+        meters(41, 46),
         [-24, -2, 2, "-"],
     )
 
@@ -285,34 +285,27 @@ def VN(voice, meters):
     )
     rhythm(
         meters(25),
-        [-8, 8, 8, "-"],
+        [-8, 8, 8],
         overlap=True,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(26, 27),
+        23 * [1] + ["-"],
+        extra_counts=[0, 0, 2, 0, 1],
     )
 
     @baca.call
     def block():
-        components = rhythm.make_one_beat_tuplets(
-            [abjad.TimeSignature((9, 4))],
-            23 * [1] + ["-"],
-            extra_counts=[0, 0, 2, 0, 1],
-            do_not_extend=True,
-        )
-        components.insert(0, abjad.Rest((6, 4)))
-        library.overlap_previous_measure(voice, components, meters(25))
-
-    @baca.call
-    def block():
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
-        components = rhythm.make_one_beat_tuplets(
-            meters(26, 28),
+        rhythm.make_one_beat_tuplets(
+            meters(27, 29),
             [-9] + [1] + counts + ["-"],
             extra_counts=[0, 1, 0, 0, 2],  # by hand
-            do_not_extend=True,
+            overlap=True,
         )
-        library.overlap_previous_measure(voice, components, meters(26, 28))
 
     rhythm(
-        meters(29, 31),
+        meters(30, 32),
         [-8, 8, 8, 24, 24],
     )
 
@@ -322,14 +315,14 @@ def VN(voice, meters):
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
         rhythm.make_one_beat_tuplets(
-            meters(32, 34),
+            meters(33, 35),
             counts + ["-"],
             extra_counts=[0, 2, 0, 1, 0],
         )
 
     rhythm(
-        meters(34),
-        [-8, 16, "-"],
+        meters(35),
+        [-8, 16],
         overlap=True,
     )
 
@@ -339,17 +332,15 @@ def VN(voice, meters):
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
         counts += [2, 11, 12, 2, 13, 14]
-        components = rhythm.make_one_beat_tuplets(
-            meters(34, 39),
-            6 * [-4] + 23 * [1] + counts + ["-"],
-            extra_counts=6 * [0] + 10 * [2, 0, 1, 0, 0],
-            do_not_extend=True,
+        rhythm.make_one_beat_tuplets(
+            meters(36, 41),
+            23 * [1] + counts + ["-"],
+            extra_counts=10 * [2, 0, 1, 0, 0],
         )
-        library.overlap_previous_measure(voice, components, meters(34, 39))
 
     rhythm(
-        meters(39),
-        [-11, 13, "-"],
+        meters(41),
+        [-11, 13],
         overlap=True,
     )
 
@@ -359,13 +350,11 @@ def VN(voice, meters):
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
         counts += [2, 11, 12, 2, 13, 14]
-        components = rhythm.make_one_beat_tuplets(
-            meters(39, 43),
-            6 * [-4] + 24 * [1] + counts + ["-"],
-            extra_counts=6 * [0] + 10 * [0, 1, 0, 0, 2],
-            do_not_extend=True,
+        rhythm.make_one_beat_tuplets(
+            meters(42, 46),
+            24 * [1] + counts + ["-"],
+            extra_counts=10 * [0, 1, 0, 0, 2],
         )
-        library.overlap_previous_measure(voice, components, meters(34, 39))
 
 
 def VC(voice, meters):
@@ -463,7 +452,7 @@ def VC(voice, meters):
         )
         rhythm(
             meters(25),
-            [4, 4, 8, 8, "-"],
+            [4, 4, 8, 8],
         )
 
     @baca.call
@@ -472,39 +461,33 @@ def VC(voice, meters):
         counts = counts[1:] + abjad.sequence.reverse(counts)
         counts += [2, 11, 12, 2, 13, 14, 2, 15, 16]
         counts += [2, 3, 4, 2, 5, 6, 2, 7, 8]
-        components = rhythm.make_one_beat_tuplets(
-            meters(25, 34),
-            6 * [-4] + 15 * [1] + counts + ["-"],
-            extra_counts=6 * [0] + 20 * [2, 0, 1, 0, 0],
-            do_not_extend=True,
+        rhythm.make_one_beat_tuplets(
+            meters(26, 35),
+            15 * [1] + counts + ["-"],
+            extra_counts=20 * [2, 0, 1, 0, 0],
         )
-        library.overlap_previous_measure(voice, components, meters(25))
 
     @baca.call
     def block():
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         counts = abjad.sequence.reverse(counts)
         counts += [2, 11, 12, 2, 13, 14, 2, 15]
-        components = rhythm.make_one_beat_tuplets(
-            meters(34, 39),
-            6 * [-4] + 13 * [1] + counts + ["-"],
-            extra_counts=6 * [0] + 20 * [0, 1, 0, 0, 2],
-            do_not_extend=True,
+        rhythm.make_one_beat_tuplets(
+            meters(36, 41),
+            13 * [1] + counts + ["-"],
+            extra_counts=20 * [0, 1, 0, 0, 2],
         )
-        library.overlap_previous_measure(voice, components, meters(34))
 
     @baca.call
     def block():
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         counts = abjad.sequence.reverse(counts)
         counts += [2, 11, 12, 99]
-        components = rhythm.make_one_beat_tuplets(
-            meters(39, 43),
-            6 * [-4] + 13 * [1] + counts + ["-"],
-            extra_counts=6 * [0] + 20 * [1, 0, 0, 2, 0],
-            do_not_extend=True,
+        rhythm.make_one_beat_tuplets(
+            meters(42, 46),
+            13 * [1] + counts + ["-"],
+            extra_counts=20 * [1, 0, 0, 2, 0],
         )
-        library.overlap_previous_measure(voice, components, meters(39))
 
 
 def fl(m):
@@ -582,8 +565,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
     numerators = [6, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 4, 6]
     numerators += [5, 4, 5, 5, 5]
-    numerators += [6, 6, 6, 6, 6, 9, 6, 6, 6, 6, 6, 6, 6, 6]
-    numerators += [9, 6, 6, 6, 6, 9, 6, 6, 6, 6]
+    numerators += [6, 6, 6, 6, 6, 6, 3, 6, 6, 6, 6, 6, 6, 6, 6]
+    numerators += [6, 3, 6, 6, 6, 6, 6, 3, 6, 6, 6, 6]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -656,16 +639,16 @@ def make_layout():
         baca.page(
             2,
             baca.system(measure=20, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=26, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=27, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         baca.page(
             3,
-            baca.system(measure=32, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=38, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=33, y_offset=10, distances=(15, 20, 20, 20)),
+            baca.system(measure=40, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 24),
         overrides=[
-            ((20, 43), (1, 28)),
+            ((20, 46), (1, 28)),
         ],
     )
     baca.section.make_layout_ly(spacing)
