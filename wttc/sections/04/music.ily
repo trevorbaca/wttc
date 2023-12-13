@@ -1476,18 +1476,18 @@ number.4.Guitar.1.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
+    \staffHighlight tan
     c''8.
 
     % [Guitar.1.Music measure 7]
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
+    \staffHighlight tan
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     c''4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
+    \staffHighlight tan
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     c''4

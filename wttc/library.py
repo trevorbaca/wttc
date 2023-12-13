@@ -492,7 +492,7 @@ def material_annotation_spanner(argument, number):
         2: "lightblue",
         3: "lightgreen",
         4: "lightpink",
-        5: "lightskyblue",
+        5: "tan",
         99: "yellow",
     }
     color = material_to_color[number]

@@ -468,9 +468,9 @@ def gt1(m):
         library.material_annotation_spanner(plts[1], 2)
         library.material_annotation_spanner(plts[2], 2)
         library.material_annotation_spanner(plts[3], 2)
-        library.material_annotation_spanner(plts[4], 4)
-        library.material_annotation_spanner(plts[5], 4)
-        library.material_annotation_spanner(plts[6], 4)
+        library.material_annotation_spanner(plts[4], 5)
+        library.material_annotation_spanner(plts[5], 5)
+        library.material_annotation_spanner(plts[6], 5)
     with baca.scope(m[8, 10]) as o:
         plts = baca.select.plts(o)
         library.material_annotation_spanner(plts[0], 1)
