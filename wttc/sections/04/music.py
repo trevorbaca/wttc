@@ -398,6 +398,40 @@ def fl(m):
         baca.instrument_name(o.leaf(0), r"\wttc-alto-flute-markup")
         baca.short_instrument_name(o.leaf(0), "Afl.", library.manifests)
         baca.clef(o.leaf(0), "treble")
+    with baca.scope(m[1]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 1)
+        library.material_annotation_spanner(plts[2:], 3)
+    with baca.scope(m[2]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 1)
+        library.material_annotation_spanner(plts[2:], 3)
+    with baca.scope(m[3]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 3)
+    with baca.scope(m[4, 7]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 3)
+        library.material_annotation_spanner(plts[1], 1)
+        library.material_annotation_spanner(plts[2], 1)
+        library.material_annotation_spanner(plts[3], 1)
+        library.material_annotation_spanner(plts[4], 1)
+    with baca.scope(m[8]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts, 3)
+    with baca.scope(m[10, 13]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 1)
+        library.material_annotation_spanner(plts[2:], 3)
+    with baca.scope(m[14, 16]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 1)
+        library.material_annotation_spanner(plts[2], 1)
 
 
 def ob(m):
@@ -414,6 +448,47 @@ def gt1(m):
         baca.instrument_name(o.leaf(0), r"\wttc-guitar-i-markup")
         baca.short_instrument_name(o.leaf(0), "Gt. 1", library.manifests)
         baca.clef(o.leaf(0), "treble")
+    with baca.scope(m[1, 3]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 2)
+        library.material_annotation_spanner(plts[2], 2)
+        library.material_annotation_spanner(plts[3], 1)
+        library.material_annotation_spanner(plts[4], 2)
+        library.material_annotation_spanner(plts[5], 2)
+        library.material_annotation_spanner(plts[6], 1)
+        library.material_annotation_spanner(plts[7], 2)
+    with baca.scope(m[4]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 4)
+        library.material_annotation_spanner(plts[1], 4)
+    with baca.scope(m[5, 7]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 2)
+        library.material_annotation_spanner(plts[2], 2)
+        library.material_annotation_spanner(plts[3], 2)
+        library.material_annotation_spanner(plts[4], 4)
+        library.material_annotation_spanner(plts[5], 4)
+        library.material_annotation_spanner(plts[6], 4)
+    with baca.scope(m[8, 10]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 1)
+        library.material_annotation_spanner(plts[1], 2)
+        library.material_annotation_spanner(plts[2], 4)
+        library.material_annotation_spanner(plts[3], 4)
+        library.material_annotation_spanner(plts[4], 4)
+        library.material_annotation_spanner(plts[5], 4)
+    with baca.scope(m[11, 16]) as o:
+        plts = baca.select.plts(o)
+        library.material_annotation_spanner(plts[0], 2)
+        library.material_annotation_spanner(plts[1], 4)
+        library.material_annotation_spanner(plts[2], 4)
+        library.material_annotation_spanner(plts[3], 4)
+        library.material_annotation_spanner(plts[4], 4)
+        library.material_annotation_spanner(plts[5], 4)
+        library.material_annotation_spanner(plts[6], 2)
+        library.material_annotation_spanner(plts[7], 2)
 
 
 def gt2(m):
