@@ -41,7 +41,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A1 [h] + A2 [l]"
+    - \baca-start-snm-left-only "A1.h + A2.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -72,7 +72,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A1 [m] + A2 [l_m]"
+    - \baca-start-snm-left-only "A1.m + A2.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -103,7 +103,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A1 [l] + A2 [l_h]"
+    - \baca-start-snm-left-only "A1.l + A2.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -159,7 +159,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A1 [l_h]"
+    - \baca-start-snm-left-only "A1.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -207,7 +207,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A2 [h] + A3 [h]"
+    - \baca-start-snm-left-only "A2.h + A3.h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5
@@ -236,7 +236,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A3 [l_h]"
+    - \baca-start-snm-left-only "A3.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -284,7 +284,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A3 [l_h]"
+    - \baca-start-snm-left-only "A3.l_h"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -315,7 +315,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A3 [l] + B1 [l]"
+    - \baca-start-snm-left-only "A3.l + B1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -346,7 +346,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A1 [l] + A3 [l]"
+    - \baca-start-snm-left-only "A1.l + A3.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -373,7 +373,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A3 [l] + B1 [l]"
+    - \baca-start-snm-left-only "A3.l + B1.l"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

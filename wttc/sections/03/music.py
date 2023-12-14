@@ -24,16 +24,16 @@ OBGC = library.OBGC
 
 def GLOBALS(skips):
     stage_markup = (
-        ("A1 [h] + A2 [l]", 1),
-        ("A1 [m] + A2 [l_m]", 2),
-        ("A1 [l] + A2 [l_h]", 3),
-        ("A1 [l_h]", 5),
-        ("A2 [h] + A3 [h]", 7),
-        ("A3 [l_h]", 8),
-        ("A3 [l_h]", 10),
-        ("A3 [l] + B1 [l]", 11),
-        ("A1 [l] + A3 [l]", 12),
-        ("A3 [l] + B1 [l]", 13),
+        ("A1.h + A2.l", 1),
+        ("A1.m + A2.l_m", 2),
+        ("A1.l + A2.l_h", 3),
+        ("A1.l_h", 5),
+        ("A2.h + A3.h", 7),
+        ("A3.l_h", 8),
+        ("A3.l_h", 10),
+        ("A3.l + B1.l", 11),
+        ("A1.l + A3.l", 12),
+        ("A3.l + B1.l", 13),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
