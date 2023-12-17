@@ -284,7 +284,7 @@ number.3.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A3.l_h"
+    - \baca-start-snm-left-only "A3.l_m"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
