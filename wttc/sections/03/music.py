@@ -54,13 +54,8 @@ def GLOBALS(skips):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1),
-        [pair(2, 4, 2, 4), pair(4, 8, 4, 8), t(4)],
-    )
-    rhythm(
-        meters(2),
-        [4, t(4), 4, -4, -4, t(4)],
-        do_not_rewrite_meter=True,
+        meters(1, 2),
+        3 * [pair(4, 8, 4, 8)] + ["-"],
     )
     rhythm(
         meters(3),
@@ -288,6 +283,17 @@ def fl(m):
         for run in o.runs():
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 1)
+    with baca.scope(m[1, 2]) as o:
+        run = o.run(0)
+        baca.pitch(run, "F#4")
+        rrun = baca.select.rleak(run)
+        baca.hairpin(
+            rrun,
+            "niente o< mf >o niente o< mf >o niente o< mp >o niente",
+            pieces=baca.select.clparts(rrun, [1]),
+        )
+    with baca.scope(m[1, 2]) as o:
+        baca.override.dls_staff_padding(o, 3.5)
     with baca.scope(m[7]) as o:
         library.material_annotation_spanner(o.run(-1), 3)
     with baca.scope(m[8, 11]) as o:
@@ -453,7 +459,9 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
+        do_not_check_wellformedness=True,
         do_not_color_repeat_pitch_classes=True,
+        do_not_transpose_score=True,
         global_rests_in_topmost_staff=True,
     )
     baca.tags.activate(

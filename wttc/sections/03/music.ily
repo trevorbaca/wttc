@@ -468,6 +468,7 @@ number.3.AltoFlute.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 3.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -478,12 +479,29 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
-    f'4 * 1/2
+    \staffHighlight antiquewhite
+    fs'!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -496,58 +514,151 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4 * 1/2
+    fs'!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-    f'2 * 1/2
+    fs'!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    fs'!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-
-    f'4
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [AltoFlute.Music measure 2]
-    f'4
-    \repeatTie
+    fs'!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
-    f'4
-    - \tweak stencil ##f
-    ~
-
-    f'4
-    \repeatTie
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    fs'!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4
-
-    r4
-
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
-    f'4
-    - \tweak stencil ##f
-    ~
+    r1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 3]
-    f'4
-    \repeatTie
+      %! STAFF_HIGHLIGHT
+    \staffHighlight antiquewhite
+    c'4
 
-    f'4
+    c'4
     - \tweak stencil ##f
     ~
 
-    f'4
+    c'4
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -560,11 +671,11 @@ number.3.AltoFlute.Music = {
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
-    f'4
+    \staffHighlight antiquewhite
+    c'4
 
     % [AltoFlute.Music measure 5]
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -572,11 +683,11 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -584,12 +695,12 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 6]
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -597,11 +708,11 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -609,14 +720,14 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 7]
-    f'4
+    c'4
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -625,13 +736,13 @@ number.3.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'16
+    c'16
 
     \afterGrace
-    f'2
+    c'2
     {
 
-        f'8
+        c'8
 
     }
 
@@ -641,37 +752,37 @@ number.3.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'1
+    c'1
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 9]
     \afterGrace
-    f'1
+    c'1
     \repeatTie
     {
 
-        f'8
+        c'8
 
     }
 
 
     % [AltoFlute.Music measure 10]
     \afterGrace
-    f'1
+    c'1
     {
 
-        f'8
+        c'8
 
     }
 
 
     % [AltoFlute.Music measure 11]
     \afterGrace
-    f'8.
+    c'8.
     {
 
-        f'8
+        c'8
 
     }
 
@@ -684,10 +795,10 @@ number.3.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    f'16
+    c'16
     ~
 
-    f'8
+    c'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -695,8 +806,8 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 12]
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
-    f'2 * 1/2
+    \staffHighlight antiquewhite
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -704,7 +815,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    c'2 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -713,10 +824,10 @@ number.3.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     \afterGrace
-    f'8.
+    c'8.
     {
 
-        f'8
+        c'8
 
     }
 
@@ -731,10 +842,10 @@ number.3.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    f'16
+    c'16
     ~
 
-    f'8
+    c'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -744,10 +855,10 @@ number.3.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
     \afterGrace
-    f'8.
+    c'8.
     {
 
-        f'8
+        c'8
 
     }
 
@@ -762,10 +873,10 @@ number.3.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    f'16
+    c'16
     ~
 
-    f'8
+    c'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -937,8 +1048,8 @@ number.3.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
     }
 
@@ -956,8 +1067,8 @@ number.3.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -980,8 +1091,8 @@ number.3.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1009,8 +1120,8 @@ number.3.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1046,7 +1157,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c''8
+        c'8
         ~
 
     }
@@ -1056,7 +1167,7 @@ number.3.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 12]
-        c''8
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1074,12 +1185,12 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c''8
+        c'8
         ~
 
     }
 
-    c''4
+    c'4
     - \tweak stencil ##f
     ~
 
@@ -1087,7 +1198,7 @@ number.3.Guitar.1.Music = {
     \times 2/3
     {
 
-        c''8
+        c'8
         \repeatTie
 
           %! STAFF_HIGHLIGHT
@@ -1107,7 +1218,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c''4
+        c'4
 
     }
 
@@ -1168,8 +1279,8 @@ number.3.Guitar.2.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1189,8 +1300,8 @@ number.3.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1218,8 +1329,8 @@ number.3.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1239,8 +1350,8 @@ number.3.Guitar.2.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
-        c''8
+        \staffHighlight antiquewhite
+        c'8
 
     }
 
@@ -1277,7 +1388,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c''4
+        c'4
         - \tweak stencil ##f
         ~
 
@@ -1287,7 +1398,7 @@ number.3.Guitar.2.Music = {
     \times 2/3
     {
 
-        c''8
+        c'8
         \repeatTie
 
           %! STAFF_HIGHLIGHT
@@ -1312,7 +1423,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c''8
+        c'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1360,7 +1471,7 @@ number.3.Violin.Music = {
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c'16
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
@@ -1405,7 +1516,7 @@ number.3.Violin.Music = {
 
         % [Violin.Music measure 2]
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c'16
 
         c'16
@@ -1459,7 +1570,7 @@ number.3.Violin.Music = {
 
         % [Violin.Music measure 3]
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c'16
 
         c'16
@@ -1526,7 +1637,7 @@ number.3.Violin.Music = {
 
         % [Violin.Music measure 5]
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         c'16
@@ -1628,7 +1739,7 @@ number.3.Violin.Music = {
 
         % [Violin.Music measure 12]
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c'16
 
         c'16

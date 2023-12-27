@@ -599,7 +599,7 @@ number.4.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'16
 
       %! STAFF_HIGHLIGHT
@@ -613,7 +613,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'8
         ~
 
@@ -685,7 +685,7 @@ number.4.AltoFlute.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'8
 
     }
@@ -699,7 +699,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'8
         ~
 
@@ -773,7 +773,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'8
         ~
 
@@ -808,7 +808,7 @@ number.4.AltoFlute.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'16
     ~
 
@@ -820,7 +820,7 @@ number.4.AltoFlute.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'8.
 
       %! STAFF_HIGHLIGHT
@@ -833,7 +833,7 @@ number.4.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'8.
 
       %! STAFF_HIGHLIGHT
@@ -846,7 +846,7 @@ number.4.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'8.
     - \tweak stencil ##f
     ~
@@ -909,7 +909,7 @@ number.4.AltoFlute.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'16
 
       %! STAFF_HIGHLIGHT
@@ -924,7 +924,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'8
         ~
 
@@ -1007,7 +1007,7 @@ number.4.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgrey
+    \staffHighlight antiquewhite
     f'16
 
       %! STAFF_HIGHLIGHT
@@ -1021,7 +1021,7 @@ number.4.AltoFlute.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'4
         - \tweak stencil ##f
         ~
@@ -1056,7 +1056,7 @@ number.4.AltoFlute.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         f'4
         - \tweak stencil ##f
         ~
@@ -1245,7 +1245,7 @@ number.4.Guitar.1.Music = {
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-gt-i-markup
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c''4
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
@@ -1303,7 +1303,7 @@ number.4.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c''8
         ~
 
@@ -1355,7 +1355,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c''4
         - \tweak stencil ##f
         ~
@@ -1414,7 +1414,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c''4
         - \tweak stencil ##f
         ~
@@ -1511,7 +1511,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgrey
+        \staffHighlight antiquewhite
         c''4
 
     }

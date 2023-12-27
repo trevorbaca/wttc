@@ -488,7 +488,7 @@ def match(component_1, component_2):
 
 def material_annotation_spanner(argument, number):
     material_to_color = {
-        1: "lightgrey",
+        1: "antiquewhite",
         2: "lightblue",
         3: "lightgreen",
         4: "lightpink",
