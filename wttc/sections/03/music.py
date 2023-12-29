@@ -290,6 +290,7 @@ def fl(m):
         baca.hairpin(
             rrun,
             "niente o< mf >o niente o< mf >o niente o< mp >o niente",
+            forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(rrun, [1]),
         )
     with baca.scope(m[1, 2]) as o:
