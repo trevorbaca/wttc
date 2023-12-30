@@ -250,12 +250,6 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     return unwrapped_components
 
 
-def delete_components_in_previous_measure(voice, *, count=1):
-    components = get_components_in_previous_measure(voice, count=count)
-    index = voice.index(components[0])
-    del voice[index:]
-
-
 def eject_components_in_measures(voice, measure_numbers):
     components, time_signatures = get_measures(voice, measure_numbers)
     start = voice.index(components[0])
@@ -270,14 +264,6 @@ def eject_components_in_previous_measure(voice, *, count=1):
     stop = voice.index(components[-1])
     voice[start : stop + 1] = []
     return components
-
-
-def end_at_right(sequence, total):
-    assert total <= abjad.math.weight(sequence), repr((sequence, total))
-    sequence_ = abjad.sequence.reverse(sequence)
-    sequence_ = abjad.sequence.split(sequence_, [total])[0]
-    sequence_ = abjad.sequence.reverse(sequence_)
-    return sequence_
 
 
 def force_repeat_tie(components, threshold=(1, 8)):
@@ -572,6 +558,15 @@ def merge(components_1, components_2, time_signature):
     return components
 
 
+def niente_swell_string(dynamic_peak_string):
+    parts = dynamic_peak_string.split()
+    result = []
+    for part in parts:
+        result.append(f"niente o< {part} >o")
+    string = " ".join(result) + " niente"
+    return string
+
+
 def overlap_previous_measure(voice, components, time_signatures):
     voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
     first_measure, time_signatures_ = eject_components_in_measures(voice_, 1)
@@ -653,35 +648,6 @@ def series_g(width, offset, start, length):
         pairs.append((left, right))
     counts = abjad.sequence.flatten(pairs)
     return counts
-
-
-def split_and_keep_left(voice, duration, *, count=1):
-    assert isinstance(duration, abjad.Duration), repr(duration)
-    components = get_components_in_previous_measure(voice, count=count)
-    if duration < 0:
-        components_duration = abjad.get.duration(components)
-        duration = components_duration + duration
-    lists = abjad.mutate.split(components, [duration])
-    assert len(lists) == 2, repr(lists)
-    components = get_components_in_previous_measure(voice, count=count)
-    lists = abjad.select.partition_by_durations(components, [duration], overhang=True)
-    assert len(lists) == 2, repr(lists)
-    index = voice.index(lists[1][0])
-    del voice[index:]
-
-
-def split_and_keep_middle(components, durations):
-    assert len(durations) == 2, repr(durations)
-    lists = abjad.mutate.split(components, durations)
-    assert len(lists) == 3, repr(lists)
-    return lists[1]
-
-
-def split_and_keep_right(components, duration):
-    assert isinstance(duration, abjad.Duration), repr(duration)
-    lists = abjad.mutate.split(components, [duration])
-    assert len(lists) == 2, repr(lists)
-    return lists[1]
 
 
 def swell(n):

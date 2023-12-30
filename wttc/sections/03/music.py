@@ -284,7 +284,7 @@ def fl(m):
         rrun = baca.select.rleak(run)
         baca.hairpin(
             rrun,
-            "niente o< mf >o niente o< mf >o niente o< mp >o niente",
+            library.niente_swell_string("mf mf mp"),
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(rrun, [1]),
         )
@@ -306,8 +306,7 @@ def fl(m):
         baca.pitch(leaves, "E4")
         baca.hairpin(
             leaves,
-            "niente o< p >o niente o< mp >o niente o< mf >o niente o<"
-            + " mp >o niente o< p >o",
+            library.niente_swell_string("p mp mf mp p"),
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
         )
