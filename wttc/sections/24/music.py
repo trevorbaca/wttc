@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 24 ##########################################
@@ -507,7 +507,7 @@ def ob(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "Oboe", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-oboe-markup")
+        baca.instrument_name(leaf, strings.oboe_markup)
         baca.short_instrument_name(leaf, "Ob.", library.manifests)
         baca.clef(leaf, "treble")
         baca.literal(
@@ -524,7 +524,7 @@ def gt1(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "Guitar", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-guitar-i-markup")
+        baca.instrument_name(leaf, strings.guitar_i_markup)
         baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
         baca.clef(leaf, "treble")
 
@@ -534,7 +534,7 @@ def gt2(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "Guitar", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-guitar-ii-markup")
+        baca.instrument_name(leaf, strings.guitar_ii_markup)
         baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
         baca.clef(leaf, "treble")
         baca.literal(
@@ -551,7 +551,7 @@ def vn(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "Violin", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-violin-markup")
+        baca.instrument_name(leaf, strings.violin_markup)
         baca.short_instrument_name(leaf, "Vn.", library.manifests)
         baca.clef(leaf, "treble")
 
@@ -561,7 +561,7 @@ def vc(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "Cello", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-cello-markup")
+        baca.instrument_name(leaf, strings.cello_markup)
         baca.short_instrument_name(leaf, "Vc.", library.manifests)
         baca.clef(leaf, "treble")
         baca.literal(
