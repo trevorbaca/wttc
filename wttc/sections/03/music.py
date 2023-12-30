@@ -269,40 +269,58 @@ def VC(voice, meters):
 
 
 def fl(m):
-    with baca.scope(m.leaves()) as o:
-        baca.instrument(o.leaf(0), "AltoFlute", manifests=library.manifests)
-        baca.instrument_name(o.leaf(0), r"\wttc-alto-flute-markup")
-        baca.short_instrument_name(o.leaf(0), "Afl.", library.manifests)
-        baca.clef(o.leaf(0), "treble")
-    with baca.scope(m[1, 4]) as o:
-        for run in o.runs():
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        baca.instrument(leaf, "AltoFlute", manifests=library.manifests)
+        baca.instrument_name(leaf, r"\wttc-alto-flute-markup")
+        baca.short_instrument_name(leaf, "Afl.", library.manifests)
+        baca.clef(leaf, "treble")
+
+    @baca.call
+    def block():
+        leaves = m[1, 4]
+        runs = abjad.select.runs(leaves)
+        for run in runs:
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 1)
-    with baca.scope(m[1, 2]) as o:
-        run = o.run(0)
-        baca.pitch(run, "F#4")
-        rrun = baca.select.rleak(run)
+
+    @baca.call
+    def block():
+        leaves = m[1, 2]
+        runs = abjad.select.runs(leaves)
+        baca.pitch(runs[0], "F#4")
+        rrun = baca.select.rleak(runs[0])
         baca.hairpin(
             rrun,
             library.niente_swell_string("mf mf mp"),
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(rrun, [1]),
         )
-    with baca.scope(m[3, 4]) as o:
-        run = o.run(0)
-        baca.pitch(run, "F4")
+
+    @baca.call
+    def block():
+        leaves = m[3, 4]
+        runs = abjad.select.runs(leaves)
+        baca.pitch(runs[0], "F4")
         baca.hairpin(
-            run,
+            runs[0],
             "niente o< p >o",
             bookend=False,
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(run, [1]),
+            pieces=baca.select.clparts(runs[0], [1]),
         )
-        baca.dynamic(o.rest(0), "niente")
-    with baca.scope(m[1, 6]) as o:
-        baca.override.dls_staff_padding(o, 3.5)
-    with baca.scope(m[5, 7]) as o:
-        leaves = o.leaves()[:10]
+        rest = abjad.select.rest(leaves, 0)
+        baca.dynamic(rest, "niente")
+
+    @baca.call
+    def block():
+        leaves = m[1, 6]
+        baca.override.dls_staff_padding(leaves, 3.5)
+
+    @baca.call
+    def block():
+        leaves = m[5, 7][:10]
         baca.pitch(leaves, "E4")
         baca.hairpin(
             leaves,
@@ -310,37 +328,50 @@ def fl(m):
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
         )
-        library.material_annotation_spanner(o.leaves()[:10], 1)
-        baca.pitches(o.leaves()[-3:], "C6 C6 B5")
-    with baca.scope(m[7]) as o:
-        leaves = o.leaves()[-3:]
+        library.material_annotation_spanner(leaves, 1)
+
+    @baca.call
+    def block():
+        leaves = m[7][-3:]
         library.material_annotation_spanner(leaves, 3)
-        baca.hairpin(
-            leaves,
-            "f >o niente",
-        )
-        baca.glissando(leaves, allow_repeats=True, hide_middle_note_heads=True)
-    with baca.scope(m[8, 11]) as o:
-        baca.dynamic(o.leaf(0), "f")
-        library.material_annotation_spanner(o.run(0), 3)
-        library.material_annotation_spanner(o.run(1), 99)
-    with baca.scope(m[12]) as o:
-        library.material_annotation_spanner(o.pleaves()[:2], 1)
-        library.material_annotation_spanner(o.pleaves()[2:4], 3)
-        library.material_annotation_spanner(o.run(1), 99)
-    with baca.scope(m[13]) as o:
-        library.material_annotation_spanner(o.run(0), 3)
-        library.material_annotation_spanner(o.run(1), 99)
+        baca.flat_glissando(leaves, "C6", stop_pitch="B5")
+        baca.hairpin(leaves, "f >o niente")
+
+    @baca.call
+    def block():
+        leaves = m[8, 11]
+        runs = abjad.select.runs(leaves)
+        baca.dynamic(leaves[0], "f")
+        library.material_annotation_spanner(runs[0], 3)
+        library.material_annotation_spanner(runs[1], 99)
+
+    @baca.call
+    def block():
+        leaves = m[12]
+        pleaves = baca.select.pleaves(leaves)
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(pleaves[:2], 1)
+        library.material_annotation_spanner(pleaves[2:4], 3)
+        library.material_annotation_spanner(runs[1], 99)
+
+    @baca.call
+    def block():
+        leaves = m[13]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 3)
+        library.material_annotation_spanner(runs[1], 99)
 
 
 def ob(m):
-    with baca.scope(m.leaves()) as o:
-        baca.instrument(o.leaf(0), "Oboe", manifests=library.manifests)
-        baca.instrument_name(o.leaf(0), r"\wttc-oboe-markup")
-        baca.short_instrument_name(o.leaf(0), "Ob.", library.manifests)
-        baca.clef(o.leaf(0), "treble")
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        baca.instrument(leaf, "Oboe", manifests=library.manifests)
+        baca.instrument_name(leaf, r"\wttc-oboe-markup")
+        baca.short_instrument_name(leaf, "Ob.", library.manifests)
+        baca.clef(leaf, "treble")
         baca.literal(
-            o.leaf(0),
+            leaf,
             [
                 r"\override Staff.RehearsalMark.direction = #down",
                 r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
@@ -349,11 +380,14 @@ def ob(m):
 
 
 def gt1(m):
-    with baca.scope(m.leaves()) as o:
-        baca.instrument(o.leaf(0), "Guitar", manifests=library.manifests)
-        baca.instrument_name(o.leaf(0), r"\wttc-guitar-i-markup")
-        baca.short_instrument_name(o.leaf(0), "Gt. 1", library.manifests)
-        baca.clef(o.leaf(0), "treble")
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        baca.instrument(leaf, "Guitar", manifests=library.manifests)
+        baca.instrument_name(leaf, r"\wttc-guitar-i-markup")
+        baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
+        baca.clef(leaf, "treble")
+
     with baca.scope(m[1, 7]) as o:
         for run in o.runs():
             run = baca.select.plts(run)
@@ -365,18 +399,21 @@ def gt1(m):
 
 
 def gt2(m):
-    with baca.scope(m.leaves()) as o:
-        baca.instrument(o.leaf(0), "Guitar", manifests=library.manifests)
-        baca.instrument_name(o.leaf(0), r"\wttc-guitar-ii-markup")
-        baca.short_instrument_name(o.leaf(0), "Gt. 2", library.manifests)
-        baca.clef(o.leaf(0), "treble")
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        baca.instrument(leaf, "Guitar", manifests=library.manifests)
+        baca.instrument_name(leaf, r"\wttc-guitar-ii-markup")
+        baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
+        baca.clef(leaf, "treble")
         baca.literal(
-            o.leaf(0),
+            leaf,
             [
                 r"\override Staff.RehearsalMark.direction = #down",
                 r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
             ],
         )
+
     with baca.scope(m[1, 7]) as o:
         for run in o.runs():
             run = baca.select.plts(run)
@@ -388,11 +425,14 @@ def gt2(m):
 
 
 def vn(m):
-    with baca.scope(m.leaves()) as o:
-        baca.instrument(o.leaf(0), "Violin", manifests=library.manifests)
-        baca.instrument_name(o.leaf(0), r"\wttc-violin-markup")
-        baca.short_instrument_name(o.leaf(0), "Vn.", library.manifests)
-        baca.clef(o.leaf(0), "treble")
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        baca.instrument(leaf, "Violin", manifests=library.manifests)
+        baca.instrument_name(leaf, r"\wttc-violin-markup")
+        baca.short_instrument_name(leaf, "Vn.", library.manifests)
+        baca.clef(leaf, "treble")
+
     with baca.scope(m[1]) as o:
         library.material_annotation_spanner(o.run(0), 1)
         library.material_annotation_spanner(o.run(1), 2)
@@ -414,18 +454,21 @@ def vn(m):
 
 
 def vc(m):
-    with baca.scope(m.leaves()) as o:
-        baca.instrument(o.leaf(0), "Cello", manifests=library.manifests)
-        baca.instrument_name(o.leaf(0), r"\wttc-cello-markup")
-        baca.short_instrument_name(o.leaf(0), "Vc.", library.manifests)
-        baca.clef(o.leaf(0), "treble")
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        baca.instrument(leaf, "Cello", manifests=library.manifests)
+        baca.instrument_name(leaf, r"\wttc-cello-markup")
+        baca.short_instrument_name(leaf, "Vc.", library.manifests)
+        baca.clef(leaf, "treble")
         baca.literal(
-            o.leaf(0),
+            leaf,
             [
                 r"\override Staff.RehearsalMark.direction = #down",
                 r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
             ],
         )
+
     with baca.scope(m[1, 5]) as o:
         for run in o.runs():
             run = baca.select.plts(run)
