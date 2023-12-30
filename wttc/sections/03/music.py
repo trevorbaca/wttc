@@ -58,13 +58,8 @@ def FL(voice, meters):
         3 * [pair(4, 8, 4, 8)] + ["-"],
     )
     rhythm(
-        meters(3),
-        [4, t(4), 4, -4],
-        do_not_rewrite_meter=True,
-    )
-    rhythm(
-        meters(4),
-        ["-", 4],
+        meters(3, 4),
+        3 * [pair(4, 8, 4, 8)] + ["-"],
     )
     rhythm(
         meters(5),
@@ -76,7 +71,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7),
-        [rt(4), -3, 1, AG([2], 8)],
+        [4, rt(3), 1, AG([2], 8)],
     )
     rhythm(
         meters(8, 9),
@@ -279,7 +274,7 @@ def fl(m):
         baca.instrument_name(o.leaf(0), r"\wttc-alto-flute-markup")
         baca.short_instrument_name(o.leaf(0), "Afl.", library.manifests)
         baca.clef(o.leaf(0), "treble")
-    with baca.scope(m[1, 6]) as o:
+    with baca.scope(m[1, 4]) as o:
         for run in o.runs():
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 1)
@@ -293,11 +288,41 @@ def fl(m):
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(rrun, [1]),
         )
-    with baca.scope(m[1, 2]) as o:
+    with baca.scope(m[3, 4]) as o:
+        run = o.run(0)
+        baca.pitch(run, "F4")
+        baca.hairpin(
+            run,
+            "niente o< p >o",
+            bookend=False,
+            forbid_al_niente_to_bar_line=True,
+            pieces=baca.select.clparts(run, [1]),
+        )
+        baca.dynamic(o.rest(0), "niente")
+    with baca.scope(m[1, 6]) as o:
         baca.override.dls_staff_padding(o, 3.5)
+    with baca.scope(m[5, 7]) as o:
+        leaves = o.leaves()[:10]
+        baca.pitch(leaves, "E4")
+        baca.hairpin(
+            leaves,
+            "niente o< p >o niente o< mp >o niente o< mf >o niente o<"
+            + " mp >o niente o< p >o",
+            forbid_al_niente_to_bar_line=True,
+            pieces=baca.select.clparts(leaves, [1]),
+        )
+        library.material_annotation_spanner(o.leaves()[:10], 1)
+        baca.pitches(o.leaves()[-3:], "C6 C6 B5")
     with baca.scope(m[7]) as o:
-        library.material_annotation_spanner(o.run(-1), 3)
+        leaves = o.leaves()[-3:]
+        library.material_annotation_spanner(leaves, 3)
+        baca.hairpin(
+            leaves,
+            "f >o niente",
+        )
+        baca.glissando(leaves, allow_repeats=True, hide_middle_note_heads=True)
     with baca.scope(m[8, 11]) as o:
+        baca.dynamic(o.leaf(0), "f")
         library.material_annotation_spanner(o.run(0), 3)
         library.material_annotation_spanner(o.run(1), 99)
     with baca.scope(m[12]) as o:
