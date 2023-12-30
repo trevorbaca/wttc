@@ -382,12 +382,19 @@ def gt1(m):
         baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
         baca.clef(leaf, "treble")
 
-    with baca.scope(m[1, 7]) as o:
-        for run in o.runs():
+    @baca.call
+    def block():
+        leaves = m[1, 7]
+        runs = abjad.select.runs(leaves)
+        for run in runs:
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 1)
-    with baca.scope(m[11, 13]) as o:
-        for run in o.runs():
+
+    @baca.call
+    def block():
+        leaves = m[11, 13]
+        runs = abjad.select.runs(leaves)
+        for run in runs:
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 99)
 
@@ -402,12 +409,19 @@ def gt2(m):
         baca.clef(leaf, "treble")
         library.rotate_rehearsal_mark_literal(leaf)
 
-    with baca.scope(m[1, 7]) as o:
-        for run in o.runs():
+    @baca.call
+    def block():
+        leaves = m[1, 7]
+        runs = abjad.select.runs(leaves)
+        for run in runs:
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 1)
-    with baca.scope(m[11, 13]) as o:
-        for run in o.runs():
+
+    @baca.call
+    def block():
+        leaves = m[11, 13]
+        runs = abjad.select.runs(leaves)
+        for run in runs:
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 99)
 
@@ -421,24 +435,47 @@ def vn(m):
         baca.short_instrument_name(leaf, "Vn.", library.manifests)
         baca.clef(leaf, "treble")
 
-    with baca.scope(m[1]) as o:
-        library.material_annotation_spanner(o.run(0), 1)
-        library.material_annotation_spanner(o.run(1), 2)
-    with baca.scope(m[2]) as o:
-        library.material_annotation_spanner(o.run(0), 1)
-        library.material_annotation_spanner(o.run(1), 2)
-    with baca.scope(m[3, 4]) as o:
-        library.material_annotation_spanner(o.run(0), 1)
-        library.material_annotation_spanner(o.run(1), 2)
-    library.material_annotation_spanner(m[5, 6], 1)
-    with baca.scope(m[7]) as o:
-        library.material_annotation_spanner(o.run(0), 2)
-    with baca.scope(m[11, 13]) as o:
-        library.material_annotation_spanner(o.run(0), 99)
-        library.material_annotation_spanner(o.run(1), 1)
-        library.material_annotation_spanner(o.run(2), 99)
-        library.material_annotation_spanner(o.run(3), 99)
-        library.material_annotation_spanner(o.run(4), 99)
+    @baca.call
+    def block():
+        leaves = m[1]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 1)
+        library.material_annotation_spanner(runs[1], 2)
+
+    @baca.call
+    def block():
+        leaves = m[2]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 1)
+        library.material_annotation_spanner(runs[1], 2)
+
+    @baca.call
+    def block():
+        leaves = m[3, 4]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 1)
+        library.material_annotation_spanner(runs[1], 2)
+
+    @baca.call
+    def block():
+        leaves = m[5, 6]
+        library.material_annotation_spanner(leaves, 1)
+
+    @baca.call
+    def block():
+        leaves = m[7]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 2)
+
+    @baca.call
+    def block():
+        leaves = m[11, 13]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 99)
+        library.material_annotation_spanner(runs[1], 1)
+        library.material_annotation_spanner(runs[2], 99)
+        library.material_annotation_spanner(runs[3], 99)
+        library.material_annotation_spanner(runs[4], 99)
 
 
 def vc(m):
@@ -451,20 +488,31 @@ def vc(m):
         baca.clef(leaf, "treble")
         library.rotate_rehearsal_mark_literal(leaf)
 
-    with baca.scope(m[1, 5]) as o:
-        for run in o.runs():
+    @baca.call
+    def block():
+        leaves = m[1, 5]
+        runs = abjad.select.runs(leaves)
+        for run in runs:
             run = baca.select.plts(run)
             library.material_annotation_spanner(run, 2)
-    with baca.scope(m[6, 7]) as o:
-        library.material_annotation_spanner(o.plts()[:-1], 2)
-        library.material_annotation_spanner(o.plts()[-1:], 3)
-    with baca.scope(m[8, 13]) as o:
-        library.material_annotation_spanner(o.run(0), 3)
-        library.material_annotation_spanner(o.run(1), 99)
-        library.material_annotation_spanner(o.run(2), 3)
-        library.material_annotation_spanner(o.run(3), 99)
-        library.material_annotation_spanner(o.run(4), 3)
-        library.material_annotation_spanner(o.run(5), 99)
+
+    @baca.call
+    def block():
+        leaves = m[6, 7]
+        plts = baca.select.plts(leaves)
+        library.material_annotation_spanner(plts[:-1], 2)
+        library.material_annotation_spanner(plts[-1:], 3)
+
+    @baca.call
+    def block():
+        leaves = m[8, 13]
+        runs = abjad.select.runs(leaves)
+        library.material_annotation_spanner(runs[0], 3)
+        library.material_annotation_spanner(runs[1], 99)
+        library.material_annotation_spanner(runs[2], 3)
+        library.material_annotation_spanner(runs[3], 99)
+        library.material_annotation_spanner(runs[4], 3)
+        library.material_annotation_spanner(runs[5], 99)
 
 
 @baca.build.timed("make_score")
