@@ -640,6 +640,16 @@ def rhythm(
     return components
 
 
+def rotate_rehearsal_mark_literal(leaf):
+    baca.literal(
+        leaf,
+        [
+            r"\override Staff.RehearsalMark.direction = #down",
+            r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
+        ],
+    )
+
+
 def series_g(width, offset, start, length):
     pairs = []
     for i in range(length):

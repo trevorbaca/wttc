@@ -510,13 +510,7 @@ def ob(m):
         baca.instrument_name(leaf, strings.oboe_markup)
         baca.short_instrument_name(leaf, "Ob.", library.manifests)
         baca.clef(leaf, "treble")
-        baca.literal(
-            leaf,
-            [
-                r"\override Staff.RehearsalMark.direction = #down",
-                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
-            ],
-        )
+        library.rotate_rehearsal_mark_literal(leaf)
 
 
 def gt1(m):
@@ -537,13 +531,7 @@ def gt2(m):
         baca.instrument_name(leaf, strings.guitar_ii_markup)
         baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
         baca.clef(leaf, "treble")
-        baca.literal(
-            leaf,
-            [
-                r"\override Staff.RehearsalMark.direction = #down",
-                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
-            ],
-        )
+        library.rotate_rehearsal_mark_literal(leaf)
 
 
 def vn(m):
@@ -564,13 +552,7 @@ def vc(m):
         baca.instrument_name(leaf, strings.cello_markup)
         baca.short_instrument_name(leaf, "Vc.", library.manifests)
         baca.clef(leaf, "treble")
-        baca.literal(
-            leaf,
-            [
-                r"\override Staff.RehearsalMark.direction = #down",
-                r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
-            ],
-        )
+        library.rotate_rehearsal_mark_literal(leaf)
 
 
 @baca.build.timed("make_score")
