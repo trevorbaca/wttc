@@ -341,25 +341,77 @@ def fl(m):
     def block():
         leaves = m[8, 11]
         runs = abjad.select.runs(leaves)
-        baca.dynamic(leaves[0], "f")
         library.material_annotation_spanner(runs[0], 3)
         library.material_annotation_spanner(runs[1], 99)
+        baca.flat_glissando(leaves[:3], "C6", stop_pitch="B5")
+        baca.hairpin(leaves[:3], "mf >o !")
+        baca.flat_glissando(m[10], "D6", stop_pitch="C#6")
+        baca.hairpin(m[10], "mp >o !")
+        baca.flat_glissando(m[11][:2], "Eb6", stop_pitch="D6")
+        baca.hairpin(m[11][:2], "p >o !")
+        baca.override.dls_staff_padding(runs[0], 3.5)
+
+    @baca.call
+    def block():
+        run = abjad.select.run(m[11], 1)
+        baca.pitch(run, "G#3")
+        baca.covered_spanner(
+            baca.select.rleak(run),
+            abjad.Tweak(r"- \tweak staff-padding 3"),
+            items=r"\baca-cov-markup =|",
+        )
+        baca.dynamic(run[0], "mp")
+        baca.override.dls_staff_padding(run, 5)
 
     @baca.call
     def block():
         leaves = m[12]
         pleaves = baca.select.pleaves(leaves)
         runs = abjad.select.runs(leaves)
-        library.material_annotation_spanner(pleaves[:2], 1)
-        library.material_annotation_spanner(pleaves[2:4], 3)
-        library.material_annotation_spanner(runs[1], 99)
+        first = pleaves[:2]
+        library.material_annotation_spanner(first, 1)
+        baca.pitch(first, "E4")
+        baca.hairpin(
+            first,
+            "niente o< p >o",
+            pieces=baca.select.clparts(first, [1]),
+        )
+        baca.dynamic(baca.select.rleak(first), "!")
+        second = pleaves[2:4]
+        library.material_annotation_spanner(second, 3)
+        baca.flat_glissando(second, "E6", stop_pitch="D#6")
+        baca.hairpin(second, "p >o !")
+        baca.override.dls_staff_padding(first + second, 3.5)
+        third = runs[1]
+        library.material_annotation_spanner(third, 99)
+        baca.pitch(third, "G#3")
+        baca.covered_spanner(
+            baca.select.rleak(third),
+            abjad.Tweak(r"- \tweak staff-padding 3"),
+            items=r"\baca-cov-markup =|",
+        )
+        baca.dynamic(third[0], "mp")
+        baca.override.dls_staff_padding(third, 5)
 
     @baca.call
     def block():
         leaves = m[13]
         runs = abjad.select.runs(leaves)
-        library.material_annotation_spanner(runs[0], 3)
-        library.material_annotation_spanner(runs[1], 99)
+        first = runs[0]
+        library.material_annotation_spanner(first, 3)
+        baca.flat_glissando(first, "F6", stop_pitch="E6")
+        baca.hairpin(first, "p >o !")
+        baca.override.dls_staff_padding(first, 3)
+        second = runs[1]
+        library.material_annotation_spanner(second, 99)
+        baca.pitch(second, "G#3")
+        baca.covered_spanner(
+            baca.select.rleak(second),
+            abjad.Tweak(r"- \tweak staff-padding 3"),
+            items=r"\baca-cov-markup =|",
+        )
+        baca.dynamic(second[0], "mp")
+        baca.override.dls_staff_padding(second, 5)
 
 
 def ob(m):
@@ -559,7 +611,6 @@ def persist_score(score, environment):
         library.manifests,
         do_not_check_wellformedness=True,
         do_not_color_repeat_pitch_classes=True,
-        do_not_transpose_score=True,
         global_rests_in_topmost_staff=True,
     )
     baca.tags.activate(

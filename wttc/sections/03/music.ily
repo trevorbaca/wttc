@@ -480,7 +480,7 @@ number.3.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! STAFF_HIGHLIGHT
     \staffHighlight antiquewhite
-    fs'!2 * 1/2
+    b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -514,7 +514,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    fs'!2 * 1/2
+    b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -535,7 +535,7 @@ number.3.AltoFlute.Music = {
       %! SPANNER_START
     \>
 
-    fs'!2 * 1/2
+    b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -560,7 +560,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    fs'!2 * 1/2
+    b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -582,7 +582,7 @@ number.3.AltoFlute.Music = {
     \>
 
     % [AltoFlute.Music measure 2]
-    fs'!2 * 1/2
+    b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -607,7 +607,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    fs'!2 * 1/2
+    b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -642,7 +642,7 @@ number.3.AltoFlute.Music = {
     % [AltoFlute.Music measure 3]
       %! STAFF_HIGHLIGHT
     \staffHighlight antiquewhite
-    f'2 * 1/2
+    bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -667,7 +667,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -688,7 +688,7 @@ number.3.AltoFlute.Music = {
       %! SPANNER_START
     \>
 
-    f'2 * 1/2
+    bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -713,7 +713,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -735,7 +735,7 @@ number.3.AltoFlute.Music = {
     \>
 
     % [AltoFlute.Music measure 4]
-    f'2 * 1/2
+    bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -760,7 +760,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2 * 1/2
+    bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -793,7 +793,7 @@ number.3.AltoFlute.Music = {
     % [AltoFlute.Music measure 5]
       %! STAFF_HIGHLIGHT
     \staffHighlight antiquewhite
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -818,7 +818,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -839,7 +839,7 @@ number.3.AltoFlute.Music = {
       %! SPANNER_START
     \>
 
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -864,7 +864,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -886,7 +886,7 @@ number.3.AltoFlute.Music = {
     \>
 
     % [AltoFlute.Music measure 6]
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -911,7 +911,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -932,7 +932,7 @@ number.3.AltoFlute.Music = {
       %! SPANNER_START
     \>
 
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -957,7 +957,7 @@ number.3.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'2 * 1/2
+    a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -980,7 +980,7 @@ number.3.AltoFlute.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 7]
-    e'4
+    a'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1001,7 +1001,7 @@ number.3.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
-    e'8.
+    a'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1026,7 +1026,7 @@ number.3.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'''16
+    f'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1055,14 +1055,14 @@ number.3.AltoFlute.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     \afterGrace
-    c'''2
+    f'''2
     {
 
         \revert Accidental.stencil
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-        b''8
+        e'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
@@ -1075,46 +1075,133 @@ number.3.AltoFlute.Music = {
 
 
     % [AltoFlute.Music measure 8]
+    \override DynamicLineSpanner.staff-padding = 3.5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'1
+    f'''1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \f
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_STOP
+    \mf
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [AltoFlute.Music measure 9]
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    c'1
-    \repeatTie
+    f'''1
     {
 
-        c'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        e'''8
+          %! SPANNER_STOP
+        \!
 
     }
 
 
     % [AltoFlute.Music measure 10]
     \afterGrace
-    c'1
+    g'''1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-        c'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        fs'''!8
+          %! SPANNER_STOP
+        \!
 
     }
 
 
     % [AltoFlute.Music measure 11]
     \afterGrace
-    c'8.
+    af'''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-        c'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        g'''8
+          %! SPANNER_STOP
+        \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1125,41 +1212,139 @@ number.3.AltoFlute.Music = {
 
     r8.
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c'16
+    cs'!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-cov-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
     ~
 
-    c'8
+    cs'8
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! COVERED_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 12]
+    \override DynamicLineSpanner.staff-padding = 3.5
       %! STAFF_HIGHLIGHT
     \staffHighlight antiquewhite
-    c'2 * 1/2
+    a'2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    c'2 * 1/2
+    a'2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     \afterGrace
-    c'8.
+    a'''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-        c'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gs'''!8
+          %! SPANNER_STOP
+        \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1172,25 +1357,83 @@ number.3.AltoFlute.Music = {
 
     r8.
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c'16
+    cs'!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-cov-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
     ~
 
-    c'8
+    cs'8
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! COVERED_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 13]
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
     \afterGrace
-    c'8.
+    bf'''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-        c'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        a'''8
+          %! SPANNER_STOP
+        \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1203,16 +1446,41 @@ number.3.AltoFlute.Music = {
 
     r8.
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c'16
+    cs'!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-cov-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
     ~
 
-    c'8
+    cs'8
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! COVERED_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
 
 }
 
@@ -1381,7 +1649,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
     }
 
@@ -1400,7 +1668,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1424,7 +1692,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1453,7 +1721,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1489,7 +1757,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'8
+        c''8
         ~
 
     }
@@ -1499,7 +1767,7 @@ number.3.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 12]
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1517,12 +1785,12 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'8
+        c''8
         ~
 
     }
 
-    c'4
+    c''4
     - \tweak stencil ##f
     ~
 
@@ -1530,7 +1798,7 @@ number.3.Guitar.1.Music = {
     \times 2/3
     {
 
-        c'8
+        c''8
         \repeatTie
 
           %! STAFF_HIGHLIGHT
@@ -1550,7 +1818,7 @@ number.3.Guitar.1.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'4
+        c''4
 
     }
 
@@ -1612,7 +1880,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1633,7 +1901,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1662,7 +1930,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1683,7 +1951,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'8
+        c''8
 
     }
 
@@ -1720,7 +1988,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'4
+        c''4
         - \tweak stencil ##f
         ~
 
@@ -1730,7 +1998,7 @@ number.3.Guitar.2.Music = {
     \times 2/3
     {
 
-        c'8
+        c''8
         \repeatTie
 
           %! STAFF_HIGHLIGHT
@@ -1755,7 +2023,7 @@ number.3.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'8
+        c''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight

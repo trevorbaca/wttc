@@ -667,7 +667,7 @@ def swell(n):
 
 
 instruments = {
-    "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, E6]")),
+    "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, F6]")),
     "Oboe": abjad.Oboe(),
     "Guitar": abjad.Guitar(),
     "Violin": abjad.Violin(),
