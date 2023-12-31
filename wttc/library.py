@@ -558,7 +558,7 @@ def merge(components_1, components_2, time_signature):
     return components
 
 
-def niente_swell_string(dynamic_peak_string):
+def niente_swells(dynamic_peak_string):
     parts = dynamic_peak_string.split()
     result = []
     for part in parts:

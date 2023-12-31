@@ -89,6 +89,16 @@
                 value="Vc.",
             ),
         ],
+        "Guitar.1.Music": [
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="\\baca-effort-mf",
+            )
+        ],
         "Guitar.1.Staff": [
             baca.Memento(
                 context="Guitar.1.Music",
@@ -114,6 +124,16 @@
                 synthetic_offset=None,
                 value="Gt. 1",
             ),
+        ],
+        "Guitar.2.Music": [
+            baca.Memento(
+                context="Guitar.2.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="\\baca-effort-mf",
+            )
         ],
         "Guitar.2.Staff": [
             baca.Memento(
@@ -184,6 +204,16 @@
                 synthetic_offset=None,
                 value="3/4",
             ),
+        ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="niente",
+            )
         ],
         "Violin.Staff": [
             baca.Memento(
