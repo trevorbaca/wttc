@@ -404,50 +404,50 @@ def fl(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[1])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 1)
-        library.material_annotation_spanner(plts[2:], 3)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 1)
+        library.staff_highlight(plts[2:], 3)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[2])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 1)
-        library.material_annotation_spanner(plts[2:], 3)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 1)
+        library.staff_highlight(plts[2:], 3)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[3])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 3)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 3)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[4, 7])
-        library.material_annotation_spanner(plts[0], 3)
-        library.material_annotation_spanner(plts[1], 1)
-        library.material_annotation_spanner(plts[2], 1)
-        library.material_annotation_spanner(plts[3], 1)
-        library.material_annotation_spanner(plts[4], 1)
+        library.staff_highlight(plts[0], 3)
+        library.staff_highlight(plts[1], 1)
+        library.staff_highlight(plts[2], 1)
+        library.staff_highlight(plts[3], 1)
+        library.staff_highlight(plts[4], 1)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[8])
-        library.material_annotation_spanner(plts, 3)
+        library.staff_highlight(plts, 3)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[10, 13])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 1)
-        library.material_annotation_spanner(plts[2:], 3)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 1)
+        library.staff_highlight(plts[2:], 3)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[14, 16])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 1)
-        library.material_annotation_spanner(plts[2], 1)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 1)
+        library.staff_highlight(plts[2], 1)
 
 
 def ob(m):
@@ -472,53 +472,53 @@ def gt1(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[1, 3])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 2)
-        library.material_annotation_spanner(plts[2], 2)
-        library.material_annotation_spanner(plts[3], 1)
-        library.material_annotation_spanner(plts[4], 2)
-        library.material_annotation_spanner(plts[5], 2)
-        library.material_annotation_spanner(plts[6], 1)
-        library.material_annotation_spanner(plts[7], 2)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 2)
+        library.staff_highlight(plts[2], 2)
+        library.staff_highlight(plts[3], 1)
+        library.staff_highlight(plts[4], 2)
+        library.staff_highlight(plts[5], 2)
+        library.staff_highlight(plts[6], 1)
+        library.staff_highlight(plts[7], 2)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[4])
-        library.material_annotation_spanner(plts[0], 4)
-        library.material_annotation_spanner(plts[1], 4)
+        library.staff_highlight(plts[0], 4)
+        library.staff_highlight(plts[1], 4)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[5, 7])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 2)
-        library.material_annotation_spanner(plts[2], 2)
-        library.material_annotation_spanner(plts[3], 2)
-        library.material_annotation_spanner(plts[4], 5)
-        library.material_annotation_spanner(plts[5], 5)
-        library.material_annotation_spanner(plts[6], 5)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 2)
+        library.staff_highlight(plts[2], 2)
+        library.staff_highlight(plts[3], 2)
+        library.staff_highlight(plts[4], 5)
+        library.staff_highlight(plts[5], 5)
+        library.staff_highlight(plts[6], 5)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[8, 10])
-        library.material_annotation_spanner(plts[0], 1)
-        library.material_annotation_spanner(plts[1], 2)
-        library.material_annotation_spanner(plts[2], 4)
-        library.material_annotation_spanner(plts[3], 4)
-        library.material_annotation_spanner(plts[4], 4)
-        library.material_annotation_spanner(plts[5], 4)
+        library.staff_highlight(plts[0], 1)
+        library.staff_highlight(plts[1], 2)
+        library.staff_highlight(plts[2], 4)
+        library.staff_highlight(plts[3], 4)
+        library.staff_highlight(plts[4], 4)
+        library.staff_highlight(plts[5], 4)
 
     @baca.call
     def block():
         plts = baca.select.plts(m[11, 16])
-        library.material_annotation_spanner(plts[0], 2)
-        library.material_annotation_spanner(plts[1], 4)
-        library.material_annotation_spanner(plts[2], 4)
-        library.material_annotation_spanner(plts[3], 4)
-        library.material_annotation_spanner(plts[4], 4)
-        library.material_annotation_spanner(plts[5], 4)
-        library.material_annotation_spanner(plts[6], 2)
-        library.material_annotation_spanner(plts[7], 2)
+        library.staff_highlight(plts[0], 2)
+        library.staff_highlight(plts[1], 4)
+        library.staff_highlight(plts[2], 4)
+        library.staff_highlight(plts[3], 4)
+        library.staff_highlight(plts[4], 4)
+        library.staff_highlight(plts[5], 4)
+        library.staff_highlight(plts[6], 2)
+        library.staff_highlight(plts[7], 2)
 
 
 def gt2(m):

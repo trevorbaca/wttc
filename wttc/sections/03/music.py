@@ -281,7 +281,7 @@ def fl(m):
         runs = abjad.select.runs(leaves)
         for run in runs:
             run = baca.select.plts(run)
-            library.material_annotation_spanner(run, 1)
+            library.staff_highlight(run, 1)
 
     @baca.call
     def block():
@@ -326,12 +326,12 @@ def fl(m):
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
         )
-        library.material_annotation_spanner(leaves, 1)
+        library.staff_highlight(leaves, 1)
 
     @baca.call
     def block():
         leaves = m[7][-3:]
-        library.material_annotation_spanner(leaves, 3)
+        library.staff_highlight(leaves, 3)
         baca.flat_glissando(leaves, "C6", stop_pitch="B5")
         baca.hairpin(leaves, "f >o niente")
 
@@ -339,8 +339,8 @@ def fl(m):
     def block():
         leaves = m[8, 11]
         runs = abjad.select.runs(leaves)
-        library.material_annotation_spanner(runs[0], 3)
-        library.material_annotation_spanner(runs[1], 99)
+        library.staff_highlight(runs[0], 3)
+        library.staff_highlight(runs[1], 99)
         baca.flat_glissando(leaves[:3], "C6", stop_pitch="B5")
         baca.hairpin(leaves[:3], "mf >o !")
         baca.flat_glissando(m[10], "D6", stop_pitch="C#6")
@@ -367,7 +367,7 @@ def fl(m):
         pleaves = baca.select.pleaves(leaves)
         runs = abjad.select.runs(leaves)
         first = pleaves[:2]
-        library.material_annotation_spanner(first, 1)
+        library.staff_highlight(first, 1)
         baca.pitch(first, "E4")
         baca.hairpin(
             first,
@@ -376,12 +376,12 @@ def fl(m):
         )
         baca.dynamic(baca.select.rleak(first), "!")
         second = pleaves[2:4]
-        library.material_annotation_spanner(second, 3)
+        library.staff_highlight(second, 3)
         baca.flat_glissando(second, "E6", stop_pitch="D#6")
         baca.hairpin(second, "p >o !")
         baca.override.dls_staff_padding(first + second, 3.5)
         third = runs[1]
-        library.material_annotation_spanner(third, 99)
+        library.staff_highlight(third, 99)
         baca.pitch(third, "G#3")
         baca.covered_spanner(
             baca.select.rleak(third),
@@ -396,12 +396,12 @@ def fl(m):
         leaves = m[13]
         runs = abjad.select.runs(leaves)
         first = runs[0]
-        library.material_annotation_spanner(first, 3)
+        library.staff_highlight(first, 3)
         baca.flat_glissando(first, "F6", stop_pitch="E6")
         baca.hairpin(first, "p >o !")
         baca.override.dls_staff_padding(first, 3)
         second = runs[1]
-        library.material_annotation_spanner(second, 99)
+        library.staff_highlight(second, 99)
         baca.pitch(second, "G#3")
         baca.covered_spanner(
             baca.select.rleak(second),
@@ -438,7 +438,7 @@ def gt1(m):
         runs = abjad.select.runs(leaves)
         for run in runs:
             run = baca.select.plts(run)
-            library.material_annotation_spanner(run, 1)
+            library.staff_highlight(run, 1)
         notes = abjad.select.notes(leaves)
         baca.pitches(notes, "Db5 Bb4 Ab4 F4")
         baca.laissez_vibrer(notes)
@@ -451,7 +451,7 @@ def gt1(m):
         leaves = m[11, 13]
         runs = abjad.select.runs(leaves)
         for run in runs:
-            library.material_annotation_spanner(run, 99)
+            library.staff_highlight(run, 99)
             baca.down_bow(run[0], abjad.Tweak(r"- \tweak padding 1"))
             if len(run) == 1:
                 run = baca.select.rleak(run)
@@ -478,7 +478,7 @@ def gt2(m):
         runs = abjad.select.runs(leaves)
         for run in runs:
             run = baca.select.plts(run)
-            library.material_annotation_spanner(run, 1)
+            library.staff_highlight(run, 1)
         notes = abjad.select.notes(leaves)
         baca.pitches(notes, "C5 B4 G4 Gb4")
         baca.laissez_vibrer(notes)
@@ -490,7 +490,7 @@ def gt2(m):
         leaves = m[11, 13]
         runs = abjad.select.runs(leaves)
         for run in runs:
-            library.material_annotation_spanner(run, 99)
+            library.staff_highlight(run, 99)
             baca.up_bow(run[0], abjad.Tweak(r"- \tweak padding 1"))
             if len(run) == 1:
                 run = baca.select.rleak(run)
@@ -513,7 +513,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[1], 0)
-        library.material_annotation_spanner(run, 1)
+        library.staff_highlight(run, 1)
         baca.pitches(run, "D4 F4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -525,7 +525,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[1], 1)
-        library.material_annotation_spanner(run, 2)
+        library.staff_highlight(run, 2)
         baca.flat_glissando(run, "D5", stop_pitch="Eb4")
         rrun = baca.select.rleak(run)
         baca.damp_spanner(rrun, abjad.Tweak(r"- \tweak staff-padding 3"))
@@ -543,7 +543,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[2], 0)
-        library.material_annotation_spanner(run, 1)
+        library.staff_highlight(run, 1)
         baca.pitches(run, "D4 F#4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -555,7 +555,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[2], 1)
-        library.material_annotation_spanner(run, 2)
+        library.staff_highlight(run, 2)
         baca.multistage_leaf_glissando(
             run,
             [("Db5", 3), ("E4", 2), ("C5", 3), ("F4", None)],
@@ -572,7 +572,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[3], 0)
-        library.material_annotation_spanner(run, 1)
+        library.staff_highlight(run, 1)
         baca.pitches(run, "E4 G4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -585,7 +585,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[3, 4], 1)
-        library.material_annotation_spanner(run, 2)
+        library.staff_highlight(run, 2)
         baca.multistage_leaf_glissando(
             run,
             [
@@ -615,7 +615,7 @@ def vn(m):
     @baca.call
     def block():
         leaves = m[5, 6]
-        library.material_annotation_spanner(leaves, 1)
+        library.staff_highlight(leaves, 1)
         baca.pitches(leaves, "E4 G#4")
         baca.hairpin(
             leaves[:7],
@@ -635,7 +635,7 @@ def vn(m):
     def block():
         leaves = m[7]
         run = abjad.select.run(leaves, 0)
-        library.material_annotation_spanner(run, 2)
+        library.staff_highlight(run, 2)
         baca.multistage_leaf_glissando(
             run,
             [
@@ -659,10 +659,10 @@ def vn(m):
     def block():
         leaves = m[11, 13]
         runs = abjad.select.runs(leaves)
-        library.material_annotation_spanner(runs[0], 99)
-        library.material_annotation_spanner(runs[2], 99)
-        library.material_annotation_spanner(runs[3], 99)
-        library.material_annotation_spanner(runs[4], 99)
+        library.staff_highlight(runs[0], 99)
+        library.staff_highlight(runs[2], 99)
+        library.staff_highlight(runs[3], 99)
+        library.staff_highlight(runs[4], 99)
 
     @baca.call
     def block():
@@ -685,7 +685,7 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[12], 0)
-        library.material_annotation_spanner(run, 1)
+        library.staff_highlight(run, 1)
         baca.pitches(run, "E4 G#4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -737,7 +737,7 @@ def vc(cache):
         runs = abjad.select.runs(leaves)
         for run in runs:
             run = baca.select.plts(run)
-            library.material_annotation_spanner(run, 2)
+            library.staff_highlight(run, 2)
 
     @baca.call
     def block():
@@ -828,8 +828,8 @@ def vc(cache):
     def block():
         leaves = m[6, 7]
         plts = baca.select.plts(leaves)
-        library.material_annotation_spanner(plts[:-1], 2)
-        library.material_annotation_spanner(plts[-1:], 3)
+        library.staff_highlight(plts[:-1], 2)
+        library.staff_highlight(plts[-1:], 3)
 
     @baca.call
     def block():
@@ -886,12 +886,12 @@ def vc(cache):
     def block():
         leaves = m[8, 13]
         runs = abjad.select.runs(leaves)
-        library.material_annotation_spanner(runs[0], 3)
-        library.material_annotation_spanner(runs[1], 99)
-        library.material_annotation_spanner(runs[2], 3)
-        library.material_annotation_spanner(runs[3], 99)
-        library.material_annotation_spanner(runs[4], 3)
-        library.material_annotation_spanner(runs[5], 99)
+        library.staff_highlight(runs[0], 3)
+        library.staff_highlight(runs[1], 99)
+        library.staff_highlight(runs[2], 3)
+        library.staff_highlight(runs[3], 99)
+        library.staff_highlight(runs[4], 3)
+        library.staff_highlight(runs[5], 99)
 
     @baca.call
     def block():

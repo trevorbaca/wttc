@@ -472,28 +472,6 @@ def match(component_1, component_2):
     return True
 
 
-def material_annotation_spanner(argument, number):
-    material_to_color = {
-        1: "antiquewhite",
-        2: "lightblue",
-        3: "lightgreen",
-        4: "lightpink",
-        5: "tan",
-        99: "yellow",
-    }
-    color = material_to_color[number]
-    wrappers = baca.literal(
-        abjad.select.leaf(argument, 0),
-        rf"\staffHighlight {color}",
-    )
-    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
-    wrappers = baca.literal(
-        baca.select.rleaf(argument, -1),
-        r"\stopStaffHighlight",
-    )
-    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
-
-
 def merge(components_1, components_2, time_signature):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert abjad.get.duration(components_1) == abjad.get.duration(components_2)
@@ -658,6 +636,28 @@ def series_g(width, offset, start, length):
         pairs.append((left, right))
     counts = abjad.sequence.flatten(pairs)
     return counts
+
+
+def staff_highlight(argument, number):
+    material_to_color = {
+        1: "antiquewhite",
+        2: "lightblue",
+        3: "lightgreen",
+        4: "lightpink",
+        5: "tan",
+        99: "yellow",
+    }
+    color = material_to_color[number]
+    wrappers = baca.literal(
+        abjad.select.leaf(argument, 0),
+        rf"\staffHighlight {color}",
+    )
+    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
+    wrappers = baca.literal(
+        baca.select.rleaf(argument, -1),
+        r"\stopStaffHighlight",
+    )
+    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
 
 
 def swell(n):
