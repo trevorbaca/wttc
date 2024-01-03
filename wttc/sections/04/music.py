@@ -78,12 +78,12 @@ def FL(voice, meters):
         [1, -2, -2, 4],
         extra_counts=[-1],
     )
-    container = abjad.AfterGraceContainer("e'16")
-    leaf = abjad.select.leaf(components, -1)
-    abjad.attach(container, leaf)
+    # container = abjad.AfterGraceContainer("e'16")
+    # leaf = abjad.select.leaf(components, -1)
+    # abjad.attach(container, leaf)
     rhythm(
         meters(4, 5),
-        [1, -14, 3, -2, 3, -9],
+        [4, -11, 3, -2, 3, -9],
     )
     rhythm(
         meters(6),
@@ -131,7 +131,49 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    components = rhythm.make_one_beat_tuplets(
+        meters(1),
+        [-3, -3, -1, 2, 2, 3, 4],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components):
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    components = rhythm.make_one_beat_tuplets(
+        meters(2),
+        [-3, -3, 2, 3, 1, "-"],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components):
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    components = rhythm.make_one_beat_tuplets(
+        meters(3),
+        ["-", 1],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components):
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    rhythm.mmrests(4, 7)
+    components = rhythm.make_one_beat_tuplets(
+        meters(8, 9),
+        [-4, 15, "-"],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components):
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    rhythm.mmrests(10, 11)
+    components = rhythm.make_one_beat_tuplets(
+        meters(12, 13),
+        [-1, 18, "-"],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components):
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    rhythm.mmrests(14, 16)
 
 
 def GT1(voice, meters):
@@ -410,6 +452,135 @@ def fl(m):
 
     @baca.call
     def block():
+        plts = baca.select.plts(m[1])[:2]
+        baca.pitch(plts, "G3")
+        baca.covered_spanner(plts, staff_padding=5.5)
+        baca.dynamic(plts[0].head, "mp")
+        baca.override.dls_staff_padding(plts, 4)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[1])[2:]
+        nongraces = baca.select.pleaves(plts, grace=False)
+        nongrace_plts = baca.select.plts(nongraces)
+        for nongrace_plt in nongrace_plts:
+            baca.pitch(nongrace_plt, "D5")
+            if 1 < len(nongrace_plt):
+                nongrace_plt = baca.select.rleak(nongrace_plt)
+            baca.trill_spanner(
+                nongrace_plt,
+                alteration="M2",
+                staff_padding=5.5,
+            )
+        baca.override.tie_down(plts)
+        graces = baca.select.pleaves(plts, grace=True)
+        baca.pitch(graces, "Eb4")
+        pleaves = baca.select.pleaves(m[1])[:4]
+        baca.override.tuplet_bracket_staff_padding(pleaves, 1),
+        hairpin_leaves = baca.select.rleak(plts[1:])
+        baca.hairpin(
+            hairpin_leaves,
+            "p < f >o niente",
+            pieces=baca.select.lparts(hairpin_leaves, [7, 3]),
+        )
+        baca.override.dls_staff_padding(hairpin_leaves, 6)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[2])[:2]
+        baca.pitch(plts, "G3")
+        baca.covered_spanner(
+            plts,
+            items=r"\baca-cov-markup =|",
+            staff_padding=5.5,
+        )
+        baca.dynamic(plts[0].head, "mf")
+        baca.override.dls_staff_padding(plts, 4)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[2])[3:]
+        nongraces = baca.select.pleaves(plts, grace=False)
+        nongrace_plts = baca.select.plts(nongraces)
+        for nongrace_plt in nongrace_plts:
+            baca.pitch(nongrace_plt, "D5")
+            if 1 < len(nongrace_plt):
+                nongrace_plt = baca.select.rleak(nongrace_plt)
+            baca.trill_spanner(
+                nongrace_plt,
+                alteration="M2",
+                staff_padding=5.5,
+            )
+        baca.override.tie_down(plts)
+        graces = baca.select.pleaves(plts, grace=True)
+        baca.pitch(graces, "Eb4")
+        pleaves = baca.select.pleaves(m[2])[:5]
+        baca.override.tuplet_bracket_staff_padding(pleaves, 1),
+        hairpin_leaves = baca.select.rleak(plts)
+        baca.hairpin(
+            hairpin_leaves,
+            "p < f >o niente",
+            pieces=baca.select.lparts(hairpin_leaves, [5, 3]),
+        )
+        baca.override.dls_staff_padding(hairpin_leaves, 6)
+
+    @baca.call
+    def block():
+        plt = baca.select.plt(m[3], 0)
+        baca.pitch(plt, "G3")
+        rplt = baca.select.rleak(plt)
+        baca.covered_spanner(
+            rplt,
+            items=r"\baca-cov-markup =|",
+            staff_padding=5.5,
+        )
+        baca.dynamic(plt.head, '"f"')
+        baca.override.dls_staff_padding(plt, 5)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[4])[:1]
+        baca.pitch(plts, "D5")
+        rplts = baca.select.rleak(plts)
+        baca.trill_spanner(
+            rplts,
+            alteration="M2",
+            staff_padding=5.5,
+        )
+        baca.hairpin(
+            rplts,
+            "f >o niente",
+        )
+        baca.override.dls_staff_padding(rplts, 3)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[4, 6])[1:]
+        baca.pitch(plts, "Eb4")
+        rplts = baca.select.rleak(plts)
+        baca.covered_spanner(
+            rplts,
+            staff_padding=3,
+        )
+        baca.dynamic(plts[0].head, '"f"')
+        baca.dynamic(plts[1].head, "mf")
+        baca.dynamic(plts[2].head, "mp")
+        baca.override.dls_staff_padding(plts, 3)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[7])[:1]
+        baca.pitch(plts, "Eb4")
+        rplts = baca.select.rleak(plts)
+        baca.covered_spanner(
+            rplts,
+            staff_padding=3,
+        )
+        baca.dynamic(plts[0].head, '"f"')
+        baca.override.dls_staff_padding(plts, 3)
+
+    @baca.call
+    def block():
         plts = baca.select.plts(m[2])
         library.staff_highlight(plts[0], 1)
         library.staff_highlight(plts[1], 1)
@@ -419,7 +590,6 @@ def fl(m):
     def block():
         plts = baca.select.plts(m[3])
         library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 3)
 
     @baca.call
     def block():
