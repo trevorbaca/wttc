@@ -63,6 +63,16 @@
                 value="Afl.",
             ),
         ],
+        "Cello.Music": [
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="niente",
+            )
+        ],
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
@@ -78,7 +88,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="treble",
+                value="bass",
             ),
             baca.Memento(
                 context="Cello.Music",

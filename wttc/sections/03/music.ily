@@ -3313,83 +3313,300 @@ number.3.Violin.Music = {
 
     \acciaccatura {
 
+        \override DynamicLineSpanner.staff-padding = 3
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'16
+        b'16
 
     }
 
-    c'4
-    - \tweak stencil ##f
-    ~
+    a'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "II"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-    c'16
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
+    b'8
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c''16
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
     \repeat tremolo 4 {
 
         % [Violin.Music measure 12]
+        \override DynamicLineSpanner.staff-padding = 3
           %! STAFF_HIGHLIGHT
         \staffHighlight antiquewhite
-        c'16
+        e'16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
 
-        c'16
+        gs'!16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \pp
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
     }
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r16
 
     \acciaccatura {
 
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'16
+        b'16
 
     }
 
-    c'8.
-    - \tweak stencil ##f
-    ~
+    a'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "II"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-    c'16
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
+    b'16
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c''16
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
     r16
 
     \acciaccatura {
 
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'16
+        b'16
 
     }
 
-    c'16
-    ~
+    a'16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "II"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-    c'4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b'4
 
     % [Violin.Music measure 13]
-    c'8.
-    \repeatTie
+    \afterGrace
+    b'8.
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c''16
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
     r2.
 
@@ -3397,22 +3614,80 @@ number.3.Violin.Music = {
 
     \acciaccatura {
 
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        c'16
+        b'16
 
     }
 
-    c'8
-    - \tweak stencil ##f
-    ~
+    a'8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \pp
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "II"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-    c'16
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
+    b'16
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c''16
+        \revert DynamicLineSpanner.staff-padding
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
 }
 
@@ -3429,7 +3704,7 @@ number.3.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
-    \clef "treble"
+    \clef "bass"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -3437,7 +3712,7 @@ number.3.Cello.Music = {
     \once \override Staff.Clef.color = #blue
       %! MEASURE_1
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -3464,156 +3739,692 @@ number.3.Cello.Music = {
 
     r16
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightblue
-    c'8.
-    - \tweak stencil ##f
-    ~
+    b,8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-    c'16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b,16
     [
-    \repeatTie
 
-    c'8.
+    c8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     ]
-    - \tweak stencil ##f
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'8.
+    d8.
     [
-    \repeatTie
 
-    c'16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    d16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     ]
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 2]
-    c'8
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    d8
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     r8.
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightblue
-    c'16
-    ~
+    bf,!16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-    c'8
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b,8
     [
 
-    c'8
+    c8
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     ]
-    - \tweak stencil ##f
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'8
+    c8
     [
-    \repeatTie
 
-    c'16
+    c16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-    c'16
+    c16
     ]
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'8
+    d8
     [
 
-    c'8
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     ]
-    - \tweak stencil ##f
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-    c'8
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    d8
     [
-    \repeatTie
 
-    c'8
+    d8
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     ]
-    - \tweak stencil ##f
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
     % [Cello.Music measure 3]
-    c'16
-    \repeatTie
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df!16
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     r8.
 
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     \staffHighlight lightblue
-    c'16
-    ~
+    af,!16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-    c'8
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a,8
     [
 
-    c'16
+    a,16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-    c'16
+    a,16
     ]
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'4
-    - \tweak stencil ##f
-    ~
+    b,4
 
     % [Cello.Music measure 4]
-    c'16
-    [
-    \repeatTie
-
-    c'16
-
-    c'8
-    ]
-
-    c'4
-
-    c'16
+    b,16
     [
 
-    c'8.
+    b,16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+
+    b,8
     ]
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'4
+    b,4
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'8
+    b,16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     [
 
-    c'16
-
-    c'16
+    b,8.
     ]
-    ~
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'4
-    - \tweak stencil ##f
-    ~
+    c4
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+
+    c8
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+    [
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+
+    c16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    cf!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+    ]
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    c4
 
     % [Cello.Music measure 5]
-    c'16
+    c16
     [
-    \repeatTie
 
-    c'16
+    c16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-    c'8
+    c8
     ]
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'4
+    c4
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
-    c'16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    cf!16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r4
 
@@ -3622,168 +4433,742 @@ number.3.Cello.Music = {
 
     r8.
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightblue
-    c'16
-    ~
+    g,16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-    c'4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g,4
 
     % [Cello.Music measure 7]
-    c'16
+    a,16
     [
-    \repeatTie
 
-    c'16
+    b,16
+    - \tweak staff-padding 3
+    - \baca-circle-bowing
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-    c'8
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    bf,!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
     ]
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-    c'8.
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    bf,!8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     [
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'16
+    <gf,! cf!>16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
     ]
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T4"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
 
-    c'2
+    <gf, cf>2
 
     % [Cello.Music measure 8]
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'1
+    <gf,! cf!>1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T4"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 9]
-    c'2
+    <gf, cf>2.
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'8.
-    [
+    <gf, cf>4 * 3/4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P2"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     \repeatTie
 
-    c'16
-    ]
-    ~
-
-    \afterGrace
-    c'4
-    {
-
-        c'8
-
-    }
-
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    <gf,! cf!>16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \ff
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
 
     % [Cello.Music measure 10]
-    c'2.
+    \override DynamicLineSpanner.staff-padding = 5
+    <f, bf,!>2.
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T4"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
-    \afterGrace
-    c'4
+    <f, bf,>4 * 3/4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P2"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     \repeatTie
-    {
 
-        c'8
-
-    }
-
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    <f, bf,!>16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \ff
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 11]
-    \afterGrace
-    c'8.
-    {
+    \override DynamicLineSpanner.staff-padding = 5
+    <ef,! af,!>4 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P2"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
-        c'8
-
-    }
-
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    <ef,! af,!>16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \ff
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r16
-
     r4
 
     r16
 
     \acciaccatura {
 
+        \override DynamicLineSpanner.staff-padding = 3
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         c'8
 
     }
 
-    c'8.
-    - \tweak stencil ##f
-    ~
+    b8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "I"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 5
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 12]
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
     c'8
-    \repeatTie
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        d'8
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c'16
+    <ef,! af,!>16
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     ~
 
-    c'4
+    <ef, af,>4
     - \tweak stencil ##f
     ~
 
-    c'8.
+    <ef, af,>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
     r8.
 
     \acciaccatura {
 
+        \override DynamicLineSpanner.staff-padding = 3
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         c'8
 
     }
 
-    c'16
-    ~
+    b16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "I"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 5
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
     c'8.
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        d'8
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
     r4
 
     % [Cello.Music measure 13]
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c'8.
+    <ef,! af,!>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
     r4
 
@@ -3791,22 +5176,81 @@ number.3.Cello.Music = {
 
     \acciaccatura {
 
+        \override DynamicLineSpanner.staff-padding = 3
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         c'8
 
     }
 
-    c'8.
-    - \tweak stencil ##f
-    ~
+    b8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \pp
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "I"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 5
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
     c'16
-    \repeatTie
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        d'8
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
     r2
 
