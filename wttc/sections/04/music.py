@@ -197,7 +197,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(4),
-        [-1, 1, -2, -8, -1, 1, -2],
+        [-1, 1, "-"],
     )
     rhythm.make_one_beat_tuplets(
         meters(5),
@@ -211,20 +211,20 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(7),
-        [4, 5, "-"],
+        [4, t(12)],
     )
     rhythm.make_one_beat_tuplets(
         meters(8),
-        [-1, 2, -3, -2, 1],
+        [1, 2, -3, -2, 1],
         extra_counts=[-1],
     )
     rhythm(
         meters(9, 10),
-        [1, -3, 1, -3, -4, -1, 7, 8, "-"],
+        [-1, 1, -2, -1, 1, -2, -4, -1, 7, t(12)],
     )
     rhythm.make_one_beat_tuplets(
         meters(11),
-        [-3, -3, -1, 1, -1],
+        [7, 1, -1],
         extra_counts=[-1],
     )
     rhythm(
@@ -233,7 +233,7 @@ def GT1(voice, meters):
     )
     rhythm.make_one_beat_tuplets(
         meters(14),
-        [3, -2, 1, "-"],
+        [5, 1, "-"],
         extra_counts=[-1],
     )
     rhythm.make_one_beat_tuplets(
@@ -277,20 +277,20 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(7),
-        [4, 5, "-"],
+        [4, t(12)],
     )
     rhythm.make_one_beat_tuplets(
         meters(8),
-        [-1, 2, -1, 1, "-"],
+        [1, 2, -1, 1, "-"],
         extra_counts=[1],
     )
     rhythm(
         meters(9, 10),
-        [1, -3, 1, -3, -4, -1, 7, 8, "-"],
+        [1, -3, 1, -3, -4, -1, 7, t(12)],
     )
     rhythm.make_one_beat_tuplets(
         meters(11),
-        [-3, 4, -3, "-"],
+        [3, 4, -3, "-"],
         extra_counts=[1],
     )
     rhythm(
@@ -632,7 +632,26 @@ def ob(m):
         baca.clef(leaf, "treble")
 
 
-def gt1(m):
+def gt1(cache):
+    name = "gt1"
+    m = cache[name]
+
+    @baca.call
+    def block():
+        run = abjad.select.run(m[6, 8], 2)
+        run = run[:-1]
+        assert len(run) == 4
+        baca.pitches(run, "<A3 C4> <G3 Bb3> <F#3 A3>")
+        run = abjad.select.run(m[9, 10], -1)
+        baca.pitch(run, "<F3 Ab3>")
+        run = abjad.select.run(m[12, 14], -1)
+        run = run[:-1]
+        assert len(run) == 5
+        baca.pitch(run, "<F3 Ab3>")
+        cache.rebuild()
+
+    m = cache[name]
+
     @baca.call
     def block():
         leaf = m[1][0]
@@ -641,11 +660,14 @@ def gt1(m):
         baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
         baca.clef(leaf, "treble")
 
-    def select_lone_eighth_notes(leaves):
+    def select_untied_notes(leaves, duration=None):
         notes = []
         for plt in baca.select.plts(leaves):
-            if len(plt) == 1 and plt.head.written_duration == abjad.Duration(1, 8):
-                notes.extend(plt)
+            if len(plt) == 1:
+                if duration is None or plt.head.written_duration == abjad.Duration(
+                    duration
+                ):
+                    notes.extend(plt)
         return notes
 
     @baca.call
@@ -674,12 +696,27 @@ def gt1(m):
 
     @baca.call
     def block():
-        notes = select_lone_eighth_notes(m.leaves())
+        notes = select_untied_notes(m.leaves(), (1, 8))
         for note in notes:
             library.staff_highlight(note, 2)
-        notes = select_lone_eighth_notes(m[1, 3])
+        notes = select_untied_notes(m[1, 3], (1, 8))
         baca.pitch(notes, "D5")
         dynamics = "mp p f mf f".split()
+        for note, dynamic in zip(notes, dynamics, strict=True):
+            baca.dynamic(note, dynamic)
+        notes = select_untied_notes(m[5, 8], (1, 8))
+        baca.pitch(notes, "D#5")
+        dynamics = "f mf mp f".split()
+        for note, dynamic in zip(notes, dynamics, strict=True):
+            baca.dynamic(note, dynamic)
+        notes = select_untied_notes(m[11], (1, 8))
+        baca.pitch(notes, "F5")
+        dynamics = "mf".split()
+        for note, dynamic in zip(notes, dynamics, strict=True):
+            baca.dynamic(note, dynamic)
+        notes = select_untied_notes(m[14, 15], (1, 8))
+        baca.pitch(notes, "F#5")
+        dynamics = "mp p".split()
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
 
@@ -690,9 +727,7 @@ def gt1(m):
         )
         return pairs
 
-    @baca.call
-    def block():
-        leaves = m[1, 3]
+    def override_uneven_staff_padding(leaves):
         components = abjad.select.top(leaves)
         tuplets = abjad.select.tuplets(components)
         for tuplet in tuplets:
@@ -715,33 +750,63 @@ def gt1(m):
 
     @baca.call
     def block():
-        plts = baca.select.plts(m[4])
-        library.staff_highlight(plts[0], 4)
-        library.staff_highlight(plts[1], 4)
+        override_uneven_staff_padding(m[1, 3])
+        override_uneven_staff_padding(m[5, 6][1:-1])
+        baca.override.tuplet_bracket_down(m[8])
+        override_uneven_staff_padding(m[8])
+        baca.override.dls_staff_padding(m[4], 3)
+        run = abjad.select.run(m[6, 7], -1)
+        baca.override.dls_staff_padding(run, 3)
+        baca.override.dls_staff_padding(m[9, 10], 3)
+        baca.override.dls_staff_padding(m[12, 13], 3)
+        components = abjad.select.top(m[11])
+        tuplet = abjad.select.tuplet(components, -1)
+        baca.override.tuplet_bracket_staff_padding(tuplet, 2.5)
+        baca.override.dls_staff_padding(tuplet, 8)
+        components = abjad.select.top(m[14])
+        tuplet = abjad.select.tuplet(components, -1)
+        baca.override.tuplet_bracket_staff_padding(tuplet, 1)
+        baca.override.dls_staff_padding(tuplet, 5.5)
+        components = abjad.select.top(m[15])
+        tuplet = abjad.select.tuplet(components, -1)
+        baca.override.tuplet_bracket_staff_padding(tuplet, 1)
+        baca.override.dls_staff_padding(tuplet, 5.5)
 
     @baca.call
     def block():
-        plts = baca.select.plts(m[5, 7])
-        library.staff_highlight(plts[4], 5)
-        library.staff_highlight(plts[5], 5)
-        library.staff_highlight(plts[6], 5)
+        leaves = m[4] + m[9] + m[12]
+        notes = select_untied_notes(leaves, (1, 16))
+        for note in notes:
+            library.staff_highlight(note, 4)
+            baca.flageolet(note)
+        note = select_untied_notes(m[4])
+        baca.pitch(note, "G#4")
+        baca.dynamic(note, "p")
+        notes = select_untied_notes(m[9])
+        baca.pitches(notes, "G4 Gb4")
+        baca.hairpin(notes, "p pp")
+        notes = select_untied_notes(m[12])
+        baca.pitches(notes, "C4 B3 Bb3")
+        baca.hairpin(notes, "p pp ppp", pieces=baca.select.lparts(notes, [1, 2]))
 
     @baca.call
     def block():
-        plts = baca.select.plts(m[8, 10])
-        library.staff_highlight(plts[2], 4)
-        library.staff_highlight(plts[3], 4)
-        library.staff_highlight(plts[4], 4)
-        library.staff_highlight(plts[5], 4)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[11, 16])
-        library.staff_highlight(plts[1], 4)
-        library.staff_highlight(plts[2], 4)
-        library.staff_highlight(plts[3], 4)
-        library.staff_highlight(plts[4], 4)
-        library.staff_highlight(plts[5], 4)
+        runs = [
+            abjad.select.run(m[6, 8], -2)[:-1],
+            abjad.select.run(m[9, 11], -1)[:-1],
+            abjad.select.run(m[12, 14], -1)[:-1],
+        ]
+        dynamic_strings = [
+            "f mf mp",
+            "mf mp",
+            "mf mp",
+        ]
+        for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
+            library.staff_highlight(run, 5)
+            plts = baca.select.plts(run)
+            dynamics = dynamic_string.split()
+            for plt, dynamic in zip(plts, dynamics, strict=True):
+                baca.dynamic(plt.head, dynamic)
 
 
 def gt2(m):
@@ -804,7 +869,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     )
     fl(cache["afl"])
     ob(cache["ob"])
-    gt1(cache["gt1"])
+    gt1(cache)
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
