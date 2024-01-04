@@ -106,7 +106,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-effort-mf",
+                value="\\baca-effort-ff",
             )
         ],
         "Guitar.1.Staff": [

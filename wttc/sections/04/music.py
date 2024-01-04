@@ -1,3 +1,5 @@
+import itertools
+
 import abjad
 import baca
 
@@ -639,17 +641,77 @@ def gt1(m):
         baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
         baca.clef(leaf, "treble")
 
+    def select_lone_eighth_notes(leaves):
+        notes = []
+        for plt in baca.select.plts(leaves):
+            if len(plt) == 1 and plt.head.written_duration == abjad.Duration(1, 8):
+                notes.extend(plt)
+        return notes
+
     @baca.call
     def block():
-        plts = baca.select.plts(m[1, 3])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 2)
-        library.staff_highlight(plts[2], 2)
-        library.staff_highlight(plts[3], 1)
-        library.staff_highlight(plts[4], 2)
-        library.staff_highlight(plts[5], 2)
-        library.staff_highlight(plts[6], 1)
-        library.staff_highlight(plts[7], 2)
+        plts = [
+            baca.select.plt(m[1], 0),
+            baca.select.plt(m[2], 0),
+            baca.select.plt(m[3], 0),
+            baca.select.plt(m[5], 0),
+            baca.select.plt(m[8], 0),
+        ]
+        terminations = ['"mf"', '"f"', '"ff"', '"mf"', '"ff"']
+        for plt, termination in zip(plts, terminations, strict=True):
+            library.staff_highlight(plt, 1)
+            baca.staff_lines(plt.head, 1)
+            leaf = abjad.get.leaf(plt[-1], 1)
+            baca.staff_lines(leaf, 5)
+            baca.staff_position(plt, 0)
+            baca.down_bow(plt.head, padding=1)
+            if len(plt) == 1:
+                leaves = baca.select.rleak(plt)
+            else:
+                leaves = plt
+            string = f"o< {termination}"
+            baca.hairpin(leaves, string)
+
+    @baca.call
+    def block():
+        notes = select_lone_eighth_notes(m.leaves())
+        for note in notes:
+            library.staff_highlight(note, 2)
+        notes = select_lone_eighth_notes(m[1, 3])
+        baca.pitch(notes, "D5")
+        dynamics = "mp p f mf f".split()
+        for note, dynamic in zip(notes, dynamics, strict=True):
+            baca.dynamic(note, dynamic)
+
+    def group_leaves_by_staff_lines(leaves):
+        pairs = itertools.groupby(
+            leaves,
+            lambda _: abjad.get.effective(_, baca.StaffLines),
+        )
+        return pairs
+
+    @baca.call
+    def block():
+        leaves = m[1, 3]
+        components = abjad.select.top(leaves)
+        tuplets = abjad.select.tuplets(components)
+        for tuplet in tuplets:
+            leaf = abjad.select.leaf(tuplet, 0)
+            staff_lines = abjad.get.effective(leaf, baca.StaffLines)
+            if staff_lines.line_count == 5:
+                staff_padding = 1.25
+            else:
+                assert staff_lines.line_count == 1
+                staff_padding = 3
+            baca.override.tuplet_bracket_staff_padding(tuplet, staff_padding)
+        pairs = group_leaves_by_staff_lines(leaves)
+        for staff_lines, group in pairs:
+            if staff_lines.line_count == 5:
+                adjustment = 0
+            else:
+                assert staff_lines.line_count == 1
+                adjustment = 2
+            baca.override.dls_staff_padding(group, 7 + adjustment)
 
     @baca.call
     def block():
@@ -660,10 +722,6 @@ def gt1(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[5, 7])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 2)
-        library.staff_highlight(plts[2], 2)
-        library.staff_highlight(plts[3], 2)
         library.staff_highlight(plts[4], 5)
         library.staff_highlight(plts[5], 5)
         library.staff_highlight(plts[6], 5)
@@ -671,8 +729,6 @@ def gt1(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[8, 10])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 2)
         library.staff_highlight(plts[2], 4)
         library.staff_highlight(plts[3], 4)
         library.staff_highlight(plts[4], 4)
@@ -681,14 +737,11 @@ def gt1(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[11, 16])
-        library.staff_highlight(plts[0], 2)
         library.staff_highlight(plts[1], 4)
         library.staff_highlight(plts[2], 4)
         library.staff_highlight(plts[3], 4)
         library.staff_highlight(plts[4], 4)
         library.staff_highlight(plts[5], 4)
-        library.staff_highlight(plts[6], 2)
-        library.staff_highlight(plts[7], 2)
 
 
 def gt2(m):
