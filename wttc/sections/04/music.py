@@ -786,7 +786,7 @@ def gt1(cache):
         baca.pitches(notes, "G4 Gb4")
         baca.hairpin(notes, "p pp")
         notes = select_untied_notes(m[12])
-        baca.pitches(notes, "C4 B3 Bb3")
+        baca.pitches(notes, "C4 B3 Bb3", exact=True)
         baca.hairpin(notes, "p pp ppp", pieces=baca.select.lparts(notes, [1, 2]))
 
     @baca.call
