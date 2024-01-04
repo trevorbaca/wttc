@@ -158,7 +158,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-effort-mf",
+                value="mp",
             )
         ],
         "Guitar.2.Staff": [

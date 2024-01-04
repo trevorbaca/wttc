@@ -2772,12 +2772,29 @@ number.4.Guitar.2.Music = {
 
     r16
 
-    c''8.
+      %! STAFF_HIGHLIGHT
+    \staffHighlight tan
+    <gs'! b'>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
 
     % [Guitar.2.Music measure 7]
-    c''4
+    <fs'! a'>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
-    c''2.
+    <f' af'!>2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
     - \tweak stencil ##f
     ~
 
@@ -2786,10 +2803,12 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 8]
-        c''16
+        <f' af'>16
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''8
         ]
 
@@ -2814,15 +2833,27 @@ number.4.Guitar.2.Music = {
 
     r16
 
-    c''8.
+      %! STAFF_HIGHLIGHT
+    \staffHighlight tan
+    <e' g'>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
     - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 10]
-    c''4
+    <e' g'>4
     \repeatTie
 
-    c''2.
+    <e' g'>2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
     - \tweak stencil ##f
     ~
 
@@ -2831,7 +2862,9 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 11]
-        c''8.
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+        <e' g'>8.
         [
         \repeatTie
 
@@ -2868,20 +2901,32 @@ number.4.Guitar.2.Music = {
 
     r16
 
-    c''8.
+      %! STAFF_HIGHLIGHT
+    \staffHighlight tan
+    <e' g'>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
     - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 13]
-    c''2.
+    <e' g'>2.
     \repeatTie
 
-    c''4
+    <e' g'>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
     - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 14]
-    c''4
+    <e' g'>4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -2890,10 +2935,12 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        c''16
+        <e' g'>16
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
         ]
 

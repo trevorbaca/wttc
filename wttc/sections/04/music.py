@@ -809,7 +809,26 @@ def gt1(cache):
                 baca.dynamic(plt.head, dynamic)
 
 
-def gt2(m):
+def gt2(cache):
+    name = "gt2"
+    m = cache[name]
+
+    @baca.call
+    def block():
+        run = abjad.select.run(m[6, 8], -2)
+        run = run[:-1]
+        assert len(run) == 4
+        baca.pitches(run, "<G#3 B3> <F#3 A3> <F3 Ab3>")
+        run = abjad.select.run(m[9, 10], -1)
+        baca.pitch(run, "<E3 G3>")
+        run = abjad.select.run(m[12, 14], -2)
+        run = run[:-1]
+        assert len(run) == 5
+        baca.pitch(run, "<E3 G3>")
+        cache.rebuild()
+
+    m = cache[name]
+
     @baca.call
     def block():
         leaf = m[1][0]
@@ -817,6 +836,25 @@ def gt2(m):
         baca.instrument_name(leaf, strings.guitar_ii_markup)
         baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
         baca.clef(leaf, "treble")
+
+    @baca.call
+    def block():
+        runs = [
+            abjad.select.run(m[6, 8], -2)[:-1],
+            abjad.select.run(m[9, 10], -1),
+            abjad.select.run(m[12, 14], -2)[:-1],
+        ]
+        dynamic_strings = [
+            "f mf mp",
+            "mf mp",
+            "mf mp",
+        ]
+        for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
+            library.staff_highlight(run, 5)
+            plts = baca.select.plts(run)
+            dynamics = dynamic_string.split()
+            for plt, dynamic in zip(plts, dynamics, strict=True):
+                baca.dynamic(plt.head, dynamic)
 
 
 def vn(m):
@@ -870,7 +908,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     fl(cache["afl"])
     ob(cache["ob"])
     gt1(cache)
-    gt2(cache["gt2"])
+    gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
     return score
