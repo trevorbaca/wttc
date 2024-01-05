@@ -2706,11 +2706,7 @@ number.4.Guitar.2.Music = {
 
     r8.
 
-    r2
-
-    c''16
-
-    r8.
+    r2.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5

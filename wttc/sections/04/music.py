@@ -263,7 +263,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(4),
-        [1, -3, "-", 1, -3],
+        [1, "-"],
     )
     rhythm.make_one_beat_tuplets(
         meters(5),
@@ -836,6 +836,26 @@ def gt2(cache):
         baca.instrument_name(leaf, strings.guitar_ii_markup)
         baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
         baca.clef(leaf, "treble")
+
+    def upbows(leaves, dynamics):
+        plts = baca.select.plts(leaves)
+        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
+        dynamics = dynamics.split()
+        for plt, dynamic in zip(plts, dynamics, strict=True):
+            pass
+
+    @baca.call
+    def block():
+        """
+        upbows(
+            m[1, 3],
+            baca.dynamics.linear("mf ff", effort=True),
+        )
+        """
+        """
+        plts = baca.select.plts(leaves)
+        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
+        """
 
     @baca.call
     def block():
