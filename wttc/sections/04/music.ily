@@ -2620,8 +2620,12 @@ number.4.Guitar.2.Music = {
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-gt-ii-markup
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''8.
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r16
 
     }
@@ -2632,8 +2636,12 @@ number.4.Guitar.2.Music = {
 
         r16
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8.
 
     }
@@ -2646,8 +2654,12 @@ number.4.Guitar.2.Music = {
 
         r16
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8.
 
     }
@@ -2659,8 +2671,12 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 2]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''4
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r16
 
     }
@@ -2669,8 +2685,12 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -2684,6 +2704,8 @@ number.4.Guitar.2.Music = {
         % [Guitar.2.Music measure 3]
         r8.
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''8
         ~
 
@@ -2695,6 +2717,8 @@ number.4.Guitar.2.Music = {
 
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -2702,8 +2726,12 @@ number.4.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 4]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2.
@@ -2715,6 +2743,8 @@ number.4.Guitar.2.Music = {
         % [Guitar.2.Music measure 5]
         r16
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''4
 
     }
@@ -2723,12 +2753,18 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''8.
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2736,8 +2772,12 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 6]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8.
 
     }
@@ -2748,10 +2788,16 @@ number.4.Guitar.2.Music = {
 
         r16
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
     }
@@ -2760,8 +2806,14 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -2799,30 +2851,46 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 8]
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         <f' af'>16
         [
         \repeatTie
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        \staffHighlight antiquewhite
         c''8
         ]
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r16
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.2.Music measure 9]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
@@ -2864,6 +2932,8 @@ number.4.Guitar.2.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight antiquewhite
         c''8
         ]
         ~
@@ -2876,6 +2946,8 @@ number.4.Guitar.2.Music = {
 
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8.
 
     }
@@ -2883,16 +2955,28 @@ number.4.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r16
@@ -2931,21 +3015,29 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         <e' g'>16
         [
         \repeatTie
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        \staffHighlight lightblue
         c''16
         ]
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.2.Music measure 15]
@@ -2957,8 +3049,12 @@ number.4.Guitar.2.Music = {
 
         r16
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightblue
         c''16
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8.
 
     }

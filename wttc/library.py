@@ -39,6 +39,7 @@ class Rhythm:
         self,
         time_signatures,
         items,
+        material=None,
         *,
         debug=False,
         denominator=16,
@@ -47,6 +48,7 @@ class Rhythm:
         do_not_rewrite_meter=False,
         overlap=False,
     ):
+        assert material in (1, 2, 3, 4, 5, None), repr(material)
         assert time_signatures is not None, repr(time_signatures)
         tag = baca.helpers.function_name(inspect.currentframe())
         if isinstance(items, list):
@@ -71,11 +73,16 @@ class Rhythm:
                 rmakers.beam([tuplet])
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
+            if material is not None:
+                raise Exception("add components to voice before staff highlight.")
             return components
         elif overlap is True:
             overlap_previous_measure(self.voice, components, time_signatures)
         else:
             self.voice.extend(components)
+        if material is not None:
+            tleaves = baca.select.tleaves(components)
+            staff_highlight(tleaves, material)
         return components
 
     def make_one_beat_tuplets(
@@ -86,8 +93,10 @@ class Rhythm:
         debug=False,
         do_not_extend=False,
         extra_counts=(),
+        material=None,
         overlap=False,
     ):
+        assert material in (1, 2, 3, 4, 5, None), repr(material)
         tag = baca.helpers.function_name(inspect.currentframe())
         durations = [_.duration for _ in time_signatures]
         durations = [sum(durations)]
@@ -98,10 +107,17 @@ class Rhythm:
         components = clean_up_rhythmic_spelling(
             tuplets, time_signatures, debug=debug, tag=tag
         )
+        did_staff_highlight = False
         if overlap is True:
             overlap_previous_measure(self.voice, components, time_signatures)
         elif not do_not_extend:
             self.voice.extend(components)
+            if material is not None:
+                tleaves = baca.select.tleaves(components)
+                staff_highlight(tleaves, material)
+                did_staff_highlight = True
+        if material is not None and not did_staff_highlight:
+            raise Exception("must add components to voice before staff highlight.")
         return components
 
     def mmrests(self, *arguments, head=False):

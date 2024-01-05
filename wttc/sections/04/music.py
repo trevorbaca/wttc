@@ -310,6 +310,40 @@ def GT2(voice, meters):
         extra_counts=[1],
     )
     rhythm.mmrests(16)
+    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
+        for plt in plts:
+            library.staff_highlight(plt, 1)
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, "1/16", preprolated=True)
+        for plt in plts:
+            library.staff_highlight(plt, 2)
+
+    @baca.call
+    def block():
+        notes = abjad.select.notes(m.leaves())
+        notes = baca.select.untupletted(notes)
+        notes = baca.select.duration(notes, "1/16")
+        for note in notes:
+            library.staff_highlight(note, 4)
+
+    @baca.call
+    def block():
+        notes = abjad.select.notes(m.leaves())
+        notes = baca.select.untupletted(notes)
+        notes = baca.select.duration(notes, ">=3/16")
+        groups = baca.select.group_consecutive(notes)
+        for group in groups:
+            library.staff_highlight(group, 5)
 
 
 def VN(voice, meters):
@@ -870,7 +904,7 @@ def gt2(cache):
             "mf mp",
         ]
         for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
-            library.staff_highlight(run, 5)
+            # library.staff_highlight(run, 5)
             plts = baca.select.plts(run)
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
