@@ -319,6 +319,8 @@ def GT2(voice, meters):
         plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
         for plt in plts:
             library.staff_highlight(plt, 1)
+            for leaf in abjad.select.leaves(plt):
+                abjad.attach("MATERIAL_1", leaf)
 
     @baca.call
     def block():
@@ -327,6 +329,8 @@ def GT2(voice, meters):
         plts = baca.select.duration(plts, "1/16", preprolated=True)
         for plt in plts:
             library.staff_highlight(plt, 2)
+            for leaf in abjad.select.leaves(plt):
+                abjad.attach("MATERIAL_2", leaf)
 
     @baca.call
     def block():
@@ -335,6 +339,7 @@ def GT2(voice, meters):
         notes = baca.select.duration(notes, "1/16")
         for note in notes:
             library.staff_highlight(note, 4)
+            abjad.attach("MATERIAL_4", note)
 
     @baca.call
     def block():
@@ -344,6 +349,8 @@ def GT2(voice, meters):
         groups = baca.select.group_consecutive(notes)
         for group in groups:
             library.staff_highlight(group, 5)
+            for leaf in abjad.select.leaves(group):
+                abjad.attach("MATERIAL_5", leaf)
 
 
 def VN(voice, meters):
@@ -873,39 +880,45 @@ def gt2(cache):
 
     def upbows(leaves, dynamics):
         plts = baca.select.plts(leaves)
-        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
         dynamics = dynamics.split()
         for plt, dynamic in zip(plts, dynamics, strict=True):
-            pass
+            baca.staff_lines(plt.head, 1)
+            next_leaf = abjad.get.leaf(plt[-1], 1)
+            baca.staff_lines(next_leaf, 5)
+            baca.staff_position(plt, 0)
+            baca.up_bow(plt.head, padding=1)
+            baca.hairpin(baca.select.rleak(plt), f"o< {dynamic}")
 
     @baca.call
     def block():
-        """
         upbows(
-            m[1, 3],
+            library.select_material(m[1, 3], 1),
             baca.dynamics.linear("mf ff", effort=True),
         )
-        """
-        """
-        plts = baca.select.plts(leaves)
-        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
-        """
+        upbows(
+            library.select_material(m[5, 6], 1),
+            baca.dynamics.linear("ff mf", effort=True),
+        )
+        upbows(
+            library.select_material(m[8], 1),
+            '"ff"',
+        )
+        upbows(
+            library.select_material(m[11], 1),
+            '"mf"',
+        )
 
     @baca.call
     def block():
-        runs = [
-            abjad.select.run(m[6, 8], -2)[:-1],
-            abjad.select.run(m[9, 10], -1),
-            abjad.select.run(m[12, 14], -2)[:-1],
-        ]
+        leaves = library.select_material(m.leaves(), 5)
+        groups = baca.select.group_consecutive(leaves)
         dynamic_strings = [
             "f mf mp",
             "mf mp",
             "mf mp",
         ]
-        for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
-            # library.staff_highlight(run, 5)
-            plts = baca.select.plts(run)
+        for group, dynamic_string in zip(groups, dynamic_strings, strict=True):
+            plts = baca.select.plts(group)
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)

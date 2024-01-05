@@ -644,6 +644,16 @@ def rotate_rehearsal_mark_literal(leaf):
     )
 
 
+def select_material(components, material):
+    assert material in (1, 2, 3, 4, 5), repr(material)
+    material_string = f"MATERIAL_{material}"
+    result = []
+    for component in components:
+        if abjad.get.has_indicator(component, material_string):
+            result.append(component)
+    return result
+
+
 def series_g(width, offset, start, length):
     pairs = []
     for i in range(length):
