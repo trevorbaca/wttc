@@ -1342,50 +1342,30 @@ number.4.AltoFlute.Music = {
     ~
     \repeatTie
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
+    % [AltoFlute.Music measure 15]
+    f'4
+    \repeatTie
 
-        % [AltoFlute.Music measure 15]
-        f'4
-        \repeatTie
+    \acciaccatura {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        r8
-
-    }
-
-    r2
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        r8
-
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-        f'4
-        - \tweak stencil ##f
-        ~
-
-    }
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        % [AltoFlute.Music measure 16]
         f'8
-        \repeatTie
-
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
-        r4
 
     }
 
+    f'2.
+    - \tweak stencil ##f
+    ~
+
+    % [AltoFlute.Music measure 16]
+    f'4
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
 }
@@ -3117,8 +3097,6 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 8]
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         <f' af'>16
         [
         \repeatTie
@@ -3133,6 +3111,8 @@ number.4.Guitar.2.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         b'8
         - \tweak padding 1
         - \upbow
@@ -3233,8 +3213,6 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 11]
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         <e' g'>8.
         [
         \repeatTie
@@ -3249,6 +3227,8 @@ number.4.Guitar.2.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         b'8
         - \tweak padding 1
         - \upbow
@@ -3363,14 +3343,14 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         <e' g'>16
         [
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
         ]
 

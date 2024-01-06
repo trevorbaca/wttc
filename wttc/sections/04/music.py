@@ -124,11 +124,35 @@ def FL(voice, meters):
     )
     leaf = abjad.select.leaf(components, -1)
     baca.tie(leaf)
-    components = rhythm.make_one_beat_tuplets(
+    rhythm(
         meters(15, 16),
-        [2, -1, -3, -3, -1, 3, -2, -3, -3, -3],
-        extra_counts=[-1],
+        [4, BG([2], 16), "-"],
     )
+
+    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
+
+    @baca.call
+    def block():
+        ungraced_runs, graced_runs = [], []
+        runs = abjad.select.runs(m.leaves())
+        for run in runs:
+            ungraced_run, graced_run = [], []
+            found_grace = False
+            for leaf in run:
+                if abjad.get.grace(leaf) is True:
+                    found_grace = True
+                if found_grace is True:
+                    graced_run.append(leaf)
+                else:
+                    ungraced_run.append(leaf)
+            if ungraced_run:
+                ungraced_runs.append(ungraced_run)
+            if graced_run:
+                graced_runs.append(graced_run)
+        graced_runs.append(ungraced_runs[4][-1:])
+        ungraced_runs[4] = ungraced_runs[4][:-1]
+        library.annotate(ungraced_runs, 1)
+        library.annotate(graced_runs, 3)
 
 
 def OB(voice, meters):
@@ -250,6 +274,28 @@ def GT1(voice, meters):
     )
     rhythm.mmrests(16)
 
+    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, ">1/8", preprolated=True)
+        library.annotate(plts, 1)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, "1/8", preprolated=True)
+        library.annotate(plts, 2)
+        pleaves = baca.select.pleaves(m.leaves())
+        pleaves = baca.select.untupletted(pleaves)
+        pleaves = baca.select.duration(pleaves, "1/16")
+        library.annotate(pleaves, 4)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.untupletted_first_leaf(plts)
+        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
+        runs = abjad.select.runs(plts)
+        library.annotate(runs, 5)
+
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
@@ -342,11 +388,11 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        notes = abjad.select.notes(m.leaves())
-        notes = baca.select.untupletted(notes)
-        notes = baca.select.duration(notes, ">=3/16")
-        groups = baca.select.group_consecutive(notes)
-        library.annotate(groups, 5)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.untupletted_first_leaf(plts)
+        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
+        runs = abjad.select.runs(plts)
+        library.annotate(runs, 5)
 
 
 def VN(voice, meters):
@@ -517,13 +563,6 @@ def fl(m):
 
     @baca.call
     def block():
-        plts = baca.select.plts(m[1])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 1)
-        library.staff_highlight(plts[2:], 3)
-
-    @baca.call
-    def block():
         plts = baca.select.plts(m[1])[:2]
         baca.pitch(plts, "G3")
         baca.covered_spanner(plts, staff_padding=5.5)
@@ -651,46 +690,6 @@ def fl(m):
         baca.dynamic(plts[0].head, '"f"')
         baca.override.dls_staff_padding(plts, 3)
 
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[2])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 1)
-        library.staff_highlight(plts[2:], 3)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[3])
-        library.staff_highlight(plts[0], 1)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[4, 7])
-        library.staff_highlight(plts[0], 3)
-        library.staff_highlight(plts[1], 1)
-        library.staff_highlight(plts[2], 1)
-        library.staff_highlight(plts[3], 1)
-        library.staff_highlight(plts[4], 1)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[8])
-        library.staff_highlight(plts, 3)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[10, 13])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 1)
-        library.staff_highlight(plts[2:], 3)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[14, 16])
-        library.staff_highlight(plts[0], 1)
-        library.staff_highlight(plts[1], 1)
-        library.staff_highlight(plts[2], 1)
-
 
 def ob(m):
     @baca.call
@@ -751,7 +750,6 @@ def gt1(cache):
         ]
         terminations = ['"mf"', '"f"', '"ff"', '"mf"', '"ff"']
         for plt, termination in zip(plts, terminations, strict=True):
-            library.staff_highlight(plt, 1)
             baca.staff_lines(plt.head, 1)
             leaf = abjad.get.leaf(plt[-1], 1)
             baca.staff_lines(leaf, 5)
@@ -767,8 +765,6 @@ def gt1(cache):
     @baca.call
     def block():
         notes = select_untied_notes(m.leaves(), (1, 8))
-        for note in notes:
-            library.staff_highlight(note, 2)
         notes = select_untied_notes(m[1, 3], (1, 8))
         baca.pitch(notes, "D5")
         dynamics = "mp p f mf f".split()
@@ -847,7 +843,6 @@ def gt1(cache):
         leaves = m[4] + m[9] + m[12]
         notes = select_untied_notes(leaves, (1, 16))
         for note in notes:
-            library.staff_highlight(note, 4)
             baca.flageolet(note)
         note = select_untied_notes(m[4])
         baca.pitch(note, "G#4")
@@ -872,7 +867,6 @@ def gt1(cache):
             "mf mp",
         ]
         for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
-            library.staff_highlight(run, 5)
             plts = baca.select.plts(run)
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
