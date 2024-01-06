@@ -129,31 +129,6 @@ def FL(voice, meters):
         [4, BG([2], 16), "-"],
     )
 
-    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
-
-    @baca.call
-    def block():
-        ungraced_runs, graced_runs = [], []
-        runs = abjad.select.runs(m.leaves())
-        for run in runs:
-            ungraced_run, graced_run = [], []
-            found_grace = False
-            for leaf in run:
-                if abjad.get.grace(leaf) is True:
-                    found_grace = True
-                if found_grace is True:
-                    graced_run.append(leaf)
-                else:
-                    ungraced_run.append(leaf)
-            if ungraced_run:
-                ungraced_runs.append(ungraced_run)
-            if graced_run:
-                graced_runs.append(graced_run)
-        graced_runs.append(ungraced_runs[4][-1:])
-        ungraced_runs[4] = ungraced_runs[4][:-1]
-        library.annotate(ungraced_runs, 1)
-        library.annotate(graced_runs, 3)
-
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
@@ -200,13 +175,6 @@ def OB(voice, meters):
         container = abjad.BeforeGraceContainer("e'16")
         abjad.attach(container, plt.head)
     rhythm.mmrests(14, 16)
-
-    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
-
-    @baca.call
-    def block():
-        runs = abjad.select.runs(m.leaves())
-        library.annotate(runs, 3)
 
 
 def GT1(voice, meters):
@@ -273,28 +241,6 @@ def GT1(voice, meters):
         extra_counts=[-1],
     )
     rhythm.mmrests(16)
-
-    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, ">1/8", preprolated=True)
-        library.annotate(plts, 1)
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, "1/8", preprolated=True)
-        library.annotate(plts, 2)
-        pleaves = baca.select.pleaves(m.leaves())
-        pleaves = baca.select.untupletted(pleaves)
-        pleaves = baca.select.duration(pleaves, "1/16")
-        library.annotate(pleaves, 4)
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.untupletted_first_leaf(plts)
-        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
-        runs = abjad.select.runs(plts)
-        library.annotate(runs, 5)
 
 
 def GT2(voice, meters):
@@ -363,36 +309,6 @@ def GT2(voice, meters):
         extra_counts=[1],
     )
     rhythm.mmrests(16)
-    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
-        library.annotate(plts, 1)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, "1/16", preprolated=True)
-        library.annotate(plts, 2)
-
-    @baca.call
-    def block():
-        notes = abjad.select.notes(m.leaves())
-        notes = baca.select.untupletted(notes)
-        notes = baca.select.duration(notes, "1/16")
-        library.annotate(notes, 4)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.untupletted_first_leaf(plts)
-        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
-        runs = abjad.select.runs(plts)
-        library.annotate(runs, 5)
 
 
 def VN(voice, meters):
@@ -457,27 +373,6 @@ def VN(voice, meters):
         extra_counts=[2],
     )
 
-    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[1, 13])
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration_ge(plts, "1/8", preprolated=True)
-        library.annotate(plts, 1)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.untupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, "1/16", preprolated=True)
-        library.annotate(plts, 2)
-
-    @baca.call
-    def block():
-        runs = abjad.select.runs(m[14, 16])
-        library.annotate(runs, 99)
-
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
@@ -532,22 +427,103 @@ def VC(voice, meters):
         extra_counts=[2],
     )
 
-    m = baca.section.cache_leaves_in_voice(voice, len(meters()))
+
+def annotate(cache):
+    @baca.call
+    def block():
+        m = cache["afl"]
+        ungraced_runs, graced_runs = [], []
+        runs = abjad.select.runs(m.leaves())
+        for run in runs:
+            ungraced_run, graced_run = [], []
+            found_grace = False
+            for leaf in run:
+                if abjad.get.grace(leaf) is True:
+                    found_grace = True
+                if found_grace is True:
+                    graced_run.append(leaf)
+                else:
+                    ungraced_run.append(leaf)
+            if ungraced_run:
+                ungraced_runs.append(ungraced_run)
+            if graced_run:
+                graced_runs.append(graced_run)
+        graced_runs.append(ungraced_runs[4][-1:])
+        ungraced_runs[4] = ungraced_runs[4][:-1]
+        library.annotate(ungraced_runs, 1)
+        library.annotate(graced_runs, 3)
 
     @baca.call
     def block():
+        m = cache["ob"]
+        runs = abjad.select.runs(m.leaves())
+        library.annotate(runs, 3)
+
+    @baca.call
+    def block():
+        m = cache["gt1"]
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, ">1/8", preprolated=True)
+        library.annotate(plts, 1)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, "1/8", preprolated=True)
+        library.annotate(plts, 2)
+        pleaves = baca.select.pleaves(m.leaves())
+        pleaves = baca.select.untupletted(pleaves)
+        pleaves = baca.select.duration(pleaves, "1/16")
+        library.annotate(pleaves, 4)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.untupletted_first_leaf(plts)
+        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
+        runs = abjad.select.runs(plts)
+        library.annotate(runs, 5)
+
+    @baca.call
+    def block():
+        m = cache["gt2"]
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, ">=1/8", preprolated=True)
+        library.annotate(plts, 1)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, "1/16", preprolated=True)
+        library.annotate(plts, 2)
+        notes = abjad.select.notes(m.leaves())
+        notes = baca.select.untupletted(notes)
+        notes = baca.select.duration(notes, "1/16")
+        library.annotate(notes, 4)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.untupletted_first_leaf(plts)
+        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
+        runs = abjad.select.runs(plts)
+        library.annotate(runs, 5)
+
+    @baca.call
+    def block():
+        m = cache["vn"]
+        plts = baca.select.plts(m[1, 13])
+        plts = baca.select.tupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, ">=1/8", preprolated=True)
+        library.annotate(plts, 1)
+        plts = baca.select.plts(m.leaves())
+        plts = baca.select.untupletted_first_leaf(plts)
+        plts = baca.select.duration(plts, "1/16", preprolated=True)
+        library.annotate(plts, 2)
+        runs = abjad.select.runs(m[14, 16])
+        library.annotate(runs, 99)
+
+    @baca.call
+    def block():
+        m = cache["vc"]
         plts = baca.select.plts(m[1, 13])
         plts = baca.select.tupletted_first_leaf(plts)
         library.annotate(plts, 1)
-
-    @baca.call
-    def block():
         leaves = baca.select.untupletted(m[1, 13])
         runs = abjad.select.runs(leaves)
         library.annotate(runs, 4)
-
-    @baca.call
-    def block():
         runs = abjad.select.runs(m[14, 16])
         library.annotate(runs, 99)
 
@@ -995,6 +971,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
+    annotate(cache)
     fl(cache["afl"])
     ob(cache["ob"])
     gt1(cache)
