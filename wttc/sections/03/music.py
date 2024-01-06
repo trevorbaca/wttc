@@ -1030,7 +1030,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         # score_persistent_indicators=previous_persistent_indicators["Score"],
     )
     GLOBALS(score["Skips"])
-    FL(voices.afl, meters)
+    FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
     GT2(voices.gt2, meters)
@@ -1042,7 +1042,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    fl(cache["afl"])
+    fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
     gt2(cache["gt2"])

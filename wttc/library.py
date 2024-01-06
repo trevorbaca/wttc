@@ -48,7 +48,7 @@ class Rhythm:
         do_not_rewrite_meter=False,
         overlap=False,
     ):
-        assert material in (1, 2, 3, 4, 5, None), repr(material)
+        assert material in (1, 2, 3, 4, 5, 99, None), repr(material)
         assert time_signatures is not None, repr(time_signatures)
         tag = baca.helpers.function_name(inspect.currentframe())
         if isinstance(items, list):
@@ -71,18 +71,16 @@ class Rhythm:
         if not do_not_beam_tuplets:
             for tuplet in abjad.select.tuplets(voice_):
                 rmakers.beam([tuplet])
+        if material is not None:
+            tleaves = baca.select.tleaves(voice_)
+            annotate(tleaves, material)
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
-            if material is not None:
-                raise Exception("add components to voice before staff highlight.")
             return components
         elif overlap is True:
             overlap_previous_measure(self.voice, components, time_signatures)
         else:
             self.voice.extend(components)
-        if material is not None:
-            tleaves = baca.select.tleaves(components)
-            staff_highlight(tleaves, material)
         return components
 
     def make_one_beat_tuplets(
@@ -96,7 +94,7 @@ class Rhythm:
         material=None,
         overlap=False,
     ):
-        assert material in (1, 2, 3, 4, 5, None), repr(material)
+        assert material in (1, 2, 3, 4, 5, 99, None), repr(material)
         tag = baca.helpers.function_name(inspect.currentframe())
         durations = [_.duration for _ in time_signatures]
         durations = [sum(durations)]
@@ -736,17 +734,10 @@ manifests = {
 
 
 voice_abbreviations = {
-    "afl": "AltoFlute.Music",
+    "fl": "AltoFlute.Music",
     "ob": "Oboe.Music",
     "gt1": "Guitar.1.Music",
     "gt2": "Guitar.2.Music",
     "vn": "Violin.Music",
     "vc": "Cello.Music",
-    "tutti": [
-        "AltoFlute.Music",
-        "Guitar.1.Music",
-        "Guitar.2.Music",
-        "Violin.Music",
-        "Cello.Music",
-    ],
 }

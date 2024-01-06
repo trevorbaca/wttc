@@ -290,6 +290,7 @@ def VN(voice, meters):
     rhythm(
         meters(1, 2),
         [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
+        # material=1,
     )
     rhythm(
         meters(3, 4),
@@ -302,8 +303,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(7, 8),
-        [-3, t(1), t(4), t(4), t(4), t(4), t(4), 4, 16, rt(1), 2, -1],
-        do_not_rewrite_meter=True,
+        [-3, 1, 4, 4, 4, 4, 4, 4, "+", w(3, 4), h(1)],
     )
     rhythm(
         meters(9),
@@ -311,17 +311,16 @@ def VN(voice, meters):
     )
     rhythm(
         meters(10, 11),
-        [-3, t(1), t(4), t(4), t(4), 4, t(24), 3, -1],
-        do_not_rewrite_meter=True,
+        [-3, 1, 4, 4, 4, 4, "+", w(3, 4), h(1)],
     )
     rhythm(
         meters(12, 14),
-        [8, AG([2], 24), -1, t(3), 4, -8, -3, t(1), t(4), 4],
+        [t(24), AG([2], 8), -1, t(3), 4, -8, -3, t(1), t(4), 4],
         do_not_rewrite_meter=True,
     )
     rhythm(
         meters(15, 17),
-        [AG([2], 8), "-", 32, 7],
+        [AG([2], 8), "-", 29, -3, 7],
     )
     rhythm(
         meters(18, 19),
@@ -475,6 +474,25 @@ def VC(voice, meters):
     )
 
 
+def annotate(cache):
+    @baca.call
+    def block():
+        runs = abjad.select.runs(cache["fl"][1, 30])
+        library.annotate(runs, 3)
+        runs = abjad.select.runs(cache["gt1"][1, 30])
+        library.annotate(runs, 3)
+        runs = abjad.select.runs(cache["gt2"][1, 30])
+        library.annotate(runs, 3)
+
+    """
+    print()
+    for leaf in cache["vn"][1, 6]:
+        print(leaf, abjad.get.indicators(leaf, str))
+    print()
+    breakpoint()
+    """
+
+
 def fl(m):
     @baca.call
     def block():
@@ -557,7 +575,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         # score_persistent_indicators=previous_persistent_indicators["Score"],
     )
     GLOBALS(score["Skips"])
-    FL(voices.afl, meters)
+    FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
     GT2(voices.gt2, meters)
@@ -569,7 +587,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    fl(cache["afl"])
+    annotate(cache)
+    fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
     gt2(cache["gt2"])
