@@ -479,7 +479,7 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! STAFF_HIGHLIGHT
-    \staffHighlight antiquewhite
+    \staffHighlight orange
     b'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -641,7 +641,7 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 3]
       %! STAFF_HIGHLIGHT
-    \staffHighlight antiquewhite
+    \staffHighlight orange
     bf'!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -792,7 +792,7 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 5]
       %! STAFF_HIGHLIGHT
-    \staffHighlight antiquewhite
+    \staffHighlight orange
     a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1251,7 +1251,7 @@ number.3.AltoFlute.Music = {
     % [AltoFlute.Music measure 12]
     \override DynamicLineSpanner.staff-padding = 3.5
       %! STAFF_HIGHLIGHT
-    \staffHighlight antiquewhite
+    \staffHighlight orange
     a'2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1649,7 +1649,7 @@ number.3.Guitar.1.Music = {
 
         \override DynamicLineSpanner.staff-padding = 5
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         df'''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1674,7 +1674,7 @@ number.3.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         bf''!8
         \laissezVibrer
 
@@ -1699,7 +1699,7 @@ number.3.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         af''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1734,7 +1734,7 @@ number.3.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         f''8
         \laissezVibrer
         \revert DynamicLineSpanner.staff-padding
@@ -1975,7 +1975,7 @@ number.3.Guitar.2.Music = {
 
         \override DynamicLineSpanner.staff-padding = 4.5
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         c'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2002,7 +2002,7 @@ number.3.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         b''8
         \laissezVibrer
 
@@ -2032,7 +2032,7 @@ number.3.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         g''8
         \laissezVibrer
 
@@ -2054,7 +2054,7 @@ number.3.Guitar.2.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         gf''!8
         \laissezVibrer
         \revert DynamicLineSpanner.staff-padding
@@ -2235,7 +2235,7 @@ number.3.Violin.Music = {
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         d'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2345,7 +2345,7 @@ number.3.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     d''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2433,7 +2433,7 @@ number.3.Violin.Music = {
 
         % [Violin.Music measure 2]
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         d'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2534,7 +2534,7 @@ number.3.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     df''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2665,7 +2665,7 @@ number.3.Violin.Music = {
         % [Violin.Music measure 3]
         \override DynamicLineSpanner.staff-padding = 4
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         e'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2768,7 +2768,7 @@ number.3.Violin.Music = {
 
     \override DynamicLineSpanner.staff-padding = 5.5
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2986,7 +2986,7 @@ number.3.Violin.Music = {
         % [Violin.Music measure 5]
         \override DynamicLineSpanner.staff-padding = 3
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         e'16
@@ -3177,7 +3177,7 @@ number.3.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     bf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3394,7 +3394,7 @@ number.3.Violin.Music = {
         % [Violin.Music measure 12]
         \override DynamicLineSpanner.staff-padding = 3
           %! STAFF_HIGHLIGHT
-        \staffHighlight antiquewhite
+        \staffHighlight orange
         e'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3741,7 +3741,7 @@ number.3.Cello.Music = {
 
     \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     b,8.
       %! CIRCLE_BOW_SPANNER
       %! SPANNER_START
@@ -3886,7 +3886,7 @@ number.3.Cello.Music = {
 
     \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     bf,!16
       %! CIRCLE_BOW_SPANNER
       %! SPANNER_START
@@ -4089,7 +4089,7 @@ number.3.Cello.Music = {
 
     \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     af,!16
       %! CIRCLE_BOW_SPANNER
       %! SPANNER_START
@@ -4435,7 +4435,7 @@ number.3.Cello.Music = {
 
     \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightblue
+    \staffHighlight deepskyblue
     g,16
       %! CIRCLE_BOW_SPANNER
       %! SPANNER_START

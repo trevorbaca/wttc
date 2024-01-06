@@ -145,6 +145,14 @@ def _reference_meters():
     )
 
 
+def annotate(items, n):
+    assert n in (1, 2, 3, 4, 5, 99), repr(n)
+    for item in items:
+        staff_highlight(item, n)
+        for leaf in abjad.select.leaves(item):
+            abjad.attach(f"MATERIAL_{n}", leaf)
+
+
 def attach_bgs(counts, grace_lists):
     result = []
     cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
@@ -666,11 +674,11 @@ def series_g(width, offset, start, length):
 
 def staff_highlight(argument, number):
     material_to_color = {
-        1: "antiquewhite",
-        2: "lightblue",
+        1: "orange",
+        2: "deepskyblue",
         3: "lightgreen",
-        4: "lightpink",
-        5: "tan",
+        4: "hotpink",
+        5: "burlywood",
         99: "yellow",
     }
     color = material_to_color[number]
