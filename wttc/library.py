@@ -72,8 +72,8 @@ class Rhythm:
             for tuplet in abjad.select.tuplets(voice_):
                 rmakers.beam([tuplet])
         if material is not None:
-            tleaves = baca.select.tleaves(voice_)
-            annotate(tleaves, material)
+            for leaf in abjad.select.leaves(voice_):
+                abjad.attach(f"MATERIAL_{material}", leaf)
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
             return components
@@ -670,7 +670,7 @@ def series_g(width, offset, start, length):
     return counts
 
 
-def staff_highlight(argument, number):
+def staff_highlight(argument, number, *, after=False):
     material_to_color = {
         1: "orange",
         2: "deepskyblue",
@@ -685,10 +685,17 @@ def staff_highlight(argument, number):
         rf"\staffHighlight {color}",
     )
     baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
-    wrappers = baca.literal(
-        baca.select.rleaf(argument, -1),
-        r"\stopStaffHighlight",
-    )
+    if after is True:
+        wrappers = baca.literal(
+            abjad.select.leaf(argument, -1),
+            r"\stopStaffHighlight",
+            site="after",
+        )
+    else:
+        wrappers = baca.literal(
+            baca.select.rleaf(argument, -1),
+            r"\stopStaffHighlight",
+        )
     baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
 
 

@@ -3563,6 +3563,8 @@ number.5.Violin.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     r4
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
@@ -3576,6 +3578,10 @@ number.5.Violin.Music = {
 
     \slashedGrace {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -3590,6 +3596,10 @@ number.5.Violin.Music = {
 
     \slashedGrace {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -3617,12 +3627,18 @@ number.5.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
 
 
     % [Violin.Music measure 3]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'4
     - \tweak stencil ##f
     ~

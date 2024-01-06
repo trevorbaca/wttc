@@ -290,7 +290,7 @@ def VN(voice, meters):
     rhythm(
         meters(1, 2),
         [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
-        # material=1,
+        material=1,
     )
     rhythm(
         meters(3, 4),
@@ -484,13 +484,13 @@ def annotate(cache):
         runs = abjad.select.runs(cache["gt2"][1, 30])
         library.annotate(runs, 3)
 
-    """
-    print()
-    for leaf in cache["vn"][1, 6]:
-        print(leaf, abjad.get.indicators(leaf, str))
-    print()
-    breakpoint()
-    """
+    @baca.call
+    def block():
+        m = cache["vn"]
+        leaves = m.leaves()
+        leaves = library.select_material(leaves, 1)
+        groups = baca.select.group_consecutive(leaves)
+        library.annotate(groups, 1)
 
 
 def fl(m):
