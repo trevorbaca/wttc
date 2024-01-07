@@ -1212,6 +1212,8 @@ number.12.AltoFlute.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     f'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -1246,6 +1248,10 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         f'16 * 1408/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
@@ -1266,8 +1272,6 @@ number.12.AltoFlute.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3136" #"1024"
         ]
-        - \tweak stencil ##f
-        ~
 
     }
     \revert TupletNumber.text
@@ -1275,42 +1279,69 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 2]
     f'16
     [
-    \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'8.
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [AltoFlute.Music measure 3]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'4
     - \tweak stencil ##f
     ~
@@ -1325,7 +1356,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
@@ -1340,6 +1373,10 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         f'16 * 1728/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1728" #"2048"
@@ -1375,6 +1412,8 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'16
     [
     \repeatTie

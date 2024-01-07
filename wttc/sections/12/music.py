@@ -83,20 +83,56 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [swell(12), R([rt(1), 1, 1, 1, 1, 1], 12)],
+        [swell(12), "-"],
         do_not_rewrite_meter=True,
+        material=1,
     )
-    components = rhythm(
-        meters(2, 3),
-        [rt(1), 3, -4] + 5 * [-1, 3, -4],
+
+    @baca.call
+    def block():
+        components = rhythm(
+            meters(1),
+            R([rt(1), 1, 1, 1, 1, 1], 12),
+            do_not_clean_up_rhythmic_spelling=True,
+            material=2,
+            overlap=["-"],
+        )
+        note = abjad.select.note(components, 0)
+        abjad.detach(library.Material, note)
+        library.annotate([note], 1)
+
+    rhythm(
+        meters(2),
+        [1, "-"],
+        material=2,
     )
-    note = abjad.Note(0, components[-1].written_duration)
-    abjad.mutate.replace(components[-1:], [note])
+    rhythm(meters(2, 3), [3] + 5 * [-5, 3] + ["-"], material=3, overlap=[-1])
+    rhythm(
+        meters(3),
+        [t(4)],
+        material=1,
+        overlap=["-"],
+    )
     rhythm(
         meters(4),
-        [rt(w(6, 12)), h(6), R([rt(1), 1, 1, 1, 1, 1, 1, 1], 12)],
+        [swell(12), "-"],
         do_not_rewrite_meter=True,
+        material=1,
     )
+
+    @baca.call
+    def block():
+        components = rhythm(
+            meters(4),
+            R([rt(1), 1, 1, 1, 1, 1, 1, 1], 12),
+            do_not_clean_up_rhythmic_spelling=True,
+            material=2,
+            overlap=["-"],
+        )
+        note = abjad.select.note(components, 0)
+        abjad.detach(library.Material, note)
+        library.annotate([note], 1)
+
     rhythm(
         meters(5),
         [rt(1), 3, -4, -1, 3, -4, -1, 3, 4],
@@ -566,6 +602,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
+    library.highlight_staves(cache)
     # library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
