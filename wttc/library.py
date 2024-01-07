@@ -49,6 +49,7 @@ class Rhythm:
         debug=False,
         denominator=16,
         do_not_beam_tuplets=False,
+        do_not_clean_up_rhythmic_spelling=False,
         do_not_extend=False,
         do_not_rewrite_meter=False,
         overlap=False,
@@ -83,7 +84,12 @@ class Rhythm:
         if do_not_extend is True:
             return components
         elif overlap is True:
-            overlap_previous_measure(self.voice, components, time_signatures)
+            overlap_previous_measure(
+                self.voice,
+                components,
+                time_signatures,
+                do_not_clean_up_rhythmic_spelling=do_not_clean_up_rhythmic_spelling,
+            )
         else:
             self.voice.extend(components)
         return components
@@ -508,7 +514,13 @@ def match(component_1, component_2):
     return True
 
 
-def merge(components_1, components_2, time_signature):
+def merge(
+    components_1,
+    components_2,
+    time_signature,
+    *,
+    do_not_clean_up_rhythmic_spelling=False,
+):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert abjad.get.duration(components_1) == abjad.get.duration(components_2)
     assert abjad.get.duration(components_1) == time_signature.duration
@@ -568,7 +580,8 @@ def merge(components_1, components_2, time_signature):
             merged_components.extend(rests)
     voice = abjad.Voice(merged_components)
     components = abjad.mutate.eject_contents(voice)
-    components = clean_up_rhythmic_spelling(components, [time_signature], tag=tag)
+    if not do_not_clean_up_rhythmic_spelling:
+        components = clean_up_rhythmic_spelling(components, [time_signature], tag=tag)
     return components
 
 
@@ -581,12 +594,23 @@ def niente_swells(dynamic_peak_string):
     return string
 
 
-def overlap_previous_measure(voice, components, time_signatures):
+def overlap_previous_measure(
+    voice,
+    components,
+    time_signatures,
+    *,
+    do_not_clean_up_rhythmic_spelling=False,
+):
     voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
     first_measure, time_signatures_ = eject_components_in_measures(voice_, 1)
     nonfirst_measures = abjad.mutate.eject_contents(voice_)
     previous_measure = eject_components_in_previous_measure(voice)
-    merged_measure = merge(previous_measure, first_measure, time_signatures_[0])
+    merged_measure = merge(
+        previous_measure,
+        first_measure,
+        time_signatures_[0],
+        do_not_clean_up_rhythmic_spelling=do_not_clean_up_rhythmic_spelling,
+    )
     components = merged_measure + nonfirst_measures
     voice.extend(components)
 
