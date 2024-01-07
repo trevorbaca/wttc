@@ -158,7 +158,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="\\baca-effort-mf",
             )
         ],
         "Guitar.2.Staff": [
@@ -180,27 +180,11 @@
             ),
             baca.Memento(
                 context="Guitar.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="baca.StaffLines",
-                synthetic_offset=None,
-                value=5,
-            ),
-            baca.Memento(
-                context="Guitar.2.Music",
                 edition=Tag(string="-PARTS"),
                 manifest="short_instrument_names",
                 prototype=None,
                 synthetic_offset=None,
                 value="Gt. 2",
-            ),
-            baca.Memento(
-                context="Guitar.2.Music",
-                edition=Tag(string="-PARTS"),
-                manifest=None,
-                prototype="baca.BarExtent",
-                synthetic_offset=None,
-                value=5,
             ),
         ],
         "Oboe.Staff": [

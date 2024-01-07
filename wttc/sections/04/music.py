@@ -84,8 +84,13 @@ def FL(voice, meters):
     # leaf = abjad.select.leaf(components, -1)
     # abjad.attach(container, leaf)
     rhythm(
+        meters(4),
+        [4, "-"],
+    )
+    rhythm(
         meters(4, 5),
-        [4, -11, 3, -2, 3, -9],
+        [3, -2, 3, "-"],
+        overlap=[-15],
     )
     rhythm(
         meters(6),
@@ -97,8 +102,13 @@ def FL(voice, meters):
     )
     rhythm(
         meters(8),
-        [1, -3, T([-2, BG([1], t(4))], -2), t(4)],
+        [1, "-"],
+    )
+    rhythm(
+        meters(8),
+        [T([-2, BG([1], t(4))], -2), t(4)],
         do_not_rewrite_meter=True,
+        overlap=[-4],
     )
     rhythm.make_one_beat_tuplets(
         meters(9),
@@ -125,8 +135,13 @@ def FL(voice, meters):
     leaf = abjad.select.leaf(components, -1)
     baca.tie(leaf)
     rhythm(
+        meters(15),
+        [4, "-"],
+    )
+    rhythm(
         meters(15, 16),
-        [4, BG([2], 16), "-"],
+        [BG([2], 16), "-"],
+        overlap=[-4],
     )
 
 
@@ -888,6 +903,7 @@ def gt2(cache):
             baca.up_bow(plt.head, padding=1)
             baca.hairpin(baca.select.rleak(plt), f"o< {dynamic}")
 
+    """
     @baca.call
     def block():
         upbows(
@@ -906,7 +922,9 @@ def gt2(cache):
             library.select_material(m[11], 1),
             '"mf"',
         )
+    """
 
+    """
     @baca.call
     def block():
         leaves = library.select_material(m.leaves(), 5)
@@ -921,6 +939,7 @@ def gt2(cache):
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)
+    """
 
 
 def vn(m):
@@ -972,7 +991,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         library.voice_abbreviations,
     )
     annotate(cache)
-    library.check_material_annotations(score)
+    library.highlight_staves(cache)
+    # library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache)

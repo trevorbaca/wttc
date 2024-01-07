@@ -163,7 +163,6 @@ def _reference_meters():
 def annotate(items, n):
     assert n in (1, 2, 3, 4, 5, 99), repr(n)
     for item in items:
-        staff_highlight(item, n)
         for leaf in abjad.select.leaves(item):
             abjad.attach(Material(n), leaf)
 
@@ -247,9 +246,15 @@ def check_material_annotations(score):
     for pleaf in baca.select.pleaves(score, exclude=baca.enums.HIDDEN):
         indicators = abjad.get.indicators(pleaf, Material)
         if 1 < len(indicators):
-            raise Exception(f"Multiple material annotations attached to {pleaf}.")
+            voice = abjad.get.parentage(pleaf).get(abjad.Voice)
+            name = voice.name
+            raise Exception(
+                f"Multiple material annotations attached to leaf in {name}."
+            )
         if not indicators:
-            raise Exception(f"No material annotation attached to {pleaf}.")
+            voice = abjad.get.parentage(pleaf).get(abjad.Voice)
+            name = voice.name
+            raise Exception(f"No material annotation attached to leaf in {name}.")
 
 
 def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=None):
