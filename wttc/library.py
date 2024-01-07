@@ -81,6 +81,8 @@ class Rhythm:
                 rmakers.beam([tuplet])
         if material is not None:
             for leaf in abjad.select.leaves(voice_):
+                if abjad.get.has_indicator(leaf, Material):
+                    raise Exception(leaf, material)
                 abjad.attach(Material(material), leaf)
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
@@ -239,6 +241,15 @@ def canon_e(twelfths=False):
         assert set(permutation) == set(range(12))
     counts = abjad.sequence.permute(counts, permutation)
     return counts
+
+
+def check_material_annotations(score):
+    for pleaf in baca.select.pleaves(score, exclude=baca.enums.HIDDEN):
+        indicators = abjad.get.indicators(pleaf, Material)
+        if 1 < len(indicators):
+            raise Exception(f"Multiple material annotations attached to {pleaf}.")
+        if not indicators:
+            raise Exception(f"No material annotation attached to {pleaf}.")
 
 
 def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=None):
@@ -739,6 +750,16 @@ def staff_highlight(argument, number, *, after=False):
             r"\stopStaffHighlight",
         )
     baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
+
+
+def staff_highlight_all_leaves_in_voice(leaves):
+    pleaves = baca.select.pleaves(leaves)
+    for n in (1, 2, 3, 4, 5, 99):
+        pleaves_ = select_material(pleaves, n)
+        if pleaves_:
+            groups = baca.select.group_consecutive(pleaves_)
+            for group in groups:
+                staff_highlight(group, n)
 
 
 def swell(n):

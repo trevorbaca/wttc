@@ -5118,6 +5118,8 @@ number.5.Cello.Music = {
 
     % [Cello.Music measure 42]
       %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
+      %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     c'2.
     - \tweak stencil ##f
@@ -5127,17 +5129,29 @@ number.5.Cello.Music = {
     [
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'16
     ]
     ~
 
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
 
     % [Cello.Music measure 43]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'1
     - \tweak stencil ##f
     ~
@@ -5152,6 +5166,10 @@ number.5.Cello.Music = {
     [
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'8
     ]
     - \tweak stencil ##f
@@ -5160,11 +5178,19 @@ number.5.Cello.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8
 
     % [Cello.Music measure 45]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'1
     - \tweak stencil ##f
     ~
@@ -5173,13 +5199,56 @@ number.5.Cello.Music = {
     c'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Cello.Music measure 47]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'1
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 48]
-    r1
+    c'1
+    \repeatTie
+
+      %! ANCHOR_NOTE
+    % [Cello.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 

@@ -631,26 +631,43 @@ def VC(voice, meters):
     )
     rhythm(
         meters(42),
-        [15, 5, -1, 3],
+        [15, "-"],
+        material=4,
+    )
+    rhythm(
+        meters(42),
+        [5, -1, 3],
+        material=2,
+        overlap=[-15],
     )
     rhythm(
         meters(43, 44),
-        ["+", 3, -1, 2],
+        [34, "-"],
+        material=4,
+    )
+    rhythm(
+        meters(44),
+        [3, -1, 2],
+        material=2,
+        overlap=[-18],
     )
     rhythm(
         meters(45, 46),
         [20, "-"],
+        material=4,
     )
     rhythm(
         meters(47, 48),
-        [16, "-"],
+        ["+"],
+        material=4,
     )
+    baca.section.append_anchor_note(voice)
 
 
 def annotate(cache):
     for abbreviation in ("fl", "ob", "gt1", "gt2", "vn", "vc"):
         leaves = cache[abbreviation].leaves()
-        library.annotate_all_leaves_in_voice(leaves)
+        library.staff_highlight_all_leaves_in_voice(leaves)
 
 
 def fl(m):
@@ -748,6 +765,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         library.voice_abbreviations,
     )
     annotate(cache)
+    library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
