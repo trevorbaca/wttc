@@ -10,6 +10,11 @@ def BG(*arguments):
     return baca.rhythm.BG(*arguments, slur=False)
 
 
+@dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
+class Material:
+    number: int
+
+
 def OBGC(grace_note_numerators, nongrace_note_numerator):
     return baca.OBGC(
         grace_note_numerators,
@@ -73,7 +78,7 @@ class Rhythm:
                 rmakers.beam([tuplet])
         if material is not None:
             for leaf in abjad.select.leaves(voice_):
-                abjad.attach(f"MATERIAL_{material}", leaf)
+                abjad.attach(Material(material), leaf)
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
             return components
@@ -148,7 +153,16 @@ def annotate(items, n):
     for item in items:
         staff_highlight(item, n)
         for leaf in abjad.select.leaves(item):
-            abjad.attach(f"MATERIAL_{n}", leaf)
+            abjad.attach(Material(n), leaf)
+
+
+def annotate_all_leaves_in_voice(leaves):
+    pleaves = baca.select.pleaves(leaves)
+    for n in (1, 2, 3, 4, 5, 99):
+        pleaves_ = select_material(pleaves, n)
+        if pleaves_:
+            groups = baca.select.group_consecutive(pleaves_)
+            annotate(groups, n)
 
 
 def attach_bgs(counts, grace_lists):
@@ -650,13 +664,13 @@ def rotate_rehearsal_mark_literal(leaf):
     )
 
 
-def select_material(components, material):
-    assert material in (1, 2, 3, 4, 5), repr(material)
-    material_string = f"MATERIAL_{material}"
+def select_material(components, n):
+    assert n in (1, 2, 3, 4, 5, 99), repr(n)
     result = []
     for component in components:
-        if abjad.get.has_indicator(component, material_string):
-            result.append(component)
+        for material in abjad.get.indicators(component, Material):
+            if material.number == n:
+                result.append(component)
     return result
 
 

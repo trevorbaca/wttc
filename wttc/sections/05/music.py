@@ -105,30 +105,36 @@ def FL(voice, meters):
     rhythm(
         meters(1, 9),
         ["-", 16, -58, 16, -58, 16, -8],
+        material=3,
     )
     rhythm.mmrests(10, 11)
     rhythm(
         meters(12, 14),
         [8, AG([2], 24), "-"],
+        material=3,
     )
     rhythm(
         meters(15, 17),
         [8, AG([2], 24), "-", -1, 16, -3],
+        material=3,
     )
     rhythm.mmrests(18, 19)
     rhythm(
         meters(20, 24),
         [-16, -4, -3, t(1), t(12), t(16), t(16), 7, -1],
         do_not_rewrite_meter=True,
+        material=3,
     )
     rhythm(
         meters(25, 27),
         [-20, -1, t(3), t(16), t(16), 7, -1],
         do_not_rewrite_meter=True,
+        material=3,
     )
     rhythm(
         meters(28, 30),
         ["-", -1, 7, -4],
+        material=3,
     )
     rhythm(
         meters(31, 34),
@@ -296,14 +302,17 @@ def VN(voice, meters):
         meters(3, 4),
         [t(4), bl(1), BG([2], br(3)), swell(12), -1, t(3), 4, -8, -1, t(3), 4, -4],
         do_not_rewrite_meter=True,
+        material=1,
     )
     rhythm(
         meters(5, 6),
         [16, 8, -1, 15, -1, 7],
+        material=1,
     )
     rhythm(
         meters(7, 8),
         [-3, 1, 4, 4, 4, 4, 4, 4, "+", w(3, 4), h(1)],
+        material=2,
     )
     rhythm(
         meters(9),
@@ -475,22 +484,19 @@ def VC(voice, meters):
 
 
 def annotate(cache):
-    @baca.call
-    def block():
-        runs = abjad.select.runs(cache["fl"][1, 30])
-        library.annotate(runs, 3)
-        runs = abjad.select.runs(cache["gt1"][1, 30])
-        library.annotate(runs, 3)
-        runs = abjad.select.runs(cache["gt2"][1, 30])
-        library.annotate(runs, 3)
+    #    @baca.call
+    #    def block():
+    #        runs = abjad.select.runs(cache["fl"][1, 30])
+    #        library.annotate(runs, 3)
+    #        runs = abjad.select.runs(cache["gt1"][1, 30])
+    #        library.annotate(runs, 3)
+    #        runs = abjad.select.runs(cache["gt2"][1, 30])
+    #        library.annotate(runs, 3)
 
     @baca.call
     def block():
-        m = cache["vn"]
-        leaves = m.leaves()
-        leaves = library.select_material(leaves, 1)
-        groups = baca.select.group_consecutive(leaves)
-        library.annotate(groups, 1)
+        library.annotate_all_leaves_in_voice(cache["fl"].leaves())
+        library.annotate_all_leaves_in_voice(cache["vn"].leaves())
 
 
 def fl(m):
