@@ -56,42 +56,82 @@ def FL(voice, meters):
     rhythm(
         meters(1, 2),
         3 * [pair(4, 8, 4, 8)] + ["-"],
+        material=1,
     )
     rhythm(
         meters(3, 4),
         3 * [pair(4, 8, 4, 8)] + ["-"],
+        material=1,
     )
     rhythm(
         meters(5),
         2 * [pair(4, 8, 4, 8)],
+        material=1,
     )
     rhythm(
         meters(6),
         2 * [pair(4, 8, 4, 8)],
+        material=1,
     )
     rhythm(
         meters(7),
-        [4, rt(3), 1, AG([2], 8)],
+        [4, rt(3), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(7),
+        [1, AG([2], 8)],
+        material=3,
+        overlap=[-7],
     )
     rhythm(
         meters(8, 9),
         [16, AG([2], rt(16))],
+        material=3,
     )
     rhythm(
         meters(10),
         AG([2], 16),
+        material=3,
     )
     rhythm(
         meters(11),
-        [AG([2], 3), -1, -3, 3, -2],
+        [AG([2], 3), -1, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(11),
+        [-3, 3, -2],
+        material=99,
+        overlap=[-4],
     )
     rhythm(
         meters(12),
-        [pair(4, 8, 4, 8), AG([2], 3), -1, -4, -3, 3, -2],
+        [pair(4, 8, 4, 8), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(12),
+        [AG([2], 3), -1, "-"],
+        material=3,
+        overlap=[-8],
+    )
+    rhythm(
+        meters(12),
+        [-3, 3, -2],
+        material=99,
+        overlap=[-16],
     )
     rhythm(
         meters(13),
-        [AG([2], 3), -1, -4, "-", 3, -2],
+        [AG([2], 3), -1, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(13),
+        [-3, 3, -2],
+        material=99,
+        overlap=[-16],
     )
 
 
@@ -106,34 +146,40 @@ def GT1(voice, meters):
         meters(1),
         [-5, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(2),
         [-15, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.mmrests(3)
     rhythm.make_one_beat_tuplets(
         meters(4),
         [-12, -1, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.mmrests(5, 6)
     rhythm.make_one_beat_tuplets(
         meters(7),
         [-1, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.mmrests(8, 10)
     rhythm.make_one_beat_tuplets(
         meters(11, 12),
         [-8, 2, "-", 5, -2],
         extra_counts=[-1],
+        material=99,
     )
     rhythm.make_one_beat_tuplets(
         meters(13),
         [-12, -1, 2, "-"],
         extra_counts=[-1],
+        material=99,
     )
 
 
@@ -143,22 +189,26 @@ def GT2(voice, meters):
         meters(1),
         [-6, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(2),
         [-13, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.mmrests(3, 4)
     rhythm.make_one_beat_tuplets(
         meters(5),
         [-1, 1, "-"],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(6),
         ["-", 1],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.mmrests(7)
     rhythm.mmrests(8, 10)
@@ -166,12 +216,14 @@ def GT2(voice, meters):
         meters(11),
         [-3, -1, 3, "-"],
         extra_counts=[-1],
+        material=99,
     )
     rhythm.mmrests(12)
     rhythm.make_one_beat_tuplets(
         meters(13),
         [-3, -3, -3, -1, 1, "-"],
         extra_counts=[-1],
+        material=99,
     )
 
 
@@ -179,38 +231,73 @@ def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [TC(2, [1, 1]), TC(2, [1, 1]), -1, 5, 1, -1],
+        [TC(2, [1, 1]), TC(2, [1, 1]), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(1),
+        [-1, 5, 1, -1],
+        do_not_clean_up_rhythmic_spelling=True,
+        material=2,
+        overlap=[-8],
     )
     rhythm(
         meters(2),
-        2 * [TC(2, [1, 1])] + [-2, 4, 1, 3, 3, 1, -2],
+        2 * [TC(2, [1, 1])] + ["-"],
+        material=1,
+    )
+    rhythm(
+        meters(2),
+        [-2, 4, 1, 3, 3, 1, -2],
+        do_not_clean_up_rhythmic_spelling=True,
+        material=2,
+        overlap=[-8],
     )
     rhythm(
         meters(3),
-        2 * [TC(2, [1, 1])] + [-2, 1, t(5)],
+        2 * [TC(2, [1, 1])] + ["-"],
+        material=1,
+    )
+    rhythm(
+        meters(3),
+        [-2, 1, t(5)],
+        material=2,
+        do_not_clean_up_rhythmic_spelling=True,
+        overlap=[-8],
     )
     rhythm(
         meters(4),
         [1, 1, 2, 4, 1, 3, 4, 2, 1, 4, 1],
+        material=2,
     )
     rhythm(
         meters(5, 6),
         4 * [TC(4, [1, 1])],
+        material=1,
     )
     rhythm(
         meters(7),
         [-1, 1, 2, 4, 1, 2, 1, -4],
+        material=2,
     )
     rhythm.mmrests(8, 10)
     rhythm(
         meters(11),
         [-5, BG([1], 3), AG([1], rt(2)), -2],
+        material=99,
+    )
+    rhythm(
+        meters(12),
+        [TC(4, [1, 1]), "-"],
+        material=1,
     )
     rhythm(
         meters(12, 13),
-        [TC(4, [1, 1]), -4]
-        + [-1, BG([1], t(3)), AG([1], 1), -1, -1, BG([1], t(1)), t(4), AG([1], 3), -1]
+        [-4, -1, BG([1], t(3)), AG([1], 1), -1, -1, BG([1], t(1)), t(4), AG([1], 3), -1]
         + [-12, -2, BG([1], t(2)), AG([1], 1), -3],
+        do_not_clean_up_rhythmic_spelling=True,
+        material=99,
+        overlap=[-8],
     )
 
 
@@ -219,50 +306,89 @@ def VC(voice, meters):
     rhythm(
         meters(1),
         ["-", 4, 6, t(1)],
+        material=2,
     )
     rhythm(
         meters(2),
         [2, "-", 3, 4, 1, 3, 4, t(2)],
+        material=2,
     )
     rhythm(
         meters(3),
         [1, "-", 3, 1, t(5)],
+        material=2,
     )
     rhythm(
         meters(4),
         [1, 1, 2, 4, 1, 3, 4, 2, 1, t(5)],
+        material=2,
     )
     rhythm(
         meters(5),
         [1, 1, 2, 4, 1, "-"],
+        material=2,
     )
     rhythm(
         meters(6),
         ["-", t(5)],
+        material=2,
     )
     rhythm(
         meters(7),
-        [(1, 1, 2, 4 - 1), "+"],
+        [1, 1, 2, 4 - 1, "-"],
+        material=2,
     )
+    rhythm(
+        meters(7),
+        [9],
+        material=3,
+        overlap=[-7],
+    )
+
     rhythm(
         meters(8, 9),
         [t(16), t(12), w(3, 4), h(1)],
+        material=3,
     )
     rhythm(
         meters(10),
         [t(12), w(3, 4), h(1)],
+        material=3,
     )
     rhythm(
         meters(11),
-        [w(3, 4), h(1), -1, "-", BG([2], 3)],
+        [w(3, 4), h(1), -1, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(11),
+        [BG([2], 3)],
+        material=99,
+        overlap=["-"],
+    )
+    rhythm(meters(12), [rt(AG([2], 2)), "-"], material=99)
+    rhythm(
+        meters(12),
+        [-1, 8, "-"],
+        material=3,
+        overlap=[-2],
     )
     rhythm(
         meters(12),
-        [rt(AG([2], 2)), -1, 8, -1, -3, AG([2], BG([2], 4)), -5],
+        [-1, -3, AG([2], BG([2], 4)), -5],
+        material=99,
+        overlap=[-11],
     )
     rhythm(
         meters(13),
-        [3, -1, -4, -1, AG([2], BG([2], 4)), "-"],
+        [3, -1, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(13),
+        [-4, -1, AG([2], BG([2], 4)), "-"],
+        material=99,
+        overlap=[-4],
     )
 
 
@@ -274,12 +400,6 @@ def fl(m):
         baca.instrument_name(leaf, strings.alto_flute_markup)
         baca.short_instrument_name(leaf, "Afl.", library.manifests)
         baca.clef(leaf, "treble")
-
-    @baca.call
-    def block():
-        leaves = m[1, 4]
-        runs = abjad.select.runs(leaves)
-        library.annotate(runs, 1)
 
     @baca.call
     def block():
@@ -324,12 +444,10 @@ def fl(m):
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
         )
-        library.annotate([leaves], 1)
 
     @baca.call
     def block():
         leaves = m[7][-3:]
-        library.annotate([leaves], 3)
         baca.flat_glissando(leaves, "C6", stop_pitch="B5")
         baca.hairpin(leaves, "f >o niente")
 
@@ -337,8 +455,6 @@ def fl(m):
     def block():
         leaves = m[8, 11]
         runs = abjad.select.runs(leaves)
-        library.annotate([runs[0]], 3)
-        library.annotate([runs[1]], 99)
         baca.flat_glissando(leaves[:3], "C6", stop_pitch="B5")
         baca.hairpin(leaves[:3], "mf >o !")
         baca.flat_glissando(m[10], "D6", stop_pitch="C#6")
@@ -365,7 +481,6 @@ def fl(m):
         pleaves = baca.select.pleaves(leaves)
         runs = abjad.select.runs(leaves)
         first = pleaves[:2]
-        library.annotate([first], 1)
         baca.pitch(first, "E4")
         baca.hairpin(
             first,
@@ -374,12 +489,10 @@ def fl(m):
         )
         baca.dynamic(baca.select.rleak(first), "!")
         second = pleaves[2:4]
-        library.annotate([second], 3)
         baca.flat_glissando(second, "E6", stop_pitch="D#6")
         baca.hairpin(second, "p >o !")
         baca.override.dls_staff_padding(first + second, 3.5)
         third = runs[1]
-        library.annotate([third], 99)
         baca.pitch(third, "G#3")
         baca.covered_spanner(
             baca.select.rleak(third),
@@ -394,12 +507,10 @@ def fl(m):
         leaves = m[13]
         runs = abjad.select.runs(leaves)
         first = runs[0]
-        library.annotate([first], 3)
         baca.flat_glissando(first, "F6", stop_pitch="E6")
         baca.hairpin(first, "p >o !")
         baca.override.dls_staff_padding(first, 3)
         second = runs[1]
-        library.annotate([second], 99)
         baca.pitch(second, "G#3")
         baca.covered_spanner(
             baca.select.rleak(second),
@@ -433,8 +544,6 @@ def gt1(m):
     @baca.call
     def block():
         leaves = m[1, 7]
-        runs = abjad.select.runs(leaves)
-        library.annotate(runs, 1)
         notes = abjad.select.notes(leaves)
         baca.pitches(notes, "Db5 Bb4 Ab4 F4")
         baca.laissez_vibrer(notes)
@@ -446,7 +555,6 @@ def gt1(m):
     def block():
         leaves = m[11, 13]
         runs = abjad.select.runs(leaves)
-        library.annotate(runs, 99)
         for run in runs:
             baca.down_bow(run[0], abjad.Tweak(r"- \tweak padding 1"))
             if len(run) == 1:
@@ -472,7 +580,6 @@ def gt2(m):
     def block():
         leaves = m[1, 7]
         runs = abjad.select.runs(leaves)
-        library.annotate(runs, 1)
         for run in runs:
             run = baca.select.plts(run)
         notes = abjad.select.notes(leaves)
@@ -485,7 +592,6 @@ def gt2(m):
     def block():
         leaves = m[11, 13]
         runs = abjad.select.runs(leaves)
-        library.annotate(runs, 99)
         for run in runs:
             baca.up_bow(run[0], abjad.Tweak(r"- \tweak padding 1"))
             if len(run) == 1:
@@ -509,7 +615,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[1], 0)
-        library.annotate([run], 1)
         baca.pitches(run, "D4 F4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -521,7 +626,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[1], 1)
-        library.annotate([run], 2)
         baca.flat_glissando(run, "D5", stop_pitch="Eb4")
         rrun = baca.select.rleak(run)
         baca.damp_spanner(rrun, abjad.Tweak(r"- \tweak staff-padding 3"))
@@ -539,7 +643,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[2], 0)
-        library.annotate([run], 1)
         baca.pitches(run, "D4 F#4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -551,7 +654,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[2], 1)
-        library.annotate([run], 2)
         baca.multistage_leaf_glissando(
             run,
             [("Db5", 3), ("E4", 2), ("C5", 3), ("F4", None)],
@@ -568,7 +670,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[3], 0)
-        library.annotate([run], 1)
         baca.pitches(run, "E4 G4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -581,7 +682,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[3, 4], 1)
-        library.annotate([run], 2)
         baca.multistage_leaf_glissando(
             run,
             [
@@ -611,7 +711,6 @@ def vn(m):
     @baca.call
     def block():
         leaves = m[5, 6]
-        library.annotate([leaves], 1)
         baca.pitches(leaves, "E4 G#4")
         baca.hairpin(
             leaves[:7],
@@ -631,7 +730,6 @@ def vn(m):
     def block():
         leaves = m[7]
         run = abjad.select.run(leaves, 0)
-        library.annotate([run], 2)
         baca.multistage_leaf_glissando(
             run,
             [
@@ -650,15 +748,6 @@ def vn(m):
             '"f" >o niente',
         )
         baca.override.dls_staff_padding(leaves, 3)
-
-    @baca.call
-    def block():
-        leaves = m[11, 13]
-        runs = abjad.select.runs(leaves)
-        library.annotate([runs[0]], 99)
-        library.annotate([runs[2]], 99)
-        library.annotate([runs[3]], 99)
-        library.annotate([runs[4]], 99)
 
     @baca.call
     def block():
@@ -681,7 +770,6 @@ def vn(m):
     @baca.call
     def block():
         run = abjad.select.run(m[12], 0)
-        library.annotate([run], 1)
         baca.pitches(run, "E4 G#4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
@@ -726,12 +814,6 @@ def vc(cache):
         baca.short_instrument_name(leaf, "Vc.", library.manifests)
         baca.clef(leaf, "bass")
         library.rotate_rehearsal_mark_literal(leaf)
-
-    @baca.call
-    def block():
-        leaves = m[1, 5]
-        runs = abjad.select.runs(leaves)
-        library.annotate(runs, 2)
 
     @baca.call
     def block():
@@ -820,13 +902,6 @@ def vc(cache):
 
     @baca.call
     def block():
-        leaves = m[6, 7]
-        plts = baca.select.plts(leaves)
-        library.annotate([plts[:-1]], 2)
-        library.annotate([plts[-1:]], 3)
-
-    @baca.call
-    def block():
         run = abjad.select.run(m[6, 7], 0)
         run = run[:-2]
         plts = baca.select.plts(run)
@@ -875,17 +950,6 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 3"),
         )
         baca.hairpin(rplt, ">o niente")
-
-    @baca.call
-    def block():
-        leaves = m[8, 13]
-        runs = abjad.select.runs(leaves)
-        library.annotate([runs[0]], 3)
-        library.annotate([runs[1]], 99)
-        library.annotate([runs[2]], 3)
-        library.annotate([runs[3]], 99)
-        library.annotate([runs[4]], 3)
-        library.annotate([runs[5]], 99)
 
     @baca.call
     def block():
@@ -1036,14 +1100,14 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    # library.check_material_annotations(score)
+    library.highlight_staves(cache)
+    library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache)
-    library.check_material_annotations(score)
     return score
 
 

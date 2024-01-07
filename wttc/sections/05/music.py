@@ -664,12 +664,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def annotate(cache):
-    for abbreviation in ("fl", "ob", "gt1", "gt2", "vn", "vc"):
-        leaves = cache[abbreviation].leaves()
-        library.staff_highlight_all_leaves_in_voice(leaves)
-
-
 def fl(m):
     @baca.call
     def block():
@@ -764,7 +758,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    annotate(cache)
+    library.highlight_staves(cache)
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])

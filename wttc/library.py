@@ -122,17 +122,17 @@ class Rhythm:
         components = clean_up_rhythmic_spelling(
             tuplets, time_signatures, debug=debug, tag=tag
         )
-        did_staff_highlight = False
+        if material is not None:
+            voice_ = abjad.Voice(components)
+            for leaf in abjad.select.leaves(voice_):
+                if abjad.get.has_indicator(leaf, Material):
+                    raise Exception(leaf, material)
+                abjad.attach(Material(material), leaf)
+            components = abjad.mutate.eject_contents(voice_)
         if overlap:
             overlap_previous_measure(self.voice, components, time_signatures)
         elif not do_not_extend:
             self.voice.extend(components)
-            if material is not None:
-                tleaves = baca.select.tleaves(components)
-                staff_highlight(tleaves, material)
-                did_staff_highlight = True
-        if material is not None and not did_staff_highlight:
-            raise Exception("must add components to voice before staff highlight.")
         return components
 
     def mmrests(self, *arguments, head=False):
@@ -360,6 +360,12 @@ def get_components_in_previous_measure(voice, *, count=1):
     groups = groups[-count:]
     components = abjad.sequence.flatten(groups)
     return components
+
+
+def highlight_staves(cache):
+    for abbreviation in ("fl", "ob", "gt1", "gt2", "vn", "vc"):
+        leaves = cache[abbreviation].leaves()
+        staff_highlight_all_leaves_in_voice(leaves)
 
 
 def is_obgc_polyphony_container(component):

@@ -1062,6 +1062,10 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         e'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1076,10 +1080,6 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 8]
     \override DynamicLineSpanner.staff-padding = 3.5
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     f'''1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1116,6 +1116,10 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         e'''8
           %! SPANNER_STOP
         \!
@@ -1157,6 +1161,10 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         fs'''!8
           %! SPANNER_STOP
         \!
@@ -1198,6 +1206,10 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         g'''8
           %! SPANNER_STOP
         \!
@@ -1341,6 +1353,10 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         gs'''!8
           %! SPANNER_STOP
         \!
@@ -1430,6 +1446,10 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         a'''8
           %! SPANNER_STOP
         \!
@@ -3368,6 +3388,10 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
 
     }
@@ -3507,6 +3531,10 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
 
     }
@@ -3514,7 +3542,7 @@ number.3.Violin.Music = {
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r16
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -3526,8 +3554,6 @@ number.3.Violin.Music = {
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     \revert NoteHead.style
-
-    r16
 
     \acciaccatura {
 
@@ -3588,6 +3614,10 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
 
     }
@@ -3668,6 +3698,10 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16
         \revert DynamicLineSpanner.staff-padding
 
@@ -4609,10 +4643,6 @@ number.3.Cello.Music = {
     <gf, cf>2
 
     % [Cello.Music measure 8]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     <gf,! cf!>1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4944,6 +4974,10 @@ number.3.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         d'8
 
     }
@@ -5094,6 +5128,10 @@ number.3.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         d'8
 
     }
@@ -5231,6 +5269,10 @@ number.3.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+          %! STAFF_HIGHLIGHT
+        \staffHighlight yellow
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         d'8
 
     }
