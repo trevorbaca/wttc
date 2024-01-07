@@ -1802,55 +1802,82 @@ number.5.AltoFlute.Music = {
     r4
 
     % [AltoFlute.Music measure 31]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 32]
     r2
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
 
     f'2
-    - \tweak stencil ##f
-    ~
 
-    f'16
-    [
-    \repeatTie
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    f'16
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 33]
-    f'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    f'8
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8
+
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+    f'16
     [
-    \repeatTie
-
-    f'16
-
-    f'16
-    ]
-    ~
-
-    f'4
-    - \tweak stencil ##f
-    ~
-
-    f'8
-    [
-    \repeatTie
-
-    f'16
 
     f'16
     ]
@@ -1873,12 +1900,14 @@ number.5.AltoFlute.Music = {
     ~
 
     f'8.
-    [
     \repeatTie
 
-    f'16
-    ]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -1990,7 +2019,17 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 37]
-    r2.
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     f'4 * 1/2
       %! DURATION_MULTIPLIER
@@ -2004,14 +2043,48 @@ number.5.AltoFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r2
+
     % [AltoFlute.Music measure 38]
-    r1
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r2
 
     % [AltoFlute.Music measure 39]
     r4
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
 
     f'4
@@ -2054,79 +2127,62 @@ number.5.AltoFlute.Music = {
     \repeatTie
 
     % [AltoFlute.Music measure 41]
-    f'4 * 1/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-    f'4 * 1/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-
-    r4
-
-    f'16
-    [
-
-    f'8.
-    ]
-    - \tweak stencil ##f
-    ~
-
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'4
-    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r2.
 
     % [AltoFlute.Music measure 42]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'16
     ~
 
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
-    r8
-
-    f'16
-    [
-
-    f'16
-    ]
-    ~
-
-    f'4
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'16
-
-    f'8
-    ]
+    r2.
 
     % [AltoFlute.Music measure 43]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'16
     ~
 
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'8.
     - \tweak stencil ##f
     ~
@@ -2135,156 +2191,65 @@ number.5.AltoFlute.Music = {
     f'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'16
     ~
 
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'8.
     - \tweak stencil ##f
     ~
 
     f'16
-    [
     \repeatTie
 
-    f'16
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'16
-
-    f'8
-    ]
-
-    % [AltoFlute.Music measure 45]
-    f'16
-    [
-
-    f'16
-    ~
-
-    f'16
-    ]
-
-    r16
-
-    r8
-
-    f'16
-    [
-
-    f'16
-    ]
-    ~
-
-    f'8
-
-    r8
-
-    r16
-
-    f'16
-    [
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    % [AltoFlute.Music measure 46]
-    f'8
-    \repeatTie
-
-    r8
-
-    r16
-
-    f'16
-    [
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'8.
-    \repeatTie
-
-    r16
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8.
 
     r4
 
+    % [AltoFlute.Music measure 45]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [AltoFlute.Music measure 46]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
     % [AltoFlute.Music measure 47]
-    f'16
-    [
-
-    f'8.
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'8
-    [
-    \repeatTie
-
-    f'16
-
-    f'16
-    ]
-    ~
-
-    f'4
-    - \tweak stencil ##f
-    ~
-
-    f'16
-    [
-    \repeatTie
-
-    f'16
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 48]
-    f'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    f'16
-    [
-    \repeatTie
-
-    f'16
-
-    f'8
-    ]
-    - \tweak stencil ##f
-    ~
-
-    f'2
-    \repeatTie
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
 }
 
@@ -2664,9 +2629,13 @@ number.5.Guitar.1.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
     % [Guitar.1.Music measure 10]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2689,9 +2658,13 @@ number.5.Guitar.1.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
     % [Guitar.1.Music measure 15]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2723,8 +2696,12 @@ number.5.Guitar.1.Music = {
     r2.
 
     % [Guitar.1.Music measure 22]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2
@@ -2745,8 +2722,12 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 26]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r1
@@ -3745,18 +3726,28 @@ number.5.Violin.Music = {
 
     % [Violin.Music measure 9]
       %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     \afterGrace
     c'1
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -3765,8 +3756,12 @@ number.5.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 10]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
     c'4
@@ -3801,6 +3796,10 @@ number.5.Violin.Music = {
     c'16
 
     % [Violin.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'1.
     - \tweak stencil ##f
     ~
@@ -3811,13 +3810,21 @@ number.5.Violin.Music = {
     \repeatTie
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -3826,34 +3833,46 @@ number.5.Violin.Music = {
     c'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
-    ~
 
     c'4
-    - \tweak stencil ##f
-    ~
 
     c'4
-    \repeatTie
 
     % [Violin.Music measure 15]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     \afterGrace
     c'2
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
 
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'8.
     - \tweak stencil ##f
     ~
@@ -3868,10 +3887,14 @@ number.5.Violin.Music = {
     c'8
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -3880,8 +3903,12 @@ number.5.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 18]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
     ~
 
@@ -3920,14 +3947,22 @@ number.5.Violin.Music = {
     \repeatTie
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
 
 
     % [Violin.Music measure 20]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -3935,20 +3970,24 @@ number.5.Violin.Music = {
     c'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
-    ~
 
     % [Violin.Music measure 21]
     c'4
-    - \tweak stencil ##f
-    ~
 
     c'16
     [
-    \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'8.
     ]
     - \tweak stencil ##f
@@ -3979,24 +4018,26 @@ number.5.Violin.Music = {
     c'4..
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     % [Violin.Music measure 25]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
-    - \tweak stencil ##f
-    ~
 
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     c'16
     [
-    \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'8.
     ]
     - \tweak stencil ##f
@@ -4013,14 +4054,22 @@ number.5.Violin.Music = {
     ~
     \repeatTie
 
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 27]
     c'1
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'4..
+    c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     % [Violin.Music measure 28]
@@ -4038,6 +4087,8 @@ number.5.Violin.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'8.
     - \tweak stencil ##f
     ~
@@ -4046,6 +4097,8 @@ number.5.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 31]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -4093,41 +4146,63 @@ number.5.Violin.Music = {
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'4
 
     % [Violin.Music measure 41]
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Violin.Music measure 42]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'16
     ~
 
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2.
 
     % [Violin.Music measure 43]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'16
     ~
 
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'8.
     - \tweak stencil ##f
     ~
@@ -4136,21 +4211,33 @@ number.5.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'16
     ~
 
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'8.
     - \tweak stencil ##f
     ~
@@ -4158,11 +4245,15 @@ number.5.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
 
     % [Violin.Music measure 45]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'4
 
     c'4
@@ -4174,9 +4265,13 @@ number.5.Violin.Music = {
     % [Violin.Music measure 46]
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Violin.Music measure 47]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'4
 
     c'4
@@ -4186,7 +4281,49 @@ number.5.Violin.Music = {
     c'4
 
     % [Violin.Music measure 48]
-    r1
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+      %! ANCHOR_NOTE
+    % [Violin.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 

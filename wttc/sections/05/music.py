@@ -136,42 +136,51 @@ def FL(voice, meters):
         ["-", -1, 7, -4],
         material=3,
     )
+    rhythm.mmrests(31)
     rhythm(
-        meters(31, 34),
-        ["-", 1, 9, 1, 8, 1, 7, 1, 6, 1, 5, 1, swell(4)],
+        meters(32),
+        ["-", 1, 8, -4],
+        material=2,
     )
     rhythm(
-        meters(35, 36),
-        8 * [swell(4)],
+        meters(32, 33),
+        [-20] + 4 * [swell(4)] + ["-"],
+        material=3,
+        overlap=True,
     )
     rhythm(
-        meters(37, 38),
-        [-12, swell(4), "-"],
+        meters(33, 34),
+        [-12, -2, 1, 6, 1, 5, "-"],
+        material=2,
+        overlap=True,
+    )
+    rhythm(
+        meters(34, 38),
+        [-12] + 11 * [swell(4)] + [-4, -4] + 2 * [swell(4)] + ["-"],
+        material=3,
+        overlap=True,
     )
     rhythm(
         meters(39, 40),
         [-4, -3, 1, 4, 1, 5, 1, 6, 1, "+"],
+        material=2,
     )
     rhythm(
         meters(41),
-        [swell(4), -4, 1, 7],
+        [4, "-"],
+        material=4,
     )
     rhythm(
         meters(42),
-        [4, -3, 4, -3, 1, 6, 1, 5],
+        [4, -3, 4, "-"],
+        material=4,
     )
     rhythm(
         meters(43, 44),
-        [4, -3, 4, -2, 4, -2, 4, -1, 4, -1, 4, 1, 3, 1, 2],
+        [4, -3, 4, -2, 4, -2, 4, -1, 4, -1, 4, "-"],
+        material=4,
     )
-    rhythm(
-        meters(45, 46),
-        [1, 2, -3, 1, 3, -3, 1, 4, -3, 1, 5, "-"],
-    )
-    rhythm(
-        meters(47, 48),
-        [1, 5, 1, 6, 1, 7, 1, "+"],
-    )
+    rhythm.mmrests(45, 48)
 
 
 def OB(voice, meters):
@@ -185,22 +194,26 @@ def GT1(voice, meters):
     rhythm(
         meters(9),
         ["-", 1],
+        material=3,
     )
     rhythm.mmrests(10, 11)
     rhythm(
         meters(12, 14),
         ["-", 1],
+        material=3,
     )
     rhythm.mmrests(15, 17)
     rhythm.mmrests(18, 19)
     rhythm(
         meters(20, 22),
         ["-", 2, -10],
+        material=3,
     )
     rhythm.mmrests(23, 25)
     rhythm(
         meters(26, 27),
         [2, "-"],
+        material=3,
     )
     rhythm.mmrests(28, 30)
     rhythm(
@@ -316,73 +329,131 @@ def VN(voice, meters):
     )
     rhythm(
         meters(9),
-        [AG([2], 16), -1, 7],
+        [AG([2], 16), "-"],
+        material=3,
+    )
+    rhythm(
+        meters(9),
+        [-16, -1, 7],
+        material=1,
+        overlap=True,
     )
     rhythm(
         meters(10, 11),
         [-3, 1, 4, 4, 4, 4, "+", w(3, 4), h(1)],
+        material=2,
     )
     rhythm(
-        meters(12, 14),
-        [t(24), AG([2], 8), -1, t(3), 4, -8, -3, t(1), t(4), 4],
+        meters(12, 13),
+        [t(24), AG([2], 8), "-"],
         do_not_rewrite_meter=True,
+        material=3,
+    )
+    rhythm(
+        meters(13, 14),
+        [-8, -1, 7, "-"],
+        material=1,
+        overlap=True,
+    )
+    rhythm(
+        meters(14),
+        ["-", 1, 4, 4],
+        material=2,
+        overlap=True,
     )
     rhythm(
         meters(15, 17),
-        [AG([2], 8), "-", 29, -3, 7],
+        [AG([2], 8), "-", 29, -10],
+        material=3,
+    )
+    rhythm(
+        meters(17),
+        ["-", 7],
+        material=1,
+        overlap=True,
     )
     rhythm(
         meters(18, 19),
         [-3, t(1), t(4), t(4), t(4), t(4), t(4), t(4), AG([2], 4)],
         do_not_rewrite_meter=True,
+        material=2,
     )
     rhythm(
-        meters(20, 22),
-        [-1, 7, -3, t(1), t(4), 1, t(19)],
+        meters(20),
+        [-1, 7, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(20, 21),
+        [-11, 1, 4, 1, "-"],
+        material=2,
+        overlap=True,
+    )
+    rhythm(
+        meters(21, 22),
+        [-5, t(19)],
+        material=3,
+        overlap=True,
     )
     rhythm(
         meters(23, 24),
         [t(16), t(16), 7, -1],
         do_not_rewrite_meter=True,
+        material=3,
     )
     rhythm(
         meters(25),
-        [-1, t(7), 1, t(15)],
+        [-1, 3, 4, 1, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(25),
+        [-9, t(15)],
+        material=3,
+        overlap=True,
     )
     rhythm(
         meters(26, 27),
-        [t(16), t(16), 7, -1],
-        do_not_rewrite_meter=True,
+        ["+", -1],
+        material=3,
     )
     rhythm(
         meters(28, 30),
         ["-", -1, 7],
+        material=3,
     )
     rhythm.mmrests(31, 38)
     rhythm(
         meters(39, 40),
         ["-", 4],
+        material=4,
     )
     rhythm(
         meters(41),
         [4, "-"],
+        material=4,
     )
     rhythm(
         meters(42),
         [4, -3, 4, "-"],
+        material=4,
     )
     rhythm(
         meters(43, 44),
         [4, -3, 4, -2, 4, -2, 4, -1, 4, -1, 4, "-"],
+        material=4,
     )
     rhythm(
         meters(45, 46),
         [4, 4, 4, 4, 4, "-"],
+        material=4,
     )
     rhythm(
         meters(47, 48),
-        [4, 4, 4, 4, "-"],
+        8 * [4],
+        material=4,
     )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
@@ -484,19 +555,9 @@ def VC(voice, meters):
 
 
 def annotate(cache):
-    #    @baca.call
-    #    def block():
-    #        runs = abjad.select.runs(cache["fl"][1, 30])
-    #        library.annotate(runs, 3)
-    #        runs = abjad.select.runs(cache["gt1"][1, 30])
-    #        library.annotate(runs, 3)
-    #        runs = abjad.select.runs(cache["gt2"][1, 30])
-    #        library.annotate(runs, 3)
-
-    @baca.call
-    def block():
-        library.annotate_all_leaves_in_voice(cache["fl"].leaves())
-        library.annotate_all_leaves_in_voice(cache["vn"].leaves())
+    for abbreviation in ("fl", "ob", "gt1", "gt2", "vn", "vc"):
+        leaves = cache[abbreviation].leaves()
+        library.annotate_all_leaves_in_voice(leaves)
 
 
 def fl(m):
