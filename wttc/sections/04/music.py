@@ -548,7 +548,7 @@ def fl(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "AltoFlute", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-alto-flute-markup")
+        baca.instrument_name(leaf, strings.alto_flute_markup)
         baca.short_instrument_name(leaf, "Afl.", library.manifests)
         baca.clef(leaf, "treble")
 

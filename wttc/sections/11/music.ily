@@ -937,6 +937,8 @@ number.11.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup
 
     % [AltoFlute.Music measure 2]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     f'1.
 
     % [AltoFlute.Music measure 3]
@@ -975,6 +977,8 @@ number.11.AltoFlute.Music = {
     f'2
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     % [AltoFlute.Music measure 11]
@@ -1015,6 +1019,8 @@ number.11.AltoFlute.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     f'8
     - \tweak stencil ##f
     ~
@@ -1024,6 +1030,8 @@ number.11.AltoFlute.Music = {
     \repeatTie
 
     % [AltoFlute.Music measure 20]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -1039,6 +1047,8 @@ number.11.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [AltoFlute.Music measure 23]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     f'1
     - \tweak stencil ##f
     ~
@@ -1056,6 +1066,8 @@ number.11.AltoFlute.Music = {
     \repeatTie
 
     % [AltoFlute.Music measure 24]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -1066,6 +1078,8 @@ number.11.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [AltoFlute.Music measure 26]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     f'1
     - \tweak stencil ##f
     ~
@@ -1100,6 +1114,8 @@ number.11.AltoFlute.Music = {
     \repeatTie
 
     % [AltoFlute.Music measure 28]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
 }
@@ -1344,15 +1360,21 @@ number.11.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 3]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 4]
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     % [Guitar.1.Music measure 5]
@@ -1360,8 +1382,12 @@ number.11.Guitar.1.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Guitar.1.Music measure 6]
@@ -1369,38 +1395,60 @@ number.11.Guitar.1.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 7]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 8]
     r1
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
     c''4
 
     % [Guitar.1.Music measure 9]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Guitar.1.Music measure 10]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     r4
@@ -1410,68 +1458,110 @@ number.11.Guitar.1.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
     c''4
 
     % [Guitar.1.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Guitar.1.Music measure 13]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 14]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
     c''4
 
     % [Guitar.1.Music measure 15]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
     c''4
 
     % [Guitar.1.Music measure 16]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Guitar.1.Music measure 17]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 18]
@@ -1485,17 +1575,25 @@ number.11.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 20]
-    r2.
-
-    % [Guitar.1.Music measure 21]
-    r2.
-
-    % [Guitar.1.Music measure 22]
     r2
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
+
+    % [Guitar.1.Music measure 21]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Guitar.1.Music measure 22]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 23]
     R1 * 9/4
@@ -1583,15 +1681,21 @@ number.11.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 3]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 4]
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     % [Guitar.2.Music measure 5]
@@ -1599,8 +1703,12 @@ number.11.Guitar.2.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Guitar.2.Music measure 6]
@@ -1608,8 +1716,12 @@ number.11.Guitar.2.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.2.Music measure 7]
@@ -1626,10 +1738,14 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1639,6 +1755,8 @@ number.11.Guitar.2.Music = {
         % [Guitar.2.Music measure 9]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
@@ -1647,75 +1765,117 @@ number.11.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
     c''4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Guitar.2.Music measure 10]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
-    r\breve
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r1
 
     r4
 
+    % [Guitar.2.Music measure 11]
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
         % [Guitar.2.Music measure 12]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
     c''4
 
-    r1.
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r2.
+
+    % [Guitar.2.Music measure 13]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.2.Music measure 14]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1725,6 +1885,8 @@ number.11.Guitar.2.Music = {
         % [Guitar.2.Music measure 15]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
@@ -1733,8 +1895,12 @@ number.11.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
@@ -1745,6 +1911,8 @@ number.11.Guitar.2.Music = {
 
         c''4
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -1757,10 +1925,14 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.2.Music measure 16]
@@ -1770,8 +1942,12 @@ number.11.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -1784,11 +1960,15 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
     }
 
     % [Guitar.2.Music measure 17]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -1804,17 +1984,25 @@ number.11.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 20]
-    r2.
-
-    % [Guitar.2.Music measure 21]
-    r2.
-
-    % [Guitar.2.Music measure 22]
     r2
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''8.
+
+    % [Guitar.2.Music measure 21]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+    % [Guitar.2.Music measure 22]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.2.Music measure 23]
     R1 * 9/4
@@ -1881,6 +2069,8 @@ number.11.Violin.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'2.
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
@@ -1905,6 +2095,8 @@ number.11.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -1915,7 +2107,9 @@ number.11.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 7]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 8]
     r1
@@ -1924,20 +2118,32 @@ number.11.Violin.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
     % [Violin.Music measure 9]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
     % [Violin.Music measure 10]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1.
 
     % [Violin.Music measure 11]
@@ -1945,25 +2151,41 @@ number.11.Violin.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
     % [Violin.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Violin.Music measure 13]
@@ -1974,22 +2196,40 @@ number.11.Violin.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'16
     ~
 
@@ -2009,6 +2249,8 @@ number.11.Violin.Music = {
     \repeatTie
 
     % [Violin.Music measure 18]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -2018,67 +2260,140 @@ number.11.Violin.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
-    {
+    % [Violin.Music measure 20]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
-        % [Violin.Music measure 20]
-        c'\breve
+    % [Violin.Music measure 21]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
-    }
+    % [Violin.Music measure 22]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+    c'4
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
-    {
+    c'4
 
-        % [Violin.Music measure 23]
-        c'\breve
+    c'4
 
-    }
+    % [Violin.Music measure 23]
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
 
     % [Violin.Music measure 24]
-    c'2.
-    - \tweak stencil ##f
-    ~
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Violin.Music measure 25]
-    c'2.
-    \repeatTie
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+    c'4
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
-    {
+    c'4
 
-        % [Violin.Music measure 26]
-        c'\breve
+    c'4
 
-    }
+    % [Violin.Music measure 26]
+    c'4
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
-    {
+    c'4
 
-        % [Violin.Music measure 27]
-        c'\breve
+    c'4
 
-    }
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    % [Violin.Music measure 27]
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
+
+    c'4
 
     % [Violin.Music measure 28]
-    c'2. * 2/3
+    c'4
+
+    c'4
+
+    c'4
+
+      %! ANCHOR_NOTE
+    % [Violin.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-    c'8.
-
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-    c'16
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 
@@ -2117,6 +2432,8 @@ number.11.Cello.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'2.
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
@@ -2141,6 +2458,8 @@ number.11.Cello.Music = {
     \repeatTie
 
     % [Cello.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2151,6 +2470,8 @@ number.11.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 7]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'1
 
     c'2
@@ -2164,8 +2485,12 @@ number.11.Cello.Music = {
     c'1
 
     % [Cello.Music measure 9]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'1
 
     % [Cello.Music measure 10]
@@ -2181,84 +2506,167 @@ number.11.Cello.Music = {
     % [Cello.Music measure 12]
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'4
 
     c'4
 
     % [Cello.Music measure 13]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Cello.Music measure 14]
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'4
 
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Cello.Music measure 15]
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'4
 
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Cello.Music measure 16]
     r1
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'4
 
     c'4
 
     % [Cello.Music measure 17]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Cello.Music measure 18]
-    r2.
-
-    % [Cello.Music measure 19]
-    r2.
-
-    c'4
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
-    {
-
-        % [Cello.Music measure 20]
-        c'\breve
-
-    }
-
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
-    {
-
-        % [Cello.Music measure 23]
-        c'\breve
-
-    }
-
-    % [Cello.Music measure 24]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'2.
     - \tweak stencil ##f
     ~
 
-    % [Cello.Music measure 25]
+    % [Cello.Music measure 19]
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Cello.Music measure 20]
     c'2.
     \repeatTie
 
-    % [Cello.Music measure 26]
-    c'4
+    % [Cello.Music measure 21]
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    r\breve
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    % [Cello.Music measure 22]
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    % [Cello.Music measure 23]
+    c'1
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'1
+    \repeatTie
+
+    % [Cello.Music measure 24]
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    % [Cello.Music measure 25]
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+    % [Cello.Music measure 26]
+    c'1
+    - \tweak stencil ##f
+    ~
+
+    c'8
+    [
+    \repeatTie
+
+    c'8
+    ]
+    - \tweak stencil ##f
+    ~
+
+    c'1
+    \repeatTie
 
     % [Cello.Music measure 27]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 9/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"9" #"4"
