@@ -67,23 +67,32 @@ def FL(voice, meters):
     rhythm(
         meters(1, 7),
         ["-", 20, -12, 36, -14],
+        material=3,
     )
     rhythm.mmrests(8, 9)
     rhythm(
         meters(10),
-        ["-", 3, -1, 2],
+        ["-", 2],
+        material=4,
     )
-    counts = library.canon_e()
-    counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
-    rhythm(
-        meters(11, 16),
-        counts + ["-"],
-    )
-    note = abjad.Note("c'4")
-    abjad.mutate.replace(voice[-1:], [note])
+
+    @baca.call
+    def block():
+        counts = library.canon_e()
+        counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
+        rhythm(
+            meters(11, 16),
+            counts + ["-"],
+            material=4,
+        )
+        note = abjad.Note("c'4")
+        abjad.mutate.replace(voice[-1:], [note])
+        library.annotate([note], 4)
+
     rhythm(
         meters(17, 18),
         [rt(8), rt(2), -5, 10, -7],
+        material=4,
     )
     rhythm.mmrests(19, 22)
 
@@ -98,50 +107,63 @@ def GT1(voice, meters):
     rhythm(
         meters(1, 2),
         [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(3, 5),
         [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(6, 9),
-        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
+        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, -1, -1, 1, "-"],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(10),
-        ["-", -2, 1, -2, 1],
+        ["-", -2, 1, -3],
         extra_counts=[-1],
+        material=4,
     )
-    counts = library.canon_e(twelfths=True)
-    counts = baca.sequence.negate_elements(counts, indices=[1], period=2)
-    counts_ = []
-    for count in counts:
-        if 1 < count:
-            counts_.extend([1, -(count - 1)])
-        else:
-            counts_.append(count)
-    counts_.append("-")
-    rhythm.make_one_beat_tuplets(
-        meters(11, 16),
-        counts_,
-        extra_counts=[-1],
-    )
+
+    @baca.call
+    def block():
+        counts = library.canon_e(twelfths=True)
+        counts = baca.sequence.negate_elements(counts, indices=[1], period=2)
+        counts_ = []
+        for count in counts:
+            if 1 < count:
+                counts_.extend([1, -(count - 1)])
+            else:
+                counts_.append(count)
+        counts_.append("-")
+        rhythm.make_one_beat_tuplets(
+            meters(11, 16),
+            counts_,
+            extra_counts=[-1],
+            material=4,
+        )
+
     rhythm.make_one_beat_tuplets(
         meters(17, 18),
         [-7, 1, "-"],
         extra_counts=[-1],
+        material=4,
     )
     rhythm(
         meters(19),
         [-5, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(20),
         [-10, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(21),
         [-10, 1, "-"],
+        material=1,
     )
     rhythm.mmrests(22)
 
@@ -151,118 +173,190 @@ def GT2(voice, meters):
     rhythm(
         meters(1, 2),
         [-3, 1, -1, 1, -5, 1, -2, 1, -6, 1, -3, 1, -7, 1, -4, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(3, 5),
         [-7, 1, -9, 1, -10, 1, -11, 1, -12, 1, -13, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(6, 9),
-        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, 1, -1, 1, "-"],
+        [-12, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, -1, -2, -1, -1, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(10),
         [-16, -4, 1, -3],
+        material=4,
     )
-    counts = library.canon_e()
-    counts = abjad.sequence.rotate(counts, -2)
-    counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
-    counts_ = []
-    for count in counts:
-        if 1 < count:
-            counts_.extend([1, -(count - 1)])
-        else:
-            counts_.append(count)
-    rhythm(
-        meters(11, 16),
-        counts_ + ["-"],
-    )
+
+    @baca.call
+    def block():
+        counts = library.canon_e()
+        counts = abjad.sequence.rotate(counts, -2)
+        counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
+        counts_ = []
+        for count in counts:
+            if 1 < count:
+                counts_.extend([1, -(count - 1)])
+            else:
+                counts_.append(count)
+        rhythm(
+            meters(11, 16),
+            counts_ + ["-"],
+            material=4,
+        )
+
     rhythm(
         meters(17, 18),
         [-8, 1, -7, -3, 1, -12],
+        material=4,
     )
     rhythm(
         meters(19),
         [-5, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(20),
         [-10, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(21),
         [-10, 1, "-"],
+        material=1,
     )
     rhythm.mmrests(22)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.make_one_beat_tuplets(
-        meters(1, 8),
-        [1, -12, 1, -8, 1, -6],
-        extra_counts=[-1],
-    )
-    note = abjad.Note("c'", voice[4][-1].written_duration)
-    voice[4][-1] = note
-    note = abjad.Note("c'", voice[5].written_duration)
-    voice[5] = note
-    note = abjad.Note("c'", voice[6].multiplied_duration)
-    voice[6] = note
-    tuplet_1 = abjad.Tuplet("3:2", "c'8 r4")
-    tuplet_1.force_fraction = True
-    tuplet_2 = abjad.Tuplet("3:2", "r4 c'8")
-    tuplet_2.force_fraction = True
-    voice[7:8] = [tuplet_1, abjad.Rest("r2"), tuplet_2]
-    abjad.tie(abjad.select.notes(voice)[3:7])
-    container = abjad.Container(r"c'2. \repeatTie ~ \times 2/3 { c'8 c'4 }")
-    components = abjad.mutate.eject_contents(container)
-    components[-1].force_fraction = True
-    library.replace_measure(voice, 4, components)
-    rest = abjad.select.group_by_measure(voice)[5 - 1][0]
-    tuplet = abjad.Tuplet("3:2", r"c'8 \repeatTie r4")
-    tuplet.force_fraction = True
-    abjad.mutate.replace([rest], [tuplet])
+
+    @baca.call
+    def block():
+        rhythm.make_one_beat_tuplets(
+            meters(1, 8),
+            [1, -12, 1, -8, 1, -6],
+            extra_counts=[-1],
+        )
+        note = abjad.Note("c'", voice[4][-1].written_duration)
+        voice[4][-1] = note
+        note = abjad.Note("c'", voice[5].written_duration)
+        voice[5] = note
+        note = abjad.Note("c'", voice[6].multiplied_duration)
+        voice[6] = note
+        tuplet_1 = abjad.Tuplet("3:2", "c'8 r4")
+        tuplet_1.force_fraction = True
+        tuplet_2 = abjad.Tuplet("3:2", "r4 c'8")
+        tuplet_2.force_fraction = True
+        voice[7:8] = [tuplet_1, abjad.Rest("r2"), tuplet_2]
+        abjad.tie(abjad.select.notes(voice)[3:7])
+        container = abjad.Container(r"c'2. \repeatTie ~ \times 2/3 { c'8 c'4 }")
+        components = abjad.mutate.eject_contents(container)
+        components[-1].force_fraction = True
+        library.replace_measure(voice, 4, components)
+        rest = abjad.select.group_by_measure(voice)[5 - 1][0]
+        tuplet = abjad.Tuplet("3:2", r"c'8 \repeatTie r4")
+        tuplet.force_fraction = True
+        abjad.mutate.replace([rest], [tuplet])
+        for plt in baca.select.plts(voice):
+            if len(plt) == 1:
+                library.annotate(plt, 1)
+            else:
+                library.annotate(plt, 2)
+
     rhythm(
         meters(9, 10),
         3 * [AG([2], 7), -1] + [swell(16)],
         do_not_rewrite_meter=True,
+        material=2,
     )
     rhythm(
         meters(11),
-        [8, swell(8)],
+        [8, "-"],
+        material=4,
+    )
+    rhythm(
+        meters(11),
+        [-4, swell(4)],
+        material=2,
+        overlap=[-8],
     )
     rhythm(
         meters(12),
-        [-15, t(9)],
+        [-2, 5, "-"],
+        material=4,
+    )
+    rhythm(
+        meters(12),
+        [t(9)],
+        material=2,
+        overlap=["-"],
     )
     rhythm(
         meters(13),
         [1, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(13),
+        [2],
+        material=4,
+        overlap=["-"],
     )
     rhythm(
         meters(14),
-        [-15, 9],
+        [7, "-"],
+        material=4,
     )
     rhythm(
-        meters(15, 18),
-        4 * [rt(1), 15],
-        do_not_rewrite_meter=True,
+        meters(14),
+        [9],
+        material=2,
+        overlap=["-"],
     )
-    abjad.attach(abjad.Tie(), voice[-1])
-    rhythm.make_one_beat_tuplets(
-        meters(19, 20),
-        [1, -1, 1, -6, 1, -2, -9, -1, 1, -1, 3],
-        extra_counts=[-1],
+
+    @baca.call
+    def block():
+        rhythm(
+            meters(15, 18),
+            4 * [rt(1), 15],
+            do_not_rewrite_meter=True,
+            material=2,
+        )
+        abjad.attach(abjad.Tie(), voice[-1])
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(19, 20),
+            [1, -1, 1, -6, 1, -2, -9, -1, 1, -1, -3],
+            extra_counts=[-1],
+            material=1,
+        )
+        leaf = abjad.select.leaf(components, 0)
+        abjad.detach(library.Material, leaf)
+        library.annotate([leaf], 2)
+
+    rhythm(
+        meters(20),
+        [swell(4)],
+        material=99,
+        overlap=["-"],
     )
     rhythm(
         meters(21),
         ["-", swell(4)],
+        material=99,
     )
     rhythm(
         meters(22),
         ["-", swell(4)],
+        material=99,
     )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
@@ -271,31 +365,82 @@ def VC(voice, meters):
         meters(1, 9),
         [1, -7, 1, -9, 1, -13],
         extra_counts=[-1],
+        material=1,
     )
-    container = abjad.Container("r8. c'16 r c' r8 r8. c'16 r8 c'16 r")
-    components = abjad.mutate.eject_contents(container)
-    library.replace_measure(voice, 3, components)
-    #
-    components = rhythm(
-        meters(5, 6),
-        10 * [-3, 1],
-        do_not_extend=True,
-    )
-    library.replace_measure(voice, (5, 6), components)
-    #
-    group = abjad.select.group_by_measure(voice)[7 - 1]
-    library.replace(voice, group[-1], "r4 r8. c'16")
-    #
-    rhythm.mmrests(10)
-    rhythm.mmrests(11, 18)
-    voice.extend(r"r4 \times 2/3 { r8 c'8 r8 } r4 r8. c'16")
-    voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. c'16 c'4")
-    voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. c'16 c'4")
+
+    @baca.call
+    def block():
+        container = abjad.Container("r8. c'16 r c' r8 r8. c'16 r8 c'16 r")
+        components = abjad.mutate.eject_contents(container)
+        library.replace_measure(voice, 3, components)
+        library.annotate(components, 3)
+
+    @baca.call
+    def block():
+        components = rhythm(
+            meters(5, 6),
+            10 * [-3, 1],
+            do_not_extend=True,
+        )
+        library.replace_measure(voice, (5, 6), components)
+        library.annotate(components, 3)
+
+    @baca.call
+    def block():
+        group = abjad.select.group_by_measure(voice)[7 - 1]
+        library.replace(voice, group[-1], "r4 r8. c'16")
+        group = abjad.select.group_by_measure(voice)[7 - 1]
+        leaf = abjad.select.leaf(group, -1)
+        library.annotate([leaf], 3)
+
+    rhythm.mmrests(10, 18)
+
+    @baca.call
+    def block():
+        voice.extend(r"r4 \times 2/3 { r8 c'8 r8 } r4 r8. c'16")
+        voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. c'16 r4")
+        groups = abjad.select.group_by_measure(voice)[19 - 1 : 21 - 1]
+        pleaves = baca.select.pleaves(groups)
+        tupletted = baca.select.tupletted(pleaves)
+        library.annotate(tupletted, 1)
+        untupletted = baca.select.untupletted(pleaves)
+        library.annotate(untupletted, 3)
+        rhythm(
+            meters(20),
+            [swell(4)],
+            material=99,
+            overlap=["-"],
+        )
+
+    @baca.call
+    def block():
+        voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. c'16 r4")
+        groups = abjad.select.group_by_measure(voice)[21 - 1]
+        pleaves = baca.select.pleaves(groups)
+        tupletted = baca.select.tupletted(pleaves)
+        library.annotate(tupletted, 1)
+        untupletted = baca.select.untupletted(pleaves)
+        library.annotate(untupletted, 3)
+        rhythm(
+            meters(21),
+            [swell(4)],
+            material=99,
+            overlap=["-"],
+        )
+
     rhythm(
         meters(22),
-        ["-", 1, swell(4)],
+        [-7, 1, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(22),
+        [swell(4)],
+        material=99,
+        overlap=[-8],
     )
     rmakers.force_fraction(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def fl(m):
@@ -390,7 +535,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    # library.check_material_annotations(score)
+    library.highlight_staves(cache)
+    library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
