@@ -52,7 +52,7 @@ class Rhythm:
         do_not_clean_up_rhythmic_spelling=False,
         do_not_extend=False,
         do_not_rewrite_meter=False,
-        overlap=False,
+        overlap=(),
     ):
         assert material in (1, 2, 3, 4, 5, 99, None), repr(material)
         assert time_signatures is not None, repr(time_signatures)
@@ -61,6 +61,8 @@ class Rhythm:
             items = abjad.sequence.flatten(items)
         else:
             items = [items]
+        if overlap:
+            items = list(overlap) + items
         if time_signatures is None:
             do_not_rewrite_meter = True
         voice_ = baca.make_rhythm(
@@ -83,7 +85,7 @@ class Rhythm:
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
             return components
-        elif overlap is True:
+        elif overlap:
             overlap_previous_measure(
                 self.voice,
                 components,
@@ -103,10 +105,12 @@ class Rhythm:
         do_not_extend=False,
         extra_counts=(),
         material=None,
-        overlap=False,
+        overlap=(),
     ):
         assert material in (1, 2, 3, 4, 5, 99, None), repr(material)
         tag = baca.helpers.function_name(inspect.currentframe())
+        if overlap:
+            counts = list(overlap) + counts
         durations = [_.duration for _ in time_signatures]
         durations = [sum(durations)]
         durations = baca.sequence.quarters(durations)
@@ -117,7 +121,7 @@ class Rhythm:
             tuplets, time_signatures, debug=debug, tag=tag
         )
         did_staff_highlight = False
-        if overlap is True:
+        if overlap:
             overlap_previous_measure(self.voice, components, time_signatures)
         elif not do_not_extend:
             self.voice.extend(components)

@@ -113,8 +113,8 @@ def FL(voice, meters):
         counts = library.attach_bgs(counts, [[1]])
         rhythm(
             meters(2, 4),
-            [-24 + 3] + counts + ["-"],
-            overlap=True,
+            counts + ["-"],
+            overlap=[-24 + 3],
         )
 
     library.overlap_previous_measure(voice, j3_measures[4 - 1], meters(4))
@@ -131,8 +131,8 @@ def FL(voice, meters):
         counts = library.attach_bgs(counts, [[1]])
         rhythm(
             meters(4, 6),
-            [-24 + 3] + counts + [8, 16] + ["-"],
-            overlap=True,
+            counts + [8, 16] + ["-"],
+            overlap=[-24 + 3],
         )
 
     @baca.call
@@ -151,8 +151,8 @@ def FL(voice, meters):
         counts = [12, 4, 4, 2, 6, 4]
         rhythm(
             meters(8, 10),
-            [-24 + 3] + counts + ["-"],
-            overlap=True,
+            counts + ["-"],
+            overlap=[-24 + 3],
         )
 
     @baca.call
@@ -167,8 +167,8 @@ def FL(voice, meters):
         counts = library.attach_bgs(counts, [[1]])
         rhythm(
             meters(10, 12),
-            [-5] + [8, 16, 8, 16] + counts,
-            overlap=True,
+            [8, 16, 8, 16] + counts,
+            overlap=[-5],
         )
 
     @baca.call
@@ -195,8 +195,8 @@ def FL(voice, meters):
         assert counts == [1, -3, 1, -3]
         rhythm(
             meters(14, 16),
-            [-24 + 3] + counts + [8] + ["-"],
-            overlap=True,
+            counts + [8] + ["-"],
+            overlap=[-24 + 3],
         )
 
     @baca.call
@@ -238,8 +238,8 @@ def FL(voice, meters):
         voice.extend(j3_measures[23 - before_fermata])
         rhythm(
             meters(23, 26),
-            [-24 + 1] + [1 + 24 + 24 + 12] + ["-"],
-            overlap=True,
+            [1 + 24 + 24 + 12] + ["-"],
+            overlap=[-24 + 1],
         )
         start = 27 - before_fermata
         measures = j3_measures[start : start + 3]
@@ -567,28 +567,28 @@ def VN(voice, meters):
 
     rhythm(
         meters(13, 15),
-        [-21, 9, 8, 3, 8, "-"],
-        overlap=True,
+        [9, 8, 3, 8, "-"],
+        overlap=[-21],
     )
     rhythm(
         meters(15, 18),
-        [-10, 9, 8, 9, 8, 3, 8, 3, 2, 3, 2, "-"],
-        overlap=True,
+        [9, 8, 9, 8, 3, 8, 3, 2, 3, 2, "-"],
+        overlap=[-10],
     )
     rhythm(
         meters(18, 20),
-        [-11, 2, 3, 2, 3, 8, 3, 8, 9, 8, "-"],
-        overlap=True,
+        [2, 3, 2, 3, 8, 3, 8, 9, 8, "-"],
+        overlap=[-11],
     )
     rhythm(
         meters(20, 23),
-        [-24 + 1, 3, 2, 3, 8, 3, 8, 9, 14, "-"],
-        overlap=True,
+        [3, 2, 3, 8, 3, 8, 9, 14, "-"],
+        overlap=[-24 + 1],
     )
     rhythm(
         meters(23, 26),
-        [-24 + 7, 8, 9, 14, 15, 20, "-"],
-        overlap=True,
+        [8, 9, 14, 15, 20, "-"],
+        overlap=[-24 + 7],
     )
     rhythm.mmrests(27, 29)
 
@@ -651,14 +651,14 @@ def VC(voice, meters):
         library.overlap_previous_measure(voice, components, meters(27))
         components = rhythm(
             meters(27, 28),
-            ["-", 8, 8],
-            overlap=True,
+            [8, 8],
+            overlap=["-"],
         )
         voice.extend(j3_measures[29 - before_fermata])
         rhythm(
             meters(29),
-            [-8, 8, 8],
-            overlap=True,
+            [8, 8],
+            overlap=[-8],
         )
 
 
@@ -667,7 +667,7 @@ def fl(m):
     def block():
         leaf = m[1][0]
         baca.instrument(leaf, "AltoFlute", manifests=library.manifests)
-        baca.instrument_name(leaf, r"\wttc-alto-flute-markup")
+        baca.instrument_name(leaf, strings.alto_flute_markup)
         baca.short_instrument_name(leaf, "Afl.", library.manifests)
         baca.clef(leaf, "treble")
 

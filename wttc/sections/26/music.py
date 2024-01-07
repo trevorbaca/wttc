@@ -96,8 +96,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(3, 4),
-        [-15] + 2 * [2, -7, 1, -5],
-        overlap=True,
+        2 * [2, -7, 1, -5],
+        overlap=[-15],
     )
     rhythm(
         meters(5, 6),
@@ -367,8 +367,8 @@ def VN(voice, meters):
     )
     rhythm(
         meters(3, 5),
-        [-13] + 2 * [3, -3, 1, -6] + ["-"],
-        overlap=True,
+        2 * [3, -3, 1, -6] + ["-"],
+        overlap=[-13],
     )
     rhythm.mmrests(6)
     rhythm(
@@ -390,8 +390,8 @@ def VN(voice, meters):
     )
     rhythm(
         meters(12, 13),
-        [-18] + [3, -3, 1, -6, 3, -3] + ["-"],
-        overlap=True,
+        [3, -3, 1, -6, 3, -3] + ["-"],
+        overlap=[-18],
     )
     rhythm(
         meters(14, 15),
@@ -459,9 +459,9 @@ def VC(voice, meters):
     )
     rhythm.make_one_beat_tuplets(
         meters(3, 5),
-        [-11] + [1, -4, 2, -6, 1, -4, 2, -6] + ["-"],
+        [1, -4, 2, -6, 1, -4, 2, -6] + ["-"],
         extra_counts=[-1],
-        overlap=True,
+        overlap=[-11],
     )
     rhythm.mmrests(6, 7)
     rhythm.make_one_beat_tuplets(
@@ -476,9 +476,9 @@ def VC(voice, meters):
     )
     rhythm.make_one_beat_tuplets(
         meters(12, 13),
-        [-12] + [1] + [2, -6, 1, -4, 2, -6] + ["-"],
+        [1] + [2, -6, 1, -4, 2, -6] + ["-"],
         extra_counts=[-1],
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(14),

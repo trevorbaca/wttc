@@ -341,9 +341,9 @@ def VN(voice, meters):
     def block():
         rhythm.make_one_beat_tuplets(
             meters(6, 7),
-            [-3, 3, 1, 4, 1, -7, 3, 1, "-"],
+            [3, 1, 4, 1, -7, 3, 1, "-"],
             extra_counts=[-1],
-            overlap=True,
+            overlap=[-3],
         )
         rhythm.mmrests(8, 9)
 
@@ -355,9 +355,9 @@ def VN(voice, meters):
         )
         rhythm.make_one_beat_tuplets(
             meters(11, 15),
-            [-6, 4, 1, -3, 5, 1, -6, 6, 1, "-"],
+            [4, 1, -3, 5, 1, -6, 6, 1, "-"],
             extra_counts=[-1],
-            overlap=True,
+            overlap=[-6],
         )
 
     @baca.call
@@ -407,9 +407,9 @@ def VC(voice, meters):
     def block():
         rhythm.make_one_beat_tuplets(
             meters(3, 4),
-            [-15, 1, 3, 1, 11, 1, "-"],
+            [1, 3, 1, 11, 1, "-"],
             extra_counts=[-1],
-            overlap=True,
+            overlap=[-15],
         )
 
     @baca.call
@@ -420,25 +420,25 @@ def VC(voice, meters):
         )
         rhythm(
             meters(5, 6),
-            [-22, 2, 2, 4, "-"],
-            overlap=True,
+            [2, 2, 4, "-"],
+            overlap=[-22],
         )
 
     @baca.call
     def block():
         rhythm.make_one_beat_tuplets(
             meters(6, 7),
-            [-8, 3, 1, -1, 3, 1, "-"],
+            [3, 1, -1, 3, 1, "-"],
             extra_counts=[-1],
-            overlap=True,
+            overlap=[-8],
         )
 
     @baca.call
     def block():
         rhythm(
             meters(7, 9),
-            [-9, 4, 8, 12, 16, "-"],
-            overlap=True,
+            [4, 8, 12, 16, "-"],
+            overlap=[-9],
         )
 
     @baca.call
@@ -449,9 +449,9 @@ def VC(voice, meters):
         )
         rhythm.make_one_beat_tuplets(
             meters(11, 12),
-            [-6, -3, -2, 4, 1, 5, 1, -6, 6, 1, "-"],
+            [-3, -2, 4, 1, 5, 1, -6, 6, 1, "-"],
             extra_counts=[-1],
-            overlap=True,
+            overlap=[-6],
         )
 
     @baca.call

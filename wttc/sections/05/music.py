@@ -144,21 +144,21 @@ def FL(voice, meters):
     )
     rhythm(
         meters(32, 33),
-        [-20] + 4 * [swell(4)] + ["-"],
+        4 * [swell(4)] + ["-"],
         material=3,
-        overlap=True,
+        overlap=[-20],
     )
     rhythm(
         meters(33, 34),
-        [-12, -2, 1, 6, 1, 5, "-"],
+        [-2, 1, 6, 1, 5, "-"],
         material=2,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(34, 38),
-        [-12] + 11 * [swell(4)] + [-4, -4] + 2 * [swell(4)] + ["-"],
+        11 * [swell(4)] + [-4, -4] + 2 * [swell(4)] + ["-"],
         material=3,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(39, 40),
@@ -225,10 +225,10 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(32),
-        [-12, -8, -1, 1, -2],
+        [-8, -1, 1, -2],
         do_not_clean_up_rhythmic_spelling=True,
         material=3,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(33, 34),
@@ -237,9 +237,9 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(34),
-        [-12, -1, 1, -2],
+        [-1, 1, -2],
         material=3,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm.mmrests(35, 37)
     rhythm(
@@ -315,10 +315,10 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(32),
-        [-12, -8, -1, 1, -2],
+        [-8, -1, 1, -2],
         do_not_clean_up_rhythmic_spelling=True,
         material=3,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(33, 34),
@@ -327,9 +327,9 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(34),
-        [-12, -1, 1, -2],
+        [-1, 1, -2],
         material=3,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm.mmrests(35, 37)
     rhythm(
@@ -400,9 +400,9 @@ def VN(voice, meters):
     )
     rhythm(
         meters(9),
-        [-16, -1, 7],
+        [-1, 7],
         material=1,
-        overlap=True,
+        overlap=[-16],
     )
     rhythm(
         meters(10, 11),
@@ -417,15 +417,15 @@ def VN(voice, meters):
     )
     rhythm(
         meters(13, 14),
-        [-8, -1, 7, "-"],
+        [-1, 7, "-"],
         material=1,
-        overlap=True,
+        overlap=[-8],
     )
     rhythm(
         meters(14),
-        ["-", 1, 4, 4],
+        [1, 4, 4],
         material=2,
-        overlap=True,
+        overlap=["-"],
     )
     rhythm(
         meters(15, 17),
@@ -434,9 +434,9 @@ def VN(voice, meters):
     )
     rhythm(
         meters(17),
-        ["-", 7],
+        [7],
         material=1,
-        overlap=True,
+        overlap=["-"],
     )
     rhythm(
         meters(18, 19),
@@ -451,15 +451,15 @@ def VN(voice, meters):
     )
     rhythm(
         meters(20, 21),
-        [-11, 1, 4, 1, "-"],
+        [1, 4, 1, "-"],
         material=2,
-        overlap=True,
+        overlap=[-11],
     )
     rhythm(
         meters(21, 22),
-        [-5, t(19)],
+        [t(19)],
         material=3,
-        overlap=True,
+        overlap=[-5],
     )
     rhythm(
         meters(23, 24),
@@ -474,9 +474,9 @@ def VN(voice, meters):
     )
     rhythm(
         meters(25),
-        [-9, t(15)],
+        [t(15)],
         material=3,
-        overlap=True,
+        overlap=[-9],
     )
     rhythm(
         meters(26, 27),
@@ -602,21 +602,21 @@ def VC(voice, meters):
     )
     rhythm(
         meters(33, 34),
-        [-14, -1, 6, -1, 5, -1, -4],
+        [-1, 6, -1, 5, -1, -4],
         material=2,
-        overlap=True,
+        overlap=[-14],
     )
     rhythm(
         meters(34, 39),
-        [-12, "+", -4],
+        ["+", -4],
         material=1,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(39, 40),
-        [-12, -1, 5, -1, 6, -1, 2, 4, 4, 3, 1],
+        [-1, 5, -1, 6, -1, 2, 4, 4, 3, 1],
         material=2,
-        overlap=True,
+        overlap=[-12],
     )
     rhythm(
         meters(41),
@@ -625,9 +625,9 @@ def VC(voice, meters):
     )
     rhythm(
         meters(41),
-        [-9, 7],
+        [7],
         material=2,
-        overlap=True,
+        overlap=[-9],
     )
     rhythm(
         meters(42),

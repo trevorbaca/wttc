@@ -70,8 +70,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(8),
-        [-5, "+"],
-        overlap=True,
+        ["+"],
+        overlap=[-5],
     )
     rhythm(
         meters(9, 11),
@@ -79,8 +79,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(11),
-        [-13, "+"],
-        overlap=True,
+        ["+"],
+        overlap=[-13],
     )
     rhythm(
         meters(12, 14),
@@ -88,8 +88,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(14),
-        [-13, "+"],
-        overlap=True,
+        ["+"],
+        overlap=[-13],
     )
     rhythm(
         meters(15),
@@ -236,8 +236,8 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8, 10),
-        [-9, 7, 9, 7, 9, 7],
-        overlap=True,
+        [7, 9, 7, 9, 7],
+        overlap=[-9],
     )
     rhythm(
         meters(11),
@@ -246,8 +246,8 @@ def VC(voice, meters):
     )
     rhythm(
         meters(11, 12),
-        [-17, 7, 9, 7, 9, 7],
-        overlap=True,
+        [7, 9, 7, 9, 7],
+        overlap=[-17],
     )
     rhythm(
         meters(13, 14),

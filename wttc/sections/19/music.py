@@ -91,8 +91,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7, 9),
-        [-12] + 3 * [4] + ["-"],
-        overlap=True,
+        3 * [4] + ["-"],
+        overlap=[-12],
     )
     rhythm(
         meters(10, 11),
@@ -108,8 +108,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(15, 16),
-        [-19, 1, 7, 1, 4, 4],
-        overlap=True,
+        [1, 7, 1, 4, 4],
+        overlap=[-19],
     )
     rhythm(
         meters(17),
@@ -142,8 +142,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(34, 37),
-        [-20, 4, 4, 4, 4, "-"],
-        overlap=True,
+        [4, 4, 4, 4, "-"],
+        overlap=[-20],
     )
     rhythm(
         meters(38, 43),
@@ -309,8 +309,8 @@ def VN(voice, meters):
     )
     rhythm(
         meters(23),
-        [-8, 8, 8],
-        overlap=True,
+        [8, 8],
+        overlap=[-8],
     )
     rhythm.make_one_beat_tuplets(
         meters(24, 25),
@@ -319,8 +319,8 @@ def VN(voice, meters):
     )
     rhythm(
         meters(25),
-        [-8, 8, 8],
-        overlap=True,
+        [8, 8],
+        overlap=[-8],
     )
     rhythm.make_one_beat_tuplets(
         meters(26, 27),
@@ -333,9 +333,9 @@ def VN(voice, meters):
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         rhythm.make_one_beat_tuplets(
             meters(27, 29),
-            [-9] + [1] + counts + ["-"],
+            [1] + counts + ["-"],
             extra_counts=[0, 1, 0, 0, 2],  # by hand
-            overlap=True,
+            overlap=[-9],
         )
 
     rhythm(
@@ -354,11 +354,7 @@ def VN(voice, meters):
             extra_counts=[0, 2, 0, 1, 0],
         )
 
-    rhythm(
-        meters(35),
-        [-8, 16],
-        overlap=True,
-    )
+    rhythm(meters(35), [16], overlap=[-8])
 
     @baca.call
     def block():
@@ -374,8 +370,8 @@ def VN(voice, meters):
 
     rhythm(
         meters(41),
-        [-11, 13],
-        overlap=True,
+        [13],
+        overlap=[-11],
     )
 
     @baca.call
@@ -411,8 +407,8 @@ def VC(voice, meters):
         counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
         rhythm(
             meters(3, 5),
-            [-12] + counts,
-            overlap=True,
+            counts,
+            overlap=[-12],
         )
         rhythm(
             meters(6, 8),
@@ -426,8 +422,8 @@ def VC(voice, meters):
         assert counts == [1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8]
         rhythm(
             meters(8, 11),
-            [-7] + counts + ["-"],
-            overlap=True,
+            counts + ["-"],
+            overlap=[-7],
         )
 
     @baca.call
@@ -438,8 +434,8 @@ def VC(voice, meters):
         assert counts == [1, 5, 1, 6, 1, 7]
         rhythm(
             meters(11, 12),
-            [-11] + counts + ["-"],
-            overlap=True,
+            counts + ["-"],
+            overlap=[-11],
         )
 
     @baca.call
