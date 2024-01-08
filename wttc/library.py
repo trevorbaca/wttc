@@ -75,6 +75,11 @@ class Rhythm:
             tag=tag,
             voice_name=self.voice.name,
         )
+        # rmakers.extract_trivial(voice_)
+        for tuplet in abjad.select.tuplets(voice_):
+            if tuplet.multiplier == (1, 1):
+                if not abjad.get.has_indicator(tuplet, "FEATHER_BEAM_CONTAINER"):
+                    abjad.mutate.extract(tuplet)
         rmakers.force_fraction(voice_)
         if not do_not_beam_tuplets:
             for tuplet in abjad.select.tuplets(voice_):
