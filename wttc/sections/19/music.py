@@ -300,7 +300,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(20),
-        [-8, w(8, 16), h(8)],
+        [-8, swell(16)],
     )
     rhythm.make_one_beat_tuplets(
         meters(21, 23),
@@ -398,7 +398,7 @@ def VC(voice, meters):
         )
         rhythm(
             meters(2, 3),
-            [w(8, 16), h(8), 12, "-"],
+            [swell(16), 12, "-"],
         )
 
     @baca.call

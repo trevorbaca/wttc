@@ -1663,7 +1663,6 @@ number.26.AltoFlute.Music = {
     f'8. * 2/3
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-    [
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -1673,7 +1672,6 @@ number.26.AltoFlute.Music = {
     f'16
 
     f'16
-    ]
     ~
 
     f'2

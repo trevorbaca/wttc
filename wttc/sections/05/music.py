@@ -20,6 +20,7 @@ w = baca.rhythm.w
 BG = library.BG
 OBGC = library.OBGC
 X = library.X
+anchor = library.anchor
 pair = library.pair
 swell = library.swell
 
@@ -218,7 +219,7 @@ def GT1(voice, meters):
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, X([w(7, 8), h(1)]), "-"],
+        [-12, anchor(8, 1), "-"],
         material=2,
     )
     rhythm(
@@ -307,7 +308,7 @@ def GT2(voice, meters):
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, X([w(7, 8), h(1)]), "-"],
+        [-12, anchor(8, 1), "-"],
         material=2,
     )
     rhythm(
@@ -386,7 +387,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(7, 8),
-        [-3, 1, 4, 4, 4, 4, 4, 4, "+", w(3, 4), h(1)],
+        [-3, 1, 4, 4, 4, 4, 4, 4, "+", anchor(4, 1)],
         material=2,
     )
     rhythm(
@@ -402,7 +403,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(10, 11),
-        [-3, 1, 4, 4, 4, 4, "+", w(3, 4), h(1)],
+        [-3, 1, 4, 4, 4, 4, "+", anchor(4, 1)],
         material=2,
     )
     rhythm(

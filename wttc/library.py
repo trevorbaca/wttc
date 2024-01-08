@@ -174,6 +174,13 @@ def _reference_meters():
     )
 
 
+def anchor(written_n, anchor_n):
+    actual_n = written_n - anchor_n
+    first = baca.rhythm.w(actual_n, written_n)
+    second = baca.rhythm.h(anchor_n)
+    return X([first, second])
+
+
 def annotate(items, n):
     assert n in (1, 2, 3, 4, 5, 99), repr(n)
     for item in items:

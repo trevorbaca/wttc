@@ -22,6 +22,7 @@ w = baca.rhythm.w
 
 OBGC = library.OBGC
 X = library.X
+anchor = library.anchor
 pair = library.pair
 swell = library.swell
 
@@ -153,7 +154,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(6),
-        [1, t(3), t(8), w(15, 16), h(1)],
+        [1, t(3), t(8), anchor(16, 1)],
         do_not_rewrite_meter=True,
     )
 

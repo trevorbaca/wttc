@@ -22,6 +22,7 @@ w = baca.rhythm.w
 
 OBGC = library.OBGC
 X = library.X
+anchor = library.anchor
 pair = library.pair
 swell = library.swell
 
@@ -128,11 +129,11 @@ def FL(voice, meters):
     rhythm(
         meters(13, 14),
         # [12, 4, 8, 2, 6 - 1, 9],
-        [12, 4, 8, 2, t(2), w(2, 3), h(1), 9],
+        [12, 4, 8, 2, t(2), anchor(3, 1), 9],
     )
     rhythm(
         meters(15, 16),
-        [8, 6, 2, 12, w(3, 4), h(1)],
+        [8, 6, 2, 12, anchor(4, 1)],
     )
     rhythm(
         meters(17, 18),

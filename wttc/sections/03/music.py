@@ -14,12 +14,14 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
-pair = library.pair
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
+X = library.X
+anchor = library.anchor
+pair = library.pair
 
 
 def GLOBALS(skips):
@@ -347,17 +349,17 @@ def VC(voice, meters):
 
     rhythm(
         meters(8, 9),
-        [t(16), t(12), w(3, 4), h(1)],
+        [X(t(16)), X(t(12)), anchor(4, 1)],
         material=3,
     )
     rhythm(
         meters(10),
-        [t(12), w(3, 4), h(1)],
+        [X(t(12)), anchor(4, 1)],
         material=3,
     )
     rhythm(
         meters(11),
-        [w(3, 4), h(1), -1, "-"],
+        [anchor(4, 1), -1, "-"],
         material=3,
     )
     rhythm(
