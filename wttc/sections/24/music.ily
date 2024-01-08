@@ -1917,7 +1917,7 @@ number.24.Guitar.1.Music = {
 
     r8.
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -1966,7 +1966,7 @@ number.24.Guitar.1.Music = {
 
     r8
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -1999,7 +1999,7 @@ number.24.Guitar.1.Music = {
 
     r8
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2059,7 +2059,7 @@ number.24.Guitar.1.Music = {
     % [Guitar.1.Music measure 12]
     r8.
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2180,7 +2180,7 @@ number.24.Guitar.1.Music = {
 
     r8
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2280,7 +2280,7 @@ number.24.Guitar.1.Music = {
 
     r8
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2402,7 +2402,7 @@ number.24.Guitar.1.Music = {
 
     r8.
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2452,7 +2452,7 @@ number.24.Guitar.1.Music = {
 
     r8
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2541,7 +2541,7 @@ number.24.Guitar.2.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2587,7 +2587,7 @@ number.24.Guitar.2.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2634,7 +2634,7 @@ number.24.Guitar.2.Music = {
 
     r8.
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2691,7 +2691,7 @@ number.24.Guitar.2.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2805,7 +2805,7 @@ number.24.Guitar.2.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -2906,7 +2906,7 @@ number.24.Guitar.2.Music = {
 
     r8.
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -3021,7 +3021,7 @@ number.24.Guitar.2.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 
@@ -3079,7 +3079,7 @@ number.24.Guitar.2.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         c''8
 

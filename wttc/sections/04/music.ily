@@ -1194,7 +1194,7 @@ number.4.AltoFlute.Music = {
 
         r8
 
-        \acciaccatura {
+        \slashedGrace {
 
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
@@ -1370,7 +1370,7 @@ number.4.AltoFlute.Music = {
     f'4
     \repeatTie
 
-    \acciaccatura {
+    \slashedGrace {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen

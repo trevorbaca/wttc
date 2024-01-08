@@ -3331,7 +3331,7 @@ number.3.Violin.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
@@ -3475,7 +3475,7 @@ number.3.Violin.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
@@ -3555,7 +3555,7 @@ number.3.Violin.Music = {
     \bacaStopTextSpanStringNumber
     \revert NoteHead.style
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
@@ -3642,7 +3642,7 @@ number.3.Violin.Music = {
 
     r8
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
@@ -4916,7 +4916,7 @@ number.3.Cello.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
@@ -5071,7 +5071,7 @@ number.3.Cello.Music = {
 
     r8.
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
@@ -5212,7 +5212,7 @@ number.3.Cello.Music = {
 
     r16
 
-    \acciaccatura {
+    \slashedGrace {
 
         \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic

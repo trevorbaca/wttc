@@ -797,6 +797,10 @@ def swell(n):
     return tuplet
 
 
+def xt(number):
+    return X(baca.rhythm.t(number))
+
+
 instruments = {
     "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, F6]")),
     "Oboe": abjad.Oboe(),

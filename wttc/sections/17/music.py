@@ -9,7 +9,6 @@ from wttc import library, strings
 
 A = baca.rhythm.A
 AG = baca.rhythm.AG
-BG = baca.rhythm.BG
 R = baca.rhythm.R
 T = baca.rhythm.T
 TC = baca.rhythm.TC
@@ -20,10 +19,13 @@ rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
+BG = library.BG
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
+beat = library.beat
 swell = library.swell
+xt = library.xt
 
 
 def GLOBALS(skips, first_measure_number):

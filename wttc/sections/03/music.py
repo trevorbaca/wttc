@@ -8,7 +8,6 @@ from wttc import library, strings
 #########################################################################################
 
 AG = baca.rhythm.AG
-BG = baca.rhythm.BG
 T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
@@ -18,10 +17,13 @@ rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
+BG = library.BG
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
+beat = library.beat
 swell = library.swell
+xt = library.xt
 
 
 def GLOBALS(skips):
@@ -346,7 +348,6 @@ def VC(voice, meters):
         material=3,
         overlap=[-7],
     )
-
     rhythm(
         meters(8, 9),
         [X(t(16)), X(t(12)), anchor(4, 1)],
