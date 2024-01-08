@@ -1412,33 +1412,52 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 5]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     f'16
     [
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'8.
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'4
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 6]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music

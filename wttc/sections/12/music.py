@@ -102,7 +102,12 @@ def FL(voice, meters):
         [1, "-"],
         material=2,
     )
-    rhythm(meters(2, 3), [3] + 5 * [-5, 3] + ["-"], material=3, overlap=[-1])
+    rhythm(
+        meters(2, 3),
+        [3] + 5 * [-5, 3] + ["-"],
+        material=3,
+        overlap=[-1],
+    )
     rhythm(
         meters(3),
         [t(4)],
@@ -123,7 +128,8 @@ def FL(voice, meters):
     )
     rhythm(
         meters(5),
-        [rt(1), 3, -4, -1, 3, -4, -1, 3, 4],
+        [M(rt(1), 2), 3, -4, -1, 3, -4, -1, 3, M(t(4), 1)],
+        material=3,
     )
     rhythm(
         meters(6, 7),
