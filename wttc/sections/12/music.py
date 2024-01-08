@@ -185,46 +185,67 @@ def FL(voice, meters):
     )
     rhythm(
         meters(18),
-        [rt(1), 3, "-"],
+        [M(rt(1), 2), 3, "-"],
+        material=3,
     )
-    rhythm.mmrests(19, 22)
+    rhythm.mmrests(19, 21)
+    rhythm(
+        meters(22),
+        [-12, swell(12)],
+        material=1,
+    )
     rhythm(
         meters(23),
         swell(12),
+        material=2,
     )
     rhythm(
         meters(24),
-        [rt(1), 3, "-"],
+        [M(rt(1), 2), 3, "-"],
+        material=3,
     )
     rhythm(
         meters(25, 28),
         [-18, 24, 24, 10, -4],
+        material=5,
     )
-    rhythm.mmrests(29)
+    rhythm(
+        meters(29),
+        [-12, swell(12)],
+        material=2,
+    )
     rhythm(
         meters(30),
-        swell(12),
+        [M(rt(1), 2), 3, "-"],
+        material=3,
     )
     rhythm.mmrests(31)
     rhythm(
         meters(32),
         [-12, swell(12)],
+        material=2,
     )
-    rhythm.mmrests(33)
+    rhythm(
+        meters(33),
+        [M(rt(1), 2), 3, "-"],
+        material=3,
+    )
     rhythm(
         meters(34),
         [12, 4, 4],
+        material=2,
     )
     rhythm(
         meters(35),
         [8, 4, 4, 4],
+        material=2,
     )
     rhythm(
         meters(36),
         [8, 4, 4, 4, X(rt(4))],
+        material=2,
     )
     rhythm.mmrests(37)
-    baca.section.append_anchor_note(voice)
 
 
 def OB(voice, meters):
