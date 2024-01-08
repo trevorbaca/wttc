@@ -133,19 +133,23 @@ def FL(voice, meters):
     )
     rhythm(
         meters(6, 7),
-        [swell(12), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        [M(swell(12), 1), R([M(rt(1), 1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        material=2,
     )
     rhythm(
         meters(8),
-        [rt(1), 3, "-"],
+        [M(rt(1), 1), 3, "-"],
+        material=3,
     )
     rhythm(
         meters(9),
         [-12, swell(12)],
+        material=1,
     )
     rhythm(
         meters(10, 11),
         4 * [swell(12)],
+        material=1,
     )
     rhythm(
         meters(12, 14),

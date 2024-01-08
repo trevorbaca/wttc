@@ -15,13 +15,14 @@ def BG(*arguments):
 class M:
     argument: typing.Any
     number: int
+    debug: bool = False
 
     custom: typing.ClassVar[bool] = True
 
     def __call__(self, components):
         for leaf in abjad.select.leaves(components):
-            assert not abjad.get.indicators(leaf, Material)
-            abjad.attach(Material(self.number), leaf)
+            if not abjad.get.indicators(leaf, Material):
+                abjad.attach(Material(self.number), leaf)
         return components
 
 
