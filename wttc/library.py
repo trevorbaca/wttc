@@ -1,5 +1,6 @@
 import dataclasses
 import inspect
+import typing
 
 import abjad
 import baca
@@ -8,6 +9,20 @@ from abjadext import rmakers
 
 def BG(*arguments):
     return baca.rhythm.BG(*arguments, slur=False)
+
+
+@dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
+class M:
+    argument: typing.Any
+    number: int
+
+    custom: typing.ClassVar[bool] = True
+
+    def __call__(self, components):
+        for leaf in abjad.select.leaves(components):
+            assert not abjad.get.indicators(leaf, Material)
+            abjad.attach(Material(self.number), leaf)
+        return components
 
 
 @dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
@@ -86,9 +101,8 @@ class Rhythm:
                 rmakers.beam([tuplet])
         if material is not None:
             for leaf in abjad.select.leaves(voice_):
-                if abjad.get.has_indicator(leaf, Material):
-                    raise Exception(leaf, material)
-                abjad.attach(Material(material), leaf)
+                if not abjad.get.has_indicator(leaf, Material):
+                    abjad.attach(Material(material), leaf)
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
             return components

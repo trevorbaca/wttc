@@ -20,6 +20,7 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
@@ -89,20 +90,13 @@ def FL(voice, meters):
         [swell(12), "-"],
         material=1,
     )
-
-    @baca.call
-    def block():
-        components = rhythm(
-            meters(1),
-            R([rt(1), 1, 1, 1, 1, 1], 12),
-            do_not_clean_up_rhythmic_spelling=True,
-            material=2,
-            overlap=["-"],
-        )
-        note = abjad.select.note(components, 0)
-        abjad.detach(library.Material, note)
-        library.annotate([note], 1)
-
+    rhythm(
+        meters(1),
+        R([M(rt(1), 1), 1, 1, 1, 1, 1], 12),
+        do_not_clean_up_rhythmic_spelling=True,
+        material=2,
+        overlap=["-"],
+    )
     rhythm(
         meters(2),
         [1, "-"],
@@ -120,20 +114,13 @@ def FL(voice, meters):
         [swell(12), "-"],
         material=1,
     )
-
-    @baca.call
-    def block():
-        components = rhythm(
-            meters(4),
-            R([rt(1), 1, 1, 1, 1, 1, 1, 1], 12),
-            do_not_clean_up_rhythmic_spelling=True,
-            material=2,
-            overlap=["-"],
-        )
-        note = abjad.select.note(components, 0)
-        abjad.detach(library.Material, note)
-        library.annotate([note], 1)
-
+    rhythm(
+        meters(4),
+        R([M(rt(1), 1), 1, 1, 1, 1, 1, 1, 1], 12),
+        do_not_clean_up_rhythmic_spelling=True,
+        material=2,
+        overlap=["-"],
+    )
     rhythm(
         meters(5),
         [rt(1), 3, -4, -1, 3, -4, -1, 3, 4],
