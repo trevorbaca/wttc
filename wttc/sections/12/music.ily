@@ -1763,6 +1763,8 @@ number.12.AltoFlute.Music = {
     \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     f'8
     - \tweak stencil ##f
     ~
@@ -1784,6 +1786,10 @@ number.12.AltoFlute.Music = {
     f'2
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'4
     - \tweak stencil ##f
     ~
@@ -1815,6 +1821,10 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         f'16 * 896/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
@@ -1866,6 +1876,8 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 18]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'16
     [
     \repeatTie

@@ -151,12 +151,6 @@ def FL(voice, meters):
         4 * [swell(12)],
         material=1,
     )
-    """
-    rhythm(
-        meters(12, 14),
-        [12, A([rt(1)] + 8 * [1] + [t(1)], 24), A(9 * [1] + [t(1)], 24), t(8), 1, 3],
-    )
-    """
     rhythm(
         None,
         swell(12),
@@ -173,14 +167,21 @@ def FL(voice, meters):
         material=5,
         prefix=[-12],
     )
-
     rhythm(
         meters(15),
-        [-2, 7, 11, t(4)],
+        [-2, 7, 11],
+        material=5,
+        suffix=[-4],
     )
     rhythm(
-        meters(16, 17),
-        [swell(12), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        None,
+        [t(4), swell(12)],
+        material=1,
+    )
+    rhythm(
+        None,
+        R([M(rt(1), 1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24),
+        material=2,
     )
     rhythm(
         meters(18),

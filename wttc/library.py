@@ -70,6 +70,7 @@ class Rhythm:
         do_not_rewrite_meter=False,
         overlap=(),
         prefix=(),
+        suffix=(),
     ):
         assert material in (1, 2, 3, 4, 5, 99, None), repr(material)
         tag = baca.helpers.function_name(inspect.currentframe())
@@ -83,6 +84,10 @@ class Rhythm:
             items = list(prefix) + items
             prefix_numerator = abjad.sequence.weight(prefix)
             prefix_duration = abjad.Duration(prefix_numerator, denominator)
+        if suffix:
+            items = items + list(suffix)
+            suffix_numerator = abjad.sequence.weight(suffix)
+            suffix_duration = abjad.Duration(suffix_numerator, denominator)
         if time_signatures is None:
             do_not_rewrite_meter = True
         voice_ = baca.make_rhythm(
@@ -103,6 +108,16 @@ class Rhythm:
             assert abjad.get.duration(parts[0]) == prefix_duration
             count = len(parts[0])
             del voice_[:count]
+        if suffix:
+            voice_duration = abjad.get.duration(voice_)
+            nonsuffix_duration = voice_duration - suffix_duration
+            parts = abjad.select.partition_by_durations(
+                voice_, [nonsuffix_duration, suffix_duration]
+            )
+            assert len(parts) == 2, repr(parts)
+            assert abjad.get.duration(parts[-1]) == suffix_duration
+            count = len(parts[-1])
+            del voice_[-count:]
         # rmakers.extract_trivial(voice_)
         for tuplet in abjad.select.tuplets(voice_):
             if tuplet.multiplier == (1, 1):
