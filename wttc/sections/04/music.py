@@ -107,7 +107,6 @@ def FL(voice, meters):
     rhythm(
         meters(8),
         [T([-2, BG([1], t(4))], -2), t(4)],
-        do_not_rewrite_meter=True,
         overlap=[-4],
     )
     rhythm.make_one_beat_tuplets(

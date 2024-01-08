@@ -149,9 +149,13 @@ class Rhythm:
         self.voice.extend(music)
 
 
-def X(number):
-    assert isinstance(number, int), repr(number)
-    return baca.rhythm.T([number], "1:1")
+def X(argument):
+    if isinstance(argument, list):
+        list_ = argument
+    else:
+        list_ = [argument]
+    assert isinstance(list_, list), repr(list_)
+    return baca.rhythm.T(list_, "1:1")
 
 
 def _reference_meters():

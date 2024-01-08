@@ -394,8 +394,7 @@ def VC(voice, meters):
     def block():
         rhythm(
             meters(1),
-            [w(4, 8), h(4), w(6, 12), h(6), 4],
-            do_not_rewrite_meter=True,
+            [swell(8), swell(12), 4],
         )
         rhythm(
             meters(2, 3),

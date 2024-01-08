@@ -322,8 +322,7 @@ def VN(voice, meters):
     def block():
         rhythm(
             meters(15, 18),
-            4 * [rt(1), 15],
-            do_not_rewrite_meter=True,
+            4 * [rt(1), X(15)],
             material=2,
         )
         abjad.attach(abjad.Tie(), voice[-1])

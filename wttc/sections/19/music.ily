@@ -5373,7 +5373,9 @@ number.19.Cello.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    c'4
+    c'2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     c'2. * 1/2
       %! DURATION_MULTIPLIER
@@ -5383,7 +5385,9 @@ number.19.Cello.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    c'4.
+    c'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     c'4
 

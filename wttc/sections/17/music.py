@@ -16,12 +16,13 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
-pair = library.pair
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
+X = library.X
+pair = library.pair
 swell = library.swell
 
 

@@ -8,19 +8,20 @@ from wttc import library, strings
 #########################################################################################
 
 AG = baca.rhythm.AG
-BG = library.BG
 T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
-pair = library.pair
 rt = baca.rhythm.rt
-swell = library.swell
 t = baca.rhythm.t
 w = baca.rhythm.w
 
+BG = library.BG
 OBGC = library.OBGC
+X = library.X
+pair = library.pair
+swell = library.swell
 
 
 def GLOBALS(skips):
@@ -122,13 +123,11 @@ def FL(voice, meters):
     rhythm(
         meters(20, 24),
         [-16, -4, -3, t(1), t(12), t(16), t(16), 7, -1],
-        do_not_rewrite_meter=True,
         material=3,
     )
     rhythm(
         meters(25, 27),
         [-20, -1, t(3), t(16), t(16), 7, -1],
-        do_not_rewrite_meter=True,
         material=3,
     )
     rhythm(
@@ -219,8 +218,7 @@ def GT1(voice, meters):
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, w(7, 8), h(1), "-"],
-        do_not_rewrite_meter=True,
+        [-12, X([w(7, 8), h(1)]), "-"],
         material=2,
     )
     rhythm(

@@ -1710,9 +1710,10 @@ number.5.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [AltoFlute.Music measure 20]
-    r1
+    r2.
 
-    r4
+    % [AltoFlute.Music measure 21]
+    r2
 
     r8.
 
@@ -1732,12 +1733,18 @@ number.5.AltoFlute.Music = {
     ~
     \repeatTie
 
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [AltoFlute.Music measure 24]
     f'1
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    f'4..
+    f'8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -1763,12 +1770,18 @@ number.5.AltoFlute.Music = {
     ~
     \repeatTie
 
+    f'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [AltoFlute.Music measure 27]
     f'1
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    f'4..
+    f'8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT

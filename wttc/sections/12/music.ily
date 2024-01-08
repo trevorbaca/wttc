@@ -1434,20 +1434,19 @@ number.12.AltoFlute.Music = {
     f'8.
 
     f'4
-    - \tweak stencil ##f
-    ~
 
     % [AltoFlute.Music measure 6]
     f'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
@@ -1535,7 +1534,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 10]
     f'2. * 1/2
@@ -1546,7 +1547,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     f'2. * 1/2
       %! DURATION_MULTIPLIER
@@ -1556,7 +1559,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 11]
     f'2. * 1/2
@@ -1567,7 +1572,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     f'2. * 1/2
       %! DURATION_MULTIPLIER
@@ -1577,7 +1584,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 12]
     f'2.
@@ -1723,6 +1732,7 @@ number.12.AltoFlute.Music = {
     \repeatTie
 
     f'4
+    - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 16]
@@ -1735,7 +1745,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
@@ -1828,9 +1840,9 @@ number.12.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 22]
-    r2.
-
-    r2.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 23]
     f'2. * 1/2
@@ -1841,7 +1853,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
@@ -1918,9 +1932,9 @@ number.12.AltoFlute.Music = {
     r4
 
     % [AltoFlute.Music measure 29]
-    r2.
-
-    r2.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 30]
     f'2. * 1/2
@@ -1931,7 +1945,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 31]
     R1 * 4/4
@@ -1949,7 +1965,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'4.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 33]
     R1 * 8/4

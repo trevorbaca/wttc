@@ -16,12 +16,13 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
-pair = library.pair
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
+X = library.X
+pair = library.pair
 swell = library.swell
 
 
@@ -137,8 +138,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(6, 7),
-        [rt(w(6, 12)), h(6), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
-        do_not_rewrite_meter=True,
+        [swell(12), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
     )
     rhythm(
         meters(8),
@@ -146,13 +146,11 @@ def FL(voice, meters):
     )
     rhythm(
         meters(9),
-        [-12, w(6, 12), h(6)],
-        do_not_rewrite_meter=True,
+        [-12, swell(12)],
     )
     rhythm(
         meters(10, 11),
-        4 * [w(6, 12), h(6)],
-        do_not_rewrite_meter=True,
+        4 * [swell(12)],
     )
     rhythm(
         meters(12, 14),
@@ -164,18 +162,16 @@ def FL(voice, meters):
     )
     rhythm(
         meters(16, 17),
-        [rt(w(6, 12)), h(6), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
-        do_not_rewrite_meter=True,
+        [swell(12), R([rt(1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
     )
     rhythm(
         meters(18),
         [rt(1), 3, "-"],
     )
-    rhythm.mmrests(19, 21)
+    rhythm.mmrests(19, 22)
     rhythm(
-        meters(22, 23),
-        [-12, -12, w(6, 12), h(6)],
-        do_not_rewrite_meter=True,
+        meters(23),
+        swell(12),
     )
     rhythm(
         meters(24),
@@ -185,16 +181,15 @@ def FL(voice, meters):
         meters(25, 28),
         [-18, 24, 24, 10, -4],
     )
+    rhythm.mmrests(29)
     rhythm(
-        meters(29, 30),
-        [-12, -12, w(6, 12), h(6)],
-        do_not_rewrite_meter=True,
+        meters(30),
+        swell(12),
     )
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, w(6, 12), h(6)],
-        do_not_rewrite_meter=True,
+        [-12, swell(12)],
     )
     rhythm.mmrests(33)
     rhythm(
@@ -207,8 +202,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(36),
-        [8, 4, 4, 4, rt(4)],
-        do_not_rewrite_meter=True,
+        [8, 4, 4, 4, X(rt(4))],
     )
     rhythm.mmrests(37)
 
@@ -431,7 +425,6 @@ def VN(voice, meters):
         [t(24)]
         + [bl(t(4)), 1, 2, br(1), t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
         denominator=32,
-        do_not_rewrite_meter=True,
     )
 
 
@@ -501,7 +494,6 @@ def VC(voice, meters):
         [t(24)]
         + [bl(t(4)), 1, 2, br(1), t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
         denominator=32,
-        do_not_rewrite_meter=True,
     )
 
 

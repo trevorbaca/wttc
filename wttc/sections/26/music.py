@@ -16,12 +16,13 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
-pair = library.pair
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
+X = library.X
+pair = library.pair
 swell = library.swell
 
 
@@ -105,13 +106,11 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7),
-        [rt(1), OBGC(6 * [1], [7]), 1, 7],
-        do_not_rewrite_meter=True,
+        [rt(1), X(OBGC(6 * [1], [7])), 1, X(7)],
     )
     rhythm(
         meters(8),
-        [rt(1), OBGC(12 * [1], [14]), 1],
-        do_not_rewrite_meter=True,
+        [rt(1), X(OBGC(12 * [1], [14])), 1],
     )
     rhythm(
         meters(9, 10),
@@ -149,8 +148,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(22),
-        [-1, OBGC(6 * [1], [t(7)]), 12],
-        do_not_rewrite_meter=True,
+        [-1, X(OBGC(6 * [1], [t(7)])), 12],
     )
     rhythm(
         meters(23),
@@ -377,8 +375,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(8),
-        [rt(1), OBGC(7 * [1], [14]), 1],
-        do_not_rewrite_meter=True,
+        [rt(1), X(OBGC(7 * [1], [14])), 1],
     )
     rhythm(
         meters(9, 10),
@@ -400,8 +397,7 @@ def VN(voice, meters):
     rhythm.mmrests(16, 18)
     rhythm(
         meters(19),
-        [-1, OBGC(7 * [1], [t(7)]), t(8)],
-        do_not_rewrite_meter=True,
+        [-1, X(OBGC(7 * [1], [t(7)])), t(8)],
     )
     rhythm(
         meters(20, 21),
@@ -409,8 +405,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(22),
-        [-1, OBGC(7 * [1], [t(7)]), 12],
-        do_not_rewrite_meter=True,
+        [-1, X(OBGC(7 * [1], [t(7)])), 12],
     )
     rhythm(
         meters(23),
