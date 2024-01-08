@@ -84,7 +84,6 @@ def FL(voice, meters):
     rhythm(
         meters(1),
         [swell(12), "-"],
-        do_not_rewrite_meter=True,
         material=1,
     )
 
@@ -116,7 +115,6 @@ def FL(voice, meters):
     rhythm(
         meters(4),
         [swell(12), "-"],
-        do_not_rewrite_meter=True,
         material=1,
     )
 

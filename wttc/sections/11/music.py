@@ -319,7 +319,6 @@ def VC(voice, meters):
     rhythm(
         meters(21, 22),
         2 * [swell(12)],
-        do_not_rewrite_meter=True,
         material=2,
     )
     rhythm(
@@ -330,7 +329,6 @@ def VC(voice, meters):
     rhythm(
         meters(24, 25),
         2 * [swell(12)],
-        do_not_rewrite_meter=True,
         material=2,
     )
     rhythm(

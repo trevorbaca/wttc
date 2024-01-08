@@ -377,13 +377,9 @@ def VN(voice, meters):
         [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
         material=1,
     )
-    tuplet = T(list(swell(12)), "1:1")
     rhythm(
         meters(3, 4),
-        # [t(4), bl(1), BG([2], br(3)), swell(12), -1, t(3), 4, -8, -1, t(3), 4, -4],
-        [t(4), bl(1), BG([2], br(3)), tuplet, -1, t(3), 4, -8, -1, t(3), 4, -4],
-        debug=True,
-        # do_not_rewrite_meter=True,
+        [t(4), bl(1), BG([2], br(3)), swell(12), -1, t(3), 4, -8, -1, t(3), 4, -4],
         material=1,
     )
     rhythm(

@@ -781,7 +781,9 @@ def staff_highlight_all_leaves_in_voice(leaves):
 def swell(n):
     assert n % 2 == 0, repr(n)
     half = int(n / 2)
-    return pair(half, n, half, n)
+    numbers = pair(half, n, half, n)
+    tuplet = baca.rhythm.T(list(numbers), "1:1")
+    return tuplet
 
 
 instruments = {
