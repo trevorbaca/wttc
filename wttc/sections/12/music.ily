@@ -1622,9 +1622,17 @@ number.12.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 12]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    f'2.
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    f'2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
@@ -1639,6 +1647,10 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         f'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
@@ -1722,6 +1734,10 @@ number.12.AltoFlute.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         f'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
@@ -1743,6 +1759,8 @@ number.12.AltoFlute.Music = {
     ]
 
     % [AltoFlute.Music measure 15]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     f'8
@@ -2043,6 +2061,39 @@ number.12.AltoFlute.Music = {
     R1 * 7/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"7" #"4"
+
+      %! ANCHOR_NOTE
+    % [AltoFlute.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 

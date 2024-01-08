@@ -69,9 +69,9 @@ class Rhythm:
         do_not_extend=False,
         do_not_rewrite_meter=False,
         overlap=(),
+        prefix=(),
     ):
         assert material in (1, 2, 3, 4, 5, 99, None), repr(material)
-        assert time_signatures is not None, repr(time_signatures)
         tag = baca.helpers.function_name(inspect.currentframe())
         if isinstance(items, list):
             items = abjad.sequence.flatten(items)
@@ -79,6 +79,10 @@ class Rhythm:
             items = [items]
         if overlap:
             items = list(overlap) + items
+        if prefix:
+            items = list(prefix) + items
+            prefix_numerator = abjad.sequence.weight(prefix)
+            prefix_duration = abjad.Duration(prefix_numerator, denominator)
         if time_signatures is None:
             do_not_rewrite_meter = True
         voice_ = baca.make_rhythm(
@@ -91,6 +95,14 @@ class Rhythm:
             tag=tag,
             voice_name=self.voice.name,
         )
+        if prefix:
+            parts = abjad.select.partition_by_durations(
+                voice_, [prefix_duration], overhang=True
+            )
+            assert len(parts) == 2, repr(parts)
+            assert abjad.get.duration(parts[0]) == prefix_duration
+            count = len(parts[0])
+            del voice_[:count]
         # rmakers.extract_trivial(voice_)
         for tuplet in abjad.select.tuplets(voice_):
             if tuplet.multiplier == (1, 1):
