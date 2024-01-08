@@ -2426,39 +2426,63 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 2]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 3]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
@@ -2466,6 +2490,8 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 4]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -2513,22 +2539,36 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
@@ -2536,6 +2576,8 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 6]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -2619,14 +2661,22 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 8]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
     [
     ~
@@ -2634,14 +2684,20 @@ number.12.Guitar.1.Music = {
     c''16
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
@@ -2649,20 +2705,30 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 9]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
     [
     ~
@@ -2670,6 +2736,8 @@ number.12.Guitar.1.Music = {
     c''16
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
@@ -2677,14 +2745,22 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 10]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
@@ -2695,6 +2771,8 @@ number.12.Guitar.1.Music = {
     \times 1/1
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 5616/1024
           %! DURATION_MULTIPLIER
@@ -2721,6 +2799,8 @@ number.12.Guitar.1.Music = {
     }
     \revert TupletNumber.text
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     % [Guitar.1.Music measure 12]
@@ -2748,6 +2828,8 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 16]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -2831,18 +2913,28 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 18]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2853,10 +2945,14 @@ number.12.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2865,8 +2961,12 @@ number.12.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2880,8 +2980,12 @@ number.12.Guitar.1.Music = {
         % [Guitar.1.Music measure 19]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2894,10 +2998,14 @@ number.12.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2906,8 +3014,12 @@ number.12.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2921,8 +3033,12 @@ number.12.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2935,11 +3051,15 @@ number.12.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
     % [Guitar.1.Music measure 21]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -2949,6 +3069,8 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 22]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -3032,18 +3154,28 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 24]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''8.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3054,10 +3186,14 @@ number.12.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3066,8 +3202,12 @@ number.12.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3081,8 +3221,12 @@ number.12.Guitar.1.Music = {
         % [Guitar.1.Music measure 25]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3095,10 +3239,14 @@ number.12.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3107,8 +3255,12 @@ number.12.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3122,8 +3274,12 @@ number.12.Guitar.1.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3136,11 +3292,15 @@ number.12.Guitar.1.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
     % [Guitar.1.Music measure 27]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -3148,8 +3308,12 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 28]
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 29]
@@ -3158,23 +3322,41 @@ number.12.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 30]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r16
+
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+    c''8.
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r2
 
     % [Guitar.1.Music measure 31]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 32]
@@ -3183,65 +3365,113 @@ number.12.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 33]
-    r2
+    r16
+
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+    c''8.
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r4
 
     r4.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 34]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 35]
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     % [Guitar.1.Music measure 36]
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2.
@@ -3309,6 +3539,8 @@ number.12.Guitar.2.Music = {
 
         r2
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''4
 
         c''4
@@ -3411,6 +3643,10 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16 * 11520/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11520" #"11264"
@@ -3464,6 +3700,10 @@ number.12.Guitar.2.Music = {
         c''4
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''4
 
         c''4
@@ -3504,6 +3744,10 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c''16 * 2176/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2176" #"1024"
@@ -3529,29 +3773,41 @@ number.12.Guitar.2.Music = {
     \revert TupletNumber.text
 
     % [Guitar.2.Music measure 7]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
     ~
 
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
     ~
 
     % [Guitar.2.Music measure 8]
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''8
     - \tweak stencil ##f
     ~
@@ -3559,6 +3815,8 @@ number.12.Guitar.2.Music = {
     c''16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
@@ -3568,6 +3826,8 @@ number.12.Guitar.2.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
     [
     ~
@@ -3575,6 +3835,8 @@ number.12.Guitar.2.Music = {
     c''16
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2.
@@ -3582,6 +3844,8 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 10]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''8
     - \tweak stencil ##f
     ~
@@ -3589,6 +3853,8 @@ number.12.Guitar.2.Music = {
     c''16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
@@ -3599,6 +3865,8 @@ number.12.Guitar.2.Music = {
     \times 1/1
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 10000/2048
           %! DURATION_MULTIPLIER
@@ -3629,6 +3897,8 @@ number.12.Guitar.2.Music = {
     }
     \revert TupletNumber.text
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     % [Guitar.2.Music measure 12]
@@ -3658,6 +3928,8 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 16]
         r1
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         c''4
         - \tweak stencil ##f
         ~
@@ -3700,13 +3972,19 @@ number.12.Guitar.2.Music = {
     \revert TupletNumber.text
 
     % [Guitar.2.Music measure 17]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
     ~
 
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
@@ -3718,8 +3996,12 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 18]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3730,8 +4012,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3742,10 +4028,14 @@ number.12.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3754,8 +4044,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3769,8 +4063,12 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 19]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3783,10 +4081,14 @@ number.12.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3795,8 +4097,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3810,8 +4116,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3824,11 +4134,15 @@ number.12.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
     % [Guitar.2.Music measure 21]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -3838,6 +4152,8 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 22]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         \once \override Beam.grow-direction = #right
         c''16 * 4000/1024
           %! DURATION_MULTIPLIER
@@ -3924,10 +4240,16 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 24]
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3938,8 +4260,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3950,10 +4276,14 @@ number.12.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3962,8 +4292,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3977,8 +4311,12 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 25]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3991,10 +4329,14 @@ number.12.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4003,8 +4345,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -4018,8 +4364,12 @@ number.12.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -4032,11 +4382,15 @@ number.12.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c''8
 
     }
 
     % [Guitar.2.Music measure 27]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -4044,8 +4398,12 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 28]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.2.Music measure 29]
@@ -4063,8 +4421,12 @@ number.12.Guitar.2.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.2.Music measure 32]
@@ -4077,28 +4439,44 @@ number.12.Guitar.2.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c''8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [Guitar.2.Music measure 34]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r1
 
     % [Guitar.2.Music measure 35]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r1
@@ -4106,14 +4484,22 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 36]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r1

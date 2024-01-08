@@ -259,173 +259,243 @@ def GT1(voice, meters):
     rhythm(
         meters(2, 3),
         6 * [-1, 3, -4],
+        material=3,
     )
     rhythm(
         meters(4),
         # TODO: start with rest
         A(10 * [1], 24),
+        material=1,
     )
     rhythm(
         meters(5),
         3 * [-1, 3, -4],
+        material=3,
     )
     rhythm(
         meters(6, 7),
         [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        material=1,
     )
     rhythm(
         meters(8, 9),
-        [-1, 3] + [-5, 2, -7, 1, -7, 2, -5, 1, -7, 2, -5],
+        [-1, M(3, 3)] + [-5, 2, -7, 1, -7, 2, -5, 1, -7, 2, -5],
+        material=4,
     )
     rhythm(
         meters(10),
-        [-2, 1, -5, 2, -7, "+"],
+        [-2, 1, -5, 2, -7],
+        material=4,
+        suffix=[7],
     )
-    del voice[-2:]
     rhythm(
-        meters(10, 11),
+        None,
         [A([1, 1, 1, 1, 1], 15), -16],
-        # TODO: remove dummy meter
-        do_not_rewrite_meter=True,
+        material=1,
     )
     rhythm.mmrests(12, 15)
     rhythm(
         meters(16, 17),
         [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        material=1,
     )
     tuplets = rhythm.make_one_beat_tuplets(
         meters(18, 20),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
+        material=4,
     )
-    abjad.mutate.replace(tuplets[:1], abjad.Container("r16 c'8.")[:])
+
+    @baca.call
+    def block():
+        container = abjad.Container("r16 c'8.")
+        library.annotate(container, 3)
+        abjad.mutate.replace(tuplets[:1], container[:])
+
     rhythm.mmrests(21)
     rhythm(
         meters(22, 23),
         [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        material=1,
     )
     tuplets = rhythm.make_one_beat_tuplets(
         meters(24, 26),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
+        material=4,
     )
-    abjad.mutate.replace(tuplets[:1], abjad.Container("r16 c'8.")[:])
+
+    @baca.call
+    def block():
+        container = abjad.Container("r16 c'8.")
+        library.annotate(container, 3)
+        abjad.mutate.replace(tuplets[:1], container[:])
+
     rhythm.mmrests(27)
     rhythm(
         meters(28),
         [-4, 2, -2],
+        material=99,
     )
-    rhythm.mmrests(29, 30)
+    rhythm.mmrests(29)
+    rhythm(
+        meters(30),
+        [-1, 3, "-"],
+        material=3,
+    )
     rhythm(
         meters(31),
         [2, -6, 2, -2, 2, -2],
+        material=99,
     )
     rhythm.mmrests(32)
     rhythm(
         meters(33),
-        [-8, -6, 2, -4, 2, -2, -2, 2, -8],
+        [-1, M(3, 3), -4, -6, 2, -4, 2, -2, -2, 2, -8],
+        material=99,
     )
     rhythm(
         meters(34),
         [-1, 1, -2, -4, -1, 1, -1, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(35),
         [-3, 1, "-"],
+        material=1,
     )
     rhythm(
         meters(36),
         [-4, 1, -1, -1, 1, -2, 1, -3, -4, "-"],
+        material=1,
     )
     rhythm.mmrests(37)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    voice.extend(r"r4 r4 r4 \times 3/5 { r2 c'4 c' c' }")
-    voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
-    voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
-    voice.extend(r"\times 3/5 { c'4 c' c' c'2 }")
+
+    @baca.call
+    def block():
+        voice.extend(r"r4 r4 r4 \times 3/5 { r2 c'4 c' c' }")
+        voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
+        voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
+        voice.extend(r"\times 3/5 { c'4 c' c' c'2 }")
+        library.annotate(voice, 3)
+
     rhythm(
-        meters(5),
-        R([rt(1)] + 9 * [1] + [t(1)], 24),
-        # TODO: remove dummy meter
-        do_not_rewrite_meter=True,
+        None,
+        R([M(rt(1), 3)] + 9 * [1] + [t(1)], 24),
+        material=1,
     )
-    voice.extend(r"\times 3/5 { c'4 c' c' c' c' }")
-    voice.extend(r"\times 3/5 { c'4 c' c' c' c' }")
+
+    @baca.call
+    def block():
+        container = abjad.Container(2 * r"\times 3/5 { c'4 c' c' c' c' } ")
+        leaves = abjad.select.leaves(container)
+        library.annotate(leaves[:1], 1)
+        library.annotate(leaves[1:], 3)
+        tuplets = abjad.mutate.eject_contents(container)
+        voice.extend(tuplets)
+
     rhythm(
-        meters(6, 7),
-        A([rt(1)] + 5 * [1], 12),
-        # TODO: remove dummy meter
-        do_not_rewrite_meter=True,
+        None,
+        A([M(rt(1), 3)] + 5 * [1], 12),
+        material=1,
     )
-    voice.extend("r8. c'16 ~ c'8 r8 r8. c'16 ~")
+
+    @baca.call
+    def block():
+        container = abjad.Container("r8. c'16 ~ c'8 r8 r8. c'16 ~")
+        library.annotate(container, 4)
+        voice.extend(container)
+
     rhythm(
         meters(8, 9),
         [2, -12, 3, -16, 2, -14],
+        material=4,
     )
     rhythm(
         meters(10),
-        [-2, 3, -12, "+"],
+        [-2, 3, -12],
+        suffix=[7],
+        material=4,
     )
-    del voice[-2:]
     rhythm(
-        meters(10, 11),
+        None,
         [A([1, 1, 1, 1, 1, 1], 15), -16],
-        # TODO: remove dummy meter
-        do_not_rewrite_meter=True,
+        material=1,
     )
     rhythm.mmrests(12, 15)
-    voice.extend(r"\times 3/5 { r1 c'4 }")
+
+    @baca.call
+    def block():
+        container = abjad.Container(r"\times 3/5 { r1 c'4 }")
+        library.annotate(container, 1)
+        voice.extend(container)
+
     rhythm(
-        meters(16, 17),
+        None,
         A([rt(1)] + 5 * [1], 12),
-        # TODO: remove dummy meter
-        do_not_rewrite_meter=True,
+        material=1,
     )
-    voice.extend("r8. c'16 ~ c'8 r8 r4")
+
+    @baca.call
+    def block():
+        container = abjad.Container("r8. c'16 ~ c'8 r8 r4")
+        library.annotate(container, 4)
+        voice.extend(container)
+
     rhythm.make_one_beat_tuplets(
         meters(18, 20),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
+        material=4,
     )
     rhythm.mmrests(21)
     rhythm(
         meters(22, 23),
         [A(5 * [1] + [t(1)], 12), R(10 * [1], 24)],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(24, 26),
         [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
         extra_counts=[-1],
+        material=4,
     )
     rhythm.mmrests(27)
     rhythm(
         meters(28),
         [-2, 2, -4],
+        material=99,
     )
     rhythm.mmrests(29, 30)
     rhythm(
         meters(31),
         [-6, 2, -8],
+        material=99,
     )
     rhythm.mmrests(32)
     rhythm(
         meters(33),
         [-8, -8, -2, 2, -4, -4, 2, -2],
+        material=99,
     )
     rhythm(
         meters(34),
         [-2, 1, -1, "-"],
+        material=1,
     )
     rhythm(
         meters(35),
         [1, -3, "-"],
+        material=1,
     )
     rhythm(
         meters(36),
         [-1, 1, -2, -2, 1, -1, -4, -4, "-"],
+        material=1,
     )
     rhythm.mmrests(37)
 
