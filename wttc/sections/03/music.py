@@ -350,12 +350,12 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8, 9),
-        [X(t(16)), X(t(12)), anchor(4, 1)],
+        [xt(16), xt(12), anchor(4, 1)],
         material=3,
     )
     rhythm(
         meters(10),
-        [X(t(12)), anchor(4, 1)],
+        [xt(12), anchor(4, 1)],
         material=3,
     )
     rhythm(
