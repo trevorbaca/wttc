@@ -307,8 +307,7 @@ def GT2(voice, meters):
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, w(7, 8), h(1), "-"],
-        do_not_rewrite_meter=True,
+        [-12, X([w(7, 8), h(1)]), "-"],
         material=2,
     )
     rhythm(
@@ -409,7 +408,6 @@ def VN(voice, meters):
     rhythm(
         meters(12, 13),
         [t(24), AG([2], 8), "-"],
-        do_not_rewrite_meter=True,
         material=3,
     )
     rhythm(
@@ -566,7 +564,6 @@ def VC(voice, meters):
     rhythm(
         meters(23, 24),
         [t(16), t(4), t(16), t(4)],
-        do_not_rewrite_meter=True,
         material=99,
     )
     rhythm(
@@ -577,13 +574,11 @@ def VC(voice, meters):
     rhythm(
         meters(26, 27),
         [t(16), t(4), t(16), t(4)],
-        do_not_rewrite_meter=True,
         material=99,
     )
     rhythm(
         meters(28, 30),
         [t(16), t(4), t(16), t(4), 4, "-"],
-        do_not_rewrite_meter=True,
         material=99,
     )
     rhythm(
