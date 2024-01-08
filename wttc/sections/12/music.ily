@@ -4617,6 +4617,8 @@ number.12.Violin.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     c'8
     - \tweak stencil ##f
     ~
@@ -4720,6 +4722,8 @@ number.12.Violin.Music = {
     c'8
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
@@ -4737,6 +4741,8 @@ number.12.Violin.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     c'8
     - \tweak stencil ##f
     ~
@@ -4840,6 +4846,8 @@ number.12.Violin.Music = {
     ]
 
     % [Violin.Music measure 23]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     % [Violin.Music measure 24]
@@ -4852,6 +4860,8 @@ number.12.Violin.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     c'8
     - \tweak stencil ##f
     ~
@@ -4905,6 +4915,8 @@ number.12.Violin.Music = {
     c'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Violin.Music measure 29]
@@ -4933,6 +4945,8 @@ number.12.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Violin.Music measure 34]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'2.
 
     c'4
@@ -4957,6 +4971,10 @@ number.12.Violin.Music = {
 
     c'4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'8
     [
     - \tweak stencil ##f
@@ -5019,6 +5037,42 @@ number.12.Violin.Music = {
 
     c'32
     ]
+
+      %! ANCHOR_NOTE
+    % [Violin.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 
@@ -5090,6 +5144,8 @@ number.12.Cello.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -5116,6 +5172,8 @@ number.12.Cello.Music = {
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5125,10 +5183,14 @@ number.12.Cello.Music = {
         % [Cello.Music measure 7]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
         c'4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text

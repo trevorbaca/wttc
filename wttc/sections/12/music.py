@@ -506,37 +506,59 @@ def VN(voice, meters):
     rhythm(
         meters(13, 17),
         [-6, 20, 3, 7, 5, 9, 7, 11, 9, 13, "-"],
+        material=5,
     )
     rhythm.mmrests(18)
     rhythm(
         meters(19, 23),
         [-6, 15, 11, 13, 9, 11, 7, 9, 5, 7, 3, "-"],
+        material=5,
     )
     rhythm.mmrests(24)
     rhythm(
         meters(25, 28),
         [-18, 24, 24, 10, -4],
+        material=5,
     )
     rhythm.mmrests(29, 33)
     rhythm(
         meters(34),
         [12, 4, 4],
+        material=2,
     )
     rhythm(
         meters(35),
         [8, 4, 4, 4],
+        material=2,
     )
     rhythm(
         meters(36),
-        [16, 8, 8, 8, t(4), 1, 2, 1],
+        [8, 4, 4, 4],
+        material=2,
+        suffix=[4],
+    )
+    rhythm(
+        meters(36),
+        [t(4), 1, 2, 1],
         denominator=32,
+        material=3,
+        prefix=[40],
     )
     rhythm(
         meters(37),
-        [t(24)]
-        + [bl(t(4)), 1, 2, br(1), t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
+        [t(24), bl(t(4)), 1, 2, br(1)],
         denominator=32,
+        material=3,
+        suffix=[24],
     )
+    rhythm(
+        meters(37),
+        [t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
+        denominator=32,
+        material=3,
+        prefix=[32],
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
@@ -545,11 +567,13 @@ def VC(voice, meters):
     rhythm(
         meters(5),
         [-8, -1, t(3), t(12)],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(6, 7),
         ["+", 1, -7, 2, -6],
         extra_counts=[-1],
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(8, 9),
