@@ -15,12 +15,13 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
-pair = library.pair
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 OBGC = library.OBGC
+X = library.X
+pair = library.pair
 swell = library.swell
 
 
@@ -269,8 +270,7 @@ def VN(voice, meters):
 
     rhythm(
         meters(9, 10),
-        3 * [AG([2], 7), -1] + [swell(16)],
-        do_not_rewrite_meter=True,
+        3 * [AG([2], X(7)), -1] + [swell(16)],
         material=2,
     )
     rhythm(

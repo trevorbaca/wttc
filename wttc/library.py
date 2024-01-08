@@ -149,6 +149,11 @@ class Rhythm:
         self.voice.extend(music)
 
 
+def X(number):
+    assert isinstance(number, int), repr(number)
+    return baca.rhythm.T([number], "1:1")
+
+
 def _reference_meters():
     return (
         abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
