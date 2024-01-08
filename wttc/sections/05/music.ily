@@ -4169,41 +4169,22 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
     c'16
-    ~
 
     c'4
-    - \tweak stencil ##f
-    ~
 
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     % [Violin.Music measure 19]
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     c'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     \afterGrace
     c'4
-    \repeatTie
     {
 
           %! STAFF_HIGHLIGHT
@@ -4269,12 +4250,18 @@ number.5.Violin.Music = {
     ~
     \repeatTie
 
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Violin.Music measure 24]
     c'1
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'4..
+    c'8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4951,39 +4938,27 @@ number.5.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
     c'4
-    - \tweak stencil ##f
-    ~
+
+    c'4
+
+    c'4
 
     c'4
     - \tweak stencil ##f
     ~
-    \repeatTie
 
+    % [Cello.Music measure 32]
     c'4
-    - \tweak stencil ##f
-    ~
     \repeatTie
 
     c'2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    c'2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     c'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     % [Cello.Music measure 33]
     c'2.
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     c'8
     \repeatTie

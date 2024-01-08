@@ -435,8 +435,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(18, 19),
-        [-3, t(1), t(4), t(4), t(4), t(4), t(4), t(4), AG([2], 4)],
-        do_not_rewrite_meter=True,
+        [-3, 1, 4, 4, 4, 4, 4, 4, AG([2], 4)],
         material=2,
     )
     rhythm(
@@ -458,8 +457,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(23, 24),
-        [t(16), t(16), 7, -1],
-        do_not_rewrite_meter=True,
+        ["+", -1],
         material=3,
     )
     rhythm(
@@ -583,8 +581,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(31, 32),
-        [t(4), t(4), t(4), t(8), t(8), t(12)],
-        do_not_rewrite_meter=True,
+        [4, 4, 4, 8, 8, 12],
         material=1,
     )
     rhythm(
