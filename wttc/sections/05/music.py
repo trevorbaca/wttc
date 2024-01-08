@@ -21,7 +21,6 @@ BG = library.BG
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
-pair = library.pair
 swell = library.swell
 
 

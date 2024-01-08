@@ -662,12 +662,6 @@ def overlap_previous_measure(
     voice.extend(components)
 
 
-def pair(first_real_n, first_written_n, second_real_n, second_written_n):
-    first = baca.rhythm.w(first_real_n, first_written_n)
-    second = baca.rhythm.h(baca.rhythm.w(second_real_n, second_written_n))
-    return first, second
-
-
 def replace(voice, component, string):
     index = voice.index(component)
     container = abjad.Container(string)
@@ -797,8 +791,9 @@ def staff_highlight_all_leaves_in_voice(leaves):
 def swell(n):
     assert n % 2 == 0, repr(n)
     half = int(n / 2)
-    numbers = pair(half, n, half, n)
-    tuplet = baca.rhythm.T(list(numbers), "1:1")
+    first = baca.rhythm.w(half, n)
+    second = baca.rhythm.h(baca.rhythm.w(half, n))
+    tuplet = baca.rhythm.T([first, second], "1:1")
     return tuplet
 
 

@@ -21,7 +21,7 @@ w = baca.rhythm.w
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
-pair = library.pair
+swell = library.swell
 
 
 def GLOBALS(skips):
@@ -57,22 +57,22 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        3 * [pair(4, 8, 4, 8)] + ["-"],
+        3 * [swell(8)] + ["-"],
         material=1,
     )
     rhythm(
         meters(3, 4),
-        3 * [pair(4, 8, 4, 8)] + ["-"],
+        3 * [swell(8)] + ["-"],
         material=1,
     )
     rhythm(
         meters(5),
-        2 * [pair(4, 8, 4, 8)],
+        2 * [swell(8)],
         material=1,
     )
     rhythm(
         meters(6),
-        2 * [pair(4, 8, 4, 8)],
+        2 * [swell(8)],
         material=1,
     )
     rhythm(
@@ -109,7 +109,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(12),
-        [pair(4, 8, 4, 8), "-"],
+        [swell(8), "-"],
         material=1,
     )
     rhythm(
