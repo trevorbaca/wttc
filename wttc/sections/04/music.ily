@@ -1751,11 +1751,10 @@ number.4.Guitar.1.Music = {
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-          %! REDUNDANT_STAFF_LINES_COLOR
-        \once \override Staff.StaffSymbol.color = #(x11-color 'DeepPink1)
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
-          %! REDUNDANT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 0)
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
@@ -1768,11 +1767,11 @@ number.4.Guitar.1.Music = {
         \set Staff.shortInstrumentName = \wttc-gt-i-markup
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \stopStaff
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \startStaff
         b'4
         - \tweak padding 1

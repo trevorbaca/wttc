@@ -514,27 +514,31 @@ def gt1(m):
 
     @baca.call
     def block():
-        leaves = m[1, 7]
-        notes = abjad.select.notes(leaves)
+        pleaves = library.filter_material(m[1, 7], 1)
+        notes = abjad.select.notes(pleaves)
         baca.pitches(notes, "Db5 Bb4 Ab4 F4")
         baca.laissez_vibrer(notes)
         baca.dynamic(notes[0], "f")
         baca.dynamic(notes[2], "mf")
-        baca.override.dls_staff_padding(notes, 5)
 
     @baca.call
     def block():
-        leaves = m[11, 13]
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[11, 13], 99)
+        baca.staff_position(pleaves, 0)
+        runs = abjad.select.runs(pleaves)
         for run in runs:
-            baca.down_bow(run[0], abjad.Tweak(r"- \tweak padding 1"))
+            baca.staff_lines(run[0], 1)
+            leaf = abjad.get.leaf(run[-1], 1)
+            baca.staff_lines(leaf, 5)
+            baca.down_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.rleak(run)
             baca.hairpin(run, 'o<| "mf"')
-        notes = abjad.select.notes(leaves)
-        baca.staff_lines(notes[0], 1)
-        baca.staff_position(leaves, 0)
-        baca.override.dls_staff_padding(leaves, 9)
+
+    @baca.call
+    def block():
+        baca.override.dls_staff_padding(m[1, 7], 5)
+        baca.override.dls_staff_padding(m[11, 13], 9)
 
 
 def gt2(m):
