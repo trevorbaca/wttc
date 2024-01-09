@@ -3,7 +3,7 @@ import itertools
 import abjad
 import baca
 
-from wttc import library, strings
+from wttc import library
 
 #########################################################################################
 ########################################### 04 ##########################################
@@ -549,16 +549,8 @@ def annotate(cache):
 def fl(m):
     @baca.call
     def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "AltoFlute", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.alto_flute_markup)
-        baca.short_instrument_name(leaf, "Afl.", library.manifests)
-        baca.clef(leaf, "treble")
-
-    @baca.call
-    def block():
-        # HERE
-        plts = baca.select.plts(m[1])[:2]
+        leaves = library.select_material(m[1], 1)
+        plts = baca.select.plts(leaves)
         baca.pitch(plts, "G3")
         baca.covered_spanner(plts, staff_padding=5.5)
         baca.dynamic(plts[0].head, "mp")
@@ -687,13 +679,7 @@ def fl(m):
 
 
 def ob(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Oboe", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.oboe_markup)
-        baca.short_instrument_name(leaf, "Ob.", library.manifests)
-        baca.clef(leaf, "treble")
+    pass
 
 
 def gt1(cache):
@@ -715,14 +701,6 @@ def gt1(cache):
         cache.rebuild()
 
     m = cache[name]
-
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Guitar", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.guitar_i_markup)
-        baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
-        baca.clef(leaf, "treble")
 
     def select_untied_notes(leaves, duration=None):
         notes = []
@@ -888,14 +866,6 @@ def gt2(cache):
 
     m = cache[name]
 
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Guitar", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.guitar_ii_markup)
-        baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
-        baca.clef(leaf, "treble")
-
     def upbows(leaves, dynamics):
         plts = baca.select.plts(leaves)
         dynamics = dynamics.split()
@@ -943,23 +913,11 @@ def gt2(cache):
 
 
 def vn(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Violin", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.violin_markup)
-        baca.short_instrument_name(leaf, "Vn.", library.manifests)
-        baca.clef(leaf, "treble")
+    pass
 
 
 def vc(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Cello", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.cello_markup)
-        baca.short_instrument_name(leaf, "Vc.", library.manifests)
-        baca.clef(leaf, "treble")
+    pass
 
 
 @baca.build.timed("make_score")
@@ -975,7 +933,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
-        # score_persistent_indicators=previous_persistent_indicators["Score"],
+        score_persistent_indicators=previous_persistent_indicators["Score"],
     )
     GLOBALS(score["Skips"])
     FL(voices.fl, meters)
@@ -985,6 +943,11 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VN(voices.vn, meters)
     VC(voices.vc, meters)
     library.force_repeat_tie(score)
+    baca.section.reapply_persistent_indicators(
+        voices,
+        previous_persistent_indicators,
+        manifests=library.manifests,
+    )
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
@@ -992,7 +955,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     )
     annotate(cache)
     library.highlight_staves(cache)
-    # library.check_material_annotations(score)
+    library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache)
@@ -1017,7 +980,8 @@ def persist_score(score, environment):
     )
     baca.tags.deactivate(
         score,
-        baca.tags.EXPLICIT_INSTRUMENT_ALERT,
+        *baca.tags.instrument_color_tags(),
+        *baca.tags.short_instrument_name_color_tags(),
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -1050,8 +1014,7 @@ def main():
     if environment.score():
         score = make_score(
             environment.first_measure_number,
-            # environment.previous_metadata["persistent_indicators"],
-            {},
+            environment.previous_metadata["persistent_indicators"],
             environment.timing,
         )
         persist_score(score, environment)
