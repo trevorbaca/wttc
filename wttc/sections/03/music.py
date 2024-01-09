@@ -1088,7 +1088,6 @@ def make_score(first_measure_number, previous_persistent_indicators):
         append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
-        # score_persistent_indicators=previous_persistent_indicators["Score"],
     )
     GLOBALS(score["Skips"])
     FL(voices.fl, meters)
@@ -1130,7 +1129,8 @@ def persist_score(score, environment):
     )
     baca.tags.deactivate(
         score,
-        baca.tags.EXPLICIT_INSTRUMENT_ALERT,
+        *baca.tags.instrument_color_tags(),
+        *baca.tags.short_instrument_name_color_tags(),
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -1163,7 +1163,6 @@ def main():
     if environment.score():
         score = make_score(
             environment.first_measure_number,
-            # environment.previous_metadata["persistent_indicators"],
             {},
             environment.timing,
         )

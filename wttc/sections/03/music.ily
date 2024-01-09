@@ -467,7 +467,7 @@ number.3.AltoFlute.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
+    %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 3.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -505,10 +505,10 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-afl-markup
+    \set Staff.shortInstrumentName = \wttc-afl-markup %@%
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -1530,7 +1530,7 @@ number.3.Oboe.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
+    %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -1550,10 +1550,10 @@ number.3.Oboe.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-ob-markup
+    \set Staff.shortInstrumentName = \wttc-ob-markup %@%
 
     % [Oboe.Music measure 2]
     R1 * 6/4
@@ -1640,7 +1640,7 @@ number.3.Guitar.1.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
+    %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -1656,10 +1656,10 @@ number.3.Guitar.1.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup
+    \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -1966,7 +1966,7 @@ number.3.Guitar.2.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
+    %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -1984,10 +1984,10 @@ number.3.Guitar.2.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup
+    \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -2243,7 +2243,7 @@ number.3.Violin.Music = {
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        \once \override Staff.InstrumentName.color = #blue
+        %@% \once \override Staff.InstrumentName.color = #blue
         \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
@@ -2279,10 +2279,10 @@ number.3.Violin.Music = {
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+        %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
           %! -PARTS
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-        \set Staff.shortInstrumentName = \wttc-vn-markup
+        \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
         f'16
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3748,7 +3748,7 @@ number.3.Cello.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
+    %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -3766,10 +3766,10 @@ number.3.Cello.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vc-markup
+    \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
     r16
 

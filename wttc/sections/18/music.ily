@@ -922,37 +922,35 @@ number.18.Rests = {
 number.18.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \clef "treble"
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REAPPLIED_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+      %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
+    \set Staff.instrumentName = \wttc-afl-markup
       %! -PARTS
-    \set Staff.instrumentName = \wttc-alto-flute-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
     r16
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \baca-effort-f
+      %! REAPPLIED_INSTRUMENT_ALERT
+    %@% ^ \baca-reapplied-instrument-markup "(“AltoFlute”)"
+      %! REAPPLIED_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-afl-markup
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
+    \set Staff.shortInstrumentName = \wttc-afl-markup %@%
 
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
@@ -1762,41 +1760,34 @@ number.18.AltoFlute.Staff = <<
 number.18.Oboe.Music = {
 
     % [Oboe.Music measure 1]
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \clef "treble"
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REAPPLIED_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+      %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
+    \set Staff.instrumentName = \wttc-ob-markup
       %! -PARTS
-    \set Staff.instrumentName = \wttc-oboe-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Oboe”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+      %! REAPPLIED_INSTRUMENT_ALERT
+    %@% ^ \baca-reapplied-instrument-markup "(“Oboe”)"
+      %! REAPPLIED_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-ob-markup
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
+    \set Staff.shortInstrumentName = \wttc-ob-markup %@%
 
     % [Oboe.Music measure 2]
     R1 * 6/4
@@ -2000,37 +1991,47 @@ number.18.Guitar.1.Music.item.6 = {
 number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \clef "treble"
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REAPPLIED_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+      %! REAPPLIED_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+      %! REAPPLIED_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
+    \set Staff.instrumentName = \wttc-gt-i-markup
       %! -PARTS
-    \set Staff.instrumentName = \wttc-guitar-i-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
+      %! REAPPLIED_STAFF_LINES
+    \stopStaff
+      %! REAPPLIED_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! REAPPLIED_STAFF_LINES
+    \startStaff
     r2.
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \p
+      %! REAPPLIED_INSTRUMENT_ALERT
+    %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
+      %! REAPPLIED_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
+    \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
     <<
 
@@ -2742,52 +2743,62 @@ number.18.Guitar.2.Music = {
         {
 
             % [Guitar.2.Music measure 1]
-              %! EXPLICIT_CLEF
+              %! REAPPLIED_CLEF
             \clef "treble"
-              %! MEASURE_171
-              %! SHIFTED_CLEF
-        %%% \once \override Staff.Clef.X-extent = ##f
-              %! EXPLICIT_CLEF_COLOR
-            \once \override Staff.Clef.color = #blue
-              %! MEASURE_171
-              %! SHIFTED_CLEF
-        %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-              %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-            \once \override Staff.InstrumentName.color = #blue
-              %! EXPLICIT_CLEF_COLOR_CANCELLATION
+              %! REAPPLIED_CLEF_COLOR
+            \once \override Staff.Clef.color = #(x11-color 'green4)
+              %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+            %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+              %! REAPPLIED_STAFF_LINES_COLOR
+            \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+              %! -PARTS
+              %! EXPLICIT_BAR_EXTENT
+              %! REAPPLIED_BAR_EXTENT
+            \override Staff.BarLine.bar-extent = #'(-2 . 2)
+              %! REAPPLIED_CLEF_COLOR_CANCELLATION
             %@% \override Staff.Clef.color = ##f
             \override Staff.RehearsalMark.direction = #down
             \override Staff.RehearsalMark.rotation = #'(180 0 0)
-              %! EXPLICIT_CLEF
+              %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
+            \set Staff.instrumentName = \wttc-gt-ii-markup
               %! -PARTS
-            \set Staff.instrumentName = \wttc-guitar-ii-markup
-              %! -PARTS
-              %! EXPLICIT_SHORT_INSTRUMENT_NAME
+              %! REAPPLIED_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \wttc-gt-ii-markup
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
             \staffHighlight orange
+              %! REAPPLIED_STAFF_LINES
+            \stopStaff
+              %! REAPPLIED_STAFF_LINES
+            \once \override Staff.StaffSymbol.line-count = 5
+              %! REAPPLIED_STAFF_LINES
+            \startStaff
             \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
                 c''
             >16 * 2/3
+              %! REAPPLIED_DYNAMIC_COLOR
+              %! REAPPLIED_DYNAMIC
+            - \tweak color #(x11-color 'green4)
+              %! REAPPLIED_DYNAMIC
+            \mp
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-              %! EXPLICIT_INSTRUMENT_ALERT
-            %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
+              %! REAPPLIED_INSTRUMENT_ALERT
+            %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
             [
             (
-              %! EXPLICIT_CLEF_REDRAW_COLOR
-            \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-              %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-            \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+              %! REAPPLIED_CLEF_REDRAW_COLOR
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)
+              %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+            %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
               %! -PARTS
-              %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-            \set Staff.shortInstrumentName = \wttc-gt-ii-markup
+              %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
+            \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
             c''16 * 2/3
               %! DURATION_MULTIPLIER
@@ -3571,39 +3582,37 @@ number.18.Guitar.2.Staff = <<
 number.18.Violin.Music = {
 
     % [Violin.Music measure 1]
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \clef "treble"
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REAPPLIED_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+      %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
+    \set Staff.instrumentName = \wttc-vn-markup
       %! -PARTS
-    \set Staff.instrumentName = \wttc-violin-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
     R1 * 6/4
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+      %! REAPPLIED_INSTRUMENT_ALERT
+    %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
+      %! REAPPLIED_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
+    \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
     % [Violin.Music measure 2]
     R1 * 6/4
@@ -4119,41 +4128,39 @@ number.18.Violin.Staff = <<
 number.18.Cello.Music = {
 
     % [Cello.Music measure 1]
-      %! EXPLICIT_CLEF
-    \clef "treble"
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_171
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REAPPLIED_CLEF
+    \clef "bass"
+      %! REAPPLIED_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+      %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! EXPLICIT_CLEF
+      %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
+    \set Staff.instrumentName = \wttc-vc-markup
       %! -PARTS
-    \set Staff.instrumentName = \wttc-cello-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
+      %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
     R1 * 6/4
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+      %! REAPPLIED_INSTRUMENT_ALERT
+    %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
+      %! REAPPLIED_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
+    %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vc-markup
+      %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
+    \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
     % [Cello.Music measure 2]
     r4
@@ -4471,7 +4478,7 @@ number.18.Cello.Music = {
       %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
-    b'1 * 1/4
+    d1 * 1/4
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
