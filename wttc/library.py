@@ -411,6 +411,19 @@ def eject_components_in_previous_measure(voice, *, count=1):
     return components
 
 
+def filter_material(items, n):
+    assert n in (1, 2, 3, 4, 5, 99), repr(n)
+    result = []
+    for item in items:
+        for leaf in abjad.select.leaves(item):
+            material = abjad.get.indicator(leaf, Material)
+            if material is None or material.number != n:
+                break
+        else:
+            result.append(item)
+    return result
+
+
 def force_repeat_tie(components, threshold=(1, 8)):
     tag = baca.helpers.function_name(inspect.currentframe())
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
@@ -455,7 +468,7 @@ def highlight_staves(cache):
         leaves = cache[abbreviation].leaves()
         pleaves = baca.select.pleaves(leaves)
         for n in (1, 2, 3, 4, 5, 99):
-            pleaves_ = select_material(pleaves, n)
+            pleaves_ = filter_material(pleaves, n)
             if pleaves_:
                 runs = abjad.select.runs(pleaves_)
                 for run in runs:
@@ -795,29 +808,6 @@ def rotate_rehearsal_mark_literal(leaf):
             r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
         ],
     )
-
-
-def select_material(components, n):
-    assert n in (1, 2, 3, 4, 5, 99), repr(n)
-    result = []
-    for component in components:
-        for material in abjad.get.indicators(component, Material):
-            if material.number == n:
-                result.append(component)
-    return result
-
-
-def select_material_new(items, n):
-    assert n in (1, 2, 3, 4, 5, 99), repr(n)
-    result = []
-    for item in items:
-        for leaf in abjad.select.leaves(item):
-            material = abjad.get.indicator(leaf, Material)
-            if material is None or material.number != n:
-                break
-        else:
-            result.append(item)
-    return result
 
 
 def series_g(width, offset, start, length):

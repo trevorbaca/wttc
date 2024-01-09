@@ -549,7 +549,7 @@ def annotate(cache):
 def fl(m):
     @baca.call
     def block():
-        leaves = library.select_material_new(m[1], 1)
+        leaves = library.filter_material(m[1], 1)
         plts = baca.select.plts(leaves)
         baca.pitch(plts, "G3")
         baca.covered_spanner(plts, staff_padding=5.5)
@@ -558,7 +558,7 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = library.select_material_new(m[1], 3)
+        leaves = library.filter_material(m[1], 3)
         plts = baca.select.plts(leaves)
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
@@ -586,7 +586,7 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = library.select_material_new(m[2], 1)
+        leaves = library.filter_material(m[2], 1)
         plts = baca.select.plts(leaves)
         baca.pitch(plts, "G3")
         baca.covered_spanner(
@@ -600,7 +600,7 @@ def fl(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[2])
-        plts = library.select_material_new(plts, 3)
+        plts = library.filter_material(plts, 3)
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
         for nongrace_plt in nongrace_plts:
@@ -883,25 +883,25 @@ def gt2(cache):
     @baca.call
     def block():
         upbows(
-            library.select_material_new(m[1, 3], 1),
+            library.filter_material(m[1, 3], 1),
             baca.dynamics.linear("mf ff", effort=True),
         )
         upbows(
-            library.select_material_new(m[5, 6], 1),
+            library.filter_material(m[5, 6], 1),
             baca.dynamics.linear("ff mf", effort=True),
         )
         upbows(
-            library.select_material_new(m[8], 1),
+            library.filter_material(m[8], 1),
             '"ff"',
         )
         upbows(
-            library.select_material_new(m[11], 1),
+            library.filter_material(m[11], 1),
             '"mf"',
         )
 
     @baca.call
     def block():
-        leaves = library.select_material_new(m.leaves(), 5)
+        leaves = library.filter_material(m.leaves(), 5)
         runs = abjad.select.runs(leaves)
         dynamic_strings = [
             "f mf mp",
