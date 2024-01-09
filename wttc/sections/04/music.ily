@@ -1217,7 +1217,7 @@ number.4.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    f'16
+    af'!16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1232,12 +1232,12 @@ number.4.AltoFlute.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
-        f'8
+        af'!8
         ~
 
     }
 
-    f'2
+    af'2
     - \tweak stencil ##f
     ~
 
@@ -1246,7 +1246,7 @@ number.4.AltoFlute.Music = {
     {
 
         % [AltoFlute.Music measure 12]
-        f'8
+        af'8
         \repeatTie
 
         \grace {
@@ -1315,7 +1315,7 @@ number.4.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    f'16
+    g'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1329,19 +1329,19 @@ number.4.AltoFlute.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
-        f'4
+        g'4
         - \tweak stencil ##f
         ~
 
     }
 
-    f'4
+    g'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 15]
-    f'4
+    g'4
     \repeatTie
 
     \slashedGrace {

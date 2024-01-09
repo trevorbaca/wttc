@@ -549,17 +549,24 @@ def annotate(cache):
 def fl(m):
     @baca.call
     def block():
-        leaves = library.filter_material(m[1], 1)
-        plts = baca.select.plts(leaves)
-        baca.pitch(plts, "G3")
+        plts = baca.select.plts(m.leaves())
+        plts = library.filter_material(plts, 1)
+        baca.pitch(plts[:5], "G3")
+        baca.pitch(plts[5:11], "Eb4")
+        baca.pitch(plts[11:], "D4")
+
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[1])
+        plts = library.filter_material(plts, 1)
         baca.covered_spanner(plts, staff_padding=5.5)
         baca.dynamic(plts[0].head, "mp")
         baca.override.dls_staff_padding(plts, 4)
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[1], 3)
-        plts = baca.select.plts(leaves)
+        plts = baca.select.plts(m[1])
+        plts = library.filter_material(plts, 3)
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
         for nongrace_plt in nongrace_plts:
@@ -586,9 +593,8 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[2], 1)
-        plts = baca.select.plts(leaves)
-        baca.pitch(plts, "G3")
+        plts = baca.select.plts(m[2])
+        plts = library.filter_material(plts, 1)
         baca.covered_spanner(
             plts,
             items=r"\baca-cov-markup =|",
@@ -628,7 +634,6 @@ def fl(m):
     @baca.call
     def block():
         plt = baca.select.plt(m[3], 0)
-        baca.pitch(plt, "G3")
         rplt = baca.select.rleak(plt)
         baca.covered_spanner(
             rplt,
@@ -657,7 +662,6 @@ def fl(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[4, 6])[1:]
-        baca.pitch(plts, "Eb4")
         rplts = baca.select.rleak(plts)
         baca.covered_spanner(
             rplts,
@@ -671,7 +675,6 @@ def fl(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[7])[:1]
-        baca.pitch(plts, "Eb4")
         rplts = baca.select.rleak(plts)
         baca.covered_spanner(
             rplts,
