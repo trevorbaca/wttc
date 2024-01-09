@@ -20,6 +20,7 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
@@ -58,6 +59,7 @@ def FL(voice, meters):
     rhythm(
         meters(1, 3),
         [-4, -1, 1, 3, -4, 2, 6, -4, 4, 12, -12, 8, "-"],
+        material=2,
     )
 
     @baca.call
@@ -72,6 +74,7 @@ def FL(voice, meters):
             meters(4, 6),
             counts,
             denominator=32,
+            material=99,
         )
 
 
@@ -85,22 +88,27 @@ def GT1(voice, meters):
     rhythm(
         meters(1),
         [OBGC(4 * [1], [8]), OBGC(3 * [1], [12])],
+        material=1,
     )
     rhythm(
         meters(2),
         T([OBGC(4 * [1], [16])], "4:5"),
+        material=1,
     )
     rhythm(
         meters(3),
-        [A(12 * [1], 16), 1, "-", 1],
+        [A(12 * [1], 16), 1, "-", M(1, 3)],
+        material=1,
     )
     rhythm(
         meters(4),
         [-1, 1, -15, 1, -7, 1, "-"],
+        material=3,
     )
     rhythm(
         meters(5),
         T([OBGC(4 * [1], [16])], "4:5"),
+        material=1,
     )
     rhythm.mmrests(6)
 
@@ -110,22 +118,27 @@ def GT2(voice, meters):
     rhythm(
         meters(1),
         [OBGC(3 * [1], [8]), OBGC(4 * [1], [12])],
+        material=1,
     )
     rhythm(
         meters(2),
         T([OBGC(3 * [1], [16])], "4:5"),
+        material=1,
     )
     rhythm(
         meters(3),
-        [A(15 * [1], 16), 1, "-", 1],
+        [A(15 * [1], 16), 1, "-", M(1, 3)],
+        material=1,
     )
     rhythm(
         meters(4),
         [-1, 1, -15, 1, -7, 1, "-"],
+        material=3,
     )
     rhythm(
         meters(5),
         T([OBGC(3 * [1], [16])], "4:5"),
+        material=1,
     )
     rhythm.mmrests(6)
 
@@ -135,6 +148,7 @@ def VN(voice, meters):
     rhythm(
         meters(1, 3),
         [-4, -1, -1, 3, -4, -2, 6, -4, -4, 12, "-"],
+        material=2,
     )
     rhythm.mmrests(4, 6)
 
@@ -142,22 +156,31 @@ def VN(voice, meters):
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1, 3),
-        [-4, -1, -1, 2, 1, -4, -2, 5, 1, -4, -4, 11, 1, -7, 12, 3, 1],
+        meters(1, 2),
+        [-4, -1, -1, 2, 1, -4, -2, 5, 1, -4, -4, 11],
+        material=2,
+    )
+    rhythm(
+        meters(3),
+        [M(1, 2), -7, 12, 3, 1],
+        material=3,
     )
     rhythm(
         meters(4),
         [1, 3, 12, 1, 3, 4, 1, t(7)],
+        material=3,
     )
     rhythm(
         meters(5),
         [t(4), 1, t(3), t(12)],
+        material=3,
     )
     rhythm(
         meters(6),
-        [1, t(3), t(8), anchor(16, 1)],
-        do_not_rewrite_meter=True,
+        [1, xt(3), xt(8), anchor(16, 1)],
+        material=3,
     )
+    baca.section.append_anchor_note(voice)
 
 
 def fl(m):
@@ -251,7 +274,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    # library.check_material_annotations(score)
+    library.highlight_staves(cache)
+    library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
