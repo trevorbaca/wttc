@@ -553,29 +553,30 @@ def gt2(m):
 
     @baca.call
     def block():
-        leaves = m[1, 7]
-        runs = abjad.select.runs(leaves)
-        for run in runs:
-            run = baca.select.plts(run)
-        notes = abjad.select.notes(leaves)
-        baca.pitches(notes, "C5 B4 G4 Gb4")
-        baca.laissez_vibrer(notes)
-        baca.dynamic(notes[0], "p")
-        baca.override.dls_staff_padding(notes, 4.5)
+        pleaves = library.filter_material(m[1, 7], 1)
+        pleaves = baca.select.pleaves(pleaves)
+        baca.pitches(pleaves, "C5 B4 G4 Gb4")
+        baca.laissez_vibrer(pleaves)
+        baca.dynamic(pleaves[0], "p")
 
     @baca.call
     def block():
-        leaves = m[11, 13]
+        leaves = library.filter_material(m[11, 13], 99)
+        baca.staff_position(leaves, 0)
         runs = abjad.select.runs(leaves)
         for run in runs:
-            baca.up_bow(run[0], abjad.Tweak(r"- \tweak padding 1"))
+            baca.staff_lines(run[0], 1)
+            leaf = abjad.get.leaf(run[-1], 1)
+            baca.staff_lines(leaf, 5)
+            baca.up_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.rleak(run)
             baca.hairpin(run, 'o<| "mf"')
-        notes = abjad.select.notes(leaves)
-        baca.staff_lines(notes[0], 1)
-        baca.staff_position(leaves, 0)
-        baca.override.dls_staff_padding(leaves, 9)
+
+    @baca.call
+    def block():
+        baca.override.dls_staff_padding(m[1, 7], 4.5)
+        baca.override.dls_staff_padding(m[11, 13], 4.5)
 
 
 def vn(m):

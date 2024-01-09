@@ -1998,6 +1998,7 @@ number.3.Guitar.2.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 4.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -2024,7 +2025,6 @@ number.3.Guitar.2.Music = {
     \times 2/3
     {
 
-        \override DynamicLineSpanner.staff-padding = 4.5
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         c'''8
@@ -2108,7 +2108,6 @@ number.3.Guitar.2.Music = {
         \staffHighlight orange
         gf''!8
         \laissezVibrer
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -2118,6 +2117,7 @@ number.3.Guitar.2.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 8]
     R1 * 4/4
@@ -2135,7 +2135,7 @@ number.3.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 11]
-    \override DynamicLineSpanner.staff-padding = 9
+    \override DynamicLineSpanner.staff-padding = 4.5
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2192,6 +2192,17 @@ number.3.Guitar.2.Music = {
         \baca-effort-mf
         \repeatTie
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
@@ -2212,8 +2223,16 @@ number.3.Guitar.2.Music = {
 
         r8
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
         - \tweak padding 1
         - \upbow
@@ -2230,7 +2249,21 @@ number.3.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \<
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8

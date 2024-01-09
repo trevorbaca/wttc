@@ -172,9 +172,8 @@ class Rhythm:
         if material is not None:
             voice_ = abjad.Voice(components)
             for leaf in abjad.select.leaves(voice_):
-                if abjad.get.has_indicator(leaf, Material):
-                    raise Exception(leaf, material)
-                abjad.attach(Material(material), leaf)
+                if not abjad.get.has_indicator(leaf, Material):
+                    abjad.attach(Material(material), leaf)
             components = abjad.mutate.eject_contents(voice_)
         if overlap:
             overlap_previous_measure(self.voice, components, time_signatures)

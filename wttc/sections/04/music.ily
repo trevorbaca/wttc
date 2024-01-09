@@ -2631,7 +2631,7 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
           %! REAPPLIED_BAR_EXTENT
-        \override Staff.BarLine.bar-extent = #'(0 . 2)
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
           %! REAPPLIED_CLEF
@@ -2643,7 +2643,7 @@ number.4.Guitar.2.Music = {
           %! REAPPLIED_STAFF_LINES
         \stopStaff
           %! REAPPLIED_STAFF_LINES
-        \once \override Staff.StaffSymbol.line-count = 1
+        \once \override Staff.StaffSymbol.line-count = 5
           %! REAPPLIED_STAFF_LINES
         \startStaff
         r16
@@ -2662,18 +2662,15 @@ number.4.Guitar.2.Music = {
           %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
-          %! REDUNDANT_STAFF_LINES_COLOR
-        \once \override Staff.StaffSymbol.color = #(x11-color 'DeepPink1)
-          %! -PARTS
-          %! REDUNDANT_BAR_EXTENT
-        \override Staff.BarLine.bar-extent = #'(0 . 2)
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \stopStaff
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \startStaff
         b'8.
         - \tweak padding 1
@@ -2688,6 +2685,9 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \<
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
