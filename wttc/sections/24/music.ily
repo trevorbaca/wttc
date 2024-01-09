@@ -1141,7 +1141,7 @@ number.24.AltoFlute.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \baca-effort-f
+    \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT

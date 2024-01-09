@@ -1526,7 +1526,7 @@ number.5.AltoFlute.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \baca-effort-f
+    \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“AltoFlute”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

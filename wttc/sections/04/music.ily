@@ -1215,9 +1215,30 @@ number.4.AltoFlute.Music = {
 
     r8.
 
+    \once \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
     af'!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1256,6 +1277,9 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
             a'16
+              %! COVERED_SPANNER
+              %! SPANNER_STOP
+            \bacaStopTextSpanCovered
 
         }
 
@@ -1313,9 +1337,30 @@ number.4.AltoFlute.Music = {
 
     r16
 
+    \once \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
     g'16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1351,6 +1396,9 @@ number.4.AltoFlute.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         f'8
+          %! COVERED_SPANNER
+          %! SPANNER_STOP
+        \bacaStopTextSpanCovered
 
     }
 

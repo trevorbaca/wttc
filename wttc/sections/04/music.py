@@ -3,7 +3,7 @@ import itertools
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 04 ##########################################
@@ -561,18 +561,20 @@ def fl(m):
         baca.dynamic(plts[6].head, "mf")
         baca.dynamic(plts[7].head, "mp")
         baca.dynamic(plts[8].head, '"f"')
+        baca.dynamic(plts[9].head, "mp")
+        baca.dynamic(plts[11].head, "p")
         baca.covered_spanner(
             baca.select.rleak(plts[:2]),
             staff_padding=5.5,
         )
         baca.covered_spanner(
             plts[2:4],
-            items=r"\baca-cov-markup =|",
+            items=strings.cov_dashed_hook,
             staff_padding=5.5,
         )
         baca.covered_spanner(
             baca.select.rleak(plts[4]),
-            items=r"\baca-cov-markup =|",
+            items=strings.cov_dashed_hook,
             staff_padding=5.5,
         )
         baca.covered_spanner(
@@ -583,12 +585,21 @@ def fl(m):
             baca.select.rleak(plts[8]),
             staff_padding=3,
         )
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[1])
-        plts = library.filter_material(plts, 1)
-        baca.override.dls_staff_padding(plts, 4)
+        baca.covered_spanner(
+            baca.select.rleak(plts[9:11]),
+            staff_padding=5.5,
+        )
+        baca.covered_spanner(
+            baca.select.rleak(plts[11:13]),
+            staff_padding=5.5,
+        )
+        baca.override.dls_staff_padding(plts[:2], 4)
+        baca.override.dls_staff_padding(plts[2:4], 4)
+        baca.override.dls_staff_padding(plts[4], 5)
+        baca.override.dls_staff_padding(plts[5:8], 3)
+        baca.override.dls_staff_padding(plts[8:9], 3)
+        baca.override.dls_staff_padding(plts[9], 3)
+        baca.override.dls_staff_padding(plts[11], 3)
 
     @baca.call
     def block():
@@ -621,12 +632,6 @@ def fl(m):
     @baca.call
     def block():
         plts = baca.select.plts(m[2])
-        plts = library.filter_material(plts, 1)
-        baca.override.dls_staff_padding(plts, 4)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[2])
         plts = library.filter_material(plts, 3)
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
@@ -654,11 +659,6 @@ def fl(m):
 
     @baca.call
     def block():
-        plt = baca.select.plt(m[3], 0)
-        baca.override.dls_staff_padding(plt, 5)
-
-    @baca.call
-    def block():
         plts = baca.select.plts(m[4])[:1]
         baca.pitch(plts, "D5")
         rplts = baca.select.rleak(plts)
@@ -672,16 +672,6 @@ def fl(m):
             "f >o niente",
         )
         baca.override.dls_staff_padding(rplts, 3)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[4, 6])[1:]
-        baca.override.dls_staff_padding(plts, 3)
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[7])[:1]
-        baca.override.dls_staff_padding(plts, 3)
 
 
 def ob(m):

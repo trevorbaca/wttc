@@ -1212,7 +1212,7 @@ number.12.AltoFlute.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \baca-effort-f
+    \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT

@@ -34,7 +34,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-effort-f",
+                value="p",
             )
         ],
         "AltoFlute.Staff": [
