@@ -20,6 +20,7 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
@@ -77,6 +78,7 @@ def FL(voice, meters):
         rhythm(
             meters(6, 10),
             [-12, -12, -4, -1] + counts + ["-"],
+            material=4,
         )
         rhythm.mmrests(11, 15)
 
@@ -89,6 +91,7 @@ def FL(voice, meters):
         rhythm(
             meters(16, 20),
             [-12, -12, -4, -1] + counts + ["-"],
+            material=4,
         )
         rhythm.mmrests(21)
 
@@ -101,6 +104,7 @@ def FL(voice, meters):
         rhythm(
             meters(22, 26),
             [-12, -12, -4, -1] + counts + ["-"],
+            material=4,
         )
         rhythm.mmrests(27, 37)
 
@@ -127,24 +131,49 @@ def GT1(voice, meters):
         assert counts == [-3, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            meters(1, 3),
-            [-12] + counts + ["+"],
+            meters(1),
+            [-12] + counts + ["-"],
+            material=2,
         )
+
+    rhythm(
+        meters(1, 4),
+        [3 + 24 + 24 + 4 + 1, "-"],
+        material=3,
+        overlap=[-21],
+    )
+
+    @baca.call
+    def block():
         counts = B1(-1, 2)
         assert counts == [-6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            meters(4, 5),
-            [rt(t(4)), 1, -7] + counts + [t(24)],
+            meters(4),
+            counts,
+            material=2,
+            overlap=[-12],
         )
+
+    rhythm(
+        meters(5, 6),
+        [29, "-"],
+        material=3,
+    )
+
+    @baca.call
+    def block():
         counts = B1(-2, 4)
         assert counts == [-6, 3, 6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(6, 7),
-            [5, -7] + counts + ["-"],
+            counts + ["-"],
+            material=2,
+            overlap=[-12],
         )
-        rhythm.mmrests(8, 11)
+
+    rhythm.mmrests(8, 11)
 
     @baca.call
     def block():
@@ -154,46 +183,59 @@ def GT1(voice, meters):
         rhythm(
             meters(12, 13),
             counts,
+            material=2,
         )
-        rhythm(
-            meters(14, 15),
-            A(4 * [1] + [-1], 48),
-            do_not_beam_tuplets=True,
-        )
+
+    rhythm(
+        meters(14, 15),
+        A(4 * [1] + [-1], 48),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+
+    @baca.call
+    def block():
         counts = B1(-4, 6)
         assert counts == [-6, 6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(16, 18),
             [-12] + counts + ["-"],
+            material=2,
         )
-        rhythm.mmrests(19)
+
+    rhythm.mmrests(19)
+    rhythm(
+        meters(20, 21),
+        A([-1, 1, -1, -1, -1, -1, 1], 48),
+        material=5,
+        do_not_beam_tuplets=True,
+    )
 
     @baca.call
     def block():
-        rhythm(
-            meters(20, 21),
-            A([-1, 1, -1, -1, -1, -1, 1], 48),
-            do_not_beam_tuplets=True,
-        )
         counts = B1(-5, 5)
         assert counts == [-6, 3, 6, 6, 3]
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(22, 24),
             [-12] + counts + ["-"],
+            material=2,
         )
-        rhythm.mmrests(25)
-        rhythm(
-            meters(26, 27),
-            A([1, 1, -1, -1, -1, 1, -1], 48),
-            do_not_beam_tuplets=True,
-        )
-        rhythm(
-            meters(28),
-            R([-1, -1, 1, -1], 24),
-            do_not_beam_tuplets=True,
-        )
+
+    rhythm.mmrests(25)
+    rhythm(
+        meters(26, 27),
+        A([1, 1, -1, -1, -1, 1, -1], 48),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(28),
+        R([-1, -1, 1, -1], 24),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
     @baca.call
     def block():
@@ -201,19 +243,33 @@ def GT1(voice, meters):
         assert counts == [-3, 6, 6]
         counts[1] = BG([2], counts[1])
         rhythm(
-            meters(29, 32),
-            [-12] + counts + ["+"],
+            meters(29, 30),
+            [-12] + counts + ["-"],
+            material=2,
         )
+
+    rhythm(
+        meters(30, 33),
+        [9 + 24 + 24 + 1, "-"],
+        overlap=[-3],
+        material=3,
+    )
 
     @baca.call
     def block():
         counts = B1(-7, 2)
         assert counts == [-6, 6]
+        counts[0] = [-5]
         counts[1] = BG([2], counts[1])
-        rhythm(
-            meters(33, 37),
-            counts + ["+"],
-        )
+        rhythm(meters(33), counts + ["-"], material=2, overlap=[-1])
+
+    rhythm(
+        meters(33, 37),
+        ["+"],
+        material=3,
+        overlap=[-12],
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def B2(rotation, length):
@@ -233,24 +289,50 @@ def GT2(voice, meters):
         assert counts == [-5, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            meters(1, 3),
-            [-12] + counts + ["+"],
+            meters(1),
+            [-12] + counts + ["-"],
+            material=2,
         )
+
+    rhythm(
+        meters(1, 4),
+        [2 + 24 + 24 + 5, "-"],
+        material=3,
+        overlap=[-22],
+    )
+
+    @baca.call
+    def block():
         counts = B2(-1, 3)
         assert counts == [-5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(4, 5),
-            [rt(t(4)), 1, -7] + counts + ["+"],
+            counts + ["-"],
+            material=2,
+            overlap=[-5 + -7],
         )
+
+    rhythm(
+        meters(5, 6),
+        [23 + 5, "-"],
+        material=3,
+        overlap=[-1],
+    )
+
+    @baca.call
+    def block():
         counts = B2(-2, 5)
         assert counts == [-3, 5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(6, 7),
-            [rt(t(4)), 1, -7] + counts + ["-"],
+            counts + ["-"],
+            material=2,
+            overlap=[-12],
         )
-        rhythm.mmrests(8, 11)
+
+    rhythm.mmrests(8, 11)
 
     @baca.call
     def block():
@@ -260,44 +342,58 @@ def GT2(voice, meters):
         rhythm(
             meters(12, 13),
             counts + ["-"],
+            material=2,
         )
-        rhythm(
-            meters(14, 15),
-            R([rt(1)] + 4 * [1], 48),
-        )
+
+    rhythm(
+        meters(14, 15),
+        R([M(rt(1), 2)] + 4 * [1], 48),
+        material=5,
+    )
+
+    @baca.call
+    def block():
         counts = B2(-4, 6)
         assert counts == [-5, 3, 5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(16, 18),
             [-12] + counts + ["-"],
+            material=2,
         )
-        rhythm.mmrests(19)
+
+    rhythm.mmrests(19)
+
+    rhythm(
+        meters(20, 21),
+        R([1, -1, -1, -1, 1, -1, 1], 48),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
     @baca.call
     def block():
-        rhythm(
-            meters(20, 21),
-            R([1, -1, -1, -1, 1, -1, 1], 48),
-            do_not_beam_tuplets=True,
-        )
         counts = B2(-5, 5)
         counts[1] = BG([2], counts[1])
         rhythm(
             meters(22, 24),
             [-12] + counts + ["-"],
+            material=2,
         )
-        rhythm.mmrests(25)
-        rhythm(
-            meters(26, 27),
-            R([-1, 1, -1, -1, -1, -1, 1], 48),
-            do_not_beam_tuplets=True,
-        )
-        rhythm(
-            meters(28),
-            A([-1, 1, -1, -1], 24),
-            do_not_beam_tuplets=True,
-        )
+
+    rhythm.mmrests(25)
+    rhythm(
+        meters(26, 27),
+        R([-1, 1, -1, -1, -1, -1, 1], 48),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(28),
+        A([-1, 1, -1, -1], 24),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
     @baca.call
     def block():
@@ -305,194 +401,222 @@ def GT2(voice, meters):
         assert counts == [-5, 5, 3, 5]
         counts[1] = BG([2], counts[1])
         rhythm(
-            meters(29, 32),
-            [-12] + counts + ["+"],
+            meters(29, 30),
+            [-12] + counts + ["-"],
+            material=2,
         )
+
+    rhythm(
+        meters(30, 33),
+        [6 + 24 + 24 + 1, "-"],
+        material=3,
+        overlap=[-6],
+    )
 
     @baca.call
     def block():
         counts = B2(-7, 3)
         assert counts == [-5, 3, 5]
+        counts[0] = -4
         counts[1] = BG([2], counts[1])
         rhythm(
-            meters(33, 37),
-            counts + ["+"],
+            meters(33),
+            counts + ["-"],
+            material=2,
+            overlap=[-1],
         )
+
+    rhythm(
+        meters(33, 37),
+        ["+"],
+        material=3,
+        overlap=[-13],
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-
-    @baca.call
-    def block():
-        rhythm.make_one_beat_tuplets(
-            meters(1, 2),
-            [6, 1, 5, 1, "-"],
-            extra_counts=[-1],
-        )
-        rhythm.make_one_beat_tuplets(
-            meters(3, 4),
-            [-13, 3, 1, 4, 1, -7, 3, 1, "-"],
-            extra_counts=[-1],
-        )
-        rhythm(
-            meters(5, 6),
-            [-19, 3, 3, 3, "-"],
-        )
-
-    @baca.call
-    def block():
-        rhythm.make_one_beat_tuplets(
-            meters(6, 7),
-            [3, 1, 4, 1, -7, 3, 1, "-"],
-            extra_counts=[-1],
-            overlap=[-3],
-        )
-        rhythm.mmrests(8, 9)
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(10, 11),
-            [19, 3, 3, 3, 2, 2, "-"],
-        )
-        rhythm.make_one_beat_tuplets(
-            meters(11, 15),
-            [4, 1, -3, 5, 1, -6, 6, 1, "-"],
-            extra_counts=[-1],
-            overlap=[-6],
-        )
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(16),
-            [11, 3, 2, 2, 4, "-"],
-        )
-        rhythm.mmrests(17, 21)
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(22, 26),
-            [24, "-"],
-        )
-        rhythm(
-            meters(27, 28),
-            [-18, "+"],
-        )
-        rhythm(
-            meters(29),
-            [24],
-        )
-        rhythm(
-            meters(30, 37),
-            [-6, 6 + 24 + 24 + 2, -16, "+"],
-        )
+    rhythm.make_one_beat_tuplets(
+        meters(1, 2),
+        [6, 1, 5, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(3, 4),
+        [-13, 3, 1, 4, 1, -7, 3, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+    )
+    rhythm(
+        meters(5, 6),
+        [-19, 3, 3, 3, "-"],
+        material=1,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(6, 7),
+        [3, 1, 4, 1, -7, 3, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+        overlap=[-3],
+    )
+    rhythm.mmrests(8, 9)
+    rhythm(
+        meters(10, 11),
+        [19, 3, 3, 3, 2, 2, "-"],
+        material=1,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(11, 15),
+        [4, 1, -3, 5, 1, -6, 6, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+        overlap=[-6],
+    )
+    rhythm(
+        meters(16),
+        [11, 3, 2, 2, 4, "-"],
+        material=1,
+    )
+    rhythm.mmrests(17, 21)
+    rhythm(
+        meters(22, 26),
+        [24, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(27, 28),
+        [-18, "+"],
+        material=99,
+    )
+    rhythm(
+        meters(29),
+        [24],
+        material=99,
+    )
+    rhythm(
+        meters(30, 37),
+        [-6, 6 + 24 + 24 + 2, -16, "+"],
+        material=99,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+    rhythm.make_one_beat_tuplets(
+        meters(1, 2),
+        [-4, 1, 1, 2, 1, -8, 4, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+    )
+    rhythm(
+        meters(3),
+        [-1, 19, -4],
+        material=3,
+    )
 
     @baca.call
     def block():
-        rhythm.make_one_beat_tuplets(
-            meters(1, 2),
-            [-4, 1, 1, 2, 1, -8, 4, 1, "-"],
-            extra_counts=[-1],
-        )
-        rhythm(
-            meters(3),
-            [-1, 19, -4],
-        )
-
-    @baca.call
-    def block():
-        rhythm.make_one_beat_tuplets(
+        components = rhythm.make_one_beat_tuplets(
             meters(3, 4),
-            [1, 3, 1, 11, 1, "-"],
+            [1, 3, 1, 11, 1, 1, "-"],
             extra_counts=[-1],
             overlap=[-15],
         )
+        plts = baca.select.plts(components)
+        library.annotate(plts[:1], 3)
+        library.annotate(plts[1:3], 1)
+        library.annotate(plts[3:4], 3)
+        library.annotate(plts[4:], 1)
 
-    @baca.call
-    def block():
-        rhythm(
-            meters(5),
-            [-1, 4, 10, "-"],
-        )
-        rhythm(
-            meters(5, 6),
-            [2, 2, 4, "-"],
-            overlap=[-22],
-        )
-
-    @baca.call
-    def block():
-        rhythm.make_one_beat_tuplets(
-            meters(6, 7),
-            [3, 1, -1, 3, 1, "-"],
-            extra_counts=[-1],
-            overlap=[-8],
-        )
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(7, 9),
-            [4, 8, 12, 16, "-"],
-            overlap=[-9],
-        )
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(10, 11),
-            [22, 2, 2, 4, "-"],
-        )
-        rhythm.make_one_beat_tuplets(
-            meters(11, 12),
-            [-3, -2, 4, 1, 5, 1, -6, 6, 1, "-"],
-            extra_counts=[-1],
-            overlap=[-6],
-        )
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(13, 15),
-            [-16, R([-1] + 5 * [1], 56)],
-            do_not_beam_tuplets=True,
-        )
-        rhythm(
-            meters(16, 19),
-            [14, 2, 2, 3, 3, -11, 16, 12, 8, 4, "-"],
-        )
-        rhythm(
-            meters(20, 21),
-            [R([-1, 1, -1, -1, 1, 1], 48)],
-            do_not_beam_tuplets=True,
-        )
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(22, 25),
-            [24, -11, 16, "-"],
-        )
-        rhythm(
-            meters(26, 27),
-            [R([1, -1, -1, -1, 1, 1], 48)],
-            do_not_beam_tuplets=True,
-        )
-        rhythm(
-            meters(28),
-            [24],
-        )
-        rhythm(
-            meters(29, 37),
-            [24, -6, 6 + 24 + 24 + 2, -16, "+"],
-        )
+    rhythm(
+        meters(5),
+        [-1, 4, 10, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(5, 6),
+        [2, 2, 4, "-"],
+        material=1,
+        overlap=[-22],
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(6, 7),
+        [3, 1, -1, 3, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+        overlap=[-8],
+    )
+    rhythm(
+        meters(7, 9),
+        [4, 8, 12, 16, "-"],
+        material=3,
+        overlap=[-9],
+    )
+    rhythm(
+        meters(10, 11),
+        [22, 2, 2, 4, "-"],
+        material=1,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(11, 12),
+        [-3, -2, 4, 1, 5, 1, -6, 6, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+        overlap=[-6],
+    )
+    rhythm(
+        meters(13, 15),
+        [-16, R([-1] + 5 * [1], 56)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(16),
+        [14, 2, 2, 3, 3],
+        material=1,
+    )
+    rhythm(
+        meters(17, 19),
+        [-11, 16, 12, 8, 4, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(20, 21),
+        [R([-1, 1, -1, -1, 1, 1], 48)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(22),
+        [24],
+        material=1,
+    )
+    rhythm(
+        meters(23, 24),
+        [-11, 16, "-"],
+        material=3,
+    )
+    rhythm.mmrests(25)
+    rhythm(
+        meters(26, 27),
+        [R([1, -1, -1, -1, 1, 1], 48)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(28),
+        [24],
+        material=99,
+    )
+    rhythm(
+        meters(29, 37),
+        [24, -6, 6 + 24 + 24 + 2, -16, "+"],
+        material=99,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def fl(m):
@@ -587,7 +711,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    # library.check_material_annotations(score)
+    library.highlight_staves(cache)
+    library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
