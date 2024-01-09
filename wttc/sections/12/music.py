@@ -564,72 +564,124 @@ def VN(voice, meters):
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1, 4)
-    rhythm(
-        meters(5),
-        [-8, -1, t(3), t(12)],
-        material=1,
-    )
-    rhythm.make_one_beat_tuplets(
-        meters(6, 7),
-        ["+", 1, -7, 2, -6],
-        extra_counts=[-1],
-        material=1,
-    )
-    rhythm.make_one_beat_tuplets(
-        meters(8, 9),
-        [-1, 1, -5, 2, -7, 1, -7, 2, -5, 1, "+"],
-        extra_counts=[-1],
-    )
+
+    @baca.call
+    def block():
+        rhythm(
+            meters(5),
+            [-8, -1, t(3), t(12)],
+        )
+        rhythm.make_one_beat_tuplets(
+            meters(6, 7),
+            ["+", 1, -7, 2, -6],
+            extra_counts=[-1],
+        )
+        plts = baca.select.plts(voice)
+        library.annotate(plts[:1], 1)
+        library.annotate(plts[1:], 4)
+
+    @baca.call
+    def block():
+        rhythm.make_one_beat_tuplets(
+            meters(8, 9),
+            [-1, 1, -5, 2, -7, 1, -7, 2, -5, 1, "+"],
+            extra_counts=[-1],
+            material=4,
+        )
+        plt = baca.select.plt(voice, -1)
+        library.unannotate(plt)
+        library.annotate(plt, 1)
+
     rhythm(
         meters(10, 13),
-        [rt(24), rt(24), rt(24), 16, -6, t(2)],
+        [rt(24), rt(24), rt(24), 16, -6, M(t(2), 5)],
+        material=1,
     )
     rhythm(
         meters(14, 15),
-        [2, 3, 8, 5, 10, 7, "+"],
+        [2, 3, 8, 5, 10, 7],
+        material=5,
+        suffix=[13],
     )
-    rhythm.make_one_beat_tuplets(
-        meters(16, 17),
-        ["+", 1, -7, 2, -6],
-        extra_counts=[-1],
+    rhythm(
+        meters(15),
+        [13],
+        prefix=[11],
+        material=1,
     )
-    rhythm.make_one_beat_tuplets(
-        meters(18, 19),
-        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, "-"],
-        extra_counts=[-1],
-    )
+
+    @baca.call
+    def block():
+        rhythm.make_one_beat_tuplets(
+            meters(16, 17),
+            ["+", 1, -7, 2, -6],
+            extra_counts=[-1],
+            material=1,
+        )
+        plts = baca.select.plts(voice)[-2:]
+        library.unannotate(plts)
+        library.annotate(plts, 4)
+
+    @baca.call
+    def block():
+        rhythm.make_one_beat_tuplets(
+            meters(18, 19),
+            [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, "-"],
+            extra_counts=[-1],
+            material=4,
+        )
+        plts = baca.select.plts(voice)[-1:]
+        library.unannotate(plts)
+        library.annotate(plts, 5)
+
     rhythm(
         meters(20, 23),
         [rt(14), 9, 12, 7, 10, 5, 8, 3, 6, "-"],
+        material=5,
     )
     rhythm.make_one_beat_tuplets(
         meters(24, 25),
-        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, "-"],
+        [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, "-"],
         extra_counts=[-1],
+        material=4,
     )
-    abjad.mutate.replace(voice[-2:], abjad.Container("r4 r8 c'8 ~ c'4")[:])
+    rhythm(
+        meters(25),
+        [6],
+        material=5,
+        overlap=[-18],
+    )
     rhythm(
         meters(26, 28),
-        [rt(16), rt(2), 24, 10, t(4)],
+        [rt(16), rt(2), 24, 10, M(t(4), 1)],
+        material=5,
     )
     rhythm(
-        meters(29, 32),
+        meters(29, 35),
         ["+"],
+        material=1,
     )
-    rhythm.mmrests(33)
-    rhythm.mmrests(34)
-    rhythm.mmrests(35)
     rhythm(
         meters(36),
         [-40, 5, 2, 1],
         denominator=32,
+        material=3,
     )
     rhythm(
         meters(37),
-        [t(24)]
-        + [bl(t(4)), 1, 2, br(1), t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
+        [t(24), bl(t(4)), 1, 2, br(1)],
         denominator=32,
+        material=3,
+        suffix=[24],
     )
+    rhythm(
+        meters(37),
+        [t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
+        denominator=32,
+        material=3,
+        prefix=[32],
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def fl(m):

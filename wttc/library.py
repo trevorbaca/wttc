@@ -839,6 +839,13 @@ def swell(n):
     return tuplet
 
 
+def unannotate(items):
+    for item in items:
+        for leaf in abjad.select.leaves(item):
+            assert abjad.get.has_indicator(leaf, Material), repr(leaf)
+            abjad.detach(Material, leaf)
+
+
 def xt(number):
     return X(baca.rhythm.t(number))
 

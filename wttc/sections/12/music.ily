@@ -5168,6 +5168,10 @@ number.12.Cello.Music = {
         c'4
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -5184,7 +5188,7 @@ number.12.Cello.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight hotpink
         c'4
 
     }
@@ -5200,8 +5204,12 @@ number.12.Cello.Music = {
         % [Cello.Music measure 8]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5214,10 +5222,14 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5226,8 +5238,12 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5239,8 +5255,12 @@ number.12.Cello.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'4
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5253,9 +5273,15 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
         [
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight orange
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
         ]
         ~
@@ -5285,10 +5311,14 @@ number.12.Cello.Music = {
     % [Cello.Music measure 13]
     c'1
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     c'8
     - \tweak stencil ##f
     ~
@@ -5352,6 +5382,10 @@ number.12.Cello.Music = {
     [
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'16
     ]
     ~
@@ -5370,10 +5404,16 @@ number.12.Cello.Music = {
         c'4
         \repeatTie
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5383,10 +5423,14 @@ number.12.Cello.Music = {
         % [Cello.Music measure 17]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5396,8 +5440,12 @@ number.12.Cello.Music = {
         % [Cello.Music measure 18]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5408,8 +5456,12 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5420,10 +5472,14 @@ number.12.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5432,8 +5488,12 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5447,8 +5507,12 @@ number.12.Cello.Music = {
         % [Cello.Music measure 19]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5461,10 +5525,14 @@ number.12.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5473,13 +5541,19 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
 
     % [Cello.Music measure 20]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     c'2.
     - \tweak stencil ##f
     ~
@@ -5575,6 +5649,8 @@ number.12.Cello.Music = {
     c'8
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2
@@ -5586,8 +5662,12 @@ number.12.Cello.Music = {
         % [Cello.Music measure 24]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5598,8 +5678,12 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5610,10 +5694,14 @@ number.12.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5622,8 +5710,12 @@ number.12.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5637,8 +5729,12 @@ number.12.Cello.Music = {
         % [Cello.Music measure 25]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -5651,14 +5747,20 @@ number.12.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
         c'8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight burlywood
     c'8
     - \tweak stencil ##f
     ~
@@ -5712,6 +5814,10 @@ number.12.Cello.Music = {
     c'4
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'4
     - \tweak stencil ##f
     ~
@@ -5736,28 +5842,45 @@ number.12.Cello.Music = {
 
     % [Cello.Music measure 32]
     c'1.
+    - \tweak stencil ##f
+    ~
     \repeatTie
 
     % [Cello.Music measure 33]
-    R1 * 8/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"8" #"4"
+    c'\breve
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Cello.Music measure 34]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Cello.Music measure 35]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    c'1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    c'4
+    \repeatTie
 
     % [Cello.Music measure 36]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r1
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'8
     [
     - \tweak stencil ##f
@@ -5820,6 +5943,42 @@ number.12.Cello.Music = {
 
     c'32
     ]
+
+      %! ANCHOR_NOTE
+    % [Cello.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 
