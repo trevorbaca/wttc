@@ -781,6 +781,19 @@ def select_material(components, n):
     return result
 
 
+def select_material_new(items, n):
+    assert n in (1, 2, 3, 4, 5, 99), repr(n)
+    result = []
+    for item in items:
+        for leaf in abjad.select.leaves(item):
+            material = abjad.get.indicator(leaf, Material)
+            if material is None or material.number != n:
+                break
+        else:
+            result.append(item)
+    return result
+
+
 def series_g(width, offset, start, length):
     pairs = []
     for i in range(length):
