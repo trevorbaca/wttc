@@ -200,6 +200,35 @@ def X(argument):
     return baca.rhythm.T(list_, "1:1")
 
 
+def _highlight_staff(argument, number, *, after=False):
+    material_to_color = {
+        1: "orange",
+        2: "deepskyblue",
+        3: "lightgreen",
+        4: "hotpink",
+        5: "burlywood",
+        99: "yellow",
+    }
+    color = material_to_color[number]
+    wrappers = baca.literal(
+        abjad.select.leaf(argument, 0),
+        rf"\staffHighlight {color}",
+    )
+    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
+    if after is True:
+        wrappers = baca.literal(
+            abjad.select.leaf(argument, -1),
+            r"\stopStaffHighlight",
+            site="after",
+        )
+    else:
+        wrappers = baca.literal(
+            baca.select.rleaf(argument, -1),
+            r"\stopStaffHighlight",
+        )
+    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
+
+
 def _reference_meters():
     return (
         abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
@@ -228,15 +257,6 @@ def annotate(items, n):
     for item in items:
         for leaf in abjad.select.leaves(item):
             abjad.attach(Material(n), leaf)
-
-
-def annotate_all_leaves_in_voice(leaves):
-    pleaves = baca.select.pleaves(leaves)
-    for n in (1, 2, 3, 4, 5, 99):
-        pleaves_ = select_material(pleaves, n)
-        if pleaves_:
-            groups = baca.select.group_consecutive(pleaves_)
-            annotate(groups, n)
 
 
 def attach_bgs(counts, grace_lists):
@@ -433,7 +453,13 @@ def get_components_in_previous_measure(voice, *, count=1):
 def highlight_staves(cache):
     for abbreviation in ("fl", "ob", "gt1", "gt2", "vn", "vc"):
         leaves = cache[abbreviation].leaves()
-        staff_highlight_all_leaves_in_voice(leaves)
+        pleaves = baca.select.pleaves(leaves)
+        for n in (1, 2, 3, 4, 5, 99):
+            pleaves_ = select_material(pleaves, n)
+            if pleaves_:
+                groups = baca.select.group_consecutive(pleaves_)
+                for group in groups:
+                    _highlight_staff(group, n)
 
 
 def is_obgc_polyphony_container(component):
@@ -802,45 +828,6 @@ def series_g(width, offset, start, length):
         pairs.append((left, right))
     counts = abjad.sequence.flatten(pairs)
     return counts
-
-
-def staff_highlight(argument, number, *, after=False):
-    material_to_color = {
-        1: "orange",
-        2: "deepskyblue",
-        3: "lightgreen",
-        4: "hotpink",
-        5: "burlywood",
-        99: "yellow",
-    }
-    color = material_to_color[number]
-    wrappers = baca.literal(
-        abjad.select.leaf(argument, 0),
-        rf"\staffHighlight {color}",
-    )
-    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
-    if after is True:
-        wrappers = baca.literal(
-            abjad.select.leaf(argument, -1),
-            r"\stopStaffHighlight",
-            site="after",
-        )
-    else:
-        wrappers = baca.literal(
-            baca.select.rleaf(argument, -1),
-            r"\stopStaffHighlight",
-        )
-    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
-
-
-def staff_highlight_all_leaves_in_voice(leaves):
-    pleaves = baca.select.pleaves(leaves)
-    for n in (1, 2, 3, 4, 5, 99):
-        pleaves_ = select_material(pleaves, n)
-        if pleaves_:
-            groups = baca.select.group_consecutive(pleaves_)
-            for group in groups:
-                staff_highlight(group, n)
 
 
 def swell(n):
