@@ -842,36 +842,36 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
+            \override DynamicLineSpanner.staff-padding = 6
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
-            a'16
+            af'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \p
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \<
             \revert TupletBracket.staff-padding
 
         }
 
-        \override DynamicLineSpanner.staff-padding = 6
-        \override Tie.direction = #down
           %! SPANNER_START
         \pitchedTrill
         g''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        \p
           %! SPANNER_STOP
         \stopTrillSpan
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \<
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -904,34 +904,34 @@ number.4.AltoFlute.Music = {
         \grace {
 
             af'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \f
               %! SPANNER_STOP
             \stopTrillSpan
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak circled-tip ##t
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak to-barline ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \>
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         g''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        \f
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \>
         ~
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -946,11 +946,6 @@ number.4.AltoFlute.Music = {
 
         % [AltoFlute.Music measure 3]
         g''8
-        \revert Tie.direction
-
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
-        r4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
@@ -958,6 +953,11 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
+        \revert Tie.direction
+
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+        r4
           %! SPANNER_STOP
         \stopTrillSpan
         \revert DynamicLineSpanner.staff-padding

@@ -599,11 +599,8 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = library.select_material(m[2], 1)
-        plts = baca.select.plts(leaves)
-        plts = baca.select.plts(m[2])[3:]
-        # plts = baca.select.plts(m[2])
-        # plts = library.select_material_new(plts, 3)
+        plts = baca.select.plts(m[2])
+        plts = library.select_material_new(plts, 3)
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
         for nongrace_plt in nongrace_plts:
