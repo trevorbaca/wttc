@@ -3797,6 +3797,7 @@ number.3.Cello.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -3821,7 +3822,6 @@ number.3.Cello.Music = {
 
     r16
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
     b,8.
@@ -3948,7 +3948,6 @@ number.3.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     d8
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3966,7 +3965,6 @@ number.3.Cello.Music = {
 
     r8.
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
     bf,!16
@@ -4151,7 +4149,6 @@ number.3.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     df!16
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4169,7 +4166,6 @@ number.3.Cello.Music = {
 
     r8.
 
-    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
     af,!16
@@ -4495,7 +4491,6 @@ number.3.Cello.Music = {
       %! CIRCLE_BOW_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanCircleBow
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4515,7 +4510,6 @@ number.3.Cello.Music = {
 
     r8.
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
     g,16
@@ -4643,7 +4637,6 @@ number.3.Cello.Music = {
       %! CIRCLE_BOW_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
@@ -4811,7 +4804,6 @@ number.3.Cello.Music = {
     \bacaStopTextSpanSCP
 
     % [Cello.Music measure 10]
-    \override DynamicLineSpanner.staff-padding = 5
     <f, bf,!>2.
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5023,6 +5015,7 @@ number.3.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         d'8
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -5040,7 +5033,6 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
-    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
     \override DynamicLineSpanner.staff-padding = 5
@@ -5097,6 +5089,7 @@ number.3.Cello.Music = {
       %! SPANNER_START
     \>
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5111,7 +5104,6 @@ number.3.Cello.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \revert DynamicLineSpanner.staff-padding
 
     r8.
 
@@ -5173,6 +5165,7 @@ number.3.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         d'8
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -5190,13 +5183,12 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
-    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
     r4
 
     % [Cello.Music measure 13]
-    \override DynamicLineSpanner.staff-padding = 5
+    \once \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
     <ef,! af,!>8.
@@ -5246,7 +5238,6 @@ number.3.Cello.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \revert DynamicLineSpanner.staff-padding
 
     r4
 
@@ -5310,6 +5301,7 @@ number.3.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         d'8
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -5327,7 +5319,6 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
-    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
     r2
