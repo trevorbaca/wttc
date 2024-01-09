@@ -281,6 +281,8 @@ number.26.Skips = {
     %@% - \baca-start-mn-left-only "312"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 11]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -1143,18 +1145,7 @@ number.26.Rests = {
 number.26.AltoFlute.Music.item.1 = {
 
     \voiceTwo
-    f'8.
-    - \tweak stencil ##f
-    ~
-
-    f'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [AltoFlute.Music measure 2]
-    f'1
-    \repeatTie
+    f'1....
 
 }
 
@@ -1240,6 +1231,8 @@ number.26.AltoFlute.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -1354,12 +1347,20 @@ number.26.AltoFlute.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
     [
     ~
@@ -1367,9 +1368,13 @@ number.26.AltoFlute.Music = {
     f'16
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     % [AltoFlute.Music measure 3]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     f'4
     - \tweak stencil ##f
     ~
@@ -1392,6 +1397,10 @@ number.26.AltoFlute.Music = {
     [
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'16
     ]
     ~
@@ -1399,19 +1408,31 @@ number.26.AltoFlute.Music = {
     % [AltoFlute.Music measure 4]
     f'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'8
 
     % [AltoFlute.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'4
     - \tweak stencil ##f
     ~
@@ -1441,6 +1462,10 @@ number.26.AltoFlute.Music = {
     ~
 
     % [AltoFlute.Music measure 7]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'16
     \repeatTie
 
@@ -1576,13 +1601,21 @@ number.26.AltoFlute.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'16
 
     % [AltoFlute.Music measure 9]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
     [
     ~
@@ -1590,38 +1623,56 @@ number.26.AltoFlute.Music = {
     f'16
     ]
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     % [AltoFlute.Music measure 10]
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'16
     ~
 
     f'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [AltoFlute.Music measure 11]
@@ -1629,16 +1680,22 @@ number.26.AltoFlute.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'16
     ~
 
     f'2
 
     % [AltoFlute.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     f'16
     ~
 
@@ -1759,6 +1816,8 @@ number.26.AltoFlute.Music = {
     ]
 
     % [AltoFlute.Music measure 19]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     <<
@@ -1768,6 +1827,8 @@ number.26.AltoFlute.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -1811,6 +1872,10 @@ number.26.AltoFlute.Music = {
     % [AltoFlute.Music measure 20]
       %! ONE_VOICE_COMMAND
     \oneVoice
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     f'4
 
     f'8
@@ -1854,6 +1919,8 @@ number.26.AltoFlute.Music = {
     \repeatTie
 
     % [AltoFlute.Music measure 22]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     <<
@@ -1863,6 +1930,8 @@ number.26.AltoFlute.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -1919,6 +1988,8 @@ number.26.AltoFlute.Music = {
     f'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [AltoFlute.Music measure 24]
@@ -1931,6 +2002,8 @@ number.26.AltoFlute.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'8.
     - \tweak stencil ##f
     ~
@@ -1944,12 +2017,16 @@ number.26.AltoFlute.Music = {
     f'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'8.
     - \tweak stencil ##f
     ~
@@ -1968,12 +2045,16 @@ number.26.AltoFlute.Music = {
     f'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     f'8.
     - \tweak stencil ##f
     ~
@@ -1994,6 +2075,8 @@ number.26.AltoFlute.Music = {
     f'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r1
@@ -2313,15 +2396,23 @@ number.26.Guitar.1.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 3]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2.
@@ -2331,21 +2422,33 @@ number.26.Guitar.1.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 5]
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Guitar.1.Music measure 6]
@@ -2356,8 +2459,12 @@ number.26.Guitar.1.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 8]
@@ -2375,8 +2482,12 @@ number.26.Guitar.1.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
@@ -2384,8 +2495,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 11]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2393,8 +2508,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 12]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r1
@@ -2404,8 +2523,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 13]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2416,8 +2539,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 15]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2428,8 +2555,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 17]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2442,15 +2573,23 @@ number.26.Guitar.1.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 20]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2463,8 +2602,12 @@ number.26.Guitar.1.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 23]
@@ -2472,13 +2615,21 @@ number.26.Guitar.1.Music = {
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 24]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
@@ -2499,27 +2650,43 @@ number.26.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 28]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Guitar.1.Music measure 29]
     r2.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
@@ -2527,8 +2694,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 30]
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2.
@@ -2536,8 +2707,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 31]
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2.
@@ -2545,8 +2720,12 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 32]
     r2.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
@@ -2632,11 +2811,15 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
     }
 
     % [Guitar.2.Music measure 3]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2645,8 +2828,12 @@ number.26.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2662,11 +2849,15 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
     }
 
     % [Guitar.2.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2675,8 +2866,12 @@ number.26.Guitar.2.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2690,8 +2885,12 @@ number.26.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -2707,10 +2906,14 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.2.Music measure 8]
@@ -2728,8 +2931,12 @@ number.26.Guitar.2.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
@@ -2737,8 +2944,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 11]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2746,8 +2957,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 12]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r1
@@ -2757,8 +2972,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 13]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2769,8 +2988,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 15]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2781,8 +3004,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 17]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2799,17 +3026,25 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Guitar.2.Music measure 20]
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2.
@@ -2826,10 +3061,14 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Guitar.2.Music measure 23]
@@ -2841,10 +3080,14 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2854,8 +3097,12 @@ number.26.Guitar.2.Music = {
         % [Guitar.2.Music measure 24]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
         c''8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -2878,27 +3125,43 @@ number.26.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 28]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Guitar.2.Music measure 29]
     r2.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
@@ -2906,8 +3169,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 30]
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2.
@@ -2915,8 +3182,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 31]
     r2
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2.
@@ -2924,8 +3195,12 @@ number.26.Guitar.2.Music = {
     % [Guitar.2.Music measure 32]
     r2.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c''16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2
@@ -2964,18 +3239,7 @@ number.26.Guitar.2.Staff = <<
 number.26.Violin.Music.item.1 = {
 
     \voiceTwo
-    c'8.
-    - \tweak stencil ##f
-    ~
-
-    c'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [Violin.Music measure 2]
-    c'1
-    \repeatTie
+    c'1....
 
 }
 
@@ -3065,6 +3329,8 @@ number.26.Violin.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -3183,35 +3449,55 @@ number.26.Violin.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
     ~
 
     % [Violin.Music measure 3]
     c'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r2
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
 
     % [Violin.Music measure 4]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8
     - \tweak stencil ##f
     ~
@@ -3219,11 +3505,17 @@ number.26.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Violin.Music measure 5]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r2.
@@ -3243,6 +3535,8 @@ number.26.Violin.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -3346,13 +3640,21 @@ number.26.Violin.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'16
 
     % [Violin.Music measure 9]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8
     - \tweak stencil ##f
     ~
@@ -3360,38 +3662,60 @@ number.26.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Violin.Music measure 10]
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
     ~
 
     c'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     % [Violin.Music measure 11]
@@ -3399,25 +3723,39 @@ number.26.Violin.Music = {
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
 
     % [Violin.Music measure 12]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2.
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8
     - \tweak stencil ##f
     ~
@@ -3425,20 +3763,30 @@ number.26.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Violin.Music measure 13]
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
     ~
 
     c'8
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8
 
     r4
@@ -3448,17 +3796,27 @@ number.26.Violin.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'16
 
     % [Violin.Music measure 15]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     r8
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8
     - \tweak stencil ##f
     ~
@@ -3466,6 +3824,8 @@ number.26.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
@@ -3495,6 +3855,8 @@ number.26.Violin.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -3555,6 +3917,8 @@ number.26.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     r4
@@ -3572,6 +3936,8 @@ number.26.Violin.Music = {
 
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
             \voiceOne
             <
                 \tweak font-size 0
@@ -3632,6 +3998,8 @@ number.26.Violin.Music = {
     c'16
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r8.
 
     % [Violin.Music measure 24]
@@ -3649,6 +4017,8 @@ number.26.Violin.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
     - \tweak stencil ##f
     ~
@@ -3668,12 +4038,16 @@ number.26.Violin.Music = {
     \repeatTie
     ~
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight deepskyblue
     c'8.
     - \tweak stencil ##f
     ~
@@ -3694,6 +4068,8 @@ number.26.Violin.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r1
@@ -3708,6 +4084,8 @@ number.26.Violin.Music = {
     % [Violin.Music measure 32]
     r2.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
     c'4
 
     c'4
@@ -3716,6 +4094,10 @@ number.26.Violin.Music = {
     c'4
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -3749,6 +4131,10 @@ number.26.Violin.Music = {
     c'4
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -3769,6 +4155,10 @@ number.26.Violin.Music = {
     c'4
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -3783,6 +4173,12 @@ number.26.Violin.Music = {
     c'4
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
     }
@@ -3847,6 +4243,8 @@ number.26.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
         ~
 
@@ -3858,6 +4256,8 @@ number.26.Cello.Music = {
 
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -3871,8 +4271,12 @@ number.26.Cello.Music = {
         % [Cello.Music measure 3]
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3885,11 +4289,15 @@ number.26.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
     }
 
     % [Cello.Music measure 4]
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3898,10 +4306,14 @@ number.26.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3909,8 +4321,12 @@ number.26.Cello.Music = {
     {
 
         % [Cello.Music measure 5]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -3921,6 +4337,8 @@ number.26.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
         ~
 
@@ -3932,6 +4350,8 @@ number.26.Cello.Music = {
 
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -3957,6 +4377,8 @@ number.26.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
         ~
 
@@ -3968,6 +4390,8 @@ number.26.Cello.Music = {
 
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -3981,8 +4405,12 @@ number.26.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -3993,8 +4421,12 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'4
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -4008,10 +4440,14 @@ number.26.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4020,10 +4456,14 @@ number.26.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r2
 
     % [Cello.Music measure 11]
@@ -4035,8 +4475,12 @@ number.26.Cello.Music = {
 
         r8
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r8
 
     }
@@ -4048,8 +4492,14 @@ number.26.Cello.Music = {
     {
 
         % [Cello.Music measure 12]
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight hotpink
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
         ~
 
@@ -4061,12 +4511,18 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         c'8
 
         c'4
 
     }
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r4
 
     % [Cello.Music measure 13]
@@ -4076,8 +4532,12 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -4088,6 +4548,8 @@ number.26.Cello.Music = {
 
         r4
 
+          %! STAFF_HIGHLIGHT
+        \staffHighlight deepskyblue
         c'8
         ~
 
@@ -4099,6 +4561,8 @@ number.26.Cello.Music = {
 
         c'8
 
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
         r4
 
     }
@@ -4108,6 +4572,8 @@ number.26.Cello.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight hotpink
     c'8.
     - \tweak stencil ##f
     ~
@@ -4253,6 +4719,10 @@ number.26.Cello.Music = {
     [
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     c'16
     ]
     ~
@@ -4263,25 +4733,19 @@ number.26.Cello.Music = {
 
     % [Cello.Music measure 23]
     c'16
-    [
     \repeatTie
 
-    c'8.
-    ]
-    - \tweak stencil ##f
-    ~
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8.
 
-    c'2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    r2
 
-    c'8.
-    [
-    \repeatTie
+    r8.
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     c'16
-    ]
     ~
 
     c'4
@@ -4319,12 +4783,16 @@ number.26.Cello.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r4
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -4338,6 +4806,8 @@ number.26.Cello.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2
@@ -4347,6 +4817,8 @@ number.26.Cello.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -4360,6 +4832,8 @@ number.26.Cello.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r1
@@ -4373,6 +4847,8 @@ number.26.Cello.Music = {
 
     r16
 
+      %! STAFF_HIGHLIGHT
+    \staffHighlight orange
     c'8.
     - \tweak stencil ##f
     ~
@@ -4398,6 +4874,8 @@ number.26.Cello.Music = {
     c'8.
     \repeatTie
 
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     r16
 
     r2
