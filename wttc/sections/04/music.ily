@@ -644,9 +644,6 @@ number.4.AltoFlute.Music = {
     {
 
         c'4
-          %! COVERED_SPANNER
-          %! SPANNER_STOP
-        \bacaStopTextSpanCovered
         \revert DynamicLineSpanner.staff-padding
 
         \grace {
@@ -657,6 +654,9 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
             af'!16
+              %! COVERED_SPANNER
+              %! SPANNER_STOP
+            \bacaStopTextSpanCovered
             \revert TupletBracket.staff-padding
 
         }
