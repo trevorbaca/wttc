@@ -406,30 +406,26 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = m[1, 2]
+        leaves = library.filter_material(m.leaves(), 1)
         runs = abjad.select.runs(leaves)
         baca.pitch(runs[0], "F#4")
-        rrun = baca.select.rleak(runs[0])
+        baca.pitch(runs[1], "F4")
+        baca.pitch(runs[2], "E4")
+        baca.pitch(runs[3], "E4")
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("mf mf mp"),
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(rrun, [1]),
+            pieces=baca.select.clparts(baca.select.rleak(runs[0]), [1]),
         )
-
-    @baca.call
-    def block():
-        leaves = m[3, 4]
-        runs = abjad.select.runs(leaves)
-        baca.pitch(runs[0], "F4")
         baca.hairpin(
-            runs[0],
+            (),
             "niente o< p >o",
             bookend=False,
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(runs[0], [1]),
+            pieces=baca.select.clparts(runs[1], [1]),
         )
-        rest = abjad.select.rest(leaves, 0)
+        rest = baca.select.rleaf(runs[1], -1)
         baca.dynamic(rest, "niente")
 
     @baca.call
@@ -440,9 +436,8 @@ def fl(m):
     @baca.call
     def block():
         leaves = m[5, 7][:10]
-        baca.pitch(leaves, "E4")
         baca.hairpin(
-            leaves,
+            (),
             baca.dynamics.niente_swells("p mp mf mp p"),
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
@@ -484,9 +479,8 @@ def fl(m):
         pleaves = baca.select.pleaves(leaves)
         runs = abjad.select.runs(leaves)
         first = pleaves[:2]
-        baca.pitch(first, "E4")
         baca.hairpin(
-            first,
+            (),
             "niente o< p >o",
             pieces=baca.select.clparts(first, [1]),
         )
@@ -621,7 +615,7 @@ def vn(m):
         baca.pitches(run, "D4 F4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("mp mp"),
             pieces=baca.select.lparts(rrun, [1, 1, 1, 2]),
         )
@@ -633,7 +627,7 @@ def vn(m):
         rrun = baca.select.rleak(run)
         baca.damp_spanner(rrun, abjad.Tweak(r"- \tweak staff-padding 3"))
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("mp"),
             pieces=baca.select.lparts(rrun, [1, 3]),
         )
@@ -649,7 +643,7 @@ def vn(m):
         baca.pitches(run, "D4 F#4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("p p"),
             pieces=baca.select.lparts(rrun, [1, 1, 1, 2]),
         )
@@ -665,7 +659,7 @@ def vn(m):
         rrun = baca.select.rleak(run)
         baca.damp_spanner(rrun, abjad.Tweak(r"- \tweak staff-padding 3"))
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("mf"),
             pieces=baca.select.lparts(rrun, [5, 3]),
         )
@@ -676,7 +670,7 @@ def vn(m):
         baca.pitches(run, "E4 G4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("p p"),
             pieces=baca.select.lparts(rrun, [1, 1, 1, 2]),
         )
@@ -705,7 +699,7 @@ def vn(m):
         rrun = baca.select.rleak(run)
         baca.damp_spanner(rrun, abjad.Tweak(r"- \tweak staff-padding 4.5"))
         baca.hairpin(
-            run,
+            (),
             'niente o< "f" -- ! >o niente',
             pieces=baca.select.lparts(run, [7, 3, 5]),
         )
@@ -716,14 +710,14 @@ def vn(m):
         leaves = m[5, 6]
         baca.pitches(leaves, "E4 G#4")
         baca.hairpin(
-            leaves[:7],
+            (),
             baca.dynamics.niente_swells("pp p mp"),
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.lparts(leaves[:7], [1, 1, 1, 1, 1, 2]),
         )
         rleaves = baca.select.rleak(leaves)
         baca.hairpin(
-            rleaves[-3:],
+            (),
             "o< mp >o niente",
             pieces=baca.select.lparts(rleaves[-3:], [1, 2]),
         )
@@ -776,7 +770,7 @@ def vn(m):
         baca.pitches(run, "E4 G#4")
         rrun = baca.select.rleak(run)
         baca.hairpin(
-            rrun,
+            (),
             baca.dynamics.niente_swells("pp"),
             pieces=baca.select.lparts(rrun, [1, 2]),
         )
@@ -830,7 +824,7 @@ def vc(cache):
                 staff_padding=3,
             )
         baca.hairpin(
-            run,
+            (),
             "o< p >o niente",
             pieces=[plts[:2], baca.select.rleak(plts[-1])],
         )
@@ -861,7 +855,7 @@ def vc(cache):
                     staff_padding=staff_padding,
                 )
         baca.hairpin(
-            run,
+            (),
             "o< mp >o niente",
             pieces=[plts[:4], baca.select.rleak(plts[-2:])],
         )
@@ -892,7 +886,7 @@ def vc(cache):
                     staff_padding=staff_padding,
                 )
         baca.hairpin(
-            run,
+            (),
             "o< mf >o niente",
             pieces=[plts[:11], baca.select.rleak(plts[-5:])],
         )
@@ -924,7 +918,7 @@ def vc(cache):
                     staff_padding=staff_padding,
                 )
         baca.hairpin(
-            run,
+            (),
             "o< mf >o p",
             pieces=[plts[:2], baca.select.rleak(plts[2:])],
         )
@@ -974,7 +968,7 @@ def vc(cache):
     def block():
         leaves = m[8, 9]
         baca.hairpin(
-            leaves,
+            (),
             "o< p <| ff",
             pieces=baca.select.lparts(leaves, [2, 2]),
         )
@@ -990,7 +984,7 @@ def vc(cache):
     def block():
         leaves = m[10]
         baca.hairpin(
-            leaves,
+            (),
             "o< p <| ff",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
@@ -1053,7 +1047,7 @@ def vc(cache):
             staff_padding=3,
         )
         baca.hairpin(
-            rrun,
+            (),
             "o< p >o niente",
             pieces=baca.select.lparts(rrun, [2, 2]),
         )
