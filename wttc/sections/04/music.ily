@@ -691,10 +691,6 @@ number.4.AltoFlute.Music = {
 
     \grace {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         af'!16
           %! SPANNER_STOP
         \stopTrillSpan
@@ -717,14 +713,10 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
             af'!16
 
         }
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
           %! SPANNER_START
         \pitchedTrill
         g''4
@@ -737,10 +729,6 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             af'!16
 
         }
@@ -891,10 +879,6 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             af'!16
 
         }
@@ -919,10 +903,6 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             af'!16
               %! SPANNER_STOP
             \stopTrillSpan
@@ -1294,10 +1274,6 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             a'16
 
         }
@@ -1456,22 +1432,14 @@ number.4.Oboe.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
             e'16
 
         }
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'4
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             e'16
 
         }
@@ -1489,10 +1457,6 @@ number.4.Oboe.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             e'16
 
         }
@@ -1525,10 +1489,6 @@ number.4.Oboe.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             e'16
 
         }
@@ -1546,10 +1506,6 @@ number.4.Oboe.Music = {
 
         \grace {
 
-              %! STAFF_HIGHLIGHT
-            \staffHighlight lightgreen
-              %! STAFF_HIGHLIGHT
-            \stopStaffHighlight
             e'16
 
         }

@@ -1627,10 +1627,6 @@ number.5.AltoFlute.Music = {
     \repeatTie
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         f'8
 
     }
@@ -1658,10 +1654,6 @@ number.5.AltoFlute.Music = {
     \repeatTie
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         f'8
 
     }
@@ -3817,10 +3809,6 @@ number.5.Violin.Music = {
 
     \slashedGrace {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -3848,10 +3836,6 @@ number.5.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -3868,10 +3852,6 @@ number.5.Violin.Music = {
 
     \slashedGrace {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4001,10 +3981,6 @@ number.5.Violin.Music = {
     c'1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4078,10 +4054,6 @@ number.5.Violin.Music = {
     \repeatTie
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4124,10 +4096,6 @@ number.5.Violin.Music = {
     c'2
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4196,10 +4164,6 @@ number.5.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4644,10 +4608,6 @@ number.5.Cello.Music = {
 
     \slashedGrace {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4673,10 +4633,6 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }

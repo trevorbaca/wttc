@@ -905,14 +905,14 @@ def gt2(cache):
     @baca.call
     def block():
         leaves = library.select_material_new(m.leaves(), 5)
-        groups = baca.select.group_consecutive(leaves)
+        runs = abjad.select.runs(leaves)
         dynamic_strings = [
             "f mf mp",
             "mf mp",
             "mf mp",
         ]
-        for group, dynamic_string in zip(groups, dynamic_strings, strict=True):
-            plts = baca.select.plts(group)
+        for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
+            plts = baca.select.plts(run)
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)

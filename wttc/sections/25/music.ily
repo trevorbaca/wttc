@@ -2112,10 +2112,6 @@ number.25.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2131,10 +2127,6 @@ number.25.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2160,10 +2152,6 @@ number.25.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2867,10 +2855,6 @@ number.25.Cello.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2886,10 +2870,6 @@ number.25.Cello.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2915,10 +2895,6 @@ number.25.Cello.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }

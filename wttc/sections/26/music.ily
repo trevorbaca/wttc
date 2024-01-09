@@ -4103,10 +4103,6 @@ number.26.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4140,10 +4136,6 @@ number.26.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4164,10 +4156,6 @@ number.26.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -4182,16 +4170,46 @@ number.26.Violin.Music = {
     c'4
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
 
+
+      %! ANCHOR_NOTE
+    % [Violin.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
 }
 

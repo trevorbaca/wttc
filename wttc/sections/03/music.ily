@@ -1062,10 +1062,6 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         e'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1116,10 +1112,6 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         e'''8
           %! SPANNER_STOP
         \!
@@ -1161,10 +1153,6 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         fs'''!8
           %! SPANNER_STOP
         \!
@@ -1206,10 +1194,6 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         g'''8
           %! SPANNER_STOP
         \!
@@ -1353,10 +1337,6 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         gs'''!8
           %! SPANNER_STOP
         \!
@@ -1446,10 +1426,6 @@ number.3.AltoFlute.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         a'''8
           %! SPANNER_STOP
         \!
@@ -3388,10 +3364,6 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c''16
 
     }
@@ -3531,10 +3503,6 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c''16
 
     }
@@ -3614,10 +3582,6 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c''16
 
     }
@@ -3698,10 +3662,6 @@ number.3.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c''16
         \revert DynamicLineSpanner.staff-padding
 
@@ -4974,10 +4934,6 @@ number.3.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         d'8
 
     }
@@ -5128,10 +5084,6 @@ number.3.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         d'8
 
     }
@@ -5269,10 +5221,6 @@ number.3.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         d'8
 
     }

@@ -426,7 +426,6 @@ def VN(voice, meters):
     # counts = [1, -6, 3, -3]
     rhythm(
         None,
-        # [-1, OBGC(25 * [1], [31]), 1, -6, t(1)],
         [-1, OBGC(25 * [1], [31])],
         material=1,
     )
@@ -537,6 +536,7 @@ def VN(voice, meters):
         2 * [4] + [AG([2], 4)],
         material=3,
     )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):

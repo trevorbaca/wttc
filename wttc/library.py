@@ -457,9 +457,9 @@ def highlight_staves(cache):
         for n in (1, 2, 3, 4, 5, 99):
             pleaves_ = select_material(pleaves, n)
             if pleaves_:
-                groups = baca.select.group_consecutive(pleaves_)
-                for group in groups:
-                    _highlight_staff(group, n)
+                runs = abjad.select.runs(pleaves_)
+                for run in runs:
+                    _highlight_staff(run, n)
 
 
 def is_obgc_polyphony_container(component):

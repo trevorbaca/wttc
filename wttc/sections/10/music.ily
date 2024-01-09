@@ -2367,10 +2367,6 @@ number.10.Violin.Music = {
     c'4..
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2386,10 +2382,6 @@ number.10.Violin.Music = {
     c'4..
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }
@@ -2406,10 +2398,6 @@ number.10.Violin.Music = {
     c'4..
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'8
 
     }

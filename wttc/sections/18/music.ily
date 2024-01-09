@@ -1457,10 +1457,6 @@ number.18.AltoFlute.Music = {
 
     \slashedGrace {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         f'16
 
     }
