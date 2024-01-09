@@ -427,95 +427,69 @@ def fl(m):
         )
         rest = baca.select.rleaf(runs[1], -1)
         baca.dynamic(rest, "niente")
-
-    @baca.call
-    def block():
-        leaves = m[1, 6]
-        baca.override.dls_staff_padding(leaves, 3.5)
-
-    @baca.call
-    def block():
-        leaves = m[5, 7][:10]
         baca.hairpin(
             (),
             baca.dynamics.niente_swells("p mp mf mp p"),
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(leaves, [1]),
+            pieces=baca.select.clparts(runs[2], [1]),
         )
-
-    @baca.call
-    def block():
-        leaves = m[7][-3:]
-        baca.flat_glissando(leaves, "C6", stop_pitch="B5")
-        baca.hairpin(leaves, "f >o niente")
-
-    @baca.call
-    def block():
-        leaves = m[8, 11]
-        runs = abjad.select.runs(leaves)
-        baca.flat_glissando(leaves[:3], "C6", stop_pitch="B5")
-        baca.hairpin(leaves[:3], "mf >o !")
-        baca.flat_glissando(m[10], "D6", stop_pitch="C#6")
-        baca.hairpin(m[10], "mp >o !")
-        baca.flat_glissando(m[11][:2], "Eb6", stop_pitch="D6")
-        baca.hairpin(m[11][:2], "p >o !")
-        baca.override.dls_staff_padding(runs[0], 3.5)
-
-    @baca.call
-    def block():
-        run = abjad.select.run(m[11], 1)
-        baca.pitch(run, "G#3")
-        baca.covered_spanner(
-            baca.select.rleak(run),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            items=r"\baca-cov-markup =|",
-        )
-        baca.dynamic(run[0], "mp")
-        baca.override.dls_staff_padding(run, 5)
-
-    @baca.call
-    def block():
-        leaves = m[12]
-        pleaves = baca.select.pleaves(leaves)
-        runs = abjad.select.runs(leaves)
-        first = pleaves[:2]
         baca.hairpin(
             (),
             "niente o< p >o",
-            pieces=baca.select.clparts(first, [1]),
+            pieces=baca.select.clparts(runs[3], [1]),
         )
-        baca.dynamic(baca.select.rleak(first), "!")
-        second = pleaves[2:4]
-        baca.flat_glissando(second, "E6", stop_pitch="D#6")
-        baca.hairpin(second, "p >o !")
-        baca.override.dls_staff_padding(first + second, 3.5)
-        third = runs[1]
-        baca.pitch(third, "G#3")
-        baca.covered_spanner(
-            baca.select.rleak(third),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            items=r"\baca-cov-markup =|",
-        )
-        baca.dynamic(third[0], "mp")
-        baca.override.dls_staff_padding(third, 5)
+        baca.dynamic(baca.select.rleak(runs[3]), "!")
 
     @baca.call
     def block():
-        leaves = m[13]
-        runs = abjad.select.runs(leaves)
-        first = runs[0]
-        baca.flat_glissando(first, "F6", stop_pitch="E6")
-        baca.hairpin(first, "p >o !")
-        baca.override.dls_staff_padding(first, 3)
-        second = runs[1]
-        baca.pitch(second, "G#3")
-        baca.covered_spanner(
-            baca.select.rleak(second),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            items=r"\baca-cov-markup =|",
+        pleaves = library.filter_material(m.leaves(), 3)
+        runs = abjad.select.runs(pleaves)
+        parts = baca.select.lparts(runs[0], [3, 3, 2, 2], overhang=abjad.EXACT)
+        baca.flat_glissando(parts[0], "C6", stop_pitch="B5")
+        baca.flat_glissando(parts[1], "C6", stop_pitch="B5")
+        baca.flat_glissando(parts[2], "D6", stop_pitch="C#6")
+        baca.flat_glissando(parts[3], "Eb6", stop_pitch="D6")
+        baca.flat_glissando(runs[1], "E6", stop_pitch="D#6")
+        baca.flat_glissando(runs[2], "F6", stop_pitch="E6")
+        baca.hairpin(parts[0], "f >o niente")
+        baca.hairpin(parts[1], "mf >o !")
+        baca.hairpin(parts[2], "mp >o !")
+        baca.hairpin(parts[3], "p >o !")
+        baca.hairpin(runs[1], "p >o !")
+        baca.hairpin(runs[2], "p >o !")
+
+    @baca.call
+    def block():
+        pleaves = library.filter_material(m[11, 13], 99)
+        runs = abjad.select.runs(pleaves)
+        for run in runs:
+            baca.pitch(run, "G#")
+            baca.covered_spanner(
+                baca.select.rleak(run),
+                items=strings.cov_dashed_hook,
+                staff_padding=3,
+            )
+            baca.dynamic(run[0], "mp")
+            baca.override.dls_staff_padding(run, 5)
+
+    @baca.call
+    def block():
+        baca.override.dls_staff_padding(
+            m[1, 6],
+            3.5,
         )
-        baca.dynamic(second[0], "mp")
-        baca.override.dls_staff_padding(second, 5)
+        baca.override.dls_staff_padding(
+            abjad.select.run(m[8, 11], 0),
+            3.5,
+        )
+        baca.override.dls_staff_padding(
+            abjad.select.run(m[12], 0),
+            3.5,
+        )
+        baca.override.dls_staff_padding(
+            abjad.select.run(m[13], 0),
+            3.5,
+        )
 
 
 def ob(m):

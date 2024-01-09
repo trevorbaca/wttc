@@ -1390,7 +1390,7 @@ number.3.AltoFlute.Music = {
     \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 13]
-    \override DynamicLineSpanner.staff-padding = 3
+    \override DynamicLineSpanner.staff-padding = 3.5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
     \afterGrace
