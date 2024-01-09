@@ -557,6 +557,7 @@ def fl(m):
 
     @baca.call
     def block():
+        # HERE
         plts = baca.select.plts(m[1])[:2]
         baca.pitch(plts, "G3")
         baca.covered_spanner(plts, staff_padding=5.5)
@@ -906,7 +907,6 @@ def gt2(cache):
             baca.up_bow(plt.head, padding=1)
             baca.hairpin(baca.select.rleak(plt), f"o< {dynamic}")
 
-    """
     @baca.call
     def block():
         upbows(
@@ -925,9 +925,7 @@ def gt2(cache):
             library.select_material(m[11], 1),
             '"mf"',
         )
-    """
 
-    """
     @baca.call
     def block():
         leaves = library.select_material(m.leaves(), 5)
@@ -942,7 +940,6 @@ def gt2(cache):
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)
-    """
 
 
 def vn(m):
