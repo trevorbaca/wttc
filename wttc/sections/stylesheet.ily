@@ -2,22 +2,10 @@
 
 \paper
 {
-  evenFooterMarkup = \markup \fill-line
-  {
-    \fontsize #3
-    \override #'(font-name . "Adobe Garamond Pro")
-    \concat {
-      \override #'(font-name . "Adobe Garamond Pro Italic")
-      "when the time comes"
-      \hspace #3
-      —
-      \hspace #3
-      Bača
-    }
-  }
+  evenFooterMarkup = \markup \null
   evenHeaderMarkup = \markup \null
-  oddFooterMarkup = \evenFooterMarkup
-  oddHeaderMarkup = \evenHeaderMarkup
+  oddFooterMarkup = \markup \null
+  oddHeaderMarkup = \markup \null
 }
 
 \layout { \context { \Score barNumberVisibility = #all-bar-numbers-visible } }

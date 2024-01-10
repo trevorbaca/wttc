@@ -179,6 +179,8 @@ class Rhythm:
             overlap_previous_measure(self.voice, components, time_signatures)
         elif not do_not_extend:
             self.voice.extend(components)
+        for pleaf in baca.select.pleaves(components):
+            abjad.attach(baca.enums.NOT_YET_PITCHED, pleaf)
         return components
 
     def mmrests(self, *arguments, head=False):

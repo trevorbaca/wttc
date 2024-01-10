@@ -3167,9 +3167,11 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3184,9 +3186,11 @@ number.26.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3205,9 +3209,11 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3222,9 +3228,11 @@ number.26.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3241,9 +3249,11 @@ number.26.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3262,9 +3272,11 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3394,9 +3406,11 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3431,9 +3445,11 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3450,9 +3466,11 @@ number.26.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3467,9 +3485,11 @@ number.26.Guitar.2.Music = {
         % [Guitar.2.Music measure 24]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4906,9 +4926,11 @@ number.26.Cello.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
         ~
 
     }
@@ -4917,7 +4939,9 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        c'8
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4934,9 +4958,11 @@ number.26.Cello.Music = {
         % [Cello.Music measure 3]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4952,9 +4978,11 @@ number.26.Cello.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
     }
 
@@ -4969,9 +4997,11 @@ number.26.Cello.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'4
+        d4
 
     }
 
@@ -4984,9 +5014,11 @@ number.26.Cello.Music = {
     {
 
         % [Cello.Music measure 5]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5000,9 +5032,11 @@ number.26.Cello.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
         ~
 
     }
@@ -5011,7 +5045,9 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        c'8
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5040,9 +5076,11 @@ number.26.Cello.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
         ~
 
     }
@@ -5051,7 +5089,9 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        c'8
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5068,9 +5108,11 @@ number.26.Cello.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5084,9 +5126,11 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'4
+        d4
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5103,9 +5147,11 @@ number.26.Cello.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
     }
 
@@ -5119,9 +5165,11 @@ number.26.Cello.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'4
+        d4
 
     }
 
@@ -5138,9 +5186,11 @@ number.26.Cello.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5155,32 +5205,42 @@ number.26.Cello.Music = {
     {
 
         % [Cello.Music measure 12]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'4
+        d4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        c'8
+        d8
         ~
 
     }
 
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d2.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        c'8
+        d8
 
-        c'4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        d4
 
     }
 
@@ -5195,9 +5255,11 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5211,9 +5273,11 @@ number.26.Cello.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c'8
+        d8
         ~
 
     }
@@ -5222,7 +5286,9 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        c'8
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight

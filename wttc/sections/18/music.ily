@@ -2374,9 +2374,11 @@ number.18.Guitar.1.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2391,9 +2393,11 @@ number.18.Guitar.1.Music = {
         % [Guitar.1.Music measure 4]
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2407,9 +2411,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2423,9 +2429,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2444,9 +2452,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2461,9 +2471,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2477,9 +2489,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2492,9 +2506,11 @@ number.18.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 7]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2508,9 +2524,11 @@ number.18.Guitar.1.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2524,9 +2542,11 @@ number.18.Guitar.1.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2540,9 +2560,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2557,9 +2579,11 @@ number.18.Guitar.1.Music = {
         % [Guitar.1.Music measure 8]
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2571,9 +2595,11 @@ number.18.Guitar.1.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2588,9 +2614,11 @@ number.18.Guitar.1.Music = {
         % [Guitar.1.Music measure 9]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2770,9 +2798,11 @@ number.18.Guitar.1.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2904,9 +2934,11 @@ number.18.Guitar.1.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -2926,9 +2958,11 @@ number.18.Guitar.1.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3239,9 +3273,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3258,9 +3294,11 @@ number.18.Guitar.2.Music = {
         % [Guitar.2.Music measure 4]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3276,9 +3314,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3292,9 +3332,11 @@ number.18.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3308,9 +3350,11 @@ number.18.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3327,9 +3371,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3346,9 +3392,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3362,9 +3410,11 @@ number.18.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3378,9 +3428,11 @@ number.18.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3393,9 +3445,11 @@ number.18.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 7]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3411,9 +3465,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3429,9 +3485,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3487,9 +3545,11 @@ number.18.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3503,9 +3563,11 @@ number.18.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3735,9 +3797,11 @@ number.18.Guitar.2.Music = {
         \stopStaffHighlight
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3753,9 +3817,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3885,9 +3951,11 @@ number.18.Guitar.2.Music = {
 
         r4
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
     }
 
@@ -3904,9 +3972,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3923,9 +3993,11 @@ number.18.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight

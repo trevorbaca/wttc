@@ -1852,9 +1852,11 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -1869,9 +1871,11 @@ number.11.Guitar.2.Music = {
         % [Guitar.2.Music measure 9]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -1883,13 +1887,17 @@ number.11.Guitar.2.Music = {
         \stopStaffHighlight
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
-    c''4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1919,9 +1927,11 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -1936,9 +1946,11 @@ number.11.Guitar.2.Music = {
         % [Guitar.2.Music measure 12]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -1950,13 +1962,17 @@ number.11.Guitar.2.Music = {
         \stopStaffHighlight
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
-    c''4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1986,9 +2002,11 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -2003,9 +2021,11 @@ number.11.Guitar.2.Music = {
         % [Guitar.2.Music measure 15]
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -2017,9 +2037,11 @@ number.11.Guitar.2.Music = {
         \stopStaffHighlight
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -2027,7 +2049,9 @@ number.11.Guitar.2.Music = {
     \times 2/3
     {
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2043,9 +2067,11 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
@@ -2060,9 +2086,11 @@ number.11.Guitar.2.Music = {
     \times 2/3
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2078,9 +2106,11 @@ number.11.Guitar.2.Music = {
 
         r8
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
     }
 
