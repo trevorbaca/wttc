@@ -57,6 +57,22 @@ def GLOBALS(skips):
     )
 
 
+def attach_B_1b_graces(
+    voice, *, do_not_attach_after_grace=False, do_not_attach_before_grace=False
+):
+    plts = baca.select.plts(voice)
+    plts = library.filter_material(plts, 1)
+    for plt in plts:
+        if do_not_attach_before_grace is not True:
+            container = abjad.BeforeGraceContainer("d'8")
+            library.annotate(container, 1)
+            abjad.attach(container, plt.head)
+        if do_not_attach_after_grace is not True:
+            container = abjad.AfterGraceContainer("e'8")
+            library.annotate(container, 1)
+            abjad.attach(container, plt[-1])
+
+
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
 
@@ -606,6 +622,7 @@ def VN(voice, meters):
         extra_counts=[2],
         material=99,
     )
+    attach_B_1b_graces(voice)
 
 
 def VC(voice, meters):
@@ -696,10 +713,39 @@ def VC(voice, meters):
         extra_counts=[2],
         material=99,
     )
+    plts = baca.select.plts(voice)
+    plts = library.filter_material(plts, 1)
+    attach_B_1b_graces(plts[0])
+    attach_B_1b_graces(plts[1])
+    attach_B_1b_graces(plts[2], do_not_attach_before_grace=True)
+    attach_B_1b_graces(plts[3], do_not_attach_before_grace=True)
+    attach_B_1b_graces(plts[4])
+    attach_B_1b_graces(plts[5])
+    attach_B_1b_graces(plts[6])
+    attach_B_1b_graces(plts[7])
 
 
-def B_1b():
-    ...
+def B_1b(pleaves, string_number, pitches, dynamics):
+    runs = abjad.select.runs(pleaves)
+    dynamics = dynamics.split()
+    grace_pitch, start_pitch, stop_pitch = pitches.split()
+    for run, dynamic in zip(runs, dynamics, strict=True):
+        baca.override.note_head_style_harmonic(baca.select.rleak(run))
+        if len(run) == 3:
+            baca.pitch(run[0], grace_pitch)
+            baca.flat_glissando(run[1:], start_pitch, stop_pitch=stop_pitch)
+        else:
+            assert len(run) == 2
+            baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
+        baca.string_number_spanner(
+            baca.select.rleak(run)[1:],
+            f"{string_number} =|",
+            staff_padding=3,
+        )
+        baca.hairpin(
+            baca.select.rleak(run)[1:],
+            f"niente o< {dynamic}",
+        )
 
 
 def B_3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
@@ -1171,7 +1217,19 @@ def gt2(cache):
 
 
 def vn(m):
-    pass
+    @baca.call
+    def block():
+        plts = baca.select.plts(m[1, 3])
+        plts = library.filter_material(plts, 1)
+        B_1b(plts, "III", "B4 A4 C5", "mp mf f")
+
+    @baca.call
+    def block():
+        baca.override.tuplet_bracket_down(m[1, 3])
+
+    @baca.call
+    def block():
+        baca.override.dls_staff_padding(m[1, 3], 6)
 
 
 def vc(m):
@@ -1259,8 +1317,13 @@ def make_layout():
     spacing = baca.make_layout(
         baca.page(
             1,
-            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=9, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            # baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
+        ),
+        baca.page(
+            2,
+            baca.system(measure=8, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            # baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         spacing=(1, 32),
     )

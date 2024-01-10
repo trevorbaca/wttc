@@ -1,5 +1,5 @@
 % first_page_number = 2
-% page_count = 1
+% page_count = 2
 % measure_count = 16 + 1
 % time_signatures = [
 % '6/4', '4/4', '3/4', '4/4', '4/4', '4/4', '4/4', '3/4', '4/4', '4/4', '3/4',
@@ -20,7 +20,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #32
               %! BREAK
@@ -98,23 +98,10 @@
 
             % [PageLayout measure 7]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
-              %! BREAK
-            \noBreak
-            s1 * 4/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/32]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [PageLayout measure 8]
-              %! SPACING_COMMAND
             \baca-new-spacing-section #35 #768
               %! BREAK
             \noBreak
-            s1 * 3/4
+            s1 * 4/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
@@ -122,13 +109,26 @@
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
-            % [PageLayout measure 9]
+            % [PageLayout measure 8]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #32
               %! BREAK
-            \break
+            \pageBreak
+            s1 * 3/4
+              %! SPACING
+            %@% \bacaStopTextSpanSPM
+              %! SPACING
+            %@% - \baca-start-spm-left-only "[1/32]"
+              %! SPACING
+            %@% \bacaStartTextSpanSPM
+
+            % [PageLayout measure 9]
+              %! SPACING_COMMAND
+            \baca-new-spacing-section #1 #32
+              %! BREAK
+            \noBreak
             s1 * 4/4
               %! SPACING
             %@% \bacaStopTextSpanSPM

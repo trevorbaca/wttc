@@ -21,7 +21,7 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [14, 22],
+    "bol_measure_numbers": [14, 21],
     "duration": "1'16''",
     "final_measure_number": 29,
     "first_measure_number": 14,
@@ -264,7 +264,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="niente",
+                value="f",
             )
         ],
         "Violin.Staff": [

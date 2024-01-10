@@ -3989,8 +3989,10 @@ number.4.Violin.Music = {
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+        \override DynamicLineSpanner.staff-padding = 6
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.direction = #down
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
         \set Staff.instrumentName = \wttc-vn-markup
@@ -4013,15 +4015,76 @@ number.4.Violin.Music = {
           %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-        b'8
+        \grace {
+
+            \override NoteHead.style = #'harmonic
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
+        \afterGrace
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
+        {
+
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            c''8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mp
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
@@ -4054,17 +4117,78 @@ number.4.Violin.Music = {
         % [Violin.Music measure 2]
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-        b'8
+        \grace {
+
+            \override NoteHead.style = #'harmonic
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
+        \afterGrace
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
+        {
+
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            c''8
+
+        }
+
 
     }
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
     r16
 
@@ -4085,15 +4209,76 @@ number.4.Violin.Music = {
     {
 
         % [Violin.Music measure 3]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
-        b'8
+        \grace {
+
+            \override NoteHead.style = #'harmonic
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
+        \afterGrace
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
+        {
+
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            c''8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \f
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
@@ -4108,6 +4293,8 @@ number.4.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
 
     % [Violin.Music measure 4]
     r2.
@@ -4118,11 +4305,28 @@ number.4.Violin.Music = {
 
         r8
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         b'8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4137,11 +4341,28 @@ number.4.Violin.Music = {
         % [Violin.Music measure 5]
         r4
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         b'8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'8
+
+        }
+
 
     }
 
@@ -4149,9 +4370,26 @@ number.4.Violin.Music = {
     \times 2/3
     {
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
+        \afterGrace
         b'4
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4211,11 +4449,28 @@ number.4.Violin.Music = {
 
         r4
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         b'8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'8
+
+        }
+
 
     }
 
@@ -4248,11 +4503,28 @@ number.4.Violin.Music = {
 
         r8
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         b'8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4470,11 +4742,28 @@ number.4.Cello.Music = {
           %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         d8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
     }
 
@@ -4486,10 +4775,18 @@ number.4.Cello.Music = {
         \stopStaffHighlight
         r4
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
         d16
         ~
 
@@ -4501,7 +4798,16 @@ number.4.Cello.Music = {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
+        \afterGrace
         d8.
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4533,7 +4839,16 @@ number.4.Cello.Music = {
         % [Cello.Music measure 2]
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
+        \afterGrace
         d8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4554,7 +4869,16 @@ number.4.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
+        \afterGrace
         d8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4656,11 +4980,28 @@ number.4.Cello.Music = {
 
         r8.
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         d8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
     }
 
@@ -4677,11 +5018,28 @@ number.4.Cello.Music = {
 
         r8
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         d8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4700,10 +5058,18 @@ number.4.Cello.Music = {
 
         r4
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
         d16
         ~
 
@@ -4716,7 +5082,16 @@ number.4.Cello.Music = {
         % [Cello.Music measure 8]
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
+        \afterGrace
         d8
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4807,11 +5182,28 @@ number.4.Cello.Music = {
 
         r8.
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \afterGrace
         d16
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            d8
+
+        }
+
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
