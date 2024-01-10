@@ -3339,9 +3339,11 @@ number.12.Guitar.1.Music = {
     \stopStaffHighlight
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -3628,9 +3630,11 @@ number.12.Guitar.1.Music = {
     \stopStaffHighlight
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -4067,13 +4071,19 @@ number.12.Guitar.2.Music = {
 
         r2
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
-        c''4
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
     }
 
@@ -4082,15 +4092,25 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 2]
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
     }
 
@@ -4098,15 +4118,25 @@ number.12.Guitar.2.Music = {
     \times 3/5
     {
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
     }
 
@@ -4115,15 +4145,25 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 3]
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
     }
 
@@ -4131,15 +4171,25 @@ number.12.Guitar.2.Music = {
     \times 3/5
     {
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
     }
 
@@ -4148,13 +4198,21 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 4]
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''2
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'2
         - \tweak stencil ##f
         ~
 
@@ -4167,7 +4225,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        c''16 * 5376/11264
+        b'16 * 5376/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"5376" #"11264"
         [
@@ -4247,20 +4305,30 @@ number.12.Guitar.2.Music = {
     \times 3/5
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         b'4
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        c''4
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
     }
 
@@ -4269,15 +4337,25 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 6]
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
 
-        c''4
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'4
         - \tweak stencil ##f
         ~
 
@@ -4290,7 +4368,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #right
-        c''16 * 4000/1024
+        b'16 * 4000/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"4000" #"1024"
         [
@@ -4339,12 +4417,16 @@ number.12.Guitar.2.Music = {
     \stopStaffHighlight
     r8.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
     ~
 
-    c''8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4352,15 +4434,17 @@ number.12.Guitar.2.Music = {
 
     r8.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
     ~
 
     % [Guitar.2.Music measure 8]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4516,9 +4600,11 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 16]
         r1
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
-        c''4
+        b'4
         - \tweak stencil ##f
         ~
 
@@ -4531,7 +4617,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #right
-        c''16 * 4000/1024
+        b'16 * 4000/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"4000" #"1024"
         [
@@ -4576,12 +4662,16 @@ number.12.Guitar.2.Music = {
     \stopStaffHighlight
     r8.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
     ~
 
-    c''8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight

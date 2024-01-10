@@ -181,8 +181,6 @@ class Rhythm:
             overlap_previous_measure(self.voice, components, time_signatures)
         elif not do_not_extend:
             self.voice.extend(components)
-        for pleaf in baca.select.pleaves(components):
-            abjad.attach(baca.enums.NOT_YET_PITCHED, pleaf)
         return components
 
     def mmrests(self, *arguments, head=False):
@@ -278,6 +276,12 @@ def attach_bgs(counts, grace_lists):
                 result.append(count)
             i += 1
     return result
+
+
+def attach_not_yet_pitched(score):
+    assert isinstance(score, abjad.Score)
+    for pleaf in baca.select.pleaves(score):
+        abjad.attach(baca.enums.NOT_YET_PITCHED, pleaf)
 
 
 def attach_obgcs(counts, grace_lists):

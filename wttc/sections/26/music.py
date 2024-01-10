@@ -713,6 +713,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     GT2(voices.gt2, meters)
     VN(voices.vn, meters)
     VC(voices.vc, meters)
+    library.attach_not_yet_pitched(score)
     library.force_repeat_tie(score)
     baca.section.reapply_persistent_indicators(
         voices,

@@ -236,6 +236,8 @@ def OB(voice, meters):
         container = abjad.BeforeGraceContainer("e'16")
         abjad.attach(container, plt.head)
     rhythm.mmrests(14, 16)
+    for pleaf in baca.select.pleaves(voice):
+        abjad.attach(baca.enums.NOT_YET_PITCHED, pleaf)
     library.annotate(voice, 3)
 
 
@@ -1198,6 +1200,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     GT2(voices.gt2, meters)
     VN(voices.vn, meters)
     VC(voices.vc, meters)
+    library.attach_not_yet_pitched(score)
     library.force_repeat_tie(score)
     baca.section.reapply_persistent_indicators(
         voices,
