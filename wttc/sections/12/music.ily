@@ -1191,6 +1191,8 @@ number.12.Rests = {
 number.12.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
@@ -1207,7 +1209,7 @@ number.12.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    f'2. * 1/2
+    b'2. * 1/2
       %! REAPPLIED_DYNAMIC_COLOR
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
@@ -1229,7 +1231,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
@@ -1239,34 +1243,46 @@ number.12.AltoFlute.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        f'16 * 672/1024
+        b'16 * 672/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"672" #"1024"
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'16 * 1408/1024
+        b'16 * 1408/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
 
-        f'16 * 1920/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1920/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1920" #"1024"
 
-        f'16 * 2368/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2368/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2368" #"1024"
 
-        f'16 * 2784/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2784/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2784" #"1024"
 
-        f'16 * 3136/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3136/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3136" #"1024"
         ]
@@ -1275,14 +1291,18 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 2]
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -1291,9 +1311,11 @@ number.12.AltoFlute.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1301,9 +1323,11 @@ number.12.AltoFlute.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1312,9 +1336,11 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 3]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1322,9 +1348,11 @@ number.12.AltoFlute.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1332,20 +1360,26 @@ number.12.AltoFlute.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'4
+    b'4
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 4]
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     \repeatTie
@@ -1354,7 +1388,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
@@ -1364,42 +1400,58 @@ number.12.AltoFlute.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        f'16 * 816/2048
+        b'16 * 816/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"816" #"2048"
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'16 * 1728/2048
+        b'16 * 1728/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1728" #"2048"
 
-        f'16 * 2400/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2400/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2400" #"2048"
 
-        f'16 * 2976/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2976/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2976" #"2048"
 
-        f'16 * 3504/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3504/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3504" #"2048"
 
-        f'16 * 3936/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3936/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3936" #"2048"
 
-        f'16 * 4368/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 4368/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"4368" #"2048"
 
-        f'16 * 4848/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 4848/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"4848" #"2048"
         ]
@@ -1410,15 +1462,19 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 5]
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -1427,9 +1483,11 @@ number.12.AltoFlute.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1437,20 +1495,26 @@ number.12.AltoFlute.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    f'8.
+    b'8.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'4
+    b'4
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 6]
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     \repeatTie
@@ -1459,7 +1523,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
@@ -1469,58 +1535,82 @@ number.12.AltoFlute.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        f'16 * 448/1024
+        b'16 * 448/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"448" #"1024"
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'16 * 896/1024
+        b'16 * 896/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
 
-        f'16 * 1248/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1248/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1248" #"1024"
 
-        f'16 * 1536/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1536/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1536" #"1024"
 
-        f'16 * 1792/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1792/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1792" #"1024"
 
-        f'16 * 2048/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2048/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2048" #"1024"
 
-        f'16 * 2272/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2272/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2272" #"1024"
 
-        f'16 * 2496/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2496/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2496" #"1024"
 
-        f'16 * 2688/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2688/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2688" #"1024"
 
-        f'16 * 2880/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2880/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2880" #"1024"
 
-        f'16 * 3072/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3072/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3072" #"1024"
 
-        f'16 * 3200/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3200/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3200" #"1024"
         ]
@@ -1531,19 +1621,23 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 8]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'16
+    b'16
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -1555,9 +1649,11 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 9]
     r2.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    f'2. * 1/2
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1565,12 +1661,16 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 10]
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1578,11 +1678,15 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1590,12 +1694,16 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 11]
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1603,11 +1711,15 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1615,12 +1727,16 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 12]
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1628,7 +1744,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
@@ -1638,50 +1756,70 @@ number.12.AltoFlute.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #right
-        f'16 * 28992/5120
+        b'16 * 28992/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28992" #"5120"
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'16 * 15744/5120
+        b'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
 
-        f'16 * 13056/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13056/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13056" #"5120"
 
-        f'16 * 11328/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 11328/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11328" #"5120"
 
-        f'16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        f'16 * 9600/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9600/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9600" #"5120"
 
-        f'16 * 9024/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9024/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9024" #"5120"
 
-        f'16 * 8640/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8640/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8640" #"5120"
 
-        f'16 * 8256/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8256/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
-        f'16 * 7872/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
         ]
@@ -1694,49 +1832,69 @@ number.12.AltoFlute.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #right
-        f'16 * 28992/5120
+        b'16 * 28992/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28992" #"5120"
         [
 
-        f'16 * 15744/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
 
-        f'16 * 13056/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13056/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13056" #"5120"
 
-        f'16 * 11328/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 11328/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11328" #"5120"
 
-        f'16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        f'16 * 9600/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9600/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9600" #"5120"
 
-        f'16 * 9024/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9024/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9024" #"5120"
 
-        f'16 * 8640/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8640/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8640" #"5120"
 
-        f'16 * 8256/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8256/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight burlywood
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'16 * 7872/5120
+        b'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
         ]
@@ -1745,15 +1903,21 @@ number.12.AltoFlute.Music = {
     }
     \revert TupletNumber.text
 
-    f'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     - \tweak stencil ##f
     ~
 
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    f'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
 
     % [AltoFlute.Music measure 15]
@@ -1761,39 +1925,53 @@ number.12.AltoFlute.Music = {
     \stopStaffHighlight
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    f'8
+    b'8
     - \tweak stencil ##f
     ~
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    f'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    f'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'4
+    b'4
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 16]
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     \repeatTie
@@ -1802,7 +1980,9 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
@@ -1812,58 +1992,82 @@ number.12.AltoFlute.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        f'16 * 448/1024
+        b'16 * 448/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"448" #"1024"
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'16 * 896/1024
+        b'16 * 896/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
 
-        f'16 * 1248/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1248/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1248" #"1024"
 
-        f'16 * 1536/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1536/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1536" #"1024"
 
-        f'16 * 1792/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1792/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1792" #"1024"
 
-        f'16 * 2048/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2048/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2048" #"1024"
 
-        f'16 * 2272/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2272/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2272" #"1024"
 
-        f'16 * 2496/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2496/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2496" #"1024"
 
-        f'16 * 2688/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2688/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2688" #"1024"
 
-        f'16 * 2880/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2880/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2880" #"1024"
 
-        f'16 * 3072/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3072/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3072" #"1024"
 
-        f'16 * 3200/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3200/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3200" #"1024"
         ]
@@ -1874,15 +2078,19 @@ number.12.AltoFlute.Music = {
     \revert TupletNumber.text
 
     % [AltoFlute.Music measure 18]
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -1909,9 +2117,11 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 22]
     r2.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    f'2. * 1/2
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1919,16 +2129,20 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
     % [AltoFlute.Music measure 23]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'2. * 1/2
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -1936,22 +2150,28 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 24]
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -1965,59 +2185,83 @@ number.12.AltoFlute.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    f'8
+    b'8
     - \tweak stencil ##f
     ~
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 26]
-    f'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    f'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    f'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 27]
-    f'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    f'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    f'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 28]
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -2027,9 +2271,11 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 29]
     r2.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    f'2. * 1/2
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -2037,22 +2283,28 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 30]
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -2067,9 +2319,11 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 32]
     r2.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    f'2. * 1/2
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -2077,22 +2331,28 @@ number.12.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    f'2. * 1/2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 33]
-    f'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    f'8.
+    b'8.
     ]
 
       %! STAFF_HIGHLIGHT
@@ -2102,35 +2362,59 @@ number.12.AltoFlute.Music = {
     r1.
 
     % [AltoFlute.Music measure 34]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    f'2.
+    b'2.
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
     % [AltoFlute.Music measure 35]
-    f'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
     % [AltoFlute.Music measure 36]
-    f'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
 
-    f'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     \repeatTie
 
     % [AltoFlute.Music measure 37]
@@ -2427,9 +2711,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 2]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2437,9 +2723,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2447,9 +2735,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2458,9 +2748,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 3]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2468,9 +2760,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2478,9 +2772,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2491,47 +2787,67 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 4]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 28992/5120
+        b'16 * 28992/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28992" #"5120"
         [
 
-        c''16 * 15744/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
 
-        c''16 * 13056/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13056/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13056" #"5120"
 
-        c''16 * 11328/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 11328/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11328" #"5120"
 
-        c''16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        c''16 * 9600/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9600/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9600" #"5120"
 
-        c''16 * 9024/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9024/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9024" #"5120"
 
-        c''16 * 8640/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8640/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8640" #"5120"
 
-        c''16 * 8256/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8256/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
-        c''16 * 7872/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
         ]
@@ -2544,9 +2860,11 @@ number.12.Guitar.1.Music = {
     \stopStaffHighlight
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2554,9 +2872,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2564,9 +2884,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2577,47 +2899,67 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 6]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 28992/5120
+        b'16 * 28992/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28992" #"5120"
         [
 
-        c''16 * 15744/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
 
-        c''16 * 13056/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13056/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13056" #"5120"
 
-        c''16 * 11328/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 11328/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11328" #"5120"
 
-        c''16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        c''16 * 9600/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9600/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9600" #"5120"
 
-        c''16 * 9024/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9024/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9024" #"5120"
 
-        c''16 * 8640/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8640/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8640" #"5120"
 
-        c''16 * 8256/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8256/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
-        c''16 * 7872/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
         ]
@@ -2631,29 +2973,41 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 7]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        c''16 * 672/1024
+        b'16 * 672/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"672" #"1024"
         [
 
-        c''16 * 1408/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1408/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
 
-        c''16 * 1920/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1920/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1920" #"1024"
 
-        c''16 * 2368/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2368/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2368" #"1024"
 
-        c''16 * 2784/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2784/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2784" #"1024"
 
-        c''16 * 3136/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3136/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3136" #"1024"
         ]
@@ -2666,9 +3020,11 @@ number.12.Guitar.1.Music = {
     \stopStaffHighlight
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2676,13 +3032,17 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
     [
     ~
 
-    c''16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     ]
 
       %! STAFF_HIGHLIGHT
@@ -2693,9 +3053,11 @@ number.12.Guitar.1.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2706,9 +3068,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 9]
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2716,9 +3080,11 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2728,13 +3094,17 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
     [
     ~
 
-    c''16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     ]
 
       %! STAFF_HIGHLIGHT
@@ -2746,9 +3116,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 10]
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2756,9 +3128,11 @@ number.12.Guitar.1.Music = {
 
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -2772,27 +3146,37 @@ number.12.Guitar.1.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 5616/1024
+        b'16 * 5616/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"5616" #"1024"
         [
 
-        c''16 * 3024/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3024/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3024" #"1024"
 
-        c''16 * 2496/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2496/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2496" #"1024"
 
-        c''16 * 2208/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2208/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2208" #"1024"
 
-        c''16 * 2016/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2016/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2016" #"1024"
         ]
@@ -2829,47 +3213,67 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 16]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 28992/5120
+        b'16 * 28992/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28992" #"5120"
         [
 
-        c''16 * 15744/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
 
-        c''16 * 13056/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13056/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13056" #"5120"
 
-        c''16 * 11328/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 11328/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11328" #"5120"
 
-        c''16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        c''16 * 9600/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9600/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9600" #"5120"
 
-        c''16 * 9024/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9024/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9024" #"5120"
 
-        c''16 * 8640/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8640/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8640" #"5120"
 
-        c''16 * 8256/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8256/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
-        c''16 * 7872/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
         ]
@@ -2883,29 +3287,41 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 17]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        c''16 * 672/1024
+        b'16 * 672/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"672" #"1024"
         [
 
-        c''16 * 1408/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1408/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
 
-        c''16 * 1920/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1920/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1920" #"1024"
 
-        c''16 * 2368/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2368/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2368" #"1024"
 
-        c''16 * 2784/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2784/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2784" #"1024"
 
-        c''16 * 3136/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3136/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3136" #"1024"
         ]
@@ -3070,47 +3486,67 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 22]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 28992/5120
+        b'16 * 28992/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28992" #"5120"
         [
 
-        c''16 * 15744/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15744/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"5120"
 
-        c''16 * 13056/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13056/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13056" #"5120"
 
-        c''16 * 11328/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 11328/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11328" #"5120"
 
-        c''16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        c''16 * 9600/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9600/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9600" #"5120"
 
-        c''16 * 9024/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 9024/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"9024" #"5120"
 
-        c''16 * 8640/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8640/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8640" #"5120"
 
-        c''16 * 8256/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8256/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8256" #"5120"
 
-        c''16 * 7872/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 7872/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"7872" #"5120"
         ]
@@ -3124,29 +3560,41 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 23]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        c''16 * 672/1024
+        b'16 * 672/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"672" #"1024"
         [
 
-        c''16 * 1408/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1408/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
 
-        c''16 * 1920/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1920/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1920" #"1024"
 
-        c''16 * 2368/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2368/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2368" #"1024"
 
-        c''16 * 2784/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2784/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2784" #"1024"
 
-        c''16 * 3136/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3136/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3136" #"1024"
         ]
@@ -3309,9 +3757,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 28]
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3325,18 +3775,22 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 30]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 31]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3344,17 +3798,21 @@ number.12.Guitar.1.Music = {
 
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3368,9 +3826,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 33]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c''8.
+    b'8.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3378,17 +3838,21 @@ number.12.Guitar.1.Music = {
 
     r4.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3396,9 +3860,11 @@ number.12.Guitar.1.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3407,9 +3873,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 34]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3419,17 +3887,21 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3438,9 +3910,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 35]
     r8.
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3449,9 +3923,11 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 36]
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3459,17 +3935,21 @@ number.12.Guitar.1.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3647,6 +4127,8 @@ number.12.Guitar.2.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
         c''16 * 5376/11264
           %! DURATION_MULTIPLIER
@@ -3654,47 +4136,67 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        c''16 * 11520/11264
+        b'16 * 11520/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"11520" #"11264"
 
-        c''16 * 15744/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15744/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15744" #"11264"
 
-        c''16 * 19584/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 19584/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"19584" #"11264"
 
-        c''16 * 22656/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 22656/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"22656" #"11264"
 
-        c''16 * 25728/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 25728/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"25728" #"11264"
 
-        c''16 * 28800/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 28800/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"28800" #"11264"
 
-        c''16 * 31488/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 31488/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"31488" #"11264"
 
-        c''16 * 34176/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 34176/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"34176" #"11264"
 
-        c''16 * 36480/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 36480/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"36480" #"11264"
 
-        c''16 * 38784/11264
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 38784/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"38784" #"11264"
         ]
@@ -3708,7 +4210,7 @@ number.12.Guitar.2.Music = {
     \times 3/5
     {
 
-        c''4
+        b'4
         \repeatTie
 
           %! STAFF_HIGHLIGHT
@@ -3748,6 +4250,8 @@ number.12.Guitar.2.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #right
         c''16 * 4000/1024
           %! DURATION_MULTIPLIER
@@ -3755,27 +4259,37 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        c''16 * 2176/1024
+        b'16 * 2176/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2176" #"1024"
 
-        c''16 * 1792/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1792/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1792" #"1024"
 
-        c''16 * 1568/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1568/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1568" #"1024"
 
-        c''16 * 1440/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1440/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1440" #"1024"
 
-        c''16 * 1312/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1312/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1312" #"1024"
         ]
@@ -3807,6 +4321,8 @@ number.12.Guitar.2.Music = {
     ~
 
     % [Guitar.2.Music measure 8]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
     c''8
 
       %! STAFF_HIGHLIGHT
@@ -3817,13 +4333,17 @@ number.12.Guitar.2.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''8
+    b'8
     - \tweak stencil ##f
     ~
 
-    c''16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -3837,13 +4357,17 @@ number.12.Guitar.2.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    b'16
     [
     ~
 
-    c''16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     ]
 
       %! STAFF_HIGHLIGHT
@@ -3855,13 +4379,17 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 10]
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''8
+    b'8
     - \tweak stencil ##f
     ~
 
-    c''16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -3876,31 +4404,43 @@ number.12.Guitar.2.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 10000/2048
+        b'16 * 10000/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10000" #"2048"
         [
 
-        c''16 * 5440/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 5440/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"5440" #"2048"
 
-        c''16 * 4480/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 4480/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"4480" #"2048"
 
-        c''16 * 3920/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3920/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3920" #"2048"
 
-        c''16 * 3600/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3600/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3600" #"2048"
 
-        c''16 * 3280/2048
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 3280/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"3280" #"2048"
         ]
@@ -3951,6 +4491,8 @@ number.12.Guitar.2.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #right
         c''16 * 4000/1024
           %! DURATION_MULTIPLIER
@@ -3958,23 +4500,33 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
-        c''16 * 2176/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2176/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2176" #"1024"
 
-        c''16 * 1792/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1792/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1792" #"1024"
 
-        c''16 * 1568/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1568/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1568" #"1024"
 
-        c''16 * 1440/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1440/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1440" #"1024"
 
-        c''16 * 1312/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1312/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1312" #"1024"
         ]
@@ -4163,31 +4715,43 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 22]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight orange
         \once \override Beam.grow-direction = #right
-        c''16 * 4000/1024
+        b'16 * 4000/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"4000" #"1024"
         [
 
-        c''16 * 2176/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 2176/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2176" #"1024"
 
-        c''16 * 1792/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1792/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1792" #"1024"
 
-        c''16 * 1568/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1568/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1568" #"1024"
 
-        c''16 * 1440/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1440/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1440" #"1024"
 
-        c''16 * 1312/1024
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 1312/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1312" #"1024"
         ]
@@ -4200,45 +4764,65 @@ number.12.Guitar.2.Music = {
     \times 1/1
     {
 
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         \once \override Beam.grow-direction = #left
-        c''16 * 2880/5120
+        b'16 * 2880/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"2880" #"5120"
         [
 
-        c''16 * 6144/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 6144/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"6144" #"5120"
 
-        c''16 * 8448/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 8448/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"8448" #"5120"
 
-        c''16 * 10368/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 10368/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"10368" #"5120"
 
-        c''16 * 12096/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 12096/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"12096" #"5120"
 
-        c''16 * 13824/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 13824/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"13824" #"5120"
 
-        c''16 * 15168/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 15168/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"15168" #"5120"
 
-        c''16 * 16704/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 16704/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"16704" #"5120"
 
-        c''16 * 18048/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 18048/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"18048" #"5120"
 
-        c''16 * 19200/5120
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16 * 19200/5120
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"19200" #"5120"
         ]
@@ -4409,9 +4993,11 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 28]
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4432,9 +5018,11 @@ number.12.Guitar.2.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4450,9 +5038,11 @@ number.12.Guitar.2.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4460,9 +5050,11 @@ number.12.Guitar.2.Music = {
 
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    c''8
+    b'8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4471,9 +5063,11 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 34]
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4482,9 +5076,11 @@ number.12.Guitar.2.Music = {
     r1
 
     % [Guitar.2.Music measure 35]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4495,9 +5091,11 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 36]
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4505,9 +5103,11 @@ number.12.Guitar.2.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c''16
+    b'16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4626,109 +5226,156 @@ number.12.Violin.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    c'8
+    b'8
     - \tweak stencil ##f
     ~
 
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Violin.Music measure 14]
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     \repeatTie
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Violin.Music measure 15]
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     \repeatTie
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 16]
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4750,108 +5397,154 @@ number.12.Violin.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    c'8
+    b'8
     - \tweak stencil ##f
     ~
 
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 20]
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     \repeatTie
 
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
     - \tweak stencil ##f
     ~
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 21]
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     \repeatTie
 
     % [Violin.Music measure 22]
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
     - \tweak stencil ##f
     ~
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
     ]
 
     % [Violin.Music measure 23]
@@ -4869,59 +5562,83 @@ number.12.Violin.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    c'8
+    b'8
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Violin.Music measure 26]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Violin.Music measure 27]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Violin.Music measure 28]
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4954,97 +5671,155 @@ number.12.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Violin.Music measure 34]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    c'2.
+    b'2.
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
     % [Violin.Music measure 35]
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
     % [Violin.Music measure 36]
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'8
+    b'8
     [
     - \tweak stencil ##f
     ~
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     ]
 
     % [Violin.Music measure 37]
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     ]
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     ]
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
     [
     - \tweak stencil ##f
     ~
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'32
     ]
 
       %! ANCHOR_NOTE
@@ -5151,19 +5926,23 @@ number.12.Cello.Music = {
 
     r16
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
-    c'8.
+    d8.
     - \tweak stencil ##f
     ~
 
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 6]
-    c'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -5172,7 +5951,7 @@ number.12.Cello.Music = {
     \times 2/3
     {
 
-        c'4
+        d4
         \repeatTie
 
           %! STAFF_HIGHLIGHT
@@ -5300,23 +6079,31 @@ number.12.Cello.Music = {
     ~
 
     % [Cello.Music measure 10]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 11]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
     c'1.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 12]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
     c'1.
     \repeatTie
 
     % [Cello.Music measure 13]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5324,80 +6111,112 @@ number.12.Cello.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    c'8
+    d8
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 14]
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     ]
     - \tweak stencil ##f
     ~
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 15]
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     \repeatTie
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     [
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'16
+    d16
     ]
     ~
 
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d2.
 
     % [Cello.Music measure 16]
     c'2.
@@ -5559,101 +6378,145 @@ number.12.Cello.Music = {
     }
 
     % [Cello.Music measure 20]
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    c'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     [
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
     ]
     ~
 
     % [Cello.Music measure 21]
-    c'2
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d2
     - \tweak stencil ##f
     ~
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     [
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
     ]
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 22]
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     \repeatTie
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
     [
     \repeatTie
 
-    c'8.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8.
     ]
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 23]
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -5766,117 +6629,167 @@ number.12.Cello.Music = {
 
     r8
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    c'8
+    d8
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 26]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 27]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     \repeatTie
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     ]
     - \tweak stencil ##f
     ~
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 28]
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     \repeatTie
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight orange
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    c'4
+    d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 29]
-    c'1.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1.
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Cello.Music measure 30]
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 31]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Cello.Music measure 32]
-    c'1.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1.
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Cello.Music measure 33]
-    c'\breve
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d\breve
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Cello.Music measure 34]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Cello.Music measure 35]
-    c'1
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d1
+    - \tweak direction #up
+    \repeatTie
     - \tweak stencil ##f
     ~
-    \repeatTie
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     \repeatTie
 
     % [Cello.Music measure 36]
@@ -5886,69 +6799,105 @@ number.12.Cello.Music = {
 
     r4
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    c'8
+    d8
     [
     - \tweak stencil ##f
     ~
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     ]
 
     % [Cello.Music measure 37]
-    c'2.
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d2.
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     ]
 
-    c'4
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d4
     - \tweak stencil ##f
     ~
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     ]
 
-    c'8
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d8
     [
     - \tweak stencil ##f
     ~
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     \repeatTie
 
-    c'16
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d16
 
-    c'32
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    d32
     ]
 
       %! ANCHOR_NOTE
