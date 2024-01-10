@@ -771,6 +771,7 @@ number.4.AltoFlute.Music = {
         % [AltoFlute.Music measure 2]
         \override TupletBracket.staff-padding = 1
         g''8
+        \revert DynamicLineSpanner.staff-padding
         \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
@@ -785,7 +786,6 @@ number.4.AltoFlute.Music = {
         \!
           %! SPANNER_STOP
         \stopTrillSpan
-        \revert DynamicLineSpanner.staff-padding
 
         \override DynamicLineSpanner.staff-padding = 4
           %! STAFF_HIGHLIGHT

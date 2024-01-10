@@ -549,8 +549,8 @@ def annotate(cache):
 def fl(m):
     @baca.call
     def block():
-        plts = baca.select.plts(m.leaves())
-        plts = library.filter_material(plts, 1)
+        leaves = library.filter_material(m.leaves(), 1)
+        plts = baca.select.plts(leaves)
         baca.pitch(plts[:5], "G3")
         baca.pitch(plts[5:11], "Eb4")
         baca.pitch(plts[11:], "D4")
@@ -601,14 +601,11 @@ def fl(m):
         baca.override.dls_staff_padding(plts[9], 3)
         baca.override.dls_staff_padding(plts[11], 3)
 
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[1])
-        plts = library.filter_material(plts, 3)
+    def graced_trill(plts, nongrace_pitch, grace_pitch):
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
         for nongrace_plt in nongrace_plts:
-            baca.pitch(nongrace_plt, "D5")
+            baca.pitch(nongrace_plt, nongrace_pitch)
             if 1 < len(nongrace_plt):
                 nongrace_plt = baca.select.rleak(nongrace_plt)
             baca.trill_spanner(
@@ -616,42 +613,48 @@ def fl(m):
                 alteration="M2",
                 staff_padding=5.5,
             )
-        baca.override.tie_down(plts)
-        graces = baca.select.pleaves(plts, grace=True)
-        baca.pitch(graces, "Eb4")
-        pleaves = baca.select.pleaves(m[1])[:4]
-        baca.override.tuplet_bracket_staff_padding(pleaves, 1),
-        hairpin_leaves = baca.select.rleak(plts[1:])
+        grace_plts = baca.select.pleaves(plts, grace=True)
+        baca.pitch(grace_plts, grace_pitch)
+
+    @baca.call
+    def block():
+        leaves = library.filter_material(m.leaves(), 3)
+        runs = abjad.select.runs(leaves)
+        assert len(runs) == 6
+        plts = baca.select.plts(runs[0])
+        graced_trill(plts, "D5", "Eb4")
+        baca.override.tie_down(runs[0])
         baca.hairpin(
-            hairpin_leaves,
+            (),
             "p < f >o niente",
-            pieces=baca.select.lparts(hairpin_leaves, [7, 3]),
+            pieces=baca.select.lparts(baca.select.rleak(runs[0][1:]), [7, 3]),
         )
-        baca.override.dls_staff_padding(hairpin_leaves, 6)
+
+    @baca.call
+    def block():
+        baca.override.dls_staff_padding(
+            abjad.select.run(m.leaves(), 1)[3:],
+            6,
+        )
+
+    @baca.call
+    def block():
+        baca.override.tuplet_bracket_staff_padding(
+            baca.select.pleaves(m[1])[:4],
+            1,
+        )
 
     @baca.call
     def block():
         plts = baca.select.plts(m[2])
         plts = library.filter_material(plts, 3)
-        nongraces = baca.select.pleaves(plts, grace=False)
-        nongrace_plts = baca.select.plts(nongraces)
-        for nongrace_plt in nongrace_plts:
-            baca.pitch(nongrace_plt, "D5")
-            if 1 < len(nongrace_plt):
-                nongrace_plt = baca.select.rleak(nongrace_plt)
-            baca.trill_spanner(
-                nongrace_plt,
-                alteration="M2",
-                staff_padding=5.5,
-            )
+        graced_trill(plts, "D5", "Eb4")
         baca.override.tie_down(plts)
-        graces = baca.select.pleaves(plts, grace=True)
-        baca.pitch(graces, "Eb4")
         pleaves = baca.select.pleaves(m[2])[:5]
         baca.override.tuplet_bracket_staff_padding(pleaves, 1),
         hairpin_leaves = baca.select.rleak(plts)
         baca.hairpin(
-            hairpin_leaves,
+            (),
             "p < f >o niente",
             pieces=baca.select.lparts(hairpin_leaves, [5, 3]),
         )
@@ -821,7 +824,11 @@ def gt1(cache):
         baca.hairpin(notes, "p pp")
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
-        baca.hairpin(notes, "p pp ppp", pieces=baca.select.lparts(notes, [1, 2]))
+        baca.hairpin(
+            (),
+            "p pp ppp",
+            pieces=baca.select.lparts(notes, [1, 2]),
+        )
 
     @baca.call
     def block():
