@@ -788,18 +788,18 @@ def make_layout():
     spacing = baca.make_layout(
         baca.page(
             1,
-            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=12, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=12, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         baca.page(
             2,
-            baca.system(measure=20, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=27, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=20, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=27, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         baca.page(
             3,
-            baca.system(measure=33, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=40, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=33, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=40, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         spacing=(1, 24),
         overrides=[

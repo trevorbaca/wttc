@@ -772,13 +772,13 @@ def make_layout():
     spacing = baca.make_layout(
         baca.page(
             1,
-            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=15, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=15, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         baca.page(
             2,
-            baca.system(measure=31, y_offset=10, distances=(15, 20, 20, 20)),
-            baca.system(measure=41, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=31, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=41, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         spacing=(1, 20),
         overrides=[baca.space((13, 22), (1, 24))],

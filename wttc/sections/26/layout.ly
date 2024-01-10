@@ -22,7 +22,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #28
               %! BREAK
@@ -152,7 +152,7 @@
 
             % [PageLayout measure 11]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20)
+            \baca-lbsd #160 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #28
               %! BREAK
@@ -258,7 +258,7 @@
 
             % [PageLayout measure 19]
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #28
               %! BREAK
@@ -364,7 +364,7 @@
 
             % [PageLayout measure 27]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20)
+            \baca-lbsd #160 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #24
               %! BREAK
@@ -444,7 +444,7 @@
 
             % [PageLayout measure 33]
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #24
               %! BREAK
