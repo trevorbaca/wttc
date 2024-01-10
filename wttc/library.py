@@ -756,6 +756,21 @@ def overlap_previous_measure(
     voice.extend(components)
 
 
+def pleaves(leaves, material_number):
+    if isinstance(leaves, baca.section.DictionaryGetItemWrapper):
+        leaves = leaves.leaves()
+    pleaves = filter_material(leaves, material_number)
+    return pleaves
+
+
+def plts(leaves, material_number):
+    if isinstance(leaves, baca.section.DictionaryGetItemWrapper):
+        leaves = leaves.leaves()
+    plts = baca.select.plts(leaves)
+    plts = filter_material(plts, material_number)
+    return plts
+
+
 def replace(voice, component, string):
     index = voice.index(component)
     container = abjad.Container(string)
@@ -821,6 +836,14 @@ def rotate_rehearsal_mark_literal(leaf):
             r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
         ],
     )
+
+
+def runs(leaves, material_number):
+    if isinstance(leaves, baca.section.DictionaryGetItemWrapper):
+        leaves = leaves.leaves()
+    pleaves = filter_material(leaves, material_number)
+    runs = abjad.select.runs(pleaves)
+    return runs
 
 
 def series_g(width, offset, start, length):

@@ -52,14 +52,13 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[1 - 1],
         "B",
-        abjad.Tweak(r"\tweak padding 1.5"),
         font_size=6,
+        padding=1.5,
     )
 
 
 def attach_B_1b_graces(voice, *, do_not_attach_before_grace=False):
-    plts = baca.select.plts(voice)
-    plts = library.filter_material(plts, 1)
+    plts = library.plts(voice, 1)
     for plt in plts:
         if do_not_attach_before_grace is not True:
             container = abjad.BeforeGraceContainer("d'8")
@@ -710,8 +709,7 @@ def VC(voice, meters):
         extra_counts=[2],
         material=99,
     )
-    plts = baca.select.plts(voice)
-    plts = library.filter_material(plts, 1)
+    plts = library.plts(voice, 1)
     attach_B_1b_graces(plts[0])
     attach_B_1b_graces(plts[1])
     attach_B_1b_graces(plts[2])
@@ -762,8 +760,7 @@ def B_3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
 def fl(m):
     @baca.call
     def block():
-        pleaves = library.filter_material(m.leaves(), 1)
-        plts = baca.select.plts(pleaves)
+        plts = library.plts(m, 1)
         baca.pitch(plts[:5], "G3")
         baca.pitch(plts[5:11], "Eb4")
         baca.pitch(plts[11:], "D4")
@@ -816,8 +813,7 @@ def fl(m):
 
     @baca.call
     def block():
-        pleaves = library.filter_material(m.leaves(), 3)
-        runs = abjad.select.runs(pleaves)
+        runs = library.runs(m, 3)
         assert len(runs) == 6
         B_3(runs[0], "D5", "Eb4")
         B_3(runs[1], "D5", "Eb4")
@@ -906,8 +902,7 @@ def fl(m):
 def ob(m):
     @baca.call
     def block():
-        pleaves = library.filter_material(m.leaves(), 3)
-        runs = abjad.select.runs(pleaves)
+        runs = library.runs(m, 3)
         assert len(runs) == 5
         plts = baca.select.plts(runs[0])
         B_3(plts, "D5", "Eb4")
@@ -1149,9 +1144,9 @@ def gt2(cache):
 
     @baca.call
     def block():
-        material_2(library.filter_material(m[1, 3], 2), "D5", "p mp f")
-        material_2(library.filter_material(m[6, 8], 2), "D#5", "f mf mp f")
-        material_2(library.filter_material(m[14, 15], 2), "F#5", "p mp p")
+        material_2(library.pleaves(m[1, 3], 2), "D5", "p mp f")
+        material_2(library.pleaves(m[6, 8], 2), "D#5", "f mf mp f")
+        material_2(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
 
     def upbows(leaves, dynamics):
         plts = baca.select.plts(leaves)
@@ -1167,19 +1162,19 @@ def gt2(cache):
     @baca.call
     def block():
         upbows(
-            library.filter_material(m[1, 3], 1),
+            library.pleaves(m[1, 3], 1),
             baca.dynamics.linear("mf ff", effort=True),
         )
         upbows(
-            library.filter_material(m[5, 6], 1),
+            library.pleaves(m[5, 6], 1),
             baca.dynamics.linear("ff mf", effort=True),
         )
         upbows(
-            library.filter_material(m[8], 1),
+            library.pleaves(m[8], 1),
             '"ff"',
         )
         upbows(
-            library.filter_material(m[11], 1),
+            library.pleaves(m[11], 1),
             '"mf"',
         )
 
@@ -1193,14 +1188,13 @@ def gt2(cache):
 
     @baca.call
     def block():
-        material_4(library.filter_material(m[4], 4), "D#4", "mf")
-        material_4(library.filter_material(m[9], 4), "D4 Db4", "mf mp")
-        material_4(library.filter_material(m[12], 4), "G3 Gb3 F3", "mf mp p")
+        material_4(library.pleaves(m[4], 4), "D#4", "mf")
+        material_4(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
+        material_4(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
 
     @baca.call
     def block():
-        pleaves = library.filter_material(m.leaves(), 5)
-        runs = abjad.select.runs(pleaves)
+        runs = library.runs(m, 5)
         dynamic_strings = [
             "f mf mp",
             "mf mp",
@@ -1216,8 +1210,7 @@ def gt2(cache):
 def vn(m):
     @baca.call
     def block():
-        plts = baca.select.plts(m[1, 3])
-        plts = library.filter_material(plts, 1)
+        plts = library.plts(m[1, 3], 1)
         B_1b(plts, "III", "B4 A4 C5", "mp mf f")
 
     @baca.call
