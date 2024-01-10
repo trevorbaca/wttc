@@ -4823,10 +4823,18 @@ number.4.Cello.Music = {
 
         r4
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
         d16
         ~
 
@@ -4865,10 +4873,18 @@ number.4.Cello.Music = {
         % [Cello.Music measure 3]
         r16
 
+        \grace {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight orange
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight orange
         \afterGrace
         d8
         {

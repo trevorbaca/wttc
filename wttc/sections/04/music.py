@@ -57,9 +57,7 @@ def GLOBALS(skips):
     )
 
 
-def attach_B_1b_graces(
-    voice, *, do_not_attach_after_grace=False, do_not_attach_before_grace=False
-):
+def attach_B_1b_graces(voice, *, do_not_attach_before_grace=False):
     plts = baca.select.plts(voice)
     plts = library.filter_material(plts, 1)
     for plt in plts:
@@ -67,10 +65,9 @@ def attach_B_1b_graces(
             container = abjad.BeforeGraceContainer("d'8")
             library.annotate(container, 1)
             abjad.attach(container, plt.head)
-        if do_not_attach_after_grace is not True:
-            container = abjad.AfterGraceContainer("e'8")
-            library.annotate(container, 1)
-            abjad.attach(container, plt[-1])
+        container = abjad.AfterGraceContainer("e'8")
+        library.annotate(container, 1)
+        abjad.attach(container, plt[-1])
 
 
 def FL(voice, meters):
@@ -717,8 +714,8 @@ def VC(voice, meters):
     plts = library.filter_material(plts, 1)
     attach_B_1b_graces(plts[0])
     attach_B_1b_graces(plts[1])
-    attach_B_1b_graces(plts[2], do_not_attach_before_grace=True)
-    attach_B_1b_graces(plts[3], do_not_attach_before_grace=True)
+    attach_B_1b_graces(plts[2])
+    attach_B_1b_graces(plts[3])
     attach_B_1b_graces(plts[4])
     attach_B_1b_graces(plts[5])
     attach_B_1b_graces(plts[6])
@@ -1318,14 +1315,14 @@ def make_layout():
         baca.page(
             1,
             baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            # baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=4, y_offset=160, distances=(15, 20, 20, 20)),
         ),
         baca.page(
             2,
             baca.system(measure=8, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            # baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=12, y_offset=160, distances=(15, 20, 20, 20)),
         ),
-        spacing=(1, 32),
+        spacing=(1, 48),
     )
     baca.section.make_layout_ly(spacing)
 
