@@ -59,91 +59,134 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    components = rhythm.make_one_beat_tuplets(
-        meters(1),
-        [-1, 1, -2, -2, 3, 4, 3, 2, 1],
-        extra_counts=[0, -1, -1, -1, -1, -1],
-    )
-    for plt in baca.select.plts(components)[-4:]:
-        container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.head)
-    leaf = abjad.select.leaf(components, -1)
-    baca.tie(leaf)
-    components = rhythm.make_one_beat_tuplets(
-        meters(2),
-        [1, -1, 1, -2, 2, 1, 3, 1],
-        extra_counts=[-1],
-    )
-    for plt in baca.select.plts(components)[-3:]:
-        container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.head)
-    leaf = abjad.select.leaf(components, -1)
-    baca.tie(leaf)
-    components = rhythm.make_one_beat_tuplets(
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(1),
+            [-1, 1, -2, -2, 3, 4, 3, 2, 1],
+            extra_counts=[0, -1, -1, -1, -1, -1],
+        )
+        plts = baca.select.plts(components)
+        library.annotate(plts[:2], 1)
+        library.annotate(plts[2:], 3)
+        for plt in baca.select.plts(components)[-4:]:
+            container = abjad.BeforeGraceContainer("e'16")
+            library.annotate(container, 3)
+            abjad.attach(container, plt.head)
+        leaf = abjad.select.leaf(components, -1)
+        baca.tie(leaf)
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(2),
+            [1, -1, 1, -2, 2, 1, 3, 1],
+            extra_counts=[-1],
+        )
+        pleaves = baca.select.pleaves(components)
+        library.annotate(pleaves[:1], 3)
+        library.annotate(pleaves[1:4], 1)
+        library.annotate(pleaves[4:], 3)
+        for plt in baca.select.plts(components)[-3:]:
+            container = abjad.BeforeGraceContainer("e'16")
+            library.annotate(container, 3)
+            abjad.attach(container, plt.head)
+        leaf = abjad.select.leaf(components, -1)
+        baca.tie(leaf)
+
+    rhythm.make_one_beat_tuplets(
         meters(3),
-        [1, -2, -2, 4],
+        [1, "-"],
         extra_counts=[-1],
+        material=3,
     )
-    # container = abjad.AfterGraceContainer("e'16")
-    # leaf = abjad.select.leaf(components, -1)
-    # abjad.attach(container, leaf)
+    rhythm.make_one_beat_tuplets(
+        meters(3),
+        [4],
+        extra_counts=[-1],
+        material=1,
+        overlap=[-5],
+    )
     rhythm(
         meters(4),
         [4, "-"],
+        material=3,
     )
     rhythm(
         meters(4, 5),
         [3, -2, 3, "-"],
+        material=1,
         overlap=[-15],
     )
     rhythm(
         meters(6),
         [-1, 3, "-"],
+        material=1,
     )
     rhythm(
         meters(7),
         ["-", t(3)],
+        material=1,
     )
     rhythm(
         meters(8),
         [1, "-"],
+        material=1,
     )
     rhythm(
         meters(8),
         [T([-2, BG([1], t(4))], -2), t(4)],
+        material=3,
         overlap=[-4],
     )
     rhythm.make_one_beat_tuplets(
         meters(9),
         [10, "-"],
         extra_counts=[-1],
+        material=3,
     )
     rhythm(
         meters(10),
         ["-", 1, -4],
+        material=1,
     )
-    components = rhythm.make_one_beat_tuplets(
-        meters(11, 13),
-        [-2, 8, 4, 14, -2, -3],
-        extra_counts=[-1],
-    )
-    for plt in baca.select.plts(components)[-2:]:
-        container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.head)
-    components = rhythm.make_one_beat_tuplets(
-        meters(14),
-        [-4, -1, 1, -2, -1, 5],
-        extra_counts=[0, 0, -1, -1],
-    )
-    leaf = abjad.select.leaf(components, -1)
-    baca.tie(leaf)
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(11, 13),
+            [-2, 8, 4, 14, -2, -3],
+            extra_counts=[-1],
+        )
+        plts = baca.select.plts(components)
+        library.annotate(plts[:1], 1)
+        library.annotate(plts[1:], 3)
+        for plt in baca.select.plts(components)[-2:]:
+            container = abjad.BeforeGraceContainer("e'16")
+            library.annotate(container, 3)
+            abjad.attach(container, plt.head)
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(14),
+            [-4, -1, 1, -2, -1, 5],
+            extra_counts=[0, 0, -1, -1],
+            material=1,
+        )
+        leaf = abjad.select.leaf(components, -1)
+        baca.tie(leaf)
+
     rhythm(
         meters(15),
         [4, "-"],
+        material=1,
     )
     rhythm(
         meters(15, 16),
         [BG([2], 16), "-"],
+        material=3,
         overlap=[-4],
     )
 
@@ -653,32 +696,6 @@ def VC(voice, meters):
         extra_counts=[2],
         material=99,
     )
-
-
-def annotate(cache):
-    @baca.call
-    def block():
-        m = cache["fl"]
-        ungraced_runs, graced_runs = [], []
-        runs = abjad.select.runs(m.leaves())
-        for run in runs:
-            ungraced_run, graced_run = [], []
-            found_grace = False
-            for leaf in run:
-                if abjad.get.grace(leaf) is True:
-                    found_grace = True
-                if found_grace is True:
-                    graced_run.append(leaf)
-                else:
-                    ungraced_run.append(leaf)
-            if ungraced_run:
-                ungraced_runs.append(ungraced_run)
-            if graced_run:
-                graced_runs.append(graced_run)
-        graced_runs.append(ungraced_runs[4][-1:])
-        ungraced_runs[4] = ungraced_runs[4][:-1]
-        library.annotate(ungraced_runs, 1)
-        library.annotate(graced_runs, 3)
 
 
 def B_1b():
@@ -1194,7 +1211,6 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    annotate(cache)
     library.highlight_staves(cache)
     library.check_material_annotations(score)
     fl(cache["fl"])
