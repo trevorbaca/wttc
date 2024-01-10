@@ -623,11 +623,28 @@ def fl(m):
         assert len(runs) == 6
         plts = baca.select.plts(runs[0])
         graced_trill(plts, "D5", "Eb4")
+        graced_trill(runs[1], "D5", "Eb4")
+        baca.pitch(runs[2], "D5")
+        baca.trill_spanner(
+            baca.select.rleak(runs[2]),
+            alteration="M2",
+            staff_padding=5.5,
+        )
         baca.override.tie_down(runs[0])
+        baca.override.tie_down(runs[1])
         baca.hairpin(
             (),
             "p < f >o niente",
             pieces=baca.select.lparts(baca.select.rleak(runs[0][1:]), [7, 3]),
+        )
+        baca.hairpin(
+            (),
+            "p < f >o niente",
+            pieces=baca.select.lparts(baca.select.rleak(runs[1]), [5, 3]),
+        )
+        baca.hairpin(
+            baca.select.rleak(runs[2]),
+            "f >o niente",
         )
 
     @baca.call
@@ -640,6 +657,10 @@ def fl(m):
             abjad.select.run(m.leaves(), 3)[2:],
             6,
         )
+        baca.override.dls_staff_padding(
+            abjad.select.leaves(m[4])[:2],
+            3,
+        )
 
     @baca.call
     def block():
@@ -647,37 +668,10 @@ def fl(m):
             baca.select.pleaves(m[1])[:4],
             1,
         )
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[2])
-        plts = library.filter_material(plts, 3)
-        graced_trill(plts, "D5", "Eb4")
-        baca.override.tie_down(plts)
-        pleaves = baca.select.pleaves(m[2])[:5]
-        baca.override.tuplet_bracket_staff_padding(pleaves, 1),
-        hairpin_leaves = baca.select.rleak(plts)
-        baca.hairpin(
-            (),
-            "p < f >o niente",
-            pieces=baca.select.lparts(hairpin_leaves, [5, 3]),
+        baca.override.tuplet_bracket_staff_padding(
+            baca.select.pleaves(m[2])[:5],
+            1,
         )
-
-    @baca.call
-    def block():
-        plts = baca.select.plts(m[4])[:1]
-        baca.pitch(plts, "D5")
-        rplts = baca.select.rleak(plts)
-        baca.trill_spanner(
-            rplts,
-            alteration="M2",
-            staff_padding=5.5,
-        )
-        baca.hairpin(
-            rplts,
-            "f >o niente",
-        )
-        baca.override.dls_staff_padding(rplts, 3)
 
 
 def ob(m):
