@@ -654,9 +654,23 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
             af'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \p
               %! COVERED_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanCovered
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \<
             \revert TupletBracket.staff-padding
 
         }
@@ -665,20 +679,6 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \pitchedTrill
         g''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        \p
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \<
         ~
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -700,8 +700,6 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     \pitchedTrill
     g''4
-      %! SPANNER_STOP
-    \stopTrillSpan
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -730,6 +728,8 @@ number.4.AltoFlute.Music = {
         \grace {
 
             af'!16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
@@ -870,8 +870,6 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \pitchedTrill
         g''8
-          %! SPANNER_STOP
-        \stopTrillSpan
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -880,6 +878,8 @@ number.4.AltoFlute.Music = {
         \grace {
 
             af'!16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
@@ -1584,8 +1584,10 @@ number.4.Oboe.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4.5
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override TupletBracket.direction = #up
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-ob-markup
@@ -1611,15 +1613,34 @@ number.4.Oboe.Music = {
 
         \grace {
 
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
-            e'16
+            ef'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \p
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \<
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+          %! SPANNER_START
+        \pitchedTrill
+        d''4
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
 
     }
 
@@ -1629,24 +1650,36 @@ number.4.Oboe.Music = {
 
         \grace {
 
-            e'16
+            ef'!16
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+          %! SPANNER_START
+        \pitchedTrill
+        d''4
+          %! SPANNER_STOP
+        \stopTrillSpan
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
 
         \grace {
 
-            e'16
+            ef'!16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+          %! SPANNER_START
+        \pitchedTrill
+        d''8
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
 
     }
 
@@ -1654,31 +1687,63 @@ number.4.Oboe.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+        d''4
 
         \grace {
 
-            e'16
+            ef'!16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+          %! SPANNER_START
+        \pitchedTrill
+        d''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    d''4
+    \revert Tie.direction
 
     % [Oboe.Music measure 2]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -1686,26 +1751,71 @@ number.4.Oboe.Music = {
 
         \grace {
 
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
-            e'16
+            ef'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \p
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \<
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+          %! SPANNER_START
+        \pitchedTrill
+        d''4
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
 
         \grace {
 
-            e'16
+            ef'!16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+          %! SPANNER_START
+        \pitchedTrill
+        d''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
 
     }
 
@@ -1713,19 +1823,24 @@ number.4.Oboe.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+        d''4
 
         \grace {
 
-            e'16
+            ef'!16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+          %! SPANNER_START
+        \pitchedTrill
+        d''8
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan e''
+        \revert Tie.direction
 
     }
 
@@ -1733,6 +1848,15 @@ number.4.Oboe.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -1742,24 +1866,100 @@ number.4.Oboe.Music = {
 
         \grace {
 
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
-            e'16
+            d'16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \p
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \<
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+          %! SPANNER_START
+        \pitchedTrill
+        cs''!8
+        ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan ds''
 
     }
 
-    % [Oboe.Music measure 4]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Oboe.Music measure 4]
+        cs''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \f
+        [
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+        \grace {
+
+            d'16
+              %! SPANNER_STOP
+            \stopTrillSpan
+
+        }
+
+          %! SPANNER_START
+        \pitchedTrill
+        cs''!8
+        ]
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan ds''
+        \revert Tie.direction
+
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+        r8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_STOP
+        \stopTrillSpan
+
+    }
+
+    r2.
 
     % [Oboe.Music measure 5]
     R1 * 4/4
@@ -1789,29 +1989,52 @@ number.4.Oboe.Music = {
 
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
-            e'16
+            df'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \f
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak circled-tip ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak to-barline ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \>
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+          %! SPANNER_START
+        \pitchedTrill
+        c''4
         - \tweak stencil ##f
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan d''
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    c''4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Oboe.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
+    c''2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -1820,14 +2043,21 @@ number.4.Oboe.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        c''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
@@ -1852,29 +2082,52 @@ number.4.Oboe.Music = {
 
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
-            e'16
+            b16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \f
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak circled-tip ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak to-barline ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \>
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+          %! SPANNER_START
+        \pitchedTrill
+        bf'!4
         - \tweak stencil ##f
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan c''
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
+    bf'2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Oboe.Music measure 13]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
+    bf'2
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -1883,14 +2136,21 @@ number.4.Oboe.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        bf'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
@@ -1910,6 +2170,8 @@ number.4.Oboe.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
 
 }
 
