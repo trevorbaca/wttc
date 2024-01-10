@@ -30,6 +30,8 @@ class M:
 class Material:
     number: int
 
+    context: typing.ClassVar[str] = "Staff"
+
 
 def OBGC(grace_note_numerators, nongrace_note_numerator):
     return baca.OBGC(
