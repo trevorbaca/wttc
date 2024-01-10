@@ -337,9 +337,9 @@ def VN(voice, meters):
             extra_counts=[-1],
             material=1,
         )
-        leaf = abjad.select.leaf(components, 0)
-        abjad.detach(library.Material, leaf)
-        library.annotate([leaf], 2)
+        note = abjad.select.leaf(components, 0)
+        abjad.detach(library.Material, note)
+        library.annotate([note], 2)
 
     rhythm(
         meters(20),
@@ -391,8 +391,8 @@ def VC(voice, meters):
         group = abjad.select.group_by_measure(voice)[7 - 1]
         library.replace(voice, group[-1], "r4 r8. c'16")
         group = abjad.select.group_by_measure(voice)[7 - 1]
-        leaf = abjad.select.leaf(group, -1)
-        library.annotate([leaf], 3)
+        note = abjad.select.leaf(group, -1)
+        library.annotate([note], 3)
 
     rhythm.mmrests(10, 18)
 

@@ -236,9 +236,7 @@ def OB(voice, meters):
         container = abjad.BeforeGraceContainer("e'16")
         abjad.attach(container, plt.head)
     rhythm.mmrests(14, 16)
-    # library.annotate(voice, 3)
-    pleaves = baca.select.pleaves(voice)
-    library.annotate(pleaves, 3)
+    library.annotate(voice, 3)
 
 
 def GT1(voice, meters):
