@@ -419,11 +419,17 @@ def filter_material(items, n):
     result = []
     for item in items:
         for leaf in abjad.select.leaves(item):
+            if not isinstance(leaf, abjad.Note | abjad.Chord):
+                break
             material = abjad.get.indicator(leaf, Material)
-            if material is None or material.number != n:
+            if material is None:
+                break
+            if material.number != n:
                 break
         else:
             result.append(item)
+    leaves = abjad.select.leaves(result)
+    assert all(isinstance(_, abjad.Note | abjad.Chord) for _ in leaves)
     return result
 
 
