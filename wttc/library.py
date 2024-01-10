@@ -257,6 +257,10 @@ def annotate(items, n):
     assert n in (1, 2, 3, 4, 5, 99), repr(n)
     for item in items:
         for leaf in abjad.select.leaves(item):
+            if isinstance(leaf, abjad.Rest):
+                # TODO: activate
+                # raise Exception(leaf)
+                pass
             abjad.attach(Material(n), leaf)
 
 

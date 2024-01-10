@@ -193,7 +193,9 @@ def OB(voice, meters):
         container = abjad.BeforeGraceContainer("e'16")
         abjad.attach(container, plt.head)
     rhythm.mmrests(14, 16)
-    library.annotate(voice, 3)
+    # library.annotate(voice, 3)
+    pleaves = baca.select.pleaves(voice)
+    library.annotate(pleaves, 3)
 
 
 def GT1(voice, meters):
@@ -336,68 +338,128 @@ def GT1(voice, meters):
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.make_one_beat_tuplets(
-        meters(1),
-        [-1, 3, -1, -1, 1, -3, -5, -1, 1, -3, "-"],
-        extra_counts=[1],
-    )
-    rhythm.make_one_beat_tuplets(
-        meters(2),
-        [4, -1, 1, -4, "-"],
-        extra_counts=[1],
-    )
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(1),
+            [-1, 3, -1, -1, 1, -3, -5, -1, 1, -3, "-"],
+            extra_counts=[1],
+        )
+        plts = baca.select.plts(components)
+        library.annotate(plts[:1], 1)
+        library.annotate(plts[1:], 2)
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(2),
+            [4, -1, 1, -4, "-"],
+            extra_counts=[1],
+        )
+        plts = baca.select.plts(components)
+        library.annotate(plts[:1], 1)
+        library.annotate(plts[1:], 2)
+
     rhythm.make_one_beat_tuplets(
         meters(3),
         [-3, 3, "-"],
         extra_counts=[1],
+        material=1,
     )
     rhythm(
         meters(4),
         [1, "-"],
+        material=4,
     )
     rhythm.make_one_beat_tuplets(
         meters(5),
         [-1, 4, -2, 3, "-"],
         extra_counts=[1],
+        material=1,
     )
-    rhythm.make_one_beat_tuplets(
-        meters(6),
-        [2, -3, -1, 1, -2, 1, 1, -4, -1, 3],
-        extra_counts=[1, 1, 1, 0],
-    )
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(6),
+            [2, -3, -1, 1, -2, 1, 1, -4, -1, 3],
+            extra_counts=[1, 1, 1, 0],
+        )
+        plts = baca.select.plts(components)
+        library.annotate(plts[:1], 1)
+        library.annotate(plts[1:4], 2)
+        library.annotate(plts[4:], 5)
+
     rhythm(
         meters(7),
         [4, t(12)],
+        material=5,
     )
-    rhythm.make_one_beat_tuplets(
-        meters(8),
-        [1, 2, -1, 1, "-"],
-        extra_counts=[1],
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(8),
+            [1, 2, -1, 1, "-"],
+            extra_counts=[1],
+        )
+        pleaves = baca.select.pleaves(components)
+        library.annotate(pleaves[:1], 5)
+        library.annotate(pleaves[1:2], 1)
+        library.annotate(pleaves[2:], 2)
+
+    rhythm(
+        meters(9),
+        [1, -3, 1, "-"],
+        material=4,
     )
     rhythm(
         meters(9, 10),
-        [1, -3, 1, -3, -4, -1, 7, t(12)],
+        [7, t(12)],
+        material=5,
+        overlap=[-13],
     )
-    rhythm.make_one_beat_tuplets(
-        meters(11),
-        [3, 4, -3, "-"],
-        extra_counts=[1],
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(11),
+            [3, 4, -3, "-"],
+            extra_counts=[1],
+        )
+        pleaves = baca.select.pleaves(components)
+        library.annotate(pleaves[:1], 5)
+        library.annotate(pleaves[1:], 1)
+
+    rhythm(
+        meters(12),
+        3 * [1, -3] + ["-"],
+        material=4,
     )
     rhythm(
         meters(12, 13),
-        [1, -3, 1, -3, 1, -3, -1, 15, t(4)],
+        [15, t(4)],
+        material=5,
+        overlap=[-13],
     )
-    components = rhythm.make_one_beat_tuplets(
-        meters(14),
-        [4, 1, 1, -2, 1, "-"],
-        extra_counts=[0, 1, 1, 1],
-    )
-    leaf = abjad.select.leaf(components, 0)
-    baca.tie(leaf)
-    components = rhythm.make_one_beat_tuplets(
+
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(14),
+            [6, 1, -2, 1, "-"],
+            extra_counts=[1],
+        )
+        pleaves = baca.select.pleaves(components)
+        library.annotate(pleaves[:2], 5)
+        library.annotate(pleaves[2:], 2)
+
+    rhythm.make_one_beat_tuplets(
         meters(15),
         [-5, -5, -1, 1, -3, "-"],
         extra_counts=[1],
+        material=2,
     )
     rhythm.mmrests(16)
 
@@ -617,27 +679,6 @@ def annotate(cache):
         ungraced_runs[4] = ungraced_runs[4][:-1]
         library.annotate(ungraced_runs, 1)
         library.annotate(graced_runs, 3)
-
-    @baca.call
-    def block():
-        m = cache["gt2"]
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, ">=1/8", preprolated=True)
-        library.annotate(plts, 1)
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, "1/16", preprolated=True)
-        library.annotate(plts, 2)
-        notes = abjad.select.notes(m.leaves())
-        notes = baca.select.untupletted(notes)
-        notes = baca.select.duration(notes, "1/16")
-        library.annotate(notes, 4)
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.untupletted_first_leaf(plts)
-        plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
-        runs = abjad.select.runs(plts)
-        library.annotate(runs, 5)
 
 
 def B_1b():
@@ -1039,6 +1080,7 @@ def gt2(cache):
     m = cache[name]
 
     def material_2(notes, pitch, dynamics):
+        notes = abjad.select.notes(notes)
         dynamics = dynamics.split()
         assert len(notes) == len(dynamics)
         baca.pitch(notes, "D5")
@@ -1082,6 +1124,7 @@ def gt2(cache):
         )
 
     def material_4(notes, pitch, dynamics):
+        notes = abjad.select.notes(notes)
         dynamics = dynamics.split()
         baca.pitches(notes, pitch)
         for note, dynamic in zip(notes, dynamics, strict=True):
