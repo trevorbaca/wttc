@@ -719,8 +719,8 @@ def B_3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
 def fl(m):
     @baca.call
     def block():
-        leaves = library.filter_material(m.leaves(), 1)
-        plts = baca.select.plts(leaves)
+        pleaves = library.filter_material(m.leaves(), 1)
+        plts = baca.select.plts(pleaves)
         baca.pitch(plts[:5], "G3")
         baca.pitch(plts[5:11], "Eb4")
         baca.pitch(plts[11:], "D4")
@@ -773,8 +773,8 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m.leaves(), 3)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m.leaves(), 3)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 6
         B_3(runs[0], "D5", "Eb4")
         B_3(runs[1], "D5", "Eb4")
@@ -863,8 +863,8 @@ def fl(m):
 def ob(m):
     @baca.call
     def block():
-        leaves = library.filter_material(m.leaves(), 3)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m.leaves(), 3)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 5
         plts = baca.select.plts(runs[0])
         B_3(plts, "D5", "Eb4")
@@ -1156,8 +1156,8 @@ def gt2(cache):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m.leaves(), 5)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m.leaves(), 5)
+        runs = abjad.select.runs(pleaves)
         dynamic_strings = [
             "f mf mp",
             "mf mp",

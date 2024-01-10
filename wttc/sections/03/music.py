@@ -406,8 +406,8 @@ def fl(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m.leaves(), 1)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m.leaves(), 1)
+        runs = abjad.select.runs(pleaves)
         baca.pitch(runs[0], "F#4")
         baca.pitch(runs[1], "F4")
         baca.pitch(runs[2], "E4")
@@ -515,11 +515,10 @@ def gt1(m):
     @baca.call
     def block():
         pleaves = library.filter_material(m[1, 7], 1)
-        notes = abjad.select.notes(pleaves)
-        baca.pitches(notes, "Db5 Bb4 Ab4 F4")
-        baca.laissez_vibrer(notes)
-        baca.dynamic(notes[0], "f")
-        baca.dynamic(notes[2], "mf")
+        baca.pitches(pleaves, "Db5 Bb4 Ab4 F4")
+        baca.laissez_vibrer(pleaves)
+        baca.dynamic(pleaves[0], "f")
+        baca.dynamic(pleaves[2], "mf")
 
     @baca.call
     def block():
@@ -561,9 +560,9 @@ def gt2(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[11, 13], 99)
-        baca.staff_position(leaves, 0)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[11, 13], 99)
+        baca.staff_position(pleaves, 0)
+        runs = abjad.select.runs(pleaves)
         for run in runs:
             baca.staff_lines(run[0], 1)
             leaf = abjad.get.leaf(run[-1], 1)
@@ -590,8 +589,8 @@ def vn(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m.leaves(), 1)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m.leaves(), 1)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 5
         baca.pitches(runs[0], "D4 F4")
         baca.pitches(runs[1], "D4 F#4")
@@ -632,8 +631,8 @@ def vn(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[1, 7], 2)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[1, 7], 2)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 4
         baca.flat_glissando(
             runs[0],
@@ -699,8 +698,8 @@ def vn(m):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[11, 13], 99)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[11, 13], 99)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 4
         dynamics = "mp p p pp".split()
         for run, dynamic in zip(runs, dynamics, strict=True):
@@ -791,8 +790,8 @@ def vc(cache):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[1, 7], 2)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[1, 7], 2)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 4
         for run in runs:
             circle_bow_spanner(run)
@@ -839,8 +838,8 @@ def vc(cache):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[7, 13], 3)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[7, 13], 3)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 3
         parts = baca.select.lparts(runs[0], [2, 4, 3, 2])
         baca.scp_spanner(
@@ -908,8 +907,8 @@ def vc(cache):
 
     @baca.call
     def block():
-        leaves = library.filter_material(m[11, 13], 99)
-        runs = abjad.select.runs(leaves)
+        pleaves = library.filter_material(m[11, 13], 99)
+        runs = abjad.select.runs(pleaves)
         assert len(runs) == 3
         dynamics = "mp p pp".split()
         for run, dynamic in zip(runs, dynamics, strict=True):
