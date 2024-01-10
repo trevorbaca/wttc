@@ -601,7 +601,7 @@ def fl(m):
         baca.override.dls_staff_padding(plts[9], 3)
         baca.override.dls_staff_padding(plts[11], 3)
 
-    def graced_trill(plts, nongrace_pitch, grace_pitch):
+    def graced_trill(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
         nongraces = baca.select.pleaves(plts, grace=False)
         nongrace_plts = baca.select.plts(nongraces)
         for nongrace_plt in nongrace_plts:
@@ -611,7 +611,7 @@ def fl(m):
             baca.trill_spanner(
                 nongrace_plt,
                 alteration="M2",
-                staff_padding=5.5,
+                staff_padding=staff_padding,
             )
         grace_plts = baca.select.pleaves(plts, grace=True)
         baca.pitch(grace_plts, grace_pitch)
@@ -624,12 +624,15 @@ def fl(m):
         plts = baca.select.plts(runs[0])
         graced_trill(plts, "D5", "Eb4")
         graced_trill(runs[1], "D5", "Eb4")
-        baca.pitch(runs[2], "D5")
+        baca.pitch(runs[2], "C#5")
         baca.trill_spanner(
             baca.select.rleak(runs[2]),
             alteration="M2",
             staff_padding=5.5,
         )
+        graced_trill(runs[3], "C5", "Db4")
+        graced_trill(runs[4], "Bb4", "B3")
+        graced_trill(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.hairpin(
@@ -646,6 +649,22 @@ def fl(m):
             baca.select.rleak(runs[2]),
             "f >o niente",
         )
+        baca.hairpin(
+            runs[3],
+            "f |>o niente",
+        )
+        baca.override.dls_staff_padding(runs[3], 3)
+        baca.hairpin(
+            runs[4],
+            "f |>o niente",
+        )
+        baca.override.dls_staff_padding(runs[4], 3)
+        baca.hairpin(
+            (),
+            "sfpp < p >o niente",
+            pieces=baca.select.lparts(baca.select.rleak(runs[5][1:]), [1, 2]),
+        )
+        baca.override.dls_staff_padding(runs[5], 3)
 
     @baca.call
     def block():
@@ -672,6 +691,19 @@ def fl(m):
             baca.select.pleaves(m[2])[:5],
             1,
         )
+        baca.override.tuplet_bracket_staff_padding(
+            m[8, 9],
+            1,
+        )
+        baca.override.tuplet_bracket_staff_padding(
+            m[12, 13],
+            1,
+        )
+
+    @baca.call
+    def block():
+        baca.override.tuplet_bracket_up(m[8, 9])
+        baca.override.tuplet_bracket_up(m[12, 13])
 
 
 def ob(m):
@@ -866,6 +898,19 @@ def gt2(cache):
 
     m = cache[name]
 
+    def material_2(notes, pitch, dynamics):
+        dynamics = dynamics.split()
+        assert len(notes) == len(dynamics)
+        baca.pitch(notes, "D5")
+        for note, dynamic in zip(notes, dynamics, strict=True):
+            baca.dynamic(note, dynamic)
+
+    @baca.call
+    def block():
+        material_2(library.filter_material(m[1, 3], 2), "D5", "p mp f")
+        material_2(library.filter_material(m[6, 8], 2), "D#5", "f mf mp f")
+        material_2(library.filter_material(m[14, 15], 2), "F#5", "p mp p")
+
     def upbows(leaves, dynamics):
         plts = baca.select.plts(leaves)
         dynamics = dynamics.split()
@@ -895,6 +940,19 @@ def gt2(cache):
             library.filter_material(m[11], 1),
             '"mf"',
         )
+
+    def material_4(notes, pitch, dynamics):
+        dynamics = dynamics.split()
+        baca.pitches(notes, pitch)
+        for note, dynamic in zip(notes, dynamics, strict=True):
+            baca.dynamic(note, dynamic)
+        baca.flageolet(notes)
+
+    @baca.call
+    def block():
+        material_4(library.filter_material(m[4], 4), "D#4", "mf")
+        material_4(library.filter_material(m[9], 4), "D4 Db4", "mf mp")
+        material_4(library.filter_material(m[12], 4), "G3 Gb3 F3", "mf mp p")
 
     @baca.call
     def block():

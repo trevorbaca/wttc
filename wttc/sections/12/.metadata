@@ -34,7 +34,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="p",
+                value="niente",
             )
         ],
         "AltoFlute.Staff": [
@@ -158,7 +158,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [

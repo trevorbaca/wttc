@@ -1009,7 +1009,7 @@ number.4.AltoFlute.Music = {
     \stopStaffHighlight
       %! SPANNER_START
     \pitchedTrill
-    g''4
+    fs''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1036,7 +1036,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
-    \startTrillSpan a''
+    \startTrillSpan gs''
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1155,6 +1155,8 @@ number.4.AltoFlute.Music = {
     ~
 
     % [AltoFlute.Music measure 8]
+    \override TupletBracket.direction = #up
+    \override TupletBracket.staff-padding = 1
     af'16
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
@@ -1174,25 +1176,55 @@ number.4.AltoFlute.Music = {
 
         \slashedGrace {
 
+            \override DynamicLineSpanner.staff-padding = 3
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
-            f'16
+            gf'!16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \f
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak circled-tip ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak to-barline ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \>
 
         }
 
-        f'4
+          %! SPANNER_START
+        \pitchedTrill
+        f''4
         - \tweak stencil ##f
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan g''
 
     }
 
-    f'4
+    f''4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 9]
-    f'2.
+    f''2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -1201,12 +1233,24 @@ number.4.AltoFlute.Music = {
     \times 2/3
     {
 
-        f'8
+        f''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
         \repeatTie
+        \revert DynamicLineSpanner.staff-padding
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \stopTrillSpan
+        \revert TupletBracket.direction
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -1267,25 +1311,57 @@ number.4.AltoFlute.Music = {
     {
 
         % [AltoFlute.Music measure 12]
+        \override TupletBracket.direction = #up
+        \override TupletBracket.staff-padding = 1
         af'8
         \repeatTie
 
         \grace {
 
+            \override DynamicLineSpanner.staff-padding = 3
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
-            a'16
+            e'16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_STOP
+            \f
               %! COVERED_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanCovered
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak circled-tip ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak to-barline ##t
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \>
 
         }
 
-        f'4
+          %! SPANNER_START
+        \pitchedTrill
+        ef''!4
         - \tweak stencil ##f
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan f''
 
     }
 
@@ -1293,26 +1369,34 @@ number.4.AltoFlute.Music = {
     \times 2/3
     {
 
-        f'4
+        ef''4
         \repeatTie
 
         \grace {
 
-            a'16
+            e'16
+              %! SPANNER_STOP
+            \stopTrillSpan
 
         }
 
-        f'8
+          %! SPANNER_START
+        \pitchedTrill
+        ef''!8
         ~
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTrillSpan f''
 
     }
 
-    f'2
+    ef''2
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 13]
-    f'2
+    ef''2
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -1321,16 +1405,28 @@ number.4.AltoFlute.Music = {
     \times 2/3
     {
 
-        f'8
+        ef''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
         \repeatTie
+        \revert DynamicLineSpanner.staff-padding
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
     r4
+    \revert TupletBracket.direction
+    \revert TupletBracket.staff-padding
 
     % [AltoFlute.Music measure 14]
     r4
@@ -1391,28 +1487,79 @@ number.4.AltoFlute.Music = {
 
     \slashedGrace {
 
+        \override DynamicLineSpanner.staff-padding = 3
           %! STAFF_HIGHLIGHT
         \staffHighlight lightgreen
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        f'8
+        cs'!8
           %! COVERED_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanCovered
 
     }
 
-    f'2.
+      %! SPANNER_START
+    \pitchedTrill
+    d''2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \baca-sfpp
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan e''
 
     % [AltoFlute.Music measure 16]
-    f'4
+    d''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
@@ -2721,7 +2868,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2739,7 +2891,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2811,7 +2968,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -2893,7 +3055,13 @@ number.4.Guitar.2.Music = {
     % [Guitar.2.Music measure 4]
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    ds''!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3078,7 +3246,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3086,7 +3259,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
 
     }
 
@@ -3094,7 +3272,12 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -3193,7 +3376,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
 
     }
 
@@ -3204,7 +3392,13 @@ number.4.Guitar.2.Music = {
     % [Guitar.2.Music measure 9]
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    d''16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3212,7 +3406,13 @@ number.4.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    df''!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3323,7 +3523,13 @@ number.4.Guitar.2.Music = {
     % [Guitar.2.Music measure 12]
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    g'16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3331,7 +3537,13 @@ number.4.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    gf'!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3339,7 +3551,13 @@ number.4.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    c''16
+    f'16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3389,7 +3607,12 @@ number.4.Guitar.2.Music = {
         \staffHighlight deepskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
         ]
 
           %! STAFF_HIGHLIGHT
@@ -3398,7 +3621,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
 
     }
 
@@ -3417,7 +3645,12 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight deepskyblue
-        c''16
+        d'''16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
