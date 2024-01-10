@@ -332,12 +332,6 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    """
-    rhythm(
-        meters(1),
-        [T([-2, 2, -2], -2), 1, -3, -3, 1, "-"],
-    )
-    """
     rhythm(
         meters(1),
         [T([-2, 2, -2], -2), "-"],
@@ -349,12 +343,6 @@ def VN(voice, meters):
         material=2,
         overlap=[-4],
     )
-    """
-    rhythm(
-        meters(2),
-        [T([-4, 2], -2), -4, -1, 1, -2, "-"],
-    )
-    """
     rhythm(
         meters(2),
         [T([-4, 2], -2), "-"],
@@ -366,12 +354,6 @@ def VN(voice, meters):
         material=2,
         overlap=[-4],
     )
-    """
-    rhythm(
-        meters(3),
-        [T([2, -4], -2), -3, 1, "-"],
-    )
-    """
     rhythm(
         meters(3),
         [T([2, -4], -2), "-"],
@@ -398,12 +380,6 @@ def VN(voice, meters):
         [-4, -3, 1, -2, 1, -1, "-"],
         material=2,
     )
-    """
-    rhythm(
-        meters(7),
-        [-4, -1, 1, -2, -4, T([-4, 2], -2)],
-    )
-    """
     rhythm(
         meters(7),
         [-4, -1, 1, -2, -4, "-"],
@@ -461,51 +437,87 @@ def VC(voice, meters):
         meters(1, 2),
         [-3, 2, -4, 4, -2, -14, 1 + 2, -3, -15],
         extra_counts=[1],
+        material=1,
+    )
+    rhythm(
+        meters(3),
+        [T([-1, 2, -2], -1), "-"],
+        material=1,
     )
     rhythm(
         meters(3, 5),
-        [T([-1, 2, -2], -1), -1, 4, 4, 4, 4, 4, 4, -3, -4, T([-3, 2], -1), -4],
+        [-1, 4, 4, 4, 4, 4, 4, "-"],
+        material=4,
+        overlap=[-4],
+    )
+    rhythm(
+        meters(5),
+        [-3, -4, T([-3, 2], -1), -4],
+        material=1,
+        overlap=[-1],
     )
     rhythm(
         meters(6),
         [-4, T([-2, 2, -1], -1), -8],
+        material=1,
     )
     rhythm(
         meters(7),
         [-12, T([-4, t(1)], -1)],
+        material=1,
     )
     rhythm(
         meters(8),
-        [T([2, -3], -1), -4, -1, t(3)],
+        [T([2, -3], -1), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(8),
+        [-4, -1, t(3)],
+        material=4,
+        overlap=[-4],
     )
     rhythm(
         meters(9),
         [1, 4, 4, 4, t(3)],
+        material=4,
     )
     rhythm(
         meters(10),
-        [1, -3, -8, T([-3, 1, -1], -1)],
+        [1, "-"],
+        material=4,
+    )
+    rhythm(
+        meters(10),
+        [-3, -8, T([-3, 1, -1], -1)],
+        material=1,
+        overlap=[-1],
     )
     rhythm(
         meters(11, 12),
         [-4, -4, -1, 4, 4, 4, 4, t(3)],
+        material=4,
     )
     rhythm(
         meters(13),
         [1, "-"],
+        material=4,
     )
     rhythm(
         meters(14),
         [T([-1, 1, -4], "6:4"), "-"],
+        material=99,
     )
     rhythm(
         meters(15),
         [T([-1, 1, t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        material=99,
     )
     rhythm.make_one_beat_tuplets(
         meters(16),
         [-1, 1, 4 + 4, 2, -3, 2, -2, 2, -1, 2],
         extra_counts=[2],
+        material=99,
     )
 
 
@@ -575,18 +587,6 @@ def annotate(cache):
         plts = [_ for _ in plts if abjad.Duration(3, 16) <= _.head.written_duration]
         runs = abjad.select.runs(plts)
         library.annotate(runs, 5)
-
-    @baca.call
-    def block():
-        m = cache["vc"]
-        plts = baca.select.plts(m[1, 13])
-        plts = baca.select.tupletted_first_leaf(plts)
-        library.annotate(plts, 1)
-        leaves = baca.select.untupletted(m[1, 13])
-        runs = abjad.select.runs(leaves)
-        library.annotate(runs, 4)
-        runs = abjad.select.runs(m[14, 16])
-        library.annotate(runs, 99)
 
 
 def B_1b():
