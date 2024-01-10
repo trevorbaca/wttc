@@ -636,6 +636,10 @@ def fl(m):
             abjad.select.run(m.leaves(), 1)[3:],
             6,
         )
+        baca.override.dls_staff_padding(
+            abjad.select.run(m.leaves(), 3)[2:],
+            6,
+        )
 
     @baca.call
     def block():
@@ -658,7 +662,6 @@ def fl(m):
             "p < f >o niente",
             pieces=baca.select.lparts(hairpin_leaves, [5, 3]),
         )
-        baca.override.dls_staff_padding(hairpin_leaves, 6)
 
     @baca.call
     def block():

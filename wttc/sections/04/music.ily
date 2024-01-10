@@ -953,6 +953,7 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
+        \revert DynamicLineSpanner.staff-padding
         \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
@@ -960,7 +961,6 @@ number.4.AltoFlute.Music = {
         r4
           %! SPANNER_STOP
         \stopTrillSpan
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
