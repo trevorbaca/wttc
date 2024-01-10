@@ -193,6 +193,7 @@ def OB(voice, meters):
         container = abjad.BeforeGraceContainer("e'16")
         abjad.attach(container, plt.head)
     rhythm.mmrests(14, 16)
+    library.annotate(voice, 3)
 
 
 def GT1(voice, meters):
@@ -331,64 +332,126 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
+    """
     rhythm(
         meters(1),
         [T([-2, 2, -2], -2), 1, -3, -3, 1, "-"],
     )
+    """
+    rhythm(
+        meters(1),
+        [T([-2, 2, -2], -2), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(1),
+        [1, -3, -3, 1, "-"],
+        material=2,
+        overlap=[-4],
+    )
+    """
     rhythm(
         meters(2),
         [T([-4, 2], -2), -4, -1, 1, -2, "-"],
     )
+    """
+    rhythm(
+        meters(2),
+        [T([-4, 2], -2), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(2),
+        [-4, -1, 1, -2, "-"],
+        material=2,
+        overlap=[-4],
+    )
+    """
     rhythm(
         meters(3),
         [T([2, -4], -2), -3, 1, "-"],
     )
+    """
+    rhythm(
+        meters(3),
+        [T([2, -4], -2), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(3),
+        [-3, 1, "-"],
+        material=2,
+        overlap=[-4],
+    )
     rhythm(
         meters(4),
         [-12, T([-2, 2, -2], -2)],
+        material=1,
     )
     rhythm(
         meters(5),
         [T([-4, 2], -2), T([4, -2], -2), -8],
+        material=1,
     )
     rhythm(
         meters(6),
         [-4, -3, 1, -2, 1, -1, "-"],
+        material=2,
     )
+    """
     rhythm(
         meters(7),
         [-4, -1, 1, -2, -4, T([-4, 2], -2)],
     )
+    """
+    rhythm(
+        meters(7),
+        [-4, -1, 1, -2, -4, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(7),
+        T([-4, 2], -2),
+        overlap=[-12],
+        material=1,
+    )
     rhythm(
         meters(8),
         [-3, 1, "-"],
+        material=2,
     )
     rhythm.mmrests(9)
     rhythm(
         meters(10),
         ["-", T([-2, 2, -2], -2), -4],
+        material=1,
     )
     rhythm(
         meters(11),
         [-4, 1, -3, -4],
+        material=2,
     )
     rhythm(
         meters(12),
         [-3, 1, "-"],
+        material=2,
     )
     rhythm.mmrests(13)
     rhythm(
         meters(14),
         [T([-1, 1, -4], "6:4"), "-"],
+        material=99,
     )
     rhythm(
         meters(15),
         [T([-1, 1, t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        material=99,
     )
     rhythm.make_one_beat_tuplets(
         meters(16),
         [-1, 1, 4 + 4, 2, 2, -4, -2, 2, -2],
         extra_counts=[2],
+        material=99,
     )
 
 
@@ -473,12 +536,6 @@ def annotate(cache):
 
     @baca.call
     def block():
-        m = cache["ob"]
-        runs = abjad.select.runs(m.leaves())
-        library.annotate(runs, 3)
-
-    @baca.call
-    def block():
         m = cache["gt1"]
         plts = baca.select.plts(m.leaves())
         plts = baca.select.tupletted_first_leaf(plts)
@@ -521,20 +578,6 @@ def annotate(cache):
 
     @baca.call
     def block():
-        m = cache["vn"]
-        plts = baca.select.plts(m[1, 13])
-        plts = baca.select.tupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, ">=1/8", preprolated=True)
-        library.annotate(plts, 1)
-        plts = baca.select.plts(m.leaves())
-        plts = baca.select.untupletted_first_leaf(plts)
-        plts = baca.select.duration(plts, "1/16", preprolated=True)
-        library.annotate(plts, 2)
-        runs = abjad.select.runs(m[14, 16])
-        library.annotate(runs, 99)
-
-    @baca.call
-    def block():
         m = cache["vc"]
         plts = baca.select.plts(m[1, 13])
         plts = baca.select.tupletted_first_leaf(plts)
@@ -544,6 +587,10 @@ def annotate(cache):
         library.annotate(runs, 4)
         runs = abjad.select.runs(m[14, 16])
         library.annotate(runs, 99)
+
+
+def B_1b():
+    ...
 
 
 def B_3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
