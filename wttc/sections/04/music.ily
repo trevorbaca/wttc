@@ -4929,11 +4929,19 @@ number.4.Violin.Music = {
         % [Violin.Music measure 14]
         r16
 
+        \acciaccatura {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight yellow
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-        b'16
+        <b' b'>16
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4950,11 +4958,19 @@ number.4.Violin.Music = {
         % [Violin.Music measure 15]
         r16
 
+        \acciaccatura {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight yellow
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-        b'16
+        <b' b'>16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -4982,17 +4998,25 @@ number.4.Violin.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
         % [Violin.Music measure 16]
         r16
 
+        \acciaccatura {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight yellow
+            b'8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-        b'16
+        <b' b'>16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -5003,7 +5027,7 @@ number.4.Violin.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
           %! NOT_YET_PITCHED_COLORING
@@ -5018,7 +5042,7 @@ number.4.Violin.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
           %! NOT_YET_PITCHED_COLORING
@@ -5032,7 +5056,7 @@ number.4.Violin.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
         r8
@@ -5667,11 +5691,19 @@ number.4.Cello.Music = {
         % [Cello.Music measure 14]
         r16
 
+        \acciaccatura {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight yellow
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-        d16
+        <d d>16
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5688,11 +5720,19 @@ number.4.Cello.Music = {
         % [Cello.Music measure 15]
         r16
 
+        \acciaccatura {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight yellow
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-        d16
+        <d d>16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -5720,17 +5760,25 @@ number.4.Cello.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
         % [Cello.Music measure 16]
         r16
 
+        \acciaccatura {
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+              %! STAFF_HIGHLIGHT
+            \staffHighlight yellow
+            d8
+
+        }
+
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
-        d16
+        <d d>16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -5741,7 +5789,7 @@ number.4.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
           %! NOT_YET_PITCHED_COLORING
@@ -5756,7 +5804,7 @@ number.4.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
           %! STAFF_HIGHLIGHT
@@ -5776,7 +5824,7 @@ number.4.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \times 4/6
     {
 
         r16

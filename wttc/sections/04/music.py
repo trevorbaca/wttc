@@ -14,6 +14,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -57,7 +58,7 @@ def GLOBALS(skips):
     )
 
 
-def attach_B_1b_graces(voice, *, do_not_attach_before_grace=False):
+def attach_B1b_graces(voice, *, do_not_attach_before_grace=False):
     plts = library.plts(voice, 1)
     for plt in plts:
         if do_not_attach_before_grace is not True:
@@ -604,21 +605,24 @@ def VN(voice, meters):
     rhythm.mmrests(13)
     rhythm(
         meters(14),
-        [T([-1, 1, -4], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([2], c(1, 2)), -4], "6:4"), "-"],
+        do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(15),
-        [T([-1, 1, t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        do_not_beam_tuplets=True,
         material=99,
     )
-    rhythm.make_one_beat_tuplets(
+    rhythm(
         meters(16),
-        [-1, 1, 4 + 4, 2, 2, -4, -2, 2, -2],
-        extra_counts=[2],
+        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, 2], "6:4")]
+        + [T([2, -4], "6:4"), T([-2, 2, -2], "6:4")],
+        do_not_beam_tuplets=True,
         material=99,
     )
-    attach_B_1b_graces(voice)
+    attach_B1b_graces(voice)
 
 
 def VC(voice, meters):
@@ -695,29 +699,32 @@ def VC(voice, meters):
     )
     rhythm(
         meters(14),
-        [T([-1, 1, -4], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([2], c(1, 2)), -4], "6:4"), "-"],
+        do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(15),
-        [T([-1, 1, t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        do_not_beam_tuplets=True,
         material=99,
     )
-    rhythm.make_one_beat_tuplets(
+    rhythm(
         meters(16),
-        [-1, 1, 4 + 4, 2, -3, 2, -2, 2, -1, 2],
-        extra_counts=[2],
+        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, 2], "6:4")]
+        + [T([-3, 2, -1], "6:4"), T([-1, 2, -1, 2], "6:4")],
+        do_not_beam_tuplets=True,
         material=99,
     )
     plts = library.plts(voice, 1)
-    attach_B_1b_graces(plts[0])
-    attach_B_1b_graces(plts[1])
-    attach_B_1b_graces(plts[2])
-    attach_B_1b_graces(plts[3])
-    attach_B_1b_graces(plts[4])
-    attach_B_1b_graces(plts[5])
-    attach_B_1b_graces(plts[6])
-    attach_B_1b_graces(plts[7])
+    attach_B1b_graces(plts[0])
+    attach_B1b_graces(plts[1])
+    attach_B1b_graces(plts[2])
+    attach_B1b_graces(plts[3])
+    attach_B1b_graces(plts[4])
+    attach_B1b_graces(plts[5])
+    attach_B1b_graces(plts[6])
+    attach_B1b_graces(plts[7])
 
 
 def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=False):
@@ -784,6 +791,10 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
         )
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
+
+
+def C1(pleaves):
+    pass
 
 
 def fl(m):
