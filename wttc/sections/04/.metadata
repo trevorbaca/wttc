@@ -70,8 +70,16 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="niente",
-            )
+                value="p",
+            ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.StartTrillSpan",
+                synthetic_offset=None,
+                value='StartTrillSpan(interval=None, pitch=NamedPitch("f\'"), force_trill_pitch_head_accidental=True)',
+            ),
         ],
         "Cello.Staff": [
             baca.Memento(
@@ -264,7 +272,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mf",
+                value="mp",
             )
         ],
         "Violin.Staff": [

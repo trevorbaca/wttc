@@ -611,13 +611,13 @@ def VN(voice, meters):
     )
     rhythm(
         meters(15),
-        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        [T([-1, BG([c(2, 2)], 1), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(16),
-        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, 2], "6:4")]
+        [T([-1, BG([c(2, 2)], 1), t(4)], "6:4"), T([4, 2], "6:4")]
         + [T([2, -4], "6:4"), T([-2, 2, -2], "6:4")],
         do_not_beam_tuplets=True,
         material=99,
@@ -699,19 +699,19 @@ def VC(voice, meters):
     )
     rhythm(
         meters(14),
-        [T([-1, baca.rhythm.BG([c(2, 2)], 1), -4], "6:4"), "-"],
+        [T([-1, BG([2], c(1, 2)), -4], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(15),
-        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        [T([-1, BG([2], c(1, 2)), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(16),
-        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, 2], "6:4")]
+        [T([-1, BG([2], c(1, 2)), t(4)], "6:4"), T([4, 2], "6:4")]
         + [T([-3, 2, -1], "6:4"), T([-1, 2, -1, 2], "6:4")],
         do_not_beam_tuplets=True,
         material=99,
@@ -793,7 +793,7 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     baca.pitch(grace_plts, grace_pitch)
 
 
-def C1(pleaves, capotasto, harmonic):
+def C1(pleaves, capotasto, harmonic, dynamics=None, *, staff_padding=None):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, capotasto)
     chords = abjad.select.chords(pleaves)
@@ -801,30 +801,66 @@ def C1(pleaves, capotasto, harmonic):
     chord = chords[0]
     baca.pitch(chord, f"<{capotasto} {harmonic}>")
     abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
-    note = abjad.get.leaf(chord, 1)
-    abjad.tie([chord, note])
-    baca.override.tie_down([chord, note])
-    runs = abjad.select.runs(notes)
-    for run in runs:
-        previous = abjad.get.leaf(run[0], -1)
-        previous_is_chord, tweaks = False, ()
-        if isinstance(previous, abjad.Chord):
-            previous_is_chord = True
-        if len(run) == 1:
-            if previous_is_chord:
-                tweaks = (abjad.Tweak(r"- \tweak parent-alignment-X 1"),)
-            baca.articulation(run[0], "trill", *tweaks, padding=1)
-        else:
-            if previous_is_chord:
-                tweaks = (abjad.Tweak(r"- \tweak bound-details.left.padding 0.5"),)
+    if chord is pleaves[0]:
+        note = abjad.get.leaf(chord, 1)
+        abjad.tie([chord, note])
+        baca.override.tie_down([chord, note])
+    else:
+        assert chord is pleaves[1]
+        note = abjad.get.leaf(chord, -1)
+        abjad.tie([note, chord])
+        baca.override.tie_down([note, chord])
+    baca.dynamic(note, "f")
+    plts = baca.select.plts(pleaves)
+    if dynamics:
+        dynamics_list = dynamics.split()
+        for plt, dynamic in zip(plts[2:], dynamics_list, strict=True):
+            baca.dynamic(plt.head, dynamic)
+    for plt in plts[1:]:
+        if len(plt) == 1:
+            baca.literal(
+                plt.head,
+                [
+                    r"\once \override TrillSpanner.style = #'dashed-line",
+                    r"\once \override TrillSpanner.dash-period = -1",
+                ],
+            )
             baca.trill_spanner(
-                baca.select.rleak(run),
+                baca.select.rleak(plt),
+                alteration=harmonic,
+                force_trill_pitch_head_accidental=True,
+                harmonic=True,
+                staff_padding=staff_padding,
+            )
+        else:
+            tweaks = (abjad.Tweak(r"- \tweak bound-details.right.padding 1"),)
+            baca.trill_spanner(
+                baca.select.rleak(plt),
                 *tweaks,
                 alteration=harmonic,
                 force_trill_pitch_head_accidental=True,
                 harmonic=True,
-                staff_padding=2,
+                staff_padding=staff_padding,
             )
+            baca.parenthesize(plt[1:])
+            baca.untie(plt)
+            leaf = baca.select.rleaf(plt, -1)
+            if isinstance(leaf, abjad.Rest):
+                baca.hairpin(
+                    (),
+                    "niente o< mp >o niente",
+                    pieces=baca.select.lparts(baca.select.rleak(plt), [1, 2]),
+                )
+            else:
+                baca.hairpin(
+                    (),
+                    "niente o< mp >o",
+                    bookend=False,
+                    pieces=baca.select.lparts(baca.select.rleak(plt), [1, 1]),
+                )
+    for plt in plts[2:]:
+        for pleaf in plt:
+            baca.triple_staccato(pleaf, padding=0.5)
 
 
 def fl(m):
@@ -1320,7 +1356,7 @@ def vn(m):
     def block():
         C1(library.pleaves(m[14], 99), "D5", "F#5")
         C1(library.pleaves(m[15], 99), "D5", "F#5")
-        C1(library.pleaves(m[16], 99), "D5", "F#5")
+        C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
 
     @baca.call
     def block():
@@ -1330,10 +1366,19 @@ def vn(m):
     @baca.call
     def block():
         baca.override.dls_staff_padding(m[1, 3], 6)
+        baca.override.dls_staff_padding(m[14, 16], 6)
 
 
 def vc(m):
-    pass
+    @baca.call
+    def block():
+        C1(library.pleaves(m[14], 99), "D4", "F4")
+        C1(library.pleaves(m[15], 99), "D4", "F4")
+        C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
+
+    @baca.call
+    def block():
+        baca.override.dls_staff_padding(m[14, 16], 6)
 
 
 @baca.build.timed("make_score")

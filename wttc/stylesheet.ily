@@ -190,6 +190,8 @@
 
     \override NoteColumn.ignore-collision = ##t
 
+    \override Parentheses.font-size = -4
+
     \override RehearsalMark.break-visibility = ##(#t #t #f)
 
     \shape #'((-2 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie         
@@ -243,3 +245,22 @@ wttc-vn-markup = \markup \hcenter-in #12 "Vn."
 
 wttc-cello-markup = \markup \hcenter-in #22 "Cello"
 wttc-vc-markup = \markup \hcenter-in #12 "Vc."
+
+%%% STEM RIMBALZANDO %%%
+
+stemR = {
+  \once \override Stem.stencil =
+    #(lambda (grob)
+       (let* ((x-parent (ly:grob-parent grob X))
+              (is-rest? (ly:grob? (ly:grob-object x-parent 'rest))))
+         (if is-rest?
+             empty-stencil
+             (ly:stencil-combine-at-edge
+              (ly:stem::print grob)
+              Y
+              (- (ly:grob-property grob 'direction))
+              (grob-interpret-markup grob
+                                     (markup #:center-align #:fontsize 0 
+                                             #:sans "R"))
+              -2))))
+}
