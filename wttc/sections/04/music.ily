@@ -5289,23 +5289,56 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         \afterGrace
-        d8
+        b8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5319,21 +5352,58 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mp
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        d16
-        ~
+        b16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
 
     }
 
@@ -5341,15 +5411,19 @@ number.4.Cello.Music = {
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
         \afterGrace
-        d8.
+        c'8.
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5357,6 +5431,17 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mp
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
@@ -5370,18 +5455,44 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        d16
-        ~
+        b16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
 
     }
 
@@ -5390,15 +5501,19 @@ number.4.Cello.Music = {
     {
 
         % [Cello.Music measure 2]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
         \afterGrace
-        d8
+        c'8
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5406,6 +5521,17 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8.
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mf
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
@@ -5420,23 +5546,56 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         \afterGrace
-        d8
+        b8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5444,94 +5603,243 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \f
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    d8.
-    - \tweak stencil ##f
-    ~
+    e8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "III"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \pp
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 4]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
     d8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    e'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    d'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    b,16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
     r4
 
@@ -5543,23 +5851,59 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         \afterGrace
-        d8
+        b8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mp
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \glissando
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5569,6 +5913,14 @@ number.4.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+    \revert NoteHead.style
 
     % [Cello.Music measure 6]
     r4
@@ -5581,23 +5933,47 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         \afterGrace
-        d8
+        b8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \p
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \glissando
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5605,6 +5981,14 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+        \revert NoteHead.style
 
     }
 
@@ -5621,18 +6005,35 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        d16
-        ~
+        b16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mf
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \glissando
 
     }
 
@@ -5641,15 +6042,19 @@ number.4.Cello.Music = {
     {
 
         % [Cello.Music measure 8]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
         \afterGrace
-        d8
+        c'8
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5657,83 +6062,243 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8.
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
-    r4
-
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     d8.
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "III"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    e'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    d'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    b,8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \pp
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 10]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    a,16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
     r2
 
@@ -5745,23 +6310,56 @@ number.4.Cello.Music = {
 
         \grace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
             \staffHighlight lightpink
-            d8
+            c'8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         \afterGrace
-        d16
+        b16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 3
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            d8
+            \hide NoteHead
+            \override Accidental.stencil = ##f
+            \override NoteColumn.glissando-skip = ##t
+            \override NoteHead.no-ledgers = ##t
+            \revert Accidental.stencil
+            \revert NoteColumn.glissando-skip
+            \revert NoteHead.no-ledgers
+            \undo \hide NoteHead
+            d'8
 
         }
 
@@ -5769,84 +6367,246 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mf
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
 
     }
 
     % [Cello.Music measure 11]
-    r2
+    r4
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    d8.
-    - \tweak stencil ##f
-    ~
+    c8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "IV"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 3
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    d'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 12]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    b,8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    a,8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    e16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    b8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \pp
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
     % [Cello.Music measure 13]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    g,16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+    \revert NoteHead.style
 
     r2.
 

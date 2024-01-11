@@ -667,7 +667,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8),
-        [-4, -1, t(3)],
+        [-1, 4, t(3)],
         material=4,
         overlap=[-4],
     )
@@ -689,7 +689,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(11, 12),
-        [-4, -4, -1, 4, 4, 4, 4, t(3)],
+        [-4, -1, 4, 4, 4, 4, 4, t(3)],
         material=4,
     )
     rhythm(
@@ -728,12 +728,13 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=False):
+def B1b(runs, string_symbol, pitches, dynamics, *, conjoin=False, diminuendo=False):
     dynamics = dynamics.split()
     grace_pitch, start_pitch, stop_pitch = pitches.split()
     for run, dynamic in zip(runs, dynamics, strict=True):
+        # TODO: maybe run doesn't need to rleak here:
         baca.override.note_head_style_harmonic(baca.select.rleak(run))
-        if len(run) == 3:
+        if len(run) in (3, 4):
             baca.pitch(run[0], grace_pitch)
             baca.flat_glissando(run[1:], start_pitch, stop_pitch=stop_pitch)
         else:
@@ -742,7 +743,7 @@ def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=Fal
         if conjoin is False:
             baca.string_number_spanner(
                 baca.select.rleak(run)[1:],
-                f"{string_number} =|",
+                f"{string_symbol} =|",
                 staff_padding=3,
             )
         if diminuendo is True:
@@ -756,7 +757,7 @@ def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=Fal
     if conjoin is True:
         baca.string_number_spanner(
             baca.select.rleak(runs)[1:],
-            f"{string_number} =|",
+            f"{string_symbol} =|",
             staff_padding=3,
         )
 
@@ -794,7 +795,34 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     baca.pitch(grace_plts, grace_pitch)
 
 
-def C1(pleaves, capotasto, harmonic, dynamics=None, *, leak=False, staff_padding=None):
+def B4(pleaves, string_symbol, pitch_string, dynamic_string, *, staff_padding=3):
+    runs = abjad.select.runs(pleaves)
+    assert len(runs) == 1
+    run = runs[0]
+    baca.string_number_spanner(
+        baca.select.rleak(run),
+        f"{string_symbol} =|",
+        staff_padding=staff_padding,
+    )
+    baca.override.note_head_style_harmonic(baca.select.rleak(run))
+    plts = baca.select.plts(run)
+    baca.untie(plts[-1])
+    pairs = [(_, 3) for _ in pitch_string.split()]
+    baca.multistage_leaf_glissando(
+        run,
+        pairs[:-1],
+        pitch_string.split()[-1],
+    )
+    hairpin_string = library.niente_swells(dynamic_string)
+    baca.hairpin(
+        (),
+        hairpin_string,
+        forbid_al_niente_to_bar_line=True,
+        pieces=baca.select.clparts(run, [2]),
+    )
+
+
+def C1(pleaves, capotasto, harmonic, dynamics=None, *, staff_padding=None):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, capotasto)
     chords = abjad.select.chords(pleaves)
@@ -1374,6 +1402,35 @@ def vn(m):
 
 
 def vc(m):
+    @baca.call
+    def block():
+        B1b(
+            library.runs(m[1, 3], 1),
+            "II",
+            "C4 B3 D4",
+            "mp mp mf f",
+        )
+        B1b(
+            library.runs(m[5, 8], 1),
+            "II",
+            "C4 B3 D4",
+            "mp p mf",
+            conjoin=True,
+            diminuendo=True,
+        )
+        B1b(
+            library.runs(m[10], 1),
+            "II",
+            "C4 B3 D4",
+            "mf",
+        )
+
+    @baca.call
+    def block():
+        B4(library.pleaves(m[3, 5], 4), "III", "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
+        B4(library.pleaves(m[8, 10], 4), "III", "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
+        B4(library.pleaves(m[11, 13], 4), "IV", "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
+
     @baca.call
     def block():
         C1(library.pleaves(m[14], 99), "D4", "F4")
