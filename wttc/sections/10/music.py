@@ -51,13 +51,13 @@ def GLOBALS(skips, first_measure_number):
     baca.rehearsal_mark(
         skips[1 - 1],
         "E",
-        abjad.Tweak(r"\tweak padding 1.5"),
         font_size=6,
+        padding=1.5,
     )
     baca.mark(
         skips[10 - 1],
         strings.fermata,
-        abjad.Tweak(r"\tweak padding 1.5"),
+        padding=1.5,
         site="after",
     )
     baca.open_volta(skips[21 - 1], first_measure_number)

@@ -1,4 +1,3 @@
-import abjad
 import baca
 
 from wttc import library, strings
@@ -67,38 +66,38 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[1 - 1],
         "C",
-        abjad.Tweak(r"\tweak padding 1.5"),
         font_size=6,
+        padding=1.5,
     )
     baca.mark(
         skips[17 - 1],
         strings.fermata,
-        abjad.Tweak(r"\tweak padding 1.5"),
+        padding=1.5,
         site="after",
     )
     baca.metronome_mark(skips[31 - 1], "60", manifests=library.manifests)
     baca.rehearsal_mark(
         skips[31 - 1],
         "D",
-        abjad.Tweak(r"\tweak padding 1.5"),
         font_size=6,
+        padding=1.5,
     )
     baca.mark(
         skips[40 - 1],
         strings.fermata,
-        abjad.Tweak(r"\tweak padding 1.5"),
+        padding=1.5,
         site="after",
     )
     baca.mark(
         skips[46 - 1],
         strings.fermata,
-        abjad.Tweak(r"\tweak padding 1.5"),
+        padding=1.5,
         site="after",
     )
     baca.mark(
         skips[48 - 1],
         strings.fermata,
-        abjad.Tweak(r"\tweak padding 1.5"),
+        padding=1.5,
         site="after",
     )
 
