@@ -605,7 +605,7 @@ def VN(voice, meters):
     rhythm.mmrests(13)
     rhythm(
         meters(14),
-        [T([-1, baca.rhythm.BG([c(2, 2)], 1), -4], "6:4"), "-"],
+        [T([-1, BG([c(2, 2)], 1), -4], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
@@ -796,6 +796,13 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
 def C1(pleaves, capotasto, harmonic):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, capotasto)
+    chords = abjad.select.chords(pleaves)
+    for chord in chords:
+        baca.pitch(chord, f"<{capotasto} {harmonic}>")
+        # abjad.tweak(chord.note_heads[1], r"\tweak color #red")
+        note = abjad.get.leaf(chord, 1)
+        abjad.tie([chord, note])
+        baca.override.tie_down([chord, note])
 
 
 def fl(m):

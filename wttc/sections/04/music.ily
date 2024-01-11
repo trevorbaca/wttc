@@ -4929,17 +4929,18 @@ number.4.Violin.Music = {
         % [Violin.Music measure 14]
         r16
 
-        \acciaccatura {
+        \slashedGrace {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            <b' b'>8
+            <d'' fs''!>8
+            ~
 
         }
 
         d''16
+        \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
