@@ -561,7 +561,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(5),
-        [T([-4, 2], -2), T([4, -2], -2), -8],
+        [T([-4, 2], -2), T([-2, 4], -2), -8],
         material=1,
     )
     rhythm(
@@ -720,8 +720,7 @@ def VC(voice, meters):
     attach_B_1b_graces(plts[7])
 
 
-def B_1b(pleaves, string_number, pitches, dynamics):
-    runs = abjad.select.runs(pleaves)
+def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=False):
     dynamics = dynamics.split()
     grace_pitch, start_pitch, stop_pitch = pitches.split()
     for run, dynamic in zip(runs, dynamics, strict=True):
@@ -732,18 +731,29 @@ def B_1b(pleaves, string_number, pitches, dynamics):
         else:
             assert len(run) == 2
             baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
-        baca.string_number_spanner(
+        if conjoin is False:
+            baca.string_number_spanner(
+                baca.select.rleak(run)[1:],
+                f"{string_number} =|",
+                staff_padding=3,
+            )
+        if diminuendo is True:
+            string = f"{dynamic} >o niente"
+        else:
+            string = f"niente o< {dynamic}"
+        baca.hairpin(
             baca.select.rleak(run)[1:],
+            string,
+        )
+    if conjoin is True:
+        baca.string_number_spanner(
+            baca.select.rleak(runs)[1:],
             f"{string_number} =|",
             staff_padding=3,
         )
-        baca.hairpin(
-            baca.select.rleak(run)[1:],
-            f"niente o< {dynamic}",
-        )
 
 
-def B_3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
+def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     nongraces = baca.select.pleaves(plts, grace=False)
     nongrace_plts = baca.select.plts(nongraces)
     for nongrace_plt in nongrace_plts:
@@ -815,17 +825,17 @@ def fl(m):
     def block():
         runs = library.runs(m, 3)
         assert len(runs) == 6
-        B_3(runs[0], "D5", "Eb4")
-        B_3(runs[1], "D5", "Eb4")
+        B3(runs[0], "D5", "Eb4")
+        B3(runs[1], "D5", "Eb4")
         baca.pitch(runs[2], "C#5")
         baca.trill_spanner(
             baca.select.rleak(runs[2]),
             alteration="M2",
             staff_padding=5.5,
         )
-        B_3(runs[3], "C5", "Db4")
-        B_3(runs[4], "Bb4", "B3")
-        B_3(runs[5], "A4", "G#3", staff_padding=3)
+        B3(runs[3], "C5", "Db4")
+        B3(runs[4], "Bb4", "B3")
+        B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.hairpin(
@@ -905,11 +915,11 @@ def ob(m):
         runs = library.runs(m, 3)
         assert len(runs) == 5
         plts = baca.select.plts(runs[0])
-        B_3(plts, "D5", "Eb4")
-        B_3(runs[1], "D5", "Eb4")
-        B_3(runs[2], "C#5", "D4")
-        B_3(runs[3], "C5", "Db4")
-        B_3(runs[4], "Bb4", "B3")
+        B3(plts, "D5", "Eb4")
+        B3(runs[1], "D5", "Eb4")
+        B3(runs[2], "C#5", "D4")
+        B3(runs[3], "C5", "Db4")
+        B3(runs[4], "Bb4", "B3")
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
@@ -1210,12 +1220,38 @@ def gt2(cache):
 def vn(m):
     @baca.call
     def block():
-        plts = library.plts(m[1, 3], 1)
-        B_1b(plts, "III", "B4 A4 C5", "mp mf f")
+        B1b(
+            library.runs(m[1, 3], 1),
+            "III",
+            "B4 A4 C5",
+            "mp mf f",
+        )
+        B1b(
+            library.runs(m[4, 5], 1),
+            "III",
+            "B4 A4 C5",
+            "f mf mp",
+            conjoin=True,
+            diminuendo=True,
+        )
+        B1b(
+            library.runs(m[7], 1),
+            "III",
+            "B4 A4 C5",
+            "f",
+            diminuendo=True,
+        )
+        B1b(
+            library.runs(m[10], 1),
+            "III",
+            "B4 A4 C5",
+            "mp",
+        )
 
     @baca.call
     def block():
         baca.override.tuplet_bracket_down(m[1, 3])
+        baca.override.tuplet_bracket_down(m[4, 5])
 
     @baca.call
     def block():
