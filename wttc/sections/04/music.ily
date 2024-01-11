@@ -5149,8 +5149,8 @@ number.4.Violin.Music = {
           %! SPANNER_START
         \>
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
+        \override TrillSpanner.dash-period = -1
+        \override TrillSpanner.style = #'dashed-line
           %! SPANNER_START
         \pitchedTrill
         d''8
@@ -5176,8 +5176,6 @@ number.4.Violin.Music = {
     \times 4/6
     {
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
           %! SPANNER_START
         \pitchedTrill
         d''8
@@ -5211,8 +5209,6 @@ number.4.Violin.Music = {
 
         r8
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! SPANNER_START
@@ -5231,6 +5227,8 @@ number.4.Violin.Music = {
         - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan fs''!
+        \revert TrillSpanner.dash-period
+        \revert TrillSpanner.style
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6077,8 +6075,8 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \>
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
+        \override TrillSpanner.dash-period = -1
+        \override TrillSpanner.style = #'dashed-line
           %! SPANNER_START
         \pitchedTrill
         d'8
@@ -6108,8 +6106,6 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTrillSpan
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! SPANNER_START
@@ -6141,8 +6137,6 @@ number.4.Cello.Music = {
 
         r16
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! SPANNER_START
@@ -6166,12 +6160,8 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTrillSpan
 
-        \once \override TrillSpanner.dash-period = -1
-        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
           %! SPANNER_START
         \pitchedTrill
         d'8
@@ -6182,15 +6172,55 @@ number.4.Cello.Music = {
         \p
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_STOP
-        \stopTrillSpan
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
           %! SPANNER_START
         \startTrillSpan f'!
         \revert DynamicLineSpanner.staff-padding
+        \revert TrillSpanner.dash-period
+        \revert TrillSpanner.style
 
     }
+
+      %! ANCHOR_NOTE
+    % [Cello.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    d1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! RIGHT_BROKEN
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 

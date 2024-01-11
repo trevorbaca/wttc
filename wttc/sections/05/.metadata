@@ -70,7 +70,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="niente",
+                value="p",
             )
         ],
         "Cello.Staff": [
@@ -264,7 +264,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mf",
+                value="mp",
             )
         ],
         "Violin.Staff": [

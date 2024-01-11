@@ -2340,7 +2340,7 @@ number.10.Violin.Music = {
           %! REAPPLIED_DYNAMIC
         - \tweak color #(x11-color 'green4)
           %! REAPPLIED_DYNAMIC
-        \mf
+        \mp
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
           %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3042,7 +3042,7 @@ number.10.Cello.Music = {
           %! REAPPLIED_DYNAMIC
         - \tweak color #(x11-color 'green4)
           %! REAPPLIED_DYNAMIC
-        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
+        \p
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
           %! REAPPLIED_CLEF_REDRAW_COLOR

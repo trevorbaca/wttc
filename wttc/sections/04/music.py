@@ -725,6 +725,7 @@ def VC(voice, meters):
     attach_B1b_graces(plts[5])
     attach_B1b_graces(plts[6])
     attach_B1b_graces(plts[7])
+    baca.section.append_anchor_note(voice)
 
 
 def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=False):
@@ -793,7 +794,7 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     baca.pitch(grace_plts, grace_pitch)
 
 
-def C1(pleaves, capotasto, harmonic, dynamics=None, *, staff_padding=None):
+def C1(pleaves, capotasto, harmonic, dynamics=None, *, leak=False, staff_padding=None):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, capotasto)
     chords = abjad.select.chords(pleaves)
@@ -816,44 +817,52 @@ def C1(pleaves, capotasto, harmonic, dynamics=None, *, staff_padding=None):
         dynamics_list = dynamics.split()
         for plt, dynamic in zip(plts[2:], dynamics_list, strict=True):
             baca.dynamic(plt.head, dynamic)
-    for plt in plts[1:]:
-        if len(plt) == 1:
-            baca.override.trill_spanner_dash_period(plt.head, -1)
-            baca.override.trill_spanner_style(plt.head, "#'dashed-line")
-            baca.trill_spanner(
-                baca.select.rleak(plt),
-                alteration=harmonic,
-                force_trill_pitch_head_accidental=True,
-                harmonic=True,
-                staff_padding=staff_padding,
+    for plt in plts[1:2]:
+        assert len(plt) == 2
+        tweaks = (abjad.Tweak(r"- \tweak bound-details.right.padding 1"),)
+        baca.trill_spanner(
+            baca.select.rleak(plt),
+            *tweaks,
+            alteration=harmonic,
+            force_trill_pitch_head_accidental=True,
+            harmonic=True,
+            staff_padding=staff_padding,
+        )
+        baca.parenthesize(plt[1:])
+        baca.untie(plt)
+        leaf = baca.select.rleaf(plt, -1)
+        if isinstance(leaf, abjad.Rest):
+            baca.hairpin(
+                (),
+                "niente o< mp >o niente",
+                pieces=baca.select.lparts(baca.select.rleak(plt), [1, 2]),
             )
         else:
-            tweaks = (abjad.Tweak(r"- \tweak bound-details.right.padding 1"),)
-            baca.trill_spanner(
-                baca.select.rleak(plt),
-                *tweaks,
-                alteration=harmonic,
-                force_trill_pitch_head_accidental=True,
-                harmonic=True,
-                staff_padding=staff_padding,
+            baca.hairpin(
+                (),
+                "niente o< mp >o",
+                bookend=False,
+                pieces=baca.select.lparts(baca.select.rleak(plt), [1, 1]),
             )
-            baca.parenthesize(plt[1:])
-            baca.untie(plt)
-            leaf = baca.select.rleaf(plt, -1)
-            if isinstance(leaf, abjad.Rest):
-                baca.hairpin(
-                    (),
-                    "niente o< mp >o niente",
-                    pieces=baca.select.lparts(baca.select.rleak(plt), [1, 2]),
-                )
-            else:
-                baca.hairpin(
-                    (),
-                    "niente o< mp >o",
-                    bookend=False,
-                    pieces=baca.select.lparts(baca.select.rleak(plt), [1, 1]),
-                )
-    for plt in plts[2:]:
+    lone_plts = plts[2:]
+    for i, plt in enumerate(lone_plts):
+        assert len(plt) == 1
+        right_broken = False
+        rplt = baca.select.rleak(plt)
+        if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
+            right_broken = True
+        baca.trill_spanner(
+            rplt,
+            alteration=harmonic,
+            force_trill_pitch_head_accidental=True,
+            harmonic=True,
+            right_broken=right_broken,
+            staff_padding=staff_padding,
+        )
+    if lone_plts:
+        baca.override.trill_spanner_dash_period(lone_plts, -1)
+        baca.override.trill_spanner_style(lone_plts, "#'dashed-line")
+    for plt in lone_plts:
         for pleaf in plt:
             baca.triple_staccato(pleaf, padding=0.5)
 
