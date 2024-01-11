@@ -799,7 +799,7 @@ def C1(pleaves, capotasto, harmonic):
     chords = abjad.select.chords(pleaves)
     for chord in chords:
         baca.pitch(chord, f"<{capotasto} {harmonic}>")
-        # abjad.tweak(chord.note_heads[1], r"\tweak color #red")
+        abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
         note = abjad.get.leaf(chord, 1)
         abjad.tie([chord, note])
         baca.override.tie_down([chord, note])

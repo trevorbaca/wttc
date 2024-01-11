@@ -4934,7 +4934,11 @@ number.4.Violin.Music = {
             \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            <d'' fs''!>8
+            <
+                d''
+                \tweak style #'harmonic
+                fs''!
+            >8
             ~
 
         }
