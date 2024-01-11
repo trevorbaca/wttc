@@ -818,13 +818,8 @@ def C1(pleaves, capotasto, harmonic, dynamics=None, *, staff_padding=None):
             baca.dynamic(plt.head, dynamic)
     for plt in plts[1:]:
         if len(plt) == 1:
-            baca.literal(
-                plt.head,
-                [
-                    r"\once \override TrillSpanner.style = #'dashed-line",
-                    r"\once \override TrillSpanner.dash-period = -1",
-                ],
-            )
+            baca.override.trill_spanner_dash_period(plt.head, -1)
+            baca.override.trill_spanner_style(plt.head, "#'dashed-line")
             baca.trill_spanner(
                 baca.select.rleak(plt),
                 alteration=harmonic,

@@ -5149,8 +5149,8 @@ number.4.Violin.Music = {
           %! SPANNER_START
         \>
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! SPANNER_START
         \pitchedTrill
         d''8
@@ -5176,8 +5176,8 @@ number.4.Violin.Music = {
     \times 4/6
     {
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! SPANNER_START
         \pitchedTrill
         d''8
@@ -5211,8 +5211,8 @@ number.4.Violin.Music = {
 
         r8
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! SPANNER_START
@@ -6077,8 +6077,8 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \>
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! SPANNER_START
         \pitchedTrill
         d'8
@@ -6108,8 +6108,8 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTrillSpan
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! SPANNER_START
@@ -6141,8 +6141,8 @@ number.4.Cello.Music = {
 
         r16
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! SPANNER_START
@@ -6166,8 +6166,8 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTrillSpan
 
-        \once \override TrillSpanner.style = #'dashed-line
         \once \override TrillSpanner.dash-period = -1
+        \once \override TrillSpanner.style = #'dashed-line
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
           %! STAFF_HIGHLIGHT
