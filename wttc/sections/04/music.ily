@@ -4944,6 +4944,9 @@ number.4.Violin.Music = {
         }
 
         d''16
+        - \tweak padding 1
+        - \tweak parent-alignment-X 1
+        - \trill
         \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
@@ -4963,21 +4966,32 @@ number.4.Violin.Music = {
 
         \acciaccatura {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            <b' b'>8
+            <
+                d''
+                \tweak style #'harmonic
+                fs''!
+            >8
+            ~
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'16
+          %! SPANNER_START
+        \pitchedTrill
+        d''16
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        - \tweak bound-details.left.padding 0.5
+          %! SPANNER_START
+        - \tweak staff-padding 2
+          %! SPANNER_START
+        \startTrillSpan fs''!
+        \revert Tie.direction
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+        d''4
         - \tweak stencil ##f
         ~
 
@@ -4987,14 +5001,14 @@ number.4.Violin.Music = {
     \times 4/6
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+        d''4
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
@@ -5009,21 +5023,32 @@ number.4.Violin.Music = {
 
         \acciaccatura {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
+            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            <b' b'>8
+            <
+                d''
+                \tweak style #'harmonic
+                fs''!
+            >8
+            ~
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'16
+          %! SPANNER_START
+        \pitchedTrill
+        d''16
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        - \tweak bound-details.left.padding 0.5
+          %! SPANNER_START
+        - \tweak staff-padding 2
+          %! SPANNER_START
+        \startTrillSpan fs''!
+        \revert Tie.direction
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+        d''4
         - \tweak stencil ##f
         ~
 
@@ -5033,14 +5058,10 @@ number.4.Violin.Music = {
     \times 4/6
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
+        d''4
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        d''8
 
     }
 
@@ -5048,13 +5069,13 @@ number.4.Violin.Music = {
     \times 4/6
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        d''8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
@@ -5064,11 +5085,11 @@ number.4.Violin.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
-        b'8
+        d''8
+        - \tweak padding 1
+        - \trill
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight

@@ -797,12 +797,34 @@ def C1(pleaves, capotasto, harmonic):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, capotasto)
     chords = abjad.select.chords(pleaves)
-    for chord in chords:
-        baca.pitch(chord, f"<{capotasto} {harmonic}>")
-        abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
-        note = abjad.get.leaf(chord, 1)
-        abjad.tie([chord, note])
-        baca.override.tie_down([chord, note])
+    assert len(chords) == 1
+    chord = chords[0]
+    baca.pitch(chord, f"<{capotasto} {harmonic}>")
+    abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
+    note = abjad.get.leaf(chord, 1)
+    abjad.tie([chord, note])
+    baca.override.tie_down([chord, note])
+    runs = abjad.select.runs(notes)
+    for run in runs:
+        previous = abjad.get.leaf(run[0], -1)
+        previous_is_chord, tweaks = False, ()
+        if isinstance(previous, abjad.Chord):
+            previous_is_chord = True
+        if len(run) == 1:
+            if previous_is_chord:
+                tweaks = (abjad.Tweak(r"- \tweak parent-alignment-X 1"),)
+            baca.articulation(run[0], "trill", *tweaks, padding=1)
+        else:
+            if previous_is_chord:
+                tweaks = (abjad.Tweak(r"- \tweak bound-details.left.padding 0.5"),)
+            baca.trill_spanner(
+                baca.select.rleak(run),
+                *tweaks,
+                alteration=harmonic,
+                force_trill_pitch_head_accidental=True,
+                harmonic=True,
+                staff_padding=2,
+            )
 
 
 def fl(m):
@@ -1297,6 +1319,8 @@ def vn(m):
     @baca.call
     def block():
         C1(library.pleaves(m[14], 99), "D5", "F#5")
+        C1(library.pleaves(m[15], 99), "D5", "F#5")
+        C1(library.pleaves(m[16], 99), "D5", "F#5")
 
     @baca.call
     def block():

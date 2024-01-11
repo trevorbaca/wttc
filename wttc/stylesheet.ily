@@ -211,6 +211,9 @@
 
     \override TextSpanner.to-barline = ##t
 
+    % TODO: add to all score stylesheets
+    \override TrillPitchAccidental.avoid-slur = #'ignore
+
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 2
 
