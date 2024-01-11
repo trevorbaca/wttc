@@ -4935,13 +4935,11 @@ number.4.Violin.Music = {
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            b'8
+            <b' b'>8
 
         }
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        <b' b'>16
+        d''16
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -4964,13 +4962,13 @@ number.4.Violin.Music = {
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            b'8
+            <b' b'>8
 
         }
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        <b' b'>16
+        b'16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -5010,13 +5008,13 @@ number.4.Violin.Music = {
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            b'8
+            <b' b'>8
 
         }
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        <b' b'>16
+        b'16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -5697,13 +5695,13 @@ number.4.Cello.Music = {
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            d8
+            <d d>8
 
         }
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        <d d>16
+        d16
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -5726,13 +5724,13 @@ number.4.Cello.Music = {
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            d8
+            <d d>8
 
         }
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        <d d>16
+        d16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -5772,13 +5770,13 @@ number.4.Cello.Music = {
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
             \staffHighlight yellow
-            d8
+            <d d>8
 
         }
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        <d d>16
+        d16
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring

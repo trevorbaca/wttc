@@ -605,19 +605,19 @@ def VN(voice, meters):
     rhythm.mmrests(13)
     rhythm(
         meters(14),
-        [T([-1, baca.rhythm.BG([2], c(1, 2)), -4], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([c(2, 2)], 1), -4], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(15),
-        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(16),
-        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, 2], "6:4")]
+        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, 2], "6:4")]
         + [T([2, -4], "6:4"), T([-2, 2, -2], "6:4")],
         do_not_beam_tuplets=True,
         material=99,
@@ -699,19 +699,19 @@ def VC(voice, meters):
     )
     rhythm(
         meters(14),
-        [T([-1, baca.rhythm.BG([2], c(1, 2)), -4], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([c(2, 2)], 1), -4], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(15),
-        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
+        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, -2], "6:4"), "-"],
         do_not_beam_tuplets=True,
         material=99,
     )
     rhythm(
         meters(16),
-        [T([-1, baca.rhythm.BG([2], c(1, 2)), t(4)], "6:4"), T([4, 2], "6:4")]
+        [T([-1, baca.rhythm.BG([c(2, 2)], 1), t(4)], "6:4"), T([4, 2], "6:4")]
         + [T([-3, 2, -1], "6:4"), T([-1, 2, -1, 2], "6:4")],
         do_not_beam_tuplets=True,
         material=99,
@@ -793,8 +793,9 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     baca.pitch(grace_plts, grace_pitch)
 
 
-def C1(pleaves):
-    pass
+def C1(pleaves, capotasto, harmonic):
+    notes = abjad.select.notes(pleaves)
+    baca.pitch(notes, capotasto)
 
 
 def fl(m):
@@ -1285,6 +1286,10 @@ def vn(m):
         B2b(library.pleaves(m[6, 7], 2), "D#5", "f ff mp", conjoin=True)
         B2b(library.pleaves(m[8], 2), "D#5", "f")
         B2b(library.pleaves(m[11, 12], 2), "F5", "mp mf", conjoin=True)
+
+    @baca.call
+    def block():
+        C1(library.pleaves(m[14], 99), "D5", "F#5")
 
     @baca.call
     def block():
