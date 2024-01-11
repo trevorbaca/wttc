@@ -1208,7 +1208,7 @@ number.12.AltoFlute.Music = {
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'2. * 1/2
       %! REAPPLIED_DYNAMIC_COLOR
       %! REAPPLIED_DYNAMIC
@@ -1255,7 +1255,7 @@ number.12.AltoFlute.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 1408/1024
@@ -1369,7 +1369,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'4
@@ -1412,7 +1412,7 @@ number.12.AltoFlute.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 1728/2048
@@ -1504,7 +1504,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'4
@@ -1547,7 +1547,7 @@ number.12.AltoFlute.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 896/1024
@@ -1624,7 +1624,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'16
@@ -1652,7 +1652,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -1768,7 +1768,7 @@ number.12.AltoFlute.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 15744/5120
@@ -1961,7 +1961,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'4
@@ -2004,7 +2004,7 @@ number.12.AltoFlute.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 896/1024
@@ -2120,7 +2120,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -2139,7 +2139,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'2. * 1/2
@@ -2274,7 +2274,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -2322,7 +2322,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2. * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -2365,7 +2365,7 @@ number.12.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2.
 
       %! NOT_YET_PITCHED_COLORING
@@ -2795,7 +2795,7 @@ number.12.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -2907,7 +2907,7 @@ number.12.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -3154,7 +3154,7 @@ number.12.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 5616/1024
           %! DURATION_MULTIPLIER
@@ -3221,7 +3221,7 @@ number.12.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -3512,7 +3512,7 @@ number.12.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 28992/5120
           %! DURATION_MULTIPLIER
@@ -3917,7 +3917,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -3931,7 +3931,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -3941,7 +3941,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -3954,7 +3954,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -3967,7 +3967,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -3979,7 +3979,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -3989,7 +3989,7 @@ number.12.Guitar.1.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -4234,7 +4234,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 11520/11264
@@ -4377,7 +4377,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'16 * 2176/1024
@@ -4528,7 +4528,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 10000/2048
           %! DURATION_MULTIPLIER
@@ -4603,7 +4603,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         b'4
         - \tweak stencil ##f
         ~
@@ -4863,7 +4863,7 @@ number.12.Guitar.2.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 4000/1024
           %! DURATION_MULTIPLIER
@@ -5229,7 +5229,7 @@ number.12.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5242,7 +5242,7 @@ number.12.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5257,7 +5257,7 @@ number.12.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5269,7 +5269,7 @@ number.12.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5837,7 +5837,7 @@ number.12.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2.
 
       %! NOT_YET_PITCHED_COLORING
@@ -6092,7 +6092,7 @@ number.12.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     d8.
     - \tweak stencil ##f
     ~
@@ -6248,7 +6248,7 @@ number.12.Cello.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         d8
@@ -6395,7 +6395,7 @@ number.12.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d16
@@ -6933,7 +6933,7 @@ number.12.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d4

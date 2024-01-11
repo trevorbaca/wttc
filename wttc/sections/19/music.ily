@@ -1479,7 +1479,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
     - \tweak stencil ##f
     ~
@@ -1505,7 +1505,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
     - \tweak stencil ##f
     ~
@@ -1659,7 +1659,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
     % [AltoFlute.Music measure 16]
@@ -1734,7 +1734,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     ~
 
@@ -1842,7 +1842,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'4
@@ -1870,7 +1870,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'4
 
     % [AltoFlute.Music measure 23]
@@ -1898,7 +1898,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'4
 
     % [AltoFlute.Music measure 25]
@@ -1932,7 +1932,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     b'4
 
     % [AltoFlute.Music measure 29]
@@ -2510,7 +2510,7 @@ number.19.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'4
@@ -4219,7 +4219,7 @@ number.19.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         b'8
 
           %! STAFF_HIGHLIGHT
@@ -4235,7 +4235,7 @@ number.19.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         b'8
 
           %! STAFF_HIGHLIGHT
@@ -4258,7 +4258,7 @@ number.19.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         b'8
 
     }
@@ -4550,7 +4550,7 @@ number.19.Guitar.1.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         b'8
 
           %! STAFF_HIGHLIGHT
@@ -4794,7 +4794,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -4813,7 +4813,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8
     - \tweak stencil ##f
     ~
@@ -4835,7 +4835,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -4845,7 +4845,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -4857,7 +4857,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -4869,7 +4869,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -4919,7 +4919,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -4938,7 +4938,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -4957,7 +4957,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -4976,7 +4976,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -4996,7 +4996,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5015,7 +5015,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5034,7 +5034,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5053,7 +5053,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5134,7 +5134,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
       %! STAFF_HIGHLIGHT
@@ -5144,7 +5144,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
       %! STAFF_HIGHLIGHT
@@ -5154,7 +5154,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
       %! STAFF_HIGHLIGHT
@@ -5164,7 +5164,7 @@ number.19.Guitar.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
     % [Guitar.2.Music measure 13]
@@ -5509,7 +5509,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5528,7 +5528,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8
     - \tweak stencil ##f
     ~
@@ -5550,7 +5550,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5560,7 +5560,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5572,7 +5572,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5584,7 +5584,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
 
       %! STAFF_HIGHLIGHT
@@ -5612,7 +5612,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5631,7 +5631,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5650,7 +5650,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5669,7 +5669,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5689,7 +5689,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5708,7 +5708,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5727,7 +5727,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5746,7 +5746,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -5789,7 +5789,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
       %! STAFF_HIGHLIGHT
@@ -5799,7 +5799,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
       %! STAFF_HIGHLIGHT
@@ -5809,7 +5809,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
       %! STAFF_HIGHLIGHT
@@ -5819,7 +5819,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
 
     % [Violin.Music measure 13]
@@ -5870,7 +5870,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
     - \tweak stencil ##f
     ~
@@ -5959,7 +5959,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'1 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -6284,7 +6284,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2
 
       %! NOT_YET_PITCHED_COLORING
@@ -6468,7 +6468,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2
 
       %! NOT_YET_PITCHED_COLORING
@@ -6772,7 +6772,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'2
 
       %! NOT_YET_PITCHED_COLORING
@@ -6949,7 +6949,7 @@ number.19.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'1
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7762,7 +7762,7 @@ number.19.Cello.Music = {
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     d2 * 1/2
       %! REAPPLIED_DYNAMIC_COLOR
       %! REAPPLIED_DYNAMIC
@@ -7930,7 +7930,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d1
@@ -7970,7 +7970,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     d16
 
       %! NOT_YET_PITCHED_COLORING
@@ -8096,7 +8096,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     d16
 
       %! NOT_YET_PITCHED_COLORING
@@ -8160,7 +8160,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     d16
 
       %! NOT_YET_PITCHED_COLORING
@@ -8215,7 +8215,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d4
@@ -8235,7 +8235,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d16
@@ -8298,7 +8298,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d16
     ~
 
@@ -8396,7 +8396,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     d4
 
       %! NOT_YET_PITCHED_COLORING
@@ -8683,7 +8683,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d4
@@ -8839,7 +8839,7 @@ number.19.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d4
@@ -9063,7 +9063,7 @@ number.19.Cello.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         d16
@@ -9726,7 +9726,7 @@ number.19.Cello.Music = {
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         d8.

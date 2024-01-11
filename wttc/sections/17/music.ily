@@ -291,7 +291,7 @@ number.17.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
 
@@ -316,7 +316,7 @@ number.17.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     [
     ~
@@ -352,7 +352,7 @@ number.17.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
     - \tweak stencil ##f
     ~
@@ -394,7 +394,7 @@ number.17.AltoFlute.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
     - \tweak stencil ##f
     ~
@@ -777,7 +777,7 @@ number.17.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
               %! REAPPLIED_STAFF_LINES
             \stopStaff
               %! REAPPLIED_STAFF_LINES
@@ -1088,7 +1088,7 @@ number.17.Guitar.1.Music = {
                 \set fontSize = #-3
                 \slash
                   %! STAFF_HIGHLIGHT
-                \staffHighlight orange
+                \staffHighlight lightpink
                 \voiceOne
                 <
                     \tweak font-size 0
@@ -1224,7 +1224,7 @@ number.17.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
               %! REAPPLIED_STAFF_LINES
             \stopStaff
               %! REAPPLIED_STAFF_LINES
@@ -1547,7 +1547,7 @@ number.17.Guitar.2.Music = {
                 \set fontSize = #-3
                 \slash
                   %! STAFF_HIGHLIGHT
-                \staffHighlight orange
+                \staffHighlight lightpink
                 \voiceOne
                 <
                     \tweak font-size 0
@@ -1640,7 +1640,7 @@ number.17.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8
     - \tweak stencil ##f
     ~
@@ -1659,7 +1659,7 @@ number.17.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'16
     ~
 
@@ -1686,7 +1686,7 @@ number.17.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     b'8.
     - \tweak stencil ##f
     ~
@@ -1778,7 +1778,7 @@ number.17.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d8
 
       %! NOT_YET_PITCHED_COLORING
@@ -1794,7 +1794,7 @@ number.17.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d16
     ~
 
@@ -1818,7 +1818,7 @@ number.17.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d8.
     - \tweak stencil ##f
     ~

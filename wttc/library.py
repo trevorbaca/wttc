@@ -203,8 +203,8 @@ def X(argument):
 
 def _highlight_staff(argument, number, *, after=False):
     material_to_color = {
-        1: "orange",
-        2: "deepskyblue",
+        1: "lightpink",
+        2: "lightskyblue",
         3: "lightgreen",
         4: "hotpink",
         5: "burlywood",

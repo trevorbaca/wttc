@@ -599,7 +599,7 @@ number.4.AltoFlute.Music = {
     \override DynamicLineSpanner.staff-padding = 4
     \override TupletBracket.staff-padding = 1
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     c'16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -633,7 +633,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         c'8
         ~
 
@@ -789,7 +789,7 @@ number.4.AltoFlute.Music = {
 
         \override DynamicLineSpanner.staff-padding = 4
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         c'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -823,7 +823,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         c'8
         ~
 
@@ -972,7 +972,7 @@ number.4.AltoFlute.Music = {
 
         \override DynamicLineSpanner.staff-padding = 5
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         c'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1056,7 +1056,7 @@ number.4.AltoFlute.Music = {
 
     \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     af'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1088,7 +1088,7 @@ number.4.AltoFlute.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     af'!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1106,7 +1106,7 @@ number.4.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     af'!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1129,7 +1129,7 @@ number.4.AltoFlute.Music = {
 
     \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     af'!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1261,7 +1261,7 @@ number.4.AltoFlute.Music = {
 
     \once \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     af'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1296,7 +1296,7 @@ number.4.AltoFlute.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         af'!8
         ~
 
@@ -1435,7 +1435,7 @@ number.4.AltoFlute.Music = {
 
     \once \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
-    \staffHighlight orange
+    \staffHighlight lightpink
     g'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1469,7 +1469,7 @@ number.4.AltoFlute.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
         g'4
         - \tweak stencil ##f
         ~
@@ -2213,7 +2213,7 @@ number.4.Guitar.1.Music = {
           %! REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-gt-i-markup
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2277,7 +2277,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2300,7 +2300,7 @@ number.4.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2328,7 +2328,7 @@ number.4.Guitar.1.Music = {
         \once \override Staff.StaffSymbol.color = #blue
         \override DynamicLineSpanner.staff-padding = 9
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2379,7 +2379,7 @@ number.4.Guitar.1.Music = {
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2413,7 +2413,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2441,7 +2441,7 @@ number.4.Guitar.1.Music = {
         \once \override Staff.StaffSymbol.color = #blue
         \override DynamicLineSpanner.staff-padding = 9
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2493,7 +2493,7 @@ number.4.Guitar.1.Music = {
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2553,7 +2553,7 @@ number.4.Guitar.1.Music = {
         \once \override Staff.StaffSymbol.color = #blue
         \override DynamicLineSpanner.staff-padding = 9
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2615,7 +2615,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         ds'''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2637,7 +2637,7 @@ number.4.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         ds'''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2658,7 +2658,7 @@ number.4.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         ds'''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2721,7 +2721,7 @@ number.4.Guitar.1.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -2781,7 +2781,7 @@ number.4.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         ds'''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2880,7 +2880,7 @@ number.4.Guitar.1.Music = {
         \repeatTie
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         f'''8
@@ -2998,7 +2998,7 @@ number.4.Guitar.1.Music = {
         \repeatTie
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         fs'''!8
@@ -3026,7 +3026,7 @@ number.4.Guitar.1.Music = {
         \override DynamicLineSpanner.staff-padding = 5.5
         \override TupletBracket.staff-padding = 1
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         fs'''!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3112,7 +3112,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3167,7 +3167,7 @@ number.4.Guitar.2.Music = {
         r16
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3190,7 +3190,7 @@ number.4.Guitar.2.Music = {
         r16
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3214,7 +3214,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3267,7 +3267,7 @@ number.4.Guitar.2.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3293,7 +3293,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3379,7 +3379,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3434,7 +3434,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3490,7 +3490,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3545,7 +3545,7 @@ number.4.Guitar.2.Music = {
         r16
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3558,7 +3558,7 @@ number.4.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3625,7 +3625,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3675,7 +3675,7 @@ number.4.Guitar.2.Music = {
         \baca-effort-ff
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3758,7 +3758,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
-        \staffHighlight orange
+        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3904,7 +3904,7 @@ number.4.Guitar.2.Music = {
         \repeatTie
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         d'''16
@@ -3920,7 +3920,7 @@ number.4.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3944,7 +3944,7 @@ number.4.Guitar.2.Music = {
         r16
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight deepskyblue
+        \staffHighlight lightskyblue
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -4019,7 +4019,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4089,7 +4089,7 @@ number.4.Violin.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d''16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4122,7 +4122,7 @@ number.4.Violin.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4148,7 +4148,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4220,7 +4220,7 @@ number.4.Violin.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4261,7 +4261,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4333,7 +4333,7 @@ number.4.Violin.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     d''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4379,7 +4379,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4459,7 +4459,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4524,7 +4524,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4591,7 +4591,7 @@ number.4.Violin.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     ds''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4622,7 +4622,7 @@ number.4.Violin.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     ds''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4642,7 +4642,7 @@ number.4.Violin.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     ds''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4669,7 +4669,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4743,7 +4743,7 @@ number.4.Violin.Music = {
     \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     ds''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4791,7 +4791,7 @@ number.4.Violin.Music = {
 
             \override NoteHead.style = #'harmonic
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             b'8
 
         }
@@ -4866,7 +4866,7 @@ number.4.Violin.Music = {
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     f''16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4902,7 +4902,7 @@ number.4.Violin.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight deepskyblue
+    \staffHighlight lightskyblue
     f''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5292,7 +5292,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5325,7 +5325,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5373,7 +5373,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5423,7 +5423,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5546,7 +5546,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5584,7 +5584,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5624,7 +5624,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
@@ -5748,7 +5748,7 @@ number.4.Cello.Music = {
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
               %! STAFF_HIGHLIGHT
-            \staffHighlight orange
+            \staffHighlight lightpink
             d8
 
         }
