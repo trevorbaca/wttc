@@ -4088,11 +4088,32 @@ number.4.Violin.Music = {
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    d''16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \mp
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.5
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4100,11 +4121,17 @@ number.4.Violin.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    d''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4192,15 +4219,36 @@ number.4.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    d''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
 
     r4
 
@@ -4284,15 +4332,36 @@ number.4.Violin.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    d''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \ff
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 
@@ -4521,21 +4590,45 @@ number.4.Violin.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    ds''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.5
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    ds''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \ff
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4548,11 +4641,17 @@ number.4.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    ds''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4643,15 +4742,36 @@ number.4.Violin.Music = {
     \bacaStopTextSpanStringNumber
     \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    ds''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
 
     % [Violin.Music measure 9]
     R1 * 4/4
@@ -4745,11 +4865,32 @@ number.4.Violin.Music = {
     % [Violin.Music measure 11]
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    f''16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \mp
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.5
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4760,11 +4901,17 @@ number.4.Violin.Music = {
     % [Violin.Music measure 12]
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight deepskyblue
-    b'16
+    f''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight

@@ -753,6 +753,25 @@ def B1b(runs, string_number, pitches, dynamics, *, conjoin=False, diminuendo=Fal
         )
 
 
+def B2b(notes, pitch, dynamics, *, conjoin=False):
+    baca.pitch(notes, pitch)
+    dynamics_list = dynamics.split()
+    for note, dynamic in zip(notes, dynamics_list, strict=True):
+        baca.dynamic(note, dynamic)
+        if conjoin is False:
+            baca.pizzicato_spanner(
+                baca.select.rleak([note]),
+                staff_padding=3,
+                items=r"\baca-pizz-markup ||",
+            )
+    if conjoin is True:
+        baca.pizzicato_spanner(
+            notes,
+            abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
+            staff_padding=3,
+        )
+
+
 def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     nongraces = baca.select.pleaves(plts, grace=False)
     nongrace_plts = baca.select.plts(nongraces)
@@ -1247,6 +1266,14 @@ def vn(m):
             "B4 A4 C5",
             "mp",
         )
+
+    @baca.call
+    def block():
+        B2b(library.pleaves(m[1], 2), "D5", "mp p", conjoin=True)
+        B2b(library.pleaves(m[2, 3], 2), "D5", "f ff")
+        B2b(library.pleaves(m[6, 7], 2), "D#5", "f ff mp", conjoin=True)
+        B2b(library.pleaves(m[8], 2), "D#5", "f")
+        B2b(library.pleaves(m[11, 12], 2), "F5", "mp mf", conjoin=True)
 
     @baca.call
     def block():
