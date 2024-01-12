@@ -308,6 +308,38 @@ def VC(voice, meters):
     )
 
 
+def N1a():
+    pass
+
+
+def N1b():
+    pass
+
+
+def N1c():
+    pass
+
+
+def N2a():
+    pass
+
+
+def N2b():
+    pass
+
+
+def N3a():
+    pass
+
+
+def N3b():
+    pass
+
+
+def O1():
+    pass
+
+
 def fl(m):
     pass
 

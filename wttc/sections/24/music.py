@@ -619,6 +619,42 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
+def M1():
+    pass
+
+
+def M2a():
+    pass
+
+
+def M2b():
+    pass
+
+
+def M3a():
+    pass
+
+
+def M3b():
+    pass
+
+
+def M4():
+    pass
+
+
+def M5a():
+    pass
+
+
+def M5b():
+    pass
+
+
+def N1c():
+    pass
+
+
 def fl(m):
     pass
 

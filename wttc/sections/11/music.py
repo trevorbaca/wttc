@@ -341,6 +341,38 @@ def VC(voice, meters):
     rhythm.mmrests(27, 28)
 
 
+def F1a():
+    pass
+
+
+def F1b():
+    pass
+
+
+def F1c():
+    pass
+
+
+def F2a():
+    pass
+
+
+def F2b():
+    pass
+
+
+def F3a():
+    pass
+
+
+def F3b():
+    pass
+
+
+def G1a():
+    pass
+
+
 def fl(m):
     pass
 
