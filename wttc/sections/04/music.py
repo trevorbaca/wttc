@@ -728,7 +728,17 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def B1b(runs, string_symbol, pitches, dynamics, *, conjoin=False, diminuendo=False):
+def B1b(
+    runs,
+    string_symbol,
+    pitches,
+    dynamics,
+    *,
+    conjoin=False,
+    diminuendo=False,
+    dls_staff_padding=None,
+    string_number_staff_padding=3,
+):
     dynamics = dynamics.split()
     grace_pitch, start_pitch, stop_pitch = pitches.split()
     for run, dynamic in zip(runs, dynamics, strict=True):
@@ -744,8 +754,13 @@ def B1b(runs, string_symbol, pitches, dynamics, *, conjoin=False, diminuendo=Fal
             baca.string_number_spanner(
                 baca.select.rleak(run)[1:],
                 f"{string_symbol} =|",
-                staff_padding=3,
+                staff_padding=string_number_staff_padding,
             )
+            if dls_staff_padding:
+                baca.override.dls_staff_padding(
+                    baca.select.rleak(run)[1:],
+                    dls_staff_padding,
+                )
         if diminuendo is True:
             string = f"{dynamic} >o niente"
         else:
@@ -760,9 +775,14 @@ def B1b(runs, string_symbol, pitches, dynamics, *, conjoin=False, diminuendo=Fal
             f"{string_symbol} =|",
             staff_padding=3,
         )
+        if dls_staff_padding:
+            baca.override.dls_staff_padding(
+                baca.select.rleak(runs)[1:],
+                dls_staff_padding,
+            )
 
 
-def B2b(notes, pitch, dynamics, *, conjoin=False):
+def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
     baca.pitch(notes, pitch)
     dynamics_list = dynamics.split()
     for note, dynamic in zip(notes, dynamics_list, strict=True):
@@ -773,12 +793,22 @@ def B2b(notes, pitch, dynamics, *, conjoin=False):
                 staff_padding=3,
                 items=r"\baca-pizz-markup ||",
             )
+            if dls_staff_padding:
+                baca.override.dls_staff_padding(
+                    baca.select.rleak([note]),
+                    dls_staff_padding,
+                )
     if conjoin is True:
         baca.pizzicato_spanner(
             notes,
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
             staff_padding=3,
         )
+        if dls_staff_padding:
+            baca.override.dls_staff_padding(
+                notes,
+                dls_staff_padding,
+            )
 
 
 def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
@@ -791,18 +821,24 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
             alteration="M2",
             staff_padding=staff_padding,
         )
+        baca.untie(nongrace_plt)
+        baca.parenthesize(nongrace_plt[1:])
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
 
 
-def B4(pleaves, string_symbol, pitch_string, dynamic_string, *, staff_padding=3):
+def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     runs = abjad.select.runs(pleaves)
     assert len(runs) == 1
     run = runs[0]
     baca.string_number_spanner(
         baca.select.rleak(run),
         f"{string_symbol} =|",
-        staff_padding=staff_padding,
+        staff_padding=5,
+    )
+    baca.xfb_spanner(
+        baca.select.rleak(run),
+        staff_padding=7.5,
     )
     baca.override.note_head_style_harmonic(baca.select.rleak(run))
     plts = baca.select.plts(run)
@@ -820,6 +856,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string, *, staff_padding=3)
         forbid_al_niente_to_bar_line=True,
         pieces=baca.select.clparts(run, [2]),
     )
+    baca.override.dls_staff_padding(run, 4)
 
 
 def C1(pleaves, capotasto, harmonic, dynamics=None, *, staff_padding=None):
@@ -913,17 +950,17 @@ def fl(m):
         baca.dynamic(plts[11].head, "p")
         baca.covered_spanner(
             baca.select.rleak(plts[:2]),
-            staff_padding=5.5,
+            staff_padding=3,
         )
         baca.covered_spanner(
             plts[2:4],
             items=strings.cov_dashed_hook,
-            staff_padding=5.5,
+            staff_padding=3,
         )
         baca.covered_spanner(
             baca.select.rleak(plts[4]),
             items=strings.cov_dashed_hook,
-            staff_padding=5.5,
+            staff_padding=3,
         )
         baca.covered_spanner(
             baca.select.rleak(plts[5:8]),
@@ -935,34 +972,28 @@ def fl(m):
         )
         baca.covered_spanner(
             baca.select.rleak(plts[9:11]),
-            staff_padding=5.5,
+            left_broken_text=None,
+            staff_padding=3,
         )
         baca.covered_spanner(
             baca.select.rleak(plts[11:13]),
-            staff_padding=5.5,
+            staff_padding=3,
         )
-        baca.override.dls_staff_padding(plts[:2], 4)
-        baca.override.dls_staff_padding(plts[2:4], 4)
-        baca.override.dls_staff_padding(plts[4], 5)
-        baca.override.dls_staff_padding(plts[5:8], 3)
-        baca.override.dls_staff_padding(plts[8:9], 3)
-        baca.override.dls_staff_padding(plts[9], 3)
-        baca.override.dls_staff_padding(plts[11], 3)
 
     @baca.call
     def block():
         runs = library.runs(m, 3)
         assert len(runs) == 6
-        B3(runs[0], "D5", "Eb4")
+        B3(runs[0], "D5", "Eb4", staff_padding=3)
         B3(runs[1], "D5", "Eb4")
         baca.pitch(runs[2], "C#5")
         baca.trill_spanner(
             baca.select.rleak(runs[2]),
             alteration="M2",
-            staff_padding=5.5,
+            staff_padding=3,
         )
-        B3(runs[3], "C5", "Db4")
-        B3(runs[4], "Bb4", "B3")
+        B3(runs[3], "C5", "Db4", staff_padding=3)
+        B3(runs[4], "Bb4", "B3", staff_padding=3)
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
@@ -984,57 +1015,30 @@ def fl(m):
             runs[3],
             "f |>o niente",
         )
-        baca.override.dls_staff_padding(runs[3], 3)
         baca.hairpin(
             runs[4],
             "f |>o niente",
         )
-        baca.override.dls_staff_padding(runs[4], 3)
         baca.hairpin(
             (),
             "sfpp < p >o niente",
             pieces=baca.select.lparts(baca.select.rleak(runs[5][1:]), [1, 2]),
         )
-        baca.override.dls_staff_padding(runs[5], 3)
 
     @baca.call
     def block():
-        baca.override.dls_staff_padding(
-            abjad.select.run(m.leaves(), 1)[3:],
-            6,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.run(m.leaves(), 3)[2:],
-            6,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.leaves(m[4])[:2],
-            3,
-        )
+        baca.override.dls_staff_padding(m[1, 3][:2], 3)
+        baca.override.dls_staff_padding(m[1, 3][2:], 6.5)
+        baca.override.dls_staff_padding(m[4, 7], 3)
+        baca.override.dls_staff_padding(m[8, 9], 6.5)
+        baca.override.dls_staff_padding(m[10], 3)
+        baca.override.dls_staff_padding(m[12, 13], 6.5)
+        baca.override.dls_staff_padding(m[14, 16], 3)
 
     @baca.call
     def block():
-        baca.override.tuplet_bracket_staff_padding(
-            baca.select.pleaves(m[1])[:4],
-            1,
-        )
-        baca.override.tuplet_bracket_staff_padding(
-            baca.select.pleaves(m[2])[:5],
-            1,
-        )
-        baca.override.tuplet_bracket_staff_padding(
-            m[8, 9],
-            1,
-        )
-        baca.override.tuplet_bracket_staff_padding(
-            m[12, 13],
-            1,
-        )
-
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_up(m[8, 9])
-        baca.override.tuplet_bracket_up(m[12, 13])
+        baca.override.tuplet_bracket_down(m.leaves())
+        baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
 
 
 def ob(m):
@@ -1043,11 +1047,11 @@ def ob(m):
         runs = library.runs(m, 3)
         assert len(runs) == 5
         plts = baca.select.plts(runs[0])
-        B3(plts, "D5", "Eb4")
-        B3(runs[1], "D5", "Eb4")
-        B3(runs[2], "C#5", "D4")
-        B3(runs[3], "C5", "Db4")
-        B3(runs[4], "Bb4", "B3")
+        B3(plts, "D5", "Eb4", staff_padding=None)
+        B3(runs[1], "D5", "Eb4", staff_padding=None)
+        B3(runs[2], "C#5", "D4", staff_padding=None)
+        B3(runs[3], "C5", "Db4", staff_padding=None)
+        B3(runs[4], "Bb4", "B3", staff_padding=None)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
@@ -1077,11 +1081,9 @@ def ob(m):
 
     @baca.call
     def block():
-        baca.override.tuplet_bracket_up(m.leaves())
-
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m.leaves(), 4.5)
+        baca.override.tuplet_bracket_down(m.leaves())
+        baca.override.trill_spanner_staff_padding(m.leaves(), 3)
+        baca.override.dls_staff_padding(m.leaves(), 6.5)
 
 
 def gt1(cache):
@@ -1142,21 +1144,25 @@ def gt1(cache):
         notes = select_untied_notes(m.leaves(), (1, 8))
         notes = select_untied_notes(m[1, 3], (1, 8))
         baca.pitch(notes, "D5")
+        baca.laissez_vibrer(notes)
         dynamics = "mp p f mf f".split()
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
         notes = select_untied_notes(m[5, 8], (1, 8))
         baca.pitch(notes, "D#5")
+        baca.laissez_vibrer(notes)
         dynamics = "f mf mp f".split()
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
         notes = select_untied_notes(m[11], (1, 8))
         baca.pitch(notes, "F5")
+        baca.laissez_vibrer(notes)
         dynamics = "mf".split()
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
         notes = select_untied_notes(m[14, 15], (1, 8))
         baca.pitch(notes, "F#5")
+        baca.laissez_vibrer(notes)
         dynamics = "mp p".split()
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
@@ -1277,6 +1283,7 @@ def gt2(cache):
         dynamics = dynamics.split()
         assert len(notes) == len(dynamics)
         baca.pitch(notes, "D5")
+        baca.laissez_vibrer(notes)
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
 
@@ -1353,6 +1360,7 @@ def vn(m):
             "III",
             "B4 A4 C5",
             "mp mf f",
+            dls_staff_padding=6,
         )
         B1b(
             library.runs(m[4, 5], 1),
@@ -1361,6 +1369,7 @@ def vn(m):
             "f mf mp",
             conjoin=True,
             diminuendo=True,
+            dls_staff_padding=6,
         )
         B1b(
             library.runs(m[7], 1),
@@ -1368,21 +1377,35 @@ def vn(m):
             "B4 A4 C5",
             "f",
             diminuendo=True,
+            dls_staff_padding=6,
         )
         B1b(
             library.runs(m[10], 1),
             "III",
             "B4 A4 C5",
             "mp",
+            dls_staff_padding=6,
         )
 
     @baca.call
     def block():
-        B2b(library.pleaves(m[1], 2), "D5", "mp p", conjoin=True)
-        B2b(library.pleaves(m[2, 3], 2), "D5", "f ff")
-        B2b(library.pleaves(m[6, 7], 2), "D#5", "f ff mp", conjoin=True)
-        B2b(library.pleaves(m[8], 2), "D#5", "f")
-        B2b(library.pleaves(m[11, 12], 2), "F5", "mp mf", conjoin=True)
+        B2b(library.pleaves(m[1], 2), "D5", "mp p", conjoin=True, dls_staff_padding=3)
+        B2b(library.pleaves(m[2, 3], 2), "D5", "f ff", dls_staff_padding=3)
+        B2b(
+            library.pleaves(m[6, 7], 2),
+            "D#5",
+            "f ff mp",
+            conjoin=True,
+            dls_staff_padding=3,
+        )
+        B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
+        B2b(
+            library.pleaves(m[11, 12], 2),
+            "F5",
+            "mp mf",
+            conjoin=True,
+            dls_staff_padding=3,
+        )
 
     @baca.call
     def block():
@@ -1392,12 +1415,8 @@ def vn(m):
 
     @baca.call
     def block():
-        baca.override.tuplet_bracket_down(m[1, 3])
-        baca.override.tuplet_bracket_down(m[4, 5])
-
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m[1, 3], 6)
+        baca.override.tuplet_bracket_down(m.leaves())
+        baca.override.tuplet_bracket_staff_padding(m.leaves(), 1)
         baca.override.dls_staff_padding(m[14, 16], 6)
 
 
@@ -1409,6 +1428,8 @@ def vc(m):
             "II",
             "C4 B3 D4",
             "mp mp mf f",
+            dls_staff_padding=6,
+            string_number_staff_padding=5,
         )
         B1b(
             library.runs(m[5, 8], 1),
@@ -1417,12 +1438,16 @@ def vc(m):
             "mp p mf",
             conjoin=True,
             diminuendo=True,
+            dls_staff_padding=6,
+            string_number_staff_padding=5,
         )
         B1b(
             library.runs(m[10], 1),
             "II",
             "C4 B3 D4",
             "mf",
+            dls_staff_padding=6,
+            string_number_staff_padding=5,
         )
 
     @baca.call
@@ -1439,6 +1464,10 @@ def vc(m):
 
     @baca.call
     def block():
+        baca.override.tuplet_bracket_down(m.leaves())
+        # baca.override.dls_staff_padding(m[1, 2] + m[3][:5], 6)
+        # baca.override.dls_staff_padding(m[3][5:] + m[4], 4)
+        # baca.override.dls_staff_padding(m[5][1:] + m[6, 7] + m[8][:3], 6)
         baca.override.dls_staff_padding(m[14, 16], 6)
 
 
@@ -1504,6 +1533,7 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
+        baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -1523,12 +1553,12 @@ def make_layout():
     spacing = baca.make_layout(
         baca.page(
             1,
-            baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.system(measure=6, y_offset=160, distances=(15, 20, 20, 20)),
+            baca.system(measure=1, y_offset=10, distances=(15, 21, 21, 21, 21, 21)),
+            baca.system(measure=6, y_offset=160, distances=(15, 21, 21, 21, 21, 21)),
         ),
         baca.page(
             2,
-            baca.system(measure=12, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=12, y_offset=10, distances=(15, 21, 21, 21, 21, 21)),
         ),
         spacing=(1, 48),
     )
