@@ -5399,12 +5399,11 @@ number.5.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
-    ~
+    <d d>16
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d8.
+    <d d>8.
     [
 
     \slashedGrace {
@@ -5417,18 +5416,17 @@ number.5.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    <d d>16
     ]
-    ~
 
     % [Cello.Music measure 2]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d2
+    <d d>2
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d1 * 1/2
+    <d d>1 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
@@ -5457,19 +5455,27 @@ number.5.Cello.Music = {
     d8.
     [
 
+    \slashedGrace {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    <d d>16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d4
+    <d d>4
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d1 * 1/2
+    <d d>1 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 

@@ -541,12 +541,26 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        [-4, -3, BG([2], t(1)), 3, BG([2], t(1)), 8, w(8, 16), AG([2], h(w(8, 16)))],
+        [
+            -4,
+            -3,
+            BG([2], t(c(1, 2))),
+            c(3, 2),
+            BG([2], t(c(1, 2))),
+            c(8, 2),
+            w(c(8, 2), 16),
+            AG([2], h(w(8, 16))),
+        ],
         material=1,
     )
     rhythm(
-        meters(3, 4),
-        [3, 5, swell(16), c(8, 2), -4, c(8, 2), "-"],
+        meters(3),
+        [3, BG([2], c(5, 2)), w(c(8, 2), 16), h(w(8, 16))],
+        material=1,
+    )
+    rhythm(
+        meters(4),
+        [c(8, 2), -4, c(8, 2), "-"],
         material=1,
     )
     rhythm(
