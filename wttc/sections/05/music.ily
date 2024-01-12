@@ -4194,45 +4194,43 @@ number.5.Violin.Music = {
 
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
-        <b' b'>8
+        <
+            ef'!
+            \tweak style #'harmonic
+            g'
+        >8
+        ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    ef'4
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    ef'8
     [
     \repeatTie
 
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        <b' b'>8
+        <
+            ef'!
+            \tweak style #'harmonic
+            af'!
+        >8
+        ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    ef'8
     ]
     - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 2]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
+    ef'2
     \repeatTie
 
       %! SPANNER_START
@@ -4296,41 +4294,41 @@ number.5.Violin.Music = {
     \>
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        <b' b'>8
+        <
+            ef'!
+            \tweak style #'harmonic
+            g'
+        >8
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
         \stopTrillSpan
+        ~
 
     }
 
 
     % [Violin.Music measure 3]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    ef'4
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    ef'16
     [
     \repeatTie
 
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        <
+            ef'!
+            \tweak style #'harmonic
+            af'!
+        >8
+        ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    ef'8.
     ]
 
       %! SPANNER_START
@@ -5488,40 +5486,46 @@ number.5.Cello.Music = {
 
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
-        d8
+        df!8
+        ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    <
+        df
+        \tweak style #'harmonic
+        gf
+    >16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>8.
+    <
+        df!
+        \tweak style #'harmonic
+        f
+    >8.
     [
 
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        df!8
+        ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    <
+        df
+        \tweak style #'harmonic
+        f
+    >16
     ]
 
     % [Cello.Music measure 2]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>2
+    <
+        df!
+        \tweak style #'harmonic
+        f
+    >2
 
       %! SPANNER_START
     \pitchedTrill
@@ -5584,40 +5588,44 @@ number.5.Cello.Music = {
     \>
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        df!8
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
         \stopTrillSpan
+        ~
 
     }
 
 
     % [Cello.Music measure 3]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    <
+        df
+        \tweak style #'harmonic
+        gf
+    >8.
     [
 
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        df!8
+        ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    <
+        df
+        \tweak style #'harmonic
+        f
+    >16
     ]
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
+    <
+        df
+        \tweak style #'harmonic
+        f
+    >4
 
       %! SPANNER_START
     \pitchedTrill

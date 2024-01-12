@@ -389,7 +389,7 @@ def VN(voice, meters):
         [
             t(4),
             1,
-            BG([2], 3),
+            BG([c(2, 2)], 3),
             X(w(c(6, 2), 12)),
             X(h(w(6, 12))),
             -1,
@@ -555,7 +555,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(3),
-        [3, BG([2], c(5, 2)), w(c(8, 2), 16), h(w(8, 16))],
+        [c(3, 2), BG([2], c(5, 2)), w(c(8, 2), 16), h(w(8, 16))],
         material=1,
     )
     rhythm(
@@ -689,8 +689,36 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def C1a():
-    pass
+def C1a(
+    pleaves,
+    fundamental_string,
+    harmonic_1_string,
+    harmonic_2_string,
+    dynamic_string,
+    debug=False,
+):
+    plts = baca.select.plts(pleaves)
+    chord_1_pitch_string = f"<{fundamental_string} {harmonic_1_string}>"
+    chord_2_pitch_string = f"<{fundamental_string} {harmonic_2_string}>"
+    done_chord_1 = False
+    for plt in plts:
+        if isinstance(plt.head, abjad.Chord):
+            if not done_chord_1:
+                baca.pitch(plt, chord_1_pitch_string)
+                done_chord_1 = True
+            else:
+                baca.pitch(plt, chord_2_pitch_string)
+            for pleaf in plt:
+                abjad.tweak(
+                    pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic")
+                )
+        else:
+            baca.pitch(plt, fundamental_string)
+    for i, pleaf in enumerate(pleaves):
+        if abjad.get.grace(pleaf):
+            next_pleaf = pleaves[i + 1]
+            assert not abjad.get.grace(next_pleaf)
+            abjad.tie([pleaf, next_pleaf])
 
 
 def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
@@ -823,6 +851,8 @@ def gt2(m):
 
 
 def vn(m):
+    C1a(library.pleaves(m[1] + m[2][:1], 1), "Eb4", "G4", "Ab4", "p")
+    C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Eb4", "G4", "Ab4", "p")
     C1b(library.pleaves(m[2][1:3], 1), "<Eb4 G4>", "Ab4", "mp")
     C1b(library.pleaves(m[3][4:6], 1), "<Eb4 G4>", "Ab4", "mf")
     C1c(
@@ -835,6 +865,8 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
+    C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p", debug=True)
     C1b(library.pleaves(m[2][1:3], 1), "<Eb4 G4>", "Ab4", "mp")
     C1b(library.pleaves(m[3][4:6], 1), "<Eb4 G4>", "Ab4", "mf")
     C1c(
