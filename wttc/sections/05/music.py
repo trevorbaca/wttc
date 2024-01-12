@@ -11,6 +11,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -377,7 +378,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(3, 4),
-        [t(4), bl(1), BG([2], br(3)), swell(12), -1, t(3), 4, -8, -1, t(3), 4, -4],
+        [t(4), 1, BG([2], 3), swell(12), -1, 7, -8, -1, c(7, 2), -4],
         material=1,
     )
     rhythm(
@@ -663,6 +664,7 @@ def C1b():
 
 
 def C1c(pleaves, fundamental_string, harmonic_string, dynamic_string):
+    assert all(isinstance(_, abjad.Chord) for _ in pleaves)
     plts = baca.select.plts(pleaves)
     dynamics = dynamic_string.split()
     harmonics = harmonic_string.split()
@@ -763,12 +765,14 @@ def gt2(m):
 def vn(m):
     @baca.call
     def block():
+        """
         C1c(
             library.pleaves(m[3][-1:] + m[4, 30], 1),
             "Eb4",
             "G4 Ab4",
             "f - p - - - p f p p",
         )
+        """
 
 
 def vc(m):
@@ -843,6 +847,8 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
+        baca.tags.NOT_YET_PITCHED_COLORING,
+        baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,
