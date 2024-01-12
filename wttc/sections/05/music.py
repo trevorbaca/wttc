@@ -693,8 +693,33 @@ def C1a():
     pass
 
 
-def C1b():
-    pass
+def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
+    assert len(pleaves) == 2
+    chord, hidden_note = pleaves
+    assert isinstance(chord, abjad.Chord), repr(chord)
+    assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
+    baca.pitch(chord, chord_pitch_string)
+    abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
+    baca.pitch(hidden_note, chord.note_heads[0].written_pitch)
+    baca.trill_spanner(
+        baca.select.rleak(pleaves),
+        alteration=trill_pitch_string,
+        force_trill_pitch_head_accidental=True,
+        harmonic=True,
+    )
+    next_ = abjad.get.leaf(hidden_note, 1)
+    if isinstance(next_, abjad.Rest):
+        baca.hairpin(
+            (),
+            f"niente o< {dynamic_string} >o niente",
+            pieces=baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
+        )
+    else:
+        baca.hairpin(
+            (),
+            f"niente o< {dynamic_string} >o !",
+            pieces=baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
+        )
 
 
 def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
@@ -798,6 +823,8 @@ def gt2(m):
 
 
 def vn(m):
+    C1b(library.pleaves(m[2][1:3], 1), "<Eb4 G4>", "Ab4", "mp")
+    C1b(library.pleaves(m[3][4:6], 1), "<Eb4 G4>", "Ab4", "mf")
     C1c(
         library.pleaves(m[3][-1:] + m[4, 30], 1),
         "<Eb4 G4>",
@@ -808,6 +835,8 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    C1b(library.pleaves(m[2][1:3], 1), "<Eb4 G4>", "Ab4", "mp")
+    C1b(library.pleaves(m[3][4:6], 1), "<Eb4 G4>", "Ab4", "mf")
     C1c(
         library.pleaves(m[4, 30], 1),
         "<Db3 F3>",

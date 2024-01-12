@@ -4235,27 +4235,74 @@ number.5.Violin.Music = {
     b'2
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <b' b'>1 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        ef'!
+        \tweak style #'harmonic
+        g'
+    >1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     \afterGrace
-    b'1 * 1/2
+    ef'!1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     {
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
         <b' b'>8
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
@@ -4286,25 +4333,77 @@ number.5.Violin.Music = {
     b'8.
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <b' b'>2. * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        ef'!
+        \tweak style #'harmonic
+        g'
+    >2. * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+    ef'!2. * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
@@ -5424,27 +5523,74 @@ number.5.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
     <d d>2
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>1 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        ef'!
+        \tweak style #'harmonic
+        g'
+    >1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     \afterGrace
-    d1 * 1/2
+    ef'!1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     {
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
         d8
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_STOP
+        \stopTrillSpan
 
     }
 
@@ -5473,21 +5619,64 @@ number.5.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
     <d d>4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>1 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        ef'!
+        \tweak style #'harmonic
+        g'
+    >1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d1 * 1/2
+    ef'!1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Cello.Music measure 4]
       %! SPANNER_START
@@ -5503,6 +5692,10 @@ number.5.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
