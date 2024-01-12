@@ -1093,7 +1093,7 @@ def group_leaves_by_staff_lines(leaves):
     return pairs
 
 
-def override_uneven_staff_padding(leaves):
+def override_uneven_staff_padding(leaves, *, only_dls=False):
     components = abjad.select.top(leaves)
     tuplets = abjad.select.tuplets(components)
     for tuplet in tuplets:
@@ -1104,7 +1104,8 @@ def override_uneven_staff_padding(leaves):
         else:
             assert staff_lines.line_count == 1
             staff_padding = 3
-        baca.override.tuplet_bracket_staff_padding(tuplet, staff_padding)
+        if only_dls is False:
+            baca.override.tuplet_bracket_staff_padding(tuplet, staff_padding)
     pairs = group_leaves_by_staff_lines(leaves)
     for staff_lines, group in pairs:
         if staff_lines.line_count == 5:
@@ -1260,6 +1261,9 @@ def gt1(cache):
     @baca.call
     def block():
         baca.override.tuplet_bracket_down(m.leaves())
+        baca.override.dls_staff_padding(m[7], 4)
+        baca.override.dls_staff_padding(m[9, 10], 4)
+        baca.override.dls_staff_padding(m[12, 13], 4)
 
 
 def gt2(cache):
@@ -1358,11 +1362,17 @@ def gt2(cache):
     @baca.call
     def block():
         baca.override.tuplet_bracket_down(m.leaves())
-        override_uneven_staff_padding(m[1, 3])
-        override_uneven_staff_padding(m[5, 6])
-        # override_uneven_staff_padding(m[8])
-        # override_uneven_staff_padding(m[11])
+        override_uneven_staff_padding(m[1, 3], only_dls=True)
+        override_uneven_staff_padding(m[5, 6], only_dls=True)
         baca.override.tuplet_bracket_staff_padding(m[14], 3)
+        baca.override.tuplet_bracket_positions(m[1, 6], (-5, -5))
+        baca.override.tuplet_bracket_positions(m[8], (-5, -5))
+        baca.override.tuplet_bracket_positions(m[11], (-5, -5))
+        baca.override.dls_staff_padding(m[7], 4)
+        baca.override.dls_staff_padding(m[8][:3], 8)
+        baca.override.dls_staff_padding(m[9, 10], 4)
+        baca.override.dls_staff_padding(m[11], 8)
+        baca.override.dls_staff_padding(m[12, 13], 4)
 
 
 def vn(m):

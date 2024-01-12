@@ -2631,6 +2631,7 @@ number.4.Guitar.1.Music = {
     \f
 
     % [Guitar.1.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 4
     <g' bf'!>4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2646,6 +2647,7 @@ number.4.Guitar.1.Music = {
     \mp
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2737,6 +2739,7 @@ number.4.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 9]
     \override DynamicLineSpanner.staff-padding = 3
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
@@ -2803,6 +2806,7 @@ number.4.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
     \revert DynamicLineSpanner.staff-padding
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 11]
     <f' af'>2
@@ -2843,6 +2847,7 @@ number.4.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 12]
     \override DynamicLineSpanner.staff-padding = 3
+    \override DynamicLineSpanner.staff-padding = 4
     r16
 
       %! STAFF_HIGHLIGHT
@@ -2922,6 +2927,7 @@ number.4.Guitar.1.Music = {
     \mp
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 14]
@@ -3028,7 +3034,7 @@ number.4.Guitar.2.Music = {
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
         \override TupletBracket.direction = #down
-        \override TupletBracket.staff-padding = 1.25
+        \override TupletBracket.positions = #'(-5 . -5)
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
         \set Staff.instrumentName = \wttc-gt-ii-markup
@@ -3107,7 +3113,6 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-mf
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3115,7 +3120,6 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        \override TupletBracket.staff-padding = 1.25
         r16
 
           %! STAFF_HIGHLIGHT
@@ -3131,7 +3135,6 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8.
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3141,7 +3144,6 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        \override TupletBracket.staff-padding = 1.25
         r16
 
           %! STAFF_HIGHLIGHT
@@ -3157,7 +3159,6 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8.
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3172,7 +3173,6 @@ number.4.Guitar.2.Music = {
         \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-        \override TupletBracket.staff-padding = 3
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
@@ -3220,7 +3220,6 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-f
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3228,7 +3227,6 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        \override TupletBracket.staff-padding = 1.25
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         d'''16
@@ -3242,7 +3240,6 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3253,7 +3250,6 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 3]
-        \override TupletBracket.staff-padding = 1.25
         r8.
         \revert DynamicLineSpanner.staff-padding
 
@@ -3285,7 +3281,6 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3293,7 +3288,6 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        \override TupletBracket.staff-padding = 3
         b'16
         \revert DynamicLineSpanner.staff-padding
 
@@ -3319,7 +3313,6 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-ff
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3349,7 +3342,6 @@ number.4.Guitar.2.Music = {
 
         % [Guitar.2.Music measure 5]
         \once \override DynamicLineSpanner.staff-padding = 7
-        \override TupletBracket.staff-padding = 1.25
         r16
 
         \once \override DynamicLineSpanner.staff-padding = 9
@@ -3379,7 +3371,6 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3393,7 +3384,6 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
-        \override TupletBracket.staff-padding = 1.25
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3438,7 +3428,6 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3473,7 +3462,6 @@ number.4.Guitar.2.Music = {
         \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-        \override TupletBracket.staff-padding = 3
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
@@ -3521,7 +3509,6 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-mf
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3529,7 +3516,6 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        \override TupletBracket.staff-padding = 1.25
         r16
 
           %! STAFF_HIGHLIGHT
@@ -3555,7 +3541,6 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
         \laissezVibrer
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3563,7 +3548,6 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        \override TupletBracket.staff-padding = 1.25
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3575,7 +3559,6 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-        \revert TupletBracket.staff-padding
 
     }
 
@@ -3590,8 +3573,10 @@ number.4.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.positions
 
     % [Guitar.2.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 4
     <fs'! a'>4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3607,12 +3592,15 @@ number.4.Guitar.2.Music = {
     \mp
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
         % [Guitar.2.Music measure 8]
+        \override DynamicLineSpanner.staff-padding = 8
+        \override TupletBracket.positions = #'(-5 . -5)
         <f' af'>16
         [
         \repeatTie
@@ -3668,6 +3656,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-ff
+        \revert DynamicLineSpanner.staff-padding
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
@@ -3684,8 +3673,10 @@ number.4.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
+    \revert TupletBracket.positions
 
     % [Guitar.2.Music measure 9]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     d''16
@@ -3741,12 +3732,15 @@ number.4.Guitar.2.Music = {
     \mp
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
         % [Guitar.2.Music measure 11]
+        \override DynamicLineSpanner.staff-padding = 8
+        \override TupletBracket.positions = #'(-5 . -5)
         <e' g'>8.
         [
         \repeatTie
@@ -3815,8 +3809,11 @@ number.4.Guitar.2.Music = {
     }
 
     r4
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.positions
 
     % [Guitar.2.Music measure 12]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     g'16
@@ -3884,6 +3881,7 @@ number.4.Guitar.2.Music = {
     \mp
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 14]
     \override TupletBracket.staff-padding = 3
