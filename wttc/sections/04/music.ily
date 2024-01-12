@@ -2138,6 +2138,7 @@ number.4.Guitar.1.Music = {
         \override Staff.BarLine.bar-extent = #'(-2 . 0)
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.direction = #down
         \override TupletBracket.staff-padding = 3
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
@@ -2653,7 +2654,6 @@ number.4.Guitar.1.Music = {
 
         % [Guitar.1.Music measure 8]
         \once \override DynamicLineSpanner.staff-padding = 7
-        \override TupletBracket.direction = #down
         \override TupletBracket.staff-padding = 1.25
         <fs' a'>8
         \repeatTie
@@ -2731,7 +2731,6 @@ number.4.Guitar.1.Music = {
         \f
         \laissezVibrer
         \revert DynamicLineSpanner.staff-padding
-        \revert TupletBracket.direction
         \revert TupletBracket.staff-padding
 
     }
@@ -2993,6 +2992,7 @@ number.4.Guitar.1.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert TupletBracket.direction
 
 }
 
@@ -3014,6 +3014,7 @@ number.4.Guitar.2.Music = {
         % [Guitar.2.Music measure 1]
           %! REAPPLIED_CLEF
         \clef "treble"
+        \once \override DynamicLineSpanner.staff-padding = 7
           %! REAPPLIED_CLEF_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -3026,6 +3027,8 @@ number.4.Guitar.2.Music = {
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.direction = #down
+        \override TupletBracket.staff-padding = 1.25
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
         \set Staff.instrumentName = \wttc-gt-ii-markup
@@ -3054,6 +3057,7 @@ number.4.Guitar.2.Music = {
           %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
+        \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
@@ -3083,6 +3087,7 @@ number.4.Guitar.2.Music = {
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override DynamicLineSpanner.staff-padding = 7
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3102,6 +3107,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-mf
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3109,6 +3115,7 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \override TupletBracket.staff-padding = 1.25
         r16
 
           %! STAFF_HIGHLIGHT
@@ -3124,6 +3131,7 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8.
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3133,6 +3141,7 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \override TupletBracket.staff-padding = 1.25
         r16
 
           %! STAFF_HIGHLIGHT
@@ -3148,18 +3157,22 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8.
+        \revert TupletBracket.staff-padding
 
     }
 
     r2
+    \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
         % [Guitar.2.Music measure 2]
+        \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override TupletBracket.staff-padding = 3
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
@@ -3187,6 +3200,7 @@ number.4.Guitar.2.Music = {
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override DynamicLineSpanner.staff-padding = 7
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3206,6 +3220,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-f
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3213,6 +3228,7 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \override TupletBracket.staff-padding = 1.25
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         d'''16
@@ -3226,6 +3242,7 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3236,10 +3253,13 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 3]
+        \override TupletBracket.staff-padding = 1.25
         r8.
+        \revert DynamicLineSpanner.staff-padding
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override DynamicLineSpanner.staff-padding = 9
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
@@ -3265,6 +3285,7 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3272,10 +3293,13 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \override TupletBracket.staff-padding = 3
         b'16
+        \revert DynamicLineSpanner.staff-padding
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override DynamicLineSpanner.staff-padding = 7
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3295,10 +3319,12 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-ff
+        \revert TupletBracket.staff-padding
 
     }
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 4]
       %! STAFF_HIGHLIGHT
@@ -3322,8 +3348,11 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 5]
+        \once \override DynamicLineSpanner.staff-padding = 7
+        \override TupletBracket.staff-padding = 1.25
         r16
 
+        \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
@@ -3350,6 +3379,7 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3357,11 +3387,13 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \once \override DynamicLineSpanner.staff-padding = 7
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
+        \override TupletBracket.staff-padding = 1.25
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -3379,6 +3411,7 @@ number.4.Guitar.2.Music = {
           %! SPANNER_STOP
         \baca-effort-ff
 
+        \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
@@ -3405,9 +3438,11 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
+        \revert TupletBracket.staff-padding
 
     }
 
+    \once \override DynamicLineSpanner.staff-padding = 7
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
@@ -3435,8 +3470,10 @@ number.4.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 6]
+        \once \override DynamicLineSpanner.staff-padding = 9
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override TupletBracket.staff-padding = 3
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
@@ -3464,6 +3501,7 @@ number.4.Guitar.2.Music = {
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
+        \override DynamicLineSpanner.staff-padding = 7
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3483,6 +3521,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \baca-effort-mf
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3490,6 +3529,7 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \override TupletBracket.staff-padding = 1.25
         r16
 
           %! STAFF_HIGHLIGHT
@@ -3515,6 +3555,7 @@ number.4.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
         \laissezVibrer
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3522,6 +3563,7 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
+        \override TupletBracket.staff-padding = 1.25
         d'''16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -3533,6 +3575,7 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
+        \revert TupletBracket.staff-padding
 
     }
 
@@ -3546,6 +3589,7 @@ number.4.Guitar.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 7]
     <fs'! a'>4
@@ -3919,6 +3963,7 @@ number.4.Guitar.2.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert TupletBracket.direction
 
 }
 

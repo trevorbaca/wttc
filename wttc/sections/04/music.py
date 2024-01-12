@@ -1085,6 +1085,36 @@ def ob(m):
         baca.override.dls_staff_padding(m.leaves(), 6.5)
 
 
+def group_leaves_by_staff_lines(leaves):
+    pairs = itertools.groupby(
+        leaves,
+        lambda _: abjad.get.effective(_, baca.StaffLines),
+    )
+    return pairs
+
+
+def override_uneven_staff_padding(leaves):
+    components = abjad.select.top(leaves)
+    tuplets = abjad.select.tuplets(components)
+    for tuplet in tuplets:
+        leaf = abjad.select.leaf(tuplet, 0)
+        staff_lines = abjad.get.effective(leaf, baca.StaffLines)
+        if staff_lines.line_count == 5:
+            staff_padding = 1.25
+        else:
+            assert staff_lines.line_count == 1
+            staff_padding = 3
+        baca.override.tuplet_bracket_staff_padding(tuplet, staff_padding)
+    pairs = group_leaves_by_staff_lines(leaves)
+    for staff_lines, group in pairs:
+        if staff_lines.line_count == 5:
+            adjustment = 0
+        else:
+            assert staff_lines.line_count == 1
+            adjustment = 2
+        baca.override.dls_staff_padding(group, 7 + adjustment)
+
+
 def gt1(cache):
     name = "gt1"
     m = cache[name]
@@ -1166,39 +1196,10 @@ def gt1(cache):
         for note, dynamic in zip(notes, dynamics, strict=True):
             baca.dynamic(note, dynamic)
 
-    def group_leaves_by_staff_lines(leaves):
-        pairs = itertools.groupby(
-            leaves,
-            lambda _: abjad.get.effective(_, baca.StaffLines),
-        )
-        return pairs
-
-    def override_uneven_staff_padding(leaves):
-        components = abjad.select.top(leaves)
-        tuplets = abjad.select.tuplets(components)
-        for tuplet in tuplets:
-            leaf = abjad.select.leaf(tuplet, 0)
-            staff_lines = abjad.get.effective(leaf, baca.StaffLines)
-            if staff_lines.line_count == 5:
-                staff_padding = 1.25
-            else:
-                assert staff_lines.line_count == 1
-                staff_padding = 3
-            baca.override.tuplet_bracket_staff_padding(tuplet, staff_padding)
-        pairs = group_leaves_by_staff_lines(leaves)
-        for staff_lines, group in pairs:
-            if staff_lines.line_count == 5:
-                adjustment = 0
-            else:
-                assert staff_lines.line_count == 1
-                adjustment = 2
-            baca.override.dls_staff_padding(group, 7 + adjustment)
-
     @baca.call
     def block():
         override_uneven_staff_padding(m[1, 3])
         override_uneven_staff_padding(m[5, 6][1:-1])
-        baca.override.tuplet_bracket_down(m[8])
         override_uneven_staff_padding(m[8])
         baca.override.dls_staff_padding(m[4], 3)
         run = abjad.select.run(m[6, 7], -1)
@@ -1255,6 +1256,10 @@ def gt1(cache):
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)
+
+    @baca.call
+    def block():
+        baca.override.tuplet_bracket_down(m.leaves())
 
 
 def gt2(cache):
@@ -1349,6 +1354,13 @@ def gt2(cache):
             dynamics = dynamic_string.split()
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)
+
+    @baca.call
+    def block():
+        baca.override.tuplet_bracket_down(m.leaves())
+        override_uneven_staff_padding(m[1, 3])
+        override_uneven_staff_padding(m[5, 6])
+        # override_uneven_staff_padding(m[8])
 
 
 def vn(m):
