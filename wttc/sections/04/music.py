@@ -1361,6 +1361,8 @@ def gt2(cache):
         override_uneven_staff_padding(m[1, 3])
         override_uneven_staff_padding(m[5, 6])
         # override_uneven_staff_padding(m[8])
+        # override_uneven_staff_padding(m[11])
+        baca.override.tuplet_bracket_staff_padding(m[14], 3)
 
 
 def vn(m):

@@ -3886,6 +3886,7 @@ number.4.Guitar.2.Music = {
     ~
 
     % [Guitar.2.Music measure 14]
+    \override TupletBracket.staff-padding = 3
     <e' g'>4
     - \tweak stencil ##f
     ~
@@ -3931,6 +3932,7 @@ number.4.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
+    \revert TupletBracket.staff-padding
 
     % [Guitar.2.Music measure 15]
     r2
