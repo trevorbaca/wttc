@@ -4023,6 +4023,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4041,7 +4042,6 @@ number.4.Violin.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -4156,6 +4156,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4176,7 +4177,6 @@ number.4.Violin.Music = {
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     \revert DynamicLineSpanner.staff-padding
-    \revert NoteHead.style
 
     r16
 
@@ -4273,6 +4273,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4291,7 +4292,6 @@ number.4.Violin.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -4395,6 +4395,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4409,7 +4410,6 @@ number.4.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-        \revert NoteHead.style
 
     }
 
@@ -4463,6 +4463,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4483,7 +4484,6 @@ number.4.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-        \revert NoteHead.style
 
         \grace {
 
@@ -4528,6 +4528,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4548,7 +4549,6 @@ number.4.Violin.Music = {
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     \revert DynamicLineSpanner.staff-padding
-    \revert NoteHead.style
 
     % [Violin.Music measure 6]
     r4
@@ -4688,6 +4688,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4709,7 +4710,6 @@ number.4.Violin.Music = {
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     \revert DynamicLineSpanner.staff-padding
-    \revert NoteHead.style
 
     \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
@@ -4811,6 +4811,7 @@ number.4.Violin.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             c''8
+            \revert NoteHead.style
 
         }
 
@@ -4829,7 +4830,6 @@ number.4.Violin.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -5318,6 +5318,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -5342,7 +5343,6 @@ number.4.Cello.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
         \grace {
 
@@ -5405,6 +5405,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -5423,7 +5424,6 @@ number.4.Cello.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -5497,6 +5497,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -5515,7 +5516,6 @@ number.4.Cello.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -5581,6 +5581,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -5599,7 +5600,6 @@ number.4.Cello.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -5911,6 +5911,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -5927,7 +5928,6 @@ number.4.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-    \revert NoteHead.style
 
     % [Cello.Music measure 6]
     r4
@@ -5981,6 +5981,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -5995,7 +5996,6 @@ number.4.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-        \revert NoteHead.style
 
     }
 
@@ -6062,6 +6062,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -6080,7 +6081,6 @@ number.4.Cello.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 
@@ -6389,6 +6389,7 @@ number.4.Cello.Music = {
             \revert NoteHead.no-ledgers
             \undo \hide NoteHead
             d'8
+            \revert NoteHead.style
 
         }
 
@@ -6407,7 +6408,6 @@ number.4.Cello.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
-        \revert NoteHead.style
 
     }
 

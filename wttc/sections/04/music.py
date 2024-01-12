@@ -742,8 +742,7 @@ def B1b(
     dynamics = dynamics.split()
     grace_pitch, start_pitch, stop_pitch = pitches.split()
     for run, dynamic in zip(runs, dynamics, strict=True):
-        # TODO: maybe run doesn't need to rleak here:
-        baca.override.note_head_style_harmonic(baca.select.rleak(run))
+        baca.override.note_head_style_harmonic(run)
         if len(run) in (3, 4):
             baca.pitch(run[0], grace_pitch)
             baca.flat_glissando(run[1:], start_pitch, stop_pitch=stop_pitch)
