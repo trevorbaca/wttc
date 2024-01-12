@@ -4306,93 +4306,129 @@ number.5.Violin.Music = {
     \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
     % [Violin.Music measure 4]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Violin.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'1
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!1
+    - \baca-staccati #3
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!2
+    - \baca-staccati #3
+      %! SPANNER_STOP
+    \stopTrillSpan
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
     % [Violin.Music measure 6]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! SPANNER_STOP
+    \stopTrillSpan
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
-    \repeatTie
+    \parenthesize
+    ef'!2.
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! SPANNER_STOP
+    \stopTrillSpan
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
     % [Violin.Music measure 7]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -4465,23 +4501,31 @@ number.5.Violin.Music = {
     \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
     % [Violin.Music measure 10]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -4569,23 +4613,31 @@ number.5.Violin.Music = {
     \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
     % [Violin.Music measure 14]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r8.
 
@@ -4656,23 +4708,31 @@ number.5.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
     % [Violin.Music measure 18]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -4723,22 +4783,30 @@ number.5.Violin.Music = {
     \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    ef'!8.
+    - \baca-staccati #3
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan g'!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \parenthesize
+    ef'!4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring

@@ -654,8 +654,32 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def C1():
+def C1a():
     pass
+
+
+def C1b():
+    pass
+
+
+def C1c(pleaves, fundamental_string, harmonic_string, dynamic_string):
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamic_string.split()
+    harmonics = harmonic_string.split()
+    assert len(harmonics) == 2
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.pitch(plt, fundamental_string)
+        baca.triple_staccato(plt.head)
+        if dynamic != "-":
+            baca.dynamic(plt.head, dynamic)
+        baca.trill_spanner(
+            baca.select.rleak(plt),
+            alteration=harmonics[0],
+            force_trill_pitch_head_accidental=True,
+            harmonic=True,
+        )
+        baca.parenthesize(plt[1:])
+        baca.untie(plt)
 
 
 def C2a():
@@ -737,7 +761,14 @@ def gt2(m):
 
 
 def vn(m):
-    pass
+    @baca.call
+    def block():
+        C1c(
+            library.pleaves(m[3][-1:] + m[4, 30], 1),
+            "Eb4",
+            "G4 Ab4",
+            "f - p - - - p f p p",
+        )
 
 
 def vc(m):
