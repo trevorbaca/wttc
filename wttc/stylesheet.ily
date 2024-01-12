@@ -191,6 +191,7 @@
     \override NoteColumn.ignore-collision = ##t
 
     \override Parentheses.font-size = -4
+    \override Parentheses.thickness = 3
 
     \override RehearsalMark.break-visibility = ##(#t #t #f)
 

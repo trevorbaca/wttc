@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -378,12 +379,12 @@ def VN(voice, meters):
     )
     rhythm(
         meters(3, 4),
-        [t(4), 1, BG([2], 3), swell(12), -1, 7, -8, -1, c(7, 2), -4],
+        [t(4), 1, BG([2], 3), swell(12), -1, c(7, 2), -8, -1, c(7, 2), -4],
         material=1,
     )
     rhythm(
         meters(5, 6),
-        [16, 8, -1, 15, -1, 7],
+        [c(16, 2), c(8, 2), -1, c(15, 2), -1, c(7, 2)],
         material=1,
     )
     rhythm(
@@ -398,7 +399,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(9),
-        [-1, 7],
+        [-1, c(7, 2)],
         material=1,
         overlap=[-16],
     )
@@ -414,7 +415,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(13, 14),
-        [-1, 7, "-"],
+        [-1, c(7, 2), "-"],
         material=1,
         overlap=[-8],
     )
@@ -431,7 +432,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(17),
-        [7],
+        [c(7, 2)],
         material=1,
         overlap=["-"],
     )
@@ -442,7 +443,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(20),
-        [-1, 7, "-"],
+        [-1, c(7, 2), "-"],
         material=1,
     )
     rhythm(
@@ -526,29 +527,29 @@ def VC(voice, meters):
     )
     rhythm(
         meters(3, 4),
-        [3, 5, swell(16), 8, -4, 8, "-"],
+        [3, 5, swell(16), c(8, 2), -4, c(8, 2), "-"],
         material=1,
     )
     rhythm(
         meters(5, 6),
-        [16, -1, 7, 16, -1, 7],
+        [c(16, 2), -1, c(7, 2), c(16, 2), -1, c(7, 2)],
         material=1,
     )
     rhythm.mmrests(7, 8)
     rhythm(
         meters(9),
-        ["-", 8],
+        ["-", c(8, 2)],
         material=1,
     )
     rhythm.mmrests(10, 11)
     rhythm(
         meters(12, 14),
-        [-32, 8, "-"],
+        [-32, c(8, 2), "-"],
         material=1,
     )
     rhythm(
         meters(15, 17),
-        ["-", 8],
+        ["-", c(8, 2)],
         material=1,
     )
     rhythm(
@@ -663,25 +664,32 @@ def C1b():
     pass
 
 
-def C1c(pleaves, fundamental_string, harmonic_string, dynamic_string):
+def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     assert all(isinstance(_, abjad.Chord) for _ in pleaves)
     plts = baca.select.plts(pleaves)
     dynamics = dynamic_string.split()
-    harmonics = harmonic_string.split()
-    assert len(harmonics) == 2
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.pitch(plt, fundamental_string)
+        baca.pitch(plt, chord_pitch_string)
+        for chord in plt:
+            abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
         baca.triple_staccato(plt.head)
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)
         baca.trill_spanner(
             baca.select.rleak(plt),
-            alteration=harmonics[0],
+            alteration=trill_pitch_string,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
         )
-        baca.parenthesize(plt[1:])
-        baca.untie(plt)
+        if plt[1:]:
+            baca.override.accidental_font_size(plt[1:], -6)
+            baca.override.dots_font_size(plt[1:], -3)
+            baca.override.note_head_font_size(plt[1:], -6)
+            baca.override.parentheses_font_size(plt[1:], 3)
+            baca.parenthesize(plt[1:])
+            baca.untie(plt)
+            for chord in plt[1:]:
+                del chord.note_heads[1]
 
 
 def C2a():
@@ -745,10 +753,7 @@ def fl(m):
 
 
 def ob(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
 
 def gt1(m):
@@ -756,30 +761,26 @@ def gt1(m):
 
 
 def gt2(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
 
 def vn(m):
-    @baca.call
-    def block():
-        """
-        C1c(
-            library.pleaves(m[3][-1:] + m[4, 30], 1),
-            "Eb4",
-            "G4 Ab4",
-            "f - p - - - p f p p",
-        )
-        """
+    C1c(
+        library.pleaves(m[3][-1:] + m[4, 30], 1),
+        "<Eb4 G4>",
+        "Ab4",
+        "f - p - - - p p p p",
+    )
 
 
 def vc(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
+    C1c(
+        library.pleaves(m[4, 30], 1),
+        "<Db3 F3>",
+        "Gb3",
+        "f - p - - - f p p",
+    )
 
 
 @baca.build.timed("make_score")
