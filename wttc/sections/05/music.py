@@ -374,7 +374,14 @@ def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        [-4, BG([2], 6), BG([2], t(2)), 8, w(8, 16), AG([2], h(w(8, 16)))],
+        [
+            -4,
+            BG([c(2, 2)], 6),
+            BG([c(2, 2)], t(2)),
+            8,
+            w(8, 16),
+            AG([c(2, 2)], h(w(8, 16))),
+        ],
         material=1,
     )
     rhythm(

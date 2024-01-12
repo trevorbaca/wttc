@@ -4198,7 +4198,7 @@ number.5.Violin.Music = {
         %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
-        b'8
+        <b' b'>8
 
     }
 
@@ -4218,7 +4218,7 @@ number.5.Violin.Music = {
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
-        b'8
+        <b' b'>8
 
     }
 
@@ -4255,7 +4255,7 @@ number.5.Violin.Music = {
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
-        b'8
+        <b' b'>8
 
     }
 
