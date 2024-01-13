@@ -2537,96 +2537,176 @@ number.5.Oboe.Music = {
     % [Oboe.Music measure 7]
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'16
+      %! SPANNER_START
+    \pitchedTrill
+    e'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
+      %! SPANNER_START
+    \startTrillSpan f'''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
+    e'''1
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    e'''4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Oboe.Music measure 8]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    e'''4
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
+    ef'''!1
+      %! SPANNER_STOP
+    \stopTrillSpan
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    ef'''4
     \repeatTie
 
     % [Oboe.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
+      %! SPANNER_START
+    \pitchedTrill
+    d'''1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+      %! SPANNER_START
+    \startTrillSpan e'''
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Oboe.Music measure 10]
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'16
+      %! SPANNER_START
+    \pitchedTrill
+    e'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
+      %! SPANNER_START
+    \startTrillSpan f'''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
+    e'''1
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    e'''4
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Oboe.Music measure 11]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    e'''4
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
+    ef'''!1
+      %! SPANNER_STOP
+    \stopTrillSpan
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    ef'''4
     \repeatTie
 
     % [Oboe.Music measure 12]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
+      %! SPANNER_START
+    \pitchedTrill
+    d'''1.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+      %! SPANNER_START
+    \startTrillSpan e'''
 
     % [Oboe.Music measure 13]
       %! STAFF_HIGHLIGHT
@@ -2634,22 +2714,46 @@ number.5.Oboe.Music = {
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Oboe.Music measure 14]
     r2.
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'16
+      %! SPANNER_START
+    \pitchedTrill
+    d'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
+      %! SPANNER_START
+    \startTrillSpan e'''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
+    d'''2
 
     % [Oboe.Music measure 15]
       %! STAFF_HIGHLIGHT
@@ -2657,6 +2761,10 @@ number.5.Oboe.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Oboe.Music measure 16]
     R1 * 6/4
@@ -2671,55 +2779,98 @@ number.5.Oboe.Music = {
     % [Oboe.Music measure 18]
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'16
+      %! SPANNER_START
+    \pitchedTrill
+    df'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
+      %! SPANNER_START
+    \startTrillSpan ef'''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
+    df'''2
     - \tweak stencil ##f
     ~
 
     % [Oboe.Music measure 19]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
+    df'''1
     - \tweak stencil ##f
     ~
+    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    df'''4
     \repeatTie
 
     % [Oboe.Music measure 20]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'16
+      %! SPANNER_START
+    \pitchedTrill
+    df'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
+      %! SPANNER_START
+    \startTrillSpan ef'''
 
     % [Oboe.Music measure 21]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
+    df'''2
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Oboe.Music measure 22]
     R1 * 3/4
@@ -2739,29 +2890,51 @@ number.5.Oboe.Music = {
     % [Oboe.Music measure 25]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'8.
+      %! SPANNER_START
+    \pitchedTrill
+    df'''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    \startTrillSpan ef'''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    df'''4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    df'''8
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r2.
 
@@ -2798,37 +2971,56 @@ number.5.Oboe.Music = {
     % [Oboe.Music measure 32]
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
-    b'2
+    ef'''!2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
+    ef'''2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Oboe.Music measure 33]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
+    ef'''2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    ef'''8
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    r16
+    r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     % [Oboe.Music measure 34]
     R1 * 4/4
@@ -2836,56 +3028,97 @@ number.5.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 35]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
-    b'1
+    ef'''!1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
     % [Oboe.Music measure 36]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
+    ef'''1
     \repeatTie
 
     % [Oboe.Music measure 37]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     R1 * 4/4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 38]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
-    b'1
+    d'''1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
     % [Oboe.Music measure 39]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
+    d'''1
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [Oboe.Music measure 40]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
+    d'''1
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     % [Oboe.Music measure 41]
     R1 * 4/4

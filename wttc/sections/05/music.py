@@ -234,7 +234,7 @@ def OB(voice, meters):
     rhythm.mmrests(26, 31)
     rhythm(
         meters(32, 33),
-        [-4, xt(8), xt(12), 15, -1],
+        [-4, xt(8), xt(12), 14, -2],
         material=1,
     )
     rhythm.mmrests(34)
@@ -840,8 +840,23 @@ def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
                 del chord.note_heads[1]
 
 
-def C2a():
-    pass
+def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
+    plts = baca.select.plts(pleaves)
+    if pitch_2 is None:
+        assert len(plts) == 1
+    else:
+        assert len(plts) == 2
+    baca.pitch(plts[0], pitch_1)
+    baca.trill_spanner(
+        baca.select.rleak(plts[0]),
+        alteration=trill_pitch,
+    )
+    if pitch_2:
+        baca.pitch(plts[1], pitch_2)
+    baca.hairpin(
+        baca.select.rleak(pleaves),
+        f"{dynamic} >o !",
+    )
 
 
 def C2b():
@@ -860,7 +875,15 @@ def C3c():
     pass
 
 
-def D1():
+def D1a(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.rleak(pleaves),
+        f"{dynamic} >o niente",
+    )
+
+
+def D1b():
     pass
 
 
@@ -902,6 +925,17 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6")
+    C2a(library.pleaves(m[9], 2), "D6", "E6", "p")
+    C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6")
+    C2a(library.pleaves(m[12], 2), "D6", "E6", "p")
+    C2a(library.pleaves(m[14], 2), "D6", "E6", "mf")
+    C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p")
+    C2a(library.pleaves(m[20, 21], 2), "Db6", "Eb6", "p")
+    C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
+    D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
+    D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp")
+    D1a(library.pleaves(m[38, 40], 1), "D6", "f")
 
 
 def gt1(m):
