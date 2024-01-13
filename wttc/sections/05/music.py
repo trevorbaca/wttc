@@ -859,8 +859,12 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     )
 
 
-def C2b():
-    pass
+def C2b(pleaves, pitch_1, pleaves_2=None, pitch_2=None, string_number=None):
+    baca.override.note_head_style_harmonic(pleaves)
+    if pleaves_2:
+        assert pitch_2 and string_number
+        baca.override.note_head_style_harmonic(pleaves_2)
+        baca.pitch(pleaves_2, pitch_2)
 
 
 def C3a():
@@ -957,6 +961,7 @@ def vn(m):
         "Ab4",
         "f - p - - - p p p p",
     )
+    C2b(m[7, 8][1:-3], "A3", m[8][-3:], "B4", "IV")
 
 
 def vc(m):
