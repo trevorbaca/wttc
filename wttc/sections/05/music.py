@@ -792,7 +792,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
     baca.pitch(hidden_note, chord.note_heads[0].written_pitch)
     baca.trill_spanner(
-        baca.select.rleak(pleaves),
+        baca.select.next(pleaves),
         alteration=trill_pitch_string,
         force_trill_pitch_head_accidental=True,
         harmonic=True,
@@ -802,13 +802,13 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         baca.hairpin(
             (),
             f"niente o< {dynamic_string} >o niente",
-            pieces=baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
+            pieces=baca.select.lparts(baca.select.next(pleaves), [1, 2]),
         )
     else:
         baca.hairpin(
             (),
             f"niente o< {dynamic_string} >o !",
-            pieces=baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
+            pieces=baca.select.lparts(baca.select.next(pleaves), [1, 2]),
         )
 
 
@@ -824,7 +824,7 @@ def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)
         baca.trill_spanner(
-            baca.select.rleak(plt),
+            baca.select.next(plt),
             alteration=trill_pitch_string,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
@@ -848,13 +848,13 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
         assert len(plts) == 2
     baca.pitch(plts[0], pitch_1)
     baca.trill_spanner(
-        baca.select.rleak(plts[0]),
+        baca.select.next(plts[0]),
         alteration=trill_pitch,
     )
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
     baca.hairpin(
-        baca.select.rleak(pleaves),
+        baca.select.next(pleaves),
         f"{dynamic} >o !",
     )
 
@@ -878,7 +878,7 @@ def C3c():
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
-        baca.select.rleak(pleaves),
+        baca.select.next(pleaves),
         f"{dynamic} >o niente",
     )
 
