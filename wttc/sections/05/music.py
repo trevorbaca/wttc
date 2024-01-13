@@ -187,7 +187,69 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 6)
+    rhythm(
+        meters(7, 8),
+        [-3, "+", 20],
+        material=2,
+    )
+    rhythm(
+        meters(9),
+        [16, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(10, 11),
+        [-3, "+", 20],
+        material=2,
+    )
+    rhythm(
+        meters(12),
+        ["+"],
+        material=2,
+    )
+    rhythm.mmrests(13)
+    rhythm(
+        meters(14),
+        ["-", 9],
+        material=2,
+    )
+    rhythm.mmrests(15, 17)
+    rhythm(
+        meters(18, 19),
+        [-3, "+"],
+        material=2,
+    )
+    rhythm(
+        meters(20, 21),
+        [-11, 9, "-"],
+        material=2,
+    )
+    rhythm.mmrests(22, 24)
+    rhythm(
+        meters(25),
+        [-1, 9, "-"],
+        material=2,
+    )
+    rhythm.mmrests(26, 31)
+    rhythm(
+        meters(32, 33),
+        [-4, xt(8), xt(12), 15, -1],
+        material=1,
+    )
+    rhythm.mmrests(34)
+    rhythm(
+        meters(35, 36),
+        ["+"],
+        material=1,
+    )
+    rhythm.mmrests(37)
+    rhythm(
+        meters(38, 40),
+        ["+", -8],
+        material=1,
+    )
+    rhythm.mmrests(41, 48)
 
 
 def GT1(voice, meters):
