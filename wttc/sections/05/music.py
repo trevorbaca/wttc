@@ -108,34 +108,44 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 9),
-        ["-", 16, -58, 16, -58, 16, -8],
+        ["-"]
+        + [4, 4, 4, AG([2], 4), -58]
+        + [2, 4, 4, 4, AG([2], 2), -58]
+        + [4, 4, 4, AG([2], 4), -8],
         material=3,
     )
     rhythm.mmrests(10, 11)
     rhythm(
         meters(12, 14),
-        [8, AG([2], 24), "-"],
+        7 * [4] + [AG([2], 4), "-"],
         material=3,
     )
     rhythm(
-        meters(15, 17),
-        [8, AG([2], 24), "-", -1, 16, -3],
+        meters(15, 16),
+        7 * [4] + [AG([2], 4), "-"],
         material=3,
     )
-    rhythm.mmrests(18, 19)
     rhythm(
-        meters(20, 24),
-        [-16, -4, -3, t(1), t(12), t(16), t(16), 7, -1],
+        meters(16, 17),
+        [-1, 18, 1],
+        material=3,
+        overlap=["-"],
+    )
+    rhythm.mmrests(18, 20)
+    rhythm(
+        meters(21, 24),
+        [-8, -1, 3, 12, 12, 8, 12, 8],
         material=3,
     )
     rhythm(
         meters(25, 27),
-        [-20, -1, t(3), t(16), t(16), 7, -1],
+        [-20, -1, 3, 12, 8, 12, 8],
         material=3,
     )
+    rhythm.mmrests(28, 29)
     rhythm(
-        meters(28, 30),
-        ["-", -1, 7, -4],
+        meters(30),
+        [-1, w(3, 7), h(4), -4],
         material=3,
     )
     rhythm.mmrests(31)
@@ -867,12 +877,53 @@ def C2b(pleaves, pitch_1, pleaves_2=None, pitch_2=None, string_number=None):
         baca.pitch(pleaves_2, pitch_2)
 
 
-def C3a():
-    pass
+def C3a(pleaves, start_pitch, stop_pitch, hairpin, pleaves_2=None):
+    if pleaves_2 is None:
+        baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
+        baca.hairpin(
+            pleaves,
+            hairpin,
+        )
+    else:
+        length_1, length_2 = len(pleaves), len(pleaves_2)
+        pairs = [(start_pitch, length_1 + 1), (stop_pitch, length_2 + 1)]
+        baca.multistage_leaf_glissando(
+            pleaves + pleaves_2,
+            pairs,
+            start_pitch,
+        )
+        baca.hairpin(
+            (),
+            hairpin,
+            forbid_al_niente_to_bar_line=True,
+            pieces=[pleaves, pleaves_2],
+        )
 
 
-def C3b():
-    pass
+def C3b(pleaves, pitch, alteration, hairpin):
+    baca.trill_spanner(
+        baca.select.next(pleaves),
+        alteration=alteration,
+    )
+    baca.untie(pleaves)
+    baca.pitch(pleaves[:1], pitch)
+    baca.override.accidental_font_size(pleaves[1:], -6)
+    baca.override.dots_font_size(pleaves[1:], -3)
+    baca.override.flag_font_size(pleaves[1:], -3)
+    baca.override.note_head_font_size(pleaves[1:], -3)
+    baca.override.stem_up(pleaves[1:])
+    baca.pitch(pleaves[1:], "E5")
+    if "<" in hairpin and ">" in hairpin:
+        baca.hairpin(
+            (),
+            hairpin,
+            pieces=[pleaves[:-1], baca.select.next(pleaves[-1:])],
+        )
+    else:
+        baca.hairpin(
+            pleaves,
+            hairpin,
+        )
 
 
 def C3c():
@@ -924,7 +975,17 @@ def D4c():
 
 
 def fl(m):
-    pass
+    @baca.call
+    def block():
+        C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp |>o niente")
+        C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp |>o niente")
+        C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp |>o niente")
+        C3a(m[12], "G4", "F#4", "mp |>o niente o<| mf", m[13][:3])
+        C3a(m[15], "G4", "F#4", "mp |>o niente o<| f", m[16][:3])
+        C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<| ff")
+        C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp >o niente")
+        C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p >o niente")
+        C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p >o niente")
 
 
 def ob(m):
