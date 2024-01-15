@@ -479,8 +479,13 @@ def VN(voice, meters):
         material=1,
     )
     rhythm(
-        meters(7, 8),
-        [-3, 1, 4, 4, 4, 4, 4, 4, "+", anchor(4, 1)],
+        meters(7),
+        [-3, 1, 4, 4, 4, 4, AG([2], 4)],
+        material=2,
+    )
+    rhythm(
+        meters(8),
+        [w(16, 24), X(h(7)), h(1)],
         material=2,
     )
     rhythm(
@@ -495,8 +500,13 @@ def VN(voice, meters):
         overlap=[-16],
     )
     rhythm(
-        meters(10, 11),
-        [-3, 1, 4, 4, 4, 4, "+", anchor(4, 1)],
+        meters(10),
+        [-3, 1, 4, 4, 4, 4, AG([2], 4)],
+        material=2,
+    )
+    rhythm(
+        meters(11),
+        [w(16, 24), X(h(7)), h(1)],
         material=2,
     )
     rhythm(
@@ -512,7 +522,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(14),
-        [1, 4, 4],
+        [1, 4, AG([2], 4)],
         material=2,
         overlap=["-"],
     )
@@ -869,12 +879,46 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     )
 
 
-def C2b(pleaves, pitch_1, pleaves_2=None, pitch_2=None, string_number=None):
+def C2b(pleaves, pitch_1, pitch_2, hairpin, pleaves_2=None, pitch_3=None, scps=None):
     baca.override.note_head_style_harmonic(pleaves)
+    baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
+    baca.pizzicato_spanner(
+        pleaves,
+        items=r"\baca-pizz-markup ||",
+        staff_padding=3,
+    )
+    # TODO: make this work:
+    # baca.parenthesize(pleaves[-1:])
     if pleaves_2:
-        assert pitch_2 and string_number
+        assert pitch_3
         baca.override.note_head_style_harmonic(pleaves_2)
-        baca.pitch(pleaves_2, pitch_2)
+        baca.pitch(pleaves_2, pitch_3)
+        baca.scp_spanner(
+            (),
+            scps,
+            # TODO: make this work:
+            # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
+            bookend=-1,
+            pieces=baca.select.lparts(baca.select.next(pleaves_2), [1, 2]),
+            staff_padding=3,
+        )
+        all_leaves = pleaves + pleaves_2
+        baca.hairpin(
+            (),
+            hairpin,
+            pieces=[all_leaves[:2], all_leaves[-2:]],
+        )
+    else:
+        all_leaves = pleaves
+        baca.hairpin(
+            pleaves,
+            hairpin,
+        )
+    baca.string_number_spanner(
+        baca.select.next(all_leaves),
+        "IV =|",
+        staff_padding=6.5,
+    )
 
 
 def C3a(pleaves, start_pitch, stop_pitch, hairpin, pleaves_2=None):
@@ -926,8 +970,20 @@ def C3b(pleaves, pitch, alteration, hairpin):
         )
 
 
-def C3c():
-    pass
+def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=None):
+    baca.pitch(pleaves, pitch)
+    for pleaf, dynamic in zip(pleaves, dynamics.split(), strict=True):
+        if dynamic != "-":
+            baca.dynamic(pleaf, dynamic)
+    if lv is True:
+        baca.laissez_vibrer(pleaves)
+    if pizz is True:
+        for pleaf in pleaves:
+            baca.pizzicato_spanner(
+                baca.select.next(pleaf),
+                items=r"\baca-pizz-markup ||",
+                staff_padding=pizz_staff_padding,
+            )
 
 
 def D1a(pleaves, pitch, dynamic):
@@ -1004,11 +1060,14 @@ def ob(m):
 
 
 def gt1(m):
-    pass
+    C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
+    C3c(library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, pizz_staff_padding=3)
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
+    C3c(library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, pizz_staff_padding=3)
 
 
 def vn(m):
@@ -1022,7 +1081,13 @@ def vn(m):
         "Ab4",
         "f - p - - - p p p p",
     )
-    C2b(m[7, 8][1:-3], "A3", m[8][-3:], "B4", "IV")
+    C2b(m[7][1:], "A3", "C5", "f > p <| ff", m[8], "B4", "T -> P1 -> P4")
+    C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
+    C2b(library.pleaves(m[14], 2), "A3", "A4", "f > p")
+    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o niente")
+    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o !")
+    # TODO: change niente to !
+    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o niente")
 
 
 def vc(m):
