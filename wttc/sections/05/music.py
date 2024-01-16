@@ -1021,8 +1021,28 @@ def D1a(pleaves, pitch, dynamic):
     )
 
 
-def D1b():
-    pass
+def D1b(
+    pleaves,
+    pitch,
+    hairpin_string,
+    hairpin_pieces,
+    scp_string,
+    scp_pieces,
+    bookend=False,
+):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        (),
+        hairpin_string,
+        pieces=hairpin_pieces,
+    )
+    baca.scp_spanner(
+        (),
+        scp_string,
+        bookend=bookend,
+        pieces=scp_pieces,
+        staff_padding=3,
+    )
 
 
 def D2a():
@@ -1159,12 +1179,10 @@ def vn(m):
         "niente o< p >o niente",
         dummy_pitch="B5",
     )
-
     C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
     C2b(library.pleaves(m[14], 2), "A3", "A4", "f > p")
     C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o niente")
     C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o !")
-    # TODO: change niente to !
     C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o niente")
 
 
@@ -1175,11 +1193,36 @@ def vc(m):
     C1b(library.pleaves(m[2][1:3], 1), "<Eb4 G4>", "Ab4", "mp")
     C1b(library.pleaves(m[3][4:6], 1), "<Eb4 G4>", "Ab4", "mf")
     C1c(
-        library.pleaves(m[4, 30], 1),
+        library.pleaves(m[4, 17], 1),
         "<Db3 F3>",
         "Gb3",
         "f - p - - - f p p",
     )
+
+    @baca.call
+    def block():
+        pleaves = library.pleaves(m[18, 20], 99)
+        D1b(
+            pleaves,
+            "F2",
+            "niente o< p >o niente",
+            baca.select.lparts(baca.select.next(pleaves), [2, 3]),
+            "T =|",
+            [baca.select.next(pleaves)],
+        )
+
+    @baca.call
+    def block():
+        pleaves = library.pleaves(m[22, 30], 99)
+        D1b(
+            pleaves,
+            "F2",
+            "niente o< p > pp < mf > p < f >o niente",
+            baca.select.lparts(baca.select.next(pleaves), [2, 2, 3, 2, 2, 5]),
+            "T -> P1 -> T -> P2 -> T",
+            baca.select.lparts(baca.select.next(pleaves), [7, 2, 2, 5]),
+            bookend=-1,
+        )
 
 
 @baca.build.timed("make_score")
