@@ -14,11 +14,13 @@ bl = baca.rhythm.bl
 br = baca.rhythm.br
 c = baca.rhythm.c
 h = baca.rhythm.h
+md = baca.rhythm.md
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
@@ -699,7 +701,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(31, 32),
-        [4, 4, 4, 8, 8, 12],
+        [20, 8, 12],
         material=1,
     )
     rhythm(
@@ -714,16 +716,20 @@ def VC(voice, meters):
         overlap=[-14],
     )
     rhythm(
-        meters(34, 39),
-        ["+", -4],
+        meters(34, 38),
+        ["+"],
         material=1,
         overlap=[-12],
     )
     rhythm(
-        meters(39, 40),
-        [-1, 5, -1, 6, -1, 2, 4, 4, 3, 1],
+        meters(39),
+        [X(md("12/16 * 11/12")), h(1), -1, M(t(3), 2)],
+        material=1,
+    )
+    rhythm(
+        meters(40),
+        [2, -1, 6, -1, 2, 4, 4, 3, 1],
         material=2,
-        overlap=[-12],
     )
     rhythm(
         meters(41),
@@ -1041,7 +1047,11 @@ def D1b(
     scp_pieces,
     bookend=False,
 ):
-    baca.pitch(pleaves, pitch)
+    if " " in pitch:
+        start_pitch, stop_pitch = pitch.split()
+        baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
+    else:
+        baca.pitch(pleaves, pitch)
     baca.hairpin(
         (),
         hairpin_string,
@@ -1064,8 +1074,19 @@ def D2b():
     pass
 
 
-def D2c():
-    pass
+def D2c(pleaves, pitch_pairs, hairpin_string):
+    runs = abjad.select.runs(pleaves)
+    for run, pitch_pair in zip(runs, pitch_pairs, strict=True):
+        start_pitch, stop_pitch = pitch_pair.split()
+        baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
+        baca.damp_spanner(
+            baca.select.next(run),
+            staff_padding=3,
+        )
+        baca.hairpin(
+            run,
+            hairpin_string,
+        )
 
 
 def D3a():
@@ -1234,6 +1255,36 @@ def vc(m):
             baca.select.lparts(baca.select.next(pleaves), [7, 2, 2, 5]),
             bookend=-1,
         )
+
+    @baca.call
+    def block():
+        pleaves = library.pleaves(m[31, 33], 1)
+        D1b(
+            pleaves,
+            "F2",
+            "niente o< f >o niente",
+            baca.select.lparts(pleaves, [2, 4]),
+            "T -> P2 -> T -> P1 -> T",
+            baca.select.lparts(pleaves, [2, 1, 1, 2]),
+            bookend=-1,
+        )
+
+    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 'niente o< "f"')
+
+    """
+    @baca.call
+    def block():
+        pleaves = library.pleaves(m[34, 39], 1)
+        D1b(
+            pleaves,
+            "F2 E2",
+            "niente o< mf > p < mp > pp <| ff",
+            baca.select.lparts(pleaves, [2, 4]),
+            "T -> P2 -> T -> P1 -> T",
+            baca.select.lparts(pleaves, [2, 1, 1, 2]),
+            bookend=-1,
+        )
+    """
 
 
 def align_spanners(cache):

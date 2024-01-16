@@ -332,8 +332,8 @@ def canon_e(twelfths=False):
     return counts
 
 
-def check_material_annotations(score):
-    for pleaf in baca.select.pleaves(score, exclude=baca.enums.HIDDEN):
+def check_material_annotations(argument):
+    for pleaf in baca.select.pleaves(argument, exclude=baca.enums.HIDDEN):
         indicators = abjad.get.indicators(pleaf, Material)
         if 1 < len(indicators):
             voice = abjad.get.parentage(pleaf).get(abjad.Voice)

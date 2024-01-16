@@ -8049,95 +8049,269 @@ number.5.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 31]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
-    d4
-
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
-
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
-
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    f,1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 32]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    f,4
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    f,2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P2"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2.
+    f,2.
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
     % [Cello.Music measure 33]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2.
+    f,2.
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "T"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    f,8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    d16
-    ~
+    e,16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanDamp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
     % [Cello.Music measure 34]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    e,4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
-    \repeatTie
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f,16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \baca-effort-f
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! DAMP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanDamp
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    d8
-    - \tweak stencil ##f
-    ~
+    e,8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanDamp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f,8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \baca-effort-f
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! DAMP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanDamp
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
@@ -8180,14 +8354,21 @@ number.5.Cello.Music = {
     d1
     - \tweak direction #up
     \repeatTie
-    - \tweak stencil ##f
-    ~
 
     % [Cello.Music measure 39]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d2.
-    \repeatTie
+    d2. * 11/12
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"11" #"12"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
