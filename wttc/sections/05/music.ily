@@ -1973,20 +1973,21 @@ number.5.AltoFlute.Music = {
       %! SPANNER_START
     \startTrillSpan d'''
 
-    \override Accidental.font-size = -6
+    \override Accidental.stencil = ##f
     \override Dots.font-size = -3
     \override Flag.font-size = -3
     \override NoteHead.font-size = -3
+    \override NoteHead.no-ledgers = ##t
     \override Stem.direction = #up
-    a''4
+    bf''!4
 
     % [AltoFlute.Music measure 17]
-    a''2
+    bf''!2
 
-    a''8.
+    bf''!8.
     [
 
-    a''16
+    bf''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1995,10 +1996,11 @@ number.5.AltoFlute.Music = {
       %! SPANNER_STOP
     \ff
     ]
-    \revert Accidental.font-size
+    \revert Accidental.stencil
     \revert Dots.font-size
     \revert Flag.font-size
     \revert NoteHead.font-size
+    \revert NoteHead.no-ledgers
     \revert Stem.direction
 
     % [AltoFlute.Music measure 18]
@@ -2044,22 +2046,23 @@ number.5.AltoFlute.Music = {
     \startTrillSpan d'''
 
     % [AltoFlute.Music measure 22]
-    \override Accidental.font-size = -6
+    \override Accidental.stencil = ##f
     \override Dots.font-size = -3
     \override Flag.font-size = -3
     \override NoteHead.font-size = -3
+    \override NoteHead.no-ledgers = ##t
     \override Stem.direction = #up
-    a''2.
+    bf''!2.
 
     % [AltoFlute.Music measure 23]
-    a''2.
+    bf''!2.
 
-    a''2
+    bf''!2
 
     % [AltoFlute.Music measure 24]
-    a''2.
+    bf''!2.
 
-    a''2
+    bf''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -2080,10 +2083,11 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \revert Accidental.font-size
+    \revert Accidental.stencil
     \revert Dots.font-size
     \revert Flag.font-size
     \revert NoteHead.font-size
+    \revert NoteHead.no-ledgers
     \revert Stem.direction
 
     % [AltoFlute.Music measure 25]
@@ -2123,19 +2127,20 @@ number.5.AltoFlute.Music = {
     \startTrillSpan d'''
 
     % [AltoFlute.Music measure 26]
-    \override Accidental.font-size = -6
+    \override Accidental.stencil = ##f
     \override Dots.font-size = -3
     \override Flag.font-size = -3
     \override NoteHead.font-size = -3
+    \override NoteHead.no-ledgers = ##t
     \override Stem.direction = #up
-    a''2.
+    bf''!2.
 
-    a''2
+    bf''!2
 
     % [AltoFlute.Music measure 27]
-    a''2.
+    bf''!2.
 
-    a''2
+    bf''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -2156,10 +2161,11 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \revert Accidental.font-size
+    \revert Accidental.stencil
     \revert Dots.font-size
     \revert Flag.font-size
     \revert NoteHead.font-size
+    \revert NoteHead.no-ledgers
     \revert Stem.direction
 
     % [AltoFlute.Music measure 28]
@@ -2210,12 +2216,13 @@ number.5.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Accidental.font-size = -6
+    \once \override Accidental.stencil = ##f
     \once \override Dots.font-size = -3
     \once \override Flag.font-size = -3
     \once \override NoteHead.font-size = -3
+    \once \override NoteHead.no-ledgers = ##t
     \once \override Stem.direction = #up
-    a''4
+    bf''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -5624,22 +5631,83 @@ number.5.Violin.Music = {
     \revert NoteHead.style
 
     % [Violin.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    \afterGrace
-    b'1
+      %! SPANNER_START
+    \pitchedTrill
+    a'4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "III"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 6.5
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan bf'
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'4
+
+    g'4
+
+    \afterGrace
+    g'4
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        f'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+        \revert NoteHead.style
 
     }
 
@@ -5647,6 +5715,11 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
@@ -5841,30 +5914,118 @@ number.5.Violin.Music = {
     \revert NoteHead.style
 
     % [Violin.Music measure 12]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    b'1.
+      %! SPANNER_START
+    \pitchedTrill
+    a'4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "III"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 6.5
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan bf'
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a'4
+
+    g'4
+
+    g'4
+
+    g'4
+
+    f'4
 
     % [Violin.Music measure 13]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f'4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    b'2
-    \repeatTie
+    g'4
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mf
+        \revert NoteHead.style
 
     }
 
@@ -5872,6 +6033,11 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
@@ -5987,22 +6153,79 @@ number.5.Violin.Music = {
 
 
     % [Violin.Music measure 15]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    \afterGrace
-    b'2
+      %! SPANNER_START
+    \pitchedTrill
+    a'4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \baca-text-spanner-left-text "III"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak staff-padding 6.5
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    \bacaStartTextSpanStringNumber
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan bf'
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \afterGrace
+    g'4
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        f'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+        \revert NoteHead.style
 
     }
 
@@ -6010,35 +6233,69 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    gs''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    \startTrillSpan a''
 
     % [Violin.Music measure 16]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    \override Accidental.stencil = ##f
+    \override Dots.font-size = -3
+    \override Flag.font-size = -3
+    \override NoteHead.font-size = -3
+    \override NoteHead.no-ledgers = ##t
+    \override Stem.direction = #up
+    b''1.
 
     % [Violin.Music measure 17]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
-    \repeatTie
+    b''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+    \revert Accidental.stencil
+    \revert Dots.font-size
+    \revert Flag.font-size
+    \revert NoteHead.font-size
+    \revert NoteHead.no-ledgers
+    \revert Stem.direction
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r16
 
@@ -6052,10 +6309,10 @@ number.5.Violin.Music = {
         g'
     >8.
     - \baca-staccati #3
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
@@ -6284,71 +6541,97 @@ number.5.Violin.Music = {
     [
     \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    b'8.
+      %! SPANNER_START
+    \pitchedTrill
+    gs''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    \startTrillSpan a''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \override Accidental.stencil = ##f
+    \override Dots.font-size = -3
+    \override Flag.font-size = -3
+    \override NoteHead.font-size = -3
+    \override NoteHead.no-ledgers = ##t
+    \override Stem.direction = #up
+    b''4
 
     % [Violin.Music measure 22]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    b''2.
 
     % [Violin.Music measure 23]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    b''2.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    b''2
 
     % [Violin.Music measure 24]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    b''2.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
-    \repeatTie
+    b''2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \revert Accidental.stencil
+    \revert Dots.font-size
+    \revert Flag.font-size
+    \revert NoteHead.font-size
+    \revert NoteHead.no-ledgers
+    \revert Stem.direction
 
+    % [Violin.Music measure 25]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-
-    % [Violin.Music measure 25]
-    r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
@@ -6427,63 +6710,94 @@ number.5.Violin.Music = {
     [
     \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    b'8.
+      %! SPANNER_START
+    \pitchedTrill
+    gs''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     ]
-    - \tweak stencil ##f
-    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    \startTrillSpan a''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \override Accidental.stencil = ##f
+    \override Dots.font-size = -3
+    \override Flag.font-size = -3
+    \override NoteHead.font-size = -3
+    \override NoteHead.no-ledgers = ##t
+    \override Stem.direction = #up
+    b''2.
 
     % [Violin.Music measure 26]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    b''2.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    b''2
 
     % [Violin.Music measure 27]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    b''2.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
-    \repeatTie
-
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
-    r16
+    b''2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \revert Accidental.stencil
+    \revert Dots.font-size
+    \revert Flag.font-size
+    \revert NoteHead.font-size
+    \revert NoteHead.no-ledgers
+    \revert Stem.direction
 
     % [Violin.Music measure 28]
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     r1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r4
 
@@ -6497,25 +6811,80 @@ number.5.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8.
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    \pitchedTrill
+    gs''!4.. * 3/7
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"7"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    \startTrillSpan a''
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    \once \override Accidental.stencil = ##f
+    \once \override Dots.font-size = -3
+    \once \override Flag.font-size = -3
+    \once \override NoteHead.font-size = -3
+    \once \override NoteHead.no-ledgers = ##t
+    \once \override Stem.direction = #up
+    b''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Violin.Music measure 31]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     R1 * 4/4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Violin.Music measure 32]
     R1 * 6/4
