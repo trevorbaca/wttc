@@ -1513,6 +1513,7 @@ number.5.AltoFlute.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -2256,6 +2257,7 @@ number.5.AltoFlute.Music = {
     \!
       %! SPANNER_STOP
     \stopTrillSpan
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 31]
     R1 * 4/4
@@ -2868,6 +2870,7 @@ number.5.Oboe.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -3349,6 +3352,7 @@ number.5.Oboe.Music = {
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
     % [Oboe.Music measure 31]
     R1 * 4/4
@@ -3641,6 +3645,7 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 9]
+    \override DynamicLineSpanner.staff-padding = 2
     r1
 
     r4
@@ -3686,6 +3691,7 @@ number.5.Guitar.1.Music = {
     %@% \staffHighlight lightgreen
     d'''16
     \laissezVibrer
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 15]
       %! STAFF_HIGHLIGHT
@@ -3721,6 +3727,7 @@ number.5.Guitar.1.Music = {
     r2.
 
     % [Guitar.1.Music measure 22]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
     b8
@@ -3797,6 +3804,7 @@ number.5.Guitar.1.Music = {
     \bacaStopTextSpanPizzicato
 
     r1
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 27]
     r1
@@ -4390,6 +4398,7 @@ number.5.Guitar.2.Music = {
     r1.
 
     % [Guitar.2.Music measure 11]
+    \override DynamicLineSpanner.staff-padding = 2
     r1
 
     r4
@@ -4405,6 +4414,7 @@ number.5.Guitar.2.Music = {
       %! REDUNDANT_DYNAMIC
     \p
     \laissezVibrer
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 12]
       %! STAFF_HIGHLIGHT
@@ -4427,6 +4437,7 @@ number.5.Guitar.2.Music = {
     r1.
 
     % [Guitar.2.Music measure 16]
+    \override DynamicLineSpanner.staff-padding = 4
     r1
 
     r4
@@ -4584,6 +4595,7 @@ number.5.Guitar.2.Music = {
     \bacaStopTextSpanPizzicato
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 31]
     R1 * 4/4
@@ -5073,6 +5085,7 @@ number.5.Violin.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -5464,8 +5477,10 @@ number.5.Violin.Music = {
     \once \override Parentheses.font-size = 3
     \parenthesize
     <ef'!>4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
@@ -6147,12 +6162,14 @@ number.5.Violin.Music = {
           %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
+        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }
 
 
     % [Violin.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
@@ -6325,8 +6342,10 @@ number.5.Violin.Music = {
     \once \override Parentheses.font-size = 3
     \parenthesize
     <ef'!>4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 18]
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
@@ -6533,8 +6552,6 @@ number.5.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     g'16
-      %! SPANNER_STOP
-    \!
       %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -6697,13 +6714,6 @@ number.5.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     gf'!16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    \!
       %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -6780,6 +6790,7 @@ number.5.Violin.Music = {
     \>
     \revert Accidental.stencil
     \revert Dots.font-size
+    \revert DynamicLineSpanner.staff-padding
     \revert Flag.font-size
     \revert NoteHead.font-size
     \revert NoteHead.no-ledgers
@@ -6807,6 +6818,7 @@ number.5.Violin.Music = {
     r4
 
     % [Violin.Music measure 30]
+    \override DynamicLineSpanner.staff-padding = 4
     r4
 
     r16
@@ -6869,6 +6881,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 31]
       %! STAFF_HIGHLIGHT
@@ -7184,6 +7197,7 @@ number.5.Cello.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -7678,8 +7692,10 @@ number.5.Cello.Music = {
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
     \startTrillSpan gf!
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 18]
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
@@ -8030,6 +8046,7 @@ number.5.Cello.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 31]
       %! NOT_YET_PITCHED_COLORING

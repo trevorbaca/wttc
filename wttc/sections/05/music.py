@@ -879,7 +879,16 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     )
 
 
-def C2b(pleaves, pitch_1, pitch_2, hairpin, pleaves_2=None, pitch_3=None, scps=None):
+def C2b(
+    pleaves,
+    pitch_1,
+    pitch_2,
+    hairpin,
+    pleaves_2=None,
+    pitch_3=None,
+    scps=None,
+    bookend=-1,
+):
     baca.override.note_head_style_harmonic(pleaves)
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
     baca.pizzicato_spanner(
@@ -906,6 +915,7 @@ def C2b(pleaves, pitch_1, pitch_2, hairpin, pleaves_2=None, pitch_3=None, scps=N
         baca.hairpin(
             (),
             hairpin,
+            bookend=bookend,
             pieces=[all_leaves[:2], all_leaves[-2:]],
         )
     else:
@@ -913,6 +923,7 @@ def C2b(pleaves, pitch_1, pitch_2, hairpin, pleaves_2=None, pitch_3=None, scps=N
         baca.hairpin(
             pleaves,
             hairpin,
+            bookend=bookend,
         )
     baca.string_number_spanner(
         baca.select.next(all_leaves),
@@ -1182,8 +1193,8 @@ def vn(m):
     C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
     C2b(library.pleaves(m[14], 2), "A3", "A4", "f > p")
     C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o niente")
-    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o !")
-    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o niente")
+    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o", bookend=False)
+    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o", bookend=False)
 
 
 def vc(m):
@@ -1223,6 +1234,22 @@ def vc(m):
             baca.select.lparts(baca.select.next(pleaves), [7, 2, 2, 5]),
             bookend=-1,
         )
+
+
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"][1, 30], 3)
+    baca.override.dls_staff_padding(cache["ob"][1, 30], 3)
+    baca.override.dls_staff_padding(cache["gt1"][9, 14], 2)
+    baca.override.dls_staff_padding(cache["gt1"][22, 26], 4)
+    baca.override.dls_staff_padding(cache["gt2"][11], 2)
+    baca.override.dls_staff_padding(cache["gt2"][16, 30], 4)
+    baca.override.dls_staff_padding(cache["vn"][1, 6], 4)
+    baca.override.dls_staff_padding(cache["vn"][7, 14], 5)
+    baca.override.dls_staff_padding(cache["vn"][15, 17], 4)
+    baca.override.dls_staff_padding(cache["vn"][18, 27], 5)
+    baca.override.dls_staff_padding(cache["vn"][30], 4)
+    baca.override.dls_staff_padding(cache["vc"][1, 17], 4)
+    baca.override.dls_staff_padding(cache["vc"][18, 30], 5)
 
 
 @baca.build.timed("make_score")
@@ -1270,6 +1297,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
