@@ -1548,10 +1548,14 @@ def make_layout():
         baca.page(
             2,
             baca.system(measure=31, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.system(measure=41, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.system(measure=40, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         spacing=(1, 20),
-        overrides=[baca.space((13, 22), (1, 24))],
+        overrides=[
+            baca.space((13, 22), (1, 24)),
+            baca.space((31, 39), (1, 28)),
+            baca.space((40, 47), (1, 24)),
+        ],
     )
     baca.section.make_layout_ly(spacing)
 
