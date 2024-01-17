@@ -736,34 +736,34 @@ def VC(voice, meters):
     )
     rhythm(
         meters(41),
-        [9, "-"],
+        [4, 4, 1, "-"],
         material=4,
     )
     rhythm(
         meters(41),
-        [7],
+        [AG([2], 7)],
         material=2,
         overlap=[-9],
     )
     rhythm(
         meters(42),
-        [15, "-"],
+        [4, 4, 4, 3, "-"],
         material=4,
     )
     rhythm(
         meters(42),
-        [5, -1, 3],
+        [1, AG([2], 4), -1, AG([2], 3)],
         material=2,
         overlap=[-15],
     )
     rhythm(
         meters(43, 44),
-        [34, "-"],
+        [4, 4, 4, 4, 4, 4, 4, 4, 2, "-"],
         material=4,
     )
     rhythm(
         meters(44),
-        [3, -1, 2],
+        [AG([2], 3), -1, AG([2], 2)],
         material=2,
         overlap=[-18],
     )
@@ -1108,11 +1108,12 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             baca.select.next(run),
             staff_padding=3,
         )
-        baca.hairpin(
-            run,
-            hairpin_string,
-            forbid_al_niente_to_bar_line=True,
-        )
+        if hairpin_string:
+            baca.hairpin(
+                run,
+                hairpin_string,
+                forbid_al_niente_to_bar_line=True,
+            )
 
 
 def D3a(pleaves, pitch, dynamics):
@@ -1177,8 +1178,32 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         )
 
 
-def D4c():
-    pass
+def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
+    runs = abjad.select.runs(pleaves)
+    for run in runs:
+        if " " in pitches:
+            start_pitch, stop_pitch = pitches.split()
+            baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
+        else:
+            baca.pitch(run, pitches)
+        baca.xfb_spanner(
+            baca.select.next(run),
+            abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+            staff_padding=3,
+        )
+        baca.scp_spanner(
+            baca.select.next(run),
+            "T =|",
+            abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+            staff_padding=6.5,
+        )
+        if hairpin:
+            baca.hairpin(
+                run,
+                hairpin,
+            )
+    if dynamic:
+        baca.dynamic(pleaves[0], dynamic)
 
 
 def fl(m):
@@ -1400,6 +1425,10 @@ def vc(m):
         ["D#2 E2", "E2 F2", "F2 F#2"],
         ["mf >o niente", "mp >o niente", "p >o niente"],
     )
+    D2c(library.pleaves(m[41, 44], 2), 5 * ["G2 Ab2"], 5 * [None])
+    D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp > p")
+    D4c(library.pleaves(m[45, 46], 4), "F#2", dynamic="p")
+    D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")
 
 
 def align_spanners(cache):
