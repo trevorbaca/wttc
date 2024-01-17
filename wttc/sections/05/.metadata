@@ -70,7 +70,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-effort-f",
+                value="ff",
             )
         ],
         "Cello.Staff": [
@@ -106,7 +106,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="p",
             )
         ],
         "Guitar.1.Staff": [
@@ -132,7 +132,7 @@
                 manifest=None,
                 prototype="baca.StaffLines",
                 synthetic_offset=None,
-                value=5,
+                value=1,
             ),
             baca.Memento(
                 context="Guitar.1.Music",
@@ -148,7 +148,7 @@
                 manifest=None,
                 prototype="baca.BarExtent",
                 synthetic_offset=None,
-                value=5,
+                value=1,
             ),
         ],
         "Guitar.2.Music": [
@@ -158,7 +158,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [
@@ -184,7 +184,7 @@
                 manifest=None,
                 prototype="baca.StaffLines",
                 synthetic_offset=None,
-                value=5,
+                value=1,
             ),
             baca.Memento(
                 context="Guitar.2.Music",
@@ -200,7 +200,7 @@
                 manifest=None,
                 prototype="baca.BarExtent",
                 synthetic_offset=None,
-                value=5,
+                value=1,
             ),
         ],
         "Oboe.Music": [

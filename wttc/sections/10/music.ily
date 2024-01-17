@@ -1283,32 +1283,33 @@ number.10.Guitar.1.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-      %! REAPPLIED_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
-      %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override Staff.RehearsalMark.direction = #down
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-gt-i-markup
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
-      %! REAPPLIED_STAFF_LINES
+      %! EXPLICIT_STAFF_LINES
     \stopStaff
-      %! REAPPLIED_STAFF_LINES
+      %! EXPLICIT_STAFF_LINES
     \once \override Staff.StaffSymbol.line-count = 5
-      %! REAPPLIED_STAFF_LINES
+      %! EXPLICIT_STAFF_LINES
     \startStaff
     r8.
       %! REAPPLIED_DYNAMIC_COLOR
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \mp
+    \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1820,11 +1821,10 @@ number.10.Guitar.2.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-      %! REAPPLIED_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
-      %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -1836,18 +1836,18 @@ number.10.Guitar.2.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-      %! REAPPLIED_STAFF_LINES
+      %! EXPLICIT_STAFF_LINES
     \stopStaff
-      %! REAPPLIED_STAFF_LINES
+      %! EXPLICIT_STAFF_LINES
     \once \override Staff.StaffSymbol.line-count = 5
-      %! REAPPLIED_STAFF_LINES
+      %! EXPLICIT_STAFF_LINES
     \startStaff
     r8.
       %! REAPPLIED_DYNAMIC_COLOR
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \mp
+    \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3042,7 +3042,7 @@ number.10.Cello.Music = {
           %! REAPPLIED_DYNAMIC
         - \tweak color #(x11-color 'green4)
           %! REAPPLIED_DYNAMIC
-        \baca-effort-f
+        \ff
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
           %! REAPPLIED_CLEF_REDRAW_COLOR

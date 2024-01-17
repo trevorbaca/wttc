@@ -492,7 +492,11 @@ def ob(m):
 
 
 def gt1(m):
-    pass
+    @baca.call
+    def block():
+        leaf = m[1][0]
+        library.rotate_rehearsal_mark_literal(leaf)
+        baca.staff_lines(leaf, 5)
 
 
 def gt2(m):
@@ -500,6 +504,7 @@ def gt2(m):
     def block():
         leaf = m[1][0]
         library.rotate_rehearsal_mark_literal(leaf)
+        baca.staff_lines(leaf, 5)
 
 
 def vn(m):

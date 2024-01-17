@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from wttc import library, strings
 
@@ -307,7 +308,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(33, 34),
-        ["-", -1, 6, -1, 5, -1, -4],
+        ["-", -1, 6, -1, t(2), w(2, 3), h(1), -1, -4],
         material=2,
     )
     rhythm(
@@ -324,32 +325,33 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(39, 40),
-        [-8, 4, -1, 5, -1, 6, -1, "+"],
+        [-8, w(3, 4), h(1), -1, 5, -1, 6, -1, t(2), X(md("3/4 * 11/12")), h(1)],
         material=2,
     )
     rhythm(
         meters(41),
-        ["-", 7],
+        ["-", anchor(7, 1)],
         material=2,
     )
     rhythm(
         meters(42),
-        ["-", -1, 5, -1, 3],
+        [-12, -3, X(t(1)), anchor(4, 1), -1, anchor(3, 1)],
         material=2,
     )
     rhythm(
         meters(43, 44),
-        ["-", -1, 3, -1, 2],
+        ["-", -1, 3, -1, anchor(2, 1)],
         material=2,
     )
     rhythm(
         meters(45, 46),
-        [-1, 2, -3, -1, 3, -3, -1, 4, -3, -1, 5, "-"],
+        [-1, 2, -3, -1, t(1), anchor(2, 1), -3, -1, t(2)]
+        + [anchor(2, 1), -3, -1, t(2), anchor(3, 1), "-"],
         material=2,
     )
     rhythm(
         meters(47, 48),
-        [-1, 5, -1, 6, -1, 7, -1, "+"],
+        [-1, 5, -1, 6, -1, 7, -1, t(2), anchor(8, 1)],
         material=2,
     )
     baca.section.append_anchor_note(voice)
@@ -413,32 +415,33 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(39, 40),
-        [-8, 4, -1, 5, -1, 6, -1, "+"],
+        [-8, w(3, 4), h(1), -1, 5, -1, 6, -1, t(2), X(md("3/4 * 11/12")), h(1)],
         material=2,
     )
     rhythm(
         meters(41),
-        ["-", 7],
+        ["-", anchor(7, 1)],
         material=2,
     )
     rhythm(
         meters(42),
-        ["-", -1, 5, -1, 3],
+        [-12, -3, X(t(1)), anchor(4, 1), -1, anchor(3, 1)],
         material=2,
     )
     rhythm(
         meters(43, 44),
-        ["-", -1, 3, -1, 2],
+        ["-", -1, 3, -1, anchor(2, 1)],
         material=2,
     )
     rhythm(
         meters(45, 46),
-        [-1, 2, -3, -1, 3, -3, -1, 4, -3, -1, 5, "-"],
+        [-1, 2, -3, -1, t(1), anchor(2, 1), -3, -1, t(2)]
+        + [anchor(2, 1), -3, -1, t(2), anchor(3, 1), "-"],
         material=2,
     )
     rhythm(
         meters(47, 48),
-        [-1, 5, -1, 6, -1, 7, -1, "+"],
+        [-1, 5, -1, 6, -1, 7, -1, t(2), anchor(8, 1)],
         material=2,
     )
     baca.section.append_anchor_note(voice)
@@ -1047,10 +1050,7 @@ def D1b(
     scp_pieces,
     bookend=False,
 ):
-    if " " in pitch:
-        start_pitch, stop_pitch = pitch.split()
-        baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
-    else:
+    if pitch is not None:
         baca.pitch(pleaves, pitch)
     baca.hairpin(
         (),
@@ -1066,12 +1066,40 @@ def D1b(
     )
 
 
-def D2a():
-    pass
+def D2a(pleaves, pitches, hairpin_strings):
+    baca.pitches(pleaves, pitches)
+    plts = baca.select.plts(pleaves)
+    plt_pairs = abjad.sequence.partition_by_counts(plts, [2], cyclic=True)
+    hairpins = hairpin_strings.split()
+    i = 0
+    for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
+        if i == len(plt_pairs) - 1:
+            hairpin_string = f"{hairpin} >o niente"
+        else:
+            hairpin_string = f"{hairpin} >o !"
+        baca.hairpin(baca.select.next(plt_pair), hairpin_string)
+        baca.tenuto(plt_pair[0].head)
+        i += 1
 
 
-def D2b():
-    pass
+def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=False):
+    baca.staff_position(pleaves, 0)
+    runs = abjad.select.runs(pleaves)
+    dynamics_ = dynamics.split()
+    if staff_lines_1 is True:
+        baca.staff_lines(pleaves[0], 1)
+        leaf = abjad.get.leaf(pleaves[-1], 1)
+        baca.staff_lines(leaf, 5)
+    for run, dynamic_ in zip(runs, dynamics_, strict=True):
+        if upbow is True:
+            baca.up_bow(run[0], padding=1)
+        else:
+            baca.down_bow(run[0], padding=1)
+        if len(run) == 1:
+            run = baca.select.next(run)
+        baca.hairpin(run, f"o<| {dynamic_}")
+    if not do_not_unbeam:
+        rmakers.unbeam(pleaves)
 
 
 def D2c(pleaves, pitch_pairs, hairpin_string):
@@ -1110,17 +1138,22 @@ def D4c():
 
 
 def fl(m):
-    @baca.call
-    def block():
-        C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp |>o niente")
-        C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp |>o niente")
-        C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp |>o niente")
-        C3a(m[12], "G4", "F#4", "mp |>o niente o<| mf", m[13][:3])
-        C3a(m[15], "G4", "F#4", "mp |>o niente o<| f", m[16][:3])
-        C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<| ff")
-        C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp >o niente")
-        C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p >o niente")
-        C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p >o niente")
+    C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp |>o niente")
+    C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp |>o niente")
+    C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp |>o niente")
+    C3a(m[12], "G4", "F#4", "mp |>o niente o<| mf", m[13][:3])
+    C3a(m[15], "G4", "F#4", "mp |>o niente o<| f", m[16][:3])
+    C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<| ff")
+    C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp >o niente")
+    C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p >o niente")
+    C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p >o niente")
+    D2a(library.pleaves(m[32], 2), "Eb6 D6", "mf-mp")
+    D2a(library.pleaves(m[33, 34], 2), "Eb6 D6", "mf-mp f-mf")
+    D2a(
+        library.pleaves(m[39, 40], 2),
+        "D6 Dqf6 Dqf6 Db6 Db6 Dtqf6 Dtqf6 C6",
+        "f-mf mf-mp mp-p p-pp",
+    )
 
 
 def ob(m):
@@ -1141,12 +1174,30 @@ def ob(m):
 def gt1(m):
     C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
     C3c(library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, pizz_staff_padding=3)
+    D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True)
+    D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True)
+    D2b(library.pleaves(m[39, 40], 2), '"f" "mf" mp p')
+    baca.staff_lines(baca.select.pleaf(m[39], 0), 1)
+    D2b(library.pleaves(m[41, 42], 2), '"mf" "mf" "f"')
+    D2b(library.pleaves(m[44], 2), '"ff" "f"')
+    D2b(library.pleaves(m[45], 2)[:2], '"mf"', do_not_unbeam=True)
+    D2b(library.pleaves(m[45, 46], 2)[2:], "mp p pp")
+    D2b(library.pleaves(m[47, 48], 2), "p p p p")
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
     C3c(library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, pizz_staff_padding=3)
+    D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True, upbow=True)
+    D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True, upbow=True)
+    D2b(library.pleaves(m[39, 40], 2), '"f" "mf" mp p', upbow=True)
+    baca.staff_lines(baca.select.pleaf(m[39], 0), 1)
+    D2b(library.pleaves(m[41, 42], 2), '"mf" "mf" "f"', upbow=True)
+    D2b(library.pleaves(m[44], 2), '"ff" "f"', upbow=True)
+    D2b(library.pleaves(m[45], 2)[:2], '"mf"', do_not_unbeam=True, upbow=True)
+    D2b(library.pleaves(m[45, 46], 2)[2:], "mp p pp", upbow=True)
+    D2b(library.pleaves(m[47, 48], 2), "p p p p", upbow=True)
 
 
 def vn(m):
@@ -1271,20 +1322,20 @@ def vc(m):
 
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 'niente o< "f"')
 
-    """
     @baca.call
     def block():
         pleaves = library.pleaves(m[34, 39], 1)
         D1b(
             pleaves,
-            "F2 E2",
+            None,
             "niente o< mf > p < mp > pp <| ff",
-            baca.select.lparts(pleaves, [2, 4]),
-            "T -> P2 -> T -> P1 -> T",
-            baca.select.lparts(pleaves, [2, 1, 1, 2]),
+            baca.select.lparts(baca.select.next(pleaves), [1, 1, 1, 1, 3]),
+            "T -> P1 -> T -> P2 -> T -> P2",
+            baca.select.lparts(pleaves, [1, 1, 1, 1, 3]),
             bookend=-1,
         )
-    """
+        baca.flat_glissando(pleaves[:-1], "F2", stop_pitch="E2")
+        baca.pitch(pleaves[-1:], "E2")
 
 
 def align_spanners(cache):
