@@ -763,7 +763,7 @@ number.10.AltoFlute.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
+    \f
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“AltoFlute”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3042,7 +3042,7 @@ number.10.Cello.Music = {
           %! REAPPLIED_DYNAMIC
         - \tweak color #(x11-color 'green4)
           %! REAPPLIED_DYNAMIC
-        \ff
+        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
           %! REAPPLIED_CLEF_REDRAW_COLOR

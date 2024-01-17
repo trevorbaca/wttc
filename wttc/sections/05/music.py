@@ -731,7 +731,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(40),
-        [2, -1, 6, -1, 2, 4, 4, 3, 1],
+        [2, -1, 6, -1, 2, 4, 4, AG([2], 4)],
         material=2,
     )
     rhythm(
@@ -1071,15 +1071,10 @@ def D2a(pleaves, pitches, hairpin_strings):
     plts = baca.select.plts(pleaves)
     plt_pairs = abjad.sequence.partition_by_counts(plts, [2], cyclic=True)
     hairpins = hairpin_strings.split()
-    i = 0
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
-        if i == len(plt_pairs) - 1:
-            hairpin_string = f"{hairpin} >o niente"
-        else:
-            hairpin_string = f"{hairpin} >o !"
+        hairpin_string = f"{hairpin} >o !"
         baca.hairpin(baca.select.next(plt_pair), hairpin_string)
         baca.tenuto(plt_pair[0].head)
-        i += 1
 
 
 def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=False):
@@ -1102,9 +1097,11 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
         rmakers.unbeam(pleaves)
 
 
-def D2c(pleaves, pitch_pairs, hairpin_string):
+def D2c(pleaves, pitch_pairs, hairpin_strings):
     runs = abjad.select.runs(pleaves)
-    for run, pitch_pair in zip(runs, pitch_pairs, strict=True):
+    for run, pitch_pair, hairpin_string in zip(
+        runs, pitch_pairs, hairpin_strings, strict=True
+    ):
         start_pitch, stop_pitch = pitch_pair.split()
         baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         baca.damp_spanner(
@@ -1114,19 +1111,40 @@ def D2c(pleaves, pitch_pairs, hairpin_string):
         baca.hairpin(
             run,
             hairpin_string,
+            forbid_al_niente_to_bar_line=True,
         )
 
 
-def D3a():
-    pass
+def D3a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    parts = baca.select.clparts(pleaves, [1])
+    parts[-1].append(baca.select.rleaf(pleaves, -1))
+    hairpin_string = library.niente_swells(dynamics)
+    hairpin_string = hairpin_string.removeprefix("niente ")
+    baca.hairpin(
+        (),
+        hairpin_string,
+        forbid_al_niente_to_bar_line=True,
+        pieces=parts,
+    )
 
 
-def D3b():
-    pass
+def D3b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    dynamics_ = dynamics.split()
+    for pleaf, dynamic_ in zip(pleaves, dynamics_, strict=True):
+        baca.dynamic(pleaf, dynamic_)
+        baca.laissez_vibrer(pleaf)
 
 
-def D4a():
-    pass
+def D4a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    dynamics_ = dynamics.split()
+    for plt, dynamic_ in zip(plts, dynamics_, strict=True):
+        if dynamic_ != "-":
+            baca.dynamic(plt.head, dynamic_)
+        baca.espressivo(plt.head)
 
 
 def D4b():
@@ -1154,6 +1172,10 @@ def fl(m):
         "D6 Dqf6 Dqf6 Db6 Db6 Dtqf6 Dtqf6 C6",
         "f-mf mf-mp mp-p p-pp",
     )
+    D3a(library.pleaves(m[32, 33], 3), "A3", "mf mp p pp")
+    D3a(library.pleaves(m[34, 37], 3), "A3", 11 * "p ")
+    D3a(library.pleaves(m[38], 3), "G#3", "p p")
+    D4a(library.pleaves(m[41, 44], 4), "F#5", "mp - mf mp mf - f - -")
 
 
 def ob(m):
@@ -1168,7 +1190,7 @@ def ob(m):
     C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
     D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
     D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp")
-    D1a(library.pleaves(m[38, 40], 1), "D6", "f")
+    D1a(library.pleaves(m[38, 40], 1), "D6", "mf")
 
 
 def gt1(m):
@@ -1183,6 +1205,7 @@ def gt1(m):
     D2b(library.pleaves(m[45], 2)[:2], '"mf"', do_not_unbeam=True)
     D2b(library.pleaves(m[45, 46], 2)[2:], "mp p pp")
     D2b(library.pleaves(m[47, 48], 2), "p p p p")
+    D3b(library.pleaves(m[32, 38], 3), "Gb2 Gb2 Ab2", "mf mf (mf)")
 
 
 def gt2(m):
@@ -1198,6 +1221,7 @@ def gt2(m):
     D2b(library.pleaves(m[45], 2)[:2], '"mf"', do_not_unbeam=True, upbow=True)
     D2b(library.pleaves(m[45, 46], 2)[2:], "mp p pp", upbow=True)
     D2b(library.pleaves(m[47, 48], 2), "p p p p", upbow=True)
+    D3b(library.pleaves(m[32, 38], 3), "F2 F2 G2", "mf mf (mf)")
 
 
 def vn(m):
@@ -1320,7 +1344,7 @@ def vc(m):
             bookend=-1,
         )
 
-    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 'niente o< "f"')
+    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['niente o< "f"'])
 
     @baca.call
     def block():
@@ -1336,6 +1360,12 @@ def vc(m):
         )
         baca.flat_glissando(pleaves[:-1], "F2", stop_pitch="E2")
         baca.pitch(pleaves[-1:], "E2")
+
+    D2c(
+        library.pleaves(m[39, 40], 2),
+        ["D#2 E2", "E2 F2", "F2 F#2"],
+        ["mf >o niente", "mp >o niente", "p >o niente"],
+    )
 
 
 def align_spanners(cache):

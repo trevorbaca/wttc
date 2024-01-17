@@ -34,7 +34,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="niente",
+                value="f",
             )
         ],
         "AltoFlute.Staff": [
@@ -70,7 +70,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="ff",
+                value="niente",
             )
         ],
         "Cello.Staff": [
