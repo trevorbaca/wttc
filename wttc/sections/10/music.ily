@@ -781,28 +781,143 @@ number.10.AltoFlute.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override Flag.stencil = #flat-flag
+    \once \override Stem.length = 22
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'8
-    - \tweak stencil ##f
-    ~
+    ef'''!32
+    - \flageolet
+
+    \override Accidental.X-extent = ##f
+    \override Accidental.extra-offset = #'(1.2 . 2.2)
+    \override Accidental.font-size = -3
+    \override Flag.stencil = ##f
+    \override NoteHead.font-size = -3
+    \override Stem.stencil = ##f
+    g'''32
+    - \flageolet
+
+    bf'''!32
+    - \flageolet
+
+    df''''!32
+    - \flageolet
 
     % [AltoFlute.Music measure 3]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
 
     % [AltoFlute.Music measure 4]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
-    \repeatTie
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+    \revert Accidental.X-extent
+    \revert Accidental.extra-offset
+    \revert Accidental.font-size
+    \revert Flag.stencil
+    \revert NoteHead.font-size
+    \revert Stem.stencil
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -812,48 +927,319 @@ number.10.AltoFlute.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override Flag.stencil = #flat-flag
+    \once \override Stem.length = 22
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'8
-    - \tweak stencil ##f
-    ~
+    ef'''!32
+    - \flageolet
+
+    \override Accidental.X-extent = ##f
+    \override Accidental.extra-offset = #'(1.2 . 2.2)
+    \override Accidental.font-size = -3
+    \override Flag.stencil = ##f
+    \override NoteHead.font-size = -3
+    \override Stem.stencil = ##f
+    g'''32
+    - \flageolet
+
+    bf'''!32
+    - \flageolet
+
+    df''''!32
+    - \flageolet
 
     % [AltoFlute.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
 
     % [AltoFlute.Music measure 6]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
 
     % [AltoFlute.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
-    \repeatTie
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+    \revert Accidental.X-extent
+    \revert Accidental.extra-offset
+    \revert Accidental.font-size
+    \revert Flag.stencil
+    \revert NoteHead.font-size
+    \revert Stem.stencil
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
 
-    r2.
+    r2
+
+    r8
+
+    \once \override Flag.stencil = #flat-flag
+    \once \override Stem.length = 22
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightgreen
+    ef'''!32
+    - \flageolet
+
+    \override Accidental.X-extent = ##f
+    \override Accidental.extra-offset = #'(1.2 . 2.2)
+    \override Accidental.font-size = -3
+    \override Flag.stencil = ##f
+    \override NoteHead.font-size = -3
+    \override Stem.stencil = ##f
+    g'''32
+    - \flageolet
+
+    bf'''!32
+    - \flageolet
+
+    df''''!32
+    - \flageolet
 
     % [AltoFlute.Music measure 8]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+    \revert Accidental.X-extent
+    \revert Accidental.extra-offset
+    \revert Accidental.font-size
+    \revert Flag.stencil
+    \revert NoteHead.font-size
+    \revert Stem.stencil
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8
+
+    r2
 
     % [AltoFlute.Music measure 9]
     R1 * 4/4

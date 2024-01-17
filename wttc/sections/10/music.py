@@ -68,11 +68,12 @@ def GLOBALS(skips, first_measure_number):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1, 7),
-        ["-", 20, -12, 36, -14],
+        meters(1, 8),
+        ["-"] + 40 * [1] + [-24] + 72 * [1] + [-24] + 16 * [1] + [-20],
+        denominator=32,
         material=3,
     )
-    rhythm.mmrests(8, 9)
+    rhythm.mmrests(9)
     rhythm(
         meters(10),
         ["-", 2],
@@ -456,8 +457,20 @@ def E2b():
     pass
 
 
-def E3a():
-    pass
+def E3a(pleaves, fundamental):
+    pitches = "Bb5 D6 F6 Ab6 " + 20 * "Bb6 C7 D7 C7 "
+    for run in abjad.select.runs(pleaves):
+        rmakers.unbeam(run)
+        baca.flageolet(run)
+        baca.pitches(run, pitches)
+        baca.override.stem_length(run[0], 22)
+        baca.override.flag_stencil(run[0], "#flat-flag")
+        baca.override.accidental_extra_offset(run[1:], (1.2, 2.2))
+        baca.override.accidental_font_size(run[1:], -3)
+        baca.override.accidental_x_extent_false(run[1:])
+        baca.override.flag_stencil_false(run[1:])
+        baca.override.note_head_font_size(run[1:], -3)
+        baca.override.stem_stencil_false(run[1:])
 
 
 def E3b():
@@ -481,7 +494,7 @@ def F1c():
 
 
 def fl(m):
-    pass
+    E3a(library.pleaves(m[2, 8], 3), "Bb3")
 
 
 def ob(m):
