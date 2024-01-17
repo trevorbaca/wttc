@@ -2260,6 +2260,7 @@ number.5.AltoFlute.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 31]
+    \override DynamicLineSpanner.staff-padding = 4
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -3083,8 +3084,10 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 38]
+    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
     cs'!4 * 1/2
@@ -3182,8 +3185,10 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 39]
+    \override DynamicLineSpanner.staff-padding = 3
     r4
 
     r8.
@@ -3481,6 +3486,7 @@ number.5.AltoFlute.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -3990,6 +3996,7 @@ number.5.Oboe.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Oboe.Music measure 31]
+    \override DynamicLineSpanner.staff-padding = 3
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -4185,6 +4192,7 @@ number.5.Oboe.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -4462,6 +4470,7 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 31]
+    \override DynamicLineSpanner.staff-padding = 7
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -5400,6 +5409,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
+    \revert DynamicLineSpanner.staff-padding
 
       %! ANCHOR_NOTE
     % [Guitar.1.Music anchor note]
@@ -5741,6 +5751,7 @@ number.5.Guitar.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 31]
+    \override DynamicLineSpanner.staff-padding = 7
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -6671,6 +6682,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
+    \revert DynamicLineSpanner.staff-padding
 
       %! ANCHOR_NOTE
     % [Guitar.2.Music anchor note]
@@ -8581,6 +8593,7 @@ number.5.Violin.Music = {
     r1
 
     % [Violin.Music measure 40]
+    \override DynamicLineSpanner.staff-padding = 5
     r1
 
     r4
@@ -9012,6 +9025,7 @@ number.5.Violin.Music = {
     a4
     - \tweak staff-padding 1.5
     - \baca-circle-bowing
+    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
       %! ANCHOR_NOTE
@@ -9922,6 +9936,7 @@ number.5.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 31]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
     f,1
@@ -11166,6 +11181,7 @@ number.5.Cello.Music = {
     % [Cello.Music measure 48]
     fs,1
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
       %! ANCHOR_NOTE
     % [Cello.Music anchor note]
