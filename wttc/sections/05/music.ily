@@ -8585,204 +8585,434 @@ number.5.Violin.Music = {
 
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'4
+    gs!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
     % [Violin.Music measure 41]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    gs!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     % [Violin.Music measure 42]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'4
+    gs!4
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    gs!16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    gs8.
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     r2.
 
     % [Violin.Music measure 43]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'4
+    gs!4
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    gs!16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    gs8.
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'8.
+    gs!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
     - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 44]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    gs16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    gs!16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    gs8.
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'4
+    gs!4
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'8.
+    gs!8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 1.5
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanCircleBow
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    gs16
     \repeatTie
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
+      %! CIRCLE_BOW_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanCircleBow
 
     r4
 
     % [Violin.Music measure 45]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'4
+    a4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
     % [Violin.Music measure 46]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
 
     % [Violin.Music measure 47]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'4
+    a4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
     % [Violin.Music measure 48]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a4
+    - \tweak staff-padding 1.5
+    - \baca-circle-bowing
+    \revert NoteHead.style
 
       %! ANCHOR_NOTE
     % [Violin.Music anchor note]

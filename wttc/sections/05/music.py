@@ -1147,8 +1147,34 @@ def D4a(pleaves, pitch, dynamics):
         baca.espressivo(plt.head)
 
 
-def D4b():
-    pass
+def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
+    baca.pitch(pleaves, pitch)
+    baca.override.note_head_style_harmonic(pleaves)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        if not no_spanner:
+            baca.circle_bow_spanner(
+                baca.select.next(plt),
+                abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                staff_padding=3,
+            )
+        else:
+            baca.articulation(
+                plt,
+                r"baca-circle-bowing",
+                staff_padding=1.5,
+            )
+    if dynamics:
+        dynamics_ = dynamics.split()
+        for plt, dynamic_ in zip(plts, dynamics_, strict=True):
+            if dynamic_ != "-":
+                baca.dynamic(plt.head, dynamic_)
+    else:
+        baca.hairpin(
+            pleaves,
+            hairpin,
+            forbid_al_niente_to_bar_line=True,
+        )
 
 
 def D4c():
@@ -1291,6 +1317,14 @@ def vn(m):
     C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o niente")
     C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o", bookend=False)
     C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o", bookend=False)
+    D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
+    D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p >o niente", no_spanner=True)
+    D4b(
+        library.pleaves(m[47, 48], 4),
+        "A3",
+        dynamics="pp - - - - - - - ",
+        no_spanner=True,
+    )
 
 
 def vc(m):
