@@ -65,6 +65,21 @@ def GLOBALS(skips, first_measure_number):
     baca.close_volta(skips[23 - 1], first_measure_number)
 
 
+def e4(twelfths=False):
+    if twelfths is False:
+        counts = list(range(1, 14 + 1))
+        assert sum(counts) == 105
+        permutation = [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9]
+        assert set(permutation) == set(range(14))
+    else:
+        counts = list(range(1, 12 + 1))
+        assert sum(counts) == 78
+        permutation = [0, 5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7]
+        assert set(permutation) == set(range(12))
+    counts = abjad.sequence.permute(counts, permutation)
+    return counts
+
+
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
@@ -82,21 +97,19 @@ def FL(voice, meters):
 
     @baca.call
     def block():
-        counts = library.canon_e()
+        counts = e4()
         counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
         rhythm(
             meters(11, 16),
             counts + ["-"],
             material=4,
         )
-        note = abjad.Note("c'4")
-        abjad.mutate.replace(voice[-1:], [note])
-        library.annotate([note], 4)
 
     rhythm(
-        meters(17, 18),
-        [rt(8), rt(2), -5, 10, -7],
+        meters(16, 18),
+        [14, -5, 10, -7],
         material=4,
+        overlap=["-"],
     )
     rhythm.mmrests(19, 22)
 
@@ -132,7 +145,7 @@ def GT1(voice, meters):
 
     @baca.call
     def block():
-        counts = library.canon_e(twelfths=True)
+        counts = e4(twelfths=True)
         counts = baca.sequence.negate_elements(counts, indices=[1], period=2)
         counts_ = []
         for count in counts:
@@ -197,7 +210,7 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        counts = library.canon_e()
+        counts = e4()
         counts = abjad.sequence.rotate(counts, -2)
         counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
         counts_ = []

@@ -317,21 +317,6 @@ def beat(n=1):
     return abjad.Duration(n, 4)
 
 
-def canon_e(twelfths=False):
-    if twelfths is False:
-        counts = list(range(1, 14 + 1))
-        assert sum(counts) == 105
-        permutation = [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9]
-        assert set(permutation) == set(range(14))
-    else:
-        counts = list(range(1, 12 + 1))
-        assert sum(counts) == 78
-        permutation = [0, 5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7]
-        assert set(permutation) == set(range(12))
-    counts = abjad.sequence.permute(counts, permutation)
-    return counts
-
-
 def check_material_annotations(argument):
     for pleaf in baca.select.pleaves(argument, exclude=baca.enums.HIDDEN):
         indicators = abjad.get.indicators(pleaf, Material)
