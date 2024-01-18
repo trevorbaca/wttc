@@ -14,6 +14,7 @@ TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
 h = baca.rhythm.h
+md = baca.rhythm.md
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
@@ -99,18 +100,29 @@ def FL(voice, meters):
     def block():
         counts = e4()
         counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
+        assert counts == [-1, 6, -11, 2, -7, 12, -3, 8, -13, 4, -9, 14, -5, 10]
+        counts = [-1, 6, -11, 2, -7, t(1), X(md("1/2 * 5/8")), X(h(3)), rt(3), -3]
+        counts += [t(2), X(w(2, 4)), X(h(2)), rt(2), -13]
+        counts += [t(1), X(w(1, 3)), X(h(2)), -9]
+        counts += [t(4), X(md("1/2 * 3/8")), X(h(md("1/4 * 5/4"))), X(2), -5]
+        counts += [t(1), X(w(4, 8)), X(h(4)), rt(1)]
         rhythm(
             meters(11, 16),
             counts + ["-"],
             material=4,
         )
 
-    rhythm(
-        meters(16, 18),
-        [14, -5, 10, -7],
-        material=4,
-        overlap=["-"],
-    )
+    @baca.call
+    def block():
+        counts = [t(4), X(md("1/2 * 3/8")), X(h(md("1/4 * 5/4"))), X(2), -5]
+        counts += [t(1), X(w(4, 8)), X(h(4)), rt(1), -7]
+        rhythm(
+            meters(16, 18),
+            counts,
+            material=4,
+            overlap=["-"],
+        )
+
     rhythm.mmrests(19, 22)
 
 
@@ -490,8 +502,31 @@ def E3b():
     pass
 
 
-def E4a():
-    pass
+def E4a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    runs = abjad.select.runs(pleaves)
+    dynamics_ = dynamics.split()
+    for run, dynamic_ in zip(runs, dynamics_, strict=True):
+        run = baca.select.next(run)
+        if len(run) <= 2:
+            baca.dynamic(run[0], dynamic_)
+            pieces = None
+        elif len(run) == 3:
+            pieces = [run[:1], run[1:]]
+        elif len(run) == 4:
+            pieces = [run[:2], run[2:]]
+        elif len(run) == 5:
+            pieces = [run[:2], run[2:]]
+        else:
+            breakpoint()
+            assert len(run) == 6
+            pieces = [run[:3], run[3:]]
+        if pieces:
+            baca.hairpin(
+                (),
+                f"niente o< {dynamic_} >o niente",
+                pieces=pieces,
+            )
 
 
 def E4b():
@@ -508,6 +543,7 @@ def F1c():
 
 def fl(m):
     E3a(library.pleaves(m[2, 8], 3), "Bb3")
+    E4a(library.pleaves(m[10, 18], 4), "B5", "p p p mp mf f f mf mp p")
 
 
 def ob(m):
@@ -542,6 +578,10 @@ def vc(m):
     def block():
         leaf = m[1][0]
         library.rotate_rehearsal_mark_literal(leaf)
+
+
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"][10, 18], 3)
 
 
 @baca.build.timed("make_score")
@@ -587,6 +627,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 

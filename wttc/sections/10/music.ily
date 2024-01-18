@@ -1247,50 +1247,97 @@ number.10.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 10]
+    \override DynamicLineSpanner.staff-padding = 3
     r1
 
     r4
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8
+    e'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
     % [AltoFlute.Music measure 11]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8.
+    e'''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    e'''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r2
 
     % [AltoFlute.Music measure 12]
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8
+    e'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1298,54 +1345,146 @@ number.10.AltoFlute.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'16
+    e'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
+    e'''2 * 5/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    e'''8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     % [AltoFlute.Music measure 13]
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8
+    e'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
+    e'''4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    - \tweak stencil ##f
+    ~
+
+    e'''8
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r4
 
@@ -1354,124 +1493,355 @@ number.10.AltoFlute.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'16
+    e'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    e'''8. * 1/3
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"3"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r2
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'4
+    e'''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 15]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
-    - \tweak stencil ##f
-    ~
+    e'''2 * 3/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"8"
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
-    \repeatTie
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''4 * 5/4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \f
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    e'''8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'16
+    e'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     ~
 
     % [AltoFlute.Music measure 16]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
+    e'''2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    e'''16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'4
+    e'''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 17]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
-    - \tweak stencil ##f
-    ~
+    e'''2 * 3/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"8"
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
-    \repeatTie
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''4 * 5/4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    e'''8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'16
+    e'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     ~
 
     % [AltoFlute.Music measure 18]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
+    e'''2 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+    e'''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    e'''16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 19]
     R1 * 4/4
