@@ -544,6 +544,7 @@ def F1c():
 def fl(m):
     E3a(library.pleaves(m[2, 8], 3), "Bb3")
     E4a(library.pleaves(m[10, 18], 4), "B5", "p p p mp mf f f mf mp p")
+    baca.override.dynamic_text_self_alignment_x(m[14][4], 1.5)
 
 
 def ob(m):
