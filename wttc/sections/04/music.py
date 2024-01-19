@@ -26,7 +26,6 @@ X = library.X
 anchor = library.anchor
 beat = library.beat
 swell = library.swell
-xt = library.xt
 
 
 def GLOBALS(skips):

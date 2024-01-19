@@ -23,7 +23,6 @@ X = library.X
 anchor = library.anchor
 beat = library.beat
 swell = library.swell
-xt = library.xt
 
 
 def GLOBALS(skips):
@@ -350,12 +349,12 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8, 9),
-        [xt(16), xt(12), anchor(4, 1)],
+        [X(t(16)), X(t(12)), anchor(4, 1)],
         material=3,
     )
     rhythm(
         meters(10),
-        [xt(12), anchor(4, 1)],
+        [X(t(12)), anchor(4, 1)],
         material=3,
     )
     rhythm(

@@ -25,7 +25,6 @@ X = library.X
 anchor = library.anchor
 beat = library.beat
 swell = library.swell
-xt = library.xt
 
 
 def GLOBALS(skips, first_measure_number):
@@ -176,7 +175,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(6),
-        [1, xt(3), xt(8), anchor(16, 1)],
+        [1, X(t(3)), X(t(8)), anchor(16, 1)],
         material=3,
     )
     baca.section.append_anchor_note(voice)

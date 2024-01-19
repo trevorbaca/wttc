@@ -6,6 +6,8 @@ import abjad
 import baca
 from abjadext import rmakers
 
+from . import strings
+
 
 def BG(*arguments):
     return baca.rhythm.BG(*arguments, slur=False)
@@ -251,6 +253,16 @@ def anchor(written_n, anchor_n):
     first = baca.rhythm.w(actual_n, written_n)
     second = baca.rhythm.h(anchor_n)
     return X([first, second])
+
+
+def anchor_md(written_n, actual_n):
+    assert actual_n < written_n, repr((written_n, actual_n))
+    first_multiplier = (actual_n, written_n)
+    first = baca.rhythm.mdi(written_n, first_multiplier)
+    second_multiplier = (written_n - actual_n, written_n)
+    second = baca.rhythm.mdi(written_n, second_multiplier)
+    second_ = baca.rhythm.h(second)
+    return X([first, second_])
 
 
 def annotate(items, n):
@@ -846,7 +858,7 @@ def swell(n):
     half = int(n / 2)
     first = baca.rhythm.w(half, n)
     second = baca.rhythm.h(baca.rhythm.w(half, n))
-    tuplet = baca.rhythm.T([first, second], "1:1")
+    tuplet = X([first, second])
     return tuplet
 
 
@@ -855,10 +867,6 @@ def unannotate(items):
         for leaf in abjad.select.leaves(item):
             assert abjad.get.has_indicator(leaf, Material), repr(leaf)
             abjad.detach(Material, leaf)
-
-
-def xt(number):
-    return X(baca.rhythm.t(number))
 
 
 instruments = {
@@ -882,12 +890,12 @@ metronome_marks = {
 
 
 short_instrument_names = {
-    "Afl.": abjad.ShortInstrumentName(r"\wttc-afl-markup"),
-    "Ob.": abjad.ShortInstrumentName(r"\wttc-ob-markup"),
-    "Gt. 1": abjad.ShortInstrumentName(r"\wttc-gt-i-markup"),
-    "Gt. 2": abjad.ShortInstrumentName(r"\wttc-gt-ii-markup"),
-    "Vn.": abjad.ShortInstrumentName(r"\wttc-vn-markup"),
-    "Vc.": abjad.ShortInstrumentName(r"\wttc-vc-markup"),
+    "Afl.": abjad.ShortInstrumentName(strings.afl_markup),
+    "Ob.": abjad.ShortInstrumentName(strings.ob_markup),
+    "Gt. 1": abjad.ShortInstrumentName(strings.gt_i_markup),
+    "Gt. 2": abjad.ShortInstrumentName(strings.gt_ii_markup),
+    "Vn.": abjad.ShortInstrumentName(strings.vn_markup),
+    "Vc.": abjad.ShortInstrumentName(strings.vc_markup),
 }
 
 

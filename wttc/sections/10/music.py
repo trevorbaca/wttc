@@ -23,9 +23,9 @@ BG = library.BG
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
+anchor_md = library.anchor_md
 beat = library.beat
 swell = library.swell
-xt = library.xt
 
 
 def GLOBALS(skips, first_measure_number):
@@ -102,6 +102,7 @@ def FL(voice, meters):
         counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
         assert counts == [-1, 6, -11, 2, -7, 12, -3, 8, -13, 4, -9, 14, -5, 10]
         counts = [-1, 6, -11, 2, -7, t(1), X(md("1/2 * 5/8")), X(h(3)), rt(3), -3]
+        # counts = [-1, 6, -11, 2, -7, t(1), anchor_md(8, 5), rt(3), -3]
         counts += [t(2), X(w(2, 4)), X(h(2)), rt(2), -13]
         counts += [t(1), X(w(1, 3)), X(h(2)), -9]
         counts += [t(4), X(md("1/2 * 3/8")), X(h(md("1/4 * 5/4"))), X(2), -5]

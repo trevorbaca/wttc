@@ -27,7 +27,6 @@ X = library.X
 anchor = library.anchor
 beat = library.beat
 swell = library.swell
-xt = library.xt
 
 
 def GLOBALS(skips):
@@ -247,7 +246,7 @@ def OB(voice, meters):
     rhythm.mmrests(26, 31)
     rhythm(
         meters(32, 33),
-        [-4, xt(8), xt(12), 14, -2],
+        [-4, X(t(8)), X(t(12)), 14, -2],
         material=1,
     )
     rhythm.mmrests(34)
