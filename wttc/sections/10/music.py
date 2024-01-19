@@ -128,7 +128,28 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 9)
+    rhythm(
+        meters(10),
+        [-8, swell(16)],
+        material=2,
+    )
+    rhythm(
+        meters(11),
+        [-12, swell(4)],
+        material=2,
+    )
+    rhythm(
+        meters(12, 13),
+        [-15, 10, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(14, 19),
+        [-15, 10] + 4 * [X(15), rt(1)] + ["-"],
+        material=2,
+    )
+    rhythm.mmrests(20, 22)
 
 
 def GT1(voice, meters):
@@ -340,20 +361,11 @@ def VN(voice, meters):
         material=4,
     )
     rhythm(
-        meters(14),
-        [9],
+        meters(14, 18),
+        [10] + (4 * [X(15), rt(1)])[:-1],
         material=2,
-        overlap=["-"],
+        overlap=[-15],
     )
-
-    @baca.call
-    def block():
-        rhythm(
-            meters(15, 18),
-            4 * [rt(1), X(15)],
-            material=2,
-        )
-        abjad.attach(abjad.Tie(), voice[-1])
 
     @baca.call
     def block():
