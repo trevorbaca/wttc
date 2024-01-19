@@ -1375,7 +1375,7 @@ number.10.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'''8.
+    e'''2 * 3/8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1383,6 +1383,8 @@ number.10.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"8"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1439,16 +1441,16 @@ number.10.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
 
-    e'''4 * 1/2
+    e'''4 * 2/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'''8
+    e'''4 * 2/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1456,6 +1458,8 @@ number.10.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1524,7 +1528,7 @@ number.10.AltoFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     \once \override DynamicText.self-alignment-X = 1.5
-    e'''8
+    e'''8. * 2/3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1532,6 +1536,8 @@ number.10.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"3"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1592,7 +1598,7 @@ number.10.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'''4 * 5/4
+    e'''2 * 5/8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1601,7 +1607,7 @@ number.10.AltoFlute.Music = {
       %! SPANNER_STOP
     \f
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"5" #"8"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1654,15 +1660,15 @@ number.10.AltoFlute.Music = {
     ~
 
     % [AltoFlute.Music measure 16]
-    e'''2 * 1/2
+    e'''2 * 4/8
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'''4
+    e'''2 * 4/8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1670,6 +1676,8 @@ number.10.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1733,7 +1741,7 @@ number.10.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'''4 * 5/4
+    e'''2 * 5/8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1742,7 +1750,7 @@ number.10.AltoFlute.Music = {
       %! SPANNER_STOP
     \mp
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"5" #"8"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1795,15 +1803,15 @@ number.10.AltoFlute.Music = {
     ~
 
     % [AltoFlute.Music measure 18]
-    e'''2 * 1/2
+    e'''2 * 4/8
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e'''4
+    e'''2 * 4/8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1811,6 +1819,8 @@ number.10.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2015,7 +2025,19 @@ number.10.Oboe.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
     - \tweak stencil ##f
     ~
 
@@ -2045,7 +2067,19 @@ number.10.Oboe.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
     - \tweak stencil ##f
     ~
 
