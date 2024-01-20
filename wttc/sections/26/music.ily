@@ -2659,7 +2659,7 @@ number.26.Guitar.1.Music = {
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -2671,7 +2671,7 @@ number.26.Guitar.1.Music = {
       %! REAPPLIED_STAFF_LINES
     \stopStaff
       %! REAPPLIED_STAFF_LINES
-    \once \override Staff.StaffSymbol.line-count = 5
+    \once \override Staff.StaffSymbol.line-count = 1
       %! REAPPLIED_STAFF_LINES
     \startStaff
     R1 * 4/4

@@ -485,8 +485,37 @@ def E1():
     pass
 
 
-def E2a():
-    pass
+def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
+    baca.pitch(pleaves, pitch)
+    if swells:
+        swells_ = swells.split()
+        runs = abjad.select.runs(pleaves)
+        for run, swell_ in zip(runs, swells_, strict=True):
+            pieces = baca.select.partition_by_ratio_of_durations(run, (1, 1))
+            next_leaf = abjad.get.leaf(run[-1], 1)
+            pieces[-1].append(next_leaf)
+            baca.hairpin(
+                (),
+                f"niente o< {swell_} >o !",
+                pieces=pieces,
+            )
+            baca.trill_spanner(
+                run + [next_leaf],
+                alteration=alteration,
+            )
+    else:
+        assert starts
+        starts_ = starts.split()
+        plts = baca.select.plts(pleaves)
+        for plt, start_ in zip(plts, starts_, strict=True):
+            baca.hairpin(
+                plt,
+                f"{start_} >o niente",
+            )
+            baca.trill_spanner(
+                baca.select.next(plt),
+                alteration=alteration,
+            )
 
 
 def E2b():
@@ -559,18 +588,14 @@ def fl(m):
 
 
 def ob(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
+    # HERE
+    E2a(library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", swells="mp mp mp mp")
+    E2a(m[15, 19][1:], "D#6", "E6", starts="mp p pp pp")
 
 
 def gt1(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
-        baca.staff_lines(leaf, 5)
+    pass
 
 
 def gt2(m):
