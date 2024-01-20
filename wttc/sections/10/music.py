@@ -508,14 +508,18 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
         starts_ = starts.split()
         plts = baca.select.plts(pleaves)
         for plt, start_ in zip(plts, starts_, strict=True):
+            rplt = baca.select.next(plt)
             baca.hairpin(
-                plt,
-                f"{start_} >o niente",
+                rplt,
+                f"{start_} >o !",
             )
             baca.trill_spanner(
-                baca.select.next(plt),
+                rplt,
                 alteration=alteration,
             )
+        next_leaf = rplt[-1]
+        assert isinstance(next_leaf, abjad.Rest)
+        baca.dynamic(next_leaf, "niente")
 
 
 def E2b():
@@ -581,7 +585,6 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    # HERE
     E2a(library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", swells="mp mp mp mp")
     E2a(m[15, 19][1:], "D#6", "E6", starts="mp p pp pp")
 
@@ -611,6 +614,7 @@ def vc(m):
 
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"][10, 18], 3)
+    baca.override.dls_staff_padding(cache["ob"][10, 19], 3)
 
 
 @baca.build.timed("make_score")

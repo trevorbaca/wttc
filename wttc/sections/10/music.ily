@@ -1966,6 +1966,7 @@ number.10.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 10]
+    \override DynamicLineSpanner.staff-padding = 3
     r2
 
       %! STAFF_HIGHLIGHT
@@ -2275,13 +2276,6 @@ number.10.Oboe.Music = {
 
     % [Oboe.Music measure 16]
     ds'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    \!
     \repeatTie
 
       %! SPANNER_START
@@ -2294,6 +2288,8 @@ number.10.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
     \stopTrillSpan
       %! EXPLICIT_DYNAMIC
@@ -2316,13 +2312,6 @@ number.10.Oboe.Music = {
 
     % [Oboe.Music measure 17]
     ds'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    \!
     \repeatTie
 
       %! SPANNER_START
@@ -2335,6 +2324,8 @@ number.10.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
     \stopTrillSpan
       %! EXPLICIT_DYNAMIC
@@ -2357,13 +2348,6 @@ number.10.Oboe.Music = {
 
     % [Oboe.Music measure 18]
     ds'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    \!
     \repeatTie
 
       %! SPANNER_START
@@ -2376,6 +2360,8 @@ number.10.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
     \stopTrillSpan
       %! EXPLICIT_DYNAMIC
@@ -2398,22 +2384,23 @@ number.10.Oboe.Music = {
 
     % [Oboe.Music measure 19]
     ds'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    \!
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \!
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
     \stopTrillSpan
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
     % [Oboe.Music measure 20]
     R1 * 5/4
