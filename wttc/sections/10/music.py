@@ -547,26 +547,18 @@ def E4a(pleaves, pitch, dynamics):
     runs = abjad.select.runs(pleaves)
     dynamics_ = dynamics.split()
     for run, dynamic_ in zip(runs, dynamics_, strict=True):
-        run = baca.select.next(run)
-        if len(run) <= 2:
+        if len(run) == 1:
             baca.dynamic(run[0], dynamic_)
-            pieces = None
-        elif len(run) == 3:
-            pieces = [run[:1], run[1:]]
-        elif len(run) == 4:
-            pieces = [run[:2], run[2:]]
-        elif len(run) == 5:
-            pieces = [run[:2], run[2:]]
         else:
-            breakpoint()
-            assert len(run) == 6
-            pieces = [run[:3], run[3:]]
-        if pieces:
-            baca.hairpin(
-                (),
-                f"niente o< {dynamic_} >o niente",
-                pieces=pieces,
-            )
+            pieces = baca.select.partition_by_ratio_of_durations(run, (1, 1))
+            next_leaf = abjad.get.leaf(run[-1], 1)
+            pieces[-1].append(next_leaf)
+            if pieces:
+                baca.hairpin(
+                    (),
+                    f"niente o< {dynamic_} >o niente",
+                    pieces=pieces,
+                )
 
 
 def E4b():
