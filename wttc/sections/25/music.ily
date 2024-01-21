@@ -1601,7 +1601,7 @@ number.25.Guitar.1.Music = {
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -1613,7 +1613,7 @@ number.25.Guitar.1.Music = {
       %! REAPPLIED_STAFF_LINES
     \stopStaff
       %! REAPPLIED_STAFF_LINES
-    \once \override Staff.StaffSymbol.line-count = 1
+    \once \override Staff.StaffSymbol.line-count = 5
       %! REAPPLIED_STAFF_LINES
     \startStaff
     r1
@@ -1621,7 +1621,7 @@ number.25.Guitar.1.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \p
+    \pp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2003,7 +2003,7 @@ number.25.Guitar.2.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \p
+    \pp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

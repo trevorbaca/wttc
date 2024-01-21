@@ -481,8 +481,14 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E1():
-    pass
+def E1(pleaves, pitch, dynamics, *, pattern=None, string_numbers=None):
+    baca.pitch(pleaves, pitch)
+    dynamics_ = dynamics.split()
+    for pleaf, dynamic_ in zip(pleaves, dynamics_, strict=True):
+        if dynamic_ != "-":
+            baca.dynamic(pleaf, dynamic_)
+    if pattern:
+        baca.bend_after(pleaves, pattern)
 
 
 def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
@@ -565,8 +571,9 @@ def E4a(pleaves, pitch, dynamics):
                 )
 
 
-def E4b():
-    pass
+def E4b(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.dynamic(pleaves[0], dynamic)
 
 
 def E4c():
@@ -590,7 +597,27 @@ def ob(m):
 
 
 def gt1(m):
-    pass
+    baca.staff_lines(m[1][0], 5)
+    E1(
+        library.pleaves(m[1, 5], 1),
+        "A4",
+        "f mp f mp mp f mp mf p p mp pp",
+        pattern=[2, -4, -2, 4, -2, -4],
+    )
+    E1(
+        library.pleaves(m[6, 9], 1),
+        "A#4",
+        "pp p mp mf f ff ff",
+        pattern=[-4],
+    )
+    E4b(library.pleaves(m[10], 4), "C4", "f")
+    E4b(library.pleaves(m[11, 18], 4), "C4", "p")
+    E1(
+        library.pleaves(m[19, 21], 1),
+        "C#5",
+        "pp - -",
+        pattern=[-4],
+    )
 
 
 def gt2(m):
@@ -599,6 +626,27 @@ def gt2(m):
         leaf = m[1][0]
         library.rotate_rehearsal_mark_literal(leaf)
         baca.staff_lines(leaf, 5)
+
+    E1(
+        library.pleaves(m[1, 5], 1),
+        "A4",
+        "mp f f mp f f mf p p mp pp pp",
+        pattern=[-2, 4, -2, 4, 2, -4, 2, -4, 2, 4],
+    )
+    E1(
+        library.pleaves(m[6, 9], 1),
+        "A#4",
+        "pp p mp mf f ff ff",
+        pattern=[4],
+    )
+    E4b(library.pleaves(m[10], 4), "C4", "f")
+    E4b(library.pleaves(m[11, 18], 4), "C4", "p")
+    E1(
+        library.pleaves(m[19, 21], 1),
+        "C5",
+        "pp - -",
+        pattern=[4],
+    )
 
 
 def vn(m):
@@ -615,6 +663,10 @@ def vc(m):
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"][10, 18], 3)
     baca.override.dls_staff_padding(cache["ob"][10, 19], 3)
+    baca.override.dls_staff_padding(cache["gt1"][1, 9], 3)
+    baca.override.dls_staff_padding(cache["gt1"][10, 18], 5)
+    baca.override.dls_staff_padding(cache["gt1"][19, 22], 3)
+    baca.override.dls_staff_padding(cache["gt2"][1, 22], 3)
 
 
 @baca.build.timed("make_score")
