@@ -3617,8 +3617,6 @@ number.10.Violin.Music = {
     {
 
         % [Violin.Music measure 1]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! REAPPLIED_CLEF
         \clef "treble"
           %! REAPPLIED_CLEF_COLOR
@@ -3635,14 +3633,41 @@ number.10.Violin.Music = {
         \set Staff.shortInstrumentName = \wttc-vn-markup
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
-          %! REAPPLIED_DYNAMIC_COLOR
-          %! REAPPLIED_DYNAMIC
-        - \tweak color #(x11-color 'green4)
-          %! REAPPLIED_DYNAMIC
-        \pp
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-pizz-markup
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanPizzicato
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
           %! REAPPLIED_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'OliveDrab)
           %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -3654,6 +3679,9 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
 
     }
 
@@ -3666,15 +3694,33 @@ number.10.Violin.Music = {
         % [Violin.Music measure 2]
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
 
     }
 
@@ -3686,11 +3732,26 @@ number.10.Violin.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -3699,6 +3760,12 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         b'8
+          %! PIZZICATO_SPANNER
+          %! SPANNER_STOP
+        \bacaStopTextSpanPizzicato
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
         ~
 
     }

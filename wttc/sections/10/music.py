@@ -481,7 +481,7 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E1(pleaves, pitch, dynamics, *, pattern=None, string_numbers=None):
+def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=None):
     baca.pitch(pleaves, pitch)
     dynamics_ = dynamics.split()
     for pleaf, dynamic_ in zip(pleaves, dynamics_, strict=True):
@@ -489,6 +489,19 @@ def E1(pleaves, pitch, dynamics, *, pattern=None, string_numbers=None):
             baca.dynamic(pleaf, dynamic_)
     if pattern:
         baca.bend_after(pleaves, pattern)
+    if pizz is True:
+        baca.pizzicato_spanner(
+            baca.select.next(pleaves),
+            staff_padding=8,
+        )
+    if string_numbers:
+        string_numbers_ = string_numbers.split()
+        for pleaf, string_number_ in zip(pleaves, string_numbers_, strict=True):
+            baca.string_number_spanner(
+                baca.select.next([pleaf]),
+                f"{string_number_} ||",
+                staff_padding=5.5,
+            )
 
 
 def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
@@ -650,6 +663,13 @@ def gt2(m):
 
 
 def vn(m):
+    E1(
+        library.pleaves(m[1, 2], 1),
+        "A4",
+        "p f mf",
+        pizz=True,
+        string_numbers="III IV III",
+    )
     pass
 
 
