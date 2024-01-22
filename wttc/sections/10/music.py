@@ -13,12 +13,14 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
@@ -323,7 +325,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(11),
-        [8, "-"],
+        [c(8, 2), "-"],
         material=4,
     )
     rhythm(
@@ -334,18 +336,18 @@ def VN(voice, meters):
     )
     rhythm(
         meters(12),
-        [-2, 5, "-"],
+        [-2, c(5, 2), "-"],
         material=4,
     )
     rhythm(
         meters(12),
-        [t(9)],
+        [t(1), anchor_md(8, 4)],
         material=2,
         overlap=["-"],
     )
     rhythm(
         meters(13),
-        [1, "-"],
+        [rt(1), "-"],
         material=2,
     )
     rhythm(
@@ -356,14 +358,13 @@ def VN(voice, meters):
     )
     rhythm(
         meters(14),
-        [7, "-"],
+        [anchor_md(7, 3), -1, -4, -3, M(t(1), 2), M(anchor_md(8, 4), 2)],
         material=4,
     )
     rhythm(
-        meters(14, 18),
-        [10] + (4 * [X(15), rt(1)])[:-1],
+        meters(15, 18),
+        4 * [rt(1), X(15)],
         material=2,
-        overlap=[-15],
     )
 
     @baca.call
@@ -541,8 +542,64 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
         baca.dynamic(next_leaf, "niente")
 
 
-def E2b():
-    pass
+def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
+    assert damp or xfb
+    low_pitch, high_pitch = pitches.split()
+    if xfb is True:
+        first_plt = baca.select.plt(pleaves, 0)
+        baca.flat_glissando(first_plt, low_pitch, stop_pitch=high_pitch)
+        baca.override.note_head_style_harmonic(first_plt)
+        baca.xfb_spanner(
+            baca.select.next(first_plt),
+            staff_padding=3,
+        )
+        baca.string_number_spanner(
+            baca.select.next(first_plt),
+            f"{string_number} =|",
+            staff_padding=5.5,
+        )
+    if damp is True:
+        if xfb is False:
+            leaves = list(pleaves)
+        else:
+            leaves = baca.select.plt(pleaves, -1)
+        baca.flat_glissando(leaves, high_pitch, stop_pitch=low_pitch)
+        baca.damp_spanner(
+            baca.select.next(leaves),
+            staff_padding=3,
+        )
+    if xfb is True:
+        pieces = baca.select.partition_by_ratio_of_durations(pleaves, (1, 1))
+        next_leaf = abjad.get.leaf(pleaves[-1], 1)
+        pieces[-1].append(next_leaf)
+        baca.hairpin(
+            (),
+            f"niente o< {peak} >o niente",
+            pieces=pieces,
+        )
+    else:
+        baca.hairpin(
+            pleaves,
+            f"{peak} >o niente",
+        )
+
+
+def E2c(pleaves, pitch, alteration, peak, *, stop_pitch=None):
+    if stop_pitch is None:
+        baca.pitch(pleaves, pitch)
+    baca.trill_spanner(
+        baca.select.next(pleaves),
+        alteration=alteration,
+        staff_padding=3,
+    )
+    pieces = baca.select.partition_by_ratio_of_durations(pleaves, (1, 1))
+    next_leaf = abjad.get.leaf(pleaves[-1], 1)
+    pieces[-1].append(next_leaf)
+    baca.hairpin(
+        (),
+        f"niente o< {peak} >o niente",
+        pieces=pieces,
+    )
 
 
 def E3a(pleaves, fundamental):
@@ -670,7 +727,34 @@ def vn(m):
         pizz=True,
         string_numbers="III IV III",
     )
-    pass
+    E2b(
+        library.pleaves(m[2], 2) + m[3][:1],
+        "G#4 C5",
+        "p",
+        string_number="III",
+        xfb=True,
+    )
+    E2b(
+        abjad.select.run(library.pleaves(m[3, 5], 2), 1),
+        "G#4 C5",
+        "mf",
+        damp=True,
+        string_number="III",
+        xfb=True,
+    )
+    E1(
+        library.pleaves(m[5, 8], 1),
+        "A4",
+        "ff ff mf f p",
+        pizz=True,
+        string_numbers="IV III IV III IV",
+    )
+    runs = abjad.select.runs(library.pleaves(m[9, 10], 2))
+    E2b(runs[0], "G#4 C5", "mf", damp=True)
+    E2b(runs[1], "G#4 C5", "mp", damp=True)
+    E2b(runs[2], "G#4 C5", "p", damp=True)
+    E2c(runs[3], "B3", "C#4", "p")
+    E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")
 
 
 def vc(m):

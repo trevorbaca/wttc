@@ -3753,49 +3753,122 @@ number.10.Violin.Music = {
           %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        b'8
+        gs'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
           %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
-        ~
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a'4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
         % [Violin.Music measure 3]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
-        \repeatTie
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c''8
+        \revert NoteHead.style
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
 
     }
 
@@ -3807,38 +3880,119 @@ number.10.Violin.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+        \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
-        - \tweak stencil ##f
-        ~
+        gs'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
 
     }
 
     % [Violin.Music measure 4]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     b'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
-        \repeatTie
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \mf
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \revert NoteHead.style
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'4
-        - \tweak stencil ##f
-        ~
+        c''4
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
+          %! DAMP_SPANNER
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! DAMP_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup
+          %! DAMP_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+          %! DAMP_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! DAMP_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanDamp
+        \glissando
 
     }
 
@@ -3847,14 +4001,29 @@ number.10.Violin.Music = {
     {
 
         % [Violin.Music measure 5]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
-        \repeatTie
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gs'!8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
+          %! DAMP_SPANNER
+          %! SPANNER_STOP
+        \bacaStopTextSpanDamp
 
     }
 
@@ -3864,15 +4033,48 @@ number.10.Violin.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \ff
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-pizz-markup
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! PIZZICATO_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanPizzicato
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
 
     }
 
@@ -3887,17 +4089,35 @@ number.10.Violin.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
+        \ff
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
     }
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -3906,31 +4126,67 @@ number.10.Violin.Music = {
         % [Violin.Music measure 7]
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
     }
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
+      %! SPANNER_STOP
+      %! STRING_NUMBER_SPANNER
+    \bacaStopTextSpanStringNumber
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
 
     }
 
@@ -3943,30 +4199,98 @@ number.10.Violin.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        b'8
+        a'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-invisible-line
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8
+          %! PIZZICATO_SPANNER
+          %! SPANNER_STOP
+        \bacaStopTextSpanPizzicato
+          %! SPANNER_STOP
+          %! STRING_NUMBER_SPANNER
+        \bacaStopTextSpanStringNumber
 
     }
 
     % [Violin.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     \afterGrace
-    b'4..
+    c''4..
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mf
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanDamp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gs'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
 
     }
 
@@ -3974,18 +4298,68 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! DAMP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanDamp
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     \afterGrace
-    b'4..
+    c''4..
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \mp
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanDamp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gs'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
 
     }
 
@@ -3993,19 +4367,69 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! DAMP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanDamp
 
     % [Violin.Music measure 10]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     \afterGrace
-    b'4..
+    c''4..
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanDamp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gs'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
+        \!
 
     }
 
@@ -4013,24 +4437,66 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! DAMP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanDamp
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'1 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    b1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan cs'
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'1 * 1/2
+    b1 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Violin.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
@@ -4039,46 +4505,103 @@ number.10.Violin.Music = {
     \staffHighlight hotpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'2
+    <b' b'>2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'4 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    b4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan cs'
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4 * 1/2
+    b4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Violin.Music measure 12]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8
+    <b' b'>8
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    <b' b'>8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4098,7 +4621,19 @@ number.10.Violin.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
     - \tweak stencil ##f
     ~
 
@@ -4125,14 +4660,19 @@ number.10.Violin.Music = {
     % [Violin.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
+    b'4.. * 3/7
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"7"
 
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
-    \repeatTie
+    b'4.. * 4/7
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"7"
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4151,7 +4691,19 @@ number.10.Violin.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
     - \tweak stencil ##f
     ~
 
