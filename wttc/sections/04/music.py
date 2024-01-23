@@ -750,8 +750,9 @@ def B1b(
             baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         if conjoin is False:
             baca.string_number_spanner(
-                baca.select.next(run)[1:],
+                (),
                 f"{string_symbol} =|",
+                pieces=[baca.select.next(run)[1:]],
                 staff_padding=string_number_staff_padding,
             )
             if dls_staff_padding:
@@ -764,13 +765,15 @@ def B1b(
         else:
             string = f"niente o< {dynamic}"
         baca.hairpin(
-            baca.select.next(run)[1:],
+            (),
             string,
+            pieces=[baca.select.next(run)[1:]],
         )
     if conjoin is True:
         baca.string_number_spanner(
-            baca.select.next(runs)[1:],
+            (),
             f"{string_symbol} =|",
+            pieces=[baca.select.next(runs)[1:]],
             staff_padding=3,
         )
         if dls_staff_padding:
@@ -787,9 +790,10 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
         baca.dynamic(note, dynamic)
         if conjoin is False:
             baca.pizzicato_spanner(
-                baca.select.next([note]),
-                staff_padding=3,
+                (),
                 items=r"\baca-pizz-markup ||",
+                pieces=[baca.select.next([note])],
+                staff_padding=3,
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(
@@ -798,8 +802,9 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
                 )
     if conjoin is True:
         baca.pizzicato_spanner(
-            notes,
+            (),
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
+            pieces=[notes],
             staff_padding=3,
         )
         if dls_staff_padding:
@@ -830,12 +835,14 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     assert len(runs) == 1
     run = runs[0]
     baca.string_number_spanner(
-        baca.select.next(run),
+        (),
         f"{string_symbol} =|",
+        pieces=[baca.select.next(run)],
         staff_padding=5,
     )
     baca.xfb_spanner(
-        baca.select.next(run),
+        (),
+        pieces=[baca.select.next(run)],
         staff_padding=7.5,
     )
     baca.override.note_head_style_harmonic(baca.select.next(run))
@@ -947,34 +954,41 @@ def fl(m):
         baca.dynamic(plts[9].head, "mp")
         baca.dynamic(plts[11].head, "p")
         baca.covered_spanner(
-            baca.select.next(plts[:2]),
+            (),
             staff_padding=3,
+            pieces=[baca.select.next(plts[:2])],
         )
         baca.covered_spanner(
-            plts[2:4],
+            (),
             items=strings.cov_dashed_hook,
+            pieces=[plts[2:4]],
             staff_padding=3,
         )
         baca.covered_spanner(
-            baca.select.next(plts[4]),
+            (),
             items=strings.cov_dashed_hook,
+            pieces=[baca.select.next(plts[4])],
             staff_padding=3,
         )
         baca.covered_spanner(
-            baca.select.next(plts[5:8]),
+            (),
+            pieces=[baca.select.next(plts[5:8])],
             staff_padding=3,
         )
         baca.covered_spanner(
-            baca.select.next(plts[8]),
+            (),
+            pieces=[baca.select.next(plts[8])],
             staff_padding=3,
         )
         baca.covered_spanner(
-            baca.select.next(plts[9:11]),
+            (),
             left_broken_text=None,
+            pieces=[baca.select.next(plts[9:11])],
             staff_padding=3,
         )
         baca.covered_spanner(
-            baca.select.next(plts[11:13]),
+            (),
+            pieces=[baca.select.next(plts[11:13])],
             staff_padding=3,
         )
 
@@ -1006,16 +1020,19 @@ def fl(m):
             pieces=baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
         )
         baca.hairpin(
-            baca.select.next(runs[2]),
+            (),
             "f >o niente",
+            pieces=[baca.select.next(runs[2])],
         )
         baca.hairpin(
-            runs[3],
+            (),
             "f |>o niente",
+            pieces=[runs[3]],
         )
         baca.hairpin(
-            runs[4],
+            (),
             "f |>o niente",
+            pieces=[runs[4]],
         )
         baca.hairpin(
             (),
@@ -1069,12 +1086,14 @@ def ob(m):
             pieces=baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
         )
         baca.hairpin(
-            runs[3],
+            (),
             "f |>o niente",
+            pieces=[runs[3]],
         )
         baca.hairpin(
-            runs[4],
+            (),
             "f |>o niente",
+            pieces=[runs[4]],
         )
 
     @baca.call
@@ -1166,7 +1185,11 @@ def gt1(cache):
             else:
                 leaves = plt
             string = f"o< {termination}"
-            baca.hairpin(leaves, string)
+            baca.hairpin(
+                (),
+                string,
+                pieces=[leaves],
+            )
 
     @baca.call
     def block():
@@ -1230,7 +1253,11 @@ def gt1(cache):
         baca.dynamic(note, "p")
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
-        baca.hairpin(notes, "p pp")
+        baca.hairpin(
+            (),
+            "p pp",
+            pieces=[notes],
+        )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
         baca.hairpin(
@@ -1309,7 +1336,11 @@ def gt2(cache):
             baca.staff_lines(next_leaf, 5)
             baca.staff_position(plt, 0)
             baca.up_bow(plt.head, padding=1)
-            baca.hairpin(baca.select.next(plt), f"o< {dynamic}")
+            baca.hairpin(
+                (),
+                f"o< {dynamic}",
+                pieces=[baca.select.next(plt)],
+            )
 
     @baca.call
     def block():

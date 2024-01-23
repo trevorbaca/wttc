@@ -882,8 +882,9 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
     baca.hairpin(
-        baca.select.next(pleaves),
+        (),
         f"{dynamic} >o !",
+        pieces=[baca.select.next(pleaves)],
     )
 
 
@@ -900,8 +901,9 @@ def C2b(
     baca.override.note_head_style_harmonic(pleaves)
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
     baca.pizzicato_spanner(
-        pleaves,
+        (),
         items=r"\baca-pizz-markup ||",
+        pieces=[pleaves],
         staff_padding=3,
     )
     # TODO: make this work:
@@ -929,13 +931,15 @@ def C2b(
     else:
         all_leaves = pleaves
         baca.hairpin(
-            pleaves,
+            (),
             hairpin,
             bookend=bookend,
+            pieces=[pleaves],
         )
     baca.string_number_spanner(
-        baca.select.next(all_leaves),
+        (),
         "IV =|",
+        pieces=[baca.select.next(all_leaves)],
         staff_padding=6.5,
     )
 
@@ -955,8 +959,9 @@ def C3a(
     if pleaves_2 is None:
         baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
         baca.hairpin(
-            pleaves,
+            (),
             hairpin,
+            pieces=[pleaves],
         )
     else:
         length_1, length_2 = len(pleaves), len(pleaves_2)
@@ -977,8 +982,9 @@ def C3a(
         baca.override.note_head_style_harmonic(all_leaves)
     if string_number:
         baca.string_number_spanner(
-            baca.select.next(all_leaves),
+            (),
             items=f"{string_number} =|",
+            pieces=[baca.select.next(all_leaves)],
             staff_padding=6.5,
         )
     if trill:
@@ -1011,8 +1017,9 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
         )
     else:
         baca.hairpin(
-            pleaves,
+            (),
             hairpin,
+            pieces=[pleaves],
         )
 
 
@@ -1026,8 +1033,9 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
     if pizz is True:
         for pleaf in pleaves:
             baca.pizzicato_spanner(
-                baca.select.next(pleaf),
+                (),
                 items=r"\baca-pizz-markup ||",
+                pieces=[baca.select.next(pleaf)],
                 staff_padding=pizz_staff_padding,
             )
 
@@ -1035,8 +1043,9 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
-        baca.select.next(pleaves),
+        (),
         f"{dynamic} >o niente",
+        pieces=[baca.select.next(pleaves)],
     )
 
 
@@ -1072,7 +1081,11 @@ def D2a(pleaves, pitches, hairpin_strings):
     hairpins = hairpin_strings.split()
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
         hairpin_string = f"{hairpin} >o !"
-        baca.hairpin(baca.select.next(plt_pair), hairpin_string)
+        baca.hairpin(
+            (),
+            hairpin_string,
+            pieces=[baca.select.next(plt_pair)],
+        )
         baca.tenuto(plt_pair[0].head)
 
 
@@ -1091,7 +1104,11 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
             baca.down_bow(run[0], padding=1)
         if len(run) == 1:
             run = baca.select.next(run)
-        baca.hairpin(run, f"o<| {dynamic_}")
+        baca.hairpin(
+            (),
+            f"o<| {dynamic_}",
+            pieces=[run],
+        )
     if not do_not_unbeam:
         rmakers.unbeam(pleaves)
 
@@ -1104,14 +1121,16 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
         start_pitch, stop_pitch = pitch_pair.split()
         baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         baca.damp_spanner(
-            baca.select.next(run),
+            (),
+            pieces=[baca.select.next(run)],
             staff_padding=3,
         )
         if hairpin_string:
             baca.hairpin(
-                run,
+                (),
                 hairpin_string,
                 forbid_al_niente_to_bar_line=True,
+                pieces=[run],
             )
 
 
@@ -1154,8 +1173,9 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
     for plt in plts:
         if not no_spanner:
             baca.circle_bow_spanner(
-                baca.select.next(plt),
+                (),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                pieces=[baca.select.next(plt)],
                 staff_padding=3,
             )
         else:
@@ -1171,9 +1191,10 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
                 baca.dynamic(plt.head, dynamic_)
     else:
         baca.hairpin(
-            pleaves,
+            (),
             hairpin,
             forbid_al_niente_to_bar_line=True,
+            pieces=[pleaves],
         )
 
 
@@ -1186,20 +1207,23 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
         else:
             baca.pitch(run, pitches)
         baca.xfb_spanner(
-            baca.select.next(run),
+            (),
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+            pieces=[baca.select.next(run)],
             staff_padding=3,
         )
         baca.scp_spanner(
-            baca.select.next(run),
+            (),
             "T =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+            pieces=[baca.select.next(run)],
             staff_padding=6.5,
         )
         if hairpin:
             baca.hairpin(
-                run,
+                (),
                 hairpin,
+                pieces=[run],
             )
     if dynamic:
         baca.dynamic(pleaves[0], dynamic)

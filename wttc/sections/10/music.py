@@ -492,15 +492,17 @@ def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=Non
         baca.bend_after(pleaves, pattern)
     if pizz is True:
         baca.pizzicato_spanner(
-            baca.select.next(pleaves),
+            (),
+            pieces=[baca.select.next(pleaves)],
             staff_padding=8,
         )
     if string_numbers:
         string_numbers_ = string_numbers.split()
         for pleaf, string_number_ in zip(pleaves, string_numbers_, strict=True):
             baca.string_number_spanner(
-                baca.select.next([pleaf]),
+                (),
                 f"{string_number_} ||",
+                pieces=[baca.select.next([pleaf])],
                 staff_padding=5.5,
             )
 
@@ -530,8 +532,9 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
         for plt, start_ in zip(plts, starts_, strict=True):
             rplt = baca.select.next(plt)
             baca.hairpin(
-                rplt,
+                (),
                 f"{start_} >o !",
+                pieces=[rplt],
             )
             baca.trill_spanner(
                 rplt,
@@ -550,12 +553,14 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         baca.flat_glissando(first_plt, low_pitch, stop_pitch=high_pitch)
         baca.override.note_head_style_harmonic(first_plt)
         baca.xfb_spanner(
-            baca.select.next(first_plt),
+            (),
+            pieces=[baca.select.next(first_plt)],
             staff_padding=3,
         )
         baca.string_number_spanner(
-            baca.select.next(first_plt),
+            (),
             f"{string_number} =|",
+            pieces=[baca.select.next(first_plt)],
             staff_padding=5.5,
         )
     if damp is True:
@@ -565,7 +570,8 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             leaves = baca.select.plt(pleaves, -1)
         baca.flat_glissando(leaves, high_pitch, stop_pitch=low_pitch)
         baca.damp_spanner(
-            baca.select.next(leaves),
+            (),
+            pieces=[baca.select.next(leaves)],
             staff_padding=3,
         )
     if xfb is True:
@@ -579,8 +585,9 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         )
     else:
         baca.hairpin(
-            pleaves,
+            (),
             f"{peak} >o niente",
+            pieces=[pleaves],
         )
 
 

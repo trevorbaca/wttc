@@ -448,12 +448,36 @@ def fl(m):
         baca.flat_glissando(parts[3], "Eb6", stop_pitch="D6")
         baca.flat_glissando(runs[1], "E6", stop_pitch="D#6")
         baca.flat_glissando(runs[2], "F6", stop_pitch="E6")
-        baca.hairpin(parts[0], "f >o niente")
-        baca.hairpin(parts[1], "mf >o !")
-        baca.hairpin(parts[2], "mp >o !")
-        baca.hairpin(parts[3], "p >o !")
-        baca.hairpin(runs[1], "p >o !")
-        baca.hairpin(runs[2], "p >o !")
+        baca.hairpin(
+            (),
+            "f >o niente",
+            pieces=[parts[0]],
+        )
+        baca.hairpin(
+            (),
+            "mf >o !",
+            pieces=[parts[1]],
+        )
+        baca.hairpin(
+            (),
+            "mp >o !",
+            pieces=[parts[2]],
+        )
+        baca.hairpin(
+            (),
+            "p >o !",
+            pieces=[parts[3]],
+        )
+        baca.hairpin(
+            (),
+            "p >o !",
+            pieces=[runs[1]],
+        )
+        baca.hairpin(
+            (),
+            "p >o !",
+            pieces=[runs[2]],
+        )
 
     @baca.call
     def block():
@@ -461,8 +485,9 @@ def fl(m):
         for run in runs:
             baca.pitch(run, "G#")
             baca.covered_spanner(
-                baca.select.next(run),
+                (),
                 items=strings.cov_dashed_hook,
+                pieces=[baca.select.next(run)],
                 staff_padding=3,
             )
             baca.dynamic(run[0], "mp")
@@ -528,7 +553,11 @@ def gt1(m):
             baca.down_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.next(run)
-            baca.hairpin(run, 'o<| "mf"')
+            baca.hairpin(
+                (),
+                'o<| "mf"',
+                pieces=[run],
+            )
 
     @baca.call
     def block():
@@ -566,7 +595,11 @@ def gt2(m):
             baca.up_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.next(run)
-            baca.hairpin(run, 'o<| "mf"')
+            baca.hairpin(
+                (),
+                'o<| "mf"',
+                pieces=[run],
+            )
 
     @baca.call
     def block():
@@ -666,10 +699,26 @@ def vn(m):
             ],
             "G4",
         )
-        baca.damp_spanner(baca.select.next(runs[0]), staff_padding=3)
-        baca.damp_spanner(baca.select.next(runs[1]), staff_padding=3)
-        baca.damp_spanner(baca.select.next(runs[2]), staff_padding=4.5)
-        baca.damp_spanner(baca.select.next(runs[3]), staff_padding=4.5)
+        baca.damp_spanner(
+            (),
+            staff_padding=3,
+            pieces=[baca.select.next(runs[0])],
+        )
+        baca.damp_spanner(
+            (),
+            staff_padding=3,
+            pieces=[baca.select.next(runs[1])],
+        )
+        baca.damp_spanner(
+            (),
+            staff_padding=4.5,
+            pieces=[baca.select.next(runs[2])],
+        )
+        baca.damp_spanner(
+            (),
+            staff_padding=4.5,
+            pieces=[baca.select.next(runs[3])],
+        )
         baca.hairpin(
             (),
             baca.dynamics.niente_swells("mp"),
@@ -686,8 +735,9 @@ def vn(m):
             pieces=baca.select.lparts(runs[2], [7, 3, 5]),
         )
         baca.hairpin(
-            runs[3],
+            (),
             '"f" >o niente',
+            pieces=[runs[3]],
         )
 
     @baca.call
@@ -700,13 +750,15 @@ def vn(m):
             baca.pitch(run[0], "B4")
             baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
             baca.string_number_spanner(
-                baca.select.next(run)[1:],
+                (),
                 "II =|",
+                pieces=[baca.select.next(run)[1:]],
                 staff_padding=3,
             )
             baca.hairpin(
-                baca.select.next(run)[1:],
+                (),
                 f"{dynamic} >o niente",
+                pieces=[baca.select.next(run)[1:]],
             )
 
     @baca.call
@@ -776,8 +828,9 @@ def vc(cache):
                 )
             else:
                 baca.circle_bow_spanner(
-                    baca.select.next(plt),
+                    (),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                    pieces=[baca.select.next(plt)],
                     staff_padding=staff_padding,
                 )
 
@@ -834,8 +887,9 @@ def vc(cache):
         assert len(runs) == 3
         parts = baca.select.lparts(runs[0], [2, 4, 3, 2])
         baca.scp_spanner(
-            baca.select.next(parts[0]),
+            (),
             "T4 =|",
+            pieces=[baca.select.next(parts[0])],
             staff_padding=3,
         )
         baca.scp_spanner(
@@ -853,24 +907,28 @@ def vc(cache):
             staff_padding=3,
         )
         baca.scp_spanner(
-            parts[3],
+            (),
             "O => P2",
             bookend=-1,
+            pieces=[parts[3]],
             staff_padding=3,
         )
         baca.scp_spanner(
-            baca.select.next(runs[1]),
+            (),
             "T =|",
+            pieces=[baca.select.next(runs[1])],
             staff_padding=3,
         )
         baca.scp_spanner(
-            baca.select.next(runs[2]),
+            (),
             "T =|",
+            pieces=[baca.select.next(runs[2])],
             staff_padding=3,
         )
         baca.hairpin(
-            baca.select.next(parts[0]),
+            (),
             ">o niente",
+            pieces=[baca.select.next(parts[0])],
         )
         baca.hairpin(
             (),
@@ -883,8 +941,9 @@ def vc(cache):
             pieces=baca.select.lparts(parts[2], [1, 2]),
         )
         baca.hairpin(
-            parts[3],
+            (),
             "o<| ff",
+            pieces=[parts[3]],
         )
         baca.hairpin(
             (),
@@ -892,8 +951,9 @@ def vc(cache):
             pieces=baca.select.lparts(baca.select.next(runs[1]), [2, 2]),
         )
         baca.hairpin(
-            baca.select.next(runs[2]),
+            (),
             "p >o niente",
+            pieces=[baca.select.next(runs[2])],
         )
 
     @baca.call
@@ -907,13 +967,15 @@ def vc(cache):
             baca.pitch(run[0], "C4")
             baca.flat_glissando(run[1:], "B3", stop_pitch="D4")
             baca.string_number_spanner(
-                rrun[1:],
+                (),
                 "I =|",
+                pieces=[rrun[1:]],
                 staff_padding=5,
             )
             baca.hairpin(
-                rrun[1:],
+                (),
                 f"{dynamic} >o niente",
+                pieces=[rrun[1:]],
             )
 
     @baca.call
