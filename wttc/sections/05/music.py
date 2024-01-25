@@ -819,7 +819,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     baca.pitch(chord, chord_pitch_string)
     abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
     baca.pitch(hidden_note, chord.note_heads[0].written_pitch)
-    baca.trill_spanner(
+    baca.spanners.trill(
         baca.select.next(pleaves),
         alteration=trill_pitch_string,
         force_trill_pitch_head_accidental=True,
@@ -851,7 +851,7 @@ def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         baca.triple_staccato(plt.head)
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.next(plt),
             alteration=trill_pitch_string,
             force_trill_pitch_head_accidental=True,
@@ -875,7 +875,7 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     else:
         assert len(plts) == 2
     baca.pitch(plts[0], pitch_1)
-    baca.trill_spanner(
+    baca.spanners.trill(
         baca.select.next(plts[0]),
         alteration=trill_pitch,
     )
@@ -988,7 +988,7 @@ def C3a(
             staff_padding=6.5,
         )
     if trill:
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.next(all_leaves),
             alteration=trill,
             harmonic=harmonic,
@@ -996,7 +996,7 @@ def C3a(
 
 
 def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
-    baca.trill_spanner(
+    baca.spanners.trill(
         baca.select.next(pleaves),
         alteration=alteration,
     )

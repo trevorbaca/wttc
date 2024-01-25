@@ -521,7 +521,7 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
                 f"niente o< {swell_} >o !",
                 pieces=pieces,
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run + [next_leaf],
                 alteration=alteration,
             )
@@ -536,7 +536,7 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
                 f"{start_} >o !",
                 pieces=[rplt],
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 rplt,
                 alteration=alteration,
             )
@@ -594,7 +594,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
 def E2c(pleaves, pitch, alteration, peak, *, stop_pitch=None):
     if stop_pitch is None:
         baca.pitch(pleaves, pitch)
-    baca.trill_spanner(
+    baca.spanners.trill(
         baca.select.next(pleaves),
         alteration=alteration,
         staff_padding=3,
