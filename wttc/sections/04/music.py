@@ -947,42 +947,35 @@ def fl(m):
         baca.dynamic(plts[8].head, '"f"')
         baca.dynamic(plts[9].head, "mp")
         baca.dynamic(plts[11].head, "p")
-        baca.covered_spanner(
-            (),
+        baca.spanners.covered(
+            baca.select.next(plts[:2]),
             staff_padding=3,
-            pieces=[baca.select.next(plts[:2])],
         )
-        baca.covered_spanner(
-            (),
+        baca.spanners.covered(
+            plts[2:4],
             items=strings.cov_dashed_hook,
-            pieces=[plts[2:4]],
             staff_padding=3,
         )
-        baca.covered_spanner(
-            (),
+        baca.spanners.covered(
+            baca.select.next(plts[4]),
             items=strings.cov_dashed_hook,
-            pieces=[baca.select.next(plts[4])],
             staff_padding=3,
         )
-        baca.covered_spanner(
-            (),
-            pieces=[baca.select.next(plts[5:8])],
+        baca.spanners.covered(
+            baca.select.next(plts[5:8]),
             staff_padding=3,
         )
-        baca.covered_spanner(
-            (),
-            pieces=[baca.select.next(plts[8])],
+        baca.spanners.covered(
+            baca.select.next(plts[8]),
             staff_padding=3,
         )
-        baca.covered_spanner(
-            (),
+        baca.spanners.covered(
+            baca.select.next(plts[9:11]),
             left_broken_text=None,
-            pieces=[baca.select.next(plts[9:11])],
             staff_padding=3,
         )
-        baca.covered_spanner(
-            (),
-            pieces=[baca.select.next(plts[11:13])],
+        baca.spanners.covered(
+            baca.select.next(plts[11:13]),
             staff_padding=3,
         )
 

@@ -484,10 +484,9 @@ def fl(m):
         runs = library.runs(m[11, 13], 99)
         for run in runs:
             baca.pitch(run, "G#")
-            baca.covered_spanner(
-                (),
+            baca.spanners.covered(
+                baca.select.next(run),
                 items=strings.cov_dashed_hook,
-                pieces=[baca.select.next(run)],
                 staff_padding=3,
             )
             baca.dynamic(run[0], "mp")
@@ -699,25 +698,21 @@ def vn(m):
             ],
             "G4",
         )
-        baca.damp_spanner(
-            (),
+        baca.spanners.damp(
+            baca.select.next(runs[0]),
             staff_padding=3,
-            pieces=[baca.select.next(runs[0])],
         )
-        baca.damp_spanner(
-            (),
+        baca.spanners.damp(
+            baca.select.next(runs[1]),
             staff_padding=3,
-            pieces=[baca.select.next(runs[1])],
         )
-        baca.damp_spanner(
-            (),
+        baca.spanners.damp(
+            baca.select.next(runs[2]),
             staff_padding=4.5,
-            pieces=[baca.select.next(runs[2])],
         )
-        baca.damp_spanner(
-            (),
+        baca.spanners.damp(
+            baca.select.next(runs[3]),
             staff_padding=4.5,
-            pieces=[baca.select.next(runs[3])],
         )
         baca.hairpin(
             (),
