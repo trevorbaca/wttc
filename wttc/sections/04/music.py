@@ -749,10 +749,9 @@ def B1b(
             assert len(run) == 2
             baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         if conjoin is False:
-            baca.string_number_spanner(
-                (),
+            baca.spanners.string_number(
+                baca.select.next(run)[1:],
                 f"{string_symbol} =|",
-                pieces=[baca.select.next(run)[1:]],
                 staff_padding=string_number_staff_padding,
             )
             if dls_staff_padding:
@@ -770,10 +769,9 @@ def B1b(
             pieces=[baca.select.next(run)[1:]],
         )
     if conjoin is True:
-        baca.string_number_spanner(
-            (),
+        baca.spanners.string_number(
+            baca.select.next(runs)[1:],
             f"{string_symbol} =|",
-            pieces=[baca.select.next(runs)[1:]],
             staff_padding=3,
         )
         if dls_staff_padding:
@@ -789,10 +787,9 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
     for note, dynamic in zip(notes, dynamics_list, strict=True):
         baca.dynamic(note, dynamic)
         if conjoin is False:
-            baca.pizzicato_spanner(
-                (),
+            baca.spanners.pizzicato(
+                baca.select.next([note]),
                 items=r"\baca-pizz-markup ||",
-                pieces=[baca.select.next([note])],
                 staff_padding=3,
             )
             if dls_staff_padding:
@@ -801,10 +798,9 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
                     dls_staff_padding,
                 )
     if conjoin is True:
-        baca.pizzicato_spanner(
-            (),
+        baca.spanners.pizzicato(
+            notes,
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
-            pieces=[notes],
             staff_padding=3,
         )
         if dls_staff_padding:
@@ -834,15 +830,13 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     runs = abjad.select.runs(pleaves)
     assert len(runs) == 1
     run = runs[0]
-    baca.string_number_spanner(
-        (),
+    baca.spanners.string_number(
+        baca.select.next(run),
         f"{string_symbol} =|",
-        pieces=[baca.select.next(run)],
         staff_padding=5,
     )
-    baca.xfb_spanner(
-        (),
-        pieces=[baca.select.next(run)],
+    baca.spanners.xfb(
+        baca.select.next(run),
         staff_padding=7.5,
     )
     baca.override.note_head_style_harmonic(baca.select.next(run))

@@ -900,10 +900,9 @@ def C2b(
 ):
     baca.override.note_head_style_harmonic(pleaves)
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
-    baca.pizzicato_spanner(
-        (),
+    baca.spanners.pizzicato(
+        pleaves,
         items=r"\baca-pizz-markup ||",
-        pieces=[pleaves],
         staff_padding=3,
     )
     # TODO: make this work:
@@ -936,10 +935,9 @@ def C2b(
             bookend=bookend,
             pieces=[pleaves],
         )
-    baca.string_number_spanner(
-        (),
+    baca.spanners.string_number(
+        baca.select.next(all_leaves),
         "IV =|",
-        pieces=[baca.select.next(all_leaves)],
         staff_padding=6.5,
     )
 
@@ -981,10 +979,9 @@ def C3a(
     if harmonic is True:
         baca.override.note_head_style_harmonic(all_leaves)
     if string_number:
-        baca.string_number_spanner(
-            (),
+        baca.spanners.string_number(
+            baca.select.next(all_leaves),
             items=f"{string_number} =|",
-            pieces=[baca.select.next(all_leaves)],
             staff_padding=6.5,
         )
     if trill:
@@ -1032,10 +1029,9 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
         baca.laissez_vibrer(pleaves)
     if pizz is True:
         for pleaf in pleaves:
-            baca.pizzicato_spanner(
-                (),
+            baca.spanners.pizzicato(
+                baca.select.next(pleaf),
                 items=r"\baca-pizz-markup ||",
-                pieces=[baca.select.next(pleaf)],
                 staff_padding=pizz_staff_padding,
             )
 
@@ -1206,10 +1202,9 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         else:
             baca.pitch(run, pitches)
-        baca.xfb_spanner(
-            (),
+        baca.spanners.xfb(
+            baca.select.next(run),
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-            pieces=[baca.select.next(run)],
             staff_padding=3,
         )
         baca.scp_spanner(

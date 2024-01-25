@@ -749,10 +749,9 @@ def vn(m):
             baca.override.note_head_style_harmonic(baca.select.next(run))
             baca.pitch(run[0], "B4")
             baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
-            baca.string_number_spanner(
-                (),
+            baca.spanners.string_number(
+                baca.select.next(run)[1:],
                 "II =|",
-                pieces=[baca.select.next(run)[1:]],
                 staff_padding=3,
             )
             baca.hairpin(
@@ -966,10 +965,9 @@ def vc(cache):
             baca.override.note_head_style_harmonic(rrun)
             baca.pitch(run[0], "C4")
             baca.flat_glissando(run[1:], "B3", stop_pitch="D4")
-            baca.string_number_spanner(
-                (),
+            baca.spanners.string_number(
+                rrun[1:],
                 "I =|",
-                pieces=[rrun[1:]],
                 staff_padding=5,
             )
             baca.hairpin(

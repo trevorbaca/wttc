@@ -491,18 +491,16 @@ def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=Non
     if pattern:
         baca.bend_after(pleaves, pattern)
     if pizz is True:
-        baca.pizzicato_spanner(
-            (),
-            pieces=[baca.select.next(pleaves)],
+        baca.spanners.pizzicato(
+            baca.select.next(pleaves),
             staff_padding=8,
         )
     if string_numbers:
         string_numbers_ = string_numbers.split()
         for pleaf, string_number_ in zip(pleaves, string_numbers_, strict=True):
-            baca.string_number_spanner(
-                (),
+            baca.spanners.string_number(
+                baca.select.next([pleaf]),
                 f"{string_number_} ||",
-                pieces=[baca.select.next([pleaf])],
                 staff_padding=5.5,
             )
 
@@ -552,15 +550,13 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         first_plt = baca.select.plt(pleaves, 0)
         baca.flat_glissando(first_plt, low_pitch, stop_pitch=high_pitch)
         baca.override.note_head_style_harmonic(first_plt)
-        baca.xfb_spanner(
-            (),
-            pieces=[baca.select.next(first_plt)],
+        baca.spanners.xfb(
+            baca.select.next(first_plt),
             staff_padding=3,
         )
-        baca.string_number_spanner(
-            (),
+        baca.spanners.string_number(
+            baca.select.next(first_plt),
             f"{string_number} =|",
-            pieces=[baca.select.next(first_plt)],
             staff_padding=5.5,
         )
     if damp is True:
