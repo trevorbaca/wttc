@@ -827,12 +827,12 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     )
     next_ = abjad.get.leaf(hidden_note, 1)
     if isinstance(next_, abjad.Rest):
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(pleaves), [1, 2]),
             f"niente o< {dynamic_string} >o niente",
         )
     else:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(pleaves), [1, 2]),
             f"niente o< {dynamic_string} >o !",
         )
@@ -908,7 +908,7 @@ def C2b(
         assert pitch_3
         baca.override.note_head_style_harmonic(pleaves_2)
         baca.pitch(pleaves_2, pitch_3)
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             scps,
             # TODO: make this work:
@@ -918,14 +918,14 @@ def C2b(
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [all_leaves[:2], all_leaves[-2:]],
             hairpin,
             bookend=bookend,
         )
     else:
         all_leaves = pleaves
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [pleaves],
             hairpin,
             bookend=bookend,
@@ -951,7 +951,7 @@ def C3a(
     all_leaves = list(pleaves)
     if pleaves_2 is None:
         baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [pleaves],
             hairpin,
         )
@@ -963,7 +963,7 @@ def C3a(
             pairs,
             start_pitch,
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [pleaves, pleaves_2],
             hairpin,
             forbid_al_niente_to_bar_line=True,
@@ -1000,12 +1000,12 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.override.stem_up(pleaves[1:])
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [pleaves[:-1], baca.select.next(pleaves[-1:])],
             hairpin,
         )
     else:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [pleaves],
             hairpin,
         )
@@ -1046,11 +1046,11 @@ def D1b(
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
-    baca.hairpin(
+    baca.piecewise.hairpin(
         hairpin_pieces,
         hairpin_string,
     )
-    baca.scp_spanner(
+    baca.piecewise.scp(
         (),
         scp_string,
         bookend=bookend,
@@ -1108,7 +1108,7 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             staff_padding=3,
         )
         if hairpin_string:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 [run],
                 hairpin_string,
                 forbid_al_niente_to_bar_line=True,
@@ -1121,7 +1121,7 @@ def D3a(pleaves, pitch, dynamics):
     parts[-1].append(baca.select.rleaf(pleaves, -1))
     hairpin_string = library.niente_swells(dynamics)
     hairpin_string = hairpin_string.removeprefix("niente ")
-    baca.hairpin(
+    baca.piecewise.hairpin(
         parts,
         hairpin_string,
         forbid_al_niente_to_bar_line=True,
@@ -1152,7 +1152,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
     plts = baca.select.plts(pleaves)
     for plt in plts:
         if not no_spanner:
-            baca.circle_bow_spanner(
+            baca.piecewise.circle_bow(
                 (),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
                 pieces=[baca.select.next(plt)],
@@ -1170,7 +1170,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
             if dynamic_ != "-":
                 baca.dynamic(plt.head, dynamic_)
     else:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [pleaves],
             hairpin,
             forbid_al_niente_to_bar_line=True,
@@ -1190,7 +1190,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
             staff_padding=3,
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),

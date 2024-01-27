@@ -848,7 +848,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         pitch_string.split()[-1],
     )
     hairpin_string = library.niente_swells(dynamic_string)
-    baca.hairpin(
+    baca.piecewise.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
         forbid_al_niente_to_bar_line=True,
@@ -894,12 +894,12 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         baca.untie(plt)
         leaf = baca.select.rleaf(plt, -1)
         if isinstance(leaf, abjad.Rest):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.next(plt), [1, 2]),
                 "niente o< mp >o niente",
             )
         else:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.next(plt), [1, 1]),
                 "niente o< mp >o",
                 bookend=False,
@@ -992,11 +992,11 @@ def fl(m):
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
             "p < f >o niente",
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
             "p < f >o niente",
         )
@@ -1012,7 +1012,7 @@ def fl(m):
             runs[4],
             "f |>o niente",
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[5][1:]), [1, 2]),
             "sfpp < p >o niente",
         )
@@ -1047,15 +1047,15 @@ def ob(m):
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
             "p < f >o niente",
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[1]), [3, 5]),
             "p < f >o niente",
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
             "p < f >o niente",
         )
@@ -1224,13 +1224,13 @@ def gt1(cache):
         baca.dynamic(note, "p")
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [notes],
             "p pp",
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(notes, [1, 2]),
             "p pp ppp",
         )

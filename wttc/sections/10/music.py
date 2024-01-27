@@ -514,7 +514,7 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
             pieces = baca.select.partition_by_ratio_of_durations(run, (1, 1))
             next_leaf = abjad.get.leaf(run[-1], 1)
             pieces[-1].append(next_leaf)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 pieces,
                 f"niente o< {swell_} >o !",
             )
@@ -571,7 +571,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         pieces = baca.select.partition_by_ratio_of_durations(pleaves, (1, 1))
         next_leaf = abjad.get.leaf(pleaves[-1], 1)
         pieces[-1].append(next_leaf)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             pieces,
             f"niente o< {peak} >o niente",
         )
@@ -593,7 +593,7 @@ def E2c(pleaves, pitch, alteration, peak, *, stop_pitch=None):
     pieces = baca.select.partition_by_ratio_of_durations(pleaves, (1, 1))
     next_leaf = abjad.get.leaf(pleaves[-1], 1)
     pieces[-1].append(next_leaf)
-    baca.hairpin(
+    baca.piecewise.hairpin(
         pieces,
         f"niente o< {peak} >o niente",
     )
@@ -631,7 +631,7 @@ def E4a(pleaves, pitch, dynamics):
             next_leaf = abjad.get.leaf(run[-1], 1)
             pieces[-1].append(next_leaf)
             if pieces:
-                baca.hairpin(
+                baca.piecewise.hairpin(
                     pieces,
                     f"niente o< {dynamic_} >o niente",
                 )
