@@ -529,10 +529,9 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
         plts = baca.select.plts(pleaves)
         for plt, start_ in zip(plts, starts_, strict=True):
             rplt = baca.select.next(plt)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                rplt,
                 f"{start_} >o !",
-                pieces=[rplt],
             )
             baca.spanners.trill(
                 rplt,
@@ -579,10 +578,9 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             pieces=pieces,
         )
     else:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            pleaves,
             f"{peak} >o niente",
-            pieces=[pleaves],
         )
 
 

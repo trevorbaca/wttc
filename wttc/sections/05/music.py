@@ -881,10 +881,9 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     )
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
-    baca.hairpin(
-        (),
+    baca.spanners.hairpin(
+        baca.select.next(pleaves),
         f"{dynamic} >o !",
-        pieces=[baca.select.next(pleaves)],
     )
 
 
@@ -1038,10 +1037,9 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
 
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
-    baca.hairpin(
-        (),
+    baca.spanners.hairpin(
+        baca.select.next(pleaves),
         f"{dynamic} >o niente",
-        pieces=[baca.select.next(pleaves)],
     )
 
 
@@ -1077,10 +1075,9 @@ def D2a(pleaves, pitches, hairpin_strings):
     hairpins = hairpin_strings.split()
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
         hairpin_string = f"{hairpin} >o !"
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.next(plt_pair),
             hairpin_string,
-            pieces=[baca.select.next(plt_pair)],
         )
         baca.tenuto(plt_pair[0].head)
 
@@ -1100,10 +1097,9 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
             baca.down_bow(run[0], padding=1)
         if len(run) == 1:
             run = baca.select.next(run)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            run,
             f"o<| {dynamic_}",
-            pieces=[run],
         )
     if not do_not_unbeam:
         rmakers.unbeam(pleaves)
@@ -1214,10 +1210,9 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             staff_padding=6.5,
         )
         if hairpin:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 hairpin,
-                pieces=[run],
             )
     if dynamic:
         baca.dynamic(pleaves[0], dynamic)

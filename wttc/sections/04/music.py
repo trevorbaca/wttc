@@ -763,10 +763,9 @@ def B1b(
             string = f"{dynamic} >o niente"
         else:
             string = f"niente o< {dynamic}"
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.next(run)[1:],
             string,
-            pieces=[baca.select.next(run)[1:]],
         )
     if conjoin is True:
         baca.spanners.string_number(
@@ -1006,20 +1005,17 @@ def fl(m):
             "p < f >o niente",
             pieces=baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.next(runs[2]),
             "f >o niente",
-            pieces=[baca.select.next(runs[2])],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[3],
             "f |>o niente",
-            pieces=[runs[3]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[4],
             "f |>o niente",
-            pieces=[runs[4]],
         )
         baca.hairpin(
             (),
@@ -1072,15 +1068,13 @@ def ob(m):
             "p < f >o niente",
             pieces=baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[3],
             "f |>o niente",
-            pieces=[runs[3]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[4],
             "f |>o niente",
-            pieces=[runs[4]],
         )
 
     @baca.call
@@ -1172,10 +1166,9 @@ def gt1(cache):
             else:
                 leaves = plt
             string = f"o< {termination}"
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                leaves,
                 string,
-                pieces=[leaves],
             )
 
     @baca.call
@@ -1323,10 +1316,9 @@ def gt2(cache):
             baca.staff_lines(next_leaf, 5)
             baca.staff_position(plt, 0)
             baca.up_bow(plt.head, padding=1)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                baca.select.next(plt),
                 f"o< {dynamic}",
-                pieces=[baca.select.next(plt)],
             )
 
     @baca.call

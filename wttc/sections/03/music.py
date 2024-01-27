@@ -448,35 +448,29 @@ def fl(m):
         baca.flat_glissando(parts[3], "Eb6", stop_pitch="D6")
         baca.flat_glissando(runs[1], "E6", stop_pitch="D#6")
         baca.flat_glissando(runs[2], "F6", stop_pitch="E6")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            parts[0],
             "f >o niente",
-            pieces=[parts[0]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            parts[1],
             "mf >o !",
-            pieces=[parts[1]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            parts[2],
             "mp >o !",
-            pieces=[parts[2]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            parts[3],
             "p >o !",
-            pieces=[parts[3]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[1],
             "p >o !",
-            pieces=[runs[1]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[2],
             "p >o !",
-            pieces=[runs[2]],
         )
 
     @baca.call
@@ -552,10 +546,9 @@ def gt1(m):
             baca.down_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.next(run)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 'o<| "mf"',
-                pieces=[run],
             )
 
     @baca.call
@@ -594,10 +587,9 @@ def gt2(m):
             baca.up_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.next(run)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 'o<| "mf"',
-                pieces=[run],
             )
 
     @baca.call
@@ -729,10 +721,9 @@ def vn(m):
             'niente o< "f" -- ! >o niente',
             pieces=baca.select.lparts(runs[2], [7, 3, 5]),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            runs[3],
             '"f" >o niente',
-            pieces=[runs[3]],
         )
 
     @baca.call
@@ -749,10 +740,9 @@ def vn(m):
                 "II =|",
                 staff_padding=3,
             )
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                baca.select.next(run)[1:],
                 f"{dynamic} >o niente",
-                pieces=[baca.select.next(run)[1:]],
             )
 
     @baca.call
@@ -919,10 +909,9 @@ def vc(cache):
             pieces=[baca.select.next(runs[2])],
             staff_padding=3,
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.next(parts[0]),
             ">o niente",
-            pieces=[baca.select.next(parts[0])],
         )
         baca.hairpin(
             (),
@@ -934,20 +923,18 @@ def vc(cache):
             "o< p <| ff",
             pieces=baca.select.lparts(parts[2], [1, 2]),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            parts[3],
             "o<| ff",
-            pieces=[parts[3]],
         )
         baca.hairpin(
             (),
             "o< p >o niente",
             pieces=baca.select.lparts(baca.select.next(runs[1]), [2, 2]),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.next(runs[2]),
             "p >o niente",
-            pieces=[baca.select.next(runs[2])],
         )
 
     @baca.call
@@ -965,10 +952,9 @@ def vc(cache):
                 "I =|",
                 staff_padding=5,
             )
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                rrun[1:],
                 f"{dynamic} >o niente",
-                pieces=[rrun[1:]],
             )
 
     @baca.call
