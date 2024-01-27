@@ -515,9 +515,8 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
             next_leaf = abjad.get.leaf(run[-1], 1)
             pieces[-1].append(next_leaf)
             baca.hairpin(
-                (),
+                pieces,
                 f"niente o< {swell_} >o !",
-                pieces=pieces,
             )
             baca.spanners.trill(
                 run + [next_leaf],
@@ -573,9 +572,8 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         next_leaf = abjad.get.leaf(pleaves[-1], 1)
         pieces[-1].append(next_leaf)
         baca.hairpin(
-            (),
+            pieces,
             f"niente o< {peak} >o niente",
-            pieces=pieces,
         )
     else:
         baca.spanners.hairpin(
@@ -596,9 +594,8 @@ def E2c(pleaves, pitch, alteration, peak, *, stop_pitch=None):
     next_leaf = abjad.get.leaf(pleaves[-1], 1)
     pieces[-1].append(next_leaf)
     baca.hairpin(
-        (),
+        pieces,
         f"niente o< {peak} >o niente",
-        pieces=pieces,
     )
 
 
@@ -635,9 +632,8 @@ def E4a(pleaves, pitch, dynamics):
             pieces[-1].append(next_leaf)
             if pieces:
                 baca.hairpin(
-                    (),
+                    pieces,
                     f"niente o< {dynamic_} >o niente",
-                    pieces=pieces,
                 )
 
 

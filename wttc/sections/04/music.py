@@ -849,10 +849,9 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     )
     hairpin_string = library.niente_swells(dynamic_string)
     baca.hairpin(
-        (),
+        baca.select.clparts(run, [2]),
         hairpin_string,
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.select.clparts(run, [2]),
     )
     baca.override.dls_staff_padding(run, 4)
 
@@ -896,16 +895,14 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         leaf = baca.select.rleaf(plt, -1)
         if isinstance(leaf, abjad.Rest):
             baca.hairpin(
-                (),
+                baca.select.lparts(baca.select.next(plt), [1, 2]),
                 "niente o< mp >o niente",
-                pieces=baca.select.lparts(baca.select.next(plt), [1, 2]),
             )
         else:
             baca.hairpin(
-                (),
+                baca.select.lparts(baca.select.next(plt), [1, 1]),
                 "niente o< mp >o",
                 bookend=False,
-                pieces=baca.select.lparts(baca.select.next(plt), [1, 1]),
             )
     lone_plts = plts[2:]
     for i, plt in enumerate(lone_plts):
@@ -996,14 +993,12 @@ def fl(m):
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
             "p < f >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
             "p < f >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
         )
         baca.spanners.hairpin(
             baca.select.next(runs[2]),
@@ -1018,9 +1013,8 @@ def fl(m):
             "f |>o niente",
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[5][1:]), [1, 2]),
             "sfpp < p >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[5][1:]), [1, 2]),
         )
 
     @baca.call
@@ -1054,19 +1048,16 @@ def ob(m):
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
             "p < f >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[1]), [3, 5]),
             "p < f >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[1]), [3, 5]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
             "p < f >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
         )
         baca.spanners.hairpin(
             runs[3],
@@ -1234,16 +1225,14 @@ def gt1(cache):
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
         baca.hairpin(
-            (),
+            [notes],
             "p pp",
-            pieces=[notes],
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(notes, [1, 2]),
             "p pp ppp",
-            pieces=baca.select.lparts(notes, [1, 2]),
         )
 
     @baca.call

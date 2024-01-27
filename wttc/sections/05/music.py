@@ -828,15 +828,13 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     next_ = abjad.get.leaf(hidden_note, 1)
     if isinstance(next_, abjad.Rest):
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(pleaves), [1, 2]),
             f"niente o< {dynamic_string} >o niente",
-            pieces=baca.select.lparts(baca.select.next(pleaves), [1, 2]),
         )
     else:
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(pleaves), [1, 2]),
             f"niente o< {dynamic_string} >o !",
-            pieces=baca.select.lparts(baca.select.next(pleaves), [1, 2]),
         )
 
 
@@ -921,18 +919,16 @@ def C2b(
         )
         all_leaves = pleaves + pleaves_2
         baca.hairpin(
-            (),
+            [all_leaves[:2], all_leaves[-2:]],
             hairpin,
             bookend=bookend,
-            pieces=[all_leaves[:2], all_leaves[-2:]],
         )
     else:
         all_leaves = pleaves
         baca.hairpin(
-            (),
+            [pleaves],
             hairpin,
             bookend=bookend,
-            pieces=[pleaves],
         )
     baca.spanners.string_number(
         baca.select.next(all_leaves),
@@ -956,9 +952,8 @@ def C3a(
     if pleaves_2 is None:
         baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
         baca.hairpin(
-            (),
+            [pleaves],
             hairpin,
-            pieces=[pleaves],
         )
     else:
         length_1, length_2 = len(pleaves), len(pleaves_2)
@@ -969,10 +964,9 @@ def C3a(
             start_pitch,
         )
         baca.hairpin(
-            (),
+            [pleaves, pleaves_2],
             hairpin,
             forbid_al_niente_to_bar_line=True,
-            pieces=[pleaves, pleaves_2],
         )
         all_leaves += list(pleaves_2)
     if harmonic is True:
@@ -1007,15 +1001,13 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
         baca.hairpin(
-            (),
+            [pleaves[:-1], baca.select.next(pleaves[-1:])],
             hairpin,
-            pieces=[pleaves[:-1], baca.select.next(pleaves[-1:])],
         )
     else:
         baca.hairpin(
-            (),
+            [pleaves],
             hairpin,
-            pieces=[pleaves],
         )
 
 
@@ -1055,9 +1047,8 @@ def D1b(
     if pitch is not None:
         baca.pitch(pleaves, pitch)
     baca.hairpin(
-        (),
+        hairpin_pieces,
         hairpin_string,
-        pieces=hairpin_pieces,
     )
     baca.scp_spanner(
         (),
@@ -1118,10 +1109,9 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
         )
         if hairpin_string:
             baca.hairpin(
-                (),
+                [run],
                 hairpin_string,
                 forbid_al_niente_to_bar_line=True,
-                pieces=[run],
             )
 
 
@@ -1132,10 +1122,9 @@ def D3a(pleaves, pitch, dynamics):
     hairpin_string = library.niente_swells(dynamics)
     hairpin_string = hairpin_string.removeprefix("niente ")
     baca.hairpin(
-        (),
+        parts,
         hairpin_string,
         forbid_al_niente_to_bar_line=True,
-        pieces=parts,
     )
 
 
@@ -1182,10 +1171,9 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
                 baca.dynamic(plt.head, dynamic_)
     else:
         baca.hairpin(
-            (),
+            [pleaves],
             hairpin,
             forbid_al_niente_to_bar_line=True,
-            pieces=[pleaves],
         )
 
 

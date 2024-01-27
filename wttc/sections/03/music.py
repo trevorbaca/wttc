@@ -411,30 +411,26 @@ def fl(m):
         baca.pitch(runs[2], "E4")
         baca.pitch(runs[3], "E4")
         baca.hairpin(
-            (),
+            baca.select.clparts(baca.select.next(runs[0]), [1]),
             baca.dynamics.niente_swells("mf mf mp"),
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(baca.select.next(runs[0]), [1]),
         )
         baca.hairpin(
-            (),
+            baca.select.clparts(runs[1], [1]),
             "niente o< p >o",
             bookend=False,
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(runs[1], [1]),
         )
         rest = baca.select.rleaf(runs[1], -1)
         baca.dynamic(rest, "niente")
         baca.hairpin(
-            (),
+            baca.select.clparts(runs[2], [1]),
             baca.dynamics.niente_swells("p mp mf mp p"),
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.clparts(runs[2], [1]),
         )
         baca.hairpin(
-            (),
+            baca.select.clparts(runs[3], [1]),
             "niente o< p >o",
-            pieces=baca.select.clparts(runs[3], [1]),
         )
         baca.dynamic(baca.select.next(runs[3]), "!")
 
@@ -617,35 +613,29 @@ def vn(m):
         baca.pitches(runs[3], "E4 G#4")
         baca.pitches(runs[4], "E4 G#4")
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[0]), [1, 1, 1, 2]),
             baca.dynamics.niente_swells("mp mp"),
-            pieces=baca.select.lparts(baca.select.next(runs[0]), [1, 1, 1, 2]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[1]), [1, 1, 1, 2]),
             baca.dynamics.niente_swells("p p"),
-            pieces=baca.select.lparts(baca.select.next(runs[1]), [1, 1, 1, 2]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[2]), [1, 1, 1, 2]),
             baca.dynamics.niente_swells("p p"),
-            pieces=baca.select.lparts(baca.select.next(runs[2]), [1, 1, 1, 2]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(runs[3][:7], [1, 1, 1, 1, 1, 2]),
             baca.dynamics.niente_swells("pp p mp"),
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.lparts(runs[3][:7], [1, 1, 1, 1, 1, 2]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[3])[-3:], [1, 2]),
             "o< mp >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[3])[-3:], [1, 2]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[4]), [1, 2]),
             baca.dynamics.niente_swells("pp"),
-            pieces=baca.select.lparts(baca.select.next(runs[4]), [1, 2]),
         )
 
     @baca.call
@@ -707,19 +697,16 @@ def vn(m):
             staff_padding=4.5,
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[0]), [1, 3]),
             baca.dynamics.niente_swells("mp"),
-            pieces=baca.select.lparts(baca.select.next(runs[0]), [1, 3]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
             baca.dynamics.niente_swells("mf"),
-            pieces=baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(runs[2], [7, 3, 5]),
             'niente o< "f" -- ! >o niente',
-            pieces=baca.select.lparts(runs[2], [7, 3, 5]),
         )
         baca.spanners.hairpin(
             runs[3],
@@ -845,24 +832,20 @@ def vc(cache):
             "Bb2",
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[0]), [4, 3]),
             "o< p >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[0]), [4, 3]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[1]), [7, 5]),
             "o< mp >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[1]), [7, 5]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[2]), [14, 8]),
             "o< mf >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[2]), [14, 8]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[3]), [4, 3]),
             "o< mf >o p",
-            pieces=baca.select.lparts(baca.select.next(runs[3]), [4, 3]),
         )
 
     @baca.call
@@ -914,23 +897,20 @@ def vc(cache):
             ">o niente",
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(parts[1], [2, 2]),
             "o< p <| ff",
-            pieces=baca.select.lparts(parts[1], [2, 2]),
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(parts[2], [1, 2]),
             "o< p <| ff",
-            pieces=baca.select.lparts(parts[2], [1, 2]),
         )
         baca.spanners.hairpin(
             parts[3],
             "o<| ff",
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(baca.select.next(runs[1]), [2, 2]),
             "o< p >o niente",
-            pieces=baca.select.lparts(baca.select.next(runs[1]), [2, 2]),
         )
         baca.spanners.hairpin(
             baca.select.next(runs[2]),
