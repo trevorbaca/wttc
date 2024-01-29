@@ -122,19 +122,14 @@ class Rhythm:
             assert abjad.get.duration(parts[-1]) == suffix_duration
             count = len(parts[-1])
             del voice_[-count:]
-        # rmakers.extract_trivial(voice_)
-        for tuplet in abjad.select.tuplets(voice_):
-            if tuplet.multiplier == (1, 1):
-                if not abjad.get.has_indicator(tuplet, "FEATHER_BEAM_CONTAINER"):
-                    abjad.mutate.extract(tuplet)
-        rmakers.force_fraction(voice_)
-        if not do_not_beam_tuplets:
-            for tuplet in abjad.select.tuplets(voice_):
-                rmakers.beam([tuplet])
         if material is not None:
             for leaf in abjad.select.leaves(voice_):
+                if debug is True:
+                    print(leaf, abjad.get.has_indicator(leaf, Material))
                 if not abjad.get.has_indicator(leaf, Material):
                     abjad.attach(Material(material), leaf)
+                if debug is True:
+                    print(leaf, abjad.get.indicators(leaf, Material))
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
             return components
@@ -147,6 +142,14 @@ class Rhythm:
             )
         else:
             self.voice.extend(components)
+        for tuplet in abjad.select.tuplets(components):
+            if tuplet.multiplier == (1, 1):
+                if not abjad.get.has_indicator(tuplet, "FEATHER_BEAM_CONTAINER"):
+                    abjad.mutate.extract(tuplet)
+        rmakers.force_fraction(components)
+        if not do_not_beam_tuplets:
+            for tuplet in abjad.select.tuplets(components):
+                rmakers.beam([tuplet])
         return components
 
     def make_one_beat_tuplets(
