@@ -15,7 +15,7 @@ bl = baca.rhythm.bl
 br = baca.rhythm.br
 c = baca.rhythm.c
 h = baca.rhythm.h
-md = baca.rhythm.md
+mdi = baca.rhythm.mdi
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
@@ -324,7 +324,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(39, 40),
-        [-8, w(3, 4), h(1), -1, 5, -1, 6, -1, t(2), X(md("3/4 * 11/12")), h(1)],
+        [-8, w(3, 4), h(1), -1, 5, -1, 6, -1, t(2), X(mdi(12, (11, 12))), h(1)],
         material=2,
     )
     rhythm(
@@ -414,7 +414,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(39, 40),
-        [-8, w(3, 4), h(1), -1, 5, -1, 6, -1, t(2), X(md("3/4 * 11/12")), h(1)],
+        [-8, w(3, 4), h(1), -1, 5, -1, 6, -1, t(2), X(mdi(12, (11, 12))), h(1)],
         material=2,
     )
     rhythm(
@@ -725,7 +725,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(39),
-        [X(md("12/16 * 11/12")), h(1), -1, M(t(3), 2)],
+        [X(mdi(12, (11, 12))), h(1), -1, M(t(3), 2)],
         material=1,
     )
     rhythm(
