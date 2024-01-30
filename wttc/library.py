@@ -261,9 +261,9 @@ def anchor(written_n, anchor_n):
 def anchor_md(written_n, actual_n):
     assert actual_n < written_n, repr((written_n, actual_n))
     first_multiplier = (actual_n, written_n)
-    first = baca.rhythm.mdi(written_n, first_multiplier)
+    first = baca.rhythm.m(written_n, first_multiplier)
     second_multiplier = (written_n - actual_n, written_n)
-    second = baca.rhythm.mdi(written_n, second_multiplier)
+    second = baca.rhythm.m(written_n, second_multiplier)
     second_ = baca.rhythm.h(second)
     return X([first, second_])
 
