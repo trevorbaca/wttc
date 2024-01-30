@@ -4505,7 +4505,7 @@ number.10.Violin.Music = {
     \staffHighlight hotpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    <b' b'>2
+    <b' b'>2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -4513,8 +4513,18 @@ number.10.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
     \stopTrillSpan
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4699,12 +4709,12 @@ number.10.Violin.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8
+    <b' b'>8
 
     % [Violin.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4.. * 3/7
+    <b' b'>4.. * 3/7
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"7"
 
@@ -4714,9 +4724,7 @@ number.10.Violin.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4.. * 4/7
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"7"
+    b'4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight

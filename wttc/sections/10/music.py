@@ -15,6 +15,7 @@ bl = baca.rhythm.bl
 br = baca.rhythm.br
 c = baca.rhythm.c
 h = baca.rhythm.h
+m = baca.rhythm.m
 rt = baca.rhythm.rt
 t = baca.rhythm.t
 w = baca.rhythm.w
@@ -325,7 +326,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(11),
-        [c(8, 2), "-"],
+        [m(c(8, 2), (1, 2)), h(4), "-"],
         material=4,
     )
     rhythm(
@@ -352,13 +353,20 @@ def VN(voice, meters):
     )
     rhythm(
         meters(13),
-        [2],
+        [c(2, 2)],
         material=4,
         overlap=["-"],
     )
     rhythm(
         meters(14),
-        [anchor_md(7, 3), -1, -4, -3, M(t(1), 2), M(anchor_md(8, 4), 2)],
+        [
+            X([rt(m(c(7, 2), (3, 7))), h(4)]),
+            -1,
+            -4,
+            -3,
+            M(t(1), 2),
+            M(anchor_md(8, 4), 2),
+        ],
         material=4,
     )
     rhythm(
