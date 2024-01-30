@@ -36,7 +36,7 @@ class Material:
 
 
 def OBGC(grace_note_numerators, nongrace_note_numerator):
-    return baca.OBGC(
+    return baca.rhythm.OBGC(
         grace_note_numerators,
         nongrace_note_numerator,
         grace_leaf_duration=abjad.Duration(1, 20),
@@ -44,7 +44,7 @@ def OBGC(grace_note_numerators, nongrace_note_numerator):
 
 
 def OBGCF(grace_note_numerators, nongrace_note_numerator):
-    return baca.OBGC(
+    return baca.rhythm.OBGC(
         grace_note_numerators,
         nongrace_note_numerator,
         grace_leaf_duration=True,
