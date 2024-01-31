@@ -5872,11 +5872,6 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     b,16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
@@ -6353,11 +6348,6 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     a,16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
@@ -6683,11 +6673,6 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     g,16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding

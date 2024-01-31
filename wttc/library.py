@@ -731,9 +731,7 @@ def niente_swells(peaks):
     result = []
     for peak in peaks:
         result.append(f"niente o< {peak} >o")
-    # TODO:
-    # string = " ".join(result) + " !"
-    string = " ".join(result) + " niente"
+    string = " ".join(result) + " !"
     return string
 
 
