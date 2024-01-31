@@ -27,16 +27,6 @@
     "first_measure_number": 14,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "AltoFlute.Music": [
-            baca.Memento(
-                context="AltoFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -202,16 +192,6 @@
                 synthetic_offset=None,
                 value=5,
             ),
-        ],
-        "Oboe.Music": [
-            baca.Memento(
-                context="Oboe.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Oboe.Staff": [
             baca.Memento(

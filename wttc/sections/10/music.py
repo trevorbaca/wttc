@@ -326,7 +326,6 @@ def VN(voice, meters):
     )
     rhythm(
         meters(11),
-        # [m(c(8, 2), (1, 2)), h(4), "-"],
         [swell(8), "-"],
         material=4,
     )
@@ -514,19 +513,18 @@ def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=Non
             )
 
 
-def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
+def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
     baca.pitch(pleaves, pitch)
-    if swells:
-        swells_ = swells.split()
+    if peaks:
+        peaks_ = peaks.split()
         runs = abjad.select.runs(pleaves)
-        for run, swell_ in zip(runs, swells_, strict=True):
-            # pieces = baca.select.partition_by_ratio_of_durations(run, (1, 1))
+        for run, peak_ in zip(runs, peaks_, strict=True):
             pieces = baca.select.partition_in_halves(run)
             next_leaf = abjad.get.leaf(run[-1], 1)
             pieces[-1].append(next_leaf)
             baca.piecewise.hairpin(
                 pieces,
-                f"niente o< {swell_} >o !",
+                library.swells(peak_),
             )
             baca.spanners.trill(
                 run + [next_leaf],
@@ -546,6 +544,7 @@ def E2a(pleaves, pitch, alteration, *, swells=None, starts=None):
                 rplt,
                 alteration=alteration,
             )
+        # TODO: remove this suite?
         next_leaf = rplt[-1]
         assert isinstance(next_leaf, abjad.Rest)
         baca.dynamic(next_leaf, "niente")
@@ -583,12 +582,12 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         pieces[-1].append(next_leaf)
         baca.piecewise.hairpin(
             pieces,
-            f"niente o< {peak} >o niente",
+            library.swells(peak),
         )
     else:
         baca.spanners.hairpin(
             pleaves,
-            f"{peak} >o niente",
+            f"{peak} >o !",
         )
 
 
@@ -629,13 +628,13 @@ def E3b():
     pass
 
 
-def E4a(pleaves, pitch, dynamics):
+def E4a(pleaves, pitch, peaks):
     baca.pitch(pleaves, pitch)
     runs = abjad.select.runs(pleaves)
-    dynamics_ = dynamics.split()
-    for run, dynamic_ in zip(runs, dynamics_, strict=True):
+    peaks_ = peaks.split()
+    for run, peak_ in zip(runs, peaks_, strict=True):
         if len(run) == 1:
-            baca.dynamic(run[0], dynamic_)
+            baca.dynamic(run[0], peak_)
         else:
             pieces = baca.select.partition_in_halves(run)
             next_leaf = abjad.get.leaf(run[-1], 1)
@@ -643,7 +642,7 @@ def E4a(pleaves, pitch, dynamics):
             if pieces:
                 baca.piecewise.hairpin(
                     pieces,
-                    f"niente o< {dynamic_} >o niente",
+                    library.swells(peak_),
                 )
 
 
@@ -662,7 +661,7 @@ def E4c(pleaves, pitch, alteration, peak):
     )
     baca.piecewise.hairpin(
         baca.select.lparts(baca.select.next(pleaves), [1, 2]),
-        library.niente_swells(peak),
+        library.swells(peak),
     )
 
 
@@ -678,7 +677,7 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    E2a(library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", swells="mp mp mp mp")
+    E2a(library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", peaks="mp mp mp mp")
     E2a(m[15, 19][1:], "D#6", "E6", starts="mp p pp pp")
 
 

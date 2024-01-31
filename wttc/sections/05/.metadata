@@ -203,16 +203,6 @@
                 value=1,
             ),
         ],
-        "Oboe.Music": [
-            baca.Memento(
-                context="Oboe.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "Oboe.Staff": [
             baca.Memento(
                 context="Oboe.Music",

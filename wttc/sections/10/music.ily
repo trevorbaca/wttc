@@ -1317,11 +1317,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1333,10 +1328,10 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     e'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \p
 
       %! STAFF_HIGHLIGHT
@@ -1407,11 +1402,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1482,11 +1472,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1555,11 +1540,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1627,11 +1607,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1700,11 +1675,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1770,11 +1740,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1843,11 +1808,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -1908,11 +1868,6 @@ number.10.Oboe.Music = {
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
     R1 * 4/4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -3856,11 +3811,6 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! BOW_SPEED_SPANNER
@@ -4014,11 +3964,6 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! DAMP_SPANNER
@@ -4284,11 +4229,6 @@ number.10.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         gs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -4353,11 +4293,6 @@ number.10.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         gs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -4423,11 +4358,6 @@ number.10.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         gs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 

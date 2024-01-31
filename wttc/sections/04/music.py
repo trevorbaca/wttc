@@ -760,7 +760,7 @@ def B1b(
                     dls_staff_padding,
                 )
         if diminuendo is True:
-            string = f"{dynamic} >o niente"
+            string = f"{dynamic} >o !"
         else:
             string = f"niente o< {dynamic}"
         baca.spanners.hairpin(
@@ -847,7 +847,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         pairs[:-1],
         pitch_string.split()[-1],
     )
-    hairpin_string = library.niente_swells(dynamic_string)
+    hairpin_string = library.swells(dynamic_string)
     baca.piecewise.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
@@ -896,9 +896,10 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         if isinstance(leaf, abjad.Rest):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.next(plt), [1, 2]),
-                "niente o< mp >o niente",
+                library.swells("mp"),
             )
         else:
+            # TODO: check this
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.next(plt), [1, 1]),
                 "niente o< mp >o",
@@ -994,27 +995,27 @@ def fl(m):
         baca.override.tie_down(runs[1])
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
-            "p < f >o niente",
+            "p < f >o !",
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
-            "p < f >o niente",
+            "p < f >o !",
         )
         baca.spanners.hairpin(
             baca.select.next(runs[2]),
-            "f >o niente",
+            "f >o !",
         )
         baca.spanners.hairpin(
             runs[3],
-            "f |>o niente",
+            "f |>o !",
         )
         baca.spanners.hairpin(
             runs[4],
-            "f |>o niente",
+            "f |>o !",
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[5][1:]), [1, 2]),
-            "sfpp < p >o niente",
+            "sfpp < p >o !",
         )
 
     @baca.call
@@ -1049,23 +1050,23 @@ def ob(m):
         baca.override.tie_down(runs[2])
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
-            "p < f >o niente",
+            "p < f >o !",
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[1]), [3, 5]),
-            "p < f >o niente",
+            "p < f >o !",
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
-            "p < f >o niente",
+            "p < f >o !",
         )
         baca.spanners.hairpin(
             runs[3],
-            "f |>o niente",
+            "f |>o !",
         )
         baca.spanners.hairpin(
             runs[4],
-            "f |>o niente",
+            "f |>o !",
         )
 
     @baca.call

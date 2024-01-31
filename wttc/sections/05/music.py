@@ -825,17 +825,10 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         force_trill_pitch_head_accidental=True,
         harmonic=True,
     )
-    next_ = abjad.get.leaf(hidden_note, 1)
-    if isinstance(next_, abjad.Rest):
-        baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(pleaves), [1, 2]),
-            f"niente o< {dynamic_string} >o niente",
-        )
-    else:
-        baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(pleaves), [1, 2]),
-            f"niente o< {dynamic_string} >o !",
-        )
+    baca.piecewise.hairpin(
+        baca.select.lparts(baca.select.next(pleaves), [1, 2]),
+        f"niente o< {dynamic_string} >o !",
+    )
 
 
 def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
@@ -1031,7 +1024,7 @@ def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.spanners.hairpin(
         baca.select.next(pleaves),
-        f"{dynamic} >o niente",
+        f"{dynamic} >o !",
     )
 
 
@@ -1119,7 +1112,7 @@ def D3a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     parts = baca.select.clparts(pleaves, [1])
     parts[-1].append(baca.select.rleaf(pleaves, -1))
-    hairpin_string = library.niente_swells(dynamics)
+    hairpin_string = library.swells(dynamics)
     hairpin_string = hairpin_string.removeprefix("niente ")
     baca.piecewise.hairpin(
         parts,
@@ -1207,15 +1200,15 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
 
 
 def fl(m):
-    C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp |>o niente")
-    C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp |>o niente")
-    C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp |>o niente")
+    C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp |>o !")
+    C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp |>o !")
+    C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp |>o !")
     C3a(m[12], "G4", "F#4", "mp |>o niente o<| mf", m[13][:3])
     C3a(m[15], "G4", "F#4", "mp |>o niente o<| f", m[16][:3])
     C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<| ff")
-    C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp >o niente")
-    C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p >o niente")
-    C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p >o niente")
+    C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp >o !")
+    C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p >o !")
+    C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p >o !")
     D2a(library.pleaves(m[32], 2), "Eb6 D6", "mf-mp")
     D2a(library.pleaves(m[33, 34], 2), "Eb6 D6", "mf-mp f-mf")
     D2a(
@@ -1291,7 +1284,7 @@ def vn(m):
         library.pleaves(m[9], 3),
         "A4",
         "F4",
-        "mp |>o niente",
+        "mp |>o !",
         harmonic=True,
         string_number="III",
         trill="m2",
@@ -1310,7 +1303,7 @@ def vn(m):
         abjad.select.run(m[15], 0),
         "A4",
         "F4",
-        "mp |>o niente",
+        "mp |>o !",
         harmonic=True,
         string_number="III",
         trill="m2",
@@ -1320,30 +1313,30 @@ def vn(m):
         library.pleaves(m[21, 24], 3),
         "G#5",
         "A5",
-        "niente o< mp >o niente",
+        "niente o< mp >o !",
         dummy_pitch="B5",
     )
     C3b(
         library.pleaves(m[25, 27], 3),
         "G#5",
         "A5",
-        "niente o< mp >o niente",
+        "niente o< mp >o !",
         dummy_pitch="B5",
     )
     C3b(
         library.pleaves(m[30], 3),
         "G#5",
         "A5",
-        "niente o< p >o niente",
+        "niente o< p >o !",
         dummy_pitch="B5",
     )
     C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
     C2b(library.pleaves(m[14], 2), "A3", "A4", "f > p")
-    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o niente")
+    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o !")
     C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o", bookend=False)
     C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o", bookend=False)
     D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
-    D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p >o niente", no_spanner=True)
+    D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p >o !", no_spanner=True)
     D4b(
         library.pleaves(m[47, 48], 4),
         "A3",
@@ -1371,7 +1364,7 @@ def vc(m):
         D1b(
             pleaves,
             "F2",
-            "niente o< p >o niente",
+            "niente o< p >o !",
             baca.select.lparts(baca.select.next(pleaves), [2, 3]),
             "T =|",
             [baca.select.next(pleaves)],
@@ -1383,7 +1376,7 @@ def vc(m):
         D1b(
             pleaves,
             "F2",
-            "niente o< p > pp < mf > p < f >o niente",
+            "niente o< p > pp < mf > p < f >o !",
             baca.select.lparts(baca.select.next(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
             baca.select.lparts(baca.select.next(pleaves), [7, 2, 2, 5]),
@@ -1396,7 +1389,7 @@ def vc(m):
         D1b(
             pleaves,
             "F2",
-            "niente o< f >o niente",
+            "niente o< f >o !",
             baca.select.lparts(pleaves, [2, 4]),
             "T -> P2 -> T -> P1 -> T",
             baca.select.lparts(pleaves, [2, 1, 1, 2]),
@@ -1423,7 +1416,7 @@ def vc(m):
     D2c(
         library.pleaves(m[39, 40], 2),
         ["D#2 E2", "E2 F2", "F2 F#2"],
-        ["mf >o niente", "mp >o niente", "p >o niente"],
+        ["mf >o !", "mp >o !", "p >o !"],
     )
     D2c(library.pleaves(m[41, 44], 2), 5 * ["G2 Ab2"], 5 * [None])
     D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp > p")

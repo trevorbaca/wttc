@@ -775,11 +775,6 @@ number.4.AltoFlute.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
@@ -940,11 +935,6 @@ number.4.AltoFlute.Music = {
         % [AltoFlute.Music measure 3]
         \parenthesize
         g''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
         \revert Tie.direction
@@ -1033,11 +1023,6 @@ number.4.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1215,11 +1200,6 @@ number.4.AltoFlute.Music = {
 
         \parenthesize
         f''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -1375,11 +1355,6 @@ number.4.AltoFlute.Music = {
 
         \parenthesize
         ef''!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -1513,11 +1488,6 @@ number.4.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1693,11 +1663,6 @@ number.4.Oboe.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1800,11 +1765,6 @@ number.4.Oboe.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1895,11 +1855,6 @@ number.4.Oboe.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
@@ -1985,11 +1940,6 @@ number.4.Oboe.Music = {
 
         \parenthesize
         c''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -2070,11 +2020,6 @@ number.4.Oboe.Music = {
 
         \parenthesize
         bf'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -4000,11 +3945,6 @@ number.4.Violin.Music = {
           %! REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
         r8
-          %! REAPPLIED_DYNAMIC_COLOR
-          %! REAPPLIED_DYNAMIC
-        - \tweak color #(x11-color 'green4)
-          %! REAPPLIED_DYNAMIC
-        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
           %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -4448,11 +4388,6 @@ number.4.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -4522,11 +4457,6 @@ number.4.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -4583,11 +4513,6 @@ number.4.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -4744,11 +4669,6 @@ number.4.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -4760,10 +4680,10 @@ number.4.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     ds''!16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \f
       %! PIZZICATO_SPANNER
       %! SPANNER_START
@@ -5068,11 +4988,6 @@ number.4.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
@@ -5295,11 +5210,6 @@ number.4.Cello.Music = {
           %! REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vc-markup
         r8.
-          %! REAPPLIED_DYNAMIC_COLOR
-          %! REAPPLIED_DYNAMIC
-        - \tweak color #(x11-color 'green4)
-          %! REAPPLIED_DYNAMIC
-        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
           %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -5961,11 +5871,6 @@ number.4.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -6029,11 +5934,6 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -6110,11 +6010,6 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8.
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
@@ -6816,11 +6711,6 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP

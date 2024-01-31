@@ -1063,11 +1063,6 @@ number.3.AltoFlute.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         e'''8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
 
@@ -3055,11 +3050,6 @@ number.3.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     a'16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
     ]
@@ -3252,11 +3242,6 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -3358,11 +3343,6 @@ number.3.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     g'16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
     ]
@@ -3460,11 +3440,6 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -3599,11 +3574,6 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -3678,11 +3648,6 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -3759,11 +3724,6 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -3952,11 +3912,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! CIRCLE_BOW_SPANNER
@@ -4153,11 +4108,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! CIRCLE_BOW_SPANNER
@@ -4495,11 +4445,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
 
@@ -4685,11 +4630,6 @@ number.3.Cello.Music = {
 
     % [Cello.Music measure 8]
     <gf,! cf!>1
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SCP_SPANNER
@@ -5023,11 +4963,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -5094,11 +5029,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SCP_SPANNER
@@ -5173,11 +5103,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -5228,11 +5153,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SCP_SPANNER
@@ -5309,11 +5229,6 @@ number.3.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP

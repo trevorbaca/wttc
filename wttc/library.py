@@ -726,15 +726,6 @@ def merge(
     return components
 
 
-def niente_swells(peaks):
-    peaks = peaks.split()
-    result = []
-    for peak in peaks:
-        result.append(f"niente o< {peak} >o")
-    string = " ".join(result) + " !"
-    return string
-
-
 def overlap_previous_measure(
     voice,
     components,
@@ -863,6 +854,15 @@ def swell(n):
     second = baca.rhythm.h(baca.rhythm.w(half, n))
     tuplet = X([first, second])
     return tuplet
+
+
+def swells(peaks):
+    peaks = peaks.split()
+    result = []
+    for peak in peaks:
+        result.append(f"niente o< {peak} >o")
+    string = " ".join(result) + " !"
+    return string
 
 
 def unannotate(items):
