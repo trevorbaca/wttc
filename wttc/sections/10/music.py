@@ -326,7 +326,8 @@ def VN(voice, meters):
     )
     rhythm(
         meters(11),
-        [m(c(8, 2), (1, 2)), h(4), "-"],
+        # [m(c(8, 2), (1, 2)), h(4), "-"],
+        [swell(8), "-"],
         material=4,
     )
     rhythm(
@@ -577,7 +578,6 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             staff_padding=3,
         )
     if xfb is True:
-        # pieces = baca.select.partition_by_ratio_of_durations(pleaves, (1, 1))
         pieces = baca.select.partition_in_halves(pleaves)
         next_leaf = abjad.get.leaf(pleaves[-1], 1)
         pieces[-1].append(next_leaf)
@@ -600,13 +600,12 @@ def E2c(pleaves, pitch, alteration, peak, *, debug=False, stop_pitch=None):
         alteration=alteration,
         staff_padding=3,
     )
-    # pieces = baca.select.partition_by_ratio_of_durations(pleaves, (1, 1), debug=debug)
     pieces = baca.select.partition_in_halves(pleaves)
     next_leaf = abjad.get.leaf(pleaves[-1], 1)
     pieces[-1].append(next_leaf)
     baca.piecewise.hairpin(
         pieces,
-        f"niente o< {peak} >o niente",
+        f"niente o< {peak} >o !",
     )
 
 
@@ -638,7 +637,6 @@ def E4a(pleaves, pitch, dynamics):
         if len(run) == 1:
             baca.dynamic(run[0], dynamic_)
         else:
-            # pieces = baca.select.partition_by_ratio_of_durations(run, (1, 1))
             pieces = baca.select.partition_in_halves(run)
             next_leaf = abjad.get.leaf(run[-1], 1)
             pieces[-1].append(next_leaf)
@@ -654,8 +652,18 @@ def E4b(pleaves, pitch, dynamic):
     baca.dynamic(pleaves[0], dynamic)
 
 
-def E4c():
-    pass
+def E4c(pleaves, pitch, alteration, peak):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.trill(
+        baca.select.next(pleaves),
+        alteration=alteration,
+        harmonic=True,
+        staff_padding=3,
+    )
+    baca.piecewise.hairpin(
+        baca.select.lparts(baca.select.next(pleaves), [1, 2]),
+        library.niente_swells(peak),
+    )
 
 
 def F1c():
@@ -762,6 +770,7 @@ def vn(m):
     E2b(runs[1], "G#4 C5", "mp", damp=True)
     E2b(runs[2], "G#4 C5", "p", damp=True)
     E2c(runs[3], "B3", "C#4", "p")
+    E4c(library.pleaves(m[11], 4), "D#5", "G#5", "p")
     E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")
     E2c(library.pleaves(m[12, 13], 2), "B3", "C#4", "mp")
 
@@ -869,6 +878,7 @@ def make_layout():
             baca.system(measure=12, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
         spacing=(1, 32),
+        overrides=[(11, (1, 48))],
     )
     baca.section.make_layout_ly(spacing)
 

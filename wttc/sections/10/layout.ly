@@ -150,14 +150,14 @@
 
             % [PageLayout measure 11]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #768
+            \baca-new-spacing-section #35 #1152
               %! BREAK
             \noBreak
             s1 * 4/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+            %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 

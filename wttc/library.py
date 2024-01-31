@@ -726,11 +726,13 @@ def merge(
     return components
 
 
-def niente_swells(dynamic_peak_string):
-    parts = dynamic_peak_string.split()
+def niente_swells(peaks):
+    peaks = peaks.split()
     result = []
-    for part in parts:
-        result.append(f"niente o< {part} >o")
+    for peak in peaks:
+        result.append(f"niente o< {peak} >o")
+    # TODO:
+    # string = " ".join(result) + " !"
     string = " ".join(result) + " niente"
     return string
 

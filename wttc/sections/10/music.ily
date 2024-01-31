@@ -4499,13 +4499,13 @@ number.10.Violin.Music = {
     \>
 
     % [Violin.Music measure 11]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    <b' b'>2 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    ds''!2 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -4516,19 +4516,66 @@ number.10.Violin.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
     \stopTrillSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan gs''
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    ds''!2 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
@@ -4591,11 +4638,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -4691,11 +4733,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
