@@ -4710,6 +4710,8 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     <b' b'>8
+    - \tweak stencil ##f
+    ~
 
     % [Violin.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
@@ -4717,6 +4719,7 @@ number.10.Violin.Music = {
     <b' b'>4.. * 3/7
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"7"
+    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music

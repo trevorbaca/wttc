@@ -9127,11 +9127,12 @@ number.5.Cello.Music = {
         \tweak style #'harmonic
         gf
     >16
+    ~
 
     <
-        df!
+        df
         \tweak style #'harmonic
-        f
+        gf
     >8.
     [
 
@@ -9148,10 +9149,11 @@ number.5.Cello.Music = {
         f
     >16
     ]
+    ~
 
     % [Cello.Music measure 2]
     <
-        df!
+        df
         \tweak style #'harmonic
         f
     >2

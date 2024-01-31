@@ -353,14 +353,14 @@ def VN(voice, meters):
     )
     rhythm(
         meters(13),
-        [c(2, 2)],
+        [t(c(2, 2))],
         material=4,
         overlap=["-"],
     )
     rhythm(
         meters(14),
         [
-            X([rt(m(c(7, 2), (3, 7))), h(4)]),
+            X([m(c(7, 2), (3, 7)), h(4)]),
             -1,
             -4,
             -3,
