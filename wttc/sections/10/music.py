@@ -337,7 +337,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(12),
-        [-2, c(5, 2), "-"],
+        [-2, 5, "-"],
         material=4,
     )
     rhythm(
@@ -353,14 +353,14 @@ def VN(voice, meters):
     )
     rhythm(
         meters(13),
-        [t(c(2, 2))],
+        [t(2)],
         material=4,
         overlap=["-"],
     )
     rhythm(
         meters(14),
         [
-            X([m(c(7, 2), (3, 7)), h(4)]),
+            anchor_md(7, 2),
             -1,
             -4,
             -3,
@@ -371,7 +371,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(15, 18),
-        4 * [rt(1), X(15)],
+        3 * [rt(1), X(15)] + [rt(1), X(t(15))],
         material=2,
     )
 
@@ -389,18 +389,19 @@ def VN(voice, meters):
 
     rhythm(
         meters(20),
-        [swell(4)],
+        [m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
         material=99,
         overlap=["-"],
     )
     rhythm(
         meters(21),
-        ["-", swell(4)],
+        ["-", m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
         material=99,
     )
     rhythm(
         meters(22),
-        ["-", swell(4)],
+        # ["-", swell(4)],
+        ["-", m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
         material=99,
     )
     baca.section.append_anchor_note(voice)
@@ -591,7 +592,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         )
 
 
-def E2c(pleaves, pitch, alteration, peak, *, debug=False, stop_pitch=None):
+def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
     if stop_pitch is None:
         baca.pitch(pleaves, pitch)
     baca.spanners.trill(
@@ -599,13 +600,19 @@ def E2c(pleaves, pitch, alteration, peak, *, debug=False, stop_pitch=None):
         alteration=alteration,
         staff_padding=3,
     )
-    pieces = baca.select.partition_in_halves(pleaves)
-    next_leaf = abjad.get.leaf(pleaves[-1], 1)
-    pieces[-1].append(next_leaf)
-    baca.piecewise.hairpin(
-        pieces,
-        f"niente o< {peak} >o !",
-    )
+    if diminuendo is True:
+        baca.spanners.hairpin(
+            baca.select.next(pleaves),
+            f"{peak} >o !",
+        )
+    else:
+        pieces = baca.select.partition_in_halves(pleaves)
+        next_leaf = abjad.get.leaf(pleaves[-1], 1)
+        pieces[-1].append(next_leaf)
+        baca.piecewise.hairpin(
+            pieces,
+            f"niente o< {peak} >o !",
+        )
 
 
 def E3a(pleaves, fundamental):
@@ -659,14 +666,42 @@ def E4c(pleaves, pitch, alteration, peak):
         harmonic=True,
         staff_padding=3,
     )
+    pieces = baca.select.partition_in_halves(pleaves)
+    next_leaf = abjad.get.leaf(pleaves[-1], 1)
+    pieces[-1].append(next_leaf)
     baca.piecewise.hairpin(
-        baca.select.lparts(baca.select.next(pleaves), [1, 2]),
+        pieces,
         library.swells(peak),
     )
 
 
-def F1c():
-    pass
+def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
+    runs = abjad.select.runs(pleaves)
+    peaks = peaks.split()
+    for run, peak in zip(runs, peaks, strict=True):
+        for leaf in run:
+            if isinstance(leaf, abjad.Chord):
+                baca.pitch(leaf, f"<{pitch_1} {pitch_2}>")
+                abjad.tweak(leaf.note_heads[1], r"\tweak style #'harmonic")
+            else:
+                baca.pitch(leaf, pitch_1)
+        baca.spanners.trill(
+            baca.select.next(run),
+            alteration=alteration,
+            harmonic=True,
+            staff_padding=3,
+        )
+        baca.spanners.half_clt(
+            baca.select.next(run),
+            staff_padding=5.5,
+        )
+        pieces = baca.select.partition_in_halves(run)
+        next_leaf = abjad.get.leaf(run[-1], 1)
+        pieces[-1].append(next_leaf)
+        baca.piecewise.hairpin(
+            pieces,
+            library.swells(peak),
+        )
 
 
 def fl(m):
@@ -771,7 +806,22 @@ def vn(m):
     E2c(runs[3], "B3", "C#4", "p")
     E4c(library.pleaves(m[11], 4), "D#5", "G#5", "p")
     E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")
+    E4c(library.pleaves(m[12], 4), "D#5", "G#5", "mp")
     E2c(library.pleaves(m[12, 13], 2), "B3", "C#4", "mp")
+    E4c(library.pleaves(m[13, 14], 4), "D#5", "G#5", "mf")
+    E2c(library.pleaves(m[14], 2) + m[15][:1], "B3", "C#4", "mp")
+    plts = baca.select.plts(library.pleaves(m[15, 19], 2))
+    dynamics = "mp p pp ppp".split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
+    E1(
+        library.pleaves(m[19, 20], 1),
+        "A4",
+        "mf f p",
+        pizz=True,
+        string_numbers="IV III IV",
+    )
+    F1c(library.pleaves(m[20, 22], 99), "C#5", "E#5", "F#5", "mp mf f")
 
 
 def vc(m):
