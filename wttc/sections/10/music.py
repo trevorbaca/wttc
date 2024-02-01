@@ -400,7 +400,6 @@ def VN(voice, meters):
     )
     rhythm(
         meters(22),
-        # ["-", swell(4)],
         ["-", m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
         material=99,
     )
@@ -418,7 +417,9 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        container = abjad.Container("r8. c'16 r c' r8 r8. c'16 r8 c'16 r")
+        container = abjad.Container(
+            "r8. <c' c'>16 r <c' c'> r8 r8. <c' c'>16 r8 <c' c'>16 r"
+        )
         components = abjad.mutate.eject_contents(container)
         library.replace_measure(voice, 3, components)
         library.annotate(components, 3)
@@ -427,7 +428,7 @@ def VC(voice, meters):
     def block():
         components = rhythm(
             meters(5, 6),
-            10 * [-3, 1],
+            10 * [-3, c(1, 2)],
             do_not_extend=True,
         )
         library.replace_measure(voice, (5, 6), components)
@@ -436,7 +437,7 @@ def VC(voice, meters):
     @baca.call
     def block():
         group = abjad.select.group_by_measure(voice)[7 - 1]
-        library.replace(voice, group[-1], "r4 r8. c'16")
+        library.replace(voice, group[-1], "r4 r8. <c' c'>16")
         group = abjad.select.group_by_measure(voice)[7 - 1]
         note = abjad.select.leaf(group, -1)
         library.annotate([note], 3)
@@ -445,8 +446,8 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        voice.extend(r"r4 \times 2/3 { r8 c'8 r8 } r4 r8. c'16")
-        voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. c'16 r4")
+        voice.extend(r"r4 \times 2/3 { r8 c'8 r8 } r4 r8. <c' c'>16")
+        voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. <c' c'>16 r4")
         groups = abjad.select.group_by_measure(voice)[19 - 1 : 21 - 1]
         pleaves = baca.select.pleaves(groups)
         tupletted = baca.select.tupletted(pleaves)
@@ -455,14 +456,14 @@ def VC(voice, meters):
         library.annotate(untupletted, 3)
         rhythm(
             meters(20),
-            [swell(4)],
+            [m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
             material=99,
             overlap=["-"],
         )
 
     @baca.call
     def block():
-        voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. c'16 r4")
+        voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. <c' c'>16 r4")
         groups = abjad.select.group_by_measure(voice)[21 - 1]
         pleaves = baca.select.pleaves(groups)
         tupletted = baca.select.tupletted(pleaves)
@@ -471,19 +472,19 @@ def VC(voice, meters):
         library.annotate(untupletted, 3)
         rhythm(
             meters(21),
-            [swell(4)],
+            [m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
             material=99,
             overlap=["-"],
         )
 
     rhythm(
         meters(22),
-        [-7, 1, "-"],
+        [-7, c(1, 2), "-"],
         material=3,
     )
     rhythm(
         meters(22),
-        [swell(4)],
+        [m(c(4, 2), (1, 2)), h(m(4, (1, 2)))],
         material=99,
         overlap=[-8],
     )
@@ -491,7 +492,16 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=None):
+def E1(
+    pleaves,
+    pitch,
+    dynamics,
+    *,
+    pattern=None,
+    pizz=False,
+    staff_padding=5.5,
+    string_numbers=None,
+):
     baca.pitch(pleaves, pitch)
     dynamics_ = dynamics.split()
     for pleaf, dynamic_ in zip(pleaves, dynamics_, strict=True):
@@ -502,7 +512,7 @@ def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=Non
     if pizz is True:
         baca.spanners.pizzicato(
             baca.select.next(pleaves),
-            staff_padding=8,
+            staff_padding=staff_padding + 2.5,
         )
     if string_numbers:
         string_numbers_ = string_numbers.split()
@@ -510,7 +520,7 @@ def E1(pleaves, pitch, dynamics, *, pattern=None, pizz=False, string_numbers=Non
             baca.spanners.string_number(
                 baca.select.next([pleaf]),
                 f"{string_number_} ||",
-                staff_padding=5.5,
+                staff_padding=staff_padding,
             )
 
 
@@ -631,8 +641,29 @@ def E3a(pleaves, fundamental):
         baca.override.stem_stencil_false(run[1:])
 
 
-def E3b():
-    pass
+def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        assert len(plt) == 1
+        baca.pitch(plt, double_stop)
+        abjad.tweak(plt[0].note_heads[1], r"\tweak style #'harmonic")
+        baca.spanners.trill(
+            baca.select.next(plt),
+            alteration=alteration,
+            harmonic=True,
+            staff_padding=3,
+        )
+        baca.triple_staccato(plt)
+    if lone is False:
+        baca.override.trill_spanner_dash_period(pleaves, -1)
+        baca.override.trill_spanner_style(pleaves, "#'dashed-line")
+    else:
+        for plt in plts:
+            baca.override.trill_spanner_dash_period(plt, -1)
+            baca.override.trill_spanner_style(plt, "#'dashed-line")
+    if dynamic is not None:
+        for plt in plts:
+            baca.dynamic(plt, dynamic)
 
 
 def E4a(pleaves, pitch, peaks):
@@ -825,10 +856,76 @@ def vn(m):
 
 
 def vc(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
+    baca.clef(m[1][0], "tenor")
+    E1(
+        library.pleaves(m[1, 2], 1),
+        "A4",
+        "f mp ff",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="IV I IV",
+    )
+    E3b(library.pleaves(m[3, 7], 3), "<A#3 D#4>", "E#4")
+    baca.spanners.hairpin(
+        library.pleaves(m[3], 3),
+        "f > p",
+    )
+    baca.spanners.hairpin(
+        library.pleaves(m[5, 6], 3),
+        "f -- !",
+    )
+    baca.dynamic(library.pleaves(m[7], 3), "p")
+    E1(
+        library.pleaves(m[4], 1),
+        "A4",
+        "ff",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="III",
+    )
+    E1(
+        library.pleaves(m[7], 1),
+        "A4",
+        "ff",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="I",
+    )
+    E1(
+        library.pleaves(m[8, 9], 1),
+        "A4",
+        "mp mf",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="IV I",
+    )
+    E1(
+        library.pleaves(m[19], 1),
+        "A4",
+        "ff",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="II",
+    )
+    E1(
+        library.pleaves(m[20], 1),
+        "A4",
+        "mp",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="III",
+    )
+    E1(
+        library.pleaves(m[21], 1),
+        "A4",
+        "f",
+        pizz=True,
+        staff_padding=4,
+        string_numbers="IV",
+    )
+    F1c(library.pleaves(m[20, 22], 99), "C#4", "E#4", "F#4", "mp mf f")
+    E3b(library.pleaves(m[19, 22], 3), "<A#3 D#4>", "E#4", dynamic="mp", lone=True)
 
 
 def align_spanners(cache):
