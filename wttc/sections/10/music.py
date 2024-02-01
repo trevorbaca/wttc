@@ -935,6 +935,15 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(cache["gt1"][10, 18], 5)
     baca.override.dls_staff_padding(cache["gt1"][19, 22], 3)
     baca.override.dls_staff_padding(cache["gt2"][1, 22], 3)
+    baca.override.dls_staff_padding(cache["vn"][1, 2], 3)
+    baca.override.dls_staff_padding(cache["vn"][5, 8], 3)
+    baca.override.dls_staff_padding(cache["vn"][9, 22], 4)
+    baca.override.dls_staff_padding(cache["vc"][1, 2], 5)
+    baca.override.dls_staff_padding(cache["vc"][3], 4)
+    baca.override.dls_staff_padding(cache["vc"][4], 5)
+    baca.override.dls_staff_padding(cache["vc"][5, 6], 4)
+    baca.override.dls_staff_padding(cache["vc"][7, 9], 5)
+    baca.override.dls_staff_padding(cache["vc"][19, 22], 5)
 
 
 @baca.build.timed("make_score")
