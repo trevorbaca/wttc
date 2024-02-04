@@ -723,9 +723,10 @@ def vn(m):
             baca.pitch(run[0], "B4")
             baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
             baca.spanners.string_number(
-                baca.select.next(run)[1:],
+                run[1:],
                 "II =|",
                 staff_padding=3,
+                with_next_leaf=True,
             )
             baca.spanners.hairpin(
                 baca.select.next(run)[1:],
@@ -928,9 +929,10 @@ def vc(cache):
             baca.pitch(run[0], "C4")
             baca.flat_glissando(run[1:], "B3", stop_pitch="D4")
             baca.spanners.string_number(
-                rrun[1:],
+                run[1:],
                 "I =|",
                 staff_padding=5,
+                with_next_leaf=True,
             )
             baca.spanners.hairpin(
                 rrun[1:],

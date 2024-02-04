@@ -750,9 +750,10 @@ def B1b(
             baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         if conjoin is False:
             baca.spanners.string_number(
-                baca.select.next(run)[1:],
+                run[1:],
                 f"{string_symbol} =|",
                 staff_padding=string_number_staff_padding,
+                with_next_leaf=True,
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(
@@ -769,9 +770,10 @@ def B1b(
         )
     if conjoin is True:
         baca.spanners.string_number(
-            baca.select.next(runs)[1:],
+            abjad.select.leaves(runs)[1:],
             f"{string_symbol} =|",
             staff_padding=3,
+            with_next_leaf=True,
         )
         if dls_staff_padding:
             baca.override.dls_staff_padding(
@@ -830,9 +832,10 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     assert len(runs) == 1
     run = runs[0]
     baca.spanners.string_number(
-        baca.select.next(run),
+        run,
         f"{string_symbol} =|",
         staff_padding=5,
+        with_next_leaf=True,
     )
     baca.spanners.xfb(
         baca.select.next(run),

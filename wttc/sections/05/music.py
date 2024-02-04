@@ -924,9 +924,10 @@ def C2b(
             bookend=bookend,
         )
     baca.spanners.string_number(
-        baca.select.next(all_leaves),
+        all_leaves,
         "IV =|",
         staff_padding=6.5,
+        with_next_leaf=True,
     )
 
 
@@ -966,9 +967,10 @@ def C3a(
         baca.override.note_head_style_harmonic(all_leaves)
     if string_number:
         baca.spanners.string_number(
-            baca.select.next(all_leaves),
+            all_leaves,
             items=f"{string_number} =|",
             staff_padding=6.5,
+            with_next_leaf=True,
         )
     if trill:
         baca.spanners.trill(

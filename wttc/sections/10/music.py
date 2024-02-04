@@ -518,9 +518,10 @@ def E1(
         string_numbers_ = string_numbers.split()
         for pleaf, string_number_ in zip(pleaves, string_numbers_, strict=True):
             baca.spanners.string_number(
-                baca.select.next([pleaf]),
+                [pleaf],
                 f"{string_number_} ||",
                 staff_padding=staff_padding,
+                with_next_leaf=True,
             )
 
 
@@ -573,9 +574,10 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             staff_padding=3,
         )
         baca.spanners.string_number(
-            baca.select.next(first_plt),
+            first_plt,
             f"{string_number} =|",
             staff_padding=5.5,
+            with_next_leaf=True,
         )
     if damp is True:
         if xfb is False:
