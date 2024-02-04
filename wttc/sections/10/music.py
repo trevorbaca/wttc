@@ -723,7 +723,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
             staff_padding=3,
         )
         baca.spanners.half_clt(
-            baca.select.next(run),
+            run,
             staff_padding=5.5,
         )
         pieces = baca.select.partition_in_halves(run)
