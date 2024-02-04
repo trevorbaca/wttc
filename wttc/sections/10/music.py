@@ -567,8 +567,9 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         baca.flat_glissando(first_plt, low_pitch, stop_pitch=high_pitch)
         baca.override.note_head_style_harmonic(first_plt)
         baca.spanners.xfb(
-            baca.select.next(first_plt),
+            first_plt,
             staff_padding=3,
+            with_next_leaf=True,
         )
         baca.spanners.string_number(
             first_plt,

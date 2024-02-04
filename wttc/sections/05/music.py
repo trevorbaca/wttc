@@ -1181,9 +1181,10 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
         else:
             baca.pitch(run, pitches)
         baca.spanners.xfb(
-            baca.select.next(run),
+            run,
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
             staff_padding=3,
+            with_next_leaf=True,
         )
         baca.piecewise.scp(
             (),
