@@ -726,7 +726,6 @@ def vn(m):
                 run[1:],
                 "II",
                 staff_padding=3,
-                with_next_leaf=True,
             )
             baca.spanners.hairpin(
                 baca.select.next(run)[1:],
@@ -932,7 +931,6 @@ def vc(cache):
                 run[1:],
                 "I",
                 staff_padding=5,
-                with_next_leaf=True,
             )
             baca.spanners.hairpin(
                 rrun[1:],

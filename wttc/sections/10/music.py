@@ -522,7 +522,6 @@ def E1(
                 string_number_,
                 invisible_line=True,
                 staff_padding=staff_padding,
-                with_next_leaf=True,
             )
 
 
@@ -575,7 +574,6 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             first_plt,
             string_number,
             staff_padding=5.5,
-            with_next_leaf=True,
         )
     if damp is True:
         if xfb is False:

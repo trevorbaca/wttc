@@ -927,7 +927,6 @@ def C2b(
         all_leaves,
         "IV",
         staff_padding=6.5,
-        with_next_leaf=True,
     )
 
 
@@ -970,7 +969,6 @@ def C3a(
             all_leaves,
             string_number,
             staff_padding=6.5,
-            with_next_leaf=True,
         )
     if trill:
         baca.spanners.trill(

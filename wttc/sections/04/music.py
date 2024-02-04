@@ -753,7 +753,6 @@ def B1b(
                 run[1:],
                 string_symbol,
                 staff_padding=string_number_staff_padding,
-                with_next_leaf=True,
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(
@@ -773,7 +772,6 @@ def B1b(
             abjad.select.leaves(runs)[1:],
             string_symbol,
             staff_padding=3,
-            with_next_leaf=True,
         )
         if dls_staff_padding:
             baca.override.dls_staff_padding(
@@ -836,7 +834,6 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         run,
         string_symbol,
         staff_padding=5,
-        with_next_leaf=True,
     )
     baca.spanners.xfb(
         run,
