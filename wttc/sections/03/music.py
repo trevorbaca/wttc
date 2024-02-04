@@ -724,7 +724,7 @@ def vn(m):
             baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
             baca.spanners.string_number(
                 run[1:],
-                "II =|",
+                "II",
                 staff_padding=3,
                 with_next_leaf=True,
             )
@@ -930,7 +930,7 @@ def vc(cache):
             baca.flat_glissando(run[1:], "B3", stop_pitch="D4")
             baca.spanners.string_number(
                 run[1:],
-                "I =|",
+                "I",
                 staff_padding=5,
                 with_next_leaf=True,
             )

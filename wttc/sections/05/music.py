@@ -925,7 +925,7 @@ def C2b(
         )
     baca.spanners.string_number(
         all_leaves,
-        "IV =|",
+        "IV",
         staff_padding=6.5,
         with_next_leaf=True,
     )
@@ -968,7 +968,7 @@ def C3a(
     if string_number:
         baca.spanners.string_number(
             all_leaves,
-            items=f"{string_number} =|",
+            string_number,
             staff_padding=6.5,
             with_next_leaf=True,
         )

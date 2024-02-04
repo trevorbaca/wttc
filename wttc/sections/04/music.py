@@ -751,7 +751,7 @@ def B1b(
         if conjoin is False:
             baca.spanners.string_number(
                 run[1:],
-                f"{string_symbol} =|",
+                string_symbol,
                 staff_padding=string_number_staff_padding,
                 with_next_leaf=True,
             )
@@ -771,7 +771,7 @@ def B1b(
     if conjoin is True:
         baca.spanners.string_number(
             abjad.select.leaves(runs)[1:],
-            f"{string_symbol} =|",
+            string_symbol,
             staff_padding=3,
             with_next_leaf=True,
         )
@@ -833,7 +833,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     run = runs[0]
     baca.spanners.string_number(
         run,
-        f"{string_symbol} =|",
+        string_symbol,
         staff_padding=5,
         with_next_leaf=True,
     )
