@@ -7138,9 +7138,6 @@ number.5.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         c''8
-          %! PIZZICATO_SPANNER
-          %! SPANNER_STOP
-        \bacaStopTextSpanPizzicato
         \revert NoteHead.style
 
     }
@@ -7151,6 +7148,9 @@ number.5.Violin.Music = {
     b'1. * 2/3
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -7422,9 +7422,6 @@ number.5.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         cf''!8
-          %! PIZZICATO_SPANNER
-          %! SPANNER_STOP
-        \bacaStopTextSpanPizzicato
         \revert NoteHead.style
 
     }
@@ -7435,6 +7432,9 @@ number.5.Violin.Music = {
     bf'!1. * 2/3
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -7749,9 +7749,6 @@ number.5.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \p
-          %! PIZZICATO_SPANNER
-          %! SPANNER_STOP
-        \bacaStopTextSpanPizzicato
         \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
@@ -7775,6 +7772,9 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
@@ -8024,9 +8024,6 @@ number.5.Violin.Music = {
         af'!8
           %! SPANNER_STOP
         \!
-          %! PIZZICATO_SPANNER
-          %! SPANNER_STOP
-        \bacaStopTextSpanPizzicato
         \revert NoteHead.style
 
     }
@@ -8036,6 +8033,9 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
@@ -8141,9 +8141,6 @@ number.5.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     g'16
-      %! PIZZICATO_SPANNER
-      %! SPANNER_STOP
-    \bacaStopTextSpanPizzicato
     [
     \revert NoteHead.style
 
@@ -8161,6 +8158,9 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
@@ -8301,9 +8301,6 @@ number.5.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     gf'!16
-      %! PIZZICATO_SPANNER
-      %! SPANNER_STOP
-    \bacaStopTextSpanPizzicato
     [
     \revert NoteHead.style
 
@@ -8321,6 +8318,9 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
+      %! PIZZICATO_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber

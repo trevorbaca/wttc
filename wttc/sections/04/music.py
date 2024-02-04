@@ -792,7 +792,6 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
                 [note],
                 items=r"\baca-pizz-markup ||",
                 staff_padding=3,
-                with_next_leaf=True,
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(
@@ -804,6 +803,7 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
             notes,
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
             staff_padding=3,
+            without_next_leaf=True,
         )
         if dls_staff_padding:
             baca.override.dls_staff_padding(

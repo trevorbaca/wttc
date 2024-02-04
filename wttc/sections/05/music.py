@@ -1019,7 +1019,6 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
                 pleaf,
                 items=r"\baca-pizz-markup ||",
                 staff_padding=pizz_staff_padding,
-                with_next_leaf=True,
             )
 
 
