@@ -3620,6 +3620,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -3666,6 +3669,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -3704,6 +3710,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -3734,6 +3743,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
@@ -3849,6 +3861,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
@@ -4012,6 +4027,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4053,6 +4071,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4090,6 +4111,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4122,6 +4146,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
@@ -4161,6 +4188,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
@@ -5055,6 +5085,9 @@ number.10.Violin.Music = {
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5087,6 +5120,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
@@ -5126,6 +5162,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
@@ -5524,6 +5563,9 @@ number.10.Cello.Music = {
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5569,6 +5611,9 @@ number.10.Cello.Music = {
         - \baca-text-spanner-left-text "I"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text I
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5604,6 +5649,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
@@ -5787,6 +5835,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
@@ -6055,6 +6106,9 @@ number.10.Cello.Music = {
         - \baca-text-spanner-left-text "I"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text I
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -6142,6 +6196,9 @@ number.10.Cello.Music = {
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -6179,6 +6236,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "I"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text I
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
@@ -6285,6 +6345,9 @@ number.10.Cello.Music = {
         - \baca-text-spanner-left-text "II"
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text II
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -6370,6 +6433,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text III
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
@@ -6542,6 +6608,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
+          %! SPANNER_START
+          %! STRING_NUMBER_SPANNER
+        - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4

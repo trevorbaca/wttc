@@ -3401,6 +3401,9 @@ number.3.Violin.Music = {
     - \baca-text-spanner-left-text "II"
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text II
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 3
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
@@ -3535,6 +3538,9 @@ number.3.Violin.Music = {
     - \baca-text-spanner-left-text "II"
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text II
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 3
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
@@ -3604,6 +3610,9 @@ number.3.Violin.Music = {
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \baca-text-spanner-left-text "II"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text II
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 3
@@ -3682,6 +3691,9 @@ number.3.Violin.Music = {
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \baca-text-spanner-left-text "II"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text II
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 3
@@ -4922,6 +4934,9 @@ number.3.Cello.Music = {
     - \baca-text-spanner-left-text "I"
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text I
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 5
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
@@ -5063,6 +5078,9 @@ number.3.Cello.Music = {
     - \baca-text-spanner-left-text "I"
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text I
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 5
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
@@ -5187,6 +5205,9 @@ number.3.Cello.Music = {
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \baca-text-spanner-left-text "I"
+      %! SPANNER_START
+      %! STRING_NUMBER_SPANNER
+    - \tweak bound-details.left-broken.text I
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \tweak staff-padding 5
