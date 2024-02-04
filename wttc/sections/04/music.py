@@ -821,7 +821,6 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
             nongrace_plt,
             alteration="M2",
             staff_padding=staff_padding,
-            with_next_leaf=True,
         )
         baca.untie(nongrace_plt)
         baca.parenthesize(nongrace_plt[1:])
@@ -895,7 +894,6 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             force_trill_pitch_head_accidental=True,
             harmonic=True,
             staff_padding=staff_padding,
-            with_next_leaf=True,
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
@@ -926,7 +924,6 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             harmonic=True,
             right_broken=right_broken,
             staff_padding=staff_padding,
-            with_next_leaf=True,
         )
     if lone_plts:
         baca.override.trill_spanner_dash_period(lone_plts, -1)
@@ -995,7 +992,6 @@ def fl(m):
             runs[2],
             alteration="M2",
             staff_padding=3,
-            with_next_leaf=True,
         )
         B3(runs[3], "C5", "Db4", staff_padding=3)
         B3(runs[4], "Bb4", "B3", staff_padding=3)

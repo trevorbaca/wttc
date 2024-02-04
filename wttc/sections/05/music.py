@@ -824,7 +824,6 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         alteration=trill_pitch_string,
         force_trill_pitch_head_accidental=True,
         harmonic=True,
-        with_next_leaf=True,
     )
     baca.piecewise.hairpin(
         baca.select.lparts(baca.select.next(pleaves), [1, 2]),
@@ -848,7 +847,6 @@ def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
             alteration=trill_pitch_string,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
-            with_next_leaf=True,
         )
         if plt[1:]:
             baca.override.accidental_font_size(plt[1:], -6)
@@ -871,7 +869,6 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     baca.spanners.trill(
         plts[0],
         alteration=trill_pitch,
-        with_next_leaf=True,
     )
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
@@ -980,7 +977,6 @@ def C3a(
             all_leaves,
             alteration=trill,
             harmonic=harmonic,
-            with_next_leaf=True,
         )
 
 
@@ -988,7 +984,6 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.spanners.trill(
         pleaves,
         alteration=alteration,
-        with_next_leaf=True,
     )
     baca.untie(pleaves)
     baca.pitch(pleaves[:1], pitch)

@@ -543,7 +543,6 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
             baca.spanners.trill(
                 run,
                 alteration=alteration,
-                with_next_leaf=True,
             )
     else:
         assert starts
@@ -558,7 +557,6 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
             baca.spanners.trill(
                 plt,
                 alteration=alteration,
-                with_next_leaf=True,
             )
 
 
@@ -612,7 +610,6 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
         pleaves,
         alteration=alteration,
         staff_padding=3,
-        with_next_leaf=True,
     )
     if diminuendo is True:
         baca.spanners.hairpin(
@@ -656,7 +653,6 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
             alteration=alteration,
             harmonic=True,
             staff_padding=3,
-            with_next_leaf=True,
         )
         baca.triple_staccato(plt)
     if lone is False:
@@ -701,7 +697,6 @@ def E4c(pleaves, pitch, alteration, peak):
         alteration=alteration,
         harmonic=True,
         staff_padding=3,
-        with_next_leaf=True,
     )
     pieces = baca.select.partition_in_halves(pleaves)
     next_leaf = abjad.get.leaf(pleaves[-1], 1)
@@ -727,7 +722,6 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
             alteration=alteration,
             harmonic=True,
             staff_padding=3,
-            with_next_leaf=True,
         )
         baca.spanners.half_clt(
             baca.select.next(run),
