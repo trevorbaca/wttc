@@ -557,10 +557,6 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 rplt,
                 alteration=alteration,
             )
-        # TODO: remove this suite?
-        next_leaf = rplt[-1]
-        assert isinstance(next_leaf, abjad.Rest)
-        baca.dynamic(next_leaf, "niente")
 
 
 def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):

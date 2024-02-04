@@ -2344,11 +2344,6 @@ number.10.Oboe.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
