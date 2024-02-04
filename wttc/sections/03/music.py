@@ -681,19 +681,19 @@ def vn(m):
             "G4",
         )
         baca.spanners.damp(
-            baca.select.next(runs[0]),
+            runs[0],
             staff_padding=3,
         )
         baca.spanners.damp(
-            baca.select.next(runs[1]),
+            runs[1],
             staff_padding=3,
         )
         baca.spanners.damp(
-            baca.select.next(runs[2]),
+            runs[2],
             staff_padding=4.5,
         )
         baca.spanners.damp(
-            baca.select.next(runs[3]),
+            runs[3],
             staff_padding=4.5,
         )
         baca.piecewise.hairpin(

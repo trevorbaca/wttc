@@ -584,7 +584,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             leaves = baca.select.plt(pleaves, -1)
         baca.flat_glissando(leaves, high_pitch, stop_pitch=low_pitch)
         baca.spanners.damp(
-            baca.select.next(leaves),
+            leaves,
             staff_padding=3,
         )
     if xfb is True:
