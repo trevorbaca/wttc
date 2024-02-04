@@ -826,9 +826,6 @@ number.4.AltoFlute.Music = {
     {
 
         c'8
-          %! COVERED_SPANNER
-          %! SPANNER_STOP
-        \bacaStopTextSpanCovered
         [
 
         \grace {
@@ -846,6 +843,9 @@ number.4.AltoFlute.Music = {
               %! EXPLICIT_DYNAMIC
               %! SPANNER_STOP
             \p
+              %! COVERED_SPANNER
+              %! SPANNER_STOP
+            \bacaStopTextSpanCovered
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START

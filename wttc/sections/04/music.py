@@ -953,7 +953,7 @@ def fl(m):
         baca.dynamic(plts[9].head, "mp")
         baca.dynamic(plts[11].head, "p")
         baca.spanners.covered(
-            baca.select.next(plts[:2]),
+            plts[:2],
             staff_padding=3,
         )
         baca.spanners.covered(
@@ -962,25 +962,25 @@ def fl(m):
             staff_padding=3,
         )
         baca.spanners.covered(
-            baca.select.next(plts[4]),
+            plts[4],
             items=strings.cov_dashed_hook,
             staff_padding=3,
         )
         baca.spanners.covered(
-            baca.select.next(plts[5:8]),
+            plts[5:8],
             staff_padding=3,
         )
         baca.spanners.covered(
-            baca.select.next(plts[8]),
+            plts[8],
             staff_padding=3,
         )
         baca.spanners.covered(
-            baca.select.next(plts[9:11]),
+            plts[9:11],
             left_broken_text=None,
             staff_padding=3,
         )
         baca.spanners.covered(
-            baca.select.next(plts[11:13]),
+            plts[11:13],
             staff_padding=3,
         )
 

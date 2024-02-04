@@ -475,7 +475,7 @@ def fl(m):
         for run in runs:
             baca.pitch(run, "G#")
             baca.spanners.covered(
-                baca.select.next(run),
+                run,
                 items=strings.cov_dashed_hook,
                 staff_padding=3,
             )
