@@ -540,8 +540,9 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 library.swells(peak_),
             )
             baca.spanners.trill(
-                run + [next_leaf],
+                run,
                 alteration=alteration,
+                with_next_leaf=True,
             )
     else:
         assert starts
@@ -554,8 +555,9 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 f"{start_} >o !",
             )
             baca.spanners.trill(
-                rplt,
+                plt,
                 alteration=alteration,
+                with_next_leaf=True,
             )
 
 
@@ -606,9 +608,10 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
     if stop_pitch is None:
         baca.pitch(pleaves, pitch)
     baca.spanners.trill(
-        baca.select.next(pleaves),
+        pleaves,
         alteration=alteration,
         staff_padding=3,
+        with_next_leaf=True,
     )
     if diminuendo is True:
         baca.spanners.hairpin(
@@ -648,10 +651,11 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
         baca.pitch(plt, double_stop)
         abjad.tweak(plt[0].note_heads[1], r"\tweak style #'harmonic")
         baca.spanners.trill(
-            baca.select.next(plt),
+            plt,
             alteration=alteration,
             harmonic=True,
             staff_padding=3,
+            with_next_leaf=True,
         )
         baca.triple_staccato(plt)
     if lone is False:
@@ -692,10 +696,11 @@ def E4b(pleaves, pitch, dynamic):
 def E4c(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
-        baca.select.next(pleaves),
+        pleaves,
         alteration=alteration,
         harmonic=True,
         staff_padding=3,
+        with_next_leaf=True,
     )
     pieces = baca.select.partition_in_halves(pleaves)
     next_leaf = abjad.get.leaf(pleaves[-1], 1)
@@ -717,10 +722,11 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
             else:
                 baca.pitch(leaf, pitch_1)
         baca.spanners.trill(
-            baca.select.next(run),
+            run,
             alteration=alteration,
             harmonic=True,
             staff_padding=3,
+            with_next_leaf=True,
         )
         baca.spanners.half_clt(
             baca.select.next(run),

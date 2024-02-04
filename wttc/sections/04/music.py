@@ -817,9 +817,10 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     for nongrace_plt in nongrace_plts:
         baca.pitch(nongrace_plt, nongrace_pitch)
         baca.spanners.trill(
-            baca.select.next(nongrace_plt),
+            nongrace_plt,
             alteration="M2",
             staff_padding=staff_padding,
+            with_next_leaf=True,
         )
         baca.untie(nongrace_plt)
         baca.parenthesize(nongrace_plt[1:])
@@ -887,12 +888,13 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         assert len(plt) == 2
         tweaks = (abjad.Tweak(r"- \tweak bound-details.right.padding 1"),)
         baca.spanners.trill(
-            baca.select.next(plt),
+            plt,
             *tweaks,
             alteration=harmonic,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
             staff_padding=staff_padding,
+            with_next_leaf=True,
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
@@ -917,12 +919,13 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
             right_broken = True
         baca.spanners.trill(
-            rplt,
+            plt,
             alteration=harmonic,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
             right_broken=right_broken,
             staff_padding=staff_padding,
+            with_next_leaf=True,
         )
     if lone_plts:
         baca.override.trill_spanner_dash_period(lone_plts, -1)
@@ -988,9 +991,10 @@ def fl(m):
         B3(runs[1], "D5", "Eb4")
         baca.pitch(runs[2], "C#5")
         baca.spanners.trill(
-            baca.select.next(runs[2]),
+            runs[2],
             alteration="M2",
             staff_padding=3,
+            with_next_leaf=True,
         )
         B3(runs[3], "C5", "Db4", staff_padding=3)
         B3(runs[4], "Bb4", "B3", staff_padding=3)
