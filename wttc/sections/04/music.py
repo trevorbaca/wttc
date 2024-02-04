@@ -838,7 +838,6 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.spanners.xfb(
         run,
         staff_padding=7.5,
-        with_next_leaf=True,
     )
     baca.override.note_head_style_harmonic(baca.select.next(run))
     plts = baca.select.plts(run)
