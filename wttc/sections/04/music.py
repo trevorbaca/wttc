@@ -789,9 +789,10 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
         baca.dynamic(note, dynamic)
         if conjoin is False:
             baca.spanners.pizzicato(
-                baca.select.next([note]),
+                [note],
                 items=r"\baca-pizz-markup ||",
                 staff_padding=3,
+                with_next_leaf=True,
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(

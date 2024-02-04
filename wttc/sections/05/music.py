@@ -1021,9 +1021,10 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
     if pizz is True:
         for pleaf in pleaves:
             baca.spanners.pizzicato(
-                baca.select.next(pleaf),
+                pleaf,
                 items=r"\baca-pizz-markup ||",
                 staff_padding=pizz_staff_padding,
+                with_next_leaf=True,
             )
 
 

@@ -511,8 +511,9 @@ def E1(
         baca.bend_after(pleaves, pattern)
     if pizz is True:
         baca.spanners.pizzicato(
-            baca.select.next(pleaves),
+            pleaves,
             staff_padding=staff_padding + 2.5,
+            with_next_leaf=True,
         )
     if string_numbers:
         string_numbers_ = string_numbers.split()
