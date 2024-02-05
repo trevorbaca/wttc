@@ -749,7 +749,7 @@ def B1b(
             assert len(run) == 2
             baca.flat_glissando(run, start_pitch, stop_pitch=stop_pitch)
         if conjoin is False:
-            baca.spanners.string_number(
+            baca.rspanners.string_number(
                 run[1:],
                 string_symbol,
                 staff_padding=string_number_staff_padding,
@@ -768,7 +768,7 @@ def B1b(
             string,
         )
     if conjoin is True:
-        baca.spanners.string_number(
+        baca.rspanners.string_number(
             abjad.select.leaves(runs)[1:],
             string_symbol,
             staff_padding=3,
@@ -786,7 +786,7 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
     for note, dynamic in zip(notes, dynamics_list, strict=True):
         baca.dynamic(note, dynamic)
         if conjoin is False:
-            baca.spanners.pizzicato(
+            baca.rspanners.pizzicato(
                 [note],
                 items=r"\baca-pizz-markup ||",
                 staff_padding=3,
@@ -797,7 +797,7 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
                     dls_staff_padding,
                 )
     if conjoin is True:
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             notes,
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
             staff_padding=3,
@@ -815,7 +815,7 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     nongrace_plts = baca.select.plts(nongraces)
     for nongrace_plt in nongrace_plts:
         baca.pitch(nongrace_plt, nongrace_pitch)
-        baca.spanners.trill(
+        baca.rspanners.trill(
             nongrace_plt,
             alteration="M2",
             staff_padding=staff_padding,
@@ -830,12 +830,12 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     runs = abjad.select.runs(pleaves)
     assert len(runs) == 1
     run = runs[0]
-    baca.spanners.string_number(
+    baca.rspanners.string_number(
         run,
         string_symbol,
         staff_padding=5,
     )
-    baca.spanners.xfb(
+    baca.rspanners.xfb(
         run,
         staff_padding=7.5,
     )
@@ -883,7 +883,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     for plt in plts[1:2]:
         assert len(plt) == 2
         tweaks = (abjad.Tweak(r"- \tweak bound-details.right.padding 1"),)
-        baca.spanners.trill(
+        baca.rspanners.trill(
             plt,
             *tweaks,
             alteration=harmonic,
@@ -913,7 +913,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         rplt = baca.select.next(plt)
         if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
             right_broken = True
-        baca.spanners.trill(
+        baca.rspanners.trill(
             plt,
             alteration=harmonic,
             force_trill_pitch_head_accidental=True,
@@ -945,34 +945,34 @@ def fl(m):
         baca.dynamic(plts[8].head, '"f"')
         baca.dynamic(plts[9].head, "mp")
         baca.dynamic(plts[11].head, "p")
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[:2],
             staff_padding=3,
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[2:4],
             items=strings.cov_dashed_hook,
             staff_padding=3,
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[4],
             items=strings.cov_dashed_hook,
             staff_padding=3,
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[5:8],
             staff_padding=3,
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[8],
             staff_padding=3,
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[9:11],
             left_broken_text=None,
             staff_padding=3,
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             plts[11:13],
             staff_padding=3,
         )
@@ -984,7 +984,7 @@ def fl(m):
         B3(runs[0], "D5", "Eb4", staff_padding=3)
         B3(runs[1], "D5", "Eb4")
         baca.pitch(runs[2], "C#5")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             runs[2],
             alteration="M2",
             staff_padding=3,

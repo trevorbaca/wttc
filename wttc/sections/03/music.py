@@ -474,7 +474,7 @@ def fl(m):
         runs = library.runs(m[11, 13], 99)
         for run in runs:
             baca.pitch(run, "G#")
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 run,
                 items=strings.cov_dashed_hook,
                 staff_padding=3,
@@ -680,19 +680,19 @@ def vn(m):
             ],
             "G4",
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             runs[0],
             staff_padding=3,
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             runs[1],
             staff_padding=3,
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             runs[2],
             staff_padding=4.5,
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             runs[3],
             staff_padding=4.5,
         )
@@ -722,7 +722,7 @@ def vn(m):
             baca.override.note_head_style_harmonic(baca.select.next(run))
             baca.pitch(run[0], "B4")
             baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
-            baca.spanners.string_number(
+            baca.rspanners.string_number(
                 run[1:],
                 "II",
                 staff_padding=3,
@@ -927,7 +927,7 @@ def vc(cache):
             baca.override.note_head_style_harmonic(rrun)
             baca.pitch(run[0], "C4")
             baca.flat_glissando(run[1:], "B3", stop_pitch="D4")
-            baca.spanners.string_number(
+            baca.rspanners.string_number(
                 run[1:],
                 "I",
                 staff_padding=5,

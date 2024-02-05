@@ -510,14 +510,14 @@ def E1(
     if pattern:
         baca.bend_after(pleaves, pattern)
     if pizz is True:
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             pleaves,
             staff_padding=staff_padding + 2.5,
         )
     if string_numbers:
         string_numbers_ = string_numbers.split()
         for pleaf, string_number_ in zip(pleaves, string_numbers_, strict=True):
-            baca.spanners.string_number(
+            baca.rspanners.string_number(
                 [pleaf],
                 string_number_,
                 invisible_line=True,
@@ -538,7 +538,7 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 pieces,
                 library.swells(peak_),
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 alteration=alteration,
             )
@@ -552,7 +552,7 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 rplt,
                 f"{start_} >o !",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 plt,
                 alteration=alteration,
             )
@@ -565,11 +565,11 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         first_plt = baca.select.plt(pleaves, 0)
         baca.flat_glissando(first_plt, low_pitch, stop_pitch=high_pitch)
         baca.override.note_head_style_harmonic(first_plt)
-        baca.spanners.xfb(
+        baca.rspanners.xfb(
             first_plt,
             staff_padding=3,
         )
-        baca.spanners.string_number(
+        baca.rspanners.string_number(
             first_plt,
             string_number,
             staff_padding=5.5,
@@ -580,7 +580,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         else:
             leaves = baca.select.plt(pleaves, -1)
         baca.flat_glissando(leaves, high_pitch, stop_pitch=low_pitch)
-        baca.spanners.damp(
+        baca.rspanners.damp(
             leaves,
             staff_padding=3,
         )
@@ -602,7 +602,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
 def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
     if stop_pitch is None:
         baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
+    baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         staff_padding=3,
@@ -644,7 +644,7 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
         assert len(plt) == 1
         baca.pitch(plt, double_stop)
         abjad.tweak(plt[0].note_heads[1], r"\tweak style #'harmonic")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             plt,
             alteration=alteration,
             harmonic=True,
@@ -688,7 +688,7 @@ def E4b(pleaves, pitch, dynamic):
 
 def E4c(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
+    baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
@@ -713,13 +713,13 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
                 abjad.tweak(leaf.note_heads[1], r"\tweak style #'harmonic")
             else:
                 baca.pitch(leaf, pitch_1)
-        baca.spanners.trill(
+        baca.rspanners.trill(
             run,
             alteration=alteration,
             harmonic=True,
             staff_padding=3,
         )
-        baca.spanners.half_clt(
+        baca.rspanners.half_clt(
             run,
             staff_padding=5.5,
         )
