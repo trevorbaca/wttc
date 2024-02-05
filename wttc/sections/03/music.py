@@ -411,7 +411,7 @@ def fl(m):
         baca.pitch(runs[2], "E4")
         baca.pitch(runs[3], "E4")
         baca.piecewise.hairpin(
-            baca.select.clparts(baca.select.next(runs[0]), [1]),
+            baca.select.clparts(baca.select.rleak(runs[0]), [1]),
             baca.dynamics.niente_swells("mf mf mp"),
             forbid_al_niente_to_bar_line=True,
         )
@@ -432,7 +432,7 @@ def fl(m):
             baca.select.clparts(runs[3], [1]),
             "niente o< p >o",
         )
-        baca.dynamic(baca.select.next(runs[3]), "!")
+        baca.dynamic(baca.select.rleak(runs[3]), "!")
 
     @baca.call
     def block():
@@ -541,7 +541,7 @@ def gt1(m):
             baca.staff_lines(leaf, 5)
             baca.down_bow(run[0], padding=1)
             if len(run) == 1:
-                run = baca.select.next(run)
+                run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 'o<| "mf"',
@@ -582,7 +582,7 @@ def gt2(m):
             baca.staff_lines(leaf, 5)
             baca.up_bow(run[0], padding=1)
             if len(run) == 1:
-                run = baca.select.next(run)
+                run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 'o<| "mf"',
@@ -613,15 +613,15 @@ def vn(m):
         baca.pitches(runs[3], "E4 G#4")
         baca.pitches(runs[4], "E4 G#4")
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[0]), [1, 1, 1, 2]),
+            baca.select.lparts(baca.select.rleak(runs[0]), [1, 1, 1, 2]),
             baca.dynamics.niente_swells("mp mp"),
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[1]), [1, 1, 1, 2]),
+            baca.select.lparts(baca.select.rleak(runs[1]), [1, 1, 1, 2]),
             baca.dynamics.niente_swells("p p"),
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[2]), [1, 1, 1, 2]),
+            baca.select.lparts(baca.select.rleak(runs[2]), [1, 1, 1, 2]),
             baca.dynamics.niente_swells("p p"),
         )
         baca.piecewise.hairpin(
@@ -630,11 +630,11 @@ def vn(m):
             forbid_al_niente_to_bar_line=True,
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[3])[-3:], [1, 2]),
+            baca.select.lparts(baca.select.rleak(runs[3])[-3:], [1, 2]),
             "o< mp >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[4]), [1, 2]),
+            baca.select.lparts(baca.select.rleak(runs[4]), [1, 2]),
             baca.dynamics.niente_swells("pp"),
         )
 
@@ -697,11 +697,11 @@ def vn(m):
             staff_padding=4.5,
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[0]), [1, 3]),
+            baca.select.lparts(baca.select.rleak(runs[0]), [1, 3]),
             baca.dynamics.niente_swells("mp"),
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
+            baca.select.lparts(baca.select.rleak(runs[1]), [5, 3]),
             baca.dynamics.niente_swells("mf"),
         )
         baca.piecewise.hairpin(
@@ -719,7 +719,7 @@ def vn(m):
         assert len(runs) == 4
         dynamics = "mp p p pp".split()
         for run, dynamic in zip(runs, dynamics, strict=True):
-            baca.override.note_head_style_harmonic(baca.select.next(run))
+            baca.override.note_head_style_harmonic(baca.select.rleak(run))
             baca.pitch(run[0], "B4")
             baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
             baca.rspanners.string_number(
@@ -728,7 +728,7 @@ def vn(m):
                 staff_padding=3,
             )
             baca.spanners.hairpin(
-                baca.select.next(run)[1:],
+                baca.select.rleak(run)[1:],
                 f"{dynamic} >o !",
             )
 
@@ -746,7 +746,7 @@ def vn(m):
         baca.override.dls_staff_padding(m[5, 6], 3)
         baca.override.dls_staff_padding(m[7], 3)
         baca.override.dls_staff_padding(
-            baca.select.next(abjad.select.run(m[11], 0)),
+            baca.select.rleak(abjad.select.run(m[11], 0)),
             3,
         )
         baca.override.dls_staff_padding(
@@ -801,7 +801,7 @@ def vc(cache):
                 baca.piecewise.circle_bow(
                     (),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-                    pieces=[baca.select.next(plt)],
+                    pieces=[baca.select.rleak(plt)],
                     staff_padding=staff_padding,
                 )
 
@@ -832,19 +832,19 @@ def vc(cache):
             "Bb2",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[0]), [4, 3]),
+            baca.select.lparts(baca.select.rleak(runs[0]), [4, 3]),
             "o< p >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[1]), [7, 5]),
+            baca.select.lparts(baca.select.rleak(runs[1]), [7, 5]),
             "o< mp >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[2]), [14, 8]),
+            baca.select.lparts(baca.select.rleak(runs[2]), [14, 8]),
             "o< mf >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[3]), [4, 3]),
+            baca.select.lparts(baca.select.rleak(runs[3]), [4, 3]),
             "o< mf >o p",
         )
 
@@ -856,7 +856,7 @@ def vc(cache):
         baca.piecewise.scp(
             (),
             "T4 =|",
-            pieces=[baca.select.next(parts[0])],
+            pieces=[baca.select.rleak(parts[0])],
             staff_padding=3,
         )
         baca.piecewise.scp(
@@ -883,17 +883,17 @@ def vc(cache):
         baca.piecewise.scp(
             (),
             "T =|",
-            pieces=[baca.select.next(runs[1])],
+            pieces=[baca.select.rleak(runs[1])],
             staff_padding=3,
         )
         baca.piecewise.scp(
             (),
             "T =|",
-            pieces=[baca.select.next(runs[2])],
+            pieces=[baca.select.rleak(runs[2])],
             staff_padding=3,
         )
         baca.spanners.hairpin(
-            baca.select.next(parts[0]),
+            baca.select.rleak(parts[0]),
             ">o !",
         )
         baca.piecewise.hairpin(
@@ -909,11 +909,11 @@ def vc(cache):
             "o<| ff",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[1]), [2, 2]),
+            baca.select.lparts(baca.select.rleak(runs[1]), [2, 2]),
             "o< p >o !",
         )
         baca.spanners.hairpin(
-            baca.select.next(runs[2]),
+            baca.select.rleak(runs[2]),
             "p >o !",
         )
 
@@ -923,7 +923,7 @@ def vc(cache):
         assert len(runs) == 3
         dynamics = "mp p pp".split()
         for run, dynamic in zip(runs, dynamics, strict=True):
-            rrun = baca.select.next(run)
+            rrun = baca.select.rleak(run)
             baca.override.note_head_style_harmonic(rrun)
             baca.pitch(run[0], "C4")
             baca.flat_glissando(run[1:], "B3", stop_pitch="D4")

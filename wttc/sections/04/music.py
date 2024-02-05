@@ -756,7 +756,7 @@ def B1b(
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(
-                    baca.select.next(run)[1:],
+                    baca.select.rleak(run)[1:],
                     dls_staff_padding,
                 )
         if diminuendo is True:
@@ -764,7 +764,7 @@ def B1b(
         else:
             string = f"niente o< {dynamic}"
         baca.spanners.hairpin(
-            baca.select.next(run)[1:],
+            baca.select.rleak(run)[1:],
             string,
         )
     if conjoin is True:
@@ -775,7 +775,7 @@ def B1b(
         )
         if dls_staff_padding:
             baca.override.dls_staff_padding(
-                baca.select.next(runs)[1:],
+                baca.select.rleak(runs)[1:],
                 dls_staff_padding,
             )
 
@@ -793,7 +793,7 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
             )
             if dls_staff_padding:
                 baca.override.dls_staff_padding(
-                    baca.select.next([note]),
+                    baca.select.rleak([note]),
                     dls_staff_padding,
                 )
     if conjoin is True:
@@ -839,7 +839,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         run,
         staff_padding=7.5,
     )
-    baca.override.note_head_style_harmonic(baca.select.next(run))
+    baca.override.note_head_style_harmonic(baca.select.rleak(run))
     plts = baca.select.plts(run)
     baca.untie(plts[-1])
     pairs = [(_, 3) for _ in pitch_string.split()]
@@ -896,13 +896,13 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         leaf = baca.select.rleaf(plt, -1)
         if isinstance(leaf, abjad.Rest):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.next(plt), [1, 2]),
+                baca.select.lparts(baca.select.rleak(plt), [1, 2]),
                 library.swells("mp"),
             )
         else:
             # TODO: check this
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.next(plt), [1, 1]),
+                baca.select.lparts(baca.select.rleak(plt), [1, 1]),
                 "niente o< mp >o",
                 bookend=False,
             )
@@ -910,7 +910,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     for i, plt in enumerate(lone_plts):
         assert len(plt) == 1
         right_broken = False
-        rplt = baca.select.next(plt)
+        rplt = baca.select.rleak(plt)
         if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
             right_broken = True
         baca.rspanners.trill(
@@ -995,15 +995,15 @@ def fl(m):
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
+            baca.select.lparts(baca.select.rleak(runs[0]), [8, 3]),
             "p < f >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[1]), [5, 3]),
+            baca.select.lparts(baca.select.rleak(runs[1]), [5, 3]),
             "p < f >o !",
         )
         baca.spanners.hairpin(
-            baca.select.next(runs[2]),
+            baca.select.rleak(runs[2]),
             "f >o !",
         )
         baca.spanners.hairpin(
@@ -1015,7 +1015,7 @@ def fl(m):
             "f |>o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[5][1:]), [1, 2]),
+            baca.select.lparts(baca.select.rleak(runs[5][1:]), [1, 2]),
             "sfpp < p >o !",
         )
 
@@ -1050,15 +1050,15 @@ def ob(m):
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[0]), [8, 3]),
+            baca.select.lparts(baca.select.rleak(runs[0]), [8, 3]),
             "p < f >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[1]), [3, 5]),
+            baca.select.lparts(baca.select.rleak(runs[1]), [3, 5]),
             "p < f >o !",
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.next(runs[2]), [2, 4]),
+            baca.select.lparts(baca.select.rleak(runs[2]), [2, 4]),
             "p < f >o !",
         )
         baca.spanners.hairpin(
@@ -1155,7 +1155,7 @@ def gt1(cache):
             baca.staff_position(plt, 0)
             baca.down_bow(plt.head, padding=1)
             if len(plt) == 1:
-                leaves = baca.select.next(plt)
+                leaves = baca.select.rleak(plt)
             else:
                 leaves = plt
             string = f"o< {termination}"
@@ -1308,7 +1308,7 @@ def gt2(cache):
             baca.staff_position(plt, 0)
             baca.up_bow(plt.head, padding=1)
             baca.spanners.hairpin(
-                baca.select.next(plt),
+                baca.select.rleak(plt),
                 f"o< {dynamic}",
             )
 

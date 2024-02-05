@@ -826,7 +826,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         harmonic=True,
     )
     baca.piecewise.hairpin(
-        baca.select.lparts(baca.select.next(pleaves), [1, 2]),
+        baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
         f"niente o< {dynamic_string} >o !",
     )
 
@@ -873,7 +873,7 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
     baca.spanners.hairpin(
-        baca.select.next(pleaves),
+        baca.select.rleak(pleaves),
         f"{dynamic} >o !",
     )
 
@@ -907,7 +907,7 @@ def C2b(
             # TODO: make this work:
             # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
             bookend=-1,
-            pieces=baca.select.lparts(baca.select.next(pleaves_2), [1, 2]),
+            pieces=baca.select.lparts(baca.select.rleak(pleaves_2), [1, 2]),
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
@@ -994,7 +994,7 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
         baca.piecewise.hairpin(
-            [pleaves[:-1], baca.select.next(pleaves[-1:])],
+            [pleaves[:-1], baca.select.rleak(pleaves[-1:])],
             hairpin,
         )
     else:
@@ -1023,7 +1023,7 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.spanners.hairpin(
-        baca.select.next(pleaves),
+        baca.select.rleak(pleaves),
         f"{dynamic} >o !",
     )
 
@@ -1060,7 +1060,7 @@ def D2a(pleaves, pitches, hairpin_strings):
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
         hairpin_string = f"{hairpin} >o !"
         baca.spanners.hairpin(
-            baca.select.next(plt_pair),
+            baca.select.rleak(plt_pair),
             hairpin_string,
         )
         baca.tenuto(plt_pair[0].head)
@@ -1080,7 +1080,7 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
         else:
             baca.down_bow(run[0], padding=1)
         if len(run) == 1:
-            run = baca.select.next(run)
+            run = baca.select.rleak(run)
         baca.spanners.hairpin(
             run,
             f"o<| {dynamic_}",
@@ -1148,7 +1148,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
             baca.piecewise.circle_bow(
                 (),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-                pieces=[baca.select.next(plt)],
+                pieces=[baca.select.rleak(plt)],
                 staff_padding=3,
             )
         else:
@@ -1187,7 +1187,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             (),
             "T =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-            pieces=[baca.select.next(run)],
+            pieces=[baca.select.rleak(run)],
             staff_padding=6.5,
         )
         if hairpin:
@@ -1365,9 +1365,9 @@ def vc(m):
             pleaves,
             "F2",
             "niente o< p >o !",
-            baca.select.lparts(baca.select.next(pleaves), [2, 3]),
+            baca.select.lparts(baca.select.rleak(pleaves), [2, 3]),
             "T =|",
-            [baca.select.next(pleaves)],
+            [baca.select.rleak(pleaves)],
         )
 
     @baca.call
@@ -1377,9 +1377,9 @@ def vc(m):
             pleaves,
             "F2",
             "niente o< p > pp < mf > p < f >o !",
-            baca.select.lparts(baca.select.next(pleaves), [2, 2, 3, 2, 2, 5]),
+            baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
-            baca.select.lparts(baca.select.next(pleaves), [7, 2, 2, 5]),
+            baca.select.lparts(baca.select.rleak(pleaves), [7, 2, 2, 5]),
             bookend=-1,
         )
 
@@ -1405,7 +1405,7 @@ def vc(m):
             pleaves,
             None,
             "niente o< mf > p < mp > pp <| ff",
-            baca.select.lparts(baca.select.next(pleaves), [1, 1, 1, 1, 3]),
+            baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
             "T -> P1 -> T -> P2 -> T -> P2",
             baca.select.lparts(pleaves, [1, 1, 1, 1, 3]),
             bookend=-1,

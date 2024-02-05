@@ -547,7 +547,7 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
         starts_ = starts.split()
         plts = baca.select.plts(pleaves)
         for plt, start_ in zip(plts, starts_, strict=True):
-            rplt = baca.select.next(plt)
+            rplt = baca.select.rleak(plt)
             baca.spanners.hairpin(
                 rplt,
                 f"{start_} >o !",
@@ -609,7 +609,7 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
     )
     if diminuendo is True:
         baca.spanners.hairpin(
-            baca.select.next(pleaves),
+            baca.select.rleak(pleaves),
             f"{peak} >o !",
         )
     else:
