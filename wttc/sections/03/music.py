@@ -432,7 +432,7 @@ def fl(m):
             baca.select.clparts(runs[3], [1]),
             "niente o< p >o",
         )
-        baca.dynamic(baca.select.rleak(runs[3]), "!")
+        baca.hairpin(baca.select.rleak(runs[3]), "!")
 
     @baca.call
     def block():
