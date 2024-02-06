@@ -994,10 +994,8 @@ number.4.AltoFlute.Music = {
     fs''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
       %! COVERED_SPANNER
       %! SPANNER_STOP
@@ -1153,10 +1151,8 @@ number.4.AltoFlute.Music = {
             gf'!16
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \f
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
@@ -1280,10 +1276,8 @@ number.4.AltoFlute.Music = {
             e'16
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \f
               %! COVERED_SPANNER
               %! SPANNER_STOP
@@ -1895,10 +1889,8 @@ number.4.Oboe.Music = {
             df'!16
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \f
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
@@ -1975,10 +1967,8 @@ number.4.Oboe.Music = {
             b16
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \f
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
@@ -3969,10 +3959,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4105,10 +4093,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4225,10 +4211,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4347,10 +4331,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4425,10 +4407,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mf
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -4485,10 +4465,8 @@ number.4.Violin.Music = {
         a'4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -4628,10 +4606,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -4752,10 +4728,8 @@ number.4.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5252,10 +5226,8 @@ number.4.Cello.Music = {
         b8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5333,10 +5305,8 @@ number.4.Cello.Music = {
         b16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5427,10 +5397,8 @@ number.4.Cello.Music = {
         b16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5524,10 +5492,8 @@ number.4.Cello.Music = {
         b8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5852,10 +5818,8 @@ number.4.Cello.Music = {
         b8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
@@ -5932,10 +5896,8 @@ number.4.Cello.Music = {
         b8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -5998,10 +5960,8 @@ number.4.Cello.Music = {
         b16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mf
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -6319,10 +6279,8 @@ number.4.Cello.Music = {
         b16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
