@@ -1792,10 +1792,8 @@ number.3.Guitar.1.Music = {
         b'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -1867,10 +1865,8 @@ number.3.Guitar.1.Music = {
         b'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
         \repeatTie
 
@@ -1948,10 +1944,8 @@ number.3.Guitar.1.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     \revert DynamicLineSpanner.staff-padding
 
@@ -2168,10 +2162,8 @@ number.3.Guitar.2.Music = {
         b'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
         \repeatTie
 
@@ -2252,10 +2244,8 @@ number.3.Guitar.2.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
 
     }
@@ -4870,10 +4860,8 @@ number.3.Cello.Music = {
     <ef,! af,!>16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ff
       %! SCP_SPANNER
       %! SPANNER_STOP

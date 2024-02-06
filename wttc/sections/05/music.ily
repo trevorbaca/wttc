@@ -4411,10 +4411,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
 
       %! EXPLICIT_STAFF_LINES_COLOR
@@ -4490,10 +4488,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     \repeatTie
 
@@ -4534,10 +4530,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
       %! EXPLICIT_STAFF_LINES_COLOR
@@ -4647,10 +4641,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
       %! STAFF_HIGHLIGHT
@@ -4682,10 +4674,8 @@ number.5.Guitar.1.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     \repeatTie
 
@@ -4720,10 +4710,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mp
     \repeatTie
 
@@ -4764,10 +4752,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
 
     % [Guitar.1.Music measure 41]
@@ -4805,10 +4791,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
 
     % [Guitar.1.Music measure 42]
@@ -4849,10 +4833,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
 
       %! STAFF_HIGHLIGHT
@@ -4887,10 +4869,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
     % [Guitar.1.Music measure 43]
@@ -4927,10 +4907,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
     \repeatTie
 
@@ -4966,10 +4944,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
     % [Guitar.1.Music measure 45]
@@ -5001,10 +4977,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     ]
 
@@ -5045,10 +5019,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mp
 
       %! STAFF_HIGHLIGHT
@@ -5091,10 +5063,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
 
       %! STAFF_HIGHLIGHT
@@ -5136,10 +5106,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pp
 
       %! STAFF_HIGHLIGHT
@@ -5175,10 +5143,8 @@ number.5.Guitar.1.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \repeatTie
 
@@ -5213,10 +5179,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \repeatTie
 
@@ -5254,10 +5218,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \repeatTie
 
@@ -5298,10 +5260,8 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \revert DynamicLineSpanner.staff-padding
 
@@ -5692,10 +5652,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
 
       %! EXPLICIT_STAFF_LINES_COLOR
@@ -5771,10 +5729,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     \repeatTie
 
@@ -5806,10 +5762,8 @@ number.5.Guitar.2.Music = {
     b'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
     \repeatTie
 
@@ -5920,10 +5874,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
       %! STAFF_HIGHLIGHT
@@ -5955,10 +5907,8 @@ number.5.Guitar.2.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     \repeatTie
 
@@ -5993,10 +5943,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mp
     \repeatTie
 
@@ -6037,10 +5985,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
 
     % [Guitar.2.Music measure 41]
@@ -6078,10 +6024,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
 
     % [Guitar.2.Music measure 42]
@@ -6122,10 +6066,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
 
       %! STAFF_HIGHLIGHT
@@ -6160,10 +6102,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
     % [Guitar.2.Music measure 43]
@@ -6200,10 +6140,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
     \repeatTie
 
@@ -6239,10 +6177,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
     % [Guitar.2.Music measure 45]
@@ -6274,10 +6210,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-mf
     ]
 
@@ -6318,10 +6252,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mp
 
       %! STAFF_HIGHLIGHT
@@ -6364,10 +6296,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
 
       %! STAFF_HIGHLIGHT
@@ -6409,10 +6339,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pp
 
       %! STAFF_HIGHLIGHT
@@ -6448,10 +6376,8 @@ number.5.Guitar.2.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \repeatTie
 
@@ -6486,10 +6412,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \repeatTie
 
@@ -6527,10 +6451,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \repeatTie
 
@@ -6571,10 +6493,8 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     \revert DynamicLineSpanner.staff-padding
 
@@ -10520,10 +10440,8 @@ number.5.Cello.Music = {
     g,16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     [
 
@@ -10644,10 +10562,8 @@ number.5.Cello.Music = {
     g,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     [
 
@@ -10821,10 +10737,8 @@ number.5.Cello.Music = {
     g,8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
     [
 

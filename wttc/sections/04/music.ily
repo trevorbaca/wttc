@@ -2129,10 +2129,8 @@ number.4.Guitar.1.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
         \revert TupletBracket.staff-padding
 
@@ -2235,10 +2233,8 @@ number.4.Guitar.1.Music = {
         b'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
         [
         \revert DynamicLineSpanner.staff-padding
@@ -2351,10 +2347,8 @@ number.4.Guitar.1.Music = {
         b'4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
         \repeatTie
         \revert DynamicLineSpanner.staff-padding
@@ -2464,10 +2458,8 @@ number.4.Guitar.1.Music = {
         b'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
         \repeatTie
         \revert DynamicLineSpanner.staff-padding
@@ -2645,10 +2637,8 @@ number.4.Guitar.1.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3043,10 +3033,8 @@ number.4.Guitar.2.Music = {
         r16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
 
     }
@@ -3150,10 +3138,8 @@ number.4.Guitar.2.Music = {
         r16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
 
     }
@@ -3243,10 +3229,8 @@ number.4.Guitar.2.Music = {
         r4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
 
     }
@@ -3330,10 +3314,8 @@ number.4.Guitar.2.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
 
         \once \override DynamicLineSpanner.staff-padding = 9
@@ -3383,10 +3365,8 @@ number.4.Guitar.2.Music = {
     r2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3439,10 +3419,8 @@ number.4.Guitar.2.Music = {
         r8.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
 
     }
@@ -3586,10 +3564,8 @@ number.4.Guitar.2.Music = {
         r16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
         \revert DynamicLineSpanner.staff-padding
 
@@ -3735,10 +3711,8 @@ number.4.Guitar.2.Music = {
         r8.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-mf
 
     }
@@ -4009,10 +3983,8 @@ number.4.Violin.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -4145,10 +4117,8 @@ number.4.Violin.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! SPANNER_STOP
       %! STRING_NUMBER_SPANNER
@@ -4261,10 +4231,8 @@ number.4.Violin.Music = {
         r4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -4778,10 +4746,8 @@ number.4.Violin.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -5282,10 +5248,8 @@ number.4.Cello.Music = {
         r4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -5364,10 +5328,8 @@ number.4.Cello.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -5457,10 +5419,8 @@ number.4.Cello.Music = {
         r8.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mf
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -5542,10 +5502,8 @@ number.4.Cello.Music = {
         r8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
@@ -6329,10 +6287,8 @@ number.4.Cello.Music = {
         r16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mf
           %! SPANNER_STOP
           %! STRING_NUMBER_SPANNER
