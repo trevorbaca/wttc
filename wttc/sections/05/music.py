@@ -886,7 +886,7 @@ def C2b(
     pleaves_2=None,
     pitch_3=None,
     scps=None,
-    bookend=-1,
+    bookend=True,
 ):
     baca.override.note_head_style_harmonic(pleaves)
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
@@ -906,7 +906,7 @@ def C2b(
             scps,
             # TODO: make this work:
             # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.lparts(baca.select.rleak(pleaves_2), [1, 2]),
             staff_padding=3,
         )
@@ -1380,7 +1380,7 @@ def vc(m):
             baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
             baca.select.lparts(baca.select.rleak(pleaves), [7, 2, 2, 5]),
-            bookend=-1,
+            bookend=True,
         )
 
     @baca.call
@@ -1393,7 +1393,7 @@ def vc(m):
             baca.select.lparts(pleaves, [2, 4]),
             "T -> P2 -> T -> P1 -> T",
             baca.select.lparts(pleaves, [2, 1, 1, 2]),
-            bookend=-1,
+            bookend=True,
         )
 
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['niente o< "f"'])
@@ -1408,7 +1408,7 @@ def vc(m):
             baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
             "T -> P1 -> T -> P2 -> T -> P2",
             baca.select.lparts(pleaves, [1, 1, 1, 1, 3]),
-            bookend=-1,
+            bookend=True,
         )
         baca.flat_glissando(pleaves[:-1], "F2", stop_pitch="E2")
         baca.pitch(pleaves[-1:], "E2")

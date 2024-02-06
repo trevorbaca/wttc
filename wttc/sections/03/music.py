@@ -861,21 +861,21 @@ def vc(cache):
         baca.piecewise.scp(
             (),
             "T4 => T1 => O => P2",
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.lparts(parts[1], [1, 1, 2]),
             staff_padding=3,
         )
         baca.piecewise.scp(
             (),
             "T4 => O => P2",
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.lparts(parts[2], [1, 2]),
             staff_padding=3,
         )
         baca.piecewise.scp(
             (),
             "O => P2",
-            bookend=-1,
+            bookend=True,
             pieces=[parts[3]],
             staff_padding=3,
         )
