@@ -417,7 +417,7 @@ def fl(m):
         )
         baca.piecewise.hairpin(
             baca.select.clparts(runs[1], [1]),
-            "niente o< p >o",
+            "o< p >o",
             bookend=False,
             forbid_al_niente_to_bar_line=True,
         )
@@ -430,7 +430,7 @@ def fl(m):
         )
         baca.piecewise.hairpin(
             baca.select.clparts(baca.select.rleak(runs[3]), [1, 2]),
-            "niente o< p >o !",
+            "o< p >o !",
         )
 
     @baca.call

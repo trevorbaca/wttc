@@ -3897,11 +3897,6 @@ number.4.Violin.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         a'8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -4029,11 +4024,6 @@ number.4.Violin.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         a'8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -4145,11 +4135,6 @@ number.4.Violin.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         a'8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -4660,11 +4645,6 @@ number.4.Violin.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         a'8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -4949,11 +4929,6 @@ number.4.Violin.Music = {
           %! SPANNER_START
         \pitchedTrill
         d''4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -5148,11 +5123,6 @@ number.4.Cello.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         b8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -5225,11 +5195,6 @@ number.4.Cello.Music = {
 
         \override DynamicLineSpanner.staff-padding = 6
         b16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -5315,11 +5280,6 @@ number.4.Cello.Music = {
 
         \override DynamicLineSpanner.staff-padding = 6
         b16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -5408,11 +5368,6 @@ number.4.Cello.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         b8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -6169,11 +6124,6 @@ number.4.Cello.Music = {
         \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         b16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -6629,11 +6579,6 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \pitchedTrill
         d'4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t

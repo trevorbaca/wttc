@@ -762,7 +762,7 @@ def B1b(
         if diminuendo is True:
             string = f"{dynamic} >o !"
         else:
-            string = f"niente o< {dynamic}"
+            string = f"o< {dynamic}"
         baca.spanners.hairpin(
             baca.select.rleak(run)[1:],
             string,
@@ -903,7 +903,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             # TODO: check this
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(plt), [1, 1]),
-                "niente o< mp >o",
+                "o< mp >o",
                 bookend=False,
             )
     lone_plts = plts[2:]

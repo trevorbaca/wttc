@@ -618,7 +618,7 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
         pieces[-1].append(next_leaf)
         baca.piecewise.hairpin(
             pieces,
-            f"niente o< {peak} >o !",
+            f"o< {peak} >o !",
         )
 
 

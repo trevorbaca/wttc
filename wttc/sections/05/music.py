@@ -827,7 +827,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     )
     baca.piecewise.hairpin(
         baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
-        f"niente o< {dynamic_string} >o !",
+        f"o< {dynamic_string} >o !",
     )
 
 
@@ -1113,6 +1113,7 @@ def D3a(pleaves, pitch, dynamics):
     parts = baca.select.clparts(pleaves, [1])
     parts[-1].append(baca.select.rleaf(pleaves, -1))
     hairpin_string = library.swells(dynamics)
+    # TODO: remove?
     hairpin_string = hairpin_string.removeprefix("niente ")
     baca.piecewise.hairpin(
         parts,
@@ -1203,8 +1204,8 @@ def fl(m):
     C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp |>o !")
     C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp |>o !")
     C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp |>o !")
-    C3a(m[12], "G4", "F#4", "mp |>o niente o<| mf", m[13][:3])
-    C3a(m[15], "G4", "F#4", "mp |>o niente o<| f", m[16][:3])
+    C3a(m[12], "G4", "F#4", "mp |>o ! o<| mf", m[13][:3])
+    C3a(m[15], "G4", "F#4", "mp |>o ! o<| f", m[16][:3])
     C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<| ff")
     C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp >o !")
     C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p >o !")
@@ -1293,7 +1294,7 @@ def vn(m):
         library.pleaves(m[12], 3),
         "A4",
         "F4",
-        "mp |>o niente o<| mf",
+        "mp |>o ! o<| mf",
         library.pleaves(m[13], 3),
         harmonic=True,
         string_number="III",
@@ -1308,26 +1309,26 @@ def vn(m):
         string_number="III",
         trill="m2",
     )
-    C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "niente o< mp", dummy_pitch="B5")
+    C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o< mp", dummy_pitch="B5")
     C3b(
         library.pleaves(m[21, 24], 3),
         "G#5",
         "A5",
-        "niente o< mp >o !",
+        "o< mp >o !",
         dummy_pitch="B5",
     )
     C3b(
         library.pleaves(m[25, 27], 3),
         "G#5",
         "A5",
-        "niente o< mp >o !",
+        "o< mp >o !",
         dummy_pitch="B5",
     )
     C3b(
         library.pleaves(m[30], 3),
         "G#5",
         "A5",
-        "niente o< p >o !",
+        "o< p >o !",
         dummy_pitch="B5",
     )
     C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
@@ -1364,7 +1365,7 @@ def vc(m):
         D1b(
             pleaves,
             "F2",
-            "niente o< p >o !",
+            "o< p >o !",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 3]),
             "T =|",
             [baca.select.rleak(pleaves)],
@@ -1376,7 +1377,7 @@ def vc(m):
         D1b(
             pleaves,
             "F2",
-            "niente o< p > pp < mf > p < f >o !",
+            "o< p > pp < mf > p < f >o !",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
             baca.select.lparts(baca.select.rleak(pleaves), [7, 2, 2, 5]),
@@ -1389,14 +1390,14 @@ def vc(m):
         D1b(
             pleaves,
             "F2",
-            "niente o< f >o !",
+            "o< f >o !",
             baca.select.lparts(pleaves, [2, 4]),
             "T -> P2 -> T -> P1 -> T",
             baca.select.lparts(pleaves, [2, 1, 1, 2]),
             bookend=True,
         )
 
-    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['niente o< "f"'])
+    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o< "f"'])
 
     @baca.call
     def block():
@@ -1404,7 +1405,7 @@ def vc(m):
         D1b(
             pleaves,
             None,
-            "niente o< mf > p < mp > pp <| ff",
+            "o< mf > p < mp > pp <| ff",
             baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
             "T -> P1 -> T -> P2 -> T -> P2",
             baca.select.lparts(pleaves, [1, 1, 1, 1, 3]),
