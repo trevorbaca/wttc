@@ -481,11 +481,6 @@ number.3.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
     b'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_INSTRUMENT_ALERT
@@ -532,13 +527,10 @@ number.3.AltoFlute.Music = {
     \>
 
     b'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -575,13 +567,10 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 2]
     b'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -619,10 +608,7 @@ number.3.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r1
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [AltoFlute.Music measure 3]
@@ -750,11 +736,6 @@ number.3.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
     a'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -792,13 +773,10 @@ number.3.AltoFlute.Music = {
     \>
 
     a'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -835,13 +813,10 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 6]
     a'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -877,13 +852,10 @@ number.3.AltoFlute.Music = {
     \>
 
     a'2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -921,10 +893,7 @@ number.3.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 7]
     a'4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2220,11 +2189,6 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
         d'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
           %! EXPLICIT_DYNAMIC
@@ -2270,10 +2234,7 @@ number.3.Violin.Music = {
     \repeat tremolo 2 {
 
         d'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -2311,20 +2272,12 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     d''8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -2387,10 +2340,7 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! DAMP_SPANNER
       %! SPANNER_STOP
@@ -2402,11 +2352,6 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
         d'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -2443,10 +2388,7 @@ number.3.Violin.Music = {
     \repeat tremolo 2 {
 
         d'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -2484,20 +2426,12 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     df''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -2596,10 +2530,7 @@ number.3.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     b'16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
 
@@ -2618,11 +2549,6 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -2659,10 +2585,7 @@ number.3.Violin.Music = {
     \repeat tremolo 2 {
 
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -2701,10 +2624,7 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     \override DynamicLineSpanner.staff-padding = 5.5
@@ -2917,11 +2837,6 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! DAMP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanDamp
@@ -2958,10 +2873,7 @@ number.3.Violin.Music = {
     \repeat tremolo 4 {
 
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -2997,10 +2909,7 @@ number.3.Violin.Music = {
 
         % [Violin.Music measure 6]
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -3035,10 +2944,7 @@ number.3.Violin.Music = {
     \repeat tremolo 4 {
 
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -3291,11 +3197,6 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
         e'16
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -3332,10 +3233,7 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r16

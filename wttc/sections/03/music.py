@@ -412,7 +412,7 @@ def fl(m):
         baca.pitch(runs[3], "E4")
         baca.piecewise.hairpin(
             baca.select.clparts(baca.select.rleak(runs[0]), [1]),
-            baca.dynamics.niente_swells("mf mf mp"),
+            library.swells("mf mf mp"),
             forbid_al_niente_to_bar_line=True,
         )
         baca.piecewise.hairpin(
@@ -423,7 +423,7 @@ def fl(m):
         baca.spanners.hairpin(baca.select.rleaf(runs[1], -1), "!")
         baca.piecewise.hairpin(
             baca.select.clparts(runs[2], [1]),
-            baca.dynamics.niente_swells("p mp mf mp p"),
+            library.swells("p mp mf mp p"),
             forbid_al_niente_to_bar_line=True,
         )
         baca.piecewise.hairpin(
@@ -611,19 +611,19 @@ def vn(m):
         baca.pitches(runs[4], "E4 G#4")
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.rleak(runs[0]), [1, 1, 1, 2]),
-            baca.dynamics.niente_swells("mp mp"),
+            library.swells("mp mp"),
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.rleak(runs[1]), [1, 1, 1, 2]),
-            baca.dynamics.niente_swells("p p"),
+            library.swells("p p"),
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.rleak(runs[2]), [1, 1, 1, 2]),
-            baca.dynamics.niente_swells("p p"),
+            library.swells("p p"),
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[3][:7], [1, 1, 1, 1, 1, 2]),
-            baca.dynamics.niente_swells("pp p mp"),
+            library.swells("pp p mp"),
             forbid_al_niente_to_bar_line=True,
         )
         baca.piecewise.hairpin(
@@ -632,7 +632,7 @@ def vn(m):
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.rleak(runs[4]), [1, 2]),
-            baca.dynamics.niente_swells("pp"),
+            library.swells("pp"),
         )
 
     @baca.call
@@ -695,11 +695,11 @@ def vn(m):
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.rleak(runs[0]), [1, 3]),
-            baca.dynamics.niente_swells("mp"),
+            library.swells("mp"),
         )
         baca.piecewise.hairpin(
             baca.select.lparts(baca.select.rleak(runs[1]), [5, 3]),
-            baca.dynamics.niente_swells("mf"),
+            library.swells("mf"),
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[2], [7, 3, 5]),
