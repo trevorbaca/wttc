@@ -860,8 +860,8 @@ def swells(peaks):
     peaks = peaks.split()
     result = []
     for peak in peaks:
-        result.append(f"niente o< {peak} >o")
-    string = " ".join(result) + " !"
+        result.append(f"o< {peak} >o !")
+    string = " ".join(result)
     return string
 
 

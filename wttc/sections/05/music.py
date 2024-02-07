@@ -1112,12 +1112,9 @@ def D3a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     parts = baca.select.clparts(pleaves, [1])
     parts[-1].append(baca.select.rleaf(pleaves, -1))
-    hairpin_string = library.swells(dynamics)
-    # TODO: remove?
-    hairpin_string = hairpin_string.removeprefix("niente ")
     baca.piecewise.hairpin(
         parts,
-        hairpin_string,
+        library.swells(dynamics),
         forbid_al_niente_to_bar_line=True,
     )
 

@@ -1271,11 +1271,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1339,11 +1334,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1403,11 +1393,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1473,11 +1458,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1532,11 +1512,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1595,11 +1570,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1657,11 +1627,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1720,11 +1685,6 @@ number.10.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1897,11 +1857,6 @@ number.10.Oboe.Music = {
       %! SPANNER_START
     \pitchedTrill
     d'''1 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -1957,11 +1912,6 @@ number.10.Oboe.Music = {
       %! SPANNER_START
     \pitchedTrill
     d'''4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -2019,11 +1969,6 @@ number.10.Oboe.Music = {
       %! SPANNER_START
     \pitchedTrill
     d'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2094,11 +2039,6 @@ number.10.Oboe.Music = {
       %! SPANNER_START
     \pitchedTrill
     d'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3663,11 +3603,6 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         gs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
@@ -3783,11 +3718,6 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         gs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! SPANNER_START
           %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
@@ -4387,11 +4317,6 @@ number.10.Violin.Music = {
       %! SPANNER_START
     \pitchedTrill
     ds''!2 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
@@ -4511,11 +4436,6 @@ number.10.Violin.Music = {
       %! SPANNER_START
     \pitchedTrill
     ds''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4642,11 +4562,6 @@ number.10.Violin.Music = {
       %! SPANNER_START
     \pitchedTrill
     ds''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5062,11 +4977,6 @@ number.10.Violin.Music = {
         \tweak style #'harmonic
         es''!
     >4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! HALF_CLT_SPANNER
@@ -5148,11 +5058,6 @@ number.10.Violin.Music = {
         \tweak style #'harmonic
         es''!
     >4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! HALF_CLT_SPANNER
@@ -5234,11 +5139,6 @@ number.10.Violin.Music = {
         \tweak style #'harmonic
         es''!
     >4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! HALF_CLT_SPANNER
@@ -6343,11 +6243,6 @@ number.10.Cello.Music = {
         \tweak style #'harmonic
         es'!
     >4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
@@ -6514,11 +6409,6 @@ number.10.Cello.Music = {
         \tweak style #'harmonic
         es'!
     >4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
@@ -6630,11 +6520,6 @@ number.10.Cello.Music = {
         \tweak style #'harmonic
         es'!
     >4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP

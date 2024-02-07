@@ -5429,11 +5429,6 @@ number.4.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     e8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \baca-dashed-line-with-hook
@@ -5519,10 +5514,7 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     d8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
       %! EXPLICIT_DYNAMIC
@@ -5579,10 +5571,7 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     c8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
       %! EXPLICIT_DYNAMIC
@@ -5878,11 +5867,6 @@ number.4.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     d8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \baca-dashed-line-with-hook
@@ -5968,10 +5952,7 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     c8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
       %! EXPLICIT_DYNAMIC
@@ -6028,10 +6009,7 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     b,8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
       %! EXPLICIT_DYNAMIC
@@ -6188,11 +6166,6 @@ number.4.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
       %! STRING_NUMBER_SPANNER
     - \baca-dashed-line-with-hook
@@ -6278,10 +6251,7 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     b,8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
       %! EXPLICIT_DYNAMIC
@@ -6338,10 +6308,7 @@ number.4.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     a,8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     ]
       %! EXPLICIT_DYNAMIC
