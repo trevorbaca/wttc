@@ -743,10 +743,7 @@ number.3.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r1
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [AltoFlute.Music measure 5]
