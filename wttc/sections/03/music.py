@@ -703,7 +703,7 @@ def vn(m):
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[2], [7, 3, 5]),
-            'niente o< "f" -- ! >o !',
+            'o< "f" -- ! >o !',
         )
         baca.spanners.hairpin(
             runs[3],

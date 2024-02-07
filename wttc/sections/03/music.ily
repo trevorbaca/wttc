@@ -2711,11 +2711,6 @@ number.3.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     b'16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! DAMP_SPANNER
       %! SPANNER_START
