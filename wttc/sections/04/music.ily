@@ -4836,11 +4836,6 @@ number.4.Violin.Music = {
           %! SPANNER_START
         \pitchedTrill
         d''4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -4987,6 +4982,8 @@ number.4.Violin.Music = {
         \f
         - \tweak padding 0.5
         - \baca-staccati #3
+          %! SPANNER_STOP
+        \!
           %! SPANNER_STOP
         \stopTrillSpan
           %! SPANNER_START
@@ -6486,11 +6483,6 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \pitchedTrill
         d'4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -6635,6 +6627,8 @@ number.4.Cello.Music = {
         \f
         - \tweak padding 0.5
         - \baca-staccati #3
+          %! SPANNER_STOP
+        \!
           %! SPANNER_STOP
         \stopTrillSpan
           %! SPANNER_START

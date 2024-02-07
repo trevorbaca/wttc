@@ -893,19 +893,10 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
-        leaf = baca.select.rleaf(plt, -1)
-        if isinstance(leaf, abjad.Rest):
-            baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(plt), [1, 2]),
-                library.swells("mp"),
-            )
-        else:
-            # TODO: check this
-            baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(plt), [1, 1]),
-                "o< mp >o",
-                bookend=False,
-            )
+        baca.piecewise.hairpin(
+            baca.select.lparts(baca.select.rleak(plt), [1, 2]),
+            "o< mp >o !",
+        )
     lone_plts = plts[2:]
     for i, plt in enumerate(lone_plts):
         assert len(plt) == 1
