@@ -433,7 +433,8 @@ def frame(written_n, framed_n):
     right_multiplier = (written_n - actual_n, written_n)
     right = baca.rhythm.m(written_n, right_multiplier)
     right_ = baca.rhythm.h(right)
-    return X([left, right_])
+    framed_right = baca.rhythm.FramedNote(right_)
+    return X([left, framed_right])
 
 
 def get_measures(voice, measure_numbers, *, first=1):
