@@ -24,7 +24,6 @@ BG = library.BG
 M = library.M
 OBGC = library.OBGC
 X = library.X
-anchor = library.anchor
 anchor_md = library.anchor_md
 beat = library.beat
 swell = library.swell

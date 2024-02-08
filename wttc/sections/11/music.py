@@ -19,7 +19,6 @@ w = baca.rhythm.w
 BG = library.BG
 OBGC = library.OBGC
 X = library.X
-anchor = library.anchor
 beat = library.beat
 swell = library.swell
 

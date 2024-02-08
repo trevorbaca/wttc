@@ -23,7 +23,6 @@ BG = library.BG
 M = library.M
 OBGC = library.OBGC
 X = library.X
-anchor = library.anchor
 beat = library.beat
 swell = library.swell
 

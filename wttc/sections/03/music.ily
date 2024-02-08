@@ -4450,12 +4450,14 @@ number.3.Cello.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <gf,! cf!>16
+    <gf,! cf!>4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
@@ -4535,12 +4537,14 @@ number.3.Cello.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <f, bf,!>16
+    <f, bf,!>4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
@@ -4590,12 +4594,14 @@ number.3.Cello.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <ef,! af,!>16
+    <ef,! af,!>4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP

@@ -1942,7 +1942,9 @@ number.17.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    a1 * 1/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"16"
 
       %! ANCHOR_NOTE
     % [Cello.Music anchor note]

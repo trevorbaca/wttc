@@ -1951,7 +1951,9 @@ number.26.AltoFlute.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    b'4 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [AltoFlute.Music measure 17]
       %! NOT_YET_PITCHED_COLORING
