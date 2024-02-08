@@ -22,7 +22,7 @@ BG = library.BG
 M = library.M
 OBGC = library.OBGC
 X = library.X
-anchor_md = library.anchor_md
+anchor = library.anchor
 beat = library.beat
 swell = library.swell
 
@@ -175,7 +175,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(6),
-        [1, X(t(3)), X(t(8)), anchor_md(16, 1)],
+        [1, X(t(3)), X(t(8)), anchor(16, 1)],
         material=3,
     )
     baca.section.append_anchor_note(voice)

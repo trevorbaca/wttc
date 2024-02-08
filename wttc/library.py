@@ -251,7 +251,7 @@ def _reference_meters():
     )
 
 
-def anchor_md(written_n, anchor_n):
+def anchor(written_n, anchor_n):
     assert anchor_n < written_n, repr((written_n, anchor_n))
     actual_n = written_n - anchor_n
     left_multiplier = (actual_n, written_n)
