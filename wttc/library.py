@@ -258,7 +258,7 @@ def anchor(written_n, anchor_n):
     return X([first, second])
 
 
-def anchor_md_new(written_n, anchor_n):
+def anchor_md(written_n, anchor_n):
     assert anchor_n < written_n, repr((written_n, anchor_n))
     actual_n = written_n - anchor_n
     left_multiplier = (actual_n, written_n)

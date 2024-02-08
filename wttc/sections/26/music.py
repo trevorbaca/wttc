@@ -23,7 +23,7 @@ M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
-anchor_md_new = library.anchor_md_new
+anchor_md = library.anchor_md
 beat = library.beat
 swell = library.swell
 
@@ -152,7 +152,7 @@ def FL(voice, meters):
         meters(13, 14),
         # [12, 4, 8, 2, 6 - 1, 9],
         # [12, 4, 8, 2, t(2), anchor(3, 1), 9],
-        [12, 4, 8, 2, t(2), anchor_md_new(3, 1), 9],
+        [12, 4, 8, 2, t(2), anchor_md(3, 1), 9],
         material=4,
     )
     rhythm(
