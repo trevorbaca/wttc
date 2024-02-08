@@ -258,14 +258,15 @@ def anchor(written_n, anchor_n):
     return X([first, second])
 
 
-def anchor_md(written_n, actual_n):
-    assert actual_n < written_n, repr((written_n, actual_n))
-    first_multiplier = (actual_n, written_n)
-    first = baca.rhythm.m(written_n, first_multiplier)
-    second_multiplier = (written_n - actual_n, written_n)
-    second = baca.rhythm.m(written_n, second_multiplier)
-    second_ = baca.rhythm.h(second)
-    return X([first, second_])
+def anchor_md_new(written_n, anchor_n):
+    assert anchor_n < written_n, repr((written_n, anchor_n))
+    actual_n = written_n - anchor_n
+    left_multiplier = (actual_n, written_n)
+    left = baca.rhythm.m(written_n, left_multiplier)
+    right_multiplier = (written_n - actual_n, written_n)
+    right = baca.rhythm.m(written_n, right_multiplier)
+    right_ = baca.rhythm.h(right)
+    return X([left, right_])
 
 
 def annotate(items, n):

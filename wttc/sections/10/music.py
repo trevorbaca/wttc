@@ -25,7 +25,7 @@ M = library.M
 OBGC = library.OBGC
 X = library.X
 anchor = library.anchor
-anchor_md = library.anchor_md
+anchor_md_new = library.anchor_md_new
 beat = library.beat
 swell = library.swell
 
@@ -103,11 +103,11 @@ def FL(voice, meters):
         counts = e4()
         counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
         assert counts == [-1, 6, -11, 2, -7, 12, -3, 8, -13, 4, -9, 14, -5, 10]
-        counts = [-1, 6, -11, 2, -7, t(1), anchor_md(8, 5), rt(3), -3]
-        counts += [t(2), anchor_md(4, 2), rt(2), -13]
-        counts += [t(1), anchor_md(3, 1), -9]
-        counts += [t(4), anchor_md(8, 3), X(2), -5]
-        counts += [t(1), anchor_md(8, 4), rt(1)]
+        counts = [-1, 6, -11, 2, -7, t(1), anchor_md_new(8, 3), rt(3), -3]
+        counts += [t(2), anchor_md_new(4, 2), rt(2), -13]
+        counts += [t(1), anchor_md_new(3, 2), -9]
+        counts += [t(4), anchor_md_new(8, 5), X(2), -5]
+        counts += [t(1), anchor_md_new(8, 4), rt(1)]
         rhythm(
             meters(11, 16),
             counts + ["-"],
@@ -116,8 +116,8 @@ def FL(voice, meters):
 
     @baca.call
     def block():
-        counts = [t(4), anchor_md(8, 3), X(2), -5]
-        counts += [t(1), anchor_md(8, 4), rt(1), -7]
+        counts = [t(4), anchor_md_new(8, 5), X(2), -5]
+        counts += [t(1), anchor_md_new(8, 4), rt(1), -7]
         rhythm(
             meters(16, 18),
             counts,
@@ -143,12 +143,12 @@ def OB(voice, meters):
     )
     rhythm(
         meters(12, 13),
-        [-15, t(1), anchor_md(8, 4), rt(1), "-"],
+        [-15, t(1), anchor_md_new(8, 4), rt(1), "-"],
         material=2,
     )
     rhythm(
         meters(14, 19),
-        [-15, t(1), anchor_md(8, 4), rt(1)] + 4 * [X(15), rt(1)] + ["-"],
+        [-15, t(1), anchor_md_new(8, 4), rt(1)] + 4 * [X(15), rt(1)] + ["-"],
         material=2,
     )
     rhythm.mmrests(20, 22)
@@ -342,7 +342,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(12),
-        [t(1), anchor_md(8, 3)],
+        [t(1), anchor_md_new(8, 5)],
         material=2,
         overlap=["-"],
     )
@@ -360,12 +360,12 @@ def VN(voice, meters):
     rhythm(
         meters(14),
         [
-            anchor_md(7, 2),
+            anchor_md_new(7, 5),
             -1,
             -4,
             -3,
             M(t(1), 2),
-            M(anchor_md(8, 4), 2),
+            M(anchor_md_new(8, 4), 2),
         ],
         material=4,
     )
