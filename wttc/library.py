@@ -251,17 +251,6 @@ def _reference_meters():
     )
 
 
-def anchor(written_n, anchor_n):
-    assert anchor_n < written_n, repr((written_n, anchor_n))
-    actual_n = written_n - anchor_n
-    left_multiplier = (actual_n, written_n)
-    left = baca.rhythm.m(written_n, left_multiplier)
-    right_multiplier = (written_n - actual_n, written_n)
-    right = baca.rhythm.m(written_n, right_multiplier)
-    right_ = baca.rhythm.h(right)
-    return X([left, right_])
-
-
 def annotate(items, n):
     assert n in (1, 2, 3, 4, 5, 99), repr(n)
     for item in items:
@@ -434,6 +423,17 @@ def filter_material(items, n):
 def force_repeat_tie(components, threshold=(1, 8)):
     tag = baca.helpers.function_name(inspect.currentframe())
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
+
+
+def frame(written_n, framed_n):
+    assert framed_n < written_n, repr((written_n, framed_n))
+    actual_n = written_n - framed_n
+    left_multiplier = (actual_n, written_n)
+    left = baca.rhythm.m(written_n, left_multiplier)
+    right_multiplier = (written_n - actual_n, written_n)
+    right = baca.rhythm.m(written_n, right_multiplier)
+    right_ = baca.rhythm.h(right)
+    return X([left, right_])
 
 
 def get_measures(voice, measure_numbers, *, first=1):

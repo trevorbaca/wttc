@@ -24,7 +24,7 @@ BG = library.BG
 M = library.M
 OBGC = library.OBGC
 X = library.X
-anchor = library.anchor
+frame = library.frame
 beat = library.beat
 swell = library.swell
 
@@ -102,11 +102,11 @@ def FL(voice, meters):
         counts = e4()
         counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
         assert counts == [-1, 6, -11, 2, -7, 12, -3, 8, -13, 4, -9, 14, -5, 10]
-        counts = [-1, 6, -11, 2, -7, t(1), anchor(8, 3), rt(3), -3]
-        counts += [t(2), anchor(4, 2), rt(2), -13]
-        counts += [t(1), anchor(3, 2), -9]
-        counts += [t(4), anchor(8, 5), X(2), -5]
-        counts += [t(1), anchor(8, 4), rt(1)]
+        counts = [-1, 6, -11, 2, -7, t(1), frame(8, 3), rt(3), -3]
+        counts += [t(2), frame(4, 2), rt(2), -13]
+        counts += [t(1), frame(3, 2), -9]
+        counts += [t(4), frame(8, 5), X(2), -5]
+        counts += [t(1), frame(8, 4), rt(1)]
         rhythm(
             meters(11, 16),
             counts + ["-"],
@@ -115,8 +115,8 @@ def FL(voice, meters):
 
     @baca.call
     def block():
-        counts = [t(4), anchor(8, 5), X(2), -5]
-        counts += [t(1), anchor(8, 4), rt(1), -7]
+        counts = [t(4), frame(8, 5), X(2), -5]
+        counts += [t(1), frame(8, 4), rt(1), -7]
         rhythm(
             meters(16, 18),
             counts,
@@ -142,12 +142,12 @@ def OB(voice, meters):
     )
     rhythm(
         meters(12, 13),
-        [-15, t(1), anchor(8, 4), rt(1), "-"],
+        [-15, t(1), frame(8, 4), rt(1), "-"],
         material=2,
     )
     rhythm(
         meters(14, 19),
-        [-15, t(1), anchor(8, 4), rt(1)] + 4 * [X(15), rt(1)] + ["-"],
+        [-15, t(1), frame(8, 4), rt(1)] + 4 * [X(15), rt(1)] + ["-"],
         material=2,
     )
     rhythm.mmrests(20, 22)
@@ -341,7 +341,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(12),
-        [t(1), anchor(8, 5)],
+        [t(1), frame(8, 5)],
         material=2,
         overlap=["-"],
     )
@@ -359,12 +359,12 @@ def VN(voice, meters):
     rhythm(
         meters(14),
         [
-            anchor(7, 5),
+            frame(7, 5),
             -1,
             -4,
             -3,
             M(t(1), 2),
-            M(anchor(8, 4), 2),
+            M(frame(8, 4), 2),
         ],
         material=4,
     )

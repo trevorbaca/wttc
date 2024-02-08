@@ -24,7 +24,7 @@ BG = library.BG
 M = library.M
 OBGC = library.OBGC
 X = library.X
-anchor = library.anchor
+frame = library.frame
 beat = library.beat
 swell = library.swell
 
@@ -295,7 +295,7 @@ def GT1(voice, meters):
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, anchor(8, 1), "-"],
+        [-12, frame(8, 1), "-"],
         material=2,
     )
     rhythm(
@@ -329,28 +329,28 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(41),
-        ["-", anchor(7, 1)],
+        ["-", frame(7, 1)],
         material=2,
     )
     rhythm(
         meters(42),
-        [-12, -3, X(t(1)), anchor(4, 1), -1, anchor(3, 1)],
+        [-12, -3, X(t(1)), frame(4, 1), -1, frame(3, 1)],
         material=2,
     )
     rhythm(
         meters(43, 44),
-        ["-", -1, 3, -1, anchor(2, 1)],
+        ["-", -1, 3, -1, frame(2, 1)],
         material=2,
     )
     rhythm(
         meters(45, 46),
-        [-1, 2, -3, -1, t(1), anchor(2, 1), -3, -1, t(2)]
-        + [anchor(2, 1), -3, -1, t(2), anchor(3, 1), "-"],
+        [-1, 2, -3, -1, t(1), frame(2, 1), -3, -1, t(2)]
+        + [frame(2, 1), -3, -1, t(2), frame(3, 1), "-"],
         material=2,
     )
     rhythm(
         meters(47, 48),
-        [-1, 5, -1, 6, -1, 7, -1, t(2), anchor(8, 1)],
+        [-1, 5, -1, 6, -1, 7, -1, t(2), frame(8, 1)],
         material=2,
     )
     baca.section.append_anchor_note(voice)
@@ -385,7 +385,7 @@ def GT2(voice, meters):
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, anchor(8, 1), "-"],
+        [-12, frame(8, 1), "-"],
         material=2,
     )
     rhythm(
@@ -419,28 +419,28 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(41),
-        ["-", anchor(7, 1)],
+        ["-", frame(7, 1)],
         material=2,
     )
     rhythm(
         meters(42),
-        [-12, -3, X(t(1)), anchor(4, 1), -1, anchor(3, 1)],
+        [-12, -3, X(t(1)), frame(4, 1), -1, frame(3, 1)],
         material=2,
     )
     rhythm(
         meters(43, 44),
-        ["-", -1, 3, -1, anchor(2, 1)],
+        ["-", -1, 3, -1, frame(2, 1)],
         material=2,
     )
     rhythm(
         meters(45, 46),
-        [-1, 2, -3, -1, t(1), anchor(2, 1), -3, -1, t(2)]
-        + [anchor(2, 1), -3, -1, t(2), anchor(3, 1), "-"],
+        [-1, 2, -3, -1, t(1), frame(2, 1), -3, -1, t(2)]
+        + [frame(2, 1), -3, -1, t(2), frame(3, 1), "-"],
         material=2,
     )
     rhythm(
         meters(47, 48),
-        [-1, 5, -1, 6, -1, 7, -1, t(2), anchor(8, 1)],
+        [-1, 5, -1, 6, -1, 7, -1, t(2), frame(8, 1)],
         material=2,
     )
     baca.section.append_anchor_note(voice)
