@@ -14,7 +14,7 @@ number.5.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "05"
     s1 * 3/4
-    \tweak padding 1.5
+    - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -822,7 +822,7 @@ number.5.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
-    \tweak padding 1.5
+    - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "D" #6
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT

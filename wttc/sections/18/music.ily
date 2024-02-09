@@ -14,7 +14,7 @@ number.18.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "18"
     s1 * 6/4
-    \tweak padding 1.5
+    - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "J" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
