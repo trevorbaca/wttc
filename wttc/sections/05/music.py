@@ -1144,9 +1144,8 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
     for plt in plts:
         if not no_spanner:
             baca.piecewise.circle_bow(
-                (),
+                baca.select.rleak(plt),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-                pieces=[baca.select.rleak(plt)],
                 staff_padding=3,
             )
         else:
