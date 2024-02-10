@@ -3530,35 +3530,25 @@ number.10.Violin.Music = {
         \p
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8.0
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
           %! REAPPLIED_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -3572,7 +3562,6 @@ number.10.Violin.Music = {
         %@% \stopStaffHighlight
         r4
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -3595,26 +3584,20 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \f
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -3636,19 +3619,14 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
         \override NoteHead.style = #'harmonic
@@ -3657,40 +3635,28 @@ number.10.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         gs'!8
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -3751,11 +3717,9 @@ number.10.Violin.Music = {
         r4
           %! SPANNER_STOP
         \!
-          %! BOW_SPEED_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanBowSpeed
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -3773,33 +3737,23 @@ number.10.Violin.Music = {
         %@% \staffHighlight lightskyblue
         gs'!8
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -3853,25 +3807,18 @@ number.10.Violin.Music = {
         \revert NoteHead.style
 
         c''4
-          %! BOW_SPEED_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanBowSpeed
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
-          %! DAMP_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! DAMP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-damp-markup
-          %! DAMP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-          %! DAMP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
-          %! DAMP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanDamp
         \glissando
@@ -3899,7 +3846,6 @@ number.10.Violin.Music = {
         r4
           %! SPANNER_STOP
         \!
-          %! DAMP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanDamp
 
@@ -3919,42 +3865,31 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8.0
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -3979,19 +3914,14 @@ number.10.Violin.Music = {
           %! REDUNDANT_DYNAMIC
         \ff
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -4000,7 +3930,6 @@ number.10.Violin.Music = {
     %@% \stopStaffHighlight
     r2
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4019,19 +3948,14 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -4040,7 +3964,6 @@ number.10.Violin.Music = {
     %@% \stopStaffHighlight
     r2
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4056,26 +3979,20 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \f
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -4098,29 +4015,22 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \p
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
         \revert DynamicLineSpanner.staff-padding
 
@@ -4137,19 +4047,14 @@ number.10.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
@@ -4186,7 +4091,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
@@ -4199,19 +4103,14 @@ number.10.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
@@ -4248,7 +4147,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
@@ -4262,19 +4160,14 @@ number.10.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
@@ -4311,7 +4204,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
@@ -4918,35 +4810,25 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8.0
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -4955,7 +4837,6 @@ number.10.Violin.Music = {
     %@% \stopStaffHighlight
     r2
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4971,26 +4852,20 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \f
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -5013,29 +4888,22 @@ number.10.Violin.Music = {
           %! EXPLICIT_DYNAMIC
         \p
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 5.5
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -5051,19 +4919,14 @@ number.10.Violin.Music = {
     >4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
       %! EXPLICIT_DYNAMIC
@@ -5115,7 +4978,6 @@ number.10.Violin.Music = {
     r1
       %! SPANNER_STOP
     \!
-      %! HALF_CLT_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
       %! SPANNER_STOP
@@ -5132,19 +4994,14 @@ number.10.Violin.Music = {
     >4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
       %! EXPLICIT_DYNAMIC
@@ -5196,7 +5053,6 @@ number.10.Violin.Music = {
     r2
       %! SPANNER_STOP
     \!
-      %! HALF_CLT_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
       %! SPANNER_STOP
@@ -5213,19 +5069,14 @@ number.10.Violin.Music = {
     >4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
       %! EXPLICIT_DYNAMIC
@@ -5311,7 +5162,6 @@ number.10.Violin.Music = {
       %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
-      %! HALF_CLT_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
       %! ANCHOR_NOTE
@@ -5369,35 +5219,25 @@ number.10.Cello.Music = {
         \f
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -5411,7 +5251,6 @@ number.10.Cello.Music = {
         %@% \stopStaffHighlight
         r4
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -5433,19 +5272,14 @@ number.10.Cello.Music = {
           %! EXPLICIT_DYNAMIC
         \mp
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "I"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text I
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -5454,7 +5288,6 @@ number.10.Cello.Music = {
     %@% \stopStaffHighlight
     r4
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
 
     % [Cello.Music measure 2]
@@ -5473,29 +5306,22 @@ number.10.Cello.Music = {
           %! EXPLICIT_DYNAMIC
         \ff
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -5639,35 +5465,25 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -5675,11 +5491,9 @@ number.10.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     \revert DynamicLineSpanner.staff-padding
 
@@ -5906,45 +5720,33 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "I"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text I
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -5996,42 +5798,31 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -6054,19 +5845,14 @@ number.10.Cello.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "I"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text I
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -6074,11 +5860,9 @@ number.10.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
     \revert DynamicLineSpanner.staff-padding
 
@@ -6145,45 +5929,33 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "II"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text II
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -6235,45 +6007,33 @@ number.10.Cello.Music = {
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
         \mp
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "III"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text III
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! PIZZICATO_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
           %! SPANNER_STOP
-          %! STRING_NUMBER_SPANNER
         \bacaStopTextSpanStringNumber
 
     }
@@ -6319,19 +6079,14 @@ number.10.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
     \stopTrillSpan
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
       %! EXPLICIT_DYNAMIC
@@ -6387,7 +6142,6 @@ number.10.Cello.Music = {
         r4
           %! SPANNER_STOP
         \!
-          %! HALF_CLT_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanHalfCLT
           %! SPANNER_STOP
@@ -6401,35 +6155,25 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 6.5
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-invisible-line
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \baca-text-spanner-left-text "IV"
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak bound-details.left-broken.text IV
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         - \tweak staff-padding 4
           %! SPANNER_START
-          %! STRING_NUMBER_SPANNER
         \bacaStartTextSpanStringNumber
 
     }
@@ -6437,11 +6181,9 @@ number.10.Cello.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
-      %! STRING_NUMBER_SPANNER
     \bacaStopTextSpanStringNumber
 
     r8.
@@ -6485,19 +6227,14 @@ number.10.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
     \stopTrillSpan
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
       %! EXPLICIT_DYNAMIC
@@ -6549,7 +6286,6 @@ number.10.Cello.Music = {
     r4
       %! SPANNER_STOP
     \!
-      %! HALF_CLT_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
       %! SPANNER_STOP
@@ -6596,19 +6332,14 @@ number.10.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
     \stopTrillSpan
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
       %! EXPLICIT_DYNAMIC
@@ -6694,7 +6425,6 @@ number.10.Cello.Music = {
       %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
-      %! HALF_CLT_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
       %! ANCHOR_NOTE
