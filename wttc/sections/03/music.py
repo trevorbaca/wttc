@@ -795,7 +795,7 @@ def vc(cache):
                     staff_padding=staff_padding,
                 )
             else:
-                baca.piecewise.circle_bow(
+                baca.mspanners.circle_bow(
                     baca.select.rleak(plt),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
                     staff_padding=staff_padding,
