@@ -892,7 +892,7 @@ def C2b(
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
     baca.rspanners.pizzicato(
         pleaves,
-        items=r"\baca-pizz-markup ||",
+        descriptor=r"\baca-pizz-markup ||",
         staff_padding=3,
     )
     # TODO: make this work:
@@ -1015,7 +1015,7 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
         for pleaf in pleaves:
             baca.rspanners.pizzicato(
                 pleaf,
-                items=r"\baca-pizz-markup ||",
+                descriptor=r"\baca-pizz-markup ||",
                 staff_padding=pizz_staff_padding,
             )
 

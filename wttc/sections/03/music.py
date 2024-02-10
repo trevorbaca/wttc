@@ -473,7 +473,7 @@ def fl(m):
             baca.pitch(run, "G#")
             baca.rspanners.covered(
                 run,
-                items=strings.cov_dashed_hook,
+                descriptor=strings.cov_dashed_hook,
                 staff_padding=3,
             )
             baca.dynamic(run[0], "mp")

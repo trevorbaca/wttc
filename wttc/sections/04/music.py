@@ -787,7 +787,7 @@ def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
         if conjoin is False:
             baca.rspanners.pizzicato(
                 [note],
-                items=r"\baca-pizz-markup ||",
+                descriptor=r"\baca-pizz-markup ||",
                 staff_padding=3,
             )
             if dls_staff_padding:
@@ -941,12 +941,12 @@ def fl(m):
         )
         baca.rspanners.covered(
             plts[2:4],
-            items=strings.cov_dashed_hook,
+            descriptor=strings.cov_dashed_hook,
             staff_padding=3,
         )
         baca.rspanners.covered(
             plts[4],
-            items=strings.cov_dashed_hook,
+            descriptor=strings.cov_dashed_hook,
             staff_padding=3,
         )
         baca.rspanners.covered(
