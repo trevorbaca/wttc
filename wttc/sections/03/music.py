@@ -850,42 +850,36 @@ def vc(cache):
         assert len(runs) == 3
         parts = baca.select.lparts(runs[0], [2, 4, 3, 2])
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(parts[0]),
             "T4 =|",
-            pieces=baca.select.rleak(parts[0]),
             staff_padding=3,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.lparts(parts[1], [1, 1, 2]),
             "T4 => T1 => O => P2",
             bookend=True,
-            pieces=baca.select.lparts(parts[1], [1, 1, 2]),
             staff_padding=3,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.lparts(parts[2], [1, 2]),
             "T4 => O => P2",
             bookend=True,
-            pieces=baca.select.lparts(parts[2], [1, 2]),
             staff_padding=3,
         )
         baca.mspanners.scp(
-            (),
+            [parts[3]],
             "O => P2",
             bookend=True,
-            pieces=[parts[3]],
             staff_padding=3,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(runs[1]),
             "T =|",
-            pieces=baca.select.rleak(runs[1]),
             staff_padding=3,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(runs[2]),
             "T =|",
-            pieces=baca.select.rleak(runs[2]),
             staff_padding=3,
         )
         baca.spanners.hairpin(
