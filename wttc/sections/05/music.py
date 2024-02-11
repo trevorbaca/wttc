@@ -1183,8 +1183,8 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
         baca.mspanners.scp(
             (),
             "T =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-            pieces=[baca.select.rleak(run)],
+            bound_details_right_padding=1.5,
+            pieces=baca.select.rleak(run),
             staff_padding=6.5,
         )
         if hairpin:
@@ -1364,7 +1364,7 @@ def vc(m):
             "o< p >o !",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 3]),
             "T =|",
-            [baca.select.rleak(pleaves)],
+            baca.select.rleak(pleaves),
         )
 
     @baca.call
