@@ -901,7 +901,7 @@ def C2b(
         assert pitch_3
         baca.override.note_head_style_harmonic(pleaves_2)
         baca.pitch(pleaves_2, pitch_3)
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             scps,
             # TODO: make this work:
@@ -1043,7 +1043,7 @@ def D1b(
         hairpin_pieces,
         hairpin_string,
     )
-    baca.piecewise.scp(
+    baca.mspanners.scp(
         (),
         scp_string,
         bookend=bookend,
@@ -1180,7 +1180,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
             staff_padding=3,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),

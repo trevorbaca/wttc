@@ -849,40 +849,40 @@ def vc(cache):
         runs = library.runs(m[7, 13], 3)
         assert len(runs) == 3
         parts = baca.select.lparts(runs[0], [2, 4, 3, 2])
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             pieces=[baca.select.rleak(parts[0])],
             staff_padding=3,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 => T1 => O => P2",
             bookend=True,
             pieces=baca.select.lparts(parts[1], [1, 1, 2]),
             staff_padding=3,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 => O => P2",
             bookend=True,
             pieces=baca.select.lparts(parts[2], [1, 2]),
             staff_padding=3,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "O => P2",
             bookend=True,
             pieces=[parts[3]],
             staff_padding=3,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T =|",
             pieces=[baca.select.rleak(runs[1])],
             staff_padding=3,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T =|",
             pieces=[baca.select.rleak(runs[2])],
