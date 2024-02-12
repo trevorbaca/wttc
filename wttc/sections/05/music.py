@@ -1373,7 +1373,6 @@ def vc(m):
             baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
             baca.select.lparts(baca.select.rleak(pleaves), [7, 2, 2, 5]),
-            bookend=True,
         )
 
     @baca.call
@@ -1386,7 +1385,6 @@ def vc(m):
             baca.select.lparts(pleaves, [2, 4]),
             "T -> P2 -> T -> P1 -> T",
             baca.select.lparts(pleaves, [2, 1, 1, 2]),
-            bookend=True,
         )
 
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o< "f"'])
@@ -1401,7 +1399,6 @@ def vc(m):
             baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
             "T -> P1 -> T -> P2 -> T -> P2",
             baca.select.lparts(pleaves, [1, 1, 1, 1, 3]),
-            bookend=True,
         )
         baca.flat_glissando(pleaves[:-1], "F2", stop_pitch="E2")
         baca.pitch(pleaves[-1:], "E2")
