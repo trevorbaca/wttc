@@ -886,7 +886,7 @@ def C2b(
     pleaves_2=None,
     pitch_3=None,
     scps=None,
-    bookend=True,
+    do_not_bookend=None,
 ):
     baca.override.note_head_style_harmonic(pleaves)
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
@@ -912,14 +912,14 @@ def C2b(
         baca.piecewise.hairpin(
             [all_leaves[:2], all_leaves[-2:]],
             hairpin,
-            bookend=bookend,
+            do_not_bookend=do_not_bookend,
         )
     else:
         all_leaves = pleaves
         baca.piecewise.hairpin(
             [pleaves],
             hairpin,
-            bookend=bookend,
+            do_not_bookend=do_not_bookend,
         )
     baca.rspanners.string_number(
         all_leaves,
@@ -1033,7 +1033,7 @@ def D1b(
     hairpin_pieces,
     scp_string,
     scp_pieces,
-    bookend=None,
+    do_not_bookend=None,
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
@@ -1044,7 +1044,7 @@ def D1b(
     baca.mspanners.scp(
         scp_pieces,
         scp_string,
-        bookend=bookend,
+        do_not_bookend=do_not_bookend,
         staff_padding=3,
     )
 
@@ -1326,8 +1326,8 @@ def vn(m):
     C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
     C2b(library.pleaves(m[14], 2), "A3", "A4", "f > p")
     C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o !")
-    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o", bookend=False)
-    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o", bookend=False)
+    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o", do_not_bookend=True)
+    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o", do_not_bookend=True)
     D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
     D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p >o !", no_spanner=True)
     D4b(
