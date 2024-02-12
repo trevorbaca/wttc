@@ -1034,7 +1034,7 @@ def D1b(
     hairpin_pieces,
     scp_string,
     scp_pieces,
-    bookend=False,
+    bookend=None,
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
