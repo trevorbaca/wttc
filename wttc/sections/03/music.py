@@ -796,8 +796,9 @@ def vc(cache):
                 )
             else:
                 baca.mspanners.circle_bow(
-                    baca.select.rleak(plt),
+                    plt,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                    rleak=True,
                     staff_padding=staff_padding,
                 )
 
