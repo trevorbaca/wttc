@@ -857,19 +857,16 @@ def vc(cache):
         baca.mspanners.scp(
             baca.select.lparts(parts[1], [1, 1, 2]),
             "T4 => T1 => O => P2",
-            bookend=True,
             staff_padding=3,
         )
         baca.mspanners.scp(
             baca.select.lparts(parts[2], [1, 2]),
             "T4 => O => P2",
-            bookend=True,
             staff_padding=3,
         )
         baca.mspanners.scp(
             [parts[3]],
             "O => P2",
-            bookend=True,
             staff_padding=3,
         )
         baca.mspanners.scp(

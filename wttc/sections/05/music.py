@@ -906,7 +906,6 @@ def C2b(
             scps,
             # TODO: make this work:
             # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
-            bookend=True,
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
