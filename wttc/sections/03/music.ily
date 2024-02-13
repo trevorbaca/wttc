@@ -4430,6 +4430,7 @@ number.3.Cello.Music = {
         \undo \hide NoteHead
         d'8
         \revert DynamicLineSpanner.staff-padding
+        \revert NoteHead.style
 
     }
 
@@ -4441,7 +4442,6 @@ number.3.Cello.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
@@ -4558,6 +4558,7 @@ number.3.Cello.Music = {
         \undo \hide NoteHead
         d'8
         \revert DynamicLineSpanner.staff-padding
+        \revert NoteHead.style
 
     }
 
@@ -4569,7 +4570,6 @@ number.3.Cello.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     r4
 
@@ -4672,6 +4672,7 @@ number.3.Cello.Music = {
         \undo \hide NoteHead
         d'8
         \revert DynamicLineSpanner.staff-padding
+        \revert NoteHead.style
 
     }
 
@@ -4683,7 +4684,6 @@ number.3.Cello.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     r2
 
