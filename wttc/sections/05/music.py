@@ -826,8 +826,9 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         harmonic=True,
     )
     baca.piecewise.hairpin(
-        baca.select.lparts(baca.select.rleak(pleaves), [1, 2]),
+        baca.select.lparts(pleaves, [1, 1]),
         f"o< {dynamic_string} >o !",
+        rleak=True,
     )
 
 
@@ -873,8 +874,9 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
     baca.spanners.hairpin(
-        baca.select.rleak(pleaves),
+        pleaves,
         f"{dynamic} >o !",
+        rleak=True,
     )
 
 
@@ -992,8 +994,9 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
         baca.piecewise.hairpin(
-            [pleaves[:-1], baca.select.rleak(pleaves[-1:])],
+            [pleaves[:-1], pleaves[-1:]],
             hairpin,
+            rleak=True,
         )
     else:
         baca.piecewise.hairpin(
@@ -1021,8 +1024,9 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.spanners.hairpin(
-        baca.select.rleak(pleaves),
+        pleaves,
         f"{dynamic} >o !",
+        rleak=True,
     )
 
 
@@ -1057,8 +1061,9 @@ def D2a(pleaves, pitches, hairpin_strings):
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
         hairpin_string = f"{hairpin} >o !"
         baca.spanners.hairpin(
-            baca.select.rleak(plt_pair),
+            plt_pair,
             hairpin_string,
+            rleak=True,
         )
         baca.tenuto(plt_pair[0].head)
 

@@ -531,11 +531,10 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
         runs = abjad.select.runs(pleaves)
         for run, peak_ in zip(runs, peaks_, strict=True):
             pieces = baca.select.partition_in_halves(run)
-            next_leaf = abjad.get.leaf(run[-1], 1)
-            pieces[-1].append(next_leaf)
             baca.piecewise.hairpin(
                 pieces,
                 library.swells(peak_),
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -546,10 +545,10 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
         starts_ = starts.split()
         plts = baca.select.plts(pleaves)
         for plt, start_ in zip(plts, starts_, strict=True):
-            rplt = baca.select.rleak(plt)
             baca.spanners.hairpin(
-                rplt,
+                plt,
                 f"{start_} >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 plt,
@@ -585,11 +584,10 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         )
     if xfb is True:
         pieces = baca.select.partition_in_halves(pleaves)
-        next_leaf = abjad.get.leaf(pleaves[-1], 1)
-        pieces[-1].append(next_leaf)
         baca.piecewise.hairpin(
             pieces,
             library.swells(peak),
+            rleak=True,
         )
     else:
         baca.spanners.hairpin(
@@ -608,16 +606,16 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
     )
     if diminuendo is True:
         baca.spanners.hairpin(
-            baca.select.rleak(pleaves),
+            pleaves,
             f"{peak} >o !",
+            rleak=True,
         )
     else:
         pieces = baca.select.partition_in_halves(pleaves)
-        next_leaf = abjad.get.leaf(pleaves[-1], 1)
-        pieces[-1].append(next_leaf)
         baca.piecewise.hairpin(
             pieces,
             f"o< {peak} >o !",
+            rleak=True,
         )
 
 
@@ -671,12 +669,11 @@ def E4a(pleaves, pitch, peaks):
             baca.dynamic(run[0], peak_)
         else:
             pieces = baca.select.partition_in_halves(run)
-            next_leaf = abjad.get.leaf(run[-1], 1)
-            pieces[-1].append(next_leaf)
             if pieces:
                 baca.piecewise.hairpin(
                     pieces,
                     library.swells(peak_),
+                    rleak=True,
                 )
 
 
@@ -694,11 +691,10 @@ def E4c(pleaves, pitch, alteration, peak):
         staff_padding=3,
     )
     pieces = baca.select.partition_in_halves(pleaves)
-    next_leaf = abjad.get.leaf(pleaves[-1], 1)
-    pieces[-1].append(next_leaf)
     baca.piecewise.hairpin(
         pieces,
         library.swells(peak),
+        rleak=True,
     )
 
 
@@ -723,11 +719,10 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
             staff_padding=5.5,
         )
         pieces = baca.select.partition_in_halves(run)
-        next_leaf = abjad.get.leaf(run[-1], 1)
-        pieces[-1].append(next_leaf)
         baca.piecewise.hairpin(
             pieces,
             library.swells(peak),
+            rleak=True,
         )
 
 
