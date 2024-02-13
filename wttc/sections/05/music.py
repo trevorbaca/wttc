@@ -1144,7 +1144,6 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
             baca.mspanners.circle_bow(
                 plt,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-                rleak=True,
                 staff_padding=3,
             )
         else:
