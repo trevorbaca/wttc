@@ -906,7 +906,6 @@ def C2b(
             scps,
             # TODO: make this work:
             # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
-            rleak=True,
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
@@ -1182,7 +1181,6 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             run,
             "T =|",
             bound_details_right_padding=1.5,
-            rleak=True,
             staff_padding=6.5,
         )
         if hairpin:
@@ -1362,7 +1360,7 @@ def vc(m):
             "o< p >o !",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 3]),
             "T =|",
-            baca.select.rleak(pleaves),
+            pleaves,
         )
 
     @baca.call
@@ -1374,7 +1372,7 @@ def vc(m):
             "o< p > pp < mf > p < f >o !",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
-            baca.select.lparts(baca.select.rleak(pleaves), [7, 2, 2, 5]),
+            baca.select.lparts(pleaves, [7, 2, 2, 4]),
         )
 
     @baca.call
@@ -1386,7 +1384,7 @@ def vc(m):
             "o< f >o !",
             baca.select.lparts(pleaves, [2, 4]),
             "T -> P2 -> T -> P1 -> T",
-            baca.select.lparts(pleaves, [2, 1, 1, 2]),
+            baca.select.lparts(pleaves, [2, 1, 1, 1]),
         )
 
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o< "f"'])
@@ -1400,7 +1398,7 @@ def vc(m):
             "o< mf > p < mp > pp <| ff",
             baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
             "T -> P1 -> T -> P2 -> T -> P2",
-            baca.select.lparts(pleaves, [1, 1, 1, 1, 3]),
+            baca.select.lparts(pleaves, [1, 1, 1, 1, 2]),
         )
         baca.flat_glissando(pleaves[:-1], "F2", stop_pitch="E2")
         baca.pitch(pleaves[-1:], "E2")

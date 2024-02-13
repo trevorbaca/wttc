@@ -852,7 +852,6 @@ def vc(cache):
         baca.mspanners.scp(
             parts[0],
             "T4 =|",
-            rleak=True,
             staff_padding=3,
         )
         baca.mspanners.scp(
@@ -876,13 +875,11 @@ def vc(cache):
         baca.mspanners.scp(
             runs[1],
             "T =|",
-            rleak=True,
             staff_padding=3,
         )
         baca.mspanners.scp(
             runs[2],
             "T =|",
-            rleak=True,
             staff_padding=3,
         )
         baca.spanners.hairpin(
