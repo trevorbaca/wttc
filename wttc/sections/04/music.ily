@@ -742,9 +742,6 @@ number.4.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
           %! SPANNER_START
         - \tweak staff-padding 3
@@ -891,9 +888,6 @@ number.4.AltoFlute.Music = {
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak to-barline ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \>
 
         }
@@ -981,9 +975,6 @@ number.4.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1128,9 +1119,6 @@ number.4.AltoFlute.Music = {
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak to-barline ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \>
 
         }
@@ -1249,9 +1237,6 @@ number.4.AltoFlute.Music = {
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak to-barline ##t
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             \>
@@ -1421,9 +1406,6 @@ number.4.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
 
       %! STAFF_HIGHLIGHT
@@ -1583,9 +1565,6 @@ number.4.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
           %! SPANNER_START
         \startTrillSpan e''
@@ -1659,9 +1638,6 @@ number.4.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -1760,9 +1736,6 @@ number.4.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
 
         \grace {
@@ -1839,9 +1812,6 @@ number.4.Oboe.Music = {
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak to-barline ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \>
 
         }
@@ -1915,9 +1885,6 @@ number.4.Oboe.Music = {
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak to-barline ##t
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             \>
@@ -4194,9 +4161,6 @@ number.4.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
         \glissando
         {
@@ -4255,9 +4219,6 @@ number.4.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
         \glissando
         {
@@ -4311,9 +4272,6 @@ number.4.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -4454,9 +4412,6 @@ number.4.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -4759,9 +4714,6 @@ number.4.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
 
           %! STAFF_HIGHLIGHT
@@ -4847,9 +4799,6 @@ number.4.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -5533,9 +5482,6 @@ number.4.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
         \glissando
         {
@@ -5594,9 +5540,6 @@ number.4.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -5658,9 +5601,6 @@ number.4.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -6301,9 +6241,6 @@ number.4.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
 
           %! STAFF_HIGHLIGHT
@@ -6387,9 +6324,6 @@ number.4.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>

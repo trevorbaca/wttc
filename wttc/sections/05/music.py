@@ -959,7 +959,6 @@ def C3a(
         baca.piecewise.hairpin(
             [pleaves, pleaves_2],
             hairpin,
-            forbid_al_niente_to_bar_line=True,
         )
         all_leaves += list(pleaves_2)
     if harmonic is True:
@@ -1106,7 +1105,6 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             baca.piecewise.hairpin(
                 [run],
                 hairpin_string,
-                forbid_al_niente_to_bar_line=True,
             )
 
 
@@ -1117,7 +1115,6 @@ def D3a(pleaves, pitch, dynamics):
     baca.piecewise.hairpin(
         parts,
         library.swells(dynamics),
-        forbid_al_niente_to_bar_line=True,
     )
 
 
@@ -1165,7 +1162,6 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         baca.piecewise.hairpin(
             [pleaves],
             hairpin,
-            forbid_al_niente_to_bar_line=True,
         )
 
 

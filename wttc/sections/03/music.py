@@ -413,19 +413,16 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(runs[0], [1]),
             library.swells("mf mf mp"),
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.clparts(runs[1], [1]),
             "o< p >o",
-            forbid_al_niente_to_bar_line=True,
         )
         baca.spanners.hairpin(baca.select.rleaf(runs[1], -1), "!")
         baca.piecewise.hairpin(
             baca.select.clparts(runs[2], [1]),
             library.swells("p mp mf mp p"),
-            forbid_al_niente_to_bar_line=True,
         )
         baca.piecewise.hairpin(
             baca.select.clparts(runs[3], [1, 2]),
@@ -629,7 +626,6 @@ def vn(m):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[3][:6], [1, 1, 1, 1, 1, 1]),
             library.swells("pp p mp"),
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
         baca.piecewise.hairpin(

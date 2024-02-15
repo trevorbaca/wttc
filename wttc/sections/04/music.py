@@ -852,7 +852,6 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.piecewise.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
-        forbid_al_niente_to_bar_line=True,
     )
     baca.override.dls_staff_padding(run, 4)
 
