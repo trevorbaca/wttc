@@ -413,7 +413,7 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(runs[0], [1]),
             library.swells("mf mf mp"),
-            cyclic=True,
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(

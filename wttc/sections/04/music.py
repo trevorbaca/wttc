@@ -1233,9 +1233,10 @@ def gt1(cache):
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
         baca.piecewise.hairpin(
-            [notes],
+            notes,
             "p pp",
             cyclic=True,
+            do_not_bookend=True,
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
