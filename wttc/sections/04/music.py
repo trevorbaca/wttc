@@ -1227,12 +1227,14 @@ def gt1(cache):
         baca.piecewise.hairpin(
             [notes],
             "p pp",
+            cyclic=True,
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
         baca.piecewise.hairpin(
             baca.select.lparts(notes, [1, 2]),
             "p pp ppp",
+            glue=True,
         )
 
     @baca.call

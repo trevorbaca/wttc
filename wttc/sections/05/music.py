@@ -914,14 +914,15 @@ def C2b(
         baca.piecewise.hairpin(
             [all_leaves[:2], all_leaves[-2:]],
             hairpin,
+            glue=True,
             do_not_bookend=do_not_bookend,
         )
     else:
         all_leaves = pleaves
-        baca.piecewise.hairpin(
-            [pleaves],
+        baca.spanners.hairpin(
+            pleaves,
             hairpin,
-            do_not_bookend=do_not_bookend,
+            # do_not_bookend=do_not_bookend,
         )
     baca.rspanners.string_number(
         all_leaves,
@@ -959,6 +960,7 @@ def C3a(
         baca.piecewise.hairpin(
             [pleaves, pleaves_2],
             hairpin,
+            glue=True,
         )
         all_leaves += list(pleaves_2)
     if harmonic is True:
@@ -1001,6 +1003,7 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
         baca.piecewise.hairpin(
             [pleaves],
             hairpin,
+            glue=True,
         )
 
 
@@ -1043,6 +1046,7 @@ def D1b(
     baca.piecewise.hairpin(
         hairpin_pieces,
         hairpin_string,
+        glue=True,
     )
     baca.mspanners.scp(
         scp_pieces,
@@ -1102,8 +1106,8 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             staff_padding=3,
         )
         if hairpin_string:
-            baca.piecewise.hairpin(
-                [run],
+            baca.spanners.hairpin(
+                run,
                 hairpin_string,
             )
 

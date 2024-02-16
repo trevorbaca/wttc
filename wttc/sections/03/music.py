@@ -855,6 +855,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[3], [4, 2]),
             "o< mf >o p",
+            glue=True,
             rleak=True,
         )
 
@@ -904,10 +905,12 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(parts[1], [2, 2]),
             "o< p <| ff",
+            glue=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(parts[2], [1, 2]),
             "o< p <| ff",
+            glue=True,
         )
         baca.spanners.hairpin(
             parts[3],
