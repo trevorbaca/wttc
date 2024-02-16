@@ -849,7 +849,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         pitch_string.split()[-1],
     )
     hairpin_string = library.swells(dynamic_string)
-    baca.piecewise.hairpin(
+    baca.hairpinlib.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
         glue=True,
@@ -893,7 +893,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(plt, [1, 1]),
             "o< mp >o !",
             glue=True,
@@ -987,13 +987,13 @@ def fl(m):
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(runs[1], [5, 2]),
             "p < f >o !",
             glue=True,
@@ -1012,7 +1012,7 @@ def fl(m):
             runs[4],
             "f |>o !",
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(runs[5][1:], [1, 1]),
             "sfpp < p >o !",
             glue=True,
@@ -1049,19 +1049,19 @@ def ob(m):
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(runs[1], [3, 4]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(runs[2], [2, 3]),
             "p < f >o !",
             glue=True,
@@ -1232,7 +1232,7 @@ def gt1(cache):
         baca.dynamic(note, "p")
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             notes,
             "p pp",
             cyclic=True,
@@ -1240,7 +1240,7 @@ def gt1(cache):
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(notes, [1, 2]),
             "p pp ppp",
             glue=True,

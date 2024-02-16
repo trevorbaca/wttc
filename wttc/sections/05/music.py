@@ -825,7 +825,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         force_trill_pitch_head_accidental=True,
         harmonic=True,
     )
-    baca.piecewise.hairpin(
+    baca.hairpinlib.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {dynamic_string} >o !",
         glue=True,
@@ -912,7 +912,7 @@ def C2b(
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [all_leaves[:2], all_leaves[-2:]],
             hairpin,
             glue=True,
@@ -946,7 +946,7 @@ def C3a(
     all_leaves = list(pleaves)
     if pleaves_2 is None:
         baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [pleaves],
             hairpin,
             glue=True,
@@ -959,7 +959,7 @@ def C3a(
             pairs,
             start_pitch,
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [pleaves, pleaves_2],
             hairpin,
             glue=True,
@@ -996,14 +996,14 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.override.stem_up(pleaves[1:])
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [pleaves[:-1], pleaves[-1:]],
             hairpin,
             glue=True,
             rleak=True,
         )
     else:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [pleaves],
             hairpin,
             glue=True,
@@ -1046,7 +1046,7 @@ def D1b(
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
-    baca.piecewise.hairpin(
+    baca.hairpinlib.hairpin(
         hairpin_pieces,
         hairpin_string,
         glue=True,
@@ -1119,7 +1119,7 @@ def D3a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     parts = baca.select.clparts(pleaves, [1])
     parts[-1].append(baca.select.rleaf(pleaves, -1))
-    baca.piecewise.hairpin(
+    baca.hairpinlib.hairpin(
         parts,
         library.swells(dynamics),
         glue=True,
@@ -1167,7 +1167,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
             if dynamic_ != "-":
                 baca.dynamic(plt.head, dynamic_)
     else:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [pleaves],
             hairpin,
             glue=True,
