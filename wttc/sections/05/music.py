@@ -828,6 +828,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     baca.piecewise.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {dynamic_string} >o !",
+        glue=True,
         rleak=True,
     )
 
@@ -948,6 +949,7 @@ def C3a(
         baca.piecewise.hairpin(
             [pleaves],
             hairpin,
+            glue=True,
         )
     else:
         length_1, length_2 = len(pleaves), len(pleaves_2)
@@ -997,6 +999,7 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
         baca.piecewise.hairpin(
             [pleaves[:-1], pleaves[-1:]],
             hairpin,
+            glue=True,
             rleak=True,
         )
     else:
@@ -1119,6 +1122,7 @@ def D3a(pleaves, pitch, dynamics):
     baca.piecewise.hairpin(
         parts,
         library.swells(dynamics),
+        glue=True,
     )
 
 
@@ -1166,6 +1170,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         baca.piecewise.hairpin(
             [pleaves],
             hairpin,
+            glue=True,
         )
 
 

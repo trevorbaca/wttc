@@ -852,6 +852,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.piecewise.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
+        glue=True,
     )
     baca.override.dls_staff_padding(run, 4)
 
@@ -895,6 +896,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         baca.piecewise.hairpin(
             baca.select.lparts(plt, [1, 1]),
             "o< mp >o !",
+            glue=True,
             rleak=True,
         )
     lone_plts = plts[2:]
@@ -988,11 +990,13 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p < f >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[1], [5, 2]),
             "p < f >o !",
+            glue=True,
             rleak=True,
         )
         baca.spanners.hairpin(
@@ -1011,6 +1015,7 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[5][1:], [1, 1]),
             "sfpp < p >o !",
+            glue=True,
             rleak=True,
         )
 
@@ -1047,16 +1052,19 @@ def ob(m):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p < f >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[1], [3, 4]),
             "p < f >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[2], [2, 3]),
             "p < f >o !",
+            glue=True,
             rleak=True,
         )
         baca.spanners.hairpin(

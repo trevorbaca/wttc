@@ -534,6 +534,7 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
             baca.piecewise.hairpin(
                 pieces,
                 library.swells(peak_),
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -587,6 +588,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         baca.piecewise.hairpin(
             pieces,
             library.swells(peak),
+            glue=True,
             rleak=True,
         )
     else:
@@ -615,6 +617,7 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
         baca.piecewise.hairpin(
             pieces,
             f"o< {peak} >o !",
+            glue=True,
             rleak=True,
         )
 
@@ -673,6 +676,7 @@ def E4a(pleaves, pitch, peaks):
                 baca.piecewise.hairpin(
                     pieces,
                     library.swells(peak_),
+                    glue=True,
                     rleak=True,
                 )
 
@@ -694,6 +698,7 @@ def E4c(pleaves, pitch, alteration, peak):
     baca.piecewise.hairpin(
         pieces,
         library.swells(peak),
+        glue=True,
         rleak=True,
     )
 
@@ -722,6 +727,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
         baca.piecewise.hairpin(
             pieces,
             library.swells(peak),
+            glue=True,
             rleak=True,
         )
 

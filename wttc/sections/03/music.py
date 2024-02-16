@@ -413,6 +413,7 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(runs[0], [1]),
             library.swells("mf mf mp"),
+            cyclic=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
@@ -429,6 +430,7 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(runs[3], [1, 2]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
 
@@ -613,31 +615,37 @@ def vn(m):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[0], [1, 1, 1, 1]),
             library.swells("mp mp"),
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[1], [1, 1, 1, 1]),
             library.swells("p p"),
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[2], [1, 1, 1, 1]),
             library.swells("p p"),
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[3][:6], [1, 1, 1, 1, 1, 1]),
             library.swells("pp p mp"),
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[3][-2:], [1, 1]),
             "o< mp >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[4], [1, 1]),
             library.swells("pp"),
+            glue=True,
             rleak=True,
         )
 
@@ -702,16 +710,19 @@ def vn(m):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[0], [1, 2]),
             library.swells("mp"),
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[1], [5, 2]),
             library.swells("mf"),
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[2], [7, 3, 4]),
             'o< "f" -- ! >o !',
+            glue=True,
             rleak=True,
         )
         baca.spanners.hairpin(
@@ -840,16 +851,19 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[0], [4, 2]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[1], [7, 4]),
             "o< mp >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.lparts(runs[2], [14, 7]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
@@ -919,6 +933,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(runs[1], [2, 1]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.spanners.hairpin(
