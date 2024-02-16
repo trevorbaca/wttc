@@ -418,11 +418,13 @@ def fl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(runs[1], [1]),
             "o< p >o",
+            do_not_bookend=True,
         )
         baca.spanners.hairpin(baca.select.rleaf(runs[1], -1), "!")
         baca.piecewise.hairpin(
             baca.select.clparts(runs[2], [1]),
             library.swells("p mp mf mp p"),
+            do_not_bookend=True,
         )
         baca.piecewise.hairpin(
             baca.select.clparts(runs[3], [1, 2]),
