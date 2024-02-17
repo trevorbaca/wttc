@@ -889,7 +889,7 @@ def C2b(
     pleaves_2=None,
     pitch_3=None,
     scps=None,
-    do_not_bookend=None,
+    do_not_bookend=False,
 ):
     baca.override.note_head_style_harmonic(pleaves)
     baca.flat_glissando(pleaves, pitch_1, stop_pitch=pitch_2)
