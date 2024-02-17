@@ -1232,10 +1232,9 @@ def gt1(cache):
         baca.dynamic(note, "p")
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
-        baca.hairpinlib.hairpin(
+        baca.hairpinlib.cyclic(
             notes,
             "p pp",
-            cyclic=True,
             do_not_bookend=True,
         )
         notes = select_untied_notes(m[12])

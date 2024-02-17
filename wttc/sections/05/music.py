@@ -912,12 +912,19 @@ def C2b(
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
-        baca.hairpinlib.hairpin(
-            [all_leaves[:2], all_leaves[-2:]],
-            hairpin,
-            glue=True,
-            do_not_bookend=do_not_bookend,
-        )
+        if do_not_bookend is True:
+            baca.hairpinlib.cyclic(
+                [all_leaves[:2], all_leaves[-2:]],
+                hairpin,
+                glue=True,
+                do_not_bookend=do_not_bookend,
+            )
+        else:
+            baca.hairpinlib.hairpin(
+                [all_leaves[:2], all_leaves[-2:]],
+                hairpin,
+                glue=True,
+            )
     else:
         all_leaves = pleaves
         baca.spanners.hairpin(
