@@ -825,7 +825,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
         force_trill_pitch_head_accidental=True,
         harmonic=True,
     )
-    baca.hairpinlib.hairpin(
+    baca.hairpins.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {dynamic_string} >o !",
         glue=True,
@@ -874,7 +874,7 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     )
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
-    baca.hairpinlib.exact(
+    baca.hairpins.exact(
         pleaves,
         f"{dynamic}>o!",
         rleak=True,
@@ -913,21 +913,21 @@ def C2b(
         )
         all_leaves = pleaves + pleaves_2
         if do_not_bookend is True:
-            baca.hairpinlib.cyclic(
+            baca.hairpins.cyclic(
                 [all_leaves[:2], all_leaves[-2:]],
                 hairpin,
                 glue=True,
                 do_not_bookend=do_not_bookend,
             )
         else:
-            baca.hairpinlib.hairpin(
+            baca.hairpins.hairpin(
                 [all_leaves[:2], all_leaves[-2:]],
                 hairpin,
                 glue=True,
             )
     else:
         all_leaves = pleaves
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             pleaves,
             hairpin,
         )
@@ -952,7 +952,7 @@ def C3a(
     all_leaves = list(pleaves)
     if pleaves_2 is None:
         baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             [pleaves],
             hairpin,
             glue=True,
@@ -965,7 +965,7 @@ def C3a(
             pairs,
             start_pitch,
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             [pleaves, pleaves_2],
             hairpin,
             glue=True,
@@ -1002,14 +1002,14 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.override.stem_up(pleaves[1:])
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             [pleaves[:-1], pleaves[-1:]],
             hairpin,
             glue=True,
             rleak=True,
         )
     else:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             [pleaves],
             hairpin,
             glue=True,
@@ -1034,7 +1034,7 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
 
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
-    baca.hairpinlib.exact(
+    baca.hairpins.exact(
         pleaves,
         f"{dynamic}>o!",
         rleak=True,
@@ -1052,7 +1052,7 @@ def D1b(
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
-    baca.hairpinlib.hairpin(
+    baca.hairpins.hairpin(
         hairpin_pieces,
         hairpin_string,
         glue=True,
@@ -1072,7 +1072,7 @@ def D2a(pleaves, pitches, hairpin_strings):
     hairpins = hairpin_strings.split()
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
         hairpin_string = f"{hairpin}>o!"
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             plt_pair,
             hairpin_string,
             rleak=True,
@@ -1095,7 +1095,7 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
             baca.down_bow(run[0], padding=1)
         if len(run) == 1:
             run = baca.select.rleak(run)
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             run,
             f"o<|{dynamic_}",
         )
@@ -1115,7 +1115,7 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             staff_padding=3,
         )
         if hairpin_string:
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 hairpin_string,
             )
@@ -1125,7 +1125,7 @@ def D3a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     parts = baca.select.clparts(pleaves, [1])
     parts[-1].append(baca.select.rleaf(pleaves, -1))
-    baca.hairpinlib.hairpin(
+    baca.hairpins.hairpin(
         parts,
         library.swells(dynamics),
         glue=True,
@@ -1173,7 +1173,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
             if dynamic_ != "-":
                 baca.dynamic(plt.head, dynamic_)
     else:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             [pleaves],
             hairpin,
             glue=True,
@@ -1200,7 +1200,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             staff_padding=6.5,
         )
         if hairpin:
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 hairpin,
             )

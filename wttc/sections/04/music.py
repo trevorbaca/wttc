@@ -762,7 +762,7 @@ def B1b(
             string = f"{dynamic}>o!"
         else:
             string = f"o<{dynamic}"
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             run[1:],
             string,
             rleak=True,
@@ -849,7 +849,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         pitch_string.split()[-1],
     )
     hairpin_string = library.swells(dynamic_string)
-    baca.hairpinlib.hairpin(
+    baca.hairpins.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
         glue=True,
@@ -893,7 +893,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(plt, [1, 1]),
             "o< mp >o !",
             glue=True,
@@ -987,32 +987,32 @@ def fl(m):
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(runs[1], [5, 2]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             runs[2],
             "f>o!",
             rleak=True,
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             runs[3],
             "f|>o!",
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             runs[4],
             "f|>o!",
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(runs[5][1:], [1, 1]),
             "sfpp < p >o !",
             glue=True,
@@ -1049,29 +1049,29 @@ def ob(m):
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(runs[1], [3, 4]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(runs[2], [2, 3]),
             "p < f >o !",
             glue=True,
             rleak=True,
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             runs[3],
             "f|>o!",
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             runs[4],
             "f|>o!",
         )
@@ -1165,7 +1165,7 @@ def gt1(cache):
             else:
                 leaves = plt
             string = f"o<{termination}"
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 leaves,
                 string,
             )
@@ -1232,14 +1232,14 @@ def gt1(cache):
         baca.dynamic(note, "p")
         notes = select_untied_notes(m[9])
         baca.pitches(notes, "G4 Gb4")
-        baca.hairpinlib.cyclic(
+        baca.hairpins.cyclic(
             notes,
             "p pp",
             do_not_bookend=True,
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(notes, [1, 2]),
             "p pp ppp",
             glue=True,
@@ -1315,7 +1315,7 @@ def gt2(cache):
             baca.staff_lines(next_leaf, 5)
             baca.staff_position(plt, 0)
             baca.up_bow(plt.head, padding=1)
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 plt,
                 f"o<{dynamic}",
                 rleak=True,
