@@ -421,7 +421,7 @@ def fl(m):
             "o< p >o",
             do_not_bookend=True,
         )
-        baca.spanners.hairpin(baca.select.rleaf(runs[1], -1), "!")
+        baca.hairpinlib.exact([baca.select.rleaf(runs[1], -1)], "!")
         baca.hairpinlib.hairpin(
             baca.select.clparts(runs[2], [1]),
             library.swells("p mp mf mp p"),
@@ -444,29 +444,29 @@ def fl(m):
         baca.flat_glissando(parts[3], "Eb6", stop_pitch="D6")
         baca.flat_glissando(runs[1], "E6", stop_pitch="D#6")
         baca.flat_glissando(runs[2], "F6", stop_pitch="E6")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             parts[0],
-            "f >o !",
+            "f>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             parts[1],
-            "mf >o !",
+            "mf>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             parts[2],
-            "mp >o !",
+            "mp>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             parts[3],
-            "p >o !",
+            "p>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[1],
-            "p >o !",
+            "p>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[2],
-            "p >o !",
+            "p>o!",
         )
 
     @baca.call
@@ -542,9 +542,9 @@ def gt1(m):
             baca.down_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.rleak(run)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                'o<| "mf"',
+                'o<|"mf"',
             )
 
     @baca.call
@@ -583,9 +583,9 @@ def gt2(m):
             baca.up_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.rleak(run)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                'o<| "mf"',
+                'o<|"mf"',
             )
 
     @baca.call
@@ -725,9 +725,9 @@ def vn(m):
             glue=True,
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[3],
-            '"f" >o !',
+            '"f">o!',
         )
 
     @baca.call
@@ -744,9 +744,9 @@ def vn(m):
                 "II",
                 staff_padding=3,
             )
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run[1:],
-                f"{dynamic} >o !",
+                f"{dynamic}>o!",
                 rleak=True,
             )
 
@@ -911,9 +911,9 @@ def vc(cache):
             "T =|",
             staff_padding=3,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             parts[0],
-            ">o !",
+            ">o!",
             rleak=True,
         )
         baca.hairpinlib.hairpin(
@@ -926,9 +926,9 @@ def vc(cache):
             "o< p <| ff",
             glue=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             parts[3],
-            "o<| ff",
+            "o<|ff",
         )
         baca.hairpinlib.hairpin(
             baca.select.lparts(runs[1], [2, 1]),
@@ -936,9 +936,9 @@ def vc(cache):
             glue=True,
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[2],
-            "p >o !",
+            "p>o!",
             rleak=True,
         )
 
@@ -956,9 +956,9 @@ def vc(cache):
                 "I",
                 staff_padding=5,
             )
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run[1:],
-                f"{dynamic} >o !",
+                f"{dynamic}>o!",
                 rleak=True,
             )
 

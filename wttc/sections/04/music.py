@@ -759,10 +759,10 @@ def B1b(
                     dls_staff_padding,
                 )
         if diminuendo is True:
-            string = f"{dynamic} >o !"
+            string = f"{dynamic}>o!"
         else:
-            string = f"o< {dynamic}"
-        baca.spanners.hairpin(
+            string = f"o<{dynamic}"
+        baca.hairpinlib.exact(
             run[1:],
             string,
             rleak=True,
@@ -999,18 +999,18 @@ def fl(m):
             glue=True,
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[2],
-            "f >o !",
+            "f>o!",
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[3],
-            "f |>o !",
+            "f|>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[4],
-            "f |>o !",
+            "f|>o!",
         )
         baca.hairpinlib.hairpin(
             baca.select.lparts(runs[5][1:], [1, 1]),
@@ -1067,13 +1067,13 @@ def ob(m):
             glue=True,
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[3],
-            "f |>o !",
+            "f|>o!",
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             runs[4],
-            "f |>o !",
+            "f|>o!",
         )
 
     @baca.call
@@ -1164,8 +1164,8 @@ def gt1(cache):
                 leaves = baca.select.rleak(plt)
             else:
                 leaves = plt
-            string = f"o< {termination}"
-            baca.spanners.hairpin(
+            string = f"o<{termination}"
+            baca.hairpinlib.exact(
                 leaves,
                 string,
             )
@@ -1315,9 +1315,9 @@ def gt2(cache):
             baca.staff_lines(next_leaf, 5)
             baca.staff_position(plt, 0)
             baca.up_bow(plt.head, padding=1)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 plt,
-                f"o< {dynamic}",
+                f"o<{dynamic}",
                 rleak=True,
             )
 

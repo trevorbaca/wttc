@@ -546,9 +546,9 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
         starts_ = starts.split()
         plts = baca.select.plts(pleaves)
         for plt, start_ in zip(plts, starts_, strict=True):
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 plt,
-                f"{start_} >o !",
+                f"{start_}>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -592,9 +592,9 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             rleak=True,
         )
     else:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             pleaves,
-            f"{peak} >o !",
+            f"{peak}>o!",
         )
 
 
@@ -607,9 +607,9 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
         staff_padding=3,
     )
     if diminuendo is True:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             pleaves,
-            f"{peak} >o !",
+            f"{peak}>o!",
             rleak=True,
         )
     else:
@@ -864,13 +864,13 @@ def vc(m):
         string_numbers="IV I IV",
     )
     E3b(library.pleaves(m[3, 7], 3), "<A#3 D#4>", "E#4")
-    baca.spanners.hairpin(
+    baca.hairpinlib.exact(
         library.pleaves(m[3], 3),
-        "f > p",
+        "f>p",
     )
-    baca.spanners.hairpin(
+    baca.hairpinlib.exact(
         library.pleaves(m[5, 6], 3),
-        "f -- !",
+        "f--!",
     )
     baca.dynamic(library.pleaves(m[7], 3), "p")
     E1(

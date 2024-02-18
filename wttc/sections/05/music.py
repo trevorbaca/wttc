@@ -874,9 +874,9 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     )
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
-    baca.spanners.hairpin(
+    baca.hairpinlib.exact(
         pleaves,
-        f"{dynamic} >o !",
+        f"{dynamic}>o!",
         rleak=True,
     )
 
@@ -927,10 +927,9 @@ def C2b(
             )
     else:
         all_leaves = pleaves
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             pleaves,
             hairpin,
-            # do_not_bookend=do_not_bookend,
         )
     baca.rspanners.string_number(
         all_leaves,
@@ -1035,9 +1034,9 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
 
 def D1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
-    baca.spanners.hairpin(
+    baca.hairpinlib.exact(
         pleaves,
-        f"{dynamic} >o !",
+        f"{dynamic}>o!",
         rleak=True,
     )
 
@@ -1072,8 +1071,8 @@ def D2a(pleaves, pitches, hairpin_strings):
     plt_pairs = abjad.sequence.partition_by_counts(plts, [2], cyclic=True)
     hairpins = hairpin_strings.split()
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
-        hairpin_string = f"{hairpin} >o !"
-        baca.spanners.hairpin(
+        hairpin_string = f"{hairpin}>o!"
+        baca.hairpinlib.exact(
             plt_pair,
             hairpin_string,
             rleak=True,
@@ -1096,9 +1095,9 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
             baca.down_bow(run[0], padding=1)
         if len(run) == 1:
             run = baca.select.rleak(run)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             run,
-            f"o<| {dynamic_}",
+            f"o<|{dynamic_}",
         )
     if not do_not_unbeam:
         rmakers.unbeam(pleaves)
@@ -1116,7 +1115,7 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             staff_padding=3,
         )
         if hairpin_string:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
                 hairpin_string,
             )
@@ -1201,7 +1200,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             staff_padding=6.5,
         )
         if hairpin:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
                 hairpin,
             )
@@ -1341,10 +1340,10 @@ def vn(m):
         dummy_pitch="B5",
     )
     C2b(m[10][1:], "A3", "Cb5", "f > p <| ff", m[11], "Bb4", "T -> P1 -> P4")
-    C2b(library.pleaves(m[14], 2), "A3", "A4", "f > p")
-    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p >o !")
-    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p >o", do_not_bookend=True)
-    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p >o", do_not_bookend=True)
+    C2b(library.pleaves(m[14], 2), "A3", "A4", "f>p")
+    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
+    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
+    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
     D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
     D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p >o !", no_spanner=True)
     D4b(
@@ -1404,7 +1403,7 @@ def vc(m):
             baca.select.lparts(pleaves, [2, 1, 1, 1]),
         )
 
-    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o< "f"'])
+    D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o<"f"'])
 
     @baca.call
     def block():
@@ -1423,10 +1422,10 @@ def vc(m):
     D2c(
         library.pleaves(m[39, 40], 2),
         ["D#2 E2", "E2 F2", "F2 F#2"],
-        ["mf >o !", "mp >o !", "p >o !"],
+        ["mf>o!", "mp>o!", "p>o!"],
     )
     D2c(library.pleaves(m[41, 44], 2), 5 * ["G2 Ab2"], 5 * [None])
-    D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp > p")
+    D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp>p")
     D4c(library.pleaves(m[45, 46], 4), "F#2", dynamic="p")
     D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")
 
