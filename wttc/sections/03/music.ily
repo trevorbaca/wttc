@@ -914,6 +914,8 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+      %! SPANNER_STOP
+    \!
     [
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START

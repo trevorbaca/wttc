@@ -425,6 +425,7 @@ def fl(m):
         baca.hairpinlib.hairpin(
             baca.select.clparts(runs[2], [1]),
             library.swells("p mp mf mp p"),
+            glue=True,
         )
         baca.hairpinlib.hairpin(
             baca.select.clparts(runs[3], [1, 2]),
