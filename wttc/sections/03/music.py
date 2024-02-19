@@ -394,109 +394,52 @@ def VC(voice, meters):
     )
 
 
+def A1a(pleaves, pitch, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        library.swells(peaks),
+        rleak=True,
+    )
+
+
+def A3a(pleaves, pitches, hairpin):
+    pitches = pitches.split()
+    assert len(pitches) == 2, repr(pitches)
+    start_pitch, stop_pitch = pitches
+    baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
+    baca.hairpin(pleaves, hairpin)
+
+
+def B1a(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.covered(
+        pleaves,
+        descriptor=strings.cov_dashed_hook,
+        staff_padding=3,
+    )
+    baca.dynamic(pleaves[0], dynamic)
+    baca.override.dls_staff_padding(pleaves, 5)
+
+
 def fl(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "AltoFlute", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.alto_flute_markup)
-        baca.short_instrument_name(leaf, "Afl.", library.manifests)
-        baca.clef(leaf, "treble")
-
-    @baca.call
-    def block():
-        runs = library.runs(m, 1)
-        baca.pitch(runs[0], "F#4")
-        baca.pitch(runs[1], "F4")
-        baca.pitch(runs[2], "E4")
-        baca.pitch(runs[3], "E4")
-        baca.hairpin(
-            baca.select.clparts(runs[0], [1]),
-            library.swells("mf mf mp"),
-            rleak=True,
-        )
-        baca.hairpins.cyclic(
-            baca.select.clparts(runs[1], [1]),
-            "o< p >o",
-            do_not_bookend=True,
-        )
-        baca.hairpin([baca.select.rleaf(runs[1], -1)], "!")
-        baca.hairpin(
-            baca.select.clparts(runs[2], [1]),
-            library.swells("p mp mf mp p"),
-        )
-        baca.hairpin(
-            baca.select.clparts(runs[3], [1, 2]),
-            "o< p>o!",
-            rleak=True,
-        )
-
-    @baca.call
-    def block():
-        runs = library.runs(m, 3)
-        parts = baca.select.lparts(runs[0], [4, 3, 2, 2], overhang=abjad.EXACT)
-        baca.flat_glissando(parts[0], "C6", stop_pitch="B5")
-        baca.flat_glissando(parts[1], "C6", stop_pitch="B5")
-        baca.flat_glissando(parts[2], "D6", stop_pitch="C#6")
-        baca.flat_glissando(parts[3], "Eb6", stop_pitch="D6")
-        baca.flat_glissando(runs[1], "E6", stop_pitch="D#6")
-        baca.flat_glissando(runs[2], "F6", stop_pitch="E6")
-        baca.hairpin(
-            parts[0],
-            "f>o!",
-        )
-        baca.hairpin(
-            parts[1],
-            "mf>o!",
-        )
-        baca.hairpin(
-            parts[2],
-            "mp>o!",
-        )
-        baca.hairpin(
-            parts[3],
-            "p>o!",
-        )
-        baca.hairpin(
-            runs[1],
-            "p>o!",
-        )
-        baca.hairpin(
-            runs[2],
-            "p>o!",
-        )
-
-    @baca.call
-    def block():
-        runs = library.runs(m[11, 13], 99)
-        for run in runs:
-            baca.pitch(run, "G#")
-            baca.rspanners.covered(
-                run,
-                descriptor=strings.cov_dashed_hook,
-                staff_padding=3,
-            )
-            baca.dynamic(run[0], "mp")
-            baca.override.dls_staff_padding(run, 5)
-
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(
-            m[1, 6],
-            3.5,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.run(m[8, 11], 0),
-            3.5,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.run(m[12], 0),
-            3.5,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.run(m[13], 0),
-            3.5,
-        )
+    baca.instrument(m[1][0], "AltoFlute", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.alto_flute_markup)
+    baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
+    baca.clef(m[1][0], "treble")
+    A1a(library.pleaves(m[1, 2], 1), "F#4", "mf mf mp")
+    A1a(library.pleaves(m[3, 4], 1), "F4", "p p p")
+    A1a(library.pleaves(m[5, 7], 1), "E4", "p mp mf mp p")
+    A3a(library.pleaves(m[7], 3), "C6 B5", "f>o!")
+    A3a(library.pleaves(m[8, 9], 3), "C6 B5", "mf>o!")
+    A3a(library.pleaves(m[10], 3), "D6 C#6", "mp>o!")
+    A3a(library.pleaves(m[11], 3), "Eb6 D6", "p>o!")
+    B1a(library.pleaves(m[11], 99), "G#3", "mp")
+    A1a(library.pleaves(m[12], 1), "E4", "p")
+    A3a(library.pleaves(m[12], 3), "E6 D#6", "p>o!")
+    B1a(library.pleaves(m[12], 99), "G#3", "mp")
+    A3a(library.pleaves(m[13], 3), "F6 E6", "p>o!")
+    B1a(library.pleaves(m[13], 99), "G#3", "mp")
 
 
 def ob(m):
@@ -956,6 +899,13 @@ def vc(cache):
             baca.override.dls_staff_padding(run, staff_padding)
 
 
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"][1, 6], 3.5)
+    baca.override.dls_staff_padding(abjad.select.run(cache["fl"][8, 11], 0), 3.5)
+    baca.override.dls_staff_padding(abjad.select.run(cache["fl"][12], 0), 3.5)
+    baca.override.dls_staff_padding(abjad.select.run(cache["fl"][13], 0), 3.5)
+
+
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
@@ -992,6 +942,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache)
+    align_spanners(cache)
     return score
 
 

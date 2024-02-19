@@ -678,6 +678,8 @@ number.3.AltoFlute.Music = {
     bf'!2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -722,6 +724,8 @@ number.3.AltoFlute.Music = {
     bf'!2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -986,8 +990,6 @@ number.3.AltoFlute.Music = {
     \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"7"
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1009,6 +1011,8 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
