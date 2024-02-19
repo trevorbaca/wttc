@@ -443,24 +443,18 @@ def fl(m):
 
 
 def ob(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Oboe", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.oboe_markup)
-        baca.short_instrument_name(leaf, "Ob.", library.manifests)
-        baca.clef(leaf, "treble")
-        library.rotate_rehearsal_mark_literal(leaf)
+    baca.instrument(m[1][0], "Oboe", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.oboe_markup)
+    baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
+    baca.clef(m[1][0], "treble")
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
 
 def gt1(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Guitar", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.guitar_i_markup)
-        baca.short_instrument_name(leaf, "Gt. 1", library.manifests)
-        baca.clef(leaf, "treble")
+    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.guitar_i_markup)
+    baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
+    baca.clef(m[1][0], "treble")
 
     @baca.call
     def block():
@@ -494,14 +488,11 @@ def gt1(m):
 
 
 def gt2(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Guitar", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.guitar_ii_markup)
-        baca.short_instrument_name(leaf, "Gt. 2", library.manifests)
-        baca.clef(leaf, "treble")
-        library.rotate_rehearsal_mark_literal(leaf)
+    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.guitar_ii_markup)
+    baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
+    baca.clef(m[1][0], "treble")
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
     @baca.call
     def block():
@@ -535,13 +526,10 @@ def gt2(m):
 
 
 def vn(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Violin", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.violin_markup)
-        baca.short_instrument_name(leaf, "Vn.", library.manifests)
-        baca.clef(leaf, "treble")
+    baca.instrument(m[1][0], "Violin", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.violin_markup)
+    baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
+    baca.clef(m[1][0], "treble")
 
     @baca.call
     def block():
@@ -727,14 +715,11 @@ def vc(cache):
 
     m = cache[name]
 
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        baca.instrument(leaf, "Cello", manifests=library.manifests)
-        baca.instrument_name(leaf, strings.cello_markup)
-        baca.short_instrument_name(leaf, "Vc.", library.manifests)
-        baca.clef(leaf, "bass")
-        library.rotate_rehearsal_mark_literal(leaf)
+    baca.instrument(m[1][0], "Cello", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.cello_markup)
+    baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
+    baca.clef(m[1][0], "bass")
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
     def circle_bow_spanner(run):
         staff_padding = 3
