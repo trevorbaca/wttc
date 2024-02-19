@@ -403,6 +403,15 @@ def A1a(pleaves, pitch, peaks):
     )
 
 
+def A1b(pleaves, pitches, peaks):
+    baca.pitches(pleaves, pitches)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        library.swells(peaks),
+        rleak=True,
+    )
+
+
 def A2a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     baca.laissez_vibrer(pleaves)
@@ -512,46 +521,11 @@ def vn(m):
     baca.instrument_name(m[1][0], strings.violin_markup)
     baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
     baca.clef(m[1][0], "treble")
-
-    @baca.call
-    def block():
-        runs = library.runs(m, 1)
-        assert len(runs) == 5
-        baca.pitches(runs[0], "D4 F4")
-        baca.pitches(runs[1], "D4 F#4")
-        baca.pitches(runs[2], "E4 G4")
-        baca.pitches(runs[3], "E4 G#4")
-        baca.pitches(runs[4], "E4 G#4")
-        baca.hairpin(
-            baca.select.lparts(runs[0], [1, 1, 1, 1]),
-            library.swells("mp mp"),
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[1], [1, 1, 1, 1]),
-            library.swells("p p"),
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[2], [1, 1, 1, 1]),
-            library.swells("p p"),
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[3][:6], [1, 1, 1, 1, 1, 1]),
-            library.swells("pp p mp"),
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[3][-2:], [1, 1]),
-            "o< mp>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[4], [1, 1]),
-            library.swells("pp"),
-            rleak=True,
-        )
+    A1b(library.pleaves(m[1], 1), "D4 F4", "mp mp")
+    A1b(library.pleaves(m[2], 1), "D4 F#4", "p p")
+    A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
+    A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
+    A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
 
     @baca.call
     def block():
@@ -650,28 +624,6 @@ def vn(m):
                 f"{dynamic}>o!",
                 rleak=True,
             )
-
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m[1, 2], 4)
-        baca.override.dls_staff_padding(
-            abjad.select.run(m[3], 0),
-            4,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.run(m[3, 4], 1),
-            5.5,
-        )
-        baca.override.dls_staff_padding(m[5, 6], 3)
-        baca.override.dls_staff_padding(m[7], 3)
-        baca.override.dls_staff_padding(
-            baca.select.rleak(abjad.select.run(m[11], 0)),
-            3,
-        )
-        baca.override.dls_staff_padding(
-            abjad.select.runs(m[12, 13]),
-            3,
-        )
 
 
 def vc(cache):
@@ -853,18 +805,6 @@ def vc(cache):
                 rleak=True,
             )
 
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m[1, 10], 5)
-        runs = abjad.select.runs(m[11, 13])
-        assert len(runs) == 6
-        for i, run in enumerate(runs):
-            if i % 2 == 0:
-                staff_padding = 5
-            else:
-                staff_padding = 3
-            baca.override.dls_staff_padding(run, staff_padding)
-
 
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"][1, 6], 3.5)
@@ -875,6 +815,24 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(cache["gt1"][11, 13], 9)
     baca.override.dls_staff_padding(cache["gt2"][1, 7], 4.5)
     baca.override.dls_staff_padding(cache["gt2"][11, 13], 4.5)
+    baca.override.dls_staff_padding(cache["vn"][1, 2], 4)
+    baca.override.dls_staff_padding(abjad.select.run(cache["vn"][3], 0), 4)
+    baca.override.dls_staff_padding(abjad.select.run(cache["vn"][3, 4], 1), 5.5)
+    baca.override.dls_staff_padding(cache["vn"][5, 6], 3)
+    baca.override.dls_staff_padding(cache["vn"][7], 3)
+    baca.override.dls_staff_padding(
+        baca.select.rleak(abjad.select.run(cache["vn"][11], 0)), 3
+    )
+    baca.override.dls_staff_padding(abjad.select.runs(cache["vn"][12, 13]), 3)
+    baca.override.dls_staff_padding(cache["vc"][1, 10], 5)
+    runs = abjad.select.runs(cache["vc"][11, 13])
+    assert len(runs) == 6
+    for i, run in enumerate(runs):
+        if i % 2 == 0:
+            staff_padding = 5
+        else:
+            staff_padding = 3
+        baca.override.dls_staff_padding(run, staff_padding)
 
 
 @baca.build.timed("make_score")
