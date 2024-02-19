@@ -762,7 +762,7 @@ def B1b(
             string = f"{dynamic}>o!"
         else:
             string = f"o<{dynamic}"
-        baca.hairpins.exact(
+        baca.hairpin(
             run[1:],
             string,
             rleak=True,
@@ -849,7 +849,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
         pitch_string.split()[-1],
     )
     hairpin_string = library.swells(dynamic_string)
-    baca.hairpins.exact(
+    baca.hairpin(
         baca.select.clparts(run, [2]),
         hairpin_string,
     )
@@ -892,7 +892,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(plt, [1, 1]),
             "o< mp>o!",
             rleak=True,
@@ -985,30 +985,30 @@ def fl(m):
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p< f>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[1], [5, 2]),
             "p< f>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[2],
             "f>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[3],
             "f|>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[4],
             "f|>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[5][1:], [1, 1]),
             "sfpp< p>o!",
             rleak=True,
@@ -1044,26 +1044,26 @@ def ob(m):
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
         baca.override.tie_down(runs[2])
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[0], [8, 2]),
             "p< f>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[1], [3, 4]),
             "p< f>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[2], [2, 3]),
             "p< f>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[3],
             "f|>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[4],
             "f|>o!",
         )
@@ -1157,7 +1157,7 @@ def gt1(cache):
             else:
                 leaves = plt
             string = f"o<{termination}"
-            baca.hairpins.exact(
+            baca.hairpin(
                 leaves,
                 string,
             )
@@ -1231,7 +1231,7 @@ def gt1(cache):
         )
         notes = select_untied_notes(m[12])
         baca.pitches(notes, "C4 B3 Bb3", exact=True)
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(notes, [1, 1, 1]),
             "p pp ppp",
         )
@@ -1306,7 +1306,7 @@ def gt2(cache):
             baca.staff_lines(next_leaf, 5)
             baca.staff_position(plt, 0)
             baca.up_bow(plt.head, padding=1)
-            baca.hairpins.exact(
+            baca.hairpin(
                 plt,
                 f"o<{dynamic}",
                 rleak=True,

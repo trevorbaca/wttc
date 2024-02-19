@@ -410,7 +410,7 @@ def fl(m):
         baca.pitch(runs[1], "F4")
         baca.pitch(runs[2], "E4")
         baca.pitch(runs[3], "E4")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.clparts(runs[0], [1]),
             library.swells("mf mf mp"),
             rleak=True,
@@ -420,12 +420,12 @@ def fl(m):
             "o< p >o",
             do_not_bookend=True,
         )
-        baca.hairpins.exact([baca.select.rleaf(runs[1], -1)], "!")
-        baca.hairpins.exact(
+        baca.hairpin([baca.select.rleaf(runs[1], -1)], "!")
+        baca.hairpin(
             baca.select.clparts(runs[2], [1]),
             library.swells("p mp mf mp p"),
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.clparts(runs[3], [1, 2]),
             "o< p>o!",
             rleak=True,
@@ -441,27 +441,27 @@ def fl(m):
         baca.flat_glissando(parts[3], "Eb6", stop_pitch="D6")
         baca.flat_glissando(runs[1], "E6", stop_pitch="D#6")
         baca.flat_glissando(runs[2], "F6", stop_pitch="E6")
-        baca.hairpins.exact(
+        baca.hairpin(
             parts[0],
             "f>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             parts[1],
             "mf>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             parts[2],
             "mp>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             parts[3],
             "p>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[1],
             "p>o!",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[2],
             "p>o!",
         )
@@ -539,7 +539,7 @@ def gt1(m):
             baca.down_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.rleak(run)
-            baca.hairpins.exact(
+            baca.hairpin(
                 run,
                 'o<|"mf"',
             )
@@ -580,7 +580,7 @@ def gt2(m):
             baca.up_bow(run[0], padding=1)
             if len(run) == 1:
                 run = baca.select.rleak(run)
-            baca.hairpins.exact(
+            baca.hairpin(
                 run,
                 'o<|"mf"',
             )
@@ -609,32 +609,32 @@ def vn(m):
         baca.pitches(runs[2], "E4 G4")
         baca.pitches(runs[3], "E4 G#4")
         baca.pitches(runs[4], "E4 G#4")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[0], [1, 1, 1, 1]),
             library.swells("mp mp"),
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[1], [1, 1, 1, 1]),
             library.swells("p p"),
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[2], [1, 1, 1, 1]),
             library.swells("p p"),
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[3][:6], [1, 1, 1, 1, 1, 1]),
             library.swells("pp p mp"),
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[3][-2:], [1, 1]),
             "o< mp>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[4], [1, 1]),
             library.swells("pp"),
             rleak=True,
@@ -698,22 +698,22 @@ def vn(m):
             runs[3],
             staff_padding=4.5,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[0], [1, 2]),
             library.swells("mp"),
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[1], [5, 2]),
             library.swells("mf"),
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[2], [7, 3, 4]),
             'o< "f"-- !>o!',
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[3],
             '"f">o!',
         )
@@ -732,7 +732,7 @@ def vn(m):
                 "II",
                 staff_padding=3,
             )
-            baca.hairpins.exact(
+            baca.hairpin(
                 run[1:],
                 f"{dynamic}>o!",
                 rleak=True,
@@ -836,22 +836,22 @@ def vc(cache):
             [("G2", 5), ("Bb2", 3)],
             "Bb2",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[0], [4, 2]),
             "o< p>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[1], [7, 4]),
             "o< mp>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[2], [14, 7]),
             "o< mf>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[3], [4, 2]),
             "o< mf>op",
             rleak=True,
@@ -895,29 +895,29 @@ def vc(cache):
             "T =|",
             staff_padding=3,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             parts[0],
             ">o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(parts[1], [2, 2]),
             "o< p<|ff",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(parts[2], [1, 2]),
             "o< p<|ff",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             parts[3],
             "o<|ff",
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(runs[1], [2, 1]),
             "o< p>o!",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             runs[2],
             "p>o!",
             rleak=True,
@@ -937,7 +937,7 @@ def vc(cache):
                 "I",
                 staff_padding=5,
             )
-            baca.hairpins.exact(
+            baca.hairpin(
                 run[1:],
                 f"{dynamic}>o!",
                 rleak=True,
