@@ -403,6 +403,22 @@ def A1a(pleaves, pitch, peaks):
     )
 
 
+def A2a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    baca.laissez_vibrer(pleaves)
+    dynamics = dynamics.split()
+    for pleaf, dynamic in zip(pleaves, dynamics, strict=True):
+        baca.dynamic(pleaf, dynamic)
+
+
+def A2b():
+    pass
+
+
+def A2c():
+    pass
+
+
 def A3a(pleaves, pitches, hairpin):
     pitches = pitches.split()
     assert len(pitches) == 2, repr(pitches)
@@ -420,6 +436,28 @@ def B1a(pleaves, pitch, dynamic):
     )
     baca.dynamic(pleaves[0], dynamic)
     baca.override.dls_staff_padding(pleaves, 5)
+
+
+def B1b(pleaves, *, up_bow=False):
+    baca.staff_position(pleaves, 0)
+    for run in abjad.select.runs(pleaves):
+        baca.staff_lines(run[0], 1)
+        rleaf = abjad.get.leaf(run[-1], 1)
+        baca.staff_lines(rleaf, 5)
+        if up_bow is True:
+            function = baca.up_bow
+        else:
+            function = baca.down_bow
+        function(run[0], padding=1)
+        baca.hairpin(
+            run,
+            'o<|"mf"',
+            rleak=len(run) == 1,
+        )
+
+
+def B1c():
+    pass
 
 
 def fl(m):
@@ -455,36 +493,8 @@ def gt1(m):
     baca.instrument_name(m[1][0], strings.guitar_i_markup)
     baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
     baca.clef(m[1][0], "treble")
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[1, 7], 2)
-        baca.pitches(pleaves, "Db5 Bb4 Ab4 F4")
-        baca.laissez_vibrer(pleaves)
-        baca.dynamic(pleaves[0], "f")
-        baca.dynamic(pleaves[2], "mf")
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[11, 13], 99)
-        baca.staff_position(pleaves, 0)
-        runs = abjad.select.runs(pleaves)
-        for run in runs:
-            baca.staff_lines(run[0], 1)
-            leaf = abjad.get.leaf(run[-1], 1)
-            baca.staff_lines(leaf, 5)
-            baca.down_bow(run[0], padding=1)
-            if len(run) == 1:
-                run = baca.select.rleak(run)
-            baca.hairpin(
-                run,
-                'o<|"mf"',
-            )
-
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m[1, 7], 5)
-        baca.override.dls_staff_padding(m[11, 13], 9)
+    A2a(library.pleaves(m[1, 7], 2), "Db5 Bb4 Ab4 F4", "f - mf -")
+    B1b(library.pleaves(m[11, 13], 99))
 
 
 def gt2(m):
@@ -493,36 +503,8 @@ def gt2(m):
     baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[1, 7], 2)
-        pleaves = baca.select.pleaves(pleaves)
-        baca.pitches(pleaves, "C5 B4 G4 Gb4")
-        baca.laissez_vibrer(pleaves)
-        baca.dynamic(pleaves[0], "p")
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[11, 13], 99)
-        baca.staff_position(pleaves, 0)
-        runs = abjad.select.runs(pleaves)
-        for run in runs:
-            baca.staff_lines(run[0], 1)
-            leaf = abjad.get.leaf(run[-1], 1)
-            baca.staff_lines(leaf, 5)
-            baca.up_bow(run[0], padding=1)
-            if len(run) == 1:
-                run = baca.select.rleak(run)
-            baca.hairpin(
-                run,
-                'o<|"mf"',
-            )
-
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m[1, 7], 4.5)
-        baca.override.dls_staff_padding(m[11, 13], 4.5)
+    A2a(library.pleaves(m[1, 7], 2), "C5 B4 G4 Gb4", "p - - -")
+    B1b(library.pleaves(m[11, 13], 99), up_bow=True)
 
 
 def vn(m):
@@ -889,6 +871,10 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(abjad.select.run(cache["fl"][8, 11], 0), 3.5)
     baca.override.dls_staff_padding(abjad.select.run(cache["fl"][12], 0), 3.5)
     baca.override.dls_staff_padding(abjad.select.run(cache["fl"][13], 0), 3.5)
+    baca.override.dls_staff_padding(cache["gt1"][1, 7], 5)
+    baca.override.dls_staff_padding(cache["gt1"][11, 13], 9)
+    baca.override.dls_staff_padding(cache["gt2"][1, 7], 4.5)
+    baca.override.dls_staff_padding(cache["gt2"][11, 13], 4.5)
 
 
 @baca.build.timed("make_score")
