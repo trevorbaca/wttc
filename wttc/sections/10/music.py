@@ -531,10 +531,9 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
         runs = abjad.select.runs(pleaves)
         for run, peak_ in zip(runs, peaks_, strict=True):
             pieces = baca.select.partition_in_halves(run)
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 pieces,
                 library.swells(peak_),
-                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -585,10 +584,9 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         )
     if xfb is True:
         pieces = baca.select.partition_in_halves(pleaves)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             pieces,
             library.swells(peak),
-            glue=True,
             rleak=True,
         )
     else:
@@ -614,10 +612,9 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
         )
     else:
         pieces = baca.select.partition_in_halves(pleaves)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             pieces,
-            f"o< {peak} >o !",
-            glue=True,
+            f"o< {peak}>o!",
             rleak=True,
         )
 
@@ -673,10 +670,9 @@ def E4a(pleaves, pitch, peaks):
         else:
             pieces = baca.select.partition_in_halves(run)
             if pieces:
-                baca.hairpins.hairpin(
+                baca.hairpins.exact(
                     pieces,
                     library.swells(peak_),
-                    glue=True,
                     rleak=True,
                 )
 
@@ -695,10 +691,9 @@ def E4c(pleaves, pitch, alteration, peak):
         staff_padding=3,
     )
     pieces = baca.select.partition_in_halves(pleaves)
-    baca.hairpins.hairpin(
+    baca.hairpins.exact(
         pieces,
         library.swells(peak),
-        glue=True,
         rleak=True,
     )
 
@@ -724,10 +719,9 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
             staff_padding=5.5,
         )
         pieces = baca.select.partition_in_halves(run)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             pieces,
             library.swells(peak),
-            glue=True,
             rleak=True,
         )
 

@@ -410,10 +410,9 @@ def fl(m):
         baca.pitch(runs[1], "F4")
         baca.pitch(runs[2], "E4")
         baca.pitch(runs[3], "E4")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(runs[0], [1]),
             library.swells("mf mf mp"),
-            glue=True,
             rleak=True,
         )
         baca.hairpins.cyclic(
@@ -422,15 +421,13 @@ def fl(m):
             do_not_bookend=True,
         )
         baca.hairpins.exact([baca.select.rleaf(runs[1], -1)], "!")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(runs[2], [1]),
             library.swells("p mp mf mp p"),
-            glue=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(runs[3], [1, 2]),
-            "o< p >o !",
-            glue=True,
+            "o< p>o!",
             rleak=True,
         )
 
@@ -612,40 +609,34 @@ def vn(m):
         baca.pitches(runs[2], "E4 G4")
         baca.pitches(runs[3], "E4 G#4")
         baca.pitches(runs[4], "E4 G#4")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[0], [1, 1, 1, 1]),
             library.swells("mp mp"),
-            glue=True,
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[1], [1, 1, 1, 1]),
             library.swells("p p"),
-            glue=True,
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[2], [1, 1, 1, 1]),
             library.swells("p p"),
-            glue=True,
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[3][:6], [1, 1, 1, 1, 1, 1]),
             library.swells("pp p mp"),
-            glue=True,
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[3][-2:], [1, 1]),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[4], [1, 1]),
             library.swells("pp"),
-            glue=True,
             rleak=True,
         )
 
@@ -707,22 +698,19 @@ def vn(m):
             runs[3],
             staff_padding=4.5,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[0], [1, 2]),
             library.swells("mp"),
-            glue=True,
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[1], [5, 2]),
             library.swells("mf"),
-            glue=True,
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[2], [7, 3, 4]),
-            'o< "f" -- ! >o !',
-            glue=True,
+            'o< "f"-- !>o!',
             rleak=True,
         )
         baca.hairpins.exact(
@@ -848,28 +836,24 @@ def vc(cache):
             [("G2", 5), ("Bb2", 3)],
             "Bb2",
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[0], [4, 2]),
-            "o< p >o !",
-            glue=True,
+            "o< p>o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[1], [7, 4]),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[2], [14, 7]),
-            "o< mf >o !",
-            glue=True,
+            "o< mf>o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[3], [4, 2]),
-            "o< mf >o p",
-            glue=True,
+            "o< mf>op",
             rleak=True,
         )
 
@@ -916,24 +900,21 @@ def vc(cache):
             ">o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(parts[1], [2, 2]),
-            "o< p <| ff",
-            glue=True,
+            "o< p<|ff",
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(parts[2], [1, 2]),
-            "o< p <| ff",
-            glue=True,
+            "o< p<|ff",
         )
         baca.hairpins.exact(
             parts[3],
             "o<|ff",
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(runs[1], [2, 1]),
-            "o< p >o !",
-            glue=True,
+            "o< p>o!",
             rleak=True,
         )
         baca.hairpins.exact(
