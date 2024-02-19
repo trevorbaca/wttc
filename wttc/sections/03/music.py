@@ -58,32 +58,32 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        3 * [swell(8)] + ["-"],
+        3 * [frame(8, 4)] + ["-"],
         material=1,
     )
     rhythm(
         meters(3, 4),
-        3 * [swell(8)] + ["-"],
+        3 * [frame(8, 4)] + ["-"],
         material=1,
     )
     rhythm(
         meters(5),
-        2 * [swell(8)],
+        2 * [frame(8, 4)],
         material=1,
     )
     rhythm(
         meters(6),
-        2 * [swell(8)],
+        2 * [frame(8, 4)],
         material=1,
     )
     rhythm(
         meters(7),
-        [4, rt(3), "-"],
+        [frame(7, 3), "-"],
         material=1,
     )
     rhythm(
         meters(7),
-        [1, AG([2], 8)],
+        [1, 4, AG([2], 4)],
         material=3,
         overlap=[-7],
     )
@@ -110,7 +110,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(12),
-        [swell(8), "-"],
+        [frame(8, 4), "-"],
         material=1,
     )
     rhythm(
@@ -149,27 +149,27 @@ def GT1(voice, meters):
         meters(1),
         [-5, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.make_one_beat_tuplets(
         meters(2),
         [-15, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.mmrests(3)
     rhythm.make_one_beat_tuplets(
         meters(4),
         [-12, -1, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.mmrests(5, 6)
     rhythm.make_one_beat_tuplets(
         meters(7),
         [-1, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.mmrests(8, 10)
     rhythm.make_one_beat_tuplets(
@@ -192,26 +192,26 @@ def GT2(voice, meters):
         meters(1),
         [-6, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.make_one_beat_tuplets(
         meters(2),
         [-13, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.mmrests(3, 4)
     rhythm.make_one_beat_tuplets(
         meters(5),
         [-1, 1, "-"],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.make_one_beat_tuplets(
         meters(6),
         ["-", 1],
         extra_counts=[-1],
-        material=1,
+        material=2,
     )
     rhythm.mmrests(7)
     rhythm.mmrests(8, 10)
@@ -434,7 +434,7 @@ def fl(m):
     @baca.call
     def block():
         runs = library.runs(m, 3)
-        parts = baca.select.lparts(runs[0], [3, 3, 2, 2], overhang=abjad.EXACT)
+        parts = baca.select.lparts(runs[0], [4, 3, 2, 2], overhang=abjad.EXACT)
         baca.flat_glissando(parts[0], "C6", stop_pitch="B5")
         baca.flat_glissando(parts[1], "C6", stop_pitch="B5")
         baca.flat_glissando(parts[2], "D6", stop_pitch="C#6")
@@ -521,7 +521,7 @@ def gt1(m):
 
     @baca.call
     def block():
-        pleaves = library.pleaves(m[1, 7], 1)
+        pleaves = library.pleaves(m[1, 7], 2)
         baca.pitches(pleaves, "Db5 Bb4 Ab4 F4")
         baca.laissez_vibrer(pleaves)
         baca.dynamic(pleaves[0], "f")
@@ -562,7 +562,7 @@ def gt2(m):
 
     @baca.call
     def block():
-        pleaves = library.pleaves(m[1, 7], 1)
+        pleaves = library.pleaves(m[1, 7], 2)
         pleaves = baca.select.pleaves(pleaves)
         baca.pitches(pleaves, "C5 B4 G4 Gb4")
         baca.laissez_vibrer(pleaves)
