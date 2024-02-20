@@ -2323,7 +2323,9 @@ number.3.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak bound-details.right.padding 2
+      %! SPANNER_START
+    - \tweak staff-padding 4.5
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
@@ -2365,13 +2367,13 @@ number.3.Violin.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     ef'!16
+      %! SPANNER_STOP
+    \!
     ]
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
-      %! SPANNER_STOP
-    \!
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
@@ -2462,7 +2464,9 @@ number.3.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak bound-details.right.padding 2
+      %! SPANNER_START
+    - \tweak staff-padding 4.5
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
@@ -2646,6 +2650,8 @@ number.3.Violin.Music = {
     - \baca-text-spanner-left-markup \baca-damp-markup
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak staff-padding 4.5
       %! SPANNER_START
@@ -2999,6 +3005,8 @@ number.3.Violin.Music = {
     - \baca-text-spanner-left-markup \baca-damp-markup
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak staff-padding 4.5
       %! SPANNER_START
@@ -4140,7 +4148,7 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"
       %! SPANNER_START

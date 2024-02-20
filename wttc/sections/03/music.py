@@ -425,8 +425,31 @@ def A2a(pleaves, pitches, dynamics):
         baca.dynamic(pleaf, dynamic)
 
 
-def A2b():
-    pass
+def A2b(
+    pleaves,
+    glissando_pairs,
+    stop_pitch,
+    hairpin_lparts,
+    hairpin,
+    *,
+    rleak_hairpin=False,
+    damp_staff_padding=4.5,
+):
+    baca.multistage_leaf_glissando(
+        pleaves,
+        glissando_pairs,
+        stop_pitch,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        rleak=rleak_hairpin,
+    )
+    baca.rspanners.damp(
+        pleaves,
+        bound_details_right_padding=2,
+        staff_padding=damp_staff_padding,
+    )
 
 
 def A2c():
@@ -556,84 +579,52 @@ def vn(m):
     A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
     A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
     A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
-
-    @baca.call
-    def block():
-        runs = library.runs(m[1, 7], 2)
-        assert len(runs) == 4
-        baca.flat_glissando(
-            runs[0],
-            "D5",
-            stop_pitch="Eb4",
-        )
-        baca.multistage_leaf_glissando(
-            runs[1],
-            [("Db5", 3), ("E4", 2), ("C5", 3), ("F4", None)],
-            "B4",
-        )
-        baca.multistage_leaf_glissando(
-            runs[2],
-            [
-                ("B4", 2),
-                ("E4", 4),
-                ("C5", 2),
-                ("F4", 2),
-                ("D5", 2),
-                ("G4", 2),
-                ("E5", 2),
-                ("A4", 2),
-                ("F5", 2),
-                ("G4", 2),
-                ("G5", None),
-            ],
-            "A4",
-        )
-        baca.multistage_leaf_glissando(
-            runs[3],
-            [
-                ("Bb4", 2),
-                ("E4", 2),
-                ("C5", 2),
-                ("F4", 2),
-                ("D5", None),
-            ],
-            "G4",
-        )
-        baca.rspanners.damp(
-            runs[0],
-            staff_padding=3,
-        )
-        baca.rspanners.damp(
-            runs[1],
-            staff_padding=3,
-        )
-        baca.rspanners.damp(
-            runs[2],
-            staff_padding=4.5,
-        )
-        baca.rspanners.damp(
-            runs[3],
-            staff_padding=4.5,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[0], [1, 2]),
-            library.swells("mp"),
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[1], [5, 2]),
-            library.swells("mf"),
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[2], [7, 3, 4]),
-            'o< "f"-- !>o!',
-            rleak=True,
-        )
-        baca.hairpin(
-            runs[3],
-            '"f">o!',
-        )
+    A2b(
+        library.pleaves(m[1], 2),
+        [("D5", 3)],
+        "Eb4",
+        [1, 2],
+        "o< mp>o!",
+    )
+    A2b(
+        library.pleaves(m[2], 2),
+        [("Db5", 3), ("E4", 2), ("C5", 3), ("F4", None)],
+        "B4",
+        [5, 3],
+        "o< mf>o!",
+    )
+    A2b(
+        library.pleaves(m[3, 4], 2),
+        [
+            ("B4", 2),
+            ("E4", 4),
+            ("C5", 2),
+            ("F4", 2),
+            ("D5", 2),
+            ("G4", 2),
+            ("E5", 2),
+            ("A4", 2),
+            ("F5", 2),
+            ("G4", 2),
+            ("G5", None),
+        ],
+        "A4",
+        [7, 3, 5],
+        'o< "f"-- !>o!',
+    )
+    A2b(
+        library.pleaves(m[7], 2),
+        [
+            ("Bb4", 2),
+            ("E4", 2),
+            ("C5", 2),
+            ("F4", 2),
+            ("D5", None),
+        ],
+        "G4",
+        [7],
+        '"f">o!',
+    )
 
     @baca.call
     def block():
@@ -780,47 +771,6 @@ def vc(m):
             "o< mf>o!",
             rleak=True,
         )
-
-    """
-    @baca.call
-    def block():
-        runs = library.runs(m[7, 13], 3)
-        assert len(runs) == 3
-        parts = baca.select.lparts(runs[0], [2, 4, 3, 2])
-        baca.mspanners.scp(
-            parts[0],
-            "T4 =|",
-            staff_padding=3,
-        )
-        baca.mspanners.scp(
-            baca.select.lparts(parts[1], [1, 1, 2]),
-            "T4 => T1 => O => P2",
-            do_not_rleak=True,
-            staff_padding=3,
-        )
-        baca.mspanners.scp(
-            baca.select.lparts(parts[2], [1, 2]),
-            "T4 => O => P2",
-            do_not_rleak=True,
-            staff_padding=3,
-        )
-        baca.mspanners.scp(
-            [parts[3]],
-            "O => P2",
-            do_not_rleak=True,
-            staff_padding=3,
-        )
-        baca.mspanners.scp(
-            runs[1],
-            "T =|",
-            staff_padding=3,
-        )
-        baca.mspanners.scp(
-            runs[2],
-            "T =|",
-            staff_padding=3,
-        )
-    """
 
     @baca.call
     def block():
