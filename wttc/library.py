@@ -425,13 +425,19 @@ def force_repeat_tie(components, threshold=(1, 8)):
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
 
 
-def frame(written_n, framed_n):
+def frame(written_n, framed_n, *, chords=False):
     assert framed_n < written_n, repr((written_n, framed_n))
     actual_n = written_n - framed_n
     left_multiplier = (actual_n, written_n)
-    left = baca.rhythm.m(written_n, left_multiplier)
+    if chords:
+        left = baca.rhythm.m(baca.rhythm.Chord(written_n, chords), left_multiplier)
+    else:
+        left = baca.rhythm.m(written_n, left_multiplier)
     right_multiplier = (written_n - actual_n, written_n)
-    right = baca.rhythm.m(written_n, right_multiplier)
+    if chords:
+        right = baca.rhythm.m(baca.rhythm.Chord(written_n, chords), right_multiplier)
+    else:
+        right = baca.rhythm.m(written_n, right_multiplier)
     right_ = baca.rhythm.h(right)
     framed_right = baca.rhythm.FramedNote(right_)
     return X([left, framed_right])

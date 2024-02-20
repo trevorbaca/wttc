@@ -4176,15 +4176,16 @@ number.3.Cello.Music = {
     ~
     \repeatTie
 
-    <gf, cf>8.
+    <gf, cf>4 * 3/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    [
       %! SPANNER_START
     - \baca-dashed-line-with-arrow
       %! SPANNER_START
@@ -4211,15 +4212,26 @@ number.3.Cello.Music = {
     \<
     \repeatTie
 
-    <gf,! cf!>16
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    <gf,! cf!>4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    ]
 
     % [Cello.Music measure 10]
     <f, bf,!>2.
@@ -4244,15 +4256,16 @@ number.3.Cello.Music = {
     - \tweak stencil ##f
     ~
 
-    <f, bf,>8.
+    <f, bf,>4 * 3/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    [
       %! SPANNER_START
     - \baca-dashed-line-with-arrow
       %! SPANNER_START
@@ -4279,21 +4292,33 @@ number.3.Cello.Music = {
     \<
     \repeatTie
 
-    <f, bf,!>16
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    <f, bf,!>4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    ]
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 11]
     \override DynamicLineSpanner.staff-padding = 5
-    <ef,! af,!>8.
-    [
+    <ef,! af,!>4 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! SPANNER_START
     - \baca-dashed-line-with-arrow
       %! SPANNER_START
@@ -4322,15 +4347,26 @@ number.3.Cello.Music = {
       %! SPANNER_START
     \<
 
-    <ef,! af,!>16
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    <ef,! af,!>4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    ]
     \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
