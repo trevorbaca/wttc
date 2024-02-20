@@ -844,7 +844,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.untie(plts[-1])
     strings = [_ + ":2" for _ in pitch_string.split()[:-1]] + pitch_string.split()[-1:]
     string = " ".join(strings)
-    baca.multistage_leaf_glissando(
+    baca.multistage_glissando(
         run,
         string,
     )

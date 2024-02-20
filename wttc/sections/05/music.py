@@ -957,7 +957,7 @@ def C3a(
     else:
         length_1, length_2 = len(pleaves), len(pleaves_2)
         string = f"{start_pitch}:{length_1} {stop_pitch}:{length_2} {start_pitch}"
-        baca.multistage_leaf_glissando(
+        baca.multistage_glissando(
             pleaves + pleaves_2,
             string,
         )
