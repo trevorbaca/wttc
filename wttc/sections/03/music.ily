@@ -4114,7 +4114,7 @@ number.3.Cello.Music = {
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
-    - \baca-text-spanner-left-text "T4"
+    - \baca-text-spanner-left-text "T"
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -4165,7 +4165,7 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T1"
       %! SPANNER_START
@@ -4187,7 +4187,7 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
@@ -4236,7 +4236,7 @@ number.3.Cello.Music = {
     % [Cello.Music measure 10]
     <f, bf,!>2.
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"
       %! SPANNER_START
@@ -4267,7 +4267,7 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
@@ -4320,7 +4320,7 @@ number.3.Cello.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START

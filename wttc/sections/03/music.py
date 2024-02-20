@@ -441,12 +441,28 @@ def A3a(pleaves, pitches, hairpin):
     baca.hairpin(pleaves, hairpin)
 
 
-def A3b(pleaves, pitch, lparts, hairpin, *, rleak=False):
+def A3b(
+    pleaves,
+    pitch,
+    hairpin_lparts,
+    hairpin,
+    scp_lparts,
+    scp,
+    *,
+    rleak_hairpin=False,
+    do_not_rleak_scp=False,
+):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
-        baca.select.lparts(pleaves, lparts),
+        baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=rleak,
+        rleak=rleak_hairpin,
+    )
+    baca.mspanners.scp(
+        baca.select.lparts(pleaves, scp_lparts),
+        scp,
+        do_not_rleak=do_not_rleak_scp,
+        staff_padding=3,
     )
 
 
@@ -646,13 +662,60 @@ def vc(m):
     baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
-
-    A3b(library.pleaves(m[7], 3), "<Gb2 Cb3>", [2], "p>o!", rleak=True)
-    A3b(library.pleaves(m[8, 9], 3), "<Gb2 Cb3>", [2, 2], "o< p<|ff")
-    A3b(library.pleaves(m[10], 3), "<F2 Bb2>", [1, 2], "o< p<|ff")
-    A3b(library.pleaves(m[11], 3), "<Eb2 Ab2>", [2], "o<|ff")
-    A3b(library.pleaves(m[12], 3), "<Eb2 Ab2>", [2, 1], "o< p>o!", rleak=True)
-    A3b(library.pleaves(m[13], 3), "<Eb2 Ab2>", [1], "p>o!", rleak=True)
+    A3b(
+        library.pleaves(m[7], 3),
+        "<Gb2 Cb3>",
+        [2],
+        "p>o!",
+        [2],
+        "T =|",
+        rleak_hairpin=True,
+    )
+    A3b(
+        library.pleaves(m[8, 9], 3),
+        "<Gb2 Cb3>",
+        [2, 2],
+        "o< p<|ff",
+        [1, 1, 2],
+        "T4 -> T1 -> O -> P2",
+        do_not_rleak_scp=True,
+    )
+    A3b(
+        library.pleaves(m[10], 3),
+        "<F2 Bb2>",
+        [1, 2],
+        "o< p<|ff",
+        [1, 2],
+        "T4 -> O -> P2",
+        do_not_rleak_scp=True,
+    )
+    A3b(
+        library.pleaves(m[11], 3),
+        "<Eb2 Ab2>",
+        [2],
+        "o<|ff",
+        [2],
+        "O -> P2",
+        do_not_rleak_scp=True,
+    )
+    A3b(
+        library.pleaves(m[12], 3),
+        "<Eb2 Ab2>",
+        [2, 1],
+        "o< p>o!",
+        [3],
+        "T =|",
+        rleak_hairpin=True,
+    )
+    A3b(
+        library.pleaves(m[13], 3),
+        "<Eb2 Ab2>",
+        [1],
+        "p>o!",
+        [1],
+        "T =|",
+        rleak_hairpin=True,
+    )
 
     def circle_bow_spanner(run):
         staff_padding = 3
@@ -718,6 +781,7 @@ def vc(m):
             rleak=True,
         )
 
+    """
     @baca.call
     def block():
         runs = library.runs(m[7, 13], 3)
@@ -756,30 +820,7 @@ def vc(m):
             "T =|",
             staff_padding=3,
         )
-        """
-        baca.hairpin(
-            baca.select.lparts(parts[1], [2, 2]),
-            "o< p<|ff",
-        )
-        baca.hairpin(
-            baca.select.lparts(parts[2], [1, 2]),
-            "o< p<|ff",
-        )
-        baca.hairpin(
-            parts[3],
-            "o<|ff",
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[1], [2, 1]),
-            "o< p>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            runs[2],
-            "p>o!",
-            rleak=True,
-        )
-        """
+    """
 
     @baca.call
     def block():
