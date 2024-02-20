@@ -12,6 +12,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -343,23 +344,26 @@ def VC(voice, meters):
     )
     rhythm(
         meters(7),
-        [9],
+        [c(9, 2)],
         material=3,
         overlap=[-7],
     )
     rhythm(
         meters(8, 9),
-        [X(t(16)), X(t(12)), frame(4, 1)],
+        # [X(t(c(16))), X(t(c(12))), frame(4, 1)],
+        [X(t(c(16, 2))), X(t(c(12, 2))), c(3, 2), c(1, 2)],
         material=3,
     )
     rhythm(
         meters(10),
-        [X(t(12)), frame(4, 1)],
+        # [X(t(12)), frame(4, 1)],
+        [X(t(c(12, 2))), c(3, 2), c(1, 2)],
         material=3,
     )
     rhythm(
         meters(11),
-        [frame(4, 1), -1, "-"],
+        # [frame(4, 1), -1, "-"],
+        [c(3, 2), c(1, 2), -1, "-"],
         material=3,
     )
     rhythm(
@@ -368,10 +372,14 @@ def VC(voice, meters):
         material=99,
         overlap=["-"],
     )
-    rhythm(meters(12), [rt(AG([2], 2)), "-"], material=99)
     rhythm(
         meters(12),
-        [-1, 8, "-"],
+        [rt(AG([2], 2)), "-"],
+        material=99,
+    )
+    rhythm(
+        meters(12),
+        [-1, c(8, 2), "-"],
         material=3,
         overlap=[-2],
     )
@@ -383,7 +391,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(13),
-        [3, -1, "-"],
+        [c(3, 2), -1, "-"],
         material=3,
     )
     rhythm(
@@ -434,6 +442,15 @@ def A3a(pleaves, pitches, hairpin):
     start_pitch, stop_pitch = pitches
     baca.flat_glissando(pleaves, start_pitch, stop_pitch=stop_pitch)
     baca.hairpin(pleaves, hairpin)
+
+
+def A3b(pleaves, pitch, lparts, hairpin, *, rleak=False):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.lparts(pleaves, lparts),
+        hairpin,
+        rleak=rleak,
+    )
 
 
 def B1a(pleaves, pitch, dynamic):
@@ -626,34 +643,19 @@ def vn(m):
             )
 
 
-def vc(cache):
-    name = "vc"
-    m = cache[name]
-
-    @baca.call
-    def block():
-        plt = baca.select.plt(m[6, 7], -1)
-        baca.pitch(plt, "<Gb2 Cb3>")
-        cache.rebuild()
-        pleaves = m[8, 9]
-        baca.pitch(pleaves, "<Gb2 Cb3>")
-        pleaves = m[10]
-        baca.pitch(pleaves, "<F2 Bb2>")
-        run = abjad.select.run(m[11], 0)
-        baca.pitch(run, "<Eb2 Ab2>")
-        run = abjad.select.run(m[12], 1)
-        baca.pitch(run, "<Eb2 Ab2>")
-        run = abjad.select.run(m[13], 0)
-        baca.pitch(run, "<Eb2 Ab2>")
-        cache.rebuild()
-
-    m = cache[name]
-
+def vc(m):
     baca.instrument(m[1][0], "Cello", manifests=library.manifests)
     baca.instrument_name(m[1][0], strings.cello_markup)
     baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
+
+    A3b(library.pleaves(m[7], 3), "<Gb2 Cb3>", [2], "p>o!", rleak=True)
+    A3b(library.pleaves(m[8, 9], 3), "<Gb2 Cb3>", [2, 2], "o< p<|ff")
+    A3b(library.pleaves(m[10], 3), "<F2 Bb2>", [1, 2], "o< p<|ff")
+    A3b(library.pleaves(m[11], 3), "<Eb2 Ab2>", [2], "o<|ff")
+    A3b(library.pleaves(m[12], 3), "<Eb2 Ab2>", [2, 1], "o< p>o!", rleak=True)
+    A3b(library.pleaves(m[13], 3), "<Eb2 Ab2>", [1], "p>o!", rleak=True)
 
     def circle_bow_spanner(run):
         staff_padding = 3
@@ -715,7 +717,7 @@ def vc(cache):
         )
         baca.hairpin(
             baca.select.lparts(runs[3], [4, 2]),
-            "o< mf>op",
+            "o< mf>o!",
             rleak=True,
         )
 
@@ -757,11 +759,7 @@ def vc(cache):
             "T =|",
             staff_padding=3,
         )
-        baca.hairpin(
-            parts[0],
-            ">o!",
-            rleak=True,
-        )
+        """
         baca.hairpin(
             baca.select.lparts(parts[1], [2, 2]),
             "o< p<|ff",
@@ -784,6 +782,7 @@ def vc(cache):
             "p>o!",
             rleak=True,
         )
+        """
 
     @baca.call
     def block():
@@ -870,7 +869,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt1(cache["gt1"])
     gt2(cache["gt2"])
     vn(cache["vn"])
-    vc(cache)
+    vc(cache["vc"])
     align_spanners(cache)
     return score
 
