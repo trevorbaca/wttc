@@ -427,8 +427,7 @@ def A2a(pleaves, pitches, dynamics):
 
 def A2b(
     pleaves,
-    glissando_pairs,
-    # stop_pitch,
+    glissando_pitches,
     hairpin_lparts,
     hairpin,
     *,
@@ -437,9 +436,7 @@ def A2b(
 ):
     baca.multistage_leaf_glissando(
         pleaves,
-        glissando_pairs,
-        # stop_pitch,
-        None,
+        glissando_pitches,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
