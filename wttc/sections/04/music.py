@@ -842,11 +842,11 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.override.note_head_style_harmonic(baca.select.rleak(run))
     plts = baca.select.plts(run)
     baca.untie(plts[-1])
-    pairs = [(_, 3) for _ in pitch_string.split()]
+    strings = [_ + ":2" for _ in pitch_string.split()[:-1]] + pitch_string.split()[-1:]
+    string = " ".join(strings)
     baca.multistage_leaf_glissando(
         run,
-        pairs[:-1],
-        pitch_string.split()[-1],
+        string,
     )
     hairpin_string = library.swells(dynamic_string)
     baca.hairpin(

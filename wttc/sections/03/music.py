@@ -428,7 +428,7 @@ def A2a(pleaves, pitches, dynamics):
 def A2b(
     pleaves,
     glissando_pairs,
-    stop_pitch,
+    # stop_pitch,
     hairpin_lparts,
     hairpin,
     *,
@@ -438,7 +438,8 @@ def A2b(
     baca.multistage_leaf_glissando(
         pleaves,
         glissando_pairs,
-        stop_pitch,
+        # stop_pitch,
+        None,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -581,47 +582,25 @@ def vn(m):
     A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
     A2b(
         library.pleaves(m[1], 2),
-        [("D5", 3)],
-        "Eb4",
+        "D5:2 Eb4",
         [1, 2],
         "o< mp>o!",
     )
     A2b(
         library.pleaves(m[2], 2),
-        [("Db5", 3), ("E4", 2), ("C5", 3), ("F4", None)],
-        "B4",
+        "Db5:2 E4 C5:2 F4:2 B4",
         [5, 3],
         "o< mf>o!",
     )
     A2b(
         library.pleaves(m[3, 4], 2),
-        [
-            ("B4", 2),
-            ("E4", 4),
-            ("C5", 2),
-            ("F4", 2),
-            ("D5", 2),
-            ("G4", 2),
-            ("E5", 2),
-            ("A4", 2),
-            ("F5", 2),
-            ("G4", 2),
-            ("G5", None),
-        ],
-        "A4",
+        "B4 E4:3 C5 F4 D5 G4 E5 A4 F5 G4 G5:2 A4",
         [7, 3, 5],
         'o< "f"-- !>o!',
     )
     A2b(
         library.pleaves(m[7], 2),
-        [
-            ("Bb4", 2),
-            ("E4", 2),
-            ("C5", 2),
-            ("F4", 2),
-            ("D5", None),
-        ],
-        "G4",
+        "Bb4 E4 C5 F4 D5:2 G4",
         [7],
         '"f">o!',
     )
@@ -733,23 +712,27 @@ def vc(m):
             circle_bow_spanner(run)
         baca.multistage_leaf_glissando(
             runs[0],
-            [("B2", 5), ("D3", 2)],
-            "D3",
+            # [("B2", 5), ("D3", 2)],
+            # "D3",
+            "B2:4 D3 D3",
         )
         baca.multistage_leaf_glissando(
             runs[1],
-            [("Bb2", 8), ("Db3", 4)],
-            "Db3",
+            # [("Bb2", 8), ("Db3", 4)],
+            # "Db3",
+            "Bb2:7 Db3 Db3",
         )
         baca.multistage_leaf_glissando(
             runs[2],
-            [("Ab2", 15), ("Cb3", 8)],
-            "Cb3",
+            # [("Ab2", 15), ("Cb3", 8)],
+            # "Cb3",
+            "Ab2:14 Cb3:7 Cb3",
         )
         baca.multistage_leaf_glissando(
             runs[3],
-            [("G2", 5), ("Bb2", 3)],
-            "Bb2",
+            # [("G2", 5), ("Bb2", 3)],
+            # "Bb2",
+            "G2:4 Bb2 Bb2",
         )
         baca.hairpin(
             baca.select.lparts(runs[0], [4, 2]),

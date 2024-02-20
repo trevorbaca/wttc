@@ -956,11 +956,10 @@ def C3a(
         )
     else:
         length_1, length_2 = len(pleaves), len(pleaves_2)
-        pairs = [(start_pitch, length_1 + 1), (stop_pitch, length_2 + 1)]
+        string = f"{start_pitch}:{length_1} {stop_pitch}:{length_2} {start_pitch}"
         baca.multistage_leaf_glissando(
             pleaves + pleaves_2,
-            pairs,
-            start_pitch,
+            string,
         )
         baca.hairpin(
             [pleaves, pleaves_2],
