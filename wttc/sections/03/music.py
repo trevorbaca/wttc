@@ -610,7 +610,7 @@ def vn(m):
         for run, dynamic in zip(runs, dynamics, strict=True):
             baca.override.note_head_style_harmonic(baca.select.rleak(run))
             baca.pitch(run[0], "B4")
-            baca.flat_glissando(run[1:], "A4", stop_pitch="C5")
+            baca.flat_glissando(run[1:], "A4 C5")
             baca.rspanners.string_number(
                 run[1:],
                 "II",
