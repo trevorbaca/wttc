@@ -3700,10 +3700,10 @@ number.3.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    d8
+    df!8
     [
 
-    d8
+    df!8
       %! SPANNER_STOP
     \bacaStopTextSpanCircleBow
     ]
@@ -3935,19 +3935,19 @@ number.3.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    c4
+    cf!4
 
     % [Cello.Music measure 5]
-    c16
+    cf!16
     [
 
-    c16
+    cf!16
     - \tweak staff-padding 3
     - \baca-circle-bowing
       %! SPANNER_STOP
     \bacaStopTextSpanCircleBow
 
-    c8
+    cf!8
     ]
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -3962,7 +3962,7 @@ number.3.Cello.Music = {
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
 
-    c4
+    cf!4
       %! SPANNER_STOP
     \bacaStopTextSpanCircleBow
       %! SPANNER_START
