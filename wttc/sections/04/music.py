@@ -743,10 +743,10 @@ def B1b(
         baca.override.note_head_style_harmonic(run)
         if len(run) in (3, 4):
             baca.pitch(run[0], grace_pitch)
-            baca.flat_glissando(run[1:], f"{start_pitch} {stop_pitch}")
+            baca.multistage_glissando(run[1:], f"{start_pitch} {stop_pitch}")
         else:
             assert len(run) == 2
-            baca.flat_glissando(run, f"{start_pitch} {stop_pitch}")
+            baca.multistage_glissando(run, f"{start_pitch} {stop_pitch}")
         if conjoin is False:
             baca.rspanners.string_number(
                 run[1:],

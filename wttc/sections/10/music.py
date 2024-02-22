@@ -561,7 +561,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
     low_pitch, high_pitch = pitches.split()
     if xfb is True:
         first_plt = baca.select.plt(pleaves, 0)
-        baca.flat_glissando(first_plt, f"{low_pitch} {high_pitch}")
+        baca.multistage_glissando(first_plt, f"{low_pitch} {high_pitch}")
         baca.override.note_head_style_harmonic(first_plt)
         baca.rspanners.xfb(
             first_plt,
@@ -577,7 +577,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
             leaves = list(pleaves)
         else:
             leaves = baca.select.plt(pleaves, -1)
-        baca.flat_glissando(leaves, f"{high_pitch} {low_pitch}")
+        baca.multistage_glissando(leaves, f"{high_pitch} {low_pitch}")
         baca.rspanners.damp(
             leaves,
             staff_padding=3,

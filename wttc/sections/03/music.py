@@ -458,7 +458,7 @@ def A3a(pleaves, pitches, hairpin):
     pitches = pitches.split()
     assert len(pitches) == 2, repr(pitches)
     start_pitch, stop_pitch = pitches
-    baca.flat_glissando(pleaves, f"{start_pitch} {stop_pitch}")
+    baca.multistage_glissando(pleaves, f"{start_pitch} {stop_pitch}")
     baca.hairpin(pleaves, hairpin)
 
 
@@ -610,7 +610,7 @@ def vn(m):
         for run, dynamic in zip(runs, dynamics, strict=True):
             baca.override.note_head_style_harmonic(baca.select.rleak(run))
             baca.pitch(run[0], "B4")
-            baca.flat_glissando(run[1:], "A4 C5")
+            baca.multistage_glissando(run[1:], "A4 C5")
             baca.rspanners.string_number(
                 run[1:],
                 "II",
@@ -760,7 +760,7 @@ def vc(m):
         for run, dynamic in zip(runs, dynamics, strict=True):
             baca.override.note_head_style_harmonic(run)
             baca.pitch(run[0], "C4")
-            baca.flat_glissando(run[1:], "B3 D4")
+            baca.multistage_glissando(run[1:], "B3 D4")
             baca.rspanners.string_number(
                 run[1:],
                 "I",
