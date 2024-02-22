@@ -3846,14 +3846,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -3960,14 +3952,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4059,14 +4043,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4165,14 +4141,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4223,14 +4191,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4278,14 +4238,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4418,14 +4370,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4520,14 +4464,6 @@ number.4.Violin.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             c''8
             \revert NoteHead.style
 
@@ -4976,14 +4912,6 @@ number.4.Cello.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             d'8
             \revert NoteHead.style
 
@@ -5203,14 +5131,6 @@ number.4.Cello.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             d'8
             \revert NoteHead.style
 
@@ -5416,14 +5336,6 @@ number.4.Cello.Music = {
     \glissando
 
     % [Cello.Music measure 5]
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
     b,16
       %! SPANNER_STOP
     \!
@@ -5486,14 +5398,6 @@ number.4.Cello.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             d'8
             \revert NoteHead.style
 
@@ -5546,14 +5450,6 @@ number.4.Cello.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             d'8
             \revert NoteHead.style
 
@@ -5827,14 +5723,6 @@ number.4.Cello.Music = {
     \glissando
 
     % [Cello.Music measure 10]
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
     a,16
       %! SPANNER_STOP
     \!
@@ -5892,14 +5780,6 @@ number.4.Cello.Music = {
         \glissando
         {
 
-            \hide NoteHead
-            \override Accidental.stencil = ##f
-            \override NoteColumn.glissando-skip = ##t
-            \override NoteHead.no-ledgers = ##t
-            \revert Accidental.stencil
-            \revert NoteColumn.glissando-skip
-            \revert NoteHead.no-ledgers
-            \undo \hide NoteHead
             d'8
             \revert NoteHead.style
 
@@ -6108,14 +5988,6 @@ number.4.Cello.Music = {
     \glissando
 
     % [Cello.Music measure 13]
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
     g,16
       %! SPANNER_STOP
     \!

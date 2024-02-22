@@ -3776,15 +3776,7 @@ number.10.Violin.Music = {
     {
 
         % [Violin.Music measure 5]
-        \hide NoteHead
-        \override Accidental.stencil = ##f
-        \override NoteColumn.glissando-skip = ##t
-        \override NoteHead.no-ledgers = ##t
         \override DynamicLineSpanner.staff-padding = 3
-        \revert Accidental.stencil
-        \revert NoteColumn.glissando-skip
-        \revert NoteHead.no-ledgers
-        \undo \hide NoteHead
         gs'!8
 
           %! STAFF_HIGHLIGHT
@@ -4016,14 +4008,6 @@ number.10.Violin.Music = {
     \glissando
     {
 
-        \hide NoteHead
-        \override Accidental.stencil = ##f
-        \override NoteColumn.glissando-skip = ##t
-        \override NoteHead.no-ledgers = ##t
-        \revert Accidental.stencil
-        \revert NoteColumn.glissando-skip
-        \revert NoteHead.no-ledgers
-        \undo \hide NoteHead
         gs'!8
           %! SPANNER_STOP
         \!
@@ -4069,14 +4053,6 @@ number.10.Violin.Music = {
     \glissando
     {
 
-        \hide NoteHead
-        \override Accidental.stencil = ##f
-        \override NoteColumn.glissando-skip = ##t
-        \override NoteHead.no-ledgers = ##t
-        \revert Accidental.stencil
-        \revert NoteColumn.glissando-skip
-        \revert NoteHead.no-ledgers
-        \undo \hide NoteHead
         gs'!8
           %! SPANNER_STOP
         \!
@@ -4123,14 +4099,6 @@ number.10.Violin.Music = {
     \glissando
     {
 
-        \hide NoteHead
-        \override Accidental.stencil = ##f
-        \override NoteColumn.glissando-skip = ##t
-        \override NoteHead.no-ledgers = ##t
-        \revert Accidental.stencil
-        \revert NoteColumn.glissando-skip
-        \revert NoteHead.no-ledgers
-        \undo \hide NoteHead
         gs'!8
           %! SPANNER_STOP
         \!
