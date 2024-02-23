@@ -2518,12 +2518,10 @@ number.3.Violin.Music = {
     r8
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
-    \revert DynamicLineSpanner.staff-padding
 
     \repeat tremolo 2 {
 
         % [Violin.Music measure 3]
-        \override DynamicLineSpanner.staff-padding = 4
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
         e'16
@@ -2725,7 +2723,7 @@ number.3.Violin.Music = {
     \repeat tremolo 4 {
 
         % [Violin.Music measure 5]
-        \override DynamicLineSpanner.staff-padding = 3
+        \override DynamicLineSpanner.staff-padding = 4
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
@@ -2866,12 +2864,10 @@ number.3.Violin.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
     % [Violin.Music measure 7]
-    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
@@ -2945,7 +2941,6 @@ number.3.Violin.Music = {
     r4
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
-    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 8]
     R1 * 4/4
@@ -2969,7 +2964,6 @@ number.3.Violin.Music = {
 
     \slashedGrace {
 
-        \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
@@ -3030,12 +3024,10 @@ number.3.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert DynamicLineSpanner.staff-padding
 
     \repeat tremolo 4 {
 
         % [Violin.Music measure 12]
-        \override DynamicLineSpanner.staff-padding = 3
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
         e'16
@@ -3260,7 +3252,6 @@ number.3.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         c''16
-        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }
@@ -3273,6 +3264,7 @@ number.3.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -4160,10 +4152,8 @@ number.3.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 11]
-    \override DynamicLineSpanner.staff-padding = 5
     <ef,! af,!>4 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -4215,7 +4205,6 @@ number.3.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4225,7 +4214,6 @@ number.3.Cello.Music = {
 
     \slashedGrace {
 
-        \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
@@ -4275,7 +4263,6 @@ number.3.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         d'8
-        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }
@@ -4289,7 +4276,6 @@ number.3.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
     <ef,! af,!>16
@@ -4334,7 +4320,6 @@ number.3.Cello.Music = {
       %! SPANNER_START
     \>
     \repeatTie
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4348,7 +4333,6 @@ number.3.Cello.Music = {
 
     \slashedGrace {
 
-        \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
@@ -4397,7 +4381,6 @@ number.3.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         d'8
-        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }
@@ -4414,7 +4397,6 @@ number.3.Cello.Music = {
     r4
 
     % [Cello.Music measure 13]
-    \once \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
     <ef,! af,!>8.
@@ -4456,7 +4438,6 @@ number.3.Cello.Music = {
 
     \slashedGrace {
 
-        \override DynamicLineSpanner.staff-padding = 3
         \override NoteHead.style = #'harmonic
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
@@ -4505,7 +4486,6 @@ number.3.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         d'8
-        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }
@@ -4520,6 +4500,7 @@ number.3.Cello.Music = {
     \bacaStopTextSpanStringNumber
 
     r2
+    \revert DynamicLineSpanner.staff-padding
 
 }
 

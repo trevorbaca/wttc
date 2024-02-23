@@ -718,24 +718,10 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(cache["gt1"][11, 13], 9)
     baca.override.dls_staff_padding(cache["gt2"][1, 7], 4.5)
     baca.override.dls_staff_padding(cache["gt2"][11, 13], 4.5)
-    baca.override.dls_staff_padding(cache["vn"][1, 2], 4)
-    baca.override.dls_staff_padding(abjad.select.run(cache["vn"][3], 0), 4)
-    baca.override.dls_staff_padding(abjad.select.run(cache["vn"][3, 4], 1), 5.5)
-    baca.override.dls_staff_padding(cache["vn"][5, 6], 3)
-    baca.override.dls_staff_padding(cache["vn"][7], 3)
-    baca.override.dls_staff_padding(
-        baca.select.rleak(abjad.select.run(cache["vn"][11], 0)), 3
-    )
-    baca.override.dls_staff_padding(abjad.select.runs(cache["vn"][12, 13]), 3)
-    baca.override.dls_staff_padding(cache["vc"][1, 10], 5)
-    runs = abjad.select.runs(cache["vc"][11, 13])
-    assert len(runs) == 6
-    for i, run in enumerate(runs):
-        if i % 2 == 0:
-            staff_padding = 5
-        else:
-            staff_padding = 3
-        baca.override.dls_staff_padding(run, staff_padding)
+    baca.override.dls_staff_padding(cache["vn"][1, 3][:-4], 4)
+    baca.override.dls_staff_padding(cache["vn"][3, 4][5:], 5.5)
+    baca.override.dls_staff_padding(cache["vn"][5, 13], 4)
+    baca.override.dls_staff_padding(cache["vc"][1, 13], 5)
 
 
 @baca.build.timed("make_score")
