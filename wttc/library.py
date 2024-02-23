@@ -830,6 +830,14 @@ def rotate_rehearsal_mark_literal(leaf):
     )
 
 
+def run(leaves, material_number, run_index):
+    if isinstance(leaves, baca.section.DictionaryGetItemWrapper):
+        leaves = leaves.leaves()
+    pleaves = filter_material(leaves, material_number)
+    run = abjad.select.run(pleaves, run_index)
+    return run
+
+
 def runs(leaves, material_number):
     if isinstance(leaves, baca.section.DictionaryGetItemWrapper):
         leaves = leaves.leaves()

@@ -450,8 +450,29 @@ def A2b(
     )
 
 
-def A2c():
-    pass
+def A2c(run, glissando, hairpin_lparts, hairpin):
+    for plt in baca.select.plts(run):
+        if abjad.get.duration(plt) <= abjad.Duration(1, 16):
+            baca.articulation(
+                plt,
+                r"baca-circle-bowing",
+                staff_padding=3,
+            )
+        else:
+            baca.mspanners.circle_bow(
+                plt,
+                abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                staff_padding=3,
+            )
+    baca.glissando(
+        run,
+        glissando,
+    )
+    baca.hairpin(
+        baca.select.lparts(run, hairpin_lparts),
+        hairpin,
+        rleak=True,
+    )
 
 
 def A3a(pleaves, pitches, hairpin):
@@ -516,14 +537,14 @@ def B1b(pleaves, *, up_bow=False):
         )
 
 
-def B1c(run, dynamic, grace_pitch, glissando, string_number):
-    baca.override.note_head_style_harmonic(baca.select.rleak(run))
+def B1c(run, dynamic, grace_pitch, glissando, string_number, *, staff_padding=3):
+    baca.override.note_head_style_harmonic(run)
     baca.pitch(run[0], grace_pitch)
     baca.glissando(run[1:], glissando)
     baca.rspanners.string_number(
-        run[1:],
+        run,
         string_number,
-        staff_padding=3,
+        staff_padding=staff_padding,
     )
     baca.hairpin(
         run[1:],
@@ -679,94 +700,13 @@ def vc(m):
         "T =|",
         rleak_hairpin=True,
     )
-
-    def circle_bow_spanner(run):
-        staff_padding = 3
-        plts = baca.select.plts(run)
-        for plt in plts:
-            if abjad.get.duration(plt) <= abjad.Duration(1, 16):
-                baca.articulation(
-                    plt,
-                    r"baca-circle-bowing",
-                    staff_padding=staff_padding,
-                )
-            else:
-                baca.mspanners.circle_bow(
-                    plt,
-                    abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
-                    staff_padding=staff_padding,
-                )
-
-    @baca.call
-    def block():
-        runs = library.runs(m[1, 7], 2)
-        assert len(runs) == 4
-        for run in runs:
-            circle_bow_spanner(run)
-        baca.glissando(
-            runs[0],
-            # [("B2", 5), ("D3", 2)],
-            # "D3",
-            "B2:4 D3 D3",
-        )
-        baca.glissando(
-            runs[1],
-            # [("Bb2", 8), ("Db3", 4)],
-            # "Db3",
-            "Bb2:7 Db3 Db3",
-        )
-        baca.glissando(
-            runs[2],
-            # [("Ab2", 15), ("Cb3", 8)],
-            # "Cb3",
-            "Ab2:14 Cb3:7 Cb3",
-        )
-        baca.glissando(
-            runs[3],
-            # [("G2", 5), ("Bb2", 3)],
-            # "Bb2",
-            "G2:4 Bb2 Bb2",
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[0], [4, 2]),
-            "o< p>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[1], [7, 4]),
-            "o< mp>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[2], [14, 7]),
-            "o< mf>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[3], [4, 2]),
-            "o< mf>o!",
-            rleak=True,
-        )
-
-    @baca.call
-    def block():
-        runs = library.runs(m[11, 13], 99)
-        assert len(runs) == 3
-        dynamics = "mp p pp".split()
-        for run, dynamic in zip(runs, dynamics, strict=True):
-            baca.override.note_head_style_harmonic(run)
-            baca.pitch(run[0], "C4")
-            baca.glissando(run[1:], "B3 D4")
-            baca.rspanners.string_number(
-                run[1:],
-                "I",
-                staff_padding=5,
-            )
-            baca.hairpin(
-                run[1:],
-                f"{dynamic}>o!",
-                rleak=True,
-            )
+    A2c(library.run(m[1, 2], 2, 0), "B2:4 D3 D3", [4, 2], "o< p>o!")
+    A2c(library.run(m[2, 3], 2, 1), "Bb2:7 Db3 Db3", [7, 4], "o< mp>o!")
+    A2c(library.run(m[3, 5], 2, 1), "Ab2:14 Cb3:7 Cb3", [14, 7], "o< mf>o!")
+    A2c(library.run(m[6, 7], 2, 0), "G2:4 Bb2 Bb2", [4, 2], "o< mf>o!")
+    B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", "I", staff_padding=5)
+    B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", "I", staff_padding=5)
+    B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", "I", staff_padding=5)
 
 
 def align_spanners(cache):

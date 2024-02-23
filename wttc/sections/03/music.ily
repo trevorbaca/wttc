@@ -2974,6 +2974,16 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         b'16
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text II
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -2983,16 +2993,6 @@ number.3.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "II"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text II
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3018,6 +3018,7 @@ number.3.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         c''16
+        \revert NoteHead.style
 
     }
 
@@ -3030,7 +3031,6 @@ number.3.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
     \revert DynamicLineSpanner.staff-padding
-    \revert NoteHead.style
 
     \repeat tremolo 4 {
 
@@ -3083,6 +3083,16 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         b'16
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text II
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -3092,16 +3102,6 @@ number.3.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "II"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text II
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3127,6 +3127,7 @@ number.3.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         c''16
+        \revert NoteHead.style
 
     }
 
@@ -3138,7 +3139,6 @@ number.3.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     \slashedGrace {
 
@@ -3146,6 +3146,16 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         b'16
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text II
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -3155,16 +3165,6 @@ number.3.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "II"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text II
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3193,6 +3193,7 @@ number.3.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         c''16
+        \revert NoteHead.style
 
     }
 
@@ -3204,7 +3205,6 @@ number.3.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     r2.
 
@@ -3216,6 +3216,16 @@ number.3.Violin.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         b'16
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "II"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text II
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -3225,16 +3235,6 @@ number.3.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "II"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text II
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3261,6 +3261,7 @@ number.3.Violin.Music = {
         \undo \hide NoteHead
         c''16
         \revert DynamicLineSpanner.staff-padding
+        \revert NoteHead.style
 
     }
 
@@ -3272,7 +3273,6 @@ number.3.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
 }
 
@@ -4230,6 +4230,16 @@ number.3.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         c'8
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "I"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text I
+          %! SPANNER_START
+        - \tweak staff-padding 5
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -4239,16 +4249,6 @@ number.3.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "I"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text I
-      %! SPANNER_START
-    - \tweak staff-padding 5
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4353,6 +4353,16 @@ number.3.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         c'8
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "I"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text I
+          %! SPANNER_START
+        - \tweak staff-padding 5
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -4362,16 +4372,6 @@ number.3.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "I"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text I
-      %! SPANNER_START
-    - \tweak staff-padding 5
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4461,6 +4461,16 @@ number.3.Cello.Music = {
           %! STAFF_HIGHLIGHT
         \staffHighlight yellow
         c'8
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "I"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text I
+          %! SPANNER_START
+        - \tweak staff-padding 5
+          %! SPANNER_START
+        \bacaStartTextSpanStringNumber
 
     }
 
@@ -4470,16 +4480,6 @@ number.3.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "I"
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text I
-      %! SPANNER_START
-    - \tweak staff-padding 5
-      %! SPANNER_START
-    \bacaStartTextSpanStringNumber
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
