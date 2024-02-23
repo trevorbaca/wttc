@@ -3,7 +3,7 @@ import itertools
 import abjad
 import baca
 
-from wttc import library, strings
+from wttc import library
 
 #########################################################################################
 ########################################### 04 ##########################################
@@ -726,7 +726,33 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def B1b(
+def B1a(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
+    baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    if cov is True:
+        descriptor = r"\baca-cov-markup =|"
+    else:
+        descriptor = r"\baca-covered-markup =|"
+    if left_broken_none is True:
+        left_broken_text = None
+    else:
+        left_broken_text = r"\baca-left-broken-covered-markup"
+    baca.rspanners.covered(
+        pleaves,
+        descriptor=descriptor,
+        left_broken_text=left_broken_text,
+        staff_padding=3,
+    )
+
+
+def B1b():
+    pass
+
+
+def B1c(
     runs,
     string_symbol,
     pitches,
@@ -921,52 +947,13 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
 
 
 def fl(m):
-    @baca.call
-    def block():
-        plts = library.plts(m, 1)
-        baca.pitch(plts[:5], "G3")
-        baca.pitch(plts[5:11], "Eb4")
-        baca.pitch(plts[11:], "D4")
-        baca.dynamic(plts[0].head, "mp")
-        baca.dynamic(plts[2].head, "mf")
-        baca.dynamic(plts[4].head, '"f"')
-        baca.dynamic(plts[5].head, '"f"')
-        baca.dynamic(plts[6].head, "mf")
-        baca.dynamic(plts[7].head, "mp")
-        baca.dynamic(plts[8].head, '"f"')
-        baca.dynamic(plts[9].head, "mp")
-        baca.dynamic(plts[11].head, "p")
-        baca.rspanners.covered(
-            plts[:2],
-            staff_padding=3,
-        )
-        baca.rspanners.covered(
-            plts[2:4],
-            descriptor=strings.cov_dashed_hook,
-            staff_padding=3,
-        )
-        baca.rspanners.covered(
-            plts[4],
-            descriptor=strings.cov_dashed_hook,
-            staff_padding=3,
-        )
-        baca.rspanners.covered(
-            plts[5:8],
-            staff_padding=3,
-        )
-        baca.rspanners.covered(
-            plts[8],
-            staff_padding=3,
-        )
-        baca.rspanners.covered(
-            plts[9:11],
-            left_broken_text=None,
-            staff_padding=3,
-        )
-        baca.rspanners.covered(
-            plts[11:13],
-            staff_padding=3,
-        )
+    B1a(library.pleaves(m[1], 1), "G3", "mp -")
+    B1a(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
+    B1a(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
+    B1a(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
+    B1a(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
+    B1a(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
+    B1a(library.pleaves(m[14, 15], 1), "D4", "p -")
 
     @baca.call
     def block():
@@ -1014,20 +1001,8 @@ def fl(m):
             rleak=True,
         )
 
-    @baca.call
-    def block():
-        baca.override.dls_staff_padding(m[1, 3][:2], 3)
-        baca.override.dls_staff_padding(m[1, 3][2:], 6.5)
-        baca.override.dls_staff_padding(m[4, 7], 3)
-        baca.override.dls_staff_padding(m[8, 9], 6.5)
-        baca.override.dls_staff_padding(m[10], 3)
-        baca.override.dls_staff_padding(m[12, 13], 6.5)
-        baca.override.dls_staff_padding(m[14, 16], 3)
-
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_down(m.leaves())
-        baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
+    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
 
 
 def ob(m):
@@ -1068,11 +1043,8 @@ def ob(m):
             "f|>o!",
         )
 
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_down(m.leaves())
-        baca.override.trill_spanner_staff_padding(m.leaves(), 3)
-        baca.override.dls_staff_padding(m.leaves(), 6.5)
+    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.trill_spanner_staff_padding(m.leaves(), 3)
 
 
 def group_leaves_by_staff_lines(leaves):
@@ -1257,9 +1229,6 @@ def gt1(cache):
     @baca.call
     def block():
         baca.override.tuplet_bracket_down(m.leaves())
-        baca.override.dls_staff_padding(m[7], 4)
-        baca.override.dls_staff_padding(m[9, 10], 4)
-        baca.override.dls_staff_padding(m[12, 13], 4)
 
 
 def gt2(cache):
@@ -1368,24 +1337,19 @@ def gt2(cache):
         baca.override.tuplet_bracket_positions(m[1, 6], (-5, -5))
         baca.override.tuplet_bracket_positions(m[8], (-5, -5))
         baca.override.tuplet_bracket_positions(m[11], (-5, -5))
-        baca.override.dls_staff_padding(m[7], 4)
-        baca.override.dls_staff_padding(m[8][:3], 8)
-        baca.override.dls_staff_padding(m[9, 10], 4)
-        baca.override.dls_staff_padding(m[11], 8)
-        baca.override.dls_staff_padding(m[12, 13], 4)
 
 
 def vn(m):
     @baca.call
     def block():
-        B1b(
+        B1c(
             library.runs(m[1, 3], 1),
             "III",
             "B4 A4 C5",
             "mp mf f",
             dls_staff_padding=6,
         )
-        B1b(
+        B1c(
             library.runs(m[4, 5], 1),
             "III",
             "B4 A4 C5",
@@ -1394,7 +1358,7 @@ def vn(m):
             diminuendo=True,
             dls_staff_padding=6,
         )
-        B1b(
+        B1c(
             library.runs(m[7], 1),
             "III",
             "B4 A4 C5",
@@ -1402,7 +1366,7 @@ def vn(m):
             diminuendo=True,
             dls_staff_padding=6,
         )
-        B1b(
+        B1c(
             library.runs(m[10], 1),
             "III",
             "B4 A4 C5",
@@ -1440,13 +1404,12 @@ def vn(m):
     def block():
         baca.override.tuplet_bracket_down(m.leaves())
         baca.override.tuplet_bracket_staff_padding(m.leaves(), 1)
-        baca.override.dls_staff_padding(m[14, 16], 6)
 
 
 def vc(m):
     @baca.call
     def block():
-        B1b(
+        B1c(
             library.runs(m[1, 3], 1),
             "II",
             "C4 B3 D4",
@@ -1454,7 +1417,7 @@ def vc(m):
             dls_staff_padding=6,
             string_number_staff_padding=5,
         )
-        B1b(
+        B1c(
             library.runs(m[5, 8], 1),
             "II",
             "C4 B3 D4",
@@ -1464,7 +1427,7 @@ def vc(m):
             dls_staff_padding=6,
             string_number_staff_padding=5,
         )
-        B1b(
+        B1c(
             library.runs(m[10], 1),
             "II",
             "C4 B3 D4",
@@ -1488,10 +1451,27 @@ def vc(m):
     @baca.call
     def block():
         baca.override.tuplet_bracket_down(m.leaves())
-        # baca.override.dls_staff_padding(m[1, 2] + m[3][:5], 6)
-        # baca.override.dls_staff_padding(m[3][5:] + m[4], 4)
-        # baca.override.dls_staff_padding(m[5][1:] + m[6, 7] + m[8][:3], 6)
-        baca.override.dls_staff_padding(m[14, 16], 6)
+
+
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"][1, 3][:2], 3)
+    baca.override.dls_staff_padding(cache["fl"][1, 3][2:], 6.5)
+    baca.override.dls_staff_padding(cache["fl"][4, 7], 3)
+    baca.override.dls_staff_padding(cache["fl"][8, 9], 6.5)
+    baca.override.dls_staff_padding(cache["fl"][10], 3)
+    baca.override.dls_staff_padding(cache["fl"][12, 13], 6.5)
+    baca.override.dls_staff_padding(cache["ob"].leaves(), 6.5)
+    baca.override.dls_staff_padding(cache["fl"][14, 16], 3)
+    baca.override.dls_staff_padding(cache["gt1"][7], 4)
+    baca.override.dls_staff_padding(cache["gt1"][9, 10], 4)
+    baca.override.dls_staff_padding(cache["gt1"][12, 13], 4)
+    baca.override.dls_staff_padding(cache["gt2"][7], 4)
+    baca.override.dls_staff_padding(cache["gt2"][8][:3], 8)
+    baca.override.dls_staff_padding(cache["gt2"][9, 10], 4)
+    baca.override.dls_staff_padding(cache["gt2"][11], 8)
+    baca.override.dls_staff_padding(cache["gt2"][12, 13], 4)
+    baca.override.dls_staff_padding(cache["vn"][14, 16], 6)
+    baca.override.dls_staff_padding(cache["vc"][14, 16], 6)
 
 
 @baca.build.timed("make_score")
@@ -1536,6 +1516,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
