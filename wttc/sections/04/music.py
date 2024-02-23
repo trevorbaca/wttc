@@ -1080,15 +1080,10 @@ def fl(m):
     def block():
         runs = library.runs(m, 3)
         assert len(runs) == 6
-        B3(runs[3], "C5", "Db4", staff_padding=3)
         B3(runs[4], "Bb4", "B3", staff_padding=3)
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.hairpin(
-            runs[3],
-            "f|>o!",
-        )
         baca.hairpin(
             runs[4],
             "f|>o!",
@@ -1123,6 +1118,14 @@ def fl(m):
         [1],
         "f>o!",
         rleak_hairpin=True,
+        trill_staff_padding=3,
+    )
+    B3_new(
+        library.run(m[8, 9], 3, 0),
+        "C5",
+        "Db4",
+        [5],
+        "f|>o!",
         trill_staff_padding=3,
     )
 
