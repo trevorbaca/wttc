@@ -810,60 +810,6 @@ def B1b(pleaves, terminations, *, up_bow=False):
 
 
 def B1c(
-    runs,
-    string_symbol,
-    pitches,
-    dynamics,
-    *,
-    conjoin=False,
-    diminuendo=False,
-    dls_staff_padding=None,
-    string_number_staff_padding=3,
-):
-    dynamics = dynamics.split()
-    grace_pitch, start_pitch, stop_pitch = pitches.split()
-    for run, dynamic in zip(runs, dynamics, strict=True):
-        baca.override.note_head_style_harmonic(run)
-        if len(run) in (3, 4):
-            baca.pitch(run[0], grace_pitch)
-            baca.glissando(run[1:], f"{start_pitch} {stop_pitch}")
-        else:
-            assert len(run) == 2
-            baca.glissando(run, f"{start_pitch} {stop_pitch}")
-        if conjoin is False:
-            baca.rspanners.string_number(
-                run[1:],
-                string_symbol,
-                staff_padding=string_number_staff_padding,
-            )
-            if dls_staff_padding:
-                baca.override.dls_staff_padding(
-                    baca.select.rleak(run)[1:],
-                    dls_staff_padding,
-                )
-        if diminuendo is True:
-            string = f"{dynamic}>o!"
-        else:
-            string = f"o<{dynamic}"
-        baca.hairpin(
-            run[1:],
-            string,
-            rleak=True,
-        )
-    if conjoin is True:
-        baca.rspanners.string_number(
-            abjad.select.leaves(runs)[1:],
-            string_symbol,
-            staff_padding=3,
-        )
-        if dls_staff_padding:
-            baca.override.dls_staff_padding(
-                baca.select.rleak(runs)[1:],
-                dls_staff_padding,
-            )
-
-
-def B1c_new(
     pleaves,
     string_symbol,
     grace_pitch,
@@ -930,9 +876,10 @@ def B2a(pleaves, pitch, dynamics):
         baca.laissez_vibrer(plt.tail)
 
 
-def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
+def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
     baca.pitch(notes, pitch)
     dynamics_list = dynamics.split()
+    conjoin = 1 < len(notes)
     for note, dynamic in zip(notes, dynamics_list, strict=True):
         baca.dynamic(note, dynamic)
         if conjoin is False:
@@ -1288,7 +1235,7 @@ def gt2(m):
 
 
 def vn(m):
-    B1c_new(
+    B1c(
         library.pleaves(m[1], 1),
         "III",
         "B4",
@@ -1296,7 +1243,8 @@ def vn(m):
         "mp",
         dls_staff_padding=6,
     )
-    B1c_new(
+    B2b(library.pleaves(m[1], 2), "D5", "mp p", dls_staff_padding=3)
+    B1c(
         library.run(m[2, 3], 1, 0),
         "III",
         "B4",
@@ -1304,7 +1252,8 @@ def vn(m):
         "mf",
         dls_staff_padding=6,
     )
-    B1c_new(
+    B2b(library.pleaves(m[2], 2), "D5", "f", dls_staff_padding=3)
+    B1c(
         library.run(m[2, 3], 1, 1),
         "III",
         "B4",
@@ -1312,7 +1261,8 @@ def vn(m):
         "f",
         dls_staff_padding=6,
     )
-    B1c_new(
+    B2b(library.pleaves(m[3], 2), "D5", "ff", dls_staff_padding=3)
+    B1c(
         library.runs(m[4, 5], 1),
         "III",
         "B4",
@@ -1321,7 +1271,13 @@ def vn(m):
         diminuendo=True,
         dls_staff_padding=6,
     )
-    B1c_new(
+    B2b(
+        library.pleaves(m[6, 7], 2),
+        "D#5",
+        "f ff mp",
+        dls_staff_padding=3,
+    )
+    B1c(
         library.runs(m[7], 1),
         "III",
         "B4",
@@ -1330,7 +1286,8 @@ def vn(m):
         diminuendo=True,
         dls_staff_padding=6,
     )
-    B1c_new(
+    B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
+    B1c(
         library.runs(m[10], 1),
         "III",
         "B4",
@@ -1338,21 +1295,10 @@ def vn(m):
         "mp",
         dls_staff_padding=6,
     )
-    B2b(library.pleaves(m[1], 2), "D5", "mp p", conjoin=True, dls_staff_padding=3)
-    B2b(library.pleaves(m[2, 3], 2), "D5", "f ff", dls_staff_padding=3)
-    B2b(
-        library.pleaves(m[6, 7], 2),
-        "D#5",
-        "f ff mp",
-        conjoin=True,
-        dls_staff_padding=3,
-    )
-    B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
     B2b(
         library.pleaves(m[11, 12], 2),
         "F5",
         "mp mf",
-        conjoin=True,
         dls_staff_padding=3,
     )
     C1(library.pleaves(m[14], 99), "D5", "F#5")
@@ -1363,7 +1309,7 @@ def vn(m):
 
 
 def vc(m):
-    B1c_new(
+    B1c(
         library.pleaves(m[1, 3], 1),
         "II",
         "C4",
@@ -1372,7 +1318,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B1c_new(
+    B1c(
         library.pleaves(m[5, 8], 1),
         "II",
         "C4",
@@ -1382,7 +1328,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B1c_new(
+    B1c(
         library.pleaves(m[10], 1),
         "II",
         "C4",
