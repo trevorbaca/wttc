@@ -457,17 +457,23 @@ def GT2(voice, meters):
     def block():
         components = rhythm.make_one_beat_tuplets(
             meters(6),
-            [2, -3, -1, 1, -2, 1, 1, -4, -1, 3],
-            extra_counts=[1, 1, 1, 0],
+            [2, -3, -1, 1, -2, 1, 1, -4, "-"],
+            extra_counts=[1],
         )
         plts = baca.select.plts(components)
         library.annotate(plts[:1], 1)
         library.annotate(plts[1:4], 2)
-        library.annotate(plts[4:], 5)
+
+    rhythm(
+        meters(6),
+        [-1, c(3, 2)],
+        material=5,
+        overlap=[-12],
+    )
 
     rhythm(
         meters(7),
-        [4, t(12)],
+        [c(4, 2), t(c(12, 2))],
         material=5,
     )
 
@@ -478,10 +484,14 @@ def GT2(voice, meters):
             [1, 2, -1, 1, "-"],
             extra_counts=[1],
         )
+        rmakers.unbeam(components[0])
         pleaves = baca.select.pleaves(components)
-        library.annotate(pleaves[:1], 5)
+        chord = abjad.Chord([0, 0], pleaves[0].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[0], chord)
         library.annotate(pleaves[1:2], 1)
         library.annotate(pleaves[2:], 2)
+        rmakers.beam([components[0]])
 
     rhythm(
         meters(9),
@@ -490,7 +500,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(9, 10),
-        [7, t(12)],
+        [c(7, 2), t(c(12, 2))],
         material=5,
         overlap=[-13],
     )
@@ -502,9 +512,13 @@ def GT2(voice, meters):
             [3, 4, -3, "-"],
             extra_counts=[1],
         )
+        rmakers.unbeam(components[0])
         pleaves = baca.select.pleaves(components)
-        library.annotate(pleaves[:1], 5)
+        chord = abjad.Chord([0, 0], pleaves[0].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[0], chord)
         library.annotate(pleaves[1:], 1)
+        rmakers.beam([components[0]])
 
     rhythm(
         meters(12),
@@ -513,7 +527,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(12, 13),
-        [15, t(4)],
+        [c(15, 2), t(c(4, 2))],
         material=5,
         overlap=[-13],
     )
@@ -525,9 +539,17 @@ def GT2(voice, meters):
             [6, 1, -2, 1, "-"],
             extra_counts=[1],
         )
+        rmakers.unbeam(components[1])
         pleaves = baca.select.pleaves(components)
-        library.annotate(pleaves[:2], 5)
+        chord = abjad.Chord([0, 0], pleaves[0].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[0], chord)
+        chord = abjad.Chord([0, 0], pleaves[1].written_duration)
+        library.annotate([chord], 5)
+        baca.repeat_tie(chord)
+        abjad.mutate.replace(pleaves[1], chord)
         library.annotate(pleaves[2:], 2)
+        rmakers.beam([components[1]])
 
     rhythm.make_one_beat_tuplets(
         meters(15),
@@ -1244,9 +1266,7 @@ def gt1(m):
     baca.override.tuplet_bracket_down(m.leaves())
 
 
-def gt2(cache):
-    name = "gt2"
-    m = cache[name]
+def gt2(m):
 
     @baca.call
     def block():
@@ -1260,9 +1280,6 @@ def gt2(cache):
         run = run[:-1]
         assert len(run) == 5
         baca.pitch(run, "<E3 G3>")
-        cache.rebuild()
-
-    m = cache[name]
 
     def material_2(notes, pitch, dynamics):
         notes = abjad.select.notes(notes)
@@ -1526,7 +1543,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     fl(cache["fl"])
     ob(cache["ob"])
     gt1(cache["gt1"])
-    gt2(cache)
+    gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
     align_spanners(cache)
