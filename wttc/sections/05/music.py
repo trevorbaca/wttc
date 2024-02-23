@@ -891,7 +891,7 @@ def C2b(
     do_not_bookend=False,
 ):
     baca.override.note_head_style_harmonic(pleaves)
-    baca.multistage_glissando(pleaves, f"{pitch_1} {pitch_2}")
+    baca.glissando(pleaves, f"{pitch_1} {pitch_2}")
     baca.rspanners.pizzicato(
         pleaves,
         descriptor=r"\baca-pizz-markup ||",
@@ -949,7 +949,7 @@ def C3a(
 ):
     all_leaves = list(pleaves)
     if pleaves_2 is None:
-        baca.multistage_glissando(pleaves, f"{start_pitch} {stop_pitch}")
+        baca.glissando(pleaves, f"{start_pitch} {stop_pitch}")
         baca.hairpin(
             [pleaves],
             hairpin,
@@ -957,7 +957,7 @@ def C3a(
     else:
         length_1, length_2 = len(pleaves), len(pleaves_2)
         string = f"{start_pitch}:{length_1} {stop_pitch}:{length_2} {start_pitch}"
-        baca.multistage_glissando(
+        baca.glissando(
             pleaves + pleaves_2,
             string,
         )
@@ -1101,7 +1101,7 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
         runs, pitch_pairs, hairpin_strings, strict=True
     ):
         start_pitch, stop_pitch = pitch_pair.split()
-        baca.multistage_glissando(run, f"{start_pitch} {stop_pitch}")
+        baca.glissando(run, f"{start_pitch} {stop_pitch}")
         baca.rspanners.damp(
             run,
             staff_padding=3,
@@ -1175,7 +1175,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
     for run in runs:
         if " " in pitches:
             start_pitch, stop_pitch = pitches.split()
-            baca.multistage_glissando(run, f"{start_pitch} {stop_pitch}")
+            baca.glissando(run, f"{start_pitch} {stop_pitch}")
         else:
             baca.pitch(run, pitches)
         baca.rspanners.xfb(
@@ -1406,7 +1406,7 @@ def vc(m):
             "T -> P1 -> T -> P2 -> T -> P2",
             baca.select.lparts(pleaves, [1, 1, 1, 1, 2]),
         )
-        baca.multistage_glissando(pleaves[:-1], "F2 E2")
+        baca.glissando(pleaves[:-1], "F2 E2")
         baca.pitch(pleaves[-1:], "E2")
 
     D2c(

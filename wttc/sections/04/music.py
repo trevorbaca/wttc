@@ -743,10 +743,10 @@ def B1b(
         baca.override.note_head_style_harmonic(run)
         if len(run) in (3, 4):
             baca.pitch(run[0], grace_pitch)
-            baca.multistage_glissando(run[1:], f"{start_pitch} {stop_pitch}")
+            baca.glissando(run[1:], f"{start_pitch} {stop_pitch}")
         else:
             assert len(run) == 2
-            baca.multistage_glissando(run, f"{start_pitch} {stop_pitch}")
+            baca.glissando(run, f"{start_pitch} {stop_pitch}")
         if conjoin is False:
             baca.rspanners.string_number(
                 run[1:],
@@ -844,7 +844,7 @@ def B4(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.untie(plts[-1])
     strings = [_ + ":2" for _ in pitch_string.split()[:-1]] + pitch_string.split()[-1:]
     string = " ".join(strings)
-    baca.multistage_glissando(
+    baca.glissando(
         run,
         string,
     )
