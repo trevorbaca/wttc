@@ -957,6 +957,14 @@ def B4b(pleaves, string_symbol, pitch_string, dynamic_string):
     baca.override.dls_staff_padding(run, 4)
 
 
+def B5(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
 def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, fundamental)
@@ -1154,138 +1162,71 @@ def override_uneven_staff_padding(leaves, *, only_dls=False):
 
 
 def gt1(m):
-
-    @baca.call
-    def block():
-        run = abjad.select.run(m[6, 8], 2)
-        run = run[:-1]
-        assert len(run) == 4
-        baca.pitches(run, "<A3 C4> <G3 Bb3> <F#3 A3>")
-        run = abjad.select.run(m[9, 10], -1)
-        baca.pitch(run, "<F3 Ab3>")
-        run = abjad.select.run(m[12, 14], -1)
-        run = run[:-1]
-        assert len(run) == 5
-        baca.pitch(run, "<F3 Ab3>")
-
     B1b(library.pleaves(m[1], 1), '"mf"')
-    B1b(library.pleaves(m[2], 1), '"f"')
-    B1b(library.pleaves(m[3], 1), '"ff"')
-    B1b(library.pleaves(m[5], 1), '"mf"')
-    B1b(library.pleaves(m[8], 1), '"ff"')
-
     B2a(library.pleaves(m[1], 2), "D5", "mp p")
+    B1b(library.pleaves(m[2], 1), '"f"')
     B2a(library.pleaves(m[2], 2), "D5", "f mf")
+    B1b(library.pleaves(m[3], 1), '"ff"')
     B2a(library.pleaves(m[3], 2), "D5", "f")
-    B2a(library.pleaves(m[5, 6], 2), "D#5", "f mf mp")
-    B2a(library.pleaves(m[8], 2), "D#5", "f")
-    B2a(library.pleaves(m[11], 2), "F5", "mf")
-    B2a(library.pleaves(m[14, 15], 2), "F#5", "mp p")
-
-    @baca.call
-    def block():
-        override_uneven_staff_padding(m[1, 3])
-        override_uneven_staff_padding(m[5, 6][1:-1])
-        override_uneven_staff_padding(m[8])
-        baca.override.dls_staff_padding(m[4], 3)
-        run = abjad.select.run(m[6, 7], -1)
-        baca.override.dls_staff_padding(run, 3)
-        baca.override.dls_staff_padding(m[9, 10], 3)
-        baca.override.dls_staff_padding(m[12, 13], 3)
-        components = abjad.select.top(m[11])
-        tuplet = abjad.select.tuplet(components, -1)
-        baca.override.tuplet_bracket_staff_padding(tuplet, 2.5)
-        baca.override.dls_staff_padding(tuplet, 8)
-        components = abjad.select.top(m[14])
-        tuplet = abjad.select.tuplet(components, -1)
-        baca.override.tuplet_bracket_staff_padding(tuplet, 1)
-        baca.override.dls_staff_padding(tuplet, 5.5)
-        components = abjad.select.top(m[15])
-        tuplet = abjad.select.tuplet(components, -1)
-        baca.override.tuplet_bracket_staff_padding(tuplet, 1)
-        baca.override.dls_staff_padding(tuplet, 5.5)
-
     B4a(library.pleaves(m[4], 4), "G#4", "p")
+    B1b(library.pleaves(m[5], 1), '"mf"')
+    B2a(library.pleaves(m[5, 6], 2), "D#5", "f mf mp")
+    B5(library.pleaves(m[6, 8], 5), "<A3 C4> <G3 Bb3> <F#3 A3>", "f mf mp")
+    B1b(library.pleaves(m[8], 1), '"ff"')
+    B2a(library.pleaves(m[8], 2), "D#5", "f")
     B4a(library.pleaves(m[9], 4), "G4 Gb4", "p pp")
+    B5(library.pleaves(m[9, 11], 5), "<F3 Ab3>", "mf mp")
+    B2a(library.pleaves(m[11], 2), "F5", "mf")
     B4a(library.pleaves(m[12], 4), "C4 B3 Bb3", "p pp ppp")
-
-    @baca.call
-    def block():
-        runs = [
-            abjad.select.run(m[6, 8], -2)[:-1],
-            abjad.select.run(m[9, 11], -1)[:-1],
-            abjad.select.run(m[12, 14], -1)[:-1],
-        ]
-        dynamic_strings = [
-            "f mf mp",
-            "mf mp",
-            "mf mp",
-        ]
-        for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
-            plts = baca.select.plts(run)
-            dynamics = dynamic_string.split()
-            for plt, dynamic in zip(plts, dynamics, strict=True):
-                baca.dynamic(plt.head, dynamic)
-
+    B5(library.pleaves(m[12, 14], 5), "<F3 Ab3>", "mf mp")
+    B2a(library.pleaves(m[14, 15], 2), "F#5", "mp p")
+    override_uneven_staff_padding(m[1, 3])
+    override_uneven_staff_padding(m[5, 6][1:-1])
+    override_uneven_staff_padding(m[8])
+    baca.override.dls_staff_padding(m[4], 3)
+    baca.override.dls_staff_padding(abjad.select.run(m[6, 7], -1), 3)
+    baca.override.dls_staff_padding(m[9, 10], 3)
+    baca.override.dls_staff_padding(m[12, 13], 3)
+    tuplet = abjad.select.tuplet(abjad.select.top(m[11]), -1)
+    baca.override.tuplet_bracket_staff_padding(tuplet, 2.5)
+    baca.override.dls_staff_padding(tuplet, 8)
+    components = abjad.select.top(m[14])
+    tuplet = abjad.select.tuplet(components, -1)
+    baca.override.tuplet_bracket_staff_padding(tuplet, 1)
+    baca.override.dls_staff_padding(tuplet, 5.5)
+    components = abjad.select.top(m[15])
+    tuplet = abjad.select.tuplet(components, -1)
+    baca.override.tuplet_bracket_staff_padding(tuplet, 1)
+    baca.override.dls_staff_padding(tuplet, 5.5)
     baca.override.tuplet_bracket_down(m.leaves())
 
 
 def gt2(m):
-
-    @baca.call
-    def block():
-        run = abjad.select.run(m[6, 8], -2)
-        run = run[:-1]
-        assert len(run) == 4
-        baca.pitches(run, "<G#3 B3> <F#3 A3> <F3 Ab3>")
-        run = abjad.select.run(m[9, 10], -1)
-        baca.pitch(run, "<E3 G3>")
-        run = abjad.select.run(m[12, 14], -2)
-        run = run[:-1]
-        assert len(run) == 5
-        baca.pitch(run, "<E3 G3>")
-
     B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
+    B2a(library.pleaves(m[1], 2), "D5", "p mp")
     B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
+    B2a(library.pleaves(m[2], 2), "D5", "f")
     B1b(library.pleaves(m[3], 1), '"ff"', up_bow=True)
+    B4a(library.pleaves(m[4], 4), "D#4", "mf")
     B1b(library.pleaves(m[5], 1), '"ff" "f"', up_bow=True)
     B1b(library.pleaves(m[6], 1), '"mf"', up_bow=True)
-    B1b(library.pleaves(m[8], 1), '"ff"', up_bow=True)
-    B1b(library.pleaves(m[11], 1), '"mf"', up_bow=True)
-
-    B2a(library.pleaves(m[1], 2), "D5", "p mp")
-    B2a(library.pleaves(m[2], 2), "D5", "f")
     B2a(library.pleaves(m[6], 2), "D#5", "f mf mp")
+    B5(library.pleaves(m[6, 8], 5), "<G#3 B3> <F#3 A3> <F3 Ab3>", "f mf mp")
+    B1b(library.pleaves(m[8], 1), '"ff"', up_bow=True)
     B2a(library.pleaves(m[8], 2), "D#5", "f")
-    B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
-
-    B4a(library.pleaves(m[4], 4), "D#4", "mf")
     B4a(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
+    B5(library.pleaves(m[9, 10], 5), "<E3 G3>", "mf mp")
+    B1b(library.pleaves(m[11], 1), '"mf"', up_bow=True)
     B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
-
-    @baca.call
-    def block():
-        runs = library.runs(m, 5)
-        dynamic_strings = [
-            "f mf mp",
-            "mf mp",
-            "mf mp",
-        ]
-        for run, dynamic_string in zip(runs, dynamic_strings, strict=True):
-            plts = baca.select.plts(run)
-            dynamics = dynamic_string.split()
-            for plt, dynamic in zip(plts, dynamics, strict=True):
-                baca.dynamic(plt.head, dynamic)
-
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_down(m.leaves())
-        override_uneven_staff_padding(m[1, 3], only_dls=True)
-        override_uneven_staff_padding(m[5, 6], only_dls=True)
-        baca.override.tuplet_bracket_staff_padding(m[14], 3)
-        baca.override.tuplet_bracket_positions(m[1, 6], (-5, -5))
-        baca.override.tuplet_bracket_positions(m[8], (-5, -5))
-        baca.override.tuplet_bracket_positions(m[11], (-5, -5))
+    B5(library.pleaves(m[12, 14], 5), "<E3 G3>", "mf mp")
+    B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
+    baca.override.tuplet_bracket_down(m.leaves())
+    override_uneven_staff_padding(m[1, 3], only_dls=True)
+    override_uneven_staff_padding(m[5, 6], only_dls=True)
+    baca.override.tuplet_bracket_staff_padding(m[14], 3)
+    baca.override.tuplet_bracket_positions(m[1, 6], (-5, -5))
+    baca.override.tuplet_bracket_positions(m[8], (-5, -5))
+    baca.override.tuplet_bracket_positions(m[11], (-5, -5))
 
 
 def vn(m):
