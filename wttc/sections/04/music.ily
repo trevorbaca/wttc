@@ -3325,7 +3325,7 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        d'''16
+        ds'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -3339,7 +3339,7 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        d'''16
+        ds'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -3353,7 +3353,7 @@ number.4.Guitar.2.Music = {
     \times 4/5
     {
 
-        d'''16
+        ds'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -3463,7 +3463,7 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        d'''16
+        ds'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -3703,7 +3703,7 @@ number.4.Guitar.2.Music = {
         \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        d'''16
+        fs'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -3718,7 +3718,7 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        d'''16
+        fs'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -3744,7 +3744,7 @@ number.4.Guitar.2.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        d'''16
+        fs'''!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue

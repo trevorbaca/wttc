@@ -863,6 +863,15 @@ def B1c(
             )
 
 
+def B2a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.laissez_vibrer(plt.tail)
+
+
 def B2b(notes, pitch, dynamics, *, conjoin=False, dls_staff_padding=None):
     baca.pitch(notes, pitch)
     dynamics_list = dynamics.split()
@@ -1166,33 +1175,13 @@ def gt1(m):
                     notes.extend(plt)
         return notes
 
-    @baca.call
-    def block():
-        notes = select_untied_notes(m.leaves(), (1, 8))
-        notes = select_untied_notes(m[1, 3], (1, 8))
-        baca.pitch(notes, "D5")
-        baca.laissez_vibrer(notes)
-        dynamics = "mp p f mf f".split()
-        for note, dynamic in zip(notes, dynamics, strict=True):
-            baca.dynamic(note, dynamic)
-        notes = select_untied_notes(m[5, 8], (1, 8))
-        baca.pitch(notes, "D#5")
-        baca.laissez_vibrer(notes)
-        dynamics = "f mf mp f".split()
-        for note, dynamic in zip(notes, dynamics, strict=True):
-            baca.dynamic(note, dynamic)
-        notes = select_untied_notes(m[11], (1, 8))
-        baca.pitch(notes, "F5")
-        baca.laissez_vibrer(notes)
-        dynamics = "mf".split()
-        for note, dynamic in zip(notes, dynamics, strict=True):
-            baca.dynamic(note, dynamic)
-        notes = select_untied_notes(m[14, 15], (1, 8))
-        baca.pitch(notes, "F#5")
-        baca.laissez_vibrer(notes)
-        dynamics = "mp p".split()
-        for note, dynamic in zip(notes, dynamics, strict=True):
-            baca.dynamic(note, dynamic)
+    B2a(library.pleaves(m[1], 2), "D5", "mp p")
+    B2a(library.pleaves(m[2], 2), "D5", "f mf")
+    B2a(library.pleaves(m[3], 2), "D5", "f")
+    B2a(library.pleaves(m[5, 6], 2), "D#5", "f mf mp")
+    B2a(library.pleaves(m[8], 2), "D#5", "f")
+    B2a(library.pleaves(m[11], 2), "F5", "mf")
+    B2a(library.pleaves(m[14, 15], 2), "F#5", "mp p")
 
     @baca.call
     def block():
@@ -1276,21 +1265,6 @@ def gt2(m):
         assert len(run) == 5
         baca.pitch(run, "<E3 G3>")
 
-    def material_2(notes, pitch, dynamics):
-        notes = abjad.select.notes(notes)
-        dynamics = dynamics.split()
-        assert len(notes) == len(dynamics)
-        baca.pitch(notes, "D5")
-        baca.laissez_vibrer(notes)
-        for note, dynamic in zip(notes, dynamics, strict=True):
-            baca.dynamic(note, dynamic)
-
-    @baca.call
-    def block():
-        material_2(library.pleaves(m[1, 3], 2), "D5", "p mp f")
-        material_2(library.pleaves(m[6, 8], 2), "D#5", "f mf mp f")
-        material_2(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
-
     B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
     B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
     B1b(library.pleaves(m[3], 1), '"ff"', up_bow=True)
@@ -1298,6 +1272,12 @@ def gt2(m):
     B1b(library.pleaves(m[6], 1), '"mf"', up_bow=True)
     B1b(library.pleaves(m[8], 1), '"ff"', up_bow=True)
     B1b(library.pleaves(m[11], 1), '"mf"', up_bow=True)
+
+    B2a(library.pleaves(m[1], 2), "D5", "p mp")
+    B2a(library.pleaves(m[2], 2), "D5", "f")
+    B2a(library.pleaves(m[6], 2), "D#5", "f mf mp")
+    B2a(library.pleaves(m[8], 2), "D#5", "f")
+    B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
 
     def material_4(notes, pitch, dynamics):
         notes = abjad.select.notes(notes)
