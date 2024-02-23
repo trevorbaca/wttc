@@ -1318,6 +1318,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
+    B4b(library.pleaves(m[3, 5], 4), "III", "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
     B1c(
         library.pleaves(m[5, 8], 1),
         "II",
@@ -1328,6 +1329,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
+    B4b(library.pleaves(m[8, 10], 4), "III", "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
     B1c(
         library.pleaves(m[10], 1),
         "II",
@@ -1337,22 +1339,11 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-
-    @baca.call
-    def block():
-        B4b(library.pleaves(m[3, 5], 4), "III", "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
-        B4b(library.pleaves(m[8, 10], 4), "III", "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
-        B4b(library.pleaves(m[11, 13], 4), "IV", "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
-
-    @baca.call
-    def block():
-        C1(library.pleaves(m[14], 99), "D4", "F4")
-        C1(library.pleaves(m[15], 99), "D4", "F4")
-        C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
-
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_down(m.leaves())
+    B4b(library.pleaves(m[11, 13], 4), "IV", "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
+    C1(library.pleaves(m[14], 99), "D4", "F4")
+    C1(library.pleaves(m[15], 99), "D4", "F4")
+    C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
+    baca.override.tuplet_bracket_down(m.leaves())
 
 
 def align_spanners(cache):
