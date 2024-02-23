@@ -516,8 +516,20 @@ def B1b(pleaves, *, up_bow=False):
         )
 
 
-def B1c():
-    pass
+def B1c(run, dynamic, grace_pitch, glissando, string_number):
+    baca.override.note_head_style_harmonic(baca.select.rleak(run))
+    baca.pitch(run[0], grace_pitch)
+    baca.glissando(run[1:], glissando)
+    baca.rspanners.string_number(
+        run[1:],
+        string_number,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        run[1:],
+        f"{dynamic}>o!",
+        rleak=True,
+    )
 
 
 def fl(m):
@@ -573,54 +585,38 @@ def vn(m):
     baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
     baca.clef(m[1][0], "treble")
     A1b(library.pleaves(m[1], 1), "D4 F4", "mp mp")
-    A1b(library.pleaves(m[2], 1), "D4 F#4", "p p")
-    A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
-    A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
-    A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
     A2b(
         library.pleaves(m[1], 2),
         "D5:2 Eb4",
         [1, 2],
         "o< mp>o!",
     )
+    A1b(library.pleaves(m[2], 1), "D4 F#4", "p p")
     A2b(
         library.pleaves(m[2], 2),
         "Db5:2 E4 C5:2 F4:2 B4",
         [5, 3],
         "o< mf>o!",
     )
+    A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
     A2b(
         library.pleaves(m[3, 4], 2),
         "B4 E4:3 C5 F4 D5 G4 E5 A4 F5 G4 G5:2 A4",
         [7, 3, 5],
         'o< "f"-- !>o!',
     )
+    A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
     A2b(
         library.pleaves(m[7], 2),
         "Bb4 E4 C5 F4 D5:2 G4",
         [7],
         '"f">o!',
     )
-
-    @baca.call
-    def block():
-        runs = library.runs(m[11, 13], 99)
-        assert len(runs) == 4
-        dynamics = "mp p p pp".split()
-        for run, dynamic in zip(runs, dynamics, strict=True):
-            baca.override.note_head_style_harmonic(baca.select.rleak(run))
-            baca.pitch(run[0], "B4")
-            baca.glissando(run[1:], "A4 C5")
-            baca.rspanners.string_number(
-                run[1:],
-                "II",
-                staff_padding=3,
-            )
-            baca.hairpin(
-                run[1:],
-                f"{dynamic}>o!",
-                rleak=True,
-            )
+    B1c(library.pleaves(m[11], 99), "mp", "B4", "A4 C5", "II")
+    A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
+    B1c(abjad.select.run(library.pleaves(m[12], 99), 0), "p", "B4", "A4 C5", "II")
+    B1c(abjad.select.run(library.pleaves(m[12, 13], 99), 1), "p", "B4", "A4 C5", "II")
+    B1c(abjad.select.run(library.pleaves(m[13], 99), 1), "pp", "B4", "A4 C5", "II")
 
 
 def vc(m):
