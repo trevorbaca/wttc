@@ -918,7 +918,16 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     baca.pitch(grace_plts, grace_pitch)
 
 
-def B4(pleaves, string_symbol, pitch_string, dynamic_string):
+def B4a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.flageolet(plt.head)
+
+
+def B4b(pleaves, string_symbol, pitch_string, dynamic_string):
     runs = abjad.select.runs(pleaves)
     assert len(runs) == 1
     run = runs[0]
@@ -1165,16 +1174,6 @@ def gt1(m):
     B1b(library.pleaves(m[5], 1), '"mf"')
     B1b(library.pleaves(m[8], 1), '"ff"')
 
-    def select_untied_notes(leaves, duration=None):
-        notes = []
-        for plt in baca.select.plts(leaves):
-            if len(plt) == 1:
-                if duration is None or plt.head.written_duration == abjad.Duration(
-                    duration
-                ):
-                    notes.extend(plt)
-        return notes
-
     B2a(library.pleaves(m[1], 2), "D5", "mp p")
     B2a(library.pleaves(m[2], 2), "D5", "f mf")
     B2a(library.pleaves(m[3], 2), "D5", "f")
@@ -1206,28 +1205,9 @@ def gt1(m):
         baca.override.tuplet_bracket_staff_padding(tuplet, 1)
         baca.override.dls_staff_padding(tuplet, 5.5)
 
-    @baca.call
-    def block():
-        leaves = m[4] + m[9] + m[12]
-        notes = select_untied_notes(leaves, (1, 16))
-        for note in notes:
-            baca.flageolet(note)
-        note = select_untied_notes(m[4])
-        baca.pitch(note, "G#4")
-        baca.dynamic(note, "p")
-        notes = select_untied_notes(m[9])
-        baca.pitches(notes, "G4 Gb4")
-        baca.hairpins.cyclic(
-            notes,
-            "p pp",
-            do_not_bookend=True,
-        )
-        notes = select_untied_notes(m[12])
-        baca.pitches(notes, "C4 B3 Bb3", exact=True)
-        baca.hairpin(
-            baca.select.lparts(notes, [1, 1, 1]),
-            "p pp ppp",
-        )
+    B4a(library.pleaves(m[4], 4), "G#4", "p")
+    B4a(library.pleaves(m[9], 4), "G4 Gb4", "p pp")
+    B4a(library.pleaves(m[12], 4), "C4 B3 Bb3", "p pp ppp")
 
     @baca.call
     def block():
@@ -1279,19 +1259,9 @@ def gt2(m):
     B2a(library.pleaves(m[8], 2), "D#5", "f")
     B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
 
-    def material_4(notes, pitch, dynamics):
-        notes = abjad.select.notes(notes)
-        dynamics = dynamics.split()
-        baca.pitches(notes, pitch)
-        for note, dynamic in zip(notes, dynamics, strict=True):
-            baca.dynamic(note, dynamic)
-        baca.flageolet(notes)
-
-    @baca.call
-    def block():
-        material_4(library.pleaves(m[4], 4), "D#4", "mf")
-        material_4(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
-        material_4(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
+    B4a(library.pleaves(m[4], 4), "D#4", "mf")
+    B4a(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
+    B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
 
     @baca.call
     def block():
@@ -1417,9 +1387,9 @@ def vc(m):
 
     @baca.call
     def block():
-        B4(library.pleaves(m[3, 5], 4), "III", "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
-        B4(library.pleaves(m[8, 10], 4), "III", "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
-        B4(library.pleaves(m[11, 13], 4), "IV", "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
+        B4b(library.pleaves(m[3, 5], 4), "III", "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
+        B4b(library.pleaves(m[8, 10], 4), "III", "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
+        B4b(library.pleaves(m[11, 13], 4), "IV", "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
 
     @baca.call
     def block():
