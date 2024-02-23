@@ -3102,6 +3102,11 @@ number.4.Guitar.2.Music = {
     {
 
         b'16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \baca-effort-ff
         \revert DynamicLineSpanner.staff-padding
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -3119,11 +3124,6 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \baca-effort-ff
 
     }
 
@@ -3586,6 +3586,11 @@ number.4.Guitar.2.Music = {
     {
 
         b'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \baca-effort-mf
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
@@ -3601,11 +3606,6 @@ number.4.Guitar.2.Music = {
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r8.
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \baca-effort-mf
 
     }
 

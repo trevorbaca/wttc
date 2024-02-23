@@ -790,8 +790,23 @@ def B1a(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
     )
 
 
-def B1b():
-    pass
+def B1b(pleaves, terminations, *, up_bow=False):
+    plts = baca.select.plts(pleaves)
+    terminations = terminations.split()
+    for plt, termination in zip(plts, terminations, strict=True):
+        baca.staff_lines(plt.head, 1)
+        final_leaf = abjad.get.leaf(plt[-1], 1)
+        baca.staff_lines(final_leaf, 5)
+        baca.staff_position(plt, 0)
+        if up_bow is True:
+            baca.up_bow(plt.head, padding=1)
+        else:
+            baca.down_bow(plt.head, padding=1)
+        baca.hairpin(
+            plt,
+            f"o<{termination}",
+            rleak=len(plt) == 1,
+        )
 
 
 def B1c(
@@ -1135,6 +1150,12 @@ def gt1(m):
         assert len(run) == 5
         baca.pitch(run, "<F3 Ab3>")
 
+    B1b(library.pleaves(m[1], 1), '"mf"')
+    B1b(library.pleaves(m[2], 1), '"f"')
+    B1b(library.pleaves(m[3], 1), '"ff"')
+    B1b(library.pleaves(m[5], 1), '"mf"')
+    B1b(library.pleaves(m[8], 1), '"ff"')
+
     def select_untied_notes(leaves, duration=None):
         notes = []
         for plt in baca.select.plts(leaves):
@@ -1144,32 +1165,6 @@ def gt1(m):
                 ):
                     notes.extend(plt)
         return notes
-
-    @baca.call
-    def block():
-        plts = [
-            baca.select.plt(m[1], 0),
-            baca.select.plt(m[2], 0),
-            baca.select.plt(m[3], 0),
-            baca.select.plt(m[5], 0),
-            baca.select.plt(m[8], 0),
-        ]
-        terminations = ['"mf"', '"f"', '"ff"', '"mf"', '"ff"']
-        for plt, termination in zip(plts, terminations, strict=True):
-            baca.staff_lines(plt.head, 1)
-            leaf = abjad.get.leaf(plt[-1], 1)
-            baca.staff_lines(leaf, 5)
-            baca.staff_position(plt, 0)
-            baca.down_bow(plt.head, padding=1)
-            if len(plt) == 1:
-                leaves = baca.select.rleak(plt)
-            else:
-                leaves = plt
-            string = f"o<{termination}"
-            baca.hairpin(
-                leaves,
-                string,
-            )
 
     @baca.call
     def block():
@@ -1296,39 +1291,13 @@ def gt2(m):
         material_2(library.pleaves(m[6, 8], 2), "D#5", "f mf mp f")
         material_2(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
 
-    def upbows(leaves, dynamics):
-        plts = baca.select.plts(leaves)
-        dynamics = dynamics.split()
-        for plt, dynamic in zip(plts, dynamics, strict=True):
-            baca.staff_lines(plt.head, 1)
-            next_leaf = abjad.get.leaf(plt[-1], 1)
-            baca.staff_lines(next_leaf, 5)
-            baca.staff_position(plt, 0)
-            baca.up_bow(plt.head, padding=1)
-            baca.hairpin(
-                plt,
-                f"o<{dynamic}",
-                rleak=True,
-            )
-
-    @baca.call
-    def block():
-        upbows(
-            library.pleaves(m[1, 3], 1),
-            baca.dynamics.linear("mf ff", effort=True),
-        )
-        upbows(
-            library.pleaves(m[5, 6], 1),
-            baca.dynamics.linear("ff mf", effort=True),
-        )
-        upbows(
-            library.pleaves(m[8], 1),
-            '"ff"',
-        )
-        upbows(
-            library.pleaves(m[11], 1),
-            '"mf"',
-        )
+    B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
+    B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
+    B1b(library.pleaves(m[3], 1), '"ff"', up_bow=True)
+    B1b(library.pleaves(m[5], 1), '"ff" "f"', up_bow=True)
+    B1b(library.pleaves(m[6], 1), '"mf"', up_bow=True)
+    B1b(library.pleaves(m[8], 1), '"ff"', up_bow=True)
+    B1b(library.pleaves(m[11], 1), '"mf"', up_bow=True)
 
     def material_4(notes, pitch, dynamics):
         notes = abjad.select.notes(notes)
