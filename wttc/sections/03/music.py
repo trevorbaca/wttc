@@ -646,6 +646,10 @@ def vc(m):
     baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
+    A2c(library.run(m[1, 2], 2, 0), "B2:4 D3 D3", [4, 2], "o< p>o!")
+    A2c(library.run(m[2, 3], 2, 1), "Bb2:7 Db3 Db3", [7, 4], "o< mp>o!")
+    A2c(library.run(m[3, 5], 2, 1), "Ab2:14 Cb3:7 Cb3", [14, 7], "o< mf>o!")
+    A2c(library.run(m[6, 7], 2, 0), "G2:4 Bb2 Bb2", [4, 2], "o< mf>o!")
     A3b(
         library.pleaves(m[7], 3),
         "<Gb2 Cb3>",
@@ -682,6 +686,7 @@ def vc(m):
         "O -> P2",
         do_not_rleak_scp=True,
     )
+    B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", "I", staff_padding=5)
     A3b(
         library.pleaves(m[12], 3),
         "<Eb2 Ab2>",
@@ -691,6 +696,7 @@ def vc(m):
         "T =|",
         rleak_hairpin=True,
     )
+    B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", "I", staff_padding=5)
     A3b(
         library.pleaves(m[13], 3),
         "<Eb2 Ab2>",
@@ -700,12 +706,6 @@ def vc(m):
         "T =|",
         rleak_hairpin=True,
     )
-    A2c(library.run(m[1, 2], 2, 0), "B2:4 D3 D3", [4, 2], "o< p>o!")
-    A2c(library.run(m[2, 3], 2, 1), "Bb2:7 Db3 Db3", [7, 4], "o< mp>o!")
-    A2c(library.run(m[3, 5], 2, 1), "Ab2:14 Cb3:7 Cb3", [14, 7], "o< mf>o!")
-    A2c(library.run(m[6, 7], 2, 0), "G2:4 Bb2 Bb2", [4, 2], "o< mf>o!")
-    B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", "I", staff_padding=5)
-    B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", "I", staff_padding=5)
     B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", "I", staff_padding=5)
 
 
