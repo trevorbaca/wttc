@@ -4932,9 +4932,6 @@ number.4.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanStringNumber
-        \revert DynamicLineSpanner.staff-padding
 
         \grace {
 
@@ -4945,18 +4942,7 @@ number.4.Cello.Music = {
 
         }
 
-        \override DynamicLineSpanner.staff-padding = 6
         b16
-          %! SPANNER_START
-        - \baca-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "II"
-          %! SPANNER_START
-        - \tweak bound-details.left-broken.text II
-          %! SPANNER_START
-        - \tweak staff-padding 5
-          %! SPANNER_START
-        \bacaStartTextSpanStringNumber
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -5001,9 +4987,6 @@ number.4.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanStringNumber
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -5024,18 +5007,7 @@ number.4.Cello.Music = {
 
         }
 
-        \override DynamicLineSpanner.staff-padding = 6
         b16
-          %! SPANNER_START
-        - \baca-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "II"
-          %! SPANNER_START
-        - \tweak bound-details.left-broken.text II
-          %! SPANNER_START
-        - \tweak staff-padding 5
-          %! SPANNER_START
-        \bacaStartTextSpanStringNumber
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -5081,9 +5053,6 @@ number.4.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-          %! SPANNER_STOP
-        \bacaStopTextSpanStringNumber
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -5105,19 +5074,8 @@ number.4.Cello.Music = {
 
         }
 
-        \override DynamicLineSpanner.staff-padding = 6
         \afterGrace
         b8
-          %! SPANNER_START
-        - \baca-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "II"
-          %! SPANNER_START
-        - \tweak bound-details.left-broken.text II
-          %! SPANNER_START
-        - \tweak staff-padding 5
-          %! SPANNER_START
-        \bacaStartTextSpanStringNumber
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -5382,7 +5340,7 @@ number.4.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text II
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
           %! EXPLICIT_DYNAMIC

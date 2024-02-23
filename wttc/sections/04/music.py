@@ -863,6 +863,64 @@ def B1c(
             )
 
 
+def B1c_new(
+    pleaves,
+    string_symbol,
+    grace_pitch,
+    glissando,
+    dynamics,
+    *,
+    diminuendo=False,
+    dls_staff_padding=None,
+    string_number_staff_padding=3,
+):
+    dynamics = dynamics.split()
+    start_pitch, stop_pitch = glissando.split()
+    runs = abjad.select.runs(pleaves)
+    if len(runs) != len(dynamics):
+        breakpoint()
+    for run, dynamic in zip(runs, dynamics, strict=True):
+        baca.override.note_head_style_harmonic(run)
+        if len(run) in (3, 4):
+            baca.pitch(run[0], grace_pitch)
+            baca.glissando(run[1:], f"{start_pitch} {stop_pitch}")
+        else:
+            assert len(run) == 2
+            baca.glissando(run, f"{start_pitch} {stop_pitch}")
+        """
+        if conjoin is False:
+            baca.rspanners.string_number(
+                run[1:],
+                string_symbol,
+                staff_padding=string_number_staff_padding,
+            )
+            if dls_staff_padding:
+                baca.override.dls_staff_padding(
+                    baca.select.rleak(run)[1:],
+                    dls_staff_padding,
+                )
+        """
+        if diminuendo is True:
+            string = f"{dynamic}>o!"
+        else:
+            string = f"o<{dynamic}"
+        baca.hairpin(
+            run[1:],
+            string,
+            rleak=True,
+        )
+    baca.rspanners.string_number(
+        abjad.select.leaves(runs)[1:],
+        string_symbol,
+        staff_padding=string_number_staff_padding,
+    )
+    if dls_staff_padding:
+        baca.override.dls_staff_padding(
+            baca.select.rleak(runs)[1:],
+            dls_staff_padding,
+        )
+
+
 def B2a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     dynamics = dynamics.split()
@@ -1230,101 +1288,109 @@ def gt2(m):
 
 
 def vn(m):
-    @baca.call
-    def block():
-        B1c(
-            library.runs(m[1, 3], 1),
-            "III",
-            "B4 A4 C5",
-            "mp mf f",
-            dls_staff_padding=6,
-        )
-        B1c(
-            library.runs(m[4, 5], 1),
-            "III",
-            "B4 A4 C5",
-            "f mf mp",
-            conjoin=True,
-            diminuendo=True,
-            dls_staff_padding=6,
-        )
-        B1c(
-            library.runs(m[7], 1),
-            "III",
-            "B4 A4 C5",
-            "f",
-            diminuendo=True,
-            dls_staff_padding=6,
-        )
-        B1c(
-            library.runs(m[10], 1),
-            "III",
-            "B4 A4 C5",
-            "mp",
-            dls_staff_padding=6,
-        )
-
-    @baca.call
-    def block():
-        B2b(library.pleaves(m[1], 2), "D5", "mp p", conjoin=True, dls_staff_padding=3)
-        B2b(library.pleaves(m[2, 3], 2), "D5", "f ff", dls_staff_padding=3)
-        B2b(
-            library.pleaves(m[6, 7], 2),
-            "D#5",
-            "f ff mp",
-            conjoin=True,
-            dls_staff_padding=3,
-        )
-        B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
-        B2b(
-            library.pleaves(m[11, 12], 2),
-            "F5",
-            "mp mf",
-            conjoin=True,
-            dls_staff_padding=3,
-        )
-
-    @baca.call
-    def block():
-        C1(library.pleaves(m[14], 99), "D5", "F#5")
-        C1(library.pleaves(m[15], 99), "D5", "F#5")
-        C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
-
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_down(m.leaves())
-        baca.override.tuplet_bracket_staff_padding(m.leaves(), 1)
+    B1c_new(
+        library.pleaves(m[1], 1),
+        "III",
+        "B4",
+        "A4 C5",
+        "mp",
+        dls_staff_padding=6,
+    )
+    B1c_new(
+        library.run(m[2, 3], 1, 0),
+        "III",
+        "B4",
+        "A4 C5",
+        "mf",
+        dls_staff_padding=6,
+    )
+    B1c_new(
+        library.run(m[2, 3], 1, 1),
+        "III",
+        "B4",
+        "A4 C5",
+        "f",
+        dls_staff_padding=6,
+    )
+    B1c_new(
+        library.runs(m[4, 5], 1),
+        "III",
+        "B4",
+        "A4 C5",
+        "f mf mp",
+        diminuendo=True,
+        dls_staff_padding=6,
+    )
+    B1c_new(
+        library.runs(m[7], 1),
+        "III",
+        "B4",
+        "A4 C5",
+        "f",
+        diminuendo=True,
+        dls_staff_padding=6,
+    )
+    B1c_new(
+        library.runs(m[10], 1),
+        "III",
+        "B4",
+        "A4 C5",
+        "mp",
+        dls_staff_padding=6,
+    )
+    B2b(library.pleaves(m[1], 2), "D5", "mp p", conjoin=True, dls_staff_padding=3)
+    B2b(library.pleaves(m[2, 3], 2), "D5", "f ff", dls_staff_padding=3)
+    B2b(
+        library.pleaves(m[6, 7], 2),
+        "D#5",
+        "f ff mp",
+        conjoin=True,
+        dls_staff_padding=3,
+    )
+    B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
+    B2b(
+        library.pleaves(m[11, 12], 2),
+        "F5",
+        "mp mf",
+        conjoin=True,
+        dls_staff_padding=3,
+    )
+    C1(library.pleaves(m[14], 99), "D5", "F#5")
+    C1(library.pleaves(m[15], 99), "D5", "F#5")
+    C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
+    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_staff_padding(m.leaves(), 1)
 
 
 def vc(m):
-    @baca.call
-    def block():
-        B1c(
-            library.runs(m[1, 3], 1),
-            "II",
-            "C4 B3 D4",
-            "mp mp mf f",
-            dls_staff_padding=6,
-            string_number_staff_padding=5,
-        )
-        B1c(
-            library.runs(m[5, 8], 1),
-            "II",
-            "C4 B3 D4",
-            "mp p mf",
-            conjoin=True,
-            diminuendo=True,
-            dls_staff_padding=6,
-            string_number_staff_padding=5,
-        )
-        B1c(
-            library.runs(m[10], 1),
-            "II",
-            "C4 B3 D4",
-            "mf",
-            dls_staff_padding=6,
-            string_number_staff_padding=5,
-        )
+    B1c_new(
+        library.pleaves(m[1, 3], 1),
+        "II",
+        "C4",
+        "B3 D4",
+        "mp mp mf f",
+        dls_staff_padding=6,
+        string_number_staff_padding=5,
+    )
+    B1c_new(
+        library.pleaves(m[5, 8], 1),
+        "II",
+        "C4",
+        "B3 D4",
+        "mp p mf",
+        diminuendo=True,
+        dls_staff_padding=6,
+        string_number_staff_padding=5,
+    )
+    B1c_new(
+        library.pleaves(m[10], 1),
+        "II",
+        "C4",
+        "B3 D4",
+        "mf",
+        dls_staff_padding=6,
+        string_number_staff_padding=5,
+    )
 
     @baca.call
     def block():
