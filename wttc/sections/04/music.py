@@ -923,6 +923,39 @@ def B3(plts, nongrace_pitch, grace_pitch, staff_padding=5.5):
     baca.pitch(grace_plts, grace_pitch)
 
 
+def B3_new(
+    plts,
+    nongrace_pitch,
+    grace_pitch,
+    hairpin_lparts,
+    hairpin,
+    *,
+    debug=False,
+    rleak_hairpin=False,
+    trill_staff_padding=5.5,
+):
+    nongraces = baca.select.pleaves(plts, grace=False)
+    nongrace_plts = baca.select.plts(nongraces)
+    for nongrace_plt in nongrace_plts:
+        baca.pitch(nongrace_plt, nongrace_pitch)
+        baca.rspanners.trill(
+            nongrace_plt,
+            alteration="M2",
+            staff_padding=trill_staff_padding,
+        )
+        baca.untie(nongrace_plt)
+        baca.parenthesize(nongrace_plt[1:])
+    grace_plts = baca.select.pleaves(plts, grace=True)
+    baca.pitch(grace_plts, grace_pitch)
+    if debug:
+        breakpoint()
+    baca.hairpin(
+        baca.select.lparts(plts, hairpin_lparts),
+        hairpin,
+        rleak=rleak_hairpin,
+    )
+
+
 def B4a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
@@ -1047,34 +1080,11 @@ def fl(m):
     def block():
         runs = library.runs(m, 3)
         assert len(runs) == 6
-        B3(runs[0], "D5", "Eb4", staff_padding=3)
-        B3(runs[1], "D5", "Eb4")
-        baca.pitch(runs[2], "C#5")
-        baca.rspanners.trill(
-            runs[2],
-            alteration="M2",
-            staff_padding=3,
-        )
         B3(runs[3], "C5", "Db4", staff_padding=3)
         B3(runs[4], "Bb4", "B3", staff_padding=3)
         B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.hairpin(
-            baca.select.lparts(runs[0], [8, 2]),
-            "p< f>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[1], [5, 2]),
-            "p< f>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            runs[2],
-            "f>o!",
-            rleak=True,
-        )
         baca.hairpin(
             runs[3],
             "f|>o!",
@@ -1088,6 +1098,33 @@ def fl(m):
             "sfpp< p>o!",
             rleak=True,
         )
+
+    B3_new(
+        library.run(m[1, 2], 3, 0),
+        "D5",
+        "Eb4",
+        [8, 2],
+        "p< f>o!",
+        rleak_hairpin=True,
+        trill_staff_padding=3,
+    )
+    B3_new(
+        library.run(m[2, 3], 3, 1),
+        "D5",
+        "Eb4",
+        [5, 2],
+        "p< f>o!",
+        rleak_hairpin=True,
+    )
+    B3_new(
+        library.pleaves(m[4], 3),
+        "C#5",
+        "D#5",
+        [1],
+        "f>o!",
+        rleak_hairpin=True,
+        trill_staff_padding=3,
+    )
 
     baca.override.tuplet_bracket_down(m.leaves())
     baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
