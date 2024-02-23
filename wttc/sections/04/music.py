@@ -2,6 +2,7 @@ import itertools
 
 import abjad
 import baca
+from abjadext import rmakers
 
 from wttc import library
 
@@ -313,13 +314,13 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(6),
-        [3],
+        [c(3, 2)],
         material=5,
         overlap=[-13],
     )
     rhythm(
         meters(7),
-        [4, t(12)],
+        [c(4, 2), t(c(12, 2))],
         material=5,
     )
 
@@ -331,7 +332,9 @@ def GT1(voice, meters):
             extra_counts=[-1],
         )
         pleaves = baca.select.pleaves(components)
-        library.annotate(pleaves[:1], 5)
+        chord = abjad.Chord([0, 0], pleaves[0].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[0], chord)
         library.annotate(pleaves[1:2], 1)
         library.annotate(pleaves[2:], 2)
 
@@ -342,7 +345,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(9, 10),
-        [7, t(12)],
+        [c(7, 2), t(c(12, 2))],
         material=5,
         overlap=[-13],
     )
@@ -355,8 +358,16 @@ def GT1(voice, meters):
             extra_counts=[-1],
         )
         pleaves = baca.select.pleaves(components)
-        library.annotate(pleaves[:2], 5)
+        rmakers.unbeam(pleaves)
+        chord = abjad.Chord([0, 0], pleaves[0].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[0], chord)
+        chord = abjad.Chord([0, 0], pleaves[1].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[1], chord)
+        baca.repeat_tie(chord)
         library.annotate(pleaves[2:], 2)
+        rmakers.beam([components[-1]])
 
     rhythm(
         meters(12),
@@ -365,7 +376,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(12, 13),
-        [15, t(4)],
+        [c(15, 2), t(c(4, 2))],
         material=5,
         overlap=[-13],
     )
@@ -378,7 +389,16 @@ def GT1(voice, meters):
             extra_counts=[-1],
         )
         pleaves = baca.select.pleaves(components)
-        library.annotate(pleaves[:2], 5)
+        # library.annotate(pleaves[:2], 5)
+
+        chord = abjad.Chord([0, 0], pleaves[0].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[0], chord)
+        chord = abjad.Chord([0, 0], pleaves[1].written_duration)
+        library.annotate([chord], 5)
+        abjad.mutate.replace(pleaves[1], chord)
+        baca.repeat_tie(chord)
+
         library.annotate(pleaves[2:], 2)
 
     rhythm.make_one_beat_tuplets(
@@ -1078,9 +1098,7 @@ def override_uneven_staff_padding(leaves, *, only_dls=False):
         baca.override.dls_staff_padding(group, 7 + adjustment)
 
 
-def gt1(cache):
-    name = "gt1"
-    m = cache[name]
+def gt1(m):
 
     @baca.call
     def block():
@@ -1094,9 +1112,6 @@ def gt1(cache):
         run = run[:-1]
         assert len(run) == 5
         baca.pitch(run, "<F3 Ab3>")
-        cache.rebuild()
-
-    m = cache[name]
 
     def select_untied_notes(leaves, duration=None):
         notes = []
@@ -1226,9 +1241,7 @@ def gt1(cache):
             for plt, dynamic in zip(plts, dynamics, strict=True):
                 baca.dynamic(plt.head, dynamic)
 
-    @baca.call
-    def block():
-        baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_down(m.leaves())
 
 
 def gt2(cache):
@@ -1512,7 +1525,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
-    gt1(cache)
+    gt1(cache["gt1"])
     gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
