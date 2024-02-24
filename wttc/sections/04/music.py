@@ -823,8 +823,6 @@ def B1c(
     dynamics = dynamics.split()
     start_pitch, stop_pitch = glissando.split()
     runs = abjad.select.runs(pleaves)
-    if len(runs) != len(dynamics):
-        breakpoint()
     for run, dynamic in zip(runs, dynamics, strict=True):
         baca.override.note_head_style_harmonic(run)
         if len(run) in (3, 4):
@@ -833,19 +831,6 @@ def B1c(
         else:
             assert len(run) == 2
             baca.glissando(run, f"{start_pitch} {stop_pitch}")
-        """
-        if conjoin is False:
-            baca.rspanners.string_number(
-                run[1:],
-                string_symbol,
-                staff_padding=string_number_staff_padding,
-            )
-            if dls_staff_padding:
-                baca.override.dls_staff_padding(
-                    baca.select.rleak(run)[1:],
-                    dls_staff_padding,
-                )
-        """
         if diminuendo is True:
             string = f"{dynamic}>o!"
         else:

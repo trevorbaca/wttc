@@ -3495,9 +3495,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3538,9 +3538,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3573,9 +3573,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3594,9 +3594,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3688,9 +3688,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3816,9 +3816,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3854,9 +3854,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3888,9 +3888,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3919,9 +3919,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -3955,9 +3955,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -4695,9 +4695,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -4726,9 +4726,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -4762,9 +4762,9 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -5095,9 +5095,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5137,9 +5137,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "I"
+        - \baca-text-spanner-left-markup \baca-string-i-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text I
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-i-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5171,9 +5171,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5341,9 +5341,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5596,9 +5596,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "I"
+        - \baca-text-spanner-left-markup \baca-string-i-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text I
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-i-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5674,9 +5674,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5710,9 +5710,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "I"
+        - \baca-text-spanner-left-markup \baca-string-i-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text I
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-i-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5805,9 +5805,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "II"
+        - \baca-text-spanner-left-markup \baca-string-ii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text II
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-ii-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -5883,9 +5883,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "III"
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text III
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
@@ -6028,9 +6028,9 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
-        - \baca-text-spanner-left-text "IV"
+        - \baca-text-spanner-left-markup \baca-string-iv-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text IV
+        - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
           %! SPANNER_START
         - \tweak staff-padding 4
           %! SPANNER_START
