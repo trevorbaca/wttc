@@ -763,12 +763,8 @@ def gt1(m):
 
 
 def gt2(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
-        baca.staff_lines(leaf, 5)
-
+    library.rotate_rehearsal_mark_literal(m[1][0])
+    baca.staff_lines(m[1][0], 5)
     E1(
         library.pleaves(m[1, 5], 1),
         "A4",

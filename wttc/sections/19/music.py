@@ -746,10 +746,7 @@ def fl(m):
 
 
 def ob(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
 
 def gt1(m):
@@ -757,10 +754,7 @@ def gt1(m):
 
 
 def gt2(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
 
 def vn(m):
@@ -768,10 +762,7 @@ def vn(m):
 
 
 def vc(m):
-    @baca.call
-    def block():
-        leaf = m[1][0]
-        library.rotate_rehearsal_mark_literal(leaf)
+    library.rotate_rehearsal_mark_literal(m[1][0])
 
 
 @baca.build.timed("make_score")
