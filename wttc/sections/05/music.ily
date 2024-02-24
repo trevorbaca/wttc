@@ -4070,7 +4070,7 @@ number.5.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -4108,7 +4108,7 @@ number.5.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5314,7 +5314,7 @@ number.5.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5370,7 +5370,7 @@ number.5.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5423,7 +5423,7 @@ number.5.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -6847,7 +6847,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iv-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -6857,7 +6857,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -6985,7 +6985,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iii-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7089,7 +7089,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iv-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7099,7 +7099,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -7227,7 +7227,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iii-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7369,7 +7369,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iv-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7379,7 +7379,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -7443,7 +7443,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iii-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iii-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7596,7 +7596,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iv-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7606,7 +7606,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -7712,7 +7712,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iv-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7722,7 +7722,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -7844,7 +7844,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-string-iv-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-string-iv-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
@@ -7854,7 +7854,7 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

@@ -2973,7 +2973,7 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-ii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -3080,7 +3080,7 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-ii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -3143,7 +3143,7 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-ii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -3213,7 +3213,7 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-ii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -4223,7 +4223,7 @@ number.3.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-i-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-i-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-i-markup
           %! SPANNER_START
         - \tweak staff-padding 5
           %! SPANNER_START
@@ -4342,7 +4342,7 @@ number.3.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-i-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-i-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-i-markup
           %! SPANNER_START
         - \tweak staff-padding 5
           %! SPANNER_START
@@ -4447,7 +4447,7 @@ number.3.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-string-i-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-string-i-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-i-markup
           %! SPANNER_START
         - \tweak staff-padding 5
           %! SPANNER_START
