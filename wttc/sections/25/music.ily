@@ -1611,7 +1611,7 @@ number.25.Guitar.1.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \pp
+    \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1993,7 +1993,7 @@ number.25.Guitar.2.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \pp
+    \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3497,7 +3497,7 @@ number.25.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! REAPPLIED_CLEF
-    \clef "tenor"
+    \clef "treble"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -3514,7 +3514,7 @@ number.25.Cello.Music = {
     \set Staff.shortInstrumentName = \wttc-vc-markup
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    a4
+    b'4
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3528,37 +3528,37 @@ number.25.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \afterGrace
-    a4
+    b'4
     {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        a8
+        b'8
 
     }
 
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \afterGrace
-    a4
+    b'4
     {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        a8
+        b'8
 
     }
 
@@ -3566,42 +3566,42 @@ number.25.Cello.Music = {
     % [Cello.Music measure 2]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
     % [Cello.Music measure 3]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \afterGrace
-    a4
+    b'4
     {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        a8
+        b'8
 
     }
 
@@ -3622,63 +3622,63 @@ number.25.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    a8.
+    b'8.
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2
+    b'2
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2
+    b'2
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 8]
@@ -3688,80 +3688,80 @@ number.25.Cello.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -3769,64 +3769,64 @@ number.25.Cello.Music = {
     \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2
+    b'2
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 10]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2
+    b'2
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 11]
@@ -3836,148 +3836,148 @@ number.25.Cello.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -3985,39 +3985,39 @@ number.25.Cello.Music = {
     \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2
+    b'2
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 13]
@@ -4027,285 +4027,285 @@ number.25.Cello.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
     % [Cello.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! STAFF_HIGHLIGHT
@@ -4319,20 +4319,20 @@ number.25.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    a1
+    b'1
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4344,21 +4344,21 @@ number.25.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    a1
+    b'1
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 17]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4372,21 +4372,21 @@ number.25.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    a1
+    b'1
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 19]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT

@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -11,6 +12,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -109,7 +111,65 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 9)
+    rhythm(
+        meters(10),
+        [8, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(11),
+        [8, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(12),
+        [4, "-", 4, 4],
+        material=2,
+    )
+    rhythm.mmrests(13)
+    rhythm(
+        meters(14),
+        [-4, 4, 4, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(15),
+        [-8, 4, 4, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(15),
+        ["-", 4, 4],
+        material=2,
+    )
+    rhythm.mmrests(17)
+    rhythm(
+        meters(18, 20),
+        [t(12), t(16), frame(12, 6)],
+        material=2,
+    )
+    rhythm(
+        meters(21, 22),
+        2 * [frame(12, 6)],
+        material=2,
+    )
+    rhythm(
+        meters(23),
+        T([w(16, 32), h(16)], "8:9"),
+        material=2,
+    )
+    rhythm(
+        meters(24, 25),
+        2 * [frame(12, 6)],
+        material=2,
+    )
+    rhythm(
+        meters(26),
+        T([w(16, 32), h(16)], "8:9"),
+        material=2,
+    )
+    rhythm.mmrests(27, 28)
 
 
 def GT1(voice, meters):
@@ -117,7 +177,7 @@ def GT1(voice, meters):
     rhythm.mmrests(1, 3)
     rhythm(
         meters(4, 6),
-        ["-", -1, 3, -24, -1, 3, -24, -1, 3, -8],
+        ["-", -1, c(3, 2), -24, -1, c(3, 2), -24, -1, c(3, 2), -8],
         material=1,
     )
     rhythm.mmrests(7)
@@ -128,7 +188,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(10),
-        [-1, 3, "-"],
+        [-1, c(3, 2), "-"],
         material=1,
     )
     rhythm(
@@ -144,7 +204,7 @@ def GT1(voice, meters):
     rhythm.mmrests(13)
     rhythm(
         meters(14),
-        [-1, 3, "-"],
+        [-1, c(3, 2), "-"],
         material=1,
     )
     rhythm(
@@ -160,8 +220,8 @@ def GT1(voice, meters):
     )
     rhythm.mmrests(18, 19)
     rhythm(
-        meters(22),
-        ["-", -1, 3],
+        meters(20),
+        ["-", -1, c(3, 2)],
         material=1,
     )
     rhythm.mmrests(21, 28)
@@ -172,7 +232,7 @@ def GT2(voice, meters):
     rhythm.mmrests(1, 3)
     rhythm(
         meters(4, 6),
-        ["-", -1, 3, -24, -1, 3, -24, -1, 3, -8],
+        ["-", -1, c(3, 2), -24, -1, c(3, 2), -24, -1, c(3, 2), -8],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -183,7 +243,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(10),
-        [-1, 3, "-"],
+        [-1, c(3, 2), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -201,7 +261,7 @@ def GT2(voice, meters):
     rhythm.mmrests(13)
     rhythm(
         meters(14),
-        [-1, 3, "-"],
+        [-1, c(3, 2), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -220,7 +280,7 @@ def GT2(voice, meters):
     rhythm.mmrests(17, 19)
     rhythm(
         meters(20),
-        ["-", -1, 3],
+        ["-", -1, c(3, 2)],
         material=1,
     )
     rhythm.mmrests(21, 28)
@@ -230,12 +290,12 @@ def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        [12, 24],
+        [frame(12, 6, chords=2), frame(24, 12, chords=2)],
         material=1,
     )
     rhythm(
         meters(3, 4),
-        [48],
+        2 * [c(24, 2)],
         material=1,
     )
     rhythm.mmrests(5, 7)
@@ -283,12 +343,12 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        [12, 24],
+        [frame(12, 6, chords=2), frame(24, 12, chords=2)],
         material=1,
     )
     rhythm(
         meters(3, 4),
-        [48],
+        2 * [c(24, 2)],
         material=1,
     )
     rhythm.mmrests(5, 6)
@@ -355,16 +415,58 @@ def F1a(pleaves, pitch, hairpin_lparts, hairpin):
     )
 
 
-def F1b():
-    pass
+def F1b(pleaves, chord, dynamics):
+    baca.pitch(pleaves, chord)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def F1c():
-    pass
+def F1c(pleaves, chord, alteration, peaks):
+    baca.pitch(pleaves, chord)
+    for chord in pleaves:
+        abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
+        staff_padding=3,
+    )
+    baca.rspanners.half_clt(
+        pleaves,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        library.swells(peaks),
+        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        rleak=True,
+    )
 
 
-def F2a():
-    pass
+def F2a1(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    for pleaf in pleaves[4::2]:
+        pitch = abjad.NamedPitch(pleaf.written_pitch.name, arrow=abjad.UP)
+        pleaf.written_pitch = pitch
+
+
+def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        library.swells(peaks),
+        rleak=True,
+    )
 
 
 def F2b():
@@ -394,26 +496,49 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    F2a1(
+        library.pleaves(m[10, 16], 2),
+        "D6 D6 Eb6  Eb6 Eb6  Eqf6 Eqf6  E6 E6  Eqs6 Eqs6",
+        "f f f f p f p f p f p",
+    )
+    F2a2(library.pleaves(m[18, 20], 2), "F6", None, [3, 1], "p")
+    F2a2(library.pleaves(m[21, 23], 2), "F6", "F#6", 6 * [1], "pp pp p")
+    F2a2(library.pleaves(m[24, 26], 2), "F6", "G6", 6 * [1], "ppp ppp pp")
 
 
 def gt1(m):
-    pass
+    F1b(library.pleaves(m[4, 6], 1), "<G3 B3>", "mp - -")
+    F1b(library.pleaves(m[10], 1), "<G3 B3>", "mp")
+    F1b(library.pleaves(m[14], 1), "<G3 B3>", "mp")
+    F1b(library.pleaves(m[20], 1), "<G3 B3>", "mp")
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    F1b(library.pleaves(m[4, 6], 1), "<F3 A3>", "mp - -")
+    F1b(library.pleaves(m[10], 1), "<F3 A3>", "mp")
+    F1b(library.pleaves(m[14], 1), "<F3 A3>", "mp")
+    F1b(library.pleaves(m[20], 1), "<F3 A3>", "mp")
 
 
 def vn(m):
-    pass
+    F1c(library.pleaves(m[1, 4], 1), "<D5 F#5>", "G5", 'mp mf "f"')
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    baca.clef(m[1][0], "treble")
+    F1c(library.pleaves(m[1, 4], 1), "<D4 G4>", "A4", 'mp mf "f"')
 
 
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["ob"][1, 17], 3)
+    baca.override.dls_staff_padding(cache["ob"][18, 28], 6)
+    baca.override.dls_staff_padding(cache["gt1"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["gt2"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["vn"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
 
 
 @baca.build.timed("make_score")

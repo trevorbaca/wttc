@@ -2690,7 +2690,7 @@ number.12.Guitar.1.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \pp
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -4040,7 +4040,7 @@ number.12.Guitar.2.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \pp
+    \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -6021,7 +6021,7 @@ number.12.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
-    \clef "tenor"
+    \clef "treble"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -6073,13 +6073,13 @@ number.12.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    a8.
+    b'8.
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2.
+    b'2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6087,7 +6087,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2.
+    b'2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6098,7 +6098,7 @@ number.12.Cello.Music = {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        a4
+        b'4
         \repeatTie
 
           %! NOT_YET_PITCHED_COLORING
@@ -6107,7 +6107,7 @@ number.12.Cello.Music = {
         \staffHighlight hotpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        a8
+        b'8
 
     }
 
@@ -6126,7 +6126,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a4
+        b'4
 
     }
 
@@ -6145,7 +6145,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6165,7 +6165,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a4
+        b'4
 
     }
 
@@ -6183,7 +6183,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6202,7 +6202,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a4
+        b'4
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6222,7 +6222,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
         [
 
           %! NOT_YET_PITCHED_COLORING
@@ -6231,7 +6231,7 @@ number.12.Cello.Music = {
         \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        a8
+        b'8
         ]
         ~
 
@@ -6239,14 +6239,14 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 10]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1.
+    b'1.
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6255,7 +6255,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1.
+    b'1.
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6264,14 +6264,14 @@ number.12.Cello.Music = {
     % [Cello.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1.
+    b'1.
     - \tweak direction #up
     \repeatTie
 
     % [Cello.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1
+    b'1
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -6283,73 +6283,73 @@ number.12.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    a8
+    b'8
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6357,18 +6357,18 @@ number.12.Cello.Music = {
     % [Cello.Music measure 15]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     [
     \repeatTie
 
@@ -6378,18 +6378,18 @@ number.12.Cello.Music = {
     \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a16
+    b'16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2.
+    b'2.
 
     % [Cello.Music measure 16]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2.
+    b'2.
     - \tweak stencil ##f
     ~
 
@@ -6399,7 +6399,7 @@ number.12.Cello.Music = {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        a4
+        b'4
         \repeatTie
 
           %! NOT_YET_PITCHED_COLORING
@@ -6408,7 +6408,7 @@ number.12.Cello.Music = {
         \staffHighlight hotpink
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        a8
+        b'8
 
     }
 
@@ -6427,7 +6427,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a4
+        b'4
 
     }
 
@@ -6446,7 +6446,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6464,7 +6464,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6482,7 +6482,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
     }
 
@@ -6500,7 +6500,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6521,7 +6521,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6541,7 +6541,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
     }
 
@@ -6559,7 +6559,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight burlywood
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6572,84 +6572,84 @@ number.12.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    a2.
+    b'2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     ]
     ~
 
     % [Cello.Music measure 21]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2
+    b'2
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6657,56 +6657,56 @@ number.12.Cello.Music = {
     % [Cello.Music measure 22]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8.
+    b'8.
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 23]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -6726,7 +6726,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6744,7 +6744,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6762,7 +6762,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
     }
 
@@ -6780,7 +6780,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6801,7 +6801,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6821,7 +6821,7 @@ number.12.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight hotpink
-        a8
+        b'8
 
     }
 
@@ -6835,13 +6835,13 @@ number.12.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight burlywood
-    a8
+    b'8
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6849,7 +6849,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 26]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1
+    b'1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6857,20 +6857,20 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6878,7 +6878,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 27]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1
+    b'1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6886,20 +6886,20 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6907,7 +6907,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 28]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
@@ -6916,14 +6916,14 @@ number.12.Cello.Music = {
     \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 29]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1.
+    b'1.
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6932,7 +6932,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 30]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2.
+    b'2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6940,7 +6940,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 31]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1
+    b'1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6949,7 +6949,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 32]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1.
+    b'1.
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6958,7 +6958,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 33]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a\breve
+    b'\breve
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6967,7 +6967,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 34]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1
+    b'1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6975,7 +6975,7 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6983,7 +6983,7 @@ number.12.Cello.Music = {
     % [Cello.Music measure 35]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a1
+    b'1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6991,7 +6991,7 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     \repeatTie
 
     % [Cello.Music measure 36]
@@ -7005,35 +7005,35 @@ number.12.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    a8
+    b'8
     [
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
     % [Cello.Music measure 37]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2.
+    b'2.
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     - \tweak stencil ##f
     ~
@@ -7041,27 +7041,27 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    b'4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     - \tweak stencil ##f
     ~
@@ -7069,37 +7069,37 @@ number.12.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a8
+    b'8
     [
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a16
+    b'16
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a32
+    b'32
     ]
 
       %! ANCHOR_NOTE
@@ -7131,7 +7131,7 @@ number.12.Cello.Music = {
       %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
-    a1 * 1/4
+    b'1 * 1/4
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN

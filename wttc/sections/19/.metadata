@@ -68,7 +68,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="tenor",
+                value="treble",
             ),
             baca.Memento(
                 context="Cello.Music",
@@ -86,7 +86,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="mp",
             )
         ],
         "Guitar.1.Staff": [
@@ -138,7 +138,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="mp",
             )
         ],
         "Guitar.2.Staff": [
