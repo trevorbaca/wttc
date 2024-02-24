@@ -645,7 +645,6 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
               %! STAFF_HIGHLIGHT
@@ -757,7 +756,6 @@ number.4.AltoFlute.Music = {
         % [AltoFlute.Music measure 2]
         \parenthesize
         g''8
-        \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -812,7 +810,6 @@ number.4.AltoFlute.Music = {
 
         \grace {
 
-            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
               %! STAFF_HIGHLIGHT
@@ -909,7 +906,6 @@ number.4.AltoFlute.Music = {
         % [AltoFlute.Music measure 3]
         \parenthesize
         g''8
-        \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight

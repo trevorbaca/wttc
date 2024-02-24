@@ -1073,20 +1073,6 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
 
 def fl(m):
     B1a(library.pleaves(m[1], 1), "G3", "mp -")
-    B1a(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
-    B1a(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
-    B1a(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
-    B1a(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
-    B1a(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
-    B1a(library.pleaves(m[14, 15], 1), "D4", "p -")
-
-    @baca.call
-    def block():
-        runs = library.runs(m, 3)
-        assert len(runs) == 6
-        baca.override.tie_down(runs[0])
-        baca.override.tie_down(runs[1])
-
     B3_new(
         library.run(m[1, 2], 3, 0),
         "D5",
@@ -1096,6 +1082,7 @@ def fl(m):
         rleak_hairpin=True,
         trill_staff_padding=3,
     )
+    B1a(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
     B3_new(
         library.run(m[2, 3], 3, 1),
         "D5",
@@ -1104,6 +1091,7 @@ def fl(m):
         "p< f>o!",
         rleak_hairpin=True,
     )
+    B1a(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
     B3_new(
         library.pleaves(m[4], 3),
         "C#5",
@@ -1113,6 +1101,8 @@ def fl(m):
         rleak_hairpin=True,
         trill_staff_padding=3,
     )
+    B1a(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
+    B1a(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
     B3_new(
         library.run(m[8, 9], 3, 0),
         "C5",
@@ -1121,6 +1111,7 @@ def fl(m):
         "sfp>o!",
         trill_staff_padding=3,
     )
+    B1a(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
     B3_new(
         library.run(m[12, 13], 3, 0),
         "Bb4",
@@ -1129,6 +1120,7 @@ def fl(m):
         "sfp>o!",
         trill_staff_padding=3,
     )
+    B1a(library.pleaves(m[14, 15], 1), "D4", "p -")
     B3_new(
         library.pleaves(m[15, 16], 3),
         "A4",
