@@ -339,8 +339,18 @@ def VC(voice, meters):
     rhythm.mmrests(27, 28)
 
 
-def F1a():
-    pass
+def F1a(pleaves, pitch, hairpin_lparts, hairpin):
+    baca.pitch(pleaves, pitch)
+    baca.mspanners.text(
+        pleaves,
+        "air =|",
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        rleak=True,
+    )
 
 
 def F1b():
@@ -458,6 +468,7 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
+        baca.tags.NOT_YET_PITCHED_COLORING,
     )
     lilypond_file = baca.lilypond.file(
         score,

@@ -612,7 +612,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -778,7 +778,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-cov-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -936,7 +936,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-cov-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -1002,7 +1002,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -1067,7 +1067,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -1314,7 +1314,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

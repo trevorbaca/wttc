@@ -781,7 +781,7 @@ def B1a(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
     if left_broken_none is True:
         left_broken_text = None
     else:
-        left_broken_text = r"\baca-left-broken-covered-markup"
+        left_broken_text = r"\baca-parenthesized-cov-markup"
     baca.rspanners.covered(
         pleaves,
         descriptor=descriptor,
