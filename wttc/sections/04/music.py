@@ -947,10 +947,14 @@ def B3_new(
         baca.parenthesize(nongrace_plt[1:])
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
-    if debug:
-        breakpoint()
+    if abjad.get.grace(plts[0]):
+        plts = plts[1:]
+    if hairpin_lparts is not None:
+        parts = baca.select.lparts(plts, hairpin_lparts)
+    else:
+        parts = plts
     baca.hairpin(
-        baca.select.lparts(plts, hairpin_lparts),
+        parts,
         hairpin,
         rleak=rleak_hairpin,
     )
@@ -1080,25 +1084,14 @@ def fl(m):
     def block():
         runs = library.runs(m, 3)
         assert len(runs) == 6
-        B3(runs[4], "Bb4", "B3", staff_padding=3)
-        B3(runs[5], "A4", "G#3", staff_padding=3)
         baca.override.tie_down(runs[0])
         baca.override.tie_down(runs[1])
-        baca.hairpin(
-            runs[4],
-            "f|>o!",
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[5][1:], [1, 1]),
-            "sfpp< p>o!",
-            rleak=True,
-        )
 
     B3_new(
         library.run(m[1, 2], 3, 0),
         "D5",
         "Eb4",
-        [8, 2],
+        [7, 2],
         "p< f>o!",
         rleak_hairpin=True,
         trill_staff_padding=3,
@@ -1115,7 +1108,7 @@ def fl(m):
         library.pleaves(m[4], 3),
         "C#5",
         "D#5",
-        [1],
+        None,
         "f>o!",
         rleak_hairpin=True,
         trill_staff_padding=3,
@@ -1124,11 +1117,27 @@ def fl(m):
         library.run(m[8, 9], 3, 0),
         "C5",
         "Db4",
-        [5],
-        "f|>o!",
+        None,
+        "sfp>o!",
         trill_staff_padding=3,
     )
-
+    B3_new(
+        library.run(m[12, 13], 3, 0),
+        "Bb4",
+        "B3",
+        None,
+        "sfp>o!",
+        trill_staff_padding=3,
+    )
+    B3_new(
+        library.pleaves(m[15, 16], 3),
+        "A4",
+        "G#3",
+        [1, 1],
+        "sfpp< p>o!",
+        rleak_hairpin=True,
+        trill_staff_padding=3,
+    )
     baca.override.tuplet_bracket_down(m.leaves())
     baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
 

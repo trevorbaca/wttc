@@ -651,26 +651,26 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
             af'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \p
               %! SPANNER_STOP
             \bacaStopTextSpanCovered
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \<
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         g''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -818,26 +818,26 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
             af'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \p
               %! SPANNER_STOP
             \bacaStopTextSpanCovered
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \<
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         g''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -872,29 +872,29 @@ number.4.AltoFlute.Music = {
         \grace {
 
             af'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \f
               %! SPANNER_STOP
             \stopTrillSpan
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak circled-tip ##t
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \>
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         g''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -909,13 +909,13 @@ number.4.AltoFlute.Music = {
         % [AltoFlute.Music measure 3]
         \parenthesize
         g''8
-          %! SPANNER_STOP
-        \!
         \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \!
           %! SPANNER_STOP
         \stopTrillSpan
 
@@ -1102,30 +1102,27 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
             gf'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \f
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak circled-tip ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \>
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         f''4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \sfp
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -1220,32 +1217,29 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             \stopStaffHighlight
             e'16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \f
               %! SPANNER_STOP
             \bacaStopTextSpanCovered
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak circled-tip ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \>
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         ef''!4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \sfp
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
