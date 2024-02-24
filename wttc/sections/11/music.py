@@ -20,6 +20,7 @@ BG = library.BG
 OBGC = library.OBGC
 X = library.X
 beat = library.beat
+frame = library.frame
 swell = library.swell
 
 
@@ -68,7 +69,7 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        [-12, 24],
+        [-12, frame(24, 12)],
         material=1,
     )
     rhythm(
@@ -78,12 +79,12 @@ def FL(voice, meters):
     )
     rhythm(
         meters(9),
-        [t(24)],
+        [frame(24, 8)],
         material=1,
     )
     rhythm(
         meters(10, 11),
-        [8, "-"],
+        [rt(8), "-"],
         material=1,
     )
     rhythm.mmrests(12, 17)
@@ -343,7 +344,8 @@ def F1a(pleaves, pitch, hairpin_lparts, hairpin):
     baca.pitch(pleaves, pitch)
     baca.mspanners.text(
         pleaves,
-        "air =|",
+        r"\baca-airtone-markup =|",
+        left_broken_text=r"\baca-parenthesized-air-markup",
         staff_padding=3,
     )
     baca.hairpin(
@@ -382,7 +384,12 @@ def G1a():
 
 
 def fl(m):
-    pass
+    F1a(
+        library.pleaves(m[2, 10], 1),
+        "Eb4",
+        11 * [1],
+        "o< p>o o< p>o o< p>o o< p>o o< p>o !",
+    )
 
 
 def ob(m):
@@ -403,6 +410,10 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+
+
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
 
 
 @baca.build.timed("make_score")
@@ -448,6 +459,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
