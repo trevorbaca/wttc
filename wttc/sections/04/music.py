@@ -1135,43 +1135,49 @@ def fl(m):
 
 
 def ob(m):
-    @baca.call
-    def block():
-        runs = library.runs(m, 3)
-        assert len(runs) == 5
-        plts = baca.select.plts(runs[0])
-        B3(plts, "D5", "Eb4", staff_padding=None)
-        B3(runs[1], "D5", "Eb4", staff_padding=None)
-        B3(runs[2], "C#5", "D4", staff_padding=None)
-        B3(runs[3], "C5", "Db4", staff_padding=None)
-        B3(runs[4], "Bb4", "B3", staff_padding=None)
-        baca.override.tie_down(runs[0])
-        baca.override.tie_down(runs[1])
-        baca.override.tie_down(runs[2])
-        baca.hairpin(
-            baca.select.lparts(runs[0], [8, 2]),
-            "p< f>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[1], [3, 4]),
-            "p< f>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            baca.select.lparts(runs[2], [2, 3]),
-            "p< f>o!",
-            rleak=True,
-        )
-        baca.hairpin(
-            runs[3],
-            "f|>o!",
-        )
-        baca.hairpin(
-            runs[4],
-            "f|>o!",
-        )
-
+    B3_new(
+        library.pleaves(m[1], 3),
+        "D5",
+        "Eb4",
+        [7, 2],
+        "p< f>o!",
+        rleak_hairpin=True,
+        trill_staff_padding=None,
+    )
+    B3_new(
+        library.pleaves(m[2], 3),
+        "D5",
+        "Eb4",
+        [2, 4],
+        "p< f>o!",
+        rleak_hairpin=True,
+        trill_staff_padding=None,
+    )
+    B3_new(
+        library.pleaves(m[3, 4], 3),
+        "C#5",
+        "D4",
+        [1, 3],
+        "p< f>o!",
+        rleak_hairpin=True,
+        trill_staff_padding=None,
+    )
+    B3_new(
+        library.pleaves(m[8, 9], 3),
+        "C5",
+        "Db4",
+        None,
+        "sfp>o!",
+        trill_staff_padding=None,
+    )
+    B3_new(
+        library.pleaves(m[12, 13], 3),
+        "Bb4",
+        "B3",
+        None,
+        "sfp>o!",
+        trill_staff_padding=None,
+    )
     baca.override.tuplet_bracket_down(m.leaves())
     baca.override.trill_spanner_staff_padding(m.leaves(), 3)
 

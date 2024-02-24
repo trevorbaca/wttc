@@ -1462,28 +1462,27 @@ number.4.Oboe.Music = {
 
         \grace {
 
-            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
             ef'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \p
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \<
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         d''4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
           %! SPANNER_START
         \startTrillSpan e''
 
@@ -1563,7 +1562,6 @@ number.4.Oboe.Music = {
 
     \parenthesize
     d''4
-    \revert Tie.direction
 
     % [Oboe.Music measure 2]
       %! STAFF_HIGHLIGHT
@@ -1580,28 +1578,27 @@ number.4.Oboe.Music = {
 
         \grace {
 
-            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
             ef'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \p
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \<
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         d''4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
           %! SPANNER_START
         \startTrillSpan e''
 
@@ -1656,7 +1653,6 @@ number.4.Oboe.Music = {
         d''8
           %! SPANNER_START
         \startTrillSpan e''
-        \revert Tie.direction
 
     }
 
@@ -1677,28 +1673,27 @@ number.4.Oboe.Music = {
 
         \grace {
 
-            \override Tie.direction = #down
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
             d'16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \p
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \<
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         cs''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
           %! SPANNER_START
         \startTrillSpan ds''
 
@@ -1742,7 +1737,6 @@ number.4.Oboe.Music = {
         ]
           %! SPANNER_START
         \startTrillSpan ds''
-        \revert Tie.direction
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -1785,30 +1779,27 @@ number.4.Oboe.Music = {
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
             df'!16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \f
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak circled-tip ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \>
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         c''4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \sfp
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
           %! SPANNER_START
         \startTrillSpan d''
 
@@ -1860,30 +1851,27 @@ number.4.Oboe.Music = {
               %! STAFF_HIGHLIGHT
             \staffHighlight lightgreen
             b16
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \f
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak circled-tip ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
-            \>
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         bf'!4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \sfp
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
           %! SPANNER_START
         \startTrillSpan c''
 
