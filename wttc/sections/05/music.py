@@ -931,7 +931,7 @@ def C2b(
         )
     baca.rspanners.string_number(
         all_leaves,
-        "IV",
+        4,
         staff_padding=6.5,
     )
 
@@ -1285,7 +1285,7 @@ def vn(m):
         "F4",
         "mp|>o!",
         harmonic=True,
-        string_number="III",
+        string_number=3,
         trill="m2",
     )
     C3a(
@@ -1295,7 +1295,7 @@ def vn(m):
         "mp|>o !o<|mf",
         library.pleaves(m[13], 3),
         harmonic=True,
-        string_number="III",
+        string_number=3,
         trill="m2",
     )
     C3a(
@@ -1304,7 +1304,7 @@ def vn(m):
         "F4",
         "mp|>o!",
         harmonic=True,
-        string_number="III",
+        string_number=3,
         trill="m2",
     )
     C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")

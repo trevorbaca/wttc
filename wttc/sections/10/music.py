@@ -514,11 +514,11 @@ def E1(
             staff_padding=staff_padding + 2.5,
         )
     if string_numbers:
-        string_numbers_ = string_numbers.split()
-        for pleaf, string_number_ in zip(pleaves, string_numbers_, strict=True):
+        assert isinstance(string_numbers, list), repr(string_numbers)
+        for pleaf, string_number in zip(pleaves, string_numbers, strict=True):
             baca.rspanners.string_number(
                 [pleaf],
-                string_number_,
+                string_number,
                 invisible_line=True,
                 staff_padding=staff_padding,
             )
@@ -797,13 +797,13 @@ def vn(m):
         "A4",
         "p f mf",
         pizz=True,
-        string_numbers="III IV III",
+        string_numbers=[3, 4, 3],
     )
     E2b(
         library.pleaves(m[2], 2) + m[3][:1],
         "G#4 C5",
         "p",
-        string_number="III",
+        string_number=3,
         xfb=True,
     )
     E2b(
@@ -811,7 +811,7 @@ def vn(m):
         "G#4 C5",
         "mf",
         damp=True,
-        string_number="III",
+        string_number=3,
         xfb=True,
     )
     E1(
@@ -819,7 +819,7 @@ def vn(m):
         "A4",
         "ff ff mf f p",
         pizz=True,
-        string_numbers="IV III IV III IV",
+        string_numbers=[4, 3, 4, 3, 4],
     )
     runs = abjad.select.runs(library.pleaves(m[9, 10], 2))
     E2b(runs[0], "G#4 C5", "mf", damp=True)
@@ -841,7 +841,7 @@ def vn(m):
         "A4",
         "mf f p",
         pizz=True,
-        string_numbers="IV III IV",
+        string_numbers=[4, 3, 4],
     )
     F1c(library.pleaves(m[20, 22], 99), "C#5", "E#5", "F#5", "mp mf f")
 
@@ -855,7 +855,7 @@ def vc(m):
         "f mp ff",
         pizz=True,
         staff_padding=4,
-        string_numbers="IV I IV",
+        string_numbers=[4, 1, 4],
     )
     E3b(library.pleaves(m[3, 7], 3), "<A#3 D#4>", "E#4")
     baca.hairpin(
@@ -873,7 +873,7 @@ def vc(m):
         "ff",
         pizz=True,
         staff_padding=4,
-        string_numbers="III",
+        string_numbers=[3],
     )
     E1(
         library.pleaves(m[7], 1),
@@ -881,7 +881,7 @@ def vc(m):
         "ff",
         pizz=True,
         staff_padding=4,
-        string_numbers="I",
+        string_numbers=[1],
     )
     E1(
         library.pleaves(m[8, 9], 1),
@@ -889,7 +889,7 @@ def vc(m):
         "mp mf",
         pizz=True,
         staff_padding=4,
-        string_numbers="IV I",
+        string_numbers=[4, 1],
     )
     E1(
         library.pleaves(m[19], 1),
@@ -897,7 +897,7 @@ def vc(m):
         "ff",
         pizz=True,
         staff_padding=4,
-        string_numbers="II",
+        string_numbers=[2],
     )
     E1(
         library.pleaves(m[20], 1),
@@ -905,7 +905,7 @@ def vc(m):
         "mp",
         pizz=True,
         staff_padding=4,
-        string_numbers="III",
+        string_numbers=[3],
     )
     E1(
         library.pleaves(m[21], 1),
@@ -913,7 +913,7 @@ def vc(m):
         "f",
         pizz=True,
         staff_padding=4,
-        string_numbers="IV",
+        string_numbers=[4],
     )
     F1c(library.pleaves(m[20, 22], 99), "C#4", "E#4", "F#4", "mp mf f")
     E3b(library.pleaves(m[19, 22], 3), "<A#3 D#4>", "E#4", dynamic="mp", lone=True)

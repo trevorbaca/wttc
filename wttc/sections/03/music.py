@@ -633,11 +633,11 @@ def vn(m):
         [7],
         '"f">o!',
     )
-    B1c(library.pleaves(m[11], 99), "mp", "B4", "A4 C5", "II")
+    B1c(library.pleaves(m[11], 99), "mp", "B4", "A4 C5", 2)
     A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
-    B1c(abjad.select.run(library.pleaves(m[12], 99), 0), "p", "B4", "A4 C5", "II")
-    B1c(abjad.select.run(library.pleaves(m[12, 13], 99), 1), "p", "B4", "A4 C5", "II")
-    B1c(abjad.select.run(library.pleaves(m[13], 99), 1), "pp", "B4", "A4 C5", "II")
+    B1c(abjad.select.run(library.pleaves(m[12], 99), 0), "p", "B4", "A4 C5", 2)
+    B1c(abjad.select.run(library.pleaves(m[12, 13], 99), 1), "p", "B4", "A4 C5", 2)
+    B1c(abjad.select.run(library.pleaves(m[13], 99), 1), "pp", "B4", "A4 C5", 2)
 
 
 def vc(m):
@@ -686,7 +686,7 @@ def vc(m):
         "O -> P2",
         do_not_rleak_scp=True,
     )
-    B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", "I", staff_padding=5)
+    B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", 1, staff_padding=5)
     A3b(
         library.pleaves(m[12], 3),
         "<Eb2 Ab2>",
@@ -696,7 +696,7 @@ def vc(m):
         "T =|",
         rleak_hairpin=True,
     )
-    B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", "I", staff_padding=5)
+    B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", 1, staff_padding=5)
     A3b(
         library.pleaves(m[13], 3),
         "<Eb2 Ab2>",
@@ -706,7 +706,7 @@ def vc(m):
         "T =|",
         rleak_hairpin=True,
     )
-    B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", "I", staff_padding=5)
+    B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", 1, staff_padding=5)
 
 
 def align_spanners(cache):

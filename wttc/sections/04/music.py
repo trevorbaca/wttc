@@ -1217,7 +1217,7 @@ def gt2(m):
 def vn(m):
     B1c(
         library.pleaves(m[1], 1),
-        "III",
+        3,
         "B4",
         "A4 C5",
         "mp",
@@ -1226,7 +1226,7 @@ def vn(m):
     B2b(library.pleaves(m[1], 2), "D5", "mp p", dls_staff_padding=3)
     B1c(
         library.run(m[2, 3], 1, 0),
-        "III",
+        3,
         "B4",
         "A4 C5",
         "mf",
@@ -1235,7 +1235,7 @@ def vn(m):
     B2b(library.pleaves(m[2], 2), "D5", "f", dls_staff_padding=3)
     B1c(
         library.run(m[2, 3], 1, 1),
-        "III",
+        3,
         "B4",
         "A4 C5",
         "f",
@@ -1244,7 +1244,7 @@ def vn(m):
     B2b(library.pleaves(m[3], 2), "D5", "ff", dls_staff_padding=3)
     B1c(
         library.runs(m[4, 5], 1),
-        "III",
+        3,
         "B4",
         "A4 C5",
         "f mf mp",
@@ -1259,7 +1259,7 @@ def vn(m):
     )
     B1c(
         library.runs(m[7], 1),
-        "III",
+        3,
         "B4",
         "A4 C5",
         "f",
@@ -1269,7 +1269,7 @@ def vn(m):
     B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
     B1c(
         library.runs(m[10], 1),
-        "III",
+        3,
         "B4",
         "A4 C5",
         "mp",
@@ -1291,17 +1291,17 @@ def vn(m):
 def vc(m):
     B1c(
         library.pleaves(m[1, 3], 1),
-        "II",
+        2,
         "C4",
         "B3 D4",
         "mp mp mf f",
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B4b(library.pleaves(m[3, 5], 4), "III", "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
+    B4b(library.pleaves(m[3, 5], 4), 3, "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
     B1c(
         library.pleaves(m[5, 8], 1),
-        "II",
+        2,
         "C4",
         "B3 D4",
         "mp p mf",
@@ -1309,17 +1309,17 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B4b(library.pleaves(m[8, 10], 4), "III", "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
+    B4b(library.pleaves(m[8, 10], 4), 3, "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
     B1c(
         library.pleaves(m[10], 1),
-        "II",
+        2,
         "C4",
         "B3 D4",
         "mf",
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B4b(library.pleaves(m[11, 13], 4), "IV", "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
+    B4b(library.pleaves(m[11, 13], 4), 4, "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
     C1(library.pleaves(m[14], 99), "D4", "F4")
     C1(library.pleaves(m[15], 99), "D4", "F4")
     C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
