@@ -24,6 +24,7 @@ M = library.M
 OBGC = library.OBGC
 X = library.X
 beat = library.beat
+frame = library.frame
 swell = library.swell
 
 
@@ -85,7 +86,7 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [swell(12), "-"],
+        [frame(12, 6), "-"],
         material=1,
     )
     rhythm(
@@ -97,12 +98,12 @@ def FL(voice, meters):
     )
     rhythm(
         meters(2),
-        [1, "-"],
+        [rt(1), "-"],
         material=2,
     )
     rhythm(
         meters(2, 3),
-        [3] + 5 * [-5, 3] + ["-"],
+        [AG([2], 3)] + 5 * [-5, AG([2], 3)] + ["-"],
         material=3,
         overlap=[-1],
     )
@@ -114,7 +115,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(4),
-        [swell(12), "-"],
+        [frame(12, 6), "-"],
         material=1,
     )
     rhythm(
@@ -126,32 +127,32 @@ def FL(voice, meters):
     )
     rhythm(
         meters(5),
-        [M(rt(1), 2), 3, -4, -1, 3, -4, -1, 3, M(t(4), 1)],
+        [M(rt(1), 2), AG([2], 3), -4, -1, AG([2], 3), -4, -1, AG([2], 3), M(t(4), 1)],
         material=3,
     )
     rhythm(
         meters(6, 7),
-        [M(swell(12), 1), R([M(rt(1), 1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        [M(frame(12, 6), 1), R([M(rt(1), 1), 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
         material=2,
     )
     rhythm(
         meters(8),
-        [M(rt(1), 1), 3, "-"],
+        [M(rt(1), 2), AG([2], 3), "-"],
         material=3,
     )
     rhythm(
         meters(9),
-        [-12, swell(12)],
+        [-12, frame(12, 6)],
         material=1,
     )
     rhythm(
         meters(10, 11),
-        4 * [swell(12)],
+        4 * [frame(12, 6)],
         material=1,
     )
     rhythm(
         None,
-        swell(12),
+        frame(12, 6),
         material=1,
     )
     rhythm(
@@ -173,7 +174,7 @@ def FL(voice, meters):
     )
     rhythm(
         None,
-        [t(4), swell(12)],
+        [t(4), frame(12, 6)],
         material=1,
     )
     rhythm(
@@ -183,23 +184,23 @@ def FL(voice, meters):
     )
     rhythm(
         meters(18),
-        [M(rt(1), 2), 3, "-"],
+        [M(rt(1), 2), AG([2], 3), "-"],
         material=3,
     )
     rhythm.mmrests(19, 21)
     rhythm(
         meters(22),
-        [-12, swell(12)],
+        [-12, frame(12, 6)],
         material=1,
     )
     rhythm(
         meters(23),
-        swell(12),
+        frame(12, 6),
         material=2,
     )
     rhythm(
         meters(24),
-        [M(rt(1), 2), 3, "-"],
+        [M(rt(1), 2), AG([2], 3), "-"],
         material=3,
     )
     rhythm(
@@ -209,23 +210,23 @@ def FL(voice, meters):
     )
     rhythm(
         meters(29),
-        [-12, swell(12)],
+        [-12, frame(12, 6)],
         material=2,
     )
     rhythm(
         meters(30),
-        [M(rt(1), 2), 3, "-"],
+        [M(rt(1), 2), AG([2], 3), "-"],
         material=3,
     )
     rhythm.mmrests(31)
     rhythm(
         meters(32),
-        [-12, swell(12)],
+        [-12, frame(12, 6)],
         material=2,
     )
     rhythm(
         meters(33),
-        [M(rt(1), 2), 3, "-"],
+        [M(rt(1), 2), AG([2], 3), "-"],
         material=3,
     )
     rhythm(
@@ -248,7 +249,92 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1),
+        # TODO: start with rest
+        [-12, R([1, 1, 1, 1, 1, 1, 1], 12)],
+        do_not_clean_up_rhythmic_spelling=True,
+        material=2,
+    )
+    rhythm(
+        meters(2),
+        [rt(1), "-"],
+        material=2,
+    )
+    rhythm.mmrests(3)
+    rhythm(
+        meters(4),
+        # TODO: start with rest
+        [-12, R([1, 1, 1, 1, 1, 1, 1], 12)],
+        do_not_clean_up_rhythmic_spelling=True,
+        material=2,
+    )
+    rhythm(
+        meters(5),
+        [rt(1), "-"],
+        material=2,
+    )
+    rhythm(
+        meters(6, 7),
+        # TODO: start with rest
+        [-12, R([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 24)],
+        material=2,
+    )
+    rhythm(
+        meters(8),
+        [rt(1), "-"],
+        material=2,
+    )
+    rhythm.mmrests(9, 11)
+    rhythm(
+        meters(12, 14),
+        [-12, A(11 * [1] + [t(1)], 24), A(12 * [1], 24), -12],
+        material=2,
+    )
+    rhythm.mmrests(15)
+    rhythm(
+        meters(16, 17),
+        [-12, R(14 * [1], 24)],
+        material=2,
+    )
+    rhythm(
+        meters(18),
+        [rt(1), "-"],
+        material=2,
+    )
+    rhythm.mmrests(19, 22)
+    rhythm(
+        meters(23, 24),
+        [frame(12, 6), rt(1), "-"],
+        material=2,
+    )
+    rhythm.mmrests(25, 27)
+    rhythm(
+        meters(28),
+        [-2, 4, -4],
+        material=99,
+    )
+    rhythm(
+        meters(29, 30),
+        [-12, frame(12, 6), rt(1), "-"],
+        material=2,
+    )
+    rhythm(
+        meters(31),
+        [-6, 4, -6],
+        material=99,
+    )
+    rhythm(
+        meters(32, 33),
+        [-12, frame(12, 6), rt(1), "-"],
+        material=2,
+    )
+    rhythm(
+        meters(33),
+        [-4, 6, 2, -4],
+        overlap=[-16],
+        material=99,
+    )
 
 
 def GT1(voice, meters):
@@ -463,36 +549,42 @@ def GT2(voice, meters):
         material=4,
     )
     rhythm.mmrests(27)
-    rhythm(
+    rhythm.make_one_beat_tuplets(
         meters(28),
-        [-2, 2, -4],
+        [-2, 1, "-"],
+        extra_counts=[-1],
         material=99,
     )
     rhythm.mmrests(29, 30)
-    rhythm(
+    rhythm.make_one_beat_tuplets(
         meters(31),
-        [-6, 2, -8],
+        [-4, 1, "-"],
+        extra_counts=[-1],
         material=99,
     )
     rhythm.mmrests(32)
-    rhythm(
+    rhythm.make_one_beat_tuplets(
         meters(33),
-        [-8, -8, -2, 2, -4, -4, 2, -2],
+        [-11, 1, -11, 1],
+        extra_counts=[-1],
         material=99,
     )
-    rhythm(
+    rhythm.make_one_beat_tuplets(
         meters(34),
-        [-2, 1, -1, "-"],
+        [-2, 1, "-"],
+        extra_counts=[-1],
         material=1,
     )
-    rhythm(
+    rhythm.make_one_beat_tuplets(
         meters(35),
-        [1, -3, "-"],
+        [1, "-"],
+        extra_counts=[-1],
         material=1,
     )
-    rhythm(
+    rhythm.make_one_beat_tuplets(
         meters(36),
-        [-1, 1, -2, -2, 1, -1, -4, -4, "-"],
+        [-1, 1, -2, 1, "-"],
+        extra_counts=[-1],
         material=1,
     )
     rhythm.mmrests(37)
@@ -682,55 +774,194 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def G1a():
-    pass
+def G1a(pleaves, pitch, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        library.swells(peaks),
+        rleak=True,
+    )
 
 
-def G1b():
-    pass
+def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
+    baca.pitches(pleaves, pitches, strict=True)
+    if hairpin_lparts is not None:
+        parts = baca.select.lparts(pleaves, hairpin_lparts)
+    else:
+        parts = pleaves
+    baca.hairpin(
+        parts,
+        hairpin,
+    )
 
 
-def G1c():
-    pass
+def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin):
+    baca.pitch(pleaves, pitch)
+    baca.mspanners.vibrato(
+        baca.select.lparts(vibrato_lparts, pleaves),
+        vibrato,
+        do_not_rleak=True,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(hairpin_lparts, pleaves),
+        hairpin,
+    )
 
 
-def G2a():
-    pass
+def G2a1(pleaves, pitch, peak):
+    baca.pitch(pleaves, pitch)
+    pheads = baca.select.pheads(pleaves)
+    baca.color_fingerings(
+        pheads,
+        [1, 2, 1, 2, 3, 1, 3, 2],
+    )
+    left = len(pheads) // 2 + 1
+    right = len(pheads) - left
+    baca.hairpin(
+        baca.select.lparts(pleaves, [left, right]),
+        library.swells(peak),
+        rleak=True,
+    )
 
 
-def G2b():
-    pass
+def G2a2(pleaves, pitch, alteration, peak):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, [1, 1]),
+        library.swells(peak),
+        rleak=True,
+    )
 
 
-def G3a():
-    pass
+def G3a(pleaves, glissando, dynamics):
+    runs = abjad.select.runs(pleaves)
+    dynamics = dynamics.split()
+    for run, dynamic in zip(runs, dynamics, strict=True):
+        baca.glissando(run, glissando)
+        baca.dynamic(run[0], dynamic)
 
 
-def G3b():
-    pass
+def G3b(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    if len(plts) == 1:
+        baca.rspanners.pizzicato(
+            plts,
+            descriptor=r"\baca-pizz-markup ||",
+            staff_padding=3,
+        )
+    else:
+        baca.rspanners.pizzicato(
+            plts,
+            staff_padding=3,
+            do_not_rleak=True,
+        )
 
 
-def G4a():
-    pass
+def G3c(pleaves, pitch):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        pleaves,
+        "p--!",
+        rleak=True,
+    )
 
 
-def G4b():
-    pass
+def G4a(pleaves, up_bow=False):
+    baca.staff_position(pleaves, 0)
+    baca.staff_lines(pleaves[0], 1)
+    rleaf = abjad.get.leaf(pleaves[-1], 1)
+    baca.staff_lines(rleaf, 5)
+    if up_bow is True:
+        bow_mark = baca.up_bow
+    else:
+        bow_mark = baca.down_bow
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        bow_mark(plt.head, padding=1)
+        baca.stop_on_string(plt.head)
+    baca.dynamic(
+        pleaves[0],
+        '"ff"-sempre',
+        abjad.Tweaks(r"- \tweak parent-alignment-X -1"),
+        abjad.Tweaks(r"- \tweak self-alignment-X -1"),
+    )
 
 
-def G5a():
-    pass
+def G4b(pleaves):
+    baca.staff_position(pleaves, 0)
+    baca.staff_lines(pleaves[0], 1)
+    rleaf = abjad.get.leaf(pleaves[-1], 1)
+    baca.staff_lines(rleaf, 5)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.stop_on_string(plt.head)
+    baca.dynamic(
+        pleaves[0],
+        '"f"-sempre',
+        abjad.Tweaks(r"- \tweak parent-alignment-X -1"),
+        abjad.Tweaks(r"- \tweak self-alignment-X -1"),
+    )
 
 
-def G5b():
-    pass
+def G5a(pleaves, glissandi, starts):
+    plts = baca.select.plts(pleaves)
+    starts = starts.split()
+    assert len(plts) == len(glissandi) == len(starts)
+    for plt, glissando, start in zip(plts, glissandi, starts, strict=True):
+        baca.glissando(plt, glissando)
+        baca.hairpin(
+            plt,
+            f"{start}>o!",
+        )
 
 
-def H1a():
-    pass
+def G5b(pleaves, glissando):
+    baca.glissando(pleaves, glissando)
+    baca.stem_tremolo(pleaves)
+    baca.rspanners.pizzicato(
+        pleaves,
+        '"2-finger pizzicato" =|',
+        do_not_rleak=True,
+        left_broken_text='"(2f. pizz.)"',
+        staff_padding=3,
+    )
+    left = len(pleaves) // 2 + 1
+    right = len(pleaves) - left
+    baca.hairpin(
+        baca.select.lparts(pleaves, [left, right]),
+        "o< mp>o!",
+    )
 
 
-def H1b():
+def H1a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.stop_on_string(plt.tail)
+
+
+def H1b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    dynamics = dynamics.split()
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
+def H1c():
     pass
 
 

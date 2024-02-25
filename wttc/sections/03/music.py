@@ -521,15 +521,15 @@ def B1a(pleaves, pitch, dynamic):
 
 def B1b(pleaves, *, up_bow=False):
     baca.staff_position(pleaves, 0)
+    if up_bow is True:
+        bow_mark = baca.up_bow
+    else:
+        bow_mark = baca.down_bow
     for run in abjad.select.runs(pleaves):
         baca.staff_lines(run[0], 1)
         rleaf = abjad.get.leaf(run[-1], 1)
         baca.staff_lines(rleaf, 5)
-        if up_bow is True:
-            function = baca.up_bow
-        else:
-            function = baca.down_bow
-        function(run[0], padding=1)
+        bow_mark(run[0], padding=1)
         baca.hairpin(
             run,
             'o<|"mf"',
