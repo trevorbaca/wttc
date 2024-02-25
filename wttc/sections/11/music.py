@@ -92,21 +92,22 @@ def FL(voice, meters):
     rhythm.mmrests(12, 17)
     rhythm(
         meters(18, 19),
-        ["-", 18],
+        ["-", t(2), frame(16, 9)],
         material=99,
     )
     rhythm.mmrests(20, 22)
     rhythm(
         meters(23),
-        [18, 18],
+        [frame(16, 7), rt(2), t(2), frame(16, 9)],
         material=99,
     )
     rhythm.mmrests(24, 25)
     rhythm(
-        meters(26, 28),
-        [18, 18, 18, 18, "-"],
+        meters(26, 27),
+        2 * [frame(16, 7), rt(2), t(2), frame(16, 9)],
         material=99,
     )
+    rhythm.mmrests(28)
 
 
 def OB(voice, meters):
@@ -301,39 +302,40 @@ def VN(voice, meters):
     rhythm.mmrests(5, 7)
     rhythm(
         meters(8),
-        ["-", 1],
+        ["-", c(1, 2)],
         material=3,
     )
     rhythm(
         meters(9),
-        [-16, -3, 1, -3, 1],
+        [-16, -3, c(1, 2), -3, c(1, 2)],
         material=3,
     )
     rhythm(
         meters(10, 11),
-        [-28, -3, 1, -12, -3, 1],
+        [-28, -3, c(1, 2), -12, -3, c(1, 2)],
         material=3,
     )
     rhythm(
         meters(12, 14),
-        [-3, 1, -8, -3, 1, -24, -3, 1, -3, 1, -3, 1, -3, 1, -3, t(1)],
+        [-3, c(1, 2), -8, -3, c(1, 2), -24]
+        + [-3, c(1, 2), -3, c(1, 2), -3, c(1, 2), -3, c(1, 2), -3, t(1)],
         material=3,
     )
     rhythm(
         meters(15, 17),
-        [60],
+        14 * [4] + [AG([2], 4)],
         material=3,
     )
     rhythm.mmrests(18, 21)
     rhythm(
         meters(22, 23),
-        12 * [4],
+        11 * [4] + [AG([2], 4)],
         material=3,
     )
     rhythm.mmrests(24)
     rhythm(
         meters(25, 28),
-        24 * [4],
+        11 * [4] + [AG([2], 4)] + 11 * [4] + [AG([2], 4)],
         material=3,
     )
     baca.section.append_anchor_note(voice)
@@ -354,47 +356,49 @@ def VC(voice, meters):
     rhythm.mmrests(5, 6)
     rhythm(
         meters(7, 8),
-        [16, 16, 16],
+        [frame(16, 8), 16, frame(16, 8)],
         material=2,
     )
     rhythm(
         meters(9),
-        [-8, 16],
+        [-8, frame(16, 8)],
         material=2,
     )
     rhythm(
         meters(10, 11),
-        [8, 16, 8, 16],
+        [frame(8, 2), frame(16, 8), frame(8, 2), frame(16, 8)],
         material=2,
     )
     rhythm(
         meters(12, 17),
-        [4, -12, 4, 4, -16, 4, 4, -20, 4, 4, -24, 4, 4, -28, 4, 4, "-"],
+        [AG([2], 4), -12, AG([2], 4), AG([2], 4), -16, AG([2], 4), AG([2], 4)]
+        + [-20, AG([2], 4), AG([2], 4), -24, AG([2], 4), AG([2], 4)]
+        + [-28, AG([2], 4), AG([2], 4), "-"],
         material=2,
     )
     rhythm(
         meters(18, 20),
-        ["+"],
+        [t(12), t(16), frame(12, 6)],
         material=2,
     )
     rhythm(
         meters(21, 22),
-        2 * [swell(12)],
+        2 * [frame(12, 6)],
         material=2,
     )
     rhythm(
         meters(23),
-        [18, 18],
+        T([w(16, 32), h(16)], "8:9"),
         material=2,
     )
     rhythm(
         meters(24, 25),
-        2 * [swell(12)],
+        2 * [frame(12, 6)],
         material=2,
     )
     rhythm(
         meters(26),
-        [18, 18],
+        T([w(16, 32), h(16)], "8:9"),
         material=2,
     )
     rhythm.mmrests(27, 28)
@@ -461,6 +465,7 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
+        staff_padding=3,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -469,20 +474,133 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     )
 
 
-def F2b():
-    pass
+def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
+        staff_padding=5.5,
+    )
+    baca.override.note_head_style_harmonic(pleaves)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        if abjad.Duration(1, 2) < abjad.get.duration(plt):
+            baca.rspanners.circle_bow(
+                plt,
+                staff_padding=3,
+            )
+        else:
+            baca.rspanners.half_clt(
+                plt,
+                staff_padding=3,
+            )
+            baca.down_bow(plt.head, full=True)
+    baca.hairpin(
+        pleaves,
+        baca.select.lparts(pleaves, hairpin_lparts),
+        library.swells(peaks),
+    )
 
 
-def F3a():
-    pass
+def F2b2(pleaves, pitches):
+    baca.pitches(pleaves, pitches, strict=True)
+    baca.alternate_bow_strokes(pleaves)
+    baca.dynamic(
+        pleaves[0],
+        "f-sempre",
+        abjad.Tweaks(r"- \tweak parent-alignment-X -1"),
+        abjad.Tweaks(r"- \tweak self-alignment-X -1"),
+    )
+    for nongrace_note in abjad.select.notes(pleaves, grace=False):
+        after_grace_note = abjad.get.leaf(nongrace_note, 1)
+        notes = [nongrace_note, after_grace_note]
+        baca.mspanners.scp(
+            "O -> P",
+            notes,
+            do_not_rleak=True,
+            staff_padding=3,
+        )
+    baca.mspanners.text(
+        pleaves,
+        '"alla punta"',
+        staff_padding=5.5,
+    )
 
 
-def F3b():
-    pass
+def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
+        staff_padding=3,
+    )
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.rspanners.circle_bow(
+            plt,
+            staff_padding=5.5,
+        )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        library.swells(peaks),
+        rleak=True,
+    )
 
 
-def G1a():
-    pass
+def F3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    if ">" in dynamics:
+        baca.hairpin(
+            pleaves,
+            dynamics,
+        )
+    else:
+        baca.dynamic(pleaves[0], dynamics)
+
+
+def F3b1(pleaves, fundamentals, dynamics):
+    assert len(pleaves) == len(fundamentals)
+    for pleaf, fundamental in zip(pleaves, fundamentals):
+        pitch = abjad.NamedPitch(fundamental)
+        fourth = pitch + abjad.NamedInterval("P4")
+        pleaf.note_heads[0].written_pitch = pitch
+        pleaf.note_heads[1].written_pitch = fourth
+        abjad.tweak(pleaf.note_heads[1], r"- \tweak style #'harmonic")
+    if ">" in dynamics:
+        baca.hairpin(
+            pleaves,
+            dynamics,
+        )
+    else:
+        baca.dynamic(pleaves[0], dynamics)
+
+
+def F3b2(pleaves, glissando, hairpin):
+    baca.glissando(pleaves, glissando)
+    baca.stem_tremolo(pleaves)
+    baca.hairpin(
+        pleaves,
+        hairpin,
+    )
+    baca.rspanners.xfb(
+        pleaves,
+        staff_padding=3,
+    )
+    baca.rspanners.tasto(
+        pleaves,
+        staff_padding=3,
+    )
+
+
+def G1a(pleaves, pitch, hairpin_lparts, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        library.swells(peaks),
+    )
 
 
 def fl(m):

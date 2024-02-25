@@ -1195,9 +1195,27 @@ number.11.AltoFlute.Music = {
     % [AltoFlute.Music measure 19]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 7/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak direction #up
     \repeatTie
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 9/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
 
     % [AltoFlute.Music measure 20]
       %! STAFF_HIGHLIGHT
@@ -1221,7 +1239,25 @@ number.11.AltoFlute.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'1
+    b'1 * 9/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak stencil ##f
     ~
 
@@ -1240,9 +1276,27 @@ number.11.AltoFlute.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 7/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak direction #up
     \repeatTie
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 9/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
 
     % [AltoFlute.Music measure 24]
       %! STAFF_HIGHLIGHT
@@ -1261,7 +1315,25 @@ number.11.AltoFlute.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'1
+    b'1 * 9/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak stencil ##f
     ~
 
@@ -1280,14 +1352,50 @@ number.11.AltoFlute.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 7/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak direction #up
     \repeatTie
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 9/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
 
     % [AltoFlute.Music measure 27]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 9/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 7/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak stencil ##f
     ~
 
@@ -1306,14 +1414,34 @@ number.11.AltoFlute.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 7/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"16"
     - \tweak direction #up
     \repeatTie
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 9/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"9" #"16"
 
     % [AltoFlute.Music measure 28]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     \revert DynamicLineSpanner.staff-padding
 
 }
@@ -1559,6 +1687,8 @@ number.11.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan
 
     % [Oboe.Music measure 19]
@@ -1622,6 +1752,8 @@ number.11.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan fs'''
 
@@ -1764,6 +1896,8 @@ number.11.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan g'''
 
@@ -2998,7 +3132,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
     % [Violin.Music measure 9]
       %! STAFF_HIGHLIGHT
@@ -3011,7 +3145,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3021,7 +3155,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
     % [Violin.Music measure 10]
       %! STAFF_HIGHLIGHT
@@ -3037,7 +3171,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3049,7 +3183,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
     % [Violin.Music measure 12]
       %! STAFF_HIGHLIGHT
@@ -3060,7 +3194,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3072,7 +3206,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3090,7 +3224,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3100,7 +3234,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3110,7 +3244,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3120,7 +3254,7 @@ number.11.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3136,24 +3270,74 @@ number.11.Violin.Music = {
     % [Violin.Music measure 15]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak stencil ##f
-    ~
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
 
     % [Violin.Music measure 16]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
 
     % [Violin.Music measure 17]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2.
-    \repeatTie
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    \afterGrace
+    b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Violin.Music measure 18]
       %! STAFF_HIGHLIGHT
@@ -3227,7 +3411,16 @@ number.11.Violin.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Violin.Music measure 24]
       %! STAFF_HIGHLIGHT
@@ -3286,7 +3479,16 @@ number.11.Violin.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Violin.Music measure 27]
       %! NOT_YET_PITCHED_COLORING
@@ -3336,8 +3538,17 @@ number.11.Violin.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
-    \revert DynamicLineSpanner.staff-padding
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+        \revert DynamicLineSpanner.staff-padding
+
+    }
+
 
       %! ANCHOR_NOTE
     % [Violin.Music anchor note]
@@ -3613,7 +3824,25 @@ number.11.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'1
+    b'1 * 8/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 2/1
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
@@ -3629,7 +3858,25 @@ number.11.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 8/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 2/1
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
     % [Cello.Music measure 9]
       %! STAFF_HIGHLIGHT
@@ -3640,30 +3887,129 @@ number.11.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'1
+    b'1 * 8/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 2/1
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
     % [Cello.Music measure 10]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 6/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"8"
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 8/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 2/1
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
     % [Cello.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 6/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"8"
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'1
+    b'1 * 8/16
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 2/1
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
     % [Cello.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3673,11 +4019,29 @@ number.11.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Cello.Music measure 13]
       %! STAFF_HIGHLIGHT
@@ -3691,11 +4055,29 @@ number.11.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3708,11 +4090,29 @@ number.11.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3725,11 +4125,29 @@ number.11.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'4
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Cello.Music measure 17]
       %! STAFF_HIGHLIGHT
@@ -3757,15 +4175,33 @@ number.11.Cello.Music = {
     % [Cello.Music measure 20]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2.
+    b'2. * 6/12
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
     \repeatTie
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 3/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
     % [Cello.Music measure 21]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+    b'2. * 6/12
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -3773,16 +4209,22 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 3/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
     % [Cello.Music measure 22]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+    b'2. * 6/12
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -3790,42 +4232,43 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 3/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
-    % [Cello.Music measure 23]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak stencil ##f
-    ~
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 9/8
+    {
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
-    [
-    \repeatTie
+        % [Cello.Music measure 23]
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'\breve * 1/2
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
-    ]
-    - \tweak stencil ##f
-    ~
+          %! INVISIBLE_MUSIC_COMMAND
+        %@% \abjad-invisible-music
+          %! INVISIBLE_MUSIC_COLORING
+        \abjad-invisible-music-coloring
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'1
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
+    }
 
     % [Cello.Music measure 24]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+    b'2. * 6/12
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -3833,16 +4276,22 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 3/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
     % [Cello.Music measure 25]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+    b'2. * 6/12
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -3850,35 +4299,36 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2. * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 3/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
-    % [Cello.Music measure 26]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak stencil ##f
-    ~
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 9/8
+    {
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
-    [
-    \repeatTie
+        % [Cello.Music measure 26]
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'\breve * 1/2
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
-    ]
-    - \tweak stencil ##f
-    ~
+          %! INVISIBLE_MUSIC_COMMAND
+        %@% \abjad-invisible-music
+          %! INVISIBLE_MUSIC_COLORING
+        \abjad-invisible-music-coloring
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'1
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
+    }
 
     % [Cello.Music measure 27]
       %! STAFF_HIGHLIGHT
