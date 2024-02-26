@@ -356,17 +356,17 @@ def VC(voice, meters):
     rhythm.mmrests(5, 6)
     rhythm(
         meters(7, 8),
-        [frame(16, 8), 16, frame(16, 8)],
+        [frame(16, 8), 16, frame(16, 7)],
         material=2,
     )
     rhythm(
         meters(9),
-        [-8, frame(16, 8)],
+        [-8, frame(16, 6)],
         material=2,
     )
     rhythm(
         meters(10, 11),
-        [frame(8, 2), frame(16, 8), frame(8, 2), frame(16, 8)],
+        [frame(8, 4), frame(16, 8), frame(8, 3), frame(16, 8)],
         material=2,
     )
     rhythm(
@@ -474,57 +474,62 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     )
 
 
-def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks):
+def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     baca.pitch(pleaves, pitch)
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
-        staff_padding=5.5,
+        staff_padding=3,
     )
     baca.override.note_head_style_harmonic(pleaves)
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        if abjad.Duration(1, 2) < abjad.get.duration(plt):
-            baca.rspanners.circle_bow(
-                plt,
-                staff_padding=3,
-            )
-        else:
+    parts = baca.select.clparts(pleaves, [2])
+    for i, part in enumerate(parts):
+        if i in down_bow_indices:
             baca.rspanners.half_clt(
-                plt,
-                staff_padding=3,
+                part,
+                descriptor="½ clt ||",
+                staff_padding=5.5,
             )
-            baca.down_bow(plt.head, full=True)
+            baca.down_bow(part[0], full=True)
+        else:
+            baca.mspanners.circle_bow(
+                part,
+                staff_padding=5.5,
+            )
     baca.hairpin(
-        pleaves,
         baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
+        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        rleak=True,
     )
 
 
-def F2b2(pleaves, pitches):
-    baca.pitches(pleaves, pitches, strict=True)
-    baca.alternate_bow_strokes(pleaves)
+def F2b2(pleaves, glissandi):
+    parts = baca.select.clparts(pleaves, [2])
+    for part, glissando in zip(parts, glissandi, strict=True):
+        baca.glissando(part, glissando)
+        baca.mspanners.scp(
+            part,
+            ". -> P",
+            do_not_rleak=True,
+            staff_padding=4,
+        )
+    nongrace_notes = abjad.select.notes(pleaves, grace=False)
+    baca.alternate_bow_strokes(
+        nongrace_notes,
+        abjad.Tweak(r"- \tweak padding 1"),
+    )
     baca.dynamic(
         pleaves[0],
         "f-sempre",
-        abjad.Tweaks(r"- \tweak parent-alignment-X -1"),
-        abjad.Tweaks(r"- \tweak self-alignment-X -1"),
+        abjad.Tweak(r"- \tweak parent-alignment-X -1"),
+        abjad.Tweak(r"- \tweak self-alignment-X -1"),
     )
-    for nongrace_note in abjad.select.notes(pleaves, grace=False):
-        after_grace_note = abjad.get.leaf(nongrace_note, 1)
-        notes = [nongrace_note, after_grace_note]
-        baca.mspanners.scp(
-            "O -> P",
-            notes,
-            do_not_rleak=True,
-            staff_padding=3,
-        )
     baca.mspanners.text(
         pleaves,
-        '"alla punta"',
-        staff_padding=5.5,
+        r"\wttc-alla-punta =|",
+        staff_padding=6.5,
     )
 
 
@@ -535,17 +540,21 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
         pleaves,
         alteration=alteration,
         harmonic=True,
-        staff_padding=3,
+        staff_padding=5.5,
     )
     plts = baca.select.plts(pleaves)
-    for plt in plts:
-        baca.rspanners.circle_bow(
-            plt,
-            staff_padding=5.5,
+    pairs = abjad.sequence.partition_by_counts(hairpin_lparts, [2], cyclic=True)
+    circle_bow_lparts = [sum(_) for _ in pairs]
+    parts = baca.select.clparts(plts, circle_bow_lparts)
+    for part in parts:
+        baca.mspanners.circle_bow(
+            part,
+            staff_padding=8,
         )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
+        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
         rleak=True,
     )
 
@@ -562,13 +571,14 @@ def F3a(pleaves, pitches, dynamics):
 
 
 def F3b1(pleaves, fundamentals, dynamics):
+    fundamentals = fundamentals.split()
     assert len(pleaves) == len(fundamentals)
     for pleaf, fundamental in zip(pleaves, fundamentals):
         pitch = abjad.NamedPitch(fundamental)
         fourth = pitch + abjad.NamedInterval("P4")
-        pleaf.note_heads[0].written_pitch = pitch
-        pleaf.note_heads[1].written_pitch = fourth
-        abjad.tweak(pleaf.note_heads[1], r"- \tweak style #'harmonic")
+        string = f'<{pitch.get_name(locale="us")} {fourth.get_name(locale="us")}>'
+        baca.pitch(pleaf, string)
+        abjad.tweak(pleaf.note_heads[1], r"\tweak style #'harmonic")
     if ">" in dynamics:
         baca.hairpin(
             pleaves,
@@ -591,7 +601,7 @@ def F3b2(pleaves, glissando, hairpin):
     )
     baca.rspanners.tasto(
         pleaves,
-        staff_padding=3,
+        staff_padding=5.5,
     )
 
 
@@ -600,6 +610,8 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
+        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        rleak=True,
     )
 
 
@@ -610,6 +622,9 @@ def fl(m):
         11 * [1],
         "o< p>o o< p>o o< p>o o< p>o o< p>o !",
     )
+    G1a(library.pleaves(m[18, 19], 99), "A3", [2, 1], "p")
+    G1a(library.pleaves(m[23], 99), "A3", [1, 2, 2, 1], "p mp")
+    G1a(library.pleaves(m[26, 27], 99), "A3", 2 * [1, 2, 2, 1], "p mp mp mf")
 
 
 def ob(m):
@@ -626,27 +641,66 @@ def ob(m):
 
 def gt1(m):
     F1b(library.pleaves(m[4, 6], 1), "<G3 B3>", "mp - -")
+    F3a(library.pleaves(m[8, 9], 3), "C#4 D4 D#4 E4", "p")
     F1b(library.pleaves(m[10], 1), "<G3 B3>", "mp")
+    F3a(library.pleaves(m[11, 12], 3), "D4 D#4 E4 F4", "p")
     F1b(library.pleaves(m[14], 1), "<G3 B3>", "mp")
+    F3a(library.pleaves(m[14, 17], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
     F1b(library.pleaves(m[20], 1), "<G3 B3>", "mp")
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     F1b(library.pleaves(m[4, 6], 1), "<F3 A3>", "mp - -")
+    F3a(library.pleaves(m[8, 9], 3), "C4 C#4 D4 D#4", "p")
     F1b(library.pleaves(m[10], 1), "<F3 A3>", "mp")
+    F3a(library.pleaves(m[11, 12], 3), "C#4 D4 D#4 E4", "p")
     F1b(library.pleaves(m[14], 1), "<F3 A3>", "mp")
+    F3a(library.pleaves(m[14, 16], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
     F1b(library.pleaves(m[20], 1), "<F3 A3>", "mp")
 
 
 def vn(m):
     F1c(library.pleaves(m[1, 4], 1), "<D5 F#5>", "G5", 'mp mf "f"')
+    F3b1(library.pleaves(m[8, 9], 3), "D#5 E5 F5", "mp")
+    F3b1(library.pleaves(m[11, 12], 3), "D#5 E5 F5 F#5", "p")
+    F3b1(library.pleaves(m[14], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
+    F3b2(library.pleaves(m[14, 17], 3)[4:], "Ab4 Gb4", "p>o!")
+    F3b2(library.pleaves(m[22, 23], 3), "Ab4 Gb4", "pp>o!")
+    F3b2(library.pleaves(m[25, 26], 3), "Ab4 Gb4", "pp>o!")
+    F3b2(library.pleaves(m[27, 28], 3), "Ab4 Gb4", "pp>o!")
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     baca.clef(m[1][0], "treble")
     F1c(library.pleaves(m[1, 4], 1), "<D4 G4>", "A4", 'mp mf "f"')
+    baca.clef(m[7][0], "bass")
+    F2b1(library.pleaves(m[7, 8], 2), "Eb2", "F2", 6 * [1], "mf mf mf", [])
+    F2b1(
+        library.pleaves(m[9, 11], 2), "Eb2", "F2", 10 * [1], 'mp "f" mp "f" mp', [1, 3]
+    )
+    F2b2(
+        library.pleaves(m[12, 16], 2),
+        [
+            "D2 Eb2",
+            "D2 Eb2",
+            "Dqf2 Etqf2",
+            "Dqf2 Etqf2",
+            "C#2 D2",
+            "C#2 D2",
+            "Cqs2 Dqf2",
+            "Cqs2 Dqf2",
+            "C2 Db2",
+        ],
+    )
+    F2b3(
+        library.pleaves(m[18, 26], 2),
+        "F2",
+        "G2",
+        [3] + 13 * [1],
+        "mp p p mp pp pp p",
+    )
 
 
 def align_spanners(cache):

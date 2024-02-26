@@ -4747,7 +4747,7 @@ number.18.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
-    \clef "treble"
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -4782,7 +4782,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4804,7 +4804,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4818,7 +4818,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4833,7 +4833,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4848,7 +4848,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4862,7 +4862,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4875,7 +4875,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4887,7 +4887,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4897,7 +4897,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4912,7 +4912,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -4927,7 +4927,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5009,7 +5009,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5034,16 +5034,16 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'2
+    d2
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    d2
 
     % [Cello.Music measure 27]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
+    d4
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5055,7 +5055,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5065,19 +5065,19 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'4
+    d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 28]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
+    d4
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    d2
 
     % [Cello.Music measure 29]
       %! STAFF_HIGHLIGHT
@@ -5088,7 +5088,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'16
+    d16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5100,11 +5100,11 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'2
+    d2
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    d2
 
       %! ANCHOR_NOTE
     % [Cello.Music anchor note]
@@ -5135,7 +5135,7 @@ number.18.Cello.Music = {
       %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
-    b'1 * 1/4
+    d1 * 1/4
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN

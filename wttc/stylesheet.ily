@@ -247,6 +247,11 @@ wttc-vn-markup = \markup \hcenter-in #12 "Vn."
 wttc-cello-markup = \markup \hcenter-in #22 "Cello"
 wttc-vc-markup = \markup \hcenter-in #12 "Vc."
 
+
+%%% MARKUP %%%
+
+wttc-alla-punta = \markup \upright "alla punta"
+
 %%% STEM RIMBALZANDO %%%
 
 stemR = {
