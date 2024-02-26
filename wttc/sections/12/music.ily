@@ -1197,6 +1197,7 @@ number.12.AltoFlute.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -3070,6 +3071,7 @@ number.12.AltoFlute.Music = {
     r4
 
     r1.
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 34]
       %! NOT_YET_PITCHED_COLORING
@@ -3157,6 +3159,7 @@ number.12.Oboe.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 6
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -3794,8 +3797,10 @@ number.12.Oboe.Music = {
     r1
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Oboe.Music measure 19]
+    \override DynamicLineSpanner.staff-padding = 4
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -4108,6 +4113,7 @@ number.12.Oboe.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -4131,6 +4137,7 @@ number.12.Guitar.1.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -5594,6 +5601,7 @@ number.12.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 34]
     r16
@@ -5709,6 +5717,7 @@ number.12.Guitar.2.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 6
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -7000,6 +7009,7 @@ number.12.Guitar.2.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -7107,6 +7117,7 @@ number.12.Violin.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -7399,6 +7410,7 @@ number.12.Violin.Music = {
     r8
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 17]
     r2.
@@ -7409,6 +7421,7 @@ number.12.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 19]
+    \override DynamicLineSpanner.staff-padding = 5
     r4
 
     r8
@@ -7620,6 +7633,7 @@ number.12.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
     ]
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 23]
       %! STAFF_HIGHLIGHT
@@ -7632,6 +7646,7 @@ number.12.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 25]
+    \override DynamicLineSpanner.staff-padding = 6
     r1
 
     r8
@@ -7747,6 +7762,7 @@ number.12.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 29]
     R1 * 6/4
@@ -7981,6 +7997,7 @@ number.12.Cello.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 5
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -9431,6 +9448,7 @@ number.12.Cello.Music = {
     - \tweak stencil ##f
     ~
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 34]
     gs,1

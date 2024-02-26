@@ -1124,6 +1124,18 @@ def vc(m):
     )
 
 
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"][1, 33], 4)
+    baca.override.dls_staff_padding(cache["ob"][1, 18], 6)
+    baca.override.dls_staff_padding(cache["ob"][19, 33], 4)
+    baca.override.dls_staff_padding(cache["gt1"][1, 33], 4)
+    baca.override.dls_staff_padding(cache["gt2"][1, 33], 6)
+    baca.override.dls_staff_padding(cache["vn"][1, 16], 4)
+    baca.override.dls_staff_padding(cache["vn"][19, 22], 5)
+    baca.override.dls_staff_padding(cache["vn"][25, 28], 6)
+    baca.override.dls_staff_padding(cache["vc"][1, 33], 5)
+
+
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
@@ -1170,6 +1182,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
