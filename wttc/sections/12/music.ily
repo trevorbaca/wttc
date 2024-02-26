@@ -7125,11 +7125,25 @@ number.12.Cello.Music = {
     % [Cello.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d1.
+    d1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
     ~
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d8
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d4.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Cello.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
@@ -7137,11 +7151,21 @@ number.12.Cello.Music = {
     d1.
     - \tweak direction #up
     \repeatTie
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d1
+    d2..
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d8
+    \repeatTie
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight

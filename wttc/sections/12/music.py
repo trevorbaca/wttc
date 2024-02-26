@@ -684,7 +684,7 @@ def VC(voice, meters):
 
     rhythm(
         meters(10, 13),
-        [rt(24), rt(24), rt(24), 16, -6, M(t(2), 5)],
+        [rt(24), rt(16), rt(2), X(rt(6)), rt(24), X(rt(14)), X(rt(2)), -6, M(t(2), 5)],
         material=1,
     )
     rhythm(
@@ -774,12 +774,12 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def G1a(pleaves, pitch, peaks):
+def G1a(pleaves, pitch, hairpin_lparts, peaks, *, rleak=False):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
-        baca.select.clparts(pleaves, [1]),
+        baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
-        rleak=True,
+        rleak=rleak,
     )
 
 
@@ -816,13 +816,19 @@ def G2a1(pleaves, pitch, peak):
         pheads,
         [1, 2, 1, 2, 3, 1, 3, 2],
     )
-    left = len(pheads) // 2 + 1
-    right = len(pheads) - left
-    baca.hairpin(
-        baca.select.lparts(pleaves, [left, right]),
-        library.swells(peak),
-        rleak=True,
-    )
+    if ">" in peak:
+        baca.hairpin(
+            pleaves,
+            peak,
+        )
+    else:
+        left = len(pheads) // 2 + 1
+        right = len(pheads) - left
+        baca.hairpin(
+            baca.select.lparts(pleaves, [left, right]),
+            library.swells(peak),
+            rleak=True,
+        )
 
 
 def G2a2(pleaves, pitch, alteration, peak):
@@ -955,7 +961,6 @@ def H1a(pleaves, pitches, dynamics):
 def H1b(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches, exact=True)
     dynamics = dynamics.split()
-    dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
@@ -975,26 +980,158 @@ def H3():
 
 def fl(m):
     pass
+    """
+    G1a(library.pleaves(m[1], 1), "A#4", [1, 2], "p")
+    G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
+    G3a(library.pleaves(m[2, 3], 3), "D5 C5", "p p mp mp mf mf")
+    G1a(library.pleaves(m[3, 4], 1), "A#4", [2, 2], "mp")
+    G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
+    G3a(library.pleaves(m[5], 3), "D5 C5", "mf mf f")
+    G1a(library.pleaves(m[5, 6], 1), "A#4", [2, 2], "mf")
+    G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
+    G3a(library.pleaves(m[8], 3), "D5 C5", "f")
+    G1a(library.pleaves(m[9, 12], 1), "B4", 12 * [1], "mf mf mp mp p p", rleak=True)
+    G2a1(library.pleaves(m[12, 13], 2), "G5", "f>o!")
+    G5a(
+        library.pleaves(m[14, 15], 5),
+        ["G4 F4", "Gb4 E4", "F4 Eb4", "E4 D4"],
+        "mf mp p pp",
+    )
+    G1a(library.pleaves(m[15, 16], 1), "B4", [2, 2], "mf")
+    G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
+    G3a(library.pleaves(m[18], 3), "F4 E4", "f")
+    G1a(library.pleaves(m[22], 1), "B4", [1, 2], "p")
+    G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
+    G3a(library.pleaves(m[18], 3), "F4 E4", "f")
+    G5a(library.pleaves(m[25, 28], 5), ["B3 A#3", "Bb3 A3", "A3 G#3"], "mp p pp")
+    G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
+    G3a(library.pleaves(m[30], 3), "F4 E4", "p")
+    G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
+    G3a(library.pleaves(m[33], 3), "F4 E4", "p")
+    """
 
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    pass
+    """
+    G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
+    G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
+    G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
+    G2a1(library.pleaves(m[12, 13], 2), "G5", "f>o!")
+    G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
+    G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
+    G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
+    G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
+    """
 
 
 def gt1(m):
     pass
+    """
+    G3b(library.pleaves(m[2, 3], 3), "F2", "p p mp mp mf mf")
+    G1b(library.pleaves(m[4], 1), "A3 B3", "mp>o!")
+    G3b(library.pleaves(m[5], 3), "F2", "mf mf f")
+    G1b(library.pleaves(m[6, 7], 1), "A3 B3", "mp>o!")
+    G3b(library.pleaves(m[8], 3), "F2", "f")
+    G4a(library.pleaves(m[8, 10], 4))
+    G1b(library.pleaves(m[10, 11], 1), "A#3 B#3", "p<mf")
+    G1b(library.pleaves(m[16, 17], 1), "C4 D4", "p<mf>p")
+    G3b(library.pleaves(m[18], 3), "A2", "f")
+    G4a(library.pleaves(m[18, 20], 4))
+    G1b(library.pleaves(m[22, 23], 1), "C4 D4", "p>o!")
+    G3b(library.pleaves(m[24], 3), "A2", "f")
+    G4a(library.pleaves(m[24, 26], 4))
+    H1b(library.pleaves(m[28], 99), "Db4", "p")
+    G3b(library.pleaves(m[30], 3), "A2", "p")
+    H1b(library.pleaves(m[31], 99), "Eb4 D4 B3", "mp pp mf")
+    G3b(library.pleaves(m[33], 3), "A2", "p")
+    H1b(library.pleaves(m[33], 99), "Db4 C4 A3", "pp mf f")
+    """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    G3c(library.pleaves(m[1, 4], 3), "F#4")
+    G1b(library.pleaves(m[4, 5], 1), "A#3 B#3", "mp>o!")
+    G3c(library.pleaves(m[5, 6], 3), "F#4")
+    G1b(library.pleaves(m[6], 1), "A#3 B#3", "mp>o!")
+    G4a(library.pleaves(m[7, 10], 4), up_bow=True)
+    G1b(library.pleaves(m[10, 11], 1), "B3 C#4", "p<mf")
+    G1b(library.pleaves(m[16], 1), "B3 C#4", "p<mf")
+    G4a(library.pleaves(m[17, 20], 4), up_bow=True)
+    G1b(library.pleaves(m[22, 23], 1), "B3 C#4", "p>o!")
+    G4a(library.pleaves(m[24, 26], 4), up_bow=True)
+    H1b(library.pleaves(m[28], 99), "E4", "mp")
+    H1b(library.pleaves(m[31], 99), "C4", "f")
+    H1b(library.pleaves(m[33], 99), "Bb3 B3", "f pp")
+    """
 
 
 def vn(m):
     pass
+    """
+    G5b(
+        library.pleaves(m[13, 16], 5),
+        "Ab4:3 F4:2 A4:2 E4:2 Gb4:3 Eb4:3 F4:2 D4:3 E4:2 Db4:1",
+    )
+    G5b(
+        library.pleaves(m[19, 22], 5),
+        "E4:3 Db4:2 Eb4:2 C4:4 D4:3 B3:2 Db4:2 Bb3:2 C4:3 A3",
+    )
+    G5b(library.pleaves(m[25, 28], 5), "B3:4 Ab3:4 Bb3:2 G3")
+    """
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    G1c(
+        library.pleaves(m[5, 6], 1),
+        "G2",
+        [2, 1, 1],
+        "NV -> vib. -> NV",
+        [3, 1],
+        "ppp<|f",
+    )
+    G4b(library.pleaves(m[6, 9], 4))
+    G1c(
+        library.pleaves(m[9, 13], 1),
+        "G2",
+        [3, 3, 1, 1, 1],
+        "NV -> molto -> NV -> molto -> NV",
+        [2, 2, 2, 3],
+        "ppp<| f> p<| mf>o !",
+    )
+    G5b(library.pleaves(m[13, 15], 5), "G4:2 E4:2 Gb4:3 Eb4:2 F4:3 D4 E4")
+    G1c(
+        library.pleaves(m[15, 16], 1),
+        "G#2",
+        [1, 1, ],
+        "molto -> NV -> molto",
+        [3],
+        "sfp>o!",
+    )
+    G4b(library.pleaves(m[16, 19], 4))
+    G5b(
+        library.pleaves(m[13, 15], 5),
+        "Eb4:3 C4:3 D4:3 B3:3 Db4:3 B3:2 C4:3 A3:2 B3",
+    )
+    G4b(library.pleaves(m[24, 25], 4))
+    G5b(
+        library.pleaves(m[25, 28], 5),
+        "Ab3:4 Bb3:4 G3:2 A3",
+    )
+    G1c(
+        library.pleaves(m[28, 34], 1)[:-1],
+        "G#2",
+        [2, 2, 1, 1, 1],
+        "molto -> NV -> molto -> NV -> molto",
+        [1, 1, 1, 1, 1, 1, 1],
+        "o< mp> pp< mp> pp< p> pp",
+    )
+    """
 
 
 @baca.build.timed("make_score")
