@@ -990,7 +990,7 @@ def fl(m):
     G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
     G3a(library.pleaves(m[8], 3), "D5 C5", "f")
     G1a(library.pleaves(m[9, 12], 1), "B4", 12 * [1], "mf mf mp mp p p", rleak=True)
-    G2a1(library.pleaves(m[12, 13], 2), "G5", "f>o!")
+    G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
     G5a(
         library.pleaves(m[14, 15], 5),
         ["G4 F4", "Gb4 E4", "F4 Eb4", "E4 D4"],
@@ -1203,7 +1203,7 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
-        baca.tags.NOT_YET_PITCHED_COLORING,
+        # baca.tags.NOT_YET_PITCHED_COLORING,
     )
     lilypond_file = baca.lilypond.file(
         score,
