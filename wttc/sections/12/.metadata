@@ -27,6 +27,16 @@
     "first_measure_number": 128,
     "has_anchor_skip": True,
     "persistent_indicators": {
+        "AltoFlute.Music": [
+            baca.Memento(
+                context="AltoFlute.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="p",
+            )
+        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -53,6 +63,16 @@
                 value="Afl.",
             ),
         ],
+        "Cello.Music": [
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="pp",
+            )
+        ],
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
@@ -72,11 +92,27 @@
             ),
             baca.Memento(
                 context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Cello.Music",
                 edition=Tag(string="-PARTS"),
                 manifest="short_instrument_names",
                 prototype=None,
                 synthetic_offset=None,
                 value="Vc.",
+            ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
         "Guitar.1.Music": [
@@ -86,7 +122,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="f",
             )
         ],
         "Guitar.1.Staff": [
@@ -138,7 +174,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="pp",
             )
         ],
         "Guitar.2.Staff": [

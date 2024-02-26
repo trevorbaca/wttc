@@ -247,10 +247,12 @@ wttc-vn-markup = \markup \hcenter-in #12 "Vn."
 wttc-cello-markup = \markup \hcenter-in #22 "Cello"
 wttc-vc-markup = \markup \hcenter-in #12 "Vc."
 
-
 %%% MARKUP %%%
 
 wttc-alla-punta = \markup \upright "alla punta"
+wttc-two-f-pizz = \markup \upright "2f. pizz."
+wttc-two-finger-pizzicato = \markup \upright "2-finger pizzicato"
+wttc-parenthesized-two-finger-pizz = \markup \upright "(2f. pizz.)"
 
 %%% STEM RIMBALZANDO %%%
 

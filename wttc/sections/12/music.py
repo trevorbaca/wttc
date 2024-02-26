@@ -162,13 +162,13 @@ def FL(voice, meters):
     )
     rhythm(
         meters(14),
-        [t(8), 1, 3],
+        [t(8), 1, t(3)],
         material=5,
         prefix=[-12],
     )
     rhythm(
         meters(15),
-        [-2, 7, 11],
+        [2, 7, 11],
         material=5,
         suffix=[-4],
     )
@@ -716,7 +716,8 @@ def VC(voice, meters):
     def block():
         rhythm.make_one_beat_tuplets(
             meters(18, 19),
-            [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, "-"],
+            # [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, "-"],
+            [-1, 1, -2, 1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 99],
             extra_counts=[-1],
             material=4,
         )
@@ -784,7 +785,7 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks, *, rleak=False):
 
 
 def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
-    baca.pitches(pleaves, pitches, strict=True)
+    baca.pitches(pleaves, pitches)
     if hairpin_lparts is not None:
         parts = baca.select.lparts(pleaves, hairpin_lparts)
     else:
@@ -798,13 +799,13 @@ def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
 def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin):
     baca.pitch(pleaves, pitch)
     baca.mspanners.vibrato(
-        baca.select.lparts(vibrato_lparts, pleaves),
+        baca.select.lparts(pleaves, vibrato_lparts),
         vibrato,
         do_not_rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
-        baca.select.lparts(hairpin_lparts, pleaves),
+        baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
     )
 
@@ -845,7 +846,7 @@ def G2a2(pleaves, pitch, alteration, peak):
     )
 
 
-def G3a(pleaves, glissando, dynamics):
+def G3a(pleaves, glissando, dynamics, debug=False):
     runs = abjad.select.runs(pleaves)
     dynamics = dynamics.split()
     for run, dynamic in zip(runs, dynamics, strict=True):
@@ -898,8 +899,8 @@ def G4a(pleaves, up_bow=False):
     baca.dynamic(
         pleaves[0],
         '"ff"-sempre',
-        abjad.Tweaks(r"- \tweak parent-alignment-X -1"),
-        abjad.Tweaks(r"- \tweak self-alignment-X -1"),
+        abjad.Tweak(r"- \tweak parent-alignment-X -1"),
+        abjad.Tweak(r"- \tweak self-alignment-X -1"),
     )
 
 
@@ -914,8 +915,8 @@ def G4b(pleaves):
     baca.dynamic(
         pleaves[0],
         '"f"-sempre',
-        abjad.Tweaks(r"- \tweak parent-alignment-X -1"),
-        abjad.Tweaks(r"- \tweak self-alignment-X -1"),
+        abjad.Tweak(r"- \tweak parent-alignment-X -1"),
+        abjad.Tweak(r"- \tweak self-alignment-X -1"),
     )
 
 
@@ -936,9 +937,9 @@ def G5b(pleaves, glissando):
     baca.stem_tremolo(pleaves)
     baca.rspanners.pizzicato(
         pleaves,
-        '"2-finger pizzicato" =|',
+        descriptor=r"\wttc-two-f-pizz =|",
         do_not_rleak=True,
-        left_broken_text='"(2f. pizz.)"',
+        left_broken_text=r"\wttc-parenthesized-two-finger-pizz",
         staff_padding=3,
     )
     left = len(pleaves) // 2 + 1
@@ -979,8 +980,6 @@ def H3():
 
 
 def fl(m):
-    pass
-    """
     G1a(library.pleaves(m[1], 1), "A#4", [1, 2], "p")
     G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
     G3a(library.pleaves(m[2, 3], 3), "D5 C5", "p p mp mp mf mf")
@@ -1000,35 +999,29 @@ def fl(m):
     G1a(library.pleaves(m[15, 16], 1), "B4", [2, 2], "mf")
     G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
     G3a(library.pleaves(m[18], 3), "F4 E4", "f")
-    G1a(library.pleaves(m[22], 1), "B4", [1, 2], "p")
+    G1a(library.pleaves(m[22], 1), "B4", [1, 1], "p")
     G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
-    G3a(library.pleaves(m[18], 3), "F4 E4", "f")
+    G3a(library.pleaves(m[24], 3), "F4 E4", "f")
     G5a(library.pleaves(m[25, 28], 5), ["B3 A#3", "Bb3 A3", "A3 G#3"], "mp p pp")
     G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
     G3a(library.pleaves(m[30], 3), "F4 E4", "p")
     G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
     G3a(library.pleaves(m[33], 3), "F4 E4", "p")
-    """
 
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    pass
-    """
     G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
     G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
     G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
-    G2a1(library.pleaves(m[12, 13], 2), "G5", "f>o!")
+    G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
     G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
     G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
     G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
     G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
-    """
 
 
 def gt1(m):
-    pass
-    """
     G3b(library.pleaves(m[2, 3], 3), "F2", "p p mp mp mf mf")
     G1b(library.pleaves(m[4], 1), "A3 B3", "mp>o!")
     G3b(library.pleaves(m[5], 3), "F2", "mf mf f")
@@ -1036,7 +1029,8 @@ def gt1(m):
     G3b(library.pleaves(m[8], 3), "F2", "f")
     G4a(library.pleaves(m[8, 10], 4))
     G1b(library.pleaves(m[10, 11], 1), "A#3 B#3", "p<mf")
-    G1b(library.pleaves(m[16, 17], 1), "C4 D4", "p<mf>p")
+
+    G1b(library.pleaves(m[16, 17], 1), "C4 D4", "p< mf>p", [9, 7])
     G3b(library.pleaves(m[18], 3), "A2", "f")
     G4a(library.pleaves(m[18, 20], 4))
     G1b(library.pleaves(m[22, 23], 1), "C4 D4", "p>o!")
@@ -1047,12 +1041,10 @@ def gt1(m):
     H1b(library.pleaves(m[31], 99), "Eb4 D4 B3", "mp pp mf")
     G3b(library.pleaves(m[33], 3), "A2", "p")
     H1b(library.pleaves(m[33], 99), "Db4 C4 A3", "pp mf f")
-    """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     G3c(library.pleaves(m[1, 4], 3), "F#4")
     G1b(library.pleaves(m[4, 5], 1), "A#3 B#3", "mp>o!")
     G3c(library.pleaves(m[5, 6], 3), "F#4")
@@ -1066,12 +1058,9 @@ def gt2(m):
     H1b(library.pleaves(m[28], 99), "E4", "mp")
     H1b(library.pleaves(m[31], 99), "C4", "f")
     H1b(library.pleaves(m[33], 99), "Bb3 B3", "f pp")
-    """
 
 
 def vn(m):
-    pass
-    """
     G5b(
         library.pleaves(m[13, 16], 5),
         "Ab4:3 F4:2 A4:2 E4:2 Gb4:3 Eb4:3 F4:2 D4:3 E4:2 Db4:1",
@@ -1081,12 +1070,10 @@ def vn(m):
         "E4:3 Db4:2 Eb4:2 C4:4 D4:3 B3:2 Db4:2 Bb3:2 C4:3 A3",
     )
     G5b(library.pleaves(m[25, 28], 5), "B3:4 Ab3:4 Bb3:2 G3")
-    """
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     G1c(
         library.pleaves(m[5, 6], 1),
         "G2",
@@ -1101,21 +1088,24 @@ def vc(m):
         "G2",
         [3, 3, 1, 1, 1],
         "NV -> molto -> NV -> molto -> NV",
-        [2, 2, 2, 3],
+        [2, 2, 2, 2, 1],
         "ppp<| f> p<| mf>o !",
     )
+    baca.clef(m[13][-1], "treble")
     G5b(library.pleaves(m[13, 15], 5), "G4:2 E4:2 Gb4:3 Eb4:2 F4:3 D4 E4")
+    baca.clef(library.pleaves(m[15], 1)[0], "bass")
     G1c(
         library.pleaves(m[15, 16], 1),
         "G#2",
-        [1, 1, ],
+        [2, 1, 1],
         "molto -> NV -> molto",
-        [3],
+        [4],
         "sfp>o!",
     )
     G4b(library.pleaves(m[16, 19], 4))
+    baca.clef(library.pleaves(m[19], 5)[0], "treble")
     G5b(
-        library.pleaves(m[13, 15], 5),
+        library.pleaves(m[19, 23], 5),
         "Eb4:3 C4:3 D4:3 B3:3 Db4:3 B3:2 C4:3 A3:2 B3",
     )
     G4b(library.pleaves(m[24, 25], 4))
@@ -1123,6 +1113,7 @@ def vc(m):
         library.pleaves(m[25, 28], 5),
         "Ab3:4 Bb3:4 G3:2 A3",
     )
+    baca.clef(library.pleaves(m[28], 1)[0], "bass")
     G1c(
         library.pleaves(m[28, 34], 1)[:-1],
         "G#2",
@@ -1131,7 +1122,6 @@ def vc(m):
         [1, 1, 1, 1, 1, 1, 1],
         "o< mp> pp< mp> pp< p> pp",
     )
-    """
 
 
 @baca.build.timed("make_score")

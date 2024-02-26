@@ -883,7 +883,7 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
             notes,
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
             staff_padding=3,
-            without_next_leaf=True,
+            do_not_rleak=True,
         )
         if dls_staff_padding:
             baca.override.dls_staff_padding(
