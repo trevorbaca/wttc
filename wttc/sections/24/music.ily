@@ -3976,6 +3976,11 @@ number.24.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
     b'2
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -4742,6 +4747,11 @@ number.24.Cello.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     r4
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

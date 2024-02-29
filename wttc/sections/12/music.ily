@@ -8878,112 +8878,302 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'8
+      %! SPANNER_START
+    \pitchedTrill
+    e'8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
     [
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan fs'
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    e'32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    \override NoteHead.style = #'harmonic
+    e'16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    \afterGrace
+    fs''!32
     ]
+    \glissando
+    {
+
+        \once \override Stem.direction = #down
+        ds'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
 
     % [Violin.Music measure 37]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
+      %! SPANNER_START
+    \pitchedTrill
+    e'2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! SPANNER_STOP
+    \stopTrillSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan fs'
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
+    e'8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    e'32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    \override NoteHead.style = #'harmonic
+    e'16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    \afterGrace
+    fs''!32
     ]
+    \glissando
+    {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+        \once \override Stem.direction = #down
+        ds'!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
+
+      %! SPANNER_START
+    \pitchedTrill
+    f'4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_STOP
+    \stopTrillSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P2"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan g'
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
+    f'8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f'32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    \override NoteHead.style = #'harmonic
+    f'16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    \afterGrace
+    g''32
     ]
+    \glissando
+    {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8
+        \once \override Stem.direction = #down
+        e'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
+
+      %! SPANNER_START
+    \pitchedTrill
+    fs'!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+      %! SPANNER_STOP
+    \stopTrillSpan
     [
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P3"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan gs'
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    fs'32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    \override NoteHead.style = #'harmonic
+    fs'!16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    \afterGrace
+    gs''!32
     ]
+    \glissando
+    {
+
+        \once \override Stem.direction = #down
+        f'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
 
       %! ANCHOR_NOTE
     % [Violin.Music anchor note]
@@ -9020,6 +9210,9 @@ number.12.Violin.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
@@ -10588,106 +10781,286 @@ number.12.Cello.Music = {
 
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    d8
+      %! SPANNER_START
+    \pitchedTrill
+    ef,!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
     [
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan f,
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
+    ef,!32
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    f16
+    \glissando
+
+    \once \override Stem.direction = #down
     d32
-    \repeatTie
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+    \revert NoteHead.style
 
     % [Cello.Music measure 37]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2.
+      %! SPANNER_START
+    \pitchedTrill
+    ef,!2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! SPANNER_STOP
+    \stopTrillSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan f,
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8
+    ef,8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d32
+    ef,32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \override NoteHead.style = #'harmonic
+    ef,!16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d32
+    \afterGrace
+    f32
     ]
+    \glissando
+    {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d4
+        \once \override Stem.direction = #down
+        d8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
+
+      %! SPANNER_START
+    \pitchedTrill
+    df,!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_STOP
+    \stopTrillSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P2"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan ef,
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8
+    df,8
     [
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d32
+    df,32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \override NoteHead.style = #'harmonic
+    df,!16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d32
+    \afterGrace
+    ef!32
     ]
+    \glissando
+    {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8
+        \once \override Stem.direction = #down
+        c8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
+
+      %! SPANNER_START
+    \pitchedTrill
+    c,8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+      %! SPANNER_STOP
+    \stopTrillSpan
     [
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P3"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan d,
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d32
+    c,32
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    \override NoteHead.style = #'harmonic
+    c,16
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \afterGrace
     d32
     ]
+    \glissando
+    {
+
+        \once \override Stem.direction = #down
+        b,8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+        \revert NoteHead.style
+
+    }
+
 
       %! ANCHOR_NOTE
     % [Cello.Music anchor note]
@@ -10724,6 +11097,9 @@ number.12.Cello.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 

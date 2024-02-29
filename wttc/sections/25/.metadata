@@ -53,6 +53,16 @@
                 value="Afl.",
             ),
         ],
+        "Cello.Music": [
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
+        ],
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
@@ -252,6 +262,16 @@
                 synthetic_offset=None,
                 value="7/4",
             ),
+        ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
         ],
         "Violin.Staff": [
             baca.Memento(

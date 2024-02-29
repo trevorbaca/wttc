@@ -5461,6 +5461,11 @@ number.19.Violin.Music = {
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
     R1 * 6/4
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -7766,6 +7771,11 @@ number.19.Cello.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     d2 * 1/2
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT

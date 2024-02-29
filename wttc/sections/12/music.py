@@ -644,21 +644,21 @@ def VN(voice, meters):
     )
     rhythm(
         meters(36),
-        [t(4), 1, 2, 1],
+        [t(4), 1, 2, AG([4], 1)],
         denominator=32,
         material=3,
         prefix=[40],
     )
     rhythm(
         meters(37),
-        [t(24), bl(t(4)), 1, 2, br(1)],
+        [t(24), bl(t(4)), 1, 2, AG([4], br(1))],
         denominator=32,
         material=3,
         suffix=[24],
     )
     rhythm(
         meters(37),
-        [t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
+        [t(8), bl(t(4)), 1, 2, AG([4], br(1)), bl(t(4)), 1, 2, AG([4], br(1))],
         denominator=32,
         material=3,
         prefix=[32],
@@ -775,14 +775,14 @@ def VC(voice, meters):
     )
     rhythm(
         meters(37),
-        [t(24), bl(t(4)), 1, 2, br(1)],
+        [t(24), bl(t(4)), 1, 2, AG([4], br(1))],
         denominator=32,
         material=3,
         suffix=[24],
     )
     rhythm(
         meters(37),
-        [t(8), bl(t(4)), 1, 2, br(1), bl(t(4)), 1, 2, br(1)],
+        [t(8), bl(t(4)), 1, 2, AG([4], br(1)), bl(t(4)), 1, 2, AG([4], br(1))],
         denominator=32,
         material=3,
         prefix=[32],
@@ -1004,8 +1004,30 @@ def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
     )
 
 
-def H3():
-    pass
+def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
+    baca.pitch(pleaves[:-3], pitch)
+    baca.pitch(pleaves[-3], pitch)
+    baca.pitch(pleaves[-2], peak)
+    baca.pitch(pleaves[-1], fall)
+    baca.override.note_head_style_harmonic(pleaves[-3:])
+    baca.glissando(pleaves[-3:], do_not_hide_middle_note_heads=True)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=5.5,
+    )
+    baca.mspanners.scp(
+        pleaves,
+        f"{scp} =|",
+        do_not_rleak=True,
+        staff_padding=8,
+    )
+    start, stop = dynamics.split()
+    baca.hairpin(
+        [pleaves[:-3], pleaves[-3:]],
+        f"{start}> <|{stop}",
+    )
+    baca.override.stem_down(pleaves[-1])
 
 
 def fl(m):
@@ -1116,6 +1138,10 @@ def vn(m):
     H2(library.pleaves(m[34], 2), "C6", "C#6", "p p mp")
     H2(library.pleaves(m[35], 2), "B5", "C6", "p p mp mf")
     H2(library.pleaves(m[36], 2), "A5", "Bb5", "mf mf mf mf")
+    H3(library.pleaves(m[36], 3), "E4", "F#4", "F#5", "D#4", "mp f", "P1")
+    H3(library.pleaves(m[37], 3)[:6], "E4", "F#4", "F#5", "D#4", "mp f", "P1")
+    H3(library.pleaves(m[37], 3)[6:12], "F4", "G4", "G5", "E4", "p mf", "P2")
+    H3(library.pleaves(m[37], 3)[-5:], "F#4", "G#4", "G#5", "F4", "pp mp", "P3")
 
 
 def vc(m):
@@ -1174,6 +1200,10 @@ def vc(m):
         do_not_rleak=True,
         staff_padding=5.5,
     )
+    H3(library.pleaves(m[36], 3), "Eb2", "F2", "F3", "D3", "mp f", "P1")
+    H3(library.pleaves(m[37], 3)[:6], "Eb2", "F2", "F3", "D3", "mp f", "P1")
+    H3(library.pleaves(m[37], 3)[6:12], "Db2", "Eb2", "Eb3", "C3", "p mf", "P2")
+    H3(library.pleaves(m[37], 3)[-5:], "C2", "D2", "D3", "B2", "pp mp", "P3")
 
 
 def align_spanners(cache):
@@ -1290,7 +1320,7 @@ def make_layout():
         spacing=(1, 20),
         overrides=[
             ((34, 35), (1, 32)),
-            ((36, 37), (1, 48)),
+            ((36, 37), (1, 64)),
         ],
     )
     baca.section.make_layout_ly(spacing)
