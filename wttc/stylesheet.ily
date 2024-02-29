@@ -250,6 +250,7 @@ wttc-vc-markup = \markup \hcenter-in #12 "Vc."
 %%% MARKUP %%%
 
 wttc-alla-punta = \markup \upright "alla punta"
+wttc-non-stringere = \markup \upright "non stringere"
 wttc-two-f-pizz = \markup \upright "2f. pizz."
 wttc-two-finger-pizzicato = \markup \upright "2-finger pizzicato"
 wttc-parenthesized-two-finger-pizz = \markup \upright "(2f. pizz.)"

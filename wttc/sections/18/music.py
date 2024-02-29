@@ -713,32 +713,111 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def J1a():
-    pass
+def J1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+    baca.pitches(pleaves, pitches)
+    baca.hairpin(
+        pleaves,
+        hairpin,
+        rleak=rleak_hairpin,
+    )
 
 
-def J1b():
-    pass
+def J1b(run, pitches, dynamic):
+    baca.pitches(run, pitches)
+    note = abjad.select.leaf(run, 0, grace=False)
+    baca.dynamic(note, dynamic)
 
 
-def J2():
-    pass
+def J2a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def J3():
-    pass
+def J2b(pleaves, pitches, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitches, exact=True)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
 
 
-def J4a():
-    pass
+def J3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    for plt in plts:
+        baca.accent(plt.head)
 
 
-def J4b():
-    pass
+def J3b(pleaves, pitches, dynamics, falls):
+    baca.pitches(pleaves, pitches, exact=True)
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    falls = abjad.CyclicTuple(falls)
+    for i, plt in enumerate(plts):
+        if falls[i] == 0:
+            baca.articulation(plt.head, r"\fall")
+        else:
+            baca.articulation(plt.head, r"\doit")
 
 
-def K1b():
-    pass
+def J3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    baca.override.note_head_style_harmonic(pleaves)
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    baca.rspanners.pizzicato(
+        pleaves,
+        staff_padding=3,
+    )
+    baca.rspanners.string_number(
+        pleaves,
+        4,
+        staff_padding=5.5,
+    )
+
+
+def J4a(pleaves, dyad, dynamic):
+    baca.pitches(pleaves, dyad)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.dynamic(plt.head, dynamic)
+
+
+def J4b(pleaves, glissando, hairpin_lparts, hairpin, *, tasto=None):
+    baca.glissando(
+        pleaves,
+        glissando,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+    if tasto is not None:
+        baca.rspanners.tasto(
+            pleaves,
+            descriptor=f"{tasto} =|",
+        )
+
+
+def K1b(pleaves, dyad, alteration, peaks):
+    baca.pitch(pleaves, dyad)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
+    )
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        library.swells(peaks),
+    )
 
 
 def fl(m):
