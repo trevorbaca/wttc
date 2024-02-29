@@ -271,11 +271,6 @@ number.17.AltoFlute.Music = {
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“AltoFlute”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -416,9 +411,9 @@ number.17.AltoFlute.Music = {
     r8.
 
     % [AltoFlute.Music measure 4]
-    r1.
+    r1
 
-    r4
+    r2.
 
     r32
 
@@ -651,6 +646,11 @@ number.17.Oboe.Music = {
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
     R1 * 5/4
+      %! REAPPLIED_DYNAMIC_COLOR
+      %! REAPPLIED_DYNAMIC
+    - \tweak color #(x11-color 'green4)
+      %! REAPPLIED_DYNAMIC
+    \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -789,7 +789,7 @@ number.17.Guitar.1.Music = {
               %! REAPPLIED_DYNAMIC
             - \tweak color #(x11-color 'green4)
               %! REAPPLIED_DYNAMIC
-            \f
+            \mp
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
@@ -1040,9 +1040,7 @@ number.17.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4.
-
-    r2
+    r2..
 
     r16
 
@@ -1054,7 +1052,9 @@ number.17.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4.
+    r8
+
+    r4
 
     r16
 
@@ -1236,7 +1236,7 @@ number.17.Guitar.2.Music = {
               %! REAPPLIED_DYNAMIC
             - \tweak color #(x11-color 'green4)
               %! REAPPLIED_DYNAMIC
-            \pp
+            \f
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
@@ -1499,9 +1499,7 @@ number.17.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4.
-
-    r2
+    r2..
 
     r16
 
@@ -1513,7 +1511,9 @@ number.17.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4.
+    r8
+
+    r4
 
     r16
 
@@ -1760,11 +1760,6 @@ number.17.Cello.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    \pp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1870,14 +1865,7 @@ number.17.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    d4
-    - \tweak stencil ##f
-    ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2
-    \repeatTie
+    d2.
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring

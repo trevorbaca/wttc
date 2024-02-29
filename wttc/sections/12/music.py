@@ -231,17 +231,17 @@ def FL(voice, meters):
     )
     rhythm(
         meters(34),
-        [12, 4, 4],
+        [frame(12, 6), frame(4, 2), frame(4, 2)],
         material=2,
     )
     rhythm(
         meters(35),
-        [8, 4, 4, 4],
+        [frame(8, 4), frame(4, 2), frame(4, 2), frame(4, 2)],
         material=2,
     )
     rhythm(
         meters(36),
-        [8, 4, 4, 4, X(rt(4))],
+        [frame(8, 4), frame(4, 2), frame(4, 2), frame(8, 4)],
         material=2,
     )
     rhythm.mmrests(37)
@@ -325,16 +325,31 @@ def OB(voice, meters):
         material=99,
     )
     rhythm(
-        meters(32, 33),
-        [-12, frame(12, 6), rt(1), "-"],
+        meters(32),
+        [-12, frame(12, 6)],
         material=2,
     )
     rhythm(
         meters(33),
-        [-4, 6, 2, -4],
-        overlap=[-16],
+        [M(rt(1), 2), -3, -4, -4, -4, -4, X(t(6)), 2, -4],
         material=99,
     )
+    rhythm(
+        meters(34),
+        [-4, 6, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(35),
+        [-3, 6, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(36),
+        [-6, 5, "-"],
+        material=1,
+    )
+    rhythm.mmrests(37)
 
 
 def GT1(voice, meters):
@@ -613,17 +628,17 @@ def VN(voice, meters):
     rhythm.mmrests(29, 33)
     rhythm(
         meters(34),
-        [12, 4, 4],
+        [frame(12, 6), frame(4, 2), frame(4, 2)],
         material=2,
     )
     rhythm(
         meters(35),
-        [8, 4, 4, 4],
+        [frame(8, 4), frame(4, 2), frame(4, 2), frame(4, 2)],
         material=2,
     )
     rhythm(
         meters(36),
-        [8, 4, 4, 4],
+        [frame(8, 4), frame(4, 2), frame(4, 2), frame(4, 2)],
         material=2,
         suffix=[4],
     )
@@ -971,8 +986,22 @@ def H1c():
     pass
 
 
-def H2():
-    pass
+def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=5.5,
+    )
+    tweaks = ()
+    if to_bar_line is True:
+        tweaks = ((abjad.Tweak(r"- \tweak to-barline ##t"), -1),)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        library.swells(peaks),
+        *tweaks,
+        rleak=True,
+    )
 
 
 def H3():
@@ -1007,6 +1036,9 @@ def fl(m):
     G3a(library.pleaves(m[30], 3), "F4 E4", "p")
     G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
     G3a(library.pleaves(m[33], 3), "F4 E4", "p")
+    H2(library.pleaves(m[34], 2), "C6", None, "p p mp")
+    H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf")
+    H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", to_bar_line=True)
 
 
 def ob(m):
@@ -1017,8 +1049,14 @@ def ob(m):
     G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
     G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
     G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
+    H1a(library.pleaves(m[28], 99), "D4", "f")
     G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
+    H1a(library.pleaves(m[31], 99), "D4", "f")
     G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
+    H1a(library.pleaves(m[33], 99), "D4", "f")
+    H1a(library.pleaves(m[34], 1), "D4", "f")
+    H1a(library.pleaves(m[35], 1), "Db4", "ff")
+    H1a(library.pleaves(m[36], 1), "C4", "ff")
 
 
 def gt1(m):
@@ -1029,7 +1067,6 @@ def gt1(m):
     G3b(library.pleaves(m[8], 3), "F2", "f")
     G4a(library.pleaves(m[8, 10], 4))
     G1b(library.pleaves(m[10, 11], 1), "A#3 B#3", "p<mf")
-
     G1b(library.pleaves(m[16, 17], 1), "C4 D4", "p< mf>p", [9, 7])
     G3b(library.pleaves(m[18], 3), "A2", "f")
     G4a(library.pleaves(m[18, 20], 4))
@@ -1041,6 +1078,9 @@ def gt1(m):
     H1b(library.pleaves(m[31], 99), "Eb4 D4 B3", "mp pp mf")
     G3b(library.pleaves(m[33], 3), "A2", "p")
     H1b(library.pleaves(m[33], 99), "Db4 C4 A3", "pp mf f")
+    H1b(library.pleaves(m[34], 1), "Ab3 G3 A3", "mf ff pp")
+    H1b(library.pleaves(m[35], 1), "Ab3", "f")
+    H1b(library.pleaves(m[36], 1), "G3 Gb3 Eb3", "pp ff mp")
 
 
 def gt2(m):
@@ -1058,6 +1098,9 @@ def gt2(m):
     H1b(library.pleaves(m[28], 99), "E4", "mp")
     H1b(library.pleaves(m[31], 99), "C4", "f")
     H1b(library.pleaves(m[33], 99), "Bb3 B3", "f pp")
+    H1b(library.pleaves(m[34], 1), "Bb3", "ff")
+    H1b(library.pleaves(m[35], 1), "Gb3", "mp")
+    H1b(library.pleaves(m[36], 1), "F3 E3", "pp f")
 
 
 def vn(m):
@@ -1070,6 +1113,9 @@ def vn(m):
         "E4:3 Db4:2 Eb4:2 C4:4 D4:3 B3:2 Db4:2 Bb3:2 C4:3 A3",
     )
     G5b(library.pleaves(m[25, 28], 5), "B3:4 Ab3:4 Bb3:2 G3")
+    H2(library.pleaves(m[34], 2), "C6", "C#6", "p p mp")
+    H2(library.pleaves(m[35], 2), "B5", "C6", "p p mp mf")
+    H2(library.pleaves(m[36], 2), "A5", "Bb5", "mf mf mf mf")
 
 
 def vc(m):
@@ -1115,12 +1161,18 @@ def vc(m):
     )
     baca.clef(library.pleaves(m[28], 1)[0], "bass")
     G1c(
-        library.pleaves(m[28, 34], 1)[:-1],
+        library.pleaves(m[28, 35], 1),
         "G#2",
-        [2, 2, 1, 1, 1],
-        "molto -> NV -> molto -> NV -> molto",
-        [1, 1, 1, 1, 1, 1, 1],
-        "o< mp> pp< mp> pp< p> pp",
+        [2, 2, 1, 1, 2, 1, 1],
+        "molto -> NV -> molto -> NV -> molto -> NV -> molto",
+        [1, 1, 1, 1, 1, 1, 2, 1, 1],
+        "o< mp> pp< mp> pp< p> pp< p>o !",
+    )
+    baca.mspanners.scp(
+        [library.pleaves(m[28, 35], 1)],
+        "T1 -> T4",
+        do_not_rleak=True,
+        staff_padding=5.5,
     )
 
 
