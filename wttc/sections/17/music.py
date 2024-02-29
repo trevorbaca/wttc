@@ -181,32 +181,115 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def I1a():
-    pass
+def I1a(pleaves, pitch, alteration, dynamics):
+    baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.rspanners.trill(
+            plt,
+            alteration=alteration,
+            staff_padding=5.5,
+        )
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def I1b():
-    pass
+def I1b(pleaves, pitches, dynamic=None):
+    baca.pitches(pleaves, pitches)
+    if dynamic is not None:
+        baca.dynamic(pleaves[0], dynamic)
 
 
-def I2a():
-    pass
+def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
+    baca.pitch(pleaves[glissando_count:], pitch)
+    if glissando_start is not None:
+        baca.glissando(
+            pleaves[: glissando_count + 1],
+            f"{glissando_start}:{glissando_count} {pitch}",
+        )
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+    )
 
 
-def I2b():
-    pass
+def I2b(pleaves, pitch, alteration, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=3,
+    )
+    baca.mspanners.scp(
+        [pleaves],
+        "O -> T",
+        do_not_rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}|>opp",
+    )
 
 
-def I3a():
-    pass
+def I2b(pleaves, pitch, alteration, peak, fall, dynamic):
+    start_count = len(pleaves) - 2
+    string = f"{pitch}:{start_count} {peak} {fall}"
+    baca.glissando(
+        pleaves,
+        string,
+        do_not_hide_middle_note_heads=True,
+    )
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=3,
+    )
+    baca.mspanners.scp(
+        [pleaves],
+        "P =|",
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        pleaves,
+        f"pp<|{dynamic}",
+    )
 
 
-def I3b():
-    pass
+def I3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def J1a():
-    pass
+def I3b(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
+    baca.glissand(
+        pleaves,
+        glissando,
+        do_not_hide_middle_note_heads=True,
+    )
+    baca.mspanners.scp(
+        baca.select.lparts(pleaves, scp_lparts),
+        scp,
+        do_not_rleak=True,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
+def J1a(pleaves, pitches, dynamic):
+    baca.pitches(pleaves, pitches, exact=True)
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+        rleak=True,
+    )
 
 
 def fl(m):
