@@ -617,40 +617,135 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def M1():
-    pass
+def M1_1(pleaves, dyad, stop_pitch, hairpin):
+    baca.pitch(pleaves[0], dyad)
+    baca.pitch(pleaves[-1], stop_pitch)
+    baca.glissando(pleaves)
+    baca.mspanners.text(
+        pleaves,
+        r"\wttc-non-stringere =|",
+        staff_padding=3,
+    )
+    baca.hairpin(
+        pleaves,
+        hairpin,
+    )
 
 
-def M2a():
-    pass
+def M1_2(pleaves, fundamentals, hairpin):
+    dyads = []
+    for fundamental in fundamentals:
+        harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
+        dyad = f"<{fundamental} {harmonic}>"
+        dyads.append(dyad)
+    baca.pitches(pleaves, dyads, exact=True)
+    for pleaf in pleaves:
+        abjad.tweak(pleaf.note_heads[1], r"\tweak style #'harmonic")
+    for phead in baca.select.pheads(pleaves):
+        baca.up_bow(phead)
 
 
-def M2b():
-    pass
+def M1_3(pleaves, glissandi, dynamics):
+    plts = baca.select.plts(pleaves)
+    assert len(plts) % 2 == 0
+    pairs = abjad.sequence.partition_by_counts(plts, [2], cyclic=True)
+    dynamics = dynamics.split()
+    for pair, glissando, dynamic in zip(pairs, glissandi, dynamics, strict=True):
+        baca.glissando(pair, glissando)
+        leaf = abjad.select.leaf(pair, 0)
+        baca.dynamic(leaf, dynamic)
+    baca.rspanners.pizzicato(
+        pleaves,
+        staff_padding=3,
+    )
 
 
-def M3a():
-    pass
+def M2(pleaves, pitches, dynamic):
+    baca.pitches(pleaves, pitches, exact=True)
+    if ">" in dynamic:
+        baca.hairpin(
+            pleaves,
+            dynamic,
+        )
+    else:
+        baca.dynamic(pleaves[0], dynamic)
 
 
-def M3b():
-    pass
+def M3a(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.stem_tremolo(pleaves)
+    if "<" in dynamic:
+        baca.hairpin(pleaves, dynamic)
+    else:
+        baca.dynamic(pleaves[0], dynamic)
+    baca.rspanners.pizzicato(
+        pleaves,
+        descriptor=r"\wttc-two-finger-tamburo =|",
+        staff_padding=3,
+    )
 
 
-def M4():
-    pass
+def M3b(pleaves, pitches, string_number, dynamics):
+    baca.pitches(pleaves, pitches)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.glissando(pleaves, do_not_hide_middle_note_heads=True)
+    baca.rspanners.string_number(
+        pleaves,
+        string_number,
+        staff_padding=3,
+    )
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def M5a():
-    pass
+def M4(pleaves, pitch, hairpin):
+    baca.pitch(pleaves, pitch)
+    baca.stem_tremolo(pleaves)
+    baca.hairpin(
+        pleaves,
+        hairpin,
+    )
 
 
-def M5b():
-    pass
+def M5a(pleaves, pitches, falls, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
+        if fall == 0:
+            baca.articulation(plt.tail, r"\fall")
+        else:
+            baca.articulation(plt.tail, r"\doit")
+        baca.dynamic(plt.head, dynamic)
 
 
-def N1c():
-    pass
+def M5b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, exact=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.triple_staccato(plt.head)
+        baca.dynamic(plt.head, dynamic)
+
+
+def N1c(run, glissando, string_number, hairpin):
+    baca.glissando(run, glissando)
+    baca.override.note_head_style_harmonic(run)
+    baca.stem_tremolo(run)
+    baca.rspanners.pizzicato(
+        run,
+        descriptor=r"\wttc-two-finger-pizzicato =|",
+    )
+    baca.rspanners.string_number(
+        run,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        run,
+        hairpin,
+    )
 
 
 def fl(m):

@@ -253,6 +253,7 @@ wttc-alla-punta = \markup \upright "alla punta"
 wttc-non-stringere = \markup \upright "non stringere"
 wttc-two-f-pizz = \markup \upright "2f. pizz."
 wttc-two-finger-pizzicato = \markup \upright "2-finger pizzicato"
+wttc-two-finger-tamburo = \markup \upright "2-finger tamburo"
 wttc-parenthesized-two-finger-pizz = \markup \upright "(2f. pizz.)"
 
 %%% STEM RIMBALZANDO %%%
