@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -306,36 +307,128 @@ def VC(voice, meters):
     )
 
 
-def N1a():
-    pass
+def N1a(pleaves, pitches, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitches)
+    baca.rspanners.covered(
+        pleaves,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
 
 
-def N1b():
-    pass
+def N1b(pleaves, pitches, dynamic):
+    baca.pitches(pleaves, pitches)
+    baca.stem_tremolo(pleaves)
+    baca.dynamic(pleaves[0], dynamic)
+    baca.rspanners.pizzicato(
+        pleaves,
+        descriptor=r"\wttc-two-finger-tamburo =|",
+        staff_padding=3,
+    )
 
 
-def N1c():
-    pass
+def N1c(runs, glissandi, hairpins, string_number):
+    for run, glissando, hairpin in zip(runs, glissandi, hairpins, strict=True):
+        baca.glissando(runs, glissando)
+        baca.override.note_head_style_harmonic(run)
+        baca.hairpin(
+            run,
+            hairpin,
+        )
+    baca.rspanners.string_number(
+        runs,
+        string_number,
+        staff_padding=3,
+    )
 
 
-def N2a():
-    pass
+def N2a(pleaves, pitches, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitches)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
 
 
-def N2b():
-    pass
+def N2b1(pleaves, start, stop):
+    baca.pitch(pleaves[0], start)
+    baca.pitch(pleaves[-1], stop)
+    baca.glissando(pleaves)
+    baca.rspanners.xfb(
+        pleaves,
+        staff_padding=3,
+    )
 
 
-def N3a():
-    pass
+def N2b2(pleaves, start, stop):
+    baca.pitch(pleaves[0], start)
+    baca.pitch(pleaves[-1], stop)
+    baca.glissando(pleaves)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.mspanners.text(
+        pleaves,
+        "II / III mod. =|",
+        staff_padding=3,
+    )
 
 
-def N3b():
-    pass
+def N3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    pheads = baca.select.pheads(pleaves)
+    baca.flageolet(pheads)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def O1():
-    pass
+def N3b(pleaves, pitches, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitches)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
+def O1a(pleaves, pitches, dynamic, hairpin):
+    baca.pitches(pleaves, pitches)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        rleak=True,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\baca-airtone-markup =|",
+        left_broken_text=r"\baca-parenthesized-air-markup",
+        staff_padding=3,
+    )
+
+
+def O1b(pleaves, pitches, dynamic, string_number, hairpin):
+    baca.pitches(pleaves, pitches)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        rleak=True,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\wttc-half-harmonic-pressure =|",
+        left_broken_text=r"\baca-parenthesized-half-harm",
+        staff_padding=3,
+    )
+    baca.rspanners.string_number(
+        nongraces,
+        string_number,
+        staff_padding=5.5,
+    )
 
 
 def fl(m):
