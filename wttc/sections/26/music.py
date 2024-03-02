@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -654,48 +655,223 @@ def VC(voice, meters):
     rhythm.mmrests(33, 36)
 
 
-def O1():
-    pass
+def O1a(pleaves, pitches, dynamic, hairpin):
+    baca.pitches(pleaves, pitches)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        rleak=True,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\baca-airtone-markup =|",
+        left_broken_text=r"\baca-parenthesized-air-markup",
+        staff_padding=3,
+    )
 
 
-def O2():
-    pass
+def O1b(pleaves, pitches, dynamic, string_number, hairpin):
+    baca.pitches(pleaves, pitches)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        rleak=True,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\wttc-half-harmonic-pressure =|",
+        left_broken_text=r"\baca-parenthesized-half-harm",
+        staff_padding=3,
+    )
+    baca.rspanners.string_number(
+        nongraces,
+        string_number,
+        staff_padding=5.5,
+    )
 
 
-def O3a():
-    pass
+def O2a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    plts = baca.selet.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.espressivo(plt.head)
+        baca.dynamic(plt.head, dynamic)
+    baca.rspanners.covered(
+        pleaves,
+        staff_padding=3,
+    )
 
 
-def O3b():
-    pass
+def O2b(pleaves, dynamics):
+    baca.staff_position(pleaves, 0)
+    baca.stem_tremolo(pleaves)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    baca.staff_lines(pleaves[0], 1)
+    leaf = abjad.get.leaf(pleaves[-1], 1)
+    baca.staff_lines(leaf, 5)
 
 
-def O4a():
-    pass
+def O3a(pleaves, pitches, peak):
+    baca.pitches(pleaves, pitches)
+    plts = baca.select.plts(pleaves)
+    assert len(plts) == 2
+    baca.hairpin(
+        plts,
+        library.swells(peak),
+    )
 
 
-def O4b():
-    pass
+def O3b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def P1a():
-    pass
+def O4a(pleaves, pitch, hairpin):
+    if " " in pitch:
+        baca.glissando(pleaves, pitch)
+    else:
+        baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    baca.hairpin(
+        plts,
+        hairpin,
+    )
 
 
-def P1b():
-    pass
+def O4b(pleaves, dyads, dynamics):
+    baca.pitches(pleaves, dyads)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
-def P2a():
-    pass
+def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
+    baca.glissando(
+        pleaves,
+        glissando,
+    )
+    baca.mspanners.scp(
+        baca.select.lparts(pleaves, scp_lparts),
+        scp,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+    plts = baca.select.plts(pleaves)
+    for plt in plts[1:]:
+        baca.marcato(plt.head)
 
 
-def P2b():
-    pass
+def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=False):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        rleak=rleak_hairpin,
+    )
 
 
-def P3():
-    pass
+def P1b(
+    pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=False
+):
+    baca.glissando(pleaves, glissando)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        rleak=rleak_hairpin,
+    )
+    baca.rspanners.string_number(
+        pleaves,
+        4,
+        staff_padding=5.5,
+    )
+
+
+def P2a(pleaves, pitch, peak):
+    baca.pitch(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        [pleaves[:1], pleaves[1:]],
+        library.swells(peak),
+    )
+
+
+def P2b(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics):
+        baca.dynamic(plt.head, dynamic)
+        baca.flageolet(plt.head)
+
+
+def P2c(pleaves, pitch, string_number, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.rspanners.trill(
+        pleaves,
+        staff_padding=3,
+    )
+    plts = baca.select.plts(pleaves)
+    for plt in plts[1:-1]:
+        baca.rspanners.circle_bow(
+            plt,
+            staff_padding=5.5,
+        )
+    baca.rspanners.string_number(
+        pleaves,
+        string_number,
+        staff_padding=8,
+    )
+    baca.hairpin(
+        pleaves[:2],
+        f"o<{dynamic}",
+    )
+    baca.hairpin(
+        pleaves[-1:],
+        f"({dynamic})>o!",
+        rleak=True,
+    )
+
+
+def P3(pleaves, glissando, hairpin_lparts, hairpin, *, damp_staff_padding=None):
+    baca.glissando(
+        pleaves,
+        glissando,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+    baca.rspanners.damp(
+        pleaves,
+        staff_padding=damp_staff_padding,
+    )
 
 
 def fl(m):
