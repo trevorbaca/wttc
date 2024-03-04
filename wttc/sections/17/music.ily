@@ -645,14 +645,12 @@ number.17.Oboe.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
-    R1 * 5/4
+    r16
       %! REAPPLIED_DYNAMIC_COLOR
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
     \ff
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Oboe”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -663,15 +661,239 @@ number.17.Oboe.Music = {
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup %@%
 
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r4
+
     % [Oboe.Music measure 2]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r4
 
     % [Oboe.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r2
 
     % [Oboe.Music measure 4]
     R1 * 8/4
@@ -679,9 +901,28 @@ number.17.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Oboe.Music measure 5]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    r2.
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightpink
+    b'16
+    [
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r4
 
     % [Oboe.Music measure 6]
     R1 * 7/4
@@ -1850,7 +2091,25 @@ number.17.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    d2.
+    d2. * 6/12
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    d4 * 3/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -1875,7 +2134,25 @@ number.17.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    d2.
+    d2. * 11/12
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"11" #"12"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    d4 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"12"
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -1889,7 +2166,25 @@ number.17.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    d4
+    d4 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    d4 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring

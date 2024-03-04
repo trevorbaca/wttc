@@ -78,7 +78,28 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1),
+        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(2),
+        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(3),
+        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        material=1,
+    )
+    rhythm.mmrests(4)
+    rhythm(
+        meters(5),
+        [-12, -1, 2, -1, "-"],
+        material=1,
+    )
+    rhythm.mmrests(6)
 
 
 def GT1(voice, meters):
@@ -160,12 +181,12 @@ def VC(voice, meters):
     )
     rhythm(
         meters(3),
-        [M(1, 2), -7, 12, 3, 1],
+        [M(1, 2), -7, frame(12, 6), 3, 1],
         material=3,
     )
     rhythm(
         meters(4),
-        [1, 3, 12, 1, 3, 4, 1, t(7)],
+        [1, 3, frame(12, 1), 1, 3, frame(4, 1), 1, t(7)],
         material=3,
     )
     rhythm(
@@ -233,7 +254,7 @@ def I2b(pleaves, pitch, alteration, dynamic):
     )
 
 
-def I2b(pleaves, pitch, alteration, peak, fall, dynamic):
+def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
     start_count = len(pleaves) - 2
     string = f"{pitch}:{start_count} {peak} {fall}"
     baca.glissando(
@@ -294,26 +315,95 @@ def J1a(pleaves, pitches, dynamic):
 
 def fl(m):
     pass
+    """
+    I2a(library.run(m[1], 2, 0), "B4", "p", "A#4", 2)
+    I2a(library.run(m[1, 2], 2, 1), "B4", "mp", "A#4", 3)
+    I2a(library.run(m[2, 3], 2, 0), "B4", "mf", "A#4", 2)
+    I2a(library.run(m[3], 2, 1), "C#6", "mf")
+    J1a(library.run(m[4, 5], 99, 0), "E6 Eqf6 Eb6", "p")
+    J1a(library.run(m[5, 6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6", "mp")
+    J1a(library.run(m[6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6 Db6", "mf")
+    """
 
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    I1a(library.pleaves(m[1], 1), "D#6", "E6", "mf - mp -")
+    I1a(library.pleaves(m[2], 1), "D#6", "E6", "p - - -")
+    I1a(library.pleaves(m[3], 1), "D#6", "E6", "p mp mf f -")
+    I1a(library.pleaves(m[5], 1), "D#6", "E6", "p")
+    """
 
 
 def gt1(m):
     pass
+    """
+    I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5", "mf")
+    I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4", "mp")
+    I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5", "p")
+    I1b(library.pleaves(m[3], 1), "Eb5 D5 C5 Eb5 B4 Bb4 B4 Eb5 Bb4 C5 D5 C5 D5", "p<f")
+    I3a(library.pleaves(m[3], 3), "Gb2", "mf")
+    I3a(library.pleaves(m[4], 3), "Gb2 G2 G2", "mf mp p")
+    I1b(library.pleaves(m[5], 1), "Db5 B4 C5 Db5 Eb5", "p")
+    """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5", "mf")
+    I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5", "mp")
+    I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5", "p")
+    I1b(
+        library.pleaves(m[3], 1), "B4 Bb4 C5 Eb5 B4 D5 Eb5 B4 Eb5 D5 Bb4 C5 D5 C5", "p<f"
+    )
+    I3a(library.pleaves(m[3], 3), "F2", "mf")
+    I3a(library.pleaves(m[4], 3), "F2 F2 F#2", "mf mp p")
+    I1b(library.pleaves(m[5], 1), "Eb5 E5 Eb5 Db5", "p")
+    """
 
 
 def vn(m):
     pass
+    """
+    I2b(library.run(m[1], 3, 0), "B4", "C5", "mp")
+    I2b(library.run(m[1, 2], 3, 1), "B4", "C5", "mf")
+    I2b(library.run(m[3, 4], 3, 1), "B4", "C5", "f")
+    """
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    I2c(library.run(m[1], 2, 0), "C#3", "D#3", "E3", "D3", "mp")
+    I2c(library.run(m[1, 2], 2, 1), "C#3", "D#3", "E3", "D3", "mf")
+    I2c(library.run(m[2, 3], 2, 1), "C#3", "D#3", "E3", "D3", "f")
+    I3b(
+        library.pleaves(m[3], 3),
+        "F2:2 Ab2 G2",
+        [2, 1, 1],
+        "P -> T -> P",
+        [1, 1, 2],
+        "sfp< mf> pp<|f",
+    )
+    I3b(
+        library.pleaves(m[4], 3)[:5],
+        "Ab2 G2 F#2:2 E#2",
+        [1, 3, 1],
+        "P -> T -> P",
+        [1, 3, 1],
+        "f|> p<| f",
+    )
+    I3b(
+        library.pleaves(m[4, 6], 3)[9:],
+        "A2:3 Gb2:3 E2:3 E2",
+        [1, 6, 2, 2],
+        "P -> T -> P -> T =|",
+        [1, 6, 2, 1, 1],
+        "f|> p< mp> pp -",
+    )
+    """
 
 
 @baca.build.timed("make_score")
