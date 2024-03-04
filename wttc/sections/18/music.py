@@ -25,6 +25,7 @@ BG = library.BG
 OBGC = library.OBGC
 X = library.X
 beat = library.beat
+frame = library.frame
 swell = library.swell
 
 
@@ -613,6 +614,7 @@ def VN(voice, meters):
         assert counts == [2, 3, 8, 9, 14, 15, 20, -21]
         counts = abjad.sequence.reverse(counts)
         assert counts == [-21, 20, 15, 14, 9, 8, 3, 2]
+        counts = [-21, 20, 15, 14, 9, X(t(1)), AG([2], 4)]
         rhythm(
             meters(9, 12),
             counts,
@@ -719,14 +721,14 @@ def VC(voice, meters):
         rhythm.mmrests(24, 25)
         rhythm(
             meters(26, 27),
-            [-8, 8, 8, 4, "-"],
+            [-8, frame(8, 4), frame(8, 4), "-"],
             material=99,
         )
         components = j3_measures[27 - before_fermata]
         library.overlap_previous_measure(voice, components, meters(27))
         components = rhythm(
             meters(27, 28),
-            [8, 8],
+            [8, frame(8, 4)],
             material=99,
             overlap=["-"],
         )
@@ -734,7 +736,7 @@ def VC(voice, meters):
 
     rhythm(
         meters(29),
-        [8, 8],
+        [frame(8, 4), frame(8, 4)],
         material=99,
         overlap=[-8],
     )
@@ -830,11 +832,9 @@ def J4a(pleaves, dyad, dynamic):
         baca.dynamic(plt.head, dynamic)
 
 
-def J4b(pleaves, glissando, hairpin_lparts, hairpin, *, tasto=None):
-    baca.glissando(
-        pleaves,
-        glissando,
-    )
+def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
+    baca.pitches(pleaves, pitches, exact=True)
+    baca.glissando(pleaves)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
@@ -981,13 +981,63 @@ def gt2(m):
 def vn(m):
     pass
     """
-    # J4b(pleaves, glissando, hairpin_lparts, hairpin, *, tasto=None)
-    J4b(library.pleaves(m[9, 12], 4), "C6:3 G5:3 Db5:2 F#4:3 B5:2 Eb4",
+    J4b(
+        library.pleaves(m[9, 12], 4),
+        "C6 G5 Db5 F#4 B5 Eb4",
+        [8, 6],
+        "o< mp>o!",
+        tasto="T4 =|",
+    )
+    J4b(
+        library.run(m[13], 4, 0),
+        "B5 Eb4",
+        [2],
+        "p>o!",
+    )
+    J4b(library.run(m[13, 15], 4, 1), "B5 G5 Db5 F#4 B5", [8, 3], "o< mf>o!")
+    J4b(
+        library.run(m[15, 18], 4, 1),
+        "B5 G5 Db5 F#4 Bb5 Gb5 C5 F4 A5 F5",
+        [13, 6],
+        "o< f>o!",
+    )
+    J4b(
+        library.run(m[18, 20], 4, 1),
+        "A5 F5 B4 E4 Gb5 E5 Bb4 Eb4 C5 Db4",
+        [3, 14],
+        "o< mf>o!",
+    )
+    J4b(
+        library.run(m[20, 23], 4, 1),
+        "Ab5 E5 Bb4 Eb4 F5 Eb5 A4 D4 Gb5",
+        [3, 15],
+        "o< mp>o!",
+    )
+    J4b(
+        library.run(m[23, 26], 4, 1),
+        "G5 Eb5 A4 D4 E5 D5",
+        [3, 11],
+        "o< p>o!",
+    )
     """
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    J3c(library.pleaves(m[2, 5], 3), 3 * "Btqf4 ", "mf f mf mp")
+    J3c(
+        library.pleaves(m[6, 9], 3),
+        "Btqf4 G4 G4 G4 E4 E4 E4",
+        "f mf mp mp mp p p",
+    )
+    J3c(library.pleaves(m[23], 3), "E4", "p")
+    K1b(library.pleaves(m[26], 99), "<F3 Bb3>", "C4", "p p")
+    J3c(library.pleaves(m[27], 3), "E4", "p")
+    K1b(library.pleaves(m[27, 28], 99), "<F3 Bb3>", "C4", "mp mp")
+    J3c(library.pleaves(m[29], 3), "E4", "p")
+    K1b(library.pleaves(m[29], 99), "<F3 Bb3>", "C4", "mf mf")
+    """
 
 
 @baca.build.timed("make_score")
