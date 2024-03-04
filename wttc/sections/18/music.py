@@ -273,7 +273,35 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 4)
+    rhythm(
+        meters(5, 6),
+        [-3, 8, 16, "-"],
+        material=2,
+    )
+    rhythm.mmrests(7, 9)
+    rhythm(
+        meters(10, 12),
+        [-5, 8, 16, 8, 16, "-"],
+        material=2,
+    )
+    rhythm.mmrests(13, 14)
+    rhythm(
+        meters(15, 16),
+        [-5, 8, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(17, 22),
+        ["-", 15, 48, 48],
+        material=2,
+    )
+    rhythm(
+        meters(23, 26),
+        [-23, "+", -12],
+        material=2,
+    )
+    rhythm.mmrests(27, 29)
 
 
 def GT1(voice, meters):
@@ -728,7 +756,7 @@ def J1b(run, pitches, dynamic):
     baca.dynamic(note, dynamic)
 
 
-def J2a(pleaves, pitches, dynamics):
+def J2a1(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
@@ -736,11 +764,22 @@ def J2a(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def J2b(pleaves, pitches, hairpin_lparts, hairpin):
+def J2a2(
+    pleaves,
+    pitches,
+    hairpin_lparts,
+    hairpin,
+    *,
+    fluttertongue=False,
+    rleak_hairpin=False,
+):
     baca.pitches(pleaves, pitches, exact=True)
+    if fluttertongue is True:
+        baca.fluttertongue(pleaves)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
+        rleak=rleak_hairpin,
     )
 
 
@@ -761,13 +800,13 @@ def J3b(pleaves, pitches, dynamics, falls):
         baca.dynamic(plt.head, dynamic)
     falls = abjad.CyclicTuple(falls)
     for i, plt in enumerate(plts):
-        if falls[i] == 0:
+        if falls[i] == "0":
             baca.articulation(plt.head, r"\fall")
         else:
             baca.articulation(plt.head, r"\doit")
 
 
-def J3a(pleaves, pitches, dynamics):
+def J3c(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches, exact=True)
     baca.override.note_head_style_harmonic(pleaves)
     plts = baca.select.plts(pleaves)
@@ -822,22 +861,129 @@ def K1b(pleaves, dyad, alteration, peaks):
 
 def fl(m):
     pass
+    """
+    J1a(library.pleaves(m[1, 2], 1), "D6 Dqf6 Df6 Dtqf6 C6 Cqf6 B5", "f>o!")
+    J2a1(
+        library.pleaves(m[2, 4])[:-2],
+        "C#4 D5 D#4 E5 Db4 B3 A#3 A4 D4 Eb5",
+        "p mf p f p f p mf p mp",
+    )
+    J3a(library.pleaves(m[4], 3), "E4 E4 E4 E4", "f mf mp p")
+    J2a1(library.pleaves(m[4, 5])[2:6], "D#4 F5 F4 F#5", "p mf p f")
+    J2a2(library.pleaves(m[5, 6])[2:], "A5 Ab5", [3, 3], "o< f>o!", fluttertongue=True)
+    J3a(
+        library.pleaves(m[6, 8], 3),
+        "E4 Eb4 Eb4 Eb4 Db4 Db4 Db4 Db4 B3 B3 B3 B3",
+        "f f mf mf mp mp p p p pp pp pp",
+    )
+    J1a(library.pleaves(m[8, 10], 1), "C6 Cqf6 B5 Bqf5 Bb5 A5", "p<f")
+    J2a2(
+        library.pleaves(m[10, 12], 2)[:-4],
+        "Bb5 Ab5 G5 F5",
+        [14],
+        "f>o!",
+        fluttertongue=True,
+    )
+    J2a1(library.pleaves(m[12], 2)[-4:], "E4 F#5 F4 G#5", "p mf p mp")
+    J2a1(library.pleaves(m[13, 15], 2), 3 * "F#4 A5 ", 3 * "p mf ")
+    J2a2(library.pleaves(m[15, 16], 2)[2:], "B5", [3], "sfp>o!", fluttertongue=True)
+    J2a2(
+        library.pleaves(m[17, 22], 2),
+        "B5 C#6 C#6",
+        [2, 2, 2],
+        "sfp>o sfp>o sfp>o!",
+        fluttertongue=True,
+        rleak_hairpin=True,
+    )
+    J3a(library.pleaves(m[23], 3), "B3", "p")
+    J2a2(
+        library.pleaves(m[23, 26], 2),
+        "D6",
+        [4],
+        "sfp>o!",
+        fluttertongue=True,
+        rleak_hairpin=True,
+    )
+    J3a(library.pleaves(m[27, 29], 3), "B3 Bb3 Bb3 Bb3", "p pp pp pp")
+    """
 
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    J2a2(library.pleaves(m[5, 6])[2:], "A5 Ab5", [3, 3], "o< f>o!")
+    J2a2(library.pleaves(m[10, 12], 2)[:-4], "Bb5 Ab5 G5 F5", [14], "f>o!")
+    J2a2(library.pleaves(m[15, 16], 2)[2:], "B5", [3], "sfp>o!")
+    J2a2(
+        library.pleaves(m[17, 22], 2),
+        "B5 C#6 C#6",
+        [2, 2, 2],
+        "sfp>o sfp>o sfp>o!",
+        rleak_hairpin=True,
+    )
+    J2a2(library.pleaves(m[23, 26], 2), "D6", [4], "sfp>o!", rleak_hairpin=True)
+    """
 
 
 def gt1(m):
     pass
+    """
+    J1b(library.pleaves(m[1], 1), "G4 A4 B4", "mf")
+    J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5", "mp")
+    J3b(library.pleaves(m[3, 4], 3), 4 * "F#3 ", "mf mf mp p", "1101")
+    J3b(
+        library.pleaves(m[5, 7], 3),
+        "F#3 G#3 G#3 G#3 G#3 A3 A3",
+        "mf mf mf mp mp mp p",
+        "0110101",
+    )
+    J3b(library.pleaves(m[8, 9], 3), "A3 A#3 A#", "p p pp", "101")
+    J1b(library.pleaves(m[9], 1), "C#5 D#5 F5", "mp")
+    J1b(library.pleaves(m[10], 1), "C#5 D#5 F5 G5", "f")
+    J4a(library.pleaves(m[16, 17], 4), "<G2 Eb3>", "p p")
+    J4a(library.pleaves(m[19, 22], 4), "<G2 D3>", "p p")
+    J3b(library.pleaves(m[23], 3), "A#3", "p", "0")
+    J4a(library.pleaves(m[24, 25], 4), "<G2 B2>", "p")
+    J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5", "p")
+    J1b(library.pleaves(m[27], 1), "C#5 D#5 F5", "p")
+    J3b(library.pleaves(m[27, 29], 3), "A#3 B3", "p pp", "11")
+    """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5", "f")
+    J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4", "mp")
+    J1b(library.run(m[2], 1, 1), "G#4 A#4 C5 D5", "p")
+    J3b(library.pleaves(m[3, 4], 3), 5 * "F#3 ", "mf mp mp p p", "10101")
+    J3b(
+        library.pleaves(m[5, 7], 3),
+        "F#3 F#3 G#3 G#3 G#3 A3 A3",
+        "mf mf mf mp mp mp p",
+        "1101011",
+    )
+    J1b(library.run(m[8], 1, 0), "C5 D5 E5", "p")
+    J3b(library.pleaves(m[8], 3), "A3 A#3", "p p", "10")
+    J1b(library.run(m[8], 1, 1), "C5 D5 E5 F#5", "p")
+    J1b(library.pleaves(m[10], 1), "D5 E5 F#5", "mf")
+    J4a(library.pleaves(m[16, 17], 4), "<Db3 F2>", "p p")
+    J4a(library.pleaves(m[19, 22], 4), "<F2 C3>", "p p p p")
+    J1b(library.pleaves(m[23], 1), "D5 E5 F#5 G#5", "p")
+    J3b(library.pleaves(m[23], 3), "A#3 A#3", "p p", "10")
+    J4a(library.pleaves(m[24, 25], 4), "<F2 A2>", "p")
+    J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5", "p")
+    J1b(library.pleaves(m[27], 1), "D5 E5 F#5", "p")
+    J3b(library.pleaves(m[27, 29], 3), "A#3 B3 B3", "p pp pp", "111")
+    """
 
 
 def vn(m):
     pass
+    """
+    # J4b(pleaves, glissando, hairpin_lparts, hairpin, *, tasto=None)
+    J4b(library.pleaves(m[9, 12], 4), "C6:3 G5:3 Db5:2 F#4:3 B5:2 Eb4",
+    """
 
 
 def vc(m):

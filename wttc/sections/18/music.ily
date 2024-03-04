@@ -2032,14 +2032,52 @@ number.18.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r8.
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightskyblue
+    b'16
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
+    [
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    ]
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
+
+    r1
+
+    r4
 
     % [Oboe.Music measure 7]
     R1 * 6/4
@@ -2057,19 +2095,111 @@ number.18.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 10]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightskyblue
+    b'8.
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    [
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Oboe.Music measure 11]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    [
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    [
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Oboe.Music measure 12]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8.
+
+    r4
 
     % [Oboe.Music measure 13]
     R1 * 6/4
@@ -2082,64 +2212,129 @@ number.18.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 15]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r4
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightskyblue
+    b'8.
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Oboe.Music measure 16]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'16
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8.
+
+    r1
+
+    r4
 
     % [Oboe.Music measure 17]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    r16
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightskyblue
+    b'8.
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 18]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
+    \repeatTie
 
     % [Oboe.Music measure 19]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1.
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 20]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1.
+    - \tweak direction #up
+    \repeatTie
 
     % [Oboe.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1.
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 22]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1.
+    - \tweak direction #up
+    \repeatTie
 
     % [Oboe.Music measure 23]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r1
+
+    r4
+
+    r8.
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight lightskyblue
+    b'16
+    ~
 
     % [Oboe.Music measure 24]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1.
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 25]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'1.
+    - \tweak direction #up
+    \repeatTie
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 26]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r2.
 
     % [Oboe.Music measure 27]
     R1 * 6/4
