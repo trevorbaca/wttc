@@ -21,9 +21,7 @@ w = baca.rhythm.w
 BG = library.BG
 OBGC = library.OBGC
 X = library.X
-beat = library.beat
 frame = library.frame
-swell = library.swell
 
 
 def GLOBALS(skips, first_measure_number):

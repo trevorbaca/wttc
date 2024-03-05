@@ -25,8 +25,6 @@ M = library.M
 OBGC = library.OBGC
 X = library.X
 frame = library.frame
-beat = library.beat
-swell = library.swell
 
 
 def GLOBALS(skips):
@@ -158,7 +156,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(32, 33),
-        4 * [swell(4)] + ["-"],
+        4 * [frame(4, 2)] + ["-"],
         material=3,
         overlap=[-20],
     )
@@ -170,7 +168,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(34, 38),
-        11 * [swell(4)] + [-4, -4] + 2 * [swell(4)] + ["-"],
+        11 * [frame(4, 2)] + [-4, -4] + 2 * [frame(4, 2)] + ["-"],
         material=3,
         overlap=[-12],
     )

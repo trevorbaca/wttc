@@ -24,9 +24,7 @@ BG = library.BG
 M = library.M
 OBGC = library.OBGC
 X = library.X
-beat = library.beat
 frame = library.frame
-swell = library.swell
 
 
 def GLOBALS(skips, first_measure_number):
@@ -371,7 +369,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(20),
-        [-8, swell(16)],
+        [-8, frame(16, 8)],
         material=2,
     )
     rhythm.make_one_beat_tuplets(
@@ -494,13 +492,13 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [swell(8), swell(12), frame(4, 1)],
+        [frame(8, 4), frame(12, 6), frame(4, 1)],
         material=1,
     )
     rhythm(
         meters(2, 3),
-        # [swell(16), frame(12, 1), "-"],
-        [swell(16), 12, "-"],
+        # [frame(16, 8), frame(12, 1), "-"],
+        [frame(16, 8), 12, "-"],
         material=1,
     )
 

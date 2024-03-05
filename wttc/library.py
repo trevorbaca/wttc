@@ -315,10 +315,6 @@ def attacks(counts, *, n=1):
     return result
 
 
-def beat(n=1):
-    return abjad.Duration(n, 4)
-
-
 def check_material_annotations(argument):
     for pleaf in baca.select.pleaves(argument, exclude=baca.enums.HIDDEN):
         indicators = abjad.get.indicators(pleaf, Material)
@@ -858,15 +854,6 @@ def series_g(width, offset, start, length):
         pairs.append((left, right))
     counts = abjad.sequence.flatten(pairs)
     return counts
-
-
-def swell(n):
-    assert n % 2 == 0, repr(n)
-    half = int(n / 2)
-    first = baca.rhythm.w(half, n)
-    second = baca.rhythm.h(baca.rhythm.w(half, n))
-    tuplet = X([first, second])
-    return tuplet
 
 
 def swells(peaks):

@@ -24,8 +24,6 @@ w = baca.rhythm.w
 BG = library.BG
 OBGC = library.OBGC
 X = library.X
-beat = library.beat
-swell = library.swell
 
 
 def GLOBALS(skips):

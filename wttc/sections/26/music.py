@@ -24,8 +24,6 @@ M = library.M
 OBGC = library.OBGC
 X = library.X
 frame = library.frame
-beat = library.beat
-swell = library.swell
 
 
 def GLOBALS(skips, first_measure_number):
