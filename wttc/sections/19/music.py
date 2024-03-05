@@ -710,11 +710,9 @@ def K1b2(pleaves, pitch, hairpin):
     )
 
 
-def K1b3(pleaves, glissando, hairpin, hairpin_lparts=None):
-    baca.glissando(
-        pleaves,
-        glissando,
-    )
+def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None):
+    baca.pitches(pleaves, pitches, exact=True)
+    baca.glissando(pleaves)
     baca.rspanners.damp(
         pleaves,
         staff_padding=3,
@@ -956,6 +954,21 @@ def L5b(pleaves, glissando, hairpin):
 
 def fl(m):
     pass
+    """
+    K2a(library.pleaves(m[6], 2), "A3 Ab3", "mf>o!")
+    K2a(library.pleaves(m[7], 2), "A3 Ab3", "mf>o!")
+    K3a(library.pleaves(m[7, 8], 3), "G3", "p p p")
+    K3a(library.pleaves(m[10, 11], 3), "G3", "p p p p p")
+    K3a(library.pleaves(m[12, 14], 3), "G3", "p p p mp mp mp mf mf mf")
+    L1a(library.pleaves(m[15], 99), "A#4", None, "o<p")
+    K2a(library.pleaves(m[15, 16], 2), "F4 E4", "mp>o!")
+    K3a(library.pleaves(m[16], 3), "A3", "p p")
+    L1a(library.pleaves(m[17], 99), "A#4", None, "o<p")
+    K2a(library.pleaves(m[17], 2), "F4 E4", "mp>o!")
+    K3a(library.pleaves(m[18], 3), "A3", "p p")
+    L1a(library.pleaves(m[18, 19], 99), "A#4", None, "o<f")
+    K3a(library.pleaves(m[19], 3), "A3", "pp pp")
+    """
 
 
 def ob(m):
@@ -967,26 +980,65 @@ def ob(m):
 
 def gt1(m):
     pass
+    """
+    K2b(library.pleaves(m[6, 7], 2), "Ab2")
+    K3b(library.pleaves(m[8], 3), "C#5", "p - -")
+    K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
+    K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
+    K2b(library.pleaves(m[17], 2), "Ab2")
+    """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    K2c(library.pleaves(m[6, 7], 2))
+    K3b(library.pleaves(m[8], 3), "C#5", "p - -")
+    K2c(library.pleaves(m[9, 10], 2))
+    K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
+    K2c(library.pleaves(m[12], 2))
+    K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
+    """
 
 
 def vn(m):
     pass
+    """
+    K2d(library.pleaves(m[6, 7], 2), "A3", "mf")
+    K3a(library.pleaves(m[8], 3), "C4", "p p", circle_bow=True)
+    K2d(library.pleaves(m[9, 10], 2), "Ab3", "mf")
+    K3a(library.pleaves(m[8], 3), "C4", "p p mp mp", circle_bow=True)
+    K2d(library.pleaves(m[12], 2), "Ab3", "mf")
+    K3a(library.pleaves(m[13, 14], 3), "C4", "p p mp mp mf mf mf mf", circle_bow=True)
+    K2d(library.pleaves(m[15], 2), "B3", "pp")
+    K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
+    K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
+    """
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    # K1b1(pleaves, dyad, alteration, peaks):
-    # K1b2(pleaves, pitch, hairpin):
-    # K1b3(pleaves, glissando, hairpin, hairpin_lparts=None):
     """
     K1b1(library.pleaves(m[1], 1)[:4], "<F#3 B3>", "C#4", "p mp")
     K1b2(library.pleaves(m[1], 1)[-2:], "G3", "p<|f")
     K1b1(library.pleaves(m[2], 1), "<F#3 B3>", "C#4", "mf")
-    K1b2(library.pleaves(m[1])[:2], "G3", "p<|f")
+    K1b2(library.pleaves(m[3], 1)[:2], "G3", "p<|f")
+    K1b3(library.pleaves(m[3, 5], 1)[2:], "Ab3 E3 F3 C#3 D3 A#2 B2 G2 G#2 E2", "mp>o!")
+    K2e(library.pleaves(m[5, 8], 2), "F2", "sfp>o!", "P2 -> T")
+    K1b3(
+        library.run(m[8, 11], 1, 0),
+        "A3 Bb3 G3 Ab3 F3 Gb3 D#3 E3 C#3 D3 B2 C3 A2 Bb2 G2",
+        "o< p>o!",
+        [12, 9],
+    )
+    K1b3(library.run(m[11, 12], 1, 1), "G2 Ab2 F2 Gb2 D#2 E2", "p>o!")
+    K1b3(library.pleaves(m[14], 1), "F2 Gb2 D#2 E2", "p>o!")
+    L1a(library.pleaves(m[15], 99), "A#4", "B4", "o<p")
+    K1b3(library.pleaves(m[15], 1), "F2 D2", "p>o!")
+    K2e(library.pleaves(m[15, 16], 2), "G#2", "o<|mp", "T -> P")
+    L1a(library.pleaves(m[17], 99), "A#4", "B4", "o<mp")
+    K2e(library.pleaves(m[17, 18], 2), "G#2", "o<|mp", "T -> P")
+    L1a(library.pleaves(m[18, 19], 99), "A#4", "B4", "o<f")
     """
 
 
