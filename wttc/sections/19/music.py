@@ -889,8 +889,12 @@ def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     )
 
 
-def L2b1(pleaves, pitches, alteration, string_number, hairpin_lparts, hairpin):
-    baca.pitches(pleaves, pitches)
+def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpin):
+    if stop is None:
+        baca.pitches(pleaves, start)
+    else:
+        baca.glissando(pleaves, f"{start} {stop}")
+        baca.markup(pleaves[0], r"\wttc-non-stringere")
     baca.override.note_head_style_harmonic(pleaves)
     baca.rspanners.string_number(
         pleaves,
@@ -906,35 +910,16 @@ def L2b1(pleaves, pitches, alteration, string_number, hairpin_lparts, hairpin):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
+        rleak=True,
     )
 
 
-def L2b2(pleaves, glissando, alteration, string_number, hairpin_lparts, hairpin):
+def L2b2(pleaves, glissando, alteration, hairpin_lparts, hairpin):
     baca.glissando(pleaves, glissando)
-    baca.override.note_head_style_harmonic(pleaves)
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
-        harmonic=True,
-        staff_padding=3,
-    )
-    baca.markup(pleaves[0], r"\wttc-non-stringere")
-    baca.rspanners.string_number(
-        pleaves,
-        string_number,
         staff_padding=5.5,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-
-
-def L2b3(pleaves, pitch, alteration, hairpin_lparts, hairpin):
-    baca.pitches(pleaves, pitch)
-    baca.rspanners.trill(
-        pleaves,
-        alteration=alteration,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -1098,6 +1083,12 @@ def vn(m):
     K2d(library.pleaves(m[15], 2), "B3", "pp")
     K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
+    L2b1(library.pleaves(m[20], 3), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
+    L2b1(library.pleaves(m[23], 3), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
+    L2b1(library.pleaves(m[25], 3), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
+    L2b1(library.pleaves(m[30], 3), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
+    L2b2(library.pleaves(m[31, 33], 3), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!")
+    L2b2(library.pleaves(m[35], 3), "G#5 E4", "A5", [2], "f>o!")
     """
 
 
