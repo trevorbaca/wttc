@@ -195,7 +195,12 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 22)
+    rhythm(
+        meters(1, 6),
+        [24, 28, 40, "-"],
+        material=1,
+    )
+    rhythm.mmrests(7, 22)
     rhythm(
         meters(23),
         [-8, frame(16, 8)],
