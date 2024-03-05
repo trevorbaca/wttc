@@ -200,7 +200,13 @@ def OB(voice, meters):
         [24, 28, 40, "-"],
         material=1,
     )
-    rhythm.mmrests(7, 22)
+    rhythm.mmrests(7, 19)
+    rhythm(
+        meters(21),
+        [-8, frame(16, 8)],
+        material=2,
+    )
+    rhythm.mmrests(22)
     rhythm(
         meters(23),
         [-8, frame(16, 8)],
@@ -1018,6 +1024,12 @@ def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     """
     K1a(library.pleaves(m[1, 8], 1), "G6 G6 F6", "p")
+    L2a(library.pleaves(m[20], 2), "G6 Bb6", None, [1, 1], "mp")
+    L2a(library.pleaves(m[23], 2), "G6 Bb6", None, [1, 1], "mf")
+    L2a(library.pleaves(m[25], 2), "G6 Bb6", None, [1, 1], "f")
+    L2a(library.pleaves(m[30], 2), "G6 Bb6", None, [1, 1], "f")
+    L2a(library.pleaves(m[31, 33], 2), "G#6 A6", None, [1, 2], "f")
+    L2a(library.pleaves(m[35], 2), "G#6 A6", None, [2], "f>o!")
     """
 
 
