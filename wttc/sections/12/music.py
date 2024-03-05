@@ -675,15 +675,16 @@ def VC(voice, meters):
         rhythm(
             meters(5),
             [-8, -1, t(3), t(12)],
+            material=1,
         )
-        rhythm.make_one_beat_tuplets(
+        components = rhythm.make_one_beat_tuplets(
             meters(6, 7),
-            ["+", 1, -7, 2, -6],
+            [11, 1, -7, 2, -6],
             extra_counts=[-1],
         )
-        plts = baca.select.plts(voice)
-        library.annotate(plts[:1], 1)
-        library.annotate(plts[1:], 4)
+        pleaves = baca.select.pleaves(components)
+        library.annotate(pleaves[:2], 1)
+        library.annotate(pleaves[2:], 4)
 
     @baca.call
     def block():

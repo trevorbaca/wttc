@@ -150,11 +150,9 @@ class Rhythm:
         if not do_not_beam_tuplets:
             for tuplet in abjad.select.tuplets(components):
                 rmakers.beam([tuplet])
-        """
         for pleaf in baca.select.pleaves(components):
             if not abjad.get.has_indicator(pleaf, Material):
                 raise Exception(f"no material for {pleaf!r}.")
-        """
         return components
 
     def make_one_beat_tuplets(
