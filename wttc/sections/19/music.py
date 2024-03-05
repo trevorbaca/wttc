@@ -25,6 +25,7 @@ M = library.M
 OBGC = library.OBGC
 X = library.X
 beat = library.beat
+frame = library.frame
 swell = library.swell
 
 
@@ -493,11 +494,12 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [swell(8), swell(12), 4],
+        [swell(8), swell(12), frame(4, 1)],
         material=1,
     )
     rhythm(
         meters(2, 3),
+        # [swell(16), frame(12, 1), "-"],
         [swell(16), 12, "-"],
         material=1,
     )
@@ -960,6 +962,9 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    K1a(library.pleaves(m[1, 8], 1), "G6 G6 F6", "p")
+    """
 
 
 def gt1(m):
@@ -976,6 +981,15 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    # K1b1(pleaves, dyad, alteration, peaks):
+    # K1b2(pleaves, pitch, hairpin):
+    # K1b3(pleaves, glissando, hairpin, hairpin_lparts=None):
+    """
+    K1b1(library.pleaves(m[1], 1)[:4], "<F#3 B3>", "C#4", "p mp")
+    K1b2(library.pleaves(m[1], 1)[-2:], "G3", "p<|f")
+    K1b1(library.pleaves(m[2], 1), "<F#3 B3>", "C#4", "mf")
+    K1b2(library.pleaves(m[1])[:2], "G3", "p<|f")
+    """
 
 
 @baca.build.timed("make_score")
@@ -1043,6 +1057,8 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
+        baca.tags.STAFF_HIGHLIGHT,
+        baca.tags.NOT_YET_PITCHED_COLORING,
     )
     lilypond_file = baca.lilypond.file(
         score,
