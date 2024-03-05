@@ -497,19 +497,19 @@ def VC(voice, meters):
     )
     rhythm(
         meters(2, 3),
-        # [frame(16, 8), frame(12, 1), "-"],
-        [frame(16, 8), 12, "-"],
+        [frame(16, 8), frame(12, 1), t(4)],
         material=1,
     )
 
     @baca.call
     def block():
         counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, M(1, 2)]
+        counts[0] -= 4
+        assert counts == [4, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, M(1, 2)]
         rhythm(
-            meters(3, 5),
+            meters(4, 5),
             counts,
             material=1,
-            overlap=[-12],
         )
 
     rhythm(

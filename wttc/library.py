@@ -124,12 +124,8 @@ class Rhythm:
             del voice_[-count:]
         if material is not None:
             for leaf in abjad.select.leaves(voice_):
-                if debug is True:
-                    print(leaf, abjad.get.has_indicator(leaf, Material))
                 if not abjad.get.has_indicator(leaf, Material):
                     abjad.attach(Material(material), leaf)
-                if debug is True:
-                    print(leaf, abjad.get.indicators(leaf, Material))
         components = abjad.mutate.eject_contents(voice_)
         if do_not_extend is True:
             return components
@@ -138,6 +134,7 @@ class Rhythm:
                 self.voice,
                 components,
                 time_signatures,
+                debug=debug,
                 do_not_clean_up_rhythmic_spelling=do_not_clean_up_rhythmic_spelling,
             )
         else:
@@ -320,13 +317,13 @@ def check_material_annotations(argument):
         indicators = abjad.get.indicators(pleaf, Material)
         if 1 < len(indicators):
             voice = abjad.get.parentage(pleaf).get(abjad.Voice)
-            name = voice.name
+            name = getattr(voice, "name", "no voice")
             raise Exception(
                 f"Multiple material annotations attached to leaf in {name}."
             )
         if not indicators:
             voice = abjad.get.parentage(pleaf).get(abjad.Voice)
-            name = voice.name
+            name = getattr(voice, "name", "no voice")
             raise Exception(f"No material annotation attached to leaf in {name}.")
 
 
@@ -661,6 +658,7 @@ def merge(
     components_2,
     time_signature,
     *,
+    debug=False,
     do_not_clean_up_rhythmic_spelling=False,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
@@ -723,7 +721,9 @@ def merge(
     voice = abjad.Voice(merged_components)
     components = abjad.mutate.eject_contents(voice)
     if not do_not_clean_up_rhythmic_spelling:
-        components = clean_up_rhythmic_spelling(components, [time_signature], tag=tag)
+        components = clean_up_rhythmic_spelling(
+            components, [time_signature], debug=debug, tag=tag
+        )
     return components
 
 
@@ -732,6 +732,7 @@ def overlap_previous_measure(
     components,
     time_signatures,
     *,
+    debug=False,
     do_not_clean_up_rhythmic_spelling=False,
 ):
     voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
@@ -742,6 +743,7 @@ def overlap_previous_measure(
         previous_measure,
         first_measure,
         time_signatures_[0],
+        debug=debug,
         do_not_clean_up_rhythmic_spelling=do_not_clean_up_rhythmic_spelling,
     )
     components = merged_measure + nonfirst_measures
