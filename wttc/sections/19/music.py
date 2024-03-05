@@ -848,11 +848,13 @@ def K3b(pleaves, pitch, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def L1a(pleaves, pitches, alteration, hairpin, hairpin_lparts=None):
+def L1a(pleaves, pitches, alteration, hairpin, hairpin_lparts=None, *, gliss=None):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
     for plt in plts:
         baca.espressivo(plt.head)
+    if gliss is not None:
+        baca.glissando(pleaves[-gliss:])
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
@@ -1206,10 +1208,63 @@ def vc(m):
     L1a(library.pleaves(m[17], 99), "A#4", "B4", "o<mp")
     K2e(library.pleaves(m[17, 18], 2), "G#2", "o<|mp", "T -> P")
     L1a(library.pleaves(m[18, 19], 99), "A#4", "B4", "o<f")
-    #
     L1a(library.pleaves(m[20], 1), "B4", "C5", "o<p")
     L3b(library.pleaves(m[21, 22], 3), Q2a, "o< f>o!", [46, 14])
-    L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o<p")
+    L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o< mp>o!", [2, 2], gliss=2)
+    L3b(library.pleaves(m[24], 3), Q2b, "o< f>o!", [19, 8])
+    L1a(
+        library.pleaves(m[23], 1),
+        "B4 B4 B4 Bb3 G3",
+        "C5",
+        "o< f> p<|ff",
+        [2, 1, 2],
+        gliss=3,
+    )
+    L3b(library.pleaves(m[26], 3), Q2c, "o< f>o!", [6, 9])
+    L4(
+        library.pleaves(m[27, 28], 4),
+        "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3",
+        'o<"ff"',
+    )
+    L1b(
+        library.pleaves(m[28, 35], 1),
+        "Eb2",
+        "P -> O -> P -> O -> P -> O -> P -> O ->"
+        " P -> T -> P -> T -> P -> T ->"
+        " O -> T -> O -> T -> O -> T -> O -> T -> O -> T -> O -> T -> O -> T ->"
+        " P -> O -> P -> O -> T",
+    )
+    baca.hairpin(
+        library.pleaves(m[28, 30], 1),
+        "sfp>pp-sempre",
+        rleak=True,
+    )
+    baca.hairpin(
+        library.pleaves(m[34, 35], 1)[-8:],
+        "sfp>o!",
+    )
+    L3b(library.pleaves(m[37], 3), Q2c, "o< f>o!", [4, 10])
+    L4(
+        library.pleaves(m[37, 39], 4),
+        "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2",
+        '"ff">o!',
+    )
+    L1b(
+        library.pleaves(m[39, 41], 1),
+        "D2",
+        "O -> T -> O -> T -> O -> T -> O",
+    )
+    baca.dynamic(library.pleaves(m[39], 1)[0], "pp")
+    baca.hairpin(
+        library.pleaves(m[41], 1)[-4:],
+        "(pp)>o!",
+    )
+    L3b(library.pleaves(m[42, 43], 3), Q2c, "o< f>o!", [4, 9])
+    L4(
+        library.pleaves(m[43, 46], 4),
+        "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2 G2 Db2 Gb2 C2",
+        '"ff">o!',
+    )
     """
 
 
