@@ -968,6 +968,15 @@ def fl(m):
     K3a(library.pleaves(m[18], 3), "A3", "p p")
     L1a(library.pleaves(m[18, 19], 99), "A#4", None, "o<f")
     K3a(library.pleaves(m[19], 3), "A3", "pp pp")
+    #
+    L1a(library.pleaves(m[20], 1), "B4", None, "o<p")
+    L1a(library.pleaves(m[22, 23], 1), "B4", None, "o<mp")
+    L1a(library.pleaves(m[24, 25], 1), "B4", None, "o<mf")
+    L1a(library.pleaves(m[28, 30], 1), "C6", None, "sfp>o!")
+    L5a(library.pleaves(m[32, 34], 5), "C#")
+    L1a(library.pleaves(m[34, 35], 1), "C6", None, "f>o!")
+    L5a(library.pleaves(m[38, 41], 5), "B")
+    L5a(library.pleaves(m[44, 46], 5), "A")
     """
 
 
