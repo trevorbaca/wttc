@@ -643,7 +643,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(23),
-        [4, 4, 8, "-"],
+        [4, 4, AG([2], 8), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -654,7 +654,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(25),
-        [4, 4, 8, 8],
+        [4, 4, 8, AG([2], 8)],
         material=1,
     )
 
@@ -848,8 +848,8 @@ def K3b(pleaves, pitch, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def L1a(pleaves, pitch, alteration, hairpin):
-    baca.pitch(pleaves, pitch)
+def L1a(pleaves, pitches, alteration, hairpin, hairpin_lparts=None):
+    baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
     for plt in plts:
         baca.espressivo(plt.head)
@@ -858,8 +858,12 @@ def L1a(pleaves, pitch, alteration, hairpin):
         alteration=alteration,
         staff_padding=3,
     )
+    if hairpin_lparts is None:
+        parts = pleaves
+    else:
+        parts = baca.select.lparts(pleaves, hairpin_lparts)
     baca.hairpin(
-        pleaves,
+        parts,
         hairpin,
     )
 
@@ -1202,6 +1206,10 @@ def vc(m):
     L1a(library.pleaves(m[17], 99), "A#4", "B4", "o<mp")
     K2e(library.pleaves(m[17, 18], 2), "G#2", "o<|mp", "T -> P")
     L1a(library.pleaves(m[18, 19], 99), "A#4", "B4", "o<f")
+    #
+    L1a(library.pleaves(m[20], 1), "B4", "C5", "o<p")
+    L3b(library.pleaves(m[21, 22], 3), Q2a, "o< f>o!", [46, 14])
+    L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o<p")
     """
 
 
