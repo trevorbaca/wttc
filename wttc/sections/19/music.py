@@ -1141,11 +1141,41 @@ def vn(m):
     L3b(library.pleaves(m[24, 25], 3), Q1b, "o< f>o!", [19, 14])
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     L3b(library.pleaves(m[26, 27], 3), Q1c, "o< f>o!", [4, 20])
+    L4(
+        library.pleaves(m[27, 29], 4),
+        "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5 G#5 E6",
+        'o<"ff"',
+    )
     L2b1(library.pleaves(m[30], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     L2b2(library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!")
+    L5b(
+        library.pleaves(m[33, 35], 5),
+        "E6 G#5 B5 Eb5 Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
+        "pp>o!",
+    )
     L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!")
     L3b(library.pleaves(m[36, 37], 3), Q1c, "o< f>o!", [6, 18])
+    L4(
+        library.pleaves(m[37, 39], 4),
+        "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5 G#5 E6",
+        '"ff">o!',
+    )
+    L5b(
+        library.pleaves(m[39, 41], 5),
+        "Eb5 Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
+        "pp>o!",
+    )
     L3b(library.pleaves(m[42, 43], 3), Q1c, "o< f>o!", [4, 20])
+    L4(
+        library.pleaves(m[43, 45], 4),
+        "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5",
+        '"ff">o!',
+    )
+    L5b(
+        library.pleaves(m[45, 46], 5),
+        "Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
+        "pp>o!",
+    )
     """
 
 
