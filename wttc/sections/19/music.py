@@ -421,7 +421,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(23),
-        [8, 8],
+        [w(8, 16), AG([2], h(8))],
         material=2,
         overlap=[-8],
     )
@@ -433,7 +433,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(25),
-        [8, 8],
+        [w(8, 16), AG([2], h(8))],
         material=2,
         overlap=[-8],
     )
@@ -457,7 +457,7 @@ def VN(voice, meters):
 
     rhythm(
         meters(30, 32),
-        [-8, 8, 8, 24, 24],
+        [-8, w(8, 16), AG([2], h(8)), 24, 24],
         material=2,
     )
 
@@ -478,7 +478,7 @@ def VN(voice, meters):
 
     rhythm(
         meters(35),
-        [16],
+        AG([2], 16),
         material=2,
         overlap=[-8],
     )
@@ -876,42 +876,61 @@ def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
     )
 
 
-def L2a(pleaves, pitches, string_number, hairpin_lparts, peaks):
+def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitch)
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
+def L2b1(pleaves, pitches, alteration, string_number, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
     baca.rspanners.string_number(
         pleaves,
         string_number,
+        staff_padding=5.5,
+    )
+    baca.rspanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
         staff_padding=3,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
-        library.swells(peaks),
+        hairpin,
     )
 
 
-def L2b(pleaves, pitches, alteration, string_number, hairpin_lparts, peaks):
-    baca.pitches(pleaves, pitches)
+def L2b2(pleaves, glissando, alteration, string_number, hairpin_lparts, hairpin):
+    baca.glissando(pleaves, glissando)
     baca.override.note_head_style_harmonic(pleaves)
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        staff_padding=3,
     )
-    baca.glissando(pleaves)
     baca.markup(pleaves[0], r"\wttc-non-stringere")
     baca.rspanners.string_number(
         pleaves,
         string_number,
-        staff_padding=3,
+        staff_padding=5.5,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
-        library.swells(peaks),
+        hairpin,
     )
 
 
-def L2c(pleaves, pitch, alteration, hairpin_lparts, hairpin):
+def L2b3(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitch)
     baca.rspanners.trill(
         pleaves,
@@ -1025,12 +1044,12 @@ def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     """
     K1a(library.pleaves(m[1, 8], 1), "G6 G6 F6", "p")
-    L2a(library.pleaves(m[20], 2), "G6 Bb6", None, [1, 1], "mp")
-    L2a(library.pleaves(m[23], 2), "G6 Bb6", None, [1, 1], "mf")
-    L2a(library.pleaves(m[25], 2), "G6 Bb6", None, [1, 1], "f")
-    L2a(library.pleaves(m[30], 2), "G6 Bb6", None, [1, 1], "f")
-    L2a(library.pleaves(m[31, 33], 2), "G#6 A6", None, [1, 2], "f")
-    L2a(library.pleaves(m[35], 2), "G#6 A6", None, [2], "f>o!")
+    L2a(library.pleaves(m[20], 2), "G6", "Bb6", [1, 1], "o< mp>o!")
+    L2a(library.pleaves(m[23], 2), "G6", "Bb6", [1, 1], "o< mf>o!")
+    L2a(library.pleaves(m[25], 2), "G6", "Bb6", [1, 1], "o< f>o!")
+    L2a(library.pleaves(m[30], 2), "G6", "Bb6", [1, 1], "o< f>o!")
+    L2a(library.pleaves(m[31, 33], 2), "G#6", "A6", [1, 2], "o< f>o!")
+    L2a(library.pleaves(m[35], 2), "G#6 A6", [2], "f>o!")
     """
 
 

@@ -6436,11 +6436,28 @@ number.19.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'2
+    b'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'2
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        b'8
+
+    }
+
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
@@ -6451,8 +6468,6 @@ number.19.Violin.Music = {
         %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
         b'16
         [
 
@@ -6620,11 +6635,26 @@ number.19.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'2
+    b'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'2
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Violin.Music measure 26]
       %! NOT_YET_PITCHED_COLORING
@@ -6924,11 +6954,26 @@ number.19.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    b'2
+    b'1 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'2
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Violin.Music measure 31]
       %! NOT_YET_PITCHED_COLORING
@@ -7101,7 +7146,18 @@ number.19.Violin.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+    \afterGrace
     b'1
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        b'8
+
+    }
+
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -7112,8 +7168,6 @@ number.19.Violin.Music = {
         %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
         b'16
         [
 
