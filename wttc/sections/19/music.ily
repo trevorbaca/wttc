@@ -4050,6 +4050,11 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 22]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 23]
     r2
 
       %! NOT_YET_PITCHED_COLORING
@@ -4076,14 +4081,14 @@ number.19.Oboe.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
-    % [Oboe.Music measure 23]
+    % [Oboe.Music measure 24]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Oboe.Music measure 24]
+    % [Oboe.Music measure 25]
     r2
 
       %! NOT_YET_PITCHED_COLORING
@@ -4110,16 +4115,12 @@ number.19.Oboe.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
-    % [Oboe.Music measure 25]
+    % [Oboe.Music measure 26]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 27]
     R1 * 6/4
@@ -4132,6 +4133,11 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 29]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 30]
     r2
 
       %! NOT_YET_PITCHED_COLORING
@@ -4158,17 +4164,17 @@ number.19.Oboe.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
-    % [Oboe.Music measure 30]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-
     % [Oboe.Music measure 31]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'1.
 
     % [Oboe.Music measure 32]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'1.
+
+    % [Oboe.Music measure 33]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'8
@@ -4181,12 +4187,12 @@ number.19.Oboe.Music = {
 
     r4
 
-    % [Oboe.Music measure 33]
+    % [Oboe.Music measure 34]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Oboe.Music measure 34]
+    % [Oboe.Music measure 35]
     r2
 
       %! NOT_YET_PITCHED_COLORING
@@ -4213,16 +4219,12 @@ number.19.Oboe.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
-    % [Oboe.Music measure 35]
+    % [Oboe.Music measure 36]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 37]
     R1 * 6/4
@@ -4245,13 +4247,14 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 41]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 42]
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Oboe.Music measure 43]
     R1 * 6/4
@@ -4264,6 +4267,11 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 45]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 46]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -4718,7 +4726,7 @@ number.19.Guitar.1.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4739,7 +4747,7 @@ number.19.Guitar.1.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4759,7 +4767,7 @@ number.19.Guitar.1.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4799,7 +4807,7 @@ number.19.Guitar.1.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4827,7 +4835,7 @@ number.19.Guitar.1.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5447,7 +5455,7 @@ number.19.Guitar.2.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5468,7 +5476,7 @@ number.19.Guitar.2.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5488,7 +5496,7 @@ number.19.Guitar.2.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5528,7 +5536,7 @@ number.19.Guitar.2.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5556,7 +5564,7 @@ number.19.Guitar.2.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'8
+    <b' b'>8
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
