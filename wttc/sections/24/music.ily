@@ -4720,11 +4720,18 @@ number.24.Violin.Music = {
     b'1.
     - \tweak direction #up
     \repeatTie
+    - \tweak stencil ##f
+    ~
 
     % [Violin.Music measure 30]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'8
+    \repeatTie
+
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4
+    r8
 
     r8
 
@@ -4820,9 +4827,18 @@ number.24.Violin.Music = {
     % [Violin.Music measure 37]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     b'1.
     - \tweak direction #up
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
       %! ANCHOR_NOTE
     % [Violin.Music anchor note]
@@ -5693,11 +5709,18 @@ number.24.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     d1.
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 30]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d8
+    \repeatTie
+
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r4
+    r8
 
     r8
 
@@ -5793,9 +5816,18 @@ number.24.Cello.Music = {
     % [Cello.Music measure 37]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d1.
     - \tweak direction #up
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
       %! ANCHOR_NOTE
     % [Cello.Music anchor note]

@@ -506,7 +506,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(30, 37),
-        [-6, 6 + 24 + 24 + 2, -16, "+"],
+        [rt(2), -4, 6 + 24 + 24 + 2, -16, t(78), AG([2], 24)],
         material=99,
     )
     baca.section.append_anchor_note(voice)
@@ -610,7 +610,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(29, 37),
-        [24, -6, 6 + 24 + 24 + 2, -16, "+"],
+        [26, -4, 6 + 24 + 24 + 2, -16, t(78), AG([2], 24)],
         material=99,
     )
     baca.section.append_anchor_note(voice)
@@ -640,7 +640,7 @@ def M1_2(pleaves, fundamentals, hairpin):
     fundamentals = fundamentals.split()
     for fundamental in fundamentals:
         harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
-        dyad = f"<{fundamental} {harmonic}>"
+        dyad = f'<{fundamental} {harmonic.get_name(locale="us")}>'
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, exact=True)
     for pleaf in pleaves:
@@ -778,9 +778,12 @@ def vn(m):
     M1_1(library.pleaves(m[10], 1)[:2], "<E4 A4>", "D#5", "o<f")
     M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
+    M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
     M1_1(library.pleaves(m[16], 1)[:2], "<F#4 B4>", "G5", "o<f")
     M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
+    M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
     M1_1(library.pleaves(m[22], 1), "<G4 C4>", "C6", "pp<| f|>pp", [1, 2])
+    M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
     """
 
 
