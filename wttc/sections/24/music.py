@@ -784,6 +784,9 @@ def vn(m):
     M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
     M1_1(library.pleaves(m[22], 1), "<G4 C4>", "C6", "pp<| f|>pp", [1, 2])
     M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
+    N1c(library.run(m[27, 30], 99, 0), "Gb5 Eb5", 2, "p>o!")
+    N1c(library.run(m[30, 33], 99, 1), "Gb5 D5", 2, "mp>o!")
+    N1c(library.run(m[33, 37], 99, 1), "Gb5 Db5", 2, "mf>o!")
     """
 
 
