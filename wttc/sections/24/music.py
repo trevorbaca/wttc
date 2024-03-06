@@ -734,6 +734,11 @@ def N1c(run, glissando, string_number, hairpin):
 
 def fl(m):
     pass
+    """
+    M4(library.pleaves(m[7, 10], 4), "D6", "p<|f")
+    M4(library.pleaves(m[17, 20], 4), "D#6", "f|>p")
+    M4(library.pleaves(m[23, 26], 4), "D#6", "f|>p")
+    """
 
 
 def ob(m):
