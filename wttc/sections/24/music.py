@@ -64,45 +64,25 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-
-    @baca.call
-    def block():
-        rhythm.mmrests(1, 5)
-        counts = [3, 3, 3, 5, 5]
-        counts = 4 * counts
-        counts = counts[:-2]
-        rhythm(
-            meters(6, 10),
-            [-12, -12, -4, -1] + counts + ["-"],
-            material=4,
-        )
-        rhythm.mmrests(11, 15)
-
-    @baca.call
-    def block():
-        counts = [3, 3, 3, 5, 5]
-        counts = abjad.sequence.reverse(counts)
-        counts = 4 * counts
-        counts = counts[:-3]
-        rhythm(
-            meters(16, 20),
-            [-12, -12, -4, -1] + counts + ["-"],
-            material=4,
-        )
-        rhythm.mmrests(21)
-
-    @baca.call
-    def block():
-        counts = [3, 3, 3, 5, 5]
-        counts = abjad.sequence.reverse(counts)
-        counts = 4 * counts
-        counts = counts[:-3]
-        rhythm(
-            meters(22, 26),
-            [-12, -12, -4, -1] + counts + ["-"],
-            material=4,
-        )
-        rhythm.mmrests(27, 37)
+    rhythm.mmrests(1, 6)
+    rhythm(
+        meters(7, 10),
+        [-5, "+", -12],
+        material=4,
+    )
+    rhythm.mmrests(11, 16)
+    rhythm(
+        meters(17, 20),
+        [-5, "+", -12],
+        material=4,
+    )
+    rhythm.mmrests(21, 22)
+    rhythm(
+        meters(23, 26),
+        [-5, "+", -12],
+        material=4,
+    )
+    rhythm.mmrests(27, 37)
 
 
 def OB(voice, meters):
