@@ -4447,25 +4447,63 @@ number.24.Violin.Music = {
     r4
 
     % [Violin.Music measure 13]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    r1
 
-    % [Violin.Music measure 14]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve.. }
+    \times 1/1
+    {
 
-    % [Violin.Music measure 15]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #left
+        r16 * 9408/3072
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"9408" #"3072"
+        [
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
+        b'16 * 19712/3072
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"19712" #"3072"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'16 * 26880/3072
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"26880" #"3072"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'16 * 33152/3072
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"33152" #"3072"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'16 * 38976/3072
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"38976" #"3072"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'16 * 43904/3072
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"43904" #"3072"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
 
     % [Violin.Music measure 16]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     b'2
     - \tweak stencil ##f
     ~
@@ -4528,22 +4566,82 @@ number.24.Violin.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Violin.Music measure 20]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
+    \times 1/1
+    {
 
-    % [Violin.Music measure 21]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+        % [Violin.Music measure 20]
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #left
+        r16 * 2688/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"2688" #"1024"
+        [
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
+        b'16 * 5632/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"5632" #"1024"
+
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+        r16 * 7680/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"7680" #"1024"
+
+        r16 * 9472/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"9472" #"1024"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
+        b'16 * 11136/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"11136" #"1024"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'16 * 12544/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"12544" #"1024"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
 
     % [Violin.Music measure 22]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'1.
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    b'1. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    \afterGrace
+    b'2.
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+    }
+
 
     % [Violin.Music measure 23]
       %! STAFF_HIGHLIGHT
@@ -4556,40 +4654,72 @@ number.24.Violin.Music = {
     % [Violin.Music measure 25]
     r1.
 
-    % [Violin.Music measure 26]
-    r1.
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
+    \times 1/1
+    {
 
-    % [Violin.Music measure 27]
-    r1
+        % [Violin.Music measure 26]
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        \override Staff.Stem.stemlet-length = 0.75
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
+        \once \override Beam.grow-direction = #left
+        b'16 * 2688/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"2688" #"1024"
+        [
 
-    r8
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+        r16 * 5632/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"5632" #"1024"
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
-    b'8
-    - \tweak stencil ##f
-    ~
+        r16 * 7680/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"7680" #"1024"
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+        r16 * 9472/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"9472" #"1024"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        \staffHighlight burlywood
+        b'16 * 11136/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"11136" #"1024"
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'16 * 12544/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"12544" #"1024"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
 
     % [Violin.Music measure 28]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
     b'1.
-    - \tweak direction #up
-    \repeatTie
+    - \tweak stencil ##f
+    ~
 
     % [Violin.Music measure 29]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'1.
+    - \tweak direction #up
+    \repeatTie
 
     % [Violin.Music measure 30]
       %! STAFF_HIGHLIGHT
@@ -5340,63 +5470,25 @@ number.24.Cello.Music = {
     }
 
     % [Cello.Music measure 13]
-    r1
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve.. }
-    \times 1/1
-    {
+    % [Cello.Music measure 14]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-        \override Staff.Stem.stemlet-length = 0.75
-        \once \override Beam.grow-direction = #left
-        r16 * 9408/3072
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"9408" #"3072"
-        [
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
-        d16 * 19712/3072
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"19712" #"3072"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16 * 26880/3072
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"26880" #"3072"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16 * 33152/3072
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"33152" #"3072"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16 * 38976/3072
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"38976" #"3072"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16 * 43904/3072
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"43904" #"3072"
-        ]
-        \revert Staff.Stem.stemlet-length
-
-    }
-    \revert TupletNumber.text
+    % [Cello.Music measure 15]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 16]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     d2.
     - \tweak stencil ##f
     ~
@@ -5515,62 +5607,21 @@ number.24.Cello.Music = {
 
     r2
 
-    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
-    \times 1/1
-    {
+    % [Cello.Music measure 20]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-        % [Cello.Music measure 20]
-        \override Staff.Stem.stemlet-length = 0.75
-        \once \override Beam.grow-direction = #left
-        r16 * 2688/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"2688" #"1024"
-        [
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
-        d16 * 5632/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"5632" #"1024"
-
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
-        r16 * 7680/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"7680" #"1024"
-
-        r16 * 9472/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"9472" #"1024"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
-        d16 * 11136/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"11136" #"1024"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16 * 12544/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"12544" #"1024"
-        ]
-        \revert Staff.Stem.stemlet-length
-
-    }
-    \revert TupletNumber.text
+    % [Cello.Music measure 21]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 22]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     d1.
 
     % [Cello.Music measure 23]
@@ -5606,67 +5657,37 @@ number.24.Cello.Music = {
     r2
 
     % [Cello.Music measure 25]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1.
 
-    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
-    \times 1/1
-    {
+    % [Cello.Music measure 26]
+    r1.
 
-        % [Cello.Music measure 26]
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        \override Staff.Stem.stemlet-length = 0.75
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
-        \once \override Beam.grow-direction = #left
-        d16 * 2688/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"2688" #"1024"
-        [
+    % [Cello.Music measure 27]
+    r1
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
-        r16 * 5632/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"5632" #"1024"
+    r8
 
-        r16 * 7680/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"7680" #"1024"
-
-        r16 * 9472/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"9472" #"1024"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
-        d16 * 11136/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"11136" #"1024"
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16 * 12544/1024
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"12544" #"1024"
-        ]
-        \revert Staff.Stem.stemlet-length
-
-    }
-    \revert TupletNumber.text
-
-    % [Cello.Music measure 28]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    d8
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Cello.Music measure 28]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
     d1.
+    - \tweak direction #up
+    \repeatTie
 
     % [Cello.Music measure 29]
       %! NOT_YET_PITCHED_COLORING

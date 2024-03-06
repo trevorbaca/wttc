@@ -464,31 +464,44 @@ def VN(voice, meters):
         material=1,
     )
     rhythm.make_one_beat_tuplets(
-        meters(11, 15),
+        meters(11, 12),
         [4, 1, -3, 5, 1, -6, 6, 1, "-"],
         extra_counts=[-1],
         material=1,
         overlap=[-6],
     )
     rhythm(
+        meters(13, 15),
+        [-16, R([-1] + 5 * [1], 56)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
         meters(16),
         [11, 3, 2, 2, 4, "-"],
         material=1,
     )
-    rhythm.mmrests(17, 21)
+    rhythm.mmrests(17, 19)
     rhythm(
-        meters(22, 26),
-        [24, "-"],
+        meters(20, 21),
+        [R([-1, 1, -1, -1, 1, 1], 48)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(22, 25),
+        [w(12, 24), AG([2], h(12)), "-"],
         material=1,
     )
     rhythm(
-        meters(27, 28),
-        [-18, "+"],
-        material=99,
+        meters(26, 27),
+        [R([1, -1, -1, -1, 1, 1], 48)],
+        do_not_beam_tuplets=True,
+        material=5,
     )
     rhythm(
-        meters(29),
-        [24],
+        meters(28, 29),
+        ["+"],
         material=99,
     )
     rhythm(
@@ -563,12 +576,7 @@ def VC(voice, meters):
         material=1,
         overlap=[-6],
     )
-    rhythm(
-        meters(13, 15),
-        [-16, R([-1] + 5 * [1], 56)],
-        do_not_beam_tuplets=True,
-        material=5,
-    )
+    rhythm.mmrests(13, 15)
     rhythm(
         meters(16),
         [14, 2, 2, 3, 3],
@@ -579,12 +587,7 @@ def VC(voice, meters):
         [-11, 16, 12, 8, 4, "-"],
         material=3,
     )
-    rhythm(
-        meters(20, 21),
-        [R([-1, 1, -1, -1, 1, 1], 48)],
-        do_not_beam_tuplets=True,
-        material=5,
-    )
+    rhythm.mmrests(20, 21)
     rhythm(
         meters(22),
         [24],
@@ -595,12 +598,10 @@ def VC(voice, meters):
         [-11, 16, "-"],
         material=3,
     )
-    rhythm.mmrests(25)
     rhythm(
-        meters(26, 27),
-        [R([1, -1, -1, -1, 1, 1], 48)],
-        do_not_beam_tuplets=True,
-        material=5,
+        meters(25, 27),
+        ["-", t(6)],
+        material=99,
     )
     rhythm(
         meters(28),
@@ -615,7 +616,7 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def M1_1(pleaves, dyad, stop_pitch, hairpin):
+def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     baca.pitch(pleaves[0], dyad)
     baca.pitch(pleaves[-1], stop_pitch)
     baca.glissando(pleaves)
@@ -624,14 +625,19 @@ def M1_1(pleaves, dyad, stop_pitch, hairpin):
         r"\wttc-non-stringere =|",
         staff_padding=3,
     )
+    if hairpin_lparts is None:
+        parts = pleaves
+    else:
+        parts = baca.select.lparts(pleaves, hairpin_lparts)
     baca.hairpin(
-        pleaves,
+        parts,
         hairpin,
     )
 
 
 def M1_2(pleaves, fundamentals, hairpin):
     dyads = []
+    fundamentals = fundamentals.split()
     for fundamental in fundamentals:
         harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
         dyad = f"<{fundamental} {harmonic}>"
@@ -772,6 +778,9 @@ def vn(m):
     M1_1(library.pleaves(m[10], 1)[:2], "<E4 A4>", "D#5", "o<f")
     M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
+    M1_1(library.pleaves(m[16], 1)[:2], "<F#4 B4>", "G5", "o<f")
+    M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
+    M1_1(library.pleaves(m[22], 1), "<G4 C4>", "C6", "pp<| f|>pp", [1, 2])
     """
 
 
