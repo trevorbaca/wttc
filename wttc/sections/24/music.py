@@ -590,7 +590,7 @@ def VC(voice, meters):
     rhythm.mmrests(20, 21)
     rhythm(
         meters(22),
-        [24],
+        [w(12, 24), AG([2], h(12))],
         material=1,
     )
     rhythm(
@@ -771,7 +771,7 @@ def gt2(m):
 def vn(m):
     pass
     """
-    M1_3(library.pleaves(m[1, 2], 1), ["D5 G#4", "Db5 G4", "B4 F4"], "mf mp mf")
+    M1_3(library.pleaves(m[1, 2], 1), ["D5 G#4", "Db5 G4", "Bb4 E4"], "mf mp mf")
     M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "mf mp mf")
     M1_2(library.pleaves(m[5, 6], 1)[:4], "D4 E4 F4", "mf<f")
     M1_3(library.pleaves(m[5, 7], 1)[4:], ["C5 B4", "B4 A#4", "Bb4 A4"], "mf mf mp")
@@ -792,6 +792,24 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    M1_3(library.pleaves(m[1, 2], 1), ["C5 F#4", "B4 F4"], "mf mp")
+    M3b(library.pleaves(m[3], 3), "A2 F#4", 3, "f")
+    M1_3(library.run(m[3, 4], 1, 0), ["B4 G#4"], "mf")
+    M3b(library.pleaves(m[4], 3), "C#3 G4", 3, "f")
+    M1_3(library.run(m[4], 1, 1), ["Bb4 G4"], "mp")
+    M3b(library.pleaves(m[5], 3), "F#3 A3 Bb2", 3, "mf f")
+    M1_2(library.run(m[5, 6], 1, 0), "C#4 D#4 E4", "mf<f")
+    M1_3(library.pleaves(m[6], 1)[3:], ["Bb4 A4", "A4 G#4"], "mf mp")
+    M3b(library.pleaves(m[7, 8], 3), "A3 B3 G#4 D4 G#4", 3, "f mf mp p")
+    M1_1(library.pleaves(m[10], 1)[:3], "<D#4 G#4>", "C5", "o<f")
+    M1_2(library.pleaves(m[10, 11], 1)[3:7], "C#4 D#4 E4", "mf<f")
+    M1_3(library.pleaves(m[11, 12], 1)[3:], ["G4 F#4", "Gb4 Eb4", "F4 B3"], "mf mp p")
+    M1_1(library.pleaves(m[16], 1)[:2], "<E4 A4>", "F5", "o<f")
+    M1_2(library.pleaves(m[16], 1)[2:], "D#4 E4 F4 F#4", "mf<f")
+    M3b(library.pleaves(m[17, 19], 3), "G#4 D4 E4 F#4 G#4", 3, "f mf mp p")
+    M1_1(library.pleaves(m[22], 1), "<F4 Bb4>", "C6", "pp<| f|>pp", [1, 2])
+    """
 
 
 @baca.build.timed("make_score")
