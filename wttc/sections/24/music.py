@@ -435,7 +435,7 @@ def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.make_one_beat_tuplets(
         meters(1, 2),
-        [6, 1, 5, 1, "-"],
+        [6, 1, 5, 1, -2, -1, 2, 1, "-"],
         extra_counts=[-1],
         material=1,
     )
@@ -764,6 +764,15 @@ def gt2(m):
 
 def vn(m):
     pass
+    """
+    M1_3(library.pleaves(m[1, 2], 1), ["D5 G#4", "Db5 G4", "B4 F4"], "mf mp mf")
+    M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "mf mp mf")
+    M1_2(library.pleaves(m[5, 6], 1)[:4], "D4 E4 F4", "mf<f")
+    M1_3(library.pleaves(m[5, 7], 1)[4:], ["C5 B4", "B4 A#4", "Bb4 A4"], "mf mf mp")
+    M1_1(library.pleaves(m[10], 1)[:2], "<E4 A4>", "D#5", "o<f")
+    M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
+    M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
+    """
 
 
 def vc(m):

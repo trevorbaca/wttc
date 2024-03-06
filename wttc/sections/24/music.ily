@@ -4026,12 +4026,38 @@ number.24.Violin.Music = {
 
     }
 
-    r4
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
 
-    % [Violin.Music measure 2]
-    R1 * 3/2
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+        r8
+
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+          %! STAFF_HIGHLIGHT
+        \staffHighlight lightpink
+        b'4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Violin.Music measure 2]
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'8
+
+          %! STAFF_HIGHLIGHT
+        \stopStaffHighlight
+        r4
+
+    }
+
+    r1
+
+    r4
 
     % [Violin.Music measure 3]
     r1
