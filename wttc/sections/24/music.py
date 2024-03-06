@@ -809,6 +809,10 @@ def vc(m):
     M1_2(library.pleaves(m[16], 1)[2:], "D#4 E4 F4 F#4", "mf<f")
     M3b(library.pleaves(m[17, 19], 3), "G#4 D4 E4 F#4 G#4", 3, "f mf mp p")
     M1_1(library.pleaves(m[22], 1), "<F4 Bb4>", "C6", "pp<| f|>pp", [1, 2])
+    M3b(library.pleaves(m[23, 24], 3), "E3 C#5", 3, "mf")
+    N1c(library.run(m[27, 30], 99, 0), "D#5 F5", 1, "p>o!")
+    N1c(library.run(m[30, 33], 99, 1), "D#5 F#5", 1, "mp>o!")
+    N1c(library.run(m[33, 37], 99, 1), "D#5 G5", 1, "mf>o!")
     """
 
 
