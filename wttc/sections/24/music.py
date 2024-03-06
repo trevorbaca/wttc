@@ -747,6 +747,13 @@ def ob(m):
 
 def gt1(m):
     pass
+    """
+    M2(library.pleaves(m[1], 2), "Bb3 A3", "mp")
+    M3a(library.pleaves(m[1, 4], 3), "G2", 'p<"f"')
+    M2(library.pleaves(m[4], 2), "Bb3 A3", "mf")
+    M3a(library.pleaves(m[5, 6], 3), "G#2", 'mp<"f"')
+    M2(library.pleaves(m[6, 7], 2), "Bb3 A3 G3 F3", "f")
+    """
 
 
 def gt2(m):
