@@ -408,7 +408,7 @@ def O1a(pleaves, pitches, hairpin):
     )
 
 
-def O1b(pleaves, pitches, dynamic, string_number, hairpin):
+def O1b(pleaves, pitches, string_number, hairpin):
     baca.pitches(pleaves, pitches)
     nongraces = abjad.select.notes(pleaves, grace=False)
     baca.hairpin(
@@ -427,6 +427,25 @@ def O1b(pleaves, pitches, dynamic, string_number, hairpin):
         string_number,
         staff_padding=5.5,
     )
+
+
+Q1a = """
+    D4 Bb4 F#5 D6
+    D6 F#5 Bb4 D4 Eb4
+    B4 G5 Eb6 Eb6
+    G5 B4 Eb4 F#4
+    D5 Bb5 F#6 F#6 Bb5 D5
+    F#4 E4
+    C5 Ab5
+    E6 E6 Ab5 C5 E4
+    F4 C#5
+    A5 F6 F6 A5
+    C#5 F4 G4 Eb5 B5 G6
+    G6 B5 Eb4 G4
+    Ab4 E5 C6 Ab6 Ab6
+    C6 E5
+    Ab4 F4 C#5 C6
+    """
 
 
 def fl(m):
@@ -492,6 +511,21 @@ def gt2(m):
 
 def vn(m):
     pass
+    """
+    runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
+    N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
+    N3b(library.pleaves(m[8], 3), Q1a, None, "o<mp")
+    N3b(library.pleaves(m[11], 3), Q1a + 1, [24, 10], "o< mf")
+    N3b(library.pleaves(m[11], 3), Q1a + 4, [32, 8, 26], "o< f f>o!")
+    O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", 4, "sfmp>o!")
+    O1b(library.pleaves(m[17], 99), "G E F# G F# E Eb D E D Eb F# F", 4, "sfp>o!")
+    O1b(
+        library.pleaves(m[19, 20], 99),
+        "E F# G F# E Eb D E D Eb F# G Eb G F# D E F# E D G Eb D Eb F",
+        4,
+        "sfpp>o!",
+    )
+    """
 
 
 def vc(m):
