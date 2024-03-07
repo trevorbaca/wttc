@@ -255,7 +255,7 @@ def VC(voice, meters):
     rhythm.mmrests(4)
     rhythm(
         meters(5, 7),
-        [-9, 7, 9, 7, 9, 7],
+        [-9, AG([2], 7), 9, AG([2], 7), 9, AG([2], 7)],
         material=2,
     )
     rhythm(
@@ -266,7 +266,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8, 10),
-        [7, 9, 7, 9, 7],
+        [AG([2], 7), 9, AG([2], 7), 9, AG([2], 7)],
         material=2,
         overlap=[-9],
     )
@@ -278,7 +278,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(11, 12),
-        [7, 9, 7, 9, 7],
+        [AG([2], 7), 9, AG([2], 7), 9, 7],
         overlap=[-17],
         material=2,
     )
@@ -530,6 +530,12 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
+    N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 3)
+    # N2b1(pleaves, start, stop)
+    # N2b2(pleaves, start, stop)
+    """
 
 
 @baca.build.timed("make_score")

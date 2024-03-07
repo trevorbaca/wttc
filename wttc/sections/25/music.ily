@@ -3655,8 +3655,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
@@ -3680,8 +3689,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
@@ -3705,8 +3723,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 8]
       %! NOT_YET_PITCHED_COLORING
@@ -3803,8 +3830,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
@@ -3828,8 +3864,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 10]
       %! NOT_YET_PITCHED_COLORING
@@ -3853,8 +3898,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
@@ -4019,8 +4073,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
@@ -4044,8 +4107,17 @@ number.25.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+    \afterGrace
     d4
     \repeatTie
+    {
+
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        d8
+
+    }
+
 
     % [Cello.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
