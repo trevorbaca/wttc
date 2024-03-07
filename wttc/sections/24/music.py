@@ -753,11 +753,38 @@ def gt1(m):
     M2(library.pleaves(m[4], 2), "Bb3 A3", "mf")
     M3a(library.pleaves(m[5, 6], 3), "G#2", 'mp<"f"')
     M2(library.pleaves(m[6, 7], 2), "Bb3 A3 G3 F3", "f")
+    M2(library.pleaves(m[12, 13], 2), "Bb3 A3 G3 F3 E3 Eb3 Db3 C3 B2 Bb2", "f>p")
+    M5a(library.pleaves(m[14, 15], 5), "A2 Ab2 G2 Gb2", "0010", "-")
+    M2(library.pleaves(m[16, 18], 2), "Db3 C3 B2 Bb2 A2 Ab2", "f>p")
+    M5a(library.pleaves(m[20, 21], 5), "G2 Gb2", "01", "(p) -")
+    M2(library.pleaves(m[22, 23], 2), "Db3 C3 B2 Bb2 A2", "mf>p")
+    M5a(library.pleaves(m[26, 28], 5), "Ab2 G2 Gb2 F2", "0010", "(p) - - -")
+    M2(library.pleaves(m[29, 30], 2), "Db3 C3 B2", "mp")
+    M3a(library.pleaves(m[30, 33], 3), "Gb2", "p")
+    M2(library.pleaves(m[33], 2), "Db3 C3", "mp")
+    M3a(library.pleaves(m[33, 37], 3), "G2", "p")
     """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    M2(library.pleaves(m[1], 2), "D3 D#3", "mp")
+    M3a(library.pleaves(m[1, 4], 3), "F#2", 'p<"f"')
+    M2(library.pleaves(m[4, 5], 2), "D3 D#3 E3", "mf")
+    M3a(library.pleaves(m[5, 6], 3), "F#2", 'mp<"f"')
+    M2(library.pleaves(m[6, 7], 2), "D3 D#3 E3 F#3 G#3", "f")
+    M2(library.pleaves(m[12, 14], 2), "D3 D#3 E3 F#3 G#3 A3 AE3 B3 G#4 D4 D#4", "f>p")
+    M5a(library.pleaves(m[14, 15], 5), "E4 F4 F#4 G4", "1101", "-")
+    M2(library.pleaves(m[16, 18], 2), "A#3 B3 C#4 D4 D#4 E4", "f>p")
+    M5a(library.pleaves(m[20, 21], 5), "F4 F#4 G4", "101", "(p) -")
+    M2(library.pleaves(m[22, 23], 2), "G#4 D4 D#4 E4 F4", "mf>p")
+    M5a(library.pleaves(m[26, 28], 5), "F#4 G4 G#4", "101", "(p) - - -")
+    M2(library.pleaves(m[29, 30], 2), "C#4 D4 E4 F4", "mp")
+    M3a(library.pleaves(m[30, 33], 3), "F2", "p")
+    M2(library.pleaves(m[33], 2), "C#4 D4 E4", "mp")
+    M3a(library.pleaves(m[33, 37], 3), "F2", "p")
+    """
 
 
 def vn(m):
