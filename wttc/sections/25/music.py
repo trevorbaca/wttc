@@ -278,7 +278,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(11, 12),
-        [AG([2], 7), 9, AG([2], 7), 9, 7],
+        [AG([2], 7), 9, AG([2], 7)],
         overlap=[-17],
         material=2,
     )
@@ -351,21 +351,24 @@ def N2a(pleaves, pitches, hairpin_lparts, hairpin):
     )
 
 
-def N2b1(pleaves, start, stop):
-    baca.pitch(pleaves[0], start)
-    baca.pitch(pleaves[-1], stop)
-    baca.glissando(pleaves)
+def N2b1(pleaves, glissando):
+    baca.glissando(pleaves, glissando)
     baca.rspanners.xfb(
         pleaves,
         staff_padding=3,
     )
 
 
-def N2b2(pleaves, start, stop):
-    baca.pitch(pleaves[0], start)
-    baca.pitch(pleaves[-1], stop)
+def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None):
+    baca.pitch(pleaves[0], start_dyad)
+    baca.pitch(pleaves[-1], stop_dyad)
     baca.glissando(pleaves)
     baca.override.note_head_style_harmonic(pleaves)
+    if hairpin is not None:
+        baca.hairpin(
+            pleaves,
+            hairpin,
+        )
     baca.mspanners.text(
         pleaves,
         "II / III mod. =|",
@@ -448,6 +451,24 @@ Q1a = """
     """
 
 
+Q2a = """
+    Eb4 C5 A5 F#6 F#6 A5
+    C5 Eb4 Eb4 C5 A5 F#6
+    F#6 A5 C5 Eb4
+    Ab6 B5 D5 F4
+    F4 D5 B5 Ab6
+    F4 D5 B5 Ab6 Ab6
+    B5 D5 F4 F4 D5 B5
+    Ab6 Ab6
+    B5 D5 F4 Bb6
+    C#5 E5 G4 G4
+    E5 C#6 Bb6 F#4
+    Eb5 C6 A6 A6 C6
+    Eb5 F#4 F#4 Eb5 C6 A6
+    A6 C6
+    """
+
+
 def fl(m):
     pass
     """
@@ -516,7 +537,7 @@ def vn(m):
     N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
     N3b(library.pleaves(m[8], 3), Q1a, None, "o<mp")
     N3b(library.pleaves(m[11], 3), Q1a + 1, [24, 10], "o< mf")
-    N3b(library.pleaves(m[11], 3), Q1a + 4, [32, 8, 26], "o< f f>o!")
+    N3b(library.pleaves(m[13, 14], 3), Q1a + 4, [32, 8, 26], "o< f f>o!")
     O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", 4, "sfmp>o!")
     O1b(library.pleaves(m[17], 99), "G E F# G F# E Eb D E D Eb F# F", 4, "sfp>o!")
     O1b(
@@ -533,8 +554,25 @@ def vc(m):
     """
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 3)
-    # N2b1(pleaves, start, stop)
-    # N2b2(pleaves, start, stop)
+    N2b1(library.pleaves(m[5], 2), "C2 E4")
+    N2b2(library.pleaves(m[6], 2)[:2], "<B4 D#4>", "<G#2 B#2>")
+    N2b1(library.pleaves(m[6], 2)[2:], "C#2 F4")
+    N2b2(library.pleaves(m[7], 2)[:2], "<C5 E5>", "<A2 C#3>")
+    N2b1(library.pleaves(m[7], 2)[2:], "D2 F#4")
+    N3b(library.pleaves(m[8], 3), Q2a, None, "o<mp")
+    N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
+    N2b2(library.pleaves(m[9], 2)[:2], "<C5 E5>", "<A2 C#3>")
+    N2b1(library.pleaves(m[9], 2)[2:], "D2 F#4")
+    N2b2(library.pleaves(m[10], 2)[:2], "<C#5 E#5>", "<Bb2 D3>")
+    N2b1(library.pleaves(m[10], 2)[2:], "Eb2 G4")
+    N3b(library.pleaves(m[11], 3), Q2a + 2, [24, 10], "o< mf")
+    N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
+    N2b2(library.pleaves(m[12], 2)[:2], "<D5 F#5>", "<B2 D#3>")
+    N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
+    N3b(library.pleaves(m[13, 14], 3), Q2a + 4, [32, 8, 26], "o< f f>o!")
+    N2b2(library.pleaves(m[15], 2), "<Eb5 G5>", "<C5 E5>", "sfp>o!")
+    N2b2(library.pleaves(m[16, 17], 2), "<E5 G#5>", "<C#5 E#5>", "o<|mp")
+    N2b2(library.pleaves(m[18, 19], 2), "<A5 F5>", "<D5 F#5>", "o<|p")
     """
 
 
