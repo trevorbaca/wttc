@@ -702,7 +702,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
     for run, peak in zip(runs, peaks, strict=True):
         for leaf in run:
             if isinstance(leaf, abjad.Chord):
-                baca.pitch(leaf, f"<{pitch_1} {pitch_2}>")
+                baca.pitch(leaf, f"{pitch_1}:{pitch_2}")
                 abjad.tweak(leaf.note_heads[1], r"\tweak style #'harmonic")
             else:
                 baca.pitch(leaf, pitch_1)
