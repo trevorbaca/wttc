@@ -965,7 +965,7 @@ def G5b(pleaves, glissando):
 
 
 def H1a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -974,7 +974,7 @@ def H1a(pleaves, pitches, dynamics):
 
 
 def H1b(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):

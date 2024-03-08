@@ -773,7 +773,7 @@ def J2a2(
     fluttertongue=False,
     rleak_hairpin=False,
 ):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     if fluttertongue is True:
         baca.fluttertongue(pleaves)
     baca.hairpin(
@@ -784,7 +784,7 @@ def J2a2(
 
 
 def J3a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -794,7 +794,7 @@ def J3a(pleaves, pitches, dynamics):
 
 
 def J3b(pleaves, pitches, dynamics, falls):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
@@ -807,7 +807,7 @@ def J3b(pleaves, pitches, dynamics, falls):
 
 
 def J3c(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     baca.override.note_head_style_harmonic(pleaves)
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -831,7 +831,7 @@ def J4a(pleaves, dyad, dynamic):
 
 
 def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     baca.glissando(pleaves)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),

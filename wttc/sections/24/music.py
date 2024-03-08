@@ -622,7 +622,7 @@ def M1_2(pleaves, fundamentals, hairpin):
         harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
         dyad = f'<{fundamental} {harmonic.get_name(locale="us")}>'
         dyads.append(dyad)
-    baca.pitches(pleaves, dyads, exact=True)
+    baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
         abjad.tweak(pleaf.note_heads[1], r"\tweak style #'harmonic")
     for phead in baca.select.pheads(pleaves):
@@ -645,7 +645,7 @@ def M1_3(pleaves, glissandi, dynamics):
 
 
 def M2(pleaves, pitches, dynamic):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     if ">" in dynamic:
         baca.hairpin(
             pleaves,
@@ -694,7 +694,7 @@ def M4(pleaves, pitch, hairpin):
 
 
 def M5a(pleaves, pitches, falls, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
@@ -706,7 +706,7 @@ def M5a(pleaves, pitches, falls, dynamics):
 
 
 def M5b(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):

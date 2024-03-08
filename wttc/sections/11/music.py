@@ -448,7 +448,7 @@ def F1c(pleaves, chord, alteration, peaks):
 
 
 def F2a1(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -558,7 +558,7 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
 
 
 def F3a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     if ">" in dynamics:
         baca.hairpin(
             pleaves,

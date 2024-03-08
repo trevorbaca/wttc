@@ -712,7 +712,7 @@ def VC(voice, meters):
 
 
 def K1a(pleaves, pitches, dynamic):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     baca.dynamic(pleaves[0], dynamic)
     baca.hairpin(
         pleaves[-1:],
@@ -752,7 +752,7 @@ def K1b2(pleaves, pitch, hairpin):
 
 
 def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     baca.glissando(pleaves)
     baca.rspanners.damp(
         pleaves,

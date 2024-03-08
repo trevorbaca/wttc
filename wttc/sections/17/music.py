@@ -277,7 +277,7 @@ def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
 
 
 def I3a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -303,7 +303,7 @@ def I3b(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
 
 
 def J1a(pleaves, pitches, dynamic):
-    baca.pitches(pleaves, pitches, exact=True)
+    baca.pitches(pleaves, pitches, strict=True)
     baca.hairpin(
         pleaves,
         f"{dynamic}>o!",
