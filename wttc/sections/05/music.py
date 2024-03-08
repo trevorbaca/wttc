@@ -816,7 +816,8 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, chord_pitch_string)
     abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
-    baca.pitch(hidden_note, chord.note_heads[0].written_pitch)
+    name = chord.note_heads[0].written_pitch.get_name(locale="us")
+    baca.pitch(hidden_note, name)
     baca.rspanners.trill(
         pleaves,
         alteration=trill_pitch_string,
