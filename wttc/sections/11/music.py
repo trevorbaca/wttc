@@ -574,7 +574,7 @@ def F3b1(pleaves, fundamentals, dynamics):
     for pleaf, fundamental in zip(pleaves, fundamentals):
         pitch = abjad.NamedPitch(fundamental)
         fourth = pitch + abjad.NamedInterval("P4")
-        string = f'<{pitch.get_name(locale="us")} {fourth.get_name(locale="us")}>'
+        string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
         baca.pitch(pleaf, string)
         abjad.tweak(pleaf.note_heads[1], r"\tweak style #'harmonic")
     if ">" in dynamics:
@@ -638,28 +638,28 @@ def ob(m):
 
 
 def gt1(m):
-    F1b(library.pleaves(m[4, 6], 1), "<G3 B3>", "mp - -")
+    F1b(library.pleaves(m[4, 6], 1), "G3:B3", "mp - -")
     F3a(library.pleaves(m[8, 9], 3), "C#4 D4 D#4 E4", "p")
-    F1b(library.pleaves(m[10], 1), "<G3 B3>", "mp")
+    F1b(library.pleaves(m[10], 1), "G3:B3", "mp")
     F3a(library.pleaves(m[11, 12], 3), "D4 D#4 E4 F4", "p")
-    F1b(library.pleaves(m[14], 1), "<G3 B3>", "mp")
+    F1b(library.pleaves(m[14], 1), "G3:B3", "mp")
     F3a(library.pleaves(m[14, 17], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
-    F1b(library.pleaves(m[20], 1), "<G3 B3>", "mp")
+    F1b(library.pleaves(m[20], 1), "G3:B3", "mp")
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    F1b(library.pleaves(m[4, 6], 1), "<F3 A3>", "mp - -")
+    F1b(library.pleaves(m[4, 6], 1), "F3:A3", "mp - -")
     F3a(library.pleaves(m[8, 9], 3), "C4 C#4 D4 D#4", "p")
-    F1b(library.pleaves(m[10], 1), "<F3 A3>", "mp")
+    F1b(library.pleaves(m[10], 1), "F3:A3", "mp")
     F3a(library.pleaves(m[11, 12], 3), "C#4 D4 D#4 E4", "p")
-    F1b(library.pleaves(m[14], 1), "<F3 A3>", "mp")
+    F1b(library.pleaves(m[14], 1), "F3:A3", "mp")
     F3a(library.pleaves(m[14, 16], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
-    F1b(library.pleaves(m[20], 1), "<F3 A3>", "mp")
+    F1b(library.pleaves(m[20], 1), "F3:A3", "mp")
 
 
 def vn(m):
-    F1c(library.pleaves(m[1, 4], 1), "<D5 F#5>", "G5", 'mp mf "f"')
+    F1c(library.pleaves(m[1, 4], 1), "D5:F#5", "G5", 'mp mf "f"')
     F3b1(library.pleaves(m[8, 9], 3), "D#5 E5 F5", "mp")
     F3b1(library.pleaves(m[11, 12], 3), "D#5 E5 F5 F#5", "p")
     F3b1(library.pleaves(m[14], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
@@ -672,7 +672,7 @@ def vn(m):
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     baca.clef(m[1][0], "treble")
-    F1c(library.pleaves(m[1, 4], 1), "<D4 G4>", "A4", 'mp mf "f"')
+    F1c(library.pleaves(m[1, 4], 1), "D4:G4", "A4", 'mp mf "f"')
     baca.clef(m[7][0], "bass")
     F2b1(library.pleaves(m[7, 8], 2), "Eb2", "F2", 6 * [1], "mf mf mf", [])
     F2b1(

@@ -851,7 +851,7 @@ def vc(m):
         staff_padding=4,
         string_numbers=[4, 1, 4],
     )
-    E3b(library.pleaves(m[3, 7], 3), "<A#3 D#4>", "E#4")
+    E3b(library.pleaves(m[3, 7], 3), "A#3:D#4", "E#4")
     baca.hairpin(
         library.pleaves(m[3], 3),
         "f>p",
@@ -910,7 +910,7 @@ def vc(m):
         string_numbers=[4],
     )
     F1c(library.pleaves(m[20, 22], 99), "C#4", "E#4", "F#4", "mp mf f")
-    E3b(library.pleaves(m[19, 22], 3), "<A#3 D#4>", "E#4", dynamic="mp", lone=True)
+    E3b(library.pleaves(m[19, 22], 3), "A#3:D#4", "E#4", dynamic="mp", lone=True)
 
 
 def align_spanners(cache):

@@ -1127,13 +1127,13 @@ def gt2(m):
 def vn(m):
     G5b(
         library.pleaves(m[13, 16], 5),
-        "Ab4:3 F4:2 A4:2 E4:2 Gb4:3 Eb4:3 F4:2 D4:3 E4:2 Db4:1",
+        "Ab4/3 F4/2 A4/2 E4/2 Gb4/3 Eb4/3 F4/2 D4/3 E4/2 Db4/1",
     )
     G5b(
         library.pleaves(m[19, 22], 5),
-        "E4:3 Db4:2 Eb4:2 C4:4 D4:3 B3:2 Db4:2 Bb3:2 C4:3 A3",
+        "E4/3 Db4/2 Eb4/2 C4/4 D4/3 B3/2 Db4/2 Bb3/2 C4/3 A3",
     )
-    G5b(library.pleaves(m[25, 28], 5), "B3:4 Ab3:4 Bb3:2 G3")
+    G5b(library.pleaves(m[25, 28], 5), "B3/4 Ab3/4 Bb3/2 G3")
     H2(library.pleaves(m[34], 2), "C6", "C#6", "p p mp")
     H2(library.pleaves(m[35], 2), "B5", "C6", "p p mp mf")
     H2(library.pleaves(m[36], 2), "A5", "Bb5", "mf mf mf mf")
@@ -1163,7 +1163,7 @@ def vc(m):
         "ppp<| f> p<| mf>o !",
     )
     baca.clef(m[13][-1], "treble")
-    G5b(library.pleaves(m[13, 15], 5), "G4:2 E4:2 Gb4:3 Eb4:2 F4:3 D4 E4")
+    G5b(library.pleaves(m[13, 15], 5), "G4/2 E4/2 Gb4/3 Eb4/2 F4/3 D4 E4")
     baca.clef(library.pleaves(m[15], 1)[0], "bass")
     G1c(
         library.pleaves(m[15, 16], 1),
@@ -1177,12 +1177,12 @@ def vc(m):
     baca.clef(library.pleaves(m[19], 5)[0], "treble")
     G5b(
         library.pleaves(m[19, 23], 5),
-        "Eb4:3 C4:3 D4:3 B3:3 Db4:3 B3:2 C4:3 A3:2 B3",
+        "Eb4/3 C4/3 D4/3 B3/3 Db4/3 B3/2 C4/3 A3/2 B3",
     )
     G4b(library.pleaves(m[24, 25], 4))
     G5b(
         library.pleaves(m[25, 28], 5),
-        "Ab3:4 Bb3:4 G3:2 A3",
+        "Ab3/4 Bb3/4 G3/2 A3",
     )
     baca.clef(library.pleaves(m[28], 1)[0], "bass")
     G1c(
