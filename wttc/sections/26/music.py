@@ -1004,6 +1004,16 @@ def vc(m):
         [5, 8, 14, 3],
         "o< mf> pp< p>o!",
     )
+    P1b(library.run(m[22, 23], 0, 99), "E3 C4", "C2", [3], "o<p")
+    P1b(library.run(m[23, 24], 1, 99), "F3 D4", "C2", [3], "o<mp")
+    P1b(
+        library.run(m[24, 25], 1, 99),
+        "G3 E4",
+        "C2",
+        [2, 2],
+        "o< mf>o!",
+        rleak_hairpin=True,
+    )
     """
 
 
