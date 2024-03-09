@@ -122,12 +122,12 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7),
-        [rt(1), OBGC(6 * [1], [15])],
+        [rt(1), X(OBGC(6 * [1], [15]))],
         material=1,
     )
     rhythm(
         meters(8),
-        [rt(1), X(OBGC(12 * [1], [14])), M(1, 2)],
+        [rt(1), X(OBGC(12 * [1], [w(12, 14), h(2)])), M(1, 2)],
         material=1,
     )
     rhythm(
@@ -446,12 +446,12 @@ def VN(voice, meters):
     rhythm.mmrests(6)
     rhythm(
         meters(7),
-        [-1, OBGC(6 * [1], [15])],
+        [-1, X(OBGC(6 * [1], [15]))],
         material=1,
     )
     rhythm(
         meters(8),
-        [rt(1), X(OBGC(12 * [1], [14])), M(1, 2)],
+        [rt(1), X(OBGC(12 * [1], [w(12, 14), h(2)])), M(1, 2)],
         material=1,
     )
     rhythm(
@@ -887,9 +887,14 @@ def fl(m):
     O3a(library.pleaves(m[5], 3), "F4 F#5", "mf")
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
     O1a(
-        library.pleaves(m[1, 2], 1),
-        "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
-        "sfmp>o!",
+        library.pleaves(m[7], 1),
+        "F G G# A G# G B",
+        "p",
+    )
+    O1a(
+        library.pleaves(m[8], 1),
+        "G# G E G# A F A G# F E G E B",
+        "p<|f",
     )
     """
 

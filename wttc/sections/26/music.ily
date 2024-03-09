@@ -1157,17 +1157,9 @@ number.26.AltoFlute.Music.item.2 = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'8.
-    ]
+    b'2...
     - \tweak stencil ##f
     ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
 }
 
@@ -1177,7 +1169,17 @@ number.26.AltoFlute.Music.item.3 = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'2..
+    b'2.. * 6/7
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"7"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
 
 }
 
@@ -1570,7 +1572,6 @@ number.26.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'16
-    [
     \repeatTie
 
     <<
@@ -3672,16 +3673,9 @@ number.26.Violin.Music.item.2 = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'8.
+    b'2...
     - \tweak stencil ##f
     ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
 
 }
 
@@ -3691,7 +3685,17 @@ number.26.Violin.Music.item.3 = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'2..
+    b'2.. * 6/7
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"7"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'8
 
 }
 
