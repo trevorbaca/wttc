@@ -137,7 +137,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(11),
-        [-7, "+"],
+        [-7, t(1), frame(8, 1)],
         material=4,
     )
     rhythm(
@@ -880,9 +880,9 @@ def fl(m):
         "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
         "sfmp>o!",
     )
-    O2a(library.pleaves(m[2], "D3", "p p")
+    O2a(library.pleaves(m[2], 2), "D3", "p p")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
-    O2a(library.pleaves(m[3, 4], "D3", 'p mp "mf"')
+    O2a(library.pleaves(m[3], 4), "D3", 'p mp "mf"')
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
     O3a(library.pleaves(m[5], 3), "F4 F#5", "mf")
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
@@ -895,6 +895,22 @@ def fl(m):
         library.pleaves(m[8], 1),
         "G# G E G# A F A G# F E G E B",
         "p<|f",
+    )
+    O2a(library.pleaves(m[8, 10], 2), "Db3", '"mf" "mf" mp mp p p')
+    O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
+    O4a(library.pleaves(m[12, 13], 4)[:-2], "C6 B5", "pp<| f> mf> mp> p> pp")
+    O4a(library.pleaves(m[14, 16], 4)[5:], "D6 Db6", "pp<| f> mf> mp> p> pp")
+    O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
+    O1a(
+        library.pleaves(m[19], 1),
+        "F G G# A G# G Ab",
+        "p>o!",
+    )
+    O4a(library.pleaves(m[20, 21], 4), "Eb6 D6", "f> mf> mp> p> pp")
+    O1a(
+        library.pleaves(m[22, 23], 1),
+        "F G G# A G# G Ab",
+        "p>o!",
     )
     """
 

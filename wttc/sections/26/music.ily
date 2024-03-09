@@ -1842,7 +1842,25 @@ number.26.AltoFlute.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    b'2 * 7/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"7" #"8"
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
     % [AltoFlute.Music measure 12]
       %! STAFF_HIGHLIGHT
