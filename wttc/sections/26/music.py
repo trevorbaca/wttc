@@ -683,11 +683,6 @@ def O1b(pleaves, pitches, string_number, hairpin):
         left_broken_text=r"\baca-parenthesized-half-harm",
         staff_padding=3,
     )
-    baca.rspanners.string_number(
-        nongraces,
-        string_number,
-        staff_padding=5.5,
-    )
 
 
 def O2a(pleaves, pitch, dynamics):
@@ -957,6 +952,39 @@ def gt2(m):
 
 def vn(m):
     pass
+    """
+    O1b(
+        library.pleaves(m[1, 2], 1),
+        "F# D# G Ab E Ab G E D# F# D# E F# G Ab G F# Ab E DE E Ab D# F#",
+        "sfmp>o!",
+    )
+    O2b(library.pleaves(m[2, 3], 2)[:-1], "p p")
+    O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf f f")
+    O1b(
+        library.pleaves(m[7], 1),
+        "F# G Ab G F# E A",
+        "p",
+    )
+    O1b(
+        library.pleaves(m[8], 1)[1:],
+        "D# F# D# E G Ab E Ab G D# F# G A",
+        "p<|f",
+    )
+    O2b(library.pleaves(m[8, 10], 2), "f f mf mp mp p p")
+    O2b(library.pleaves(m[11, 12], 2)[:3], "mp - -")
+    O2b(library.pleaves(m[12, 13], 2)[1:], "mf - -")
+    O2b(library.pleaves(m[14, 15], 2), "f - -")
+    O1b(
+        library.pleaves(m[19, 20], 1),
+        "F# G Ab G F# E G",
+        "p>o!",
+    )
+    O1b(
+        library.pleaves(m[22, 23], 1),
+        "F# G Ab G F# E G",
+        "p>o!",
+    )
+    """
 
 
 def vc(m):
