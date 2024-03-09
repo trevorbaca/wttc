@@ -989,6 +989,22 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    O2b(library.pleaves(m[2, 3], 2)[:-1], "p p")
+    O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf f f")
+    O2b(library.pleaves(m[8, 10], 2), "f mf mp p p")
+    O2b(library.pleaves(m[11, 12], 2)[:2], "mp -")
+    O4c(library.pleaves(m[12], 4), "F2", [2, 1], "P -> O", [3], "mf|>pp")
+    O2b(library.pleaves(m[12, 13], 2)[1:], "mf -")
+    O4c(
+        library.pleaves(m[14, 22], 4),
+        "E2/13 E2/13 Db2/5",
+        "T -> P -> T -> P -> T",
+        [5, 8, 14, 2, 1],
+        [5, 8, 14, 3],
+        "o< mf> pp< p>o!",
+    )
+    """
 
 
 @baca.build.timed("make_score")
