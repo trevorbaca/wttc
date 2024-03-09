@@ -122,7 +122,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7),
-        [rt(1), X(OBGC(6 * [1], [7])), 1, X(7)],
+        [rt(1), OBGC(6 * [1], [15])],
         material=1,
     )
     rhythm(
@@ -423,7 +423,7 @@ def VN(voice, meters):
     # counts = [1, -6, 3, -3]
     rhythm(
         None,
-        [-1, OBGC(25 * [1], [31])],
+        [-1, OBGC(24 * [1], [31])],
         material=1,
     )
     rhythm(
@@ -446,12 +446,12 @@ def VN(voice, meters):
     rhythm.mmrests(6)
     rhythm(
         meters(7),
-        [-1, OBGC(7 * [1], [15])],
+        [-1, OBGC(6 * [1], [15])],
         material=1,
     )
     rhythm(
         meters(8),
-        [rt(1), X(OBGC(7 * [1], [14])), M(1, 2)],
+        [rt(1), X(OBGC(12 * [1], [14])), M(1, 2)],
         material=1,
     )
     rhythm(
@@ -478,7 +478,7 @@ def VN(voice, meters):
     rhythm.mmrests(16, 18)
     rhythm(
         meters(19),
-        [-1, X(OBGC(7 * [1], [t(7)])), t(8)],
+        [-1, X(OBGC(6 * [1], [t(7)])), t(8)],
         material=1,
     )
     rhythm(
@@ -488,7 +488,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(22),
-        [-1, X(OBGC(7 * [1], [t(7)])), 12],
+        [-1, X(OBGC(6 * [1], [t(7)])), 12],
         material=1,
     )
     rhythm(
@@ -653,7 +653,7 @@ def VC(voice, meters):
     rhythm.mmrests(33, 36)
 
 
-def O1a(pleaves, pitches, dynamic, hairpin):
+def O1a(pleaves, pitches, hairpin):
     baca.pitches(pleaves, pitches)
     nongraces = abjad.select.notes(pleaves, grace=False)
     baca.hairpin(
@@ -669,7 +669,7 @@ def O1a(pleaves, pitches, dynamic, hairpin):
     )
 
 
-def O1b(pleaves, pitches, dynamic, string_number, hairpin):
+def O1b(pleaves, pitches, string_number, hairpin):
     baca.pitches(pleaves, pitches)
     nongraces = abjad.select.notes(pleaves, grace=False)
     baca.hairpin(
@@ -874,6 +874,24 @@ def P3(pleaves, glissando, hairpin_lparts, hairpin, *, damp_staff_padding=None):
 
 def fl(m):
     pass
+    """
+    O1a(
+        library.pleaves(m[1, 2], 1),
+        "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
+        "sfmp>o!",
+    )
+    O2a(library.pleaves(m[2], "D3", "p p")
+    O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
+    O2a(library.pleaves(m[3, 4], "D3", 'p mp "mf"')
+    O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
+    O3a(library.pleaves(m[5], 3), "F4 F#5", "mf")
+    O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
+    O1a(
+        library.pleaves(m[1, 2], 1),
+        "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
+        "sfmp>o!",
+    )
+    """
 
 
 def ob(m):

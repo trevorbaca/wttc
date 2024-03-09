@@ -1157,7 +1157,17 @@ number.26.AltoFlute.Music.item.2 = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'4..
+    b'8.
+    ]
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    \baca-not-yet-pitched-coloring
+    b'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
 }
 
@@ -1560,6 +1570,7 @@ number.26.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     b'16
+    [
     \repeatTie
 
     <<
@@ -1621,21 +1632,11 @@ number.26.AltoFlute.Music = {
 
     >>
 
+    % [AltoFlute.Music measure 8]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! ONE_VOICE_COMMAND
     \oneVoice
-    b'16
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4..
-    - \tweak stencil ##f
-    ~
-
-    % [AltoFlute.Music measure 8]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'16
     \repeatTie
 
@@ -3911,12 +3912,6 @@ number.26.Violin.Music = {
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
-
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
 
@@ -4075,12 +4070,6 @@ number.26.Violin.Music = {
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
-
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
 
@@ -4118,6 +4107,36 @@ number.26.Violin.Music = {
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
@@ -4467,12 +4486,6 @@ number.26.Violin.Music = {
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
-
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
 
@@ -4538,12 +4551,6 @@ number.26.Violin.Music = {
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
-
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
               %! NOT_YET_PITCHED_COLORING
             \baca-not-yet-pitched-coloring
