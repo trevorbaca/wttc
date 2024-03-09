@@ -622,7 +622,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(24),
-        [rt(1), "+", t(5)],
+        [rt(1), "-", t(5)],
         material=99,
     )
     rhythm(

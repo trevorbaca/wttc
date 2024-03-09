@@ -5615,26 +5615,19 @@ number.26.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     d16
-    [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
-    ]
-    - \tweak stencil ##f
-    ~
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r8.
+
+    r8.
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    d8.
-    [
-    \repeatTie
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    \staffHighlight yellow
     d16
-    ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
