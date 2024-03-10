@@ -208,7 +208,47 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 21)
+    rhythm(
+        meters(22),
+        [-15, 5],
+        material=99,
+    )
+    rhythm(
+        meters(23),
+        [rt(1), "-", 5],
+        material=99,
+    )
+    rhythm(
+        meters(24),
+        [rt(1), "-", t(5)],
+        material=99,
+    )
+    rhythm(
+        meters(25),
+        [15, "-", M(t(3), 1)],
+        material=99,
+    )
+    rhythm(
+        meters(26),
+        [15, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(27),
+        ["-", t(15)],
+        material=1,
+    )
+    rhythm(
+        meters(28),
+        [3, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(29, 32),
+        [-21, "+", -9],
+        material=1,
+    )
 
 
 def GT1(voice, meters):
@@ -915,6 +955,14 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    """
+    P1a(library.run(m[22, 23], 99, 0), "C6", "D6", [3], "o<p")
+    P1a(library.run(m[23, 24], 99, 1), "C6", "D6", [3], "o<mp")
+    P1a(library.run(m[24, 25], 99, 1), "C6", "D6", [2, 2], "o< mf>o!")
+    P1a(library.run(m[25, 26], 1, 1), "C6", "D6", [1, 2], "o< mp>o!")
+    P1a(library.run(m[27, 28], 1, 0), "C6", "D6", [1, 2], "o< p>o!")
+    P1a(library.run(m[29, 32], 1, 0), "C6", "D6", [3, 2], "o< pp>o!")
+    """
 
 
 def gt1(m):
