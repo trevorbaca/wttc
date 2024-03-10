@@ -3157,48 +3157,16 @@ number.26.Guitar.1.Music = {
     \stopStaffHighlight
     r8.
 
+    r1
+
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
     % [Guitar.1.Music measure 29]
-    r2.
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 30]
-    r2
-
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
@@ -3209,37 +3177,19 @@ number.26.Guitar.1.Music = {
     \stopStaffHighlight
     r8.
 
-    r2.
+    r1
+
+    r4
 
     % [Guitar.1.Music measure 31]
-    r2
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 32]
-    r2.
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 33]
     R1 * 6/4
@@ -3690,48 +3640,16 @@ number.26.Guitar.2.Music = {
     \stopStaffHighlight
     r8.
 
+    r1
+
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
     % [Guitar.2.Music measure 29]
-    r2.
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 30]
-    r2
-
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
@@ -3742,37 +3660,19 @@ number.26.Guitar.2.Music = {
     \stopStaffHighlight
     r8.
 
-    r2.
+    r1
+
+    r4
 
     % [Guitar.2.Music measure 31]
-    r2
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 32]
-    r2.
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-    b'16
-
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-    r8.
-
-    r2
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 33]
     R1 * 6/4

@@ -336,18 +336,18 @@ def GT1(voice, meters):
         material=3,
     )
     rhythm.mmrests(25, 27)
-
-    @baca.call
-    def block():
-        counts = [8, 12, 16, 20, 24, 28, 32]
-        counts = library.attacks(counts)
-        rhythm(
-            meters(28, 32),
-            counts + ["-"],
-            material=2,
-        )
-
-    rhythm.mmrests(33, 36)
+    rhythm(
+        meters(28),
+        [1, "-"],
+        material=2,
+    )
+    rhythm.mmrests(29)
+    rhythm(
+        meters(30),
+        [1, "-"],
+        material=2,
+    )
+    rhythm.mmrests(31, 36)
 
 
 def GT2(voice, meters):
@@ -444,18 +444,18 @@ def GT2(voice, meters):
         material=3,
     )
     rhythm.mmrests(25, 27)
-
-    @baca.call
-    def block():
-        counts = [8, 12, 16, 20, 24, 28, 32]
-        counts = library.attacks(counts)
-        rhythm(
-            meters(28, 32),
-            counts + ["-"],
-            material=2,
-        )
-
-    rhythm.mmrests(33, 36)
+    rhythm(
+        meters(28),
+        [1, "-"],
+        material=2,
+    )
+    rhythm.mmrests(29)
+    rhythm(
+        meters(30),
+        [1, "-"],
+        material=2,
+    )
+    rhythm.mmrests(31, 36)
 
 
 def VN(voice, meters):
@@ -980,6 +980,8 @@ def gt1(m):
     O3b(library.pleaves(m[19], 3), "A5", "p")
     O4b(library.pleaves(m[20], 4), "Gb2:Bb2", "p")
     O3b(library.pleaves(m[22, 24], 3), "A5", "p")
+    P2b(library.pleaves(m[28], 2), "D#5", "mp")
+    P2b(library.pleaves(m[30], 2), "D#5", "f")
     """
 
 
@@ -998,6 +1000,8 @@ def gt2(m):
     O3b(library.pleaves(m[19], 3), "Ab5", "p")
     O4b(library.pleaves(m[20], 4), "F2:A2", "p")
     O3b(library.pleaves(m[22, 24], 3), "Ab5", "p")
+    P2b(library.pleaves(m[28], 2), "C#5", "mp")
+    P2b(library.pleaves(m[30], 2), "C#5", "f")
     """
 
 
@@ -1065,6 +1069,9 @@ def vc(m):
         "o< mf>o!",
         rleak_hairpin=True,
     )
+    P1b(library.pleaves(m[25, 26], 1), "F5 E4", "C2", [1, 2], "o< mp>o!")
+    P1b(library.pleaves(m[27, 28], 1), "E5 D4", "C2", [1, 2], "o< p>o!")
+    P1b(library.pleaves(m[29, 32], 1), "D5 Db2", "C2", [3, 2], "o< f>o!")
     """
 
 
