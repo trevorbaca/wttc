@@ -907,6 +907,9 @@ def fl(m):
         "F G G# A G# G Ab",
         "p>o!",
     )
+    P2a(library.run(m[25, 26], 2, 0), "E6", "p")
+    P2a(library.run(m[26, 27], 2, 1), "E6", "mp")
+    P2a(library.run(m[27, 30], 2, 1), "E6", "mf")
     """
 
 
