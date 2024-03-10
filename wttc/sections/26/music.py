@@ -1039,6 +1039,10 @@ def vn(m):
         "F# G Ab G F# E G",
         "p>o!",
     )
+    P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!")
+    P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], "o< mf>o!")
+    P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
+    P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
     """
 
 
