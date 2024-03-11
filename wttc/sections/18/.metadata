@@ -60,7 +60,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="pp",
             )
         ],
         "Cello.Staff": [
@@ -112,7 +112,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="p",
             )
         ],
         "Guitar.1.Staff": [
@@ -164,7 +164,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="f",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [
@@ -216,7 +216,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="ff",
+                value="p",
             )
         ],
         "Oboe.Staff": [
@@ -270,7 +270,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="pp",
             )
         ],
         "Violin.Staff": [

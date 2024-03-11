@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -174,17 +175,18 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 2),
-        [-4, -1, -1, 2, 1, -4, -2, 5, 1, -4, -4, 11],
+        [-4, -1, -1, AG([2], 2), 1, -4, -2, t(1), AG([2], 4)]
+        + [1, -4, -4, t(3), AG([2], 8)],
         material=2,
     )
     rhythm(
         meters(3),
-        [M(1, 2), -7, frame(12, 6), 3, 1],
+        [M(1, 2), -7, X(w(6, 12)), X(h(6)), 3, 1],
         material=3,
     )
     rhythm(
         meters(4),
-        [1, 3, frame(12, 1), 1, 3, frame(4, 1), 1, t(7)],
+        [1, 3, 4, 4, AG([2], 4), 1, 3, AG([2], 4), 1, t(7)],
         material=3,
     )
     rhythm(
@@ -194,7 +196,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(6),
-        [1, X(t(3)), X(t(8)), frame(16, 1)],
+        [1, X(t(3)), X(t(8)), 16],
         material=3,
     )
     baca.section.append_anchor_note(voice)
@@ -215,9 +217,13 @@ def I1a(pleaves, pitch, alteration, dynamics):
 
 
 def I1b(pleaves, pitches, dynamic=None):
-    baca.pitches(pleaves, pitches)
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True)
     if dynamic is not None:
-        baca.dynamic(pleaves[0], dynamic)
+        main_leaves = abjad.select.leaves(pleaves, grace=False)
+        if "<" in dynamic or ">" in dynamic:
+            baca.hairpin(main_leaves, dynamic)
+        else:
+            baca.dynamic(main_leaves[0], dynamic)
 
 
 def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
@@ -225,7 +231,7 @@ def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
     if glissando_start is not None:
         baca.glissando(
             pleaves[: glissando_count + 1],
-            f"{glissando_start}:{glissando_count} {pitch}",
+            f"{glissando_start}/{glissando_count} {pitch}",
         )
     baca.hairpin(
         pleaves,
@@ -254,11 +260,10 @@ def I2b(pleaves, pitch, alteration, dynamic):
 
 def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
     start_count = len(pleaves) - 2
-    string = f"{pitch}:{start_count} {peak} {fall}"
+    string = f"{pitch}/{start_count} {peak} {fall}"
     baca.glissando(
         pleaves,
         string,
-        do_not_hide_middle_note_heads=True,
     )
     baca.rspanners.trill(
         pleaves,
@@ -285,10 +290,9 @@ def I3a(pleaves, pitches, dynamics):
 
 
 def I3b(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
-    baca.glissand(
+    baca.glissando(
         pleaves,
         glissando,
-        do_not_hide_middle_note_heads=True,
     )
     baca.mspanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
@@ -312,31 +316,24 @@ def J1a(pleaves, pitches, dynamic):
 
 
 def fl(m):
-    pass
-    """
     I2a(library.run(m[1], 2, 0), "B4", "p", "A#4", 2)
     I2a(library.run(m[1, 2], 2, 1), "B4", "mp", "A#4", 3)
-    I2a(library.run(m[2, 3], 2, 0), "B4", "mf", "A#4", 2)
+    I2a(library.run(m[2, 3], 2, 1), "B4", "mf", "A#4", 2)
     I2a(library.run(m[3], 2, 1), "C#6", "mf")
     J1a(library.run(m[4, 5], 99, 0), "E6 Eqf6 Eb6", "p")
     J1a(library.run(m[5, 6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6", "mp")
     J1a(library.run(m[6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6 Db6", "mf")
-    """
 
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     I1a(library.pleaves(m[1], 1), "D#6", "E6", "mf - mp -")
     I1a(library.pleaves(m[2], 1), "D#6", "E6", "p - - -")
-    I1a(library.pleaves(m[3], 1), "D#6", "E6", "p mp mf f -")
+    I1a(library.pleaves(m[3], 1), "D#6", "E6", "(p) mp mf f")
     I1a(library.pleaves(m[5], 1), "D#6", "E6", "p")
-    """
 
 
 def gt1(m):
-    pass
-    """
     I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5", "mf")
     I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4", "mp")
     I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5", "p")
@@ -344,64 +341,75 @@ def gt1(m):
     I3a(library.pleaves(m[3], 3), "Gb2", "mf")
     I3a(library.pleaves(m[4], 3), "Gb2 G2 G2", "mf mp p")
     I1b(library.pleaves(m[5], 1), "Db5 B4 C5 Db5 Eb5", "p")
-    """
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5", "mf")
     I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5", "mp")
     I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5", "p")
     I1b(
-        library.pleaves(m[3], 1), "B4 Bb4 C5 Eb5 B4 D5 Eb5 B4 Eb5 D5 Bb4 C5 D5 C5", "p<f"
+        library.pleaves(m[3], 1),
+        "B4 Bb4 C5 Eb5 B4 D5 Eb5 B4 Eb5 D5 Bb4 C5 D5 C5",
+        "p<f",
     )
     I3a(library.pleaves(m[3], 3), "F2", "mf")
     I3a(library.pleaves(m[4], 3), "F2 F2 F#2", "mf mp p")
     I1b(library.pleaves(m[5], 1), "Eb5 E5 Eb5 Db5", "p")
-    """
 
 
 def vn(m):
-    pass
-    """
-    I2b(library.run(m[1], 3, 0), "B4", "C5", "mp")
-    I2b(library.run(m[1, 2], 3, 1), "B4", "C5", "mf")
-    I2b(library.run(m[3, 4], 3, 1), "B4", "C5", "f")
-    """
+    I2b(library.run(m[1], 2, 0), "B4", "C5", "mp")
+    I2b(library.run(m[1, 2], 2, 1), "B4", "C5", "mf")
+    I2b(library.run(m[2, 3], 2, 1), "B4", "C5", "f")
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     I2c(library.run(m[1], 2, 0), "C#3", "D#3", "E3", "D3", "mp")
     I2c(library.run(m[1, 2], 2, 1), "C#3", "D#3", "E3", "D3", "mf")
     I2c(library.run(m[2, 3], 2, 1), "C#3", "D#3", "E3", "D3", "f")
     I3b(
         library.pleaves(m[3], 3),
-        "F2:2 Ab2 G2",
+        "F2/2 Ab2 G2",
         [2, 1, 1],
         "P -> T -> P",
         [1, 1, 2],
         "sfp< mf> pp<|f",
     )
     I3b(
-        library.pleaves(m[4], 3)[:5],
-        "Ab2 G2 F#2:2 E#2",
-        [1, 3, 1],
+        library.pleaves(m[4], 3)[:6],
+        "Ab2/5 F2",
+        [1, 4, 1],
         "P -> T -> P",
-        [1, 3, 1],
+        [1, 4, 1],
         "f|> p<| f",
     )
     I3b(
-        library.pleaves(m[4, 6], 3)[9:],
-        "A2:3 Gb2:3 E2:3 E2",
-        [1, 6, 2, 2],
-        "P -> T -> P -> T =|",
-        [1, 6, 2, 1, 1],
-        "f|> p< mp> pp -",
+        library.pleaves(m[4], 3)[6:10],
+        "A2/3 F#2",
+        [1, 2, 1],
+        "P -> T -> P",
+        [1, 2, 1],
+        "f|> p<| f",
     )
-    """
+    I3b(
+        library.pleaves(m[4, 6], 3)[10:],
+        "Bb2/7 E2/2 E2",
+        [1, 6, 2, 1],
+        "P -> T -> P -> T =|",
+        [1, 6, 2, 1],
+        "f|> p< mp> pp",
+    )
+
+
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["gt1"].leaves(), 5)
+    baca.override.dls_staff_padding(cache["gt2"].leaves(), 5)
+    baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
 
 
 @baca.build.timed("make_score")
@@ -446,6 +454,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
