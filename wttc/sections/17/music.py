@@ -333,21 +333,35 @@ def ob(m):
     I1a(library.pleaves(m[5], 1), "D#6", "E6", "p")
 
 
-def gt1(m):
-    I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5", "mf")
-    I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4", "mp")
-    I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5", "p")
+def gt1(cache):
+    m = cache["gt1"]
+    I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5")
+    I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4")
+    I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5")
     I1b(library.pleaves(m[3], 1), "Eb5 D5 C5 Eb5 B4 Bb4 B4 Eb5 Bb4 C5 D5 C5 D5", "p<f")
     I3a(library.pleaves(m[3], 3), "Gb2", "mf")
     I3a(library.pleaves(m[4], 3), "Gb2 G2 G2", "mf mp p")
-    I1b(library.pleaves(m[5], 1), "Db5 B4 C5 Db5 Eb5", "p")
+    I1b(library.pleaves(m[5], 1), "Db5 B4 C5 Db5 Eb5")
+    #
+    cache.rebuild()
+    m = cache["gt1"]
+    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False), "mf")
+    baca.dynamic(abjad.select.leaf(m[1], 1, grace=False), "mp")
+    baca.dynamic(abjad.select.leaf(m[2], 0, grace=False), "p")
+    baca.dynamic(
+        abjad.select.leaf(m[5], 0, grace=False),
+        "p-ancora",
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
+    )
 
 
-def gt2(m):
+def gt2(cache):
+    m = cache["gt2"]
     library.rotate_rehearsal_mark_literal(m[1][0])
-    I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5", "mf")
-    I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5", "mp")
-    I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5", "p")
+    I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5")
+    I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5")
+    I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5")
     I1b(
         library.pleaves(m[3], 1),
         "B4 Bb4 C5 Eb5 B4 D5 Eb5 B4 Eb5 D5 Bb4 C5 D5 C5",
@@ -355,7 +369,19 @@ def gt2(m):
     )
     I3a(library.pleaves(m[3], 3), "F2", "mf")
     I3a(library.pleaves(m[4], 3), "F2 F2 F#2", "mf mp p")
-    I1b(library.pleaves(m[5], 1), "Eb5 E5 Eb5 Db5", "p")
+    I1b(library.pleaves(m[5], 1), "Eb5 E5 Eb5 Db5")
+    #
+    cache.rebuild()
+    m = cache["gt2"]
+    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False), "mf")
+    baca.dynamic(abjad.select.leaf(m[1], 1, grace=False), "mp")
+    baca.dynamic(abjad.select.leaf(m[2], 0, grace=False), "p")
+    baca.dynamic(
+        abjad.select.leaf(m[5], 0, grace=False),
+        "p-ancora",
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
+    )
 
 
 def vn(m):
@@ -406,8 +432,18 @@ def vc(m):
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
     baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
-    baca.override.dls_staff_padding(cache["gt1"].leaves(), 5)
-    baca.override.dls_staff_padding(cache["gt2"].leaves(), 5)
+    baca.override.dls_staff_padding(
+        abjad.select.leaves(cache["gt1"].leaves(), grace=False)[:2], 4
+    )
+    baca.override.dls_staff_padding(
+        abjad.select.leaves(cache["gt1"].leaves(), grace=False)[2:], 5
+    )
+    baca.override.dls_staff_padding(
+        abjad.select.leaves(cache["gt2"].leaves(), grace=False)[:2], 4
+    )
+    baca.override.dls_staff_padding(
+        abjad.select.leaves(cache["gt2"].leaves(), grace=False)[2:], 5
+    )
     baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
     baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
 
@@ -450,8 +486,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
-    gt1(cache["gt1"])
-    gt2(cache["gt2"])
+    gt1(cache)
+    gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
     align_spanners(cache)

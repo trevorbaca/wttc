@@ -112,7 +112,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="p",
+                value="\\baca-p-ancora",
             )
         ],
         "Guitar.1.Staff": [
@@ -164,7 +164,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="p",
+                value="\\baca-p-ancora",
             )
         ],
         "Guitar.2.Staff": [

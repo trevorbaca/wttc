@@ -1078,8 +1078,14 @@ number.17.Oboe.Staff = <<
 
 number.17.Guitar.1.Music.item.1 = {
 
+    \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
     c'''2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
 }
 
@@ -1088,14 +1094,26 @@ number.17.Guitar.1.Music.item.2 = {
 
     \voiceTwo
     b''2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
 
 number.17.Guitar.1.Music.item.3 = {
 
+    \override DynamicLineSpanner.staff-padding = 5
     \voiceTwo
     ef'''!1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
 }
 
@@ -1104,6 +1122,15 @@ number.17.Guitar.1.Music.item.4 = {
 
     \voiceTwo
     ef'''!1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    - \tweak parent-alignment-X -1
+      %! EXPLICIT_DYNAMIC
+    - \tweak self-alignment-X -1
+      %! EXPLICIT_DYNAMIC
+    \baca-p-ancora
 
 }
 
@@ -1493,8 +1520,14 @@ number.17.Guitar.1.Staff = <<
 
 number.17.Guitar.2.Music.item.1 = {
 
+    \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
     e'''2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
 }
 
@@ -1503,14 +1536,26 @@ number.17.Guitar.2.Music.item.2 = {
 
     \voiceTwo
     df'''!2.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
 
 number.17.Guitar.2.Music.item.3 = {
 
+    \override DynamicLineSpanner.staff-padding = 5
     \voiceTwo
     df'''!1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
 }
 
@@ -1519,6 +1564,15 @@ number.17.Guitar.2.Music.item.4 = {
 
     \voiceTwo
     df'''!1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    - \tweak parent-alignment-X -1
+      %! EXPLICIT_DYNAMIC
+    - \tweak self-alignment-X -1
+      %! EXPLICIT_DYNAMIC
+    \baca-p-ancora
 
 }
 
