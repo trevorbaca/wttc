@@ -7976,11 +7976,6 @@ number.19.Cello.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     a2 * 4/8
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
       %! REAPPLIED_INSTRUMENT_ALERT

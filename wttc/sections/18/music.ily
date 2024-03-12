@@ -928,6 +928,7 @@ number.18.AltoFlute.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -2150,6 +2151,7 @@ number.18.AltoFlute.Music = {
     r8
 
     r2
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -2174,6 +2176,7 @@ number.18.Oboe.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -2592,6 +2595,7 @@ number.18.Oboe.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -2663,6 +2667,7 @@ number.18.Guitar.1.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -3423,6 +3428,7 @@ number.18.Guitar.1.Music = {
     }
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -3523,6 +3529,7 @@ number.18.Guitar.2.Music = {
             %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
               %! REAPPLIED_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+            \override DynamicLineSpanner.staff-padding = 3
               %! -PARTS
               %! EXPLICIT_BAR_EXTENT
               %! REAPPLIED_BAR_EXTENT
@@ -4462,6 +4469,7 @@ number.18.Guitar.2.Music = {
     }
 
     r2
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -4483,6 +4491,7 @@ number.18.Violin.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -5386,6 +5395,7 @@ number.18.Violin.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -5415,6 +5425,7 @@ number.18.Cello.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -5837,151 +5848,430 @@ number.18.Cello.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    <a a>2 * 1/2
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >2 * 4/8
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan c'
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    a4
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    <a a>2 * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >4 * 1/1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >2 * 4/8
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    a4
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >4 * 1/1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Cello.Music measure 27]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r1
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    a16
+    e'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-string-iv-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+      %! SPANNER_STOP
+    \bacaStopTextSpanStringNumber
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    <a a>4
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >4
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan c'
 
     % [Cello.Music measure 28]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    <a a>4
+    <
+        f
+        \tweak style #'harmonic
+        bf
+    >4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    <a a>2 * 4/8
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    <a a>4 * 1/1
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >4 * 1/1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Cello.Music measure 29]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    a16
+    e'16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-string-iv-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+      %! SPANNER_STOP
+    \bacaStopTextSpanStringNumber
 
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    <a a>2 * 4/8
+      %! SPANNER_START
+    \pitchedTrill
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    \startTrillSpan c'
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    <a a>4 * 1/1
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >4 * 1/1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    <a a>2 * 4/8
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    <a a>4 * 1/1
+    <
+        f
+        \tweak style #'harmonic
+        bf!
+    >4 * 1/1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \revert DynamicLineSpanner.staff-padding
 
       %! ANCHOR_NOTE
     % [Cello.Music anchor note]
@@ -6018,6 +6308,12 @@ number.18.Cello.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 

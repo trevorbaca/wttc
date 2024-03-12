@@ -63,16 +63,6 @@
                 value="Afl.",
             ),
         ],
-        "Cello.Music": [
-            baca.Memento(
-                context="Cello.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="p",
-            )
-        ],
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",

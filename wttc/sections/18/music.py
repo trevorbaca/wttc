@@ -23,6 +23,7 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 frame = library.frame
@@ -748,7 +749,7 @@ def VC(voice, meters):
         rhythm.mmrests(24, 25)
         rhythm(
             meters(26, 27),
-            [-8, w(c(4, 2), 8), h(4), w(c(4, 2), 8), h(4), "-"],
+            [-8, frame(8, 4, chords=2), frame(8, 4, chords=2), "-"],
             material=99,
         )
         components = j3_measures[27 - before_fermata]
@@ -878,17 +879,18 @@ def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
 
 def K1b(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
+    for pleaf in pleaves:
+        abjad.tweak(pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
     )
-    """
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),
+        rleak=True,
     )
-    """
 
 
 def fl(m):
@@ -954,7 +956,8 @@ def ob(m):
     J2a2(library.pleaves(m[23, 26], 2), "D6", [4], "sfp>o!", rleak_hairpin=True)
 
 
-def gt1(m):
+def gt1(cache):
+    m = cache["gt1"]
     J1b(library.pleaves(m[1], 1), "G4 A4 B4", "mf")
     J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5", "mp")
     J3b(library.pleaves(m[3, 4], 3), 4 * "F#3 ", "mf mf mp p", "1101")
@@ -974,9 +977,11 @@ def gt1(m):
     J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5", "p")
     J1b(library.pleaves(m[27], 1), "C#5 D#5 F5", "p")
     J3b(library.pleaves(m[27, 29], 3), "A#3 B3", "p pp", "11")
+    cache.rebuild()
 
 
-def gt2(m):
+def gt2(cache):
+    m = cache["gt2"]
     library.rotate_rehearsal_mark_literal(m[1][0])
     J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5", "f")
     J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4", "mp")
@@ -1000,6 +1005,7 @@ def gt2(m):
     J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5", "p")
     J1b(library.pleaves(m[27], 1), "D5 E5 F#5", "p")
     J3b(library.pleaves(m[27, 29], 3), "A#3 B3 B3", "p pp pp", "111")
+    cache.rebuild()
 
 
 def vn(m):
@@ -1054,13 +1060,20 @@ def vc(m):
     )
     J3c(library.pleaves(m[23], 3), "E4", "p")
     baca.clef(m[26][0], "tenor")
-    """
     K1b(library.pleaves(m[26], 99), "F3:Bb3", "C4", "p p")
     J3c(library.pleaves(m[27], 3), "E4", "p")
     K1b(library.pleaves(m[27, 28], 99), "F3:Bb3", "C4", "mp mp")
     J3c(library.pleaves(m[29], 3), "E4", "p")
     K1b(library.pleaves(m[29], 99), "F3:Bb3", "C4", "mf mf")
-    """
+
+
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["gt1"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["gt2"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
 
 
 @baca.build.timed("make_score")
@@ -1102,10 +1115,11 @@ def make_score(first_measure_number, previous_persistent_indicators):
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
-    gt1(cache["gt1"])
-    gt2(cache["gt2"])
+    gt1(cache)
+    gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
