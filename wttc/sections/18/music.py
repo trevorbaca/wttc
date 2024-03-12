@@ -371,13 +371,13 @@ def GT1(voice, meters):
     rhythm.mmrests(13, 15)
     rhythm(
         meters(16, 17),
-        2 * [24],
+        2 * [c(24, 2)],
         material=4,
     )
     rhythm.mmrests(18)
     rhythm(
         meters(19, 22),
-        4 * [24],
+        4 * [c(24, 2)],
         material=4,
     )
 
@@ -442,7 +442,7 @@ def GT1(voice, meters):
         voice.extend(j3_measures[23 - before_fermata])
         rhythm(
             meters(24, 25),
-            [24, rt(16), -8],
+            [c(24, 2), rt(c(16, 2)), -8],
             material=4,
         )
         components = j1_measures[25 - before_fermata]
@@ -524,13 +524,13 @@ def GT2(voice, meters):
         rhythm.mmrests(13, 15)
         rhythm(
             meters(16, 17),
-            [24, 24],
+            2 * [c(24, 2)],
             material=4,
         )
         rhythm.mmrests(18)
         rhythm(
             meters(19, 22),
-            4 * [24],
+            4 * [c(24, 2)],
             material=4,
         )
 
@@ -594,7 +594,7 @@ def GT2(voice, meters):
         library.overlap_previous_measure(voice, components, meters(23))
         rhythm(
             meters(24, 25),
-            [24, rt(24)],
+            [c(24, 2), rt(c(24, 2))],
             material=4,
         )
         voice.extend(j1_measures[26 - before_fermata])
@@ -780,11 +780,8 @@ def J1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-# TODO: remove dynamic
-def J1b(run, pitches, dynamic):
+def J1b(run, pitches):
     baca.pitches(run, pitches, allow_obgc_mutation=True)
-    note = abjad.select.leaf(run, 0, grace=False)
-    baca.dynamic(note, dynamic)
 
 
 def J2a1(pleaves, pitches, dynamics):
@@ -856,11 +853,10 @@ def J3c(pleaves, pitches, dynamics):
     )
 
 
-def J4a(pleaves, dyad, dynamic):
+def J4a(pleaves, dyad, dynamic=None):
     baca.pitches(pleaves, dyad)
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        baca.dynamic(plt.head, dynamic)
+    if dynamic is not None:
+        baca.dynamic(pleaves[0], dynamic)
 
 
 def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
@@ -958,8 +954,8 @@ def ob(m):
 
 def gt1(cache):
     m = cache["gt1"]
-    J1b(library.pleaves(m[1], 1), "G4 A4 B4", "mf")
-    J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5", "mp")
+    J1b(library.pleaves(m[1], 1), "G4 A4 B4")
+    J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5")
     J3b(library.pleaves(m[3, 4], 3), 4 * "F#3 ", "mf mf mp p", "1101")
     J3b(
         library.pleaves(m[5, 7], 3),
@@ -968,24 +964,31 @@ def gt1(cache):
         "0110101",
     )
     J3b(library.pleaves(m[8, 9], 3), "A3 A#3 A#3", "p p pp", "101")
-    J1b(library.pleaves(m[9], 1), "C#5 D#5 F5", "mp")
-    J1b(library.pleaves(m[10], 1), "C#5 D#5 F5 G5", "f")
+    J1b(library.pleaves(m[9], 1), "C#5 D#5 F5")
+    J1b(library.pleaves(m[10], 1), "C#5 D#5 F5 G5")
     J4a(library.pleaves(m[16, 17], 4), "G2:Eb3", "p")
-    J4a(library.pleaves(m[19, 22], 4), "G2:D3", "-")
+    J4a(library.pleaves(m[19, 22], 4), "G2:D3")
     J3b(library.pleaves(m[23], 3), "A#3", "p", "0")
     J4a(library.pleaves(m[24, 25], 4), "G2:B2", "p")
-    J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5", "p")
-    J1b(library.pleaves(m[27], 1), "C#5 D#5 F5", "p")
+    J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5")
+    J1b(library.pleaves(m[27], 1), "C#5 D#5 F5")
     J3b(library.pleaves(m[27, 29], 3), "A#3 B3", "p pp", "11")
+    #
     cache.rebuild()
+    m = cache["gt1"]
+    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False, pitched=True), "mf")
+    baca.dynamic(abjad.select.leaf(m[2], 0, grace=False, pitched=True), "mp")
+    baca.dynamic(abjad.select.leaf(m[9], 1, grace=False, pitched=True), "mp")
+    baca.dynamic(abjad.select.leaf(m[10], 0, grace=False, pitched=True), "f")
+    baca.dynamic(abjad.select.leaf(m[25], 1, grace=False, pitched=True), "p")
 
 
 def gt2(cache):
     m = cache["gt2"]
     library.rotate_rehearsal_mark_literal(m[1][0])
-    J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5", "f")
-    J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4", "mp")
-    J1b(library.run(m[2], 1, 1), "G#4 A#4 C5 D5", "p")
+    J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5")
+    J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4")
+    J1b(library.run(m[2], 1, 1), "G#4 A#4 C5 D5")
     J3b(library.pleaves(m[3, 4], 3), 5 * "F#3 ", "mf mp mp p p", "10101")
     J3b(
         library.pleaves(m[5, 7], 3),
@@ -993,19 +996,25 @@ def gt2(cache):
         "mf mf mf mp mp mp p",
         "1101011",
     )
-    J1b(library.run(m[8], 1, 0), "C5 D5 E5", "p")
+    J1b(library.run(m[8], 1, 0), "C5 D5 E5")
     J3b(library.pleaves(m[8], 3), "A3 A#3", "p p", "10")
-    J1b(library.run(m[8], 1, 1), "C5 D5 E5 F#5", "p")
-    J1b(library.pleaves(m[10], 1), "D5 E5 F#5", "mf")
+    J1b(library.run(m[8], 1, 1), "C5 D5 E5 F#5")
+    J1b(library.pleaves(m[10], 1), "D5 E5 F#5")
     J4a(library.pleaves(m[16, 17], 4), "Db3:F2", "p")
-    J4a(library.pleaves(m[19, 22], 4), "F2:C3", "-")
-    J1b(library.pleaves(m[23], 1), "D5 E5 F#5 G#5", "p")
+    J4a(library.pleaves(m[19, 22], 4), "F2:C3")
+    J1b(library.pleaves(m[23], 1), "D5 E5 F#5 G#5")
     J3b(library.pleaves(m[23], 3), "A#3 A#3", "p p", "10")
     J4a(library.pleaves(m[24, 25], 4), "F2:A2", "p")
-    J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5", "p")
-    J1b(library.pleaves(m[27], 1), "D5 E5 F#5", "p")
+    J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5")
+    J1b(library.pleaves(m[27], 1), "D5 E5 F#5")
     J3b(library.pleaves(m[27, 29], 3), "A#3 B3 B3", "p pp pp", "111")
+    #
     cache.rebuild()
+    m = cache["gt2"]
+    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False, pitched=True), "f")
+    baca.dynamic(abjad.select.leaf(m[2], 0, grace=False, pitched=True), "mp")
+    baca.dynamic(abjad.select.leaf(m[2], 1, grace=False, pitched=True), "p")
+    baca.dynamic(abjad.select.leaf(m[10], 0, grace=False, pitched=True), "mf")
 
 
 def vn(m):

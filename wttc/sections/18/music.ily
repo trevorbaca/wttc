@@ -2612,6 +2612,11 @@ number.18.Guitar.1.Music.item.1 = {
 
     \voiceTwo
     b''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
 }
 
@@ -2620,6 +2625,11 @@ number.18.Guitar.1.Music.item.2 = {
 
     \voiceTwo
     cs'''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
 }
 
@@ -2628,6 +2638,11 @@ number.18.Guitar.1.Music.item.3 = {
 
     \voiceTwo
     f'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
 }
 
@@ -2636,6 +2651,11 @@ number.18.Guitar.1.Music.item.4 = {
 
     \voiceTwo
     g'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
 
 }
 
@@ -2644,6 +2664,11 @@ number.18.Guitar.1.Music.item.5 = {
 
     \voiceTwo
     g'''8
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
 
 }
 
@@ -3222,6 +3247,11 @@ number.18.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     <g ef'!>1.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
     % [Guitar.1.Music measure 17]
     <g ef'!>1.
@@ -3260,10 +3290,10 @@ number.18.Guitar.1.Music = {
         \staffHighlight lightgreen
         as'!8
         - \bendAfter #'-4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
         \p
 
           %! STAFF_HIGHLIGHT
@@ -3278,6 +3308,11 @@ number.18.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     <g b>1.
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
     - \tweak stencil ##f
     ~
 
@@ -3445,6 +3480,11 @@ number.18.Guitar.2.Music.item.1 = {
 
     \voiceTwo
     c'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
 
 }
 
@@ -3453,6 +3493,11 @@ number.18.Guitar.2.Music.item.2 = {
 
     \voiceTwo
     as''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
 }
 
@@ -3461,6 +3506,11 @@ number.18.Guitar.2.Music.item.3 = {
 
     \voiceTwo
     d'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
 }
 
@@ -3485,6 +3535,11 @@ number.18.Guitar.2.Music.item.6 = {
 
     \voiceTwo
     fs'''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
 }
 
@@ -4175,6 +4230,11 @@ number.18.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     <f df'!>1.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
     % [Guitar.2.Music measure 17]
     <f df'!>1.
@@ -4297,6 +4357,11 @@ number.18.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
     <f a>1.
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
     - \tweak stencil ##f
     ~
 
