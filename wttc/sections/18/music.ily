@@ -5841,9 +5841,9 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    <a a>2 * 4/8
+    <a a>2 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -5851,21 +5851,13 @@ number.18.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-      %! FRAMED_LEAF
-    \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override Stem.thickness = 6
-    <a a>4 * 1/1
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+    a4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    <a a>2 * 4/8
+    <a a>2 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -5873,15 +5865,7 @@ number.18.Cello.Music = {
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-      %! FRAMED_LEAF
-    \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override Stem.thickness = 6
-    <a a>4 * 1/1
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"8"
+    a4
 
     % [Cello.Music measure 27]
       %! STAFF_HIGHLIGHT

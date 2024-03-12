@@ -748,7 +748,7 @@ def VC(voice, meters):
         rhythm.mmrests(24, 25)
         rhythm(
             meters(26, 27),
-            [-8, frame(8, 4, chords=2), frame(8, 4, chords=2), "-"],
+            [-8, w(c(4, 2), 8), h(4), w(c(4, 2), 8), h(4), "-"],
             material=99,
         )
         components = j3_measures[27 - before_fermata]
@@ -883,10 +883,12 @@ def K1b(pleaves, dyad, alteration, peaks):
         alteration=alteration,
         harmonic=True,
     )
+    """
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),
     )
+    """
 
 
 def fl(m):
