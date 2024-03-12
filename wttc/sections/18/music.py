@@ -673,12 +673,22 @@ def VN(voice, meters):
         material=4,
         overlap=[-24 + 1],
     )
-    rhythm(
-        meters(23, 26),
-        [8, 9, 14, 15, 20, "-"],
-        material=4,
-        overlap=[-24 + 7],
-    )
+
+    @baca.call
+    def block():
+        counts = [8, 9, 14, 15, 20]
+        library.respell(counts, 2, [2, 4, 4, 4])
+        library.respell(counts, 3, [4, 4, 4, 3])
+        library.respell(counts, 4, [1, 4, 4, 4, 4, 3])
+        assert counts == [8, 9, [2, 4, 4, 4], [4, 4, 4, 3], [1, 4, 4, 4, 4, 3]]
+        counts = abjad.sequence.flatten(counts)
+        rhythm(
+            meters(23, 26),
+            counts + ["-"],
+            material=4,
+            overlap=[-24 + 7],
+        )
+
     rhythm.mmrests(27, 29)
 
 
@@ -830,6 +840,7 @@ def J3c(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches, strict=True)
     baca.override.note_head_style_harmonic(pleaves)
     plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
     baca.rspanners.pizzicato(
@@ -991,61 +1002,61 @@ def gt2(m):
 def vn(m):
     J4b(
         library.pleaves(m[9, 12], 4),
-        "C6/6 G5/4 Db5/4 F#4/3 B4/2 Eb4",
+        "C6/6 G5/4 Db5/4 F#4/3 B5/2 Eb4",
         [14, 6],
         "o< mp>o!",
         tasto="T4 =|",
     )
-    """
     J4b(
         library.run(m[13], 4, 0),
         "B5 Eb4",
         [2],
         "p>o!",
     )
-    J4b(library.run(m[13, 15], 4, 1), "B5 G5 Db5 F#4 B5", [8, 3], "o< mf>o!")
+    J4b(library.run(m[13, 15], 4, 1), "B5/3 G5/3 Db5/2 F#4/2 B5", [8, 3], "o< mf>o!")
     J4b(
         library.run(m[15, 18], 4, 1),
-        "B5 G5 Db5 F#4 Bb5 Gb5 C5 F4 A5 F5",
+        "B5/3 G5/3 Db5/2 F#4 Bb5 Gb5/3 C5/2 F4 A5 F5 D4",
         [13, 6],
         "o< f>o!",
     )
     J4b(
         library.run(m[18, 20], 4, 1),
-        "A5 F5 B4 E4 Gb5 E5 Bb4 Eb4 C5 Db4",
+        "A5/2 F5 B4 E4/2 Gb5/3 E5 Bb4/2 Eb4/2 C5/2 Db4",
         [3, 14],
         "o< mf>o!",
     )
     J4b(
         library.run(m[20, 23], 4, 1),
-        "Ab5 E5 Bb4 Eb4 F5 Eb5 A4 D4 Gb5",
+        "Ab5/2 E5 Bb4 Eb4/3 F5/2 Eb5/3 A4/3 D4/2 Gb5",
         [3, 15],
         "o< mp>o!",
     )
     J4b(
         library.run(m[23, 26], 4, 1),
-        "G5 Eb5 A4 D4 E5 D5",
-        [3, 11],
+        "G5/3 Eb5/3 A4/4 D4/4 E5/5 D5",
+        [3, 17],
         "o< p>o!",
     )
-    """
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
-    J3c(library.pleaves(m[2, 5], 3), 3 * "Btqf4 ", "mf f mf mp")
+    baca.clef(m[1][0], "treble")
+    J3c(library.pleaves(m[2, 5], 3), 4 * "Btqf4 ", "mf f mf mp")
     J3c(
         library.pleaves(m[6, 9], 3),
         "Btqf4 G4 G4 G4 E4 E4 E4",
         "f mf mp mp mp p p",
     )
     J3c(library.pleaves(m[23], 3), "E4", "p")
-    K1b(library.pleaves(m[26], 99), "<F3 Bb3>", "C4", "p p")
+    baca.clef(m[26][0], "tenor")
+    """
+    K1b(library.pleaves(m[26], 99), "F3:Bb3", "C4", "p p")
     J3c(library.pleaves(m[27], 3), "E4", "p")
-    K1b(library.pleaves(m[27, 28], 99), "<F3 Bb3>", "C4", "mp mp")
+    K1b(library.pleaves(m[27, 28], 99), "F3:Bb3", "C4", "mp mp")
     J3c(library.pleaves(m[29], 3), "E4", "p")
-    K1b(library.pleaves(m[29], 99), "<F3 Bb3>", "C4", "mf mf")
+    K1b(library.pleaves(m[29], 99), "F3:Bb3", "C4", "mf mf")
     """
 
 
