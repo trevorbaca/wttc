@@ -765,6 +765,11 @@ def plts(leaves, material_number):
     return plts
 
 
+def respell(counts, index, respelling):
+    assert counts[index] == sum(respelling)
+    counts[index] = respelling
+
+
 def replace(voice, component, string):
     index = voice.index(component)
     container = abjad.Container(string)

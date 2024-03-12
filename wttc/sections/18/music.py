@@ -615,7 +615,22 @@ def VN(voice, meters):
         assert counts == [2, 3, 8, 9, 14, 15, 20, -21]
         counts = abjad.sequence.reverse(counts)
         assert counts == [-21, 20, 15, 14, 9, 8, 3, 2]
-        counts = [-21, 20, 15, 14, 9, X(t(1)), AG([2], 4)]
+        library.respell(counts, 1, [3, 4, 4, 4, 4, 1])
+        assert counts == [-21, [3, 4, 4, 4, 4, 1], 15, 14, 9, 8, 3, 2]
+        library.respell(counts, 2, [3, 4, 4, 4])
+        assert counts == [-21, [3, 4, 4, 4, 4, 1], [3, 4, 4, 4], 14, 9, 8, 3, 2]
+        library.respell(counts, 3, [4, 4, 4, 2])
+        assert counts == [
+            -21,
+            [3, 4, 4, 4, 4, 1],
+            [3, 4, 4, 4],
+            [4, 4, 4, 2],
+            9,
+            8,
+            3,
+            2,
+        ]
+        counts = [-21, 3, 4, 4, 4, 4, 1, 3, 4, 4, 4, 4, 4, 4, 2, 9, X(t(1)), AG([2], 4)]
         rhythm(
             meters(9, 12),
             counts,
@@ -836,8 +851,7 @@ def J4a(pleaves, dyad, dynamic):
 
 
 def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
-    baca.pitches(pleaves, pitches, strict=True)
-    baca.glissando(pleaves)
+    baca.glissando(pleaves, pitches)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
@@ -846,6 +860,7 @@ def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
         baca.rspanners.tasto(
             pleaves,
             descriptor=f"{tasto} =|",
+            staff_padding=5.5,
         )
 
 
@@ -879,7 +894,7 @@ def fl(m):
         "E4 Eb4 Eb4 Eb4 Db4 Db4 Db4 Db4 B3 B3 B3 B3",
         "f f mf mf mp mp p p p pp pp pp",
     )
-    J1a(library.pleaves(m[8, 10], 1), "C6 Cqf6 B5 Bqf5 Bb5 A5", "p<f")
+    J1a(library.pleaves(m[8, 10], 1), "C6 Cqf6 B5 Bqf5 Bb5 A5", "p<!")
     J2a2(
         library.pleaves(m[10, 12], 2)[:-4],
         "Bb5 Ab5 G5 F5",
@@ -976,8 +991,8 @@ def gt2(m):
 def vn(m):
     J4b(
         library.pleaves(m[9, 12], 4),
-        "C6 G5 Db5 F#4 B5 Eb4",
-        [8, 6],
+        "C6/6 G5/4 Db5/4 F#4/3 B4/2 Eb4",
+        [14, 6],
         "o< mp>o!",
         tasto="T4 =|",
     )

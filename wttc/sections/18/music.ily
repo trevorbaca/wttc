@@ -1603,11 +1603,8 @@ number.18.AltoFlute.Music = {
     ~
 
     d'''16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \f
+      %! SPANNER_STOP
+    \!
     [
     \repeatTie
 
@@ -4564,6 +4561,8 @@ number.18.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-t-markup
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4582,24 +4581,58 @@ number.18.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    c'''1
+    c'''4
 
-    c'''16
+    b''4
+
+    a''4
+
+    a''4
+
+    a''16
     [
 
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
     g''8.
     ]
+    \glissando
 
-    g''4
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f''4
 
     % [Violin.Music measure 11]
-    g''2
+    f''4
 
-    df''!2.
+    e''4
 
-    df''!8
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df''!4
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    c''4
+
+    b'4
+
+    g'8
     [
 
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
     fs'!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4617,16 +4650,30 @@ number.18.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \glissando
 
     % [Violin.Music measure 12]
-    fs'!4
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'4
 
-    fs'!8.
+    a'8.
 
-    b''16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    b'16
+    \glissando
 
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    b''4
+    g'4
     {
 
         \revert Accidental.stencil
