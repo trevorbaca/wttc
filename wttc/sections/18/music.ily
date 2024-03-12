@@ -3584,7 +3584,6 @@ number.18.Guitar.2.Music = {
             %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
               %! REAPPLIED_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-            \override DynamicLineSpanner.staff-padding = 3
               %! -PARTS
               %! EXPLICIT_BAR_EXTENT
               %! REAPPLIED_BAR_EXTENT
@@ -3654,6 +3653,7 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8
@@ -4484,6 +4484,7 @@ number.18.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 28]
+    \override TupletBracket.direction = #up
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4535,6 +4536,7 @@ number.18.Guitar.2.Music = {
 
     r2
     \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
 
 }
 
