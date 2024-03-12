@@ -5841,7 +5841,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    a2 * 4/8
+    <a a>2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5857,13 +5857,13 @@ number.18.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 1/1
+    <a a>4 * 1/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2 * 4/8
+    <a a>2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5879,7 +5879,7 @@ number.18.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 1/1
+    <a a>4 * 1/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5904,19 +5904,19 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    a4
+    <a a>4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 28]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a4
+    <a a>4
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2 * 4/8
+    <a a>2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5932,7 +5932,7 @@ number.18.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 1/1
+    <a a>4 * 1/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5957,7 +5957,7 @@ number.18.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    a2 * 4/8
+    <a a>2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5973,13 +5973,13 @@ number.18.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 1/1
+    <a a>4 * 1/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    a2 * 4/8
+    <a a>2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
@@ -5995,7 +5995,7 @@ number.18.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 1/1
+    <a a>4 * 1/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 

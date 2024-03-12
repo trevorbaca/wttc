@@ -16,6 +16,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -747,14 +748,14 @@ def VC(voice, meters):
         rhythm.mmrests(24, 25)
         rhythm(
             meters(26, 27),
-            [-8, frame(8, 4), frame(8, 4), "-"],
+            [-8, frame(8, 4, chords=2), frame(8, 4, chords=2), "-"],
             material=99,
         )
         components = j3_measures[27 - before_fermata]
         library.overlap_previous_measure(voice, components, meters(27))
         components = rhythm(
             meters(27, 28),
-            [8, frame(8, 4)],
+            [c(8, 2), frame(8, 4, chords=2)],
             material=99,
             overlap=["-"],
         )
@@ -762,7 +763,7 @@ def VC(voice, meters):
 
     rhythm(
         meters(29),
-        [frame(8, 4), frame(8, 4)],
+        [frame(8, 4, chords=2), frame(8, 4, chords=2)],
         material=99,
         overlap=[-8],
     )
