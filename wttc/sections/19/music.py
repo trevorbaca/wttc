@@ -375,7 +375,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(8),
-        [4, 4, "-"],
+        2 * [frame(4, 2)] + ["-"],
         material=3,
     )
     rhythm(
@@ -385,7 +385,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(11),
-        4 * [4],
+        4 * [frame(4, 2)],
         material=3,
     )
     rhythm(
@@ -395,7 +395,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(13, 14),
-        8 * [4] + ["-"],
+        8 * [frame(4, 2)] + ["-"],
         material=3,
     )
     rhythm(
@@ -404,8 +404,13 @@ def VN(voice, meters):
         material=2,
     )
     rhythm(
-        meters(16, 19),
-        [-4] + 4 * [4] + [12] + 4 * [4] + [16] + 3 * [4],
+        meters(16, 17),
+        [-4] + 4 * [frame(4, 2)] + [frame(12, 6)] + [frame(4, 2)],
+        material=3,
+    )
+    rhythm(
+        meters(18, 19),
+        3 * [frame(4, 2)] + [16] + 3 * [frame(4, 2)],
         material=3,
     )
     rhythm(
