@@ -854,6 +854,7 @@ def K3a(pleaves, pitch, peaks, *, circle_bow=False):
             baca.mspanners.text(
                 pleaf,
                 r"\baca-circle-markup ||",
+                staff_padding=3,
             )
 
 
