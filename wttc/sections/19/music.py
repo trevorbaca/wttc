@@ -370,7 +370,7 @@ def VN(voice, meters):
     rhythm.mmrests(1, 5)
     rhythm(
         meters(6, 7),
-        [-1, 2, -3, 3, -7, -1, 1, -1, 1, -6, 1, -2, 1, -3],
+        [-1, X(2), -3, 3, -7, -1, 1, -1, 1, -6, 1, -2, 1, -3],
         material=2,
     )
     rhythm(
@@ -381,6 +381,7 @@ def VN(voice, meters):
     rhythm(
         meters(9, 10),
         8 * [-1, 2, -1],
+        do_not_rewrite_meter=True,
         material=2,
     )
     rhythm(
@@ -838,6 +839,7 @@ def K3a(pleaves, pitch, peaks, *, circle_bow=False):
     )
     if circle_bow is True:
         plts = baca.select.plts(pleaves)
+        plts = abjad.sequence.retain_pattern(plts, abjad.index([0], 2))
         for plt in plts:
             baca.mspanners.text(
                 plt,
@@ -1133,17 +1135,16 @@ def gt2(m):
 
 
 def vn(m):
-    pass
-    """
     K2d(library.pleaves(m[6, 7], 2), "A3", "mf")
     K3a(library.pleaves(m[8], 3), "C4", "p p", circle_bow=True)
     K2d(library.pleaves(m[9, 10], 2), "Ab3", "mf")
-    K3a(library.pleaves(m[8], 3), "C4", "p p mp mp", circle_bow=True)
+    K3a(library.pleaves(m[11], 3), "C4", "p p mp mp", circle_bow=True)
     K2d(library.pleaves(m[12], 2), "Ab3", "mf")
     K3a(library.pleaves(m[13, 14], 3), "C4", "p p mp mp mf mf mf mf", circle_bow=True)
     K2d(library.pleaves(m[15], 2), "B3", "pp")
     K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
+    """
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
     L3b(library.pleaves(m[21, 23], 3), Q1a, "o< f>o!", [46, 14])
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
