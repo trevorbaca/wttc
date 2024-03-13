@@ -95,18 +95,18 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7, 9),
-        3 * [4] + ["-"],
+        3 * [frame(4, 2)] + ["-"],
         overlap=[-12],
         material=3,
     )
     rhythm(
         meters(10, 11),
-        ["-"] + 5 * [4],
+        ["-"] + 5 * [frame(4, 2)],
         material=3,
     )
     rhythm(
         meters(12, 14),
-        ["-"] + 9 * [4] + [-8],
+        ["-"] + 9 * [frame(4, 2)] + [-8],
         material=3,
     )
     rhythm(
@@ -116,7 +116,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(15, 16),
-        [1, 7, 1, M(4, 3), M(4, 3)],
+        [1, 7, 1, M(frame(4, 2), 3), M(frame(4, 2), 3)],
         material=2,
         overlap=[-19],
     )
@@ -133,7 +133,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(18),
-        [4, 4, "-"],
+        [frame(4, 2), frame(4, 2), "-"],
         material=3,
     )
     rhythm(
@@ -144,7 +144,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(19),
-        [4, 4],
+        2 * [frame(4, 2)],
         material=3,
         overlap=["-"],
     )
