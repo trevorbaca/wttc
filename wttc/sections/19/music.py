@@ -1057,7 +1057,6 @@ Q2c = """
 
 def fl(m):
     pass
-    """
     K2a(library.pleaves(m[6], 2), "A3 Ab3", "mf>o!")
     K2a(library.pleaves(m[7], 2), "A3 Ab3", "mf>o!")
     K3a(library.pleaves(m[7, 8], 3), "G3", "p p p")
@@ -1072,6 +1071,7 @@ def fl(m):
     L1a(library.pleaves(m[18, 19], 99), "A#4", None, "o<f")
     K3a(library.pleaves(m[19], 3), "A3", "pp pp")
     #
+    """
     L1a(library.pleaves(m[20], 1), "B4", None, "o<p")
     L1a(library.pleaves(m[22, 23], 1), "B4", None, "o<mp")
     L1a(library.pleaves(m[24, 25], 1), "B4", None, "o<mf")
@@ -1085,8 +1085,8 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     K1a(library.pleaves(m[1, 8], 1), "G6 G6 F6", "p")
+    """
     L2a(library.pleaves(m[20], 2), "G6", "Bb6", [1, 1], "o< mp>o!")
     L2a(library.pleaves(m[23], 2), "G6", "Bb6", [1, 1], "o< mf>o!")
     L2a(library.pleaves(m[25], 2), "G6", "Bb6", [1, 1], "o< f>o!")
