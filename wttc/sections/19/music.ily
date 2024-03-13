@@ -5410,34 +5410,22 @@ number.19.Guitar.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
-    \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
-    {
-
-        % [Guitar.1.Music measure 6]
-        r8
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        %@% \staffHighlight lightskyblue
-        b'8
-
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
-        r8
-
-    }
+    % [Guitar.1.Music measure 6]
+    r4
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        af!8
+        - \baca-damp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \baca-sffz
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5456,11 +5444,15 @@ number.19.Guitar.1.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        af!8
+        - \baca-damp
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
+        \baca-sffz
 
     }
 
@@ -5473,16 +5465,17 @@ number.19.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 8]
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
         [
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        cs'''!8
         ]
 
           %! STAFF_HIGHLIGHT
@@ -5497,11 +5490,9 @@ number.19.Guitar.1.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5528,11 +5519,14 @@ number.19.Guitar.1.Music = {
         % [Guitar.1.Music measure 11]
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \baca-p-parenthesized
 
     }
 
@@ -5544,16 +5538,17 @@ number.19.Guitar.1.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
         [
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
         ]
 
           %! STAFF_HIGHLIGHT
@@ -5568,11 +5563,9 @@ number.19.Guitar.1.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5587,11 +5580,14 @@ number.19.Guitar.1.Music = {
         % [Guitar.1.Music measure 12]
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
 
     }
 
@@ -5608,16 +5604,17 @@ number.19.Guitar.1.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
         [
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        cs'''!8
         ]
 
           %! STAFF_HIGHLIGHT
@@ -5632,11 +5629,14 @@ number.19.Guitar.1.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5650,11 +5650,9 @@ number.19.Guitar.1.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
 
     }
 
@@ -5663,9 +5661,12 @@ number.19.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 14]
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5677,11 +5678,9 @@ number.19.Guitar.1.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5695,16 +5694,17 @@ number.19.Guitar.1.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
         [
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        cs'''!8
         ]
 
     }
@@ -5717,11 +5717,9 @@ number.19.Guitar.1.Music = {
         %@% \stopStaffHighlight
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
-        b'8
+        cs'''!8
 
     }
 
@@ -5748,11 +5746,15 @@ number.19.Guitar.1.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        af!8
+        - \baca-damp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \baca-sffz
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5992,16 +5994,30 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 6]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
     b'16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(0 . 2)
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6011,16 +6027,19 @@ number.19.Guitar.2.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     \repeatTie
 
@@ -6033,21 +6052,31 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 7]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6055,11 +6084,16 @@ number.19.Guitar.2.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6067,12 +6101,28 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
@@ -6080,11 +6130,14 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 8]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6092,21 +6145,17 @@ number.19.Guitar.2.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6117,16 +6166,30 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 9]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
     b'16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(0 . 2)
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6136,16 +6199,19 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6155,16 +6221,19 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6174,16 +6243,19 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6194,16 +6266,19 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 10]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6213,16 +6288,19 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6232,16 +6310,19 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
@@ -6251,19 +6332,33 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'16
     ]
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
@@ -6271,11 +6366,14 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 11]
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-p-parenthesized
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6283,11 +6381,9 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6295,21 +6391,22 @@ number.19.Guitar.2.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6318,11 +6415,14 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 12]
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6332,64 +6432,107 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
     b'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(0 . 2)
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \baca-effort-f
+    - \tweak padding 1
+    - \upbow
 
     % [Guitar.2.Music measure 13]
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6397,21 +6540,22 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6420,11 +6564,14 @@ number.19.Guitar.2.Music = {
     % [Guitar.2.Music measure 14]
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6432,21 +6579,22 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6454,11 +6602,9 @@ number.19.Guitar.2.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6466,11 +6612,9 @@ number.19.Guitar.2.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    cs'''!16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight

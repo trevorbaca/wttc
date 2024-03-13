@@ -102,7 +102,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="\\baca-sffz",
             )
         ],
         "Guitar.1.Staff": [
@@ -154,7 +154,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="f",
             )
         ],
         "Guitar.2.Staff": [

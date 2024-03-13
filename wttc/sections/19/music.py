@@ -244,7 +244,7 @@ def GT1(voice, meters):
     rhythm.mmrests(1, 5)
     rhythm.make_one_beat_tuplets(
         meters(6, 7),
-        [-1, 1, -1, 1, -2, -14, 1, "-"],
+        [-3, 1, -2, -14, 1, "-"],
         extra_counts=[-1],
         material=2,
     )
@@ -1056,7 +1056,6 @@ Q2c = """
 
 
 def fl(m):
-    pass
     K2a(library.pleaves(m[6], 2), "A3 Ab3", "mf>o!")
     K2a(library.pleaves(m[7], 2), "A3 Ab3", "mf>o!")
     K3a(library.pleaves(m[7, 8], 3), "G3", "p p p")
@@ -1097,13 +1096,12 @@ def ob(m):
 
 
 def gt1(m):
-    pass
-    """
     K2b(library.pleaves(m[6, 7], 2), "Ab2")
     K3b(library.pleaves(m[8], 3), "C#5", "p - -")
     K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
     K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
     K2b(library.pleaves(m[17], 2), "Ab2")
+    """
     L3a(library.pleaves(m[21], 3), "<G2 Ab3>", "mf")
     L3a(library.pleaves(m[24], 3), "<G2 Ab3>", "mf")
     L3a(library.pleaves(m[26], 3), "<G#2 A3>", "mp")
@@ -1114,13 +1112,13 @@ def gt1(m):
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     K2c(library.pleaves(m[6, 7], 2))
     K3b(library.pleaves(m[8], 3), "C#5", "p - -")
     K2c(library.pleaves(m[9, 10], 2))
     K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
     K2c(library.pleaves(m[12], 2))
     K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
+    """
     L3a(library.pleaves(m[21], 3), "<F2 Gb3>", "mf")
     L3a(library.pleaves(m[24], 3), "<F2 Gb3>", "mf")
     L3a(library.pleaves(m[26], 3), "<F#2 G3>", "mp")
