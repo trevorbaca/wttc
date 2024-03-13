@@ -10862,50 +10862,71 @@ number.19.Cello.Music = {
       %! SPANNER_STOP
     \!
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    d16
+    f,16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \sfp
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P2"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "T"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 6]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d1
-    - \tweak direction #up
-    \repeatTie
+    f,1
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [Cello.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d1
-    - \tweak direction #up
-    \repeatTie
+    f,1
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [Cello.Music measure 8]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    f,4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    f,16
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \repeatTie
 
       %! STAFF_HIGHLIGHT

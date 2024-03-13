@@ -824,8 +824,9 @@ def K2d(pleaves, pitch, dynamic):
 def K2e(pleaves, pitch, hairpin, scp):
     baca.pitch(pleaves, pitch)
     baca.mspanners.scp(
-        pleaves,
+        [pleaves],
         scp,
+        do_not_rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -1205,8 +1206,8 @@ def vc(m):
         "Ab3/2 E3/1 F3/2 C#3/1 D3/2 A#2/1 B2/2 G2/1 G#2/2 E2/1",
         "mp>o!",
     )
-    """
     K2e(library.pleaves(m[5, 8], 2), "F2", "sfp>o!", "P2 -> T")
+    """
     K1b3(
         library.run(m[8, 11], 1, 0),
         "A3 Bb3 G3 Ab3 F3 Gb3 D#3 E3 C#3 D3 B2 C3 A2 Bb2 G2",
