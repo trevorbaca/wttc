@@ -8397,6 +8397,8 @@ number.19.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
+      %! SPANNER_STOP
+    \stopTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8414,8 +8416,12 @@ number.19.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! SPANNER_STOP
     \!
-      %! SPANNER_STOP
-    \stopTextSpan
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! SPANNER_START
+    \startTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8445,12 +8451,8 @@ number.19.Violin.Music = {
     \pp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
-      %! SPANNER_START
-    - \baca-invisible-line
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \baca-circle-markup
-      %! SPANNER_START
-    \startTextSpan
+      %! SPANNER_STOP
+    \stopTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8467,8 +8469,12 @@ number.19.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! SPANNER_STOP
     \!
-      %! SPANNER_STOP
-    \stopTextSpan
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! SPANNER_START
+    \startTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8498,12 +8504,8 @@ number.19.Violin.Music = {
     \pp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
-      %! SPANNER_START
-    - \baca-invisible-line
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \baca-circle-markup
-      %! SPANNER_START
-    \startTextSpan
+      %! SPANNER_STOP
+    \stopTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8520,8 +8522,12 @@ number.19.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! SPANNER_STOP
     \!
-      %! SPANNER_STOP
-    \stopTextSpan
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! SPANNER_START
+    \startTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8551,12 +8557,8 @@ number.19.Violin.Music = {
     \pp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
-      %! SPANNER_START
-    - \baca-invisible-line
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \baca-circle-markup
-      %! SPANNER_START
-    \startTextSpan
+      %! SPANNER_STOP
+    \stopTextSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8574,8 +8576,6 @@ number.19.Violin.Music = {
     r2
       %! SPANNER_STOP
     \!
-      %! SPANNER_STOP
-    \stopTextSpan
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
