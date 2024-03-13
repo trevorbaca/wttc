@@ -550,12 +550,14 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, M(1, 2)]
+        counts = [8, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, 1]
+        counts = counts[:10]
+        assert counts == [8, 1, 7, 1, 6, 1, 5, 1, 4, 1]
         counts[0] -= 4
-        assert counts == [4, 1, 7, 1, 6, 1, 5, 1, 4, 1, 3, 1, 2, M(1, 2)]
+        assert counts == [4, 1, 7, 1, 6, 1, 5, 1, 4, 1]
         rhythm(
             meters(4, 5),
-            counts,
+            counts + [M(1, 2)],
             material=1,
         )
 

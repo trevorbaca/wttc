@@ -10859,12 +10859,20 @@ number.19.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     e,16
+      %! SPANNER_STOP
+    \!
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     d16
       %! SPANNER_STOP
-    \!
+    \bacaStopTextSpanDamp
+      %! SPANNER_STOP
+    \bacaStopTextSpanHalfCLT
     ]
     - \tweak stencil ##f
     ~
@@ -10872,15 +10880,7 @@ number.19.Cello.Music = {
     % [Cello.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-      %! STAFF_HIGHLIGHT
-    %@% \staffHighlight lightskyblue
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     d1
-      %! SPANNER_STOP
-    \bacaStopTextSpanDamp
-      %! SPANNER_STOP
-    \bacaStopTextSpanHalfCLT
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
