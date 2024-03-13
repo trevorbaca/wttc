@@ -10435,7 +10435,7 @@ number.19.Cello.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! REAPPLIED_STAFF_LINES
     \startStaff
-    a2 * 4/8
+    <a a>2 * 4/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -10460,13 +10460,13 @@ number.19.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 1/1
+    <a a>4 * 1/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    a2. * 6/12
+    <a a>2. * 6/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
@@ -10482,7 +10482,7 @@ number.19.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 3/2
+    <a a>4 * 3/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
 
@@ -10511,7 +10511,7 @@ number.19.Cello.Music = {
     % [Cello.Music measure 2]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    a1 * 8/16
+    <a a>1 * 8/16
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 
@@ -10527,7 +10527,7 @@ number.19.Cello.Music = {
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    a4 * 2/1
+    <a a>4 * 2/1
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
 

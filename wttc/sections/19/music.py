@@ -539,12 +539,12 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [frame(8, 4), frame(12, 6), frame(4, 1)],
+        [frame(8, 4, chords=2), frame(12, 6, chords=2), frame(4, 1)],
         material=1,
     )
     rhythm(
         meters(2, 3),
-        [frame(16, 8), frame(12, 1), t(4)],
+        [frame(16, 8, chords=2), frame(12, 1), t(4)],
         material=1,
     )
 
@@ -1192,9 +1192,9 @@ def vn(m):
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     """
-    K1b1(library.pleaves(m[1], 1)[:4], "<F#3 B3>", "C#4", "p mp")
+    K1b1(library.pleaves(m[1], 1)[:4], "F#3:B3", "C#4", "p mp")
     K1b2(library.pleaves(m[1], 1)[-2:], "G3", "p<|f")
-    K1b1(library.pleaves(m[2], 1), "<F#3 B3>", "C#4", "mf")
+    K1b1(library.pleaves(m[2], 1), "F#3:B3", "C#4", "mf")
     K1b2(library.pleaves(m[3], 1)[:2], "G3", "p<|f")
     K1b3(library.pleaves(m[3, 5], 1)[2:], "Ab3 E3 F3 C#3 D3 A#2 B2 G2 G#2 E2", "mp>o!")
     K2e(library.pleaves(m[5, 8], 2), "F2", "sfp>o!", "P2 -> T")
