@@ -1133,7 +1133,7 @@ def gt2(m):
     K2c(library.pleaves(m[6, 7], 2))
     K3b(library.pleaves(m[8], 3), "C#5", "p - -")
     K2c(library.pleaves(m[9, 10], 2))
-    K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
+    K3b(library.pleaves(m[11, 12], 3), "C#5", "p - mp - mf")
     K2c(library.pleaves(m[12], 2))
     K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
     """
@@ -1288,6 +1288,22 @@ def vc(m):
     """
 
 
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["gt1"].leaves(), 6)
+    gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2[6, 7], 6)
+    baca.override.dls_staff_padding(gt2[8], 4)
+    baca.override.dls_staff_padding(gt2[9, 10], 6)
+    baca.override.dls_staff_padding(gt2[11], 4)
+    baca.override.dls_staff_padding(gt2[12][:2], 4)
+    baca.override.dls_staff_padding(gt2[12][-8:], 6)
+    baca.override.dls_staff_padding(gt2[13, 14], 4)
+    baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
+
+
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
@@ -1333,6 +1349,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
