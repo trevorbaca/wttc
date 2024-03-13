@@ -732,6 +732,8 @@ def K1a(pleaves, pitches, dynamic):
 
 def K1b1(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
+    for pleaf in pleaves:
+        abjad.tweak(pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
@@ -741,6 +743,7 @@ def K1b1(pleaves, dyad, alteration, peaks):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),
+        rleak=True,
     )
 
 
@@ -752,7 +755,7 @@ def K1b2(pleaves, pitch, hairpin):
     )
     baca.mspanners.vibrato(
         pleaves,
-        "vib.molto =|",
+        "VM =|",
         staff_padding=3,
     )
 
@@ -1191,11 +1194,11 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     K1b1(library.pleaves(m[1], 1)[:4], "F#3:B3", "C#4", "p mp")
     K1b2(library.pleaves(m[1], 1)[-2:], "G3", "p<|f")
     K1b1(library.pleaves(m[2], 1), "F#3:B3", "C#4", "mf")
     K1b2(library.pleaves(m[3], 1)[:2], "G3", "p<|f")
+    """
     K1b3(library.pleaves(m[3, 5], 1)[2:], "Ab3 E3 F3 C#3 D3 A#2 B2 G2 G#2 E2", "mp>o!")
     K2e(library.pleaves(m[5, 8], 2), "F2", "sfp>o!", "P2 -> T")
     K1b3(
