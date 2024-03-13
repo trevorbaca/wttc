@@ -762,7 +762,13 @@ def K1b2(pleaves, pitch, hairpin):
     )
 
 
-def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
+def K1b3(
+    pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False, debug=False
+):
+    if debug is True:
+        plts = baca.select.plts(pleaves)
+        print([len(_) for _ in plts])
+        breakpoint()
     baca.glissando(pleaves, pitches)
     baca.rspanners.damp(
         pleaves,
@@ -1207,21 +1213,21 @@ def vc(m):
         "mp>o!",
     )
     K2e(library.pleaves(m[5, 8], 2), "F2", "sfp>o!", "P2 -> T")
-    """
     K1b3(
         library.run(m[8, 11], 1, 0),
-        "A3 Bb3 G3 Ab3 F3 Gb3 D#3 E3 C#3 D3 B2 C3 A2 Bb2 G2",
+        "A3 Bb3 G3 Ab3/2 F3 Gb3/2 D#3 E3/2 C#3 D3/2 B2 C3/2 A2 Bb2/2 G2",
         "o< p>o!",
         [12, 9],
     )
-    K1b3(library.run(m[11, 12], 1, 1), "G2 Ab2 F2 Gb2 D#2 E2", "p>o!")
-    K1b3(library.pleaves(m[14], 1), "F2 Gb2 D#2 E2", "p>o!")
+    K1b3(library.run(m[11, 12], 1, 1), "G2 Ab2/2 F2 Gb2/2 D#2 E2/2", "p>o!")
+    K1b3(library.pleaves(m[14], 1), "F2 Gb2/2 D#2 E2/2", "p>o!")
     L1a(library.pleaves(m[15], 99), "A#4", "B4", "o<p")
     K1b3(library.pleaves(m[15], 1), "F2 D2", "p>o!")
     K2e(library.pleaves(m[15, 16], 2), "G#2", "o<|mp", "T -> P")
     L1a(library.pleaves(m[17], 99), "A#4", "B4", "o<mp")
     K2e(library.pleaves(m[17, 18], 2), "G#2", "o<|mp", "T -> P")
     L1a(library.pleaves(m[18, 19], 99), "A#4", "B4", "o<f")
+    """
     L1a(library.pleaves(m[20], 1), "B4", "C5", "o<p")
     L3b(library.pleaves(m[21, 22], 3), Q2a, "o< f>o!", [46, 14])
     L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o< mp>o!", [2, 2], gliss=2)
