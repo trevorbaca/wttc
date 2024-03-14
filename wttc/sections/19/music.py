@@ -1153,8 +1153,8 @@ def vn(m):
     K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
-    """
     L3b(library.pleaves(m[21, 23], 3), Q1a, "o< f>o!", [46, 14])
+    """
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
     L3b(library.pleaves(m[24, 25], 3), Q1b, "o< f>o!", [19, 14])
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
@@ -1288,7 +1288,7 @@ def vc(m):
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"].leaves(), 4)
     baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
-    baca.override.dls_staff_padding(cache["gt1"].leaves(), 6)
+    baca.override.dls_staff_padding(cache["gt1"][1, 19], 6)
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[6, 7], 6)
     baca.override.dls_staff_padding(gt2[8], 4)
@@ -1297,8 +1297,8 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[12][:2], 4)
     baca.override.dls_staff_padding(gt2[12][-8:], 6)
     baca.override.dls_staff_padding(gt2[13, 14], 4)
-    baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["vn"][1, 19], 4)
+    baca.override.dls_staff_padding(cache["vc"][1, 19], 4)
 
 
 @baca.build.timed("make_score")
