@@ -989,7 +989,10 @@ def L4(pleaves, glissando, hairpin):
 
 def L5a(pleaves, fundamental):
     fundamental_to_overtones = {
-        "Bb": "Bb5 D6 F6 Ab6 " + 20 * "Bb6 C7 D7 C7 ",
+        "A": "A5 C#6 E6 G6 " + 50 * "A6 B6 C#7 B6 ",
+        "B": "B5 D#6 F#6 A6 " + 50 * "B6 C#7 D#7 C#7 ",
+        "Bb": "Bb5 D6 F6 Ab6 " + 50 * "Bb6 C7 D7 C7 ",
+        "C#": "C#6 E#6 G#6 B6 " + 50 * "C#7 D#7 E#7 ",
     }
     overtones = fundamental_to_overtones[fundamental]
     rmakers.unbeam(pleaves)
@@ -1087,8 +1090,6 @@ def fl(m):
     K3a(library.pleaves(m[18], 3), "A3", "p p")
     L1a(library.pleaves(m[18, 19], 99), "A#4", None, "o<f")
     K3a(library.pleaves(m[19], 3), "A3", "pp pp")
-    #
-    """
     L1a(library.pleaves(m[20], 1), "B4", None, "o<p")
     L1a(library.pleaves(m[22, 23], 1), "B4", None, "o<mp")
     L1a(library.pleaves(m[24, 25], 1), "B4", None, "o<mf")
@@ -1097,7 +1098,6 @@ def fl(m):
     L1a(library.pleaves(m[34, 35], 1), "C6", None, "f>o!")
     L5a(library.pleaves(m[38, 41], 5), "B")
     L5a(library.pleaves(m[44, 46], 5), "A")
-    """
 
 
 def ob(m):
