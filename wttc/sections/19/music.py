@@ -866,10 +866,12 @@ def K3b(pleaves, pitch, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def L1a(pleaves, pitches, alteration, hairpin, hairpin_lparts=None, *, gliss=None):
+def L1a(
+    pleaves, pitches, alteration, hairpin, hairpin_lparts=None, *, espr=None, gliss=None
+):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
-    for plt in plts:
+    for plt in plts[:espr]:
         baca.espressivo(plt.head)
     if gliss is not None:
         baca.glissando(pleaves[-gliss:])
@@ -1242,18 +1244,27 @@ def vc(m):
     baca.clef(m[20][0], "treble")
     L1a(library.pleaves(m[20], 1), "B4", "C5", "o<p")
     L3b(library.pleaves(m[21, 22], 3), Q2, "o< f>o!", [37, 17], beams=-6.5)
-    """
-    L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o< mp>o!", [2, 2], gliss=2)
-    L3b(library.pleaves(m[24], 3), Q2, "o< f>o!", [19, 8])
     L1a(
         library.pleaves(m[23], 1),
+        "B4 B4 B4 Bb3",
+        "C5",
+        "o< mp>o!",
+        [2, 2],
+        espr=2,
+        gliss=2,
+    )
+    L3b(library.pleaves(m[24], 3), Q2, "o< f>o!", [19, 8], beams=-6.5)
+    L1a(
+        library.pleaves(m[25], 1),
         "B4 B4 B4 Bb3 G3",
         "C5",
         "o< f> p<|ff",
         [2, 1, 2],
+        espr=2,
         gliss=3,
     )
-    L3b(library.pleaves(m[26], 3), Q2, "o< f>o!", [6, 9])
+    L3b(library.pleaves(m[26], 3), Q2, "o< f>o!", [6, 9], beams=-6.5)
+    """
     L4(
         library.pleaves(m[27, 28], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3",
@@ -1276,7 +1287,7 @@ def vc(m):
         library.pleaves(m[34, 35], 1)[-8:],
         "sfp>o!",
     )
-    L3b(library.pleaves(m[37], 3), Q2, "o< f>o!", [4, 10])
+    L3b(library.pleaves(m[37], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
     L4(
         library.pleaves(m[37, 39], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2",
@@ -1292,7 +1303,7 @@ def vc(m):
         library.pleaves(m[41], 1)[-4:],
         "(pp)>o!",
     )
-    L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 9])
+    L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 9], beams=-6.5)
     L4(
         library.pleaves(m[43, 46], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2 G2 Db2 Gb2 C2",
