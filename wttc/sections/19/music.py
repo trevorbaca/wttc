@@ -952,9 +952,11 @@ def L2b2(pleaves, pitches, alteration, hairpin_lparts, hairpin, *, gliss=None):
         alteration=alteration,
         staff_padding=5.5,
     )
+    assert sum(hairpin_lparts) == len(pleaves)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
+        rleak=True,
     )
 
 
@@ -1031,16 +1033,15 @@ def L5b(pleaves, glissando, hairpin):
     )
     baca.rspanners.damp(
         pleaves,
-        staff_padding=3,
+        staff_padding=5.5,
     )
     baca.rspanners.half_clt(
         pleaves,
-        staff_padding=5.5,
+        staff_padding=8,
     )
     baca.hairpin(
         pleaves,
         hairpin,
-        rleak=True,
     )
 
 
@@ -1168,12 +1169,12 @@ def vn(m):
     )
     L2b1(library.pleaves(m[30], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     L2b2(library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!", gliss=-2)
-    """
     L5b(
         library.pleaves(m[33, 35], 5),
-        "E6 G#5 B5 Eb5 Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
+        "E6/2 G#5 B5/2 Eb5/2 Gb5/2 Bb5/2 F4/2 Ab4/3 C4 Eb4/3 G3",
         "pp>o!",
     )
+    """
     L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!")
     L3b(library.pleaves(m[36, 37], 3), Q1c, "o< f>o!", [6, 18])
     L4(
@@ -1300,7 +1301,11 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[12][:2], 4)
     baca.override.dls_staff_padding(gt2[12][-8:], 6)
     baca.override.dls_staff_padding(gt2[13, 14], 4)
-    baca.override.dls_staff_padding(cache["vn"][1, 19], 4)
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[1, 19], 4)
+    baca.override.tuplet_bracket_down(vn[20, 46])
+    baca.override.tuplet_bracket_staff_padding(vn[27, 29][9:], 1.5)
+    baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)
     baca.override.dls_staff_padding(cache["vc"][1, 19], 4)
 
 
