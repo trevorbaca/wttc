@@ -488,7 +488,9 @@ def VN(voice, meters):
 
     rhythm(
         meters(35),
-        AG([2], 16),
+        [15, 1],
+        do_not_clean_up_rhythmic_spelling=True,
+        do_not_rewrite_meter=True,
         material=2,
         overlap=[-8],
     )
@@ -952,11 +954,12 @@ def L2b2(pleaves, pitches, alteration, hairpin_lparts, hairpin, *, gliss=None):
         alteration=alteration,
         staff_padding=5.5,
     )
+    if sum(hairpin_lparts) != len(pleaves):
+        breakpoint()
     assert sum(hairpin_lparts) == len(pleaves)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=True,
     )
 
 
@@ -1174,8 +1177,8 @@ def vn(m):
         "E6/2 G#5 B5/2 Eb5/2 Gb5/2 Bb5/2 F4/2 Ab4/3 C4 Eb4/3 G3",
         "pp>o!",
     )
+    L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
     """
-    L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!")
     L3b(library.pleaves(m[36, 37], 3), Q1c, "o< f>o!", [6, 18])
     L4(
         library.pleaves(m[37, 39], 4),

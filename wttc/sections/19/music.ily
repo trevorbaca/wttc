@@ -9616,6 +9616,8 @@ number.19.Violin.Music = {
     % [Violin.Music measure 33]
     \override TupletBracket.staff-padding = 1.5
     e'8
+      %! SPANNER_STOP
+    \!
     [
 
       %! STAFF_HIGHLIGHT
@@ -9628,8 +9630,6 @@ number.19.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! SPANNER_STOP
-    \!
       %! SPANNER_STOP
     \stopTrillSpan
     ]
@@ -9825,22 +9825,35 @@ number.19.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
-    b'1
-    {
+      %! SPANNER_START
+    \pitchedTrill
+    gs''!2...
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan a''
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
-        b'8
-
-    }
-
+    e'16
+      %! SPANNER_STOP
+    \!
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -9851,7 +9864,11 @@ number.19.Violin.Music = {
         %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
         b'16
+          %! SPANNER_STOP
+        \stopTrillSpan
         [
 
           %! NOT_YET_PITCHED_COLORING
