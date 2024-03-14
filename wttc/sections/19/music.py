@@ -979,6 +979,7 @@ def L3b(pleaves, pitches, hairpin, hairpin_lparts=None):
     if hairpin_lparts is None:
         parts = pleaves
     else:
+        assert sum(hairpin_lparts) == len(pleaves)
         parts = baca.select.lparts(pleaves, hairpin_lparts)
     baca.hairpin(
         parts,
@@ -1170,6 +1171,7 @@ def vn(m):
         'o<"ff"',
         staff_padding=8,
     )
+    rmakers.unbeam(m[27][9:11])
     L2b1(library.pleaves(m[30], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     L2b2(library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!", gliss=-2)
     L5b(
@@ -1177,20 +1179,22 @@ def vn(m):
         "E6/2 G#5 B5/2 Eb5/2 Gb5/2 Bb5/2 F4/2 Ab4/3 C4 Eb4/3 G3",
         "pp>o!",
     )
+    rmakers.unbeam(m[33][:2])
     L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
-    """
-    L3b(library.pleaves(m[36, 37], 3), Q1c, "o< f>o!", [6, 18])
+    L3b(library.pleaves(m[36, 37], 3), Q1a, "o< f>o!", [6, 18])
     L4(
         library.pleaves(m[37, 39], 4),
-        "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5 G#5 E6",
+        "G3 Eb4/2 C4/2 Ab4/2 F4/2 Db5/2 Bb4/3 Gb5/3 Eb5/2 B5/3 G#5/2 E6/1",
         '"ff">o!',
     )
+    rmakers.unbeam(m[37][8:11])
+    """
     L5b(
         library.pleaves(m[39, 41], 5),
-        "Eb5 Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
+        "Eb5/2 Gb5/3 Bb4/3 F4/2 Ab4/3 C4/3 Eb4 G3",
         "pp>o!",
     )
-    L3b(library.pleaves(m[42, 43], 3), Q1c, "o< f>o!", [4, 20])
+    L3b(library.pleaves(m[42, 43], 3), Q1a, "o< f>o!", [4, 20])
     L4(
         library.pleaves(m[43, 45], 4),
         "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5",
@@ -1308,6 +1312,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(vn[1, 19], 4)
     baca.override.tuplet_bracket_down(vn[20, 46])
     baca.override.tuplet_bracket_staff_padding(vn[27, 29][9:], 1.5)
+    baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)
     baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)
     baca.override.dls_staff_padding(cache["vc"][1, 19], 4)
 
