@@ -8516,7 +8516,9 @@ number.19.Violin.Music = {
     \revert NoteHead.style
 
     % [Violin.Music measure 21]
+    \override Beam.positions = #'(-5 . -5)
     \override NoteHead.style = #'harmonic
+    \override Stem.direction = #down
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
@@ -8529,6 +8531,8 @@ number.19.Violin.Music = {
       %! SPANNER_STOP
     \stopTrillSpan
     [
+      %! SPANNER_START
+    (
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8545,6 +8549,8 @@ number.19.Violin.Music = {
     fs''!16
 
     d'''16
+      %! SPANNER_STOP
+    )
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -8553,15 +8559,21 @@ number.19.Violin.Music = {
 
         d'''16
         [
+          %! SPANNER_START
+        (
 
         fs''!16
 
         bf'!16
 
         d'16
+          %! SPANNER_STOP
+        )
 
         ef'!16
         ]
+          %! SPANNER_START
+        (
 
     }
 
@@ -8571,9 +8583,13 @@ number.19.Violin.Music = {
     g''16
 
     ef'''!16
+      %! SPANNER_STOP
+    )
 
     ef'''!16
     ]
+      %! SPANNER_START
+    (
 
     g''16
     [
@@ -8581,9 +8597,13 @@ number.19.Violin.Music = {
     b'16
 
     ef'!16
+      %! SPANNER_STOP
+    )
 
     fs'!16
     ]
+      %! SPANNER_START
+    (
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -8595,8 +8615,12 @@ number.19.Violin.Music = {
         bf''!16
 
         fs'''!16
+          %! SPANNER_STOP
+        )
 
         fs'''!16
+          %! SPANNER_START
+        (
 
         bf''!16
 
@@ -8606,9 +8630,13 @@ number.19.Violin.Music = {
     }
 
     fs'!16
+      %! SPANNER_STOP
+    )
     [
 
     e'16
+      %! SPANNER_START
+    (
 
     c''16
 
@@ -8621,37 +8649,51 @@ number.19.Violin.Music = {
 
         % [Violin.Music measure 22]
         e'''16
+          %! SPANNER_STOP
+        )
         [
 
         e'''16
+          %! SPANNER_START
+        (
 
         af''!16
 
         c''16
 
         e'16
+          %! SPANNER_STOP
+        )
         ]
 
     }
 
     f'16
     [
+      %! SPANNER_START
+    (
 
     cs''!16
 
     a''16
 
     f'''16
+      %! SPANNER_STOP
+    )
     ]
 
     f'''16
     [
+      %! SPANNER_START
+    (
 
     a''16
 
     cs''!16
 
     f'16
+      %! SPANNER_STOP
+    )
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -8660,14 +8702,20 @@ number.19.Violin.Music = {
 
         g'16
         [
+          %! SPANNER_START
+        (
 
         ef''!16
 
         b''16
 
         g'''16
+          %! SPANNER_STOP
+        )
 
         g'''16
+          %! SPANNER_START
+        (
 
         b''16
         ]
@@ -8693,8 +8741,12 @@ number.19.Violin.Music = {
     \>
 
     g'16
+      %! SPANNER_STOP
+    )
 
     af'!16
+      %! SPANNER_START
+    (
 
     e''16
     ]
@@ -8707,8 +8759,12 @@ number.19.Violin.Music = {
         [
 
         af'''!16
+          %! SPANNER_STOP
+        )
 
         af'''!16
+          %! SPANNER_START
+        (
 
         c'''16
 
@@ -8719,9 +8775,13 @@ number.19.Violin.Music = {
 
     % [Violin.Music measure 23]
     af'!16
+      %! SPANNER_STOP
+    )
     [
 
     f'16
+      %! SPANNER_START
+    (
 
     cs''!16
 
@@ -8730,8 +8790,12 @@ number.19.Violin.Music = {
 
     d'16
       %! SPANNER_STOP
+    )
+      %! SPANNER_STOP
     \!
+    \revert Beam.positions
     \revert NoteHead.style
+    \revert Stem.direction
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight

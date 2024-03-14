@@ -972,6 +972,11 @@ def L3b(pleaves, pitches, hairpin, hairpin_lparts=None):
         parts,
         hairpin,
     )
+    baca.override.beam_positions(pleaves, -5)
+    baca.override.stem_down(pleaves)
+    parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True)
+    for part in parts:
+        baca.spanners.slur(part)
 
 
 def L4(pleaves, glissando, hairpin):
