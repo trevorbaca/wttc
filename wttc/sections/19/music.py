@@ -1264,12 +1264,13 @@ def vc(m):
         gliss=3,
     )
     L3b(library.pleaves(m[26], 3), Q2, "o< f>o!", [6, 9], beams=-6.5)
-    """
+    baca.clef(m[27][0], "bass")
     L4(
         library.pleaves(m[27, 28], 4),
-        "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3",
+        "Db4/2 F3 Bb3/3 D3/2 G3/2 B2/2 E3/2 G#2 C#3",
         'o<"ff"',
     )
+    """
     L1b(
         library.pleaves(m[28, 35], 1),
         "Eb2",
