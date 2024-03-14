@@ -453,13 +453,17 @@ def VN(voice, meters):
     @baca.call
     def block():
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
-        rhythm.make_one_beat_tuplets(
+        components = rhythm.make_one_beat_tuplets(
             meters(27, 29),
             [1] + counts + ["-"],
             extra_counts=[0, 1, 0, 0, 2],  # by hand
             material=4,
             overlap=[-9],
         )
+        pleaf = baca.select.pleaf(components, 0)
+        assert abjad.get.indicator(pleaf, library.Material).number == 4
+        abjad.detach(library.Material, pleaf)
+        abjad.attach(library.Material(3), pleaf)
 
     rhythm(
         meters(30, 32),
@@ -1152,7 +1156,7 @@ def vn(m):
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
     L3b(library.pleaves(m[24, 25], 3), Q1a, "o< f>o!", [19, 14])
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
-    L3b(library.pleaves(m[26, 27], 3), Q1a, "o< f>o!", [4, 19])
+    L3b(library.pleaves(m[26, 27], 3), Q1a, "o< f>o!", [4, 20])
     """
     L4(
         library.pleaves(m[27, 29], 4),

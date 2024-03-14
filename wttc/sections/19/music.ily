@@ -9144,7 +9144,7 @@ number.19.Violin.Music = {
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    a''16
+    f'''16
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -9165,16 +9165,16 @@ number.19.Violin.Music = {
       %! SPANNER_START
     \<
 
+    a''16
+
     cs''!16
 
     f'16
-
-    g'16
       %! SPANNER_STOP
     )
     ]
 
-    ef''!16
+    g'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -9194,9 +9194,9 @@ number.19.Violin.Music = {
       %! SPANNER_START
     \>
 
-    b''16
+    ef''!16
 
-    g'''16
+    b''16
 
     g'''16
       %! SPANNER_STOP
@@ -9207,67 +9207,74 @@ number.19.Violin.Music = {
     \times 2/3
     {
 
-        b''16
+        g'''16
         [
           %! SPANNER_START
         (
 
+        b''16
+
         ef'!16
 
         g'16
-
-        af'!16
           %! SPANNER_STOP
         )
 
-        e''16
+        af'!16
           %! SPANNER_START
         (
 
-        c'''16
+        e''16
         ]
 
     }
 
     % [Violin.Music measure 27]
-    af'''!16
+    c'''16
     [
 
     af'''!16
       %! SPANNER_STOP
     )
 
-    c'''16
+    af'''!16
       %! SPANNER_START
     (
 
-    e''16
+    c'''16
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
-        af'!16
+        e''16
         [
 
-        f'16
+        af'!16
           %! SPANNER_STOP
         )
+
+        f'16
+          %! SPANNER_START
+        (
 
         cs''!16
 
         a''16
-
-        f'''16
-          %! SPANNER_STOP
-        \!
         ]
-        \revert Beam.positions
-        \revert NoteHead.style
-        \revert Stem.direction
 
     }
+
+    f'''16
+      %! SPANNER_STOP
+    )
+      %! SPANNER_STOP
+    \!
+    [
+    \revert Beam.positions
+    \revert NoteHead.style
+    \revert Stem.direction
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
@@ -9275,11 +9282,6 @@ number.19.Violin.Music = {
     %@% \staffHighlight hotpink
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    b'16
-    [
-
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'8.
     ]
     - \tweak stencil ##f
