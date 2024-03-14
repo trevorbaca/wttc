@@ -462,8 +462,8 @@ def VN(voice, meters):
         )
         pleaf = baca.select.pleaf(components, 0)
         assert abjad.get.indicator(pleaf, library.Material).number == 4
-        abjad.detach(library.Material, pleaf)
-        abjad.attach(library.Material(3), pleaf)
+        library.unannotate([pleaf])
+        library.annotate([pleaf], 3)
 
     rhythm(
         meters(30, 32),
