@@ -900,23 +900,17 @@ def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
     )
 
 
-def L2a(
-    pleaves, pitch, alteration, hairpin_lparts, hairpin, *, hairpin_to_bar_line=False
-):
+def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitch)
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         staff_padding=5.5,
     )
-    if hairpin_to_bar_line is True:
-        tweaks = (abjad.Tweak(r"- \tweak to-barline ##t"),)
-    else:
-        tweaks = ()
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        *tweaks,
+        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
         rleak=True,
     )
 
@@ -942,6 +936,7 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
+        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
         rleak=True,
     )
 
@@ -1116,7 +1111,7 @@ def ob(m):
     L2a(library.pleaves(m[25], 2), "G6", "Bb6", [1, 1], "o< f>o!")
     L2a(library.pleaves(m[30], 2), "G6", "Bb6", [1, 1], "o< f>o!")
     L2a(library.pleaves(m[31, 33], 2), "G#6", "A6", [1, 2], "o< f>o!")
-    L2a(library.pleaves(m[35], 2), "G#6", "A6", [2], "f>o!", hairpin_to_bar_line=True)
+    L2a(library.pleaves(m[35], 2), "G#6", "A6", [2], "f>o!")
 
 
 def gt1(m):
@@ -1157,8 +1152,8 @@ def vn(m):
     K2d(library.pleaves(m[15], 2), "B3", "pp")
     K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
-    """
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
+    """
     L3b(library.pleaves(m[21, 23], 3), Q1a, "o< f>o!", [46, 14])
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
     L3b(library.pleaves(m[24, 25], 3), Q1b, "o< f>o!", [19, 14])
