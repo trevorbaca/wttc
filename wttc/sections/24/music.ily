@@ -1684,7 +1684,7 @@ number.24.Guitar.1.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \baca-sffz
+    \baca-mp-parenthesized
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2621,7 +2621,7 @@ number.24.Guitar.2.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \f
+    \baca-mp-parenthesized
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

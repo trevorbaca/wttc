@@ -1125,13 +1125,11 @@ def gt1(m):
     K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
     K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
     K2b(library.pleaves(m[17], 2), "Ab2")
-    """
-    L3a(library.pleaves(m[21], 3), "<G2 Ab3>", "mf")
-    L3a(library.pleaves(m[24], 3), "<G2 Ab3>", "mf")
-    L3a(library.pleaves(m[26], 3), "<G#2 A3>", "mp")
-    L3a(library.pleaves(m[36], 3), "<G#2 A3>", "mp")
-    L3a(library.pleaves(m[42], 3), "<G#2 A3>", "mp")
-    """
+    L3a(library.pleaves(m[21], 3), "G2:Ab3", "mf")
+    L3a(library.pleaves(m[24], 3), "G2:Ab3", "(mf)")
+    L3a(library.pleaves(m[26], 3), "G#2:A3", "mp")
+    L3a(library.pleaves(m[36], 3), "G#2:A3", "(mp)")
+    L3a(library.pleaves(m[42], 3), "G#2:A3", "(mp)")
 
 
 def gt2(m):
@@ -1142,13 +1140,11 @@ def gt2(m):
     K3b(library.pleaves(m[11, 12], 3), "C#5", "p - mp - mf")
     K2c(library.pleaves(m[12], 2))
     K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
-    """
-    L3a(library.pleaves(m[21], 3), "<F2 Gb3>", "mf")
-    L3a(library.pleaves(m[24], 3), "<F2 Gb3>", "mf")
-    L3a(library.pleaves(m[26], 3), "<F#2 G3>", "mp")
-    L3a(library.pleaves(m[36], 3), "<F#2 G3>", "mp")
-    L3a(library.pleaves(m[42], 3), "<F#2 G3>", "mp")
-    """
+    L3a(library.pleaves(m[21], 3), "F2:Gb3", "mf")
+    L3a(library.pleaves(m[24], 3), "F2:Gb3", "(mf)")
+    L3a(library.pleaves(m[26], 3), "F#2:G3", "mp")
+    L3a(library.pleaves(m[36], 3), "F#2:G3", "(mp)")
+    L3a(library.pleaves(m[42], 3), "F#2:G3", "(mp)")
 
 
 def vn(m):
