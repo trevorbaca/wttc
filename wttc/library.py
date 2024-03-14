@@ -888,7 +888,7 @@ instruments = {
     "Oboe": abjad.Oboe(),
     "Guitar": abjad.Guitar(pitch_range=abjad.PitchRange("[E2, G#5]")),
     "Violin": abjad.Violin(),
-    "Cello": abjad.Cello(),
+    "Cello": abjad.Cello(pitch_range=abjad.PitchRange("[C2, Eb6]")),
 }
 
 

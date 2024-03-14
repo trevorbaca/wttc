@@ -970,7 +970,7 @@ def L3a(pleaves, dyad, dynamic):
         baca.dynamic(plt.head, dynamic)
 
 
-def L3b(pleaves, pitches, hairpin, hairpin_lparts=None):
+def L3b(pleaves, pitches, hairpin, hairpin_lparts=None, *, beams=None):
     pitches = pitches.split()
     assert len(pleaves) <= len(pitches)
     pitches = pitches[-len(pleaves) :]
@@ -979,13 +979,15 @@ def L3b(pleaves, pitches, hairpin, hairpin_lparts=None):
     if hairpin_lparts is None:
         parts = pleaves
     else:
+        if sum(hairpin_lparts) != len(pleaves):
+            breakpoint()
         assert sum(hairpin_lparts) == len(pleaves)
         parts = baca.select.lparts(pleaves, hairpin_lparts)
     baca.hairpin(
         parts,
         hairpin,
     )
-    baca.override.beam_positions(pleaves, -5)
+    baca.override.beam_positions(pleaves, beams)
     baca.override.stem_down(pleaves)
     parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True)
     for part in parts:
@@ -1049,7 +1051,7 @@ def L5b(pleaves, glissando, hairpin):
     )
 
 
-Q1a = """
+Q1 = """
     D4 Bb4 F#5 D6
     D6 F#5 Bb4 D4 Eb4
     B4 G5 Eb6 Eb6
@@ -1068,7 +1070,7 @@ Q1a = """
     F6
     """
 
-Q2a = """
+Q2 = """
     Eb4 C5 A5 F#6 F#6 A5
     C5 Eb4 Eb4 C5 A5 F#6
     F#6 A5 C5 Eb4
@@ -1084,6 +1086,9 @@ Q2a = """
     Eb5 F#4 F#4 Eb5 C6 A6
     A6 C6
     """
+
+Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
+Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
 
 
 def fl(m):
@@ -1160,11 +1165,11 @@ def vn(m):
     K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
-    L3b(library.pleaves(m[21, 23], 3), Q1a, "o< f>o!", [46, 14])
+    L3b(library.pleaves(m[21, 23], 3), Q1, "o< f>o!", [46, 14], beams=-5)
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
-    L3b(library.pleaves(m[24, 25], 3), Q1a, "o< f>o!", [19, 14])
+    L3b(library.pleaves(m[24, 25], 3), Q1, "o< f>o!", [19, 14], beams=-5)
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
-    L3b(library.pleaves(m[26, 27], 3), Q1a, "o< f>o!", [4, 20])
+    L3b(library.pleaves(m[26, 27], 3), Q1, "o< f>o!", [4, 20], beams=-5)
     L4(
         library.pleaves(m[27, 29], 4),
         "G3/3 Eb4/3 C4 Ab4/3 F4/2 Db5 Bb4/2 Gb5/2 Eb5 B5/2 G#5 E6/2",
@@ -1181,7 +1186,7 @@ def vn(m):
     )
     rmakers.unbeam(m[33][:2])
     L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
-    L3b(library.pleaves(m[36, 37], 3), Q1a, "o< f>o!", [6, 18])
+    L3b(library.pleaves(m[36, 37], 3), Q1, "o< f>o!", [6, 18], beams=-5)
     L4(
         library.pleaves(m[37, 39], 4),
         "G3 Eb4/2 C4/2 Ab4/2 F4/2 Db5/2 Bb4/3 Gb5/3 Eb5/2 B5/3 G#5/2 E6/1",
@@ -1193,7 +1198,7 @@ def vn(m):
         "Eb5/2 Gb5/3 Bb4/3 F4/2 Ab4/3 C4/3 Eb4/3 G3",
         "pp>o!",
     )
-    L3b(library.pleaves(m[42, 43], 3), Q1a, "o< f>o!", [4, 20])
+    L3b(library.pleaves(m[42, 43], 3), Q1, "o< f>o!", [4, 20], beams=-5)
     L4(
         library.pleaves(m[43, 45], 4),
         "G3/2 Eb4/2 C4/2 Ab4/2 F4/2 Db5 Bb4 Gb5/2 Eb5 B5 G#5/2 A5",
@@ -1234,11 +1239,12 @@ def vc(m):
     L1a(library.pleaves(m[17], 99), "A#4", "B4", "o<mp")
     K2e(library.pleaves(m[17, 18], 2), "G#2", "o<|mp", "T -> P")
     L1a(library.pleaves(m[18, 19], 99), "A#4", "B4", "o<f")
-    """
+    baca.clef(m[20][0], "treble")
     L1a(library.pleaves(m[20], 1), "B4", "C5", "o<p")
-    L3b(library.pleaves(m[21, 22], 3), Q2a, "o< f>o!", [46, 14])
+    L3b(library.pleaves(m[21, 22], 3), Q2, "o< f>o!", [37, 17], beams=-6.5)
+    """
     L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o< mp>o!", [2, 2], gliss=2)
-    L3b(library.pleaves(m[24], 3), Q2a, "o< f>o!", [19, 8])
+    L3b(library.pleaves(m[24], 3), Q2, "o< f>o!", [19, 8])
     L1a(
         library.pleaves(m[23], 1),
         "B4 B4 B4 Bb3 G3",
@@ -1247,7 +1253,7 @@ def vc(m):
         [2, 1, 2],
         gliss=3,
     )
-    L3b(library.pleaves(m[26], 3), Q2a, "o< f>o!", [6, 9])
+    L3b(library.pleaves(m[26], 3), Q2, "o< f>o!", [6, 9])
     L4(
         library.pleaves(m[27, 28], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3",
@@ -1270,7 +1276,7 @@ def vc(m):
         library.pleaves(m[34, 35], 1)[-8:],
         "sfp>o!",
     )
-    L3b(library.pleaves(m[37], 3), Q2c, "o< f>o!", [4, 10])
+    L3b(library.pleaves(m[37], 3), Q2, "o< f>o!", [4, 10])
     L4(
         library.pleaves(m[37, 39], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2",
@@ -1286,7 +1292,7 @@ def vc(m):
         library.pleaves(m[41], 1)[-4:],
         "(pp)>o!",
     )
-    L3b(library.pleaves(m[42, 43], 3), Q2c, "o< f>o!", [4, 9])
+    L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 9])
     L4(
         library.pleaves(m[43, 46], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2 G2 Db2 Gb2 C2",
