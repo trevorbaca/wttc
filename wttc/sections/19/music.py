@@ -525,7 +525,7 @@ def VN(voice, meters):
         counts = [10, 9, 2, 8, 7, 2, 6, 5, 2, 4, 3, 2]
         counts = abjad.sequence.reverse(counts)
         assert counts == [2, 3, 4, 2, 5, 6, 2, 7, 8, 2, 9, 10]
-        counts += [2, 11, 12, 2, 13, 14]
+        counts += [2, 11, 12, 2, 12, 1]
         components = rhythm.make_one_beat_tuplets(
             meters(42, 46),
             24 * [1] + counts + ["-"],
@@ -1035,11 +1035,11 @@ def L5b(pleaves, glissando, hairpin):
         pleaves,
         glissando,
     )
-    baca.rspanners.damp(
+    baca.rspanners.half_clt(
         pleaves,
         staff_padding=5.5,
     )
-    baca.rspanners.half_clt(
+    baca.rspanners.damp(
         pleaves,
         staff_padding=8,
     )
@@ -1200,13 +1200,11 @@ def vn(m):
         '"ff">o!',
     )
     rmakers.unbeam(m[43][10:14])
-    """
     L5b(
         library.pleaves(m[45, 46], 5),
-        "Gb5/3 Bb5 F4/2 Ab4/2 C4 Eb4/2 G3",
+        "Gb5/3 Bb5 F4/2 Ab4/2 C4 Eb4/3 G3",
         "pp>o!",
     )
-    """
 
 
 def vc(m):
