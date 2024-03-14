@@ -1273,7 +1273,6 @@ def vc(m):
         "Db4/2 F3 Bb3/3 D3/2 G3/2 B2/2 E3/2 G#2 C#3",
         'o<"ff"',
     )
-    #     def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
     L1b(
         library.pleaves(m[28, 35], 1),
         "Eb2",
@@ -1284,39 +1283,31 @@ def vc(m):
         [24, 29, 8],
         "f|> pp sf|>o!",
     )
-    """
-    baca.hairpin(
-        library.pleaves(m[28, 30], 1),
-        "sfp>pp-sempre",
-        rleak=True,
-    )
-    baca.hairpin(
-        library.pleaves(m[34, 35], 1)[-8:],
-        "sfp>o!",
-    )
-    L3b(library.pleaves(m[37], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
+    baca.clef(m[36][0], "treble")
+    L3b(library.pleaves(m[36, 37], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
     L4(
         library.pleaves(m[37, 39], 4),
-        "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2",
+        "Db4/2 F3 Bb3/2 D3/2 G3/2 B2/2 E3/2 G#2/3 C#3 F2/2 Bb2/2 D2",
         '"ff">o!',
     )
+    rmakers.unbeam(m[37][:2])
+    baca.clef(m[37][1], "bass")
     L1b(
         library.pleaves(m[39, 41], 1),
         "D2",
-        "O -> T -> O -> T -> O -> T -> O",
+        "O -> T -> O -> T -> O -> T -> O -> T",
+        [10, 6],
+        "pp (pp)>o!",
     )
-    baca.dynamic(library.pleaves(m[39], 1)[0], "pp")
-    baca.hairpin(
-        library.pleaves(m[41], 1)[-4:],
-        "(pp)>o!",
-    )
-    L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 9], beams=-6.5)
+    baca.clef(m[42][0], "treble")
+    L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
     L4(
         library.pleaves(m[43, 46], 4),
-        "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3 F2 Bb2 D2 G2 Db2 Gb2 C2",
+        "Db4 F3/2 Bb3/2 D3/2 G3/2 B2/2 E3/3 G#2/3 C#3/2 F2/3"
+        " Bb2/3 D2/2 G2/3 Db2/3 Gb2 C2",
         '"ff">o!',
     )
-    """
+    baca.clef(m[43][1], "bass")
 
 
 def align_spanners(cache):
