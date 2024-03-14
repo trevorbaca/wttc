@@ -10211,370 +10211,479 @@ number.19.Violin.Music = {
           %! SPANNER_STOP
         \!
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight burlywood
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
-        b'16
+        ef''!16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
           %! SPANNER_STOP
         \bacaStopTextSpanHalfCLT
-        ~
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanDamp
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "½ clt"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! SPANNER_START
+        \bacaStartTextSpanHalfCLT
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \glissando
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f''16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    gf''!8.
     ]
-    - \tweak stencil ##f
-    ~
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    e''4
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'4
-        \repeatTie
+        d''4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
-        ~
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        bf'!8
+        \glissando
 
     }
 
     % [Violin.Music measure 40]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a'2
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    g'16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
-    ~
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f'16
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    af'!16
     ]
-    ~
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f'2
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    e'8
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c'8
     ]
-    - \tweak stencil ##f
-    ~
+    \glissando
 
     % [Violin.Music measure 41]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    d'2
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8.
+    d'8.
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    ef'!16
     ]
-    ~
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    c'2
+
+    b8.
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    g16
+      %! SPANNER_STOP
+    \!
+    ]
 
     % [Violin.Music measure 42]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \override Beam.positions = #'(-5 . -5)
+    \override NoteHead.style = #'harmonic
+    \override Stem.direction = #down
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    b'16
+    f'''16
+      %! SPANNER_STOP
+    \bacaStopTextSpanDamp
+      %! SPANNER_STOP
+    \bacaStopTextSpanHalfCLT
     [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    a''16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    cs''!16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    f'16
+      %! SPANNER_STOP
+    )
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        g'16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
         [
+          %! SPANNER_START
+        (
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        ef''!16
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        b''16
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        g'''16
+          %! SPANNER_STOP
+        )
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        g'''16
         ]
+          %! SPANNER_START
+        (
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    b''16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    ef'!16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    g'16
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    af'!16
     ]
+      %! SPANNER_START
+    (
 
     % [Violin.Music measure 43]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    e''16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    c'''16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    af'''!16
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    af'''!16
     ]
+      %! SPANNER_START
+    (
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        c'''16
         [
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        e''16
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        af'!16
+          %! SPANNER_STOP
+        )
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        f'16
+          %! SPANNER_START
+        (
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        cs''!16
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
+        a''16
         ]
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
-    [
+    f'''16
+      %! SPANNER_STOP
+    )
+      %! SPANNER_STOP
+    \!
+    \revert Beam.positions
+    \revert NoteHead.style
+    \revert Stem.direction
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    b'16
-    ~
+    g16
+    - \downbow
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-ff
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "½ clt"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanHalfCLT
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    c'16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
-    ]
-    ~
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    ef'!16
+    - \upbow
+    \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        d'8
         [
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8.
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        c'8.
+        - \downbow
         ]
-        - \tweak stencil ##f
-        ~
+        \glissando
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    e'16
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
-    ~
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    af'!16
+    - \upbow
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f'16
+    - \downbow
     ]
-    ~
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     b'4
 
     % [Violin.Music measure 44]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df''!4
+    - \upbow
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    bf'!8
+    - \downbow
     [
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'8
+    gf''!8
+    - \upbow
     ]
-    - \tweak stencil ##f
-    ~
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f''4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    ef''!2
+    - \downbow
+    \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        b''8
+        - \upbow
+        \glissando
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'4
-        - \tweak stencil ##f
-        ~
+        gs''!4
+        - \downbow
+        \glissando
 
     }
 
     % [Violin.Music measure 45]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a''4
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
-        \repeatTie
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        a''16
+          %! SPANNER_STOP
+        \!
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
@@ -10583,6 +10692,8 @@ number.19.Violin.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         b'4
+          %! SPANNER_STOP
+        \bacaStopTextSpanHalfCLT
         - \tweak stencil ##f
         ~
 

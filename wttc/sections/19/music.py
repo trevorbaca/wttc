@@ -515,7 +515,7 @@ def VN(voice, meters):
 
     rhythm(
         meters(41),
-        [13],
+        [12, 1],
         material=5,
         overlap=[-11],
     )
@@ -1188,21 +1188,22 @@ def vn(m):
         '"ff">o!',
     )
     rmakers.unbeam(m[37][8:11])
-    """
     L5b(
         library.pleaves(m[39, 41], 5),
-        "Eb5/2 Gb5/3 Bb4/3 F4/2 Ab4/3 C4/3 Eb4 G3",
+        "Eb5/2 Gb5/3 Bb4/3 F4/2 Ab4/3 C4/3 Eb4/3 G3",
         "pp>o!",
     )
     L3b(library.pleaves(m[42, 43], 3), Q1a, "o< f>o!", [4, 20])
     L4(
         library.pleaves(m[43, 45], 4),
-        "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5",
+        "G3/2 Eb4/2 C4/2 Ab4/2 F4/2 Db5 Bb4 Gb5/2 Eb5 B5 G#5/2 A5",
         '"ff">o!',
     )
+    rmakers.unbeam(m[43][10:14])
+    """
     L5b(
         library.pleaves(m[45, 46], 5),
-        "Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
+        "Gb5/3 Bb5 F4/2 Ab4/2 C4 Eb4/2 G3",
         "pp>o!",
     )
     """
