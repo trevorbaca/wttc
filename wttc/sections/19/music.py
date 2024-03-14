@@ -943,8 +943,10 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
     )
 
 
-def L2b2(pleaves, glissando, alteration, hairpin_lparts, hairpin):
-    baca.glissando(pleaves, glissando)
+def L2b2(pleaves, pitches, alteration, hairpin_lparts, hairpin, *, gliss=None):
+    baca.pitches(pleaves, pitches, strict=True)
+    if gliss is not None:
+        baca.glissando(pleaves[gliss:])
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
@@ -984,7 +986,9 @@ def L3b(pleaves, pitches, hairpin, hairpin_lparts=None):
         baca.spanners.slur(part)
 
 
-def L4(pleaves, glissando, hairpin):
+def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
+    pheads = baca.select.pheads(pleaves)
+    baca.alternate_bow_strokes(pheads)
     baca.glissando(
         pleaves,
         glissando,
@@ -993,10 +997,9 @@ def L4(pleaves, glissando, hairpin):
         pleaves,
         hairpin,
     )
-    baca.alternating_bow_strokes(pleaves)
     baca.rspanners.half_clt(
         pleaves,
-        staff_padding=5.5,
+        staff_padding=staff_padding,
     )
 
 
@@ -1157,14 +1160,15 @@ def vn(m):
     L3b(library.pleaves(m[24, 25], 3), Q1a, "o< f>o!", [19, 14])
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     L3b(library.pleaves(m[26, 27], 3), Q1a, "o< f>o!", [4, 20])
-    """
     L4(
         library.pleaves(m[27, 29], 4),
-        "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5 G#5 E6",
+        "G3/3 Eb4/3 C4 Ab4/3 F4/2 Db5 Bb4/2 Gb5/2 Eb5 B5/2 G#5 E6/2",
         'o<"ff"',
+        staff_padding=8,
     )
     L2b1(library.pleaves(m[30], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
-    L2b2(library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!")
+    L2b2(library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!", gliss=-2)
+    """
     L5b(
         library.pleaves(m[33, 35], 5),
         "E6 G#5 B5 Eb5 Gb5 Bb5 F4 Ab4 C4 Eb4 G3",
