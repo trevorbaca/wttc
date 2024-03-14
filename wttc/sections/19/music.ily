@@ -12958,38 +12958,81 @@ number.19.Cello.Music = {
           %! EXPLICIT_DYNAMIC
         \baca-effort-ff
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightpink
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
-        d16
+        ef,!16
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
           %! SPANNER_STOP
         \bacaStopTextSpanHalfCLT
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "P"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak stencil #abjad-flared-hairpin
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,8
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,!8
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,!8
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     [
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,!8
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
@@ -12998,31 +13041,51 @@ number.19.Cello.Music = {
     {
 
         % [Cello.Music measure 29]
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,16
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        ef,!4
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "P"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,!16
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,!8.
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
@@ -13030,42 +13093,60 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,8
         [
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8.
+        ef,!8.
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         - \tweak stencil ##f
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,8.
     [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,!16
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,!8.
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
@@ -13073,22 +13154,26 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        ef,4
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "P"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
     % [Cello.Music measure 30]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    ef,4
     - \tweak stencil ##f
     ~
 
@@ -13096,59 +13181,106 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,8
         [
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "T"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,!16
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "P"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,2
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,!2
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
         % [Cello.Music measure 31]
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         [
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8.
+        ef,!8.
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "T"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         - \tweak stencil ##f
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,2
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,!2
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
@@ -13156,28 +13288,40 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,8
         [
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "T"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,!16
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
     % [Cello.Music measure 32]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,2
     - \tweak stencil ##f
     ~
 
@@ -13185,52 +13329,66 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        ef,4
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "T"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,2
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,8.
     [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,!16
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     ~
 
     % [Cello.Music measure 33]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,!8.
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,2
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -13239,24 +13397,28 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,8
         [
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8.
+        ef,!8.
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         - \tweak stencil ##f
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d2
+    ef,2
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -13266,74 +13428,130 @@ number.19.Cello.Music = {
     {
 
         % [Cello.Music measure 34]
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        ef,4
         - \tweak stencil ##f
         ~
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,16
         [
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,!16
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "T"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,!8.
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        ef,!4
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "T"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d16
+        ef,!16
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d16
+    ef,16
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,!8.
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,8
     [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \sf
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
@@ -13341,21 +13559,35 @@ number.19.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        ef,4
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
     }
 
     % [Cello.Music measure 35]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    ef,!4
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
@@ -13363,29 +13595,41 @@ number.19.Cello.Music = {
     \times 4/5
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8.
+        ef,8.
         [
         \repeatTie
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        ef,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         ]
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \baca-text-spanner-right-text "T"
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    ef,4
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8
+    ef,8
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \repeatTie
 
       %! STAFF_HIGHLIGHT

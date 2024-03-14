@@ -892,9 +892,12 @@ def L1a(
 
 def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
     baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
     baca.mspanners.scp(
-        baca.select.clparts(pleaves, [1]),
+        plts,
         scp,
+        do_not_rleak=True,
+        staff_padding=5.5,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -1270,7 +1273,7 @@ def vc(m):
         "Db4/2 F3 Bb3/3 D3/2 G3/2 B2/2 E3/2 G#2 C#3",
         'o<"ff"',
     )
-    """
+    #     def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
     L1b(
         library.pleaves(m[28, 35], 1),
         "Eb2",
@@ -1278,7 +1281,10 @@ def vc(m):
         " P -> T -> P -> T -> P -> T ->"
         " O -> T -> O -> T -> O -> T -> O -> T -> O -> T -> O -> T -> O -> T ->"
         " P -> O -> P -> O -> T",
+        [24, 29, 8],
+        "f|> pp sf|>o!",
     )
+    """
     baca.hairpin(
         library.pleaves(m[28, 30], 1),
         "sfp>pp-sempre",
