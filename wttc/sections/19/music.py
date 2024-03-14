@@ -762,13 +762,7 @@ def K1b2(pleaves, pitch, hairpin):
     )
 
 
-def K1b3(
-    pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False, debug=False
-):
-    if debug is True:
-        plts = baca.select.plts(pleaves)
-        print([len(_) for _ in plts])
-        breakpoint()
+def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
     baca.glissando(pleaves, pitches)
     baca.rspanners.damp(
         pleaves,
@@ -920,18 +914,22 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
         baca.pitches(pleaves, start)
     else:
         baca.glissando(pleaves, f"{start} {stop}")
-        baca.markup(pleaves[0], r"\wttc-non-stringere")
+        baca.markup(
+            pleaves[0],
+            r"\wttc-non-stringere",
+            abjad.Tweak(r"- \tweak staff-padding 9"),
+        )
     baca.override.note_head_style_harmonic(pleaves)
     baca.rspanners.string_number(
         pleaves,
         string_number,
-        staff_padding=5.5,
+        staff_padding=6.5,
     )
     baca.rspanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
-        staff_padding=3,
+        staff_padding=4,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -962,7 +960,10 @@ def L3a(pleaves, dyad, dynamic):
 
 
 def L3b(pleaves, pitches, hairpin, hairpin_lparts=None):
-    baca.pitches(pleaves, pitches)
+    pitches = pitches.split()
+    assert len(pleaves) <= len(pitches)
+    pitches = pitches[-len(pleaves) :]
+    baca.pitches(pleaves, pitches, strict=True)
     baca.override.note_head_style_harmonic(pleaves)
     if hairpin_lparts is None:
         parts = pleaves
@@ -1051,13 +1052,8 @@ Q1a = """
     G6 B5 Eb4 G4
     Ab4 E5 C6 Ab6 Ab6
     C6 E5
-    Ab4 F4 C#5 C6
-    """
-
-Q1b = """
-    """
-
-Q1c = """
+    Ab4 F4 C#5 A5
+    F6
     """
 
 Q2a = """
@@ -1075,12 +1071,6 @@ Q2a = """
     Eb5 C6 A6 A6 C6
     Eb5 F#4 F#4 Eb5 C6 A6
     A6 C6
-    """
-
-Q2b = """
-    """
-
-Q2c = """
     """
 
 
@@ -1159,11 +1149,11 @@ def vn(m):
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
     L3b(library.pleaves(m[21, 23], 3), Q1a, "o< f>o!", [46, 14])
-    """
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
-    L3b(library.pleaves(m[24, 25], 3), Q1b, "o< f>o!", [19, 14])
+    L3b(library.pleaves(m[24, 25], 3), Q1a, "o< f>o!", [19, 14])
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
-    L3b(library.pleaves(m[26, 27], 3), Q1c, "o< f>o!", [4, 20])
+    L3b(library.pleaves(m[26, 27], 3), Q1a, "o< f>o!", [4, 19])
+    """
     L4(
         library.pleaves(m[27, 29], 4),
         "G3 Eb4 C4 Ab4 F4 Db5 Bb4 Gb5 Eb5 B5 G#5 E6",
@@ -1233,7 +1223,7 @@ def vc(m):
     L1a(library.pleaves(m[20], 1), "B4", "C5", "o<p")
     L3b(library.pleaves(m[21, 22], 3), Q2a, "o< f>o!", [46, 14])
     L1a(library.pleaves(m[23], 1), "B4 B4 B4 Bb3", "C5", "o< mp>o!", [2, 2], gliss=2)
-    L3b(library.pleaves(m[24], 3), Q2b, "o< f>o!", [19, 8])
+    L3b(library.pleaves(m[24], 3), Q2a, "o< f>o!", [19, 8])
     L1a(
         library.pleaves(m[23], 1),
         "B4 B4 B4 Bb3 G3",
@@ -1242,7 +1232,7 @@ def vc(m):
         [2, 1, 2],
         gliss=3,
     )
-    L3b(library.pleaves(m[26], 3), Q2c, "o< f>o!", [6, 9])
+    L3b(library.pleaves(m[26], 3), Q2a, "o< f>o!", [6, 9])
     L4(
         library.pleaves(m[27, 28], 4),
         "Db4 F3 Bb3 D3 G3 B2 E3 G#2 C#3",
