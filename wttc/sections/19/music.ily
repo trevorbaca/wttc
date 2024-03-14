@@ -12430,16 +12430,11 @@ number.19.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    \afterGrace
-    b'2
-    {
+    b'4..
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
-
-    }
-
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -12599,18 +12594,11 @@ number.19.Cello.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    \afterGrace
-    b'2
-    {
+    b'4..
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
-        b'8
-
-    }
-
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'16
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -12621,6 +12609,8 @@ number.19.Cello.Music = {
         %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
         b'16
         [
 

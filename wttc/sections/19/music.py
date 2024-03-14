@@ -657,7 +657,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(23),
-        [4, 4, AG([2], 8), "-"],
+        [4, 4, X(7), 1, "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -668,7 +668,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(25),
-        [4, 4, 8, AG([2], 8)],
+        [4, 4, 8, X(7), 1],
         material=1,
     )
 
