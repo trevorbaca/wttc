@@ -503,7 +503,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(3),
-        [-1, 19, -4],
+        [-1, 3, 4, 4, 4, 4, -4],
         material=3,
     )
 
@@ -517,10 +517,12 @@ def VC(voice, meters):
         )
         plts = baca.select.plts(components)
         library.annotate(plts[:1], 3)
-        baca.repeat_tie(plts[:1])
         library.annotate(plts[1:3], 1)
         library.annotate(plts[3:4], 3)
         library.annotate(plts[4:], 1)
+        quarters = [abjad.Note(_) for _ in ["c'4", "c'4", "c'4"]]
+        abjad.mutate.replace(components[4:5], quarters)
+        library.annotate(quarters, 3)
 
     rhythm(
         meters(5),
@@ -672,6 +674,10 @@ def M3a(pleaves, pitch, dynamic):
 
 
 def M3b(pleaves, pitches, string_number, dynamics):
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
     baca.pitches(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
     baca.glissando(pleaves, do_not_hide_middle_note_heads=True)
@@ -680,10 +686,6 @@ def M3b(pleaves, pitches, string_number, dynamics):
         string_number,
         staff_padding=3,
     )
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
 
 
 def M4(pleaves, pitch, hairpin):
@@ -808,6 +810,7 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
+    baca.clef(m[1][0], "treble")
     M1_3(library.pleaves(m[1, 2], 1), ["C5 F#4", "B4 F4"], "mf mp")
     """
     M3b(library.pleaves(m[3], 3), "A2 F#4", 3, "f")
