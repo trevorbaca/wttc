@@ -4049,7 +4049,7 @@ number.24.Violin.Music = {
     \<
     \glissando
 
-    <e' a'>8.
+    ds''!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue

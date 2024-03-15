@@ -441,7 +441,7 @@ def VN(voice, meters):
     rhythm.mmrests(8, 9)
     rhythm(
         meters(10, 11),
-        [c(19, 2), c(3, 2), c(3, 2), c(3, 2), c(2, 2), c(2, 2), "-"],
+        [c(16, 2), 3, c(3, 2), c(3, 2), c(3, 2), c(2, 2), c(2, 2), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
