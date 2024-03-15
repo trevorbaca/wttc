@@ -4931,19 +4931,27 @@ number.24.Cello.Music = {
     \times 2/3
     {
 
-        r8
+        r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        d8
-        [
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
-        ]
+        c''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-pizz-markup
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanPizzicato
+        \glissando
 
     }
 
@@ -4951,13 +4959,17 @@ number.24.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d4
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        a'4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        fs'!8
 
     }
 
@@ -4971,31 +4983,40 @@ number.24.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightpink
-        d8
-        ~
+        b'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+        \glissando
 
     }
 
     % [Cello.Music measure 2]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d4
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'4
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        f'8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4
+          %! SPANNER_STOP
+        \bacaStopTextSpanPizzicato
 
     }
 
@@ -5017,6 +5038,8 @@ number.24.Cello.Music = {
     d1
     - \tweak direction #up
     \repeatTie
+    - \tweak stencil ##f
+    ~
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -5025,6 +5048,7 @@ number.24.Cello.Music = {
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
         d8
+        \repeatTie
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring

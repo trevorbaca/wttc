@@ -497,7 +497,7 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.make_one_beat_tuplets(
         meters(1, 2),
-        [-4, 1, 1, 2, 1, -8, 4, 1, "-"],
+        [-5, 3, 1, -8, 4, 1, "-"],
         extra_counts=[-1],
         material=1,
     )
@@ -517,6 +517,7 @@ def VC(voice, meters):
         )
         plts = baca.select.plts(components)
         library.annotate(plts[:1], 3)
+        baca.repeat_tie(plts[:1])
         library.annotate(plts[1:3], 1)
         library.annotate(plts[3:4], 3)
         library.annotate(plts[4:], 1)
@@ -807,8 +808,8 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     M1_3(library.pleaves(m[1, 2], 1), ["C5 F#4", "B4 F4"], "mf mp")
+    """
     M3b(library.pleaves(m[3], 3), "A2 F#4", 3, "f")
     M1_3(library.run(m[3, 4], 1, 0), ["B4 G#4"], "mf")
     M3b(library.pleaves(m[4], 3), "C#3 G4", 3, "f")
