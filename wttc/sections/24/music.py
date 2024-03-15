@@ -14,6 +14,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -427,7 +428,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(5, 6),
-        [-19, 3, 3, 3, "-"],
+        [-19] + 3 * [c(3, 2)] + ["-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -620,7 +621,7 @@ def M1_2(pleaves, fundamentals, hairpin):
     fundamentals = fundamentals.split()
     for fundamental in fundamentals:
         harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
-        dyad = f'<{fundamental} {harmonic.get_name(locale="us")}>'
+        dyad = f'{fundamental}:{harmonic.get_name(locale="us")}'
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
@@ -784,20 +785,19 @@ def gt2(m):
 
 
 def vn(m):
-    pass
-    """
     M1_3(library.pleaves(m[1, 2], 1), ["D5 G#4", "Db5 G4", "Bb4 E4"], "mf mp mf")
-    M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "mf mp mf")
-    M1_2(library.pleaves(m[5, 6], 1)[:4], "D4 E4 F4", "mf<f")
-    M1_3(library.pleaves(m[5, 7], 1)[4:], ["C5 B4", "B4 A#4", "Bb4 A4"], "mf mf mp")
-    M1_1(library.pleaves(m[10], 1)[:2], "<E4 A4>", "D#5", "o<f")
+    M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "- mp mf")
+    M1_2(library.pleaves(m[5, 6], 1)[:5], "D4 E4 F4", "mf<f")
+    M1_3(library.pleaves(m[5, 7], 1)[5:], ["C5 A4", "B4 G#4", "Bb4 G4"], "- - mp")
+    """
+    M1_1(library.pleaves(m[10], 1)[:2], "E4:A4", "D#5", "o<f")
     M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
     M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
-    M1_1(library.pleaves(m[16], 1)[:2], "<F#4 B4>", "G5", "o<f")
+    M1_1(library.pleaves(m[16], 1)[:2], "F#4:B4", "G5", "o<f")
     M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
     M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
-    M1_1(library.pleaves(m[22], 1), "<G4 C4>", "C6", "pp<| f|>pp", [1, 2])
+    M1_1(library.pleaves(m[22], 1), "G4:C4", "C6", "pp<| f|>pp", [1, 2])
     M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
     N1c(library.run(m[27, 30], 99, 0), "Gb5 Eb5", 2, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "Gb5 D5", 2, "mp>o!")
@@ -817,13 +817,13 @@ def vc(m):
     M1_2(library.run(m[5, 6], 1, 0), "C#4 D#4 E4", "mf<f")
     M1_3(library.pleaves(m[6], 1)[3:], ["Bb4 A4", "A4 G#4"], "mf mp")
     M3b(library.pleaves(m[7, 8], 3), "A3 B3 G#4 D4 G#4", 3, "f mf mp p")
-    M1_1(library.pleaves(m[10], 1)[:3], "<D#4 G#4>", "C5", "o<f")
+    M1_1(library.pleaves(m[10], 1)[:3], "D#4:G#4", "C5", "o<f")
     M1_2(library.pleaves(m[10, 11], 1)[3:7], "C#4 D#4 E4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[3:], ["G4 F#4", "Gb4 Eb4", "F4 B3"], "mf mp p")
-    M1_1(library.pleaves(m[16], 1)[:2], "<E4 A4>", "F5", "o<f")
+    M1_1(library.pleaves(m[16], 1)[:2], "E4:A4", "F5", "o<f")
     M1_2(library.pleaves(m[16], 1)[2:], "D#4 E4 F4 F#4", "mf<f")
     M3b(library.pleaves(m[17, 19], 3), "G#4 D4 E4 F#4 G#4", 3, "f mf mp p")
-    M1_1(library.pleaves(m[22], 1), "<F4 Bb4>", "C6", "pp<| f|>pp", [1, 2])
+    M1_1(library.pleaves(m[22], 1), "F4:Bb4", "C6", "pp<| f|>pp", [1, 2])
     M3b(library.pleaves(m[23, 24], 3), "E3 C#5", 3, "mf")
     N1c(library.run(m[27, 30], 99, 0), "D#5 F5", 1, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "D#5 F#5", 1, "mp>o!")
