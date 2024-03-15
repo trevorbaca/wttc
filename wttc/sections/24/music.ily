@@ -4030,7 +4030,7 @@ number.24.Violin.Music = {
         a'
     >1
       %! SPANNER_START
-    - \baca-dashed-line-with-hook
+    - \baca-invisible-line
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START
@@ -4335,7 +4335,7 @@ number.24.Violin.Music = {
         b'
     >2
       %! SPANNER_START
-    - \baca-dashed-line-with-hook
+    - \baca-invisible-line
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START
@@ -4354,7 +4354,7 @@ number.24.Violin.Music = {
     \<
     \glissando
 
-    <fs'! b'>8.
+    g''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -4501,7 +4501,7 @@ number.24.Violin.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_START
-    - \baca-dashed-line-with-hook
+    - \baca-invisible-line
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START
@@ -5619,7 +5619,7 @@ number.24.Cello.Music = {
         gs'!
     >1
       %! SPANNER_START
-    - \baca-dashed-line-with-hook
+    - \baca-invisible-line
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START
@@ -5851,7 +5851,7 @@ number.24.Cello.Music = {
         a'
     >2.
       %! SPANNER_START
-    - \baca-dashed-line-with-hook
+    - \baca-invisible-line
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START
@@ -5870,7 +5870,7 @@ number.24.Cello.Music = {
     \<
     \glissando
 
-    <e' a'>8
+    f''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -6067,7 +6067,7 @@ number.24.Cello.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_START
-    - \baca-dashed-line-with-hook
+    - \baca-invisible-line
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START

@@ -459,7 +459,8 @@ def VN(voice, meters):
     )
     rhythm(
         meters(16),
-        [c(11, 2), c(3, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
+        # [c(11, 2), c(3, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
+        [c(8, 2), 3, c(3, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
         material=1,
     )
     rhythm.mmrests(17, 19)
@@ -559,7 +560,6 @@ def VC(voice, meters):
     )
     rhythm(
         meters(10, 11),
-        # [c(22, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
         [c(16, 2), 6, c(2, 2), c(2, 2), c(4, 2), "-"],
         material=1,
     )
@@ -573,7 +573,7 @@ def VC(voice, meters):
     rhythm.mmrests(13, 15)
     rhythm(
         meters(16),
-        [c(14, 2), c(2, 2), c(2, 2), c(3, 2), c(3, 2)],
+        [c(12, 2), 2, c(2, 2), c(2, 2), c(3, 2), c(3, 2)],
         material=1,
     )
     rhythm(
@@ -620,7 +620,7 @@ def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     baca.glissando(pleaves)
     baca.mspanners.text(
         pleaves,
-        r"\wttc-non-stringere =|",
+        r"\wttc-non-stringere ||",
         staff_padding=3,
     )
     if hairpin_lparts is None:
