@@ -253,16 +253,6 @@
                 value="7/4",
             ),
         ],
-        "Violin.Music": [
-            baca.Memento(
-                context="Violin.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="f",
-            )
-        ],
         "Violin.Staff": [
             baca.Memento(
                 context="Violin.Music",

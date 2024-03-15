@@ -726,9 +726,11 @@ def N1c(run, glissando, string_number, hairpin):
     baca.rspanners.pizzicato(
         run,
         descriptor=r"\wttc-two-finger-pizzicato =|",
+        staff_padding=3,
     )
     baca.rspanners.string_number(
         run,
+        string_number,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -790,7 +792,6 @@ def vn(m):
     M1_2(library.pleaves(m[5, 6], 1)[:5], "D4 E4 F4", "mf<f")
     M1_3(library.pleaves(m[5, 7], 1)[5:], ["C5 A4", "B4 G#4", "Bb4 G4"], "- - mp")
     M1_1(library.pleaves(m[10], 1)[:2], "E4:A4", "D#5", "o<f")
-    """
     M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
     M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
@@ -802,7 +803,6 @@ def vn(m):
     N1c(library.run(m[27, 30], 99, 0), "Gb5 Eb5", 2, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "Gb5 D5", 2, "mp>o!")
     N1c(library.run(m[33, 37], 99, 1), "Gb5 Db5", 2, "mf>o!")
-    """
 
 
 def vc(m):
