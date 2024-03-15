@@ -2095,13 +2095,13 @@ number.24.Guitar.1.Music = {
         \stopStaffHighlight
         \once \override Beam.grow-direction = #right
         a16 * 89856/5120
-        - \bendAfter #'4
+        - \bendAfter #'-4
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"89856" #"5120"
         [
 
         af!16 * 48384/5120
-        - \bendAfter #'4
+        - \bendAfter #'-4
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"48384" #"5120"
 
@@ -2111,7 +2111,7 @@ number.24.Guitar.1.Music = {
         %@% ^ \baca-duration-multiplier-markup #"39936" #"5120"
 
         gf!16 * 35328/5120
-        - \bendAfter #'4
+        - \bendAfter #'-4
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"35328" #"5120"
 

@@ -701,9 +701,10 @@ def M5a(pleaves, pitches, falls, dynamics=None):
     else:
         dynamics = len(plts) * ["-"]
     for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
-        if fall == 0:
+        if fall == "0":
             baca.articulation(plt.tail, "bendAfter #'-4")
         else:
+            assert fall == "1"
             baca.articulation(plt.tail, "bendAfter #'4")
         baca.dynamic(plt.head, dynamic)
 
