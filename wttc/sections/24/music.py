@@ -693,15 +693,18 @@ def M4(pleaves, pitch, hairpin):
     )
 
 
-def M5a(pleaves, pitches, falls, dynamics):
+def M5a(pleaves, pitches, falls, dynamics=None):
     baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
+    if dynamics is not None:
+        dynamics = dynamics.split()
+    else:
+        dynamics = len(plts) * ["-"]
     for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
         if fall == 0:
-            baca.articulation(plt.tail, r"\fall")
+            baca.articulation(plt.tail, "bendAfter #'-4")
         else:
-            baca.articulation(plt.tail, r"\doit")
+            baca.articulation(plt.tail, "bendAfter #'4")
         baca.dynamic(plt.head, dynamic)
 
 
@@ -743,15 +746,14 @@ def ob(m):
 
 
 def gt1(m):
-    pass
-    """
     M2(library.pleaves(m[1], 2), "Bb3 A3", "mp")
     M3a(library.pleaves(m[1, 4], 3), "G2", 'p<"f"')
     M2(library.pleaves(m[4], 2), "Bb3 A3", "mf")
     M3a(library.pleaves(m[5, 6], 3), "G#2", 'mp<"f"')
     M2(library.pleaves(m[6, 7], 2), "Bb3 A3 G3 F3", "f")
     M2(library.pleaves(m[12, 13], 2), "Bb3 A3 G3 F3 E3 Eb3 Db3 C3 B2 Bb2", "f>p")
-    M5a(library.pleaves(m[14, 15], 5), "A2 Ab2 G2 Gb2", "0010", "-")
+    M5a(library.pleaves(m[14, 15], 5), "A2 Ab2 G2 Gb2", "0010")
+    """
     M2(library.pleaves(m[16, 18], 2), "Db3 C3 B2 Bb2 A2 Ab2", "f>p")
     M5a(library.pleaves(m[20, 21], 5), "G2 Gb2", "01", "(p) -")
     M2(library.pleaves(m[22, 23], 2), "Db3 C3 B2 Bb2 A2", "mf>p")
