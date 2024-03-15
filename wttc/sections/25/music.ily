@@ -1998,7 +1998,7 @@ number.25.Guitar.2.Music = {
       %! REAPPLIED_DYNAMIC
     - \tweak color #(x11-color 'green4)
       %! REAPPLIED_DYNAMIC
-    \baca-mp-parenthesized
+    \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Guitar”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

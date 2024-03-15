@@ -164,7 +164,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-mp-parenthesized",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [
