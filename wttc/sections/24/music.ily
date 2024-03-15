@@ -5266,22 +5266,25 @@ number.24.Cello.Music = {
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
         b'8
-        [
         \repeatTie
 
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
-        b'8
-        ]
-
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
-        r8
+        b'4
+        - \tweak stencil ##f
+        ~
 
     }
 
     % [Cello.Music measure 7]
-    r2
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r4
 
     r16
 
@@ -5297,13 +5300,11 @@ number.24.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'16
-    [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'8.
-    ]
     - \tweak stencil ##f
     ~
 
@@ -5317,19 +5318,24 @@ number.24.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'16
-    [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'8.
-    ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -5337,20 +5343,32 @@ number.24.Cello.Music = {
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'16
-    [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
     b'8.
-    ]
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    b'2.
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -5362,9 +5380,9 @@ number.24.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r8.
-
     r2
+
+    r8.
 
     % [Cello.Music measure 10]
       %! NOT_YET_PITCHED_COLORING

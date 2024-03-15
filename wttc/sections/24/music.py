@@ -536,17 +536,18 @@ def VC(voice, meters):
         overlap=[-22],
     )
     rhythm.make_one_beat_tuplets(
-        meters(6, 7),
-        [3, 1, -1, 3, 1, "-"],
+        meters(6),
+        [3, 1, -1, 3, 2],
         extra_counts=[-1],
         material=1,
         overlap=[-8],
     )
     rhythm(
         meters(7, 9),
-        [4, 8, 12, 16, "-"],
+        [M(rt(4), 1), -5, t(3), 1, t(3), t(4), 1, t(3), t(4), t(4), 1]
+        + [t(3), t(4), t(4), t(4), 1, "-"],
+        do_not_rewrite_meter=True,
         material=3,
-        overlap=[-9],
     )
     rhythm(
         meters(10, 11),
