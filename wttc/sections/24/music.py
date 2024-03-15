@@ -733,12 +733,9 @@ def N1c(run, glissando, string_number, hairpin):
 
 
 def fl(m):
-    pass
-    """
     M4(library.pleaves(m[7, 10], 4), "D6", "p<|f")
     M4(library.pleaves(m[17, 20], 4), "D#6", "f|>p")
     M4(library.pleaves(m[23, 26], 4), "D#6", "f|>p")
-    """
 
 
 def ob(m):
@@ -835,6 +832,11 @@ def vc(m):
     """
 
 
+def align_spanners(cache):
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl[1, 37], 3)
+
+
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
@@ -878,6 +880,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 

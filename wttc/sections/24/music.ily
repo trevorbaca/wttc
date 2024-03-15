@@ -1128,6 +1128,7 @@ number.24.AltoFlute.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -1179,43 +1180,56 @@ number.24.AltoFlute.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8.
+    g'''8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
     - \tweak stencil ##f
     ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    g'''4
+    :32
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 8]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
+    g'''1.
+    :32
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [AltoFlute.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
+    g'''1.
+    :32
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [AltoFlute.Music measure 10]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
+    g'''2.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -1257,43 +1271,56 @@ number.24.AltoFlute.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8.
+    gs'''!8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
     - \tweak stencil ##f
     ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    gs'''4
+    :32
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 18]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
+    gs'''1.
+    :32
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [AltoFlute.Music measure 19]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
+    gs'''1.
+    :32
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [AltoFlute.Music measure 20]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
+    gs'''2.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -1315,43 +1342,56 @@ number.24.AltoFlute.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8.
+    gs'''!8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
     - \tweak stencil ##f
     ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    gs'''4
+    :32
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [AltoFlute.Music measure 24]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
+    gs'''1.
+    :32
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [AltoFlute.Music measure 25]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'1.
-    - \tweak direction #up
-    \repeatTie
+    gs'''1.
+    :32
     - \tweak stencil ##f
     ~
+    \repeatTie
 
     % [AltoFlute.Music measure 26]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'2.
+    gs'''2.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -1412,6 +1452,7 @@ number.24.AltoFlute.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
