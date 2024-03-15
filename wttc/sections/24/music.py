@@ -690,13 +690,16 @@ def M3b(pleaves, pitches, string_number, dynamics):
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
-    baca.pitches(pleaves, pitches)
+    baca.glissando(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
-    baca.glissando(pleaves, do_not_hide_middle_note_heads=True)
+    baca.rspanners.pizzicato(
+        pleaves,
+        staff_padding=5.5,
+    )
     baca.rspanners.string_number(
         pleaves,
         string_number,
-        staff_padding=3,
+        staff_padding=8,
     )
 
 
@@ -824,8 +827,9 @@ def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     baca.clef(m[1][0], "treble")
     M1_3(library.pleaves(m[1, 2], 1), ["C5 F#4", "B4 F4"], "mf mp")
-    """
+    baca.clef(m[3][0], "bass")
     M3b(library.pleaves(m[3], 3), "A2 F#4", 3, "f")
+    """
     M1_3(library.run(m[3, 4], 1, 0), ["B4 G#4"], "mf")
     M3b(library.pleaves(m[4], 3), "C#3 G4", 3, "f")
     M1_3(library.run(m[4], 1, 1), ["Bb4 G4"], "mp")

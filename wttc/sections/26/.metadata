@@ -70,7 +70,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="f",
             )
         ],
         "Cello.Staff": [
@@ -88,7 +88,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="treble",
+                value="bass",
             ),
             baca.Memento(
                 context="Cello.Music",
