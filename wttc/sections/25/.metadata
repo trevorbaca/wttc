@@ -260,7 +260,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="f",
             )
         ],
         "Violin.Staff": [

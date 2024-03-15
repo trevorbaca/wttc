@@ -441,7 +441,7 @@ def VN(voice, meters):
     rhythm.mmrests(8, 9)
     rhythm(
         meters(10, 11),
-        [19, 3, 3, 3, 2, 2, "-"],
+        [c(19, 2), c(3, 2), c(3, 2), c(3, 2), c(2, 2), c(2, 2), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -459,7 +459,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(16),
-        [11, 3, 2, 2, 4, "-"],
+        [c(11, 2), c(3, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
         material=1,
     )
     rhythm.mmrests(17, 19)
@@ -471,7 +471,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(22, 25),
-        [w(12, 24), AG([2], h(12)), "-"],
+        [w(c(12, 2), 24), AG([2], h(12)), "-"],
         material=1,
     )
     rhythm(
@@ -528,7 +528,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(5, 6),
-        [2, 2, 4, "-"],
+        [c(2, 2), c(2, 2), c(4, 2), "-"],
         material=1,
         overlap=[-22],
     )
@@ -547,7 +547,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(10, 11),
-        [22, 2, 2, 4, "-"],
+        [c(22, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -560,7 +560,7 @@ def VC(voice, meters):
     rhythm.mmrests(13, 15)
     rhythm(
         meters(16),
-        [14, 2, 2, 3, 3],
+        [c(14, 2), c(2, 2), c(2, 2), c(3, 2), c(3, 2)],
         material=1,
     )
     rhythm(
@@ -571,7 +571,7 @@ def VC(voice, meters):
     rhythm.mmrests(20, 21)
     rhythm(
         meters(22),
-        [w(12, 24), AG([2], h(12))],
+        [w(c(12, 2), 24), AG([2], h(12))],
         material=1,
     )
     rhythm(
@@ -789,8 +789,8 @@ def vn(m):
     M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "- mp mf")
     M1_2(library.pleaves(m[5, 6], 1)[:5], "D4 E4 F4", "mf<f")
     M1_3(library.pleaves(m[5, 7], 1)[5:], ["C5 A4", "B4 G#4", "Bb4 G4"], "- - mp")
-    """
     M1_1(library.pleaves(m[10], 1)[:2], "E4:A4", "D#5", "o<f")
+    """
     M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
     M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
