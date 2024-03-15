@@ -1979,6 +1979,7 @@ number.24.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 12]
+    \override DynamicLineSpanner.staff-padding = 5
     r8.
 
     \slashedGrace {
@@ -2082,6 +2083,7 @@ number.24.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     ]
+    \revert DynamicLineSpanner.staff-padding
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
     \times 1/1
@@ -2127,6 +2129,7 @@ number.24.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 16]
+    \override DynamicLineSpanner.staff-padding = 6
     r1
 
     r8
@@ -2178,6 +2181,7 @@ number.24.Guitar.1.Music = {
     ]
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 18]
     a8.
@@ -2261,6 +2265,7 @@ number.24.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 22]
+    \override DynamicLineSpanner.staff-padding = 6
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r1
@@ -2324,6 +2329,7 @@ number.24.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     ]
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 24]
       %! STAFF_HIGHLIGHT
@@ -2939,6 +2945,7 @@ number.24.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 12]
+    \override DynamicLineSpanner.staff-padding = 5
     r4
 
     r16
@@ -3033,6 +3040,7 @@ number.24.Guitar.2.Music = {
     ds''!4
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
     \times 1/1
@@ -3080,6 +3088,7 @@ number.24.Guitar.2.Music = {
     \revert TupletNumber.text
 
     % [Guitar.2.Music measure 16]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r1
@@ -3139,6 +3148,7 @@ number.24.Guitar.2.Music = {
     ]
     - \tweak stencil ##f
     ~
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 18]
     e''8
@@ -3222,6 +3232,7 @@ number.24.Guitar.2.Music = {
     \revert TupletNumber.text
 
     % [Guitar.2.Music measure 22]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2.
@@ -3280,6 +3291,7 @@ number.24.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 24]
     r1.
@@ -3621,8 +3633,11 @@ number.24.Violin.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override TupletBracket.direction = #up
+    \override TupletBracket.staff-padding = 1
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vn-markup
@@ -3646,7 +3661,7 @@ number.24.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
     \glissando
@@ -3752,7 +3767,7 @@ number.24.Violin.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
         \glissando
@@ -3911,7 +3926,7 @@ number.24.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
     \glissando
@@ -4009,7 +4024,11 @@ number.24.Violin.Music = {
     % [Violin.Music measure 10]
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    <e' a'>1
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >1
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -4112,7 +4131,7 @@ number.24.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
     \glissando
@@ -4231,6 +4250,8 @@ number.24.Violin.Music = {
     r4
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
+    \revert TupletBracket.direction
+    \revert TupletBracket.staff-padding
 
     % [Violin.Music measure 13]
     r1
@@ -4308,7 +4329,11 @@ number.24.Violin.Music = {
     \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    <fs'! b'>2
+    <
+        fs'!
+        \tweak style #'harmonic
+        b'
+    >2
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -4463,7 +4488,11 @@ number.24.Violin.Music = {
     \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    <c' g'>1. * 1/2
+    <
+        g'
+        \tweak style #'harmonic
+        c''
+    >1. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -4827,6 +4856,7 @@ number.24.Violin.Music = {
         :32
           %! SPANNER_STOP
         \!
+        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }
@@ -4902,6 +4932,7 @@ number.24.Cello.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -4954,7 +4985,7 @@ number.24.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
         \glissando
@@ -5122,7 +5153,7 @@ number.24.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
         \glissando
@@ -5228,7 +5259,7 @@ number.24.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
         \glissando
@@ -5385,7 +5416,7 @@ number.24.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
         \glissando
@@ -5582,7 +5613,11 @@ number.24.Cello.Music = {
     % [Cello.Music measure 10]
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    <ds'! gs'!>1
+    <
+        ds'!
+        \tweak style #'harmonic
+        gs'!
+    >1
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -5603,17 +5638,21 @@ number.24.Cello.Music = {
     \<
     \glissando
 
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
     \hide NoteHead
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    <ds'! gs'!>4
+    b'4
 
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    <ds'! gs'!>8
+    b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -5684,7 +5723,7 @@ number.24.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
         \glissando
@@ -5806,7 +5845,11 @@ number.24.Cello.Music = {
     % [Cello.Music measure 16]
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    <e' a'>2.
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >2.
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -6011,7 +6054,11 @@ number.24.Cello.Music = {
     % [Cello.Music measure 22]
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    <f' bf'!>1. * 1/2
+    <
+        f'
+        \tweak style #'harmonic
+        bf'!
+    >1. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -6420,6 +6467,7 @@ number.24.Cello.Music = {
         :32
           %! SPANNER_STOP
         \!
+        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }

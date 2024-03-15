@@ -559,7 +559,8 @@ def VC(voice, meters):
     )
     rhythm(
         meters(10, 11),
-        [c(22, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
+        # [c(22, 2), c(2, 2), c(2, 2), c(4, 2), "-"],
+        [c(16, 2), 6, c(2, 2), c(2, 2), c(4, 2), "-"],
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -614,6 +615,7 @@ def VC(voice, meters):
 
 def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     baca.pitch(pleaves[0], dyad)
+    abjad.tweak(pleaves[0].note_heads[1], r"\tweak style #'harmonic")
     baca.pitch(pleaves[-1], stop_pitch)
     baca.glissando(pleaves)
     baca.mspanners.text(
@@ -656,7 +658,7 @@ def M1_3(pleaves, glissandi, dynamics):
         baca.dynamic(leaf, dynamic)
     baca.rspanners.pizzicato(
         pleaves,
-        staff_padding=3,
+        staff_padding=5.5,
     )
 
 
@@ -816,7 +818,7 @@ def vn(m):
     M1_1(library.pleaves(m[16], 1)[:2], "F#4:B4", "G5", "o<f")
     M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
     M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
-    M1_1(library.pleaves(m[22], 1), "G4:C4", "C6", "pp<| f|>pp", [1, 2])
+    M1_1(library.pleaves(m[22], 1), "G4:C5", "C6", "pp<| f|>pp", [1, 2])
     M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
     N1c(library.run(m[27, 30], 99, 0), "Gb5 Eb5", 2, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "Gb5 D5", 2, "mp>o!")
@@ -855,6 +857,20 @@ def vc(m):
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 37], 3)
+    gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[12, 13], 5)
+    baca.override.dls_staff_padding(gt1[16, 17], 6)
+    baca.override.dls_staff_padding(gt1[22, 23], 6)
+    gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2[12, 13], 5)
+    baca.override.dls_staff_padding(gt2[16, 17], 4)
+    baca.override.dls_staff_padding(gt2[22, 23], 4)
+    vn = cache["vn"]
+    baca.override.tuplet_bracket_up(vn[1, 12])
+    baca.override.tuplet_bracket_staff_padding(vn[1, 12], 1)
+    baca.override.dls_staff_padding(vn[1, 37], 4)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[1, 37], 4)
 
 
 @baca.build.timed("make_score")
