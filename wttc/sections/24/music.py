@@ -829,14 +829,14 @@ def vc(m):
     M1_3(library.pleaves(m[1, 2], 1), ["C5 F#4", "B4 F4"], "mf mp")
     baca.clef(m[3][0], "bass")
     M3b(library.pleaves(m[3], 3), "A2 F#4", 3, "f")
-    """
     M1_3(library.run(m[3, 4], 1, 0), ["B4 G#4"], "mf")
     M3b(library.pleaves(m[4], 3), "C#3 G4", 3, "f")
     M1_3(library.run(m[4], 1, 1), ["Bb4 G4"], "mp")
     M3b(library.pleaves(m[5], 3), "F#3 A3 Bb2", 3, "mf f")
+    baca.clef(m[5][-2], "treble")
     M1_2(library.run(m[5, 6], 1, 0), "C#4 D#4 E4", "mf<f")
     M1_3(library.pleaves(m[6], 1)[3:], ["Bb4 A4", "A4 G#4"], "mf mp")
-    M3b(library.pleaves(m[7, 8], 3), "A3 B3 G#4 D4 G#4", 3, "f mf mp p")
+    M3b(library.pleaves(m[7, 9], 3), "A3 B3 G#4 D4 G#4", 3, "f mf mp p")
     M1_1(library.pleaves(m[10], 1)[:3], "D#4:G#4", "C5", "o<f")
     M1_2(library.pleaves(m[10, 11], 1)[3:7], "C#4 D#4 E4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[3:], ["G4 F#4", "Gb4 Eb4", "F4 B3"], "mf mp p")
@@ -844,11 +844,12 @@ def vc(m):
     M1_2(library.pleaves(m[16], 1)[2:], "D#4 E4 F4 F#4", "mf<f")
     M3b(library.pleaves(m[17, 19], 3), "G#4 D4 E4 F#4 G#4", 3, "f mf mp p")
     M1_1(library.pleaves(m[22], 1), "F4:Bb4", "C6", "pp<| f|>pp", [1, 2])
+    baca.clef(m[23][-1], "bass")
     M3b(library.pleaves(m[23, 24], 3), "E3 C#5", 3, "mf")
+    baca.clef(m[25], "treble")
     N1c(library.run(m[27, 30], 99, 0), "D#5 F5", 1, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "D#5 F#5", 1, "mp>o!")
     N1c(library.run(m[33, 37], 99, 1), "D#5 G5", 1, "mf>o!")
-    """
 
 
 def align_spanners(cache):
