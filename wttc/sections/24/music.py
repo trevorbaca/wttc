@@ -503,7 +503,7 @@ def VC(voice, meters):
     )
     rhythm(
         meters(3),
-        [-1, 3, 4, 4, 4, 4, -4],
+        [-1, 3, 4, 4, 4, 4, "-"],
         material=3,
     )
 
@@ -523,6 +523,14 @@ def VC(voice, meters):
         quarters = [abjad.Note(_) for _ in ["c'4", "c'4", "c'4"]]
         abjad.mutate.replace(components[4:5], quarters)
         library.annotate(quarters, 3)
+
+    components, _ = library.get_measures(voice, 3)
+    notes = abjad.select.notes(components)
+    baca.tie(notes[:5])
+
+    components, _ = library.get_measures(voice, 4)
+    notes = abjad.select.notes(components)
+    baca.tie(notes[2:-3])
 
     rhythm(
         meters(5),
@@ -569,7 +577,9 @@ def VC(voice, meters):
     )
     rhythm(
         meters(17, 19),
-        [-11, 16, 12, 8, 4, "-"],
+        [-8, -3, t(1), t(4), t(4), t(4), 3, t(1), t(4), t(4), 3]
+        + [t(1), t(4), 3, t(1), 3, -1, -8],
+        do_not_rewrite_meter=True,
         material=3,
     )
     rhythm.mmrests(20, 21)
@@ -580,7 +590,8 @@ def VC(voice, meters):
     )
     rhythm(
         meters(23, 24),
-        [-11, 16, "-"],
+        [-8, -3, t(1), t(4), t(4), t(4), 3, -1, -8],
+        do_not_rewrite_meter=True,
         material=3,
     )
     rhythm(
