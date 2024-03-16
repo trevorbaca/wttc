@@ -573,9 +573,9 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
-    N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 3)
+    N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 2)
+    """
     N2b1(library.pleaves(m[5], 2), "C2 E4")
     N2b2(library.pleaves(m[6], 2)[:2], "B4:D#4", "G#2:B#2")
     N2b1(library.pleaves(m[6], 2)[2:], "C#2 F4")
@@ -611,6 +611,8 @@ def align_spanners(cache):
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1, 3], 4)
     baca.override.dls_staff_padding(vn[8, 14], 7)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[1, 3], 4)
 
 
 @baca.build.timed("make_score")
