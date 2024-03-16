@@ -391,10 +391,10 @@ def N3a(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def N3b(pleaves, pitches, hairpin_lparts, hairpin, *, transpose=False):
-    if transpose is not False:
+def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
+    if t is not False:
         transposed_pitch_names = []
-        interval = abjad.NamedInterval(transpose)
+        interval = abjad.NamedInterval(t)
         for pitch_name in pitches.split():
             transposed_pitch = abjad.NamedPitch(pitch_name) + interval
             name = transposed_pitch.get_name(locale="us")
@@ -403,7 +403,7 @@ def N3b(pleaves, pitches, hairpin_lparts, hairpin, *, transpose=False):
     baca.pitches(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
     baca.override.stem_down(pleaves)
-    baca.override.beam_positions(pleaves, -6)
+    baca.override.beam_positions(pleaves, beam_positions)
     parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True, overhang=True)
     for part in parts:
         baca.spanners.slur(part)
@@ -451,7 +451,7 @@ def O1b(pleaves, pitches, string_number, hairpin):
     )
 
 
-Q1a = """
+Q1 = """
     D4 Bb4 F#5 D6
     D6 F#5 Bb4 D4 Eb4
     B4 G5 Eb6 Eb6
@@ -470,7 +470,7 @@ Q1a = """
     """
 
 
-Q2a = """
+Q2 = """
     Eb4 C5 A5 F#6 F#6 A5
     C5 Eb4 Eb4 C5 A5 F#6
     F#6 A5 C5 Eb4
@@ -486,6 +486,9 @@ Q2a = """
     Eb5 F#4 F#4 Eb5 C6 A6
     A6 C6
     """
+
+Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
+Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
 
 
 def fl(m):
@@ -557,9 +560,9 @@ def gt2(m):
 def vn(m):
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
-    N3b(library.pleaves(m[8], 3), Q1a, [8, 10], "o< mp>o!")
-    N3b(library.pleaves(m[11], 3), Q1a, [16, 18], "o< mf>o!", transpose="+m2")
-    N3b(library.pleaves(m[13, 14], 3), Q1a, [32, 8, 26], "o< f-- >o!", transpose="+M3")
+    N3b(library.pleaves(m[8], 3), Q1, [8, 10], "o< mp>o!", -6)
+    N3b(library.pleaves(m[11], 3), Q1, [16, 18], "o< mf>o!", -6, t="+m2")
+    N3b(library.pleaves(m[13, 14], 3), Q1, [32, 8, 26], "o< f-- >o!", -6, t="+M3")
     """
     O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", 4, "sfmp>o!")
     O1b(library.pleaves(m[17], 99), "G E F# G F# E Eb D E D Eb F# F", 4, "sfp>o!")
@@ -582,18 +585,19 @@ def vc(m):
     N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
     N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
+    baca.clef(m[8][0], "treble")
+    N3b(library.pleaves(m[8], 3), Q2, [8, 10], "o< mp>o!", -8)
     """
-    N3b(library.pleaves(m[8], 3), Q2a, None, "o<mp")
     N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
     N2b2(library.pleaves(m[9], 2)[:2], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[9], 2)[2:], "D2 F#4")
     N2b2(library.pleaves(m[10], 2)[:2], "C#5:E#5", "Bb2:D3")
     N2b1(library.pleaves(m[10], 2)[2:], "Eb2 G4")
-    N3b(library.pleaves(m[11], 3), Q2a + 2, [24, 10], "o< mf")
+    N3b(library.pleaves(m[11], 3), Q2 + 2, [24, 10], "o< mf")
     N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
     N2b2(library.pleaves(m[12], 2)[:2], "D5:F#5", "B2:D#3")
     N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
-    N3b(library.pleaves(m[13, 14], 3), Q2a + 4, [32, 8, 26], "o< f f>o!")
+    N3b(library.pleaves(m[13, 14], 3), Q2 + 4, [32, 8, 26], "o< f f>o!")
     N2b2(library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!")
     N2b2(library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "o<|mp")
     N2b2(library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "o<|p")
