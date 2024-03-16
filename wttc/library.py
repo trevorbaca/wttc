@@ -382,6 +382,16 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     return unwrapped_components
 
 
+def covered_pitches(pitches):
+    names = []
+    for string in pitches.split():
+        pitch = abjad.NamedPitch(string) + abjad.NamedInterval("M7")
+        name = pitch.get_name(locale="us")
+        names.append(name)
+    string = " ".join(names)
+    return string
+
+
 def eject_components_in_measures(voice, measure_numbers):
     components, time_signatures = get_measures(voice, measure_numbers)
     start = voice.index(components[0])

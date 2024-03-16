@@ -67,7 +67,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(6, 8),
-        [5, 32, "-"],
+        [5, 27, 5, "-"],
         material=2,
     )
     rhythm(
@@ -470,21 +470,20 @@ Q2a = """
 
 
 def fl(m):
-    pass
-    """
     N1a(
-        library.pleaves(m[1, 4], 1),
-        "Eb3 D3 Db3",
+        library.pleaves(m[1, 5], 1),
+        library.covered_pitches("Eb3 D3 Db3"),
         [1, 2, 1, 3, 1, 3],
         "o< mp o< mp o< mp",
     )
     N2a(library.pleaves(m[5, 8], 2), "C5 E5 Eb5", [4, 3], "o< f>o!")
     N1a(
         library.pleaves(m[8, 11], 1),
-        "D3 Db3 C3",
+        library.covered_pitches("D3 Db3 C3"),
         [1, 3, 1, 4, 1, 1],
         "o< mp o< mp o< mp",
     )
+    """
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
     O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!")
     O1a(library.pleaves(m[17], 99), "F D C# Eb C# D Eb F Gb F Eb Gb E", "sfp>o!")
@@ -576,6 +575,11 @@ def vc(m):
     """
 
 
+def align_spanners(cache):
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl[1, 14], 3)
+
+
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
@@ -619,6 +623,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
