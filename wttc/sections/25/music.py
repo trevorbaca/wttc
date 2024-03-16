@@ -365,7 +365,7 @@ def N2b1(pleaves, glissando):
 
 def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None):
     baca.pitch(pleaves[0], start_dyad)
-    baca.pitch(pleaves[-1], stop_dyad)
+    baca.pitch(pleaves[1:], stop_dyad)
     baca.glissando(pleaves)
     baca.override.note_head_style_harmonic(pleaves)
     if hairpin is not None:
@@ -376,7 +376,7 @@ def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None):
     baca.mspanners.text(
         pleaves,
         "II / III mod. =|",
-        staff_padding=3,
+        staff_padding=5.5,
     )
 
 
@@ -577,8 +577,8 @@ def vc(m):
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 2)
     baca.clef(m[5][0], "bass")
     N2b1(library.pleaves(m[5], 2), "C2 E4")
+    N2b2(library.pleaves(m[6], 2)[:3], "B3:D#4", "G#2:B#2")
     """
-    N2b2(library.pleaves(m[6], 2)[:3], "B4:D#4", "G#2:B#2")
     N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
     N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
