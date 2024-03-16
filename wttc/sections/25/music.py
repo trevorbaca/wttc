@@ -256,7 +256,8 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8),
-        (16 + 2) * [1] + ["-"],
+        # (16 + 2) * [1] + ["-"],
+        16 * [1] + ["-"],
         denominator=32,
         material=3,
     )
@@ -590,9 +591,10 @@ def vc(m):
         "o< f>o!",
     )
     baca.clef(m[8][0], "treble")
-    N3b(library.pleaves(m[8], 3), Q2, [8, 10], "o< mp>o!", -8)
-    """
+    N3b(library.pleaves(m[8], 3), Q2, [8, 8], "o< mp>o!", -8)
+    baca.clef(m[8][-3], "bass")
     N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
+    """
     N2b2(library.pleaves(m[9], 2)[:2], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[9], 2)[2:], "D2 F#4")
     N2b2(library.pleaves(m[10], 2)[:2], "C#5:E#5", "Bb2:D3")
