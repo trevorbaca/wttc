@@ -4089,6 +4089,7 @@ number.25.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     c,8.
+    :32
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -4096,7 +4097,7 @@ number.25.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 8
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
     \glissando
@@ -4107,6 +4108,7 @@ number.25.Cello.Music = {
     \override NoteHead.no-ledgers = ##t
     \afterGrace
     d4
+    :32
     {
 
         \revert Accidental.stencil
@@ -4114,6 +4116,7 @@ number.25.Cello.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         e'8
+        :32
 
     }
 
@@ -4128,7 +4131,7 @@ number.25.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "II / III mod."
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTextSpan
     \glissando
@@ -4147,63 +4150,103 @@ number.25.Cello.Music = {
     [
     \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    cs,!8.
+    :32
       %! SPANNER_STOP
     \stopTextSpan
     ]
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
     d4
-    \repeatTie
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        f'8
+        :32
 
     }
 
 
     % [Cello.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
+    \override NoteHead.style = #'harmonic
+    <c'' e''>4
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "II / III mod."
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \startTextSpan
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    <a, cs!>4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    <a, cs!>16
     [
-    \repeatTie
+    \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    d,8.
+    :32
+      %! SPANNER_STOP
+    \stopTextSpan
     ]
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    d4
-    \repeatTie
+    e4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        fs'!8
+        :32
 
     }
 
@@ -4216,6 +4259,8 @@ number.25.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d32
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
     [
 
       %! NOT_YET_PITCHED_COLORING
