@@ -597,12 +597,20 @@ def vc(m):
     N2b1(library.pleaves(m[9], 2)[3:], "D2 F#4")
     N2b2(library.pleaves(m[10], 2)[:3], "C#5:E#5", "Bb2:D3")
     N2b1(library.pleaves(m[10], 2)[3:], "Eb2 G4")
+    baca.hairpin(
+        baca.select.lparts(library.pleaves(m[8, 10], 2), [9, 6]),
+        "o< f>o!",
+    )
     baca.clef(m[11][0], "treble")
     N3b(library.pleaves(m[11], 3), Q2, [16, 16], "o< mf>o!", -8, t="M2")
     baca.clef(m[11][-3], "bass")
     N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
     N2b2(library.pleaves(m[12], 2)[:3], "D5:F#5", "B2:D#3")
     N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
+    baca.hairpin(
+        baca.select.lparts(library.pleaves(m[11, 12], 2), [3, 6]),
+        "o< f>o!",
+    )
     baca.clef(m[13][0], "treble")
     N3b(library.pleaves(m[13, 14], 3), Q2, [32, 8, 26], "o< f-- f>o!", -8, t="M3")
     """

@@ -4415,6 +4415,16 @@ number.25.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     \glissando
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -4507,6 +4517,11 @@ number.25.Cello.Music = {
     % [Cello.Music measure 10]
     \override NoteHead.style = #'harmonic
     <cs''! es''!>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! SPANNER_START
@@ -4517,6 +4532,16 @@ number.25.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \glissando
 
     \hide NoteHead
@@ -4565,6 +4590,8 @@ number.25.Cello.Music = {
         \undo \hide NoteHead
         g'8
         :32
+          %! SPANNER_STOP
+        \!
 
     }
 
@@ -4755,6 +4782,16 @@ number.25.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     \glissando
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -4781,6 +4818,11 @@ number.25.Cello.Music = {
     % [Cello.Music measure 12]
     \override NoteHead.style = #'harmonic
     <d'' fs''!>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! SPANNER_START
@@ -4791,6 +4833,16 @@ number.25.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \glissando
 
     \hide NoteHead
@@ -4839,6 +4891,8 @@ number.25.Cello.Music = {
         \undo \hide NoteHead
         gs'!8
         :32
+          %! SPANNER_STOP
+        \!
 
     }
 
@@ -4993,6 +5047,16 @@ number.25.Cello.Music = {
     [
       %! SPANNER_START
     (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #constante-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
     b'32
 
