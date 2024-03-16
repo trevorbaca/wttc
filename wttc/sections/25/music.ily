@@ -4076,6 +4076,7 @@ number.25.Cello.Music = {
       %! MEASURE_287
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -4100,6 +4101,16 @@ number.25.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     \glissando
 
     \hide NoteHead
@@ -4189,6 +4200,11 @@ number.25.Cello.Music = {
     % [Cello.Music measure 7]
     \override NoteHead.style = #'harmonic
     <c'' e''>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! SPANNER_START
@@ -4199,6 +4215,16 @@ number.25.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     \glissando
 
     \hide NoteHead
@@ -4247,6 +4273,9 @@ number.25.Cello.Music = {
         \undo \hide NoteHead
         fs'!8
         :32
+          %! SPANNER_STOP
+        \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -4263,6 +4292,7 @@ number.25.Cello.Music = {
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override Beam.positions = #'(-8 . -8)
+    \override DynamicLineSpanner.staff-padding = 10
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -4389,6 +4419,7 @@ number.25.Cello.Music = {
           %! NOT_YET_PITCHED_COLORING
         %@% \baca-not-yet-pitched-coloring
         b'8
+        \revert DynamicLineSpanner.staff-padding
 
     }
 

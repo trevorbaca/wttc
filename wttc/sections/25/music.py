@@ -585,6 +585,10 @@ def vc(m):
     N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
     N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
+    baca.hairpin(
+        baca.select.lparts(library.pleaves(m[5, 7], 2), [9, 6]),
+        "o< f>o!",
+    )
     baca.clef(m[8][0], "treble")
     N3b(library.pleaves(m[8], 3), Q2, [8, 10], "o< mp>o!", -8)
     """
@@ -619,6 +623,8 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(vn[8, 14], 7)
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[1, 3], 4)
+    baca.override.dls_staff_padding(vc[5, 7], 6)
+    baca.override.dls_staff_padding(vc[8], 10)
 
 
 @baca.build.timed("make_score")
