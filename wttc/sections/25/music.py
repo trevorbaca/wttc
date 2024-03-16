@@ -14,6 +14,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -62,7 +63,7 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 5),
-        [-5, 16, 32, 32, "-"],
+        [-5, c(16, 2), c(32, 2), c(32, 2), "-"],
         material=1,
     )
     rhythm(
@@ -72,21 +73,23 @@ def FL(voice, meters):
     )
     rhythm(
         meters(8),
-        ["+"],
+        [t(11)],
         material=1,
         overlap=[-5],
     )
     rhythm(
         meters(9, 11),
-        [5, 32, "-"],
+        [5, 32, "+"],
         material=1,
     )
+    """
     rhythm(
         meters(11),
         ["+"],
         overlap=[-13],
         material=1,
     )
+    """
     rhythm(
         meters(12, 14),
         [5, 32, "-"],
@@ -306,7 +309,9 @@ def VC(voice, meters):
 
 
 def N1a(pleaves, pitches, hairpin_lparts, hairpin):
-    baca.pitches(pleaves, pitches)
+    baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
+    for chord in pleaves:
+        abjad.tweak(chord.note_heads[0], r"\tweak style #'harmonic")
     baca.rspanners.covered(
         pleaves,
         staff_padding=3,
@@ -472,18 +477,18 @@ Q2a = """
 def fl(m):
     N1a(
         library.pleaves(m[1, 5], 1),
-        library.covered_pitches("Eb3 D3 Db3"),
+        library.make_flute_covered_dyads("Eb3 D3 Db3"),
         [1, 2, 1, 3, 1, 3],
         "o< mp o< mp o< mp",
     )
     N2a(library.pleaves(m[5, 8], 2), "C5 E5 Eb5", [4, 3], "o< f>o!")
+    """
     N1a(
         library.pleaves(m[8, 11], 1),
-        library.covered_pitches("D3 Db3 C3"),
+        library.make_flute_covered_dyads("D3 Db3 C3"),
         [1, 3, 1, 4, 1, 1],
         "o< mp o< mp o< mp",
     )
-    """
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
     O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!")
     O1a(library.pleaves(m[17], 99), "F D C# Eb C# D Eb F Gb F Eb Gb E", "sfp>o!")
@@ -577,7 +582,8 @@ def vc(m):
 
 def align_spanners(cache):
     fl = cache["fl"]
-    baca.override.dls_staff_padding(fl[1, 14], 3)
+    baca.override.dls_staff_padding(fl[1, 5], 6)
+    baca.override.dls_staff_padding(fl[6, 8][:-2], 3)
 
 
 @baca.build.timed("make_score")

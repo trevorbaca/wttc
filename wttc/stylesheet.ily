@@ -195,7 +195,7 @@
 
     \override RehearsalMark.break-visibility = ##(#t #t #f)
 
-    \shape #'((-2 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie         
+    %%% \shape #'((-2 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie         
     \override RepeatTie.X-extent = ##f
 
     \override SpacingSpanner.strict-grace-spacing = ##t

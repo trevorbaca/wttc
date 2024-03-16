@@ -382,16 +382,6 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     return unwrapped_components
 
 
-def covered_pitches(pitches):
-    names = []
-    for string in pitches.split():
-        pitch = abjad.NamedPitch(string) + abjad.NamedInterval("M7")
-        name = pitch.get_name(locale="us")
-        names.append(name)
-    string = " ".join(names)
-    return string
-
-
 def eject_components_in_measures(voice, measure_numbers):
     components, time_signatures = get_measures(voice, measure_numbers)
     start = voice.index(components[0])
@@ -590,6 +580,17 @@ def make_empty_score():
     baca.score.assert_lilypond_identifiers(score)
     baca.score.assert_unique_context_names(score)
     return score
+
+
+def make_flute_covered_dyads(pitches):
+    dyads = []
+    for sounding_name in pitches.split():
+        fingered_pitch = abjad.NamedPitch(sounding_name) + abjad.NamedInterval("M7")
+        fingered_name = fingered_pitch.get_name(locale="us")
+        dyad = f"{sounding_name}:{fingered_name}"
+        dyads.append(dyad)
+    string = " ".join(dyads)
+    return string
 
 
 def mask_measures(voice, items, *, first=1):
@@ -893,7 +894,7 @@ def unannotate(items):
 
 instruments = {
     # "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, F6]")),
-    # TODO: add baca.pitch(..., allow_out_of_range) for whistletones
+    # TODO: add baca.pitch(..., allow_out_of_range) for whistletones.
     "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, G8]")),
     "Oboe": abjad.Oboe(),
     "Guitar": abjad.Guitar(pitch_range=abjad.PitchRange("[E2, G#5]")),
