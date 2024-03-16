@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from wttc import library, strings
 
@@ -73,26 +74,18 @@ def FL(voice, meters):
     )
     rhythm(
         meters(8),
-        [t(11)],
+        [t(c(11, 2))],
         material=1,
         overlap=[-5],
     )
     rhythm(
         meters(9, 11),
-        [5, 32, "+"],
+        [c(5, 2), c(32, 2), c(19, 2)],
         material=1,
     )
-    """
-    rhythm(
-        meters(11),
-        ["+"],
-        overlap=[-13],
-        material=1,
-    )
-    """
     rhythm(
         meters(12, 14),
-        [5, 32, "-"],
+        [5, 27, 5, "-"],
         material=2,
     )
     rhythm(
@@ -482,14 +475,15 @@ def fl(m):
         "o< mp o< mp o< mp",
     )
     N2a(library.pleaves(m[5, 8], 2), "C5 E5 Eb5", [4, 3], "o< f>o!")
-    """
     N1a(
         library.pleaves(m[8, 11], 1),
         library.make_flute_covered_dyads("D3 Db3 C3"),
         [1, 3, 1, 4, 1, 1],
         "o< mp o< mp o< mp",
     )
+    rmakers.unbeam(m[8][1:3])
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
+    """
     O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!")
     O1a(library.pleaves(m[17], 99), "F D C# Eb C# D Eb F Gb F Eb Gb E", "sfp>o!")
     O1a(
@@ -559,24 +553,24 @@ def vc(m):
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 3)
     N2b1(library.pleaves(m[5], 2), "C2 E4")
-    N2b2(library.pleaves(m[6], 2)[:2], "<B4 D#4>", "<G#2 B#2>")
+    N2b2(library.pleaves(m[6], 2)[:2], "B4:D#4", "G#2:B#2")
     N2b1(library.pleaves(m[6], 2)[2:], "C#2 F4")
-    N2b2(library.pleaves(m[7], 2)[:2], "<C5 E5>", "<A2 C#3>")
+    N2b2(library.pleaves(m[7], 2)[:2], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[7], 2)[2:], "D2 F#4")
     N3b(library.pleaves(m[8], 3), Q2a, None, "o<mp")
     N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
-    N2b2(library.pleaves(m[9], 2)[:2], "<C5 E5>", "<A2 C#3>")
+    N2b2(library.pleaves(m[9], 2)[:2], "C5:E5", "A2:C#3")
     N2b1(library.pleaves(m[9], 2)[2:], "D2 F#4")
-    N2b2(library.pleaves(m[10], 2)[:2], "<C#5 E#5>", "<Bb2 D3>")
+    N2b2(library.pleaves(m[10], 2)[:2], "C#5:E#5", "Bb2:D3")
     N2b1(library.pleaves(m[10], 2)[2:], "Eb2 G4")
     N3b(library.pleaves(m[11], 3), Q2a + 2, [24, 10], "o< mf")
     N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
-    N2b2(library.pleaves(m[12], 2)[:2], "<D5 F#5>", "<B2 D#3>")
+    N2b2(library.pleaves(m[12], 2)[:2], "D5:F#5", "B2:D#3")
     N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
     N3b(library.pleaves(m[13, 14], 3), Q2a + 4, [32, 8, 26], "o< f f>o!")
-    N2b2(library.pleaves(m[15], 2), "<Eb5 G5>", "<C5 E5>", "sfp>o!")
-    N2b2(library.pleaves(m[16, 17], 2), "<E5 G#5>", "<C#5 E#5>", "o<|mp")
-    N2b2(library.pleaves(m[18, 19], 2), "<A5 F5>", "<D5 F#5>", "o<|p")
+    N2b2(library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!")
+    N2b2(library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "o<|mp")
+    N2b2(library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "o<|p")
     """
 
 
@@ -584,6 +578,8 @@ def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 5], 6)
     baca.override.dls_staff_padding(fl[6, 8][:-2], 3)
+    baca.override.dls_staff_padding(fl[8, 11][2:], 6)
+    baca.override.dls_staff_padding(fl[12, 14], 3)
 
 
 @baca.build.timed("make_score")
