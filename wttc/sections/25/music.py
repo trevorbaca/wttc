@@ -251,7 +251,7 @@ def VC(voice, meters):
     rhythm.mmrests(4)
     rhythm(
         meters(5, 7),
-        [-9, AG([2], 7), 9, AG([2], 7), 9, AG([2], 7)],
+        [-9, AG([2], 7), c(4, 2), c(5, 2), AG([2], 7), c(4, 2), c(5, 2), AG([2], 7)],
         material=2,
     )
     rhythm(
@@ -578,10 +578,10 @@ def vc(m):
     baca.clef(m[5][0], "bass")
     N2b1(library.pleaves(m[5], 2), "C2 E4")
     """
-    N2b2(library.pleaves(m[6], 2)[:2], "B4:D#4", "G#2:B#2")
-    N2b1(library.pleaves(m[6], 2)[2:], "C#2 F4")
-    N2b2(library.pleaves(m[7], 2)[:2], "C5:E5", "A2:C#3")
-    N2b1(library.pleaves(m[7], 2)[2:], "D2 F#4")
+    N2b2(library.pleaves(m[6], 2)[:3], "B4:D#4", "G#2:B#2")
+    N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
+    N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
+    N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
     N3b(library.pleaves(m[8], 3), Q2a, None, "o<mp")
     N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
     N2b2(library.pleaves(m[9], 2)[:2], "C5:E5", "A2:C#3")
