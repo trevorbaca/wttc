@@ -256,26 +256,25 @@ def VC(voice, meters):
     )
     rhythm(
         meters(8),
-        # (16 + 2) * [1] + ["-"],
         16 * [1] + ["-"],
         denominator=32,
         material=3,
     )
     rhythm(
         meters(8, 10),
-        [AG([2], 7), 9, AG([2], 7), 9, AG([2], 7)],
+        [AG([2], 7), c(4, 2), c(5, 2), AG([2], 7), c(4, 2), c(5, 2), AG([2], 7)],
         material=2,
         overlap=[-9],
     )
     rhythm(
         meters(11),
-        (32 + 2) * [1] + ["-"],
+        32 * [1] + ["-"],
         denominator=32,
         material=3,
     )
     rhythm(
         meters(11, 12),
-        [AG([2], 7), 9, AG([2], 7)],
+        [AG([2], 7), c(4, 2), c(5, 2), AG([2], 7)],
         overlap=[-17],
         material=2,
     )

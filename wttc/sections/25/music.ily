@@ -4442,15 +4442,19 @@ number.25.Cello.Music = {
     % [Cello.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d2
+    <d d>4
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    <d d>4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    <d d>16
     [
     \repeatTie
 
@@ -4478,13 +4482,17 @@ number.25.Cello.Music = {
     % [Cello.Music measure 10]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d2
+    <d d>4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    <d d>4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    <d d>16
     [
     \repeatTie
 
@@ -4650,23 +4658,15 @@ number.25.Cello.Music = {
     d32
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
-    [
-
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+      %! STAFF_HIGHLIGHT
+    \stopStaffHighlight
+    r16
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     d8.
-    ]
     - \tweak stencil ##f
     ~
 
@@ -4687,13 +4687,17 @@ number.25.Cello.Music = {
     % [Cello.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d2
+    <d d>4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    <d d>4
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    <d d>16
     [
     \repeatTie
 
