@@ -2679,14 +2679,14 @@ number.25.Violin.Music.item.3 = {
 number.25.Violin.Music = {
 
     % [Violin.Music measure 1]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 4
+    \override NoteHead.style = #'harmonic
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -2698,8 +2698,40 @@ number.25.Violin.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
     b'4
+    :32
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-string-iii-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanStringNumber
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-two-finger-pizzicato
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -2708,83 +2740,130 @@ number.25.Violin.Music = {
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
     b'4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        af'!8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
 
     }
 
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'4
+    :32
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     b'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     \afterGrace
-    b'4
+    g'4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        g'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
 
     }
 
 
     % [Violin.Music measure 2]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'4
+    :32
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     b'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     b'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a'4
+    :32
 
     % [Violin.Music measure 3]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    a'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'4
+    g'4
+    :32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
     \afterGrace
-    b'4
+    g'4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gf'!8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+        \revert DynamicLineSpanner.staff-padding
+        \revert NoteHead.style
 
     }
 
@@ -2795,6 +2874,10 @@ number.25.Violin.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+      %! SPANNER_STOP
+    \bacaStopTextSpanStringNumber
 
     % [Violin.Music measure 5]
     R1 * 4/4

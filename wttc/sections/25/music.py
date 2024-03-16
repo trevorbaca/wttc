@@ -328,16 +328,22 @@ def N1b(pleaves, pitches, dynamic):
 
 def N1c(runs, glissandi, hairpins, string_number):
     for run, glissando, hairpin in zip(runs, glissandi, hairpins, strict=True):
-        baca.glissando(runs, glissando)
-        baca.override.note_head_style_harmonic(run)
+        baca.glissando(run, glissando)
         baca.hairpin(
             run,
             hairpin,
         )
+    baca.override.note_head_style_harmonic(runs)
+    baca.stem_tremolo(runs)
+    baca.rspanners.pizzicato(
+        runs,
+        descriptor=r"\wttc-two-finger-pizzicato =|",
+        staff_padding=3,
+    )
     baca.rspanners.string_number(
         runs,
         string_number,
-        staff_padding=3,
+        staff_padding=5.5,
     )
 
 
@@ -534,10 +540,9 @@ def gt2(m):
 
 
 def vn(m):
-    pass
-    """
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
+    """
     N3b(library.pleaves(m[8], 3), Q1a, None, "o<mp")
     N3b(library.pleaves(m[11], 3), Q1a + 1, [24, 10], "o< mf")
     N3b(library.pleaves(m[13, 14], 3), Q1a + 4, [32, 8, 26], "o< f f>o!")
@@ -589,6 +594,8 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt1[1, 14], 3)
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[1, 14], 4)
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[1, 3], 4)
 
 
 @baca.build.timed("make_score")
