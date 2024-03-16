@@ -636,7 +636,11 @@ def align_spanners(cache):
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[1, 3], 4)
     baca.override.dls_staff_padding(vc[5, 7], 6)
-    baca.override.dls_staff_padding(vc[8], 10)
+    baca.override.dls_staff_padding(library.pleaves(vc[8], 3), 10)
+    baca.override.dls_staff_padding(library.pleaves(vc[8, 10], 2), 6)
+    baca.override.dls_staff_padding(library.pleaves(vc[11], 3), 10)
+    baca.override.dls_staff_padding(library.pleaves(vc[11, 12], 2), 6)
+    baca.override.dls_staff_padding(library.pleaves(vc[13, 14], 3), 10)
 
 
 @baca.build.timed("make_score")

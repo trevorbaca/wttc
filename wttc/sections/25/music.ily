@@ -4386,6 +4386,7 @@ number.25.Cello.Music = {
     \!
     ]
     \revert Beam.positions
+    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
     \revert Stem.direction
 
@@ -4397,6 +4398,7 @@ number.25.Cello.Music = {
     \clef "bass"
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -4444,7 +4446,6 @@ number.25.Cello.Music = {
         \undo \hide NoteHead
         f'8
         :32
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -4592,6 +4593,7 @@ number.25.Cello.Music = {
         :32
           %! SPANNER_STOP
         \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -4608,6 +4610,7 @@ number.25.Cello.Music = {
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override Beam.positions = #'(-8 . -8)
+    \override DynamicLineSpanner.staff-padding = 10
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -4753,6 +4756,7 @@ number.25.Cello.Music = {
     \!
     ]
     \revert Beam.positions
+    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
     \revert Stem.direction
 
@@ -4764,6 +4768,7 @@ number.25.Cello.Music = {
     \clef "bass"
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -4893,6 +4898,7 @@ number.25.Cello.Music = {
         :32
           %! SPANNER_STOP
         \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -4909,6 +4915,7 @@ number.25.Cello.Music = {
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override Beam.positions = #'(-8 . -8)
+    \override DynamicLineSpanner.staff-padding = 10
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -5184,6 +5191,7 @@ number.25.Cello.Music = {
     \!
     ]
     \revert Beam.positions
+    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
     \revert Stem.direction
 
