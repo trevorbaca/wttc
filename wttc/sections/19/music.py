@@ -1026,7 +1026,7 @@ def L5a(pleaves, fundamental):
     overtones = fundamental_to_overtones[fundamental]
     rmakers.unbeam(pleaves)
     baca.flageolet(pleaves)
-    baca.pitches(pleaves, overtones)
+    baca.pitches(pleaves, overtones, allow_out_of_range=True)
     baca.override.stem_length(pleaves[0], 22)
     baca.override.flag_stencil(pleaves[0], "#flat-flag")
     baca.override.accidental_extra_offset(pleaves[1:], (1.2, 2.2))

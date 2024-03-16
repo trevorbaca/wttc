@@ -893,9 +893,7 @@ def unannotate(items):
 
 
 instruments = {
-    # "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, F6]")),
-    # TODO: add baca.pitch(..., allow_out_of_range) for whistletones.
-    "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, G8]")),
+    "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, F6]")),
     "Oboe": abjad.Oboe(),
     "Guitar": abjad.Guitar(pitch_range=abjad.PitchRange("[E2, G#5]")),
     "Violin": abjad.Violin(),

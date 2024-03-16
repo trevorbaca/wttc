@@ -622,7 +622,7 @@ def E3a(pleaves, fundamental):
     for run in abjad.select.runs(pleaves):
         rmakers.unbeam(run)
         baca.flageolet(run)
-        baca.pitches(run, pitches)
+        baca.pitches(run, pitches, allow_out_of_range=True)
         baca.override.stem_length(run[0], 22)
         baca.override.flag_stencil(run[0], "#flat-flag")
         baca.override.accidental_extra_offset(run[1:], (1.2, 2.2))
