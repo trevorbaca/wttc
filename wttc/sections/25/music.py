@@ -499,15 +499,17 @@ def ob(m):
 
 
 def gt1(m):
-    pass
-    """
     N1b(library.pleaves(m[1, 6], 1), "Ab3 G3", "mp")
     N3a(library.pleaves(m[7, 8], 3), "F#4", "mf mp")
-    N1b(library.pleaves(m[8, 9], 1), "G3", "mp")
+    N1b(library.pleaves(m[8, 9], 1), "G3", "-")
+    rmakers.unbeam(m[8][:2])
     N3a(library.pleaves(m[10, 11], 3), "F#4", "mf mp")
     N1b(library.pleaves(m[11, 12], 1), "F3", "-")
+    rmakers.unbeam(m[11][:2])
     N3a(library.pleaves(m[12, 13], 3), "F#4", "mf mp")
     N1b(library.pleaves(m[13, 14], 1), "F3", "-")
+    rmakers.unbeam(m[13][:2])
+    """
     N1b(library.pleaves(m[15, 16], 1), "F#3", "p")
     N3a(library.pleaves(m[16, 20], 3), "G#4", "(p)")
     """
@@ -515,14 +517,17 @@ def gt1(m):
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     N1b(library.pleaves(m[1, 6], 1), "Bb2 C3", "mp")
     N3a(library.pleaves(m[7, 8], 3), "E4", "mf mp")
     N1b(library.pleaves(m[8, 9], 1), "C#3", "-")
+    rmakers.unbeam(m[8][:2])
     N3a(library.pleaves(m[10, 11], 3), "E4", "mf mp")
     N1b(library.pleaves(m[11, 12], 1), "C#3", "-")
+    rmakers.unbeam(m[11][:2])
     N3a(library.pleaves(m[12, 13], 3), "E4", "mf mp")
     N1b(library.pleaves(m[13, 14], 1), "D3", "-")
+    rmakers.unbeam(m[13][:2])
+    """
     N1b(library.pleaves(m[15, 16], 1), "D3", "p")
     N3a(library.pleaves(m[16, 20], 3), "G4", "(p)")
     """
@@ -580,6 +585,10 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(library.pleaves(fl[6, 8], 2), 3)
     baca.override.dls_staff_padding(library.pleaves(fl[8, 11], 1), 6)
     baca.override.dls_staff_padding(fl[12, 14], 3)
+    gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[1, 14], 3)
+    gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2[1, 14], 4)
 
 
 @baca.build.timed("make_score")
