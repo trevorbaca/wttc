@@ -577,8 +577,8 @@ def vc(m):
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 5], 6)
-    baca.override.dls_staff_padding(fl[6, 8][:-2], 3)
-    baca.override.dls_staff_padding(fl[8, 11][2:], 6)
+    baca.override.dls_staff_padding(library.pleaves(fl[6, 8], 2), 3)
+    baca.override.dls_staff_padding(library.pleaves(fl[8, 11], 1), 6)
     baca.override.dls_staff_padding(fl[12, 14], 3)
 
 
