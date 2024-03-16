@@ -4440,575 +4440,688 @@ number.25.Cello.Music = {
 
 
     % [Cello.Music measure 9]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
+    \override NoteHead.style = #'harmonic
+    <c'' e''>4
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "II / III mod."
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \startTextSpan
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    <a, cs!>4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    <a, cs!>16
     [
-    \repeatTie
+    \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    d,8.
+    :32
+      %! SPANNER_STOP
+    \stopTextSpan
     ]
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    d4
-    \repeatTie
+    e4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        fs'!8
+        :32
 
     }
 
 
     % [Cello.Music measure 10]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
+    \override NoteHead.style = #'harmonic
+    <cs''! es''!>4
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "II / III mod."
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \startTextSpan
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    <bf,! d>4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    <bf,! d>16
     [
-    \repeatTie
+    \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    ef,!8.
+    :32
+      %! SPANNER_STOP
+    \stopTextSpan
     ]
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    d4
-    \repeatTie
+    f4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        g'8
+        :32
 
     }
 
 
     % [Cello.Music measure 11]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+      %! EXPLICIT_CLEF
+    \clef "treble"
+      %! MEASURE_293
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_293
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \override Beam.positions = #'(-8 . -8)
+    \override NoteHead.style = #'harmonic
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+    \override Stem.direction = #down
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    d32
+    bf!32
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
     [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    g'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    e''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    cs'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    cs'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    e''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    g'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    bf!32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    bf!32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    g'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    e''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    cs'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    cs'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    e''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    g'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    bf!32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ef'''!32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
     [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ef'''!32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ef'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ef'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
+      %! SPANNER_STOP
+    )
+      %! SPANNER_STOP
+    \!
     ]
+    \revert Beam.positions
+    \revert NoteHead.style
+    \revert Stem.direction
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    d8.
-    - \tweak stencil ##f
-    ~
+    ef,!8.
+    :32
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+    \glissando
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    d4
-    \repeatTie
+    f4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        g'8
+        :32
 
     }
 
 
     % [Cello.Music measure 12]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
+    \override NoteHead.style = #'harmonic
+    <d'' fs''!>4
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "II / III mod."
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \startTextSpan
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>4
-    - \tweak stencil ##f
-    ~
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    <b, ds!>4
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    <d d>16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    <b, ds!>16
     [
-    \repeatTie
+    \revert NoteHead.style
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d8.
+    e,8.
+    :32
+      %! SPANNER_STOP
+    \stopTextSpan
     ]
-    - \tweak stencil ##f
-    ~
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \afterGrace
-    d4
-    \repeatTie
+    f4
+    :32
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        gs'!8
+        :32
 
     }
 
 
     % [Cello.Music measure 13]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+      %! EXPLICIT_CLEF
+    \clef "treble"
+      %! MEASURE_295
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_295
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \override Beam.positions = #'(-8 . -8)
+    \override NoteHead.style = #'harmonic
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+    \override Stem.direction = #down
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    d32
+    c'32
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
     [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    f'''32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    gs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    b'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    d'32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    d'32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    b'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    gs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    f'''32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    d'32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    b'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    gs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    f'''32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    f'''32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    gs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    b'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    d'32
+      %! SPANNER_STOP
+    )
     ]
 
     % [Cello.Music measure 14]
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    d'32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    b'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    gs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    f'''32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    f'''32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    gs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    b'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    d'32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    g'''32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
     [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    as'!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    cs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    e'32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    e'32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    cs''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    as''!32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    g'''32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'!32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'!32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'!32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs'''!32
+      %! SPANNER_STOP
+    )
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs'''!32
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a''32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    c'32
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    a'32
+      %! SPANNER_STOP
+    )
     ]
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    fs''!32
     [
+      %! SPANNER_START
+    (
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    d32
+    ds'''!32
+      %! SPANNER_STOP
+    )
+      %! SPANNER_STOP
+    \!
     ]
+    \revert Beam.positions
+    \revert NoteHead.style
+    \revert Stem.direction
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5021,20 +5134,20 @@ number.25.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    d1
+    b'1
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -5046,21 +5159,21 @@ number.25.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    d1
+    b'1
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 17]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -5074,21 +5187,21 @@ number.25.Cello.Music = {
     %@% \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    d1
+    b'1
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 19]
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d4
+    b'4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     %@% \baca-not-yet-pitched-coloring
-    d16
+    b'16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
