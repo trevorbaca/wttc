@@ -390,9 +390,23 @@ def N3a(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def N3b(pleaves, pitches, hairpin_lparts, hairpin):
+def N3b(pleaves, pitches, hairpin_lparts, hairpin, *, transpose=False):
+    if transpose is not False:
+        transposed_pitch_names = []
+        interval = abjad.NamedInterval(transpose)
+        for pitch_name in pitches.split():
+            transposed_pitch = abjad.NamedPitch(pitch_name) + interval
+            name = transposed_pitch.get_name(locale="us")
+            transposed_pitch_names.append(name)
+        pitches = " ".join(transposed_pitch_names)
     baca.pitches(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
+    baca.override.stem_down(pleaves)
+    baca.override.beam_positions(pleaves, -6)
+    parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True, overhang=True)
+    for part in parts:
+        baca.spanners.slur(part)
+    assert sum(hairpin_lparts) == len(pleaves)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
@@ -542,10 +556,10 @@ def gt2(m):
 def vn(m):
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
+    N3b(library.pleaves(m[8], 3), Q1a, [8, 10], "o< mp>o!")
+    N3b(library.pleaves(m[11], 3), Q1a, [16, 18], "o< mf>o!", transpose="+m2")
+    N3b(library.pleaves(m[13, 14], 3), Q1a, [32, 8, 26], "o< f-- >o!", transpose="+M3")
     """
-    N3b(library.pleaves(m[8], 3), Q1a, None, "o<mp")
-    N3b(library.pleaves(m[11], 3), Q1a + 1, [24, 10], "o< mf")
-    N3b(library.pleaves(m[13, 14], 3), Q1a + 4, [32, 8, 26], "o< f f>o!")
     O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", 4, "sfmp>o!")
     O1b(library.pleaves(m[17], 99), "G E F# G F# E Eb D E D Eb F# F", 4, "sfp>o!")
     O1b(
@@ -596,6 +610,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[1, 14], 4)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1, 3], 4)
+    baca.override.dls_staff_padding(vn[8, 14], 7)
 
 
 @baca.build.timed("make_score")
