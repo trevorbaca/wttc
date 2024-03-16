@@ -359,7 +359,7 @@ def N2b1(pleaves, glissando):
     baca.glissando(pleaves, glissando)
     baca.rspanners.xfb(
         pleaves,
-        staff_padding=3,
+        staff_padding=5.5,
     )
 
 
@@ -575,8 +575,9 @@ def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 2)
-    """
+    baca.clef(m[5][0], "bass")
     N2b1(library.pleaves(m[5], 2), "C2 E4")
+    """
     N2b2(library.pleaves(m[6], 2)[:2], "B4:D#4", "G#2:B#2")
     N2b1(library.pleaves(m[6], 2)[2:], "C#2 F4")
     N2b2(library.pleaves(m[7], 2)[:2], "C5:E5", "A2:C#3")
