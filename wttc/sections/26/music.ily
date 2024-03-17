@@ -3437,7 +3437,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3452,7 +3452,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3467,7 +3467,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3484,7 +3484,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3502,7 +3502,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3520,7 +3520,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3553,7 +3553,7 @@ number.26.Guitar.1.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3894,7 +3894,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3909,7 +3909,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3924,7 +3924,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3941,7 +3941,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3959,7 +3959,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3977,7 +3977,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4016,7 +4016,7 @@ number.26.Guitar.2.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    <b' b'>16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight

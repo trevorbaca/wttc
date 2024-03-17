@@ -282,32 +282,32 @@ def GT1(voice, meters):
     rhythm.mmrests(8, 9)
     rhythm(
         meters(10),
-        ["-", -1, 1, -6],
+        ["-", -1, c(1, 2), -6],
         material=4,
     )
     rhythm(
         meters(11),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(12),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(13, 14),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(15, 16),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(17, 18),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
@@ -317,7 +317,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(20, 21),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
@@ -386,32 +386,32 @@ def GT2(voice, meters):
     rhythm.mmrests(8, 9)
     rhythm(
         meters(10),
-        ["-", -1, 1, -6],
+        ["-", -1, c(1, 2), -6],
         material=4,
     )
     rhythm(
         meters(11),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(12),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(13, 14),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(15, 16),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm(
         meters(17, 18),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm.make_one_beat_tuplets(
@@ -422,7 +422,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(20, 21),
-        [-1, 1, "-"],
+        [-1, c(1, 2), "-"],
         material=4,
     )
     rhythm.make_one_beat_tuplets(
