@@ -3284,6 +3284,7 @@ number.26.Guitar.1.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 3
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -3417,6 +3418,7 @@ number.26.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 8]
     R1 * 4/4
@@ -3429,6 +3431,7 @@ number.26.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 10]
+    \override DynamicLineSpanner.staff-padding = 5
     r1
 
     r16
@@ -3545,11 +3548,13 @@ number.26.Guitar.1.Music = {
     r8
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 18]
     r1
 
     % [Guitar.1.Music measure 19]
+    \override DynamicLineSpanner.staff-padding = 3
     r2
 
     r8.
@@ -3566,8 +3571,10 @@ number.26.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 20]
+    \override DynamicLineSpanner.staff-padding = 5
     r16
 
       %! STAFF_HIGHLIGHT
@@ -3579,11 +3586,13 @@ number.26.Guitar.1.Music = {
     r8
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 21]
     r1
 
     % [Guitar.1.Music measure 22]
+    \override DynamicLineSpanner.staff-padding = 3
     r2
 
     r8.
@@ -3677,6 +3686,7 @@ number.26.Guitar.1.Music = {
     r1
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 31]
     R1 * 6/4
@@ -3730,6 +3740,7 @@ number.26.Guitar.2.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+    \override DynamicLineSpanner.staff-padding = 5
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -4131,6 +4142,7 @@ number.26.Guitar.2.Music = {
     }
 
     r2
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 25]
     R1 * 6/4
@@ -4148,6 +4160,7 @@ number.26.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 28]
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     cs'''!16
@@ -4189,6 +4202,7 @@ number.26.Guitar.2.Music = {
     r1
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 31]
     R1 * 6/4
