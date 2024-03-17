@@ -4031,10 +4031,50 @@ number.26.Guitar.2.Staff = <<
 
 number.26.Violin.Music.item.1 = {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override Dots.X-extent = ##f
     \voiceTwo
-    b'1....
+    a2...
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-sfmp
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-half-harmonic-pressure
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-half-harm-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTextSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-up-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
+      %! SPANNER_START
+    - \tweak direction #down
+      %! SPANNER_START
+    - \tweak staff-padding 10.5
+      %! SPANNER_START
+    \startTextSpanOne
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    - \tweak stencil ##f
+    ~
+
+    % [Violin.Music measure 2]
+    a1
+    \repeatTie
 
 }
 
@@ -4128,8 +4168,6 @@ number.26.Violin.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
@@ -4138,148 +4176,103 @@ number.26.Violin.Music = {
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                b'
+                a
+                fs'!
             >16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            ds'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            ds'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            fs'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            ds'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            fs'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            fs'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            ds'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            ds'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            fs'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
@@ -4301,6 +4294,12 @@ number.26.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     b'16
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTextSpan
+      %! SPANNER_STOP
+    \stopTextSpanOne
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight

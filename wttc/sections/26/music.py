@@ -463,7 +463,7 @@ def VN(voice, meters):
     # counts = [1, -6, 3, -3]
     rhythm(
         None,
-        [-1, OBGC(24 * [1], [31])],
+        [-1, OBGC(24 * [1], [t(15), 16])],
         material=1,
     )
     rhythm(
@@ -720,19 +720,31 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-def O1b(pleaves, pitches, string_number, hairpin):
-    baca.pitches(pleaves, pitches)
+def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    pitches = pitches[:-1] + "3"
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    # baca.override.note_head_style_harmonic_black(pleaves)
     nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,
         hairpin,
-        rleak=True,
+        rleak=rleak_hairpin,
     )
     baca.mspanners.text(
         nongraces,
         r"\wttc-half-harmonic-pressure =|",
-        left_broken_text=r"\baca-parenthesized-half-harm",
-        staff_padding=3,
+        left_broken_text=r"\baca-parenthesized-half-harm-markup",
+        staff_padding=5.5,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
+        abjad.Tweak(r"- \tweak direction #down"),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        staff_padding=10.5,
     )
 
 
@@ -1030,13 +1042,13 @@ def gt2(m):
 
 
 def vn(m):
-    pass
-    """
     O1b(
         library.pleaves(m[1, 2], 1),
-        "F# D# G Ab E Ab G E D# F# D# E F# G Ab G F# Ab E DE E Ab D# F#",
+        "F# D# G Ab E Ab G E D# F# D# E F# G Ab G F# Ab E D# E Ab D# F#" + " A",
         "sfmp>o!",
+        rleak_hairpin=True,
     )
+    """
     O2b(library.pleaves(m[2, 3], 2)[:-1], "p p")
     O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf f f")
     O1b(
