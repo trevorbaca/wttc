@@ -1055,10 +1055,10 @@ def vn(m):
         "D# F# D# E G Ab E Ab G D# F# G A",
         "p<|f",
     )
-    O2b(library.pleaves(m[8, 10], 2), "f - mf mp - p -")
+    O2b(library.pleaves(m[8, 10], 2), '"f" - mf mp - p -')
     O2b(library.pleaves(m[11, 12], 2)[:3], "mp - -")
     O2b(library.pleaves(m[12, 13], 2)[1:], "mf - -")
-    O2b(library.pleaves(m[14, 15], 2), "f - -")
+    O2b(library.pleaves(m[14, 15], 2), '"f" - -')
     O1b(
         library.pleaves(m[19, 20], 1),
         "F# G Ab G F# E G",
@@ -1079,11 +1079,11 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
-    O2b(library.pleaves(m[2, 3], 2)[:-1], "p p")
-    O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf f f")
-    O2b(library.pleaves(m[8, 10], 2), "f mf mp p p")
+    O2b(library.pleaves(m[2, 3], 2)[:-1], "p -")
+    O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf - -")
+    O2b(library.pleaves(m[8, 10], 2), '"f" mf mp p -')
     O2b(library.pleaves(m[11, 12], 2)[:2], "mp -")
+    """
     O4c(library.pleaves(m[12], 4), "F2", [2, 1], "P -> O", [3], "mf|>pp")
     O2b(library.pleaves(m[12, 13], 2)[1:], "mf -")
     O4c(

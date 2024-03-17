@@ -4954,11 +4954,11 @@ number.26.Violin.Music = {
     %@% \stopStaffHighlight
     b'16
     :32
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \f
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-f
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_STOP
@@ -5229,7 +5229,7 @@ number.26.Violin.Music = {
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \f
+    \baca-effort-f
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -5795,12 +5795,27 @@ number.26.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
         ~
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
     }
 
@@ -5808,9 +5823,8 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         b'8
+        :32
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5827,12 +5841,22 @@ number.26.Cello.Music = {
         % [Cello.Music measure 3]
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'8
+        :32
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
@@ -5847,11 +5871,26 @@ number.26.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
     }
 
@@ -5866,11 +5905,15 @@ number.26.Cello.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'4
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
 
     }
 
@@ -5883,11 +5926,10 @@ number.26.Cello.Music = {
     {
 
         % [Cello.Music measure 5]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'8
+        :32
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5901,11 +5943,10 @@ number.26.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'8
+        :32
         ~
 
     }
@@ -5914,10 +5955,20 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         b'8
+        :32
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
@@ -5945,12 +5996,27 @@ number.26.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \baca-effort-f
         ~
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
     }
 
@@ -5958,9 +6024,8 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         b'8
+        :32
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5977,11 +6042,15 @@ number.26.Cello.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -5995,11 +6064,15 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'4
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -6016,11 +6089,15 @@ number.26.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
 
     }
 
@@ -6034,14 +6111,24 @@ number.26.Cello.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'4
+        :32
 
     }
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
@@ -6055,11 +6142,26 @@ number.26.Cello.Music = {
 
         r8
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -6074,16 +6176,26 @@ number.26.Cello.Music = {
     {
 
         % [Cello.Music measure 12]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
         b'4
+        :32
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         b'8
