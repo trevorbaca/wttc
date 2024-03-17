@@ -6213,6 +6213,12 @@ number.26.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-text "P"
           %! SPANNER_START
+        - \baca-text-spanner-right-text "O"
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
         \bacaStartTextSpanSCP
@@ -6245,20 +6251,6 @@ number.26.Cello.Music = {
         \p
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
-          %! SPANNER_START
-        - \baca-invisible-line
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "O"
-          %! SPANNER_START
-        - \baca-text-spanner-right-text "P"
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-          %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SPANNER_START
-        - \tweak staff-padding 3
-          %! SPANNER_START
-        \bacaStartTextSpanSCP
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
@@ -6279,8 +6271,6 @@ number.26.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
@@ -6547,16 +6537,6 @@ number.26.Cello.Music = {
     \override NoteHead.no-ledgers = ##t
     df,!2.
     - \marcato
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
-      %! SPANNER_START
-    - \baca-solid-line-with-arrow
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "P"
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanSCP
 
     % [Cello.Music measure 21]
     df,!1
@@ -6566,6 +6546,22 @@ number.26.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "T"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -6592,20 +6588,6 @@ number.26.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
     [
-      %! SPANNER_START
-    - \baca-invisible-line
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "T"
-      %! SPANNER_START
-    - \baca-text-spanner-right-text "T"
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
-      %! SPANNER_START
-    - \tweak bound-details.right.stencil-align-dir-y #center
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanSCP
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -6614,8 +6596,6 @@ number.26.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d16
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
     ]
     ~
 
