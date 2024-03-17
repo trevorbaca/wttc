@@ -993,14 +993,12 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     P1a(library.run(m[22, 23], 99, 0), "C6", "D6", [3], "o<p")
     P1a(library.run(m[23, 24], 99, 1), "C6", "D6", [3], "o<mp")
     P1a(library.run(m[24, 25], 99, 1), "C6", "D6", [2, 2], "o< mf>o!")
-    P1a(library.run(m[25, 26], 1, 1), "C6", "D6", [1, 2], "o< mp>o!")
+    P1a(library.run(m[25, 26], 1, 0), "C6", "D6", [1, 2], "o< mp>o!")
     P1a(library.run(m[27, 28], 1, 0), "C6", "D6", [1, 2], "o< p>o!")
     P1a(library.run(m[29, 32], 1, 0), "C6", "D6", [3, 2], "o< pp>o!")
-    """
 
 
 def gt1(m):
@@ -1117,6 +1115,10 @@ def vc(m):
     """
 
 
+def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
+
+
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
@@ -1161,6 +1163,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    align_spanners(cache)
     return score
 
 
