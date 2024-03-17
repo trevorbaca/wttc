@@ -612,13 +612,20 @@ def VC(voice, meters):
         library.annotate(plts[:2], 2)
         library.annotate(plts[2:], 4)
 
-    rhythm.make_one_beat_tuplets(
-        meters(12, 13),
-        [1] + [2, -6, 1, -4, 2, -6] + ["-"],
-        extra_counts=[-1],
-        material=2,
-        overlap=[-12],
-    )
+    @baca.call
+    def block():
+        components = rhythm.make_one_beat_tuplets(
+            meters(12, 13),
+            [1] + [2, -6, 1, -4, 2, -6] + ["-"],
+            extra_counts=[-1],
+            material=2,
+            overlap=[-12],
+        )
+        tuplet = components[1]
+        eighth_note = tuplet[0]
+        library.unannotate([eighth_note])
+        library.annotate([eighth_note], 4)
+
     rhythm(
         meters(14),
         ["-", 11],
@@ -817,10 +824,13 @@ def O4b(pleaves, dyads, dynamics):
 
 
 def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
-    baca.glissando(
-        pleaves,
-        glissando,
-    )
+    if " " in glissando:
+        baca.glissando(
+            pleaves,
+            glissando,
+        )
+    else:
+        baca.pitch(pleaves, glissando)
     baca.mspanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
@@ -1188,7 +1198,7 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
-        baca.tags.STAFF_HIGHLIGHT,
+        # baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,
