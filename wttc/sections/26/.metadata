@@ -154,7 +154,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mp",
+                value="f",
             )
         ],
         "Guitar.2.Staff": [

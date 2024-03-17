@@ -1020,22 +1020,20 @@ def gt1(m):
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    """
     O3b(library.pleaves(m[2, 3], 3), "A5", "mf p")
-    O3b(library.pleaves(m[4, 5], 3), "A5", "mf - -")
+    O3b(library.pleaves(m[4, 6], 3), "A5", "mf - -")
     O3b(library.pleaves(m[7], 3), "A5", "p")
     O4b(library.pleaves(m[10], 4), "Ab2:C3", "p")
     O4b(
         library.pleaves(m[11, 17], 4),
         "Ab2:C3 G2:B2 Gb2:Bb2 F2:A2 F2:A2",
-        "p mp mf mf mp",
+        "(p) mp mf (mf) mp",
     )
     O3b(library.pleaves(m[19], 3), "Ab5", "p")
-    O4b(library.pleaves(m[20], 4), "F2:A2", "p")
-    O3b(library.pleaves(m[22, 24], 3), "Ab5", "p")
+    O4b(library.pleaves(m[20], 4), "F2:A2", "-")
+    O3b(library.pleaves(m[22, 24], 3), "Ab5", "- - -")
     P2b(library.pleaves(m[28], 2), "C#5", "mp")
     P2b(library.pleaves(m[30], 2), "C#5", "f")
-    """
 
 
 def vn(m):
