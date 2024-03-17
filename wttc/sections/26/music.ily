@@ -4032,6 +4032,7 @@ number.26.Guitar.2.Staff = <<
 number.26.Violin.Music.item.1 = {
 
     \once \override Dots.X-extent = ##f
+    \override NoteHead.style = #'harmonic-black
     \voiceTwo
     a2...
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4075,6 +4076,7 @@ number.26.Violin.Music.item.1 = {
     % [Violin.Music measure 2]
     a1
     \repeatTie
+    \revert NoteHead.style
 
 }
 
@@ -4184,6 +4186,7 @@ number.26.Violin.Music = {
             [
             (
 
+            \override NoteHead.style = #'harmonic-black
             ds'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
@@ -4277,6 +4280,7 @@ number.26.Violin.Music = {
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
+            \revert NoteHead.style
 
         }
 

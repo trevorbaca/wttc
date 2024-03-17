@@ -724,8 +724,10 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     pitches = pitches[:-1] + "3"
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
-    # baca.override.note_head_style_harmonic_black(pleaves)
+    graces = abjad.select.notes(pleaves, grace=True)
+    baca.override.note_head_style_harmonic_black(graces)
     nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.note_head_style_harmonic_black(nongraces)
     baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,
