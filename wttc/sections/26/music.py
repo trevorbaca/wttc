@@ -518,7 +518,7 @@ def VN(voice, meters):
     rhythm.mmrests(16, 18)
     rhythm(
         meters(19),
-        [-1, X(OBGC(6 * [1], [t(7)])), t(8)],
+        [-1, X(OBGC(6 * [1], [t(15)]))],
         material=1,
     )
     rhythm(
@@ -1062,8 +1062,7 @@ def vn(m):
         "D# F# D# E G Ab E Ab G D# F# G A",
         "p<|f",
     )
-    """
-    O2b(library.pleaves(m[8, 10], 2), "f f mf mp mp p p")
+    O2b(library.pleaves(m[8, 10], 2), "f - mf mp - p -")
     O2b(library.pleaves(m[11, 12], 2)[:3], "mp - -")
     O2b(library.pleaves(m[12, 13], 2)[1:], "mf - -")
     O2b(library.pleaves(m[14, 15], 2), "f - -")
@@ -1077,6 +1076,7 @@ def vn(m):
         "F# G Ab G F# E G",
         "p>o!",
     )
+    """
     P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!")
     P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], "o< mf>o!")
     P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")

@@ -4186,10 +4186,45 @@ number.26.Violin.Music.item.3 = {
 
 number.26.Violin.Music.item.4 = {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override Dots.X-extent = ##f
+    \override NoteHead.style = #'harmonic-black
     \voiceTwo
-    b'4..
+    g2...
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-half-harmonic-pressure
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-half-harm-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTextSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-up-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
+      %! SPANNER_START
+    - \tweak direction #down
+      %! SPANNER_START
+    - \tweak staff-padding 10.5
+      %! SPANNER_START
+    \startTextSpanOne
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
@@ -4198,10 +4233,45 @@ number.26.Violin.Music.item.4 = {
 
 number.26.Violin.Music.item.5 = {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override Dots.X-extent = ##f
+    \override NoteHead.style = #'harmonic-black
     \voiceTwo
-    b'4..
+    g4..
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-half-harmonic-pressure
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-half-harm-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTextSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-up-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
+      %! SPANNER_START
+    - \tweak direction #down
+      %! SPANNER_START
+    - \tweak staff-padding 10.5
+      %! SPANNER_START
+    \startTextSpanOne
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
@@ -4652,19 +4722,34 @@ number.26.Violin.Music = {
 
     >>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     b'16
+    :32
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \f
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_STOP
     \stopTextSpanOne
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
     % [Violin.Music measure 9]
       %! STAFF_HIGHLIGHT
@@ -4673,28 +4758,30 @@ number.26.Violin.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8
+    :32
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'16
+    :32
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4703,16 +4790,19 @@ number.26.Violin.Music = {
     % [Violin.Music measure 10]
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'8
+    :32
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4720,11 +4810,10 @@ number.26.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4732,11 +4821,15 @@ number.26.Violin.Music = {
 
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4744,12 +4837,22 @@ number.26.Violin.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
@@ -4759,11 +4862,26 @@ number.26.Violin.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
     b'16
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4773,40 +4891,63 @@ number.26.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
+    :32
 
     % [Violin.Music measure 12]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
     b'8
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
     - \tweak stencil ##f
     ~
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'16
+    :32
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -4814,11 +4955,10 @@ number.26.Violin.Music = {
     r8.
 
     % [Violin.Music measure 13]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -4826,17 +4966,26 @@ number.26.Violin.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'8
+    :32
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
@@ -4848,21 +4997,35 @@ number.26.Violin.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
     b'8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
+    :32
 
     % [Violin.Music measure 15]
       %! STAFF_HIGHLIGHT
@@ -4871,19 +5034,28 @@ number.26.Violin.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8
+    :32
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     b'16
+    :32
     \repeatTie
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 5
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
@@ -4913,8 +5085,6 @@ number.26.Violin.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
@@ -4923,44 +5093,37 @@ number.26.Violin.Music = {
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                b'
+                g
+                fs'!
             >16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            \override NoteHead.style = #'harmonic-black
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            fs'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
+            \revert NoteHead.style
 
         }
 
@@ -4969,31 +5132,27 @@ number.26.Violin.Music = {
 
     >>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    % [Violin.Music measure 20]
       %! ONE_VOICE_COMMAND
     \oneVoice
-    b'2
+    g2
     - \tweak stencil ##f
     ~
     \repeatTie
 
-    % [Violin.Music measure 20]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
-    - \tweak stencil ##f
-    ~
+    g16
+      %! SPANNER_STOP
+    \!
     \repeatTie
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
-    \repeatTie
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \stopTextSpan
+      %! SPANNER_STOP
+    \stopTextSpanOne
 
     r4
 
@@ -5008,8 +5167,6 @@ number.26.Violin.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
@@ -5018,44 +5175,37 @@ number.26.Violin.Music = {
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                b'
+                g
+                fs'!
             >16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            \override NoteHead.style = #'harmonic-black
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            af'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            g'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            fs'!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
+            \revert NoteHead.style
 
         }
 
@@ -5064,32 +5214,32 @@ number.26.Violin.Music = {
 
     >>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ONE_VOICE_COMMAND
     \oneVoice
-    b'2.
+    g2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
     % [Violin.Music measure 23]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'1
-    - \tweak direction #up
-    \repeatTie
+    g1
     - \tweak stencil ##f
     ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
     \repeatTie
+
+    g16
+      %! SPANNER_STOP
+    \!
+    \repeatTie
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \stopTextSpan
+      %! SPANNER_STOP
+    \stopTextSpanOne
 
     % [Violin.Music measure 24]
     R1 * 3/4
