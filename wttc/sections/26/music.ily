@@ -1579,7 +1579,7 @@ number.26.AltoFlute.Music = {
     \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    g16
+    <g fs'!>16
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1600,7 +1600,7 @@ number.26.AltoFlute.Music = {
     ~
 
     % [AltoFlute.Music measure 4]
-    g16
+    <g fs'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1610,7 +1610,7 @@ number.26.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    g16
+    <g fs'!>16
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1626,7 +1626,7 @@ number.26.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    g8
+    <g fs'!>8
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1857,19 +1857,33 @@ number.26.AltoFlute.Music = {
 
     >>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'16
+    <gf! f'>16
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-mf
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_STOP
     \stopTextSpanOne
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-covered-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
 
     % [AltoFlute.Music measure 9]
       %! STAFF_HIGHLIGHT
@@ -1878,17 +1892,14 @@ number.26.AltoFlute.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'16
+    <gf! f'>16
+    - \espressivo
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    <gf f'>16
     ]
 
       %! STAFF_HIGHLIGHT
@@ -1899,11 +1910,15 @@ number.26.AltoFlute.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'16
+    <gf! f'>16
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1912,11 +1927,10 @@ number.26.AltoFlute.Music = {
     % [AltoFlute.Music measure 10]
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'8
+    <gf! f'>8
+    - \espressivo
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1926,11 +1940,15 @@ number.26.AltoFlute.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'16
+    <gf! f'>16
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1938,20 +1956,19 @@ number.26.AltoFlute.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'16
+    <gf! f'>16
+    - \espressivo
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    <gf f'>16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r8.
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 11]
     r4

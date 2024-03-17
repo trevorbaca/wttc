@@ -112,7 +112,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(3, 4),
-        2 * [2, -7, 1, -5],
+        2 * [c(2, 2), -7, c(1, 2), -5],
         material=2,
         overlap=[-15],
     )
@@ -128,12 +128,12 @@ def FL(voice, meters):
     )
     rhythm(
         meters(8),
-        [rt(1), X(OBGC(12 * [1], [w(12, 14), rt(h(2))])), M(1, 2)],
+        [rt(1), X(OBGC(12 * [1], [w(12, 14), rt(h(2))])), M(c(1, 2), 2)],
         material=1,
     )
     rhythm(
         meters(9, 10),
-        [-5, 2, -7] + 3 * [1, -5, 2, -7],
+        [-5, c(2, 2), -7] + 3 * [c(1, 2), -5, c(2, 2), -7],
         material=2,
     )
     rhythm(
@@ -929,7 +929,9 @@ def fl(m):
     )
     O2a(library.pleaves(m[2], 2), library.make_flute_covered_dyads("D3"), "p -")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
-    O2a(library.pleaves(m[3, 4], 2), "D3", 'p mp "mf"')
+    O2a(
+        library.pleaves(m[3, 4], 2), library.make_flute_covered_dyads("D3"), 'p mp "mf"'
+    )
     O3a(library.pleaves(m[5], 3), "F4 F#5", "mf", rleak_hairpin=True)
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
     O1a(
@@ -942,8 +944,12 @@ def fl(m):
         "G# G E G# A F A G# F E G E B",
         "p<|f",
     )
+    O2a(
+        library.pleaves(m[8, 10], 2),
+        library.make_flute_covered_dyads("Db3"),
+        '"mf" - mp - p -',
+    )
     """
-    O2a(library.pleaves(m[8, 10], 2), "Db3", '"mf" "mf" mp mp p p')
     O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
     O4a(library.pleaves(m[12, 13], 4)[:-2], "C6 B5", "pp<| f> mf> mp> p> pp")
     O4a(library.pleaves(m[14, 16], 4)[5:], "D6 Db6", "pp<| f> mf> mp> p> pp")
