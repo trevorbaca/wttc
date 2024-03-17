@@ -95,7 +95,7 @@ def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         None,
-        [-1, OBGC(24 * [1], [31])],
+        [-1, OBGC(24 * [1], [t(15), 16])],
         material=1,
     )
     rhythm(
@@ -694,8 +694,11 @@ def VC(voice, meters):
 
 
 def O1a(pleaves, pitches, hairpin):
-    baca.pitches(pleaves, pitches)
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    pitches = pitches[:-1] + "3"
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
     nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,
         hairpin,
@@ -705,7 +708,15 @@ def O1a(pleaves, pitches, hairpin):
         nongraces,
         r"\baca-airtone-markup =|",
         left_broken_text=r"\baca-parenthesized-air-markup",
-        staff_padding=3,
+        staff_padding=5.5,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\wttc-e-sounds-ottava-higher-markup =|",
+        abjad.Tweak(r"- \tweak direction #down"),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        staff_padding=8,
     )
 
 
@@ -908,13 +919,12 @@ def P3(pleaves, glissando, hairpin_lparts, hairpin, *, damp_staff_padding=None):
 
 
 def fl(m):
-    pass
-    """
     O1a(
         library.pleaves(m[1, 2], 1),
         "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
         "sfmp>o!",
     )
+    """
     O2a(library.pleaves(m[2], 2), "D3", "p p")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
     O2a(library.pleaves(m[3], 4), "D3", 'p mp "mf"')

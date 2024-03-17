@@ -258,6 +258,11 @@ wttc-two-f-pizz = \markup \upright "2f. pizz."
 wttc-two-finger-pizzicato = \markup \upright "2-finger pizzicato"
 wttc-two-finger-tamburo = \markup \upright "2-finger tamburo"
 
+%%% ANNOTATION %%%
+
+wttc-e-sounds-ottava-higher-markup = \markup
+  \line { E sounds 8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va higher }
+
 %%% STEM RIMBALZANDO %%%
 
 stemR = {
