@@ -791,6 +791,7 @@ def O4a(pleaves, pitch, hairpin, *, rleak_hairpin=False):
         baca.glissando(pleaves, pitch)
     else:
         baca.pitch(pleaves, pitch)
+    baca.breathe(pleaves[-1])
 
 
 def O4b(pleaves, dyads, dynamics):
@@ -950,14 +951,13 @@ def fl(m):
         '"mf" - mp - p -',
     )
     O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
-    """
     O4a(
-        library.pleaves(m[12, 14], 4)[:-3],
+        library.pleaves(m[12, 14], 4)[:-2],
         "C6 B5",
-        "pp<| f> mf> mp> p> pp>o!",
-        rleak_hairpin=True,
+        "pp<| f> mf> mp> p> pp",
     )
-    O4a(library.pleaves(m[14, 16], 4)[5:-1], "D6 C#6", "pp<| f> mf> mp> p> pp")
+    O4a(library.pleaves(m[14, 16], 4)[4:], "D6 C#6", "pp<| f> mf> mp> p> pp")
+    """
     O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
     O1a(
         library.pleaves(m[19], 1),
