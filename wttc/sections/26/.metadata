@@ -243,6 +243,16 @@
                 value="3/4",
             ),
         ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="f",
+            )
+        ],
         "Violin.Staff": [
             baca.Memento(
                 context="Violin.Music",
@@ -262,11 +272,27 @@
             ),
             baca.Memento(
                 context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Violin.Music",
                 edition=Tag(string="-PARTS"),
                 manifest="short_instrument_names",
                 prototype=None,
                 synthetic_offset=None,
                 value="Vn.",
+            ),
+            baca.Memento(
+                context="Violin.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
     },

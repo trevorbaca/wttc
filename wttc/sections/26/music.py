@@ -491,7 +491,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(8),
-        [rt(1), X(OBGC(12 * [1], [w(12, 14), h(2)])), M(1, 2)],
+        [rt(1), X(OBGC(12 * [1], [w(12, 14), h(rt(2))])), M(1, 2)],
         material=1,
     )
     rhythm(
@@ -1046,15 +1046,14 @@ def gt2(m):
 def vn(m):
     O1b(
         library.pleaves(m[1, 2], 1),
-        "F# D# G Ab E Ab G E D# F# D# E F# G Ab G F# Ab E D# E Ab D# F#" + " A",
+        "F# D# G Ab E Ab G E D# F# D# E F# G Ab G F# Ab E D# E Ab D# F# A",
         "sfmp>o!",
         rleak_hairpin=True,
     )
-    """
-    O2b(library.pleaves(m[2, 3], 2)[:-1], "p p")
-    O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf f f")
+    O2b(library.pleaves(m[2, 3], 2)[:-1], "p -")
+    O2b(library.pleaves(m[3, 5], 2)[1:], 'mp mf "f" -')
     O1b(
-        library.pleaves(m[7], 1),
+        library.pleaves(m[7], 1) + library.pleaves(m[8], 1)[:1],
         "F# G Ab G F# E A",
         "p",
     )
@@ -1063,6 +1062,7 @@ def vn(m):
         "D# F# D# E G Ab E Ab G D# F# G A",
         "p<|f",
     )
+    """
     O2b(library.pleaves(m[8, 10], 2), "f f mf mp mp p p")
     O2b(library.pleaves(m[11, 12], 2)[:3], "mp - -")
     O2b(library.pleaves(m[12, 13], 2)[1:], "mf - -")
