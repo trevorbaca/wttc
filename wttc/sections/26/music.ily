@@ -6240,7 +6240,7 @@ number.26.Cello.Music = {
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-        \pp
+        \p
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
           %! SPANNER_START
@@ -6256,15 +6256,30 @@ number.26.Cello.Music = {
           %! SPANNER_START
         \bacaStartTextSpanSCP
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         d4
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
 
     }
 
@@ -6279,11 +6294,10 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
         d8
+        :32
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6297,11 +6311,10 @@ number.26.Cello.Music = {
 
         r4
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
         d8
+        :32
         ~
 
     }
@@ -6310,10 +6323,20 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
         d8
+        :32
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
         r4

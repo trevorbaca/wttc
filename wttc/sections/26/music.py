@@ -1094,9 +1094,9 @@ def vc(m):
     O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf - -")
     O2b(library.pleaves(m[8, 10], 2), '"f" mf mp p -')
     O2b(library.pleaves(m[11, 12], 2)[:2], "mp -")
-    O4c(library.pleaves(m[12], 4), "F2", [2, 1], "P -> O", [3], "mf|>pp")
+    O4c(library.pleaves(m[12], 4), "F2", [2, 1], "P -> O", [3], "mf|>p")
+    O2b(library.pleaves(m[12, 13], 2)[1:], "mf - -")
     """
-    O2b(library.pleaves(m[12, 13], 2)[1:], "mf -")
     O4c(
         library.pleaves(m[14, 22], 4),
         "E2/13 E2/13 Db2/5",
