@@ -834,6 +834,7 @@ def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
     baca.mspanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
+        staff_padding=3,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -1096,15 +1097,15 @@ def vc(m):
     O2b(library.pleaves(m[11, 12], 2)[:2], "mp -")
     O4c(library.pleaves(m[12], 4), "F2", [2, 1], "P -> O", [3], "mf|>p")
     O2b(library.pleaves(m[12, 13], 2)[1:], "mf - -")
-    """
     O4c(
         library.pleaves(m[14, 22], 4),
-        "E2/13 E2/13 Db2/5",
+        "E2/13 E2/13 Db2/4 Db2",
+        [5, 8, 14, 3, 1],
         "T -> P -> T -> P -> T",
-        [5, 8, 14, 2, 1],
-        [5, 8, 14, 3],
+        [5, 8, 15, 3],
         "o< mf> pp< p>o!",
     )
+    """
     P1b(library.run(m[22, 23], 0, 99), "E3 C4", "C2", [3], "o<p")
     P1b(library.run(m[23, 24], 1, 99), "F3 D4", "C2", [3], "o<mp")
     P1b(

@@ -6213,6 +6213,8 @@ number.26.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-text "P"
           %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
         \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -6253,6 +6255,8 @@ number.26.Cello.Music = {
         - \tweak bound-details.right.padding 0.5
           %! SPANNER_START
         - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 3
           %! SPANNER_START
         \bacaStartTextSpanSCP
 
@@ -6348,215 +6352,260 @@ number.26.Cello.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    d8.
-    - \tweak stencil ##f
-    ~
+    e,8.
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    e,2
+    - \marcato
 
     % [Cello.Music measure 15]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,16
+    - \marcato
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    e,8.
+    - \marcato
     ]
-    - \tweak stencil ##f
-    ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    e,2.
+    - \marcato
 
     % [Cello.Music measure 16]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    e,2
+    - \marcato
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    e,8.
+    - \marcato
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,16
+    - \marcato
     ]
-    ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    e,8.
+    - \marcato
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,16
+    - \marcato
     ]
-    - \tweak stencil ##f
-    ~
 
     % [Cello.Music measure 17]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,16
+    - \marcato
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    e,8.
+    - \marcato
     ]
-    - \tweak stencil ##f
-    ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    e,2.
+    - \marcato
 
     % [Cello.Music measure 18]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    e,2
+    - \marcato
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    e,8.
+    - \marcato
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,16
+    - \marcato
     ]
-    ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    e,8.
+    - \marcato
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,16
+    - \marcato
     ]
-    - \tweak stencil ##f
-    ~
 
     % [Cello.Music measure 19]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
-    [
-    \repeatTie
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
-    ]
-    - \tweak stencil ##f
-    ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d4
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
-    [
-    \repeatTie
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
-    ]
-    ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    e,16
+    - \marcato
     [
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    e,8.
+    - \marcato
     ]
-    - \tweak stencil ##f
-    ~
+
+    d,4
+    - \marcato
+
+    d,8.
+    - \marcato
+    [
+
+    d,16
+    - \marcato
+    ]
+
+    d,8.
+    - \marcato
+    [
+
+    d,16
+    - \marcato
+    ]
 
     % [Cello.Music measure 20]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d16
+    d,16
+    - \marcato
     [
-    \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df,!8.
+    - \marcato
     ]
-    - \tweak stencil ##f
-    ~
+    \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    df,!2.
+    - \marcato
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P"
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
     % [Cello.Music measure 21]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d1
-    - \tweak direction #up
-    \repeatTie
-    - \tweak stencil ##f
-    ~
+    df,!1
+    - \marcato
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Cello.Music measure 22]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
+    df,!2.
+    - \marcato
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d8.
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df,!8.
+    - \marcato
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     [
-    \repeatTie
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "T"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -6565,6 +6614,8 @@ number.26.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     d16
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
     ~
 
