@@ -260,8 +260,10 @@ wttc-two-finger-tamburo = \markup \upright "2-finger tamburo"
 
 %%% ANNOTATION %%%
 
-wttc-e-sounds-ottava-higher-markup = \markup
-  \line { E sounds 8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va higher }
+wttc-final-note-sounds-ottava-higher-markup = \markup
+  \line {
+    final note sounds 8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va higher
+  }
 
 %%% STEM RIMBALZANDO %%%
 

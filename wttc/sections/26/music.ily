@@ -1165,7 +1165,7 @@ number.26.AltoFlute.Music.item.1 = {
       %! SPANNER_START
     - \baca-dashed-line-with-up-hook
       %! SPANNER_START
-    - \baca-text-spanner-left-markup \wttc-e-sounds-ottava-higher-markup
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -1215,7 +1215,7 @@ number.26.AltoFlute.Music.item.2 = {
       %! SPANNER_START
     - \baca-dashed-line-with-up-hook
       %! SPANNER_START
-    - \baca-text-spanner-left-markup \wttc-e-sounds-ottava-higher-markup
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -1257,7 +1257,7 @@ number.26.AltoFlute.Music.item.3 = {
       %! SPANNER_START
     - \baca-dashed-line-with-up-hook
       %! SPANNER_START
-    - \baca-text-spanner-left-markup \wttc-e-sounds-ottava-higher-markup
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -1294,17 +1294,44 @@ number.26.AltoFlute.Music.item.3 = {
 
 number.26.AltoFlute.Music.item.4 = {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \once \override Dots.X-extent = ##f
     \voiceTwo
-    b'8.
-    - \tweak stencil ##f
-    ~
-
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
-    \repeatTie
+    df'!2...
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-airtone-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-air-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTextSpan
+      %! SPANNER_START
+    - \baca-dashed-line-with-up-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-final-note-sounds-ottava-higher-markup
+      %! SPANNER_START
+    - \tweak direction #down
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \startTextSpanOne
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
 }
 
@@ -2333,8 +2360,6 @@ number.26.AltoFlute.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
@@ -2343,40 +2368,31 @@ number.26.AltoFlute.Music = {
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                b'
+                df'
+                bf'!
             >16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            c''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            cs''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            d''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            cs''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            c''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
@@ -2399,6 +2415,12 @@ number.26.AltoFlute.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     b'4
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTextSpan
+      %! SPANNER_STOP
+    \stopTextSpanOne
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring

@@ -164,7 +164,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(19),
-        [-1, OBGC(6 * [1], [15])],
+        [-1, X(OBGC(6 * [1], [15]))],
         material=1,
     )
     rhythm(
@@ -712,7 +712,7 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
     baca.mspanners.text(
         nongraces,
-        r"\wttc-e-sounds-ottava-higher-markup =|",
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
         abjad.Tweak(r"- \tweak direction #down"),
         direction=abjad.DOWN,
         lilypond_id=1,
@@ -958,12 +958,13 @@ def fl(m):
     )
     O4a(library.pleaves(m[14, 16], 4)[4:], "D6 C#6", "pp<| f> mf> mp> p> pp")
     O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
-    """
     O1a(
         library.pleaves(m[19], 1),
         "F G G# A G# G Ab",
         "p>o!",
+        rleak_hairpin=True,
     )
+    """
     O4a(library.pleaves(m[20, 21], 4), "Eb6 D6", "f> mf> mp> p> pp")
     O1a(
         library.pleaves(m[22, 23], 1),
