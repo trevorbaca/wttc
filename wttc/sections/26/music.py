@@ -1002,11 +1002,10 @@ def ob(m):
 
 
 def gt1(m):
-    pass
-    """
     O3b(library.pleaves(m[2, 3], 3), "A5", "mf p")
     O3b(library.pleaves(m[4, 5], 3), "A5", "mf - -")
     O3b(library.pleaves(m[7], 3), "A5", "p")
+    """
     O4b(library.pleaves(m[10], 4), "A2:C#3", "p")
     O4b(
         library.pleaves(m[11, 17], 4),

@@ -3327,11 +3327,14 @@ number.26.Guitar.1.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    a'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3340,11 +3343,14 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 3]
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    a'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3357,11 +3363,14 @@ number.26.Guitar.1.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    a'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3370,11 +3379,9 @@ number.26.Guitar.1.Music = {
     % [Guitar.1.Music measure 5]
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    a'''16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3382,11 +3389,9 @@ number.26.Guitar.1.Music = {
 
     r2
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    a'''16
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3400,11 +3405,14 @@ number.26.Guitar.1.Music = {
 
     r8.
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    b'16
+    a'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
