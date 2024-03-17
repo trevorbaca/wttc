@@ -782,15 +782,15 @@ def O3b(pleaves, pitches, dynamics):
 
 
 def O4a(pleaves, pitch, hairpin):
-    if " " in pitch:
-        baca.glissando(pleaves, pitch)
-    else:
-        baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     baca.hairpin(
         plts,
         hairpin,
     )
+    if " " in pitch:
+        baca.glissando(pleaves, pitch)
+    else:
+        baca.pitch(pleaves, pitch)
 
 
 def O4b(pleaves, dyads, dynamics):
@@ -949,9 +949,9 @@ def fl(m):
         library.make_flute_covered_dyads("Db3"),
         '"mf" - mp - p -',
     )
-    """
     O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
-    O4a(library.pleaves(m[12, 13], 4)[:-2], "C6 B5", "pp<| f> mf> mp> p> pp")
+    """
+    O4a(library.pleaves(m[12, 14], 4)[:-2], "C6 B5", "pp<| f> mf> mp> p> pp> !")
     O4a(library.pleaves(m[14, 16], 4)[5:], "D6 Db6", "pp<| f> mf> mp> p> pp")
     O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
     O1a(
@@ -1161,6 +1161,7 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
+        baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,
