@@ -128,7 +128,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(8),
-        [rt(1), X(OBGC(12 * [1], [w(12, 14), h(2)])), M(1, 2)],
+        [rt(1), X(OBGC(12 * [1], [w(12, 14), rt(h(2))])), M(1, 2)],
         material=1,
     )
     rhythm(
@@ -694,7 +694,7 @@ def VC(voice, meters):
     rhythm.mmrests(33, 36)
 
 
-def O1a(pleaves, pitches, hairpin):
+def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     pitches = pitches[:-1] + "3"
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
@@ -703,7 +703,7 @@ def O1a(pleaves, pitches, hairpin):
     baca.hairpin(
         nongraces,
         hairpin,
-        rleak=True,
+        rleak=rleak_hairpin,
     )
     baca.mspanners.text(
         nongraces,
@@ -925,23 +925,24 @@ def fl(m):
         library.pleaves(m[1, 2], 1),
         "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
         "sfmp>o!",
+        rleak_hairpin=True,
     )
     O2a(library.pleaves(m[2], 2), library.make_flute_covered_dyads("D3"), "p -")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
     O2a(library.pleaves(m[3, 4], 2), "D3", 'p mp "mf"')
     O3a(library.pleaves(m[5], 3), "F4 F#5", "mf", rleak_hairpin=True)
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
-    """
     O1a(
-        library.pleaves(m[7], 1),
+        library.pleaves(m[7], 1) + library.pleaves(m[8][:1], 1),
         "F G G# A G# G B",
         "p",
     )
     O1a(
-        library.pleaves(m[8], 1),
+        library.pleaves(m[8], 1)[1:],
         "G# G E G# A F A G# F E G E B",
         "p<|f",
     )
+    """
     O2a(library.pleaves(m[8, 10], 2), "Db3", '"mf" "mf" mp mp p p')
     O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
     O4a(library.pleaves(m[12, 13], 4)[:-2], "C6 B5", "pp<| f> mf> mp> p> pp")
