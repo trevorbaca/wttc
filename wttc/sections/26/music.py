@@ -149,13 +149,12 @@ def FL(voice, meters):
     # 32 = 2 + 4 + 6 + 8 + 12
     rhythm(
         meters(13, 14),
-        # [12, 4, 8, 2, 6 - 1, 9],
-        [12, 4, 8, 2, t(2), frame(3, 1), 9],
+        [12, 4, 8, 2, 6 - 1, 9],
         material=4,
     )
     rhythm(
         meters(15, 16),
-        [8, 6, 2, 12, frame(4, 1)],
+        [8, 6, 2, 12, 4],
         material=4,
     )
     rhythm(

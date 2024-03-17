@@ -2064,30 +2064,14 @@ number.26.AltoFlute.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8. * 2/3
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+    b'8.
+    [
     \repeatTie
-
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! FRAMED_LEAF
-    \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override Stem.thickness = 6
-    b'4 * 1/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"3"
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     b'16
+    ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
@@ -2123,25 +2107,7 @@ number.26.AltoFlute.Music = {
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
-
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! FRAMED_LEAF
-    \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override Stem.thickness = 6
-    b'4 * 1/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    b'4
 
     % [AltoFlute.Music measure 17]
       %! NOT_YET_PITCHED_COLORING
