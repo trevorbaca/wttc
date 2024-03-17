@@ -14,6 +14,7 @@ T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
 br = baca.rhythm.br
+c = baca.rhythm.c
 h = baca.rhythm.h
 rt = baca.rhythm.rt
 t = baca.rhythm.t
@@ -100,7 +101,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(2),
-        [1, -4, 2, -1],
+        [c(1, 2), -4, c(2, 2), -1],
         prefix=[-16],
         material=2,
     )
@@ -737,8 +738,8 @@ def O1b(pleaves, pitches, string_number, hairpin):
 
 
 def O2a(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch)
-    plts = baca.selet.plts(pleaves)
+    baca.pitch(pleaves, pitch, allow_out_of_range=True)
+    plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.espressivo(plt.head)
@@ -761,13 +762,14 @@ def O2b(pleaves, dynamics):
     baca.staff_lines(leaf, 5)
 
 
-def O3a(pleaves, pitches, peak):
+def O3a(pleaves, pitches, peak, *, rleak_hairpin=False):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
     assert len(plts) == 2
     baca.hairpin(
         plts,
         library.swells(peak),
+        rleak=rleak_hairpin,
     )
 
 
@@ -924,13 +926,12 @@ def fl(m):
         "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
         "sfmp>o!",
     )
-    """
-    O2a(library.pleaves(m[2], 2), "D3", "p p")
+    O2a(library.pleaves(m[2], 2), library.make_flute_covered_dyads("D3"), "p -")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
-    O2a(library.pleaves(m[3], 4), "D3", 'p mp "mf"')
-    O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
-    O3a(library.pleaves(m[5], 3), "F4 F#5", "mf")
+    O2a(library.pleaves(m[3, 4], 2), "D3", 'p mp "mf"')
+    O3a(library.pleaves(m[5], 3), "F4 F#5", "mf", rleak_hairpin=True)
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
+    """
     O1a(
         library.pleaves(m[7], 1),
         "F G G# A G# G B",

@@ -1403,21 +1403,35 @@ number.26.AltoFlute.Music = {
 
     >>
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'16
+    <g fs'!>16
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_STOP
     \stopTextSpanOne
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-covered-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1425,72 +1439,100 @@ number.26.AltoFlute.Music = {
 
     r16
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'16
+    <g fs'!>16
+    - \espressivo
     [
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    <g fs'>16
     ]
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r16
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 3]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    b'4
+    bf'!4
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    bf'16
     [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    b''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
     ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    b''4
     - \tweak stencil ##f
     ~
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    b''8.
+      %! SPANNER_STOP
+    \!
     [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'16
+    g16
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
     ]
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-covered-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
     ~
 
     % [AltoFlute.Music measure 4]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    g16
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1498,11 +1540,15 @@ number.26.AltoFlute.Music = {
 
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'16
+    g16
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1510,67 +1556,111 @@ number.26.AltoFlute.Music = {
 
     r8
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    b'8
+    g8
+    - \espressivo
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-mf
 
     % [AltoFlute.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'4
+    bf'!4
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    bf'16
     [
     \repeatTie
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    b''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
     ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     - \tweak stencil ##f
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2
+    b''2
     \repeatTie
 
     % [AltoFlute.Music measure 6]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'8.
+    bf'!8.
+      %! SPANNER_STOP
+    \!
     [
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'16
+    cs'''!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
     ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
     ~
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
+    cs'''2.
     - \tweak stencil ##f
     ~
 
     % [AltoFlute.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'16
+    cs'''16
+      %! SPANNER_STOP
+    \!
     \repeatTie
 
     <<
