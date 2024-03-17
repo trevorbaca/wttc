@@ -5745,10 +5745,16 @@ number.26.Violin.Staff = <<
 number.26.Cello.Music = {
 
     % [Cello.Music measure 1]
-      %! REAPPLIED_CLEF
-    \clef "treble"
-      %! REAPPLIED_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_303
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_303
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
@@ -5757,11 +5763,11 @@ number.26.Cello.Music = {
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
-      %! REAPPLIED_CLEF_COLOR_CANCELLATION
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! REAPPLIED_CLEF
+      %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vc-markup
       %! -PARTS
@@ -5778,8 +5784,8 @@ number.26.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! REAPPLIED_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
@@ -5805,7 +5811,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -5823,7 +5829,7 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -5843,7 +5849,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
         :32
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -5881,7 +5887,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -5907,7 +5913,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'4
+        d4
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -5928,7 +5934,7 @@ number.26.Cello.Music = {
         % [Cello.Music measure 5]
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -5945,7 +5951,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
         :32
         ~
 
@@ -5955,7 +5961,7 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        b'8
+        d8
         :32
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -6006,7 +6012,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6024,7 +6030,7 @@ number.26.Cello.Music = {
     \times 2/3
     {
 
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -6044,7 +6050,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6066,7 +6072,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'4
+        d4
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6091,7 +6097,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6113,7 +6119,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'4
+        d4
         :32
 
     }
@@ -6152,7 +6158,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6178,11 +6184,9 @@ number.26.Cello.Music = {
         % [Cello.Music measure 12]
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'4
+        d4
         :32
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
           %! -PARTS
@@ -6198,22 +6202,59 @@ number.26.Cello.Music = {
         \startStaff
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        b'8
+        f,8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "P"
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak stencil #abjad-flared-hairpin
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
         ~
 
     }
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'2.
+    f,2.
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        f,8
+        - \marcato
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-invisible-line
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \baca-text-spanner-right-text "P"
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
@@ -6221,7 +6262,9 @@ number.26.Cello.Music = {
         \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
-        b'4
+        d4
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
 
     }
 
@@ -6240,7 +6283,7 @@ number.26.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6258,7 +6301,7 @@ number.26.Cello.Music = {
         \baca-not-yet-pitched-coloring
           %! STAFF_HIGHLIGHT
         \staffHighlight lightskyblue
-        b'8
+        d8
         ~
 
     }
@@ -6269,7 +6312,7 @@ number.26.Cello.Music = {
 
           %! NOT_YET_PITCHED_COLORING
         \baca-not-yet-pitched-coloring
-        b'8
+        d8
 
           %! STAFF_HIGHLIGHT
         \stopStaffHighlight
@@ -6286,13 +6329,13 @@ number.26.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
-    b'8.
+    d8.
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    d2
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6300,20 +6343,20 @@ number.26.Cello.Music = {
     % [Cello.Music measure 15]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6321,31 +6364,31 @@ number.26.Cello.Music = {
     % [Cello.Music measure 16]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    d2
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     ]
     - \tweak stencil ##f
     ~
@@ -6353,20 +6396,20 @@ number.26.Cello.Music = {
     % [Cello.Music measure 17]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6374,31 +6417,31 @@ number.26.Cello.Music = {
     % [Cello.Music measure 18]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2
+    d2
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     ]
     - \tweak stencil ##f
     ~
@@ -6406,44 +6449,44 @@ number.26.Cello.Music = {
     % [Cello.Music measure 19]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
+    d4
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     ]
     - \tweak stencil ##f
     ~
@@ -6451,20 +6494,20 @@ number.26.Cello.Music = {
     % [Cello.Music measure 20]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     [
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     ]
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6472,7 +6515,7 @@ number.26.Cello.Music = {
     % [Cello.Music measure 21]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'1
+    d1
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6481,14 +6524,14 @@ number.26.Cello.Music = {
     % [Cello.Music measure 22]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     [
     \repeatTie
 
@@ -6498,20 +6541,20 @@ number.26.Cello.Music = {
     \staffHighlight yellow
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    b'16
+    d16
     ]
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
+    d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 23]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -6526,19 +6569,19 @@ number.26.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'16
+    d16
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
+    d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 24]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'16
+    d16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -6551,26 +6594,26 @@ number.26.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
-    b'16
+    d16
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'4
+    d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 25]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -6585,21 +6628,21 @@ number.26.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
+    d8.
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 26]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -6617,13 +6660,13 @@ number.26.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
+    d8.
     - \tweak stencil ##f
     ~
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
@@ -6631,7 +6674,7 @@ number.26.Cello.Music = {
     % [Cello.Music measure 28]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -6653,14 +6696,14 @@ number.26.Cello.Music = {
     \baca-not-yet-pitched-coloring
       %! STAFF_HIGHLIGHT
     \staffHighlight lightpink
-    b'8.
+    d8.
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 30]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'1.
+    d1.
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6669,7 +6712,7 @@ number.26.Cello.Music = {
     % [Cello.Music measure 31]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'1.
+    d1.
     - \tweak direction #up
     \repeatTie
     - \tweak stencil ##f
@@ -6678,14 +6721,14 @@ number.26.Cello.Music = {
     % [Cello.Music measure 32]
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'2.
+    d2.
     - \tweak stencil ##f
     ~
     \repeatTie
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    b'8.
+    d8.
     \repeatTie
 
       %! STAFF_HIGHLIGHT
