@@ -1654,10 +1654,6 @@ number.26.AltoFlute.Music = {
     ~
 
     % [AltoFlute.Music measure 7]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     cs'''16
       %! SPANNER_STOP
     \!
@@ -1672,6 +1668,10 @@ number.26.AltoFlute.Music = {
             \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
+              %! STAFF_HIGHLIGHT
+            \staffHighlight lightpink
+              %! STAFF_HIGHLIGHT
+            \stopStaffHighlight
             \voiceOne
             <
                 \tweak font-size 0

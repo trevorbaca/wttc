@@ -123,7 +123,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(7),
-        [rt(1), X(OBGC(6 * [1], [15]))],
+        [M(rt(1), 3), X(OBGC(6 * [1], [15]))],
         material=1,
     )
     rhythm(
