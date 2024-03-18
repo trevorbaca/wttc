@@ -571,7 +571,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(36),
-        2 * [4] + [AG([2], 4)],
+        [4, frame(4, 2)] + [AG([2], 4)],
         material=3,
     )
     baca.section.append_anchor_note(voice)
@@ -934,7 +934,7 @@ def P2c(pleaves, pitch, string_number, dynamic):
     )
 
 
-def P3(pleaves, glissando, hairpin_lparts, hairpin, *, damp_staff_padding=None):
+def P3(pleaves, glissando, hairpin_lparts, hairpin, *, staff_padding=None):
     baca.glissando(
         pleaves,
         glissando,
@@ -945,7 +945,7 @@ def P3(pleaves, glissando, hairpin_lparts, hairpin, *, damp_staff_padding=None):
     )
     baca.rspanners.damp(
         pleaves,
-        staff_padding=damp_staff_padding,
+        staff_padding=staff_padding,
     )
 
 
@@ -1081,12 +1081,10 @@ def vn(m):
         "F# G Ab G F# E G",
         "p>o!",
     )
-    """
-    P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!")
-    P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], "o< mf>o!")
-    P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
-    P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
-    """
+    P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!", staff_padding=3)
+    P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], "o< mf>o!", staff_padding=5.5)
+    P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!", staff_padding=8)
+    P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!", staff_padding=10.5)
 
 
 def vc(m):
@@ -1136,6 +1134,8 @@ def align_spanners(cache):
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[1, 24], 5)
     baca.override.dls_staff_padding(gt2[28, 30], 3)
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[32, 36], 5)
 
 
 @baca.build.timed("make_score")
