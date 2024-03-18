@@ -938,10 +938,11 @@ def P3(pleaves, glissando, hairpin_lparts, hairpin, *, staff_padding=None):
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
     )
-    baca.rspanners.damp(
-        pleaves,
-        staff_padding=staff_padding,
-    )
+    if staff_padding is not None:
+        baca.rspanners.damp(
+            pleaves,
+            staff_padding=staff_padding,
+        )
 
 
 def fl(m):
@@ -1079,9 +1080,10 @@ def vn(m):
     P2c(library.run(m[26, 27], 2, 0), "E4", "D4", 3, "mp")
     P2c(library.run(m[27, 30], 2, 1), "E4", "D4", 3, "mp")
     P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!", staff_padding=3)
-    P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], "o< mf>o!", staff_padding=5.5)
-    P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!", staff_padding=8)
-    P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!", staff_padding=10.5)
+    P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], 'o< "mf">o!')
+    P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
+    P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
+    baca.rspanners.damp(m[33, 36], staff_padding=10.5)
 
 
 def vc(m):

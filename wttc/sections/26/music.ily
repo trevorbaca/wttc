@@ -5838,7 +5838,7 @@ number.26.Violin.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 10.5
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
@@ -5873,7 +5873,7 @@ number.26.Violin.Music = {
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \mf
+    \baca-effort-mf
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5910,18 +5910,6 @@ number.26.Violin.Music = {
 
     % [Violin.Music measure 35]
     af!4
-      %! SPANNER_STOP
-    \bacaStopTextSpanDamp
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \baca-damp-markup
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! SPANNER_START
-    - \tweak staff-padding 8
-      %! SPANNER_START
-    \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5978,18 +5966,6 @@ number.26.Violin.Music = {
 
     % [Violin.Music measure 36]
     af!4
-      %! SPANNER_STOP
-    \bacaStopTextSpanDamp
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \baca-damp-markup
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! SPANNER_START
-    - \tweak staff-padding 10.5
-      %! SPANNER_START
-    \bacaStartTextSpanDamp
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
