@@ -67,6 +67,7 @@ def GLOBALS(skips, first_measure_number):
     baca.rehearsal_mark(
         skips[25 - 1],
         "P",
+        extra_offset=(3, 0),
         font_size=6,
         padding=1.5,
     )
@@ -891,6 +892,7 @@ def P2a(pleaves, pitch, peak):
     baca.hairpin(
         [pleaves[:1], pleaves[1:]],
         library.swells(peak),
+        rleak=True,
     )
 
 
@@ -996,11 +998,9 @@ def fl(m):
         "F G G# A G# G Ab",
         "p>o!",
     )
-    """
     P2a(library.run(m[25, 26], 2, 0), "E6", "p")
     P2a(library.run(m[26, 27], 2, 1), "E6", "mp")
     P2a(library.run(m[27, 30], 2, 1), "E6", "mf")
-    """
 
 
 def ob(m):
@@ -1124,6 +1124,8 @@ def vc(m):
 
 
 def align_spanners(cache):
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl[25, 32], 3)
     baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[1, 7], 3)
