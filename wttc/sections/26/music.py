@@ -876,11 +876,6 @@ def P1b(
         hairpin,
         rleak=rleak_hairpin,
     )
-    baca.rspanners.string_number(
-        pleaves,
-        4,
-        staff_padding=5.5,
-    )
 
 
 def P2a(pleaves, pitch, peak):
@@ -1081,7 +1076,6 @@ def vn(m):
         "F# G Ab G F# E G",
         "p>o!",
     )
-    # def P2c(pleaves, pitch, string_number, dynamic):
     P2c(library.run(m[26, 27], 2, 0), "E4", "D4", 3, "mp")
     P2c(library.run(m[27, 30], 2, 1), "E4", "D4", 3, "mp")
     P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!", staff_padding=3)
@@ -1107,17 +1101,17 @@ def vc(m):
         [5, 8, 15, 3],
         "o< mf> pp< p>o!",
     )
-    """
-    P1b(library.run(m[22, 23], 0, 99), "E3 C4", "C2", [3], "o<p")
-    P1b(library.run(m[23, 24], 1, 99), "F3 D4", "C2", [3], "o<mp")
+    P1b(library.run(m[22, 23], 99, 0), "E3 C4", "C2", [3], "o<p")
+    P1b(library.run(m[23, 24], 99, 1), "F3 D4", "C2", [3], "o<mp")
     P1b(
-        library.run(m[24, 25], 1, 99),
+        library.run(m[24, 25], 99, 1),
         "G3 E4",
         "C2",
         [2, 2],
         "o< mf>o!",
         rleak_hairpin=True,
     )
+    """
     P1b(library.pleaves(m[25, 26], 1), "F5 E4", "C2", [1, 2], "o< mp>o!")
     P1b(library.pleaves(m[27, 28], 1), "E5 D4", "C2", [1, 2], "o< p>o!")
     P1b(library.pleaves(m[29, 32], 1), "D5 Db2", "C2", [3, 2], "o< f>o!")
@@ -1140,6 +1134,8 @@ def align_spanners(cache):
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[25, 31], 4)
     baca.override.dls_staff_padding(vn[32, 36], 5)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[14, 25], 5)
 
 
 @baca.build.timed("make_score")
