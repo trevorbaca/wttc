@@ -810,6 +810,7 @@ number.25.AltoFlute.Music.item.3 = {
     % [AltoFlute.Music measure 20]
     a'1..
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -1305,6 +1306,7 @@ number.25.AltoFlute.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 4
     r2
 
     r16
@@ -2110,6 +2112,7 @@ number.25.Guitar.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
@@ -2145,6 +2148,7 @@ number.25.Guitar.1.Music = {
     - \tweak stencil ##f
     ~
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 16]
     fs'2
@@ -2555,6 +2559,7 @@ number.25.Guitar.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
     r2
@@ -2590,6 +2595,7 @@ number.25.Guitar.2.Music = {
     - \tweak stencil ##f
     ~
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 16]
     d'2
@@ -2836,6 +2842,7 @@ number.25.Violin.Music.item.3 = {
     % [Violin.Music measure 20]
     f'1..
     \repeatTie
+    \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
 }
@@ -3608,6 +3615,7 @@ number.25.Violin.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 4
     r2
 
     r16
@@ -5313,6 +5321,7 @@ number.25.Cello.Music = {
     r4
 
     % [Cello.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
@@ -5368,6 +5377,11 @@ number.25.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     <e'' gs''!>1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -5376,9 +5390,6 @@ number.25.Cello.Music = {
     - \tweak staff-padding 3
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -5423,6 +5434,11 @@ number.25.Cello.Music = {
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
     <f'' a''>1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -5431,9 +5447,6 @@ number.25.Cello.Music = {
     - \tweak staff-padding 3
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -5475,6 +5488,7 @@ number.25.Cello.Music = {
 
     % [Cello.Music measure 20]
     r1..
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
