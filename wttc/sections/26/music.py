@@ -905,17 +905,17 @@ def P2b(pleaves, pitch, dynamics):
         baca.flageolet(plt.head)
 
 
-def P2c(pleaves, pitch, string_number, dynamic):
+def P2c(pleaves, pitch, alteration, string_number, dynamic):
     baca.pitch(pleaves, pitch)
     baca.override.note_head_style_harmonic(pleaves)
     baca.rspanners.trill(
         pleaves,
+        alteration=alteration,
         staff_padding=3,
     )
-    plts = baca.select.plts(pleaves)
-    for plt in plts[1:-1]:
-        baca.rspanners.circle_bow(
-            plt,
+    for pleaf in pleaves[1:-1]:
+        baca.mspanners.circle_bow(
+            pleaf,
             staff_padding=5.5,
         )
     baca.rspanners.string_number(
@@ -1081,6 +1081,9 @@ def vn(m):
         "F# G Ab G F# E G",
         "p>o!",
     )
+    # def P2c(pleaves, pitch, string_number, dynamic):
+    P2c(library.run(m[26, 27], 2, 0), "E4", "D4", 3, "mp")
+    P2c(library.run(m[27, 30], 2, 1), "E4", "D4", 3, "mp")
     P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!", staff_padding=3)
     P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], "o< mf>o!", staff_padding=5.5)
     P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!", staff_padding=8)
@@ -1135,6 +1138,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[1, 24], 5)
     baca.override.dls_staff_padding(gt2[28, 30], 3)
     vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[25, 31], 4)
     baca.override.dls_staff_padding(vn[32, 36], 5)
 
 
