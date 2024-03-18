@@ -286,17 +286,17 @@ def VC(voice, meters):
     )
     rhythm(
         meters(15),
-        [21, "-"],
+        [c(21, 2), "-"],
         material=2,
     )
     rhythm(
         meters(16, 17),
-        [21, "-"],
+        [c(21, 2), "-"],
         material=2,
     )
     rhythm(
         meters(18, 20),
-        [21, "-"],
+        [c(21, 2), "-"],
         material=2,
     )
 
@@ -364,7 +364,7 @@ def N2b1(pleaves, glissando):
     )
 
 
-def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None):
+def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None, *, staff_padding=8):
     baca.pitch(pleaves[0], start_dyad)
     baca.pitch(pleaves[1:], stop_dyad)
     baca.glissando(pleaves)
@@ -377,7 +377,7 @@ def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None):
     baca.mspanners.text(
         pleaves,
         "II / III mod. =|",
-        staff_padding=8,
+        staff_padding=staff_padding,
     )
 
 
@@ -636,11 +636,9 @@ def vc(m):
     )
     baca.clef(m[13][0], "treble")
     N3b(library.pleaves(m[13, 14], 3), Q2, [32, 8, 26], "o< f-- f>o!", -8, t="M3")
-    """
-    N2b2(library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!")
-    N2b2(library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "o<|mp")
-    N2b2(library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "o<|p")
-    """
+    N2b2(library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!", staff_padding=3)
+    N2b2(library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "o<|mp", staff_padding=3)
+    N2b2(library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "o<|p", staff_padding=3)
 
 
 def align_spanners(cache):
