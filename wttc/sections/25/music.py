@@ -548,10 +548,8 @@ def gt1(m):
     N3a(library.pleaves(m[12, 13], 3), "F#4", "mf mp")
     N1b(library.pleaves(m[13, 14], 1), "F3", "-")
     rmakers.unbeam(m[13][:2])
-    """
     N1b(library.pleaves(m[15, 16], 1), "F#3", "p")
-    N3a(library.pleaves(m[16, 20], 3), "G#4", "(p)")
-    """
+    N3a(library.pleaves(m[16, 20], 3), "G#4", "(p) - -")
 
 
 def gt2(m):
@@ -566,10 +564,8 @@ def gt2(m):
     N3a(library.pleaves(m[12, 13], 3), "E4", "mf mp")
     N1b(library.pleaves(m[13, 14], 1), "D3", "-")
     rmakers.unbeam(m[13][:2])
-    """
     N1b(library.pleaves(m[15, 16], 1), "D3", "p")
-    N3a(library.pleaves(m[16, 20], 3), "G4", "(p)")
-    """
+    N3a(library.pleaves(m[16, 20], 3), "G4", "(p) - -")
 
 
 def vn(m):
