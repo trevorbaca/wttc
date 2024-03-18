@@ -5346,13 +5346,13 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    <ef''! g''>4
+    <c'' e''>4
 
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    <ef''! g''>16
+    <c'' e''>16
       %! SPANNER_STOP
     \!
     \revert NoteHead.style
@@ -5396,13 +5396,13 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    <e'' gs''!>4
+    <cs''! es''!>4
 
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    <e'' gs''!>16
+    <cs''! es''!>16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -5451,13 +5451,13 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    <f'' a''>4
+    <d'' fs''!>4
 
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    <f'' a''>16
+    <d'' fs''!>16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
