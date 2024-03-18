@@ -825,6 +825,9 @@ def O4b(pleaves, dyads, dynamics):
 
 
 def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
+    plts = baca.select.plts(pleaves)
+    for plt in plts[1:]:
+        baca.marcato(plt.head)
     if " " in glissando:
         baca.glissando(
             pleaves,
@@ -842,9 +845,6 @@ def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
     )
-    plts = baca.select.plts(pleaves)
-    for plt in plts[1:]:
-        baca.marcato(plt.head)
 
 
 def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=False):

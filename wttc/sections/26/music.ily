@@ -6738,11 +6738,9 @@ number.26.Cello.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     e,2
-    - \marcato
 
     % [Cello.Music measure 15]
     e,16
-    - \marcato
     [
 
     e,8.
@@ -6750,11 +6748,9 @@ number.26.Cello.Music = {
     ]
 
     e,2.
-    - \marcato
 
     % [Cello.Music measure 16]
     e,2
-    - \marcato
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -6779,7 +6775,6 @@ number.26.Cello.Music = {
     \>
 
     e,8.
-    - \marcato
     [
 
     e,16
@@ -6787,7 +6782,6 @@ number.26.Cello.Music = {
     ]
 
     e,8.
-    - \marcato
     [
 
     e,16
@@ -6796,7 +6790,6 @@ number.26.Cello.Music = {
 
     % [Cello.Music measure 17]
     e,16
-    - \marcato
     [
 
     e,8.
@@ -6804,7 +6797,6 @@ number.26.Cello.Music = {
     ]
 
     e,2.
-    - \marcato
 
     % [Cello.Music measure 18]
     \revert Accidental.stencil
@@ -6812,7 +6804,6 @@ number.26.Cello.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     e,2
-    - \marcato
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -6842,7 +6833,6 @@ number.26.Cello.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     e,8.
-    - \marcato
     [
 
     e,16
@@ -6850,7 +6840,6 @@ number.26.Cello.Music = {
     ]
 
     e,8.
-    - \marcato
     [
 
     e,16
@@ -6859,7 +6848,6 @@ number.26.Cello.Music = {
 
     % [Cello.Music measure 19]
     e,16
-    - \marcato
     [
 
     e,8.
@@ -6867,10 +6855,8 @@ number.26.Cello.Music = {
     ]
 
     d,4
-    - \marcato
 
     d,8.
-    - \marcato
     [
 
     d,16
@@ -6878,7 +6864,6 @@ number.26.Cello.Music = {
     ]
 
     d,8.
-    - \marcato
     [
 
     d,16
@@ -6887,7 +6872,6 @@ number.26.Cello.Music = {
 
     % [Cello.Music measure 20]
     d,16
-    - \marcato
     [
 
     \revert Accidental.stencil
@@ -6904,11 +6888,9 @@ number.26.Cello.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     df,!2.
-    - \marcato
 
     % [Cello.Music measure 21]
     df,!1
-    - \marcato
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -6943,14 +6925,12 @@ number.26.Cello.Music = {
 
     % [Cello.Music measure 22]
     df,!2.
-    - \marcato
 
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     df,!8.
-    - \marcato
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
