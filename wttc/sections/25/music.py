@@ -519,14 +519,18 @@ def fl(m):
     rmakers.unbeam(m[8][1:3])
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
     O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak_hairpin=True)
-    """
-    O1a(library.pleaves(m[17], 99), "F D C# Eb C# D Eb F Gb F Eb Gb E", "sfp>o!")
+    O1a(
+        library.pleaves(m[17], 99),
+        "F D C# Eb C# D Eb F Gb F Eb Gb E",
+        "sfp>o!",
+        rleak_hairpin=True,
+    )
     O1a(
         library.pleaves(m[19, 20], 99),
         "D C# D Gb C# Eb F Eb C# F Gb D Gb F D C# Eb C# D Eb F Gb F Eb E",
         "sfpp>o!",
+        rleak_hairpin=True,
     )
-    """
 
 
 def ob(m):
