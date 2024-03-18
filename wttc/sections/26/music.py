@@ -1111,11 +1111,30 @@ def vc(m):
         "o< mf>o!",
         rleak_hairpin=True,
     )
-    """
-    P1b(library.pleaves(m[25, 26], 1), "F5 E4", "C2", [1, 2], "o< mp>o!")
-    P1b(library.pleaves(m[27, 28], 1), "E5 D4", "C2", [1, 2], "o< p>o!")
-    P1b(library.pleaves(m[29, 32], 1), "D5 Db2", "C2", [3, 2], "o< f>o!")
-    """
+    P1b(
+        library.pleaves(m[25, 26], 1),
+        "F5 E4",
+        "C2",
+        [1, 2],
+        "o< mp>o!",
+        rleak_hairpin=True,
+    )
+    P1b(
+        library.pleaves(m[27, 28], 1),
+        "E5 D4",
+        "C2",
+        [1, 2],
+        "o< p>o!",
+        rleak_hairpin=True,
+    )
+    P1b(
+        library.pleaves(m[29, 32], 1),
+        "D5 Db2",
+        "C2",
+        [3, 2],
+        "o< f>o!",
+        rleak_hairpin=True,
+    )
 
 
 def align_spanners(cache):
@@ -1135,7 +1154,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(vn[25, 31], 4)
     baca.override.dls_staff_padding(vn[32, 36], 5)
     vc = cache["vc"]
-    baca.override.dls_staff_padding(vc[14, 25], 5)
+    baca.override.dls_staff_padding(vc[14, 32], 5)
 
 
 @baca.build.timed("make_score")
