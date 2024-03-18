@@ -90,7 +90,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(15),
-        [-8, -1, OBGC(6 * [1], [15])],
+        [-8, -1, X(OBGC(6 * [1], [15]))],
         material=99,
     )
     rhythm.mmrests(16)
@@ -414,19 +414,30 @@ def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
     )
 
 
-def O1a(pleaves, pitches, hairpin):
-    baca.pitches(pleaves, pitches)
+def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
     nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,
         hairpin,
-        rleak=True,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
+        rleak=rleak_hairpin,
     )
     baca.mspanners.text(
         nongraces,
         r"\baca-airtone-markup =|",
         left_broken_text=r"\baca-parenthesized-air-markup",
-        staff_padding=3,
+        staff_padding=5.5,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
+        abjad.Tweak(r"- \tweak direction #down"),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        staff_padding=8,
     )
 
 
@@ -507,8 +518,8 @@ def fl(m):
     )
     rmakers.unbeam(m[8][1:3])
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
+    O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak_hairpin=True)
     """
-    O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!")
     O1a(library.pleaves(m[17], 99), "F D C# Eb C# D Eb F Gb F Eb Gb E", "sfp>o!")
     O1a(
         library.pleaves(m[19, 20], 99),
