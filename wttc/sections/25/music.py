@@ -218,7 +218,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(15),
-        [-8, -1, OBGC(6 * [1], [15])],
+        [-8, -1, X(OBGC(6 * [1], [15]))],
         material=99,
     )
     rhythm.mmrests(16)
@@ -441,24 +441,33 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-def O1b(pleaves, pitches, string_number, hairpin):
-    baca.pitches(pleaves, pitches)
+def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    graces = abjad.select.notes(pleaves, grace=True)
+    baca.override.note_head_style_harmonic_black(graces)
     nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.note_head_style_harmonic_black(nongraces)
+    baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,
         hairpin,
-        rleak=True,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
+        rleak=rleak_hairpin,
     )
     baca.mspanners.text(
         nongraces,
         r"\wttc-half-harmonic-pressure =|",
-        left_broken_text=r"\baca-parenthesized-half-harm",
-        staff_padding=3,
-    )
-    baca.rspanners.string_number(
-        nongraces,
-        string_number,
+        left_broken_text=r"\baca-parenthesized-half-harm-markup",
         staff_padding=5.5,
+    )
+    baca.mspanners.text(
+        nongraces,
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
+        abjad.Tweak(r"- \tweak direction #down"),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        staff_padding=8,
     )
 
 
@@ -574,16 +583,19 @@ def vn(m):
     N3b(library.pleaves(m[8], 3), Q1, [8, 10], "o< mp>o!", -6)
     N3b(library.pleaves(m[11], 3), Q1, [16, 18], "o< mf>o!", -6, t="+m2")
     N3b(library.pleaves(m[13, 14], 3), Q1, [32, 8, 26], "o< f-- >o!", -6, t="+M3")
-    """
-    O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", 4, "sfmp>o!")
-    O1b(library.pleaves(m[17], 99), "G E F# G F# E Eb D E D Eb F# F", 4, "sfp>o!")
+    O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", "sfmp>o!", rleak_hairpin=True)
+    O1b(
+        library.pleaves(m[17], 99),
+        "G E F# G F# E Eb D E D Eb F# F",
+        "sfp>o!",
+        rleak_hairpin=True,
+    )
     O1b(
         library.pleaves(m[19, 20], 99),
         "E F# G F# E Eb D E D Eb F# G Eb G F# D E F# E D G Eb D Eb F",
-        4,
         "sfpp>o!",
+        rleak_hairpin=True,
     )
-    """
 
 
 def vc(m):
