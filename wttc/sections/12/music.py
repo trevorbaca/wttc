@@ -1026,7 +1026,7 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
         [pleaves[:-3], pleaves[-3:]],
         f"{start}> <|{stop}",
     )
-    baca.override.stem_down(pleaves[-1])
+    baca.override.stem_direction_down(pleaves[-1])
 
 
 def fl(m):

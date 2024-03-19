@@ -993,7 +993,7 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.override.flag_font_size(pleaves[1:], -3)
     baca.override.note_head_font_size(pleaves[1:], -3)
     baca.override.note_head_no_ledgers(pleaves[1:], True)
-    baca.override.stem_up(pleaves[1:])
+    baca.override.stem_direction_up(pleaves[1:])
     baca.pitch(pleaves[1:], dummy_pitch)
     if "<" in hairpin and ">" in hairpin:
         baca.hairpin(

@@ -1080,7 +1080,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
     baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
     baca.override.dls_staff_padding(cache["gt1"].leaves(), 3)
-    baca.override.tuplet_bracket_up(cache["gt2"][28, 29])
+    baca.override.tuplet_bracket_direction_up(cache["gt2"][28, 29])
     baca.override.dls_staff_padding(cache["gt2"].leaves()[4:], 3)
     baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
     baca.override.dls_staff_padding(cache["vc"].leaves(), 4)

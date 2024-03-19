@@ -866,7 +866,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[16, 17], 4)
     baca.override.dls_staff_padding(gt2[22, 23], 4)
     vn = cache["vn"]
-    baca.override.tuplet_bracket_up(vn[1, 12])
+    baca.override.tuplet_bracket_direction_up(vn[1, 12])
     baca.override.tuplet_bracket_staff_padding(vn[1, 12], 1)
     baca.override.dls_staff_padding(vn[1, 37], 4)
     vc = cache["vc"]

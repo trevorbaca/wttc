@@ -993,7 +993,7 @@ def L3b(pleaves, pitches, hairpin, hairpin_lparts=None, *, beams=None):
         hairpin,
     )
     baca.override.beam_positions(pleaves, beams)
-    baca.override.stem_down(pleaves)
+    baca.override.stem_direction_down(pleaves)
     parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True)
     for part in parts:
         baca.spanners.slur(part)
@@ -1324,7 +1324,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[13, 14], 4)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1, 19], 4)
-    baca.override.tuplet_bracket_down(vn[20, 46])
+    baca.override.tuplet_bracket_direction_down(vn[20, 46])
     baca.override.tuplet_bracket_staff_padding(vn[27, 29][9:], 1.5)
     baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)
     baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)

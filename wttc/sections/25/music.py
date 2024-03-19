@@ -418,7 +418,7 @@ def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
         pitches = " ".join(transposed_pitch_names)
     baca.pitches(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
-    baca.override.stem_down(pleaves)
+    baca.override.stem_direction_down(pleaves)
     baca.override.beam_positions(pleaves, beam_positions)
     parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True, overhang=True)
     for part in parts:

@@ -986,12 +986,12 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     if chord is pleaves[0]:
         note = abjad.get.leaf(chord, 1)
         abjad.tie([chord, note])
-        baca.override.tie_down([chord, note])
+        baca.override.tie_direction_down([chord, note])
     else:
         assert chord is pleaves[1]
         note = abjad.get.leaf(chord, -1)
         abjad.tie([note, chord])
-        baca.override.tie_down([note, chord])
+        baca.override.tie_direction_down([note, chord])
     baca.dynamic(note, "f")
     plts = baca.select.plts(pleaves)
     if dynamics:
@@ -1099,7 +1099,7 @@ def fl(m):
         rleak_hairpin=True,
         trill_staff_padding=3,
     )
-    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_direction_down(m.leaves())
     baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
 
 
@@ -1109,7 +1109,7 @@ def ob(m):
     B3(library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak_hairpin=True)
     B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
     B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")
-    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_direction_down(m.leaves())
     baca.override.trill_spanner_staff_padding(m.leaves(), 3)
 
 
@@ -1181,7 +1181,7 @@ def gt1(m):
     tuplet = abjad.select.tuplet(components, -1)
     baca.override.tuplet_bracket_staff_padding(tuplet, 1)
     baca.override.dls_staff_padding(tuplet, 5.5)
-    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_direction_down(m.leaves())
 
 
 def gt2(m):
@@ -1203,7 +1203,7 @@ def gt2(m):
     B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
     B5(library.pleaves(m[12, 14], 5), "E3:G3", "mf mp")
     B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
-    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_direction_down(m.leaves())
     override_uneven_staff_padding(m[1, 3], only_dls=True)
     override_uneven_staff_padding(m[5, 6], only_dls=True)
     baca.override.tuplet_bracket_staff_padding(m[14], 3)
@@ -1282,7 +1282,7 @@ def vn(m):
     C1(library.pleaves(m[14], 99), "D5", "F#5")
     C1(library.pleaves(m[15], 99), "D5", "F#5")
     C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
-    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_direction_down(m.leaves())
     baca.override.tuplet_bracket_staff_padding(m.leaves(), 1)
 
 
@@ -1321,7 +1321,7 @@ def vc(m):
     C1(library.pleaves(m[14], 99), "D4", "F4")
     C1(library.pleaves(m[15], 99), "D4", "F4")
     C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
-    baca.override.tuplet_bracket_down(m.leaves())
+    baca.override.tuplet_bracket_direction_down(m.leaves())
 
 
 def align_spanners(cache):
