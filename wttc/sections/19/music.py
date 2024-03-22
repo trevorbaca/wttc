@@ -1395,8 +1395,6 @@ def persist_score(score, environment):
     )
     baca.tags.deactivate(
         score,
-        *baca.tags.instrument_color_tags(),
-        *baca.tags.short_instrument_name_color_tags(),
         baca.tags.STAFF_HIGHLIGHT,
         baca.tags.NOT_YET_PITCHED_COLORING,
     )
