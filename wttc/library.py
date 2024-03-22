@@ -220,7 +220,7 @@ def _highlight_staff(argument, number, *, after=False):
         abjad.select.leaf(argument, 0),
         rf"\staffHighlight {color}",
     )
-    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
+    baca.tags.tag(wrappers, baca.tags.STAFF_HIGHLIGHT)
     if after is True:
         wrappers = baca.literal(
             abjad.select.leaf(argument, -1),
@@ -232,7 +232,7 @@ def _highlight_staff(argument, number, *, after=False):
             baca.select.rleaf(argument, -1),
             r"\stopStaffHighlight",
         )
-    baca.tags.wrappers(wrappers, baca.tags.STAFF_HIGHLIGHT)
+    baca.tags.tag(wrappers, baca.tags.STAFF_HIGHLIGHT)
 
 
 def _reference_meters():
