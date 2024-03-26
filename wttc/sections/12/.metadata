@@ -21,10 +21,10 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [128, 137, 145, 153, 161],
+    "bol_measure_numbers": [132, 141, 149, 157, 165],
     "duration": "2'18''",
-    "final_measure_number": 164,
-    "first_measure_number": 128,
+    "final_measure_number": 168,
+    "first_measure_number": 132,
     "has_anchor_skip": True,
     "persistent_indicators": {
         "AltoFlute.Staff": [
@@ -300,8 +300,8 @@
             ),
         ],
     },
-    "start_clock_time": "7'00''",
-    "stop_clock_time": "9'18''",
+    "start_clock_time": "7'08''",
+    "stop_clock_time": "9'26''",
     "time_signatures": [
         "6/4",
         "6/4",
