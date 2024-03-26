@@ -24,7 +24,7 @@ frame = library.frame
 
 
 def GLOBALS(skips):
-    stage_markup = (("C/1 (beg.)", 1),)
+    stage_markup = (("C:1 (B)", 1),)
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
 
@@ -125,10 +125,21 @@ def vc(m):
     baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
+    library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
+    library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p")
+    library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
+    library.C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
+    library.C1c(
+        library.pleaves(m[4], 1),
+        "Db3:F3",
+        "Gb3",
+        "f -",
+    )
 
 
 def align_spanners(cache):
-    pass
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[1, 4], 4)
 
 
 @baca.build.timed("make_score")
@@ -186,6 +197,7 @@ def persist_score(score, environment):
     )
     baca.section.deactivate_tags(
         score,
+        baca.tags.NOT_YET_PITCHED_COLORING,
     )
     lilypond_file = baca.lilypond.file(
         score,

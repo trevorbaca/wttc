@@ -4189,12 +4189,12 @@ number.25.Cello.Music = {
     \clef "bass"
       %! MEASURE_291
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_291
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -4722,12 +4722,12 @@ number.25.Cello.Music = {
     \clef "treble"
       %! MEASURE_297
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_297
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override Beam.positions = #'(-8 . -8)
     \override DynamicLineSpanner.staff-padding = 10
     \override NoteHead.style = #'harmonic

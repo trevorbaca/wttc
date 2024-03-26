@@ -6088,12 +6088,12 @@ number.26.Cello.Music = {
     \clef "bass"
       %! MEASURE_307
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_307
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR

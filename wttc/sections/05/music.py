@@ -777,88 +777,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def C1a(
-    pleaves,
-    fundamental_string,
-    harmonic_1_string,
-    harmonic_2_string,
-    dynamic_string,
-    debug=False,
-):
-    plts = baca.select.plts(pleaves)
-    chord_1_pitch_string = f"{fundamental_string}:{harmonic_1_string}"
-    chord_2_pitch_string = f"{fundamental_string}:{harmonic_2_string}"
-    done_chord_1 = False
-    for plt in plts:
-        if isinstance(plt.head, abjad.Chord):
-            if not done_chord_1:
-                baca.pitch(plt, chord_1_pitch_string)
-                done_chord_1 = True
-            else:
-                baca.pitch(plt, chord_2_pitch_string)
-            for pleaf in plt:
-                abjad.tweak(
-                    pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic")
-                )
-        else:
-            baca.pitch(plt, fundamental_string)
-    for i, pleaf in enumerate(pleaves):
-        if abjad.get.grace(pleaf):
-            next_pleaf = pleaves[i + 1]
-            assert not abjad.get.grace(next_pleaf)
-            abjad.tie([pleaf, next_pleaf])
-
-
-def C1b(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
-    assert len(pleaves) == 2
-    chord, hidden_note = pleaves
-    assert isinstance(chord, abjad.Chord), repr(chord)
-    assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
-    baca.pitch(chord, chord_pitch_string)
-    abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
-    name = chord.note_heads[0].written_pitch.get_name(locale="us")
-    baca.pitch(hidden_note, name)
-    baca.rspanners.trill(
-        pleaves,
-        alteration=trill_pitch_string,
-        force_trill_pitch_head_accidental=True,
-        harmonic=True,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, [1, 1]),
-        f"o< {dynamic_string}>o!",
-        rleak=True,
-    )
-
-
-def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamic_string):
-    assert all(isinstance(_, abjad.Chord) for _ in pleaves)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamic_string.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.pitch(plt, chord_pitch_string)
-        for chord in plt:
-            abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
-        baca.triple_staccato(plt.head)
-        if dynamic != "-":
-            baca.dynamic(plt.head, dynamic)
-        baca.rspanners.trill(
-            plt,
-            alteration=trill_pitch_string,
-            force_trill_pitch_head_accidental=True,
-            harmonic=True,
-        )
-        if plt[1:]:
-            baca.override.accidental_font_size(plt[1:], -6)
-            baca.override.dots_font_size(plt[1:], -3)
-            baca.override.note_head_font_size(plt[1:], -6)
-            baca.override.parentheses_font_size(plt[1:], 3)
-            baca.parenthesize(plt[1:])
-            baca.untie(plt)
-            for chord in plt[1:]:
-                del chord.note_heads[1]
-
-
 def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     plts = baca.select.plts(pleaves)
     if pitch_2 is None:
@@ -1267,11 +1185,11 @@ def gt2(m):
 
 
 def vn(m):
-    C1a(library.pleaves(m[1] + m[2][:1], 1), "Eb4", "G4", "Ab4", "p")
-    C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Eb4", "G4", "Ab4", "p")
-    C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
-    C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
-    C1c(
+    library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Eb4", "G4", "Ab4", "p")
+    library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Eb4", "G4", "Ab4", "p")
+    library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
+    library.C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
+    library.C1c(
         library.pleaves(m[3][-1:] + m[4, 30], 1),
         "Eb4:G4",
         "Ab4",
@@ -1345,11 +1263,11 @@ def vn(m):
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
-    C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p", debug=True)
-    C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
-    C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
-    C1c(
+    library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
+    library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p")
+    library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
+    library.C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
+    library.C1c(
         library.pleaves(m[4, 17], 1),
         "Db3:F3",
         "Gb3",

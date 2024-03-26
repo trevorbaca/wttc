@@ -12120,12 +12120,12 @@ number.19.Cello.Music = {
     \clef "treble"
       %! MEASURE_223
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_223
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -12787,12 +12787,12 @@ number.19.Cello.Music = {
     \clef "bass"
       %! MEASURE_230
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_230
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -13643,12 +13643,12 @@ number.19.Cello.Music = {
     \clef "treble"
       %! MEASURE_239
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_239
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override Beam.positions = #'(-6.5 . -6.5)
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_CLEF_COLOR_CANCELLATION

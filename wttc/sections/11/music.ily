@@ -3942,12 +3942,12 @@ number.11.Cello.Music = {
     \clef "treble"
       %! MEASURE_104
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_104
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 4
