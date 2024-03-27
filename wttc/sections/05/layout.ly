@@ -48,15 +48,13 @@
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 3]
-              %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/20]"
+            %@% - \baca-start-spm-left-only "[Z/E]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
