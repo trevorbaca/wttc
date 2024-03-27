@@ -66,13 +66,13 @@ def VC(voice, meters):
             BG([2], t(c(1, 2))),
             c(8, 2),
             w(c(8, 2), 16),
-            AG([2], h(w(8, 16))),
+            h(w(8, 16)),
         ],
         material=1,
     )
     rhythm(
         meters(3),
-        [c(3, 2), BG([2], c(5, 2)), w(c(8, 2), 16), h(w(8, 16))],
+        [BG([2], c(3, 2)), BG([2], c(5, 2)), w(c(8, 2), 16), h(w(8, 16))],
         material=1,
     )
     rhythm(
@@ -126,8 +126,8 @@ def vc(m):
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
-    library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p")
     library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
+    library.C1a(library.pleaves(m[3][:4], 1), "Db3", "Gb3", "F3", "p")
     library.C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
     library.C1c(
         library.pleaves(m[4], 1),

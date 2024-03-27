@@ -990,6 +990,7 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, peak):
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {peak}>o!",
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         rleak=True,
     )
 
