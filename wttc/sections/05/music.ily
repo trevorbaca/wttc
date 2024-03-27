@@ -8762,20 +8762,19 @@ number.5.Cello.Music = {
     % [Cello.Music measure 3]
     \slashedGrace {
 
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        d8
+        df!8
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
         \stopTrillSpan
+        ~
 
     }
 
     <
-        df!
+        df
         \tweak style #'harmonic
-        gf!
+        gf
     >8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

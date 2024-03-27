@@ -1265,7 +1265,7 @@ def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
     library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
-    library.C1a(library.pleaves(m[3][:4], 1), "Db3", "Gb3", "F3", "p")
+    library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p")
     library.C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
     library.C1c(
         library.pleaves(m[4, 17], 1),
