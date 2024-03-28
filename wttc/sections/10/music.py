@@ -578,8 +578,9 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         else:
             leaves = baca.select.plt(pleaves, -1)
         baca.glissando(leaves, f"{high_pitch} {low_pitch}")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             leaves,
+            rleak=True,
             staff_padding=3,
         )
     if xfb is True:
@@ -718,8 +719,9 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
             rleak=True,
             staff_padding=3,
         )
-        baca.rspanners.half_clt(
+        baca.spanners.half_clt(
             run,
+            rleak=True,
             staff_padding=5.5,
         )
         pieces = baca.select.partition_in_halves(run)

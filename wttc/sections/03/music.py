@@ -441,9 +441,10 @@ def A2b(
         hairpin,
         rleak=rleak_hairpin,
     )
-    baca.rspanners.damp(
+    baca.spanners.damp(
         pleaves,
         bound_details_right_padding=2,
+        rleak=True,
         staff_padding=damp_staff_padding,
     )
 
@@ -508,9 +509,10 @@ def A3b(
 
 def B1a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.covered(
+    baca.spanners.covered(
         pleaves,
         descriptor=strings.cov_dashed_hook,
+        rleak=True,
         staff_padding=3,
     )
     baca.dynamic(pleaves[0], dynamic)

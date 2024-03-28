@@ -780,10 +780,11 @@ def B1a(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
         left_broken_text = None
     else:
         left_broken_text = r"\baca-parenthesized-cov-markup"
-    baca.rspanners.covered(
+    baca.spanners.covered(
         pleaves,
         descriptor=descriptor,
         left_broken_text=left_broken_text,
+        rleak=True,
         staff_padding=3,
     )
 

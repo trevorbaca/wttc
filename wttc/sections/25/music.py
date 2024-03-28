@@ -305,8 +305,9 @@ def N1a(pleaves, pitches, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
     for chord in pleaves:
         abjad.tweak(chord.note_heads[0], r"\tweak style #'harmonic")
-    baca.rspanners.covered(
+    baca.spanners.covered(
         pleaves,
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(

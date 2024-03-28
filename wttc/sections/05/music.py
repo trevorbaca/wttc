@@ -1018,8 +1018,9 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
     ):
         start_pitch, stop_pitch = pitch_pair.split()
         baca.glissando(run, f"{start_pitch} {stop_pitch}")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             run,
+            rleak=True,
             staff_padding=3,
         )
         if hairpin_string:

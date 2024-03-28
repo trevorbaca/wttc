@@ -436,8 +436,9 @@ def F1c(pleaves, chord, alteration, peaks):
         rleak=True,
         staff_padding=3,
     )
-    baca.rspanners.half_clt(
+    baca.spanners.half_clt(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -487,9 +488,10 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     parts = baca.select.clparts(pleaves, [2])
     for i, part in enumerate(parts):
         if i in down_bow_indices:
-            baca.rspanners.half_clt(
+            baca.spanners.half_clt(
                 part,
                 descriptor="½ clt ||",
+                rleak=True,
                 staff_padding=5.5,
             )
             baca.down_bow(part[0], full=True)

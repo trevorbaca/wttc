@@ -771,12 +771,14 @@ def K1b2(pleaves, pitch, hairpin):
 
 def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
     baca.glissando(pleaves, pitches)
-    baca.rspanners.damp(
+    baca.spanners.damp(
         pleaves,
+        rleak=True,
         staff_padding=3,
     )
-    baca.rspanners.half_clt(
+    baca.spanners.half_clt(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
     if hairpin_lparts is None:
@@ -1015,8 +1017,9 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
         pleaves,
         hairpin,
     )
-    baca.rspanners.half_clt(
+    baca.spanners.half_clt(
         pleaves,
+        rleak=True,
         staff_padding=staff_padding,
     )
 
@@ -1047,12 +1050,14 @@ def L5b(pleaves, glissando, hairpin):
         pleaves,
         glissando,
     )
-    baca.rspanners.half_clt(
+    baca.spanners.half_clt(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
-    baca.rspanners.damp(
+    baca.spanners.damp(
         pleaves,
+        rleak=True,
         staff_padding=8,
     )
     baca.hairpin(

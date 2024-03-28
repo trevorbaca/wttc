@@ -765,8 +765,9 @@ def O2a(pleaves, pitch, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.espressivo(plt.head)
         baca.dynamic(plt.head, dynamic)
-    baca.rspanners.covered(
+    baca.spanners.covered(
         pleaves,
+        rleak=True,
         staff_padding=3,
     )
 
@@ -943,8 +944,9 @@ def P3(pleaves, glissando, hairpin_lparts, hairpin, *, staff_padding=None):
         hairpin,
     )
     if staff_padding is not None:
-        baca.rspanners.damp(
+        baca.spanners.damp(
             pleaves,
+            rleak=True,
             staff_padding=staff_padding,
         )
 
@@ -1087,7 +1089,7 @@ def vn(m):
     P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], 'o< "mf">o!')
     P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
     P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
-    baca.rspanners.damp(m[33, 36], staff_padding=10.5)
+    baca.spanners.damp(m[33, 36], rleak=True, staff_padding=10.5)
 
 
 def vc(m):
