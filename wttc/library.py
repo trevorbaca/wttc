@@ -938,33 +938,29 @@ voice_abbreviations = {
     "vc": "Cello.Music",
 }
 
-#
-
 
 def C1a(
     pleaves,
-    fundamental_string,
-    harmonic_1_string,
-    harmonic_2_string,
+    fundamental,
+    harmonic_1,
+    harmonic_2,
     dynamic,
 ):
     plts = baca.select.plts(pleaves)
-    chord_1_pitch_string = f"{fundamental_string}:{harmonic_1_string}"
-    chord_2_pitch_string = f"{fundamental_string}:{harmonic_2_string}"
     done_chord_1 = False
     for plt in plts:
         if isinstance(plt.head, abjad.Chord):
             if not done_chord_1:
-                baca.pitch(plt, chord_1_pitch_string)
+                baca.pitch(plt, f"{fundamental}:{harmonic_1}")
                 done_chord_1 = True
             else:
-                baca.pitch(plt, chord_2_pitch_string)
+                baca.pitch(plt, f"{fundamental}:{harmonic_2}")
             for pleaf in plt:
                 abjad.tweak(
                     pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic")
                 )
         else:
-            baca.pitch(plt, fundamental_string)
+            baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
         if abjad.get.grace(pleaf):
             next_pleaf = pleaves[i + 1]
