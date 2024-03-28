@@ -534,9 +534,10 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 library.swells(peak_),
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 alteration=alteration,
+                rleak=True,
             )
     else:
         assert starts
@@ -548,9 +549,10 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 f"{start_}>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 plt,
                 alteration=alteration,
+                rleak=True,
             )
 
 
@@ -597,9 +599,10 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
 def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
     if stop_pitch is None:
         baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     if diminuendo is True:
@@ -639,10 +642,11 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
         assert len(plt) == 1
         baca.pitch(plt, double_stop)
         abjad.tweak(plt[0].note_heads[1], r"\tweak style #'harmonic")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             plt,
             alteration=alteration,
             harmonic=True,
+            rleak=True,
             staff_padding=3,
         )
         baca.triple_staccato(plt)
@@ -682,10 +686,11 @@ def E4b(pleaves, pitch, dynamic):
 
 def E4c(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
         staff_padding=3,
     )
     pieces = baca.select.partition_in_halves(pleaves)
@@ -706,10 +711,11 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
                 abjad.tweak(leaf.note_heads[1], r"\tweak style #'harmonic")
             else:
                 baca.pitch(leaf, pitch_1)
-        baca.rspanners.trill(
+        baca.spanners.trill(
             run,
             alteration=alteration,
             harmonic=True,
+            rleak=True,
             staff_padding=3,
         )
         baca.rspanners.half_clt(

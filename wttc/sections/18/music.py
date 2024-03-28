@@ -877,10 +877,11 @@ def K1b(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
     for pleaf in pleaves:
         abjad.tweak(pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
     )
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),

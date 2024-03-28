@@ -429,10 +429,11 @@ def F1c(pleaves, chord, alteration, peaks):
     baca.pitch(pleaves, chord)
     for chord in pleaves:
         abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
         staff_padding=3,
     )
     baca.rspanners.half_clt(
@@ -460,9 +461,10 @@ def F2a1(pleaves, pitches, dynamics):
 
 def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -474,10 +476,11 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
 
 def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
         staff_padding=3,
     )
     baca.override.note_head_style_harmonic(pleaves)
@@ -534,10 +537,11 @@ def F2b2(pleaves, glissandi):
 def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.pitch(pleaves, pitch)
     baca.override.note_head_style_harmonic(pleaves)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
         staff_padding=5.5,
     )
     plts = baca.select.plts(pleaves)

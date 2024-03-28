@@ -206,9 +206,10 @@ def I1a(pleaves, pitch, alteration, dynamics):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     for plt in plts:
-        baca.rspanners.trill(
+        baca.spanners.trill(
             plt,
             alteration=alteration,
+            rleak=True,
             staff_padding=5.5,
         )
     dynamics = dynamics.split()
@@ -241,9 +242,10 @@ def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
 
 def I2b(pleaves, pitch, alteration, dynamic):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     baca.mspanners.scp(
@@ -265,9 +267,10 @@ def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
         pleaves,
         string,
     )
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     baca.mspanners.scp(

@@ -848,9 +848,10 @@ def G2a1(pleaves, pitch, peak):
 
 def G2a2(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -987,9 +988,10 @@ def H1c():
 
 def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=5.5,
     )
     tweaks = ()
@@ -1010,9 +1012,10 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.pitch(pleaves[-1], fall)
     baca.override.note_head_style_harmonic(pleaves[-3:])
     baca.glissando(pleaves[-3:], do_not_hide_middle_note_heads=True)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=5.5,
     )
     baca.mspanners.scp(

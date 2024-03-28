@@ -979,11 +979,12 @@ def C1b(pleaves, dyad, alteration, peak):
     abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
     name = chord.note_heads[0].written_pitch.get_name(locale="us")
     baca.pitch(hidden_note, name)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         force_trill_pitch_head_accidental=True,
         harmonic=True,
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -1005,11 +1006,12 @@ def C1c(pleaves, dyad, alteration, dynamics):
         baca.triple_staccato(plt.head)
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)
-        baca.rspanners.trill(
+        baca.spanners.trill(
             plt,
             alteration=alteration,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
+            rleak=True,
             staff_padding=3,
         )
         if plt[1:]:

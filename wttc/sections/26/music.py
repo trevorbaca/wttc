@@ -849,9 +849,10 @@ def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
 
 def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=False):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -866,9 +867,10 @@ def P1b(
 ):
     baca.glissando(pleaves, glissando)
     baca.override.note_head_style_harmonic(pleaves)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -880,8 +882,9 @@ def P1b(
 
 def P2a(pleaves, pitch, peak):
     baca.pitch(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -903,9 +906,10 @@ def P2b(pleaves, pitch, dynamics):
 def P2c(pleaves, pitch, alteration, string_number, dynamic):
     baca.pitch(pleaves, pitch)
     baca.override.note_head_style_harmonic(pleaves)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     for pleaf in pleaves[1:-1]:

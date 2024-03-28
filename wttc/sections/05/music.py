@@ -780,9 +780,10 @@ def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
     else:
         assert len(plts) == 2
     baca.pitch(plts[0], pitch_1)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         plts[0],
         alteration=trill_pitch,
+        rleak=True,
     )
     if pitch_2:
         baca.pitch(plts[1], pitch_2)
@@ -888,17 +889,19 @@ def C3a(
             staff_padding=6.5,
         )
     if trill:
-        baca.rspanners.trill(
+        baca.spanners.trill(
             all_leaves,
             alteration=trill,
             harmonic=harmonic,
+            rleak=True,
         )
 
 
 def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
     )
     baca.untie(pleaves)
     baca.pitch(pleaves[:1], pitch)

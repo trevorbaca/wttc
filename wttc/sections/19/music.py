@@ -742,10 +742,11 @@ def K1b1(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
     for pleaf in pleaves:
         abjad.tweak(pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -875,9 +876,10 @@ def L1a(
         baca.espressivo(plt.head)
     if gliss is not None:
         baca.glissando(pleaves[-gliss:])
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=3,
     )
     if hairpin_lparts is None:
@@ -907,9 +909,10 @@ def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
 
 def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitch)
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -936,10 +939,11 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
         string_number,
         staff_padding=6.5,
     )
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
         harmonic=True,
+        rleak=True,
         staff_padding=4,
     )
     baca.hairpin(
@@ -954,9 +958,10 @@ def L2b2(pleaves, pitches, alteration, hairpin_lparts, hairpin, *, gliss=None):
     baca.pitches(pleaves, pitches, strict=True)
     if gliss is not None:
         baca.glissando(pleaves[gliss:])
-    baca.rspanners.trill(
+    baca.spanners.trill(
         pleaves,
         alteration=alteration,
+        rleak=True,
         staff_padding=5.5,
     )
     if sum(hairpin_lparts) != len(pleaves):
