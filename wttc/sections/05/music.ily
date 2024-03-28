@@ -6648,6 +6648,8 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -6743,6 +6745,8 @@ number.5.Violin.Music = {
     \<
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan af'!
 
@@ -8691,15 +8695,23 @@ number.5.Cello.Music = {
         f
     >2
 
+      %! EXPLICIT_CLEF
+    \clef "treble"
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
     <
         ef'!
         \tweak style #'harmonic
         g'
-    >1 * 1/2
+    >1 * 8/16
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8716,20 +8728,30 @@ number.5.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan af'!
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    ef'!1 * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    ef'!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8747,12 +8769,22 @@ number.5.Cello.Music = {
     % [Cello.Music measure 3]
     \slashedGrace {
 
+          %! EXPLICIT_CLEF
+        \clef "bass"
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
         df!8
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
         \stopTrillSpan
         ~
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     }
 
@@ -8789,15 +8821,23 @@ number.5.Cello.Music = {
         f
     >4
 
+      %! EXPLICIT_CLEF
+    \clef "treble"
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
     <
         ef'!
         \tweak style #'harmonic
         g'
-    >1 * 1/2
+    >1 * 8/16
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8814,20 +8854,30 @@ number.5.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan af'!
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    ef'!1 * 1/2
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    ef'!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -8843,6 +8893,20 @@ number.5.Cello.Music = {
     \>
 
     % [Cello.Music measure 4]
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_37
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_37
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
     <
@@ -8866,6 +8930,8 @@ number.5.Cello.Music = {
     - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan gf!
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight

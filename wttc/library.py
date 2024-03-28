@@ -422,11 +422,13 @@ def force_repeat_tie(components, threshold=(1, 8)):
     rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
 
 
-def frame(written_n, framed_n, *, chords=False):
+def frame(written_n, framed_n, *, chords=False, left=False):
     assert framed_n < written_n, repr((written_n, framed_n))
     actual_n = written_n - framed_n
     left_multiplier = (actual_n, written_n)
-    if chords:
+    if left:
+        left = baca.rhythm.m(baca.rhythm.Chord(written_n, left), left_multiplier)
+    elif chords:
         left = baca.rhythm.m(baca.rhythm.Chord(written_n, chords), left_multiplier)
     else:
         left = baca.rhythm.m(written_n, left_multiplier)
@@ -972,20 +974,21 @@ def C1a(
     baca.dynamic(leaf, dynamic)
 
 
-def C1b(pleaves, chord_pitch_string, trill_pitch_string, peak):
+def C1b(pleaves, dyad, alteration, peak):
     assert len(pleaves) == 2
     chord, hidden_note = pleaves
     assert isinstance(chord, abjad.Chord), repr(chord)
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
-    baca.pitch(chord, chord_pitch_string)
+    baca.pitch(chord, dyad)
     abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
     name = chord.note_heads[0].written_pitch.get_name(locale="us")
     baca.pitch(hidden_note, name)
     baca.rspanners.trill(
         pleaves,
-        alteration=trill_pitch_string,
+        alteration=alteration,
         force_trill_pitch_head_accidental=True,
         harmonic=True,
+        staff_padding=3,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
@@ -995,12 +998,12 @@ def C1b(pleaves, chord_pitch_string, trill_pitch_string, peak):
     )
 
 
-def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamics):
+def C1c(pleaves, dyad, alteration, dynamics):
     assert all(isinstance(_, abjad.Chord) for _ in pleaves)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.pitch(plt, chord_pitch_string)
+        baca.pitch(plt, dyad)
         for chord in plt:
             abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
         baca.triple_staccato(plt.head)
@@ -1008,7 +1011,7 @@ def C1c(pleaves, chord_pitch_string, trill_pitch_string, dynamics):
             baca.dynamic(plt.head, dynamic)
         baca.rspanners.trill(
             plt,
-            alteration=trill_pitch_string,
+            alteration=alteration,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
             staff_padding=3,

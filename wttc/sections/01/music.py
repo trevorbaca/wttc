@@ -24,7 +24,7 @@ frame = library.frame
 
 
 def GLOBALS(skips):
-    stage_markup = (("C:1 (B)", 1),)
+    stage_markup = (("1C.beginning", 1),)
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
 
@@ -57,22 +57,18 @@ def VN(voice, meters):
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
-        meters(1, 2),
-        [
-            -4,
-            -3,
-            BG([2], t(c(1, 2))),
-            c(3, 2),
-            BG([2], t(c(1, 2))),
-            c(8, 2),
-            w(c(8, 2), 16),
-            h(w(8, 16)),
-        ],
+        meters(1),
+        [-4, -3, BG([2], t(c(1, 2))), c(3, 2), BG([2], t(c(1, 2)))],
+        material=1,
+    )
+    rhythm(
+        meters(2),
+        [c(8, 2), frame(16, 8, left=2)],
         material=1,
     )
     rhythm(
         meters(3),
-        [BG([2], c(3, 2)), BG([2], c(5, 2)), w(c(8, 2), 16), h(w(8, 16))],
+        [BG([2], c(3, 2)), BG([2], c(5, 2)), frame(16, 8, left=2)],
         material=1,
     )
     rhythm(
@@ -126,9 +122,13 @@ def vc(m):
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
+    baca.clef(m[2][1], "treble")
     library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
+    baca.clef(m[2][-1], "bass")
     library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Db3", "Gb3", "F3", "p")
+    baca.clef(m[3][4], "treble")
     library.C1b(library.pleaves(m[3][4:6], 1), "Eb4:G4", "Ab4", "mf")
+    baca.clef(m[4][0], "bass")
     library.C1c(
         library.pleaves(m[4], 1),
         "Db3:F3",
@@ -220,7 +220,7 @@ def make_layout():
             baca.system(measure=1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
             # baca.system(measure=8, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
-        spacing=(1, 32),
+        spacing=(1, 20),
         overrides=[
             baca.space(3, False),
         ],
