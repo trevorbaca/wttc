@@ -956,9 +956,7 @@ def C1a(
             else:
                 baca.pitch(plt, f"{fundamental}:{harmonic_2}")
             for pleaf in plt:
-                abjad.tweak(
-                    pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic")
-                )
+                baca.tweak.note_head_style_harmonic(pleaf.note_heads[1])
         else:
             baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
@@ -976,7 +974,7 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(chord, abjad.Chord), repr(chord)
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
-    abjad.tweak(chord.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
+    baca.tweak.note_head_style_harmonic(chord.note_heads[1])
     name = chord.note_heads[0].written_pitch.get_name(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(

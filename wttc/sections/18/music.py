@@ -879,7 +879,7 @@ def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
 def K1b(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
     for pleaf in pleaves:
-        abjad.tweak(pleaf.note_heads[1], abjad.Tweak(r"\tweak style #'harmonic"))
+        baca.tweak.note_head_style_harmonic(pleaf.note_heads[1])
     baca.spanners.trill(
         pleaves,
         alteration=alteration,
