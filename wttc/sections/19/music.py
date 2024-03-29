@@ -854,9 +854,10 @@ def K3a(pleaves, pitch, peaks, *, circle_bow=False):
     if circle_bow is True:
         pleaves = abjad.sequence.retain_pattern(pleaves, abjad.index([0], 2))
         for pleaf in pleaves:
-            baca.mspanners.text(
+            baca.spanners.text(
                 pleaf,
                 r"\baca-circle-markup ||",
+                rleak=True,
                 staff_padding=3,
             )
 

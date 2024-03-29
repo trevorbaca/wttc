@@ -618,9 +618,10 @@ def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     abjad.tweak(pleaves[0].note_heads[1], r"\tweak style #'harmonic")
     baca.pitch(pleaves[-1], stop_pitch)
     baca.glissando(pleaves)
-    baca.mspanners.text(
+    baca.spanners.text(
         pleaves,
         r"\wttc-non-stringere ||",
+        rleak=True,
         staff_padding=3,
     )
     if hairpin_lparts is None:

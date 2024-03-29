@@ -712,18 +712,20 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
         hairpin,
         rleak=rleak_hairpin,
     )
-    baca.mspanners.text(
+    baca.spanners.text(
         nongraces,
         r"\baca-airtone-markup =|",
         left_broken_text=r"\baca-parenthesized-air-markup",
+        rleak=True,
         staff_padding=5.5,
     )
-    baca.mspanners.text(
+    baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
         abjad.Tweak(r"- \tweak direction #down"),
         direction=abjad.DOWN,
         lilypond_id=1,
+        rleak=True,
         staff_padding=8,
     )
 
@@ -742,18 +744,20 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
         hairpin,
         rleak=rleak_hairpin,
     )
-    baca.mspanners.text(
+    baca.spanners.text(
         nongraces,
         r"\wttc-half-harmonic-pressure =|",
         left_broken_text=r"\baca-parenthesized-half-harm-markup",
+        rleak=True,
         staff_padding=5.5,
     )
-    baca.mspanners.text(
+    baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
         abjad.Tweak(r"- \tweak direction #down"),
         direction=abjad.DOWN,
         lilypond_id=1,
+        rleak=True,
         staff_padding=10.5,
     )
 

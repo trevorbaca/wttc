@@ -404,10 +404,11 @@ def VC(voice, meters):
 
 def F1a(pleaves, pitch, hairpin_lparts, hairpin):
     baca.pitch(pleaves, pitch)
-    baca.mspanners.text(
+    baca.spanners.text(
         pleaves,
         r"\baca-airtone-markup =|",
         left_broken_text=r"\baca-parenthesized-air-markup",
+        rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -529,9 +530,10 @@ def F2b2(pleaves, glissandi):
         abjad.Tweak(r"- \tweak parent-alignment-X -1"),
         abjad.Tweak(r"- \tweak self-alignment-X -1"),
     )
-    baca.mspanners.text(
+    baca.spanners.text(
         pleaves,
         r"\wttc-alla-punta =|",
+        rleak=True,
         staff_padding=6.5,
     )
 
