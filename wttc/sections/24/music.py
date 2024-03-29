@@ -615,7 +615,7 @@ def VC(voice, meters):
 
 def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     baca.pitch(pleaves[0], dyad)
-    abjad.tweak(pleaves[0].note_heads[1], r"\tweak style #'harmonic")
+    baca.tweak.style_harmonic(pleaves[0].note_heads[1])
     baca.pitch(pleaves[-1], stop_pitch)
     baca.glissando(pleaves)
     baca.spanners.text(
@@ -643,7 +643,7 @@ def M1_2(pleaves, fundamentals, hairpin):
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
-        abjad.tweak(pleaf.note_heads[1], r"\tweak style #'harmonic")
+        baca.tweak.style_harmonic(pleaf.note_heads[1])
     for phead in baca.select.pheads(pleaves):
         baca.up_bow(phead)
 

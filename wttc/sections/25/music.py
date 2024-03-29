@@ -304,7 +304,7 @@ def VC(voice, meters):
 def N1a(pleaves, pitches, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
     for chord in pleaves:
-        abjad.tweak(chord.note_heads[0], r"\tweak style #'harmonic")
+        baca.tweak.style_harmonic(chord.note_heads[0])
     baca.spanners.covered(
         pleaves,
         rleak=True,

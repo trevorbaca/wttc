@@ -939,13 +939,7 @@ voice_abbreviations = {
 }
 
 
-def C1a(
-    pleaves,
-    fundamental,
-    harmonic_1,
-    harmonic_2,
-    dynamic,
-):
+def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
     plts = baca.select.plts(pleaves)
     done_chord_1 = False
     for plt in plts:
@@ -956,7 +950,7 @@ def C1a(
             else:
                 baca.pitch(plt, f"{fundamental}:{harmonic_2}")
             for pleaf in plt:
-                baca.tweak.note_head_style_harmonic(pleaf.note_heads[1])
+                baca.tweak.style_harmonic(pleaf.note_heads[1])
         else:
             baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
@@ -974,7 +968,7 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(chord, abjad.Chord), repr(chord)
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
-    baca.tweak.note_head_style_harmonic(chord.note_heads[1])
+    baca.tweak.style_harmonic(chord.note_heads[1])
     name = chord.note_heads[0].written_pitch.get_name(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(
@@ -988,7 +982,7 @@ def C1b(pleaves, dyad, alteration, peak):
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {peak}>o!",
-        abjad.Tweak(r"- \tweak to-barline ##t"),
+        baca.postevent.to_bar_line_true(),
         rleak=True,
     )
 
@@ -1000,7 +994,7 @@ def C1c(pleaves, dyad, alteration, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.pitch(plt, dyad)
         for chord in plt:
-            abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
+            baca.tweak.style_harmonic(chord.note_heads[1])
         baca.triple_staccato(plt.head)
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)

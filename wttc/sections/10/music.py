@@ -646,7 +646,7 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     for plt in plts:
         assert len(plt) == 1
         baca.pitch(plt, double_stop)
-        abjad.tweak(plt[0].note_heads[1], r"\tweak style #'harmonic")
+        baca.tweak.style_harmonic(plt[0].note_heads[1])
         baca.spanners.trill(
             plt,
             alteration=alteration,
@@ -713,7 +713,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
         for leaf in run:
             if isinstance(leaf, abjad.Chord):
                 baca.pitch(leaf, f"{pitch_1}:{pitch_2}")
-                abjad.tweak(leaf.note_heads[1], r"\tweak style #'harmonic")
+                baca.tweak.style_harmonic(leaf.note_heads[1])
             else:
                 baca.pitch(leaf, pitch_1)
         baca.spanners.trill(

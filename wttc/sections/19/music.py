@@ -741,7 +741,7 @@ def K1a(pleaves, pitches, dynamic):
 def K1b1(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
     for pleaf in pleaves:
-        baca.tweak.note_head_style_harmonic(pleaf.note_heads[1])
+        baca.tweak.style_harmonic(pleaf.note_heads[1])
     baca.spanners.trill(
         pleaves,
         alteration=alteration,

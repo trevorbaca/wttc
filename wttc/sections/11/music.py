@@ -429,7 +429,7 @@ def F1b(pleaves, chord, dynamics):
 def F1c(pleaves, chord, alteration, peaks):
     baca.pitch(pleaves, chord)
     for chord in pleaves:
-        abjad.tweak(chord.note_heads[1], r"\tweak style #'harmonic")
+        baca.tweak.style_harmonic(chord.note_heads[1])
     baca.spanners.trill(
         pleaves,
         alteration=alteration,
@@ -585,7 +585,7 @@ def F3b1(pleaves, fundamentals, dynamics):
         fourth = pitch + abjad.NamedInterval("P4")
         string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
         baca.pitch(pleaf, string)
-        abjad.tweak(pleaf.note_heads[1], r"\tweak style #'harmonic")
+        baca.tweak.style_harmonic(pleaf.note_heads[1])
     if ">" in dynamics:
         baca.hairpin(
             pleaves,
