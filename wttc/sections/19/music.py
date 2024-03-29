@@ -762,9 +762,10 @@ def K1b2(pleaves, pitch, hairpin):
         pleaves,
         hairpin,
     )
-    baca.mspanners.vibrato(
+    baca.spanners.vibrato(
         pleaves,
         "VM =|",
+        rleak=True,
         staff_padding=3,
     )
 

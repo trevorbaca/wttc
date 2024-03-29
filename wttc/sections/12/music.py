@@ -812,10 +812,9 @@ def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
 
 def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin):
     baca.pitch(pleaves, pitch)
-    baca.mspanners.vibrato(
+    baca.spanners.vibrato(
         baca.select.lparts(pleaves, vibrato_lparts),
         vibrato,
-        do_not_rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
