@@ -818,11 +818,12 @@ def C2b(
         assert pitch_3
         baca.override.note_head_style_harmonic(pleaves_2)
         baca.pitch(pleaves_2, pitch_3)
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.lparts(pleaves_2, [1, 1]),
             scps,
             # TODO: make this work:
             # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
+            rleak=True,
             staff_padding=3,
         )
         all_leaves = pleaves + pleaves_2
@@ -969,10 +970,11 @@ def D1b(
         hairpin_pieces,
         hairpin_string,
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         scp_pieces,
         scp_string,
         do_not_bookend=do_not_bookend,
+        rleak=True,
         staff_padding=3,
     )
 
@@ -1106,10 +1108,11 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             rleak=True,
             staff_padding=3,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             run,
             "T =|",
             bound_details_right_padding=1.5,
+            rleak=True,
             staff_padding=6.5,
         )
         if hairpin:

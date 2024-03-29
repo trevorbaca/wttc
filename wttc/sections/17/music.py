@@ -248,10 +248,9 @@ def I2b(pleaves, pitch, alteration, dynamic):
         rleak=True,
         staff_padding=3,
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         [pleaves],
         "O -> T",
-        do_not_rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -273,9 +272,10 @@ def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
         rleak=True,
         staff_padding=3,
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         [pleaves],
         "P =|",
+        rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
@@ -297,10 +297,9 @@ def I3b(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
         pleaves,
         glissando,
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
-        do_not_rleak=True,
         staff_padding=3,
     )
     baca.hairpin(

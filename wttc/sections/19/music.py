@@ -832,10 +832,9 @@ def K2d(pleaves, pitch, dynamic):
 
 def K2e(pleaves, pitch, hairpin, scp):
     baca.pitch(pleaves, pitch)
-    baca.mspanners.scp(
+    baca.spanners.scp(
         [pleaves],
         scp,
-        do_not_rleak=True,
         staff_padding=3,
     )
     baca.hairpin(
@@ -897,10 +896,9 @@ def L1a(
 def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
-    baca.mspanners.scp(
+    baca.spanners.scp(
         plts,
         scp,
-        do_not_rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(

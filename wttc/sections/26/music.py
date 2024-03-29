@@ -836,10 +836,9 @@ def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
         )
     else:
         baca.pitch(pleaves, glissando)
-    baca.mspanners.scp(
+    baca.spanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
-        do_not_rleak=True,
         staff_padding=3,
     )
     baca.hairpin(

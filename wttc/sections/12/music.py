@@ -1017,10 +1017,9 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
         rleak=True,
         staff_padding=5.5,
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         pleaves,
         f"{scp} =|",
-        do_not_rleak=True,
         staff_padding=8,
     )
     start, stop = dynamics.split()
@@ -1195,10 +1194,9 @@ def vc(m):
         [1, 1, 1, 1, 1, 1, 2, 1, 1],
         "o< mp> pp< mp> pp< p> pp< p>o !",
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         [library.pleaves(m[28, 35], 1)],
         "T1 -> T4",
-        do_not_rleak=True,
         staff_padding=5.5,
     )
     H3(library.pleaves(m[36], 3), "Eb2", "F2", "F3", "D3", "mp f", "P1")

@@ -500,10 +500,10 @@ def A3b(
         hairpin,
         rleak=rleak_hairpin,
     )
-    baca.mspanners.scp(
+    baca.spanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
-        do_not_rleak=do_not_rleak_scp,
+        rleak=not do_not_rleak_scp,
         staff_padding=3,
     )
 

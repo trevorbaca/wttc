@@ -513,10 +513,9 @@ def F2b2(pleaves, glissandi):
     parts = baca.select.clparts(pleaves, [2])
     for part, glissando in zip(parts, glissandi, strict=True):
         baca.glissando(part, glissando)
-        baca.mspanners.scp(
+        baca.spanners.scp(
             part,
             ". -> P",
-            do_not_rleak=True,
             staff_padding=4,
         )
     nongrace_notes = abjad.select.notes(pleaves, grace=False)
