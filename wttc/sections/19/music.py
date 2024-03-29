@@ -920,7 +920,7 @@ def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -933,7 +933,7 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
         baca.markup(
             pleaves[0],
             r"\wttc-non-stringere",
-            abjad.Tweak(r"- \tweak staff-padding 9"),
+            baca.postevent.staff_padding(9),
         )
     baca.override.note_head_style_harmonic(pleaves)
     baca.spanners.string_number(
@@ -952,7 +952,7 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
 

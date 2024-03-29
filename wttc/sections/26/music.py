@@ -722,7 +722,7 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        abjad.Tweak(r"- \tweak direction #down"),
+        baca.postevent.direction_down(),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,
@@ -754,7 +754,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        abjad.Tweak(r"- \tweak direction #down"),
+        baca.postevent.direction_down(),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,

@@ -913,8 +913,8 @@ def G4a(pleaves, up_bow=False):
     baca.dynamic(
         pleaves[0],
         '"ff"-sempre',
-        abjad.Tweak(r"- \tweak parent-alignment-X -1"),
-        abjad.Tweak(r"- \tweak self-alignment-X -1"),
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
     )
 
 
@@ -929,8 +929,8 @@ def G4b(pleaves):
     baca.dynamic(
         pleaves[0],
         '"f"-sempre',
-        abjad.Tweak(r"- \tweak parent-alignment-X -1"),
-        abjad.Tweak(r"- \tweak self-alignment-X -1"),
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
     )
 
 
@@ -994,7 +994,7 @@ def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
     )
     tweaks = ()
     if to_bar_line is True:
-        tweaks = ((abjad.Tweak(r"- \tweak to-barline ##t"), -1),)
+        tweaks = (baca.postevent.to_bar_line_true(index=-1),)
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),

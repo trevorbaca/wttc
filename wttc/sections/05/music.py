@@ -1072,7 +1072,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         if not no_spanner:
             baca.spanners.circle_bow(
                 plt,
-                abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                baca.postevent.bound_details_right_padding(1.5),
                 rleak=True,
                 staff_padding=3,
             )
@@ -1104,7 +1104,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             baca.pitch(run, pitches)
         baca.spanners.xfb(
             run,
-            abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+            baca.postevent.bound_details_right_padding(1.5),
             rleak=True,
             staff_padding=3,
         )

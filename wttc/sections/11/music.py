@@ -445,7 +445,7 @@ def F1c(pleaves, chord, alteration, peaks):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),
-        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -505,7 +505,7 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
-        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -522,13 +522,13 @@ def F2b2(pleaves, glissandi):
     nongrace_notes = abjad.select.notes(pleaves, grace=False)
     baca.alternate_bow_strokes(
         nongrace_notes,
-        abjad.Tweak(r"- \tweak padding 1"),
+        baca.postevent.padding(1),
     )
     baca.dynamic(
         pleaves[0],
         "f-sempre",
-        abjad.Tweak(r"- \tweak parent-alignment-X -1"),
-        abjad.Tweak(r"- \tweak self-alignment-X -1"),
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
     )
     baca.spanners.text(
         pleaves,
@@ -561,7 +561,7 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
-        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -619,7 +619,7 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         library.swells(peaks),
-        (abjad.Tweak(r"- \tweak to-barline ##t"), -1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
 

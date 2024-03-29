@@ -882,7 +882,7 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
     if conjoin is True:
         baca.spanners.pizzicato(
             notes,
-            abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
+            baca.postevent.bound_details_right_padding(-0.5),
             staff_padding=3,
         )
         if dls_staff_padding:
@@ -1005,7 +1005,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             baca.dynamic(plt.head, dynamic)
     for plt in plts[1:2]:
         assert len(plt) == 2
-        tweaks = (abjad.Tweak(r"- \tweak bound-details.right.padding 1"),)
+        tweaks = (baca.postevent.bound_details_right_padding(1),)
         baca.spanners.trill(
             plt,
             *tweaks,
