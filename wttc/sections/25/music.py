@@ -320,9 +320,10 @@ def N1b(pleaves, pitches, dynamic):
     baca.pitches(pleaves, pitches)
     baca.stem_tremolo(pleaves)
     baca.dynamic(pleaves[0], dynamic)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
         descriptor=r"\wttc-two-finger-tamburo =|",
+        rleak=True,
         staff_padding=3,
     )
 
@@ -336,14 +337,16 @@ def N1c(runs, glissandi, hairpins, string_number):
         )
     baca.override.note_head_style_harmonic(runs)
     baca.stem_tremolo(runs)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         runs,
         descriptor=r"\wttc-two-finger-pizzicato =|",
+        rleak=True,
         staff_padding=3,
     )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         runs,
         string_number,
+        rleak=True,
         staff_padding=5.5,
     )
 
@@ -359,8 +362,9 @@ def N2a(pleaves, pitches, hairpin_lparts, hairpin):
 def N2b1(pleaves, glissando):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
-    baca.rspanners.xfb(
+    baca.spanners.xfb(
         pleaves,
+        rleak=True,
         staff_padding=8,
     )
 

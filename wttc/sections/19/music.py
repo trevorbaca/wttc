@@ -936,9 +936,10 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
             abjad.Tweak(r"- \tweak staff-padding 9"),
         )
     baca.override.note_head_style_harmonic(pleaves)
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         pleaves,
         string_number,
+        rleak=True,
         staff_padding=6.5,
     )
     baca.spanners.trill(

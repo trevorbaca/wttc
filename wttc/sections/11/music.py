@@ -599,12 +599,14 @@ def F3b2(pleaves, glissando, hairpin):
         pleaves,
         hairpin,
     )
-    baca.rspanners.xfb(
+    baca.spanners.xfb(
         pleaves,
+        rleak=True,
         staff_padding=3,
     )
-    baca.rspanners.tasto(
+    baca.spanners.tasto(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
 

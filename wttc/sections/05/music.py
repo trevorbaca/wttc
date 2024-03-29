@@ -806,9 +806,10 @@ def C2b(
 ):
     baca.override.note_head_style_harmonic(pleaves)
     baca.glissando(pleaves, f"{pitch_1} {pitch_2}")
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
         descriptor=r"\baca-pizz-markup ||",
+        rleak=True,
         staff_padding=3,
     )
     # TODO: make this work:
@@ -843,9 +844,10 @@ def C2b(
             pleaves,
             hairpin,
         )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         all_leaves,
         4,
+        rleak=True,
         staff_padding=6.5,
     )
 
@@ -883,9 +885,10 @@ def C3a(
     if harmonic is True:
         baca.override.note_head_style_harmonic(all_leaves)
     if string_number:
-        baca.rspanners.string_number(
+        baca.spanners.string_number(
             all_leaves,
             string_number,
+            rleak=True,
             staff_padding=6.5,
         )
     if trill:
@@ -934,9 +937,10 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
         baca.laissez_vibrer(pleaves)
     if pizz is True:
         for pleaf in pleaves:
-            baca.rspanners.pizzicato(
+            baca.spanners.pizzicato(
                 pleaf,
                 descriptor=r"\baca-pizz-markup ||",
+                rleak=True,
                 staff_padding=pizz_staff_padding,
             )
 
@@ -1095,9 +1099,10 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             baca.glissando(run, f"{start_pitch} {stop_pitch}")
         else:
             baca.pitch(run, pitches)
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             run,
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+            rleak=True,
             staff_padding=3,
         )
         baca.mspanners.scp(

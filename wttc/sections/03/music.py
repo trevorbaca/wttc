@@ -541,9 +541,10 @@ def B1c(run, dynamic, grace_pitch, glissando, string_number, *, staff_padding=3)
     baca.override.note_head_style_harmonic(run)
     baca.pitch(run[0], grace_pitch)
     baca.glissando(run[1:], glissando)
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         run,
         string_number,
+        rleak=True,
         staff_padding=staff_padding,
     )
     baca.hairpin(

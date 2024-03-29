@@ -507,17 +507,19 @@ def E1(
     if pattern:
         baca.bend_after(pleaves, pattern)
     if pizz is True:
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             pleaves,
+            rleak=True,
             staff_padding=staff_padding + 2.5,
         )
     if string_numbers:
         assert isinstance(string_numbers, list), repr(string_numbers)
         for pleaf, string_number in zip(pleaves, string_numbers, strict=True):
-            baca.rspanners.string_number(
+            baca.spanners.string_number(
                 [pleaf],
                 string_number,
                 invisible_line=True,
+                rleak=True,
                 staff_padding=staff_padding,
             )
 
@@ -563,13 +565,15 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         first_plt = baca.select.plt(pleaves, 0)
         baca.glissando(first_plt, f"{low_pitch} {high_pitch}")
         baca.override.note_head_style_harmonic(first_plt)
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             first_plt,
+            rleak=True,
             staff_padding=3,
         )
-        baca.rspanners.string_number(
+        baca.spanners.string_number(
             first_plt,
             string_number,
+            rleak=True,
             staff_padding=5.5,
         )
     if damp is True:

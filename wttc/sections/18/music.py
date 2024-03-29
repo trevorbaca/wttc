@@ -842,13 +842,15 @@ def J3c(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
+        rleak=True,
         staff_padding=3,
     )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         pleaves,
         4,
+        rleak=True,
         staff_padding=5.5,
     )
 
@@ -866,9 +868,10 @@ def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
         hairpin,
     )
     if tasto is not None:
-        baca.rspanners.tasto(
+        baca.spanners.tasto(
             pleaves,
             descriptor=f"{tasto} =|",
+            rleak=True,
             staff_padding=5.5,
         )
 

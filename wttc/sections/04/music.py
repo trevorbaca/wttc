@@ -839,9 +839,10 @@ def B1c(
             string,
             rleak=True,
         )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         abjad.select.leaves(runs)[1:],
         string_symbol,
+        rleak=True,
         staff_padding=string_number_staff_padding,
     )
     if dls_staff_padding:
@@ -867,9 +868,10 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
     for note, dynamic in zip(notes, dynamics_list, strict=True):
         baca.dynamic(note, dynamic)
         if conjoin is False:
-            baca.rspanners.pizzicato(
+            baca.spanners.pizzicato(
                 [note],
                 descriptor=r"\baca-pizz-markup ||",
+                rleak=True,
                 staff_padding=3,
             )
             if dls_staff_padding:
@@ -878,11 +880,10 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
                     dls_staff_padding,
                 )
     if conjoin is True:
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             notes,
             abjad.Tweak(r"- \tweak bound-details.right.padding -0.5"),
             staff_padding=3,
-            do_not_rleak=True,
         )
         if dls_staff_padding:
             baca.override.dls_staff_padding(
@@ -943,13 +944,15 @@ def B4b(pleaves, string_symbol, pitch_string, dynamic_string):
     runs = abjad.select.runs(pleaves)
     assert len(runs) == 1
     run = runs[0]
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         run,
         string_symbol,
+        rleak=True,
         staff_padding=5,
     )
-    baca.rspanners.xfb(
+    baca.spanners.xfb(
         run,
+        rleak=True,
         staff_padding=7.5,
     )
     baca.override.note_head_style_harmonic(baca.select.rleak(run))

@@ -876,16 +876,16 @@ def G3b(pleaves, pitch, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
     if len(plts) == 1:
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             plts,
             descriptor=r"\baca-pizz-markup ||",
+            rleak=True,
             staff_padding=3,
         )
     else:
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             plts,
             staff_padding=3,
-            do_not_rleak=True,
         )
 
 
@@ -950,10 +950,9 @@ def G5a(pleaves, glissandi, starts):
 def G5b(pleaves, glissando):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
         descriptor=r"\wttc-two-f-pizz =|",
-        do_not_rleak=True,
         left_broken_text=r"\wttc-parenthesized-two-finger-pizz",
         staff_padding=3,
     )

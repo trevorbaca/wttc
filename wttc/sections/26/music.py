@@ -918,9 +918,10 @@ def P2c(pleaves, pitch, alteration, string_number, dynamic):
             pleaf,
             staff_padding=5.5,
         )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         pleaves,
         string_number,
+        rleak=True,
         staff_padding=8,
     )
     baca.hairpin(

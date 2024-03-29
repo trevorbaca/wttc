@@ -656,8 +656,9 @@ def M1_3(pleaves, glissandi, dynamics):
         baca.glissando(pair, glissando)
         leaf = abjad.select.leaf(pair, 0)
         baca.dynamic(leaf, dynamic)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
 
@@ -680,9 +681,10 @@ def M3a(pleaves, pitch, dynamic):
         baca.hairpin(pleaves, dynamic)
     else:
         baca.dynamic(pleaves[0], dynamic)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
         descriptor=r"\wttc-two-finger-tamburo =|",
+        rleak=True,
         staff_padding=3,
     )
 
@@ -694,13 +696,15 @@ def M3b(pleaves, pitches, string_number, dynamics):
         baca.dynamic(plt.head, dynamic)
     baca.glissando(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         pleaves,
+        rleak=True,
         staff_padding=5.5,
     )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         pleaves,
         string_number,
+        rleak=True,
         staff_padding=8,
     )
 
@@ -743,14 +747,16 @@ def N1c(run, glissando, string_number, hairpin):
     baca.glissando(run, glissando)
     baca.override.note_head_style_harmonic(run)
     baca.stem_tremolo(run)
-    baca.rspanners.pizzicato(
+    baca.spanners.pizzicato(
         run,
         descriptor=r"\wttc-two-finger-pizzicato =|",
+        rleak=True,
         staff_padding=3,
     )
-    baca.rspanners.string_number(
+    baca.spanners.string_number(
         run,
         string_number,
+        rleak=True,
         staff_padding=5.5,
     )
     baca.hairpin(
