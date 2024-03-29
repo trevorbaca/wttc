@@ -1522,7 +1522,9 @@ number.5.AltoFlute.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“AltoFlute”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1590,7 +1592,9 @@ number.5.AltoFlute.Music = {
     r2.
 
     % [AltoFlute.Music measure 4]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 5]
     r1
@@ -1655,10 +1659,14 @@ number.5.AltoFlute.Music = {
     r2
 
     % [AltoFlute.Music measure 7]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 8]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 9]
       %! STAFF_HIGHLIGHT
@@ -1809,7 +1817,9 @@ number.5.AltoFlute.Music = {
     r4
 
     % [AltoFlute.Music measure 14]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 15]
       %! STAFF_HIGHLIGHT
@@ -4106,10 +4116,14 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 12]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 13]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 14]
     r1
@@ -4152,10 +4166,14 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.1.Music measure 20]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 21]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 22]
     \override DynamicLineSpanner.staff-padding = 4
@@ -4226,9 +4244,9 @@ number.5.Guitar.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 27]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.1.Music measure 28]
     R1 * 5/4
@@ -4790,7 +4808,9 @@ number.5.Guitar.1.Music = {
     % [Guitar.1.Music measure 43]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 44]
     r1
@@ -5351,7 +5371,9 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 10]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 11]
     \override DynamicLineSpanner.staff-padding = 2
@@ -5390,7 +5412,9 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 15]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 16]
     \override DynamicLineSpanner.staff-padding = 4
@@ -5424,7 +5448,9 @@ number.5.Guitar.2.Music = {
     \bacaStopTextSpanPizzicato
 
     % [Guitar.2.Music measure 17]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.2.Music measure 18]
     R1 * 3/4
@@ -5480,9 +5506,9 @@ number.5.Guitar.2.Music = {
     \bacaStopTextSpanPizzicato
 
     % [Guitar.2.Music measure 24]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 25]
     R1 * 6/4
@@ -5500,14 +5526,14 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 28]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 29]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 30]
     r4
@@ -6072,7 +6098,9 @@ number.5.Guitar.2.Music = {
     % [Guitar.2.Music measure 43]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 44]
     r1
@@ -8090,18 +8118,18 @@ number.5.Violin.Music = {
     % [Violin.Music measure 28]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    r1
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
 
-    r4
-
     % [Violin.Music measure 29]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Violin.Music measure 30]
     \override DynamicLineSpanner.staff-padding = 4
@@ -8204,7 +8232,9 @@ number.5.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 39]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 40]
     \override DynamicLineSpanner.staff-padding = 5
@@ -9117,7 +9147,9 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 12]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 13]
     r2
@@ -9161,10 +9193,14 @@ number.5.Cello.Music = {
     r4
 
     % [Cello.Music measure 15]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 16]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 17]
     r4
@@ -9263,7 +9299,9 @@ number.5.Cello.Music = {
     \bacaStopTextSpanSCP
 
     % [Cello.Music measure 21]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Cello.Music measure 22]
     r2

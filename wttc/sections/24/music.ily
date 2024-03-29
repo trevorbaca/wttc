@@ -2334,7 +2334,9 @@ number.24.Guitar.1.Music = {
     % [Guitar.1.Music measure 24]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 25]
     R1 * 6/4
@@ -3289,7 +3291,9 @@ number.24.Guitar.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 24]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 25]
     R1 * 6/4
@@ -4556,15 +4560,21 @@ number.24.Violin.Music = {
     % [Violin.Music measure 23]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! SPANNER_STOP
     \stopTextSpan
 
     % [Violin.Music measure 24]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 25]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { \breve. }
     \times 1/1
@@ -6207,12 +6217,16 @@ number.24.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     % [Cello.Music measure 26]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 27]
     r1

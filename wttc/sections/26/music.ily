@@ -3477,7 +3477,9 @@ number.26.Guitar.1.Music = {
     r8.
 
     % [Guitar.1.Music measure 6]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 7]
     r2
@@ -3586,7 +3588,9 @@ number.26.Guitar.1.Music = {
     r2.
 
     % [Guitar.1.Music measure 14]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 15]
     r16
@@ -3607,7 +3611,9 @@ number.26.Guitar.1.Music = {
     r2.
 
     % [Guitar.1.Music measure 16]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 17]
     r16
@@ -3629,7 +3635,9 @@ number.26.Guitar.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 18]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 19]
     \override DynamicLineSpanner.staff-padding = 3
@@ -3667,7 +3675,9 @@ number.26.Guitar.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 21]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 22]
     \override DynamicLineSpanner.staff-padding = 3
@@ -4080,7 +4090,9 @@ number.26.Guitar.2.Music = {
     r2.
 
     % [Guitar.2.Music measure 14]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 15]
     r16
@@ -4101,7 +4113,9 @@ number.26.Guitar.2.Music = {
     r2.
 
     % [Guitar.2.Music measure 16]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 17]
     r16
@@ -4122,7 +4136,9 @@ number.26.Guitar.2.Music = {
     r2.
 
     % [Guitar.2.Music measure 18]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 19]
     r2
@@ -4162,7 +4178,9 @@ number.26.Guitar.2.Music = {
     r2.
 
     % [Guitar.2.Music measure 21]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 22]
     r2
@@ -5451,7 +5469,9 @@ number.26.Violin.Music = {
     r4
 
     % [Violin.Music measure 21]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 22]
     r16

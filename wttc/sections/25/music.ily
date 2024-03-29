@@ -2200,9 +2200,9 @@ number.25.Guitar.1.Music = {
     r4
 
     % [Guitar.1.Music measure 19]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.1.Music measure 20]
     r1
@@ -2647,9 +2647,9 @@ number.25.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 19]
-    r1
-
-    r4
+    R1 * 5/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 20]
     r1

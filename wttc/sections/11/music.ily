@@ -919,7 +919,9 @@ number.11.AltoFlute.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“AltoFlute”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1147,7 +1149,9 @@ number.11.AltoFlute.Music = {
     \stopTextSpan
 
     % [AltoFlute.Music measure 11]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 12]
     R1 * 6/4
@@ -3315,7 +3319,9 @@ number.11.Violin.Music = {
     % [Violin.Music measure 10]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 11]
     r4
@@ -3381,7 +3387,9 @@ number.11.Violin.Music = {
     r2
 
     % [Violin.Music measure 13]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Violin.Music measure 14]
     r4
@@ -4769,7 +4777,9 @@ number.11.Cello.Music = {
     % [Cello.Music measure 13]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Cello.Music measure 14]
     r4
@@ -4965,7 +4975,9 @@ number.11.Cello.Music = {
     % [Cello.Music measure 17]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! SPANNER_STOP
     \stopTextSpan
 

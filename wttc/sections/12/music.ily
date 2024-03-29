@@ -7982,7 +7982,9 @@ number.12.Violin.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 17]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Violin.Music measure 18]
     R1 * 6/4
@@ -8207,7 +8209,9 @@ number.12.Violin.Music = {
     % [Violin.Music measure 23]
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Violin.Music measure 24]
     R1 * 6/4
