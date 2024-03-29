@@ -914,8 +914,9 @@ def P2c(pleaves, pitch, alteration, string_number, dynamic):
         staff_padding=3,
     )
     for pleaf in pleaves[1:-1]:
-        baca.mspanners.circle_bow(
+        baca.spanners.circle_bow(
             pleaf,
+            rleak=True,
             staff_padding=5.5,
         )
     baca.spanners.string_number(

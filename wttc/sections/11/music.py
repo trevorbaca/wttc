@@ -496,8 +496,9 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
             )
             baca.down_bow(part[0], full=True)
         else:
-            baca.mspanners.circle_bow(
+            baca.spanners.circle_bow(
                 part,
+                rleak=True,
                 staff_padding=5.5,
             )
     baca.hairpin(
@@ -551,8 +552,9 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
     circle_bow_lparts = [sum(_) for _ in pairs]
     parts = baca.select.clparts(plts, circle_bow_lparts)
     for part in parts:
-        baca.mspanners.circle_bow(
+        baca.spanners.circle_bow(
             part,
+            rleak=True,
             staff_padding=8,
         )
     baca.hairpin(

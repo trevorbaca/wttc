@@ -458,9 +458,10 @@ def A2c(run, glissando, hairpin_lparts, hairpin):
                 staff_padding=3,
             )
         else:
-            baca.mspanners.circle_bow(
+            baca.spanners.circle_bow(
                 plt,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 1.5"),
+                rleak=True,
                 staff_padding=3,
             )
     baca.glissando(
