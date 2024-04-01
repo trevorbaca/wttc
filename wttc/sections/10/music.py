@@ -1030,8 +1030,8 @@ def make_layout():
         ),
     )
     spacing = baca.layout.Spacing(
-        default_spacing=(1, 32),
-        spacing_overrides=[baca.layout.Override(11, (1, 48))],
+        default=(1, 32),
+        overrides=[baca.layout.Override(11, (1, 48))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
