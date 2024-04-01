@@ -1482,7 +1482,11 @@ def make_layout():
 
 
 def main():
-    environment = baca.build.read_environment(__file__, baca.build.argv())
+    environment = baca.build.read_environment(
+        __file__,
+        baca.build.argv(),
+        section_not_included_in_score=True,
+    )
     if environment.score():
         score = make_score(
             environment.first_measure_number,
