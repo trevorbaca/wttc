@@ -27,6 +27,13 @@ def GLOBALS(skips):
     stage_markup = (("1C.beginning", 1),)
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
+    baca.metronome_mark(skips[5 - 1], "60", manifests=library.manifests)
+    baca.mark(
+        skips[7 - 1],
+        strings.fermata,
+        padding=1.5,
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -41,12 +48,33 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 4)
+    rhythm(
+        meters(5, 6),
+        [1, -5, 1, -4, 1, -3, -1, -2, -1, -1, 1, "-"],
+        material=1,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(7),
+        ["-", -2, 1, -3],
+        extra_counts=[-1],
+        material=4,
+    )
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 4)
+    rhythm(
+        meters(5, 6),
+        [1, -5, 1, -4, 1, -3, -1, -2, -1, -1, 1, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(7),
+        [-16, -4, 1, -3],
+        material=4,
+    )
 
 
 def VN(voice, meters):
@@ -98,6 +126,13 @@ def gt1(m):
     baca.instrument_name(m[1][0], strings.guitar_i_markup)
     baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
     baca.clef(m[1][0], "treble")
+    library.E1(
+        library.pleaves(m[5, 6], 1),
+        "A#4",
+        "mf f ff -",
+        bends=[-4],
+    )
+    library.E4b(library.pleaves(m[7], 4), "C4", "f")
 
 
 def gt2(m):
@@ -140,6 +175,8 @@ def vc(m):
 def align_spanners(cache):
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[1, 4], 4)
+    gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[5, 6], 4)
 
 
 @baca.build.timed("make_score")
@@ -222,9 +259,12 @@ def make_layout():
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 20),
+        default=(1, 16),
         lax_spacing_section=[1, 2],
         forbid_new_spacing_section=[3],
+        overrides=[
+            baca.layout.Override((4, 7), (1, 32)),
+        ],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

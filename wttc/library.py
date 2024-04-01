@@ -1015,3 +1015,42 @@ def C1c(pleaves, dyad, alteration, dynamics):
             baca.untie(plt)
             for chord in plt[1:]:
                 del chord.note_heads[1]
+
+
+def E1(
+    pleaves,
+    pitch,
+    dynamics,
+    *,
+    bends=None,
+    pizzicato=False,
+    staff_padding=5.5,
+    string_numbers=None,
+):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    for pleaf, dynamic in zip(pleaves, dynamics, strict=True):
+        baca.dynamic(pleaf, dynamic)
+    if bends:
+        baca.bend_after(pleaves, bends)
+    if pizzicato is True:
+        baca.spanners.pizzicato(
+            pleaves,
+            rleak=True,
+            staff_padding=staff_padding + 2.5,
+        )
+    if string_numbers:
+        assert isinstance(string_numbers, list), repr(string_numbers)
+        for pleaf, string_number in zip(pleaves, string_numbers, strict=True):
+            baca.spanners.string_number(
+                [pleaf],
+                string_number,
+                invisible_line=True,
+                rleak=True,
+                staff_padding=staff_padding,
+            )
+
+
+def E4b(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.dynamic(pleaves[0], dynamic)

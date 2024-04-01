@@ -22,7 +22,7 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1],
-    "duration": "0'14''",
+    "duration": "0'22''",
     "final_measure_number": 7,
     "first_measure_number": 1,
     "has_anchor_skip": True,
@@ -78,6 +78,16 @@
                 synthetic_offset=None,
                 value="Vc.",
             ),
+        ],
+        "Guitar.1.Music": [
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="f",
+            )
         ],
         "Guitar.1.Staff": [
             baca.Memento(
@@ -164,7 +174,7 @@
                 manifest="metronome_marks",
                 prototype=None,
                 synthetic_offset=None,
-                value="150",
+                value="60",
             ),
             baca.Memento(
                 context="Skips",
@@ -204,6 +214,6 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'14''",
+    "stop_clock_time": "0'22''",
     "time_signatures": ["3/4", "6/4", "6/4", "6/4", "3/4", "4/4", "6/4"],
 }

@@ -489,41 +489,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E1(
-    pleaves,
-    pitch,
-    dynamics,
-    *,
-    pattern=None,
-    pizz=False,
-    staff_padding=5.5,
-    string_numbers=None,
-):
-    baca.pitch(pleaves, pitch)
-    dynamics_ = dynamics.split()
-    for pleaf, dynamic_ in zip(pleaves, dynamics_, strict=True):
-        if dynamic_ != "-":
-            baca.dynamic(pleaf, dynamic_)
-    if pattern:
-        baca.bend_after(pleaves, pattern)
-    if pizz is True:
-        baca.spanners.pizzicato(
-            pleaves,
-            rleak=True,
-            staff_padding=staff_padding + 2.5,
-        )
-    if string_numbers:
-        assert isinstance(string_numbers, list), repr(string_numbers)
-        for pleaf, string_number in zip(pleaves, string_numbers, strict=True):
-            baca.spanners.string_number(
-                [pleaf],
-                string_number,
-                invisible_line=True,
-                rleak=True,
-                staff_padding=staff_padding,
-            )
-
-
 def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
     baca.pitch(pleaves, pitch)
     if peaks:
@@ -684,11 +649,6 @@ def E4a(pleaves, pitch, peaks):
                 )
 
 
-def E4b(pleaves, pitch, dynamic):
-    baca.pitch(pleaves, pitch)
-    baca.dynamic(pleaves[0], dynamic)
-
-
 def E4c(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
@@ -750,59 +710,59 @@ def ob(m):
 
 def gt1(m):
     baca.staff_lines(m[1][0], 5)
-    E1(
+    library.E1(
         library.pleaves(m[1, 5], 1),
         "A4",
         "f mp f mp mp f mp mf p p mp pp",
-        pattern=[2, -4, -2, 4, -2, -4],
+        bends=[2, -4, -2, 4, -2, -4],
     )
-    E1(
+    library.E1(
         library.pleaves(m[6, 9], 1),
         "A#4",
         "pp p mp mf f ff ff",
-        pattern=[-4],
+        bends=[-4],
     )
-    E4b(library.pleaves(m[10], 4), "C4", "f")
-    E4b(library.pleaves(m[11, 18], 4), "C4", "p")
-    E1(
+    library.E4b(library.pleaves(m[10], 4), "C4", "f")
+    library.E4b(library.pleaves(m[11, 18], 4), "C4", "p")
+    library.E1(
         library.pleaves(m[19, 21], 1),
         "C#5",
         "pp - -",
-        pattern=[-4],
+        bends=[-4],
     )
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     baca.staff_lines(m[1][0], 5)
-    E1(
+    library.E1(
         library.pleaves(m[1, 5], 1),
         "A4",
         "mp f f mp f f mf p p mp pp pp",
-        pattern=[-2, 4, -2, 4, 2, -4, 2, -4, 2, 4],
+        bends=[-2, 4, -2, 4, 2, -4, 2, -4, 2, 4],
     )
-    E1(
+    library.E1(
         library.pleaves(m[6, 9], 1),
         "A#4",
         "pp p mp mf f ff ff",
-        pattern=[4],
+        bends=[4],
     )
-    E4b(library.pleaves(m[10], 4), "C4", "f")
-    E4b(library.pleaves(m[11, 18], 4), "C4", "p")
-    E1(
+    library.E4b(library.pleaves(m[10], 4), "C4", "f")
+    library.E4b(library.pleaves(m[11, 18], 4), "C4", "p")
+    library.E1(
         library.pleaves(m[19, 21], 1),
         "C5",
         "pp - -",
-        pattern=[4],
+        bends=[4],
     )
 
 
 def vn(m):
-    E1(
+    library.E1(
         library.pleaves(m[1, 2], 1),
         "A4",
         "p f mf",
-        pizz=True,
+        pizzicato=True,
         string_numbers=[3, 4, 3],
     )
     E2b(
@@ -820,11 +780,11 @@ def vn(m):
         string_number=3,
         xfb=True,
     )
-    E1(
+    library.E1(
         library.pleaves(m[5, 8], 1),
         "A4",
         "ff ff mf f p",
-        pizz=True,
+        pizzicato=True,
         string_numbers=[4, 3, 4, 3, 4],
     )
     runs = abjad.select.runs(library.pleaves(m[9, 10], 2))
@@ -842,11 +802,11 @@ def vn(m):
     dynamics = "mp p pp ppp".split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
-    E1(
+    library.E1(
         library.pleaves(m[19, 20], 1),
         "A4",
         "mf f p",
-        pizz=True,
+        pizzicato=True,
         string_numbers=[4, 3, 4],
     )
     F1c(library.pleaves(m[20, 22], 99), "C#5", "E#5", "F#5", "mp mf f")
@@ -855,11 +815,11 @@ def vn(m):
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     baca.clef(m[1][0], "tenor")
-    E1(
+    library.E1(
         library.pleaves(m[1, 2], 1),
         "A4",
         "f mp ff",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[4, 1, 4],
     )
@@ -873,51 +833,51 @@ def vc(m):
         "f--!",
     )
     baca.dynamic(library.pleaves(m[7], 3), "p")
-    E1(
+    library.E1(
         library.pleaves(m[4], 1),
         "A4",
         "ff",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[3],
     )
-    E1(
+    library.E1(
         library.pleaves(m[7], 1),
         "A4",
         "ff",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[1],
     )
-    E1(
+    library.E1(
         library.pleaves(m[8, 9], 1),
         "A4",
         "mp mf",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[4, 1],
     )
-    E1(
+    library.E1(
         library.pleaves(m[19], 1),
         "A4",
         "ff",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[2],
     )
-    E1(
+    library.E1(
         library.pleaves(m[20], 1),
         "A4",
         "mp",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[3],
     )
-    E1(
+    library.E1(
         library.pleaves(m[21], 1),
         "A4",
         "f",
-        pizz=True,
+        pizzicato=True,
         staff_padding=4,
         string_numbers=[4],
     )
