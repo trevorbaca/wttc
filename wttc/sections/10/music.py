@@ -489,40 +489,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
-    baca.pitch(pleaves, pitch)
-    if peaks:
-        peaks_ = peaks.split()
-        runs = abjad.select.runs(pleaves)
-        for run, peak_ in zip(runs, peaks_, strict=True):
-            pieces = baca.select.partition_in_halves(run)
-            baca.hairpin(
-                pieces,
-                library.swells(peak_),
-                rleak=True,
-            )
-            baca.spanners.trill(
-                run,
-                alteration=alteration,
-                rleak=True,
-            )
-    else:
-        assert starts
-        starts_ = starts.split()
-        plts = baca.select.plts(pleaves)
-        for plt, start_ in zip(plts, starts_, strict=True):
-            baca.hairpin(
-                plt,
-                f"{start_}>o!",
-                rleak=True,
-            )
-            baca.spanners.trill(
-                plt,
-                alteration=alteration,
-                rleak=True,
-            )
-
-
 def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
     assert damp or xfb
     low_pitch, high_pitch = pitches.split()
@@ -590,22 +556,6 @@ def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
         )
 
 
-def E3a(pleaves, fundamental):
-    pitches = "Bb5 D6 F6 Ab6 " + 20 * "Bb6 C7 D7 C7 "
-    for run in abjad.select.runs(pleaves):
-        rmakers.unbeam(run)
-        baca.flageolet(run)
-        baca.pitches(run, pitches, allow_out_of_range=True)
-        baca.override.stem_length(run[0], 22)
-        baca.override.flag_stencil(run[0], "#flat-flag")
-        baca.override.accidental_extra_offset(run[1:], (1.2, 2.2))
-        baca.override.accidental_font_size(run[1:], -3)
-        baca.override.accidental_x_extent_false(run[1:])
-        baca.override.flag_stencil_false(run[1:])
-        baca.override.note_head_font_size(run[1:], -3)
-        baca.override.stem_stencil_false(run[1:])
-
-
 def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     plts = baca.select.plts(pleaves)
     for plt in plts:
@@ -630,23 +580,6 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     if dynamic is not None:
         for plt in plts:
             baca.dynamic(plt, dynamic)
-
-
-def E4a(pleaves, pitch, peaks):
-    baca.pitch(pleaves, pitch)
-    runs = abjad.select.runs(pleaves)
-    peaks_ = peaks.split()
-    for run, peak_ in zip(runs, peaks_, strict=True):
-        if len(run) == 1:
-            baca.dynamic(run[0], peak_)
-        else:
-            pieces = baca.select.partition_in_halves(run)
-            if pieces:
-                baca.hairpin(
-                    pieces,
-                    library.swells(peak_),
-                    rleak=True,
-                )
 
 
 def E4c(pleaves, pitch, alteration, peak):
@@ -697,15 +630,17 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
 
 
 def fl(m):
-    E3a(library.pleaves(m[2, 8], 3), "Bb3")
-    E4a(library.pleaves(m[10, 18], 4), "B5", "p p p mp mf f f mf mp p")
+    library.E3a(library.pleaves(m[2, 8], 3))
+    library.E4a(library.pleaves(m[10, 18], 4), "B5", "p p p mp mf f f mf mp p")
     baca.override.dynamic_text_self_alignment_x(m[14][4], 1.5)
 
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    E2a(library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", peaks="mp mp mp mp")
-    E2a(m[15, 19][1:], "D#6", "E6", starts="mp p pp pp")
+    library.E2a(
+        library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", peaks="mp mp mp mp"
+    )
+    library.E2a(m[15, 19][1:], "D#6", "E6", starts="mp p pp pp")
 
 
 def gt1(m):

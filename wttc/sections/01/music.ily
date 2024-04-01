@@ -186,7 +186,7 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'15'']" "[0'21'']"
+    %@% - \baca-start-ct-left-only "[0'15'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -199,6 +199,31 @@ number.1.Skips = {
     %@% \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+
+    % [Skips measure 8]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 4/4
+    s1 * 4/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-both "[0'21'']" "[0'25'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "8"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "8"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -255,6 +280,9 @@ number.1.Rests = {
     % [Rests measure 7]
     R1 * 6/4
 
+    % [Rests measure 8]
+    R1 * 4/4
+
 }
 
 
@@ -306,14 +334,180 @@ number.1.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \once \override Flag.stencil = #flat-flag
+    \once \override Stem.length = 22
+    ef'''!32
+    - \flageolet
+
+    \override Accidental.X-extent = ##f
+    \override Accidental.extra-offset = #'(1.2 . 2.2)
+    \override Accidental.font-size = -3
+    \override Flag.stencil = ##f
+    \override NoteHead.font-size = -3
+    \override Stem.stencil = ##f
+    g'''32
+    - \flageolet
+
+    bf'''!32
+    - \flageolet
+
+    df''''!32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
 
     % [AltoFlute.Music measure 5]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    ef''''!32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+
+    g''''32
+    - \flageolet
+
+    f''''32
+    - \flageolet
+    \revert Accidental.X-extent
+    \revert Accidental.extra-offset
+    \revert Accidental.font-size
+    \revert Flag.stencil
+    \revert NoteHead.font-size
+    \revert Stem.stencil
+
+    r8
+
+    r2
 
     % [AltoFlute.Music measure 6]
     R1 * 4/4
@@ -321,9 +515,18 @@ number.1.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+    r4
+
+    r8
+
+    e'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
 }
 
@@ -354,6 +557,7 @@ number.1.Oboe.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -404,9 +608,64 @@ number.1.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 7]
-    R1 * 6/4
+    r2
+
+      %! SPANNER_START
+    \pitchedTrill
+    d'''1 * 8/16
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    \startTrillSpan e'''
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    d'''4 * 2/1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"8" #"16"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    % [Oboe.Music measure 8]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -721,6 +980,11 @@ number.1.Violin.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Violin.Music measure 8]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
 }
 

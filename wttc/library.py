@@ -1051,6 +1051,73 @@ def E1(
             )
 
 
+def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
+    baca.pitch(pleaves, pitch)
+    if peaks:
+        peaks = peaks.split()
+        runs = abjad.select.runs(pleaves)
+        for run, peak in zip(runs, peaks, strict=True):
+            pieces = baca.select.partition_in_halves(run)
+            baca.hairpin(
+                pieces,
+                swells(peak),
+                rleak=True,
+            )
+            baca.spanners.trill(
+                run,
+                alteration=alteration,
+                rleak=True,
+            )
+    else:
+        assert starts
+        starts = starts.split()
+        plts = baca.select.plts(pleaves)
+        for plt, start in zip(plts, starts, strict=True):
+            baca.hairpin(
+                plt,
+                f"{start}>o!",
+                rleak=True,
+            )
+            baca.spanners.trill(
+                plt,
+                alteration=alteration,
+                rleak=True,
+            )
+
+
+def E3a(pleaves):
+    pitches = "Bb5 D6 F6 Ab6 " + 20 * "Bb6 C7 D7 C7 "
+    for run in abjad.select.runs(pleaves):
+        rmakers.unbeam(run)
+        baca.flageolet(run)
+        baca.pitches(run, pitches, allow_out_of_range=True)
+        baca.override.stem_length(run[0], 22)
+        baca.override.flag_stencil(run[0], "#flat-flag")
+        baca.override.accidental_extra_offset(run[1:], (1.2, 2.2))
+        baca.override.accidental_font_size(run[1:], -3)
+        baca.override.accidental_x_extent_false(run[1:])
+        baca.override.flag_stencil_false(run[1:])
+        baca.override.note_head_font_size(run[1:], -3)
+        baca.override.stem_stencil_false(run[1:])
+
+
+def E4a(pleaves, pitch, peaks):
+    baca.pitch(pleaves, pitch)
+    runs = abjad.select.runs(pleaves)
+    peaks = peaks.split()
+    for run, peak in zip(runs, peaks, strict=True):
+        if len(run) == 1:
+            baca.dynamic(run[0], peak)
+        else:
+            pieces = baca.select.partition_in_halves(run)
+            if pieces:
+                baca.hairpin(
+                    pieces,
+                    swells(peak),
+                    rleak=True,
+                )
+
+
 def E4b(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.dynamic(pleaves[0], dynamic)

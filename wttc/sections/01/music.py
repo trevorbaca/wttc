@@ -38,12 +38,30 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 3)
+    rhythm(
+        meters(4, 5),
+        52 * [1] + ["-"],
+        denominator=32,
+        material=3,
+    )
+    rhythm.mmrests(6)
+    rhythm(
+        meters(7),
+        ["-", 2],
+        material=4,
+    )
 
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 6)
+    rhythm(
+        meters(7),
+        [-8, frame(16, 8)],
+        material=2,
+    )
+    rhythm.mmrests(8)
 
 
 def GT1(voice, meters):
@@ -111,6 +129,8 @@ def fl(m):
     baca.instrument_name(m[1][0], strings.alto_flute_markup)
     baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
     baca.clef(m[1][0], "treble")
+    library.E3a(library.pleaves(m[4, 5], 3))
+    library.E4a(library.pleaves(m[7], 4), "B5", "p")
 
 
 def ob(m):
@@ -119,6 +139,7 @@ def ob(m):
     baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
+    library.E2a(library.pleaves(m[7], 2), "D6", "E6", peaks="mp")
 
 
 def gt1(m):
@@ -173,17 +194,19 @@ def vc(m):
 
 
 def align_spanners(cache):
-    vc = cache["vc"]
-    baca.override.dls_staff_padding(vc[1, 4], 4)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob.leaves(), 4)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[5, 6], 4)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[1, 4], 4)
 
 
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [3, 6, 6, 6, 3, 4, 6]
+    numerators = [3, 6, 6, 6, 3, 4, 6, 4]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(

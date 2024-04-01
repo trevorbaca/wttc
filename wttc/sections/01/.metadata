@@ -22,11 +22,21 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1],
-    "duration": "0'22''",
-    "final_measure_number": 7,
+    "duration": "0'26''",
+    "final_measure_number": 8,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
+        "AltoFlute.Music": [
+            baca.Memento(
+                context="AltoFlute.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="p",
+            )
+        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -182,7 +192,7 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="6/4",
+                value="4/4",
             ),
         ],
         "Violin.Staff": [
@@ -214,6 +224,6 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'22''",
-    "time_signatures": ["3/4", "6/4", "6/4", "6/4", "3/4", "4/4", "6/4"],
+    "stop_clock_time": "0'26''",
+    "time_signatures": ["3/4", "6/4", "6/4", "6/4", "3/4", "4/4", "6/4", "4/4"],
 }
