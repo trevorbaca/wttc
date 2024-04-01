@@ -22,8 +22,8 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1],
-    "duration": "0'08''",
-    "final_measure_number": 4,
+    "duration": "0'14''",
+    "final_measure_number": 7,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
@@ -204,6 +204,6 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'08''",
-    "time_signatures": ["3/4", "6/4", "6/4", "6/4"],
+    "stop_clock_time": "0'14''",
+    "time_signatures": ["3/4", "6/4", "6/4", "6/4", "3/4", "4/4", "6/4"],
 }
