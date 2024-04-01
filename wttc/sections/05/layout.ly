@@ -25,7 +25,7 @@
               %! BREAK
             \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-lax-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -36,7 +36,7 @@
 
             % [PageLayout measure 2]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-lax-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -51,12 +51,6 @@
               %! BREAK
             \noBreak
             s1 * 6/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[Z/E]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 4]
               %! SPACING_COMMAND

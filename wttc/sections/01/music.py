@@ -223,9 +223,8 @@ def make_layout():
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
-        overrides=[
-            baca.layout.Override(3, False),
-        ],
+        lax_spacing_section=[1, 2],
+        forbid_new_spacing_section=[3],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
