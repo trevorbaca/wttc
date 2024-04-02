@@ -1034,11 +1034,12 @@ def E1(
     if bends:
         baca.bend_after(pleaves, bends)
     if pizzicato is True:
-        baca.spanners.pizzicato(
-            pleaves,
-            rleak=True,
-            staff_padding=staff_padding + 2.5,
-        )
+        for phead in baca.select.pheads(pleaves):
+            baca.articulation(
+                phead,
+                "+",
+                baca.postevent.direction_down(),
+            )
     if string_numbers:
         assert isinstance(string_numbers, list), repr(string_numbers)
         for pleaf, string_number in zip(pleaves, string_numbers, strict=True):
@@ -1051,16 +1052,21 @@ def E1(
             )
 
 
-def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
+def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None, bar_lines=""):
     baca.pitch(pleaves, pitch)
+    bar_lines = list(bar_lines)
     if peaks:
         peaks = peaks.split()
         runs = abjad.select.runs(pleaves)
-        for run, peak in zip(runs, peaks, strict=True):
+        for run, peak, bar_line in zip(runs, peaks, bar_lines, strict=True):
             pieces = baca.select.partition_in_halves(run)
+            tweaks = ()
+            if bar_line == "1":
+                tweaks = (baca.postevent.to_bar_line_true(index=-1),)
             baca.hairpin(
                 pieces,
                 swells(peak),
+                *tweaks,
                 rleak=True,
             )
             baca.spanners.trill(
@@ -1083,6 +1089,86 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None):
                 alteration=alteration,
                 rleak=True,
             )
+
+
+def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
+    assert damp or xfb
+    low_pitch, high_pitch = pitches.split()
+    if xfb is True:
+        first_plt = baca.select.plt(pleaves, 0)
+        baca.glissando(first_plt, f"{low_pitch} {high_pitch}")
+        baca.override.note_head_style_harmonic(first_plt)
+        baca.spanners.xfb(
+            first_plt,
+            rleak=True,
+            staff_padding=3,
+        )
+        baca.spanners.string_number(
+            first_plt,
+            string_number,
+            rleak=True,
+            staff_padding=5.5,
+        )
+    if damp is True:
+        if xfb is False:
+            leaves = list(pleaves)
+        else:
+            leaves = baca.select.plt(pleaves, -1)
+        baca.glissando(leaves, f"{high_pitch} {low_pitch}")
+        baca.spanners.damp(
+            leaves,
+            rleak=True,
+            staff_padding=3,
+        )
+    if xfb is True:
+        pieces = baca.select.partition_in_halves(pleaves)
+        baca.hairpin(
+            pieces,
+            swells(peak),
+            rleak=True,
+        )
+    else:
+        baca.hairpin(
+            pleaves,
+            f"{peak}>o!",
+        )
+
+
+def E2c(
+    pleaves,
+    pitch,
+    alteration,
+    peak,
+    *,
+    diminuendo=False,
+    stop_pitch=None,
+    to_bar_line=False,
+):
+    if stop_pitch is None:
+        baca.pitch(pleaves, pitch)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=3,
+    )
+    if diminuendo is True:
+        baca.hairpin(
+            pleaves,
+            f"{peak}>o!",
+            rleak=True,
+        )
+    else:
+        pieces = baca.select.partition_in_halves(pleaves)
+        tweaks = ()
+        if to_bar_line is True:
+            tweaks = (baca.postevent.to_bar_line_true(index=-1),)
+        baca.hairpin(
+            pieces,
+            f"o< {peak}>o!",
+            *tweaks,
+            rleak=True,
+        )
 
 
 def E3a(pleaves):

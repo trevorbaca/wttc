@@ -489,73 +489,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
-    assert damp or xfb
-    low_pitch, high_pitch = pitches.split()
-    if xfb is True:
-        first_plt = baca.select.plt(pleaves, 0)
-        baca.glissando(first_plt, f"{low_pitch} {high_pitch}")
-        baca.override.note_head_style_harmonic(first_plt)
-        baca.spanners.xfb(
-            first_plt,
-            rleak=True,
-            staff_padding=3,
-        )
-        baca.spanners.string_number(
-            first_plt,
-            string_number,
-            rleak=True,
-            staff_padding=5.5,
-        )
-    if damp is True:
-        if xfb is False:
-            leaves = list(pleaves)
-        else:
-            leaves = baca.select.plt(pleaves, -1)
-        baca.glissando(leaves, f"{high_pitch} {low_pitch}")
-        baca.spanners.damp(
-            leaves,
-            rleak=True,
-            staff_padding=3,
-        )
-    if xfb is True:
-        pieces = baca.select.partition_in_halves(pleaves)
-        baca.hairpin(
-            pieces,
-            library.swells(peak),
-            rleak=True,
-        )
-    else:
-        baca.hairpin(
-            pleaves,
-            f"{peak}>o!",
-        )
-
-
-def E2c(pleaves, pitch, alteration, peak, *, diminuendo=False, stop_pitch=None):
-    if stop_pitch is None:
-        baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=3,
-    )
-    if diminuendo is True:
-        baca.hairpin(
-            pleaves,
-            f"{peak}>o!",
-            rleak=True,
-        )
-    else:
-        pieces = baca.select.partition_in_halves(pleaves)
-        baca.hairpin(
-            pieces,
-            f"o< {peak}>o!",
-            rleak=True,
-        )
-
-
 def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     plts = baca.select.plts(pleaves)
     for plt in plts:
@@ -638,7 +571,11 @@ def fl(m):
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.E2a(
-        library.pleaves(m[10, 14], 2) + m[15][:1], "D6", "E6", peaks="mp mp mp mp"
+        library.pleaves(m[10, 14], 2) + m[15][:1],
+        "D6",
+        "E6",
+        bar_lines="1100",
+        peaks="mp mp mp mp",
     )
     library.E2a(m[15, 19][1:], "D#6", "E6", starts="mp p pp pp")
 
@@ -700,14 +637,14 @@ def vn(m):
         pizzicato=True,
         string_numbers=[3, 4, 3],
     )
-    E2b(
+    library.E2b(
         library.pleaves(m[2], 2) + m[3][:1],
         "G#4 C5",
         "p",
         string_number=3,
         xfb=True,
     )
-    E2b(
+    library.E2b(
         abjad.select.run(library.pleaves(m[3, 5], 2), 1),
         "G#4 C5",
         "mf",
@@ -723,20 +660,20 @@ def vn(m):
         string_numbers=[4, 3, 4, 3, 4],
     )
     runs = abjad.select.runs(library.pleaves(m[9, 10], 2))
-    E2b(runs[0], "G#4 C5", "mf", damp=True)
-    E2b(runs[1], "G#4 C5", "mp", damp=True)
-    E2b(runs[2], "G#4 C5", "p", damp=True)
-    E2c(runs[3], "B3", "C#4", "p")
+    library.E2b(runs[0], "G#4 C5", "mf", damp=True)
+    library.E2b(runs[1], "G#4 C5", "mp", damp=True)
+    library.E2b(runs[2], "G#4 C5", "p", damp=True)
+    library.E2c(runs[3], "B3", "C#4", "p", to_bar_line=True)
     E4c(library.pleaves(m[11], 4), "D#5", "G#5", "p")
-    E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")
+    library.E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")
     E4c(library.pleaves(m[12], 4), "D#5", "G#5", "mp")
-    E2c(library.pleaves(m[12, 13], 2), "B3", "C#4", "mp")
+    library.E2c(library.pleaves(m[12, 13], 2), "B3", "C#4", "mp")
     E4c(library.pleaves(m[13, 14], 4), "D#5", "G#5", "mf")
-    E2c(library.pleaves(m[14], 2) + m[15][:1], "B3", "C#4", "mp")
+    library.E2c(library.pleaves(m[14], 2) + m[15][:1], "B3", "C#4", "mp")
     plts = baca.select.plts(library.pleaves(m[15, 19], 2))
     dynamics = "mp p pp ppp".split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
+        library.E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
     library.E1(
         library.pleaves(m[19, 20], 1),
         "A4",

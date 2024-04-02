@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -24,7 +25,11 @@ frame = library.frame
 
 
 def GLOBALS(skips):
-    stage_markup = (("1C.beginning", 1),)
+    stage_markup = (
+        ("1C.beginning", 1),
+        ("E", 4),
+        ("I+M", 8),
+    )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[5 - 1], "60", manifests=library.manifests)
@@ -78,6 +83,7 @@ def GT1(voice, meters):
         extra_counts=[-1],
         material=4,
     )
+    rhythm.mmrests(8)
 
 
 def GT2(voice, meters):
@@ -93,11 +99,24 @@ def GT2(voice, meters):
         [-16, -4, 1, -3],
         material=4,
     )
+    rhythm.mmrests(8)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 4)
+    rhythm.make_one_beat_tuplets(
+        meters(5),
+        ["-", 1, -1],
+        extra_counts=[-1],
+        material=1,
+    )
+    rhythm(
+        meters(6, 7),
+        3 * [AG([2], X(7)), -1] + [frame(16, 8)],
+        material=2,
+    )
+    rhythm.mmrests(8)
 
 
 def VC(voice, meters):
@@ -122,6 +141,14 @@ def VC(voice, meters):
         [c(8, 2), -4, c(8, 2), "-"],
         material=1,
     )
+    rhythm.make_one_beat_tuplets(
+        meters(5, 6),
+        [-6, 1, -5, -2, 1, "-"],
+        extra_counts=[-1],
+        material=1,
+    )
+    rhythm.mmrests(7)
+    rhythm.mmrests(8)
 
 
 def fl(m):
@@ -139,7 +166,7 @@ def ob(m):
     baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
-    library.E2a(library.pleaves(m[7], 2), "D6", "E6", peaks="mp")
+    library.E2a(library.pleaves(m[7], 2), "D6", "E6", bar_lines="1", peaks="mp")
 
 
 def gt1(m):
@@ -151,7 +178,7 @@ def gt1(m):
         library.pleaves(m[5, 6], 1),
         "A#4",
         "mf f ff -",
-        bends=[-4],
+        bends=[4],
     )
     library.E4b(library.pleaves(m[7], 4), "C4", "f")
 
@@ -162,6 +189,13 @@ def gt2(m):
     baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
+    library.E1(
+        library.pleaves(m[5, 6], 1),
+        "A#4",
+        "mf f ff -",
+        bends=[-4],
+    )
+    library.E4b(library.pleaves(m[7], 4), "C4", "f")
 
 
 def vn(m):
@@ -169,6 +203,18 @@ def vn(m):
     baca.instrument_name(m[1][0], strings.violin_markup)
     baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
     baca.clef(m[1][0], "treble")
+    library.E1(
+        library.pleaves(m[5], 1),
+        "A4",
+        "p",
+        pizzicato=True,
+        string_numbers=[4],
+    )
+    runs = abjad.select.runs(library.pleaves(m[6, 7], 2))
+    library.E2b(runs[0], "G#4 C5", "mf", damp=True)
+    library.E2b(runs[1], "G#4 C5", "mp", damp=True)
+    library.E2b(runs[2], "G#4 C5", "p", damp=True)
+    library.E2c(runs[3], "B3", "C#4", "p", to_bar_line=True)
 
 
 def vc(m):
@@ -191,15 +237,29 @@ def vc(m):
         "Gb3",
         "f -",
     )
+    baca.clef(m[5][0], "treble")
+    library.E1(
+        library.pleaves(m[5, 6], 1),
+        "A4",
+        "mp mf",
+        pizzicato=True,
+        string_numbers=[4, 1],
+    )
 
 
 def align_spanners(cache):
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl.leaves(), 3)
     ob = cache["ob"]
-    baca.override.dls_staff_padding(ob.leaves(), 4)
+    baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
-    baca.override.dls_staff_padding(gt1[5, 6], 4)
+    baca.override.dls_staff_padding(gt1.leaves(), 4)
+    gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2.leaves(), 4)
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn.leaves(), 4)
     vc = cache["vc"]
-    baca.override.dls_staff_padding(vc[1, 4], 4)
+    baca.override.dls_staff_padding(vc.leaves(), 4)
 
 
 @baca.build.timed("make_score")
