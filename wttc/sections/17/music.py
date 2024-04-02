@@ -202,21 +202,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def I1a(pleaves, pitch, alteration, dynamics):
-    baca.pitch(pleaves, pitch)
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        baca.spanners.trill(
-            plt,
-            alteration=alteration,
-            rleak=True,
-            staff_padding=5.5,
-        )
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-
-
 def I1b(pleaves, pitches, dynamic=None):
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True)
     if dynamic is not None:
@@ -225,63 +210,6 @@ def I1b(pleaves, pitches, dynamic=None):
             baca.hairpin(main_leaves, dynamic)
         else:
             baca.dynamic(main_leaves[0], dynamic)
-
-
-def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
-    baca.pitch(pleaves[glissando_count:], pitch)
-    if glissando_start is not None:
-        baca.glissando(
-            pleaves[: glissando_count + 1],
-            f"{glissando_start}/{glissando_count} {pitch}",
-        )
-    baca.hairpin(
-        pleaves,
-        f"{dynamic}>o!",
-    )
-
-
-def I2b(pleaves, pitch, alteration, dynamic):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.spanners.scp(
-        [pleaves],
-        "O -> T",
-        staff_padding=5.5,
-    )
-    baca.hairpin(
-        pleaves,
-        f"{dynamic}|>opp",
-    )
-
-
-def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
-    start_count = len(pleaves) - 2
-    string = f"{pitch}/{start_count} {peak} {fall}"
-    baca.glissando(
-        pleaves,
-        string,
-    )
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.spanners.scp(
-        [pleaves],
-        "P =|",
-        rleak=True,
-        staff_padding=5.5,
-    )
-    baca.hairpin(
-        pleaves,
-        f"pp<|{dynamic}",
-    )
 
 
 def I3a(pleaves, pitches, dynamics):
@@ -318,10 +246,10 @@ def J1a(pleaves, pitches, dynamic):
 
 
 def fl(m):
-    I2a(library.run(m[1], 2, 0), "B4", "p", "A#4", 2)
-    I2a(library.run(m[1, 2], 2, 1), "B4", "mp", "A#4", 3)
-    I2a(library.run(m[2, 3], 2, 1), "B4", "mf", "A#4", 2)
-    I2a(library.run(m[3], 2, 1), "C#6", "mf")
+    library.I2a(library.run(m[1], 2, 0), "B4", "p", "A#4", 2)
+    library.I2a(library.run(m[1, 2], 2, 1), "B4", "mp", "A#4", 3)
+    library.I2a(library.run(m[2, 3], 2, 1), "B4", "mf", "A#4", 2)
+    library.I2a(library.run(m[3], 2, 1), "C#6", "mf")
     J1a(library.run(m[4, 5], 99, 0), "E6 Eqf6 Eb6", "p")
     J1a(library.run(m[5, 6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6", "mp")
     J1a(library.run(m[6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6 Db6", "mf")
@@ -329,10 +257,10 @@ def fl(m):
 
 def ob(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    I1a(library.pleaves(m[1], 1), "D#6", "E6", "mf - mp -")
-    I1a(library.pleaves(m[2], 1), "D#6", "E6", "p - - -")
-    I1a(library.pleaves(m[3], 1), "D#6", "E6", "(p) mp mf f")
-    I1a(library.pleaves(m[5], 1), "D#6", "E6", "p")
+    library.I1a(library.pleaves(m[1], 1), "D#6", "E6", "mf - mp -")
+    library.I1a(library.pleaves(m[2], 1), "D#6", "E6", "p - - -")
+    library.I1a(library.pleaves(m[3], 1), "D#6", "E6", "(p) mp mf f")
+    library.I1a(library.pleaves(m[5], 1), "D#6", "E6", "p")
 
 
 def gt1(cache):
@@ -387,16 +315,16 @@ def gt2(cache):
 
 
 def vn(m):
-    I2b(library.run(m[1], 2, 0), "B4", "C5", "mp")
-    I2b(library.run(m[1, 2], 2, 1), "B4", "C5", "mf")
-    I2b(library.run(m[2, 3], 2, 1), "B4", "C5", "f")
+    library.I2b(library.run(m[1], 2, 0), "B4", "C5", "mp")
+    library.I2b(library.run(m[1, 2], 2, 1), "B4", "C5", "mf")
+    library.I2b(library.run(m[2, 3], 2, 1), "B4", "C5", "f")
 
 
 def vc(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    I2c(library.run(m[1], 2, 0), "C#3", "D#3", "E3", "D3", "mp")
-    I2c(library.run(m[1, 2], 2, 1), "C#3", "D#3", "E3", "D3", "mf")
-    I2c(library.run(m[2, 3], 2, 1), "C#3", "D#3", "E3", "D3", "f")
+    library.I2c(library.run(m[1], 2, 0), "C#3", "D#3", "E3", "D3", "mp")
+    library.I2c(library.run(m[1, 2], 2, 1), "C#3", "D#3", "E3", "D3", "mf")
+    library.I2c(library.run(m[2, 3], 2, 1), "C#3", "D#3", "E3", "D3", "f")
     I3b(
         library.pleaves(m[3], 3),
         "F2/2 Ab2 G2",

@@ -7,7 +7,9 @@ from wttc import library, strings
 ########################################### 01 ##########################################
 #########################################################################################
 
+A = baca.rhythm.A
 AG = baca.rhythm.AG
+R = baca.rhythm.R
 T = baca.rhythm.T
 TC = baca.rhythm.TC
 bl = baca.rhythm.bl
@@ -19,6 +21,7 @@ t = baca.rhythm.t
 w = baca.rhythm.w
 
 BG = library.BG
+M = library.M
 OBGC = library.OBGC
 X = library.X
 frame = library.frame
@@ -33,6 +36,7 @@ def GLOBALS(skips):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[5 - 1], "60", manifests=library.manifests)
+    baca.metronome_mark(skips[8 - 1], "50", manifests=library.manifests)
     baca.mark(
         skips[7 - 1],
         strings.fermata,
@@ -56,6 +60,12 @@ def FL(voice, meters):
         ["-", 2],
         material=4,
     )
+    rhythm.mmrests(8)
+    rhythm(
+        meters(9),
+        ["-", 8, -3],
+        material=2,
+    )
 
 
 def OB(voice, meters):
@@ -66,7 +76,16 @@ def OB(voice, meters):
         [-8, frame(16, 8)],
         material=2,
     )
-    rhythm.mmrests(8)
+    rhythm(
+        meters(8),
+        [-1, 2, -2, 2, "-"],
+        material=1,
+    )
+    rhythm(
+        meters(9),
+        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        material=1,
+    )
 
 
 def GT1(voice, meters):
@@ -83,7 +102,19 @@ def GT1(voice, meters):
         extra_counts=[-1],
         material=4,
     )
-    rhythm.mmrests(8)
+
+    @baca.call
+    def block():
+        counts = [-3, 6, 6, 3, 6, 6, 3, 6, 6, 3]
+        counts = [int(_ / 3) for _ in counts]
+        assert counts == [-1, 2, 2, 1, 2, 2, 1, 2, 2, 1]
+        counts[1] = BG([2], counts[1])
+        rhythm(
+            meters(8, 9),
+            [-4] + counts + [M(A([1, 1, 1, 1, -1], 16), 5)],
+            do_not_beam_tuplets=True,
+            material=2,
+        )
 
 
 def GT2(voice, meters):
@@ -99,7 +130,30 @@ def GT2(voice, meters):
         [-16, -4, 1, -3],
         material=4,
     )
-    rhythm.mmrests(8)
+
+    @baca.call
+    def block():
+        counts = [-5, 5, 3, 5, 5, 3, 5, 5, 3, 5, 5]
+        counts[-1] -= 1
+        assert counts == [-5, 5, 3, 5, 5, 3, 5, 5, 3, 5, 4]
+        components = rhythm.make_one_beat_tuplets(
+            meters(8, 9),
+            [-12] + counts + ["-"],
+            denominator=64,
+            extra_counts=[-4],
+            material=2,
+        )
+        note = abjad.select.note(components, 0)
+        container = abjad.BeforeGraceContainer("c'8", command=r"\slashedGrace")
+        library.annotate(container, 2)
+        abjad.attach(container, note)
+
+    rhythm(
+        meters(9),
+        R([M(rt(1), 2), 1, 1, 1, 1], 16),
+        material=5,
+        overlap=[-8],
+    )
 
 
 def VN(voice, meters):
@@ -116,7 +170,17 @@ def VN(voice, meters):
         3 * [AG([2], X(7)), -1] + [frame(16, 8)],
         material=2,
     )
-    rhythm.mmrests(8)
+    rhythm(
+        meters(8),
+        [-1, t(11)],
+        material=2,
+    )
+    rhythm(
+        meters(9),
+        [M(1, 2), "-", R([-1, 1, 1, 1, 1, 1], 19)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
 
 def VC(voice, meters):
@@ -148,7 +212,11 @@ def VC(voice, meters):
         material=1,
     )
     rhythm.mmrests(7)
-    rhythm.mmrests(8)
+    rhythm(
+        meters(8, 9),
+        [-1, t(3), AG([2], 8), 1, "-"],
+        material=2,
+    )
 
 
 def fl(m):
@@ -158,6 +226,7 @@ def fl(m):
     baca.clef(m[1][0], "treble")
     library.E3a(library.pleaves(m[4, 5], 3))
     library.E4a(library.pleaves(m[7], 4), "B5", "p")
+    library.I2a(library.run(m[9], 2, 0), "C#6", "mf")
 
 
 def ob(m):
@@ -167,6 +236,8 @@ def ob(m):
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.E2a(library.pleaves(m[7], 2), "D6", "E6", bar_lines="1", peaks="mp")
+    library.I1a(library.pleaves(m[8], 1), "D#6", "E6", "p -")
+    library.I1a(library.pleaves(m[9], 1), "D#6", "E6", "(p) mp mf f")
 
 
 def gt1(m):
@@ -181,6 +252,8 @@ def gt1(m):
         bends=[4],
     )
     library.E4b(library.pleaves(m[7], 4), "C4", "f")
+    library.M2(library.pleaves(m[8, 9], 2), "Bb3 A3 G3 F3 E3 Eb3 Db3 C3 B2 Bb2", "f>p")
+    library.M5a(library.pleaves(m[9], 5), "A2 Ab2 G2 Gb2", "0010")
 
 
 def gt2(m):
@@ -196,6 +269,10 @@ def gt2(m):
         bends=[-4],
     )
     library.E4b(library.pleaves(m[7], 4), "C4", "f")
+    library.M2(
+        library.pleaves(m[8, 9], 2), "D3 D#3 E3 F#3 G#3 A3 A#3 B3 C#4 D4 D#4", "f>p"
+    )
+    library.M5a(library.pleaves(m[9], 5), "E4 F4 F#4 G4", "1101")
 
 
 def vn(m):
@@ -215,6 +292,8 @@ def vn(m):
     library.E2b(runs[1], "G#4 C5", "mp", damp=True)
     library.E2b(runs[2], "G#4 C5", "p", damp=True)
     library.E2c(runs[3], "B3", "C#4", "p", to_bar_line=True)
+    library.I2b(library.run(m[8, 9], 2, 0), "B4", "C5", "f")
+    library.M5b(library.pleaves(m[9], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
 
 
 def vc(m):
@@ -245,6 +324,8 @@ def vc(m):
         pizzicato=True,
         string_numbers=[4, 1],
     )
+    baca.clef(m[8][0], "bass")
+    library.I2c(library.pleaves(m[8, 9], 2), "C#3", "D#3", "E3", "D3", "f")
 
 
 def align_spanners(cache):
@@ -253,9 +334,17 @@ def align_spanners(cache):
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
-    baca.override.dls_staff_padding(gt1.leaves(), 4)
+    baca.override.dls_staff_padding(gt1[1, 7], 3)
+    baca.override.tuplet_bracket_direction_up(gt1[7])
+    baca.override.beam_positions(gt1[8, 9], 4)
+    baca.override.dls_staff_padding(gt1[8, 9], 4)
     gt2 = cache["gt2"]
-    baca.override.dls_staff_padding(gt2.leaves(), 4)
+    baca.override.stem_direction_up(gt2[8, 9][:-5])
+    baca.override.beam_positions(gt2[8, 9][:-5], 4)
+    baca.override.dls_staff_padding(gt2[1, 7], 4)
+    baca.override.dls_staff_padding(gt2[8, 9], 7)
+    baca.override.tuplet_bracket_direction_down(gt2[8, 9])
+    baca.override.tuplet_bracket_staff_padding(gt2[8, 9], 1.5)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn.leaves(), 4)
     vc = cache["vc"]
@@ -266,7 +355,7 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [3, 6, 6, 6, 3, 4, 6, 4]
+    numerators = [3, 6, 6, 6, 3, 4, 6, 3, 6]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -290,6 +379,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
+    # library.highlight_staves(cache)
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
@@ -338,7 +428,7 @@ def make_layout():
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            # baca.layout.System(8, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(8, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
@@ -347,6 +437,7 @@ def make_layout():
         forbid_new_spacing_section=[3],
         overrides=[
             baca.layout.Override((4, 7), (1, 32)),
+            baca.layout.Override((8, 9), (1, 48)),
         ],
     )
     baca.build.write_layout_ly(breaks, spacing)

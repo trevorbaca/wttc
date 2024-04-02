@@ -664,17 +664,6 @@ def M1_3(pleaves, glissandi, dynamics):
     )
 
 
-def M2(pleaves, pitches, dynamic):
-    baca.pitches(pleaves, pitches, strict=True)
-    if ">" in dynamic:
-        baca.hairpin(
-            pleaves,
-            dynamic,
-        )
-    else:
-        baca.dynamic(pleaves[0], dynamic)
-
-
 def M3a(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.stem_tremolo(pleaves)
@@ -719,31 +708,6 @@ def M4(pleaves, pitch, hairpin):
     )
 
 
-def M5a(pleaves, pitches, falls, dynamics=None):
-    baca.pitches(pleaves, pitches, strict=True)
-    plts = baca.select.plts(pleaves)
-    if dynamics is not None:
-        dynamics = dynamics.split()
-    else:
-        dynamics = len(plts) * ["-"]
-    for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
-        if fall == "0":
-            baca.articulation(plt.tail, "bendAfter #'-4")
-        else:
-            assert fall == "1"
-            baca.articulation(plt.tail, "bendAfter #'4")
-        baca.dynamic(plt.head, dynamic)
-
-
-def M5b(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.triple_staccato(plt.head)
-        baca.dynamic(plt.head, dynamic)
-
-
 def N1c(run, glissando, string_number, hairpin):
     baca.glissando(run, glissando)
     baca.override.note_head_style_harmonic(run)
@@ -777,39 +741,43 @@ def ob(m):
 
 
 def gt1(m):
-    M2(library.pleaves(m[1], 2), "Bb3 A3", "mp")
+    library.M2(library.pleaves(m[1], 2), "Bb3 A3", "mp")
     M3a(library.pleaves(m[1, 4], 3), "G2", 'p<"f"')
-    M2(library.pleaves(m[4], 2), "Bb3 A3", "mf")
+    library.M2(library.pleaves(m[4], 2), "Bb3 A3", "mf")
     M3a(library.pleaves(m[5, 6], 3), "G#2", 'mp<"f"')
-    M2(library.pleaves(m[6, 7], 2), "Bb3 A3 G3 F3", "f")
-    M2(library.pleaves(m[12, 13], 2), "Bb3 A3 G3 F3 E3 Eb3 Db3 C3 B2 Bb2", "f>p")
-    M5a(library.pleaves(m[14, 15], 5), "A2 Ab2 G2 Gb2", "0010")
-    M2(library.pleaves(m[16, 18], 2), "Db3 C3 B2 Bb2 A2 Ab2", "f>p")
-    M5a(library.pleaves(m[20, 21], 5), "G2 Gb2", "01", "(p) -")
-    M2(library.pleaves(m[22, 23], 2), "Db3 C3 B2 Bb2 A2", "mf>p")
-    M5a(library.pleaves(m[26, 28], 5), "Ab2 G2 Gb2 F2", "0010", "(p) - - -")
-    M2(library.pleaves(m[29, 30], 2), "Db3 C3 B2", "mp")
+    library.M2(library.pleaves(m[6, 7], 2), "Bb3 A3 G3 F3", "f")
+    library.M2(
+        library.pleaves(m[12, 13], 2), "Bb3 A3 G3 F3 E3 Eb3 Db3 C3 B2 Bb2", "f>p"
+    )
+    library.M5a(library.pleaves(m[14, 15], 5), "A2 Ab2 G2 Gb2", "0010")
+    library.M2(library.pleaves(m[16, 18], 2), "Db3 C3 B2 Bb2 A2 Ab2", "f>p")
+    library.M5a(library.pleaves(m[20, 21], 5), "G2 Gb2", "01", "(p) -")
+    library.M2(library.pleaves(m[22, 23], 2), "Db3 C3 B2 Bb2 A2", "mf>p")
+    library.M5a(library.pleaves(m[26, 28], 5), "Ab2 G2 Gb2 F2", "0010", "(p) - - -")
+    library.M2(library.pleaves(m[29, 30], 2), "Db3 C3 B2", "mp")
     M3a(library.run(m[30, 33], 3, 0), "Gb2", "p")
-    M2(library.pleaves(m[33], 2), "Db3 C3", "mp")
+    library.M2(library.pleaves(m[33], 2), "Db3 C3", "mp")
     M3a(library.run(m[33, 37], 3, 1), "G2", "p")
 
 
 def gt2(m):
     library.rotate_rehearsal_mark_literal(m[1][0])
-    M2(library.pleaves(m[1], 2), "D3 D#3", "mp")
+    library.M2(library.pleaves(m[1], 2), "D3 D#3", "mp")
     M3a(library.pleaves(m[1, 4], 3), "F#2", 'p<"f"')
-    M2(library.pleaves(m[4, 5], 2), "D3 D#3 E3", "mf")
+    library.M2(library.pleaves(m[4, 5], 2), "D3 D#3 E3", "mf")
     M3a(library.pleaves(m[5, 6], 3), "F#2", 'mp<"f"')
-    M2(library.pleaves(m[6, 7], 2), "D3 D#3 E3 F#3 G#3", "f")
-    M2(library.pleaves(m[12, 14], 2), "D3 D#3 E3 F#3 G#3 A3 A#3 B3 G#4 D4 D#4", "f>p")
-    M5a(library.pleaves(m[14, 15], 5), "E4 F4 F#4 G4", "1101")
-    M2(library.pleaves(m[16, 18], 2), "A#3 B3 C#4 D4 D#4 E4", "f>p")
-    M5a(library.pleaves(m[20, 21], 5), "F4 F#4 G4", "101", "(p) - -")
-    M2(library.pleaves(m[22, 23], 2), "G#4 D4 D#4 E4 F4", "mf>p")
-    M5a(library.pleaves(m[26, 28], 5), "F#4 G4 G#4", "101", "(p) - -")
-    M2(library.pleaves(m[29, 30], 2), "C#4 D4 E4 F4", "mp")
+    library.M2(library.pleaves(m[6, 7], 2), "D3 D#3 E3 F#3 G#3", "f")
+    library.M2(
+        library.pleaves(m[12, 14], 2), "D3 D#3 E3 F#3 G#3 A3 A#3 B3 C#4 D4 D#4", "f>p"
+    )
+    library.M5a(library.pleaves(m[14, 15], 5), "E4 F4 F#4 G4", "1101")
+    library.M2(library.pleaves(m[16, 18], 2), "A#3 B3 C#4 D4 D#4 E4", "f>p")
+    library.M5a(library.pleaves(m[20, 21], 5), "F4 F#4 G4", "101", "(p) - -")
+    library.M2(library.pleaves(m[22, 23], 2), "G#4 D4 D#4 E4 F4", "mf>p")
+    library.M5a(library.pleaves(m[26, 28], 5), "F#4 G4 G#4", "101", "(p) - -")
+    library.M2(library.pleaves(m[29, 30], 2), "C#4 D4 E4 F4", "mp")
     M3a(library.run(m[30, 33], 3, 0), "F2", "p")
-    M2(library.pleaves(m[33], 2), "C#4 D4 E4", "mp")
+    library.M2(library.pleaves(m[33], 2), "C#4 D4 E4", "mp")
     M3a(library.run(m[33, 37], 3, 1), "F2", "p")
 
 
@@ -821,12 +789,12 @@ def vn(m):
     M1_1(library.pleaves(m[10], 1)[:2], "E4:A4", "D#5", "o<f")
     M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
-    M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
+    library.M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
     M1_1(library.pleaves(m[16], 1)[:2], "F#4:B4", "G5", "o<f")
     M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
-    M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
+    library.M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
     M1_1(library.pleaves(m[22], 1), "G4:C5", "C6", "pp<| f|>pp", [1, 2])
-    M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
+    library.M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
     N1c(library.run(m[27, 30], 99, 0), "Gb5 Eb5", 2, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "Gb5 D5", 2, "mp>o!")
     N1c(library.run(m[33, 37], 99, 1), "Gb5 Db5", 2, "mf>o!")
@@ -973,6 +941,7 @@ def make_layout():
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
+        lax_spacing_section=[11, 12],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

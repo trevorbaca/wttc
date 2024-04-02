@@ -158,6 +158,7 @@ class Rhythm:
         counts,
         *,
         debug=False,
+        denominator=16,
         do_not_extend=False,
         extra_counts=(),
         material=None,
@@ -171,7 +172,7 @@ class Rhythm:
         durations = [sum(durations)]
         durations = baca.sequence.quarters(durations)
         tuplets = rmakers.talea(
-            durations, counts, 16, extra_counts=extra_counts, tag=tag
+            durations, counts, denominator, extra_counts=extra_counts, tag=tag
         )
         components = clean_up_rhythmic_spelling(
             tuplets, time_signatures, debug=debug, tag=tag
@@ -1060,9 +1061,9 @@ def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None, bar_lines=""):
         runs = abjad.select.runs(pleaves)
         for run, peak, bar_line in zip(runs, peaks, bar_lines, strict=True):
             pieces = baca.select.partition_in_halves(run)
-            tweaks = ()
+            tweaks = []
             if bar_line == "1":
-                tweaks = (baca.postevent.to_bar_line_true(index=-1),)
+                tweaks.append(baca.postevent.to_bar_line_true(index=-1))
             baca.hairpin(
                 pieces,
                 swells(peak),
@@ -1160,9 +1161,9 @@ def E2c(
         )
     else:
         pieces = baca.select.partition_in_halves(pleaves)
-        tweaks = ()
+        tweaks = []
         if to_bar_line is True:
-            tweaks = (baca.postevent.to_bar_line_true(index=-1),)
+            tweaks.append(baca.postevent.to_bar_line_true(index=-1))
         baca.hairpin(
             pieces,
             f"o< {peak}>o!",
@@ -1207,3 +1208,113 @@ def E4a(pleaves, pitch, peaks):
 def E4b(pleaves, pitch, dynamic):
     baca.pitch(pleaves, pitch)
     baca.dynamic(pleaves[0], dynamic)
+    for ptail in baca.select.ptails(pleaves):
+        baca.laissez_vibrer(ptail)
+
+
+def I1a(pleaves, pitch, alteration, dynamics):
+    baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.spanners.trill(
+            plt,
+            alteration=alteration,
+            rleak=True,
+            staff_padding=5.5,
+        )
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
+def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
+    baca.pitch(pleaves[glissando_count:], pitch)
+    if glissando_start is not None:
+        baca.glissando(
+            pleaves[: glissando_count + 1],
+            f"{glissando_start}/{glissando_count} {pitch}",
+        )
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+    )
+
+
+def I2b(pleaves, pitch, alteration, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.spanners.scp(
+        [pleaves],
+        "O -> T",
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}|>opp",
+    )
+
+
+def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
+    start_count = len(pleaves) - 2
+    string = f"{pitch}/{start_count} {peak} {fall}"
+    baca.glissando(
+        pleaves,
+        string,
+    )
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.spanners.scp(
+        [pleaves],
+        "P =|",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        pleaves,
+        f"pp<|{dynamic}",
+    )
+
+
+def M2(pleaves, pitches, dynamic):
+    baca.pitches(pleaves, pitches, strict=True)
+    if ">" in dynamic:
+        baca.hairpin(
+            baca.select.pheads(pleaves),
+            dynamic,
+        )
+    else:
+        baca.dynamic(pleaves[0], dynamic)
+
+
+def M5a(pleaves, pitches, falls, dynamics=None):
+    baca.pitches(pleaves, pitches, strict=True)
+    plts = baca.select.plts(pleaves)
+    if dynamics is not None:
+        dynamics = dynamics.split()
+    else:
+        dynamics = len(plts) * ["-"]
+    for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
+        if fall == "0":
+            baca.articulation(plt.tail, "bendAfter #'-4")
+        else:
+            assert fall == "1"
+            baca.articulation(plt.tail, "bendAfter #'4")
+        baca.dynamic(plt.head, dynamic)
+
+
+def M5b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.triple_staccato(plt.head)
+        baca.dynamic(plt.head, dynamic)

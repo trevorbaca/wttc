@@ -21,22 +21,12 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [1],
-    "duration": "0'26''",
-    "final_measure_number": 8,
+    "bol_measure_numbers": [1, 8],
+    "duration": "0'33''",
+    "final_measure_number": 9,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "AltoFlute.Music": [
-            baca.Memento(
-                context="AltoFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="p",
-            )
-        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -70,7 +60,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mf",
+                value="f",
             )
         ],
         "Cello.Staff": [
@@ -88,7 +78,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="treble",
+                value="bass",
             ),
             baca.Memento(
                 context="Cello.Music",
@@ -106,7 +96,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="f",
+                value="p",
             )
         ],
         "Guitar.1.Staff": [
@@ -142,7 +132,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="f",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [
@@ -170,6 +160,16 @@
                 synthetic_offset=None,
                 value="Gt. 2",
             ),
+        ],
+        "Oboe.Music": [
+            baca.Memento(
+                context="Oboe.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="f",
+            )
         ],
         "Oboe.Staff": [
             baca.Memento(
@@ -204,7 +204,7 @@
                 manifest="metronome_marks",
                 prototype=None,
                 synthetic_offset=None,
-                value="60",
+                value="50",
             ),
             baca.Memento(
                 context="Skips",
@@ -212,8 +212,18 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="4/4",
+                value="6/4",
             ),
+        ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="p",
+            )
         ],
         "Violin.Staff": [
             baca.Memento(
@@ -244,6 +254,6 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'26''",
-    "time_signatures": ["3/4", "6/4", "6/4", "6/4", "3/4", "4/4", "6/4", "4/4"],
+    "stop_clock_time": "0'33''",
+    "time_signatures": ["3/4", "6/4", "6/4", "6/4", "3/4", "4/4", "6/4", "3/4", "6/4"],
 }

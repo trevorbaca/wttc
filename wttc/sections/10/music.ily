@@ -2670,6 +2670,7 @@ number.10.Guitar.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
+        \laissezVibrer
 
     }
 
@@ -2690,6 +2691,7 @@ number.10.Guitar.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -2708,6 +2710,7 @@ number.10.Guitar.1.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
         c''8
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -2729,6 +2732,7 @@ number.10.Guitar.1.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
         c''8
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -2748,6 +2752,7 @@ number.10.Guitar.1.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
         c''8
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -2769,6 +2774,7 @@ number.10.Guitar.1.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
         c''8
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -2790,6 +2796,7 @@ number.10.Guitar.1.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
         c''8
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -2816,6 +2823,7 @@ number.10.Guitar.1.Music = {
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight hotpink
         c''8
+        \laissezVibrer
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -3280,6 +3288,7 @@ number.10.Guitar.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3298,6 +3307,7 @@ number.10.Guitar.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3309,6 +3319,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3321,6 +3332,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3335,6 +3347,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3347,6 +3360,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3360,6 +3374,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3373,6 +3388,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3384,6 +3400,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3397,6 +3414,7 @@ number.10.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     c''16
+    \laissezVibrer
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight

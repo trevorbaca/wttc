@@ -153,7 +153,7 @@
 
             % [PageLayout measure 11]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #20
+            \baca-new-lax-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -166,7 +166,7 @@
 
             % [PageLayout measure 12]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #20
+            \baca-new-lax-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4

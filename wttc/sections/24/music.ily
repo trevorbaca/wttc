@@ -2189,15 +2189,15 @@ number.24.Guitar.1.Music = {
     \repeatTie
 
     af!16
-    ]
-    ~
-
-    af8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+    ]
+    ~
+
+    af8
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -3025,7 +3025,7 @@ number.24.Guitar.2.Music = {
 
     b'4
 
-    gs''!8.
+    cs''!8.
     [
 
     d''16
@@ -3035,6 +3035,11 @@ number.24.Guitar.2.Music = {
     d''4
 
     ds''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
     - \tweak stencil ##f
     ~
     \revert DynamicLineSpanner.staff-padding
@@ -3046,11 +3051,6 @@ number.24.Guitar.2.Music = {
         % [Guitar.2.Music measure 14]
         \once \override Beam.grow-direction = #left
         ds''16 * 17664/5120
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \p
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"17664" #"5120"
         [
@@ -3142,6 +3142,11 @@ number.24.Guitar.2.Music = {
     \repeatTie
 
     e''8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
     ]
     - \tweak stencil ##f
     ~
@@ -3149,11 +3154,6 @@ number.24.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 18]
     e''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \p
     \repeatTie
 
       %! STAFF_HIGHLIGHT
@@ -3274,15 +3274,15 @@ number.24.Guitar.2.Music = {
     ]
 
     f''4
-    - \tweak stencil ##f
-    ~
-
-    f''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+    - \tweak stencil ##f
+    ~
+
+    f''16
     \repeatTie
 
       %! STAFF_HIGHLIGHT
