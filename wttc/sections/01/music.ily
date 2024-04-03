@@ -39,7 +39,7 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C.beginning(1)"
+    - \baca-start-snm-left-only "C.beginning(y)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -315,7 +315,7 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "A.end(1) + B.end(1)"
+    - \baca-start-snm-left-only "A.end(x) + B.end(y)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
