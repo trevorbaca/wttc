@@ -940,6 +940,92 @@ voice_abbreviations = {
 }
 
 
+def A3b(
+    pleaves,
+    pitch,
+    hairpin_lparts,
+    hairpin,
+    scp_lparts,
+    scp,
+    *,
+    rleak_hairpin=False,
+    # TODO: reverse keyword:
+    do_not_rleak_scp=False,
+):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        rleak=rleak_hairpin,
+    )
+    baca.spanners.scp(
+        baca.select.lparts(pleaves, scp_lparts),
+        scp,
+        rleak=not do_not_rleak_scp,
+        staff_padding=3,
+    )
+
+
+def B1c(run, dynamic, grace_pitch, glissando, string_number, *, staff_padding=3):
+    baca.override.note_head_style_harmonic(run)
+    baca.pitch(run[0], grace_pitch)
+    baca.glissando(run[1:], glissando)
+    baca.spanners.string_number(
+        run,
+        string_number,
+        rleak=True,
+        staff_padding=staff_padding,
+    )
+    baca.hairpin(
+        run[1:],
+        f"{dynamic}>o!",
+        rleak=True,
+    )
+
+
+def B3(
+    plts,
+    nongrace_pitch,
+    grace_pitch,
+    hairpin_lparts,
+    hairpin,
+    *,
+    debug=False,
+    rleak_hairpin=False,
+    to_bar_line=False,
+    trill_staff_padding=None,
+):
+    nongraces = baca.select.pleaves(plts, grace=False)
+    nongrace_plts = baca.select.plts(nongraces)
+    for nongrace_plt in nongrace_plts:
+        baca.pitch(nongrace_plt, nongrace_pitch)
+        baca.spanners.trill(
+            nongrace_plt,
+            alteration="M2",
+            rleak=True,
+            staff_padding=trill_staff_padding,
+        )
+        baca.untie(nongrace_plt)
+        baca.parenthesize(nongrace_plt[1:])
+    grace_plts = baca.select.pleaves(plts, grace=True)
+    baca.pitch(grace_plts, grace_pitch)
+    if abjad.get.grace(plts[0]):
+        plts = plts[1:]
+    if hairpin_lparts is not None:
+        parts = baca.select.lparts(plts, hairpin_lparts)
+    else:
+        parts = plts
+    tweaks = []
+    if to_bar_line is True:
+        tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+    baca.hairpin(
+        parts,
+        hairpin,
+        *tweaks,
+        rleak=rleak_hairpin,
+    )
+
+
 def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
     plts = baca.select.plts(pleaves)
     done_chord_1 = False

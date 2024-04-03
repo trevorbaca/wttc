@@ -892,45 +892,6 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
             )
 
 
-def B3(
-    plts,
-    nongrace_pitch,
-    grace_pitch,
-    hairpin_lparts,
-    hairpin,
-    *,
-    debug=False,
-    rleak_hairpin=False,
-    # trill_staff_padding=5.5,
-    trill_staff_padding=None,
-):
-    nongraces = baca.select.pleaves(plts, grace=False)
-    nongrace_plts = baca.select.plts(nongraces)
-    for nongrace_plt in nongrace_plts:
-        baca.pitch(nongrace_plt, nongrace_pitch)
-        baca.spanners.trill(
-            nongrace_plt,
-            alteration="M2",
-            rleak=True,
-            staff_padding=trill_staff_padding,
-        )
-        baca.untie(nongrace_plt)
-        baca.parenthesize(nongrace_plt[1:])
-    grace_plts = baca.select.pleaves(plts, grace=True)
-    baca.pitch(grace_plts, grace_pitch)
-    if abjad.get.grace(plts[0]):
-        plts = plts[1:]
-    if hairpin_lparts is not None:
-        parts = baca.select.lparts(plts, hairpin_lparts)
-    else:
-        parts = plts
-    baca.hairpin(
-        parts,
-        hairpin,
-        rleak=rleak_hairpin,
-    )
-
-
 def B4a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
@@ -1048,7 +1009,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
 
 def fl(m):
     B1a(library.pleaves(m[1], 1), "G3", "mp -")
-    B3(
+    library.B3(
         library.run(m[1, 2], 3, 0),
         "D5",
         "Eb4",
@@ -1058,7 +1019,7 @@ def fl(m):
         trill_staff_padding=3,
     )
     B1a(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
-    B3(
+    library.B3(
         library.run(m[2, 3], 3, 1),
         "D5",
         "Eb4",
@@ -1068,7 +1029,7 @@ def fl(m):
         trill_staff_padding=5.5,
     )
     B1a(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
-    B3(
+    library.B3(
         library.pleaves(m[4], 3),
         "C#5",
         "D#5",
@@ -1079,7 +1040,7 @@ def fl(m):
     )
     B1a(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
     B1a(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
-    B3(
+    library.B3(
         library.run(m[8, 9], 3, 0),
         "C5",
         "Db4",
@@ -1088,7 +1049,7 @@ def fl(m):
         trill_staff_padding=3,
     )
     B1a(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
-    B3(
+    library.B3(
         library.run(m[12, 13], 3, 0),
         "Bb4",
         "B3",
@@ -1097,7 +1058,7 @@ def fl(m):
         trill_staff_padding=3,
     )
     B1a(library.pleaves(m[14, 15], 1), "D4", "p -")
-    B3(
+    library.B3(
         library.pleaves(m[15, 16], 3),
         "A4",
         "G#3",
@@ -1111,11 +1072,17 @@ def fl(m):
 
 
 def ob(m):
-    B3(library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", rleak_hairpin=True)
-    B3(library.pleaves(m[2], 3), "D5", "Eb4", [2, 4], "p< f>o!", rleak_hairpin=True)
-    B3(library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak_hairpin=True)
-    B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
-    B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")
+    library.B3(
+        library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", rleak_hairpin=True
+    )
+    library.B3(
+        library.pleaves(m[2], 3), "D5", "Eb4", [2, 4], "p< f>o!", rleak_hairpin=True
+    )
+    library.B3(
+        library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak_hairpin=True
+    )
+    library.B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
+    library.B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")
     baca.override.tuplet_bracket_direction_down(m.leaves())
     baca.override.trill_spanner_staff_padding(m.leaves(), 3)
 
