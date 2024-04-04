@@ -138,27 +138,27 @@
               %! BREAK
             \baca-lbsd #160 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \break
             s1 * 4/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/32]"
+            %@% - \baca-start-spm-left-only "[1/48]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 11]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #64
               %! BREAK
             \noBreak
             s1 * 4/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/32]"
+            %@% - \baca-start-spm-left-only "[1/64]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 

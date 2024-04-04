@@ -92,7 +92,12 @@ def GT1(voice, meters):
         extra_counts=[-1],
         material=4,
     )
-    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(10, 11),
+        [-8, A([1, 1, 1, 1, -1], 24)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
 
 def GT2(voice, meters):
@@ -123,7 +128,12 @@ def GT2(voice, meters):
         [-8, 1, "-"],
         material=4,
     )
-    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(10, 11),
+        [-8, R([-1, 1, 1, 1, 1], 24)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
 
 def VN(voice, meters):
@@ -134,7 +144,14 @@ def VN(voice, meters):
         material=2,
     )
     rhythm.mmrests(7, 9)
-    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(10, 11),
+        [-8, R([-2, 2, 2, 2, 2, 2], 48)] + [M(_, 3) for _ in [t(4), 1, 1, 1, 1]],
+        do_not_beam_tuplets=True,
+        denominator=32,
+        material=5,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
@@ -174,6 +191,7 @@ def gt1(m):
     baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E4b(library.pleaves(m[6, 9], 4), "C4", "p")
+    library.M5a(library.pleaves(m[10, 11], 5), "A2 Ab2 G2 Gb2", "0010")
 
 
 def gt2(m):
@@ -183,6 +201,7 @@ def gt2(m):
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.E4b(library.pleaves(m[6, 9], 4), "C4", "p")
+    library.M5a(library.pleaves(m[10, 11], 5), "E4 F4 F#4 G4", "1101")
 
 
 def vn(m):
@@ -191,10 +210,25 @@ def vn(m):
     baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E2c(library.pleaves(m[1, 2][:4], 2), "B3", "C#4", "mp")
-    plts = baca.select.plts(library.pleaves(m[2, 6], 2))
-    dynamics = "mp p pp ppp".split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        library.E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
+
+    @baca.call
+    def bloc():
+        plts = baca.select.plts(library.pleaves(m[2, 6], 2))
+        dynamics = "mp p pp ppp".split()
+        for plt, dynamic in zip(plts, dynamics, strict=True):
+            library.E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
+
+    library.M5b(library.pleaves(m[10, 11], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
+    library.H3(
+        library.pleaves(m[11], 3),
+        "E4",
+        "F#4",
+        "F#5",
+        "D#4",
+        "mp f",
+        "P1",
+        final_up=True,
+    )
 
 
 def vc(m):
@@ -316,7 +350,10 @@ def make_layout():
     )
     spacing = baca.layout.Spacing(
         default=(1, 16),
-        overrides=[baca.layout.Override((10, 11), (1, 32))],
+        overrides=[
+            baca.layout.Override(10, (1, 48)),
+            baca.layout.Override(11, (1, 64)),
+        ],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

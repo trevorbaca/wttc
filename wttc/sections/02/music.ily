@@ -1266,15 +1266,44 @@ number.2.Guitar.1.Music = {
     \revert TupletBracket.direction
 
     % [Guitar.1.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
 
-    % [Guitar.1.Music measure 11]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-    \revert DynamicLineSpanner.staff-padding
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
+    \times 1/1
+    {
+
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #right
+        a16 * 44928/5120
+        - \bendAfter #'-4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"44928" #"5120"
+        [
+
+        af!16 * 24192/5120
+        - \bendAfter #'-4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"24192" #"5120"
+
+        g16 * 19968/5120
+        - \bendAfter #'4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"19968" #"5120"
+
+        gf!16 * 17664/5120
+        - \bendAfter #'-4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"17664" #"5120"
+
+        r16 * 16128/5120
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"16128" #"5120"
+        ]
+        \revert DynamicLineSpanner.staff-padding
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
 
 }
 
@@ -1398,15 +1427,44 @@ number.2.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r2
 
-    % [Guitar.2.Music measure 11]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
-    \revert DynamicLineSpanner.staff-padding
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
+    \times 1/1
+    {
+
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #left
+        r16 * 8832/5120
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"8832" #"5120"
+        [
+
+        e''16 * 18816/5120
+        - \bendAfter #'4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"18816" #"5120"
+
+        f''16 * 25728/5120
+        - \bendAfter #'4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"25728" #"5120"
+
+        fs''!16 * 31872/5120
+        - \bendAfter #'-4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"31872" #"5120"
+
+        g''16 * 37632/5120
+        - \bendAfter #'4
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"37632" #"5120"
+        ]
+        \revert DynamicLineSpanner.staff-padding
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
 
 }
 
@@ -1671,15 +1729,167 @@ number.2.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 10]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r4
 
-    % [Violin.Music measure 11]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
+    \times 1/1
+    {
+
+        \override Staff.Stem.stemlet-length = 0.75
+        \once \override Beam.grow-direction = #left
+        r16 * 1344/1024
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"1344" #"1024"
+        [
+
+        g'16 * 2816/1024
+        - \baca-staccati #3
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \ff
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"2816" #"1024"
+
+        gqs'!16 * 3840/1024
+        - \baca-staccati #3
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"3840" #"1024"
+
+        gs'!16 * 4736/1024
+        - \baca-staccati #3
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"4736" #"1024"
+
+        gtqs'!16 * 5568/1024
+        - \baca-staccati #3
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"5568" #"1024"
+
+        a'16 * 6272/1024
+        - \baca-staccati #3
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"6272" #"1024"
+        ]
+        \revert Staff.Stem.stemlet-length
+
+    }
+    \revert TupletNumber.text
+
+      %! SPANNER_START
+    \pitchedTrill
+    e'8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    [
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    - \tweak stencil ##f
+    ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan fs'
+
+    e'32
+    \repeatTie
+
+    \override NoteHead.style = #'harmonic
+    e'32
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    fs''!32
+    \glissando
+
+    ds'!32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+    ]
     \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
+
+      %! ANCHOR_NOTE
+    % [Violin.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
