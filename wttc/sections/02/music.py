@@ -38,7 +38,8 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 9)
+    rhythm.mmrests(10, 11)
 
 
 def OB(voice, meters):
@@ -49,6 +50,7 @@ def OB(voice, meters):
         material=2,
     )
     rhythm.mmrests(7, 9)
+    rhythm.mmrests(10, 11)
 
 
 def GT1(voice, meters):
@@ -80,6 +82,7 @@ def GT1(voice, meters):
         extra_counts=[-1],
         material=4,
     )
+    rhythm.mmrests(10, 11)
 
 
 def GT2(voice, meters):
@@ -110,6 +113,7 @@ def GT2(voice, meters):
         [-8, 1, "-"],
         material=4,
     )
+    rhythm.mmrests(10, 11)
 
 
 def VN(voice, meters):
@@ -120,11 +124,13 @@ def VN(voice, meters):
         material=2,
     )
     rhythm.mmrests(7, 9)
+    rhythm.mmrests(10, 11)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 9)
+    rhythm.mmrests(10, 11)
 
 
 def fl(m):
@@ -201,7 +207,7 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [3, 4, 4, 4, 4, 6, 4, 4, 4]
+    numerators = [3, 4, 4, 4, 4, 6, 4, 4, 4, 4, 4]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -274,11 +280,12 @@ def make_layout():
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            # baca.layout.System(8, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(10, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 16),
+        overrides=[baca.layout.Override((10, 11), (1, 32))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
