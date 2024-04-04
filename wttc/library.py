@@ -940,6 +940,21 @@ voice_abbreviations = {
 }
 
 
+def e4(twelfths=False):
+    if twelfths is False:
+        counts = list(range(1, 14 + 1))
+        assert sum(counts) == 105
+        permutation = [0, 5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9]
+        assert set(permutation) == set(range(14))
+    else:
+        counts = list(range(1, 12 + 1))
+        assert sum(counts) == 78
+        permutation = [0, 5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7]
+        assert set(permutation) == set(range(12))
+    counts = abjad.sequence.permute(counts, permutation)
+    return counts
+
+
 def A3b(
     pleaves,
     pitch,
@@ -1139,7 +1154,7 @@ def E1(
             )
 
 
-def E2a(pleaves, pitch, alteration, *, peaks=None, starts=None, bar_lines=""):
+def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
     baca.pitch(pleaves, pitch)
     bar_lines = list(bar_lines)
     if peaks:

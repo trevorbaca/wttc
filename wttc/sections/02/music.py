@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -42,22 +43,83 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1, 6),
+        [-3, t(1), frame(8, 4), rt(1)] + 4 * [X(15), rt(1)] + ["-"],
+        material=2,
+    )
+    rhythm.mmrests(7, 9)
 
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 5)
+
+    @baca.call
+    def block():
+        counts = library.e4(twelfths=True)
+        counts = baca.sequence.negate_elements(counts, indices=[1], period=2)
+        counts_ = []
+        for count in counts:
+            if 1 < count:
+                counts_.extend([1, -(count - 1)])
+            else:
+                counts_.append(count)
+        assert abjad.sequence.weight(counts_) == 78
+        left, right = abjad.sequence.split(counts_, [42, 78 - 42])
+        rhythm.make_one_beat_tuplets(
+            meters(6, 8),
+            right + ["-"],
+            extra_counts=[-1],
+            material=4,
+        )
+
+    rhythm.make_one_beat_tuplets(
+        meters(9),
+        [-7, 1, "-"],
+        extra_counts=[-1],
+        material=4,
+    )
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 5)
+
+    @baca.call
+    def block():
+        counts = library.e4()
+        counts = abjad.sequence.rotate(counts, -2)
+        counts = baca.sequence.negate_elements(counts, indices=[0], period=2)
+        counts_ = []
+        for count in counts:
+            if 1 < count:
+                counts_.extend([1, -(count - 1)])
+            else:
+                counts_.append(count)
+        assert abjad.sequence.weight(counts_) == 105
+        left, right = abjad.sequence.split(counts_, [56, 105 - 56])
+        rhythm(
+            meters(6, 8),
+            right + ["-"],
+            material=4,
+        )
+
+    rhythm(
+        meters(9),
+        [-8, 1, "-"],
+        material=4,
+    )
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1, 6),
+        [-3, t(1), frame(8, 4)] + 3 * [rt(1), X(15)] + [rt(1), X(t(15)), 1, "-"],
+        material=2,
+    )
+    rhythm.mmrests(7, 9)
 
 
 def VC(voice, meters):
@@ -78,6 +140,10 @@ def ob(m):
     baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
+    library.E2a(library.pleaves(m[1, 2], 2)[:4], "D6", "E6", "0", peaks="mp")
+    library.E2a(
+        library.pleaves(m[2, 6][1:], 2), "D#6", "E6", "0000", starts="mp p pp pp"
+    )
 
 
 def gt1(m):
@@ -85,6 +151,7 @@ def gt1(m):
     baca.instrument_name(m[1][0], strings.guitar_i_markup)
     baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
     baca.clef(m[1][0], "treble")
+    library.E4b(library.pleaves(m[6, 9], 4), "C4", "p")
 
 
 def gt2(m):
@@ -93,6 +160,7 @@ def gt2(m):
     baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
+    library.E4b(library.pleaves(m[6, 9], 4), "C4", "p")
 
 
 def vn(m):
@@ -100,6 +168,11 @@ def vn(m):
     baca.instrument_name(m[1][0], strings.violin_markup)
     baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
     baca.clef(m[1][0], "treble")
+    library.E2c(library.pleaves(m[1, 2][:4], 2), "B3", "C#4", "mp")
+    plts = baca.select.plts(library.pleaves(m[2, 6], 2))
+    dynamics = "mp p pp ppp".split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        library.E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
 
 
 def vc(m):
@@ -111,15 +184,17 @@ def vc(m):
 
 
 def align_spanners(cache):
-    """
-    fl = cache["fl"]
+    # fl = cache["fl"]
     ob = cache["ob"]
+    baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
+    baca.override.tuplet_bracket_direction_up(gt1[1, 9])
+    baca.override.dls_staff_padding(gt1.leaves(), 3)
     gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2.leaves(), 3)
     vn = cache["vn"]
-    vc = cache["vc"]
-    """
-    pass
+    baca.override.dls_staff_padding(vn.leaves(), 4)
+    # vc = cache["vc"]
 
 
 @baca.build.timed("make_score")
