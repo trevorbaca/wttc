@@ -8951,8 +8951,6 @@ number.12.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -8967,6 +8965,8 @@ number.12.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
@@ -9027,8 +9027,6 @@ number.12.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -9042,6 +9040,8 @@ number.12.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
@@ -9102,8 +9102,6 @@ number.12.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -9117,6 +9115,8 @@ number.12.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! SPANNER_STOP
     \stopTrillSpan
     [
@@ -9172,8 +9172,6 @@ number.12.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -9209,6 +9207,9 @@ number.12.Violin.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \stopTrillSpan
@@ -10828,15 +10829,12 @@ number.12.Cello.Music = {
     f16
     \glissando
 
-    \once \override Stem.direction = #down
     d32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
     ]
     \revert NoteHead.style
 
@@ -10849,6 +10847,8 @@ number.12.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
@@ -10909,8 +10909,6 @@ number.12.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -10924,6 +10922,8 @@ number.12.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
@@ -10984,8 +10984,6 @@ number.12.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -10999,6 +10997,8 @@ number.12.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! SPANNER_STOP
     \stopTrillSpan
     [
@@ -11054,8 +11054,6 @@ number.12.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
         \revert NoteHead.style
 
     }
@@ -11091,6 +11089,9 @@ number.12.Cello.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \stopTrillSpan

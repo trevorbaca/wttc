@@ -1386,6 +1386,7 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp, *, final_up=False)
     baca.spanners.scp(
         pleaves,
         f"{scp} =|",
+        rleak=True,
         staff_padding=8,
     )
     start, stop = dynamics.split()

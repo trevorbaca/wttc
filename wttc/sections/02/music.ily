@@ -1854,8 +1854,6 @@ number.2.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
     ]
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -1887,6 +1885,9 @@ number.2.Violin.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \stopTrillSpan

@@ -1172,7 +1172,9 @@ def vc(m):
         "T1 -> T4",
         staff_padding=5.5,
     )
-    library.H3(library.pleaves(m[36], 3), "Eb2", "F2", "F3", "D3", "mp f", "P1")
+    library.H3(
+        library.pleaves(m[36], 3), "Eb2", "F2", "F3", "D3", "mp f", "P1", final_up=True
+    )
     library.H3(library.pleaves(m[37], 3)[:6], "Eb2", "F2", "F3", "D3", "mp f", "P1")
     library.H3(library.pleaves(m[37], 3)[6:12], "Db2", "Eb2", "Eb3", "C3", "p mf", "P2")
     library.H3(library.pleaves(m[37], 3)[-5:], "C2", "D2", "D3", "B2", "pp mp", "P3")
