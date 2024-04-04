@@ -54,13 +54,7 @@ def OB(voice, meters):
         [-3, t(1), frame(8, 4), rt(1)] + 4 * [X(15), rt(1)] + ["-"],
         material=2,
     )
-    rhythm.mmrests(7, 9)
-    rhythm(
-        meters(10, 11),
-        ["+"],
-        material=1,
-    )
-    baca.section.append_anchor_note(voice)
+    rhythm.mmrests(7, 11)
 
 
 def GT1(voice, meters):
@@ -182,7 +176,6 @@ def ob(m):
     library.E2a(
         library.pleaves(m[2, 6][1:], 2), "D#6", "E6", "0000", starts="mp p pp pp"
     )
-    library.D1a(library.pleaves(m[10, 11], 1), "Eb6", "mp", rleak=True, tbl=True)
 
 
 def gt1(m):

@@ -1072,63 +1072,15 @@ number.2.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 10]
-    ef'''!1
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \mp
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \>
-    - \tweak stencil ##f
-    ~
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 11]
-    ef'''1
-    \repeatTie
-    \revert DynamicLineSpanner.staff-padding
-
-      %! ANCHOR_NOTE
-    % [Oboe.Music anchor note]
-      %! ANCHOR_NOTE
-      %! INVISIBLE_MUSIC_COMMAND
-      %! NOTE
-    %@% \abjad-invisible-music
-      %! ANCHOR_NOTE
-      %! INVISIBLE_MUSIC_COLORING
-      %! NOTE
-    \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-    \once \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-    \stopStaff
-      %! ANCHOR_NOTE
-    \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR_NOTE
-    \startStaff
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-    b'1 * 1/4
-      %! ANCHOR_NOTE
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-      %! HIDDEN
-      %! NOTE
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-      %! ANCHOR_NOTE
-      %! SPANNER_STOP
-    \!
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
