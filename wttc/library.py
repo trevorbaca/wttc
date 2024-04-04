@@ -1370,13 +1370,19 @@ def E4b(pleaves, pitch, dynamic):
         baca.laissez_vibrer(ptail)
 
 
-def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp, *, final_up=False):
+def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.pitch(pleaves[:-3], pitch)
     baca.pitch(pleaves[-3], pitch)
     baca.pitch(pleaves[-2], peak)
     baca.pitch(pleaves[-1], fall)
     baca.override.note_head_style_harmonic(pleaves[-3:])
-    baca.glissando(pleaves[-3:], do_not_hide_middle_note_heads=True)
+    baca.glissando(
+        pleaves[-3:],
+        None,
+        baca.postevent.bound_details_right_end_on_accidental_false(index=-1),
+        baca.postevent.bound_details_right_end_on_accidental_false(index=-2),
+        do_not_hide_middle_note_heads=True,
+    )
     baca.spanners.trill(
         pleaves,
         alteration=alteration,
@@ -1394,8 +1400,6 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp, *, final_up=False)
         [pleaves[:-3], pleaves[-3:]],
         f"{start}> <|{stop}",
     )
-    if final_up is False:
-        baca.override.stem_direction_down(pleaves[-1])
 
 
 def I1a(pleaves, pitch, alteration, dynamics):

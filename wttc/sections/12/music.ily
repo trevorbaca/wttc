@@ -8926,6 +8926,8 @@ number.12.Violin.Music = {
 
     \override NoteHead.style = #'harmonic
     e'16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -8936,15 +8938,14 @@ number.12.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     fs''!32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         ds'!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -9002,6 +9003,8 @@ number.12.Violin.Music = {
 
     \override NoteHead.style = #'harmonic
     e'16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -9012,15 +9015,14 @@ number.12.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     fs''!32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         ds'!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -9077,6 +9079,8 @@ number.12.Violin.Music = {
 
     \override NoteHead.style = #'harmonic
     f'16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -9087,15 +9091,14 @@ number.12.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     g''32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         e'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -9147,6 +9150,8 @@ number.12.Violin.Music = {
 
     \override NoteHead.style = #'harmonic
     fs'!16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -9157,15 +9162,14 @@ number.12.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     gs''!32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         f'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -10814,6 +10818,8 @@ number.12.Cello.Music = {
 
     \override NoteHead.style = #'harmonic
     ef,!32
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -10824,9 +10830,9 @@ number.12.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     f16
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
 
     d32
@@ -10884,6 +10890,8 @@ number.12.Cello.Music = {
 
     \override NoteHead.style = #'harmonic
     ef,!16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -10894,15 +10902,14 @@ number.12.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     f32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         d8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -10959,6 +10966,8 @@ number.12.Cello.Music = {
 
     \override NoteHead.style = #'harmonic
     df,!16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -10969,15 +10978,14 @@ number.12.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     ef!32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         c8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -11029,6 +11037,8 @@ number.12.Cello.Music = {
 
     \override NoteHead.style = #'harmonic
     c,16
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -11039,15 +11049,14 @@ number.12.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     \afterGrace
     d32
     ]
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
     {
 
-        \once \override Stem.direction = #down
         b,8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC

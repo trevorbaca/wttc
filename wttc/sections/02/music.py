@@ -219,16 +219,7 @@ def vn(m):
             library.E2c(plt, "B3", "C#4", dynamic, diminuendo=True)
 
     library.M5b(library.pleaves(m[10, 11], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
-    library.H3(
-        library.pleaves(m[11], 3),
-        "E4",
-        "F#4",
-        "F#5",
-        "D#4",
-        "mp f",
-        "P1",
-        final_up=True,
-    )
+    library.H3(library.pleaves(m[11], 3), "E4", "F#4", "F#5", "D#4", "mp f", "P1")
 
 
 def vc(m):

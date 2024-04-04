@@ -1833,6 +1833,8 @@ number.2.Violin.Music = {
 
     \override NoteHead.style = #'harmonic
     e'32
+    - \tweak bound-details.right.end-on-accidental ##f
+    \glissando
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -1843,9 +1845,9 @@ number.2.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
 
     fs''!32
+    - \tweak bound-details.right.end-on-accidental ##f
     \glissando
 
     ds'!32
