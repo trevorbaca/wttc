@@ -39,7 +39,12 @@ def GLOBALS(skips):
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1, 9)
-    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(10, 11),
+        8 * [frame(4, 2)],
+        material=3,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def OB(voice, meters):
@@ -50,7 +55,12 @@ def OB(voice, meters):
         material=2,
     )
     rhythm.mmrests(7, 9)
-    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(10, 11),
+        ["+"],
+        material=1,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def GT1(voice, meters):
@@ -130,7 +140,11 @@ def VN(voice, meters):
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1, 9)
-    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(10, 11),
+        [16, AG([2], 16)],
+        material=1,
+    )
 
 
 def fl(m):
@@ -138,6 +152,7 @@ def fl(m):
     baca.instrument_name(m[1][0], strings.alto_flute_markup)
     baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
     baca.clef(m[1][0], "treble")
+    library.D3a(library.pleaves(m[10, 11], 3), "A3", 8 * "p ", to_bar_line=True)
 
 
 def ob(m):
@@ -150,6 +165,7 @@ def ob(m):
     library.E2a(
         library.pleaves(m[2, 6][1:], 2), "D#6", "E6", "0000", starts="mp p pp pp"
     )
+    library.D1a(library.pleaves(m[10, 11], 1), "Eb6", "mp", rleak=True, tbl=True)
 
 
 def gt1(m):
@@ -188,9 +204,23 @@ def vc(m):
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
 
+    @baca.call
+    def block():
+        pleaves = library.pleaves(m[10, 11], 1)
+        library.D1b(
+            pleaves,
+            None,
+            "mf> p<mp",
+            baca.select.lparts(pleaves, [1, 2]),
+            "P1 => T => P2",
+            baca.select.lparts(pleaves, [1, 2]),
+        )
+        baca.glissando(pleaves, "F2 Eqs2")
+
 
 def align_spanners(cache):
-    # fl = cache["fl"]
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl.leaves(), 4)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
@@ -200,7 +230,8 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2.leaves(), 3)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn.leaves(), 4)
-    # vc = cache["vc"]
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc.leaves(), 4)
 
 
 @baca.build.timed("make_score")

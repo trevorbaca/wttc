@@ -888,6 +888,13 @@ def swells(peaks):
     return string
 
 
+def to_bar_line_tweaks(to_bar_line=False):
+    tweaks = []
+    if to_bar_line is True:
+        tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+    return tweaks
+
+
 def unannotate(items):
     for item in items:
         for leaf in abjad.select.leaves(item):
@@ -1117,6 +1124,56 @@ def C1c(pleaves, dyad, alteration, dynamics):
             baca.untie(plt)
             for chord in plt[1:]:
                 del chord.note_heads[1]
+
+
+def D1a(pleaves, pitch, dynamic, *, rleak=False, tbl=False):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+        *to_bar_line_tweaks(tbl),
+        rleak=rleak,
+    )
+
+
+def D1b(
+    pleaves,
+    pitch,
+    hairpin_string,
+    hairpin_pieces,
+    scp_string,
+    scp_pieces,
+    *,
+    do_not_bookend=None,
+    rleak=False,
+):
+    if pitch is not None:
+        baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        hairpin_pieces,
+        hairpin_string,
+    )
+    baca.spanners.scp(
+        scp_pieces,
+        scp_string,
+        do_not_bookend=do_not_bookend,
+        rleak=rleak,
+        staff_padding=3,
+    )
+
+
+def D3a(pleaves, pitch, dynamics, *, to_bar_line=False):
+    baca.pitch(pleaves, pitch)
+    parts = baca.select.clparts(pleaves, [1])
+    tweaks = []
+    if to_bar_line is True:
+        tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+    baca.hairpin(
+        parts,
+        swells(dynamics),
+        *tweaks,
+        rleak=True,
+    )
 
 
 def E1(

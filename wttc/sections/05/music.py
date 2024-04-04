@@ -946,39 +946,6 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
             )
 
 
-def D1a(pleaves, pitch, dynamic):
-    baca.pitch(pleaves, pitch)
-    baca.hairpin(
-        pleaves,
-        f"{dynamic}>o!",
-        rleak=True,
-    )
-
-
-def D1b(
-    pleaves,
-    pitch,
-    hairpin_string,
-    hairpin_pieces,
-    scp_string,
-    scp_pieces,
-    do_not_bookend=None,
-):
-    if pitch is not None:
-        baca.pitch(pleaves, pitch)
-    baca.hairpin(
-        hairpin_pieces,
-        hairpin_string,
-    )
-    baca.spanners.scp(
-        scp_pieces,
-        scp_string,
-        do_not_bookend=do_not_bookend,
-        rleak=True,
-        staff_padding=3,
-    )
-
-
 def D2a(pleaves, pitches, hairpin_strings):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
@@ -1034,16 +1001,6 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
                 run,
                 hairpin_string,
             )
-
-
-def D3a(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch)
-    parts = baca.select.clparts(pleaves, [1])
-    parts[-1].append(baca.select.rleaf(pleaves, -1))
-    baca.hairpin(
-        parts,
-        library.swells(dynamics),
-    )
 
 
 def D3b(pleaves, pitches, dynamics):
@@ -1141,9 +1098,9 @@ def fl(m):
         "D6 Dqf6 Dqf6 Db6 Db6 Dtqf6 Dtqf6 C6",
         "f-mf mf-mp mp-p p-pp",
     )
-    D3a(library.pleaves(m[32, 33], 3), "A3", "mf mp p pp")
-    D3a(library.pleaves(m[34, 37], 3), "A3", 11 * "p ")
-    D3a(library.pleaves(m[38], 3), "G#3", "p p")
+    library.D3a(library.pleaves(m[32, 33], 3), "A3", "mf mp p pp")
+    library.D3a(library.pleaves(m[34, 37], 3), "A3", 11 * "p ")
+    library.D3a(library.pleaves(m[38], 3), "G#3", "p p")
     D4a(library.pleaves(m[41, 44], 4), "F#5", "mp - mf mp mf - f - -")
 
 
@@ -1157,9 +1114,9 @@ def ob(m):
     C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p")
     C2a(library.pleaves(m[20, 21], 2), "Db6", "Eb6", "p")
     C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
-    D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
-    D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp")
-    D1a(library.pleaves(m[38, 40], 1), "D6", "mf")
+    library.D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
+    library.D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp", rleak=True, tbl=True)
+    library.D1a(library.pleaves(m[38, 40], 1), "D6", "mf", rleak=True)
 
 
 def gt1(m):
@@ -1290,37 +1247,40 @@ def vc(m):
     @baca.call
     def block():
         pleaves = library.pleaves(m[18, 20], 99)
-        D1b(
+        library.D1b(
             pleaves,
             "F2",
             "o< p>o!",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 3]),
             "T =|",
             pleaves,
+            rleak=True,
         )
 
     @baca.call
     def block():
         pleaves = library.pleaves(m[22, 30], 99)
-        D1b(
+        library.D1b(
             pleaves,
             "F2",
             "o< p> pp< mf> p< f>o!",
             baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
             "T -> P1 -> T -> P2 -> T",
             baca.select.lparts(pleaves, [7, 2, 2, 4]),
+            rleak=True,
         )
 
     @baca.call
     def block():
         pleaves = library.pleaves(m[31, 33], 1)
-        D1b(
+        library.D1b(
             pleaves,
             "F2",
             "o< f>o!",
             baca.select.lparts(pleaves, [2, 4]),
             "T -> P2 -> T -> P1 -> T",
             baca.select.lparts(pleaves, [2, 1, 1, 1]),
+            rleak=True,
         )
 
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o<"f"'])
@@ -1328,13 +1288,14 @@ def vc(m):
     @baca.call
     def block():
         pleaves = library.pleaves(m[34, 39], 1)
-        D1b(
+        library.D1b(
             pleaves,
             None,
             "o< mf> p< mp> pp<|ff",
             baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
             "T -> P1 -> T -> P2 -> T -> P2",
             baca.select.lparts(pleaves, [1, 1, 1, 1, 2]),
+            rleak=True,
         )
         baca.glissando(pleaves[:-1], "F2 E2")
         baca.pitch(pleaves[-1:], "E2")

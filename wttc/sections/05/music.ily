@@ -3865,13 +3865,13 @@ number.5.Oboe.Music = {
     \repeatTie
 
     ef'''8
+      %! SPANNER_STOP
+    \!
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8
-      %! SPANNER_STOP
-    \!
 
     % [Oboe.Music measure 34]
     R1 * 4/4
@@ -3894,6 +3894,9 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
