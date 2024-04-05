@@ -1256,8 +1256,6 @@ def vn(m):
     C1(library.pleaves(m[14], 99), "D5", "F#5")
     C1(library.pleaves(m[15], 99), "D5", "F#5")
     C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
-    baca.override.tuplet_bracket_direction_down(m.leaves())
-    baca.override.tuplet_bracket_staff_padding(m.leaves(), 1)
 
 
 def vc(m):
@@ -1295,7 +1293,6 @@ def vc(m):
     C1(library.pleaves(m[14], 99), "D4", "F4")
     C1(library.pleaves(m[15], 99), "D4", "F4")
     C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
-    baca.override.tuplet_bracket_direction_down(m.leaves())
 
 
 def align_spanners(cache):
@@ -1316,7 +1313,10 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(cache["gt2"][11], 8)
     baca.override.dls_staff_padding(cache["gt2"][12, 13], 4)
     baca.override.dls_staff_padding(cache["vn"][14, 16], 6)
+    baca.override.tuplet_bracket_direction_down(cache["vn"].leaves())
+    baca.override.tuplet_bracket_staff_padding(cache["vn"].leaves(), 1)
     baca.override.dls_staff_padding(cache["vc"][14, 16], 6)
+    baca.override.tuplet_bracket_direction_down(cache["vc"].leaves())
 
 
 @baca.build.timed("make_score")

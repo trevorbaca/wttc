@@ -548,12 +548,20 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
 
 
 def fl(m):
+    baca.instrument(m[1][0], "AltoFlute", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.alto_flute_markup)
+    baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
+    baca.clef(m[1][0], "treble")
     library.E3a(library.pleaves(m[2, 8], 3))
     library.E4a(library.pleaves(m[10, 18], 4), "B5", "p p p mp mf f f mf mp p")
     baca.override.dynamic_text_self_alignment_x(m[14][4], 1.5)
 
 
 def ob(m):
+    baca.instrument(m[1][0], "Oboe", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.oboe_markup)
+    baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
+    baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.E2a(
         library.pleaves(m[10, 14], 2) + m[15][:1],
@@ -566,6 +574,10 @@ def ob(m):
 
 
 def gt1(m):
+    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.guitar_i_markup)
+    baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
+    baca.clef(m[1][0], "treble")
     baca.staff_lines(m[1][0], 5)
     library.E1(
         library.pleaves(m[1, 5], 1),
@@ -590,6 +602,10 @@ def gt1(m):
 
 
 def gt2(m):
+    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.guitar_ii_markup)
+    baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
+    baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
     baca.staff_lines(m[1][0], 5)
     library.E1(
@@ -615,6 +631,10 @@ def gt2(m):
 
 
 def vn(m):
+    baca.instrument(m[1][0], "Violin", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.violin_markup)
+    baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
+    baca.clef(m[1][0], "treble")
     library.E1(
         library.pleaves(m[1, 2], 1),
         "A4",
@@ -670,8 +690,11 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    baca.instrument(m[1][0], "Cello", manifests=library.manifests)
+    baca.instrument_name(m[1][0], strings.cello_markup)
+    baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
     baca.clef(m[1][0], "tenor")
+    library.rotate_rehearsal_mark_literal(m[1][0])
     library.E1(
         library.pleaves(m[1, 2], 1),
         "A4",
@@ -785,11 +808,13 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC(voices.vc, meters)
     library.attach_not_yet_pitched(score)
     library.force_repeat_tie(score)
+    """
     baca.section.reapply_persistent_indicators(
         voices,
         previous_persistent_indicators,
         manifests=library.manifests,
     )
+    """
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
