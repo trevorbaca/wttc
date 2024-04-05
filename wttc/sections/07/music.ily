@@ -412,6 +412,20 @@ number.7.Violin.Music = {
     \mf
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T1"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "poss."
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -433,6 +447,8 @@ number.7.Violin.Music = {
     r4
       %! SPANNER_STOP
     \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 2]
@@ -486,6 +502,20 @@ number.7.Cello.Music = {
     \mf
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T1"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "poss."
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -507,6 +537,8 @@ number.7.Cello.Music = {
     r4
       %! SPANNER_STOP
     \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 2]

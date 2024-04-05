@@ -99,7 +99,6 @@ def VC(voice, meters):
 
 def still_1a(pleaves, pitch, dynamic, *, tasto=False):
     baca.pitch(pleaves, pitch)
-    """
     if tasto is True:
         baca.spanners.scp(
             pleaves,
@@ -107,7 +106,6 @@ def still_1a(pleaves, pitch, dynamic, *, tasto=False):
             rleak=True,
             staff_padding=3,
         )
-    """
     baca.hairpin(
         pleaves,
         f"{dynamic}>o!",
