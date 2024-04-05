@@ -5884,11 +5884,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     - \tweak stencil ##f
@@ -5909,11 +5904,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
 
@@ -5924,11 +5914,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
 
@@ -5941,11 +5926,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
 
@@ -5958,11 +5938,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
 
@@ -6060,11 +6035,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6082,11 +6052,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6104,11 +6069,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6127,11 +6087,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6149,11 +6104,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6171,11 +6121,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6193,11 +6138,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'16
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     [
@@ -6325,11 +6265,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
 
@@ -6340,11 +6275,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
 
@@ -6355,11 +6285,6 @@ number.19.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     b'8.
-      %! REDUNDANT_DYNAMIC_COLOR
-      %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
-      %! REDUNDANT_DYNAMIC
-    \baca-effort-f
     - \tweak padding 1
     - \upbow
     \revert DynamicLineSpanner.staff-padding

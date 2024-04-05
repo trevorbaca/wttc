@@ -701,35 +701,6 @@ def VC(voice, meters):
     rhythm.mmrests(33, 36)
 
 
-def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
-    pitches = " ".join([_ + "4" for _ in pitches.split()])
-    pitches = pitches[:-1] + "3"
-    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
-    nongraces = abjad.select.notes(pleaves, grace=False)
-    baca.override.dots_x_extent_false(nongraces[0])
-    baca.hairpin(
-        nongraces,
-        hairpin,
-        rleak=rleak_hairpin,
-    )
-    baca.spanners.text(
-        nongraces,
-        r"\baca-airtone-markup =|",
-        left_broken_text=r"\baca-parenthesized-air-markup",
-        rleak=True,
-        staff_padding=5.5,
-    )
-    baca.spanners.text(
-        nongraces,
-        r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        baca.postevent.direction_down(),
-        direction=abjad.DOWN,
-        lilypond_id=1,
-        rleak=True,
-        staff_padding=8,
-    )
-
-
 def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     pitches = pitches[:-1] + "3"
@@ -762,20 +733,6 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-def O2a(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch, allow_out_of_range=True)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.espressivo(plt.head)
-        baca.dynamic(plt.head, dynamic)
-    baca.spanners.covered(
-        pleaves,
-        rleak=True,
-        staff_padding=3,
-    )
-
-
 def O2b(pleaves, dynamics):
     baca.staff_position(pleaves, 0)
     baca.stem_tremolo(pleaves)
@@ -797,14 +754,6 @@ def O3a(pleaves, pitches, peak, *, rleak_hairpin=False):
         library.swells(peak),
         rleak=rleak_hairpin,
     )
-
-
-def O3b(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
 
 
 def O4a(pleaves, pitch, hairpin, *, rleak_hairpin=False):
@@ -958,30 +907,30 @@ def P3(pleaves, glissando, hairpin_lparts, hairpin, *, staff_padding=None):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    O1a(
+    library.O1a(
         library.pleaves(m[1, 2], 1),
         "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
         "sfmp>o!",
         rleak_hairpin=True,
     )
-    O2a(library.pleaves(m[2], 2), library.make_flute_covered_dyads("D3"), "p -")
+    library.O2a(library.pleaves(m[2], 2), library.make_flute_covered_dyads("D3"), "p -")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
-    O2a(
+    library.O2a(
         library.pleaves(m[3, 4], 2), library.make_flute_covered_dyads("D3"), 'p mp "mf"'
     )
     O3a(library.pleaves(m[5], 3), "F4 F#5", "mf", rleak_hairpin=True)
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
-    O1a(
+    library.O1a(
         library.pleaves(m[7], 1) + library.pleaves(m[8][:1], 1),
         "F G G# A G# G B",
         "p",
     )
-    O1a(
+    library.O1a(
         library.pleaves(m[8], 1)[1:],
         "G# G E G# A F A G# F E G E B",
         "p<|f",
     )
-    O2a(
+    library.O2a(
         library.pleaves(m[8, 10], 2),
         library.make_flute_covered_dyads("Db3"),
         '"mf" - mp - p -',
@@ -994,14 +943,14 @@ def fl(m):
     )
     O4a(library.pleaves(m[14, 16], 4)[4:], "D6 C#6", "pp<| f> mf> mp> p> pp")
     O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
-    O1a(
+    library.O1a(
         library.pleaves(m[19], 1),
         "F G G# A G# G Ab",
         "p>o!",
         rleak_hairpin=True,
     )
     O4a(library.pleaves(m[20, 21], 4), "Eb6 D6", "f> mf> mp> p> pp")
-    O1a(
+    library.O1a(
         library.pleaves(m[22, 23], 1),
         "F G G# A G# G Ab",
         "p>o!",
@@ -1023,36 +972,36 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    O3b(library.pleaves(m[2, 3], 3), "A5", "mf p")
-    O3b(library.pleaves(m[4, 5], 3), "A5", "mf - -")
-    O3b(library.pleaves(m[7], 3), "A5", "p")
+    library.O3b(library.pleaves(m[2, 3], 3), "A5", "mf p")
+    library.O3b(library.pleaves(m[4, 5], 3), "A5", "mf - -")
+    library.O3b(library.pleaves(m[7], 3), "A5", "p")
     O4b(library.pleaves(m[10], 4), "A2:C#3", "p")
     O4b(
         library.pleaves(m[11, 17], 4),
         "A2:C#3 Ab2:C3 G2:B2 Gb2:Bb2 Gb2:Bb2",
         "(p) mp mf (mf) mp",
     )
-    O3b(library.pleaves(m[19], 3), "A5", "p")
+    library.O3b(library.pleaves(m[19], 3), "A5", "p")
     O4b(library.pleaves(m[20], 4), "Gb2:Bb2", "-")
-    O3b(library.pleaves(m[22, 24], 3), "A5", "- - -")
+    library.O3b(library.pleaves(m[22, 24], 3), "A5", "- - -")
     P2b(library.pleaves(m[28], 2), "D#5", "mp")
     P2b(library.pleaves(m[30], 2), "D#5", "mf")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    O3b(library.pleaves(m[2, 3], 3), "A5", "mf p")
-    O3b(library.pleaves(m[4, 6], 3), "A5", "mf - -")
-    O3b(library.pleaves(m[7], 3), "A5", "p")
+    library.O3b(library.pleaves(m[2, 3], 3), "A5", "mf p")
+    library.O3b(library.pleaves(m[4, 6], 3), "A5", "mf - -")
+    library.O3b(library.pleaves(m[7], 3), "A5", "p")
     O4b(library.pleaves(m[10], 4), "Ab2:C3", "p")
     O4b(
         library.pleaves(m[11, 17], 4),
         "Ab2:C3 G2:B2 Gb2:Bb2 F2:A2 F2:A2",
         "(p) mp mf (mf) mp",
     )
-    O3b(library.pleaves(m[19], 3), "Ab5", "p")
+    library.O3b(library.pleaves(m[19], 3), "Ab5", "p")
     O4b(library.pleaves(m[20], 4), "F2:A2", "-")
-    O3b(library.pleaves(m[22, 24], 3), "Ab5", "- - -")
+    library.O3b(library.pleaves(m[22, 24], 3), "Ab5", "- - -")
     P2b(library.pleaves(m[28], 2), "C#5", "mp")
     P2b(library.pleaves(m[30], 2), "C#5", "f")
 

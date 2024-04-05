@@ -1511,6 +1511,48 @@ def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
     )
 
 
+def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
+    baca.glissando(pleaves, pitches)
+    baca.spanners.damp(
+        pleaves,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.spanners.half_clt(
+        pleaves,
+        rleak=True,
+        staff_padding=5.5,
+    )
+    if hairpin_lparts is None:
+        parts = pleaves
+    else:
+        parts = baca.select.lparts(pleaves, hairpin_lparts)
+    baca.hairpin(
+        parts,
+        hairpin,
+        rleak=rleak_hairpin,
+    )
+
+
+def K2c(pleaves):
+    baca.staff_position(pleaves, 0)
+    baca.staff_lines(pleaves[0], 1)
+    leaf = abjad.get.leaf(pleaves[-1], 1)
+    baca.staff_lines(leaf, 5)
+    for plt in baca.select.plts(pleaves):
+        baca.up_bow(plt[0], padding=1)
+    baca.dynamic(pleaves[0], '"f"')
+
+
+def K2d(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.stem_tremolo(pleaves)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.stop_on_string(plt.head)
+    baca.dynamic(pleaves[0], dynamic)
+
+
 def M2(pleaves, pitches, dynamic):
     baca.pitches(pleaves, pitches, strict=True)
     if ">" in dynamic:
@@ -1544,4 +1586,55 @@ def M5b(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.triple_staccato(plt.head)
+        baca.dynamic(plt.head, dynamic)
+
+
+def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    pitches = pitches[:-1] + "3"
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.dots_x_extent_false(nongraces[0])
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        rleak=rleak_hairpin,
+    )
+    baca.spanners.text(
+        nongraces,
+        r"\baca-airtone-markup =|",
+        left_broken_text=r"\baca-parenthesized-air-markup",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.spanners.text(
+        nongraces,
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
+        baca.postevent.direction_down(),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        rleak=True,
+        staff_padding=8,
+    )
+
+
+def O2a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch, allow_out_of_range=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.espressivo(plt.head)
+        baca.dynamic(plt.head, dynamic)
+    baca.spanners.covered(
+        pleaves,
+        rleak=True,
+        staff_padding=3,
+    )
+
+
+def O3b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)

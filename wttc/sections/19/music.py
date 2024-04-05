@@ -770,29 +770,6 @@ def K1b2(pleaves, pitch, hairpin):
     )
 
 
-def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
-    baca.glissando(pleaves, pitches)
-    baca.spanners.damp(
-        pleaves,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.spanners.half_clt(
-        pleaves,
-        rleak=True,
-        staff_padding=5.5,
-    )
-    if hairpin_lparts is None:
-        parts = pleaves
-    else:
-        parts = baca.select.lparts(pleaves, hairpin_lparts)
-    baca.hairpin(
-        parts,
-        hairpin,
-        rleak=rleak_hairpin,
-    )
-
-
 def K2a(pleaves, glissando, hairpin):
     baca.glissando(
         pleaves,
@@ -810,25 +787,6 @@ def K2b(pleaves, pitch):
     for plt in plts:
         baca.dynamic(plt.head, "sffz")
         baca.damp(plt.head)
-
-
-def K2c(pleaves):
-    baca.staff_position(pleaves, 0)
-    baca.staff_lines(pleaves[0], 1)
-    leaf = abjad.get.leaf(pleaves[-1], 1)
-    baca.staff_lines(leaf, 5)
-    for plt in baca.select.plts(pleaves):
-        baca.up_bow(plt[0], padding=1)
-        baca.dynamic(plt.head, '"f"')
-
-
-def K2d(pleaves, pitch, dynamic):
-    baca.pitch(pleaves, pitch)
-    baca.stem_tremolo(pleaves)
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        baca.stop_on_string(plt.head)
-    baca.dynamic(pleaves[0], dynamic)
 
 
 def K2e(pleaves, pitch, hairpin, scp):
@@ -1159,11 +1117,11 @@ def gt1(m):
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    K2c(library.pleaves(m[6, 7], 2))
+    library.K2c(library.pleaves(m[6, 7], 2))
     K3b(library.pleaves(m[8], 3), "C#5", "p - -")
-    K2c(library.pleaves(m[9, 10], 2))
+    library.K2c(library.pleaves(m[9, 10], 2))
     K3b(library.pleaves(m[11, 12], 3), "C#5", "p - mp - mf")
-    K2c(library.pleaves(m[12], 2))
+    library.K2c(library.pleaves(m[12], 2))
     K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
     L3a(library.pleaves(m[21], 3), "F2:Gb3", "mf")
     L3a(library.pleaves(m[24], 3), "F2:Gb3", "(mf)")
@@ -1174,13 +1132,13 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
-    K2d(library.pleaves(m[6, 7], 2), "A3", "mf")
+    library.K2d(library.pleaves(m[6, 7], 2), "A3", "mf")
     K3a(library.pleaves(m[8], 3), "C4", "p p", circle_bow=True)
-    K2d(library.pleaves(m[9, 10], 2), "Ab3", "mf")
+    library.K2d(library.pleaves(m[9, 10], 2), "Ab3", "mf")
     K3a(library.pleaves(m[11], 3), "C4", "p p mp mp", circle_bow=True)
-    K2d(library.pleaves(m[12], 2), "Ab3", "mf")
+    library.K2d(library.pleaves(m[12], 2), "Ab3", "mf")
     K3a(library.pleaves(m[13, 14], 3), "C4", "p p mp mp mf mf mf mf", circle_bow=True)
-    K2d(library.pleaves(m[15], 2), "B3", "pp")
+    library.K2d(library.pleaves(m[15], 2), "B3", "pp")
     K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
     K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
@@ -1238,22 +1196,22 @@ def vc(m):
     K1b1(library.pleaves(m[2], 1), "F#3:B3", "C#4", "mf")
     baca.clef(m[3][0], "bass")
     K1b2(library.pleaves(m[3], 1)[:2], "G3", "p<|f")
-    K1b3(
+    library.K1b3(
         library.pleaves(m[3, 5], 1)[2:],
         "Ab3/2 E3/1 F3/2 C#3/1 D3/2 A#2/1 B2/2 G2/1 G#2/2 E2/1",
         "mp>o!",
     )
     K2e(library.pleaves(m[5, 8], 2), "F2", "sfp>o!", "P2 -> T")
-    K1b3(
+    library.K1b3(
         library.run(m[8, 11], 1, 0),
         "A3 Bb3 G3 Ab3/2 F3 Gb3/2 D#3 E3/2 C#3 D3/2 B2 C3/2 A2 Bb2/2 G2",
         "o< p>o!",
         [12, 9],
     )
-    K1b3(library.run(m[11, 12], 1, 1), "G2 Ab2/2 F2 Gb2/2 D#2 E2/2", "p>o!")
-    K1b3(library.pleaves(m[14], 1), "F2 Gb2/2 D#2 E2/2", "p>o!")
+    library.K1b3(library.run(m[11, 12], 1, 1), "G2 Ab2/2 F2 Gb2/2 D#2 E2/2", "p>o!")
+    library.K1b3(library.pleaves(m[14], 1), "F2 Gb2/2 D#2 E2/2", "p>o!")
     L1a(library.pleaves(m[15], 99), "A#4", "B4", "o<p")
-    K1b3(library.pleaves(m[15], 1), "F2 D2", "p>o!")
+    library.K1b3(library.pleaves(m[15], 1), "F2 D2", "p>o!")
     K2e(library.pleaves(m[15, 16], 2), "G#2", "o<|mp", "T -> P")
     L1a(library.pleaves(m[17], 99), "A#4", "B4", "o<mp")
     K2e(library.pleaves(m[17, 18], 2), "G#2", "o<|mp", "T -> P")
