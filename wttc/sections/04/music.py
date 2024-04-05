@@ -1163,6 +1163,7 @@ def gt1(m):
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    baca.staff_lines(m[1][0], 5)
     B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
     B2a(library.pleaves(m[1], 2), "D5", "p mp")
     B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
@@ -1349,11 +1350,13 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC(voices.vc, meters)
     library.attach_not_yet_pitched(score)
     library.force_repeat_tie(score)
+    """
     baca.section.reapply_persistent_indicators(
         voices,
         previous_persistent_indicators,
         manifests=library.manifests,
     )
+    """
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
