@@ -53,6 +53,24 @@
                 value="Afl.",
             ),
         ],
+        "Cello.Music": [
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="p",
+            ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.StartTrillSpan",
+                synthetic_offset=None,
+                value='StartTrillSpan(interval=None, pitch=NamedPitch("f\'"), force_trill_pitch_head_accidental=True)',
+            ),
+        ],
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
@@ -122,7 +140,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-effort-f",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [
@@ -194,6 +212,16 @@
                 synthetic_offset=None,
                 value="2/4",
             ),
+        ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
         ],
         "Violin.Staff": [
             baca.Memento(

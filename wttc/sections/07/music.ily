@@ -270,6 +270,7 @@ number.7.Guitar.1.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -290,15 +291,23 @@ number.7.Guitar.1.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    f16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+    - \tweak padding 1
+    - \downbow
+    - \tweak staff-padding 4
+    ^ \wttc-with-screw
 
     r8.
 
     r4
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 2]
     R1 * 2/4
@@ -331,6 +340,7 @@ number.7.Guitar.2.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -353,15 +363,23 @@ number.7.Guitar.2.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
+    f16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+    - \tweak padding 1
+    - \upbow
+    - \tweak staff-padding 4
+    ^ \wttc-with-screw
 
     r8.
 
     r4
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 2]
     R1 * 2/4
@@ -449,12 +467,64 @@ number.7.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \revert DynamicLineSpanner.staff-padding
 
-    % [Violin.Music measure 2]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        % [Violin.Music measure 2]
+        \override TrillSpanner.dash-period = -1
+        \override TrillSpanner.style = #'dashed-line
+          %! SPANNER_START
+        \pitchedTrill
+        d''8
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
+        \mf
+        - \tweak padding 0.5
+        - \baca-staccati #3
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        \startTrillSpan fs''!
+
+        r4
+          %! SPANNER_STOP
+        \stopTrillSpan
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        r8
+
+          %! SPANNER_START
+        \pitchedTrill
+        d''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+        - \tweak padding 0.5
+        - \baca-staccati #3
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        \startTrillSpan fs''!
+        \revert TrillSpanner.dash-period
+        \revert TrillSpanner.style
+
+        r8
+          %! SPANNER_STOP
+        \stopTrillSpan
+        \revert DynamicLineSpanner.staff-padding
+
+    }
 
 }
 
@@ -539,12 +609,83 @@ number.7.Cello.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \revert DynamicLineSpanner.staff-padding
 
-    % [Cello.Music measure 2]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        % [Cello.Music measure 2]
+        r8.
+
+        \override TrillSpanner.dash-period = -1
+        \override TrillSpanner.style = #'dashed-line
+          %! SPANNER_START
+        \pitchedTrill
+        d'8
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
+        \mf
+        - \tweak padding 0.5
+        - \baca-staccati #3
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        \startTrillSpan f'!
+
+        r16
+          %! SPANNER_STOP
+        \stopTrillSpan
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 4/6
+    {
+
+        r16
+
+          %! SPANNER_START
+        \pitchedTrill
+        d'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+        - \tweak padding 0.5
+        - \baca-staccati #3
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        \startTrillSpan f'!
+
+        r16
+          %! SPANNER_STOP
+        \stopTrillSpan
+
+          %! SPANNER_START
+        \pitchedTrill
+        d'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+        - \tweak padding 0.5
+        - \baca-staccati #3
+          %! SPANNER_STOP
+        \stopTrillSpan
+          %! SPANNER_START
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+          %! SPANNER_START
+        \startTrillSpan f'!
+        \revert DynamicLineSpanner.staff-padding
+        \revert TrillSpanner.dash-period
+        \revert TrillSpanner.style
+
+    }
 
 }
 

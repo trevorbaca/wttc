@@ -114,33 +114,6 @@ def VC(voice, meters):
         )
 
 
-def C1(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
-    baca.pitch(pleaves, fundamental)
-    plts = baca.select.plts(pleaves)
-    for i, plt in enumerate(plts):
-        assert len(plt) == 1
-        right_broken = False
-        rplt = baca.select.rleak(plt)
-        if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
-            right_broken = True
-        baca.spanners.trill(
-            plt,
-            alteration=harmonic,
-            force_trill_pitch_head_accidental=True,
-            harmonic=True,
-            right_broken=right_broken,
-            rleak=True,
-            staff_padding=staff_padding,
-        )
-    baca.override.trill_spanner_dash_period(plts, -1)
-    baca.override.trill_spanner_style(plts, "#'dashed-line")
-    for pleaf in pleaves:
-        baca.triple_staccato(pleaf, padding=0.5)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.O1a(
@@ -171,13 +144,13 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
-    C1(library.pleaves(m[1], 99), "D5", "F#5", "mf mp")
+    library.C1_final(library.pleaves(m[1], 99), "D5", "F#5", "mf mp")
     library.K2d(library.pleaves(m[3, 4], 2), "Ab3", "mf")
 
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "tenor")
-    C1(library.pleaves(m[1], 99), "D4", "F4", "mf mp p")
+    library.C1_final(library.pleaves(m[1], 99), "D4", "F4", "mf mp p")
     library.K1b3(
         library.pleaves(m[2, 5], 1),
         "A3 Bb3 G3 Ab3/2 F3 Gb3/2 D#3 E3/2 C#3 D3/2 B2 C3/2 A2 Bb2/2 G2",

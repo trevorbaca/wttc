@@ -1086,6 +1086,33 @@ def B3(
     )
 
 
+def C1_final(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
+    baca.pitch(pleaves, fundamental)
+    plts = baca.select.plts(pleaves)
+    for i, plt in enumerate(plts):
+        assert len(plt) == 1
+        right_broken = False
+        rplt = baca.select.rleak(plt)
+        if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
+            right_broken = True
+        baca.spanners.trill(
+            plt,
+            alteration=harmonic,
+            force_trill_pitch_head_accidental=True,
+            harmonic=True,
+            right_broken=right_broken,
+            rleak=True,
+            staff_padding=staff_padding,
+        )
+    baca.override.trill_spanner_dash_period(plts, -1)
+    baca.override.trill_spanner_style(plts, "#'dashed-line")
+    for pleaf in pleaves:
+        baca.triple_staccato(pleaf, padding=0.5)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
 def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
     plts = baca.select.plts(pleaves)
     done_chord_1 = False
