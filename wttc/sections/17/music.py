@@ -246,6 +246,7 @@ def J1a(pleaves, pitches, dynamic):
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.I2a(library.run(m[1], 2, 0), "B4", "p", "A#4", 2)
     library.I2a(library.run(m[1, 2], 2, 1), "B4", "mp", "A#4", 3)
     library.I2a(library.run(m[2, 3], 2, 1), "B4", "mf", "A#4", 2)
@@ -256,7 +257,7 @@ def fl(m):
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     library.I1a(library.pleaves(m[1], 1), "D#6", "E6", "mf - mp -")
     library.I1a(library.pleaves(m[2], 1), "D#6", "E6", "p - - -")
     library.I1a(library.pleaves(m[3], 1), "D#6", "E6", "(p) mp mf f")
@@ -265,6 +266,7 @@ def ob(m):
 
 def gt1(cache):
     m = cache["gt1"]
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5")
     I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4")
     I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5")
@@ -288,7 +290,7 @@ def gt1(cache):
 
 def gt2(cache):
     m = cache["gt2"]
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5")
     I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5")
     I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5")
@@ -315,13 +317,14 @@ def gt2(cache):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.I2b(library.run(m[1], 2, 0), "B4", "C5", "mp")
     library.I2b(library.run(m[1, 2], 2, 1), "B4", "C5", "mf")
     library.I2b(library.run(m[2, 3], 2, 1), "B4", "C5", "f")
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     library.I2c(library.run(m[1], 2, 0), "C#3", "D#3", "E3", "D3", "mp")
     library.I2c(library.run(m[1, 2], 2, 1), "C#3", "D#3", "E3", "D3", "mf")
     library.I2c(library.run(m[2, 3], 2, 1), "C#3", "D#3", "E3", "D3", "f")

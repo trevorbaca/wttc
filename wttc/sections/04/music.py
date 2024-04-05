@@ -1008,6 +1008,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     B1a(library.pleaves(m[1], 1), "G3", "mp -")
     library.B3(
         library.run(m[1, 2], 3, 0),
@@ -1072,6 +1073,7 @@ def fl(m):
 
 
 def ob(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     library.B3(
         library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", rleak_hairpin=True
     )
@@ -1119,6 +1121,7 @@ def override_uneven_staff_padding(leaves, *, only_dls=False):
 
 
 def gt1(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     B1b(library.pleaves(m[1], 1), '"mf"')
     B2a(library.pleaves(m[1], 2), "D5", "mp p")
     B1b(library.pleaves(m[2], 1), '"f"')
@@ -1159,6 +1162,7 @@ def gt1(m):
 
 
 def gt2(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
     B2a(library.pleaves(m[1], 2), "D5", "p mp")
     B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
@@ -1187,6 +1191,7 @@ def gt2(m):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     B1c(
         library.pleaves(m[1], 1),
         3,
@@ -1259,6 +1264,7 @@ def vn(m):
 
 
 def vc(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     B1c(
         library.pleaves(m[1, 3], 1),
         2,

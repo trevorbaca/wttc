@@ -1004,6 +1004,7 @@ def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     G1a(library.pleaves(m[1], 1), "A#4", [1, 2], "p")
     G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
     G3a(library.pleaves(m[2, 3], 3), "D5 C5", "p p mp mp mf mf")
@@ -1037,7 +1038,7 @@ def fl(m):
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
     G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
     G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
@@ -1055,6 +1056,7 @@ def ob(m):
 
 
 def gt1(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     G3b(library.pleaves(m[2, 3], 3), "F2", "p p mp mp mf mf")
     G1b(library.pleaves(m[4], 1), "A3 B3", "mp>o!")
     G3b(library.pleaves(m[5], 3), "F2", "mf mf f")
@@ -1079,7 +1081,7 @@ def gt1(m):
 
 
 def gt2(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     G3c(library.pleaves(m[1, 4], 3), "F#4")
     G1b(library.pleaves(m[4, 5], 1), "A#3 B#3", "mp>o!")
     G3c(library.pleaves(m[5, 6], 3), "F#4")
@@ -1099,6 +1101,7 @@ def gt2(m):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     G5b(
         library.pleaves(m[13, 16], 5),
         "Ab4/3 F4/2 A4/2 E4/2 Gb4/3 Eb4/3 F4/2 D4/3 E4/2 Db4/1",
@@ -1118,7 +1121,7 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     G1c(
         library.pleaves(m[5, 6], 1),
         "G2",

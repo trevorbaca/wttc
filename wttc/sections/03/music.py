@@ -514,10 +514,7 @@ def B1b(pleaves, *, up_bow=False):
 
 
 def fl(m):
-    baca.instrument(m[1][0], "AltoFlute", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.alto_flute_markup)
-    baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     A1a(library.pleaves(m[1, 2], 1), "F#4", "mf mf mp")
     A1a(library.pleaves(m[3, 4], 1), "F4", "p p p")
     A1a(library.pleaves(m[5, 7], 1), "E4", "p mp mf mp p")
@@ -534,37 +531,23 @@ def fl(m):
 
 
 def ob(m):
-    baca.instrument(m[1][0], "Oboe", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.oboe_markup)
-    baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
-    baca.clef(m[1][0], "treble")
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
 
 
 def gt1(m):
-    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.guitar_i_markup)
-    baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     A2a(library.pleaves(m[1, 7], 2), "Db5 Bb4 Ab4 F4", "f - mf -")
     B1b(library.pleaves(m[11, 13], 99))
 
 
 def gt2(m):
-    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.guitar_ii_markup)
-    baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
-    baca.clef(m[1][0], "treble")
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     A2a(library.pleaves(m[1, 7], 2), "C5 B4 G4 Gb4", "p - - -")
     B1b(library.pleaves(m[11, 13], 99), up_bow=True)
 
 
 def vn(m):
-    baca.instrument(m[1][0], "Violin", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.violin_markup)
-    baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     A1b(library.pleaves(m[1], 1), "D4 F4", "mp mp")
     A2b(
         library.pleaves(m[1], 2),
@@ -603,11 +586,7 @@ def vn(m):
 
 
 def vc(m):
-    baca.instrument(m[1][0], "Cello", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.cello_markup)
-    baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
-    baca.clef(m[1][0], "bass")
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     A2c(library.run(m[1, 2], 2, 0), "B2/4 D3 D3", [4, 2], "o< p>o!")
     A2c(library.run(m[2, 3], 2, 1), "Bb2/7 Db3 Db3", [7, 4], "o< mp>o!")
     A2c(library.run(m[3, 5], 2, 1), "Ab2/14 Cb3/7 Cb3", [14, 7], "o< mf>o!")

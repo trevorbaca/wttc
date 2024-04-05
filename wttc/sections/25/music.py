@@ -539,6 +539,7 @@ Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     N1a(
         library.pleaves(m[1, 5], 1),
         library.make_flute_covered_dyads("Eb3 D3 Db3"),
@@ -570,10 +571,11 @@ def fl(m):
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
 
 
 def gt1(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     N1b(library.pleaves(m[1, 6], 1), "Ab3 G3", "mp")
     N3a(library.pleaves(m[7, 8], 3), "F#4", "mf mp")
     N1b(library.pleaves(m[8, 9], 1), "G3", "-")
@@ -589,7 +591,7 @@ def gt1(m):
 
 
 def gt2(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     N1b(library.pleaves(m[1, 6], 1), "Bb2 C3", "mp")
     N3a(library.pleaves(m[7, 8], 3), "E4", "mf mp")
     N1b(library.pleaves(m[8, 9], 1), "C#3", "-")
@@ -605,6 +607,7 @@ def gt2(m):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
     N3b(library.pleaves(m[8], 3), Q1, [8, 10], "o< mp>o!", -6)
@@ -626,7 +629,7 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 2)
     baca.clef(m[5][0], "bass")

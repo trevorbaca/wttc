@@ -1108,6 +1108,7 @@ Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     K2a(library.pleaves(m[6], 2), "A3 Ab3", "mf>o!")
     K2a(library.pleaves(m[7], 2), "A3 Ab3", "mf>o!")
     K3a(library.pleaves(m[7, 8], 3), "G3", "p p p")
@@ -1132,7 +1133,7 @@ def fl(m):
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     K1a(library.pleaves(m[1, 8], 1), "G6 G6 F6", "p")
     L2a(library.pleaves(m[20], 2), "G6", "Bb6", [1, 1], "o< mp>o!")
     L2a(library.pleaves(m[23], 2), "G6", "Bb6", [1, 1], "o< mf>o!")
@@ -1143,6 +1144,7 @@ def ob(m):
 
 
 def gt1(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     K2b(library.pleaves(m[6, 7], 2), "Ab2")
     K3b(library.pleaves(m[8], 3), "C#5", "p - -")
     K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
@@ -1156,7 +1158,7 @@ def gt1(m):
 
 
 def gt2(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     K2c(library.pleaves(m[6, 7], 2))
     K3b(library.pleaves(m[8], 3), "C#5", "p - -")
     K2c(library.pleaves(m[9, 10], 2))
@@ -1171,6 +1173,7 @@ def gt2(m):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     K2d(library.pleaves(m[6, 7], 2), "A3", "mf")
     K3a(library.pleaves(m[8], 3), "C4", "p p", circle_bow=True)
     K2d(library.pleaves(m[9, 10], 2), "Ab3", "mf")
@@ -1229,7 +1232,7 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     K1b1(library.pleaves(m[1], 1)[:4], "F#3:B3", "C#4", "p mp")
     K1b2(library.pleaves(m[1], 1)[-2:], "G3", "p<|f")
     K1b1(library.pleaves(m[2], 1), "F#3:B3", "C#4", "mf")

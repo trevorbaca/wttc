@@ -894,6 +894,7 @@ def K1b(pleaves, dyad, alteration, peaks):
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     J1a(library.pleaves(m[1, 2], 1), "D6 Dqf6 Df6 Dtqf6 C6 Cqf6 B5", "f>o!")
     J2a1(
         library.pleaves(m[2, 4], 2)[:-2],
@@ -942,7 +943,7 @@ def fl(m):
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     J2a2(library.pleaves(m[5, 6], 2), "A5 Ab5", [3, 3], "o< f>o!")
     J2a2(library.pleaves(m[10, 12], 2), "Bb5 Ab5 G5 F5", [14], "f>o!")
     J2a2(library.pleaves(m[15, 16], 2), "B5", [3], "sfp>o!")
@@ -958,6 +959,7 @@ def ob(m):
 
 def gt1(cache):
     m = cache["gt1"]
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     J1b(library.pleaves(m[1], 1), "G4 A4 B4")
     J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5")
     J3b(library.pleaves(m[3, 4], 3), 4 * "F#3 ", "mf mf mp p", "1101")
@@ -989,7 +991,7 @@ def gt1(cache):
 
 def gt2(cache):
     m = cache["gt2"]
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5")
     J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4")
     J1b(library.run(m[2], 1, 1), "G#4 A#4 C5 D5")
@@ -1022,6 +1024,7 @@ def gt2(cache):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     J4b(
         library.pleaves(m[9, 12], 4),
         "C6/6 G5/4 Db5/4 F#4/3 B5/2 Eb4",
@@ -1063,8 +1066,7 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
     J3c(library.pleaves(m[2, 5], 3), 4 * "Btqf4 ", "mf f mf mp")
     J3c(
         library.pleaves(m[6, 9], 3),

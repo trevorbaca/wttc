@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library, strings
+from wttc import library
 
 #########################################################################################
 ########################################### 06 ##########################################
@@ -107,49 +107,28 @@ def C1(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
 
 
 def fl(m):
-    baca.instrument(m[1][0], "AltoFlute", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.alto_flute_markup)
-    baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
 
 
 def ob(m):
-    baca.instrument(m[1][0], "Oboe", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.oboe_markup)
-    baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
-    baca.clef(m[1][0], "treble")
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
 
 
 def gt1(m):
-    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.guitar_i_markup)
-    baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
 
 
 def gt2(m):
-    baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.guitar_ii_markup)
-    baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
-    baca.clef(m[1][0], "treble")
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
 
 
 def vn(m):
-    baca.instrument(m[1][0], "Violin", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.violin_markup)
-    baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     C1(library.pleaves(m[1], 99), "D5", "F#5", "mf mp")
 
 
 def vc(m):
-    baca.instrument(m[1][0], "Cello", manifests=library.manifests)
-    baca.instrument_name(m[1][0], strings.cello_markup)
-    baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
-    baca.clef(m[1][0], "tenor")
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "tenor")
     C1(library.pleaves(m[1], 99), "D4", "F4", "mf mp p")
 
 

@@ -730,16 +730,18 @@ def N1c(run, glissando, string_number, hairpin):
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     M4(library.pleaves(m[7, 10], 4), "D6", "p<|f")
     M4(library.pleaves(m[17, 20], 4), "D#6", "f|>p")
     M4(library.pleaves(m[23, 26], 4), "D#6", "f|>p")
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
 
 
 def gt1(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.M2(library.pleaves(m[1], 2), "Bb3 A3", "mp")
     M3a(library.pleaves(m[1, 4], 3), "G2", 'p<"f"')
     library.M2(library.pleaves(m[4], 2), "Bb3 A3", "mf")
@@ -760,7 +762,7 @@ def gt1(m):
 
 
 def gt2(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.M2(library.pleaves(m[1], 2), "D3 D#3", "mp")
     M3a(library.pleaves(m[1, 4], 3), "F#2", 'p<"f"')
     library.M2(library.pleaves(m[4, 5], 2), "D3 D#3 E3", "mf")
@@ -781,6 +783,7 @@ def gt2(m):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     M1_3(library.pleaves(m[1, 2], 1), ["D5 G#4", "Db5 G4", "Bb4 E4"], "mf mp mf")
     M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "- mp mf")
     M1_2(library.pleaves(m[5, 6], 1)[:5], "D4 E4 F4", "mf<f")
@@ -800,8 +803,7 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
-    baca.clef(m[1][0], "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
     M1_3(library.pleaves(m[1, 2], 1), ["C5 F#4", "B4 F4"], "mf mp")
     baca.clef(m[3][0], "bass")
     M3b(library.pleaves(m[3], 3), "A2 F#4", 3, "f")

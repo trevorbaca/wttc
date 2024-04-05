@@ -1082,6 +1082,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
 
 
 def fl(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp|>o!")
     C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp|>o!")
     C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp|>o!")
@@ -1105,7 +1106,7 @@ def fl(m):
 
 
 def ob(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6")
     C2a(library.pleaves(m[9], 2), "D6", "E6", "p")
     C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6")
@@ -1120,6 +1121,7 @@ def ob(m):
 
 
 def gt1(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
     C3c(library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, pizz_staff_padding=3)
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True)
@@ -1135,7 +1137,7 @@ def gt1(m):
 
 
 def gt2(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
     C3c(library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, pizz_staff_padding=3)
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True, upbow=True)
@@ -1151,6 +1153,7 @@ def gt2(m):
 
 
 def vn(m):
+    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Eb4", "G4", "Ab4", "p")
     library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
     library.C1a(library.pleaves(m[2][-1:] + m[3][:4], 1), "Eb4", "G4", "Ab4", "p")
@@ -1228,7 +1231,7 @@ def vn(m):
 
 
 def vc(m):
-    library.rotate_rehearsal_mark_literal(m[1][0])
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     library.C1a(library.pleaves(m[1] + m[2][:1], 1), "Db3", "Gb3", "F3", "p")
     baca.clef(m[2][1], "treble")
     library.C1b(library.pleaves(m[2][1:3], 1), "Eb4:G4", "Ab4", "mp")
