@@ -302,6 +302,43 @@ def attach_obgcs(counts, grace_lists):
     return result
 
 
+def attach_section_initial_persistent_indicators(leaf, voice_abbreviation, clef=None):
+    if voice_abbreviation == "fl":
+        baca.instrument(leaf, "AltoFlute", manifests=manifests)
+        baca.instrument_name(leaf, strings.alto_flute_markup)
+        baca.short_instrument_name(leaf, "Afl.", manifests)
+        baca.clef(leaf, "treble")
+    elif voice_abbreviation == "ob":
+        baca.instrument(leaf, "Oboe", manifests=manifests)
+        baca.instrument_name(leaf, strings.oboe_markup)
+        baca.short_instrument_name(leaf, "Ob.", manifests)
+        baca.clef(leaf, "treble")
+        rotate_rehearsal_mark_literal(leaf)
+    elif voice_abbreviation == "gt1":
+        baca.instrument(leaf, "Guitar", manifests=manifests)
+        baca.instrument_name(leaf, strings.guitar_i_markup)
+        baca.short_instrument_name(leaf, "Gt. 1", manifests)
+        baca.clef(leaf, "treble")
+    elif voice_abbreviation == "gt2":
+        baca.instrument(leaf, "Guitar", manifests=manifests)
+        baca.instrument_name(leaf, strings.guitar_ii_markup)
+        baca.short_instrument_name(leaf, "Gt. 2", manifests)
+        baca.clef(leaf, "treble")
+        rotate_rehearsal_mark_literal(leaf)
+    elif voice_abbreviation == "vn":
+        baca.instrument(leaf, "Violin", manifests=manifests)
+        baca.instrument_name(leaf, strings.violin_markup)
+        baca.short_instrument_name(leaf, "Vn.", manifests)
+        baca.clef(leaf, "treble")
+    else:
+        assert voice_abbreviation == "vc", repr(voice_abbreviation)
+        baca.instrument(leaf, "Cello", manifests=manifests)
+        baca.instrument_name(leaf, strings.cello_markup)
+        baca.short_instrument_name(leaf, "Vc.", manifests)
+        baca.clef(leaf, clef or "bass")
+        rotate_rehearsal_mark_literal(leaf)
+
+
 def attacks(counts, *, n=1):
     result = []
     for count in counts:
