@@ -982,14 +982,6 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             )
 
 
-def D3b(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches)
-    dynamics_ = dynamics.split()
-    for pleaf, dynamic_ in zip(pleaves, dynamics_, strict=True):
-        baca.dynamic(pleaf, dynamic_)
-        baca.laissez_vibrer(pleaf)
-
-
 def D4a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
@@ -998,66 +990,6 @@ def D4a(pleaves, pitch, dynamics):
         if dynamic_ != "-":
             baca.dynamic(plt.head, dynamic_)
         baca.espressivo(plt.head)
-
-
-def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
-    baca.pitch(pleaves, pitch)
-    baca.override.note_head_style_harmonic(pleaves)
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        if not no_spanner:
-            baca.spanners.circle_bow(
-                plt,
-                baca.postevent.bound_details_right_padding(1.5),
-                rleak=True,
-                staff_padding=3,
-            )
-        else:
-            baca.articulation(
-                plt,
-                r"baca-circle-bowing",
-                staff_padding=1.5,
-            )
-    if dynamics:
-        dynamics_ = dynamics.split()
-        for plt, dynamic_ in zip(plts, dynamics_, strict=True):
-            if dynamic_ != "-":
-                baca.dynamic(plt.head, dynamic_)
-    else:
-        baca.hairpin(
-            [pleaves],
-            hairpin,
-        )
-
-
-def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
-    runs = abjad.select.runs(pleaves)
-    for run in runs:
-        if " " in pitches:
-            start_pitch, stop_pitch = pitches.split()
-            baca.glissando(run, f"{start_pitch} {stop_pitch}")
-        else:
-            baca.pitch(run, pitches)
-        baca.spanners.xfb(
-            run,
-            baca.postevent.bound_details_right_padding(1.5),
-            rleak=True,
-            staff_padding=3,
-        )
-        baca.spanners.scp(
-            run,
-            "T =|",
-            bound_details_right_padding=1.5,
-            rleak=True,
-            staff_padding=6.5,
-        )
-        if hairpin:
-            baca.hairpin(
-                run,
-                hairpin,
-            )
-    if dynamic:
-        baca.dynamic(pleaves[0], dynamic)
 
 
 def fl(m):
@@ -1112,7 +1044,7 @@ def gt1(m):
     D2b(library.pleaves(m[45], 2)[:2], '"mf"', do_not_unbeam=True)
     D2b(library.pleaves(m[45, 46], 2)[2:], "mp p pp")
     D2b(library.pleaves(m[47, 48], 2), "p p p p")
-    D3b(library.pleaves(m[32, 38], 3), "Gb2 Gb2 Ab2", "mf mf (mf)")
+    library.D3b(library.pleaves(m[32, 38], 3), "Gb2 Gb2 Ab2", "mf mf (mf)")
 
 
 def gt2(m):
@@ -1128,7 +1060,7 @@ def gt2(m):
     D2b(library.pleaves(m[45], 2)[:2], '"mf"', do_not_unbeam=True, upbow=True)
     D2b(library.pleaves(m[45, 46], 2)[2:], "mp p pp", upbow=True)
     D2b(library.pleaves(m[47, 48], 2), "p p p p", upbow=True)
-    D3b(library.pleaves(m[32, 38], 3), "F2 F2 G2", "mf mf (mf)")
+    library.D3b(library.pleaves(m[32, 38], 3), "F2 F2 G2", "mf mf (mf)")
 
 
 def vn(m):
@@ -1199,9 +1131,9 @@ def vn(m):
     C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
     C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
     C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
-    D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
-    D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p>o!", no_spanner=True)
-    D4b(
+    library.D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
+    library.D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p>o!", no_spanner=True)
+    library.D4b(
         library.pleaves(m[47, 48], 4),
         "A3",
         dynamics="pp - - - - - - - ",
@@ -1288,9 +1220,9 @@ def vc(m):
         ["mf>o!", "mp>o!", "p>o!"],
     )
     D2c(library.pleaves(m[41, 44], 2), 5 * ["G2 Ab2"], 5 * [None])
-    D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp>p")
-    D4c(library.pleaves(m[45, 46], 4), "F#2", dynamic="p")
-    D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")
+    library.D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp>p")
+    library.D4c(library.pleaves(m[45, 46], 4), "F#2", dynamic="p")
+    library.D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")
 
 
 def align_spanners(cache):

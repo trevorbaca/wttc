@@ -1313,12 +1313,15 @@ def D1b(
     *,
     do_not_bookend=None,
     rleak=False,
+    tbl=False,
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
+    tweaks = to_bar_line_tweaks(tbl)
     baca.hairpin(
         hairpin_pieces,
         hairpin_string,
+        *tweaks,
     )
     baca.spanners.scp(
         scp_pieces,
@@ -1341,6 +1344,73 @@ def D3a(pleaves, pitch, dynamics, *, to_bar_line=False):
         *tweaks,
         rleak=True,
     )
+
+
+def D3b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    dynamics = dynamics.split()
+    for pleaf, dynamic in zip(pleaves, dynamics, strict=True):
+        baca.dynamic(pleaf, dynamic)
+        baca.laissez_vibrer(pleaf)
+
+
+def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
+    baca.pitch(pleaves, pitch)
+    baca.override.note_head_style_harmonic(pleaves)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        if not no_spanner:
+            baca.spanners.circle_bow(
+                plt,
+                baca.postevent.bound_details_right_padding(1.5),
+                rleak=True,
+                staff_padding=3,
+            )
+        else:
+            baca.articulation(
+                plt,
+                r"baca-circle-bowing",
+                staff_padding=1.5,
+            )
+    if dynamics:
+        dynamics = dynamics.split()
+        for plt, dynamic in zip(plts, dynamics, strict=True):
+            baca.dynamic(plt.head, dynamic)
+    else:
+        baca.hairpin(
+            [pleaves],
+            hairpin,
+        )
+
+
+def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
+    runs = abjad.select.runs(pleaves)
+    for run in runs:
+        if " " in pitches:
+            start_pitch, stop_pitch = pitches.split()
+            baca.glissando(run, f"{start_pitch} {stop_pitch}")
+        else:
+            baca.pitch(run, pitches)
+        baca.spanners.xfb(
+            run,
+            baca.postevent.bound_details_right_padding(1.5),
+            rleak=True,
+            staff_padding=3,
+        )
+        baca.spanners.scp(
+            run,
+            "T =|",
+            bound_details_right_padding=1.5,
+            rleak=True,
+            staff_padding=6.5,
+        )
+        if hairpin:
+            baca.hairpin(
+                run,
+                hairpin,
+            )
+    if dynamic:
+        baca.dynamic(pleaves[0], dynamic)
 
 
 def E1(
