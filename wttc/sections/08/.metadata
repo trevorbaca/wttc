@@ -22,11 +22,21 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1, 7],
-    "duration": "0'36''",
-    "final_measure_number": 9,
+    "duration": "0'41''",
+    "final_measure_number": 10,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
+        "AltoFlute.Music": [
+            baca.Memento(
+                context="AltoFlute.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
+        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -60,7 +70,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="p",
+                value="f",
             )
         ],
         "Cello.Staff": [
@@ -96,7 +106,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mf",
+                value="p",
             )
         ],
         "Guitar.1.Staff": [
@@ -148,7 +158,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="mf",
+                value="p",
             )
         ],
         "Guitar.2.Staff": [
@@ -226,7 +236,7 @@
                 manifest="metronome_marks",
                 prototype=None,
                 synthetic_offset=None,
-                value="50",
+                value="75",
             ),
             baca.Memento(
                 context="Skips",
@@ -234,18 +244,8 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="4/4",
+                value="6/4",
             ),
-        ],
-        "Violin.Music": [
-            baca.Memento(
-                context="Violin.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="mf",
-            )
         ],
         "Violin.Staff": [
             baca.Memento(
@@ -276,6 +276,17 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'36''",
-    "time_signatures": ["4/4", "4/4", "4/4", "4/4", "4/4", "6/4", "4/4", "6/4", "4/4"],
+    "stop_clock_time": "0'41''",
+    "time_signatures": [
+        "4/4",
+        "4/4",
+        "4/4",
+        "4/4",
+        "4/4",
+        "6/4",
+        "4/4",
+        "6/4",
+        "4/4",
+        "6/4",
+    ],
 }

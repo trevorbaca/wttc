@@ -202,16 +202,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def I1b(pleaves, pitches, dynamic=None):
-    baca.pitches(pleaves, pitches, allow_obgc_mutation=True)
-    if dynamic is not None:
-        main_leaves = abjad.select.leaves(pleaves, grace=False)
-        if "<" in dynamic or ">" in dynamic:
-            baca.hairpin(main_leaves, dynamic)
-        else:
-            baca.dynamic(main_leaves[0], dynamic)
-
-
 def I3a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches, strict=True)
     dynamics = dynamics.split()
@@ -267,13 +257,15 @@ def ob(m):
 def gt1(cache):
     m = cache["gt1"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5")
-    I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4")
-    I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5")
-    I1b(library.pleaves(m[3], 1), "Eb5 D5 C5 Eb5 B4 Bb4 B4 Eb5 Bb4 C5 D5 C5 D5", "p<f")
+    library.I1b(library.pleaves(m[1], 1)[:5], "Db5 B4 Eb5 E5 C5")
+    library.I1b(library.pleaves(m[1], 1)[-4:], "E5 Eb5 C5 B4")
+    library.I1b(library.pleaves(m[2], 1), "Db5 B4 C5 Db5 Eb5")
+    library.I1b(
+        library.pleaves(m[3], 1), "Eb5 D5 C5 Eb5 B4 Bb4 B4 Eb5 Bb4 C5 D5 C5 D5", "p<f"
+    )
     I3a(library.pleaves(m[3], 3), "Gb2", "mf")
     I3a(library.pleaves(m[4], 3), "Gb2 G2 G2", "mf mp p")
-    I1b(library.pleaves(m[5], 1), "Db5 B4 C5 Db5 Eb5")
+    library.I1b(library.pleaves(m[5], 1), "Db5 B4 C5 Db5 Eb5")
     #
     cache.rebuild()
     m = cache["gt1"]
@@ -291,17 +283,17 @@ def gt1(cache):
 def gt2(cache):
     m = cache["gt2"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5")
-    I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5")
-    I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5")
-    I1b(
+    library.I1b(library.pleaves(m[1], 1)[:4], "Eb5 Db5 C5 E5")
+    library.I1b(library.pleaves(m[1], 1)[-5:], "C5 B4 C5 E5 Db5")
+    library.I1b(library.pleaves(m[2], 1), "Eb5 C5 Eb5 Db5")
+    library.I1b(
         library.pleaves(m[3], 1),
         "B4 Bb4 C5 Eb5 B4 D5 Eb5 B4 Eb5 D5 Bb4 C5 D5 C5",
         "p<f",
     )
     I3a(library.pleaves(m[3], 3), "F2", "mf")
     I3a(library.pleaves(m[4], 3), "F2 F2 F#2", "mf mp p")
-    I1b(library.pleaves(m[5], 1), "Eb5 E5 Eb5 Db5")
+    library.I1b(library.pleaves(m[5], 1), "Eb5 E5 Eb5 Db5")
     #
     cache.rebuild()
     m = cache["gt2"]

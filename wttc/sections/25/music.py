@@ -301,21 +301,6 @@ def VC(voice, meters):
     )
 
 
-def N1a(pleaves, pitches, hairpin_lparts, hairpin):
-    baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
-    for chord in pleaves:
-        baca.tweak.style_harmonic(chord.note_heads[0])
-    baca.spanners.covered(
-        pleaves,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-
-
 def N1b(pleaves, pitches, dynamic):
     baca.pitches(pleaves, pitches)
     baca.stem_tremolo(pleaves)
@@ -356,16 +341,6 @@ def N2a(pleaves, pitches, hairpin_lparts, hairpin):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-    )
-
-
-def N2b1(pleaves, glissando):
-    baca.glissando(pleaves, glissando)
-    baca.stem_tremolo(pleaves)
-    baca.spanners.xfb(
-        pleaves,
-        rleak=True,
-        staff_padding=8,
     )
 
 
@@ -412,29 +387,6 @@ def N3a(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
-
-
-def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
-    if t is not False:
-        transposed_pitch_names = []
-        interval = abjad.NamedInterval(t)
-        for pitch_name in pitches.split():
-            transposed_pitch = abjad.NamedPitch(pitch_name) + interval
-            name = transposed_pitch.get_name(locale="us")
-            transposed_pitch_names.append(name)
-        pitches = " ".join(transposed_pitch_names)
-    baca.pitches(pleaves, pitches)
-    baca.override.note_head_style_harmonic(pleaves)
-    baca.override.stem_direction_down(pleaves)
-    baca.override.beam_positions(pleaves, beam_positions)
-    parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True, overhang=True)
-    for part in parts:
-        baca.spanners.slur(part)
-    assert sum(hairpin_lparts) == len(pleaves)
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
 
 
 def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
@@ -498,56 +450,16 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-Q1 = """
-    D4 Bb4 F#5 D6
-    D6 F#5 Bb4 D4 Eb4
-    B4 G5 Eb6 Eb6
-    G5 B4 Eb4 F#4
-    D5 Bb5 F#6 F#6 Bb5 D5
-    F#4 E4
-    C5 Ab5
-    E6 E6 Ab5 C5 E4
-    F4 C#5
-    A5 F6 F6 A5
-    C#5 F4 G4 Eb5 B5 G6
-    G6 B5 Eb4 G4
-    Ab4 E5 C6 Ab6 Ab6
-    C6 E5
-    Ab4 F4 C#5 C6
-    """
-
-
-Q2 = """
-    Eb4 C5 A5 F#6 F#6 A5
-    C5 Eb4 Eb4 C5 A5 F#6
-    F#6 A5 C5 Eb4
-    Ab6 B5 D5 F4
-    F4 D5 B5 Ab6
-    F4 D5 B5 Ab6 Ab6
-    B5 D5 F4 F4 D5 B5
-    Ab6 Ab6
-    B5 D5 F4 Bb6
-    C#5 E5 G4 G4
-    E5 C#6 Bb6 F#4
-    Eb5 C6 A6 A6 C6
-    Eb5 F#4 F#4 Eb5 C6 A6
-    A6 C6
-    """
-
-Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
-Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    N1a(
+    library.N1a(
         library.pleaves(m[1, 5], 1),
         library.make_flute_covered_dyads("Eb3 D3 Db3"),
         [1, 2, 1, 3, 1, 3],
         "o< mp o< mp o< mp",
     )
     N2a(library.pleaves(m[5, 8], 2), "C5 E5 Eb5", [4, 3], "o< f>o!")
-    N1a(
+    library.N1a(
         library.pleaves(m[8, 11], 1),
         library.make_flute_covered_dyads("D3 Db3 C3"),
         [1, 3, 1, 4, 1, 1],
@@ -610,9 +522,18 @@ def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["B4 Ab4", "B4 G4", "B4 Gb4"], ["o<p", "o<mp", "o<mf"], 3)
-    N3b(library.pleaves(m[8], 3), Q1, [8, 10], "o< mp>o!", -6)
-    N3b(library.pleaves(m[11], 3), Q1, [16, 18], "o< mf>o!", -6, t="+m2")
-    N3b(library.pleaves(m[13, 14], 3), Q1, [32, 8, 26], "o< f-- >o!", -6, t="+M3")
+    library.N3b(library.pleaves(m[8], 3), library.Q1, [8, 10], "o< mp>o!", -6)
+    library.N3b(
+        library.pleaves(m[11], 3), library.Q1, [16, 18], "o< mf>o!", -6, t="+m2"
+    )
+    library.N3b(
+        library.pleaves(m[13, 14], 3),
+        library.Q1,
+        [32, 8, 26],
+        "o< f-- >o!",
+        -6,
+        t="+M3",
+    )
     O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", "sfmp>o!", rleak_hairpin=True)
     O1b(
         library.pleaves(m[17], 99),
@@ -633,39 +554,46 @@ def vc(m):
     runs = baca.select.lparts(library.pleaves(m[1, 3], 1), [3, 5, 9])
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 2)
     baca.clef(m[5][0], "bass")
-    N2b1(library.pleaves(m[5], 2), "C2 E4")
+    library.N2b1(library.pleaves(m[5], 2), "C2 E4")
     N2b2(library.pleaves(m[6], 2)[:3], "B3:D#4", "G#2:B#2")
-    N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
+    library.N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
     N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
-    N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
+    library.N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
     baca.hairpin(
         baca.select.lparts(library.pleaves(m[5, 7], 2), [9, 6]),
         "o< f>o!",
     )
     baca.clef(m[8][0], "treble")
-    N3b(library.pleaves(m[8], 3), Q2, [8, 8], "o< mp>o!", -8)
+    library.N3b(library.pleaves(m[8], 3), library.Q2, [8, 8], "o< mp>o!", -8)
     baca.clef(m[8][-3], "bass")
-    N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
+    library.N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
     N2b2(library.pleaves(m[9], 2)[:3], "C5:E5", "A2:C#3")
-    N2b1(library.pleaves(m[9], 2)[3:], "D2 F#4")
+    library.N2b1(library.pleaves(m[9], 2)[3:], "D2 F#4")
     N2b2(library.pleaves(m[10], 2)[:3], "C#5:E#5", "Bb2:D3")
-    N2b1(library.pleaves(m[10], 2)[3:], "Eb2 G4")
+    library.N2b1(library.pleaves(m[10], 2)[3:], "Eb2 G4")
     baca.hairpin(
         baca.select.lparts(library.pleaves(m[8, 10], 2), [9, 6]),
         "o< f>o!",
     )
     baca.clef(m[11][0], "treble")
-    N3b(library.pleaves(m[11], 3), Q2, [16, 16], "o< mf>o!", -8, t="M2")
+    library.N3b(library.pleaves(m[11], 3), library.Q2, [16, 16], "o< mf>o!", -8, t="M2")
     baca.clef(m[11][-3], "bass")
-    N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
+    library.N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
     N2b2(library.pleaves(m[12], 2)[:3], "D5:F#5", "B2:D#3")
-    N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
+    library.N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
     baca.hairpin(
         baca.select.lparts(library.pleaves(m[11, 12], 2), [3, 6]),
         "o< f>o!",
     )
     baca.clef(m[13][0], "treble")
-    N3b(library.pleaves(m[13, 14], 3), Q2, [32, 8, 26], "o< f-- f>o!", -8, t="M3")
+    library.N3b(
+        library.pleaves(m[13, 14], 3),
+        library.Q2,
+        [32, 8, 26],
+        "o< f-- f>o!",
+        -8,
+        t="M3",
+    )
     N2b2(library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!", staff_padding=3)
     N2b2(library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3)
     N2b2(library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "pp<|p", staff_padding=3)

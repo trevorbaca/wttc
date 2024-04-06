@@ -1654,6 +1654,16 @@ def I1a(pleaves, pitch, alteration, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
+def I1b(pleaves, pitches, dynamic=None):
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True)
+    if dynamic is not None:
+        main_leaves = abjad.select.leaves(pleaves, grace=False)
+        if "<" in dynamic or ">" in dynamic:
+            baca.hairpin(main_leaves, dynamic)
+        else:
+            baca.dynamic(main_leaves[0], dynamic)
+
+
 def I2a(pleaves, pitch, dynamic, glissando_start=None, glissando_count=None):
     baca.pitch(pleaves[glissando_count:], pitch)
     if glissando_start is not None:
@@ -1789,6 +1799,54 @@ def M5b(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
+def N1a(pleaves, pitches, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
+    for chord in pleaves:
+        baca.tweak.style_harmonic(chord.note_heads[0])
+    baca.spanners.covered(
+        pleaves,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
+def N2b1(pleaves, glissando):
+    baca.glissando(pleaves, glissando)
+    baca.stem_tremolo(pleaves)
+    baca.spanners.xfb(
+        pleaves,
+        rleak=True,
+        staff_padding=8,
+    )
+
+
+def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
+    if t is not False:
+        transposed_pitch_names = []
+        interval = abjad.NamedInterval(t)
+        for pitch_name in pitches.split():
+            transposed_pitch = abjad.NamedPitch(pitch_name) + interval
+            name = transposed_pitch.get_name(locale="us")
+            transposed_pitch_names.append(name)
+        pitches = " ".join(transposed_pitch_names)
+    baca.pitches(pleaves, pitches)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.override.stem_direction_down(pleaves)
+    baca.override.beam_positions(pleaves, beam_positions)
+    parts = abjad.sequence.partition_by_counts(pleaves, [4], cyclic=True, overhang=True)
+    for part in parts:
+        baca.spanners.slur(part)
+    assert sum(hairpin_lparts) == len(pleaves)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
 def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     pitches = pitches[:-1] + "3"
@@ -1838,3 +1896,43 @@ def O3b(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
+
+
+Q1 = """
+    D4 Bb4 F#5 D6
+    D6 F#5 Bb4 D4 Eb4
+    B4 G5 Eb6 Eb6
+    G5 B4 Eb4 F#4
+    D5 Bb5 F#6 F#6 Bb5 D5
+    F#4 E4
+    C5 Ab5
+    E6 E6 Ab5 C5 E4
+    F4 C#5
+    A5 F6 F6 A5
+    C#5 F4 G4 Eb5 B5 G6
+    G6 B5 Eb4 G4
+    Ab4 E5 C6 Ab6 Ab6
+    C6 E5
+    Ab4 F4 C#5 C6
+    """
+
+
+Q2 = """
+    Eb4 C5 A5 F#6 F#6 A5
+    C5 Eb4 Eb4 C5 A5 F#6
+    F#6 A5 C5 Eb4
+    Ab6 B5 D5 F4
+    F4 D5 B5 Ab6
+    F4 D5 B5 Ab6 Ab6
+    B5 D5 F4 F4 D5 B5
+    Ab6 Ab6
+    B5 D5 F4 Bb6
+    C#5 E5 G4 G4
+    E5 C#6 Bb6 F#4
+    Eb5 C6 A6 A6 C6
+    Eb5 F#4 F#4 Eb5 C6 A6
+    A6 C6
+    """
+
+Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
+Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
