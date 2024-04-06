@@ -32,9 +32,9 @@
                 context="AltoFlute.Music",
                 edition=None,
                 manifest=None,
-                prototype="abjad.Dynamic",
+                prototype="abjad.StartHairpin",
                 synthetic_offset=None,
-                value="\\baca-effort-mf",
+                value=">o",
             )
         ],
         "AltoFlute.Staff": [
@@ -96,7 +96,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="p",
+                value="\\baca-effort-mf",
             )
         ],
         "Guitar.1.Staff": [
@@ -118,11 +118,27 @@
             ),
             baca.Memento(
                 context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Guitar.1.Music",
                 edition=Tag(string="-PARTS"),
                 manifest="short_instrument_names",
                 prototype=None,
                 synthetic_offset=None,
                 value="Gt. 1",
+            ),
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
         "Guitar.2.Music": [
@@ -132,7 +148,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-effort-f",
+                value="\\baca-effort-mf",
             )
         ],
         "Guitar.2.Staff": [

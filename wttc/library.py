@@ -1011,6 +1011,14 @@ def A1b(pleaves, pitches, peaks, *, tbl=False):
     )
 
 
+def A3a(pleaves, pitches, hairpin):
+    pitches = pitches.split()
+    assert len(pitches) == 2, repr(pitches)
+    start_pitch, stop_pitch = pitches
+    baca.glissando(pleaves, f"{start_pitch} {stop_pitch}")
+    baca.hairpin(pleaves, hairpin)
+
+
 def A3b(
     pleaves,
     pitch,
@@ -1035,6 +1043,35 @@ def A3b(
         rleak=not do_not_rleak_scp,
         staff_padding=3,
     )
+
+
+def B1a(pleaves, pitch, dynamic):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.covered(
+        pleaves,
+        descriptor=strings.cov_dashed_hook,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.dynamic(pleaves[0], dynamic)
+
+
+def B1b(pleaves, *, up_bow=False):
+    baca.staff_position(pleaves, 0)
+    if up_bow is True:
+        bow_mark = baca.up_bow
+    else:
+        bow_mark = baca.down_bow
+    for run in abjad.select.runs(pleaves):
+        baca.staff_lines(run[0], 1)
+        rleaf = abjad.get.leaf(run[-1], 1)
+        baca.staff_lines(rleaf, 5)
+        bow_mark(run[0], padding=1)
+        baca.hairpin(
+            run,
+            'o<|"mf"',
+            rleak=len(run) == 1,
+        )
 
 
 def B1c(run, dynamic, grace_pitch, glissando, string_number, *, staff_padding=3):

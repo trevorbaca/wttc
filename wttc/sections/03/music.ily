@@ -1149,7 +1149,6 @@ number.3.AltoFlute.Music = {
 
     r8.
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
     cs'!16
@@ -1171,7 +1170,6 @@ number.3.AltoFlute.Music = {
     ~
 
     cs'8
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1268,7 +1266,6 @@ number.3.AltoFlute.Music = {
 
     r8.
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
     cs'!16
@@ -1290,7 +1287,6 @@ number.3.AltoFlute.Music = {
     ~
 
     cs'8
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -1338,7 +1334,6 @@ number.3.AltoFlute.Music = {
 
     r8.
 
-    \override DynamicLineSpanner.staff-padding = 5
       %! STAFF_HIGHLIGHT
     \staffHighlight yellow
     cs'!16
@@ -1360,7 +1355,6 @@ number.3.AltoFlute.Music = {
     ~
 
     cs'8
-    \revert DynamicLineSpanner.staff-padding
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight

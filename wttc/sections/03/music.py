@@ -466,59 +466,21 @@ def A2c(run, glissando, hairpin_lparts, hairpin):
     )
 
 
-def A3a(pleaves, pitches, hairpin):
-    pitches = pitches.split()
-    assert len(pitches) == 2, repr(pitches)
-    start_pitch, stop_pitch = pitches
-    baca.glissando(pleaves, f"{start_pitch} {stop_pitch}")
-    baca.hairpin(pleaves, hairpin)
-
-
-def B1a(pleaves, pitch, dynamic):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.covered(
-        pleaves,
-        descriptor=strings.cov_dashed_hook,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.dynamic(pleaves[0], dynamic)
-    baca.override.dls_staff_padding(pleaves, 5)
-
-
-def B1b(pleaves, *, up_bow=False):
-    baca.staff_position(pleaves, 0)
-    if up_bow is True:
-        bow_mark = baca.up_bow
-    else:
-        bow_mark = baca.down_bow
-    for run in abjad.select.runs(pleaves):
-        baca.staff_lines(run[0], 1)
-        rleaf = abjad.get.leaf(run[-1], 1)
-        baca.staff_lines(rleaf, 5)
-        bow_mark(run[0], padding=1)
-        baca.hairpin(
-            run,
-            'o<|"mf"',
-            rleak=len(run) == 1,
-        )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     A1a(library.pleaves(m[1, 2], 1), "F#4", "mf mf mp")
     A1a(library.pleaves(m[3, 4], 1), "F4", "p p p")
     A1a(library.pleaves(m[5, 7], 1), "E4", "p mp mf mp p")
-    A3a(library.pleaves(m[7], 3), "C6 B5", "f>o!")
-    A3a(library.pleaves(m[8, 9], 3), "C6 B5", "mf>o!")
-    A3a(library.pleaves(m[10], 3), "D6 C#6", "mp>o!")
-    A3a(library.pleaves(m[11], 3), "Eb6 D6", "p>o!")
-    B1a(library.pleaves(m[11], 99), "G#3", "mp")
+    library.A3a(library.pleaves(m[7], 3), "C6 B5", "f>o!")
+    library.A3a(library.pleaves(m[8, 9], 3), "C6 B5", "mf>o!")
+    library.A3a(library.pleaves(m[10], 3), "D6 C#6", "mp>o!")
+    library.A3a(library.pleaves(m[11], 3), "Eb6 D6", "p>o!")
+    library.B1a(library.pleaves(m[11], 99), "G#3", "mp")
     A1a(library.pleaves(m[12], 1), "E4", "p")
-    A3a(library.pleaves(m[12], 3), "E6 D#6", "p>o!")
-    B1a(library.pleaves(m[12], 99), "G#3", "mp")
-    A3a(library.pleaves(m[13], 3), "F6 E6", "p>o!")
-    B1a(library.pleaves(m[13], 99), "G#3", "mp")
+    library.A3a(library.pleaves(m[12], 3), "E6 D#6", "p>o!")
+    library.B1a(library.pleaves(m[12], 99), "G#3", "mp")
+    library.A3a(library.pleaves(m[13], 3), "F6 E6", "p>o!")
+    library.B1a(library.pleaves(m[13], 99), "G#3", "mp")
 
 
 def ob(m):
@@ -528,13 +490,13 @@ def ob(m):
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     A2a(library.pleaves(m[1, 7], 2), "Db5 Bb4 Ab4 F4", "f - mf -")
-    B1b(library.pleaves(m[11, 13], 99))
+    library.B1b(library.pleaves(m[11, 13], 99))
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     A2a(library.pleaves(m[1, 7], 2), "C5 B4 G4 Gb4", "p - - -")
-    B1b(library.pleaves(m[11, 13], 99), up_bow=True)
+    library.B1b(library.pleaves(m[11, 13], 99), up_bow=True)
 
 
 def vn(m):
