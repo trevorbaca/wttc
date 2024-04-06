@@ -1000,6 +1000,17 @@ def e4(twelfths=False):
     return counts
 
 
+def A1b(pleaves, pitches, peaks, *, tbl=False):
+    baca.pitches(pleaves, pitches)
+    tweaks = to_bar_line_tweaks(tbl)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        swells(peaks),
+        *tweaks,
+        rleak=True,
+    )
+
+
 def A3b(
     pleaves,
     pitch,
@@ -1083,6 +1094,37 @@ def B3(
         hairpin,
         *tweaks,
         rleak=rleak_hairpin,
+    )
+
+
+def B4b(pleaves, string_number, pitches, peaks):
+    runs = abjad.select.runs(pleaves)
+    assert len(runs) == 1
+    run = runs[0]
+    baca.spanners.string_number(
+        run,
+        string_number,
+        rleak=True,
+        staff_padding=5,
+    )
+    baca.spanners.xfb(
+        run,
+        rleak=True,
+        staff_padding=7.5,
+    )
+    baca.override.note_head_style_harmonic(run)
+    plts = baca.select.plts(run)
+    baca.untie(plts[-1])
+    pitches = pitches.split()
+    strings = [_ + "/2" for _ in pitches[:-1]] + pitches[-1:]
+    descriptor = " ".join(strings)
+    baca.glissando(
+        run,
+        descriptor,
+    )
+    baca.hairpin(
+        baca.select.clparts(run, [2]),
+        swells(peaks),
     )
 
 
@@ -1189,6 +1231,29 @@ def C1c(pleaves, dyad, alteration, dynamics):
             baca.untie(plt)
             for chord in plt[1:]:
                 del chord.note_heads[1]
+
+
+def C2a(pleaves, pitch_1, alteration, dynamic, pitch_2=None, *, tbl=None):
+    plts = baca.select.plts(pleaves)
+    if pitch_2 is None:
+        assert len(plts) == 1
+    else:
+        assert len(plts) == 2
+    baca.pitch(plts[0], pitch_1)
+    baca.spanners.trill(
+        plts[0],
+        alteration=alteration,
+        rleak=True,
+    )
+    if pitch_2:
+        baca.pitch(plts[1], pitch_2)
+    tweaks = to_bar_line_tweaks(tbl)
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+        *tweaks,
+        rleak=True,
+    )
 
 
 def D1a(pleaves, pitch, dynamic, *, rleak=False, tbl=False):

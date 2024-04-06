@@ -5126,7 +5126,6 @@ number.4.Cello.Music = {
 
     r16
 
-    \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
@@ -5312,7 +5311,7 @@ number.4.Cello.Music = {
     b,16
       %! SPANNER_STOP
     \!
-    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5321,7 +5320,6 @@ number.4.Cello.Music = {
     \bacaStopTextSpanBowSpeed
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     r4
 
@@ -5513,7 +5511,6 @@ number.4.Cello.Music = {
 
     r16
 
-    \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
@@ -5699,7 +5696,7 @@ number.4.Cello.Music = {
     a,16
       %! SPANNER_STOP
     \!
-    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5708,7 +5705,6 @@ number.4.Cello.Music = {
     \bacaStopTextSpanBowSpeed
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     r2
 
@@ -5778,7 +5774,6 @@ number.4.Cello.Music = {
 
     r16
 
-    \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
     \staffHighlight hotpink
@@ -5964,7 +5959,7 @@ number.4.Cello.Music = {
     g,16
       %! SPANNER_STOP
     \!
-    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
@@ -5973,7 +5968,6 @@ number.4.Cello.Music = {
     \bacaStopTextSpanBowSpeed
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
-    \revert NoteHead.style
 
     r2.
 

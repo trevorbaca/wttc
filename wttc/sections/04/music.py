@@ -810,7 +810,7 @@ def B1b(pleaves, terminations, *, up_bow=False):
 
 def B1c(
     pleaves,
-    string_symbol,
+    string_number,
     grace_pitch,
     glissando,
     dynamics,
@@ -841,7 +841,7 @@ def B1c(
         )
     baca.spanners.string_number(
         abjad.select.leaves(runs)[1:],
-        string_symbol,
+        string_number,
         rleak=True,
         staff_padding=string_number_staff_padding,
     )
@@ -899,38 +899,6 @@ def B4a(pleaves, pitches, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
         baca.flageolet(plt.head)
-
-
-def B4b(pleaves, string_symbol, pitch_string, dynamic_string):
-    runs = abjad.select.runs(pleaves)
-    assert len(runs) == 1
-    run = runs[0]
-    baca.spanners.string_number(
-        run,
-        string_symbol,
-        rleak=True,
-        staff_padding=5,
-    )
-    baca.spanners.xfb(
-        run,
-        rleak=True,
-        staff_padding=7.5,
-    )
-    baca.override.note_head_style_harmonic(baca.select.rleak(run))
-    plts = baca.select.plts(run)
-    baca.untie(plts[-1])
-    strings = [_ + "/2" for _ in pitch_string.split()[:-1]] + pitch_string.split()[-1:]
-    string = " ".join(strings)
-    baca.glissando(
-        run,
-        string,
-    )
-    hairpin_string = library.swells(dynamic_string)
-    baca.hairpin(
-        baca.select.clparts(run, [2]),
-        hairpin_string,
-    )
-    baca.override.dls_staff_padding(run, 4)
 
 
 def B5(pleaves, pitches, dynamics):
@@ -1275,7 +1243,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B4b(library.pleaves(m[3, 5], 4), 3, "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
+    library.B4b(library.pleaves(m[3, 5], 4), 3, "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
     B1c(
         library.pleaves(m[5, 8], 1),
         2,
@@ -1286,7 +1254,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B4b(library.pleaves(m[8, 10], 4), 3, "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
+    library.B4b(library.pleaves(m[8, 10], 4), 3, "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
     B1c(
         library.pleaves(m[10], 1),
         2,
@@ -1296,7 +1264,7 @@ def vc(m):
         dls_staff_padding=6,
         string_number_staff_padding=5,
     )
-    B4b(library.pleaves(m[11, 13], 4), 4, "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
+    library.B4b(library.pleaves(m[11, 13], 4), 4, "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
     C1(library.pleaves(m[14], 99), "D4", "F4")
     C1(library.pleaves(m[15], 99), "D4", "F4")
     C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")

@@ -28,7 +28,10 @@ frame = library.frame
 
 
 def GLOBALS(skips):
-    stage_markup = (("K.middle + O.middle", 1),)
+    stage_markup = (
+        ("K.middle + O.middle", 1),
+        ("x:ABC", 4),
+    )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
 
@@ -41,12 +44,18 @@ def FL(voice, meters):
         [-1, X(OBGC(12 * [1], [w(12, 14), rt(h(2))])), M(c(1, 2), 2)],
         material=1,
     )
-    rhythm.mmrests(4)
+    rhythm.mmrests(4, 6)
 
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 4)
+    rhythm(
+        meters(5),
+        [-1, 8, 7],
+        material=2,
+    )
+    rhythm.mmrests(6)
 
 
 def GT1(voice, meters):
@@ -57,7 +66,7 @@ def GT1(voice, meters):
         [-8, -3, 1, "-"],
         material=3,
     )
-    rhythm.mmrests(3, 4)
+    rhythm.mmrests(3, 6)
 
 
 def GT2(voice, meters):
@@ -68,7 +77,7 @@ def GT2(voice, meters):
         8 * [-1, 2, -1],
         material=2,
     )
-    rhythm.mmrests(4)
+    rhythm.mmrests(4, 6)
 
 
 def VN(voice, meters):
@@ -80,7 +89,12 @@ def VN(voice, meters):
         do_not_rewrite_meter=True,
         material=2,
     )
-    rhythm.mmrests(4)
+    rhythm(
+        meters(4, 5),
+        4 * [TC(4, [1, 1])],
+        material=1,
+    )
+    rhythm.mmrests(6)
 
 
 def VC(voice, meters):
@@ -96,6 +110,13 @@ def VC(voice, meters):
             [-7] + counts + ["-"],
             material=1,
         )
+
+    rhythm(
+        meters(4, 6),
+        [-1, 4, 4, 4, 4, 4, 4, "-"],
+        material=4,
+        overlap=[-8],
+    )
 
 
 def fl(m):
@@ -114,6 +135,7 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
+    library.C2a(library.pleaves(m[5], 2), "E6", "F6", "mf", "Eb6", tbl=True)
 
 
 def gt1(m):
@@ -129,6 +151,7 @@ def gt2(m):
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.K2d(library.pleaves(m[2, 3], 2), "Ab3", "mf")
+    library.A1b(library.pleaves(m[4, 5], 1), "E4 G#4", "pp p mp mp", tbl=True)
 
 
 def vc(m):
@@ -139,11 +162,15 @@ def vc(m):
         "o< p>o!",
         [12, 9],
     )
+    baca.clef(m[4][3], "bass")
+    library.B4b(library.pleaves(m[4, 6], 4), 3, "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
 
 
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[3], 5)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob[5], 3)
     gt1 = cache["gt1"]
     baca.override.tuplet_bracket_direction_up(gt1[1, 8])
     baca.override.dls_staff_padding(gt1.leaves(), 3)
@@ -159,7 +186,7 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [4, 4, 4, 4]
+    numerators = [4, 4, 4, 4, 4, 6]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(

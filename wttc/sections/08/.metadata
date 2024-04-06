@@ -22,8 +22,8 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1],
-    "duration": "0'13''",
-    "final_measure_number": 4,
+    "duration": "0'21''",
+    "final_measure_number": 6,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
@@ -78,7 +78,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="tenor",
+                value="bass",
             ),
             baca.Memento(
                 context="Cello.Music",
@@ -218,18 +218,8 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="4/4",
+                value="6/4",
             ),
-        ],
-        "Violin.Music": [
-            baca.Memento(
-                context="Violin.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="mf",
-            )
         ],
         "Violin.Staff": [
             baca.Memento(
@@ -260,6 +250,6 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'13''",
-    "time_signatures": ["4/4", "4/4", "4/4", "4/4"],
+    "stop_clock_time": "0'21''",
+    "time_signatures": ["4/4", "4/4", "4/4", "4/4", "4/4", "6/4"],
 }

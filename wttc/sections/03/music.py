@@ -406,15 +406,6 @@ def A1a(pleaves, pitch, peaks):
     )
 
 
-def A1b(pleaves, pitches, peaks):
-    baca.pitches(pleaves, pitches)
-    baca.hairpin(
-        baca.select.clparts(pleaves, [1]),
-        library.swells(peaks),
-        rleak=True,
-    )
-
-
 def A2a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     baca.laissez_vibrer(pleaves)
@@ -548,28 +539,28 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
-    A1b(library.pleaves(m[1], 1), "D4 F4", "mp mp")
+    library.A1b(library.pleaves(m[1], 1), "D4 F4", "mp mp")
     A2b(
         library.pleaves(m[1], 2),
         "D5/2 Eb4",
         [1, 2],
         "o< mp>o!",
     )
-    A1b(library.pleaves(m[2], 1), "D4 F#4", "p p")
+    library.A1b(library.pleaves(m[2], 1), "D4 F#4", "p p")
     A2b(
         library.pleaves(m[2], 2),
         "Db5/2 E4 C5/2 F4/2 B4",
         [5, 3],
         "o< mf>o!",
     )
-    A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
+    library.A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
     A2b(
         library.pleaves(m[3, 4], 2),
         "B4 E4/3 C5 F4 D5 G4 E5 A4 F5 G4 G5/2 A4",
         [7, 3, 5],
         'o< "f"-- !>o!',
     )
-    A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
+    library.A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
     A2b(
         library.pleaves(m[7], 2),
         "Bb4 E4 C5 F4 D5/2 G4",
@@ -577,7 +568,7 @@ def vn(m):
         '"f">o!',
     )
     library.B1c(library.pleaves(m[11], 99), "mp", "B4", "A4 C5", 2)
-    A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
+    library.A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
     library.B1c(abjad.select.run(library.pleaves(m[12], 99), 0), "p", "B4", "A4 C5", 2)
     library.B1c(
         abjad.select.run(library.pleaves(m[12, 13], 99), 1), "p", "B4", "A4 C5", 2

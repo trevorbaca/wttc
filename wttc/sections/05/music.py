@@ -773,27 +773,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def C2a(pleaves, pitch_1, trill_pitch, dynamic, pitch_2=None):
-    plts = baca.select.plts(pleaves)
-    if pitch_2 is None:
-        assert len(plts) == 1
-    else:
-        assert len(plts) == 2
-    baca.pitch(plts[0], pitch_1)
-    baca.spanners.trill(
-        plts[0],
-        alteration=trill_pitch,
-        rleak=True,
-    )
-    if pitch_2:
-        baca.pitch(plts[1], pitch_2)
-    baca.hairpin(
-        pleaves,
-        f"{dynamic}>o!",
-        rleak=True,
-    )
-
-
 def C2b(
     pleaves,
     pitch_1,
@@ -1107,14 +1086,14 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6")
-    C2a(library.pleaves(m[9], 2), "D6", "E6", "p")
-    C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6")
-    C2a(library.pleaves(m[12], 2), "D6", "E6", "p")
-    C2a(library.pleaves(m[14], 2), "D6", "E6", "mf")
-    C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p")
-    C2a(library.pleaves(m[20, 21], 2), "Db6", "Eb6", "p")
-    C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
+    library.C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6", tbl=True)
+    library.C2a(library.pleaves(m[9], 2), "D6", "E6", "p")
+    library.C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6")
+    library.C2a(library.pleaves(m[12], 2), "D6", "E6", "p")
+    library.C2a(library.pleaves(m[14], 2), "D6", "E6", "mf")
+    library.C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p")
+    library.C2a(library.pleaves(m[20, 21], 2), "Db6", "Eb6", "p")
+    library.C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
     library.D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
     library.D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp", rleak=True, tbl=True)
     library.D1a(library.pleaves(m[38, 40], 1), "D6", "mf", rleak=True)
