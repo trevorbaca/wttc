@@ -845,49 +845,6 @@ def G2a1(pleaves, pitch, peak):
         )
 
 
-def G2a2(pleaves, pitch, alteration, peak):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=5.5,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, [1, 1]),
-        library.swells(peak),
-        rleak=True,
-    )
-
-
-def G3a(pleaves, glissando, dynamics, debug=False):
-    runs = abjad.select.runs(pleaves)
-    dynamics = dynamics.split()
-    for run, dynamic in zip(runs, dynamics, strict=True):
-        baca.glissando(run, glissando)
-        baca.dynamic(run[0], dynamic)
-
-
-def G3b(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-    if len(plts) == 1:
-        baca.spanners.pizzicato(
-            plts,
-            descriptor=r"\baca-pizz-markup ||",
-            rleak=True,
-            staff_padding=3,
-        )
-    else:
-        baca.spanners.pizzicato(
-            plts,
-            staff_padding=3,
-        )
-
-
 def G3c(pleaves, pitch):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
@@ -963,27 +920,6 @@ def G5b(pleaves, glissando):
     )
 
 
-def H1a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-        baca.stop_on_string(plt.tail)
-
-
-def H1b(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-
-
-def H1c():
-    pass
-
-
 def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
@@ -1007,13 +943,13 @@ def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     G1a(library.pleaves(m[1], 1), "A#4", [1, 2], "p")
     G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
-    G3a(library.pleaves(m[2, 3], 3), "D5 C5", "p p mp mp mf mf")
+    library.G3a(library.pleaves(m[2, 3], 3), "D5 C5", "p p mp mp mf mf")
     G1a(library.pleaves(m[3, 4], 1), "A#4", [2, 2], "mp")
     G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
-    G3a(library.pleaves(m[5], 3), "D5 C5", "mf mf f")
+    library.G3a(library.pleaves(m[5], 3), "D5 C5", "mf mf f")
     G1a(library.pleaves(m[5, 6], 1), "A#4", [2, 2], "mf")
     G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
-    G3a(library.pleaves(m[8], 3), "D5 C5", "f")
+    library.G3a(library.pleaves(m[8], 3), "D5 C5", "f")
     G1a(library.pleaves(m[9, 12], 1), "B4", 12 * [1], "mf mf mp mp p p", rleak=True)
     G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
     G5a(
@@ -1023,15 +959,15 @@ def fl(m):
     )
     G1a(library.pleaves(m[15, 16], 1), "B4", [2, 2], "mf")
     G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
-    G3a(library.pleaves(m[18], 3), "F4 E4", "f")
+    library.G3a(library.pleaves(m[18], 3), "F4 E4", "f")
     G1a(library.pleaves(m[22], 1), "B4", [1, 1], "p")
-    G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
-    G3a(library.pleaves(m[24], 3), "F4 E4", "f")
+    library.G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
+    library.G3a(library.pleaves(m[24], 3), "F4 E4", "f")
     G5a(library.pleaves(m[25, 28], 5), ["B3 A#3", "Bb3 A3", "A3 G#3"], "mp p pp")
-    G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
-    G3a(library.pleaves(m[30], 3), "F4 E4", "p")
-    G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
-    G3a(library.pleaves(m[33], 3), "F4 E4", "p")
+    library.G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
+    library.G3a(library.pleaves(m[30], 3), "F4 E4", "p")
+    library.G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
+    library.G3a(library.pleaves(m[33], 3), "F4 E4", "p")
     H2(library.pleaves(m[34], 2), "C6", None, "p p mp")
     H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf")
     H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", to_bar_line=True)
@@ -1044,40 +980,40 @@ def ob(m):
     G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
     G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
     G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
-    G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
-    H1a(library.pleaves(m[28], 99), "D4", "f")
-    G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
-    H1a(library.pleaves(m[31], 99), "D4", "f")
-    G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
-    H1a(library.pleaves(m[33], 99), "D4", "f")
-    H1a(library.pleaves(m[34], 1), "D4", "f")
-    H1a(library.pleaves(m[35], 1), "Db4", "ff")
-    H1a(library.pleaves(m[36], 1), "C4", "ff")
+    library.G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
+    library.H1a(library.pleaves(m[28], 99), "D4", "f")
+    library.G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
+    library.H1a(library.pleaves(m[31], 99), "D4", "f")
+    library.G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
+    library.H1a(library.pleaves(m[33], 99), "D4", "f")
+    library.H1a(library.pleaves(m[34], 1), "D4", "f")
+    library.H1a(library.pleaves(m[35], 1), "Db4", "ff")
+    library.H1a(library.pleaves(m[36], 1), "C4", "ff")
 
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    G3b(library.pleaves(m[2, 3], 3), "F2", "p p mp mp mf mf")
+    library.G3b(library.pleaves(m[2, 3], 3), "F2", "p p mp mp mf mf")
     G1b(library.pleaves(m[4], 1), "A3 B3", "mp>o!")
-    G3b(library.pleaves(m[5], 3), "F2", "mf mf f")
+    library.G3b(library.pleaves(m[5], 3), "F2", "mf mf f")
     G1b(library.pleaves(m[6, 7], 1), "A3 B3", "mp>o!")
-    G3b(library.pleaves(m[8], 3), "F2", "f")
+    library.G3b(library.pleaves(m[8], 3), "F2", "f")
     G4a(library.pleaves(m[8, 10], 4))
     G1b(library.pleaves(m[10, 11], 1), "A#3 B#3", "p<mf")
     G1b(library.pleaves(m[16, 17], 1), "C4 D4", "p< mf>p", [9, 7])
-    G3b(library.pleaves(m[18], 3), "A2", "f")
+    library.G3b(library.pleaves(m[18], 3), "A2", "f")
     G4a(library.pleaves(m[18, 20], 4))
     G1b(library.pleaves(m[22, 23], 1), "C4 D4", "p>o!")
-    G3b(library.pleaves(m[24], 3), "A2", "f")
+    library.G3b(library.pleaves(m[24], 3), "A2", "f")
     G4a(library.pleaves(m[24, 26], 4))
-    H1b(library.pleaves(m[28], 99), "Db4", "p")
-    G3b(library.pleaves(m[30], 3), "A2", "p")
-    H1b(library.pleaves(m[31], 99), "Eb4 D4 B3", "mp pp mf")
-    G3b(library.pleaves(m[33], 3), "A2", "p")
-    H1b(library.pleaves(m[33], 99), "Db4 C4 A3", "pp mf f")
-    H1b(library.pleaves(m[34], 1), "Ab3 G3 A3", "mf ff pp")
-    H1b(library.pleaves(m[35], 1), "Ab3", "f")
-    H1b(library.pleaves(m[36], 1), "G3 Gb3 Eb3", "pp ff mp")
+    library.H1b(library.pleaves(m[28], 99), "Db4", "p")
+    library.G3b(library.pleaves(m[30], 3), "A2", "p")
+    library.H1b(library.pleaves(m[31], 99), "Eb4 D4 B3", "mp pp mf")
+    library.G3b(library.pleaves(m[33], 3), "A2", "p")
+    library.H1b(library.pleaves(m[33], 99), "Db4 C4 A3", "pp mf f")
+    library.H1b(library.pleaves(m[34], 1), "Ab3 G3 A3", "mf ff pp")
+    library.H1b(library.pleaves(m[35], 1), "Ab3", "f")
+    library.H1b(library.pleaves(m[36], 1), "G3 Gb3 Eb3", "pp ff mp")
 
 
 def gt2(m):
@@ -1092,12 +1028,12 @@ def gt2(m):
     G4a(library.pleaves(m[17, 20], 4), up_bow=True)
     G1b(library.pleaves(m[22, 23], 1), "B3 C#4", "p>o!")
     G4a(library.pleaves(m[24, 26], 4), up_bow=True)
-    H1b(library.pleaves(m[28], 99), "E4", "mp")
-    H1b(library.pleaves(m[31], 99), "C4", "f")
-    H1b(library.pleaves(m[33], 99), "Bb3 B3", "f pp")
-    H1b(library.pleaves(m[34], 1), "Bb3", "ff")
-    H1b(library.pleaves(m[35], 1), "Gb3", "mp")
-    H1b(library.pleaves(m[36], 1), "F3 E3", "pp f")
+    library.H1b(library.pleaves(m[28], 99), "E4", "mp")
+    library.H1b(library.pleaves(m[31], 99), "C4", "f")
+    library.H1b(library.pleaves(m[33], 99), "Bb3 B3", "f pp")
+    library.H1b(library.pleaves(m[34], 1), "Bb3", "ff")
+    library.H1b(library.pleaves(m[35], 1), "Gb3", "mp")
+    library.H1b(library.pleaves(m[36], 1), "F3 E3", "pp f")
 
 
 def vn(m):

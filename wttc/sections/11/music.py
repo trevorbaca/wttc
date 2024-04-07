@@ -567,16 +567,6 @@ def F3b1(pleaves, fundamentals, dynamics):
         baca.dynamic(pleaves[0], dynamics)
 
 
-def G1a(pleaves, pitch, hairpin_lparts, peaks):
-    baca.pitch(pleaves, pitch)
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        library.swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
-        rleak=True,
-    )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     F1a(
@@ -585,9 +575,9 @@ def fl(m):
         11 * [1],
         "o< p>o o< p>o o< p>o o< p>o o< p>o !",
     )
-    G1a(library.pleaves(m[18, 19], 99), "A3", [2, 1], "p")
-    G1a(library.pleaves(m[23], 99), "A3", [1, 2, 2, 1], "p mp")
-    G1a(library.pleaves(m[26, 27], 99), "A3", 2 * [1, 2, 2, 1], "p mp mp mf")
+    library.G1a(library.pleaves(m[18, 19], 99), "A3", [2, 1], "p")
+    library.G1a(library.pleaves(m[23], 99), "A3", [1, 2, 2, 1], "p mp")
+    library.G1a(library.pleaves(m[26, 27], 99), "A3", 2 * [1, 2, 2, 1], "p mp mp mf")
 
 
 def ob(m):

@@ -1659,6 +1659,76 @@ def F3b2(pleaves, glissando, hairpin, *, bdrp=None):
     )
 
 
+def G1a(pleaves, pitch, hairpin_lparts, peaks):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        swells(peaks),
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
+
+
+def G2a2(pleaves, pitch, alteration, peak):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, [1, 1]),
+        swells(peak),
+        rleak=True,
+    )
+
+
+def G3a(pleaves, glissando, dynamics):
+    runs = abjad.select.runs(pleaves)
+    dynamics = dynamics.split()
+    for run, dynamic in zip(runs, dynamics, strict=True):
+        baca.glissando(run, glissando)
+        baca.dynamic(run[0], dynamic)
+
+
+def G3b(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    if len(plts) == 1:
+        baca.spanners.pizzicato(
+            plts,
+            descriptor=r"\baca-pizz-markup ||",
+            rleak=True,
+            staff_padding=3,
+        )
+    else:
+        baca.spanners.pizzicato(
+            plts,
+            staff_padding=3,
+        )
+
+
+def H1a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.stop_on_string(plt.tail)
+
+
+def H1b(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
 def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.pitch(pleaves[:-3], pitch)
     baca.pitch(pleaves[-3], pitch)

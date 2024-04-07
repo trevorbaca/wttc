@@ -39,22 +39,88 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(
+        meters(2),
+        [-12, frame(12, 6)],
+        material=2,
+    )
+    rhythm(
+        meters(3),
+        [M(rt(1), 2), AG([2], 3), "-"],
+        material=3,
+    )
+    rhythm(
+        meters(3, 5),
+        [t(4), w(2, 8), h(6), w(6, 8), h(2), rt(4), "-"],
+        do_not_rewrite_meter=True,
+        material=99,
+        overlap=[-8],
+    )
+    rhythm(
+        meters(5),
+        [frame(12, 6)],
+        material=2,
+        overlap=[-12],
+    )
+    rhythm(
+        meters(6),
+        [rt(1), "-"],
+        material=2,
+    )
 
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(
+        meters(2, 3),
+        [-12, frame(12, 6), rt(1), "-"],
+        material=2,
+    )
+    rhythm(
+        meters(4),
+        [-6, 4, -6],
+        material=99,
+    )
+    rhythm(
+        meters(5),
+        [-12, frame(12, 6)],
+        material=2,
+    )
+    rhythm(
+        meters(6),
+        [rt(1), "-"],
+        material=2,
+    )
 
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 2)
+    rhythm(
+        meters(3),
+        [-1, 3, "-"],
+        material=3,
+    )
+    rhythm(
+        meters(4),
+        [2, -6, 2, -2, 2, -2],
+        material=99,
+    )
+    rhythm.mmrests(5, 6)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 3)
+    rhythm.make_one_beat_tuplets(
+        meters(4),
+        [-4, 1, "-"],
+        extra_counts=[-1],
+        material=99,
+    )
+    rhythm.mmrests(5, 6)
 
 
 def VN(voice, meters):
@@ -86,18 +152,28 @@ def VC(voice, meters):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
+    library.G2a2(library.pleaves(m[2, 3], 2), "G#5", "B5", "p")
+    library.G3a(library.pleaves(m[3], 3), "F4 E4", "p")
+    library.G1a(library.pleaves(m[3, 5], 99), "A3", [2, 1, 1, 2], "p mp")
+    library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
 
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
+    library.G2a2(library.pleaves(m[2, 3], 2), "G#5", "B5", "p")
+    library.H1a(library.pleaves(m[4], 99), "D4", "f")
+    library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
 
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    library.G3b(library.pleaves(m[3], 3), "A2", "p")
+    library.H1b(library.pleaves(m[4], 99), "Eb4 D4 B3", "mp pp mf")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    library.H1b(library.pleaves(m[4], 99), "C4", "f")
 
 
 def vn(m):
@@ -115,6 +191,11 @@ def vc(m):
 
 
 def align_spanners(cache):
+    baca.override.dls_staff_padding(cache["fl"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["ob"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["gt1"].leaves(), 4)
+    baca.override.tuplet_bracket_direction_up(cache["gt2"][4])
+    baca.override.dls_staff_padding(cache["gt2"].leaves(), 4)
     baca.override.dls_staff_padding(cache["vn"].leaves(), 3)
     baca.override.dls_staff_padding(cache["vc"].leaves(), 5)
 
