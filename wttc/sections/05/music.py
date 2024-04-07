@@ -773,65 +773,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def C2b(
-    pleaves,
-    pitch_1,
-    pitch_2,
-    hairpin,
-    pleaves_2=None,
-    pitch_3=None,
-    scps=None,
-    do_not_bookend=False,
-):
-    baca.override.note_head_style_harmonic(pleaves)
-    baca.glissando(pleaves, f"{pitch_1} {pitch_2}")
-    baca.spanners.pizzicato(
-        pleaves,
-        descriptor=r"\baca-pizz-markup ||",
-        rleak=True,
-        staff_padding=3,
-    )
-    # TODO: make this work:
-    # baca.parenthesize(pleaves[-1:])
-    if pleaves_2:
-        assert pitch_3
-        baca.override.note_head_style_harmonic(pleaves_2)
-        baca.pitch(pleaves_2, pitch_3)
-        baca.spanners.scp(
-            baca.select.lparts(pleaves_2, [1, 1]),
-            scps,
-            # TODO: make this work:
-            # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
-            rleak=True,
-            staff_padding=3,
-        )
-        all_leaves = pleaves + pleaves_2
-        if do_not_bookend is True:
-            baca.hairpins.cyclic(
-                [all_leaves[:2], all_leaves[-2:]],
-                hairpin,
-                glue=True,
-                do_not_bookend=do_not_bookend,
-            )
-        else:
-            baca.hairpin(
-                [all_leaves[:2], all_leaves[-2:]],
-                hairpin,
-            )
-    else:
-        all_leaves = pleaves
-        baca.hairpin(
-            pleaves,
-            hairpin,
-        )
-    baca.spanners.string_number(
-        all_leaves,
-        4,
-        rleak=True,
-        staff_padding=6.5,
-    )
-
-
 def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.spanners.trill(
         pleaves,
@@ -1014,7 +955,7 @@ def vn(m):
         "Ab4",
         "f - p - - - p p p p",
     )
-    C2b(m[7][1:], "A3", "C5", "f> p<|ff", m[8], "B4", "T -> P1 -> P4")
+    library.C2b(m[7][1:], "A3", "C5", "f> p<|ff", m[8], "B4", "T -> P1 -> P4")
     library.C3a(
         library.pleaves(m[9], 3),
         "A4",
@@ -1024,7 +965,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
-    C2b(m[10][1:], "A3", "Cb5", "f> p<|ff", m[11], "Bb4", "T -> P1 -> P4")
+    library.C2b(m[10][1:], "A3", "Cb5", "f> p<|ff", m[11], "Bb4", "T -> P1 -> P4")
     library.C3a(
         library.pleaves(m[12], 3),
         "A4",
@@ -1035,7 +976,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
-    C2b(library.pleaves(m[14], 2), "A3", "A4", "f>p")
+    library.C2b(library.pleaves(m[14], 2), "A3", "A4", "f>p")
     library.C3a(
         abjad.select.run(m[15], 0),
         "A4",
@@ -1046,8 +987,8 @@ def vn(m):
         trill="m2",
     )
     C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")
-    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
-    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
+    library.C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
+    library.C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
     C3b(
         library.pleaves(m[21, 24], 3),
         "G#5",
@@ -1055,7 +996,7 @@ def vn(m):
         "o< mp>o!",
         dummy_pitch="B5",
     )
-    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
+    library.C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
     C3b(
         library.pleaves(m[25, 27], 3),
         "G#5",

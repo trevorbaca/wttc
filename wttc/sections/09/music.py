@@ -112,7 +112,7 @@ def OB(voice, meters):
         ["+"],
         material=2,
     )
-    rhythm.mmrests(11, 13)
+    rhythm.mmrests(11, 12)
 
 
 def GT1(voice, meters):
@@ -134,7 +134,7 @@ def GT1(voice, meters):
         ["-", 1],
         material=3,
     )
-    rhythm.mmrests(8, 13)
+    rhythm.mmrests(8, 12)
 
 
 def GT2(voice, meters):
@@ -152,7 +152,7 @@ def GT2(voice, meters):
         ["-", 1],
         material=3,
     )
-    rhythm.mmrests(10, 13)
+    rhythm.mmrests(10, 12)
 
 
 def VN(voice, meters):
@@ -194,7 +194,7 @@ def VC(voice, meters):
         do_not_rewrite_meter=True,
         material=2,
     )
-    rhythm.mmrests(6)
+    rhythm.mmrests(6, 8)
 
 
 def fl(m):
@@ -235,6 +235,17 @@ def vn(m):
     library.F3b2(library.pleaves(m[5, 6][-9:], 3), "Ab4 Gb4", "pp>o!")
     after_grace = abjad.select.note(m[5], 0, grace=True)
     baca.override.note_column_x_extent(after_grace, (0, 3))
+    library.C2b(m[8][1:], "A3", "Cb5", "f> p<|ff", m[9], "Bb4", "T -> P1 -> P4")
+    library.C3a(
+        library.pleaves(m[10], 3),
+        "A4",
+        "F4",
+        "mp|>o !o<|mf",
+        library.pleaves(m[11], 3),
+        harmonic=True,
+        string_number=3,
+        trill="m2",
+    )
 
 
 def vc(m):
@@ -256,7 +267,7 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [2, 6, 3, 4, 6, 5, 6, 6, 6, 6, 6, 3, 3]
+    numerators = [2, 6, 3, 4, 6, 5, 6, 6, 6, 6, 6, 3]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(

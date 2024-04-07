@@ -1293,6 +1293,65 @@ def C2a(pleaves, pitch_1, alteration, dynamic, pitch_2=None, *, tbl=None):
     )
 
 
+def C2b(
+    pleaves,
+    pitch_1,
+    pitch_2,
+    hairpin,
+    pleaves_2=None,
+    pitch_3=None,
+    scps=None,
+    do_not_bookend=False,
+):
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.glissando(pleaves, f"{pitch_1} {pitch_2}")
+    baca.spanners.pizzicato(
+        pleaves,
+        descriptor=r"\baca-pizz-markup ||",
+        rleak=True,
+        staff_padding=3,
+    )
+    # TODO: make this work:
+    # baca.parenthesize(pleaves[-1:])
+    if pleaves_2:
+        assert pitch_3
+        baca.override.note_head_style_harmonic(pleaves_2)
+        baca.pitch(pleaves_2, pitch_3)
+        baca.spanners.scp(
+            baca.select.lparts(pleaves_2, [1, 1]),
+            scps,
+            # TODO: make this work:
+            # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
+            rleak=True,
+            staff_padding=3,
+        )
+        all_leaves = pleaves + pleaves_2
+        if do_not_bookend is True:
+            baca.hairpins.cyclic(
+                [all_leaves[:2], all_leaves[-2:]],
+                hairpin,
+                glue=True,
+                do_not_bookend=do_not_bookend,
+            )
+        else:
+            baca.hairpin(
+                [all_leaves[:2], all_leaves[-2:]],
+                hairpin,
+            )
+    else:
+        all_leaves = pleaves
+        baca.hairpin(
+            pleaves,
+            hairpin,
+        )
+    baca.spanners.string_number(
+        all_leaves,
+        4,
+        rleak=True,
+        staff_padding=6.5,
+    )
+
+
 def C3a(
     pleaves,
     start_pitch,
