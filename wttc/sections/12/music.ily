@@ -1265,6 +1265,9 @@ number.12.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
     - \tweak stencil ##f
     ~
@@ -1277,8 +1280,6 @@ number.12.AltoFlute.Music = {
         ds''16 * 672/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"672" #"1024"
-          %! SPANNER_STOP
-        \!
         [
         \repeatTie
 
@@ -1290,6 +1291,8 @@ number.12.AltoFlute.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
         ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
+          %! SPANNER_STOP
+        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -1536,6 +1539,9 @@ number.12.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
     - \tweak stencil ##f
     ~
@@ -1548,8 +1554,6 @@ number.12.AltoFlute.Music = {
         ds''16 * 816/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"816" #"2048"
-          %! SPANNER_STOP
-        \!
         [
         \repeatTie
 
@@ -1561,6 +1565,8 @@ number.12.AltoFlute.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1728" #"2048"
         ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
+          %! SPANNER_STOP
+        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -1747,6 +1753,9 @@ number.12.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
     - \tweak stencil ##f
     ~
@@ -1759,8 +1768,6 @@ number.12.AltoFlute.Music = {
         ds''16 * 448/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"448" #"1024"
-          %! SPANNER_STOP
-        \!
         [
         \repeatTie
 
@@ -1772,6 +1779,8 @@ number.12.AltoFlute.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
         ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
+          %! SPANNER_STOP
+        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -2161,6 +2170,9 @@ number.12.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
     - \tweak stencil ##f
     ~
@@ -2475,6 +2487,9 @@ number.12.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
     - \tweak stencil ##f
     ~
@@ -2487,8 +2502,6 @@ number.12.AltoFlute.Music = {
         e''16 * 448/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"448" #"1024"
-          %! SPANNER_STOP
-        \!
         [
         \repeatTie
 
@@ -2500,6 +2513,8 @@ number.12.AltoFlute.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
         ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
+          %! SPANNER_STOP
+        \!
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -2667,8 +2682,6 @@ number.12.AltoFlute.Music = {
     \p
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2676,6 +2689,9 @@ number.12.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2690,6 +2706,8 @@ number.12.AltoFlute.Music = {
     cs'''!2. * 6/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

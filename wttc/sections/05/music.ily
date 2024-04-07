@@ -7196,6 +7196,8 @@ number.5.Violin.Music = {
         f'8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanStringNumber
         \revert NoteHead.style
 
     }
@@ -7204,8 +7206,6 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! SPANNER_STOP
-    \bacaStopTextSpanStringNumber
       %! SPANNER_STOP
     \stopTrillSpan
 
@@ -7476,6 +7476,8 @@ number.5.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
+          %! SPANNER_STOP
+        \bacaStopTextSpanStringNumber
         \revert NoteHead.style
 
     }
@@ -7484,8 +7486,6 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! SPANNER_STOP
-    \bacaStopTextSpanStringNumber
       %! SPANNER_STOP
     \stopTrillSpan
 
@@ -7654,6 +7654,8 @@ number.5.Violin.Music = {
         f'8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanStringNumber
         \revert NoteHead.style
 
     }
@@ -7662,8 +7664,6 @@ number.5.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
-      %! SPANNER_STOP
-    \bacaStopTextSpanStringNumber
       %! SPANNER_STOP
     \stopTrillSpan
 

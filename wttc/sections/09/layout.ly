@@ -100,79 +100,79 @@
               %! BREAK
             \baca-lbsd #160 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \break
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/24]"
+            %@% - \baca-start-spm-left-only "[1/20]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 8]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/24]"
+            %@% - \baca-start-spm-left-only "[1/20]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 9]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/24]"
+            %@% - \baca-start-spm-left-only "[1/20]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 10]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/24]"
+            %@% - \baca-start-spm-left-only "[1/20]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 11]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/32]"
+            %@% - \baca-start-spm-left-only "[1/48]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 12]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \noBreak
             s1 * 3/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/32]"
+            %@% - \baca-start-spm-left-only "[1/48]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 

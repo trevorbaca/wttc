@@ -32,6 +32,7 @@ def GLOBALS(skips):
         ("z: F (end)", 1),
         ("z: F (end) + xy: F (end) / G (end)", 2),
         ("z: F (end)", 6),
+        ("C (middle) + G (middle)", 7),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
@@ -76,6 +77,18 @@ def FL(voice, meters):
         7 * [4] + [AG([2], 4), "-"],
         material=3,
     )
+    rhythm(
+        meters(11),
+        frame(12, 6),
+        material=1,
+        overlap=[-12],
+    )
+    rhythm(
+        meters(12),
+        frame(12, 6),
+        material=2,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def OB(voice, meters):
@@ -112,7 +125,13 @@ def OB(voice, meters):
         ["+"],
         material=2,
     )
-    rhythm.mmrests(11, 12)
+    rhythm.mmrests(11)
+    rhythm(
+        meters(12),
+        frame(12, 6),
+        material=2,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def GT1(voice, meters):
@@ -134,7 +153,12 @@ def GT1(voice, meters):
         ["-", 1],
         material=3,
     )
-    rhythm.mmrests(8, 12)
+    rhythm.mmrests(8, 10)
+    rhythm(
+        meters(11, 12),
+        [A(9 * [1] + [t(1)], 24), R(6 * [1], 12)],
+        material=1,
+    )
 
 
 def GT2(voice, meters):
@@ -152,7 +176,12 @@ def GT2(voice, meters):
         ["-", 1],
         material=3,
     )
-    rhythm.mmrests(10, 12)
+    rhythm.mmrests(10)
+    rhythm(
+        meters(11, 12),
+        [A(5 * [1] + [t(1)], 12), R(10 * [1], 24)],
+        material=1,
+    )
 
 
 def VN(voice, meters):
@@ -183,6 +212,13 @@ def VN(voice, meters):
         [4, 4, 4, 4, 4, 4, 4, AG([2], 4), "-"],
         material=3,
     )
+    rhythm(
+        meters(11),
+        [1, 3, 2, 2, 4, 1, 3],
+        material=5,
+        overlap=[-8],
+    )
+    rhythm.mmrests(12)
 
 
 def VC(voice, meters):
@@ -195,6 +231,11 @@ def VC(voice, meters):
         material=2,
     )
     rhythm.mmrests(6, 8)
+    rhythm(
+        meters(9, 12),
+        [-4, 18, 14, t(12)] + [4, 5, 8, 3, 6, "-"],
+        material=5,
+    )
 
 
 def fl(m):
@@ -204,6 +245,8 @@ def fl(m):
     library.G1a(library.pleaves(m[3, 5], 99), "A3", [2, 1, 1, 2], "p mp")
     library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
     library.C3a(m[10], "G4", "F#4", "mp|>o !o<|mf", m[11][:3])
+    library.G1a(library.pleaves(m[11], 1), "B4", [1, 1], "p")
+    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", tbl=True)
 
 
 def ob(m):
@@ -213,6 +256,7 @@ def ob(m):
     library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
     library.C2a(library.pleaves(m[8, 9], 2), "E6", "F6", "mf", "Eb6", tbl=True)
     library.C2a(library.pleaves(m[10], 2), "D6", "E6", "p", tbl=True)
+    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", tbl=True)
 
 
 def gt1(m):
@@ -220,12 +264,14 @@ def gt1(m):
     library.G3b(library.pleaves(m[3], 3), "A2", "p")
     library.H1b(library.pleaves(m[4], 99), "Eb4 D4 B3", "mp pp mf")
     library.C3c(library.pleaves(m[7], 3), "D5", "p", lv=True)
+    library.G1b(library.pleaves(m[11, 12], 1), "C4 D4", "p>o!")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.H1b(library.pleaves(m[4], 99), "C4", "f")
     library.C3c(library.pleaves(m[9], 3), "D5", "p", lv=True)
+    library.G1b(library.pleaves(m[11, 12], 1), "B3 C#4", "p>o!")
 
 
 def vn(m):
@@ -246,20 +292,42 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
+    pleaves = library.pleaves(m[11], 5)
+    library.G5b(
+        pleaves,
+        "Db4/2 Bb3/2 C4/2 A3",
+        no_hairpin=True,
+        rleak_pizz=True,
+    )
+    baca.hairpin(pleaves, "p>o!", baca.postevent.to_bar_line_true(), rleak=True)
 
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
     library.F2b3(library.pleaves(m[3, 5], 2), "F2", "G2", [2, 2], "mp")
+    baca.clef(m[9][0], "treble")
+    pleaves = library.pleaves(m[9, 12], 5)
+    library.G5b(
+        pleaves,
+        "D4/1 B3/2 Db4/3 B3/2 C4/3 A3/2 B3",
+        no_hairpin=True,
+        pizz_tblf=True,
+    )
+    baca.hairpin(baca.select.lparts(pleaves, [3, 11]), "o< mp>o!")
 
 
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"].leaves(), 4)
     baca.override.dls_staff_padding(cache["ob"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["gt1"].leaves(), 4)
+    baca.override.dls_staff_padding(cache["gt1"][1, 6], 4)
+    baca.override.dls_staff_padding(cache["gt1"][7], 3)
+    baca.override.dls_staff_padding(cache["gt1"][11, 12], 6)
     baca.override.tuplet_bracket_direction_up(cache["gt2"][4])
-    baca.override.dls_staff_padding(cache["gt2"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["vn"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["gt2"][1, 6], 4)
+    baca.override.dls_staff_padding(cache["gt2"][9], 3)
+    baca.override.dls_staff_padding(cache["gt2"][11, 12], 6.5)
+    baca.override.dls_staff_padding(cache["vn"][1, 6], 3)
+    baca.override.dls_staff_padding(cache["vn"][7, 12], 6)
     baca.override.dls_staff_padding(cache["vc"].leaves(), 5)
 
 
@@ -345,7 +413,10 @@ def make_layout():
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
-        overrides=[baca.layout.Override((7, 10), (1, 24))],
+        overrides=[
+            baca.layout.Override((7, 10), (1, 20)),
+            baca.layout.Override((11, 12), (1, 48)),
+        ],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

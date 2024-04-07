@@ -27,16 +27,6 @@
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "AltoFlute.Music": [
-            baca.Memento(
-                context="AltoFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="mf",
-            )
-        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -78,7 +68,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="bass",
+                value="treble",
             ),
             baca.Memento(
                 context="Cello.Music",
@@ -88,16 +78,6 @@
                 synthetic_offset=None,
                 value="Vc.",
             ),
-        ],
-        "Guitar.1.Music": [
-            baca.Memento(
-                context="Guitar.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="p",
-            )
         ],
         "Guitar.1.Staff": [
             baca.Memento(
@@ -124,16 +104,6 @@
                 synthetic_offset=None,
                 value="Gt. 1",
             ),
-        ],
-        "Guitar.2.Music": [
-            baca.Memento(
-                context="Guitar.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="p",
-            )
         ],
         "Guitar.2.Staff": [
             baca.Memento(
@@ -204,16 +174,6 @@
                 synthetic_offset=None,
                 value="3/4",
             ),
-        ],
-        "Violin.Music": [
-            baca.Memento(
-                context="Violin.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="mf",
-            )
         ],
         "Violin.Staff": [
             baca.Memento(

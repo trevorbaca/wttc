@@ -1388,7 +1388,7 @@ def C3a(
         baca.spanners.string_number(
             all_leaves,
             string_number,
-            rleak=True,
+            # rleak=True,
             staff_padding=6.5,
         )
     if trill:
@@ -1792,7 +1792,19 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     )
 
 
-def G2a2(pleaves, pitch, alteration, peak):
+def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
+    baca.pitches(pleaves, pitches)
+    if hairpin_lparts is not None:
+        parts = baca.select.lparts(pleaves, hairpin_lparts)
+    else:
+        parts = pleaves
+    baca.hairpin(
+        parts,
+        hairpin,
+    )
+
+
+def G2a2(pleaves, pitch, alteration, peak, *, tbl=False):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
@@ -1803,6 +1815,7 @@ def G2a2(pleaves, pitch, alteration, peak):
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         swells(peak),
+        *to_bar_line_tweaks(tbl),
         rleak=True,
     )
 
@@ -1832,6 +1845,29 @@ def G3b(pleaves, pitch, dynamics):
         baca.spanners.pizzicato(
             plts,
             staff_padding=3,
+        )
+
+
+def G5b(pleaves, glissando, *, no_hairpin=False, pizz_tblf=False, rleak_pizz=False):
+    baca.glissando(pleaves, glissando)
+    baca.stem_tremolo(pleaves)
+    tweaks = []
+    if pizz_tblf is True:
+        tweaks.append(baca.postevent.to_bar_line_false())
+    baca.spanners.pizzicato(
+        pleaves,
+        *tweaks,
+        descriptor=r"\wttc-two-f-pizz =|",
+        left_broken_text=r"\wttc-parenthesized-two-finger-pizz",
+        rleak=rleak_pizz,
+        staff_padding=3,
+    )
+    if no_hairpin is False:
+        left = len(pleaves) // 2 + 1
+        right = len(pleaves) - left
+        baca.hairpin(
+            baca.select.lparts(pleaves, [left, right]),
+            "o< mp>o!",
         )
 
 
