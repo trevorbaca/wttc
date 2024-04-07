@@ -1607,6 +1607,30 @@ def E4b(pleaves, pitch, dynamic):
         baca.laissez_vibrer(ptail)
 
 
+def F3b2(pleaves, glissando, hairpin, *, bdrp=None):
+    baca.glissando(pleaves, glissando)
+    baca.stem_tremolo(pleaves)
+    baca.hairpin(
+        pleaves,
+        hairpin,
+    )
+    tweaks = []
+    if bdrp is not None:
+        tweaks.append(baca.postevent.bound_details_right_padding(bdrp))
+    baca.spanners.xfb(
+        pleaves,
+        *tweaks,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.spanners.tasto(
+        pleaves,
+        *tweaks,
+        rleak=True,
+        staff_padding=5.5,
+    )
+
+
 def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.pitch(pleaves[:-3], pitch)
     baca.pitch(pleaves[-3], pitch)

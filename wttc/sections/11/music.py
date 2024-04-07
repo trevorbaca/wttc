@@ -595,25 +595,6 @@ def F3b1(pleaves, fundamentals, dynamics):
         baca.dynamic(pleaves[0], dynamics)
 
 
-def F3b2(pleaves, glissando, hairpin):
-    baca.glissando(pleaves, glissando)
-    baca.stem_tremolo(pleaves)
-    baca.hairpin(
-        pleaves,
-        hairpin,
-    )
-    baca.spanners.xfb(
-        pleaves,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.spanners.tasto(
-        pleaves,
-        rleak=True,
-        staff_padding=5.5,
-    )
-
-
 def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
@@ -677,10 +658,10 @@ def vn(m):
     F3b1(library.pleaves(m[8, 9], 3), "D#5 E5 F5", "mp")
     F3b1(library.pleaves(m[11, 12], 3), "D#5 E5 F5 F#5", "p")
     F3b1(library.pleaves(m[14], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
-    F3b2(library.pleaves(m[14, 17], 3)[4:], "Ab4 Gb4", "p>o!")
-    F3b2(library.pleaves(m[22, 23], 3), "Ab4 Gb4", "pp>o!")
-    F3b2(library.pleaves(m[25, 26], 3), "Ab4 Gb4", "pp>o!")
-    F3b2(library.pleaves(m[27, 28], 3), "Ab4 Gb4", "pp>o!")
+    library.F3b2(library.pleaves(m[14, 17], 3)[4:], "Ab4 Gb4", "p>o!")
+    library.F3b2(library.pleaves(m[22, 23], 3), "Ab4 Gb4", "pp>o!")
+    library.F3b2(library.pleaves(m[25, 26], 3), "Ab4 Gb4", "pp>o!")
+    library.F3b2(library.pleaves(m[27, 28], 3), "Ab4 Gb4", "pp>o!")
 
 
 def vc(m):
