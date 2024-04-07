@@ -4997,7 +4997,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
       %! EXPLICIT_DYNAMIC
@@ -5075,7 +5075,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
       %! EXPLICIT_DYNAMIC
@@ -5133,7 +5133,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
       %! EXPLICIT_DYNAMIC
@@ -5195,7 +5195,7 @@ number.11.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
           %! SPANNER_START
-        - \tweak staff-padding 8
+        - \tweak staff-padding 8.0
           %! SPANNER_START
         \bacaStartTextSpanCircleBow
           %! EXPLICIT_DYNAMIC
@@ -5247,7 +5247,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
       %! EXPLICIT_DYNAMIC
@@ -5305,7 +5305,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanCircleBow
       %! EXPLICIT_DYNAMIC
@@ -5367,7 +5367,7 @@ number.11.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup
           %! SPANNER_START
-        - \tweak staff-padding 8
+        - \tweak staff-padding 8.0
           %! SPANNER_START
         \bacaStartTextSpanCircleBow
           %! EXPLICIT_DYNAMIC

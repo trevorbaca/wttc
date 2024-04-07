@@ -1607,6 +1607,34 @@ def E4b(pleaves, pitch, dynamic):
         baca.laissez_vibrer(ptail)
 
 
+def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
+    baca.pitch(pleaves, pitch)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
+        rleak=True,
+        staff_padding=staff_padding,
+    )
+    plts = baca.select.plts(pleaves)
+    pairs = abjad.sequence.partition_by_counts(hairpin_lparts, [2], cyclic=True)
+    circle_bow_lparts = [sum(_) for _ in pairs]
+    parts = baca.select.clparts(plts, circle_bow_lparts)
+    for part in parts:
+        baca.spanners.circle_bow(
+            part,
+            rleak=True,
+            staff_padding=staff_padding + 2.5,
+        )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        swells(peaks),
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
+
+
 def F3b2(pleaves, glissando, hairpin, *, bdrp=None):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)

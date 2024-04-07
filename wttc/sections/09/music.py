@@ -74,7 +74,14 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1, 2)
+    rhythm(
+        meters(3, 5),
+        [-8, t(4), t(8), t(8), t(4), "-"],
+        do_not_rewrite_meter=True,
+        material=2,
+    )
+    rhythm.mmrests(6)
 
 
 def fl(m):
@@ -104,11 +111,12 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
+    library.F2b3(library.pleaves(m[3, 5], 2), "F2", "G2", [2, 2], "mp")
 
 
 def align_spanners(cache):
-    vn = cache["vn"]
-    baca.override.dls_staff_padding(vn.leaves(), 3)
+    baca.override.dls_staff_padding(cache["vn"].leaves(), 3)
+    baca.override.dls_staff_padding(cache["vc"].leaves(), 5)
 
 
 @baca.build.timed("make_score")

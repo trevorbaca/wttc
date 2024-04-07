@@ -538,34 +538,6 @@ def F2b2(pleaves, glissandi):
     )
 
 
-def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks):
-    baca.pitch(pleaves, pitch)
-    baca.override.note_head_style_harmonic(pleaves)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        harmonic=True,
-        rleak=True,
-        staff_padding=5.5,
-    )
-    plts = baca.select.plts(pleaves)
-    pairs = abjad.sequence.partition_by_counts(hairpin_lparts, [2], cyclic=True)
-    circle_bow_lparts = [sum(_) for _ in pairs]
-    parts = baca.select.clparts(plts, circle_bow_lparts)
-    for part in parts:
-        baca.spanners.circle_bow(
-            part,
-            rleak=True,
-            staff_padding=8,
-        )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        library.swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
-        rleak=True,
-    )
-
-
 def F3a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches, strict=True)
     if ">" in dynamics:
@@ -686,12 +658,13 @@ def vc(m):
             "C2 Db2",
         ],
     )
-    F2b3(
+    library.F2b3(
         library.pleaves(m[18, 26], 2),
         "F2",
         "G2",
         [3] + 13 * [1],
         "mp p p mp pp pp p",
+        staff_padding=5.5,
     )
 
 
