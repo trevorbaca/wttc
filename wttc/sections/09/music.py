@@ -35,6 +35,8 @@ def GLOBALS(skips):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
+    baca.metronome_mark(skips[7 - 1], "150", manifests=library.manifests)
+    baca.metronome_mark(skips[11 - 1], "60", manifests=library.manifests)
 
 
 def FL(voice, meters):
@@ -68,6 +70,12 @@ def FL(voice, meters):
         [rt(1), "-"],
         material=2,
     )
+    rhythm.mmrests(7, 9)
+    rhythm(
+        meters(10, 11),
+        7 * [4] + [AG([2], 4), "-"],
+        material=3,
+    )
 
 
 def OB(voice, meters):
@@ -93,6 +101,18 @@ def OB(voice, meters):
         [rt(1), "-"],
         material=2,
     )
+    rhythm.mmrests(7)
+    rhythm(
+        meters(8, 9),
+        [-3, "+", 20],
+        material=2,
+    )
+    rhythm(
+        meters(10),
+        ["+"],
+        material=2,
+    )
+    rhythm.mmrests(11, 13)
 
 
 def GT1(voice, meters):
@@ -109,6 +129,12 @@ def GT1(voice, meters):
         material=99,
     )
     rhythm.mmrests(5, 6)
+    rhythm(
+        meters(7),
+        ["-", 1],
+        material=3,
+    )
+    rhythm.mmrests(8, 13)
 
 
 def GT2(voice, meters):
@@ -120,7 +146,13 @@ def GT2(voice, meters):
         extra_counts=[-1],
         material=99,
     )
-    rhythm.mmrests(5, 6)
+    rhythm.mmrests(5, 8)
+    rhythm(
+        meters(9),
+        ["-", 1],
+        material=3,
+    )
+    rhythm.mmrests(10, 13)
 
 
 def VN(voice, meters):
@@ -135,7 +167,22 @@ def VN(voice, meters):
         [-8] + 7 * [4] + [AG([2], 4)] + 7 * [4] + [AG([2], 4)],
         material=3,
     )
-    baca.section.append_anchor_note(voice)
+    rhythm.mmrests(7)
+    rhythm(
+        meters(8),
+        [-3, 1, 4, 4, 4, 4, AG([2], 4)],
+        material=2,
+    )
+    rhythm(
+        meters(9),
+        [w(16, 24), X(h(7)), h(1)],
+        material=2,
+    )
+    rhythm(
+        meters(10, 11),
+        [4, 4, 4, 4, 4, 4, 4, AG([2], 4), "-"],
+        material=3,
+    )
 
 
 def VC(voice, meters):
@@ -156,6 +203,7 @@ def fl(m):
     library.G3a(library.pleaves(m[3], 3), "F4 E4", "p")
     library.G1a(library.pleaves(m[3, 5], 99), "A3", [2, 1, 1, 2], "p mp")
     library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
+    library.C3a(m[10], "G4", "F#4", "mp|>o !o<|mf", m[11][:3])
 
 
 def ob(m):
@@ -163,17 +211,21 @@ def ob(m):
     library.G2a2(library.pleaves(m[2, 3], 2), "G#5", "B5", "p")
     library.H1a(library.pleaves(m[4], 99), "D4", "f")
     library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
+    library.C2a(library.pleaves(m[8, 9], 2), "E6", "F6", "mf", "Eb6", tbl=True)
+    library.C2a(library.pleaves(m[10], 2), "D6", "E6", "p", tbl=True)
 
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.G3b(library.pleaves(m[3], 3), "A2", "p")
     library.H1b(library.pleaves(m[4], 99), "Eb4 D4 B3", "mp pp mf")
+    library.C3c(library.pleaves(m[7], 3), "D5", "p", lv=True)
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.H1b(library.pleaves(m[4], 99), "C4", "f")
+    library.C3c(library.pleaves(m[9], 3), "D5", "p", lv=True)
 
 
 def vn(m):
@@ -204,7 +256,7 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [2, 6, 3, 4, 6, 5]
+    numerators = [2, 6, 3, 4, 6, 5, 6, 6, 6, 6, 6, 3, 3]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -277,10 +329,12 @@ def make_layout():
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(7, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
+        overrides=[baca.layout.Override((7, 10), (1, 24))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

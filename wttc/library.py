@@ -1293,6 +1293,70 @@ def C2a(pleaves, pitch_1, alteration, dynamic, pitch_2=None, *, tbl=None):
     )
 
 
+def C3a(
+    pleaves,
+    start_pitch,
+    stop_pitch,
+    hairpin,
+    pleaves_2=None,
+    *,
+    harmonic=False,
+    string_number=None,
+    trill=None,
+):
+    all_leaves = list(pleaves)
+    if pleaves_2 is None:
+        baca.glissando(pleaves, f"{start_pitch} {stop_pitch}")
+        baca.hairpin(
+            [pleaves],
+            hairpin,
+        )
+    else:
+        length_1, length_2 = len(pleaves), len(pleaves_2)
+        string = f"{start_pitch}/{length_1} {stop_pitch}/{length_2} {start_pitch}"
+        baca.glissando(
+            pleaves + pleaves_2,
+            string,
+        )
+        baca.hairpin(
+            [pleaves, pleaves_2],
+            hairpin,
+        )
+        all_leaves += list(pleaves_2)
+    if harmonic is True:
+        baca.override.note_head_style_harmonic(all_leaves)
+    if string_number:
+        baca.spanners.string_number(
+            all_leaves,
+            string_number,
+            rleak=True,
+            staff_padding=6.5,
+        )
+    if trill:
+        baca.spanners.trill(
+            all_leaves,
+            alteration=trill,
+            harmonic=harmonic,
+            rleak=True,
+        )
+
+
+def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=None):
+    baca.pitch(pleaves, pitch)
+    for pleaf, dynamic in zip(pleaves, dynamics.split(), strict=True):
+        baca.dynamic(pleaf, dynamic)
+    if lv is True:
+        baca.laissez_vibrer(pleaves)
+    if pizz is True:
+        for pleaf in pleaves:
+            baca.spanners.pizzicato(
+                pleaf,
+                descriptor=r"\baca-pizz-markup ||",
+                rleak=True,
+                staff_padding=pizz_staff_padding,
+            )
+
+
 def D1a(pleaves, pitch, dynamic, *, rleak=False, tbl=False):
     baca.pitch(pleaves, pitch)
     baca.hairpin(

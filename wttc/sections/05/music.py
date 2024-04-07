@@ -832,54 +832,6 @@ def C2b(
     )
 
 
-def C3a(
-    pleaves,
-    start_pitch,
-    stop_pitch,
-    hairpin,
-    pleaves_2=None,
-    *,
-    harmonic=False,
-    string_number=None,
-    trill=None,
-):
-    all_leaves = list(pleaves)
-    if pleaves_2 is None:
-        baca.glissando(pleaves, f"{start_pitch} {stop_pitch}")
-        baca.hairpin(
-            [pleaves],
-            hairpin,
-        )
-    else:
-        length_1, length_2 = len(pleaves), len(pleaves_2)
-        string = f"{start_pitch}/{length_1} {stop_pitch}/{length_2} {start_pitch}"
-        baca.glissando(
-            pleaves + pleaves_2,
-            string,
-        )
-        baca.hairpin(
-            [pleaves, pleaves_2],
-            hairpin,
-        )
-        all_leaves += list(pleaves_2)
-    if harmonic is True:
-        baca.override.note_head_style_harmonic(all_leaves)
-    if string_number:
-        baca.spanners.string_number(
-            all_leaves,
-            string_number,
-            rleak=True,
-            staff_padding=6.5,
-        )
-    if trill:
-        baca.spanners.trill(
-            all_leaves,
-            alteration=trill,
-            harmonic=harmonic,
-            rleak=True,
-        )
-
-
 def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
     baca.spanners.trill(
         pleaves,
@@ -906,23 +858,6 @@ def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
             [pleaves],
             hairpin,
         )
-
-
-def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=None):
-    baca.pitch(pleaves, pitch)
-    for pleaf, dynamic in zip(pleaves, dynamics.split(), strict=True):
-        if dynamic != "-":
-            baca.dynamic(pleaf, dynamic)
-    if lv is True:
-        baca.laissez_vibrer(pleaves)
-    if pizz is True:
-        for pleaf in pleaves:
-            baca.spanners.pizzicato(
-                pleaf,
-                descriptor=r"\baca-pizz-markup ||",
-                rleak=True,
-                staff_padding=pizz_staff_padding,
-            )
 
 
 def D2a(pleaves, pitches, hairpin_strings):
@@ -994,11 +929,11 @@ def D4a(pleaves, pitch, dynamics):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp|>o!")
-    C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp|>o!")
-    C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp|>o!")
-    C3a(m[12], "G4", "F#4", "mp|>o !o<|mf", m[13][:3])
-    C3a(m[15], "G4", "F#4", "mp|>o !o<|f", m[16][:3])
+    library.C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp|>o!")
+    library.C3a(library.pleaves(m[5, 6], 3), "G4", "F#4", "mp|>o!")
+    library.C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp|>o!")
+    library.C3a(m[12], "G4", "F#4", "mp|>o !o<|mf", m[13][:3])
+    library.C3a(m[15], "G4", "F#4", "mp|>o !o<|f", m[16][:3])
     C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff")
     C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!")
     C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!")
@@ -1020,10 +955,10 @@ def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     library.C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6", tbl=True)
     library.C2a(library.pleaves(m[9], 2), "D6", "E6", "p")
-    library.C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6")
-    library.C2a(library.pleaves(m[12], 2), "D6", "E6", "p")
+    library.C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6", tbl=True)
+    library.C2a(library.pleaves(m[12], 2), "D6", "E6", "p", tbl=True)
     library.C2a(library.pleaves(m[14], 2), "D6", "E6", "mf")
-    library.C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p")
+    library.C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p", tbl=True)
     library.C2a(library.pleaves(m[20, 21], 2), "Db6", "Eb6", "p")
     library.C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
     library.D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
@@ -1033,8 +968,10 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
-    C3c(library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, pizz_staff_padding=3)
+    library.C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
+    library.C3c(
+        library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, pizz_staff_padding=3
+    )
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True)
     D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True)
     D2b(library.pleaves(m[39, 40], 2), '"f" "mf" mp p')
@@ -1049,8 +986,10 @@ def gt1(m):
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
-    C3c(library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, pizz_staff_padding=3)
+    library.C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
+    library.C3c(
+        library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, pizz_staff_padding=3
+    )
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True, upbow=True)
     D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True, upbow=True)
     D2b(library.pleaves(m[39, 40], 2), '"f" "mf" mp p', upbow=True)
@@ -1076,7 +1015,7 @@ def vn(m):
         "f - p - - - p p p p",
     )
     C2b(m[7][1:], "A3", "C5", "f> p<|ff", m[8], "B4", "T -> P1 -> P4")
-    C3a(
+    library.C3a(
         library.pleaves(m[9], 3),
         "A4",
         "F4",
@@ -1085,7 +1024,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
-    C3a(
+    library.C3a(
         library.pleaves(m[12], 3),
         "A4",
         "F4",
@@ -1095,7 +1034,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
-    C3a(
+    library.C3a(
         abjad.select.run(m[15], 0),
         "A4",
         "F4",
