@@ -1024,6 +1024,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
+    C2b(m[10][1:], "A3", "Cb5", "f> p<|ff", m[11], "Bb4", "T -> P1 -> P4")
     library.C3a(
         library.pleaves(m[12], 3),
         "A4",
@@ -1034,6 +1035,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
+    C2b(library.pleaves(m[14], 2), "A3", "A4", "f>p")
     library.C3a(
         abjad.select.run(m[15], 0),
         "A4",
@@ -1044,6 +1046,8 @@ def vn(m):
         trill="m2",
     )
     C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")
+    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
+    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
     C3b(
         library.pleaves(m[21, 24], 3),
         "G#5",
@@ -1051,6 +1055,7 @@ def vn(m):
         "o< mp>o!",
         dummy_pitch="B5",
     )
+    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
     C3b(
         library.pleaves(m[25, 27], 3),
         "G#5",
@@ -1065,11 +1070,6 @@ def vn(m):
         "o< p>o!",
         dummy_pitch="B5",
     )
-    C2b(m[10][1:], "A3", "Cb5", "f> p<|ff", m[11], "Bb4", "T -> P1 -> P4")
-    C2b(library.pleaves(m[14], 2), "A3", "A4", "f>p")
-    C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
-    C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
-    C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
     library.D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
     library.D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p>o!", no_spanner=True)
     library.D4b(
