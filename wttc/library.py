@@ -2027,6 +2027,44 @@ def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
     )
 
 
+def J1b(run, pitches):
+    baca.pitches(run, pitches, allow_obgc_mutation=True)
+
+
+def J3b(pleaves, pitches, dynamics, falls):
+    baca.pitches(pleaves, pitches, strict=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    falls = abjad.CyclicTuple(falls)
+    for i, plt in enumerate(plts):
+        if falls[i] == "0":
+            baca.articulation(plt.head, "bendAfter #'-4")
+        else:
+            baca.articulation(plt.head, "bendAfter #'4")
+
+
+def J3c(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    baca.override.note_head_style_harmonic(pleaves)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    baca.spanners.pizzicato(
+        pleaves,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.spanners.string_number(
+        pleaves,
+        4,
+        rleak=True,
+        staff_padding=5.5,
+    )
+
+
 def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
     baca.glissando(pleaves, pitches)
     baca.spanners.damp(

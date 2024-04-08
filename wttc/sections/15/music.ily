@@ -632,6 +632,32 @@ number.15.Oboe.Staff = <<
 >>
 
 
+number.15.Guitar.1.Music.item.1 = {
+
+    \voiceTwo
+    b''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+
+}
+
+
+number.15.Guitar.1.Music.item.2 = {
+
+    \voiceTwo
+    cs'''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+
+}
+
+
 number.15.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
@@ -647,6 +673,7 @@ number.15.Guitar.1.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -680,24 +707,125 @@ number.15.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2.
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                g''
+                \tweak font-size 0
+                \tweak transparent ##t
+                b''
+            >16
+            [
+            (
+
+            a''16
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.1.Music"
+        { \number.15.Guitar.1.Music.item.1 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r2
 
     % [Guitar.1.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2.
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                g''
+                \tweak font-size 0
+                \tweak transparent ##t
+                cs'''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
+
+            a''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+
+            b''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.1.Music"
+        { \number.15.Guitar.1.Music.item.2 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r2
 
     % [Guitar.1.Music measure 6]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    r2
 
-    % [Guitar.1.Music measure 7]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        fs'!8
+        - \bendAfter #'4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+
+        r4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 7]
+        r4
+
+        fs'!8
+        - \bendAfter #'4
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
+        \mf
+
+    }
+
+    r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 8]
     R1 * 4/4
@@ -781,6 +909,45 @@ number.15.Guitar.1.Staff = <<
 >>
 
 
+number.15.Guitar.2.Music.item.1 = {
+
+    \voiceTwo
+    c'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+
+}
+
+
+number.15.Guitar.2.Music.item.2 = {
+
+    \voiceTwo
+    as''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+
+}
+
+
+number.15.Guitar.2.Music.item.3 = {
+
+    \voiceTwo
+    d'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+
+}
+
+
 number.15.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 1]
@@ -796,7 +963,7 @@ number.15.Guitar.2.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
-    \override DynamicLineSpanner.staff-padding = 6
+    \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -831,25 +998,172 @@ number.15.Guitar.2.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
-    % [Guitar.2.Music measure 4]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            % [Guitar.2.Music measure 4]
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                fs''!
+                \tweak font-size 0
+                \tweak transparent ##t
+                c'''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
+
+            gs''!16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+
+            as''!16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.2.Music"
+        { \number.15.Guitar.2.Music.item.1 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r8
+
+    r1
+
+    r4
 
     % [Guitar.2.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
+
+    r8
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                fs''!
+                \tweak font-size 0
+                \tweak transparent ##t
+                as''
+            >16
+            [
+            (
+
+            gs''!16
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.2.Music"
+        { \number.15.Guitar.2.Music.item.2 }
+
+    >>
+
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r2.
+
+    r8
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+            \set fontSize = #-3
+            \slash
+            \voiceOne
+            <
+                gs''!
+                \tweak font-size 0
+                \tweak transparent ##t
+                d'''
+            >16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            [
+            (
+
+            as''!16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+
+            c'''16 * 2/3
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"2" #"3"
+            )
+            ]
+
+        }
+
+        \context Voice = "Guitar.2.Music"
+        { \number.15.Guitar.2.Music.item.3 }
+
+    >>
 
     % [Guitar.2.Music measure 6]
-    R1 * 3/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    r4
 
-    % [Guitar.2.Music measure 7]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+        fs'!8
+        - \bendAfter #'4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+
+        r8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.2.Music measure 7]
+        r8
+
+        fs'!8
+        - \bendAfter #'-4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+
+        r8
+
+    }
+
+    r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 8]
     R1 * 4/4
@@ -862,6 +1176,7 @@ number.15.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 10]
+    \override DynamicLineSpanner.staff-padding = 6
     \override TupletBracket.direction = #up
     r2.
 
@@ -949,8 +1264,11 @@ number.15.Violin.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 7
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \override TupletBracket.direction = #down
+    \override TupletBracket.staff-padding = 1.5
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
@@ -1168,6 +1486,8 @@ number.15.Violin.Music = {
     r8.
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+    \revert TupletBracket.direction
+    \revert TupletBracket.staff-padding
 
     % [Violin.Music measure 4]
     R1 * 6/4
@@ -1188,6 +1508,7 @@ number.15.Violin.Music = {
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
     \repeat tremolo 4 {
 
@@ -1356,7 +1677,7 @@ number.15.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
-    \clef "bass"
+    \clef "treble"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1364,9 +1685,10 @@ number.15.Cello.Music = {
     \once \override Staff.Clef.color = #blue
       %! MEASURE_1
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -1407,9 +1729,39 @@ number.15.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Cello.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
+
+    \override NoteHead.style = #'harmonic
+    btqf'!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-string-iv-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanStringNumber
+
+    r8.
+
+    r1
 
     % [Cello.Music measure 6]
     R1 * 3/4
@@ -1417,13 +1769,44 @@ number.15.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Cello.Music measure 7]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    r4
+
+    r8
+
+    btqf'!16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+    \revert NoteHead.style
+
+    r16
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+      %! SPANNER_STOP
+    \bacaStopTextSpanStringNumber
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 8]
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_8
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_8
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
     \override DynamicLineSpanner.staff-padding = 5
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
     r2
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     r16
 

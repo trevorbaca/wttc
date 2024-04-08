@@ -780,10 +780,6 @@ def J1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-def J1b(run, pitches):
-    baca.pitches(run, pitches, allow_obgc_mutation=True)
-
-
 def J2a1(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     dynamics = dynamics.split()
@@ -819,40 +815,6 @@ def J3a(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
     for plt in plts:
         baca.accent(plt.head)
-
-
-def J3b(pleaves, pitches, dynamics, falls):
-    baca.pitches(pleaves, pitches, strict=True)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-    falls = abjad.CyclicTuple(falls)
-    for i, plt in enumerate(plts):
-        if falls[i] == "0":
-            baca.articulation(plt.head, "bendAfter #'-4")
-        else:
-            baca.articulation(plt.head, "bendAfter #'4")
-
-
-def J3c(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    baca.override.note_head_style_harmonic(pleaves)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-    baca.spanners.pizzicato(
-        pleaves,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.spanners.string_number(
-        pleaves,
-        4,
-        rleak=True,
-        staff_padding=5.5,
-    )
 
 
 def J4a(pleaves, dyad, dynamic=None):
@@ -960,25 +922,25 @@ def ob(m):
 def gt1(cache):
     m = cache["gt1"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    J1b(library.pleaves(m[1], 1), "G4 A4 B4")
-    J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5")
-    J3b(library.pleaves(m[3, 4], 3), 4 * "F#3 ", "mf mf mp p", "1101")
-    J3b(
+    library.J1b(library.pleaves(m[1], 1), "G4 A4 B4")
+    library.J1b(library.pleaves(m[2], 1), "G4 A4 B4 C#5")
+    library.J3b(library.pleaves(m[3, 4], 3), 4 * "F#3 ", "mf mf mp p", "1101")
+    library.J3b(
         library.pleaves(m[5, 7], 3),
         "F#3 G#3 G#3 G#3 G#3 A3 A3",
         "mf mf mf mp mp mp p",
         "0110101",
     )
-    J3b(library.pleaves(m[8, 9], 3), "A3 A#3 A#3", "p p pp", "101")
-    J1b(library.pleaves(m[9], 1), "C#5 D#5 F5")
-    J1b(library.pleaves(m[10], 1), "C#5 D#5 F5 G5")
+    library.J3b(library.pleaves(m[8, 9], 3), "A3 A#3 A#3", "p p pp", "101")
+    library.J1b(library.pleaves(m[9], 1), "C#5 D#5 F5")
+    library.J1b(library.pleaves(m[10], 1), "C#5 D#5 F5 G5")
     J4a(library.pleaves(m[16, 17], 4), "G2:Eb3", "p")
     J4a(library.pleaves(m[19, 22], 4), "G2:D3")
-    J3b(library.pleaves(m[23], 3), "A#3", "p", "0")
+    library.J3b(library.pleaves(m[23], 3), "A#3", "p", "0")
     J4a(library.pleaves(m[24, 25], 4), "G2:B2", "p")
-    J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5")
-    J1b(library.pleaves(m[27], 1), "C#5 D#5 F5")
-    J3b(library.pleaves(m[27, 29], 3), "A#3 B3", "p pp", "11")
+    library.J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5")
+    library.J1b(library.pleaves(m[27], 1), "C#5 D#5 F5")
+    library.J3b(library.pleaves(m[27, 29], 3), "A#3 B3", "p pp", "11")
     #
     cache.rebuild()
     m = cache["gt1"]
@@ -992,28 +954,28 @@ def gt1(cache):
 def gt2(cache):
     m = cache["gt2"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5")
-    J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4")
-    J1b(library.run(m[2], 1, 1), "G#4 A#4 C5 D5")
-    J3b(library.pleaves(m[3, 4], 3), 5 * "F#3 ", "mf mp mp p p", "10101")
-    J3b(
+    library.J1b(library.pleaves(m[1], 1), "F#4 G#4 A#4 C5")
+    library.J1b(library.run(m[2], 1, 0), "F#4 G#4 A#4")
+    library.J1b(library.run(m[2], 1, 1), "G#4 A#4 C5 D5")
+    library.J3b(library.pleaves(m[3, 4], 3), 5 * "F#3 ", "mf mp mp p p", "10101")
+    library.J3b(
         library.pleaves(m[5, 7], 3),
         "F#3 F#3 G#3 G#3 G#3 A3 A3",
         "mf mf mf mp mp mp p",
         "1101011",
     )
-    J1b(library.run(m[8], 1, 0), "C5 D5 E5")
-    J3b(library.pleaves(m[8], 3), "A3 A#3", "p p", "10")
-    J1b(library.run(m[8], 1, 1), "C5 D5 E5 F#5")
-    J1b(library.pleaves(m[10], 1), "D5 E5 F#5")
+    library.J1b(library.run(m[8], 1, 0), "C5 D5 E5")
+    library.J3b(library.pleaves(m[8], 3), "A3 A#3", "p p", "10")
+    library.J1b(library.run(m[8], 1, 1), "C5 D5 E5 F#5")
+    library.J1b(library.pleaves(m[10], 1), "D5 E5 F#5")
     J4a(library.pleaves(m[16, 17], 4), "Db3:F2", "p")
     J4a(library.pleaves(m[19, 22], 4), "F2:C3")
-    J1b(library.pleaves(m[23], 1), "D5 E5 F#5 G#5")
-    J3b(library.pleaves(m[23], 3), "A#3 A#3", "p p", "10")
+    library.J1b(library.pleaves(m[23], 1), "D5 E5 F#5 G#5")
+    library.J3b(library.pleaves(m[23], 3), "A#3 A#3", "p p", "10")
     J4a(library.pleaves(m[24, 25], 4), "F2:A2", "p")
-    J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5")
-    J1b(library.pleaves(m[27], 1), "D5 E5 F#5")
-    J3b(library.pleaves(m[27, 29], 3), "A#3 B3 B3", "p pp pp", "111")
+    library.J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5")
+    library.J1b(library.pleaves(m[27], 1), "D5 E5 F#5")
+    library.J3b(library.pleaves(m[27, 29], 3), "A#3 B3 B3", "p pp pp", "111")
     #
     cache.rebuild()
     m = cache["gt2"]
@@ -1067,18 +1029,18 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
-    J3c(library.pleaves(m[2, 5], 3), 4 * "Btqf4 ", "mf f mf mp")
-    J3c(
+    library.J3c(library.pleaves(m[2, 5], 3), 4 * "Btqf4 ", "mf f mf mp")
+    library.J3c(
         library.pleaves(m[6, 9], 3),
         "Btqf4 G4 G4 G4 E4 E4 E4",
         "f mf mp mp mp p p",
     )
-    J3c(library.pleaves(m[23], 3), "E4", "p")
+    library.J3c(library.pleaves(m[23], 3), "E4", "p")
     baca.clef(m[26][0], "tenor")
     K1b(library.pleaves(m[26], 99), "F3:Bb3", "C4", "p p")
-    J3c(library.pleaves(m[27], 3), "E4", "p")
+    library.J3c(library.pleaves(m[27], 3), "E4", "p")
     K1b(library.pleaves(m[27, 28], 99), "F3:Bb3", "C4", "mp mp")
-    J3c(library.pleaves(m[29], 3), "E4", "p")
+    library.J3c(library.pleaves(m[29], 3), "E4", "p")
     K1b(library.pleaves(m[29], 99), "F3:Bb3", "C4", "mf mf")
 
 
