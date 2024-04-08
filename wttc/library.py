@@ -2069,6 +2069,24 @@ def K2d(pleaves, pitch, dynamic):
     baca.dynamic(pleaves[0], dynamic)
 
 
+def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
+    pheads = baca.select.pheads(pleaves)
+    baca.alternate_bow_strokes(pheads)
+    baca.glissando(
+        pleaves,
+        glissando,
+    )
+    baca.hairpin(
+        pleaves,
+        hairpin,
+    )
+    baca.spanners.half_clt(
+        pleaves,
+        rleak=True,
+        staff_padding=staff_padding,
+    )
+
+
 def M2(pleaves, pitches, dynamic):
     baca.pitches(pleaves, pitches, strict=True)
     if ">" in dynamic:

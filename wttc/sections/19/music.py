@@ -965,24 +965,6 @@ def L3b(pleaves, pitches, hairpin, hairpin_lparts=None, *, beams=None):
         baca.spanners.slur(part)
 
 
-def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
-    pheads = baca.select.pheads(pleaves)
-    baca.alternate_bow_strokes(pheads)
-    baca.glissando(
-        pleaves,
-        glissando,
-    )
-    baca.hairpin(
-        pleaves,
-        hairpin,
-    )
-    baca.spanners.half_clt(
-        pleaves,
-        rleak=True,
-        staff_padding=staff_padding,
-    )
-
-
 def L5a(pleaves, fundamental):
     fundamental_to_overtones = {
         "A": "A5 C#6 E6 G6 " + 50 * "A6 B6 C#7 B6 ",
@@ -1147,7 +1129,7 @@ def vn(m):
     L3b(library.pleaves(m[24, 25], 3), Q1, "o< f>o!", [19, 14], beams=-5)
     L2b1(library.pleaves(m[25], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     L3b(library.pleaves(m[26, 27], 3), Q1, "o< f>o!", [4, 20], beams=-5)
-    L4(
+    library.L4(
         library.pleaves(m[27, 29], 4),
         "G3/3 Eb4/3 C4 Ab4/3 F4/2 Db5 Bb4/2 Gb5/2 Eb5 B5/2 G#5 E6/2",
         'o<"ff"',
@@ -1164,7 +1146,7 @@ def vn(m):
     rmakers.unbeam(m[33][:2])
     L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
     L3b(library.pleaves(m[36, 37], 3), Q1, "o< f>o!", [6, 18], beams=-5)
-    L4(
+    library.L4(
         library.pleaves(m[37, 39], 4),
         "G3 Eb4/2 C4/2 Ab4/2 F4/2 Db5/2 Bb4/3 Gb5/3 Eb5/2 B5/3 G#5/2 E6/1",
         '"ff">o!',
@@ -1176,7 +1158,7 @@ def vn(m):
         "pp>o!",
     )
     L3b(library.pleaves(m[42, 43], 3), Q1, "o< f>o!", [4, 20], beams=-5)
-    L4(
+    library.L4(
         library.pleaves(m[43, 45], 4),
         "G3/2 Eb4/2 C4/2 Ab4/2 F4/2 Db5 Bb4 Gb5/2 Eb5 B5 G#5/2 A5",
         '"ff">o!',
@@ -1240,7 +1222,7 @@ def vc(m):
     )
     L3b(library.pleaves(m[26], 3), Q2, "o< f>o!", [6, 9], beams=-6.5)
     baca.clef(m[27][0], "bass")
-    L4(
+    library.L4(
         library.pleaves(m[27, 28], 4),
         "Db4/2 F3 Bb3/3 D3/2 G3/2 B2/2 E3/2 G#2 C#3",
         'o<"ff"',
@@ -1257,7 +1239,7 @@ def vc(m):
     )
     baca.clef(m[36][0], "treble")
     L3b(library.pleaves(m[36, 37], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
-    L4(
+    library.L4(
         library.pleaves(m[37, 39], 4),
         "Db4/2 F3 Bb3/2 D3/2 G3/2 B2/2 E3/2 G#2/3 C#3 F2/2 Bb2/2 D2",
         '"ff">o!',
@@ -1273,7 +1255,7 @@ def vc(m):
     )
     baca.clef(m[42][0], "treble")
     L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
-    L4(
+    library.L4(
         library.pleaves(m[43, 46], 4),
         "Db4 F3/2 Bb3/2 D3/2 G3/2 B2/2 E3/3 G#2/3 C#3/2 F2/3"
         " Bb2/3 D2/2 G2/3 Db2/3 Gb2 C2",
