@@ -1730,6 +1730,31 @@ def E4b(pleaves, pitch, dynamic):
         baca.laissez_vibrer(ptail)
 
 
+def F1a(pleaves, pitch, hairpin_lparts, hairpin, *, tbl=False):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.text(
+        pleaves,
+        r"\baca-airtone-markup =|",
+        left_broken_text=r"\baca-parenthesized-air-markup",
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        *to_bar_line_tweaks(tbl),
+        rleak=True,
+    )
+
+
+def F1b(pleaves, chord, dynamics):
+    baca.pitch(pleaves, chord)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
 def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     baca.pitch(pleaves, pitch)
     baca.override.note_head_style_harmonic(pleaves)

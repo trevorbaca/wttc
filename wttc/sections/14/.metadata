@@ -21,9 +21,9 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [1, 8],
-    "duration": "0'25''",
-    "final_measure_number": 9,
+    "bol_measure_numbers": [1, 8, 10],
+    "duration": "1'07''",
+    "final_measure_number": 16,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
@@ -89,6 +89,16 @@
                 value="Vc.",
             ),
         ],
+        "Guitar.1.Music": [
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
+        ],
         "Guitar.1.Staff": [
             baca.Memento(
                 context="Guitar.1.Music",
@@ -114,6 +124,16 @@
                 synthetic_offset=None,
                 value="Gt. 1",
             ),
+        ],
+        "Guitar.2.Music": [
+            baca.Memento(
+                context="Guitar.2.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
         ],
         "Guitar.2.Staff": [
             baca.Memento(
@@ -182,7 +202,7 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="4/4",
+                value="6/4",
             ),
         ],
         "Violin.Music": [
@@ -224,6 +244,23 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'25''",
-    "time_signatures": ["6/4", "6/4", "6/4", "6/4", "6/4", "6/4", "6/4", "4/4", "4/4"],
+    "stop_clock_time": "1'07''",
+    "time_signatures": [
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "4/4",
+        "4/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+    ],
 }

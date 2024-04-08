@@ -402,30 +402,6 @@ def VC(voice, meters):
     rhythm.mmrests(27, 28)
 
 
-def F1a(pleaves, pitch, hairpin_lparts, hairpin):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.text(
-        pleaves,
-        r"\baca-airtone-markup =|",
-        left_broken_text=r"\baca-parenthesized-air-markup",
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-        rleak=True,
-    )
-
-
-def F1b(pleaves, chord, dynamics):
-    baca.pitch(pleaves, chord)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-
-
 def F1c(pleaves, chord, alteration, peaks):
     baca.pitch(pleaves, chord)
     for chord in pleaves:
@@ -569,7 +545,7 @@ def F3b1(pleaves, fundamentals, dynamics):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    F1a(
+    library.F1a(
         library.pleaves(m[2, 10], 1),
         "Eb4",
         11 * [1],
@@ -594,24 +570,24 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    F1b(library.pleaves(m[4, 6], 1), "G3:B3", "mp - -")
+    library.F1b(library.pleaves(m[4, 6], 1), "G3:B3", "mp - -")
     F3a(library.pleaves(m[8, 9], 3), "C#4 D4 D#4 E4", "p")
-    F1b(library.pleaves(m[10], 1), "G3:B3", "mp")
+    library.F1b(library.pleaves(m[10], 1), "G3:B3", "mp")
     F3a(library.pleaves(m[11, 12], 3), "D4 D#4 E4 F4", "p")
-    F1b(library.pleaves(m[14], 1), "G3:B3", "mp")
+    library.F1b(library.pleaves(m[14], 1), "G3:B3", "mp")
     F3a(library.pleaves(m[14, 17], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
-    F1b(library.pleaves(m[20], 1), "G3:B3", "mp")
+    library.F1b(library.pleaves(m[20], 1), "G3:B3", "mp")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    F1b(library.pleaves(m[4, 6], 1), "F3:A3", "mp - -")
+    library.F1b(library.pleaves(m[4, 6], 1), "F3:A3", "mp - -")
     F3a(library.pleaves(m[8, 9], 3), "C4 C#4 D4 D#4", "p")
-    F1b(library.pleaves(m[10], 1), "F3:A3", "mp")
+    library.F1b(library.pleaves(m[10], 1), "F3:A3", "mp")
     F3a(library.pleaves(m[11, 12], 3), "C#4 D4 D#4 E4", "p")
-    F1b(library.pleaves(m[14], 1), "F3:A3", "mp")
+    library.F1b(library.pleaves(m[14], 1), "F3:A3", "mp")
     F3a(library.pleaves(m[14, 16], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
-    F1b(library.pleaves(m[20], 1), "F3:A3", "mp")
+    library.F1b(library.pleaves(m[20], 1), "F3:A3", "mp")
 
 
 def vn(m):
