@@ -2068,6 +2068,16 @@ def J2a2(
     )
 
 
+def J3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    for plt in plts:
+        baca.accent(plt.head)
+
+
 def J3b(pleaves, pitches, dynamics, falls):
     baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)

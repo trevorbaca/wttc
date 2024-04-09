@@ -788,16 +788,6 @@ def J2a1(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def J3a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-    for plt in plts:
-        baca.accent(plt.head)
-
-
 def J4a(pleaves, dyad, dynamic=None):
     baca.pitches(pleaves, dyad)
     if dynamic is not None:
@@ -829,12 +819,12 @@ def fl(m):
         "C#4 D5 D#4 E5 Db4 B3 A#3 A4 D4 Eb5",
         "p mf p f p f p mf p mp",
     )
-    J3a(library.pleaves(m[4], 3), "E4 E4 E4 E4", "f mf mp p")
+    library.J3a(library.pleaves(m[4], 3), "E4 E4 E4 E4", "f mf mp p")
     J2a1(library.pleaves(m[4, 5], 2)[2:6], "D#4 F5 F4 F#5", "p mf p f")
     library.J2a2(
         library.pleaves(m[5, 6], 2)[2:], "A5 Ab5", [3, 3], "o< f>o!", fluttertongue=True
     )
-    J3a(
+    library.J3a(
         library.pleaves(m[6, 8], 3),
         "E4 Eb4 Eb4 Eb4 Db4 Db4 Db4 Db4 B3 B3 B3 B3",
         "f f mf mf mp mp p p p pp pp pp",
@@ -860,7 +850,7 @@ def fl(m):
         fluttertongue=True,
         rleak=True,
     )
-    J3a(library.pleaves(m[23], 3), "B3", "p")
+    library.J3a(library.pleaves(m[23], 3), "B3", "p")
     library.J2a2(
         library.pleaves(m[23, 26], 2),
         "D6",
@@ -869,7 +859,7 @@ def fl(m):
         fluttertongue=True,
         rleak=True,
     )
-    J3a(library.pleaves(m[27, 29], 3), "B3 Bb3 Bb3 Bb3", "p pp pp pp")
+    library.J3a(library.pleaves(m[27, 29], 3), "B3 Bb3 Bb3 Bb3", "p pp pp pp")
 
 
 def ob(m):
