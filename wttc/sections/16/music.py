@@ -64,7 +64,11 @@ def GT1(voice, meters):
         material=3,
     )
     rhythm.mmrests(2)
-    rhythm.mmrests(3, 4)
+    rhythm(
+        meters(3, 4),
+        [-16, A(12 * [1], 16), "-"],
+        material=1,
+    )
 
 
 def GT2(voice, meters):
@@ -75,7 +79,11 @@ def GT2(voice, meters):
         material=3,
     )
     rhythm.mmrests(2)
-    rhythm.mmrests(3, 4)
+    rhythm(
+        meters(3, 4),
+        [-16, A(15 * [1], 16), "-"],
+        material=1,
+    )
 
 
 def VN(voice, meters):
@@ -98,7 +106,12 @@ def VN(voice, meters):
         material=3,
         prefix=[40],
     )
-    rhythm.mmrests(4)
+    rhythm(
+        meters(4),
+        [R([-1] + 5 * [1], 16)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
 
 
 def VC(voice, meters):
@@ -124,11 +137,21 @@ def ob(m):
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.D3b(library.pleaves(m[1], 3), "Ab2", "mf")
+    library.I1b(
+        library.pleaves(m[3, 4], 1),
+        "Eb5 D5 C5 Eb5 B4 Bb4 B4 Eb5 Bb4 C5 D5 C5 D5",
+        "p<f",
+    )
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.D3b(library.pleaves(m[1], 3), "G2", "mf")
+    library.I1b(
+        library.pleaves(m[3, 4], 1),
+        "B4 Bb4 C5 Eb5 B4 D5 Eb5 B4 Eb5 D5 Bb4 C5 D5 C5",
+        "p<f",
+    )
 
 
 def vn(m):
@@ -136,6 +159,7 @@ def vn(m):
     library.D4b(library.pleaves(m[1, 2], 4), "G#3", dynamics="mp - mf - - -")
     library.H2(library.pleaves(m[3], 2), "A5", "Bb5", "mf mf mf mf")
     library.H3(library.pleaves(m[3], 3), "E4", "F#4", "F#5", "D#4", "mp f", "P1")
+    library.M5b(library.pleaves(m[4], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
 
 
 def vc(m):
@@ -150,8 +174,13 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[1, 2], 6)
+    baca.override.dls_staff_padding(gt1[3, 4], 5)
+    gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2[1, 2], 6)
+    baca.override.dls_staff_padding(gt2[3, 4], 5)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1], 6)
+    baca.override.dls_staff_padding(vn[3, 4], 4)
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[1, 2], 4)
 
@@ -233,12 +262,12 @@ def make_layout():
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            # baca.layout.System(7, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(3, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
-        overrides=[],
+        overrides=[baca.layout.Override((3, 4), (1, 64))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
