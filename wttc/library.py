@@ -1913,6 +1913,22 @@ def H1b(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
+def H2(pleaves, pitch, alteration, peaks, *, tbl=False):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        swells(peaks),
+        *to_bar_line_tweaks(tbl),
+        rleak=True,
+    )
+
+
 def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.pitch(pleaves[:-3], pitch)
     baca.pitch(pleaves[-3], pitch)

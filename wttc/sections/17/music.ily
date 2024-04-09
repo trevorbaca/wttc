@@ -16,17 +16,17 @@ number.17.Skips = {
     s1 * 5/4
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "I" #6
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "50" #blue
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "50" #(x11-color 'DeepPink1)
+      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
-      %! EXPLICIT_METRONOME_MARK
+      %! REDUNDANT_METRONOME_MARK
     %@% - \baca-invisible-line
-      %! EXPLICIT_METRONOME_MARK
+      %! REDUNDANT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "50"
-      %! EXPLICIT_METRONOME_MARK
+      %! REDUNDANT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'00'']"

@@ -882,25 +882,6 @@ def G5a(pleaves, glissandi, starts):
         )
 
 
-def H2(pleaves, pitch, alteration, peaks, *, to_bar_line=False):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=5.5,
-    )
-    tweaks = ()
-    if to_bar_line is True:
-        tweaks = (baca.postevent.to_bar_line_true(index=-1),)
-    baca.hairpin(
-        baca.select.clparts(pleaves, [1]),
-        library.swells(peaks),
-        *tweaks,
-        rleak=True,
-    )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.G1a(library.pleaves(m[1], 1), "A#4", [1, 2], "p")
@@ -930,9 +911,9 @@ def fl(m):
     library.G3a(library.pleaves(m[30], 3), "F4 E4", "p")
     library.G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
     library.G3a(library.pleaves(m[33], 3), "F4 E4", "p")
-    H2(library.pleaves(m[34], 2), "C6", None, "p p mp")
-    H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf")
-    H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", to_bar_line=True)
+    library.H2(library.pleaves(m[34], 2), "C6", None, "p p mp")
+    library.H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf")
+    library.H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", tbl=True)
 
 
 def ob(m):
@@ -1009,9 +990,9 @@ def vn(m):
         "E4/3 Db4/2 Eb4/2 C4/4 D4/3 B3/2 Db4/2 Bb3/2 C4/3 A3",
     )
     library.G5b(library.pleaves(m[25, 28], 5), "B3/4 Ab3/4 Bb3/2 G3")
-    H2(library.pleaves(m[34], 2), "C6", "C#6", "p p mp")
-    H2(library.pleaves(m[35], 2), "B5", "C6", "p p mp mf")
-    H2(library.pleaves(m[36], 2), "A5", "Bb5", "mf mf mf mf")
+    library.H2(library.pleaves(m[34], 2), "C6", "C#6", "p p mp")
+    library.H2(library.pleaves(m[35], 2), "B5", "C6", "p p mp mf")
+    library.H2(library.pleaves(m[36], 2), "A5", "Bb5", "mf mf mf mf")
     library.H3(library.pleaves(m[36], 3), "E4", "F#4", "F#5", "D#4", "mp f", "P1")
     library.H3(library.pleaves(m[37], 3)[:6], "E4", "F#4", "F#5", "D#4", "mp f", "P1")
     library.H3(library.pleaves(m[37], 3)[6:12], "F4", "G4", "G5", "E4", "p mf", "P2")
