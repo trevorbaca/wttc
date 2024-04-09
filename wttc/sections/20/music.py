@@ -269,14 +269,18 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(fl[7, 10], 4)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
-    """
     gt1 = cache["gt1"]
-    baca.override.tuplet_bracket_direction_up(gt1[2, 10])
+    baca.override.dls_staff_padding(gt1.leaves(), 3)
+    baca.override.tuplet_bracket_direction_up(gt1[4])
+    baca.override.tuplet_bracket_direction_up(gt1[10])
     gt2 = cache["gt2"]
-    baca.override.tuplet_bracket_direction_up(gt2[2, 10])
+    baca.override.dls_staff_padding(gt2.leaves(), 3)
+    baca.override.tuplet_bracket_direction_up(gt2[3, 4])
+    baca.override.tuplet_bracket_direction_up(gt2[9, 10])
     vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[5, 6], 4)
     vc = cache["vc"]
-    """
+    baca.override.dls_staff_padding(vc[5, 6], 10)
 
 
 @baca.build.timed("make_score")

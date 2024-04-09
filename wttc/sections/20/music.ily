@@ -782,6 +782,7 @@ number.20.Guitar.1.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -866,6 +867,7 @@ number.20.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 4]
+    \override TupletBracket.direction = #up
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -889,6 +891,7 @@ number.20.Guitar.1.Music = {
     }
 
     r2.
+    \revert TupletBracket.direction
 
     % [Guitar.1.Music measure 5]
       %! STAFF_HIGHLIGHT
@@ -1012,6 +1015,7 @@ number.20.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 10]
+    \override TupletBracket.direction = #up
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1035,6 +1039,8 @@ number.20.Guitar.1.Music = {
     }
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
 
 }
 
@@ -1088,6 +1094,7 @@ number.20.Guitar.2.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -1171,6 +1178,7 @@ number.20.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 3]
+    \override TupletBracket.direction = #up
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1216,6 +1224,7 @@ number.20.Guitar.2.Music = {
     }
 
     r4
+    \revert TupletBracket.direction
 
     % [Guitar.2.Music measure 5]
       %! STAFF_HIGHLIGHT
@@ -1336,6 +1345,7 @@ number.20.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 9]
+    \override TupletBracket.direction = #up
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1381,6 +1391,8 @@ number.20.Guitar.2.Music = {
     }
 
     r4
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
 
 }
 
@@ -1446,6 +1458,7 @@ number.20.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Violin.Music measure 5]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     g''16
@@ -1570,6 +1583,7 @@ number.20.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 7]
     R1 * 3/4
@@ -1658,6 +1672,7 @@ number.20.Cello.Music = {
 
     % [Cello.Music measure 5]
     \override Beam.positions = #'(-8 . -8)
+    \override DynamicLineSpanner.staff-padding = 10
     \override NoteHead.style = #'harmonic
     \override Stem.direction = #down
       %! STAFF_HIGHLIGHT
@@ -1804,6 +1819,7 @@ number.20.Cello.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 7]
     R1 * 3/4
