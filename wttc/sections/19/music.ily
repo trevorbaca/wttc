@@ -1231,7 +1231,7 @@ number.19.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[2'07'']" "[2'10'']"
+    %@% - \baca-start-ct-left-only "[2'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1240,6 +1240,67 @@ number.19.Skips = {
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
     %@% - \baca-start-mn-left-only "46"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 47]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+    \bacaStopTextSpanMM
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "75" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    \bacaStartTextSpanMM
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "75"
+      %! EXPLICIT_METRONOME_MARK
+    %@% \bacaStartTextSpanMM
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[2'10'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "47"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "47"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "N (middle) + J (middle)"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
+
+    % [Skips measure 48]
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-both "[2'14'']" "[2'19'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "48"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "48"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -1413,6 +1474,12 @@ number.19.Rests = {
     R1 * 6/4
 
     % [Rests measure 46]
+    R1 * 6/4
+
+    % [Rests measure 47]
+    R1 * 6/4
+
+    % [Rests measure 48]
     R1 * 6/4
 
 }
@@ -4506,17 +4573,27 @@ number.19.AltoFlute.Music = {
     fs''''!32
     - \flageolet
 
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     e''''32
     - \flageolet
     \revert Accidental.X-extent
     \revert Accidental.extra-offset
     \revert Accidental.font-size
-    \revert DynamicLineSpanner.staff-padding
     \revert Flag.stencil
     \revert NoteHead.font-size
     \revert Stem.stencil
+
+    % [AltoFlute.Music measure 47]
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 48]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -5146,6 +5223,16 @@ number.19.Oboe.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 47]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 48]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
     \revert DynamicLineSpanner.staff-padding
 
 }
@@ -5772,7 +5859,19 @@ number.19.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 46]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 47]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 48]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 
@@ -6627,7 +6726,19 @@ number.19.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 46]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 47]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.2.Music measure 48]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 
@@ -10835,42 +10946,21 @@ number.19.Violin.Music = {
 
     }
 
-      %! ANCHOR_NOTE
-    % [Violin.Music anchor note]
-      %! ANCHOR_NOTE
-      %! INVISIBLE_MUSIC_COMMAND
-      %! NOTE
-    %@% \abjad-invisible-music
-      %! ANCHOR_NOTE
-      %! INVISIBLE_MUSIC_COLORING
-      %! NOTE
-    \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-    \once \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-    \stopStaff
-      %! ANCHOR_NOTE
-    \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR_NOTE
-    \startStaff
-      %! ANCHOR_NOTE
+    % [Violin.Music measure 47]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-    b'1 * 1/4
-      %! ANCHOR_NOTE
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-      %! HIDDEN
-      %! NOTE
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-      %! ANCHOR_NOTE
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
-      %! ANCHOR_NOTE
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+
+    % [Violin.Music measure 48]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 
@@ -14576,39 +14666,19 @@ number.19.Cello.Music = {
       %! SPANNER_STOP
     \!
 
-      %! ANCHOR_NOTE
-    % [Cello.Music anchor note]
-      %! ANCHOR_NOTE
-      %! INVISIBLE_MUSIC_COMMAND
-      %! NOTE
-    %@% \abjad-invisible-music
-      %! ANCHOR_NOTE
-      %! INVISIBLE_MUSIC_COLORING
-      %! NOTE
-    \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-    \once \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-    \stopStaff
-      %! ANCHOR_NOTE
-    \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR_NOTE
-    \startStaff
-      %! ANCHOR_NOTE
+    % [Cello.Music measure 47]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-    d1 * 1/4
-      %! ANCHOR_NOTE
+    R1 * 6/4
       %! DURATION_MULTIPLIER
-      %! HIDDEN
-      %! NOTE
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-      %! ANCHOR_NOTE
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+
+    % [Cello.Music measure 48]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
 }
 

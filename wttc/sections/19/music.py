@@ -61,6 +61,7 @@ def GLOBALS(skips, first_measure_number):
         ("L3.h", 42),
         ("L4.h_l", 43),
         ("L5.l", 45),
+        ("N (middle) + J (middle)", 47),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
@@ -83,6 +84,7 @@ def GLOBALS(skips, first_measure_number):
         font_size=6,
         padding=1.5,
     )
+    baca.metronome_mark(skips[47 - 1], "75", manifests=library.manifests)
 
 
 def FL(voice, meters):
@@ -192,6 +194,7 @@ def FL(voice, meters):
         denominator=32,
         material=5,
     )
+    rhythm.mmrests(47, 48)
 
 
 def OB(voice, meters):
@@ -237,6 +240,7 @@ def OB(voice, meters):
         material=2,
     )
     rhythm.mmrests(36, 46)
+    rhythm.mmrests(47, 48)
 
 
 def GT1(voice, meters):
@@ -301,6 +305,7 @@ def GT1(voice, meters):
         [-24, -2, c(2, 2), "-"],
         material=3,
     )
+    rhythm.mmrests(47, 48)
 
 
 def GT2(voice, meters):
@@ -363,6 +368,7 @@ def GT2(voice, meters):
         [-24, -2, c(2, 2), "-"],
         material=3,
     )
+    rhythm.mmrests(47, 48)
 
 
 def VN(voice, meters):
@@ -538,7 +544,7 @@ def VN(voice, meters):
         library.unannotate(plts[24:35])
         library.annotate(plts[24:35], 4)
 
-    baca.section.append_anchor_note(voice)
+    rhythm.mmrests(47, 48)
 
 
 def VC(voice, meters):
@@ -722,7 +728,7 @@ def VC(voice, meters):
         library.unannotate(plts[:14])
         library.annotate(plts[:14], 3)
 
-    baca.section.append_anchor_note(voice)
+    rhythm.mmrests(47, 48)
 
 
 def K1a(pleaves, pitches, dynamic):
@@ -1293,6 +1299,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     numerators += [5, 4, 5, 5, 5]
     numerators += [6, 6, 6, 6, 6, 6, 3, 6, 6, 6, 6, 6, 6, 6, 6]
     numerators += [6, 3, 6, 6, 6, 6, 6, 3, 6, 6, 6, 6]
+    numerators += [6, 6]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
     baca.section.set_up_score(
@@ -1384,6 +1391,10 @@ def make_layout():
             3,
             baca.layout.System(33, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
             baca.layout.System(40, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+        ),
+        baca.layout.Page(
+            4,
+            baca.layout.System(47, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
