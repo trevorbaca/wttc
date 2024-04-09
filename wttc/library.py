@@ -2047,6 +2047,27 @@ def J1b(run, pitches):
     baca.pitches(run, pitches, allow_obgc_mutation=True)
 
 
+def J2a2(
+    pleaves,
+    pitches,
+    hairpin_lparts,
+    hairpin,
+    *,
+    fluttertongue=False,
+    rleak=False,
+    tbl=False,
+):
+    baca.pitches(pleaves, pitches, strict=True)
+    if fluttertongue is True:
+        baca.stem_tremolo(pleaves)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        *to_bar_line_tweaks(tbl),
+        rleak=rleak,
+    )
+
+
 def J3b(pleaves, pitches, dynamics, falls):
     baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)
@@ -2079,6 +2100,21 @@ def J3c(pleaves, pitches, dynamics):
         rleak=True,
         staff_padding=5.5,
     )
+
+
+def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
+    baca.glissando(pleaves, pitches)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+    if tasto is not None:
+        baca.spanners.tasto(
+            pleaves,
+            descriptor=f"{tasto} =|",
+            rleak=True,
+            staff_padding=5.5,
+        )
 
 
 def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
@@ -2192,6 +2228,18 @@ def N1a(pleaves, pitches, hairpin_lparts, hairpin):
     )
 
 
+def N1b(pleaves, pitches, dynamic):
+    baca.pitches(pleaves, pitches)
+    baca.stem_tremolo(pleaves)
+    baca.dynamic(pleaves[0], dynamic)
+    baca.spanners.pizzicato(
+        pleaves,
+        descriptor=r"\wttc-two-finger-tamburo =|",
+        rleak=True,
+        staff_padding=3,
+    )
+
+
 def N2b1(pleaves, glissando):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
@@ -2200,6 +2248,16 @@ def N2b1(pleaves, glissando):
         rleak=True,
         staff_padding=8,
     )
+
+
+def N3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    pheads = baca.select.pheads(pleaves)
+    baca.flageolet(pheads)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
 def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):

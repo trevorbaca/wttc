@@ -771,12 +771,12 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def J1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+def J1a(pleaves, pitches, hairpin, *, rleak=False):
     baca.pitches(pleaves, pitches)
     baca.hairpin(
         pleaves,
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
 
 
@@ -786,25 +786,6 @@ def J2a1(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
-
-
-def J2a2(
-    pleaves,
-    pitches,
-    hairpin_lparts,
-    hairpin,
-    *,
-    fluttertongue=False,
-    rleak_hairpin=False,
-):
-    baca.pitches(pleaves, pitches, strict=True)
-    if fluttertongue is True:
-        baca.stem_tremolo(pleaves)
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-        rleak=rleak_hairpin,
-    )
 
 
 def J3a(pleaves, pitches, dynamics):
@@ -821,21 +802,6 @@ def J4a(pleaves, dyad, dynamic=None):
     baca.pitches(pleaves, dyad)
     if dynamic is not None:
         baca.dynamic(pleaves[0], dynamic)
-
-
-def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
-    baca.glissando(pleaves, pitches)
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-    if tasto is not None:
-        baca.spanners.tasto(
-            pleaves,
-            descriptor=f"{tasto} =|",
-            rleak=True,
-            staff_padding=5.5,
-        )
 
 
 def K1b(pleaves, dyad, alteration, peaks):
@@ -865,7 +831,7 @@ def fl(m):
     )
     J3a(library.pleaves(m[4], 3), "E4 E4 E4 E4", "f mf mp p")
     J2a1(library.pleaves(m[4, 5], 2)[2:6], "D#4 F5 F4 F#5", "p mf p f")
-    J2a2(
+    library.J2a2(
         library.pleaves(m[5, 6], 2)[2:], "A5 Ab5", [3, 3], "o< f>o!", fluttertongue=True
     )
     J3a(
@@ -874,7 +840,7 @@ def fl(m):
         "f f mf mf mp mp p p p pp pp pp",
     )
     J1a(library.pleaves(m[8, 10], 1), "C6 Cqf6 B5 Bqf5 Bb5 A5", "p<!")
-    J2a2(
+    library.J2a2(
         library.pleaves(m[10, 12], 2)[:-4],
         "Bb5 Ab5 G5 F5",
         [14],
@@ -883,40 +849,42 @@ def fl(m):
     )
     J2a1(library.pleaves(m[12], 2)[-4:], "E4 F#5 F4 G#5", "p mf p mp")
     J2a1(library.pleaves(m[13, 15], 2)[:-2], 4 * "F#4 A5 ", 4 * "p mf ")
-    J2a2(library.pleaves(m[15, 16], 2)[2:], "B5", [3], "sfp>o!", fluttertongue=True)
-    J2a2(
+    library.J2a2(
+        library.pleaves(m[15, 16], 2)[2:], "B5", [3], "sfp>o!", fluttertongue=True
+    )
+    library.J2a2(
         library.pleaves(m[17, 22], 2),
         "B5 C#6 C#6",
         [2, 2, 2],
         "sfp>o sfp>o sfp>o!",
         fluttertongue=True,
-        rleak_hairpin=True,
+        rleak=True,
     )
     J3a(library.pleaves(m[23], 3), "B3", "p")
-    J2a2(
+    library.J2a2(
         library.pleaves(m[23, 26], 2),
         "D6",
         [4],
         "sfp>o!",
         fluttertongue=True,
-        rleak_hairpin=True,
+        rleak=True,
     )
     J3a(library.pleaves(m[27, 29], 3), "B3 Bb3 Bb3 Bb3", "p pp pp pp")
 
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    J2a2(library.pleaves(m[5, 6], 2), "A5 Ab5", [3, 3], "o< f>o!")
-    J2a2(library.pleaves(m[10, 12], 2), "Bb5 Ab5 G5 F5", [14], "f>o!")
-    J2a2(library.pleaves(m[15, 16], 2), "B5", [3], "sfp>o!")
-    J2a2(
+    library.J2a2(library.pleaves(m[5, 6], 2), "A5 Ab5", [3, 3], "o< f>o!")
+    library.J2a2(library.pleaves(m[10, 12], 2), "Bb5 Ab5 G5 F5", [14], "f>o!")
+    library.J2a2(library.pleaves(m[15, 16], 2), "B5", [3], "sfp>o!")
+    library.J2a2(
         library.pleaves(m[17, 22], 2),
         "B5 C#6 C#6",
         [2, 2, 2],
         "sfp>o sfp>o sfp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
-    J2a2(library.pleaves(m[23, 26], 2), "D6", [4], "sfp>o!", rleak_hairpin=True)
+    library.J2a2(library.pleaves(m[23, 26], 2), "D6", [4], "sfp>o!", rleak=True)
 
 
 def gt1(cache):
@@ -987,39 +955,41 @@ def gt2(cache):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
-    J4b(
+    library.J4b(
         library.pleaves(m[9, 12], 4),
         "C6/6 G5/4 Db5/4 F#4/3 B5/2 Eb4",
         [14, 6],
         "o< mp>o!",
         tasto="T4 =|",
     )
-    J4b(
+    library.J4b(
         library.run(m[13], 4, 0),
         "B5 Eb4",
         [2],
         "p>o!",
     )
-    J4b(library.run(m[13, 15], 4, 1), "B5/3 G5/3 Db5/2 F#4/2 B5", [8, 3], "o< mf>o!")
-    J4b(
+    library.J4b(
+        library.run(m[13, 15], 4, 1), "B5/3 G5/3 Db5/2 F#4/2 B5", [8, 3], "o< mf>o!"
+    )
+    library.J4b(
         library.run(m[15, 18], 4, 1),
         "B5/3 G5/3 Db5/2 F#4 Bb5 Gb5/3 C5/2 F4 A5 F5 D4",
         [13, 6],
         "o< f>o!",
     )
-    J4b(
+    library.J4b(
         library.run(m[18, 20], 4, 1),
         "A5/2 F5 B4 E4/2 Gb5/3 E5 Bb4/2 Eb4/2 C5/2 Db4",
         [3, 14],
         "o< mf>o!",
     )
-    J4b(
+    library.J4b(
         library.run(m[20, 23], 4, 1),
         "Ab5/2 E5 Bb4 Eb4/3 F5/2 Eb5/3 A4/3 D4/2 Gb5",
         [3, 15],
         "o< mp>o!",
     )
-    J4b(
+    library.J4b(
         library.run(m[23, 26], 4, 1),
         "G5/3 Eb5/3 A4/4 D4/4 E5/5 D5",
         [3, 17],

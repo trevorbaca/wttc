@@ -194,7 +194,12 @@ def FL(voice, meters):
         denominator=32,
         material=5,
     )
-    rhythm.mmrests(47, 48)
+    rhythm(
+        meters(47),
+        [c(5, 2), c(19, 2)],
+        material=1,
+    )
+    rhythm.mmrests(48)
 
 
 def OB(voice, meters):
@@ -240,7 +245,12 @@ def OB(voice, meters):
         material=2,
     )
     rhythm.mmrests(36, 46)
-    rhythm.mmrests(47, 48)
+    rhythm(
+        meters(47, 48),
+        [48, 48],
+        material=2,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def GT1(voice, meters):
@@ -305,7 +315,11 @@ def GT1(voice, meters):
         [-24, -2, c(2, 2), "-"],
         material=3,
     )
-    rhythm.mmrests(47, 48)
+    rhythm(
+        meters(47, 48),
+        [M(1, 3), 27, -1, "-"],
+        material=1,
+    )
 
 
 def GT2(voice, meters):
@@ -368,7 +382,11 @@ def GT2(voice, meters):
         [-24, -2, c(2, 2), "-"],
         material=3,
     )
-    rhythm.mmrests(47, 48)
+    rhythm(
+        meters(47, 48),
+        [M(1, 3), 27, -1, "-"],
+        material=1,
+    )
 
 
 def VN(voice, meters):
@@ -544,7 +562,11 @@ def VN(voice, meters):
         library.unannotate(plts[24:35])
         library.annotate(plts[24:35], 4)
 
-    rhythm.mmrests(47, 48)
+    rhythm(
+        meters(47, 48),
+        [1, 3, 2, 3, 8, 3, 8, 9, 8, "-"],
+        material=4,
+    )
 
 
 def VC(voice, meters):
@@ -728,7 +750,13 @@ def VC(voice, meters):
         library.unannotate(plts[:14])
         library.annotate(plts[:14], 3)
 
-    rhythm.mmrests(47, 48)
+    rhythm(
+        meters(47),
+        32 * [1] + ["-"],
+        denominator=32,
+        material=3,
+    )
+    rhythm.mmrests(48)
 
 
 def K1a(pleaves, pitches, dynamic):
@@ -1076,6 +1104,12 @@ def fl(m):
     L1a(library.pleaves(m[34, 35], 1), "C6", None, "f>o!")
     L5a(library.pleaves(m[38, 41], 5), "B")
     L5a(library.pleaves(m[44, 46], 5), "A")
+    library.N1a(
+        library.pleaves(m[47], 1),
+        library.make_flute_covered_dyads("Db3 C3"),
+        [2, 2],
+        "o<mp o<mp",
+    )
 
 
 def ob(m):
@@ -1087,6 +1121,14 @@ def ob(m):
     L2a(library.pleaves(m[30], 2), "G6", "Bb6", [1, 1], "o< f>o!")
     L2a(library.pleaves(m[31, 33], 2), "G#6", "A6", [1, 2], "o< f>o!")
     L2a(library.pleaves(m[35], 2), "G#6", "A6", [2], "f>o!")
+    library.J2a2(
+        library.pleaves(m[47, 48], 2),
+        "C#6",
+        [2],
+        "sfp>o!",
+        rleak=True,
+        tbl=True,
+    )
 
 
 def gt1(m):
@@ -1101,6 +1143,9 @@ def gt1(m):
     L3a(library.pleaves(m[26], 3), "G#2:A3", "mp")
     L3a(library.pleaves(m[36], 3), "G#2:A3", "(mp)")
     L3a(library.pleaves(m[42], 3), "G#2:A3", "(mp)")
+    library.N3a(library.pleaves(m[47], 3), "F#4", "mp")
+    rmakers.unbeam(m[47][:2])
+    library.N1b(library.pleaves(m[47, 48], 1), "F3", "-")
 
 
 def gt2(m):
@@ -1116,6 +1161,9 @@ def gt2(m):
     L3a(library.pleaves(m[26], 3), "F#2:G3", "mp")
     L3a(library.pleaves(m[36], 3), "F#2:G3", "(mp)")
     L3a(library.pleaves(m[42], 3), "F#2:G3", "(mp)")
+    library.N3a(library.pleaves(m[47], 3), "E4", "mp")
+    rmakers.unbeam(m[47][:2])
+    library.N1b(library.pleaves(m[47, 48], 1), "C#3", "-")
 
 
 def vn(m):
@@ -1174,6 +1222,12 @@ def vn(m):
         library.pleaves(m[45, 46], 5),
         "Gb5/3 Bb5 F4/2 Ab4/2 C4 Eb4/3 G3",
         "pp>o!",
+    )
+    library.J4b(
+        library.pleaves(m[47, 48], 4),
+        "G5/1 F5 B4 E4/2 Gb5/3 E5 Bb4/2 Eb4/2 C5/2 Db4",
+        [2, 14],
+        "o< mf>o!",
     )
 
 
@@ -1261,19 +1315,26 @@ def vc(m):
     )
     baca.clef(m[42][0], "treble")
     L3b(library.pleaves(m[42, 43], 3), Q2, "o< f>o!", [4, 10], beams=-6.5)
+    baca.clef(m[43][1], "bass")
     library.L4(
         library.pleaves(m[43, 46], 4),
         "Db4 F3/2 Bb3/2 D3/2 G3/2 B2/2 E3/3 G#2/3 C#3/2 F2/3"
         " Bb2/3 D2/2 G2/3 Db2/3 Gb2 C2",
         '"ff">o!',
     )
-    baca.clef(m[43][1], "bass")
+    baca.clef(m[47][0], "treble")
+    library.N3b(library.pleaves(m[47], 3), library.Q2, [16, 16], "o< mf>o!", -8, t="M2")
 
 
 def align_spanners(cache):
-    baca.override.dls_staff_padding(cache["fl"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
-    baca.override.dls_staff_padding(cache["gt1"][1, 19], 6)
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl[1, 46], 4)
+    baca.override.dls_staff_padding(fl[47, 48], 7)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob.leaves(), 3)
+    gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[1, 19], 6)
+    baca.override.dls_staff_padding(gt1[47, 48], 3)
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[6, 7], 6)
     baca.override.dls_staff_padding(gt2[8], 4)
@@ -1282,13 +1343,17 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[12][:2], 4)
     baca.override.dls_staff_padding(gt2[12][-8:], 6)
     baca.override.dls_staff_padding(gt2[13, 14], 4)
+    baca.override.dls_staff_padding(gt2[47, 48], 4)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1, 19], 4)
+    baca.override.dls_staff_padding(vn[47, 48], 4)
     baca.override.tuplet_bracket_direction_down(vn[20, 46])
     baca.override.tuplet_bracket_staff_padding(vn[27, 29][9:], 1.5)
     baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)
     baca.override.tuplet_bracket_staff_padding(vn[33, 34], 1.5)
-    baca.override.dls_staff_padding(cache["vc"][1, 19], 4)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[1, 19], 4)
+    baca.override.dls_staff_padding(vc[47, 48], 10)
 
 
 @baca.build.timed("make_score")
@@ -1401,6 +1466,7 @@ def make_layout():
         default=(1, 24),
         overrides=[
             baca.layout.Override((20, 46), (1, 28)),
+            baca.layout.Override((47, 48), (1, 48)),
         ],
     )
     baca.build.write_layout_ly(breaks, spacing)

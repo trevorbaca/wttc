@@ -4578,21 +4578,97 @@ number.19.AltoFlute.Music = {
     \revert Accidental.X-extent
     \revert Accidental.extra-offset
     \revert Accidental.font-size
+    \revert DynamicLineSpanner.staff-padding
     \revert Flag.stencil
     \revert NoteHead.font-size
     \revert Stem.stencil
 
     % [AltoFlute.Music measure 47]
+    \override DynamicLineSpanner.staff-padding = 7
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    <
+        \tweak style #'harmonic
+        gf!
+        f'
+    >4
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-covered-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanCovered
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    - \tweak stencil ##f
+    ~
+
+    <
+        \tweak style #'harmonic
+        gf
+        f'
+    >16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    [
+    \repeatTie
+
+    <
+        \tweak style #'harmonic
+        f
+        e'
+    >8.
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    - \tweak stencil ##f
+    ~
+
+    <
+        \tweak style #'harmonic
+        f
+        e'
+    >1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    \repeatTie
+
+    % [AltoFlute.Music measure 48]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [AltoFlute.Music measure 48]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
     \revert DynamicLineSpanner.staff-padding
 
 }
@@ -5225,15 +5301,68 @@ number.19.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 47]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    cs'''!1.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \sfp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    - \tweak stencil ##f
+    ~
 
     % [Oboe.Music measure 48]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    cs'''1.
+    \repeatTie
     \revert DynamicLineSpanner.staff-padding
+
+      %! ANCHOR_NOTE
+    % [Oboe.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
+      %! DURATION_MULTIPLIER
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
 
 }
 
@@ -5864,14 +5993,61 @@ number.19.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.1.Music measure 47]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \override DynamicLineSpanner.staff-padding = 3
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    fs''!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    f'8.
+    :32
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+    - \tweak stencil ##f
+    ~
+
+    f'1
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    f'4
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Guitar.1.Music measure 48]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    f'4
+    :32
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r1
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+
+    r4
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -6731,14 +6907,61 @@ number.19.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Guitar.2.Music measure 47]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \override DynamicLineSpanner.staff-padding = 4
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    e''16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    cs'!8.
+    :32
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+    - \tweak stencil ##f
+    ~
+
+    cs'1
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    cs'4
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Guitar.2.Music measure 48]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    cs'4
+    :32
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r1
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+
+    r4
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -10947,20 +11170,138 @@ number.19.Violin.Music = {
     }
 
     % [Violin.Music measure 47]
+    \override DynamicLineSpanner.staff-padding = 4
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight hotpink
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    g''16
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+    [
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    f''8.
+    ]
+    \glissando
+
+    b'8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+    [
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+
+    e'8
+    ]
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b'16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    gf''!8.
+    ]
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    f''4
+
+    f''16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    e''8.
+    ]
+    \glissando
+
+    bf'!4
+    \glissando
 
     % [Violin.Music measure 48]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'4
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    ef'!2
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c''8.
+    ]
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g'4
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    df'!16
+      %! SPANNER_STOP
+    \!
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -14667,18 +15008,175 @@ number.19.Cello.Music = {
     \!
 
     % [Cello.Music measure 47]
+      %! EXPLICIT_CLEF
+    \clef "treble"
+      %! MEASURE_47
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_47
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \override Beam.positions = #'(-8 . -8)
+    \override DynamicLineSpanner.staff-padding = 10
+    \override NoteHead.style = #'harmonic
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+    \override Stem.direction = #down
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    bf!32
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+    [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+
+    g'32
+
+    e''32
+
+    cs'''!32
+      %! SPANNER_STOP
+    )
+
+    cs'''!32
+      %! SPANNER_START
+    (
+
+    e''32
+
+    g'32
+
+    bf!32
+      %! SPANNER_STOP
+    )
+    ]
+
+    bf!32
+    [
+      %! SPANNER_START
+    (
+
+    g'32
+
+    e''32
+
+    cs'''!32
+      %! SPANNER_STOP
+    )
+
+    cs'''!32
+      %! SPANNER_START
+    (
+
+    e''32
+
+    g'32
+
+    bf!32
+      %! SPANNER_STOP
+    )
+    ]
+
+    ef'''!32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+    [
+      %! SPANNER_START
+    (
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    fs''!32
+
+    a'32
+
+    c'32
+      %! SPANNER_STOP
+    )
+
+    c'32
+      %! SPANNER_START
+    (
+
+    a'32
+
+    fs''!32
+
+    ef'''!32
+      %! SPANNER_STOP
+    )
+    ]
+
+    c'32
+    [
+      %! SPANNER_START
+    (
+
+    a'32
+
+    fs''!32
+
+    ef'''!32
+      %! SPANNER_STOP
+    )
+
+    ef'''!32
+      %! SPANNER_START
+    (
+
+    fs''!32
+
+    a'32
+
+    c'32
+      %! SPANNER_STOP
+    )
+      %! SPANNER_STOP
+    \!
+    ]
+    \revert Beam.positions
+    \revert NoteHead.style
+    \revert Stem.direction
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2
 
     % [Cello.Music measure 48]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 

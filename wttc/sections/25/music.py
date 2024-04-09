@@ -301,18 +301,6 @@ def VC(voice, meters):
     )
 
 
-def N1b(pleaves, pitches, dynamic):
-    baca.pitches(pleaves, pitches)
-    baca.stem_tremolo(pleaves)
-    baca.dynamic(pleaves[0], dynamic)
-    baca.spanners.pizzicato(
-        pleaves,
-        descriptor=r"\wttc-two-finger-tamburo =|",
-        rleak=True,
-        staff_padding=3,
-    )
-
-
 def N1c(runs, glissandi, hairpins, string_number):
     for run, glissando, hairpin in zip(runs, glissandi, hairpins, strict=True):
         baca.glissando(run, glissando)
@@ -377,16 +365,6 @@ def N2b2_revised(pleaves, glissando, hairpin=None, *, staff_padding=8):
         rleak=True,
         staff_padding=staff_padding,
     )
-
-
-def N3a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches)
-    pheads = baca.select.pheads(pleaves)
-    baca.flageolet(pheads)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
 
 
 def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
@@ -488,34 +466,34 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    N1b(library.pleaves(m[1, 6], 1), "Ab3 G3", "mp")
-    N3a(library.pleaves(m[7, 8], 3), "F#4", "mf mp")
-    N1b(library.pleaves(m[8, 9], 1), "G3", "-")
+    library.N1b(library.pleaves(m[1, 6], 1), "Ab3 G3", "mp")
+    library.N3a(library.pleaves(m[7, 8], 3), "F#4", "mf mp")
+    library.N1b(library.pleaves(m[8, 9], 1), "G3", "-")
     rmakers.unbeam(m[8][:2])
-    N3a(library.pleaves(m[10, 11], 3), "F#4", "mf mp")
-    N1b(library.pleaves(m[11, 12], 1), "F3", "-")
+    library.N3a(library.pleaves(m[10, 11], 3), "F#4", "mf mp")
+    library.N1b(library.pleaves(m[11, 12], 1), "F3", "-")
     rmakers.unbeam(m[11][:2])
-    N3a(library.pleaves(m[12, 13], 3), "F#4", "mf mp")
-    N1b(library.pleaves(m[13, 14], 1), "F3", "-")
+    library.N3a(library.pleaves(m[12, 13], 3), "F#4", "mf mp")
+    library.N1b(library.pleaves(m[13, 14], 1), "F3", "-")
     rmakers.unbeam(m[13][:2])
-    N1b(library.pleaves(m[15, 16], 1), "F#3", "p")
-    N3a(library.pleaves(m[16, 20], 3), "G#4", "(p) - -")
+    library.N1b(library.pleaves(m[15, 16], 1), "F#3", "p")
+    library.N3a(library.pleaves(m[16, 20], 3), "G#4", "(p) - -")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    N1b(library.pleaves(m[1, 6], 1), "Bb2 C3", "mp")
-    N3a(library.pleaves(m[7, 8], 3), "E4", "mf mp")
-    N1b(library.pleaves(m[8, 9], 1), "C#3", "-")
+    library.N1b(library.pleaves(m[1, 6], 1), "Bb2 C3", "mp")
+    library.N3a(library.pleaves(m[7, 8], 3), "E4", "mf mp")
+    library.N1b(library.pleaves(m[8, 9], 1), "C#3", "-")
     rmakers.unbeam(m[8][:2])
-    N3a(library.pleaves(m[10, 11], 3), "E4", "mf mp")
-    N1b(library.pleaves(m[11, 12], 1), "C#3", "-")
+    library.N3a(library.pleaves(m[10, 11], 3), "E4", "mf mp")
+    library.N1b(library.pleaves(m[11, 12], 1), "C#3", "-")
     rmakers.unbeam(m[11][:2])
-    N3a(library.pleaves(m[12, 13], 3), "E4", "mf mp")
-    N1b(library.pleaves(m[13, 14], 1), "D3", "-")
+    library.N3a(library.pleaves(m[12, 13], 3), "E4", "mf mp")
+    library.N1b(library.pleaves(m[13, 14], 1), "D3", "-")
     rmakers.unbeam(m[13][:2])
-    N1b(library.pleaves(m[15, 16], 1), "D3", "p")
-    N3a(library.pleaves(m[16, 20], 3), "G4", "(p) - -")
+    library.N1b(library.pleaves(m[15, 16], 1), "D3", "p")
+    library.N3a(library.pleaves(m[16, 20], 3), "G4", "(p) - -")
 
 
 def vn(m):
