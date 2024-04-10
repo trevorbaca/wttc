@@ -49,21 +49,8 @@ number.21.Skips = {
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
-    \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "48" #blue
-      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
-      %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
-      %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "48"
-      %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'04'']"
       %! CLOCK_TIME
@@ -87,12 +74,25 @@ number.21.Skips = {
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
+    \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "48" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    \bacaStartTextSpanMM
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "48"
+      %! EXPLICIT_METRONOME_MARK
+    %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'09'']"
+    %@% - \baca-start-ct-left-only "[0'08'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -136,7 +136,7 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'20'']"
+    %@% - \baca-start-ct-left-only "[0'19'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -161,7 +161,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'24'']"
+    %@% - \baca-start-ct-left-only "[0'23'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -186,7 +186,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'28'']"
+    %@% - \baca-start-ct-left-only "[0'27'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -226,7 +226,7 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'33'']"
+    %@% - \baca-start-ct-left-only "[0'32'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -255,7 +255,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'35'']"
+    %@% - \baca-start-ct-left-only "[0'34'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -280,7 +280,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'38'']"
+    %@% - \baca-start-ct-left-only "[0'37'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -305,7 +305,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'40'']" "[0'44'']"
+    %@% - \baca-start-ct-both "[0'39'']" "[0'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER

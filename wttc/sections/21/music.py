@@ -37,7 +37,7 @@ def GLOBALS(skips, first_measure_number):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
-    baca.metronome_mark(skips[2 - 1], "48", manifests=library.manifests)
+    baca.metronome_mark(skips[3 - 1], "48", manifests=library.manifests)
     baca.metronome_mark(skips[4 - 1], "60", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "100", manifests=library.manifests)
 
@@ -358,7 +358,7 @@ def make_layout():
     )
     spacing = baca.layout.Spacing(
         default=(1, 24),
-        overrides=[],
+        overrides=[baca.layout.Override(3, (1, 48))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

@@ -22,7 +22,7 @@
         "Cello.Music",
     ],
     "bol_measure_numbers": [1, 7],
-    "duration": "0'44''",
+    "duration": "0'43''",
     "final_measure_number": 10,
     "first_measure_number": 1,
     "has_anchor_skip": True,
@@ -244,7 +244,7 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'44''",
+    "stop_clock_time": "0'43''",
     "time_signatures": [
         "4/4",
         "4/4",

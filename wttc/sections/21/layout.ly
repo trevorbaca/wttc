@@ -45,14 +45,14 @@
 
             % [PageLayout measure 3]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \noBreak
             s1 * 9/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/24]"
+            %@% - \baca-start-spm-left-only "[1/48]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
