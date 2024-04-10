@@ -265,7 +265,7 @@ def fl(m):
         "G#3",
         [2, 1],
         "sfpp< p>o!",
-        rleak_hairpin=True,
+        rleak=True,
         to_bar_line=True,
         trill_staff_padding=3,
     )

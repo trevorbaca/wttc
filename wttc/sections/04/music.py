@@ -984,7 +984,7 @@ def fl(m):
         "Eb4",
         [7, 2],
         "p< f>o!",
-        rleak_hairpin=True,
+        rleak=True,
         trill_staff_padding=3,
     )
     B1a(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
@@ -994,7 +994,7 @@ def fl(m):
         "Eb4",
         [5, 2],
         "p< f>o!",
-        rleak_hairpin=True,
+        rleak=True,
         trill_staff_padding=5.5,
     )
     B1a(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
@@ -1004,7 +1004,7 @@ def fl(m):
         "D#5",
         None,
         "f>o!",
-        rleak_hairpin=True,
+        rleak=True,
         trill_staff_padding=3,
     )
     B1a(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
@@ -1033,7 +1033,7 @@ def fl(m):
         "G#3",
         [1, 1],
         "sfpp< p>o!",
-        rleak_hairpin=True,
+        rleak=True,
         trill_staff_padding=3,
     )
     baca.override.tuplet_bracket_direction_down(m.leaves())
@@ -1042,15 +1042,9 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.B3(
-        library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", rleak_hairpin=True
-    )
-    library.B3(
-        library.pleaves(m[2], 3), "D5", "Eb4", [2, 4], "p< f>o!", rleak_hairpin=True
-    )
-    library.B3(
-        library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak_hairpin=True
-    )
+    library.B3(library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", rleak=True)
+    library.B3(library.pleaves(m[2], 3), "D5", "Eb4", [2, 4], "p< f>o!", rleak=True)
+    library.B3(library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True)
     library.B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
     library.B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")
     baca.override.tuplet_bracket_direction_down(m.leaves())

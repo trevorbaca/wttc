@@ -420,7 +420,7 @@ def A2b(
     hairpin_lparts,
     hairpin,
     *,
-    rleak_hairpin=False,
+    rleak=False,
     damp_staff_padding=4.5,
 ):
     baca.glissando(
@@ -430,7 +430,7 @@ def A2b(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
     baca.spanners.damp(
         pleaves,

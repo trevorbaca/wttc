@@ -367,7 +367,7 @@ def N2b2_revised(pleaves, glissando, hairpin=None, *, staff_padding=8):
     )
 
 
-def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+def O1a(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
     nongraces = abjad.select.notes(pleaves, grace=False)
@@ -376,7 +376,7 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
         nongraces,
         hairpin,
         baca.postevent.to_bar_line_true(),
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
     baca.spanners.text(
         nongraces,
@@ -396,7 +396,7 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     )
 
 
-def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+def O1b(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
     graces = abjad.select.notes(pleaves, grace=True)
@@ -408,7 +408,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
         nongraces,
         hairpin,
         baca.postevent.to_bar_line_true(),
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
     baca.spanners.text(
         nongraces,
@@ -445,18 +445,18 @@ def fl(m):
     )
     rmakers.unbeam(m[8][1:3])
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
-    O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak_hairpin=True)
+    O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak=True)
     O1a(
         library.pleaves(m[17], 99),
         "F D C# Eb C# D Eb F Gb F Eb Gb E",
         "sfp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     O1a(
         library.pleaves(m[19, 20], 99),
         "D C# D Gb C# Eb F Eb C# F Gb D Gb F D C# Eb C# D Eb F Gb F Eb E",
         "sfpp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
 
 
@@ -512,18 +512,18 @@ def vn(m):
         -6,
         t="+M3",
     )
-    O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", "sfmp>o!", rleak_hairpin=True)
+    O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", "sfmp>o!", rleak=True)
     O1b(
         library.pleaves(m[17], 99),
         "G E F# G F# E Eb D E D Eb F# F",
         "sfp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     O1b(
         library.pleaves(m[19, 20], 99),
         "E F# G F# E Eb D E D Eb F# G Eb G F# D E F# E D G Eb D Eb F",
         "sfpp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
 
 

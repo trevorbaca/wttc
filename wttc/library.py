@@ -1099,7 +1099,7 @@ def B3(
     hairpin,
     *,
     debug=False,
-    rleak_hairpin=False,
+    rleak=False,
     to_bar_line=False,
     trill_staff_padding=None,
 ):
@@ -1130,7 +1130,7 @@ def B3(
         parts,
         hairpin,
         *tweaks,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
 
 
@@ -2127,7 +2127,7 @@ def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
         )
 
 
-def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False):
+def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak=False):
     baca.glissando(pleaves, pitches)
     baca.spanners.damp(
         pleaves,
@@ -2146,7 +2146,7 @@ def K1b3(pleaves, pitches, hairpin, hairpin_lparts=None, *, rleak_hairpin=False)
     baca.hairpin(
         parts,
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
 
 
