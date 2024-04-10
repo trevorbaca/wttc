@@ -332,41 +332,6 @@ def N2a(pleaves, pitches, hairpin_lparts, hairpin):
     )
 
 
-def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None, *, staff_padding=8):
-    baca.untie(pleaves)
-    baca.pitch(pleaves[0], start_dyad)
-    baca.pitch(pleaves[1:], stop_dyad)
-    baca.glissando(pleaves)
-    baca.override.note_head_style_harmonic(pleaves)
-    if hairpin is not None:
-        baca.hairpin(
-            pleaves,
-            hairpin,
-        )
-    baca.spanners.text(
-        pleaves,
-        "II / III mod. =|",
-        rleak=True,
-        staff_padding=staff_padding,
-    )
-
-
-def N2b2_revised(pleaves, glissando, hairpin=None, *, staff_padding=8):
-    baca.glissando(pleaves, glissando)
-    baca.override.note_head_style_harmonic(pleaves)
-    if hairpin is not None:
-        baca.hairpin(
-            pleaves,
-            hairpin,
-        )
-    baca.spanners.text(
-        pleaves,
-        "II / III mod. =|",
-        rleak=True,
-        staff_padding=staff_padding,
-    )
-
-
 def O1a(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
@@ -533,9 +498,9 @@ def vc(m):
     N1c(runs, ["G#4 A#4", "G#4 B4", "G#4 C5"], ["o<p", "o<mp", "o<mf"], 2)
     baca.clef(m[5][0], "bass")
     library.N2b1(library.pleaves(m[5], 2), "C2 E4")
-    N2b2(library.pleaves(m[6], 2)[:3], "B3:D#4", "G#2:B#2")
+    library.N2b2(library.pleaves(m[6], 2)[:3], "B3:D#4", "G#2:B#2")
     library.N2b1(library.pleaves(m[6], 2)[3:], "C#2 F4")
-    N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
+    library.N2b2(library.pleaves(m[7], 2)[:3], "C5:E5", "A2:C#3")
     library.N2b1(library.pleaves(m[7], 2)[3:], "D2 F#4")
     baca.hairpin(
         baca.select.lparts(library.pleaves(m[5, 7], 2), [9, 6]),
@@ -545,9 +510,9 @@ def vc(m):
     library.N3b(library.pleaves(m[8], 3), library.Q2, [8, 8], "o< mp>o!", -8)
     baca.clef(m[8][-3], "bass")
     library.N2b1(library.pleaves(m[8], 2)[-3:], "C#2 F4")
-    N2b2(library.pleaves(m[9], 2)[:3], "C5:E5", "A2:C#3")
+    library.N2b2(library.pleaves(m[9], 2)[:3], "C5:E5", "A2:C#3")
     library.N2b1(library.pleaves(m[9], 2)[3:], "D2 F#4")
-    N2b2(library.pleaves(m[10], 2)[:3], "C#5:E#5", "Bb2:D3")
+    library.N2b2(library.pleaves(m[10], 2)[:3], "C#5:E#5", "Bb2:D3")
     library.N2b1(library.pleaves(m[10], 2)[3:], "Eb2 G4")
     baca.hairpin(
         baca.select.lparts(library.pleaves(m[8, 10], 2), [9, 6]),
@@ -557,7 +522,7 @@ def vc(m):
     library.N3b(library.pleaves(m[11], 3), library.Q2, [16, 16], "o< mf>o!", -8, t="M2")
     baca.clef(m[11][-3], "bass")
     library.N2b1(library.pleaves(m[11], 2)[-3:], "Eb2 G4")
-    N2b2(library.pleaves(m[12], 2)[:3], "D5:F#5", "B2:D#3")
+    library.N2b2(library.pleaves(m[12], 2)[:3], "D5:F#5", "B2:D#3")
     library.N2b1(library.pleaves(m[12], 2)[-3:], "E2 G#4")
     baca.hairpin(
         baca.select.lparts(library.pleaves(m[11, 12], 2), [3, 6]),
@@ -572,9 +537,15 @@ def vc(m):
         -8,
         t="M3",
     )
-    N2b2(library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!", staff_padding=3)
-    N2b2(library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3)
-    N2b2(library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "pp<|p", staff_padding=3)
+    library.N2b2(
+        library.pleaves(m[15], 2), "Eb5:G5", "C5:E5", "sfp>o!", staff_padding=3
+    )
+    library.N2b2(
+        library.pleaves(m[16, 17], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3
+    )
+    library.N2b2(
+        library.pleaves(m[18, 19], 2), "A5:F5", "D5:F#5", "pp<|p", staff_padding=3
+    )
 
 
 def align_spanners(cache):

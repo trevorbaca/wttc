@@ -29,10 +29,16 @@ frame = library.frame
 
 
 def GLOBALS(skips, first_measure_number):
-    stage_markup = (("y: J (end) + z: J (end)", 7),)
+    stage_markup = (
+        ("y: O", 1),
+        ("Still 2", 3),
+        ("xyz: N (end)", 4),
+        ("y: J (end) + z: J (end)", 7),
+    )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
     baca.metronome_mark(skips[2 - 1], "48", manifests=library.manifests)
+    baca.metronome_mark(skips[4 - 1], "60", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "100", manifests=library.manifests)
 
 
@@ -48,7 +54,12 @@ def FL(voice, meters):
         [32, "-"],
         material=1,
     )
-    rhythm.mmrests(4, 6)
+    rhythm.mmrests(4, 5)
+    rhythm(
+        meters(6),
+        [-1, OBGC(12 * [1], [19])],
+        material=99,
+    )
     rhythm(
         meters(7, 8),
         [-6, 1, -5, -5, 1, -7, 1, -10],
@@ -72,8 +83,12 @@ def GT1(voice, meters):
         do_not_rewrite_meter=True,
         material=1,
     )
-    rhythm.mmrests(4, 6)
-    rhythm.mmrests(7)
+    rhythm(
+        meters(4, 5),
+        [-1, 7 + 8 + 8 + 1, M(1, 3), "-"],
+        material=1,
+    )
+    rhythm.mmrests(6, 7)
     rhythm(
         meters(8),
         [-2, OBGCF([1, 1], [2]), "-"],
@@ -104,8 +119,12 @@ def GT2(voice, meters):
         do_not_rewrite_meter=True,
         material=1,
     )
-    rhythm.mmrests(4, 6)
-    rhythm.mmrests(7)
+    rhythm(
+        meters(4, 5),
+        [-1, 7 + 8 + 8 + 1, M(1, 3), "-"],
+        material=1,
+    )
+    rhythm.mmrests(6, 7)
     rhythm(
         meters(8),
         [-8, OBGCF([1, 1], [2]), "-"],
@@ -128,7 +147,12 @@ def VN(voice, meters):
         [c(32, 2), "-"],
         material=1,
     )
-    rhythm.mmrests(4, 6)
+    rhythm.mmrests(4, 5)
+    rhythm(
+        meters(6),
+        [-1, OBGC(12 * [1], [19])],
+        material=99,
+    )
     rhythm.mmrests(7, 10)
 
 
@@ -140,7 +164,12 @@ def VC(voice, meters):
         [c(32, 2), "-"],
         material=1,
     )
-    rhythm.mmrests(4, 6)
+    rhythm.mmrests(4)
+    rhythm(
+        meters(5, 6),
+        [c(21, 2), "-"],
+        material=2,
+    )
     rhythm.mmrests(7, 10)
 
 
@@ -157,6 +186,8 @@ def ob(m):
 def gt1(cache):
     m = cache["gt1"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    library.N1b(library.pleaves(m[4, 5], 1), "F#3", "p")
+    library.N3a(library.pleaves(m[5], 3), "G#4", "(p)")
     library.J1b(library.pleaves(m[8], 1), "C#5 D#5 F5")
     #
     cache.rebuild()
@@ -168,6 +199,8 @@ def gt1(cache):
 def gt2(cache):
     m = cache["gt2"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    library.N1b(library.pleaves(m[4, 5], 1), "D3", "p")
+    library.N3a(library.pleaves(m[5], 3), "G4", "(p)")
     library.J1b(library.pleaves(m[8], 1), "D5 E5 F#5")
     #
     cache.rebuild()
@@ -182,6 +215,9 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
+    library.N2b2(
+        library.pleaves(m[5, 6], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3
+    )
 
 
 def align_spanners(cache):

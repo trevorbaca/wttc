@@ -2260,6 +2260,25 @@ def N2b1(pleaves, glissando):
     )
 
 
+def N2b2(pleaves, start_dyad, stop_dyad, hairpin=None, *, staff_padding=8):
+    baca.untie(pleaves)
+    baca.pitch(pleaves[0], start_dyad)
+    baca.pitch(pleaves[1:], stop_dyad)
+    baca.glissando(pleaves)
+    baca.override.note_head_style_harmonic(pleaves)
+    if hairpin is not None:
+        baca.hairpin(
+            pleaves,
+            hairpin,
+        )
+    baca.spanners.text(
+        pleaves,
+        "II / III mod. =|",
+        rleak=True,
+        staff_padding=staff_padding,
+    )
+
+
 def N3a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     pheads = baca.select.pheads(pleaves)

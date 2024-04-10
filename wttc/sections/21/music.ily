@@ -38,6 +38,10 @@ number.21.Skips = {
     %@% - \baca-start-mn-left-only "1"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "y: O"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 2]
     s1 * 4/4
@@ -85,6 +89,8 @@ number.21.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'09'']"
       %! CLOCK_TIME
@@ -97,6 +103,10 @@ number.21.Skips = {
     %@% - \baca-start-mn-left-only "3"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "Still 2"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 4]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -108,8 +118,23 @@ number.21.Skips = {
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
+    \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "60" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    \bacaStartTextSpanMM
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "60"
+      %! EXPLICIT_METRONOME_MARK
+    %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'20'']"
       %! CLOCK_TIME
@@ -122,6 +147,10 @@ number.21.Skips = {
     %@% - \baca-start-mn-left-only "4"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "xyz: N (end)"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 5]
     s1 * 4/4
@@ -132,7 +161,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'25'']"
+    %@% - \baca-start-ct-left-only "[0'24'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -157,7 +186,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'30'']"
+    %@% - \baca-start-ct-left-only "[0'28'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -182,6 +211,8 @@ number.21.Skips = {
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -195,7 +226,7 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'36'']"
+    %@% - \baca-start-ct-left-only "[0'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -224,7 +255,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'38'']"
+    %@% - \baca-start-ct-left-only "[0'35'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -249,7 +280,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'41'']"
+    %@% - \baca-start-ct-left-only "[0'38'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -274,7 +305,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'43'']" "[0'47'']"
+    %@% - \baca-start-ct-both "[0'40'']" "[0'44'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -349,6 +380,24 @@ number.21.Rests = {
 
     % [Rests measure 10]
     R1 * 6/4
+
+}
+
+
+number.21.AltoFlute.Music.item.1 = {
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    \voiceTwo
+    b'8.
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
 
 }
 
@@ -508,11 +557,110 @@ number.21.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    r16
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            \set fontSize = #-3
+            \slash
+              %! STAFF_HIGHLIGHT
+            %@% \staffHighlight yellow
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                b'
+            >16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+            [
+            (
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+            )
+            ]
+
+        }
+
+        \context Voice = "AltoFlute.Music"
+        { \number.21.AltoFlute.Music.item.1 }
+
+    >>
 
     % [AltoFlute.Music measure 7]
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     r4
 
     r8
@@ -754,14 +902,68 @@ number.21.Guitar.1.Music = {
     r4
 
     % [Guitar.1.Music measure 4]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r16
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    fs'!8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+    - \tweak stencil ##f
+    ~
+
+    fs'2.
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Guitar.1.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    fs'2
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    fs'16
+    :32
+    [
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    gs''!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-p-parenthesized
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+    ]
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
+
+    r4
 
     % [Guitar.1.Music measure 6]
     R1 * 5/4
@@ -945,14 +1147,68 @@ number.21.Guitar.2.Music = {
     r4
 
     % [Guitar.2.Music measure 4]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r16
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    d'8.
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
+    - \tweak stencil ##f
+    ~
+
+    d'2.
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Guitar.2.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    d'2
+    :32
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    d'16
+    :32
+    [
+    \repeatTie
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    g''16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-p-parenthesized
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+    ]
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
+
+    r4
 
     % [Guitar.2.Music measure 6]
     R1 * 5/4
@@ -1080,6 +1336,24 @@ number.21.Guitar.2.Staff = <<
 >>
 
 
+number.21.Violin.Music.item.1 = {
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    \voiceTwo
+    b'8.
+    - \tweak stencil ##f
+    ~
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'1
+    - \tweak direction #up
+    \repeatTie
+
+}
+
+
 number.21.Violin.Music = {
 
     % [Violin.Music measure 1]
@@ -1144,11 +1418,110 @@ number.21.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    r16
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            \set fontSize = #-3
+            \slash
+              %! STAFF_HIGHLIGHT
+            %@% \staffHighlight yellow
+            \voiceOne
+            <
+                \tweak font-size 0
+                \tweak transparent ##t
+                b'
+            >16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+            [
+            (
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+              %! NOT_YET_PITCHED_COLORING
+            %@% \baca-not-yet-pitched-coloring
+            b'16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+            )
+            ]
+
+        }
+
+        \context Voice = "Violin.Music"
+        { \number.21.Violin.Music.item.1 }
+
+    >>
 
     % [Violin.Music measure 7]
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -1240,14 +1613,61 @@ number.21.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 5]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \override NoteHead.style = #'harmonic
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    <e'' gs''!>1
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "II / III mod."
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
 
     % [Cello.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    <cs''! es''!>4
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    <cs''! es''!>16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    \revert NoteHead.style
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+      %! SPANNER_STOP
+    \stopTextSpan
+
+    r2.
 
     % [Cello.Music measure 7]
     R1 * 3/4
