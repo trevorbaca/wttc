@@ -1,4 +1,3 @@
-import abjad
 import baca
 from abjadext import rmakers
 
@@ -332,67 +331,6 @@ def N2a(pleaves, pitches, hairpin_lparts, hairpin):
     )
 
 
-def O1a(pleaves, pitches, hairpin, *, rleak=False):
-    pitches = " ".join([_ + "4" for _ in pitches.split()])
-    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
-    nongraces = abjad.select.notes(pleaves, grace=False)
-    baca.override.dots_x_extent_false(nongraces[0])
-    baca.hairpin(
-        nongraces,
-        hairpin,
-        baca.postevent.to_bar_line_true(),
-        rleak=rleak,
-    )
-    baca.spanners.text(
-        nongraces,
-        r"\baca-airtone-markup =|",
-        left_broken_text=r"\baca-parenthesized-air-markup",
-        rleak=True,
-        staff_padding=5.5,
-    )
-    baca.spanners.text(
-        nongraces,
-        r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        baca.postevent.direction_down(),
-        direction=abjad.DOWN,
-        lilypond_id=1,
-        rleak=True,
-        staff_padding=8,
-    )
-
-
-def O1b(pleaves, pitches, hairpin, *, rleak=False):
-    pitches = " ".join([_ + "4" for _ in pitches.split()])
-    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
-    graces = abjad.select.notes(pleaves, grace=True)
-    baca.override.note_head_style_harmonic_black(graces)
-    nongraces = abjad.select.notes(pleaves, grace=False)
-    baca.override.note_head_style_harmonic_black(nongraces)
-    baca.override.dots_x_extent_false(nongraces[0])
-    baca.hairpin(
-        nongraces,
-        hairpin,
-        baca.postevent.to_bar_line_true(),
-        rleak=rleak,
-    )
-    baca.spanners.text(
-        nongraces,
-        r"\wttc-half-harmonic-pressure =|",
-        left_broken_text=r"\baca-parenthesized-half-harm-markup",
-        rleak=True,
-        staff_padding=5.5,
-    )
-    baca.spanners.text(
-        nongraces,
-        r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        baca.postevent.direction_down(),
-        direction=abjad.DOWN,
-        lilypond_id=1,
-        rleak=True,
-        staff_padding=8,
-    )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.N1a(
@@ -410,14 +348,16 @@ def fl(m):
     )
     rmakers.unbeam(m[8][1:3])
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
-    O1a(library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak=True)
-    O1a(
+    library.O1a_foo(
+        library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak=True
+    )
+    library.O1a_foo(
         library.pleaves(m[17], 99),
         "F D C# Eb C# D Eb F Gb F Eb Gb E",
         "sfp>o!",
         rleak=True,
     )
-    O1a(
+    library.O1a_foo(
         library.pleaves(m[19, 20], 99),
         "D C# D Gb C# Eb F Eb C# F Gb D Gb F D C# Eb C# D Eb F Gb F Eb E",
         "sfpp>o!",
@@ -477,14 +417,14 @@ def vn(m):
         -6,
         t="+M3",
     )
-    O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", "sfmp>o!", rleak=True)
-    O1b(
+    library.O1b(library.pleaves(m[15], 99), "G Eb G F# D E F", "sfmp>o!", rleak=True)
+    library.O1b(
         library.pleaves(m[17], 99),
         "G E F# G F# E Eb D E D Eb F# F",
         "sfp>o!",
         rleak=True,
     )
-    O1b(
+    library.O1b(
         library.pleaves(m[19, 20], 99),
         "E F# G F# E Eb D E D Eb F# G Eb G F# D E F# E D G Eb D Eb F",
         "sfpp>o!",

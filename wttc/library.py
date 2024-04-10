@@ -2341,6 +2341,67 @@ def O1a(pleaves, pitches, hairpin, *, rleak=False):
     )
 
 
+def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.dots_x_extent_false(nongraces[0])
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        baca.postevent.to_bar_line_true(),
+        rleak=rleak,
+    )
+    baca.spanners.text(
+        nongraces,
+        r"\baca-airtone-markup =|",
+        left_broken_text=r"\baca-parenthesized-air-markup",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.spanners.text(
+        nongraces,
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
+        baca.postevent.direction_down(),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        rleak=True,
+        staff_padding=8,
+    )
+
+
+def O1b(pleaves, pitches, hairpin, *, rleak=False):
+    pitches = " ".join([_ + "4" for _ in pitches.split()])
+    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    graces = abjad.select.notes(pleaves, grace=True)
+    baca.override.note_head_style_harmonic_black(graces)
+    nongraces = abjad.select.notes(pleaves, grace=False)
+    baca.override.note_head_style_harmonic_black(nongraces)
+    baca.override.dots_x_extent_false(nongraces[0])
+    baca.hairpin(
+        nongraces,
+        hairpin,
+        baca.postevent.to_bar_line_true(),
+        rleak=rleak,
+    )
+    baca.spanners.text(
+        nongraces,
+        r"\wttc-half-harmonic-pressure =|",
+        left_broken_text=r"\baca-parenthesized-half-harm-markup",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.spanners.text(
+        nongraces,
+        r"\wttc-final-note-sounds-ottava-higher-markup =|",
+        baca.postevent.direction_down(),
+        direction=abjad.DOWN,
+        lilypond_id=1,
+        rleak=True,
+        staff_padding=8,
+    )
+
+
 def O2a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch, allow_out_of_range=True)
     plts = baca.select.plts(pleaves)
@@ -2415,3 +2476,29 @@ Q2 = """
 
 Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
 Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
+
+
+def still_1a(pleaves, pitch, dynamic, *, tasto=False):
+    baca.pitch(pleaves, pitch)
+    if tasto is True:
+        baca.spanners.scp(
+            pleaves,
+            "T1 => poss.",
+            rleak=True,
+            staff_padding=3,
+        )
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+        rleak=True,
+    )
+
+
+def still_1b(pleaves, pitch, dynamic, *, up_bow=False):
+    baca.pitch(pleaves, pitch)
+    baca.dynamic(pleaves[0], dynamic)
+    baca.markup(pleaves[0], r"\wttc-with-screw", staff_padding=4)
+    if up_bow is True:
+        baca.up_bow(pleaves[0], padding=1)
+    else:
+        baca.down_bow(pleaves[0], padding=1)

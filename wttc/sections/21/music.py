@@ -176,6 +176,13 @@ def VC(voice, meters):
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.O4a(library.pleaves(m[1, 2], 4), "Eb6 D6", "f> mf> mp> p> pp")
+    library.still_1a(library.pleaves(m[3], 1), "G4", "mf")
+    library.O1a_foo(
+        library.pleaves(m[6], 99),
+        "F D C# Eb C# D Eb F Gb F Eb Gb E",
+        "sfp>o!",
+        rleak=True,
+    )
     library.J3a(library.pleaves(m[7, 8], 3), "Bb3 Bb3 Bb3", "pp - -")
 
 
@@ -186,6 +193,7 @@ def ob(m):
 def gt1(cache):
     m = cache["gt1"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    library.still_1b(library.pleaves(m[3], 1), "F2", "p")
     library.N1b(library.pleaves(m[4, 5], 1), "F#3", "p")
     library.N3a(library.pleaves(m[5], 3), "G#4", "(p)")
     library.J1b(library.pleaves(m[8], 1), "C#5 D#5 F5")
@@ -199,6 +207,7 @@ def gt1(cache):
 def gt2(cache):
     m = cache["gt2"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    library.still_1b(library.pleaves(m[3], 1), "F2", "p", up_bow=True)
     library.N1b(library.pleaves(m[4, 5], 1), "D3", "p")
     library.N3a(library.pleaves(m[5], 3), "G4", "(p)")
     library.J1b(library.pleaves(m[8], 1), "D5 E5 F#5")
@@ -211,25 +220,49 @@ def gt2(cache):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    library.still_1a(library.pleaves(m[3], 1), "B3:F#4", "mf", tasto=True)
+    library.O1b(
+        library.pleaves(m[6], 99),
+        "G E F# G F# E Eb D E D Eb F# F",
+        "sfp>o!",
+        rleak=True,
+    )
 
 
 def vc(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
+    library.still_1a(library.pleaves(m[3], 1), "E2:C3", "mf", tasto=True)
+    baca.clef(m[5][0], "treble")
     library.N2b2(
         library.pleaves(m[5, 6], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3
     )
 
 
 def align_spanners(cache):
-    """
     fl = cache["fl"]
-    ob = cache["ob"]
+    baca.override.dls_staff_padding(fl[1, 5], 3)
+    baca.override.dls_staff_padding(fl[6], 4)
+    baca.override.dls_staff_padding(fl[7, 10], 4)
     gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[3], 5.5)
+    baca.override.dls_staff_padding(gt1[4], 3)
+    baca.override.dls_staff_padding(gt1[5], 5.5)
+    baca.override.dls_staff_padding(gt1[7, 9], 3)
+    baca.override.dls_staff_padding(gt1[10], 4)
+    baca.override.tuplet_bracket_direction_up(gt1[10])
     gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2[3], 5.5)
+    baca.override.dls_staff_padding(gt2[4], 3)
+    baca.override.dls_staff_padding(gt2[5], 5.5)
+    baca.override.dls_staff_padding(gt2[8], 3)
+    baca.override.dls_staff_padding(gt2[9], 4)
+    baca.override.tuplet_bracket_direction_up(gt2[9, 10])
     vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[3], 5)
+    baca.override.dls_staff_padding(vn[6], 4.5)
     vc = cache["vc"]
-    """
-    pass
+    baca.override.dls_staff_padding(vc[3], 5)
+    baca.override.dls_staff_padding(vc[5, 6], 4)
 
 
 @baca.build.timed("make_score")

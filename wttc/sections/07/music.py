@@ -107,35 +107,9 @@ def VC(voice, meters):
     )
 
 
-def still_1a(pleaves, pitch, dynamic, *, tasto=False):
-    baca.pitch(pleaves, pitch)
-    if tasto is True:
-        baca.spanners.scp(
-            pleaves,
-            "T1 => poss.",
-            rleak=True,
-            staff_padding=3,
-        )
-    baca.hairpin(
-        pleaves,
-        f"{dynamic}>o!",
-        rleak=True,
-    )
-
-
-def still_1b(pleaves, pitch, dynamic, *, up_bow=False):
-    baca.pitch(pleaves, pitch)
-    baca.dynamic(pleaves[0], dynamic)
-    baca.markup(pleaves[0], r"\wttc-with-screw", staff_padding=4)
-    if up_bow is True:
-        baca.up_bow(pleaves[0], padding=1)
-    else:
-        baca.down_bow(pleaves[0], padding=1)
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    still_1a(library.pleaves(m[1], 1), "G4", "mf")
+    library.still_1a(library.pleaves(m[1], 1), "G4", "mf")
 
 
 def ob(m):
@@ -144,23 +118,23 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    still_1b(library.pleaves(m[1], 1), "F2", "p")
+    library.still_1b(library.pleaves(m[1], 1), "F2", "p")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    still_1b(library.pleaves(m[1], 1), "F2", "p", up_bow=True)
+    library.still_1b(library.pleaves(m[1], 1), "F2", "p", up_bow=True)
 
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
-    still_1a(library.pleaves(m[1], 1), "B3:F#4", "mf", tasto=True)
+    library.still_1a(library.pleaves(m[1], 1), "B3:F#4", "mf", tasto=True)
     library.C1_final(library.pleaves(m[2], 99), "D5", "F#5", "mf mp")
 
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
-    still_1a(library.pleaves(m[1], 1), "E2:C3", "mf", tasto=True)
+    library.still_1a(library.pleaves(m[1], 1), "E2:C3", "mf", tasto=True)
     library.C1_final(library.pleaves(m[2], 99), "D4", "F4", "mf mp p")
 
 
