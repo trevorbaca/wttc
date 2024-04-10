@@ -31,7 +31,8 @@ frame = library.frame
 def GLOBALS(skips, first_measure_number):
     stage_markup = (("y: J (end) + z: J (end)", 7),)
     baca.section.label_stage_numbers(skips, stage_markup)
-    baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
+    baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
+    baca.metronome_mark(skips[2 - 1], "48", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "100", manifests=library.manifests)
 
 
@@ -42,7 +43,12 @@ def FL(voice, meters):
         [6, 4, 12, 8, 2],
         material=4,
     )
-    rhythm.mmrests(3, 6)
+    rhythm(
+        meters(3),
+        [32, "-"],
+        material=1,
+    )
+    rhythm.mmrests(4, 6)
     rhythm(
         meters(7, 8),
         [-6, 1, -5, -5, 1, -7, 1, -10],
@@ -59,7 +65,14 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 6)
+    rhythm.mmrests(1, 2)
+    rhythm(
+        meters(3),
+        [-24, 1, -3, -4, -4],
+        do_not_rewrite_meter=True,
+        material=1,
+    )
+    rhythm.mmrests(4, 6)
     rhythm.mmrests(7)
     rhythm(
         meters(8),
@@ -84,7 +97,14 @@ def GT1(voice, meters):
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 6)
+    rhythm.mmrests(1, 2)
+    rhythm(
+        meters(3),
+        [-24, 1, -3, -4, -4],
+        do_not_rewrite_meter=True,
+        material=1,
+    )
+    rhythm.mmrests(4, 6)
     rhythm.mmrests(7)
     rhythm(
         meters(8),
@@ -102,13 +122,25 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 6)
+    rhythm.mmrests(1, 2)
+    rhythm(
+        meters(3),
+        [c(32, 2), "-"],
+        material=1,
+    )
+    rhythm.mmrests(4, 6)
     rhythm.mmrests(7, 10)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 6)
+    rhythm.mmrests(1, 2)
+    rhythm(
+        meters(3),
+        [c(32, 2), "-"],
+        material=1,
+    )
+    rhythm.mmrests(4, 6)
     rhythm.mmrests(7, 10)
 
 
@@ -252,7 +284,7 @@ def make_layout():
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(5, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(7, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(

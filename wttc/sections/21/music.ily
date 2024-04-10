@@ -14,17 +14,17 @@ number.21.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "21"
     s1 * 4/4
-      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
-      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "100" #(x11-color 'DeepPink1)
-      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "60" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
-      %! REDUNDANT_METRONOME_MARK
+      %! EXPLICIT_METRONOME_MARK
     %@% - \baca-invisible-line
-      %! REDUNDANT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "100"
-      %! REDUNDANT_METRONOME_MARK
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "60"
+      %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'00'']"
@@ -45,10 +45,23 @@ number.21.Skips = {
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
+    \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "48" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    \bacaStartTextSpanMM
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "48"
+      %! EXPLICIT_METRONOME_MARK
+    %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'02'']"
+    %@% - \baca-start-ct-left-only "[0'04'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -73,7 +86,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'04'']"
+    %@% - \baca-start-ct-left-only "[0'09'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -98,7 +111,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'10'']"
+    %@% - \baca-start-ct-left-only "[0'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -119,7 +132,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'12'']"
+    %@% - \baca-start-ct-left-only "[0'25'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -144,7 +157,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'15'']"
+    %@% - \baca-start-ct-left-only "[0'30'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -169,20 +182,20 @@ number.21.Skips = {
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
-      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "100" #(x11-color 'DeepPink1)
-      %! REDUNDANT_METRONOME_MARK_WITH_COLOR
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "100" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
-      %! REDUNDANT_METRONOME_MARK
+      %! EXPLICIT_METRONOME_MARK
     %@% - \baca-invisible-line
-      %! REDUNDANT_METRONOME_MARK
+      %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "100"
-      %! REDUNDANT_METRONOME_MARK
+      %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'18'']"
+    %@% - \baca-start-ct-left-only "[0'36'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -211,7 +224,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'19'']"
+    %@% - \baca-start-ct-left-only "[0'38'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -236,7 +249,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'23'']"
+    %@% - \baca-start-ct-left-only "[0'41'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -261,7 +274,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'25'']" "[0'28'']"
+    %@% - \baca-start-ct-both "[0'43'']" "[0'47'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -472,11 +485,17 @@ number.21.AltoFlute.Music = {
     \breathe
 
     % [AltoFlute.Music measure 3]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    b'\breve
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
 
     % [AltoFlute.Music measure 4]
     R1 * 4/4
@@ -718,9 +737,21 @@ number.21.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 3]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r1.
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    b'16
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+    r4
+
+    r4
 
     % [Guitar.1.Music measure 4]
     R1 * 4/4
@@ -897,9 +928,21 @@ number.21.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 3]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+    r1.
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    b'16
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+    r4
+
+    r4
 
     % [Guitar.2.Music measure 4]
     R1 * 4/4
@@ -1080,9 +1123,15 @@ number.21.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 3]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    <b' b'>\breve
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
 
     % [Violin.Music measure 4]
     R1 * 4/4
@@ -1175,9 +1224,15 @@ number.21.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 3]
-    R1 * 9/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"9" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    <b' b'>\breve
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
 
     % [Cello.Music measure 4]
     R1 * 4/4
