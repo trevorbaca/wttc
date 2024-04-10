@@ -701,7 +701,7 @@ def VC(voice, meters):
     rhythm.mmrests(33, 36)
 
 
-def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+def O1b(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     pitches = pitches[:-1] + "3"
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
@@ -713,7 +713,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     baca.hairpin(
         nongraces,
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
     baca.spanners.text(
         nongraces,
@@ -745,29 +745,15 @@ def O2b(pleaves, dynamics):
     baca.staff_lines(leaf, 5)
 
 
-def O3a(pleaves, pitches, peak, *, rleak_hairpin=False):
+def O3a(pleaves, pitches, peak, *, rleak=False):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
     assert len(plts) == 2
     baca.hairpin(
         plts,
         library.swells(peak),
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
-
-
-def O4a(pleaves, pitch, hairpin, *, rleak_hairpin=False):
-    plts = baca.select.plts(pleaves)
-    baca.hairpin(
-        plts,
-        hairpin,
-        rleak=rleak_hairpin,
-    )
-    if " " in pitch:
-        baca.glissando(pleaves, pitch)
-    else:
-        baca.pitch(pleaves, pitch)
-    baca.breathe(pleaves[-1])
 
 
 def O4b(pleaves, dyads, dynamics):
@@ -800,7 +786,7 @@ def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
     )
 
 
-def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=False):
+def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak=False):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
@@ -811,13 +797,11 @@ def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=Fa
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
 
 
-def P1b(
-    pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak_hairpin=False
-):
+def P1b(pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak=False):
     baca.glissando(pleaves, glissando)
     baca.override.note_head_style_harmonic(pleaves)
     baca.spanners.trill(
@@ -829,7 +813,7 @@ def P1b(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
 
 
@@ -911,14 +895,14 @@ def fl(m):
         library.pleaves(m[1, 2], 1),
         "G E G# A F A G# F E B E F G G# A G# G A F E F A E G B",
         "sfmp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     library.O2a(library.pleaves(m[2], 2), library.make_flute_covered_dyads("D3"), "p -")
     O3a(library.pleaves(m[3], 3), "F4 F#5", "mf")
     library.O2a(
         library.pleaves(m[3, 4], 2), library.make_flute_covered_dyads("D3"), 'p mp "mf"'
     )
-    O3a(library.pleaves(m[5], 3), "F4 F#5", "mf", rleak_hairpin=True)
+    O3a(library.pleaves(m[5], 3), "F4 F#5", "mf", rleak=True)
     O3a(library.pleaves(m[6], 3), "F4 G#5", "f")
     library.O1a(
         library.pleaves(m[7], 1) + library.pleaves(m[8][:1], 1),
@@ -935,21 +919,21 @@ def fl(m):
         library.make_flute_covered_dyads("Db3"),
         '"mf" - mp - p -',
     )
-    O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
-    O4a(
+    library.O4a(library.pleaves(m[11], 4), "C6", "pp<|f")
+    library.O4a(
         library.pleaves(m[12, 14], 4)[:-2],
         "C6 B5",
         "pp<| f> mf> mp> p> pp",
     )
-    O4a(library.pleaves(m[14, 16], 4)[4:], "D6 C#6", "pp<| f> mf> mp> p> pp")
-    O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
+    library.O4a(library.pleaves(m[14, 16], 4)[4:], "D6 C#6", "pp<| f> mf> mp> p> pp")
+    library.O4a(library.pleaves(m[17, 18], 4), "Eb6 D6", "f> mf> mp> p> pp")
     library.O1a(
         library.pleaves(m[19], 1),
         "F G G# A G# G Ab",
         "p>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
-    O4a(library.pleaves(m[20, 21], 4), "Eb6 D6", "f> mf> mp> p> pp")
+    library.O4a(library.pleaves(m[20, 21], 4), "Eb6 D6", "f> mf> mp> p> pp")
     library.O1a(
         library.pleaves(m[22, 23], 1),
         "F G G# A G# G Ab",
@@ -1012,7 +996,7 @@ def vn(m):
         library.pleaves(m[1, 2], 1),
         "F# D# G Ab E Ab G E D# F# D# E F# G Ab G F# Ab E D# E Ab D# F# A",
         "sfmp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     O2b(library.pleaves(m[2, 3], 2)[:-1], "p -")
     O2b(library.pleaves(m[3, 5], 2)[1:], 'mp mf "f" -')
@@ -1073,7 +1057,7 @@ def vc(m):
         "C2",
         [2, 2],
         "o< mf>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     P1b(
         library.pleaves(m[25, 26], 1),
@@ -1081,7 +1065,7 @@ def vc(m):
         "C2",
         [1, 2],
         "o< mp>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     P1b(
         library.pleaves(m[27, 28], 1),
@@ -1089,7 +1073,7 @@ def vc(m):
         "C2",
         [1, 2],
         "o< p>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
     P1b(
         library.pleaves(m[29, 32], 1),
@@ -1097,7 +1081,7 @@ def vc(m):
         "C2",
         [3, 2],
         "o< f>o!",
-        rleak_hairpin=True,
+        rleak=True,
     )
 
 

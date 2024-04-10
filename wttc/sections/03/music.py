@@ -551,7 +551,7 @@ def vc(m):
         "p>o!",
         [2],
         "T =|",
-        rleak_hairpin=True,
+        rleak=True,
     )
     library.A3b(
         library.pleaves(m[8, 9], 3),
@@ -588,7 +588,7 @@ def vc(m):
         "o< p>o!",
         [3],
         "T =|",
-        rleak_hairpin=True,
+        rleak=True,
     )
     library.B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", 1, staff_padding=5)
     library.A3b(
@@ -598,7 +598,7 @@ def vc(m):
         "p>o!",
         [1],
         "T =|",
-        rleak_hairpin=True,
+        rleak=True,
     )
     library.B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", 1, staff_padding=5)
 

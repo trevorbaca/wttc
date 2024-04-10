@@ -37,7 +37,12 @@ def GLOBALS(skips, first_measure_number):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 6)
+    rhythm(
+        meters(1, 2),
+        [6, 4, 12, 8, 2],
+        material=4,
+    )
+    rhythm.mmrests(3, 6)
     rhythm(
         meters(7, 8),
         [-6, 1, -5, -5, 1, -7, 1, -10],
@@ -109,6 +114,7 @@ def VC(voice, meters):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
+    library.O4a(library.pleaves(m[1, 2], 4), "Eb6 D6", "f> mf> mp> p> pp")
     library.J3a(library.pleaves(m[7, 8], 3), "Bb3 Bb3 Bb3", "pp - -")
 
 

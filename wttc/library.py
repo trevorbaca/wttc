@@ -1027,7 +1027,7 @@ def A3b(
     scp_lparts,
     scp,
     *,
-    rleak_hairpin=False,
+    rleak=False,
     # TODO: reverse keyword:
     do_not_rleak_scp=False,
 ):
@@ -1035,7 +1035,7 @@ def A3b(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
     baca.spanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
@@ -2293,7 +2293,7 @@ def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
     )
 
 
-def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
+def O1a(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
     pitches = pitches[:-1] + "3"
     baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
@@ -2302,7 +2302,7 @@ def O1a(pleaves, pitches, hairpin, *, rleak_hairpin=False):
     baca.hairpin(
         nongraces,
         hairpin,
-        rleak=rleak_hairpin,
+        rleak=rleak,
     )
     baca.spanners.text(
         nongraces,
@@ -2342,6 +2342,20 @@ def O3b(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
+
+
+def O4a(pleaves, pitch, hairpin, *, rleak=False):
+    plts = baca.select.plts(pleaves)
+    baca.hairpin(
+        plts,
+        hairpin,
+        rleak=rleak,
+    )
+    if " " in pitch:
+        baca.glissando(pleaves, pitch)
+    else:
+        baca.pitch(pleaves, pitch)
+    baca.breathe(pleaves[-1])
 
 
 Q1 = """
