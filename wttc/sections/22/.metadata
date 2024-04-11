@@ -21,22 +21,12 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [1, 7],
-    "duration": "0'41''",
-    "final_measure_number": 10,
+    "bol_measure_numbers": [1, 5],
+    "duration": "0'30''",
+    "final_measure_number": 9,
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "AltoFlute.Music": [
-            baca.Memento(
-                context="AltoFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="pp",
-            )
-        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -106,7 +96,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="\\baca-p-parenthesized",
             )
         ],
         "Guitar.1.Staff": [
@@ -142,7 +132,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="\\baca-p-parenthesized",
             )
         ],
         "Guitar.2.Staff": [
@@ -204,7 +194,7 @@
                 manifest="metronome_marks",
                 prototype=None,
                 synthetic_offset=None,
-                value="100",
+                value="50",
             ),
             baca.Memento(
                 context="Skips",
@@ -212,7 +202,7 @@
                 manifest=None,
                 prototype="abjad.TimeSignature",
                 synthetic_offset=None,
-                value="6/4",
+                value="4/4",
             ),
         ],
         "Violin.Staff": [
@@ -244,17 +234,6 @@
     },
     "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
-    "stop_clock_time": "0'41''",
-    "time_signatures": [
-        "4/4",
-        "4/4",
-        "9/4",
-        "4/4",
-        "4/4",
-        "5/4",
-        "3/4",
-        "6/4",
-        "3/4",
-        "6/4",
-    ],
+    "stop_clock_time": "0'30''",
+    "time_signatures": ["4/4", "4/4", "4/4", "5/4", "6/4", "6/4", "6/4", "2/4", "4/4"],
 }

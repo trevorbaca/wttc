@@ -3,9 +3,9 @@ number.24.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
-      %! REAPPLIED_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color  #(x11-color 'green4)
-      %! REAPPLIED_TIME_SIGNATURE
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
