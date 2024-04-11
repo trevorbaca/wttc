@@ -780,24 +780,14 @@ number.22.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
     \f
 
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     eqs'''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-
-    % [Oboe.Music measure 8]
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
-
-    % [Oboe.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
 }
 
@@ -1017,9 +1007,23 @@ number.22.Guitar.1.Music = {
     r4
 
     % [Guitar.1.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    r16
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight hotpink
+    gs''!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
+
+    r2.
 
 }
 
@@ -1281,17 +1285,47 @@ number.22.Guitar.2.Music = {
 
     }
 
-    % [Guitar.2.Music measure 8]
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.2.Music measure 8]
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r4
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightskyblue
+        d'''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+        \laissezVibrer
+
+    }
+
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    r4
 
     % [Guitar.2.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight hotpink
+    ds''!16
+    - \flageolet
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+    r2.
 
 }
 
@@ -1666,16 +1700,35 @@ number.22.Violin.Music = {
     \bacaStopTextSpanBowSpeed
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    [
 
-      %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
-    b'16
-    ]
+    \override DynamicLineSpanner.staff-padding = 3
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    d''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \ff
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-pizz-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanPizzicato
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
+      %! SPANNER_STOP
+    \bacaStopTextSpanPizzicato
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 9]
     R1 * 4/4
@@ -2039,16 +2092,206 @@ number.22.Cello.Music = {
     % [Cello.Music measure 8]
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    r16
       %! SPANNER_STOP
     \stopTextSpan
 
+    \override NoteHead.style = #'harmonic
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight hotpink
+    e8.
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-string-iii-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5
+      %! SPANNER_START
+    \bacaStartTextSpanStringNumber
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 7.5
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    f'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+
     % [Cello.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    d8.
+      %! SPANNER_STOP
+    \!
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    e'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    c8.
+      %! SPANNER_STOP
+    \!
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    g16
+    [
+
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    \afterGrace
+    d'8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+    {
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        b,8
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+        \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
+
+    }
+
 
 }
 

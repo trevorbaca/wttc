@@ -1,4 +1,5 @@
 import baca
+from abjadext import rmakers
 
 from wttc import library
 
@@ -75,7 +76,17 @@ def OB(voice, meters):
         ["-", 4, 4],
         material=2,
     )
-    rhythm.mmrests(8, 9)
+    """
+    components = rhythm.make_one_beat_tuplets(
+        meters(8, 9),
+        [-4, 2, 1, "-"],
+        extra_counts=[-1],
+    )
+    for plt in baca.select.plts(components):
+        container = abjad.BeforeGraceContainer("e'16")
+        abjad.attach(container, plt.head)
+    library.annotate(components, 3)
+    """
 
 
 def GT1(voice, meters):
@@ -103,7 +114,11 @@ def GT1(voice, meters):
         [-4, 4, -2, 2, -6, 2, 4, -10, 2, -14, 2, "-"],
         material=3,
     )
-    rhythm.mmrests(9)
+    rhythm(
+        meters(9),
+        [-1, 1, "-"],
+        material=4,
+    )
 
 
 def GT2(voice, meters):
@@ -133,7 +148,17 @@ def GT2(voice, meters):
         extra_counts=[-1],
         material=3,
     )
-    rhythm.mmrests(8, 9)
+    rhythm.make_one_beat_tuplets(
+        meters(8),
+        [-2, 1, "-"],
+        extra_counts=[-1],
+        material=2,
+    )
+    rhythm(
+        meters(9),
+        [1, "-"],
+        material=4,
+    )
 
 
 def VN(voice, meters):
@@ -154,11 +179,12 @@ def VN(voice, meters):
         12 * [4],
         material=3,
     )
-    rhythm(
+    components = rhythm(
         meters(8),
-        [3, 1, -4],
+        [3, M(1, 2), -4],
         material=3,
     )
+    rmakers.unbeam(components)
     rhythm.mmrests(9)
 
 
@@ -177,7 +203,11 @@ def VC(voice, meters):
         + [-28, AG([2], 4), AG([2], 4), "-"],
         material=2,
     )
-    rhythm.mmrests(8, 9)
+    rhythm(
+        meters(8, 9),
+        [-1, 4, 4, 4, 4, 4, AG([2], 3)],
+        material=4,
+    )
 
 
 def fl(m):
@@ -207,6 +237,7 @@ def gt1(cache):
     library.N3a(library.pleaves(m[3], 3), "G#4", "(p)")
     library.F1b(library.pleaves(m[5], 1), "G3:B3", "mp")
     library.F3a(library.pleaves(m[5, 8], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
+    library.B4a(library.pleaves(m[9], 4), "G#4", "p")
 
 
 def gt2(cache):
@@ -216,6 +247,8 @@ def gt2(cache):
     library.N3a(library.pleaves(m[3], 3), "G4", "(p)")
     library.F1b(library.pleaves(m[5], 1), "F3:A3", "mp")
     library.F3a(library.pleaves(m[5, 7], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
+    library.B2a(library.pleaves(m[8], 2), "D5", "f")
+    library.B4a(library.pleaves(m[9], 4), "D#4", "mf")
 
 
 def vn(m):
@@ -227,7 +260,8 @@ def vn(m):
         rleak=True,
     )
     library.F3b1(library.pleaves(m[5], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
-    library.F3b2(library.pleaves(m[5, 8], 3)[4:-1], "Ab4 Gb4", "p>o!", tblf=True)
+    library.F3b2(library.pleaves(m[5, 8], 3)[4:], "Ab4 Gb4", "p>o!", tblf=True)
+    library.B2b(library.pleaves(m[8], 2), "D5", "ff", dls_staff_padding=3)
 
 
 def vc(m):
@@ -248,6 +282,7 @@ def vc(m):
             "C2 Db2",
         ],
     )
+    library.B4b(library.pleaves(m[8, 9], 4), 3, "E3 F4 D3 E4 C3 D4 B2", "pp mp f")
 
 
 def align_spanners(cache):

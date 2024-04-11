@@ -58,9 +58,9 @@
                 context="Cello.Music",
                 edition=None,
                 manifest=None,
-                prototype="abjad.Dynamic",
+                prototype="abjad.StartHairpin",
                 synthetic_offset=None,
-                value="\\baca-f-sempre",
+                value=">o",
             )
         ],
         "Cello.Staff": [
@@ -96,7 +96,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="p",
             )
         ],
         "Guitar.1.Staff": [
@@ -132,7 +132,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="pp",
+                value="mf",
             )
         ],
         "Guitar.2.Staff": [
@@ -214,6 +214,16 @@
                 synthetic_offset=None,
                 value="4/4",
             ),
+        ],
+        "Violin.Music": [
+            baca.Memento(
+                context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="ff",
+            )
         ],
         "Violin.Staff": [
             baca.Memento(

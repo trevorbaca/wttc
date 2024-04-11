@@ -852,55 +852,6 @@ def B1c(
         )
 
 
-def B2a(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-        baca.laissez_vibrer(plt.tail)
-
-
-def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
-    baca.pitch(notes, pitch)
-    dynamics_list = dynamics.split()
-    conjoin = 1 < len(notes)
-    for note, dynamic in zip(notes, dynamics_list, strict=True):
-        baca.dynamic(note, dynamic)
-        if conjoin is False:
-            baca.spanners.pizzicato(
-                [note],
-                descriptor=r"\baca-pizz-markup ||",
-                rleak=True,
-                staff_padding=3,
-            )
-            if dls_staff_padding:
-                baca.override.dls_staff_padding(
-                    baca.select.rleak([note]),
-                    dls_staff_padding,
-                )
-    if conjoin is True:
-        baca.spanners.pizzicato(
-            notes,
-            baca.postevent.bound_details_right_padding(-0.5),
-            staff_padding=3,
-        )
-        if dls_staff_padding:
-            baca.override.dls_staff_padding(
-                notes,
-                dls_staff_padding,
-            )
-
-
-def B4a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-        baca.flageolet(plt.head)
-
-
 def B5(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
@@ -1085,23 +1036,23 @@ def override_uneven_staff_padding(leaves, *, only_dls=False):
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     B1b(library.pleaves(m[1], 1), '"mf"')
-    B2a(library.pleaves(m[1], 2), "D5", "mp p")
+    library.B2a(library.pleaves(m[1], 2), "D5", "mp p")
     B1b(library.pleaves(m[2], 1), '"f"')
-    B2a(library.pleaves(m[2], 2), "D5", "f mf")
+    library.B2a(library.pleaves(m[2], 2), "D5", "f mf")
     B1b(library.pleaves(m[3], 1), '"ff"')
-    B2a(library.pleaves(m[3], 2), "D5", "f")
-    B4a(library.pleaves(m[4], 4), "G#4", "p")
+    library.B2a(library.pleaves(m[3], 2), "D5", "f")
+    library.B4a(library.pleaves(m[4], 4), "G#4", "p")
     B1b(library.pleaves(m[5], 1), '"mf"')
-    B2a(library.pleaves(m[5, 6], 2), "D#5", "f mf mp")
+    library.B2a(library.pleaves(m[5, 6], 2), "D#5", "f mf mp")
     B5(library.pleaves(m[6, 8], 5), "A3:C4 G3:Bb3 F#3:A3", "f mf mp")
     B1b(library.pleaves(m[8], 1), '"ff"')
-    B2a(library.pleaves(m[8], 2), "D#5", "f")
-    B4a(library.pleaves(m[9], 4), "G4 Gb4", "p pp")
+    library.B2a(library.pleaves(m[8], 2), "D#5", "f")
+    library.B4a(library.pleaves(m[9], 4), "G4 Gb4", "p pp")
     B5(library.pleaves(m[9, 11], 5), "F3:Ab3", "mf mp")
-    B2a(library.pleaves(m[11], 2), "F5", "mf")
-    B4a(library.pleaves(m[12], 4), "C4 B3 Bb3", "p pp ppp")
+    library.B2a(library.pleaves(m[11], 2), "F5", "mf")
+    library.B4a(library.pleaves(m[12], 4), "C4 B3 Bb3", "p pp ppp")
     B5(library.pleaves(m[12, 14], 5), "F3:Ab3", "mf mp")
-    B2a(library.pleaves(m[14, 15], 2), "F#5", "mp p")
+    library.B2a(library.pleaves(m[14, 15], 2), "F#5", "mp p")
     override_uneven_staff_padding(m[1, 3])
     override_uneven_staff_padding(m[5, 6][1:-1])
     override_uneven_staff_padding(m[8])
@@ -1127,23 +1078,23 @@ def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     baca.staff_lines(m[1][0], 5)
     B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
-    B2a(library.pleaves(m[1], 2), "D5", "p mp")
+    library.B2a(library.pleaves(m[1], 2), "D5", "p mp")
     B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
-    B2a(library.pleaves(m[2], 2), "D5", "f")
+    library.B2a(library.pleaves(m[2], 2), "D5", "f")
     B1b(library.pleaves(m[3], 1), '"ff"', up_bow=True)
-    B4a(library.pleaves(m[4], 4), "D#4", "mf")
+    library.B4a(library.pleaves(m[4], 4), "D#4", "mf")
     B1b(library.pleaves(m[5], 1), '"ff" "f"', up_bow=True)
     B1b(library.pleaves(m[6], 1), '"mf"', up_bow=True)
-    B2a(library.pleaves(m[6], 2), "D#5", "f mf mp")
+    library.B2a(library.pleaves(m[6], 2), "D#5", "f mf mp")
     B5(library.pleaves(m[6, 8], 5), "G#3:B3 F#3:A3 F3:Ab3", "f mf mp")
     B1b(library.pleaves(m[8], 1), '"ff"', up_bow=True)
-    B2a(library.pleaves(m[8], 2), "D#5", "f")
-    B4a(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
+    library.B2a(library.pleaves(m[8], 2), "D#5", "f")
+    library.B4a(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
     B5(library.pleaves(m[9, 10], 5), "E3:G3", "mf mp")
     B1b(library.pleaves(m[11], 1), '"mf"', up_bow=True)
-    B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
+    library.B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
     B5(library.pleaves(m[12, 14], 5), "E3:G3", "mf mp")
-    B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
+    library.B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
     baca.override.tuplet_bracket_direction_down(m.leaves())
     override_uneven_staff_padding(m[1, 3], only_dls=True)
     override_uneven_staff_padding(m[5, 6], only_dls=True)
@@ -1163,7 +1114,7 @@ def vn(m):
         "mp",
         dls_staff_padding=6,
     )
-    B2b(library.pleaves(m[1], 2), "D5", "mp p", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[1], 2), "D5", "mp p", dls_staff_padding=3)
     B1c(
         library.run(m[2, 3], 1, 0),
         3,
@@ -1172,7 +1123,7 @@ def vn(m):
         "mf",
         dls_staff_padding=6,
     )
-    B2b(library.pleaves(m[2], 2), "D5", "f", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[2], 2), "D5", "f", dls_staff_padding=3)
     B1c(
         library.run(m[2, 3], 1, 1),
         3,
@@ -1181,7 +1132,7 @@ def vn(m):
         "f",
         dls_staff_padding=6,
     )
-    B2b(library.pleaves(m[3], 2), "D5", "ff", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[3], 2), "D5", "ff", dls_staff_padding=3)
     B1c(
         library.runs(m[4, 5], 1),
         3,
@@ -1191,7 +1142,7 @@ def vn(m):
         diminuendo=True,
         dls_staff_padding=6,
     )
-    B2b(
+    library.B2b(
         library.pleaves(m[6, 7], 2),
         "D#5",
         "f ff mp",
@@ -1206,7 +1157,7 @@ def vn(m):
         diminuendo=True,
         dls_staff_padding=6,
     )
-    B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
     B1c(
         library.runs(m[10], 1),
         3,
@@ -1215,7 +1166,7 @@ def vn(m):
         "mp",
         dls_staff_padding=6,
     )
-    B2b(
+    library.B2b(
         library.pleaves(m[11, 12], 2),
         "F5",
         "mp mf",

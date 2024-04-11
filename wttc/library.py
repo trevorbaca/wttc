@@ -1091,6 +1091,46 @@ def B1c(run, dynamic, grace_pitch, glissando, string_number, *, staff_padding=3)
     )
 
 
+def B2a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.laissez_vibrer(plt.tail)
+
+
+def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
+    baca.pitch(notes, pitch)
+    dynamics_list = dynamics.split()
+    conjoin = 1 < len(notes)
+    for note, dynamic in zip(notes, dynamics_list, strict=True):
+        baca.dynamic(note, dynamic)
+        if conjoin is False:
+            baca.spanners.pizzicato(
+                [note],
+                descriptor=r"\baca-pizz-markup ||",
+                rleak=True,
+                staff_padding=3,
+            )
+            if dls_staff_padding:
+                baca.override.dls_staff_padding(
+                    baca.select.rleak([note]),
+                    dls_staff_padding,
+                )
+    if conjoin is True:
+        baca.spanners.pizzicato(
+            notes,
+            baca.postevent.bound_details_right_padding(-0.5),
+            staff_padding=3,
+        )
+        if dls_staff_padding:
+            baca.override.dls_staff_padding(
+                notes,
+                dls_staff_padding,
+            )
+
+
 def B3(
     plts,
     nongrace_pitch,
@@ -1132,6 +1172,15 @@ def B3(
         *tweaks,
         rleak=rleak,
     )
+
+
+def B4a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.flageolet(plt.head)
 
 
 def B4b(pleaves, string_number, pitches, peaks):
