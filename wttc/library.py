@@ -1755,6 +1755,45 @@ def F1b(pleaves, chord, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
+def F2a1(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    for pleaf in pleaves[4::2]:
+        pitch = abjad.NamedPitch(pleaf.written_pitch.name, arrow=abjad.UP)
+        pleaf.written_pitch = pitch
+
+
+def F2b2(pleaves, glissandi):
+    parts = baca.select.clparts(pleaves, [2])
+    for part, glissando in zip(parts, glissandi, strict=True):
+        baca.glissando(part, glissando)
+        baca.spanners.scp(
+            part,
+            ". -> P",
+            staff_padding=4,
+        )
+    nongrace_notes = abjad.select.notes(pleaves, grace=False)
+    baca.alternate_bow_strokes(
+        nongrace_notes,
+        baca.postevent.padding(1),
+    )
+    baca.dynamic(
+        pleaves[0],
+        "f-sempre",
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
+    )
+    baca.spanners.text(
+        pleaves,
+        r"\wttc-alla-punta =|",
+        rleak=True,
+        staff_padding=6.5,
+    )
+
+
 def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     baca.pitch(pleaves, pitch)
     baca.override.note_head_style_harmonic(pleaves)
@@ -1783,7 +1822,36 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     )
 
 
-def F3b2(pleaves, glissando, hairpin, *, bdrp=None):
+def F3a(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches, strict=True)
+    if ">" in dynamics:
+        baca.hairpin(
+            pleaves,
+            dynamics,
+        )
+    else:
+        baca.dynamic(pleaves[0], dynamics)
+
+
+def F3b1(pleaves, fundamentals, dynamics):
+    fundamentals = fundamentals.split()
+    assert len(pleaves) == len(fundamentals)
+    for pleaf, fundamental in zip(pleaves, fundamentals):
+        pitch = abjad.NamedPitch(fundamental)
+        fourth = pitch + abjad.NamedInterval("P4")
+        string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
+        baca.pitch(pleaf, string)
+        baca.tweak.style_harmonic(pleaf.note_heads[1])
+    if ">" in dynamics:
+        baca.hairpin(
+            pleaves,
+            dynamics,
+        )
+    else:
+        baca.dynamic(pleaves[0], dynamics)
+
+
+def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, tblf=False):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
     baca.hairpin(
@@ -1793,16 +1861,18 @@ def F3b2(pleaves, glissando, hairpin, *, bdrp=None):
     tweaks = []
     if bdrp is not None:
         tweaks.append(baca.postevent.bound_details_right_padding(bdrp))
+    if tblf is True:
+        tweaks.append(baca.postevent.to_bar_line_false())
     baca.spanners.xfb(
         pleaves,
         *tweaks,
-        rleak=True,
+        rleak=rleak,
         staff_padding=3,
     )
     baca.spanners.tasto(
         pleaves,
         *tweaks,
-        rleak=True,
+        rleak=rleak,
         staff_padding=5.5,
     )
 

@@ -723,21 +723,73 @@ number.22.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Oboe.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    eqf'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+
+    eqf'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2.
 
     % [Oboe.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    e'''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+
+    e'''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2
 
     % [Oboe.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    eqs'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+
+    eqs'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
     % [Oboe.Music measure 8]
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -869,24 +921,100 @@ number.22.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.1.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r16
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    <g' b'>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2.
+
+    r8
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    ds''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    e''4
 
     % [Guitar.1.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    f''4
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    fs''!8
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
+
+    r8
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    g''8
+
+    gs''!4
 
     % [Guitar.1.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2
+
+    r8
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    a''8
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2.
 
     % [Guitar.1.Music measure 8]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    r8
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    as''!8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
 
     % [Guitar.1.Music measure 9]
     R1 * 4/4
@@ -1017,21 +1145,145 @@ number.22.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r16
 
-    % [Guitar.2.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightpink
+    <f' a'>8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightgreen
+        d''4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+    }
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.2.Music measure 6]
+        r8
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightgreen
+        ds''!4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r8
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightgreen
+        e''4
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        f''4
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r8
+
+    }
+
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightgreen
+        fs''!4
+
+    }
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
 
     % [Guitar.2.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightgreen
+        g''4
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r8
+
+    }
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r8
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightgreen
+        gs''!4
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+
+    }
 
     % [Guitar.2.Music measure 8]
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -1239,9 +1491,7 @@ number.22.Violin.Music = {
     \oneVoice
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r4
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1249,20 +1499,183 @@ number.22.Violin.Music = {
       %! SPANNER_STOP
     \stopTextSpanOne
 
+    r8.
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    <
+        e''
+        \tweak style #'harmonic
+        a''
+    >16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    <
+        f''
+        \tweak style #'harmonic
+        bf''!
+    >16
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    <
+        fs''!
+        \tweak style #'harmonic
+        b''
+    >16
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    <
+        g''
+        \tweak style #'harmonic
+        c'''
+    >16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8.
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+    af'!16
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-t-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \glissando
+
     % [Violin.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    a'4
+    :32
+
+    a'4
+    :32
+
+    a'4
+    :32
+
+    a'4
+    :32
+
+    a'4
+    :32
+
+    a'4
+    :32
 
     % [Violin.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    g'4
+    :32
+
+    g'4
+    :32
+
+    g'4
+    :32
+
+    g'4
+    :32
+
+    g'4
+    :32
+
+    g'4
+    :32
 
     % [Violin.Music measure 8]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    gf'!8.
+    :32
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
+    [
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'16
+    ]
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
 
     % [Violin.Music measure 9]
     R1 * 4/4
@@ -1400,24 +1813,237 @@ number.22.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_5
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_5
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
+    r4
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    \afterGrace
+    dqf,!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    - \tweak parent-alignment-X -1
+      %! EXPLICIT_DYNAMIC
+    - \tweak self-alignment-X -1
+      %! EXPLICIT_DYNAMIC
+    \baca-f-sempre
+    - \tweak padding 1
+    - \downbow
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-alla-punta
+      %! SPANNER_START
+    - \tweak staff-padding 6.5
+      %! SPANNER_START
+    \startTextSpan
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "."
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 4
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+    \glissando
+    {
+
+        etqf,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
+
+    \afterGrace
+    cs,!4
+    - \tweak padding 1
+    - \upbow
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "."
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 4
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+    \glissando
+    {
+
+        d,8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2.
 
     % [Cello.Music measure 6]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r2
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    \afterGrace
+    cs,!4
+    - \tweak padding 1
+    - \downbow
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "."
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 4
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+    \glissando
+    {
+
+        d,8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
+
+    \afterGrace
+    cqs,!4
+    - \tweak padding 1
+    - \upbow
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "."
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 4
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+    \glissando
+    {
+
+        dqf,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2
 
     % [Cello.Music measure 7]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    r1
+
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightskyblue
+    \afterGrace
+    cqs,!4
+    - \tweak padding 1
+    - \downbow
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "."
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 4
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+    \glissando
+    {
+
+        dqf,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
+
+    \afterGrace
+    c,4
+    - \tweak padding 1
+    - \upbow
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "."
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "P"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 4
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+    \glissando
+    {
+
+        df,!8
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
 
     % [Cello.Music measure 8]
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! SPANNER_STOP
+    \stopTextSpan
 
     % [Cello.Music measure 9]
     R1 * 4/4

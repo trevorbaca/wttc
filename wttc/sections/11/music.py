@@ -1,4 +1,3 @@
-import abjad
 import baca
 
 from wttc import library, strings
@@ -426,17 +425,6 @@ def F1c(pleaves, chord, alteration, peaks):
     )
 
 
-def F2a1(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-    for pleaf in pleaves[4::2]:
-        pitch = abjad.NamedPitch(pleaf.written_pitch.name, arrow=abjad.UP)
-        pleaf.written_pitch = pitch
-
-
 def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
@@ -486,63 +474,6 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     )
 
 
-def F2b2(pleaves, glissandi):
-    parts = baca.select.clparts(pleaves, [2])
-    for part, glissando in zip(parts, glissandi, strict=True):
-        baca.glissando(part, glissando)
-        baca.spanners.scp(
-            part,
-            ". -> P",
-            staff_padding=4,
-        )
-    nongrace_notes = abjad.select.notes(pleaves, grace=False)
-    baca.alternate_bow_strokes(
-        nongrace_notes,
-        baca.postevent.padding(1),
-    )
-    baca.dynamic(
-        pleaves[0],
-        "f-sempre",
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
-    )
-    baca.spanners.text(
-        pleaves,
-        r"\wttc-alla-punta =|",
-        rleak=True,
-        staff_padding=6.5,
-    )
-
-
-def F3a(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches, strict=True)
-    if ">" in dynamics:
-        baca.hairpin(
-            pleaves,
-            dynamics,
-        )
-    else:
-        baca.dynamic(pleaves[0], dynamics)
-
-
-def F3b1(pleaves, fundamentals, dynamics):
-    fundamentals = fundamentals.split()
-    assert len(pleaves) == len(fundamentals)
-    for pleaf, fundamental in zip(pleaves, fundamentals):
-        pitch = abjad.NamedPitch(fundamental)
-        fourth = pitch + abjad.NamedInterval("P4")
-        string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
-        baca.pitch(pleaf, string)
-        baca.tweak.style_harmonic(pleaf.note_heads[1])
-    if ">" in dynamics:
-        baca.hairpin(
-            pleaves,
-            dynamics,
-        )
-    else:
-        baca.dynamic(pleaves[0], dynamics)
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.F1a(
@@ -558,7 +489,7 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    F2a1(
+    library.F2a1(
         library.pleaves(m[10, 16], 2),
         "D6 D6 Eb6  Eb6 Eb6  Eqf6 Eqf6  E6 E6  Eqs6 Eqs6",
         "f f f f p f p f p f p",
@@ -571,35 +502,35 @@ def ob(m):
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.F1b(library.pleaves(m[4, 6], 1), "G3:B3", "mp - -")
-    F3a(library.pleaves(m[8, 9], 3), "C#4 D4 D#4 E4", "p")
+    library.F3a(library.pleaves(m[8, 9], 3), "C#4 D4 D#4 E4", "p")
     library.F1b(library.pleaves(m[10], 1), "G3:B3", "mp")
-    F3a(library.pleaves(m[11, 12], 3), "D4 D#4 E4 F4", "p")
+    library.F3a(library.pleaves(m[11, 12], 3), "D4 D#4 E4 F4", "p")
     library.F1b(library.pleaves(m[14], 1), "G3:B3", "mp")
-    F3a(library.pleaves(m[14, 17], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
+    library.F3a(library.pleaves(m[14, 17], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
     library.F1b(library.pleaves(m[20], 1), "G3:B3", "mp")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.F1b(library.pleaves(m[4, 6], 1), "F3:A3", "mp - -")
-    F3a(library.pleaves(m[8, 9], 3), "C4 C#4 D4 D#4", "p")
+    library.F3a(library.pleaves(m[8, 9], 3), "C4 C#4 D4 D#4", "p")
     library.F1b(library.pleaves(m[10], 1), "F3:A3", "mp")
-    F3a(library.pleaves(m[11, 12], 3), "C#4 D4 D#4 E4", "p")
+    library.F3a(library.pleaves(m[11, 12], 3), "C#4 D4 D#4 E4", "p")
     library.F1b(library.pleaves(m[14], 1), "F3:A3", "mp")
-    F3a(library.pleaves(m[14, 16], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
+    library.F3a(library.pleaves(m[14, 16], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
     library.F1b(library.pleaves(m[20], 1), "F3:A3", "mp")
 
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     F1c(library.pleaves(m[1, 4], 1), "D5:F#5", "G5", 'mp mf "f"')
-    F3b1(library.pleaves(m[8, 9], 3), "D#5 E5 F5", "mp")
-    F3b1(library.pleaves(m[11, 12], 3), "D#5 E5 F5 F#5", "p")
-    F3b1(library.pleaves(m[14], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
-    library.F3b2(library.pleaves(m[14, 17], 3)[4:], "Ab4 Gb4", "p>o!")
-    library.F3b2(library.pleaves(m[22, 23], 3), "Ab4 Gb4", "pp>o!")
-    library.F3b2(library.pleaves(m[25, 26], 3), "Ab4 Gb4", "pp>o!")
-    library.F3b2(library.pleaves(m[27, 28], 3), "Ab4 Gb4", "pp>o!")
+    library.F3b1(library.pleaves(m[8, 9], 3), "D#5 E5 F5", "mp")
+    library.F3b1(library.pleaves(m[11, 12], 3), "D#5 E5 F5 F#5", "p")
+    library.F3b1(library.pleaves(m[14], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
+    library.F3b2(library.pleaves(m[14, 17], 3)[4:], "Ab4 Gb4", "p>o!", rleak=True)
+    library.F3b2(library.pleaves(m[22, 23], 3), "Ab4 Gb4", "pp>o!", rleak=True)
+    library.F3b2(library.pleaves(m[25, 26], 3), "Ab4 Gb4", "pp>o!", rleak=True)
+    library.F3b2(library.pleaves(m[27, 28], 3), "Ab4 Gb4", "pp>o!", rleak=True)
 
 
 def vc(m):
@@ -610,7 +541,7 @@ def vc(m):
     F2b1(
         library.pleaves(m[9, 11], 2), "Eb2", "F2", 10 * [1], 'mp "f" mp "f" mp', [1, 3]
     )
-    F2b2(
+    library.F2b2(
         library.pleaves(m[12, 16], 2),
         [
             "D2 Eb2",

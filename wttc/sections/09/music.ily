@@ -1923,16 +1923,16 @@ number.9.Violin.Music = {
         :32
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
 
     }
 
 
     % [Violin.Music measure 3]
     r2
-      %! SPANNER_STOP
-    \bacaStopTextSpanBowSpeed
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
 
     af'!4
     :32
@@ -2015,6 +2015,10 @@ number.9.Violin.Music = {
         :32
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
 
     }
 
@@ -2026,10 +2030,6 @@ number.9.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! SPANNER_STOP
-    \bacaStopTextSpanBowSpeed
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -2098,6 +2098,10 @@ number.9.Violin.Music = {
         :32
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
         \revert DynamicLineSpanner.staff-padding
 
     }
@@ -2108,10 +2112,6 @@ number.9.Violin.Music = {
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-      %! SPANNER_STOP
-    \bacaStopTextSpanBowSpeed
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
 
     % [Violin.Music measure 8]
     r8.

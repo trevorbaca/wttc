@@ -60,7 +60,22 @@ def FL(voice, meters):
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm.mmrests(1, 4)
-    rhythm.mmrests(5, 9)
+    rhythm(
+        meters(5),
+        [-4, 4, 4, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(6),
+        [-8, 4, 4, "-"],
+        material=2,
+    )
+    rhythm(
+        meters(7),
+        ["-", 4, 4],
+        material=2,
+    )
+    rhythm.mmrests(8, 9)
 
 
 def GT1(voice, meters):
@@ -72,7 +87,23 @@ def GT1(voice, meters):
         material=1,
     )
     rhythm.mmrests(4)
-    rhythm.mmrests(5, 9)
+    rhythm(
+        meters(5),
+        [-1, c(3, 2), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(5),
+        [2, 4],
+        material=3,
+        overlap=["-"],
+    )
+    rhythm(
+        meters(6, 8),
+        [-4, 4, -2, 2, -6, 2, 4, -10, 2, -14, 2, "-"],
+        material=3,
+    )
+    rhythm.mmrests(9)
 
 
 def GT2(voice, meters):
@@ -84,7 +115,25 @@ def GT2(voice, meters):
         material=1,
     )
     rhythm.mmrests(4)
-    rhythm.mmrests(5, 9)
+    rhythm(
+        meters(5),
+        [-1, c(3, 2), "-"],
+        material=1,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(5),
+        [2, -3],
+        extra_counts=[-1],
+        material=3,
+        overlap=["-"],
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(6, 7),
+        [-1, 2, -1, 2, 2, -5, 2, -6, 2, -11, 2],
+        extra_counts=[-1],
+        material=3,
+    )
+    rhythm.mmrests(8, 9)
 
 
 def VN(voice, meters):
@@ -95,7 +144,22 @@ def VN(voice, meters):
         [-1, OBGC(12 * [1], [19])],
         material=99,
     )
-    rhythm.mmrests(5, 9)
+    rhythm(
+        meters(5),
+        [-4, -3, c(1, 2), -3, c(1, 2), -3, c(1, 2), -3, c(1, 2), -3, t(1)],
+        material=3,
+    )
+    rhythm(
+        meters(6, 7),
+        12 * [4],
+        material=3,
+    )
+    rhythm(
+        meters(8),
+        [3, 1, -4],
+        material=3,
+    )
+    rhythm.mmrests(9)
 
 
 def VC(voice, meters):
@@ -106,7 +170,14 @@ def VC(voice, meters):
         [c(21, 2), "-"],
         material=2,
     )
-    rhythm.mmrests(5, 9)
+    rhythm(
+        meters(5, 7),
+        [-4, AG([2], 4), AG([2], 4)]
+        + [-20, AG([2], 4), AG([2], 4), -24, AG([2], 4), AG([2], 4)]
+        + [-28, AG([2], 4), AG([2], 4), "-"],
+        material=2,
+    )
+    rhythm.mmrests(8, 9)
 
 
 def fl(m):
@@ -122,6 +193,11 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
+    library.F2a1(
+        library.pleaves(m[5, 7], 2),
+        "Eqf6 Eqf6  E6 E6  Eqs6 Eqs6",
+        "f p f p f p",
+    )
 
 
 def gt1(cache):
@@ -129,6 +205,8 @@ def gt1(cache):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.N1b(library.pleaves(m[2, 3], 1), "F#3", "p")
     library.N3a(library.pleaves(m[3], 3), "G#4", "(p)")
+    library.F1b(library.pleaves(m[5], 1), "G3:B3", "mp")
+    library.F3a(library.pleaves(m[5, 8], 3), "D#4 E4 F4 F#4 G4 G#4 A4 A#4", "p>pp")
 
 
 def gt2(cache):
@@ -136,6 +214,8 @@ def gt2(cache):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.N1b(library.pleaves(m[2, 3], 1), "D3", "p")
     library.N3a(library.pleaves(m[3], 3), "G4", "(p)")
+    library.F1b(library.pleaves(m[5], 1), "F3:A3", "mp")
+    library.F3a(library.pleaves(m[5, 7], 3), "D4 D#4 E4 F4 F#4 G4 G#4", "p>pp")
 
 
 def vn(m):
@@ -146,6 +226,8 @@ def vn(m):
         "sfp>o!",
         rleak=True,
     )
+    library.F3b1(library.pleaves(m[5], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
+    library.F3b2(library.pleaves(m[5, 8], 3)[4:-1], "Ab4 Gb4", "p>o!", tblf=True)
 
 
 def vc(m):
@@ -153,6 +235,18 @@ def vc(m):
     baca.clef(m[3][0], "treble")
     library.N2b2(
         library.pleaves(m[3, 4], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3
+    )
+    baca.clef(m[5][0], "bass")
+    library.F2b2(
+        library.pleaves(m[5, 7], 2),
+        [
+            "Dqf2 Etqf2",
+            "C#2 D2",
+            "C#2 D2",
+            "Cqs2 Dqf2",
+            "Cqs2 Dqf2",
+            "C2 Db2",
+        ],
     )
 
 
@@ -265,6 +359,7 @@ def make_layout():
     )
     spacing = baca.layout.Spacing(
         default=(1, 24),
+        overrides=[baca.layout.Override((8, 9), (1, 48))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
