@@ -161,16 +161,6 @@
                 value="Gt. 2",
             ),
         ],
-        "Oboe.Music": [
-            baca.Memento(
-                context="Oboe.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="p",
-            )
-        ],
         "Oboe.Staff": [
             baca.Memento(
                 context="Oboe.Music",

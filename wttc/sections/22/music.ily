@@ -644,15 +644,82 @@ number.22.AltoFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [AltoFlute.Music measure 8]
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [AltoFlute.Music measure 8]
+        \override DynamicLineSpanner.staff-padding = 7
+        \override TupletBracket.direction = #down
+        \override TupletBracket.staff-padding = 1
+        r4
+
+          %! STAFF_HIGHLIGHT
+        %@% \staffHighlight lightpink
+        c'8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-cov-markup
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanCovered
+        ~
+
+    }
+
+    c'4
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
+    \revert TupletBracket.staff-padding
 
     % [AltoFlute.Music measure 9]
-    R1 * 4/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \override DynamicLineSpanner.staff-padding = 3
+      %! STAFF_HIGHLIGHT
+    %@% \staffHighlight lightgreen
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+      %! SPANNER_START
+    \pitchedTrill
+    fs''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan gs''
+
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r2.
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -683,6 +750,7 @@ number.22.Oboe.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -780,14 +848,109 @@ number.22.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
     \f
 
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     eqs'''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
+    \revert DynamicLineSpanner.staff-padding
+
+    % [Oboe.Music measure 8]
+    \override DynamicLineSpanner.staff-padding = 7
+    \override TupletBracket.direction = #down
+    \override TupletBracket.staff-padding = 1
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r4
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        r4
+
+        \grace {
+
+              %! STAFF_HIGHLIGHT
+            %@% \staffHighlight lightgreen
+            d'16
+
+        }
+
+          %! SPANNER_START
+        \pitchedTrill
+        cs''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+          %! SPANNER_START
+        \startTrillSpan ds''
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Oboe.Music measure 9]
+        \parenthesize
+        cs''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \f
+        [
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+        \grace {
+
+            d'16
+              %! SPANNER_STOP
+            \stopTrillSpan
+
+        }
+
+          %! SPANNER_START
+        \pitchedTrill
+        cs''!8
+        ]
+          %! SPANNER_START
+        \startTrillSpan ds''
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r8
+          %! SPANNER_STOP
+        \!
+          %! SPANNER_STOP
+        \stopTrillSpan
+
+    }
+
+    r2.
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
+    \revert TupletBracket.staff-padding
 
 }
 
@@ -911,6 +1074,7 @@ number.22.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.1.Music measure 5]
+    \override DynamicLineSpanner.staff-padding = 3
     r16
 
       %! STAFF_HIGHLIGHT
@@ -1024,6 +1188,7 @@ number.22.Guitar.1.Music = {
     r8
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -1149,6 +1314,7 @@ number.22.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     % [Guitar.2.Music measure 5]
+    \override DynamicLineSpanner.staff-padding = 3
     r16
 
       %! STAFF_HIGHLIGHT
@@ -1163,6 +1329,7 @@ number.22.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 2/3
@@ -1170,6 +1337,7 @@ number.22.Guitar.2.Music = {
 
         r8
 
+        \override DynamicLineSpanner.staff-padding = 5.5
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightgreen
         d''4
@@ -1309,8 +1477,10 @@ number.22.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 9]
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
     ds''!16
@@ -1326,6 +1496,7 @@ number.22.Guitar.2.Music = {
     r8.
 
     r2.
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -1523,6 +1694,7 @@ number.22.Violin.Music = {
     % [Violin.Music measure 5]
       %! ONE_VOICE_COMMAND
     \oneVoice
+    \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r4
@@ -1734,6 +1906,7 @@ number.22.Violin.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -1876,6 +2049,7 @@ number.22.Cello.Music = {
       %! MEASURE_5
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \override DynamicLineSpanner.staff-padding = 5.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -2085,11 +2259,13 @@ number.22.Cello.Music = {
         df,!8
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
 
     % [Cello.Music measure 8]
+    \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
@@ -2288,6 +2464,7 @@ number.22.Cello.Music = {
         \bacaStopTextSpanBowSpeed
           %! SPANNER_STOP
         \bacaStopTextSpanStringNumber
+        \revert DynamicLineSpanner.staff-padding
         \revert NoteHead.style
 
     }

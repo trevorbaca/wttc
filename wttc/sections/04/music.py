@@ -766,29 +766,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def B1a(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
-    baca.pitch(pleaves, pitch)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-    if cov is True:
-        descriptor = r"\baca-cov-markup =|"
-    else:
-        descriptor = r"\baca-covered-markup =|"
-    if left_broken_none is True:
-        left_broken_text = None
-    else:
-        left_broken_text = r"\baca-parenthesized-cov-markup"
-    baca.spanners.covered(
-        pleaves,
-        descriptor=descriptor,
-        left_broken_text=left_broken_text,
-        rleak=True,
-        staff_padding=3,
-    )
-
-
 def B1b(pleaves, terminations, *, up_bow=False):
     plts = baca.select.plts(pleaves)
     terminations = terminations.split()
@@ -928,7 +905,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    B1a(library.pleaves(m[1], 1), "G3", "mp -")
+    library.B1a_foo(library.pleaves(m[1], 1), "G3", "mp -")
     library.B3(
         library.run(m[1, 2], 3, 0),
         "D5",
@@ -938,7 +915,7 @@ def fl(m):
         rleak=True,
         trill_staff_padding=3,
     )
-    B1a(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
+    library.B1a_foo(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
     library.B3(
         library.run(m[2, 3], 3, 1),
         "D5",
@@ -948,7 +925,7 @@ def fl(m):
         rleak=True,
         trill_staff_padding=5.5,
     )
-    B1a(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
+    library.B1a_foo(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
     library.B3(
         library.pleaves(m[4], 3),
         "C#5",
@@ -958,8 +935,8 @@ def fl(m):
         rleak=True,
         trill_staff_padding=3,
     )
-    B1a(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
-    B1a(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
+    library.B1a_foo(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
+    library.B1a_foo(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
     library.B3(
         library.run(m[8, 9], 3, 0),
         "C5",
@@ -968,7 +945,7 @@ def fl(m):
         "sfp>o!",
         trill_staff_padding=3,
     )
-    B1a(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
+    library.B1a_foo(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
     library.B3(
         library.run(m[12, 13], 3, 0),
         "Bb4",
@@ -977,7 +954,7 @@ def fl(m):
         "sfp>o!",
         trill_staff_padding=3,
     )
-    B1a(library.pleaves(m[14, 15], 1), "D4", "p -")
+    library.B1a_foo(library.pleaves(m[14, 15], 1), "D4", "p -")
     library.B3(
         library.pleaves(m[15, 16], 3),
         "A4",

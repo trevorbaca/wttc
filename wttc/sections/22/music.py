@@ -1,3 +1,4 @@
+import abjad
 import baca
 from abjadext import rmakers
 
@@ -55,7 +56,18 @@ def FL(voice, meters):
         [-1, OBGC(12 * [1], [19])],
         material=99,
     )
-    rhythm.mmrests(5, 9)
+    rhythm.mmrests(5, 7)
+    rhythm.make_one_beat_tuplets(
+        meters(8),
+        ["-", 4],
+        extra_counts=[-1],
+        material=1,
+    )
+    rhythm(
+        meters(9),
+        [4, "-"],
+        material=3,
+    )
 
 
 def OB(voice, meters):
@@ -76,17 +88,16 @@ def OB(voice, meters):
         ["-", 4, 4],
         material=2,
     )
-    """
     components = rhythm.make_one_beat_tuplets(
         meters(8, 9),
-        [-4, 2, 1, "-"],
+        [-5, 2, 1, "-"],
         extra_counts=[-1],
+        material=3,
     )
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
+        library.annotate(container[:1], 3)
         abjad.attach(container, plt.head)
-    library.annotate(components, 3)
-    """
 
 
 def GT1(voice, meters):
@@ -219,6 +230,16 @@ def fl(m):
         "sfp>o!",
         rleak=True,
     )
+    library.B1a_foo(library.pleaves(m[8], 1), "G3", "mf", cov=True)
+    library.B3(
+        library.pleaves(m[9], 3),
+        "C#5",
+        "D#5",
+        None,
+        "f>o!",
+        rleak=True,
+        trill_staff_padding=3,
+    )
 
 
 def ob(m):
@@ -228,6 +249,7 @@ def ob(m):
         "Eqf6 Eqf6  E6 E6  Eqs6 Eqs6",
         "f p f p f p",
     )
+    library.B3(library.pleaves(m[8, 9], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True)
 
 
 def gt1(cache):
@@ -289,16 +311,32 @@ def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 3], 3)
     baca.override.dls_staff_padding(fl[4], 4)
+    baca.override.tuplet_bracket_direction_down(fl[8])
+    baca.override.tuplet_bracket_staff_padding(fl[8], 1)
+    baca.override.dls_staff_padding(fl[8], 7)
+    baca.override.dls_staff_padding(fl[9], 3)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob[1, 7], 3)
+    baca.override.dls_staff_padding(ob[8, 9], 7)
+    baca.override.tuplet_bracket_direction_down(ob[8, 9])
+    baca.override.tuplet_bracket_staff_padding(ob[8, 9], 1)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[2], 3)
     baca.override.dls_staff_padding(gt1[3], 5.5)
+    baca.override.dls_staff_padding(gt1[5, 9], 3)
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[2], 3)
     baca.override.dls_staff_padding(gt2[3], 5.5)
+    baca.override.dls_staff_padding(gt2[5][:3], 3)
+    baca.override.dls_staff_padding(gt2[5][-2:] + gt2[6, 8], 5.5)
+    baca.override.dls_staff_padding(gt2[9], 3)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[4], 4.5)
+    baca.override.dls_staff_padding(vn[5, 9], 3)
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[3, 4], 4)
+    baca.override.dls_staff_padding(vc[5, 7], 5.5)
+    baca.override.dls_staff_padding(vc[8, 9], 4)
 
 
 @baca.build.timed("make_score")
