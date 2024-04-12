@@ -44,7 +44,13 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 11)
+    rhythm.mmrests(1, 6)
+    rhythm(
+        meters(7),
+        [32, "-"],
+        material=1,
+    )
+    rhythm.mmrests(8, 11)
 
 
 def OB(voice, meters):
@@ -54,7 +60,25 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 7)
+    rhythm(
+        meters(1, 2),
+        A([1, 1, -1, -1, -1, 1, -1], 24),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(3),
+        [R([-1, -1, 1, -1], 12), "-"],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm.mmrests(4, 6)
+    rhythm(
+        meters(7),
+        [-24, 1, -3, -4, -4],
+        do_not_rewrite_meter=True,
+        material=1,
+    )
     rhythm(
         meters(8),
         [-12, OBGCF([1, 1], [2]), -2, -8],
@@ -75,7 +99,25 @@ def GT1(voice, meters):
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 7)
+    rhythm(
+        meters(1, 2),
+        R([-1, 1, -1, -1, -1, -1, 1], 24),
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm(
+        meters(3),
+        [A([-1, 1, -1, -1], 12), "-"],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm.mmrests(4, 6)
+    rhythm(
+        meters(7),
+        [-24, 1, -3, -4, -4],
+        do_not_rewrite_meter=True,
+        material=1,
+    )
     rhythm(
         meters(8),
         [OBGCF([1, 1, 1], [2]), -2, -20],
@@ -96,7 +138,13 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 3)
+    rhythm(
+        meters(1, 2),
+        [R([1, -1, -1, -1, 1, 1], 24)],
+        do_not_beam_tuplets=True,
+        material=5,
+    )
+    rhythm.mmrests(3)
 
     @baca.call
     def block():
@@ -108,12 +156,28 @@ def VN(voice, meters):
             material=4,
         )
 
-    rhythm.mmrests(7, 11)
+    rhythm(
+        meters(7),
+        [c(32, 2), "-"],
+        material=1,
+    )
+    rhythm.mmrests(8, 11)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 8)
+    rhythm(
+        meters(1, 3),
+        [-1, AG([2], 7), c(4, 2), c(5, 2), AG([2], 7), c(4, 2), c(5, 2), AG([2], 7)],
+        material=2,
+    )
+    rhythm.mmrests(4, 6)
+    rhythm(
+        meters(7),
+        [c(32, 2), "-"],
+        material=1,
+    )
+    rhythm.mmrests(8)
     rhythm(meters(9), [-4, 1, "-"], material=3)
     rhythm.mmrests(10)
     rhythm(meters(11), [-6, 1, "-"], material=3)
@@ -121,6 +185,7 @@ def VC(voice, meters):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
+    library.still_1a(library.pleaves(m[7], 1), "G4", "mf")
 
 
 def ob(m):
@@ -130,6 +195,8 @@ def ob(m):
 def gt1(cache):
     m = cache["gt1"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    library.M5a(library.pleaves(m[1, 3], 5), "Ab2 G2 Gb2 F2", "0010", "p - - -")
+    library.still_1b(library.pleaves(m[7], 1), "F2", "p")
     library.J1b(library.pleaves(m[8], 1), "G4 A4 B4")
     library.J1b(library.pleaves(m[9], 1), "G4 A4 B4 C#5")
     #
@@ -143,6 +210,8 @@ def gt1(cache):
 def gt2(cache):
     m = cache["gt2"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    library.M5a(library.pleaves(m[1, 3], 5), "F#4 G4 G#4", "101", "p - -")
+    library.still_1b(library.pleaves(m[7], 1), "F2", "p", up_bow=True)
     library.J1b(library.pleaves(m[8], 1), "F#4 G#4 A#4 C5")
     library.J1b(library.run(m[9], 1, 0), "F#4 G#4 A#4")
     library.J1b(library.run(m[9], 1, 1), "G#4 A#4 C5 D5")
@@ -157,16 +226,29 @@ def gt2(cache):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    library.M5b(library.pleaves(m[1, 2], 5), "G#4 Gtqs4 A4", "p - -")
     library.L4(
         library.pleaves(m[4, 6], 4),
         "G3/3 Eb4/3 C4 Ab4/3 F4/2 Db5 Bb4/2 Gb5/2 Eb5 B5/2 G#5 E6/2",
         'o<"ff"',
         staff_padding=8,
     )
+    library.still_1a(library.pleaves(m[7], 1), "B3:F#4", "mf", tasto=True)
 
 
 def vc(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
+    library.N2b1(library.pleaves(m[1], 2), "C2 E4")
+    library.N2b2(library.pleaves(m[2], 2)[:3], "B3:D#4", "G#2:B#2")
+    library.N2b1(library.pleaves(m[2], 2)[3:], "C#2 F4")
+    library.N2b2(library.pleaves(m[3], 2)[:3], "C5:E5", "A2:C#3")
+    library.N2b1(library.pleaves(m[3], 2)[3:], "D2 F#4")
+    baca.hairpin(
+        baca.select.lparts(library.pleaves(m[1, 3], 2), [9, 6]),
+        "o< f>o!",
+    )
+    library.still_1a(library.pleaves(m[7], 1), "E2:C3", "mf", tasto=True)
+    baca.clef(m[9][0], "treble")
     library.J3c(library.pleaves(m[9, 11], 3), 2 * "Btqf4 ", "mf f")
 
 
