@@ -6,24 +6,24 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 4/4
+    \time 2/4
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
     %@% \tweak color #red
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "23"
-    s1 * 4/4
+    s1 * 2/4
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "150" #blue
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "75" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "150"
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "75"
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
@@ -39,7 +39,7 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "z: L"
+    - \baca-start-snm-left-only "x: N + yz: M (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -47,8 +47,8 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
-    s1 * 6/4
+    \time 4/4
+    s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -69,10 +69,6 @@ number.23.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 3]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 4/4
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -94,6 +90,96 @@ number.23.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 4]
+    s1 * 4/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+    \bacaStopTextSpanMM
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "150" #blue
+      %! EXPLICIT_METRONOME_MARK_WITH_COLOR
+    \bacaStartTextSpanMM
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-invisible-line
+      %! EXPLICIT_METRONOME_MARK
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "150"
+      %! EXPLICIT_METRONOME_MARK
+    %@% \bacaStartTextSpanMM
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[0'08'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "4"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "4"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "z: L"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
+
+    % [Skips measure 5]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
+    s1 * 6/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[0'09'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "5"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "5"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 6]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 4/4
+    s1 * 4/4
+      %! CLOCK_TIME
+    %@% \bacaStopTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! CLOCK_TIME
+    %@% - \baca-start-ct-left-only "[0'12'']"
+      %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "6"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "6"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -121,15 +207,15 @@ number.23.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'05'']"
+    %@% - \baca-start-ct-left-only "[0'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "4"
+    - \baca-start-lmn-left-only "7"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "4"
+    %@% - \baca-start-mn-left-only "7"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
@@ -137,7 +223,7 @@ number.23.Skips = {
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
-    % [Skips measure 5]
+    % [Skips measure 8]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -146,19 +232,19 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'09'']"
+    %@% - \baca-start-ct-left-only "[0'17'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "5"
+    - \baca-start-lmn-left-only "8"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "5"
+    %@% - \baca-start-mn-left-only "8"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 6]
+    % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -171,19 +257,19 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'12'']"
+    %@% - \baca-start-ct-left-only "[0'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "6"
+    - \baca-start-lmn-left-only "9"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "6"
+    %@% - \baca-start-mn-left-only "9"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
-    % [Skips measure 7]
+    % [Skips measure 10]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
@@ -196,15 +282,15 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'14'']" "[0'15'']"
+    %@% - \baca-start-ct-both "[0'22'']" "[0'23'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "7"
+    - \baca-start-lmn-left-only "10"
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "7"
+    %@% - \baca-start-mn-left-only "10"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
 
@@ -233,15 +319,6 @@ number.23.Skips = {
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! ANCHOR_SKIP
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
-      %! ANCHOR_SKIP
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "x: ABC + yz: A (end)"
-      %! ANCHOR_SKIP
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
-      %! ANCHOR_SKIP
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP
     \once \override Score.SpanBar.transparent = ##t
@@ -252,24 +329,33 @@ number.23.Skips = {
 number.23.Rests = {
 
     % [Rests measure 1]
-    R1 * 4/4
+    R1 * 2/4
 
     % [Rests measure 2]
-    R1 * 6/4
+    R1 * 4/4
 
     % [Rests measure 3]
     R1 * 4/4
 
     % [Rests measure 4]
-    R1 * 6/4
+    R1 * 4/4
 
     % [Rests measure 5]
     R1 * 6/4
 
     % [Rests measure 6]
-    R1 * 3/4
+    R1 * 4/4
 
     % [Rests measure 7]
+    R1 * 6/4
+
+    % [Rests measure 8]
+    R1 * 6/4
+
+    % [Rests measure 9]
+    R1 * 3/4
+
+    % [Rests measure 10]
     R1 * 2/4
 
 }
@@ -299,9 +385,9 @@ number.23.AltoFlute.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
-    R1 * 4/4
+    R1 * 2/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -313,9 +399,9 @@ number.23.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup %@%
 
     % [AltoFlute.Music measure 2]
-    R1 * 6/4
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 3]
     R1 * 4/4
@@ -323,9 +409,9 @@ number.23.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 4]
-    R1 * 6/4
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 5]
     R1 * 6/4
@@ -333,11 +419,26 @@ number.23.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [AltoFlute.Music measure 6]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [AltoFlute.Music measure 7]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 8]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [AltoFlute.Music measure 9]
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
-    % [AltoFlute.Music measure 7]
+    % [AltoFlute.Music measure 10]
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -382,9 +483,9 @@ number.23.Oboe.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
-    R1 * 4/4
+    R1 * 2/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Oboe”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -396,9 +497,9 @@ number.23.Oboe.Music = {
     \set Staff.shortInstrumentName = \wttc-ob-markup %@%
 
     % [Oboe.Music measure 2]
-    R1 * 6/4
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 3]
     R1 * 4/4
@@ -406,9 +507,9 @@ number.23.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 4]
-    R1 * 6/4
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Oboe.Music measure 5]
     R1 * 6/4
@@ -416,11 +517,26 @@ number.23.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 6]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Oboe.Music measure 7]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 8]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Oboe.Music measure 9]
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
-    % [Oboe.Music measure 7]
+    % [Oboe.Music measure 10]
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -487,9 +603,9 @@ number.23.Guitar.1.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
-    R1 * 4/4
+    R1 * 2/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -501,9 +617,9 @@ number.23.Guitar.1.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
     % [Guitar.1.Music measure 2]
-    R1 * 6/4
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 3]
     R1 * 4/4
@@ -511,6 +627,21 @@ number.23.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 4]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.1.Music measure 5]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Guitar.1.Music measure 6]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.1.Music measure 7]
     r2.
 
     <<
@@ -547,7 +678,7 @@ number.23.Guitar.1.Music = {
 
     r2
 
-    % [Guitar.1.Music measure 5]
+    % [Guitar.1.Music measure 8]
     r2.
 
     <<
@@ -592,7 +723,7 @@ number.23.Guitar.1.Music = {
 
     r2
 
-    % [Guitar.1.Music measure 6]
+    % [Guitar.1.Music measure 9]
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -615,7 +746,7 @@ number.23.Guitar.1.Music = {
     \times 2/3
     {
 
-        % [Guitar.1.Music measure 7]
+        % [Guitar.1.Music measure 10]
         r4
 
         fs'!8
@@ -708,9 +839,9 @@ number.23.Guitar.2.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-    R1 * 4/4
+    R1 * 2/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -722,11 +853,26 @@ number.23.Guitar.2.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
     % [Guitar.2.Music measure 2]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.2.Music measure 3]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.2.Music measure 4]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Guitar.2.Music measure 5]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Guitar.2.Music measure 3]
+    % [Guitar.2.Music measure 6]
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -736,7 +882,7 @@ number.23.Guitar.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            % [Guitar.2.Music measure 4]
+            % [Guitar.2.Music measure 7]
             \set fontSize = #-3
             \slash
             \voiceOne
@@ -776,7 +922,7 @@ number.23.Guitar.2.Music = {
 
     r4
 
-    % [Guitar.2.Music measure 5]
+    % [Guitar.2.Music measure 8]
     r4
 
     r8
@@ -851,7 +997,7 @@ number.23.Guitar.2.Music = {
 
     >>
 
-    % [Guitar.2.Music measure 6]
+    % [Guitar.2.Music measure 9]
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
@@ -880,7 +1026,7 @@ number.23.Guitar.2.Music = {
     \times 2/3
     {
 
-        % [Guitar.2.Music measure 7]
+        % [Guitar.2.Music measure 10]
         r8
 
         fs'!8
@@ -927,8 +1073,6 @@ number.23.Violin.Music = {
     \override DynamicLineSpanner.staff-padding = 7
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    \override TupletBracket.direction = #down
-    \override TupletBracket.staff-padding = 1.5
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
@@ -936,7 +1080,9 @@ number.23.Violin.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
-    r16
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -946,6 +1092,21 @@ number.23.Violin.Music = {
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup %@%
+
+    % [Violin.Music measure 2]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Violin.Music measure 3]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Violin.Music measure 4]
+    \override TupletBracket.direction = #down
+    \override TupletBracket.staff-padding = 1.5
+    r16
 
     g8.
     - \downbow
@@ -1005,7 +1166,7 @@ number.23.Violin.Music = {
     \times 4/5
     {
 
-        % [Violin.Music measure 2]
+        % [Violin.Music measure 5]
         d'8
         [
 
@@ -1082,7 +1243,7 @@ number.23.Violin.Music = {
 
     }
 
-    % [Violin.Music measure 3]
+    % [Violin.Music measure 6]
     \hide NoteHead
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
@@ -1146,25 +1307,25 @@ number.23.Violin.Music = {
     r8.
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+
+    % [Violin.Music measure 7]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
     \revert TupletBracket.direction
     \revert TupletBracket.staff-padding
 
-    % [Violin.Music measure 4]
+    % [Violin.Music measure 8]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Violin.Music measure 5]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-
-    % [Violin.Music measure 6]
+    % [Violin.Music measure 9]
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
-    % [Violin.Music measure 7]
+    % [Violin.Music measure 10]
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -1208,9 +1369,9 @@ number.23.Cello.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
-    R1 * 4/4
+    R1 * 2/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1222,9 +1383,9 @@ number.23.Cello.Music = {
     \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
     % [Cello.Music measure 2]
-    R1 * 6/4
+    R1 * 4/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 3]
     R1 * 4/4
@@ -1232,11 +1393,26 @@ number.23.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 4]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Cello.Music measure 5]
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
-    % [Cello.Music measure 5]
+    % [Cello.Music measure 6]
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+
+    % [Cello.Music measure 7]
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+
+    % [Cello.Music measure 8]
     r4
 
     \override NoteHead.style = #'harmonic
@@ -1271,12 +1447,12 @@ number.23.Cello.Music = {
 
     r1
 
-    % [Cello.Music measure 6]
+    % [Cello.Music measure 9]
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
-    % [Cello.Music measure 7]
+    % [Cello.Music measure 10]
     r4
 
     r8
