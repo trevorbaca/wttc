@@ -2631,6 +2631,23 @@ def P1b(pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak=False)
     )
 
 
+def P3(pleaves, glissando, hairpin_lparts, hairpin, *, staff_padding=None):
+    baca.glissando(
+        pleaves,
+        glissando,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+    if staff_padding is not None:
+        baca.spanners.damp(
+            pleaves,
+            rleak=True,
+            staff_padding=staff_padding,
+        )
+
+
 Q1 = """
     D4 Bb4 F#5 D6
     D6 F#5 Bb4 D4 Eb4

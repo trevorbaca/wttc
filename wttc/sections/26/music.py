@@ -856,23 +856,6 @@ def P2c(pleaves, pitch, alteration, string_number, dynamic):
     )
 
 
-def P3(pleaves, glissando, hairpin_lparts, hairpin, *, staff_padding=None):
-    baca.glissando(
-        pleaves,
-        glissando,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-    if staff_padding is not None:
-        baca.spanners.damp(
-            pleaves,
-            rleak=True,
-            staff_padding=staff_padding,
-        )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.O1a(
@@ -1010,10 +993,10 @@ def vn(m):
     )
     P2c(library.run(m[26, 27], 2, 0), "E4", "D4", 3, "mp")
     P2c(library.run(m[27, 30], 2, 1), "E4", "D4", 3, "mp")
-    P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!", staff_padding=3)
-    P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], 'o< "mf">o!')
-    P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
-    P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
+    library.P3(library.pleaves(m[32], 3), "Ab3 Ab4", [4], "p>o!", staff_padding=3)
+    library.P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], 'o< "mf">o!')
+    library.P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
+    library.P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
     baca.spanners.damp(m[33, 36], rleak=True, staff_padding=10.5)
 
 
