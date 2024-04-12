@@ -2329,6 +2329,41 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
     )
 
 
+def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
+    baca.pitch(pleaves[0], dyad)
+    baca.tweak.style_harmonic(pleaves[0].note_heads[1])
+    baca.pitch(pleaves[-1], stop_pitch)
+    baca.glissando(pleaves)
+    baca.spanners.text(
+        pleaves,
+        r"\wttc-non-stringere ||",
+        rleak=True,
+        staff_padding=3,
+    )
+    if hairpin_lparts is None:
+        parts = pleaves
+    else:
+        parts = baca.select.lparts(pleaves, hairpin_lparts)
+    baca.hairpin(
+        parts,
+        hairpin,
+    )
+
+
+def M1_2(pleaves, fundamentals, hairpin):
+    dyads = []
+    fundamentals = fundamentals.split()
+    for fundamental in fundamentals:
+        harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
+        dyad = f'{fundamental}:{harmonic.get_name(locale="us")}'
+        dyads.append(dyad)
+    baca.pitches(pleaves, dyads, strict=True)
+    for pleaf in pleaves:
+        baca.tweak.style_harmonic(pleaf.note_heads[1])
+    for phead in baca.select.pheads(pleaves):
+        baca.up_bow(phead)
+
+
 def M2(pleaves, pitches, dynamic):
     baca.pitches(pleaves, pitches, strict=True)
     if ">" in dynamic:
@@ -2578,6 +2613,22 @@ def O4a(pleaves, pitch, hairpin, *, rleak=False):
     else:
         baca.pitch(pleaves, pitch)
     baca.breathe(pleaves[-1])
+
+
+def P1b(pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak=False):
+    baca.glissando(pleaves, glissando)
+    baca.override.note_head_style_harmonic(pleaves)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        rleak=rleak,
+    )
 
 
 Q1 = """

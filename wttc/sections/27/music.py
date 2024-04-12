@@ -1,4 +1,5 @@
 import baca
+from abjadext import rmakers
 
 from wttc import library
 
@@ -89,7 +90,12 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 3)
+    rhythm.mmrests(1)
+    rhythm(
+        meters(2, 3),
+        [c(16, 2), 3, c(3, 2), c(3, 2), c(3, 2), c(2, 2), c(2, 2), "-"],
+        material=1,
+    )
     rhythm(
         meters(4),
         [c(32, 2), "-"],
@@ -99,7 +105,18 @@ def VN(voice, meters):
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests(1, 3)
+    rhythm.mmrests(1)
+    rhythm(
+        meters(2, 3),
+        [c(16, 2), 6, c(2, 2), c(2, 2), c(4, 2), "-"],
+        material=1,
+    )
+    rhythm(
+        meters(3),
+        [2, 4, 4, 4, AG([2], 4)],
+        material=1,
+        overlap=[-6],
+    )
     rhythm(
         meters(4),
         [c(32, 2), "-"],
@@ -138,11 +155,24 @@ def gt2(cache):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    library.M1_1(library.pleaves(m[2], 1)[:2], "E4:A4", "D#5", "o<f")
+    library.M1_2(library.pleaves(m[2, 3], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     library.still_1a(library.pleaves(m[4], 1), "B3:F#4", "mf", tasto=True)
 
 
 def vc(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
+    library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
+    library.M1_1(library.pleaves(m[2], 1)[:3], "D#4:G#4", "C5", "o<f")
+    library.M1_2(library.pleaves(m[2, 3], 1)[3:7], "C#4 D#4 E4", "mf<f")
+    baca.clef(m[3][3], "bass")
+    rmakers.unbeam(m[3][2:4])
+    library.P1b(
+        library.pleaves(m[3], 1)[-6:],
+        "E5 D4",
+        "C2",
+        [1, 5],
+        "o< p>o!",
+    )
     library.still_1a(library.pleaves(m[4], 1), "E2:C3", "mf", tasto=True)
 
 
@@ -157,8 +187,10 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[1, 3], 5)
     baca.override.dls_staff_padding(gt2[4], 6)
     vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[1, 3], 4)
     baca.override.dls_staff_padding(vn[4], 5)
     vc = cache["vc"]
+    baca.override.dls_staff_padding(vc[1, 3], 6)
     baca.override.dls_staff_padding(vc[4], 5)
 
 

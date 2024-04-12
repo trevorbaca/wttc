@@ -801,22 +801,6 @@ def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak=False):
     )
 
 
-def P1b(pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak=False):
-    baca.glissando(pleaves, glissando)
-    baca.override.note_head_style_harmonic(pleaves)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-        rleak=rleak,
-    )
-
-
 def P2a(pleaves, pitch, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
@@ -1049,9 +1033,9 @@ def vc(m):
         [5, 8, 15, 3],
         "o< mf> pp< p>o!",
     )
-    P1b(library.run(m[22, 23], 99, 0), "E3 C4", "C2", [3], "o<p")
-    P1b(library.run(m[23, 24], 99, 1), "F3 D4", "C2", [3], "o<mp")
-    P1b(
+    library.P1b(library.run(m[22, 23], 99, 0), "E3 C4", "C2", [3], "o<p")
+    library.P1b(library.run(m[23, 24], 99, 1), "F3 D4", "C2", [3], "o<mp")
+    library.P1b(
         library.run(m[24, 25], 99, 1),
         "G3 E4",
         "C2",
@@ -1059,7 +1043,7 @@ def vc(m):
         "o< mf>o!",
         rleak=True,
     )
-    P1b(
+    library.P1b(
         library.pleaves(m[25, 26], 1),
         "F5 E4",
         "C2",
@@ -1067,7 +1051,7 @@ def vc(m):
         "o< mp>o!",
         rleak=True,
     )
-    P1b(
+    library.P1b(
         library.pleaves(m[27, 28], 1),
         "E5 D4",
         "C2",
@@ -1075,7 +1059,7 @@ def vc(m):
         "o< p>o!",
         rleak=True,
     )
-    P1b(
+    library.P1b(
         library.pleaves(m[29, 32], 1),
         "D5 Db2",
         "C2",

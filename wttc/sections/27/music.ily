@@ -624,6 +624,7 @@ number.27.Violin.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -647,14 +648,102 @@ number.27.Violin.Music = {
     \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
     % [Violin.Music measure 2]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >1
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-non-stringere
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+    ds''!8.
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+    [
+
+    <
+        d'
+        \tweak style #'harmonic
+        g'
+    >16
+    - \upbow
+      %! SPANNER_STOP
+    \stopTextSpan
+    ]
+    ~
+
+    <
+        d'
+        \tweak style #'harmonic
+        g'
+    >8
+    [
+
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >8
+    - \upbow
+    ]
+    - \tweak stencil ##f
+    ~
 
     % [Violin.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >16
+    [
+    \repeatTie
+
+    <
+        f'
+        \tweak style #'harmonic
+        bf'!
+    >8.
+    - \upbow
+    ]
+
+    <
+        fs'!
+        \tweak style #'harmonic
+        b'
+    >8
+    - \upbow
+    [
+
+    <
+        gs'!
+        \tweak style #'harmonic
+        cs''!
+    >8
+    - \upbow
+    ]
+
+    r1
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 4]
     \override DynamicLineSpanner.staff-padding = 5
@@ -711,7 +800,7 @@ number.27.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
-    \clef "bass"
+    \clef "treble"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -719,9 +808,10 @@ number.27.Cello.Music = {
     \once \override Staff.Clef.color = #blue
       %! MEASURE_1
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -747,14 +837,160 @@ number.27.Cello.Music = {
     \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
     % [Cello.Music measure 2]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    <
+        ds'!
+        \tweak style #'harmonic
+        gs'!
+    >1
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \wttc-non-stringere
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    b'4
+
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    b'8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+    [
+
+    <
+        cs'!
+        \tweak style #'harmonic
+        fs'!
+    >8
+    - \upbow
+      %! SPANNER_STOP
+    \stopTextSpan
+    ]
 
     % [Cello.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+    <
+        ds'!
+        \tweak style #'harmonic
+        gs'!
+    >8
+    - \upbow
+    [
+
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >8
+    - \upbow
+    ]
+    - \tweak stencil ##f
+    ~
+
+    <
+        e'
+        \tweak style #'harmonic
+        a'
+    >8
+    \repeatTie
+
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+    \override NoteHead.style = #'harmonic
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
+      %! SPANNER_START
+    \pitchedTrill
+    e''8
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan c,
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    c''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+
+    b'4
+
+    g'4
+
+    \afterGrace
+    f'4
+    {
+
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        d'8
+          %! SPANNER_STOP
+        \!
+        \revert DynamicLineSpanner.staff-padding
+        \revert NoteHead.style
+
+    }
+
 
     % [Cello.Music measure 4]
     \override DynamicLineSpanner.staff-padding = 5
@@ -764,6 +1000,8 @@ number.27.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
+      %! SPANNER_STOP
+    \stopTrillSpan
       %! SPANNER_START
     - \baca-dashed-line-with-arrow
       %! SPANNER_START

@@ -612,41 +612,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
-    baca.pitch(pleaves[0], dyad)
-    baca.tweak.style_harmonic(pleaves[0].note_heads[1])
-    baca.pitch(pleaves[-1], stop_pitch)
-    baca.glissando(pleaves)
-    baca.spanners.text(
-        pleaves,
-        r"\wttc-non-stringere ||",
-        rleak=True,
-        staff_padding=3,
-    )
-    if hairpin_lparts is None:
-        parts = pleaves
-    else:
-        parts = baca.select.lparts(pleaves, hairpin_lparts)
-    baca.hairpin(
-        parts,
-        hairpin,
-    )
-
-
-def M1_2(pleaves, fundamentals, hairpin):
-    dyads = []
-    fundamentals = fundamentals.split()
-    for fundamental in fundamentals:
-        harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
-        dyad = f'{fundamental}:{harmonic.get_name(locale="us")}'
-        dyads.append(dyad)
-    baca.pitches(pleaves, dyads, strict=True)
-    for pleaf in pleaves:
-        baca.tweak.style_harmonic(pleaf.note_heads[1])
-    for phead in baca.select.pheads(pleaves):
-        baca.up_bow(phead)
-
-
 def M1_3(pleaves, glissandi, dynamics):
     plts = baca.select.plts(pleaves)
     assert len(plts) % 2 == 0
@@ -786,16 +751,16 @@ def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     M1_3(library.pleaves(m[1, 2], 1), ["D5 G#4", "Db5 G4", "Bb4 E4"], "mf mp mf")
     M1_3(library.pleaves(m[3, 4], 1), ["Db5 G4", "C5 A4", "Bb4 E4"], "- mp mf")
-    M1_2(library.pleaves(m[5, 6], 1)[:5], "D4 E4 F4", "mf<f")
+    library.M1_2(library.pleaves(m[5, 6], 1)[:5], "D4 E4 F4", "mf<f")
     M1_3(library.pleaves(m[5, 7], 1)[5:], ["C5 A4", "B4 G#4", "Bb4 G4"], "- - mp")
-    M1_1(library.pleaves(m[10], 1)[:2], "E4:A4", "D#5", "o<f")
-    M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
+    library.M1_1(library.pleaves(m[10], 1)[:2], "E4:A4", "D#5", "o<f")
+    library.M1_2(library.pleaves(m[10, 11], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[4:], ["A4 G#4", "Ab4 F4", "G4 C#4"], "mf mp p")
     library.M5b(library.pleaves(m[13, 15], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
-    M1_1(library.pleaves(m[16], 1)[:2], "F#4:B4", "G5", "o<f")
-    M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
+    library.M1_1(library.pleaves(m[16], 1)[:2], "F#4:B4", "G5", "o<f")
+    library.M1_2(library.pleaves(m[16], 1)[2:], "F4 F#4 G#4 A4", "mf<f")
     library.M5b(library.pleaves(m[20, 21], 5), "G#4 Gtqs4 A4", "p - -")
-    M1_1(library.pleaves(m[22], 1), "G4:C5", "C6", "pp<| f|>pp", [1, 2])
+    library.M1_1(library.pleaves(m[22], 1), "G4:C5", "C6", "pp<| f|>pp", [1, 2])
     library.M5b(library.pleaves(m[26, 27], 5), "G#4 Gtqs4 A4", "p - -")
     N1c(library.run(m[27, 30], 99, 0), "Gb5 Eb5", 2, "p>o!")
     N1c(library.run(m[30, 33], 99, 1), "Gb5 D5", 2, "mp>o!")
@@ -812,16 +777,16 @@ def vc(m):
     M1_3(library.run(m[4], 1, 1), ["Bb4 G4"], "mp")
     M3b(library.pleaves(m[5], 3), "F#3 A3 Bb2", 3, "mf f")
     baca.clef(m[5][-2], "treble")
-    M1_2(library.run(m[5, 6], 1, 0), "C#4 D#4 E4", "mf<f")
+    library.M1_2(library.run(m[5, 6], 1, 0), "C#4 D#4 E4", "mf<f")
     M1_3(library.pleaves(m[6], 1)[3:], ["Bb4 A4", "A4 G#4"], "mf mp")
     M3b(library.pleaves(m[7, 9], 3), "A3/2 B3/3 C#4/4 D4/4 G#4", 3, "f mf mp p")
-    M1_1(library.pleaves(m[10], 1)[:3], "D#4:G#4", "C5", "o<f")
-    M1_2(library.pleaves(m[10, 11], 1)[3:7], "C#4 D#4 E4", "mf<f")
+    library.M1_1(library.pleaves(m[10], 1)[:3], "D#4:G#4", "C5", "o<f")
+    library.M1_2(library.pleaves(m[10, 11], 1)[3:7], "C#4 D#4 E4", "mf<f")
     M1_3(library.pleaves(m[11, 12], 1)[3:], ["G4 F#4", "Gb4 Eb4", "F4 B3"], "mf mp p")
-    M1_1(library.pleaves(m[16], 1)[:2], "E4:A4", "F5", "o<f")
-    M1_2(library.pleaves(m[16], 1)[2:], "D#4 E4 F4 F#4", "mf<f")
+    library.M1_1(library.pleaves(m[16], 1)[:2], "E4:A4", "F5", "o<f")
+    library.M1_2(library.pleaves(m[16], 1)[2:], "D#4 E4 F4 F#4", "mf<f")
     M3b(library.pleaves(m[17, 19], 3), "G#4/5 D4/4 E4/3 F#4/2 G#4", 3, "f mf mp p")
-    M1_1(library.pleaves(m[22], 1), "F4:Bb4", "C6", "pp<| f|>pp", [1, 2])
+    library.M1_1(library.pleaves(m[22], 1), "F4:Bb4", "C6", "pp<| f|>pp", [1, 2])
     baca.clef(m[23][-1], "bass")
     M3b(library.pleaves(m[23, 24], 3), "E3 C#5", 3, "mf")
     baca.clef(m[25], "treble")
