@@ -471,6 +471,7 @@ number.23.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [AltoFlute.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 3
     c''\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -491,6 +492,7 @@ number.23.AltoFlute.Music = {
     r4
       %! SPANNER_STOP
     \!
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 8]
     R1 * 6/4
@@ -671,7 +673,7 @@ number.23.Guitar.1.Music = {
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
-        \override DynamicLineSpanner.staff-padding = 3
+        \override DynamicLineSpanner.staff-padding = 5
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
         \override Staff.Stem.stemlet-length = 0.75
@@ -765,6 +767,7 @@ number.23.Guitar.1.Music = {
     \revert TupletNumber.text
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 4]
     R1 * 4/4
@@ -782,6 +785,7 @@ number.23.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.1.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 6
     r1.
 
     f16
@@ -800,8 +804,10 @@ number.23.Guitar.1.Music = {
     r4
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 8]
+    \override DynamicLineSpanner.staff-padding = 3
     r2.
 
     <<
@@ -935,6 +941,7 @@ number.23.Guitar.1.Staff = <<
 
 number.23.Guitar.2.Music.item.1 = {
 
+    \override DynamicLineSpanner.staff-padding = 3
     \voiceTwo
     c'''8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -991,7 +998,7 @@ number.23.Guitar.2.Music = {
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
-        \override DynamicLineSpanner.staff-padding = 3
+        \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
         \override Staff.RehearsalMark.direction = #down
@@ -1086,6 +1093,7 @@ number.23.Guitar.2.Music = {
     \revert TupletNumber.text
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 4]
     R1 * 4/4
@@ -1103,6 +1111,7 @@ number.23.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Guitar.2.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 6
     r1.
 
     f16
@@ -1121,6 +1130,7 @@ number.23.Guitar.2.Music = {
     r4
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     <<
 
@@ -1319,7 +1329,7 @@ number.23.Violin.Music = {
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
-        \override DynamicLineSpanner.staff-padding = 7
+        \override DynamicLineSpanner.staff-padding = 3
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
         \override Staff.Stem.stemlet-length = 0.75
@@ -1382,8 +1392,10 @@ number.23.Violin.Music = {
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 4]
+    \override DynamicLineSpanner.staff-padding = 7
     \override TupletBracket.direction = #down
     \override TupletBracket.staff-padding = 1.5
     r16
@@ -1587,10 +1599,12 @@ number.23.Violin.Music = {
     r8.
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
+    \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
     \revert TupletBracket.staff-padding
 
     % [Violin.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 5
     <b fs'!>\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1627,6 +1641,7 @@ number.23.Violin.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 8]
     R1 * 6/4
@@ -1647,7 +1662,6 @@ number.23.Violin.Music = {
     R1 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
-    \revert DynamicLineSpanner.staff-padding
 
 }
 
@@ -1675,7 +1689,7 @@ number.23.Cello.Music = {
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
-    \override DynamicLineSpanner.staff-padding = 4
+    \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override Staff.RehearsalMark.direction = #down
@@ -1884,6 +1898,7 @@ number.23.Cello.Music = {
         :32
           %! SPANNER_STOP
         \!
+        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1906,6 +1921,7 @@ number.23.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 7]
+    \override DynamicLineSpanner.staff-padding = 5
     <e, c>\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1942,8 +1958,10 @@ number.23.Cello.Music = {
     \!
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 8]
+    \override DynamicLineSpanner.staff-padding = 4
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"

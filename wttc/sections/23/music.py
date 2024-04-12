@@ -253,17 +253,27 @@ def vc(m):
 
 
 def align_spanners(cache):
-    # fl = cache["fl"]
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl[7], 3)
     gt1 = cache["gt1"]
-    baca.override.dls_staff_padding(gt1[1, 11], 3)
+    baca.override.dls_staff_padding(gt1[1, 3], 5)
+    baca.override.dls_staff_padding(gt1[7], 6)
+    baca.override.dls_staff_padding(gt1[8, 11], 3)
     gt2 = cache["gt2"]
-    baca.override.dls_staff_padding(gt2[1, 11], 3)
+    baca.override.dls_staff_padding(gt2[1, 3], 4)
+    baca.override.dls_staff_padding(gt2[7], 6)
+    nongrace_leaves = abjad.select.leaves(gt2[8, 11], grace=False)
+    baca.override.dls_staff_padding(nongrace_leaves, 3)
     vn = cache["vn"]
-    baca.override.dls_staff_padding(vn[1, 11], 7)
+    baca.override.dls_staff_padding(vn[1, 3], 3)
+    baca.override.dls_staff_padding(vn[4, 6], 7)
+    baca.override.dls_staff_padding(vn[7], 5)
     baca.override.tuplet_bracket_direction_down(vn[4, 6])
     baca.override.tuplet_bracket_staff_padding(vn[4, 6], 1.5)
     vc = cache["vc"]
-    baca.override.dls_staff_padding(vc[1, 11], 4)
+    baca.override.dls_staff_padding(vc[1, 3], 6)
+    baca.override.dls_staff_padding(vc[7], 5)
+    baca.override.dls_staff_padding(vc[8, 11], 4)
 
 
 @baca.build.timed("make_score")
