@@ -6,14 +6,14 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
-    \time 2/4
+    \time 1/4
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
     %@% \tweak color #red
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "29"
-    s1 * 2/4
+    s1 * 1/4
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -44,10 +44,6 @@ number.29.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 2]
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 1/4
     s1 * 1/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -71,7 +67,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'01'']"
+    %@% - \baca-start-ct-left-only "[0'00'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -115,7 +111,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'02'']"
+    %@% - \baca-start-ct-left-only "[0'01'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -157,7 +153,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'07'']"
+    %@% - \baca-start-ct-left-only "[0'06'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -203,7 +199,7 @@ number.29.Skips = {
       %! REDUNDANT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'09'']"
+    %@% - \baca-start-ct-left-only "[0'08'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -247,7 +243,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'10'']"
+    %@% - \baca-start-ct-left-only "[0'09'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -287,7 +283,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'11'']"
+    %@% - \baca-start-ct-left-only "[0'10'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -407,7 +403,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'14'']"
+    %@% - \baca-start-ct-left-only "[0'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -493,7 +489,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'15'']"
+    %@% - \baca-start-ct-left-only "[0'14'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -518,7 +514,7 @@ number.29.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'19'']"
+    %@% - \baca-start-ct-left-only "[0'18'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -558,7 +554,7 @@ number.29.Skips = {
       %! REDUNDANT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'23'']"
+    %@% - \baca-start-ct-left-only "[0'22'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -602,7 +598,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'24'']"
+    %@% - \baca-start-ct-left-only "[0'23'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -627,7 +623,7 @@ number.29.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'26'']"
+    %@% - \baca-start-ct-left-only "[0'25'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -711,7 +707,7 @@ number.29.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'30'']" "[0'33'']"
+    %@% - \baca-start-ct-both "[0'29'']" "[0'32'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -764,7 +760,7 @@ number.29.Skips = {
 number.29.Rests = {
 
     % [Rests measure 1]
-    R1 * 2/4
+    R1 * 1/4
 
     % [Rests measure 2]
     R1 * 1/4
@@ -823,6 +819,8 @@ number.29.Rests = {
 number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -844,7 +842,7 @@ number.29.AltoFlute.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
-    R1 * 2/4
+    b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
@@ -857,15 +855,31 @@ number.29.AltoFlute.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup %@%
 
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+
     % [AltoFlute.Music measure 2]
     R1 * 1/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [AltoFlute.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    <b' b'>1.
 
     % [AltoFlute.Music measure 4]
     R1 * 6/4
@@ -959,6 +973,8 @@ number.29.AltoFlute.Staff = <<
 number.29.Oboe.Music = {
 
     % [Oboe.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -982,7 +998,7 @@ number.29.Oboe.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
-    R1 * 2/4
+    b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
@@ -994,6 +1010,22 @@ number.29.Oboe.Music = {
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup %@%
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     % [Oboe.Music measure 2]
     R1 * 1/4
@@ -1094,6 +1126,8 @@ number.29.Oboe.Staff = <<
 number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1115,9 +1149,7 @@ number.29.Guitar.1.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    b'16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1128,15 +1160,17 @@ number.29.Guitar.1.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
+    r8.
+
     % [Guitar.1.Music measure 2]
     R1 * 1/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Guitar.1.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'1.
 
     % [Guitar.1.Music measure 4]
     R1 * 6/4
@@ -1227,6 +1261,8 @@ number.29.Guitar.1.Staff = <<
 number.29.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1250,9 +1286,7 @@ number.29.Guitar.2.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-    R1 * 2/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+    b'16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1263,15 +1297,17 @@ number.29.Guitar.2.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
+    r8.
+
     % [Guitar.2.Music measure 2]
     R1 * 1/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Guitar.2.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    b'1.
 
     % [Guitar.2.Music measure 4]
     R1 * 6/4
@@ -1362,6 +1398,8 @@ number.29.Guitar.2.Staff = <<
 number.29.Violin.Music = {
 
     % [Violin.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1383,7 +1421,7 @@ number.29.Violin.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
-    R1 * 2/4
+    b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
@@ -1395,6 +1433,22 @@ number.29.Violin.Music = {
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup %@%
+
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    b'4 * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     % [Violin.Music measure 2]
     R1 * 1/4
@@ -1495,6 +1549,8 @@ number.29.Violin.Staff = <<
 number.29.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "bass"
       %! MEASURE_1
@@ -1518,7 +1574,7 @@ number.29.Cello.Music = {
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
-    R1 * 2/4
+    d4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
@@ -1531,15 +1587,40 @@ number.29.Cello.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
-    % [Cello.Music measure 2]
-    R1 * 1/4
+      %! INVISIBLE_MUSIC_COMMAND
+    %@% \abjad-invisible-music
+      %! INVISIBLE_MUSIC_COLORING
+    \abjad-invisible-music-coloring
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+      %! FRAMED_LEAF
+    \once \override Accidental.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override NoteHead.stencil = ##f
+      %! FRAMED_LEAF
+    \once \override Stem.thickness = 6
+    d4 * 1/2
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+
+    % [Cello.Music measure 2]
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d4
+    - \tweak stencil ##f
+    ~
 
     % [Cello.Music measure 3]
-    R1 * 6/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+      %! NOT_YET_PITCHED_COLORING
+    %@% \baca-not-yet-pitched-coloring
+    d16
+    \repeatTie
+
+    r8.
+
+    r1
+
+    r4
 
     % [Cello.Music measure 4]
     R1 * 6/4

@@ -91,32 +91,58 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(meters(1), frame(4, 2), material=99)
+    rhythm.mmrests(2)
+    rhythm(
+        meters(3),
+        [c(24, 2)],
+        material=99,
+    )
+    rhythm.mmrests(4, 18)
 
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(meters(1), frame(4, 2), material=99)
+    rhythm.mmrests(2, 18)
 
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(meters(1), [1, "-"], material=99)
+    rhythm.mmrests(2)
+    rhythm(
+        meters(3),
+        "+",
+        material=99,
+    )
+    rhythm.mmrests(4, 18)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(meters(1), [1, "-"], material=99)
+    rhythm.mmrests(2)
+    rhythm(
+        meters(3),
+        "+",
+        material=99,
+    )
+    rhythm.mmrests(4, 18)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(meters(1), frame(4, 2), material=99)
+    rhythm.mmrests(2, 18)
 
 
 def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(meters(1), frame(4, 2), material=99)
+    rhythm(meters(2), "+", material=99)
+    rhythm(meters(3), [rt(1), "-"], material=99)
+    rhythm.mmrests(4, 18)
 
 
 def fl(m):
@@ -158,7 +184,7 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [2, 1, 6] + [6] + [2, 1]
+    numerators = [1, 1, 6] + [6] + [2, 1]
     numerators += [1, 1, 1, 1]
     numerators += [1] + [4, 4]
     numerators += [1, 6, 6] + [1]
