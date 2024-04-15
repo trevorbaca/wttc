@@ -1,0 +1,12 @@
+line_298 = r'''\markup "That's the reason ..."'''
+line_299 = r"""\markup '"Make yourself at home."' """
+line_300 = r'''\markup "Call this home?"'''
+line_301 = r"""\markup Window."""
+line_302 = r"""\markup Table."""
+line_303 = r"""\markup Flowers."""
+line_304 = r'''\markup "In a glass."'''
+line_305 = r"""\markup Violets."""
+line_306 = r'''\markup "Never mind."'''
+line_307 = r'''\markup "Never mind."'''
+line_308 = r'''\markup "(loud) Never mind!"'''
+line_309 = r'''\markup "Its all over."'''
