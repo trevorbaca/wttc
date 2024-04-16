@@ -1507,7 +1507,7 @@ def D1b(
     scp_string,
     scp_pieces,
     *,
-    do_not_bookend=None,
+    do_not_bookend=False,
     rleak=False,
     tbl=False,
 ):
