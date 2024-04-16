@@ -29,22 +29,18 @@ frame = library.frame
 
 def GLOBALS(skips):
     stage_markup = (
-        ("P", 1),
-        ("O", 2),
-        ("N", 3),
-        ("M", 4),
-        ("L", 5),
-        ("K", 6),
-        ("J", 7),
-        ("I", 8),
-        ("H", 9),
-        ("G", 10),
-        ("F", 11),
-        ("E", 12),
-        ("D", 14),
-        ("C", 15),
-        ("B", 17),
-        ("A", 18),
+        ("PO(@46)", 1),
+        ("N+(298); @47", 3),
+        ("M; (299); @48", 4),
+        ("(300); LK(@49)", 5),
+        ("J+(301); @50", 7),
+        ("I+(302); @51", 8),
+        ("HG+(303); @52", 9),
+        ("(304); @53; F", 11),
+        ("E+(305); @54; (306); @55", 12),
+        ("DC; (307); @56; (308)", 13),
+        ("B; @57", 15),
+        ("(309); A; @58", 16),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
@@ -59,10 +55,10 @@ def GLOBALS(skips):
     baca.metronome_mark(skips[10 - 1], "100", manifests=library.manifests)
     baca.metronome_mark(skips[11 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[12 - 1], "60", manifests=library.manifests)
-    baca.metronome_mark(skips[14 - 1], "60", manifests=library.manifests)
-    baca.metronome_mark(skips[15 - 1], "150", manifests=library.manifests)
-    baca.metronome_mark(skips[17 - 1], "50", manifests=library.manifests)
-    baca.metronome_mark(skips[18 - 1], "75", manifests=library.manifests)
+    baca.metronome_mark(skips[13 - 1], "60", manifests=library.manifests)
+    baca.metronome_mark(skips[14 - 1], "150", manifests=library.manifests)
+    baca.metronome_mark(skips[15 - 1], "50", manifests=library.manifests)
+    baca.metronome_mark(skips[16 - 1], "75", manifests=library.manifests)
     baca.mark(
         skips[3 - 1],
         strings.fermata,
@@ -76,13 +72,37 @@ def GLOBALS(skips):
         site="after",
     )
     baca.mark(
-        skips[11 - 1],
+        skips[7 - 1],
         strings.fermata,
         padding=1.5,
         site="after",
     )
     baca.mark(
-        skips[18 - 1],
+        skips[8 - 1],
+        strings.fermata,
+        padding=1.5,
+        site="after",
+    )
+    baca.mark(
+        skips[10 - 1],
+        strings.fermata,
+        padding=1.5,
+        site="after",
+    )
+    baca.mark(
+        skips[12 - 1],
+        strings.fermata,
+        padding=1.5,
+        site="after",
+    )
+    baca.mark(
+        skips[15 - 1],
+        strings.fermata,
+        padding=1.5,
+        site="after",
+    )
+    baca.mark(
+        skips[16 - 1],
         strings.fermata,
         padding=1.5,
         site="after",
@@ -98,13 +118,29 @@ def FL(voice, meters):
         [c(24, 2)],
         material=99,
     )
-    rhythm.mmrests(4, 18)
+    rhythm(
+        meters(4),
+        frame(4, 2),
+        material=99,
+    )
+    rhythm.mmrests(5)
+    rhythm(meters(6), frame(4, 2), material=99)
+    rhythm(meters(7), [4], material=99)
+    rhythm.mmrests(8, 16)
 
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(meters(1), frame(4, 2), material=99)
-    rhythm.mmrests(2, 18)
+    rhythm.mmrests(2, 4)
+    rhythm(
+        meters(5),
+        frame(4, 2),
+        material=99,
+    )
+    rhythm.mmrests(6)
+    rhythm(meters(7), [4], material=99)
+    rhythm.mmrests(8, 16)
 
 
 def GT1(voice, meters):
@@ -116,7 +152,15 @@ def GT1(voice, meters):
         "+",
         material=99,
     )
-    rhythm.mmrests(4, 18)
+    rhythm.mmrests(4, 5)
+    rhythm.make_one_beat_tuplets(
+        meters(6),
+        ["-", 1],
+        extra_counts=[-1],
+        material=99,
+    )
+    rhythm(meters(7), [c(4, 2)], material=99)
+    rhythm.mmrests(8, 16)
 
 
 def GT2(voice, meters):
@@ -128,13 +172,26 @@ def GT2(voice, meters):
         "+",
         material=99,
     )
-    rhythm.mmrests(4, 18)
+    rhythm.mmrests(4, 6)
+    rhythm(meters(7), [c(4, 2)], material=99)
+    rhythm.mmrests(8, 16)
 
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(meters(1), frame(4, 2), material=99)
-    rhythm.mmrests(2, 18)
+    rhythm.mmrests(2, 4)
+    rhythm(
+        meters(5),
+        frame(4, 2),
+        material=99,
+    )
+    rhythm(
+        meters(6),
+        frame(4, 2),
+        material=99,
+    )
+    rhythm.mmrests(7, 16)
 
 
 def VC(voice, meters):
@@ -142,7 +199,17 @@ def VC(voice, meters):
     rhythm(meters(1), frame(4, 2), material=99)
     rhythm(meters(2), "+", material=99)
     rhythm(meters(3), [rt(1), "-"], material=99)
-    rhythm.mmrests(4, 18)
+    rhythm(
+        meters(4),
+        "+",
+        material=99,
+    )
+    rhythm(
+        meters(5, 6),
+        [t(4), 4],
+        material=99,
+    )
+    rhythm.mmrests(7, 16)
 
 
 def fl(m):
@@ -184,10 +251,10 @@ def align_spanners(cache):
 def make_score(first_measure_number, previous_persistent_indicators):
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    numerators = [1, 1, 6] + [6] + [2, 1]
+    numerators = [1, 1, 6] + [1] + [1, 1]
     numerators += [1, 1, 1, 1]
-    numerators += [1] + [4, 4]
-    numerators += [1, 6, 6] + [1]
+    numerators += [1] + [4]
+    numerators += [1, 6] + [1]
     numerators += [4]
     pairs = [(_, 4) for _ in numerators]
     meters = baca.section.wrap(pairs)
@@ -265,8 +332,10 @@ def make_layout():
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 48),
-        # overrides=[baca.layout.Override((4, 5), (1, 48))],
+        default=(1, 64),
+        overrides=[
+            baca.layout.Override([3, 12, 14, 16], (1, 32)),
+        ],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
