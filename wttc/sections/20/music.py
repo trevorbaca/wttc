@@ -349,7 +349,6 @@ def persist_score(score, environment):
     baca.section.deactivate_tags(
         score,
         baca.tags.STAFF_HIGHLIGHT,
-        baca.tags.NOT_YET_PITCHED_COLORING,
     )
     lilypond_file = baca.lilypond.file(
         score,

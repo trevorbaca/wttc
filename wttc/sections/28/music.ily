@@ -981,7 +981,7 @@ number.28.Cello.Music = {
     \glissando
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     \hide NoteHead
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
@@ -989,7 +989,7 @@ number.28.Cello.Music = {
     b'4
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers

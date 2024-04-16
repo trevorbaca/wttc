@@ -752,7 +752,7 @@ number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -792,7 +792,7 @@ number.29.AltoFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -810,12 +810,12 @@ number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 3]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     <b' b'>1.
 
     % [AltoFlute.Music measure 4]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -825,7 +825,7 @@ number.29.AltoFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -843,7 +843,7 @@ number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -853,7 +853,7 @@ number.29.AltoFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -866,7 +866,7 @@ number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [AltoFlute.Music measure 8]
@@ -876,7 +876,7 @@ number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -886,7 +886,7 @@ number.29.AltoFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -909,159 +909,159 @@ number.29.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 12]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     ]
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     [
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'32
     ]
 
     % [AltoFlute.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [AltoFlute.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'1.
 
     % [AltoFlute.Music measure 15]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [AltoFlute.Music measure 16]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'1 * 8/16
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
@@ -1071,7 +1071,7 @@ number.29.AltoFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1128,7 +1128,7 @@ number.29.Oboe.Music = {
 
     % [Oboe.Music measure 1]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1170,7 +1170,7 @@ number.29.Oboe.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1198,7 +1198,7 @@ number.29.Oboe.Music = {
 
     % [Oboe.Music measure 5]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -1208,7 +1208,7 @@ number.29.Oboe.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1226,12 +1226,12 @@ number.29.Oboe.Music = {
 
     % [Oboe.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [Oboe.Music measure 8]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [Oboe.Music measure 9]
@@ -1246,7 +1246,7 @@ number.29.Oboe.Music = {
 
     % [Oboe.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [Oboe.Music measure 12]
@@ -1288,7 +1288,7 @@ number.29.Oboe.Staff = <<
 number.29.Guitar.1.Music.item.1 = {
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     \voiceTwo
     b'4
 
@@ -1299,7 +1299,7 @@ number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1341,7 +1341,7 @@ number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 3]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'1.
 
     % [Guitar.1.Music measure 4]
@@ -1360,7 +1360,7 @@ number.29.Guitar.1.Music = {
 
         % [Guitar.1.Music measure 6]
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'8
 
         r4
@@ -1369,7 +1369,7 @@ number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     <b' b'>4
 
     <<
@@ -1379,7 +1379,7 @@ number.29.Guitar.1.Music = {
 
             % [Guitar.1.Music measure 8]
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
             \voiceOne
@@ -1394,19 +1394,19 @@ number.29.Guitar.1.Music = {
             (
 
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
@@ -1422,7 +1422,7 @@ number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! ONE_VOICE_COMMAND
     \oneVoice
     b'16
@@ -1435,7 +1435,7 @@ number.29.Guitar.1.Music = {
 
         % [Guitar.1.Music measure 10]
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'8
 
         r4
@@ -1459,7 +1459,7 @@ number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'16
 
     r8.
@@ -1470,7 +1470,7 @@ number.29.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 15]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     <b' b'>4
 
     % [Guitar.1.Music measure 16]
@@ -1492,7 +1492,7 @@ number.29.Guitar.1.Staff = <<
 number.29.Guitar.2.Music.item.1 = {
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     \voiceTwo
     b'4
 
@@ -1503,7 +1503,7 @@ number.29.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 1]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1547,7 +1547,7 @@ number.29.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 3]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'1.
 
     % [Guitar.2.Music measure 4]
@@ -1567,7 +1567,7 @@ number.29.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     <b' b'>4
 
     <<
@@ -1577,7 +1577,7 @@ number.29.Guitar.2.Music = {
 
             % [Guitar.2.Music measure 8]
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
             \voiceOne
@@ -1592,13 +1592,13 @@ number.29.Guitar.2.Music = {
             (
 
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
               %! NOT_YET_PITCHED_COLORING
-            %@% \baca-not-yet-pitched-coloring
+            \baca-not-yet-pitched-coloring
             b'16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
@@ -1618,7 +1618,7 @@ number.29.Guitar.2.Music = {
 
         % [Guitar.2.Music measure 9]
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
           %! ONE_VOICE_COMMAND
         \oneVoice
         b'8
@@ -1633,7 +1633,7 @@ number.29.Guitar.2.Music = {
 
         % [Guitar.2.Music measure 10]
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'8
 
         r4
@@ -1662,7 +1662,7 @@ number.29.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 15]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     <b' b'>4
 
     % [Guitar.2.Music measure 16]
@@ -1685,7 +1685,7 @@ number.29.Violin.Music = {
 
     % [Violin.Music measure 1]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1725,7 +1725,7 @@ number.29.Violin.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1753,7 +1753,7 @@ number.29.Violin.Music = {
 
     % [Violin.Music measure 5]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -1763,7 +1763,7 @@ number.29.Violin.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1776,7 +1776,7 @@ number.29.Violin.Music = {
 
     % [Violin.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -1786,7 +1786,7 @@ number.29.Violin.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1809,7 +1809,7 @@ number.29.Violin.Music = {
 
     % [Violin.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -1819,7 +1819,7 @@ number.29.Violin.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -1844,13 +1844,13 @@ number.29.Violin.Music = {
     r4
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     \afterGrace
     b'2.
     {
 
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'8
 
     }
@@ -1858,12 +1858,12 @@ number.29.Violin.Music = {
 
     % [Violin.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'4
 
     % [Violin.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     b'1.
 
     % [Violin.Music measure 15]
@@ -1875,23 +1875,11 @@ number.29.Violin.Music = {
 
         % [Violin.Music measure 16]
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'16
 
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
-
-    }
-
-    \repeat tremolo 2 {
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
-        b'16
-
-          %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'16
 
     }
@@ -1899,11 +1887,11 @@ number.29.Violin.Music = {
     \repeat tremolo 2 {
 
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'16
 
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'16
 
     }
@@ -1911,11 +1899,23 @@ number.29.Violin.Music = {
     \repeat tremolo 2 {
 
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         b'16
 
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
+        b'16
+
+    }
+
+    \repeat tremolo 2 {
+
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
+        b'16
+
+          %! NOT_YET_PITCHED_COLORING
+        \baca-not-yet-pitched-coloring
         b'16
 
     }
@@ -1963,7 +1963,7 @@ number.29.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! EXPLICIT_CLEF
     \clef "bass"
       %! MEASURE_1
@@ -2005,7 +2005,7 @@ number.29.Cello.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2018,14 +2018,14 @@ number.29.Cello.Music = {
 
     % [Cello.Music measure 2]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 3]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d16
     \repeatTie
 
@@ -2037,19 +2037,19 @@ number.29.Cello.Music = {
 
     % [Cello.Music measure 4]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
 
     % [Cello.Music measure 5]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
     - \tweak stencil ##f
     ~
 
     % [Cello.Music measure 6]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
     \repeatTie
 
@@ -2060,12 +2060,12 @@ number.29.Cello.Music = {
 
     % [Cello.Music measure 8]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
 
     % [Cello.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2074,7 +2074,7 @@ number.29.Cello.Music = {
 
         % [Cello.Music measure 10]
           %! NOT_YET_PITCHED_COLORING
-        %@% \baca-not-yet-pitched-coloring
+        \baca-not-yet-pitched-coloring
         d8
 
         r4
@@ -2083,7 +2083,7 @@ number.29.Cello.Music = {
 
     % [Cello.Music measure 11]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -2093,7 +2093,7 @@ number.29.Cello.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2108,7 +2108,7 @@ number.29.Cello.Music = {
     r4
 
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     <d d>16
 
     r8.
@@ -2117,12 +2117,12 @@ number.29.Cello.Music = {
 
     % [Cello.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d4
 
     % [Cello.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
-    %@% \baca-not-yet-pitched-coloring
+    \baca-not-yet-pitched-coloring
     d1.
 
     % [Cello.Music measure 15]
