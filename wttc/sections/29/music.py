@@ -126,7 +126,24 @@ def FL(voice, meters):
     rhythm.mmrests(5)
     rhythm(meters(6), frame(4, 2), material=99)
     rhythm(meters(7), [4], material=99)
-    rhythm.mmrests(8, 16)
+    rhythm.mmrests(8)
+    rhythm(meters(9), frame(4, 2), material=99)
+    rhythm.mmrests(10, 11)
+    rhythm(
+        meters(12),
+        32 * [1],
+        denominator=32,
+        material=99,
+    )
+    rhythm(
+        meters(13),
+        [4],
+        material=99,
+    )
+    rhythm(meters(14), [24], material=99)
+    rhythm(meters(15), [4], material=99)
+    rhythm(meters(16), frame(16, 8), material=99)
+    baca.section.append_anchor_note(voice)
 
 
 def OB(voice, meters):
@@ -140,7 +157,10 @@ def OB(voice, meters):
     )
     rhythm.mmrests(6)
     rhythm(meters(7), [4], material=99)
-    rhythm.mmrests(8, 16)
+    rhythm(meters(8), [4], material=99)
+    rhythm.mmrests(9, 10)
+    rhythm(meters(11), [4], material=99)
+    rhythm.mmrests(12, 16)
 
 
 def GT1(voice, meters):
@@ -160,7 +180,22 @@ def GT1(voice, meters):
         material=99,
     )
     rhythm(meters(7), [c(4, 2)], material=99)
-    rhythm.mmrests(8, 16)
+    rhythm(
+        meters(8),
+        OBGC([1, 1, 1, 1], [4]),
+        material=99,
+    )
+    rhythm(meters(9), [1, "-"], material=99)
+    rhythm.make_one_beat_tuplets(
+        meters(10),
+        [1, "-"],
+        extra_counts=[-1],
+        material=99,
+    )
+    rhythm.mmrests(11, 13)
+    rhythm(meters(14), [1, "-"], material=99)
+    rhythm(meters(15), [c(4, 2)], material=99)
+    rhythm.mmrests(16)
 
 
 def GT2(voice, meters):
@@ -174,7 +209,26 @@ def GT2(voice, meters):
     )
     rhythm.mmrests(4, 6)
     rhythm(meters(7), [c(4, 2)], material=99)
-    rhythm.mmrests(8, 16)
+    rhythm(
+        meters(8),
+        OBGC([1, 1, 1], [4]),
+        material=99,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(9),
+        [1, "-"],
+        extra_counts=[-1],
+        material=99,
+    )
+    rhythm.make_one_beat_tuplets(
+        meters(10),
+        [1, "-"],
+        extra_counts=[-1],
+        material=99,
+    )
+    rhythm.mmrests(11, 14)
+    rhythm(meters(15), [c(4, 2)], material=99)
+    rhythm.mmrests(16)
 
 
 def VN(voice, meters):
@@ -191,7 +245,15 @@ def VN(voice, meters):
         frame(4, 2),
         material=99,
     )
-    rhythm.mmrests(7, 16)
+    rhythm.mmrests(7, 8)
+    rhythm(meters(9), frame(4, 2), material=99)
+    rhythm.mmrests(10, 11)
+    rhythm(meters(12), [-4, AG([2], 12)], material=99)
+    rhythm(meters(13), [4], material=99)
+    rhythm(meters(14), [24], material=99)
+    rhythm.mmrests(15)
+    rhythm(meters(16), 4 * [TC(2, [1, 1])], material=99)
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
@@ -209,7 +271,20 @@ def VC(voice, meters):
         [t(4), 4],
         material=99,
     )
-    rhythm.mmrests(7, 16)
+    rhythm.mmrests(7)
+    rhythm(meters(8), [4], material=99)
+    rhythm(meters(9), [4], material=99)
+    rhythm.make_one_beat_tuplets(
+        meters(10),
+        [1, "-"],
+        extra_counts=[-1],
+        material=99,
+    )
+    rhythm(meters(11), frame(4, 2), material=99)
+    rhythm(meters(12), [-4, c(1, 2), "-"], material=99)
+    rhythm(meters(13), [4], material=99)
+    rhythm(meters(14), [24], material=99)
+    rhythm.mmrests(15, 16)
 
 
 def fl(m):
