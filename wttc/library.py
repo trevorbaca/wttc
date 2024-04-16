@@ -410,12 +410,13 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     start_offset = abjad.Offset(0)
     for i, component in enumerate(unwrapped_components[:]):
         stop_offset = start_offset + abjad.get.duration(component)
-        timespan = abjad.Timespan(start_offset, stop_offset)
-        if timespan in measure_timespans:
-            mmrests = baca.make_mmrests([timespan.duration])
-            assert len(mmrests) == 1
-            mmrest = mmrests[0]
-            unwrapped_components[i] = mmrest
+        if isinstance(component, abjad.Rest):
+            timespan = abjad.Timespan(start_offset, stop_offset)
+            if timespan in measure_timespans:
+                mmrests = baca.make_mmrests([timespan.duration])
+                assert len(mmrests) == 1
+                mmrest = mmrests[0]
+                unwrapped_components[i] = mmrest
         start_offset = stop_offset
     return unwrapped_components
 

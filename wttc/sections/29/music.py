@@ -155,7 +155,7 @@ def GT1(voice, meters):
     rhythm.mmrests(4, 5)
     rhythm.make_one_beat_tuplets(
         meters(6),
-        ["-", 1],
+        [1, "-"],
         extra_counts=[-1],
         material=99,
     )

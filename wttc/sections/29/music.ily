@@ -1148,10 +1148,18 @@ number.29.Guitar.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
-    % [Guitar.1.Music measure 6]
-    R1 * 1/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Guitar.1.Music measure 6]
+          %! NOT_YET_PITCHED_COLORING
+        %@% \baca-not-yet-pitched-coloring
+        b'8
+
+        r4
+
+    }
 
     % [Guitar.1.Music measure 7]
       %! NOT_YET_PITCHED_COLORING
