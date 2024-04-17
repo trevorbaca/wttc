@@ -2376,6 +2376,41 @@ def M2(pleaves, pitches, dynamic):
         baca.dynamic(pleaves[0], dynamic)
 
 
+def M3b(pleaves, pitches, string_number, dynamics, *, staff_padding=5.5):
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+    baca.glissando(pleaves, pitches)
+    baca.override.note_head_style_harmonic(pleaves)
+    if len(pleaves) == 1:
+        pizz_descriptor = r"\baca-pizz-markup ||"
+    else:
+        pizz_descriptor = r"\baca-pizz-markup =|"
+    baca.spanners.pizzicato(
+        pleaves,
+        descriptor=pizz_descriptor,
+        rleak=True,
+        staff_padding=staff_padding,
+    )
+    baca.spanners.string_number(
+        pleaves,
+        string_number,
+        invisible_line=len(pleaves) == 1,
+        rleak=True,
+        staff_padding=staff_padding + 2.5,
+    )
+
+
+def M4(pleaves, pitch, hairpin):
+    baca.pitch(pleaves, pitch)
+    baca.stem_tremolo(pleaves)
+    baca.hairpin(
+        pleaves,
+        hairpin,
+    )
+
+
 def M5a(pleaves, pitches, falls, dynamics=None):
     baca.pitches(pleaves, pitches, strict=True)
     plts = baca.select.plts(pleaves)

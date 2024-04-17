@@ -5089,7 +5089,7 @@ number.24.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanStringNumber
     \glissando
@@ -5194,7 +5194,7 @@ number.24.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
-        - \tweak staff-padding 8
+        - \tweak staff-padding 8.0
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
         \glissando
@@ -5289,7 +5289,7 @@ number.24.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanStringNumber
     \glissando
@@ -5501,7 +5501,7 @@ number.24.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanStringNumber
     \glissando
@@ -5940,7 +5940,7 @@ number.24.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanStringNumber
     \glissando
@@ -6157,7 +6157,7 @@ number.24.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 8.0
       %! SPANNER_START
     \bacaStartTextSpanStringNumber
     \glissando

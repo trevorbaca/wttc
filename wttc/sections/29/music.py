@@ -120,7 +120,7 @@ def FL(voice, meters):
     )
     rhythm(
         meters(4),
-        frame(4, 2),
+        AG([h(2)], 4),
         material=99,
     )
     rhythm.mmrests(5)
@@ -301,6 +301,24 @@ def fl(m):
         baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
+    baca.pitch(
+        m[3],
+        library.make_flute_covered_dyads("Db3"),
+        allow_out_of_range=True,
+    )
+    baca.tweak.style_harmonic(m[3][0].note_heads[0])
+    baca.spanners.covered(
+        m[3],
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        m[3],
+        "mp>o!",
+        baca.postevent.to_bar_line_true(),
+        rleak=True,
+    )
+    library.M4(library.pleaves(m[4], 99), "D#6 B3", "f|>p")
 
 
 def ob(m):
@@ -309,7 +327,6 @@ def ob(m):
     baca.spanners.trill(
         m[1],
         alteration="D6",
-        # padding=1.25,
         rleak=True,
     )
     baca.hairpin(
@@ -325,6 +342,7 @@ def gt1(m):
     baca.pitch(m[1], "D#5")
     baca.flageolet(m[1][0])
     baca.dynamic(m[1][0], "mp")
+    library.N1b(library.pleaves(m[3], 99), "Ab3", "(mp)")
 
 
 def gt2(m):
@@ -332,6 +350,7 @@ def gt2(m):
     baca.pitch(m[1], "C#5")
     baca.flageolet(m[1][0])
     baca.dynamic(m[1][0], "mp")
+    library.N1b(library.pleaves(m[3], 99), "Bb2", "(mp)")
 
 
 def vn(m):
@@ -379,11 +398,24 @@ def vc(m):
         baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
+    baca.pitch(m[2, 3], "Db2")
+    baca.spanners.scp(
+        library.pleaves(m[2, 3], 99),
+        "T => P",
+        baca.postevent.to_bar_line_false(index=0),
+        staff_padding=4,
+    )
+    baca.hairpin(
+        library.pleaves(m[2, 3], 99),
+        "pp<|ff",
+    )
+    library.M3b(library.pleaves(m[4], 99), "E3", 3, "mf", staff_padding=3)
 
 
 def align_spanners(cache):
     fl = cache["fl"]
-    baca.override.dls_staff_padding(fl.leaves(), 3)
+    baca.override.dls_staff_padding(fl[1, 2], 3)
+    baca.override.dls_staff_padding(fl[3], 6)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
