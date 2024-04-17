@@ -726,7 +726,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -749,7 +749,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -777,7 +777,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -800,7 +800,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -831,7 +831,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -854,7 +854,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -877,7 +877,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -900,7 +900,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -931,7 +931,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -959,7 +959,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -987,7 +987,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1015,7 +1015,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1053,7 +1053,7 @@ number.17.Oboe.Music = {
     [
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2033,7 +2033,7 @@ number.17.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c''
 
@@ -2094,7 +2094,7 @@ number.17.Violin.Music = {
     \>
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c''
 
@@ -2163,7 +2163,7 @@ number.17.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c''
 
@@ -2291,7 +2291,7 @@ number.17.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan ds
     {
@@ -2349,7 +2349,7 @@ number.17.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan ds
 
@@ -2421,7 +2421,7 @@ number.17.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan ds
 

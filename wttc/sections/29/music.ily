@@ -1825,7 +1825,7 @@ number.29.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 2
+    - \tweak TrillSpanner.staff-padding 2
       %! SPANNER_START
     \startTrillSpan d'
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2147,7 +2147,7 @@ number.29.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak TrillSpanner.staff-padding 4
       %! SPANNER_START
     \startTrillSpan c,
       %! EXPLICIT_CLEF_REDRAW_COLOR

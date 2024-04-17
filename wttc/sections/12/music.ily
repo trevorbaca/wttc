@@ -2719,7 +2719,7 @@ number.12.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2928,7 +2928,7 @@ number.12.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -3022,7 +3022,7 @@ number.12.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -4331,7 +4331,7 @@ number.12.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -4440,7 +4440,7 @@ number.12.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -4536,7 +4536,7 @@ number.12.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -8400,7 +8400,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan cs'''
 
@@ -8544,7 +8544,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan c'''
 
@@ -8733,7 +8733,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan bf''
 
@@ -8936,7 +8936,7 @@ number.12.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan fs'
 
@@ -9007,7 +9007,7 @@ number.12.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan fs'
 
@@ -9083,7 +9083,7 @@ number.12.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan g'
 
@@ -9160,7 +9160,7 @@ number.12.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan gs'
 
@@ -10838,7 +10838,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan f,
 
@@ -10901,7 +10901,7 @@ number.12.Cello.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan f,
 
@@ -10977,7 +10977,7 @@ number.12.Cello.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan ef,
 
@@ -11054,7 +11054,7 @@ number.12.Cello.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d,
 

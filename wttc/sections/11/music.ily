@@ -1923,7 +1923,7 @@ number.11.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan fs'''
 
@@ -2067,7 +2067,7 @@ number.11.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan g'''
 
@@ -3105,7 +3105,7 @@ number.11.Violin.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan g''
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -4002,7 +4002,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan a'
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -4208,7 +4208,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan f,
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -4393,7 +4393,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan f,
 
@@ -5015,7 +5015,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan g,
 

@@ -708,7 +708,7 @@ number.22.AltoFlute.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan gs''
 

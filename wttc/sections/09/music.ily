@@ -476,7 +476,7 @@ number.9.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -645,7 +645,7 @@ number.9.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -855,7 +855,7 @@ number.9.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -999,7 +999,7 @@ number.9.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -1087,7 +1087,7 @@ number.9.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -1242,7 +1242,7 @@ number.9.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -2530,7 +2530,7 @@ number.9.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan g,
 

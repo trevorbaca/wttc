@@ -673,7 +673,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \<
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -694,7 +694,7 @@ number.4.AltoFlute.Music = {
     \pitchedTrill
     g''4
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -714,7 +714,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_STOP
         \stopTrillSpan
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -745,7 +745,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -838,7 +838,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \<
           %! SPANNER_START
-        - \tweak staff-padding 5.5
+        - \tweak TrillSpanner.staff-padding 5.5
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -855,7 +855,7 @@ number.4.AltoFlute.Music = {
         g''8
         ]
           %! SPANNER_START
-        - \tweak staff-padding 5.5
+        - \tweak TrillSpanner.staff-padding 5.5
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -895,7 +895,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak staff-padding 5.5
+        - \tweak TrillSpanner.staff-padding 5.5
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -977,7 +977,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan gs''
 
@@ -1122,7 +1122,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan g''
 
@@ -1239,7 +1239,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan f''
 
@@ -1264,7 +1264,7 @@ number.4.AltoFlute.Music = {
         \pitchedTrill
         ef''!8
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan f''
 
@@ -1377,7 +1377,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan e''
 
@@ -4715,9 +4715,9 @@ number.4.Violin.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
           %! SPANNER_START
-        - \tweak bound-details.right.padding 1
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak bound-details.right.padding 1
           %! SPANNER_START
         \startTrillSpan fs''!
 
@@ -4764,7 +4764,7 @@ number.4.Violin.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan fs''!
 
@@ -4789,7 +4789,7 @@ number.4.Violin.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan fs''!
 
@@ -4822,7 +4822,7 @@ number.4.Violin.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak TrillSpanner.staff-padding 3
           %! SPANNER_START
         \startTrillSpan fs''!
         \revert TrillSpanner.dash-period

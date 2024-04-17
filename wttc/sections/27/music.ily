@@ -944,7 +944,7 @@ number.27.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
       %! EXPLICIT_CLEF_REDRAW_COLOR

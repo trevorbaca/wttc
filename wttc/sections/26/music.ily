@@ -3029,7 +3029,7 @@ number.26.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3073,7 +3073,7 @@ number.26.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3115,7 +3115,7 @@ number.26.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3177,7 +3177,7 @@ number.26.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3238,7 +3238,7 @@ number.26.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3303,7 +3303,7 @@ number.26.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -5601,7 +5601,7 @@ number.26.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'
 
@@ -5708,7 +5708,7 @@ number.26.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan d'
 
@@ -6935,7 +6935,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -6986,7 +6986,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7035,7 +7035,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7100,7 +7100,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7166,7 +7166,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7236,7 +7236,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
