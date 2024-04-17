@@ -289,10 +289,35 @@ def VC(voice, meters):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
+    baca.pitch(m[1], "E6")
+    baca.spanners.trill(
+        m[1],
+        padding=1.25,
+        rleak=True,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1], [1, 1]),
+        "o< mf>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
+    baca.pitch(m[1], "C6")
+    baca.spanners.trill(
+        m[1],
+        alteration="D6",
+        padding=1.25,
+        rleak=True,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1], [1, 1]),
+        "o< p>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def gt1(m):
@@ -312,8 +337,11 @@ def vc(m):
 
 
 def align_spanners(cache):
-    """
     fl = cache["fl"]
+    baca.override.dls_staff_padding(fl.leaves(), 3)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob.leaves(), 3)
+    """
     gt1 = cache["gt1"]
     gt2 = cache["gt2"]
     vn = cache["vn"]
