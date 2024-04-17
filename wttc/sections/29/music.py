@@ -309,7 +309,7 @@ def ob(m):
     baca.spanners.trill(
         m[1],
         alteration="D6",
-        padding=1.25,
+        # padding=1.25,
         rleak=True,
     )
     baca.hairpin(
@@ -322,18 +322,63 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    baca.pitch(m[1], "D#5")
+    baca.flageolet(m[1][0])
+    baca.dynamic(m[1][0], "mp")
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    baca.pitch(m[1], "C#5")
+    baca.flageolet(m[1][0])
+    baca.dynamic(m[1][0], "mp")
 
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    baca.pitch(m[1], "E4")
+    baca.override.note_head_style_harmonic(m[1])
+    baca.spanners.trill(
+        m[1],
+        alteration="D4",
+        rleak=True,
+        staff_padding=2,
+    )
+    baca.spanners.circle_bow(
+        m[1],
+        rleak=True,
+        staff_padding=4.5,
+    )
+    baca.spanners.string_number(
+        m[1],
+        3,
+        rleak=True,
+        staff_padding=7,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1], [1, 1]),
+        "o< mp>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
+    baca.pitch(m[1], "D4")
+    baca.override.note_head_style_harmonic(m[1])
+    baca.spanners.trill(
+        m[1],
+        alteration="C2",
+        rleak=True,
+        staff_padding=4,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1], [1, 1]),
+        "o< p>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def align_spanners(cache):
@@ -341,13 +386,14 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(fl.leaves(), 3)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
-    """
     gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1.leaves(), 3)
     gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(gt2.leaves(), 3)
     vn = cache["vn"]
+    baca.override.dls_staff_padding(vn.leaves(), 3)
     vc = cache["vc"]
-    """
-    pass
+    baca.override.dls_staff_padding(vc.leaves(), 5)
 
 
 @baca.build.timed("make_score")

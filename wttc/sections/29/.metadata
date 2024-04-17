@@ -79,6 +79,16 @@
                 value="Vc.",
             ),
         ],
+        "Guitar.1.Music": [
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
+        ],
         "Guitar.1.Staff": [
             baca.Memento(
                 context="Guitar.1.Music",
@@ -104,6 +114,16 @@
                 synthetic_offset=None,
                 value="Gt. 1",
             ),
+        ],
+        "Guitar.2.Music": [
+            baca.Memento(
+                context="Guitar.2.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
         ],
         "Guitar.2.Staff": [
             baca.Memento(
