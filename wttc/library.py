@@ -1472,7 +1472,39 @@ def C3a(
         )
 
 
-def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=None):
+def C3b(
+    pleaves, pitch, alteration, hairpin, dummy_pitch="F5", *, once=False, rleak=False
+):
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+    )
+    baca.untie(pleaves)
+    baca.pitch(pleaves[:1], pitch)
+    if once is not True:
+        baca.override.accidental_stencil_false(pleaves[1:])
+        baca.override.dots_font_size(pleaves[1:], -3)
+        baca.override.flag_font_size(pleaves[1:], -3)
+        baca.override.note_head_font_size(pleaves[1:], -3)
+        baca.override.note_head_no_ledgers(pleaves[1:], True)
+        baca.override.stem_direction_up(pleaves[1:])
+        baca.pitch(pleaves[1:], dummy_pitch)
+    if "<" in hairpin and ">" in hairpin:
+        baca.hairpin(
+            [pleaves[:-1], pleaves[-1:]],
+            hairpin,
+            rleak=rleak,
+        )
+    else:
+        baca.hairpin(
+            [pleaves],
+            hairpin,
+            rleak=rleak,
+        )
+
+
+def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, staff_padding=None):
     baca.pitch(pleaves, pitch)
     for pleaf, dynamic in zip(pleaves, dynamics.split(), strict=True):
         baca.dynamic(pleaf, dynamic)
@@ -1484,7 +1516,7 @@ def C3c(pleaves, pitch, dynamics, *, lv=False, pizz=False, pizz_staff_padding=No
                 pleaf,
                 descriptor=r"\baca-pizz-markup ||",
                 rleak=True,
-                staff_padding=pizz_staff_padding,
+                staff_padding=staff_padding,
             )
 
 
@@ -1502,21 +1534,32 @@ def D1b(
     pleaves,
     pitch,
     hairpin_string,
-    hairpin_pieces,
+    # hairpin_pieces,
+    hairpin_counts,
     scp_string,
-    scp_pieces,
+    # scp_pieces,
+    scp_counts,
     *,
     do_not_bookend=False,
     rleak=False,
+    rleak_hairpin=False,
     tbl=False,
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
-    tweaks = to_bar_line_tweaks(tbl)
+    if hairpin_counts:
+        hairpin_pieces = baca.select.lparts(pleaves, hairpin_counts)
+    else:
+        hairpin_pieces = pleaves
+    if scp_counts:
+        scp_pieces = baca.select.lparts(pleaves, scp_counts)
+    else:
+        scp_pieces = pleaves
     baca.hairpin(
         hairpin_pieces,
         hairpin_string,
-        *tweaks,
+        *to_bar_line_tweaks(tbl),
+        rleak=rleak_hairpin,
     )
     baca.spanners.scp(
         scp_pieces,
@@ -1547,6 +1590,15 @@ def D3b(pleaves, pitches, dynamics):
     for pleaf, dynamic in zip(pleaves, dynamics, strict=True):
         baca.dynamic(pleaf, dynamic)
         baca.laissez_vibrer(pleaf)
+
+
+def D4a(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+        baca.espressivo(plt.head)
 
 
 def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
@@ -1683,7 +1735,15 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
 
 
 def E2b(
-    pleaves, pitches, peak, *, damp=False, rleak=False, string_number=None, xfb=False
+    pleaves,
+    pitches,
+    peak,
+    *,
+    damp=False,
+    once=False,
+    rleak=False,
+    string_number=None,
+    xfb=False,
 ):
     assert damp or xfb
     low_pitch, high_pitch = pitches.split()
@@ -1713,7 +1773,12 @@ def E2b(
             rleak=rleak,
             staff_padding=3,
         )
-    if xfb is True:
+    if once is True:
+        baca.hairpin(
+            pleaves,
+            f"o<{peak}",
+        )
+    elif xfb is True:
         pieces = baca.select.partition_in_halves(pleaves)
         baca.hairpin(
             pieces,
@@ -1778,6 +1843,32 @@ def E3a(pleaves):
         baca.override.flag_stencil_false(run[1:])
         baca.override.note_head_font_size(run[1:], -3)
         baca.override.stem_stencil_false(run[1:])
+
+
+def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        assert len(plt) == 1
+        baca.pitch(plt, double_stop)
+        baca.tweak.style_harmonic(plt[0].note_heads[1])
+        baca.spanners.trill(
+            plt,
+            alteration=alteration,
+            harmonic=True,
+            rleak=True,
+            staff_padding=3,
+        )
+        baca.triple_staccato(plt)
+    if lone is False:
+        baca.override.trill_spanner_dash_period(pleaves, -1)
+        baca.override.trill_spanner_style(pleaves, "#'dashed-line")
+    else:
+        for plt in plts:
+            baca.override.trill_spanner_dash_period(plt, -1)
+            baca.override.trill_spanner_style(plt, "#'dashed-line")
+    if dynamic is not None:
+        for plt in plts:
+            baca.dynamic(plt, dynamic)
 
 
 def E4a(pleaves, pitch, peaks):

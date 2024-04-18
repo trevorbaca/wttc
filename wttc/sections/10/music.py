@@ -474,32 +474,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        assert len(plt) == 1
-        baca.pitch(plt, double_stop)
-        baca.tweak.style_harmonic(plt[0].note_heads[1])
-        baca.spanners.trill(
-            plt,
-            alteration=alteration,
-            harmonic=True,
-            rleak=True,
-            staff_padding=3,
-        )
-        baca.triple_staccato(plt)
-    if lone is False:
-        baca.override.trill_spanner_dash_period(pleaves, -1)
-        baca.override.trill_spanner_style(pleaves, "#'dashed-line")
-    else:
-        for plt in plts:
-            baca.override.trill_spanner_dash_period(plt, -1)
-            baca.override.trill_spanner_style(plt, "#'dashed-line")
-    if dynamic is not None:
-        for plt in plts:
-            baca.dynamic(plt, dynamic)
-
-
 def E4c(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
@@ -684,7 +658,7 @@ def vc(m):
         staff_padding=4,
         string_numbers=[4, 1, 4],
     )
-    E3b(library.pleaves(m[3, 7], 3), "A#3:D#4", "E#4")
+    library.E3b(library.pleaves(m[3, 7], 3), "A#3:D#4", "E#4")
     baca.hairpin(
         library.pleaves(m[3], 3),
         "f>p",
@@ -743,7 +717,9 @@ def vc(m):
         string_numbers=[4],
     )
     F1c(library.pleaves(m[20, 22], 99), "C#4", "E#4", "F#4", "mp mf f")
-    E3b(library.pleaves(m[19, 22], 3), "A#3:D#4", "E#4", dynamic="mp", lone=True)
+    library.E3b(
+        library.pleaves(m[19, 22], 3), "A#3:D#4", "E#4", dynamic="mp", lone=True
+    )
 
 
 def align_spanners(cache):

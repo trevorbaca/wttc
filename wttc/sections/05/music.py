@@ -773,34 +773,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def C3b(pleaves, pitch, alteration, hairpin, dummy_pitch="F5"):
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-    )
-    baca.untie(pleaves)
-    baca.pitch(pleaves[:1], pitch)
-    baca.override.accidental_stencil_false(pleaves[1:])
-    baca.override.dots_font_size(pleaves[1:], -3)
-    baca.override.flag_font_size(pleaves[1:], -3)
-    baca.override.note_head_font_size(pleaves[1:], -3)
-    baca.override.note_head_no_ledgers(pleaves[1:], True)
-    baca.override.stem_direction_up(pleaves[1:])
-    baca.pitch(pleaves[1:], dummy_pitch)
-    if "<" in hairpin and ">" in hairpin:
-        baca.hairpin(
-            [pleaves[:-1], pleaves[-1:]],
-            hairpin,
-            rleak=True,
-        )
-    else:
-        baca.hairpin(
-            [pleaves],
-            hairpin,
-        )
-
-
 def D2a(pleaves, pitches, hairpin_strings):
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
@@ -858,16 +830,6 @@ def D2c(pleaves, pitch_pairs, hairpin_strings):
             )
 
 
-def D4a(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch)
-    plts = baca.select.plts(pleaves)
-    dynamics_ = dynamics.split()
-    for plt, dynamic_ in zip(plts, dynamics_, strict=True):
-        if dynamic_ != "-":
-            baca.dynamic(plt.head, dynamic_)
-        baca.espressivo(plt.head)
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.C3a(library.pleaves(m[2, 3], 3), "G4", "F#4", "mp|>o!")
@@ -875,10 +837,10 @@ def fl(m):
     library.C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp|>o!")
     library.C3a(m[12], "G4", "F#4", "mp|>o !o<|mf", m[13][:3])
     library.C3a(m[15], "G4", "F#4", "mp|>o !o<|f", m[16][:3])
-    C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff")
-    C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!")
-    C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!")
-    C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!")
+    library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff")
+    library.C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!", rleak=True)
+    library.C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!", rleak=True)
+    library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True)
     D2a(library.pleaves(m[32], 2), "Eb6 D6", "mf-mp")
     D2a(library.pleaves(m[33, 34], 2), "Eb6 D6", "mf-mp f-mf")
     D2a(
@@ -889,7 +851,7 @@ def fl(m):
     library.D3a(library.pleaves(m[32, 33], 3), "A3", "mf mp p pp")
     library.D3a(library.pleaves(m[34, 37], 3), "A3", 11 * "p ")
     library.D3a(library.pleaves(m[38], 3), "G#3", "p p")
-    D4a(library.pleaves(m[41, 44], 4), "F#5", "mp - mf mp mf - f - -")
+    library.D4a(library.pleaves(m[41, 44], 4), "F#5", "mp - mf mp mf - f - -")
 
 
 def ob(m):
@@ -910,9 +872,7 @@ def ob(m):
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
-    library.C3c(
-        library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, pizz_staff_padding=3
-    )
+    library.C3c(library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, staff_padding=3)
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True)
     D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True)
     D2b(library.pleaves(m[39, 40], 2), '"f" "mf" mp p')
@@ -929,7 +889,7 @@ def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
     library.C3c(
-        library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, pizz_staff_padding=3
+        library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, staff_padding=3
     )
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True, upbow=True)
     D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True, upbow=True)
@@ -986,30 +946,33 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
-    C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")
+    library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")
     library.C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
     library.C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
-    C3b(
+    library.C3b(
         library.pleaves(m[21, 24], 3),
         "G#5",
         "A5",
         "o< mp>o!",
         dummy_pitch="B5",
+        rleak=True,
     )
     library.C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
-    C3b(
+    library.C3b(
         library.pleaves(m[25, 27], 3),
         "G#5",
         "A5",
         "o< mp>o!",
         dummy_pitch="B5",
+        rleak=True,
     )
-    C3b(
+    library.C3b(
         library.pleaves(m[30], 3),
         "G#5",
         "A5",
         "o< p>o!",
         dummy_pitch="B5",
+        rleak=True,
     )
     library.D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
     library.D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p>o!", no_spanner=True)
@@ -1037,63 +1000,48 @@ def vc(m):
         "Gb3",
         "f - p - - - f p p",
     )
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[18, 20], 99)
-        library.D1b(
-            pleaves,
-            "F2",
-            "o< p>o!",
-            baca.select.lparts(baca.select.rleak(pleaves), [2, 3]),
-            "T =|",
-            pleaves,
-            rleak=True,
-        )
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[22, 30], 99)
-        library.D1b(
-            pleaves,
-            "F2",
-            "o< p> pp< mf> p< f>o!",
-            baca.select.lparts(baca.select.rleak(pleaves), [2, 2, 3, 2, 2, 5]),
-            "T -> P1 -> T -> P2 -> T",
-            baca.select.lparts(pleaves, [7, 2, 2, 4]),
-            rleak=True,
-        )
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[31, 33], 1)
-        library.D1b(
-            pleaves,
-            "F2",
-            "o< f>o!",
-            baca.select.lparts(pleaves, [2, 4]),
-            "T -> P2 -> T -> P1 -> T",
-            baca.select.lparts(pleaves, [2, 1, 1, 1]),
-            rleak=True,
-        )
-
+    library.D1b(
+        library.pleaves(m[18, 20], 99),
+        "F2",
+        "o< p>o!",
+        [2, 2],
+        "T =|",
+        None,
+        rleak=True,
+        rleak_hairpin=True,
+    )
+    library.D1b(
+        library.pleaves(m[22, 30], 99),
+        "F2",
+        "o< p> pp< mf> p< f>o!",
+        [2, 2, 3, 2, 2, 4],
+        "T -> P1 -> T -> P2 -> T",
+        [7, 2, 2, 4],
+        rleak=True,
+        rleak_hairpin=True,
+    )
+    library.D1b(
+        library.pleaves(m[31, 33], 1),
+        "F2",
+        "o< f>o!",
+        [2, 4],
+        "T -> P2 -> T -> P1 -> T",
+        [2, 1, 1, 1],
+        rleak=True,
+    )
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o<"f"'])
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[34, 39], 1)
-        library.D1b(
-            pleaves,
-            None,
-            "o< mf> p< mp> pp<|ff",
-            baca.select.lparts(baca.select.rleak(pleaves), [1, 1, 1, 1, 3]),
-            "T -> P1 -> T -> P2 -> T -> P2",
-            baca.select.lparts(pleaves, [1, 1, 1, 1, 2]),
-            rleak=True,
-        )
-        baca.glissando(pleaves[:-1], "F2 E2")
-        baca.pitch(pleaves[-1:], "E2")
-
+    library.D1b(
+        library.pleaves(m[34, 39], 1),
+        None,
+        "o< mf> p< mp> pp<|ff",
+        [1, 1, 1, 1, 2],
+        "T -> P1 -> T -> P2 -> T -> P2",
+        [1, 1, 1, 1, 2],
+        rleak=True,
+        rleak_hairpin=True,
+    )
+    baca.glissando(library.pleaves(m[34, 39], 1)[:-1], "F2 E2")
+    baca.pitch(library.pleaves(m[34, 39], 1)[-1:], "E2")
     D2c(
         library.pleaves(m[39, 40], 2),
         ["D#2 E2", "E2 F2", "F2 F#2"],

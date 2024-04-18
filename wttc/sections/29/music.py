@@ -139,9 +139,9 @@ def FL(voice, meters):
     rhythm(
         meters(13),
         [4],
-        material=99,
+        material=4,
     )
-    rhythm(meters(14), [24], material=99)
+    rhythm(meters(14), frame(24, 1), material=3)
     rhythm(meters(15), [4], material=99)
     rhythm(meters(16), frame(16, 8), material=99)
     baca.section.append_anchor_note(voice)
@@ -188,8 +188,7 @@ def GT1(voice, meters):
         extra_counts=[-1],
         material=4,
     )
-    rhythm.mmrests(11, 13)
-    rhythm(meters(14), [1, "-"], material=99)
+    rhythm.mmrests(11, 14)
     rhythm(meters(15), [c(4, 2)], material=99)
     rhythm.mmrests(16)
 
@@ -214,7 +213,8 @@ def GT2(voice, meters):
         extra_counts=[-1],
         material=4,
     )
-    rhythm.mmrests(11, 14)
+    rhythm.mmrests(11, 13)
+    rhythm(meters(14), [1, "-"], material=3)
     rhythm(meters(15), [c(4, 2)], material=99)
     rhythm.mmrests(16)
 
@@ -229,8 +229,8 @@ def VN(voice, meters):
     rhythm(meters(9), frame(4, 2), material=2)
     rhythm.mmrests(10, 11)
     rhythm(meters(12), [-4, AG([2], t(12))], material=2)
-    rhythm(meters(13), [4], material=99)
-    rhythm(meters(14), [24], material=99)
+    rhythm(meters(13), [4], material=4)
+    rhythm(meters(14), frame(24, 1), material=3)
     rhythm.mmrests(15)
     rhythm(meters(16), 4 * [TC(2, [1, 1])], material=99)
     baca.section.append_anchor_note(voice)
@@ -261,9 +261,9 @@ def VC(voice, meters):
         material=4,
     )
     rhythm(meters(11), frame(4, 2), material=2)
-    rhythm(meters(12), [-4, c(1, 2), "-"], material=99)
-    rhythm(meters(13), [4], material=99)
-    rhythm(meters(14), [24], material=99)
+    rhythm(meters(12), [-4, c(1, 2), "-"], material=3)
+    rhythm(meters(13), AG([2], 4), material=4)
+    rhythm(meters(14), frame(24, 1), material=99)
     rhythm.mmrests(15, 16)
 
 
@@ -312,6 +312,8 @@ def fl(m):
     library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", tbl=True)
     library.H2(library.pleaves(m[9], 2), "C6", None, "p", tbl=True)
     library.E3a(library.pleaves(m[12], 3))
+    library.D4a(library.pleaves(m[13], 4), "F#5", "mf")
+    library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", once=True)
 
 
 def ob(m):
@@ -363,6 +365,7 @@ def gt2(cache):
     baca.dynamic(abjad.select.leaf(m[8], 0, grace=False), "(p)")
     library.H1b(library.pleaves(m[9], 1), "Bb3", "ff")
     library.G4a(library.pleaves(m[10], 4), once=True, up_bow=True)
+    library.C3c(library.pleaves(m[14], 3), "B2", "mp", pizz=True, staff_padding=3)
 
 
 def vn(m):
@@ -407,10 +410,12 @@ def vn(m):
         library.pleaves(m[12], 2),
         "G#4 C5",
         "mf",
-        rleak=True,
+        once=True,
         string_number=3,
         xfb=True,
     )
+    library.D4b(library.pleaves(m[13], 4), "G#3", dynamics="mp", no_spanner=True)
+    library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp")
 
 
 def vc(m):
@@ -462,6 +467,11 @@ def vc(m):
     )
     library.G4b(library.pleaves(m[10], 4), once=True)
     library.F2b1(library.pleaves(m[11], 2), "Eb2", "F2", [1, 1], '"f"', [0])
+    baca.clef(m[12][0], "tenor")
+    library.E3b(library.pleaves(m[12], 3), "A#3:D#4", "E#4")
+    baca.dynamic(m[12][1], "p")
+    baca.clef(m[13][0], "bass")
+    library.D4c(library.pleaves(m[13], 4), "Ab2 G2", hairpin="mp>p")
 
 
 def align_spanners(cache):

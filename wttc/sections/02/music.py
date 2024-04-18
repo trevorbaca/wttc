@@ -200,19 +200,15 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc")
-
-    @baca.call
-    def block():
-        pleaves = library.pleaves(m[10, 11], 1)
-        library.D1b(
-            pleaves,
-            None,
-            "mf> p<mp",
-            baca.select.lparts(pleaves, [1, 2]),
-            "P1 => T => P2",
-            baca.select.lparts(pleaves, [1, 2]),
-        )
-        baca.glissando(pleaves, "F2 Eqs2")
+    library.D1b(
+        library.pleaves(m[10, 11], 1),
+        None,
+        "mf> p<mp",
+        [1, 2],
+        "P1 => T => P2",
+        [1, 2],
+    )
+    baca.glissando(library.pleaves(m[10, 11], 1), "F2 Eqs2")
 
 
 def align_spanners(cache):
