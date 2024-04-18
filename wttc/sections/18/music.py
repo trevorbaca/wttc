@@ -788,12 +788,6 @@ def J2a1(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def J4a(pleaves, dyad, dynamic=None):
-    baca.pitches(pleaves, dyad)
-    if dynamic is not None:
-        baca.dynamic(pleaves[0], dynamic)
-
-
 def K1b(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
     for pleaf in pleaves:
@@ -892,10 +886,10 @@ def gt1(cache):
     library.J3b(library.pleaves(m[8, 9], 3), "A3 A#3 A#3", "p p pp", "101")
     library.J1b(library.pleaves(m[9], 1), "C#5 D#5 F5")
     library.J1b(library.pleaves(m[10], 1), "C#5 D#5 F5 G5")
-    J4a(library.pleaves(m[16, 17], 4), "G2:Eb3", "p")
-    J4a(library.pleaves(m[19, 22], 4), "G2:D3")
+    library.J4a(library.pleaves(m[16, 17], 4), "G2:Eb3", "p")
+    library.J4a(library.pleaves(m[19, 22], 4), "G2:D3")
     library.J3b(library.pleaves(m[23], 3), "A#3", "p", "0")
-    J4a(library.pleaves(m[24, 25], 4), "G2:B2", "p")
+    library.J4a(library.pleaves(m[24, 25], 4), "G2:B2", "p")
     library.J1b(library.pleaves(m[25], 1), "C#5 D#5 F5 G5")
     library.J1b(library.pleaves(m[27], 1), "C#5 D#5 F5")
     library.J3b(library.pleaves(m[27, 29], 3), "A#3 B3", "p pp", "11")
@@ -926,11 +920,11 @@ def gt2(cache):
     library.J3b(library.pleaves(m[8], 3), "A3 A#3", "p p", "10")
     library.J1b(library.run(m[8], 1, 1), "C5 D5 E5 F#5")
     library.J1b(library.pleaves(m[10], 1), "D5 E5 F#5")
-    J4a(library.pleaves(m[16, 17], 4), "Db3:F2", "p")
-    J4a(library.pleaves(m[19, 22], 4), "F2:C3")
+    library.J4a(library.pleaves(m[16, 17], 4), "Db3:F2", "p")
+    library.J4a(library.pleaves(m[19, 22], 4), "F2:C3")
     library.J1b(library.pleaves(m[23], 1), "D5 E5 F#5 G#5")
     library.J3b(library.pleaves(m[23], 3), "A#3 A#3", "p p", "10")
-    J4a(library.pleaves(m[24, 25], 4), "F2:A2", "p")
+    library.J4a(library.pleaves(m[24, 25], 4), "F2:A2", "p")
     library.J1b(library.pleaves(m[26], 1), "D5 E5 F#5 G#5")
     library.J1b(library.pleaves(m[27], 1), "D5 E5 F#5")
     library.J3b(library.pleaves(m[27, 29], 3), "A#3 B3 B3", "p pp pp", "111")

@@ -210,40 +210,15 @@ def I3a(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def I3b(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
-    baca.glissando(
-        pleaves,
-        glissando,
-    )
-    baca.spanners.scp(
-        baca.select.lparts(pleaves, scp_lparts),
-        scp,
-        staff_padding=3,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-
-
-def J1a(pleaves, pitches, dynamic):
-    baca.pitches(pleaves, pitches, strict=True)
-    baca.hairpin(
-        pleaves,
-        f"{dynamic}>o!",
-        rleak=True,
-    )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.I2a(library.run(m[1], 2, 0), "B4", "p", "A#4", 2)
     library.I2a(library.run(m[1, 2], 2, 1), "B4", "mp", "A#4", 3)
     library.I2a(library.run(m[2, 3], 2, 1), "B4", "mf", "A#4", 2)
     library.I2a(library.run(m[3], 2, 1), "C#6", "mf")
-    J1a(library.run(m[4, 5], 99, 0), "E6 Eqf6 Eb6", "p")
-    J1a(library.run(m[5, 6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6", "mp")
-    J1a(library.run(m[6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6 Db6", "mf")
+    library.J1a(library.run(m[4, 5], 99, 0), "E6 Eqf6 Eb6", "p")
+    library.J1a(library.run(m[5, 6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6", "mp")
+    library.J1a(library.run(m[6], 99, 1), "E6 Eqf6 Eb6 Etqf6 D6 Dqf6 Db6", "mf")
 
 
 def ob(m):
@@ -320,7 +295,7 @@ def vc(m):
     library.I2c(library.run(m[1], 2, 0), "C#3", "D#3", "E3", "D3", "mp")
     library.I2c(library.run(m[1, 2], 2, 1), "C#3", "D#3", "E3", "D3", "mf")
     library.I2c(library.run(m[2, 3], 2, 1), "C#3", "D#3", "E3", "D3", "f")
-    I3b(
+    library.I3b(
         library.pleaves(m[3], 3),
         "F2/2 Ab2 G2",
         [2, 1, 1],
@@ -328,7 +303,7 @@ def vc(m):
         [1, 1, 2],
         "sfp< mf> pp<|f",
     )
-    I3b(
+    library.I3b(
         library.pleaves(m[4], 3)[:6],
         "Ab2/5 F2",
         [1, 4, 1],
@@ -336,7 +311,7 @@ def vc(m):
         [1, 4, 1],
         "f|> p<| f",
     )
-    I3b(
+    library.I3b(
         library.pleaves(m[4], 3)[6:10],
         "A2/3 F#2",
         [1, 2, 1],
@@ -344,7 +319,7 @@ def vc(m):
         [1, 2, 1],
         "f|> p<| f",
     )
-    I3b(
+    library.I3b(
         library.pleaves(m[4, 6], 3)[10:],
         "Bb2/7 E2/2 E2",
         [1, 6, 2, 1],

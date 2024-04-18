@@ -1003,11 +1003,10 @@ def e4(twelfths=False):
 
 def A1b(pleaves, pitches, peaks, *, tbl=False):
     baca.pitches(pleaves, pitches)
-    tweaks = to_bar_line_tweaks(tbl)
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
-        *tweaks,
+        *to_bar_line_tweaks(tbl),
         rleak=True,
     )
 
@@ -2186,6 +2185,32 @@ def I2c(pleaves, pitch, alteration, peak, fall, dynamic):
     )
 
 
+def I3b(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
+    baca.glissando(
+        pleaves,
+        glissando,
+    )
+    baca.spanners.scp(
+        baca.select.lparts(pleaves, scp_lparts),
+        scp,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
+def J1a(pleaves, pitches, dynamic, *, tbl=False):
+    baca.pitches(pleaves, pitches, strict=True)
+    baca.hairpin(
+        pleaves,
+        f"{dynamic}>o!",
+        *to_bar_line_tweaks(tbl),
+        rleak=True,
+    )
+
+
 def J1b(run, pitches):
     baca.pitches(run, pitches, allow_obgc_mutation=True)
 
@@ -2255,6 +2280,12 @@ def J3c(pleaves, pitches, dynamics):
     )
 
 
+def J4a(pleaves, dyad, dynamic=None):
+    baca.pitches(pleaves, dyad)
+    if dynamic is not None:
+        baca.dynamic(pleaves[0], dynamic)
+
+
 def J4b(pleaves, pitches, hairpin_lparts, hairpin, *, tasto=None):
     baca.glissando(pleaves, pitches)
     baca.hairpin(
@@ -2310,6 +2341,98 @@ def K2d(pleaves, pitch, dynamic):
     for plt in plts:
         baca.stop_on_string(plt.head)
     baca.dynamic(pleaves[0], dynamic)
+
+
+def K3a(pleaves, pitch, peaks, *, circle_bow=False, tbl=False):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        swells(peaks),
+        *to_bar_line_tweaks(tbl),
+        rleak=True,
+    )
+    if circle_bow is True:
+        pleaves = abjad.sequence.retain_pattern(pleaves, abjad.index([0], 2))
+        for pleaf in pleaves:
+            baca.spanners.text(
+                pleaf,
+                r"\baca-circle-markup ||",
+                rleak=True,
+                staff_padding=3,
+            )
+
+
+def K3b(pleaves, pitch, dynamics):
+    baca.pitch(pleaves, pitch)
+    dynamics = dynamics.split()
+    plts = baca.select.plts(pleaves)
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
+
+
+def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, tblf=False):
+    baca.pitch(pleaves, pitch)
+    plts = baca.select.plts(pleaves)
+    tweaks = []
+    if tblf is True:
+        tweaks.append(baca.postevent.to_bar_line_false(index=0))
+    baca.spanners.scp(
+        plts,
+        scp,
+        *tweaks,
+        staff_padding=staff_padding,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
+def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
+    baca.pitches(pleaves, pitch)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
+
+
+def L2b2(
+    pleaves,
+    pitches,
+    alteration,
+    hairpin_lparts,
+    hairpin,
+    *,
+    gliss=None,
+    rleak=False,
+    tbl=False,
+):
+    baca.pitches(pleaves, pitches, strict=True)
+    if gliss is not None:
+        baca.glissando(pleaves[gliss:])
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        rleak=True,
+        staff_padding=5.5,
+    )
+    if sum(hairpin_lparts) != len(pleaves):
+        breakpoint()
+    assert sum(hairpin_lparts) == len(pleaves)
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+        *to_bar_line_tweaks(tbl),
+        rleak=rleak,
+    )
 
 
 def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):

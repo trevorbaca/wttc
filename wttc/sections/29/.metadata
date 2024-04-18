@@ -27,16 +27,6 @@
     "first_measure_number": 1,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "AltoFlute.Music": [
-            baca.Memento(
-                context="AltoFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.StartHairpin",
-                synthetic_offset=None,
-                value="|>",
-            )
-        ],
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
@@ -68,9 +58,9 @@
                 context="Cello.Music",
                 edition=None,
                 manifest=None,
-                prototype="abjad.Dynamic",
+                prototype="abjad.StartHairpin",
                 synthetic_offset=None,
-                value="mf",
+                value="<",
             )
         ],
         "Cello.Staff": [
@@ -106,7 +96,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-mp-parenthesized",
+                value="\\baca-p-parenthesized",
             )
         ],
         "Guitar.1.Staff": [
@@ -142,7 +132,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-mp-parenthesized",
+                value="\\baca-p-parenthesized",
             )
         ],
         "Guitar.2.Staff": [

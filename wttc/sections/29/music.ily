@@ -924,37 +924,100 @@ number.29.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [AltoFlute.Music measure 6]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4 * 2/4
+    \override DynamicLineSpanner.staff-padding = 4
+    c'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    b'4 * 1/2
+    c'4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    e'''4
+    :32
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \sfp
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [AltoFlute.Music measure 8]
-    R1 * 1/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    aqf'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_STOP
+    \!
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [AltoFlute.Music measure 9]
       %! NOT_YET_PITCHED_COLORING
@@ -962,6 +1025,8 @@ number.29.AltoFlute.Music = {
     b'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! SPANNER_STOP
+    \!
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -1312,42 +1377,94 @@ number.29.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Oboe.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4 * 2/4
+      %! SPANNER_START
+    \pitchedTrill
+    gs'''!4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillSpanner.staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan a'''
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    b'4 * 1/2
+    gs'''!4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Oboe.Music measure 6]
     R1 * 1/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [Oboe.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    b''4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \sfp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Oboe.Music measure 8]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    R1 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
 
     % [Oboe.Music measure 9]
     R1 * 1/4
@@ -1403,10 +1520,13 @@ number.29.Oboe.Staff = <<
 
 number.29.Guitar.1.Music.item.1 = {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'4
+    ef'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-p-parenthesized
 
 }
 
@@ -1496,18 +1616,24 @@ number.29.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 6]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        cs'''!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
 
         r4
 
     }
 
     % [Guitar.1.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    <b' b'>4
+    <g ef'!>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
     <<
 
@@ -1515,36 +1641,29 @@ number.29.Guitar.1.Music = {
         {
 
             % [Guitar.1.Music measure 8]
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
             \voiceOne
             <
+                df'''!
                 \tweak font-size 0
                 \tweak transparent ##t
-                b'
+                ef'''
             >16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            b''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            c'''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            df'''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
@@ -1629,10 +1748,13 @@ number.29.Guitar.1.Staff = <<
 
 number.29.Guitar.2.Music.item.1 = {
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     \voiceTwo
-    b'4
+    df'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-p-parenthesized
 
 }
 
@@ -1725,9 +1847,12 @@ number.29.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Guitar.2.Music measure 7]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    <b' b'>4
+    <f df'!>4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
 
     <<
 
@@ -1735,30 +1860,25 @@ number.29.Guitar.2.Music = {
         {
 
             % [Guitar.2.Music measure 8]
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
             \set fontSize = #-3
             \slash
             \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                b'
+                df'''
+                ef'''!
             >16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
             (
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            e'''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
-              %! NOT_YET_PITCHED_COLORING
-            \baca-not-yet-pitched-coloring
-            b'16 * 4/5
+            ef'''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
@@ -1973,55 +2093,125 @@ number.29.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Violin.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4 * 2/4
+      %! SPANNER_START
+    \pitchedTrill
+    gs''!4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillSpanner.staff-padding 5.5
+      %! SPANNER_START
+    \startTrillSpan a''
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    b'4 * 1/2
+    gs''!4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Violin.Music measure 6]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4 * 2/4
+    c'4 * 2/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-circle-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \startTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    b'4 * 1/2
+    c'4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! SPANNER_STOP
+    \stopTextSpan
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Violin.Music measure 7]
     R1 * 1/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
 
     % [Violin.Music measure 8]
     R1 * 1/4
@@ -2358,20 +2548,54 @@ number.29.Cello.Music = {
     \bacaStartTextSpanStringNumber
 
     % [Cello.Music measure 5]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d4
+    ef,!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
+      %! SPANNER_START
+    - \baca-dashed-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "O"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "T"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
 
     % [Cello.Music measure 6]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d4
+    ef,4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \pp
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \repeatTie
 
     % [Cello.Music measure 7]
@@ -2380,9 +2604,48 @@ number.29.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Cello.Music measure 8]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d4
+    \afterGrace
+    a,4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \p
+      %! SPANNER_START
+    - \baca-solid-line-with-arrow
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "T"
+      %! SPANNER_START
+    - \baca-text-spanner-right-text "O"
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 0.5
+      %! SPANNER_START
+    - \tweak bound-details.right.stencil-align-dir-y #center
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
+    {
+
+        gtqs,!8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+
+    }
+
 
     % [Cello.Music measure 9]
       %! NOT_YET_PITCHED_COLORING

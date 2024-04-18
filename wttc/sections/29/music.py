@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -124,9 +125,9 @@ def FL(voice, meters):
         material=99,
     )
     rhythm.mmrests(5)
-    rhythm(meters(6), frame(4, 2), material=99)
-    rhythm(meters(7), [4], material=99)
-    rhythm.mmrests(8)
+    rhythm(meters(6), frame(4, 2), material=3)
+    rhythm(meters(7), [4], material=2)
+    rhythm(meters(8), [4], material=99)
     rhythm(meters(9), frame(4, 2), material=99)
     rhythm.mmrests(10, 11)
     rhythm(
@@ -153,11 +154,11 @@ def OB(voice, meters):
     rhythm(
         meters(5),
         frame(4, 2),
-        material=99,
+        material=2,
     )
     rhythm.mmrests(6)
-    rhythm(meters(7), [4], material=99)
-    rhythm(meters(8), [4], material=99)
+    rhythm(meters(7), [4], material=2)
+    rhythm.mmrests(8)
     rhythm.mmrests(9, 10)
     rhythm(meters(11), [4], material=99)
     rhythm.mmrests(12, 16)
@@ -177,14 +178,10 @@ def GT1(voice, meters):
         meters(6),
         [1, "-"],
         extra_counts=[-1],
-        material=99,
+        material=3,
     )
-    rhythm(meters(7), [c(4, 2)], material=99)
-    rhythm(
-        meters(8),
-        OBGC([1, 1, 1, 1], [4]),
-        material=99,
-    )
+    rhythm(meters(7), [c(4, 2)], material=4)
+    rhythm(meters(8), OBGC([1, 1, 1, 1], [4]), material=1)
     rhythm(meters(9), [1, "-"], material=99)
     rhythm.make_one_beat_tuplets(
         meters(10),
@@ -202,18 +199,10 @@ def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(meters(1), [1, "-"], material=99)
     rhythm.mmrests(2)
-    rhythm(
-        meters(3),
-        "+",
-        material=99,
-    )
+    rhythm(meters(3), "+", material=99)
     rhythm.mmrests(4, 6)
-    rhythm(meters(7), [c(4, 2)], material=99)
-    rhythm(
-        meters(8),
-        OBGC([1, 1, 1], [4]),
-        material=99,
-    )
+    rhythm(meters(7), [c(4, 2)], material=4)
+    rhythm(meters(8), OBGC([1, 1, 1], [4]), material=1)
     rhythm.make_one_beat_tuplets(
         meters(9),
         [1, "-"],
@@ -235,16 +224,8 @@ def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(meters(1), frame(4, 2), material=99)
     rhythm.mmrests(2, 4)
-    rhythm(
-        meters(5),
-        frame(4, 2),
-        material=99,
-    )
-    rhythm(
-        meters(6),
-        frame(4, 2),
-        material=99,
-    )
+    rhythm(meters(5), frame(4, 2), material=2)
+    rhythm(meters(6), frame(4, 2), material=3)
     rhythm.mmrests(7, 8)
     rhythm(meters(9), frame(4, 2), material=99)
     rhythm.mmrests(10, 11)
@@ -269,10 +250,10 @@ def VC(voice, meters):
     rhythm(
         meters(5, 6),
         [t(4), 4],
-        material=99,
+        material=1,
     )
     rhythm.mmrests(7)
-    rhythm(meters(8), [4], material=99)
+    rhythm(meters(8), AG([2], 4), material=3)
     rhythm(meters(9), [4], material=99)
     rhythm.make_one_beat_tuplets(
         meters(10),
@@ -319,6 +300,17 @@ def fl(m):
         rleak=True,
     )
     library.M4(library.pleaves(m[4], 99), "D#6 B3", "f|>p")
+    library.K3a(library.pleaves(m[6], 3), "G3", "mp", tbl=True)
+    library.J2a2(
+        library.pleaves(m[7], 2),
+        "B5",
+        [1],
+        "sfp>o!",
+        fluttertongue=True,
+        rleak=True,
+        tbl=True,
+    )
+    library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", tbl=True)
 
 
 def ob(m):
@@ -335,22 +327,37 @@ def ob(m):
         baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
+    library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!")
+    library.J2a2(library.pleaves(m[7], 2), "B5", [1], "sfp>o!", rleak=True, tbl=True)
 
 
-def gt1(m):
+def gt1(cache):
+    m = cache["gt1"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     baca.pitch(m[1], "D#5")
     baca.flageolet(m[1][0])
     baca.dynamic(m[1][0], "mp")
     library.N1b(library.pleaves(m[3], 99), "Ab3", "(mp)")
+    library.K3b(library.pleaves(m[6], 3), "C#5", "mf")
+    library.J4a(library.pleaves(m[7], 4), "G2:Eb3", "p")
+    library.I1b(library.pleaves(m[8], 1), "Db5 B4 C5 Db5 Eb5")
+    cache.rebuild()
+    m = cache["gt1"]
+    baca.dynamic(abjad.select.leaf(m[8], 0, grace=False), "(p)")
 
 
-def gt2(m):
+def gt2(cache):
+    m = cache["gt2"]
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     baca.pitch(m[1], "C#5")
     baca.flageolet(m[1][0])
     baca.dynamic(m[1][0], "mp")
     library.N1b(library.pleaves(m[3], 99), "Bb2", "(mp)")
+    library.J4a(library.pleaves(m[7], 4), "Db3:F2", "p")
+    library.I1b(library.pleaves(m[8], 1), "Eb5 E5 Eb5 Db5")
+    cache.rebuild()
+    m = cache["gt2"]
+    baca.dynamic(abjad.select.leaf(m[8], 0, grace=False), "(p)")
 
 
 def vn(m):
@@ -380,6 +387,16 @@ def vn(m):
         baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
+    library.L2b2(
+        library.pleaves(m[5], 2),
+        "G#5 G#5",
+        "A5",
+        [1, 1],
+        "o< f>o!",
+        rleak=True,
+        tbl=True,
+    )
+    library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, tbl=True)
 
 
 def vc(m):
@@ -410,12 +427,23 @@ def vc(m):
         "pp<|ff",
     )
     library.M3b(library.pleaves(m[4], 99), "E3", 3, "mf", staff_padding=3)
+    library.L1b(
+        library.pleaves(m[5, 6], 1),
+        "Eb2",
+        "O => T",
+        [2],
+        "f|>pp",
+        staff_padding=3,
+        tblf=True,
+    )
+    library.I3b(library.pleaves(m[8], 3), "A2/1 Gtqs2", [1, 1], "T -> O", [2], "p<mp")
 
 
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 2], 3)
     baca.override.dls_staff_padding(fl[3], 6)
+    baca.override.dls_staff_padding(fl[6], 4)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
@@ -464,8 +492,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])
-    gt1(cache["gt1"])
-    gt2(cache["gt2"])
+    gt1(cache)
+    gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
     align_spanners(cache)

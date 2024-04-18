@@ -836,32 +836,6 @@ def K2e(pleaves, pitch, hairpin, scp):
     )
 
 
-def K3a(pleaves, pitch, peaks, *, circle_bow=False):
-    baca.pitch(pleaves, pitch)
-    baca.hairpin(
-        baca.select.clparts(pleaves, [1]),
-        library.swells(peaks),
-        rleak=True,
-    )
-    if circle_bow is True:
-        pleaves = abjad.sequence.retain_pattern(pleaves, abjad.index([0], 2))
-        for pleaf in pleaves:
-            baca.spanners.text(
-                pleaf,
-                r"\baca-circle-markup ||",
-                rleak=True,
-                staff_padding=3,
-            )
-
-
-def K3b(pleaves, pitch, dynamics):
-    baca.pitch(pleaves, pitch)
-    dynamics = dynamics.split()
-    plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-
-
 def L1a(
     pleaves, pitches, alteration, hairpin, hairpin_lparts=None, *, espr=None, gliss=None
 ):
@@ -884,36 +858,6 @@ def L1a(
     baca.hairpin(
         parts,
         hairpin,
-    )
-
-
-def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin):
-    baca.pitch(pleaves, pitch)
-    plts = baca.select.plts(pleaves)
-    baca.spanners.scp(
-        plts,
-        scp,
-        staff_padding=5.5,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-
-
-def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
-    baca.pitches(pleaves, pitch)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=5.5,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-        baca.postevent.to_bar_line_true(index=-1),
-        rleak=True,
     )
 
 
@@ -946,25 +890,6 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
         hairpin,
         baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
-    )
-
-
-def L2b2(pleaves, pitches, alteration, hairpin_lparts, hairpin, *, gliss=None):
-    baca.pitches(pleaves, pitches, strict=True)
-    if gliss is not None:
-        baca.glissando(pleaves[gliss:])
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        rleak=True,
-        staff_padding=5.5,
-    )
-    if sum(hairpin_lparts) != len(pleaves):
-        breakpoint()
-    assert sum(hairpin_lparts) == len(pleaves)
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
     )
 
 
@@ -1085,17 +1010,17 @@ def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     K2a(library.pleaves(m[6], 2), "A3 Ab3", "mf>o!")
     K2a(library.pleaves(m[7], 2), "A3 Ab3", "mf>o!")
-    K3a(library.pleaves(m[7, 8], 3), "G3", "p p p")
-    K3a(library.pleaves(m[10, 11], 3), "G3", "p p p p p")
-    K3a(library.pleaves(m[12, 14], 3), "G3", "p p p mp mp mp mf mf mf")
+    library.K3a(library.pleaves(m[7, 8], 3), "G3", "p p p")
+    library.K3a(library.pleaves(m[10, 11], 3), "G3", "p p p p p")
+    library.K3a(library.pleaves(m[12, 14], 3), "G3", "p p p mp mp mp mf mf mf")
     L1a(library.pleaves(m[15], 99), "A#4", None, "o<p")
     K2a(library.pleaves(m[15, 16], 2), "F4 E4", "mp>o!")
-    K3a(library.pleaves(m[16], 3), "A3", "p p")
+    library.K3a(library.pleaves(m[16], 3), "A3", "p p")
     L1a(library.pleaves(m[17], 99), "A#4", None, "o<p")
     K2a(library.pleaves(m[17], 2), "F4 E4", "mp>o!")
-    K3a(library.pleaves(m[18], 3), "A3", "p p")
+    library.K3a(library.pleaves(m[18], 3), "A3", "p p")
     L1a(library.pleaves(m[18, 19], 99), "A#4", None, "o<f")
-    K3a(library.pleaves(m[19], 3), "A3", "pp pp")
+    library.K3a(library.pleaves(m[19], 3), "A3", "pp pp")
     L1a(library.pleaves(m[20], 1), "B4", None, "o<p")
     L1a(library.pleaves(m[22, 23], 1), "B4", None, "o<mp")
     L1a(library.pleaves(m[24, 25], 1), "B4", None, "o<mf")
@@ -1115,12 +1040,12 @@ def fl(m):
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     K1a(library.pleaves(m[1, 8], 1), "G6 G6 F6", "p")
-    L2a(library.pleaves(m[20], 2), "G6", "Bb6", [1, 1], "o< mp>o!")
-    L2a(library.pleaves(m[23], 2), "G6", "Bb6", [1, 1], "o< mf>o!")
-    L2a(library.pleaves(m[25], 2), "G6", "Bb6", [1, 1], "o< f>o!")
-    L2a(library.pleaves(m[30], 2), "G6", "Bb6", [1, 1], "o< f>o!")
-    L2a(library.pleaves(m[31, 33], 2), "G#6", "A6", [1, 2], "o< f>o!")
-    L2a(library.pleaves(m[35], 2), "G#6", "A6", [2], "f>o!")
+    library.L2a(library.pleaves(m[20], 2), "G6", "Bb6", [1, 1], "o< mp>o!")
+    library.L2a(library.pleaves(m[23], 2), "G6", "Bb6", [1, 1], "o< mf>o!")
+    library.L2a(library.pleaves(m[25], 2), "G6", "Bb6", [1, 1], "o< f>o!")
+    library.L2a(library.pleaves(m[30], 2), "G6", "Bb6", [1, 1], "o< f>o!")
+    library.L2a(library.pleaves(m[31, 33], 2), "G#6", "A6", [1, 2], "o< f>o!")
+    library.L2a(library.pleaves(m[35], 2), "G#6", "A6", [2], "f>o!")
     library.J2a2(
         library.pleaves(m[47, 48], 2),
         "C#6",
@@ -1134,9 +1059,9 @@ def ob(m):
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     K2b(library.pleaves(m[6, 7], 2), "Ab2")
-    K3b(library.pleaves(m[8], 3), "C#5", "p - -")
-    K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
-    K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
+    library.K3b(library.pleaves(m[8], 3), "C#5", "p - -")
+    library.K3b(library.pleaves(m[11, 12], 3), "C#5", "(p) - mp - mf")
+    library.K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
     K2b(library.pleaves(m[17], 2), "Ab2")
     L3a(library.pleaves(m[21], 3), "G2:Ab3", "mf")
     L3a(library.pleaves(m[24], 3), "G2:Ab3", "(mf)")
@@ -1151,11 +1076,11 @@ def gt1(m):
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.K2c(library.pleaves(m[6, 7], 2))
-    K3b(library.pleaves(m[8], 3), "C#5", "p - -")
+    library.K3b(library.pleaves(m[8], 3), "C#5", "p - -")
     library.K2c(library.pleaves(m[9, 10], 2))
-    K3b(library.pleaves(m[11, 12], 3), "C#5", "p - mp - mf")
+    library.K3b(library.pleaves(m[11, 12], 3), "C#5", "p - mp - mf")
     library.K2c(library.pleaves(m[12], 2))
-    K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
+    library.K3b(library.pleaves(m[13, 14], 3), "C#5", "p - mp - mf - f - -")
     L3a(library.pleaves(m[21], 3), "F2:Gb3", "mf")
     L3a(library.pleaves(m[24], 3), "F2:Gb3", "(mf)")
     L3a(library.pleaves(m[26], 3), "F#2:G3", "mp")
@@ -1169,14 +1094,18 @@ def gt2(m):
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.K2d(library.pleaves(m[6, 7], 2), "A3", "mf")
-    K3a(library.pleaves(m[8], 3), "C4", "p p", circle_bow=True)
+    library.K3a(library.pleaves(m[8], 3), "C4", "p p", circle_bow=True)
     library.K2d(library.pleaves(m[9, 10], 2), "Ab3", "mf")
-    K3a(library.pleaves(m[11], 3), "C4", "p p mp mp", circle_bow=True)
+    library.K3a(library.pleaves(m[11], 3), "C4", "p p mp mp", circle_bow=True)
     library.K2d(library.pleaves(m[12], 2), "Ab3", "mf")
-    K3a(library.pleaves(m[13, 14], 3), "C4", "p p mp mp mf mf mf mf", circle_bow=True)
+    library.K3a(
+        library.pleaves(m[13, 14], 3), "C4", "p p mp mp mf mf mf mf", circle_bow=True
+    )
     library.K2d(library.pleaves(m[15], 2), "B3", "pp")
-    K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
-    K3a(library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True)
+    library.K3a(library.pleaves(m[16, 17], 3), "D4", "p p p p pp p", circle_bow=True)
+    library.K3a(
+        library.pleaves(m[18, 19], 3), "D4", "p p p pp pp pp pp", circle_bow=True
+    )
     L2b1(library.pleaves(m[20], 2), "F#4", "A4", None, 4, [1, 1], "o< mp>o!")
     L3b(library.pleaves(m[21, 23], 3), Q1, "o< f>o!", [46, 14], beams=-5)
     L2b1(library.pleaves(m[23], 2), "F#4", "A4", "D5", 4, [1, 2], "o< mf>o!")
@@ -1191,14 +1120,16 @@ def vn(m):
     )
     rmakers.unbeam(m[27][9:11])
     L2b1(library.pleaves(m[30], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
-    L2b2(library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!", gliss=-2)
+    library.L2b2(
+        library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!", gliss=-2
+    )
     L5b(
         library.pleaves(m[33, 35], 5),
         "E6/2 G#5 B5/2 Eb5/2 Gb5/2 Bb5/2 F4/2 Ab4/3 C4 Eb4/3 G3",
         "pp>o!",
     )
     rmakers.unbeam(m[33][:2])
-    L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
+    library.L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
     L3b(library.pleaves(m[36, 37], 3), Q1, "o< f>o!", [6, 18], beams=-5)
     library.L4(
         library.pleaves(m[37, 39], 4),
@@ -1287,7 +1218,7 @@ def vc(m):
         "Db4/2 F3 Bb3/3 D3/2 G3/2 B2/2 E3/2 G#2 C#3",
         'o<"ff"',
     )
-    L1b(
+    library.L1b(
         library.pleaves(m[28, 35], 1),
         "Eb2",
         "P -> O -> P -> O -> P -> O -> P -> O ->"
@@ -1306,7 +1237,7 @@ def vc(m):
     )
     rmakers.unbeam(m[37][:2])
     baca.clef(m[37][1], "bass")
-    L1b(
+    library.L1b(
         library.pleaves(m[39, 41], 1),
         "D2",
         "O -> T -> O -> T -> O -> T -> O -> T",
