@@ -789,19 +789,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.vibrato(
-        baca.select.lparts(pleaves, vibrato_lparts),
-        vibrato,
-        staff_padding=3,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-    )
-
-
 def G2a1(pleaves, pitch, peak):
     baca.pitch(pleaves, pitch)
     pheads = baca.select.pheads(pleaves)
@@ -1001,7 +988,7 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc")
-    G1c(
+    library.G1c(
         library.pleaves(m[5, 6], 1),
         "G2",
         [2, 1, 1],
@@ -1010,7 +997,7 @@ def vc(m):
         "ppp<|f",
     )
     G4b(library.pleaves(m[6, 9], 4))
-    G1c(
+    library.G1c(
         library.pleaves(m[9, 13], 1),
         "G2",
         [3, 3, 1, 1, 1],
@@ -1021,7 +1008,7 @@ def vc(m):
     baca.clef(m[13][-1], "treble")
     library.G5b(library.pleaves(m[13, 15], 5), "G4/2 E4/2 Gb4/3 Eb4/2 F4/3 D4 E4")
     baca.clef(library.pleaves(m[15], 1)[0], "bass")
-    G1c(
+    library.G1c(
         library.pleaves(m[15, 16], 1),
         "G#2",
         [2, 1, 1],
@@ -1041,7 +1028,7 @@ def vc(m):
         "Ab3/4 Bb3/4 G3/2 A3",
     )
     baca.clef(library.pleaves(m[28], 1)[0], "bass")
-    G1c(
+    library.G1c(
         library.pleaves(m[28, 35], 1),
         "G#2",
         [2, 2, 1, 1, 2, 1, 1],

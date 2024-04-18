@@ -1971,6 +1971,22 @@ def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
     )
 
 
+def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, foo=False):
+    baca.pitch(pleaves, pitch)
+    tweaks = []
+    if foo is True:
+        tweaks.append()
+    baca.spanners.vibrato(
+        baca.select.lparts(pleaves, vibrato_lparts),
+        vibrato,
+        staff_padding=3,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+
+
 def G2a2(pleaves, pitch, alteration, peak, *, tbl=False):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(

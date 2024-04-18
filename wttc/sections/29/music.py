@@ -128,7 +128,7 @@ def FL(voice, meters):
     rhythm(meters(6), frame(4, 2), material=3)
     rhythm(meters(7), [4], material=2)
     rhythm(meters(8), [4], material=99)
-    rhythm(meters(9), frame(4, 2), material=99)
+    rhythm(meters(9), frame(4, 2), material=2)
     rhythm.mmrests(10, 11)
     rhythm(
         meters(12),
@@ -182,7 +182,7 @@ def GT1(voice, meters):
     )
     rhythm(meters(7), [c(4, 2)], material=4)
     rhythm(meters(8), OBGC([1, 1, 1, 1], [4]), material=1)
-    rhythm(meters(9), [1, "-"], material=99)
+    rhythm(meters(9), [1, "-"], material=1)
     rhythm.make_one_beat_tuplets(
         meters(10),
         [1, "-"],
@@ -207,7 +207,7 @@ def GT2(voice, meters):
         meters(9),
         [1, "-"],
         extra_counts=[-1],
-        material=99,
+        material=1,
     )
     rhythm.make_one_beat_tuplets(
         meters(10),
@@ -227,7 +227,7 @@ def VN(voice, meters):
     rhythm(meters(5), frame(4, 2), material=2)
     rhythm(meters(6), frame(4, 2), material=3)
     rhythm.mmrests(7, 8)
-    rhythm(meters(9), frame(4, 2), material=99)
+    rhythm(meters(9), frame(4, 2), material=2)
     rhythm.mmrests(10, 11)
     rhythm(meters(12), [-4, AG([2], 12)], material=99)
     rhythm(meters(13), [4], material=99)
@@ -254,7 +254,7 @@ def VC(voice, meters):
     )
     rhythm.mmrests(7)
     rhythm(meters(8), AG([2], 4), material=3)
-    rhythm(meters(9), [4], material=99)
+    rhythm(meters(9), AG([2], 4), material=1)
     rhythm.make_one_beat_tuplets(
         meters(10),
         [1, "-"],
@@ -311,6 +311,7 @@ def fl(m):
         tbl=True,
     )
     library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", tbl=True)
+    library.H2(library.pleaves(m[9], 2), "C6", None, "p", tbl=True)
 
 
 def ob(m):
@@ -344,6 +345,7 @@ def gt1(cache):
     cache.rebuild()
     m = cache["gt1"]
     baca.dynamic(abjad.select.leaf(m[8], 0, grace=False), "(p)")
+    library.H1b(library.pleaves(m[9], 1), "Ab3", "mf")
 
 
 def gt2(cache):
@@ -358,6 +360,7 @@ def gt2(cache):
     cache.rebuild()
     m = cache["gt2"]
     baca.dynamic(abjad.select.leaf(m[8], 0, grace=False), "(p)")
+    library.H1b(library.pleaves(m[9], 1), "Bb3", "ff")
 
 
 def vn(m):
@@ -397,6 +400,7 @@ def vn(m):
         tbl=True,
     )
     library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, tbl=True)
+    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", tbl=True)
 
 
 def vc(m):
@@ -437,6 +441,14 @@ def vc(m):
         tblf=True,
     )
     library.I3b(library.pleaves(m[8], 3), "A2/1 Gtqs2", [1, 1], "T -> O", [2], "p<mp")
+    library.G1c(
+        library.pleaves(m[9], 1),
+        "G#2",
+        [1, 1],
+        "molto -> NV",
+        [2],
+        "pp<p",
+    )
 
 
 def align_spanners(cache):

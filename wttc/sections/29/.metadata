@@ -96,7 +96,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-p-parenthesized",
+                value="mf",
             )
         ],
         "Guitar.1.Staff": [
@@ -132,7 +132,7 @@
                 manifest=None,
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
-                value="\\baca-p-parenthesized",
+                value="ff",
             )
         ],
         "Guitar.2.Staff": [
