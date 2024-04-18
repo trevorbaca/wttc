@@ -820,43 +820,6 @@ def G3c(pleaves, pitch):
     )
 
 
-def G4a(pleaves, up_bow=False):
-    baca.staff_position(pleaves, 0)
-    baca.staff_lines(pleaves[0], 1)
-    rleaf = abjad.get.leaf(pleaves[-1], 1)
-    baca.staff_lines(rleaf, 5)
-    if up_bow is True:
-        bow_mark = baca.up_bow
-    else:
-        bow_mark = baca.down_bow
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        bow_mark(plt.head, padding=1)
-        baca.stop_on_string(plt.head)
-    baca.dynamic(
-        pleaves[0],
-        '"ff"-sempre',
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
-    )
-
-
-def G4b(pleaves):
-    baca.staff_position(pleaves, 0)
-    baca.staff_lines(pleaves[0], 1)
-    rleaf = abjad.get.leaf(pleaves[-1], 1)
-    baca.staff_lines(rleaf, 5)
-    plts = baca.select.plts(pleaves)
-    for plt in plts:
-        baca.stop_on_string(plt.head)
-    baca.dynamic(
-        pleaves[0],
-        '"f"-sempre',
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
-    )
-
-
 def G5a(pleaves, glissandi, starts):
     plts = baca.select.plts(pleaves)
     starts = starts.split()
@@ -928,14 +891,14 @@ def gt1(m):
     library.G3b(library.pleaves(m[5], 3), "F2", "mf mf f")
     library.G1b(library.pleaves(m[6, 7], 1), "A3 B3", "mp>o!")
     library.G3b(library.pleaves(m[8], 3), "F2", "f")
-    G4a(library.pleaves(m[8, 10], 4))
+    library.G4a(library.pleaves(m[8, 10], 4))
     library.G1b(library.pleaves(m[10, 11], 1), "A#3 B#3", "p<mf")
     library.G1b(library.pleaves(m[16, 17], 1), "C4 D4", "p< mf>p", [9, 7])
     library.G3b(library.pleaves(m[18], 3), "A2", "f")
-    G4a(library.pleaves(m[18, 20], 4))
+    library.G4a(library.pleaves(m[18, 20], 4))
     library.G1b(library.pleaves(m[22, 23], 1), "C4 D4", "p>o!")
     library.G3b(library.pleaves(m[24], 3), "A2", "f")
-    G4a(library.pleaves(m[24, 26], 4))
+    library.G4a(library.pleaves(m[24, 26], 4))
     library.H1b(library.pleaves(m[28], 99), "Db4", "p")
     library.G3b(library.pleaves(m[30], 3), "A2", "p")
     library.H1b(library.pleaves(m[31], 99), "Eb4 D4 B3", "mp pp mf")
@@ -952,12 +915,12 @@ def gt2(m):
     library.G1b(library.pleaves(m[4, 5], 1), "A#3 B#3", "mp>o!")
     G3c(library.pleaves(m[5, 6], 3), "F#4")
     library.G1b(library.pleaves(m[6], 1), "A#3 B#3", "mp>o!")
-    G4a(library.pleaves(m[7, 10], 4), up_bow=True)
+    library.G4a(library.pleaves(m[7, 10], 4), up_bow=True)
     library.G1b(library.pleaves(m[10, 11], 1), "B3 C#4", "p<mf")
     library.G1b(library.pleaves(m[16], 1), "B3 C#4", "p<mf")
-    G4a(library.pleaves(m[17, 20], 4), up_bow=True)
+    library.G4a(library.pleaves(m[17, 20], 4), up_bow=True)
     library.G1b(library.pleaves(m[22, 23], 1), "B3 C#4", "p>o!")
-    G4a(library.pleaves(m[24, 26], 4), up_bow=True)
+    library.G4a(library.pleaves(m[24, 26], 4), up_bow=True)
     library.H1b(library.pleaves(m[28], 99), "E4", "mp")
     library.H1b(library.pleaves(m[31], 99), "C4", "f")
     library.H1b(library.pleaves(m[33], 99), "Bb3 B3", "f pp")
@@ -996,7 +959,7 @@ def vc(m):
         [3, 1],
         "ppp<|f",
     )
-    G4b(library.pleaves(m[6, 9], 4))
+    library.G4b(library.pleaves(m[6, 9], 4))
     library.G1c(
         library.pleaves(m[9, 13], 1),
         "G2",
@@ -1016,13 +979,13 @@ def vc(m):
         [4],
         "sfp>o!",
     )
-    G4b(library.pleaves(m[16, 19], 4))
+    library.G4b(library.pleaves(m[16, 19], 4))
     baca.clef(library.pleaves(m[19], 5)[0], "treble")
     library.G5b(
         library.pleaves(m[19, 23], 5),
         "Eb4/3 C4/3 D4/3 B3/3 Db4/3 B3/2 C4/3 A3/2 B3",
     )
-    G4b(library.pleaves(m[24, 25], 4))
+    library.G4b(library.pleaves(m[24, 25], 4))
     library.G5b(
         library.pleaves(m[25, 28], 5),
         "Ab3/4 Bb3/4 G3/2 A3",

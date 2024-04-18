@@ -1682,7 +1682,9 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
             )
 
 
-def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
+def E2b(
+    pleaves, pitches, peak, *, damp=False, rleak=False, string_number=None, xfb=False
+):
     assert damp or xfb
     low_pitch, high_pitch = pitches.split()
     if xfb is True:
@@ -1691,13 +1693,13 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         baca.override.note_head_style_harmonic(first_plt)
         baca.spanners.xfb(
             first_plt,
-            rleak=True,
+            rleak=rleak,
             staff_padding=3,
         )
         baca.spanners.string_number(
             first_plt,
             string_number,
-            rleak=True,
+            rleak=rleak,
             staff_padding=5.5,
         )
     if damp is True:
@@ -1708,7 +1710,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         baca.glissando(leaves, f"{high_pitch} {low_pitch}")
         baca.spanners.damp(
             leaves,
-            rleak=True,
+            rleak=rleak,
             staff_padding=3,
         )
     if xfb is True:
@@ -1716,7 +1718,7 @@ def E2b(pleaves, pitches, peak, *, damp=False, string_number=None, xfb=False):
         baca.hairpin(
             pieces,
             swells(peak),
-            rleak=True,
+            rleak=rleak,
         )
     else:
         baca.hairpin(
@@ -1836,6 +1838,40 @@ def F2a1(pleaves, pitches, dynamics):
     for pleaf in pleaves[4::2]:
         pitch = abjad.NamedPitch(pleaf.written_pitch.name, arrow=abjad.UP)
         pleaf.written_pitch = pitch
+
+
+def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
+    baca.pitch(pleaves, pitch)
+    baca.spanners.trill(
+        pleaves,
+        alteration=alteration,
+        harmonic=True,
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.override.note_head_style_harmonic(pleaves)
+    parts = baca.select.clparts(pleaves, [2])
+    for i, part in enumerate(parts):
+        if i in down_bow_indices:
+            baca.spanners.half_clt(
+                part,
+                descriptor="½ clt ||",
+                rleak=True,
+                staff_padding=5.5,
+            )
+            baca.down_bow(part[0], full=True)
+        else:
+            baca.spanners.circle_bow(
+                part,
+                rleak=True,
+                staff_padding=5.5,
+            )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        swells(peaks),
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def F2b2(pleaves, glissandi):
@@ -1971,14 +2007,15 @@ def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
     )
 
 
-def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, foo=False):
+def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, bdrp=None):
     baca.pitch(pleaves, pitch)
     tweaks = []
-    if foo is True:
-        tweaks.append()
+    if bdrp is not None:
+        tweaks.append(baca.postevent.bound_details_right_padding(bdrp))
     baca.spanners.vibrato(
         baca.select.lparts(pleaves, vibrato_lparts),
         vibrato,
+        *tweaks,
         staff_padding=3,
     )
     baca.hairpin(
@@ -2029,6 +2066,51 @@ def G3b(pleaves, pitch, dynamics):
             plts,
             staff_padding=3,
         )
+
+
+def G4a(pleaves, *, once=False, up_bow=False):
+    baca.staff_position(pleaves, 0)
+    baca.staff_lines(pleaves[0], 1)
+    rleaf = abjad.get.leaf(pleaves[-1], 1)
+    baca.staff_lines(rleaf, 5)
+    if up_bow is True:
+        bow_mark = baca.up_bow
+    else:
+        bow_mark = baca.down_bow
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        bow_mark(plt.head, padding=1)
+        baca.stop_on_string(plt.head)
+    if once is True:
+        string = '"ff"'
+    else:
+        string = '"ff"-sempre'
+    baca.dynamic(
+        pleaves[0],
+        string,
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
+    )
+
+
+def G4b(pleaves, *, once=False):
+    baca.staff_position(pleaves, 0)
+    baca.staff_lines(pleaves[0], 1)
+    rleaf = abjad.get.leaf(pleaves[-1], 1)
+    baca.staff_lines(rleaf, 5)
+    plts = baca.select.plts(pleaves)
+    for plt in plts:
+        baca.stop_on_string(plt.head)
+    if once is True:
+        string = '"f"'
+    else:
+        string = '"f"-sempre'
+    baca.dynamic(
+        pleaves[0],
+        string,
+        parent_alignment_x=-1,
+        self_alignment_x=-1,
+    )
 
 
 def G5b(pleaves, glissando, *, no_hairpin=False, pizz_tblf=False, rleak_pizz=False):

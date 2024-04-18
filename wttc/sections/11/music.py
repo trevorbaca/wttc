@@ -440,40 +440,6 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     )
 
 
-def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
-    baca.pitch(pleaves, pitch)
-    baca.spanners.trill(
-        pleaves,
-        alteration=alteration,
-        harmonic=True,
-        rleak=True,
-        staff_padding=3,
-    )
-    baca.override.note_head_style_harmonic(pleaves)
-    parts = baca.select.clparts(pleaves, [2])
-    for i, part in enumerate(parts):
-        if i in down_bow_indices:
-            baca.spanners.half_clt(
-                part,
-                descriptor="½ clt ||",
-                rleak=True,
-                staff_padding=5.5,
-            )
-            baca.down_bow(part[0], full=True)
-        else:
-            baca.spanners.circle_bow(
-                part,
-                rleak=True,
-                staff_padding=5.5,
-            )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        library.swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
-        rleak=True,
-    )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.F1a(
@@ -537,8 +503,8 @@ def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
     F1c(library.pleaves(m[1, 4], 1), "D4:G4", "A4", 'mp mf "f"')
     baca.clef(m[7][0], "bass")
-    F2b1(library.pleaves(m[7, 8], 2), "Eb2", "F2", 6 * [1], "mf mf mf", [])
-    F2b1(
+    library.F2b1(library.pleaves(m[7, 8], 2), "Eb2", "F2", 6 * [1], "mf mf mf", [])
+    library.F2b1(
         library.pleaves(m[9, 11], 2), "Eb2", "F2", 10 * [1], 'mp "f" mp "f" mp', [1, 3]
     )
     library.F2b2(

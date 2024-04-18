@@ -1087,141 +1087,115 @@ number.29.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [AltoFlute.Music measure 12]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    [
+    \once \override Flag.stencil = #flat-flag
+    \once \override Stem.length = 22
+    ef'''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    \override Accidental.X-extent = ##f
+    \override Accidental.extra-offset = #'(1.2 . 2.2)
+    \override Accidental.font-size = -3
+    \override Flag.stencil = ##f
+    \override NoteHead.font-size = -3
+    \override Stem.stencil = ##f
+    g'''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    bf'''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    df''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    ]
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    [
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    ]
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    [
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    ]
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    [
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    ef''''!32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    f''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
+    g''''32
+    - \flageolet
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'32
-    ]
+    f''''32
+    - \flageolet
+    \revert Accidental.X-extent
+    \revert Accidental.extra-offset
+    \revert Accidental.font-size
+    \revert Flag.stencil
+    \revert NoteHead.font-size
+    \revert Stem.stencil
 
     % [AltoFlute.Music measure 13]
       %! NOT_YET_PITCHED_COLORING
@@ -1509,9 +1483,9 @@ number.29.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Oboe.Music measure 11]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    b'4
+    R1 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Oboe.Music measure 12]
     R1 * 4/4
@@ -1725,10 +1699,42 @@ number.29.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 10]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 0)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
+        - \baca-stop-on-string
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        - \tweak parent-alignment-X -1
+          %! EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X -1
+          %! EXPLICIT_DYNAMIC
+        \baca-effort-ff
+        - \tweak padding 1
+        - \downbow
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         r4
 
     }
@@ -1949,10 +1955,42 @@ number.29.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 10]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         b'8
+        - \baca-stop-on-string
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        - \tweak parent-alignment-X -1
+          %! EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X -1
+          %! EXPLICIT_DYNAMIC
+        \baca-effort-ff
+        - \tweak padding 1
+        - \upbow
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         r4
 
     }
@@ -2326,15 +2364,59 @@ number.29.Violin.Music = {
     % [Violin.Music measure 12]
     r4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
+    \override NoteHead.style = #'harmonic
     \afterGrace
-    b'2.
+    gs'!2.
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \baca-string-iii-markup
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanStringNumber
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+    \glissando
     {
 
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
-        b'8
+        c''8
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mf
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \revert NoteHead.style
 
     }
 
@@ -2343,6 +2425,12 @@ number.29.Violin.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
     b'4
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
+      %! SPANNER_STOP
+    \bacaStopTextSpanStringNumber
 
     % [Violin.Music measure 14]
       %! NOT_YET_PITCHED_COLORING
@@ -2545,7 +2633,7 @@ number.29.Cello.Music = {
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
-    - \baca-dashed-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
@@ -2734,7 +2822,7 @@ number.29.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "NV"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2767,39 +2855,120 @@ number.29.Cello.Music = {
     {
 
         % [Cello.Music measure 10]
-          %! NOT_YET_PITCHED_COLORING
-        \baca-not-yet-pitched-coloring
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(0 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 1
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         d8
+        - \baca-stop-on-string
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        - \tweak parent-alignment-X -1
+          %! EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X -1
+          %! EXPLICIT_DYNAMIC
+        \baca-effort-f
 
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 2)
+          %! EXPLICIT_STAFF_LINES
+        \stopStaff
+          %! EXPLICIT_STAFF_LINES
+        \once \override Staff.StaffSymbol.line-count = 5
+          %! EXPLICIT_STAFF_LINES
+        \startStaff
         r4
 
     }
 
     % [Cello.Music measure 11]
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-    d4 * 2/4
+    \override NoteHead.style = #'harmonic
+      %! SPANNER_START
+    \pitchedTrill
+    ef,!4 * 2/4
+    - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "½ clt"
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanHalfCLT
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+      %! SPANNER_START
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    - \tweak TrillSpanner.staff-padding 3
+      %! SPANNER_START
+    \startTrillSpan f,
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    d4 * 1/2
+    ef,!4 * 1/2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-effort-f
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
+    \revert NoteHead.style
 
     % [Cello.Music measure 12]
     r4
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanHalfCLT
+      %! SPANNER_STOP
+    \stopTrillSpan
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
