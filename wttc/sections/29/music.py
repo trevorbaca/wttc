@@ -142,8 +142,8 @@ def FL(voice, meters):
         material=4,
     )
     rhythm(meters(14), frame(24, 1), material=3)
-    rhythm(meters(15), [4], material=99)
-    rhythm(meters(16), frame(16, 8), material=99)
+    rhythm(meters(15), [4], material=1)
+    rhythm(meters(16), frame(16, 8), material=1)
     baca.section.append_anchor_note(voice)
 
 
@@ -189,7 +189,7 @@ def GT1(voice, meters):
         material=4,
     )
     rhythm.mmrests(11, 14)
-    rhythm(meters(15), [c(4, 2)], material=99)
+    rhythm(meters(15), [c(4, 2)], material=5)
     rhythm.mmrests(16)
 
 
@@ -215,7 +215,7 @@ def GT2(voice, meters):
     )
     rhythm.mmrests(11, 13)
     rhythm(meters(14), [1, "-"], material=3)
-    rhythm(meters(15), [c(4, 2)], material=99)
+    rhythm(meters(15), [c(4, 2)], material=5)
     rhythm.mmrests(16)
 
 
@@ -232,7 +232,7 @@ def VN(voice, meters):
     rhythm(meters(13), [4], material=4)
     rhythm(meters(14), frame(24, 1), material=3)
     rhythm.mmrests(15)
-    rhythm(meters(16), 4 * [TC(2, [1, 1])], material=99)
+    rhythm(meters(16), 4 * [TC(2, [1, 1])], material=1)
     baca.section.append_anchor_note(voice)
 
 
@@ -314,6 +314,8 @@ def fl(m):
     library.E3a(library.pleaves(m[12], 3))
     library.D4a(library.pleaves(m[13], 4), "F#5", "mf")
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", once=True)
+    library.B1a_foo(library.pleaves(m[15], 1), "Eb4", '"f"')
+    library.A1a(library.pleaves(m[16], 1), "F#4", "mf", tbl=True)
 
 
 def ob(m):
@@ -349,6 +351,7 @@ def gt1(cache):
     baca.dynamic(abjad.select.leaf(m[8], 0, grace=False), "(p)")
     library.H1b(library.pleaves(m[9], 1), "Ab3", "mf")
     library.G4a(library.pleaves(m[10], 4), once=True)
+    library.B5(library.pleaves(m[15], 5), "F#3:A3", "mp")
 
 
 def gt2(cache):
@@ -366,6 +369,7 @@ def gt2(cache):
     library.H1b(library.pleaves(m[9], 1), "Bb3", "ff")
     library.G4a(library.pleaves(m[10], 4), once=True, up_bow=True)
     library.C3c(library.pleaves(m[14], 3), "B2", "mp", pizz=True, staff_padding=3)
+    library.B5(library.pleaves(m[15], 5), "F3:Ab3", "mp")
 
 
 def vn(m):
@@ -416,6 +420,7 @@ def vn(m):
     )
     library.D4b(library.pleaves(m[13], 4), "G#3", dynamics="mp", no_spanner=True)
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp")
+    library.A1b(library.pleaves(m[16], 1), "D4 F4", "mp mp p p", tbl=True)
 
 
 def vc(m):
@@ -472,6 +477,7 @@ def vc(m):
     baca.dynamic(m[12][1], "p")
     baca.clef(m[13][0], "bass")
     library.D4c(library.pleaves(m[13], 4), "Ab2 G2", hairpin="mp>p")
+    library.D1b(library.pleaves(m[14], 99), "F2", "o<p", [2], "T -> P1", [1, 1])
 
 
 def align_spanners(cache):
@@ -479,16 +485,36 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(fl[1, 2], 3)
     baca.override.dls_staff_padding(fl[3], 6)
     baca.override.dls_staff_padding(fl[6], 4)
+    baca.override.dls_staff_padding(fl[13, 16], 3)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
-    baca.override.dls_staff_padding(gt1.leaves(), 3)
+    baca.override.dls_staff_padding(gt1[1, 6], 3)
+    baca.override.dls_staff_padding(gt1[7], 5)
+    baca.override.dls_staff_padding(abjad.select.leaves(gt1[8, 9], grace=False), 3)
+    baca.override.dls_staff_padding(gt1[10], 6)
+    baca.override.dls_staff_padding(gt1[11, 16], 3)
+    baca.override.tuplet_bracket_direction_up(gt1[10])
     gt2 = cache["gt2"]
-    baca.override.dls_staff_padding(gt2.leaves(), 3)
+    baca.override.dls_staff_padding(gt2[1, 6], 3)
+    baca.override.dls_staff_padding(gt2[7], 6)
+    baca.override.dls_staff_padding(abjad.select.leaves(gt2[8, 9], grace=False), 3)
+    baca.override.dls_staff_padding(gt2[10], 6)
+    baca.override.dls_staff_padding(gt2[14], 4.5)
+    baca.override.dls_staff_padding(gt2[15], 3)
+    baca.override.tuplet_bracket_direction_up(gt2[9, 10])
+    baca.override.tuplet_bracket_staff_padding(gt2[9], 2.5)
     vn = cache["vn"]
-    baca.override.dls_staff_padding(vn.leaves(), 3)
+    baca.override.dls_staff_padding(vn[1, 12], 3)
+    baca.override.dls_staff_padding(vn[13], 6)
+    baca.override.dls_staff_padding(vn[14], 3)
+    baca.override.dls_staff_padding(vn[16], 4)
     vc = cache["vc"]
-    baca.override.dls_staff_padding(vc.leaves(), 5)
+    baca.override.dls_staff_padding(vc[1, 9], 5)
+    baca.override.dls_staff_padding(vc[10], 7)
+    baca.override.dls_staff_padding(vc[11, 16], 5)
+    baca.override.tuplet_bracket_direction_up(vc[10])
+    baca.override.tuplet_bracket_staff_padding(vc[10], 2)
 
 
 @baca.build.timed("make_score")

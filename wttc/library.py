@@ -1001,6 +1001,16 @@ def e4(twelfths=False):
     return counts
 
 
+def A1a(pleaves, pitch, peaks, *, tbl=False):
+    baca.pitch(pleaves, pitch)
+    baca.hairpin(
+        baca.select.clparts(pleaves, [1]),
+        swells(peaks),
+        *to_bar_line_tweaks(tbl),
+        rleak=True,
+    )
+
+
 def A1b(pleaves, pitches, peaks, *, tbl=False):
     baca.pitches(pleaves, pitches)
     baca.hairpin(
@@ -1235,6 +1245,14 @@ def B4b(pleaves, string_number, pitches, peaks):
         baca.select.clparts(run, [2]),
         swells(peaks),
     )
+
+
+def B5(pleaves, pitches, dynamics):
+    baca.pitches(pleaves, pitches)
+    plts = baca.select.plts(pleaves)
+    dynamics = dynamics.split()
+    for plt, dynamic in zip(plts, dynamics, strict=True):
+        baca.dynamic(plt.head, dynamic)
 
 
 def C1_final(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):

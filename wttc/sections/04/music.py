@@ -829,14 +829,6 @@ def B1c(
         )
 
 
-def B5(pleaves, pitches, dynamics):
-    baca.pitches(pleaves, pitches)
-    plts = baca.select.plts(pleaves)
-    dynamics = dynamics.split()
-    for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
-
-
 def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, fundamental)
@@ -1021,14 +1013,14 @@ def gt1(m):
     library.B4a(library.pleaves(m[4], 4), "G#4", "p")
     B1b(library.pleaves(m[5], 1), '"mf"')
     library.B2a(library.pleaves(m[5, 6], 2), "D#5", "f mf mp")
-    B5(library.pleaves(m[6, 8], 5), "A3:C4 G3:Bb3 F#3:A3", "f mf mp")
+    library.B5(library.pleaves(m[6, 8], 5), "A3:C4 G3:Bb3 F#3:A3", "f mf mp")
     B1b(library.pleaves(m[8], 1), '"ff"')
     library.B2a(library.pleaves(m[8], 2), "D#5", "f")
     library.B4a(library.pleaves(m[9], 4), "G4 Gb4", "p pp")
-    B5(library.pleaves(m[9, 11], 5), "F3:Ab3", "mf mp")
+    library.B5(library.pleaves(m[9, 11], 5), "F3:Ab3", "mf mp")
     library.B2a(library.pleaves(m[11], 2), "F5", "mf")
     library.B4a(library.pleaves(m[12], 4), "C4 B3 Bb3", "p pp ppp")
-    B5(library.pleaves(m[12, 14], 5), "F3:Ab3", "mf mp")
+    library.B5(library.pleaves(m[12, 14], 5), "F3:Ab3", "mf mp")
     library.B2a(library.pleaves(m[14, 15], 2), "F#5", "mp p")
     override_uneven_staff_padding(m[1, 3])
     override_uneven_staff_padding(m[5, 6][1:-1])
@@ -1063,14 +1055,14 @@ def gt2(m):
     B1b(library.pleaves(m[5], 1), '"ff" "f"', up_bow=True)
     B1b(library.pleaves(m[6], 1), '"mf"', up_bow=True)
     library.B2a(library.pleaves(m[6], 2), "D#5", "f mf mp")
-    B5(library.pleaves(m[6, 8], 5), "G#3:B3 F#3:A3 F3:Ab3", "f mf mp")
+    library.B5(library.pleaves(m[6, 8], 5), "G#3:B3 F#3:A3 F3:Ab3", "f mf mp")
     B1b(library.pleaves(m[8], 1), '"ff"', up_bow=True)
     library.B2a(library.pleaves(m[8], 2), "D#5", "f")
     library.B4a(library.pleaves(m[9], 4), "D4 Db4", "mf mp")
-    B5(library.pleaves(m[9, 10], 5), "E3:G3", "mf mp")
+    library.B5(library.pleaves(m[9, 10], 5), "E3:G3", "mf mp")
     B1b(library.pleaves(m[11], 1), '"mf"', up_bow=True)
     library.B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
-    B5(library.pleaves(m[12, 14], 5), "E3:G3", "mf mp")
+    library.B5(library.pleaves(m[12, 14], 5), "E3:G3", "mf mp")
     library.B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
     baca.override.tuplet_bracket_direction_down(m.leaves())
     override_uneven_staff_padding(m[1, 3], only_dls=True)

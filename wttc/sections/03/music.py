@@ -397,15 +397,6 @@ def VC(voice, meters):
     )
 
 
-def A1a(pleaves, pitch, peaks):
-    baca.pitch(pleaves, pitch)
-    baca.hairpin(
-        baca.select.clparts(pleaves, [1]),
-        library.swells(peaks),
-        rleak=True,
-    )
-
-
 def A2a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     baca.laissez_vibrer(pleaves)
@@ -468,15 +459,15 @@ def A2c(run, glissando, hairpin_lparts, hairpin):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    A1a(library.pleaves(m[1, 2], 1), "F#4", "mf mf mp")
-    A1a(library.pleaves(m[3, 4], 1), "F4", "p p p")
-    A1a(library.pleaves(m[5, 7], 1), "E4", "p mp mf mp p")
+    library.A1a(library.pleaves(m[1, 2], 1), "F#4", "mf mf mp")
+    library.A1a(library.pleaves(m[3, 4], 1), "F4", "p p p")
+    library.A1a(library.pleaves(m[5, 7], 1), "E4", "p mp mf mp p")
     library.A3a(library.pleaves(m[7], 3), "C6 B5", "f>o!")
     library.A3a(library.pleaves(m[8, 9], 3), "C6 B5", "mf>o!")
     library.A3a(library.pleaves(m[10], 3), "D6 C#6", "mp>o!")
     library.A3a(library.pleaves(m[11], 3), "Eb6 D6", "p>o!")
     library.B1a(library.pleaves(m[11], 99), "G#3", "mp")
-    A1a(library.pleaves(m[12], 1), "E4", "p")
+    library.A1a(library.pleaves(m[12], 1), "E4", "p")
     library.A3a(library.pleaves(m[12], 3), "E6 D#6", "p>o!")
     library.B1a(library.pleaves(m[12], 99), "G#3", "mp")
     library.A3a(library.pleaves(m[13], 3), "F6 E6", "p>o!")
