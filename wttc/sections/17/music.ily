@@ -2262,9 +2262,9 @@ number.17.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
+    \afterGrace
       %! SPANNER_START
     \pitchedTrill
-    \afterGrace
     cs!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
