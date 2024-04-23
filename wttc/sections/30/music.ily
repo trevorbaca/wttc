@@ -840,6 +840,7 @@ number.30.Cello.Music = {
         \override Staff.RehearsalMark.direction = #down
         \override Staff.RehearsalMark.rotation = #'(180 0 0)
         \override TupletBracket.direction = #down
+        \override TupletBracket.staff-padding = 1
         \override TupletBracket.stencil = ##f
         \override TupletNumber.stencil = ##f
           %! EXPLICIT_CLEF
@@ -856,6 +857,8 @@ number.30.Cello.Music = {
         - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "Tposs"
+          %! SPANNER_START
+        - \tweak staff-padding 3
           %! SPANNER_START
         \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC
@@ -915,6 +918,16 @@ number.30.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -936,14 +949,6 @@ number.30.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
-          %! SPANNER_START
-        - \baca-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "O"
-          %! SPANNER_START
-        \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -965,6 +970,16 @@ number.30.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "Tposs"
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -986,14 +1001,6 @@ number.30.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
-          %! SPANNER_START
-        - \baca-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "Tposs"
-          %! SPANNER_START
-        \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1015,6 +1022,22 @@ number.30.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
+          %! SPANNER_START
+        - \baca-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "O"
+          %! SPANNER_START
+        - \baca-text-spanner-right-text "Tposs"
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 4.5
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1036,20 +1059,6 @@ number.30.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
-          %! SPANNER_START
-        - \baca-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "O"
-          %! SPANNER_START
-        - \baca-text-spanner-right-text "Tposs"
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-          %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SPANNER_START
-        \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -1057,6 +1066,9 @@ number.30.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -1074,11 +1086,23 @@ number.30.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
+        \afterGrace
         <f, c>1
-          %! SPANNER_STOP
-        \bacaStopTextSpanSCP
-        \revert DynamicLineSpanner.staff-padding
-        \revert TupletBracket.direction
+        {
+
+              %! INVISIBLE_MUSIC_COMMAND
+            %@% \abjad-invisible-music
+              %! INVISIBLE_MUSIC_COLORING
+            \abjad-invisible-music-coloring
+            f,4
+              %! SPANNER_STOP
+            \bacaStopTextSpanSCP
+            \revert DynamicLineSpanner.staff-padding
+            \revert TupletBracket.direction
+            \revert TupletBracket.staff-padding
+
+        }
+
 
     }
 

@@ -66,7 +66,7 @@ def VC(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1, 9),
-        9 * [T([c(16, 2)], "4:5")],
+        8 * [T([c(16, 2)], "4:5")] + [T([AG([h(4)], c(16, 2))], "4:5")],
         material=99,
     )
     rhythm.mmrests(10, 11)
@@ -94,18 +94,21 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
-    baca.pitch(m[1, 9], "F2:C3")
-    baca.spanners.scp(
-        baca.select.lparts(m[1, 9], [3, 2, 2, 2]),
-        "Tposs -> O -> Tposs -> O -> Tposs",
-    )
+    baca.pitch(m[1, 9][:-1], "F2:C3")
+    baca.pitch(m[9][-1], "F2")
     baca.hairpin(
-        baca.select.lparts(m[1, 9], [1, 1, 1, 1, 1, 1, 1, 2]),
+        baca.select.lparts(m[1, 9], [1, 1, 1, 1, 1, 1, 1, 3]),
         "o< mp> pp< mp> pp< mp> pp< mp>o!",
-        # baca.postevent.to_bar_line_true(index=-1),
+        baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
-    baca.glissando(m[1, 9])
+    baca.spanners.scp(
+        baca.select.lparts(m[1, 9], [2, 2, 2, 4]),
+        "Tposs -> O -> Tposs -> O -> Tposs",
+        baca.postevent.bound_details_right_padding(4.5, index=-1),
+        staff_padding=3,
+    )
+    baca.glissando(m[1, 9][:-1])
 
 
 def align_spanners(cache):
@@ -119,6 +122,7 @@ def align_spanners(cache):
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[1, 9], 7)
     baca.override.tuplet_bracket_direction_down(vc[1, 9])
+    baca.override.tuplet_bracket_staff_padding(vc[1, 9], 1)
     baca.override.tuplet_bracket_stencil_false(vc[1, 8])
     baca.override.tuplet_number_stencil_false(vc[1, 8])
 
