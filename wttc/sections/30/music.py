@@ -39,7 +39,12 @@ def GLOBALS(skips):
 
 def FL(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1, 9),
+        9 * [T([w(8, 16), h(8)], "4:5")],
+        material=99,
+    )
+    rhythm.mmrests(10, 11)
 
 
 def OB(voice, meters):
@@ -79,6 +84,13 @@ def VC(voice, meters):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
+    baca.pitch(m[1, 9], "A4")
+    baca.hairpin(
+        baca.select.clparts(m[1, 9], [1]),
+        library.swells("mp mp mp mp p p p p pp"),
+        baca.postevent.to_bar_line_true(),
+        rleak=True,
+    )
 
 
 def ob(m):
@@ -138,8 +150,9 @@ def vc(m):
 
 
 def align_spanners(cache):
-    """
     fl = cache["fl"]
+    baca.override.dls_staff_padding(fl[1, 9], 6.5)
+    """
     ob = cache["ob"]
     gt1 = cache["gt1"]
     gt2 = cache["gt2"]
