@@ -59,7 +59,12 @@ def GT2(voice, meters):
 
 def VN(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1, 11),
+        10 * [T([16], "4:5")] + [T([AG([h(4)], 16)], "4:5")],
+        material=99,
+    )
+    baca.section.append_anchor_note(voice)
 
 
 def VC(voice, meters):
@@ -90,6 +95,27 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    baca.pitch(m[1, 11], "C4")
+    baca.stem_tremolo(m[1][0])
+    baca.stem_tremolo(m[11][0])
+    baca.glissando(m[1, 11][:-1])
+    baca.spanners.xfb(
+        m[1, 11],
+        rleak=True,
+        staff_padding=3,
+    )
+    baca.spanners.tasto(
+        m[1, 11],
+        descriptor="Tposs =|",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1, 11], [2, 1, 2, 1, 2, 1, 2]),
+        "mp> pp< mp> pp< mp> pp< mp>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def vc(m):
@@ -98,7 +124,7 @@ def vc(m):
     baca.pitch(m[9][-1], "F2")
     baca.hairpin(
         baca.select.lparts(m[1, 9], [1, 1, 1, 1, 1, 1, 1, 3]),
-        "o< mp> pp< mp> pp< mp> pp< mp>o!",
+        "pp< mp> pp< mp> pp< mp> pp< mp>o!",
         baca.postevent.to_bar_line_true(index=-1),
         rleak=True,
     )
@@ -117,10 +143,15 @@ def align_spanners(cache):
     ob = cache["ob"]
     gt1 = cache["gt1"]
     gt2 = cache["gt2"]
-    vn = cache["vn"]
     """
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[1, 11], 6.5)
+    baca.override.tuplet_bracket_direction_down(vn[1, 11])
+    baca.override.tuplet_bracket_staff_padding(vn[1, 11], 1)
+    baca.override.tuplet_bracket_stencil_false(vn[1, 10])
+    baca.override.tuplet_number_stencil_false(vn[1, 10])
     vc = cache["vc"]
-    baca.override.dls_staff_padding(vc[1, 9], 7)
+    baca.override.dls_staff_padding(vc[1, 9], 6.5)
     baca.override.tuplet_bracket_direction_down(vc[1, 9])
     baca.override.tuplet_bracket_staff_padding(vc[1, 9], 1)
     baca.override.tuplet_bracket_stencil_false(vc[1, 8])

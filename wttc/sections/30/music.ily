@@ -719,90 +719,312 @@ number.30.Guitar.2.Staff = <<
 
 number.30.Violin.Music = {
 
-    % [Violin.Music measure 1]
-      %! EXPLICIT_CLEF
-    \clef "treble"
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    %@% \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-violin-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup %@%
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Violin.Music measure 2]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Violin.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        %@% \once \override Staff.InstrumentName.color = #blue
+        \override DynamicLineSpanner.staff-padding = 6.5
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.direction = #down
+        \override TupletBracket.staff-padding = 1
+        \override TupletBracket.stencil = ##f
+        \override TupletNumber.stencil = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-violin-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vn-markup
+        c'1
+        :32
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "Tposs"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-t-markup
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \bacaStartTextSpanSCP
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+          %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \glissando
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
-    % [Violin.Music measure 3]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Violin.Music measure 4]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Violin.Music measure 5]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Violin.Music measure 2]
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        c'1
 
-    % [Violin.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Violin.Music measure 7]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Violin.Music measure 8]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Violin.Music measure 3]
+        c'1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
 
-    % [Violin.Music measure 9]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Violin.Music measure 10]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Violin.Music measure 11]
-    R1 * 5/4
+        % [Violin.Music measure 4]
+        c'1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 5]
+        c'1
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 6]
+        c'1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 7]
+        c'1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 8]
+        c'1
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 9]
+        c'1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 10]
+        c'1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \revert TupletBracket.stencil
+        \revert TupletNumber.stencil
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Violin.Music measure 11]
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        \afterGrace
+        c'1
+        :32
+        {
+
+              %! INVISIBLE_MUSIC_COMMAND
+            %@% \abjad-invisible-music
+              %! INVISIBLE_MUSIC_COLORING
+            \abjad-invisible-music-coloring
+            c'4
+              %! SPANNER_STOP
+            \!
+            \revert DynamicLineSpanner.staff-padding
+            \revert TupletBracket.direction
+            \revert TupletBracket.staff-padding
+
+        }
+
+
+    }
+
+      %! ANCHOR_NOTE
+    % [Violin.Music anchor note]
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COMMAND
+      %! NOTE
+    %@% \abjad-invisible-music
+      %! ANCHOR_NOTE
+      %! INVISIBLE_MUSIC_COLORING
+      %! NOTE
+    \abjad-invisible-music-coloring
+      %! ANCHOR_NOTE
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+    \stopStaff
+      %! ANCHOR_NOTE
+    \once \override Staff.StaffSymbol.transparent = ##t
+      %! ANCHOR_NOTE
+    \startStaff
+      %! ANCHOR_NOTE
+      %! HIDDEN
+      %! NOTE
+    b'1 * 1/4
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+      %! HIDDEN
+      %! NOTE
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
 
 }
 
@@ -834,7 +1056,7 @@ number.30.Cello.Music = {
     %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
-        \override DynamicLineSpanner.staff-padding = 7
+        \override DynamicLineSpanner.staff-padding = 6.5
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
         \override Staff.RehearsalMark.direction = #down
@@ -851,6 +1073,11 @@ number.30.Cello.Music = {
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vc-markup
         <f, c>1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
           %! SPANNER_START
@@ -861,9 +1088,6 @@ number.30.Cello.Music = {
         - \tweak staff-padding 3
           %! SPANNER_START
         \bacaStartTextSpanSCP
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
