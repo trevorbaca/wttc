@@ -866,44 +866,76 @@ number.30.Oboe.Music = {
     \set Staff.shortInstrumentName = \wttc-owl-markup %@%
 
     % [Oboe.Music measure 2]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    f''4
+
+    f''4
+
+    r2.
 
     % [Oboe.Music measure 3]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    ef''!4
+
+    f''4
+
+    r2.
 
     % [Oboe.Music measure 4]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    df''!4
 
-    % [Oboe.Music measure 5]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    c''4
+
+    r2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Oboe.Music measure 5]
+        a'4
+
+        c''4
+
+        df''!4
+
+    }
+
+    c''2.
 
     % [Oboe.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    a'4
 
-    % [Oboe.Music measure 7]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    r1
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 2/3
+    {
+
+        % [Oboe.Music measure 7]
+        f'4
+
+        gf'!4
+
+        af'!4
+
+    }
+
+    a'2.
 
     % [Oboe.Music measure 8]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    r4
 
-    % [Oboe.Music measure 9]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    gf'!4
+
+    af'!2.
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Oboe.Music measure 9]
+        gf'!1
+
+    }
 
     % [Oboe.Music measure 10]
     R1 * 5/4

@@ -49,7 +49,15 @@ def FL(voice, meters):
 
 def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm.mmrests(1)
+    rhythm(meters(2), [4, 4, "-"], material=99)
+    rhythm(meters(3), [4, 4, "-"], material=99)
+    rhythm(meters(4), [4, 4, "-"], material=99)
+    rhythm(meters(5, 6), [T([4, 4, 4], "3:2"), 12, 4, "-"], material=99)
+    rhythm(meters(7), [T([4, 4, 4], "3:2"), 12], material=99)
+    rhythm(meters(8), [-4, 4, 12], material=99)
+    rhythm(meters(9), T([16], "4:5"), material=99)
+    rhythm.mmrests(10, 11)
 
 
 def GT1(voice, meters):
@@ -105,6 +113,8 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "owl")
+    baca.pitches(m[2, 6], "F5 F5 Eb5 F5 Db5 C5 A4 C5 Db5 C5 A4", strict=True)
+    baca.pitches(m[7, 9], "F4 Gb4 Ab4 A4 Gb4 Ab4 Gb4", strict=True)
 
 
 def gt1(m):
