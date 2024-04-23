@@ -229,6 +229,8 @@
 
 %%% MARGIN MARKUP %%%
 
+wttc-owl-markup = \markup \hcenter-in #22 "OWL"
+
 wttc-alto-flute-markup = \markup \hcenter-in #22 "Alto flute"
 wttc-afl-markup = \markup \hcenter-in #12 "Al. fl."
 

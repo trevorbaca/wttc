@@ -848,22 +848,22 @@ number.30.Oboe.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! -PARTS
-    \set Staff.instrumentName = \wttc-oboe-markup
+    \set Staff.instrumentName = \wttc-owl-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-ob-markup
+    \set Staff.shortInstrumentName = \wttc-owl-markup
     R1 * 5/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
       %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Oboe”)"
+    %@% ^ \baca-explicit-instrument-markup "(“AltoVoice”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-ob-markup %@%
+    \set Staff.shortInstrumentName = \wttc-owl-markup %@%
 
     % [Oboe.Music measure 2]
     R1 * 5/4
@@ -928,85 +928,226 @@ number.30.Oboe.Staff = <<
 
 number.30.Guitar.1.Music = {
 
-    % [Guitar.1.Music measure 1]
-      %! EXPLICIT_CLEF
-    \clef "treble"
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    %@% \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-guitar-i-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Guitar.1.Music measure 2]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Guitar.1.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        %@% \once \override Staff.InstrumentName.color = #blue
+        \override DynamicLineSpanner.staff-padding = 6
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.stencil = ##f
+        \override TupletNumber.stencil = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-guitar-i-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-i-markup
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \wttc-with-screw
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
-    % [Guitar.1.Music measure 3]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Guitar.1.Music measure 4]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Guitar.1.Music measure 5]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Guitar.1.Music measure 2]
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
-    % [Guitar.1.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Guitar.1.Music measure 7]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Guitar.1.Music measure 8]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Guitar.1.Music measure 3]
+        f1
 
-    % [Guitar.1.Music measure 9]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.1.Music measure 4]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.1.Music measure 5]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.1.Music measure 6]
+        f1
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.1.Music measure 7]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.1.Music measure 8]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \revert TupletBracket.stencil
+        \revert TupletNumber.stencil
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.1.Music measure 9]
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        f1
+        \revert DynamicLineSpanner.staff-padding
+
+    }
 
     % [Guitar.1.Music measure 10]
     R1 * 5/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTextSpan
 
     % [Guitar.1.Music measure 11]
     R1 * 5/4
@@ -1026,87 +1167,228 @@ number.30.Guitar.1.Staff = <<
 
 number.30.Guitar.2.Music = {
 
-    % [Guitar.2.Music measure 1]
-      %! EXPLICIT_CLEF
-    \clef "treble"
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
-      %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    %@% \once \override Staff.InstrumentName.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-    \override Staff.RehearsalMark.direction = #down
-    \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! EXPLICIT_CLEF
-    \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-guitar-ii-markup
-      %! -PARTS
-      %! EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
-      %! EXPLICIT_INSTRUMENT_ALERT
-    %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
-    %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
-      %! -PARTS
-      %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Guitar.2.Music measure 2]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Guitar.2.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #blue
+          %! MEASURE_1
+          %! SHIFTED_CLEF
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        %@% \once \override Staff.InstrumentName.color = #blue
+        \override DynamicLineSpanner.staff-padding = 6
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
+        \override Staff.RehearsalMark.direction = #down
+        \override Staff.RehearsalMark.rotation = #'(180 0 0)
+        \override TupletBracket.stencil = ##f
+        \override TupletNumber.stencil = ##f
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
+          %! -PARTS
+        \set Staff.instrumentName = \wttc-guitar-ii-markup
+          %! -PARTS
+          %! EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-ii-markup
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_INSTRUMENT_ALERT
+        %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
+          %! SPANNER_START
+        - \baca-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \wttc-with-screw
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+        \glissando
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
+        %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
+          %! -PARTS
+          %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
+        \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
-    % [Guitar.2.Music measure 3]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Guitar.2.Music measure 4]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Guitar.2.Music measure 5]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Guitar.2.Music measure 2]
+        \hide NoteHead
+        \override Accidental.stencil = ##f
+        \override NoteColumn.glissando-skip = ##t
+        \override NoteHead.no-ledgers = ##t
+        f1
 
-    % [Guitar.2.Music measure 6]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
 
-    % [Guitar.2.Music measure 7]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
 
-    % [Guitar.2.Music measure 8]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+        % [Guitar.2.Music measure 3]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
-    % [Guitar.2.Music measure 9]
-    R1 * 5/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.2.Music measure 4]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.2.Music measure 5]
+        f1
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.2.Music measure 6]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \mp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.2.Music measure 7]
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \pp
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.2.Music measure 8]
+        f1
+        \revert TupletBracket.stencil
+        \revert TupletNumber.stencil
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 5/4
+    {
+
+        % [Guitar.2.Music measure 9]
+        \revert Accidental.stencil
+        \revert NoteColumn.glissando-skip
+        \revert NoteHead.no-ledgers
+        \undo \hide NoteHead
+        f1
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+        \p
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
+        \revert DynamicLineSpanner.staff-padding
+
+    }
 
     % [Guitar.2.Music measure 10]
     R1 * 5/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTextSpan
 
     % [Guitar.2.Music measure 11]
     R1 * 5/4

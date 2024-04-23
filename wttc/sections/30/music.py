@@ -54,12 +54,22 @@ def OB(voice, meters):
 
 def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1, 9),
+        9 * [T([16], "4:5")],
+        material=99,
+    )
+    rhythm.mmrests(10, 11)
 
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
-    rhythm.mmrests()
+    rhythm(
+        meters(1, 9),
+        9 * [T([16], "4:5")],
+        material=99,
+    )
+    rhythm.mmrests(10, 11)
 
 
 def VN(voice, meters):
@@ -94,15 +104,43 @@ def fl(m):
 
 
 def ob(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
+    library.attach_section_initial_persistent_indicators(m[1][0], "owl")
 
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    baca.pitch(m[1, 9], "F2")
+    baca.glissando(m[1, 9])
+    baca.spanners.text(
+        m[1, 9],
+        r"\wttc-with-screw =|",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1, 9], [1, 2, 1, 2, 1, 2]),
+        "p< mp> p< mp> pp< p>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    baca.pitch(m[1, 9], "F2")
+    baca.glissando(m[1, 9])
+    baca.spanners.text(
+        m[1, 9],
+        r"\wttc-with-screw =|",
+        rleak=True,
+        staff_padding=5.5,
+    )
+    baca.hairpin(
+        baca.select.lparts(m[1, 9], [2, 1, 2, 1, 2, 1]),
+        "p< mp> p< mp> pp< p>o!",
+        baca.postevent.to_bar_line_true(index=-1),
+        rleak=True,
+    )
 
 
 def vn(m):
@@ -152,11 +190,14 @@ def vc(m):
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 9], 6.5)
-    """
-    ob = cache["ob"]
     gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[1, 9], 6)
+    baca.override.tuplet_bracket_stencil_false(gt1[1, 8])
+    baca.override.tuplet_number_stencil_false(gt1[1, 8])
     gt2 = cache["gt2"]
-    """
+    baca.override.dls_staff_padding(gt2[1, 9], 6)
+    baca.override.tuplet_bracket_stencil_false(gt2[1, 8])
+    baca.override.tuplet_number_stencil_false(gt2[1, 8])
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1, 11], 6.5)
     baca.override.tuplet_bracket_direction_down(vn[1, 11])

@@ -314,6 +314,12 @@ def attach_section_initial_persistent_indicators(leaf, voice_abbreviation, clef=
         baca.short_instrument_name(leaf, "Ob.", manifests)
         baca.clef(leaf, "treble")
         rotate_rehearsal_mark_literal(leaf)
+    elif voice_abbreviation == "owl":
+        baca.instrument(leaf, "AltoVoice", manifests=manifests)
+        baca.instrument_name(leaf, strings.owl_markup)
+        baca.short_instrument_name(leaf, "OWL", manifests)
+        baca.clef(leaf, "treble")
+        rotate_rehearsal_mark_literal(leaf)
     elif voice_abbreviation == "gt1":
         baca.instrument(leaf, "Guitar", manifests=manifests)
         baca.instrument_name(leaf, strings.guitar_i_markup)
@@ -941,6 +947,7 @@ def unannotate(items):
 
 
 instruments = {
+    "AltoVoice": abjad.AltoVoice(),
     "AltoFlute": abjad.AltoFlute(pitch_range=abjad.PitchRange("[G3, F6]")),
     "Oboe": abjad.Oboe(),
     "Guitar": abjad.Guitar(pitch_range=abjad.PitchRange("[E2, A5]")),
@@ -960,6 +967,7 @@ metronome_marks = {
 
 
 short_instrument_names = {
+    "OWL": abjad.ShortInstrumentName(strings.owl_markup),
     "Afl.": abjad.ShortInstrumentName(strings.afl_markup),
     "Ob.": abjad.ShortInstrumentName(strings.ob_markup),
     "Gt. 1": abjad.ShortInstrumentName(strings.gt_i_markup),
