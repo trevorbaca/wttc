@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -35,6 +36,7 @@ def GLOBALS(skips):
         padding=1.5,
         site="after",
     )
+    baca.bar_line(skips[11 - 1], "|.")
 
 
 def FL(voice, meters):
@@ -115,6 +117,86 @@ def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "owl")
     baca.pitches(m[2, 6], "F5 F5 Eb5 F5 Db5 C5 A4 C5 Db5 C5 A4", strict=True)
     baca.pitches(m[7, 9], "F4 Gb4 Ab4 A4 Gb4 Ab4 Gb4", strict=True)
+    baca.markup(m[2][0], r"\markup \bold more", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[2][1], r"\markup \bold light", direction=abjad.DOWN, staff_padding=4.5
+    )
+    baca.markup(
+        m[3][0], r"\markup \bold raised", direction=abjad.DOWN, staff_padding=4.5
+    )
+    baca.markup(m[3][1], r"\markup \bold eyes", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(m[4][0], r"\markup \bold oh", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[4][1],
+        r"\markup \bold brief",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-0.25),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(m[5][0], r"\markup \bold re-", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[5][1],
+        r"\markup \bold store",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-0.5),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(m[5][2], r"\markup \bold re-", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[5][3],
+        r"\markup \bold mem-",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-0.5),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(
+        m[6][0], r"\markup \bold brance", direction=abjad.DOWN, staff_padding=4.5
+    )
+    baca.markup(m[7][0], r"\markup \bold re-", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[7][1],
+        r"\markup \bold mem-",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-0.5),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(
+        m[7][2],
+        r"\markup \bold bran-",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-0.85),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(
+        m[7][3],
+        r"\markup \bold ces",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-1.25),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(
+        m[8][1],
+        r"\markup \bold are",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-0.5),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(
+        m[8][2],
+        r"\markup \bold al-",
+        baca.postevent.parent_alignment_x(-1),
+        baca.postevent.self_alignment_x(-1),
+        direction=abjad.DOWN,
+        staff_padding=4.5,
+    )
+    baca.markup(m[9][0], r"\markup \bold most", direction=abjad.DOWN, staff_padding=4.5)
 
 
 def gt1(m):
@@ -200,6 +282,9 @@ def vc(m):
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 9], 6.5)
+    ob = cache["ob"]
+    baca.override.tuplet_bracket_direction_up(ob[2, 9])
+    baca.override.tuplet_bracket_staff_padding(ob[2, 8], 1)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[1, 9], 6)
     baca.override.tuplet_bracket_stencil_false(gt1[1, 8])
@@ -303,7 +388,11 @@ def make_layout():
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 16),
+        default=(1, 24),
+        overrides=[
+            baca.layout.Override(1, (1, 8)),
+            baca.layout.Override((10, 11), (1, 8)),
+        ],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

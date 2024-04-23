@@ -248,6 +248,7 @@ number.30.Skips = {
     %@% - \baca-start-mn-left-only "11"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \bar "|."
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -866,23 +867,39 @@ number.30.Oboe.Music = {
     \set Staff.shortInstrumentName = \wttc-owl-markup %@%
 
     % [Oboe.Music measure 2]
+    \override TupletBracket.direction = #up
+    \override TupletBracket.staff-padding = 1
     f''4
+    - \tweak staff-padding 4.5
+    _ \markup \bold more
 
     f''4
+    - \tweak staff-padding 4.5
+    _ \markup \bold light
 
     r2.
 
     % [Oboe.Music measure 3]
     ef''!4
+    - \tweak staff-padding 4.5
+    _ \markup \bold raised
 
     f''4
+    - \tweak staff-padding 4.5
+    _ \markup \bold eyes
 
     r2.
 
     % [Oboe.Music measure 4]
     df''!4
+    - \tweak staff-padding 4.5
+    _ \markup \bold oh
 
     c''4
+    - \tweak parent-alignment-X -1
+    - \tweak self-alignment-X -0.25
+    - \tweak staff-padding 4.5
+    _ \markup \bold brief
 
     r2.
 
@@ -892,17 +909,31 @@ number.30.Oboe.Music = {
 
         % [Oboe.Music measure 5]
         a'4
+        - \tweak staff-padding 4.5
+        _ \markup \bold re-
 
         c''4
+        - \tweak parent-alignment-X -1
+        - \tweak self-alignment-X -0.5
+        - \tweak staff-padding 4.5
+        _ \markup \bold store
 
         df''!4
+        - \tweak staff-padding 4.5
+        _ \markup \bold re-
 
     }
 
     c''2.
+    - \tweak parent-alignment-X -1
+    - \tweak self-alignment-X -0.5
+    - \tweak staff-padding 4.5
+    _ \markup \bold mem-
 
     % [Oboe.Music measure 6]
     a'4
+    - \tweak staff-padding 4.5
+    _ \markup \bold brance
 
     r1
 
@@ -912,21 +943,44 @@ number.30.Oboe.Music = {
 
         % [Oboe.Music measure 7]
         f'4
+        - \tweak staff-padding 4.5
+        _ \markup \bold re-
 
         gf'!4
+        - \tweak parent-alignment-X -1
+        - \tweak self-alignment-X -0.5
+        - \tweak staff-padding 4.5
+        _ \markup \bold mem-
 
         af'!4
+        - \tweak parent-alignment-X -1
+        - \tweak self-alignment-X -0.85
+        - \tweak staff-padding 4.5
+        _ \markup \bold bran-
 
     }
 
     a'2.
+    - \tweak parent-alignment-X -1
+    - \tweak self-alignment-X -1.25
+    - \tweak staff-padding 4.5
+    _ \markup \bold ces
 
     % [Oboe.Music measure 8]
     r4
 
     gf'!4
+    - \tweak parent-alignment-X -1
+    - \tweak self-alignment-X -0.5
+    - \tweak staff-padding 4.5
+    _ \markup \bold are
 
     af'!2.
+    - \tweak parent-alignment-X -1
+    - \tweak self-alignment-X -1
+    - \tweak staff-padding 4.5
+    _ \markup \bold al-
+    \revert TupletBracket.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4
@@ -934,6 +988,9 @@ number.30.Oboe.Music = {
 
         % [Oboe.Music measure 9]
         gf'!1
+        - \tweak staff-padding 4.5
+        _ \markup \bold most
+        \revert TupletBracket.direction
 
     }
 
