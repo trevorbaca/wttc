@@ -404,7 +404,7 @@ def VC(voice, meters):
 def F1c(pleaves, chord, alteration, peaks):
     baca.pitch(pleaves, chord)
     for chord in pleaves:
-        baca.tweak.style_harmonic(chord.note_heads[1])
+        baca.postevent.style_harmonic(target=chord.note_heads[1])
     baca.spanners.trill(
         pleaves,
         alteration=alteration,

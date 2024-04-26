@@ -286,7 +286,7 @@ def fl(m):
         library.make_flute_covered_dyads("Db3"),
         allow_out_of_range=True,
     )
-    baca.tweak.style_harmonic(m[3][0].note_heads[0])
+    baca.postevent.style_harmonic(target=m[3][0].note_heads[0])
     baca.spanners.covered(
         m[3],
         rleak=True,

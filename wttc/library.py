@@ -1301,7 +1301,7 @@ def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
             else:
                 baca.pitch(plt, f"{fundamental}:{harmonic_2}")
             for pleaf in plt:
-                baca.tweak.style_harmonic(pleaf.note_heads[1])
+                baca.postevent.style_harmonic(target=pleaf.note_heads[1])
         else:
             baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
@@ -1319,7 +1319,7 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(chord, abjad.Chord), repr(chord)
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
-    baca.tweak.style_harmonic(chord.note_heads[1])
+    baca.postevent.style_harmonic(target=chord.note_heads[1])
     name = chord.note_heads[0].written_pitch.get_name(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(
@@ -1345,7 +1345,7 @@ def C1c(pleaves, dyad, alteration, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.pitch(plt, dyad)
         for chord in plt:
-            baca.tweak.style_harmonic(chord.note_heads[1])
+            baca.postevent.style_harmonic(target=chord.note_heads[1])
         baca.triple_staccato(plt.head)
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)
@@ -1876,7 +1876,7 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     for plt in plts:
         assert len(plt) == 1
         baca.pitch(plt, double_stop)
-        baca.tweak.style_harmonic(plt[0].note_heads[1])
+        baca.postevent.style_harmonic(target=plt[0].note_heads[1])
         baca.spanners.trill(
             plt,
             alteration=alteration,
@@ -2066,7 +2066,7 @@ def F3b1(pleaves, fundamentals, dynamics):
         fourth = pitch + abjad.NamedInterval("P4")
         string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
         baca.pitch(pleaf, string)
-        baca.tweak.style_harmonic(pleaf.note_heads[1])
+        baca.postevent.style_harmonic(target=pleaf.note_heads[1])
     if ">" in dynamics:
         baca.hairpin(
             pleaves,
@@ -2670,7 +2670,7 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
 
 def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     baca.pitch(pleaves[0], dyad)
-    baca.tweak.style_harmonic(pleaves[0].note_heads[1])
+    baca.postevent.style_harmonic(target=pleaves[0].note_heads[1])
     baca.pitch(pleaves[-1], stop_pitch)
     baca.glissando(pleaves)
     baca.spanners.text(
@@ -2698,7 +2698,7 @@ def M1_2(pleaves, fundamentals, hairpin):
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
-        baca.tweak.style_harmonic(pleaf.note_heads[1])
+        baca.postevent.style_harmonic(target=pleaf.note_heads[1])
     for phead in baca.select.pheads(pleaves):
         baca.up_bow(phead)
 
@@ -2777,7 +2777,7 @@ def M5b(pleaves, pitches, dynamics):
 def N1a(pleaves, pitches, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
     for chord in pleaves:
-        baca.tweak.style_harmonic(chord.note_heads[0])
+        baca.postevent.style_harmonic(target=chord.note_heads[0])
     baca.spanners.covered(
         pleaves,
         rleak=True,
