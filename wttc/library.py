@@ -1419,7 +1419,7 @@ def C2b(
             baca.select.lparts(pleaves_2, [1, 1]),
             scps,
             # TODO: make this work:
-            # abjad.Tweak(r"- \tweak parent-alignment-X 2"),
+            # baca.postevent.parent_alignment_x(2),
             rleak=True,
             staff_padding=3,
         )
