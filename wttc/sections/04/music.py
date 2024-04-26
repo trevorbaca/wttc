@@ -836,7 +836,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     assert len(chords) == 1
     chord = chords[0]
     baca.pitch(chord, f"{fundamental}:{harmonic}")
-    baca.postevent.style_harmonic(target=chord.note_heads[1])
+    baca.tweak.style_harmonic(target=chord.note_heads[1])
     if chord is pleaves[0]:
         note = abjad.get.leaf(chord, 1)
         abjad.tie([chord, note])
@@ -854,7 +854,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             baca.dynamic(plt.head, dynamic)
     for plt in plts[1:2]:
         assert len(plt) == 2
-        tweaks = (baca.postevent.bound_details_right_padding(1),)
+        tweaks = (baca.tweak.bound_details_right_padding(1),)
         baca.spanners.trill(
             plt,
             *tweaks,

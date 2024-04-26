@@ -935,7 +935,7 @@ def swells(peaks):
 def to_bar_line_tweaks(to_bar_line=False):
     tweaks = []
     if to_bar_line is True:
-        tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+        tweaks.append(baca.tweak.to_bar_line_true(index=-1))
     return tweaks
 
 
@@ -1162,7 +1162,7 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
     if conjoin is True:
         baca.spanners.pizzicato(
             notes,
-            baca.postevent.bound_details_right_padding(-0.5),
+            baca.tweak.bound_details_right_padding(-0.5),
             staff_padding=3,
         )
         if dls_staff_padding:
@@ -1206,7 +1206,7 @@ def B3(
         parts = plts
     tweaks = []
     if to_bar_line is True:
-        tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+        tweaks.append(baca.tweak.to_bar_line_true(index=-1))
     baca.hairpin(
         parts,
         hairpin,
@@ -1301,7 +1301,7 @@ def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
             else:
                 baca.pitch(plt, f"{fundamental}:{harmonic_2}")
             for pleaf in plt:
-                baca.postevent.style_harmonic(target=pleaf.note_heads[1])
+                baca.tweak.style_harmonic(target=pleaf.note_heads[1])
         else:
             baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
@@ -1319,7 +1319,7 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(chord, abjad.Chord), repr(chord)
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
-    baca.postevent.style_harmonic(target=chord.note_heads[1])
+    baca.tweak.style_harmonic(target=chord.note_heads[1])
     name = chord.note_heads[0].written_pitch.get_name(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(
@@ -1333,7 +1333,7 @@ def C1b(pleaves, dyad, alteration, peak):
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {peak}>o!",
-        baca.postevent.to_bar_line_true(),
+        baca.tweak.to_bar_line_true(),
         rleak=True,
     )
 
@@ -1345,7 +1345,7 @@ def C1c(pleaves, dyad, alteration, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.pitch(plt, dyad)
         for chord in plt:
-            baca.postevent.style_harmonic(target=chord.note_heads[1])
+            baca.tweak.style_harmonic(target=chord.note_heads[1])
         baca.triple_staccato(plt.head)
         if dynamic != "-":
             baca.dynamic(plt.head, dynamic)
@@ -1419,7 +1419,7 @@ def C2b(
             baca.select.lparts(pleaves_2, [1, 1]),
             scps,
             # TODO: make this work:
-            # baca.postevent.parent_alignment_x(2),
+            # baca.tweak.parent_alignment_x(2),
             rleak=True,
             staff_padding=3,
         )
@@ -1601,7 +1601,7 @@ def D3a(pleaves, pitch, dynamics, *, to_bar_line=False):
     parts = baca.select.clparts(pleaves, [1])
     tweaks = []
     if to_bar_line is True:
-        tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+        tweaks.append(baca.tweak.to_bar_line_true(index=-1))
     baca.hairpin(
         parts,
         swells(dynamics),
@@ -1635,7 +1635,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         if not no_spanner:
             baca.spanners.circle_bow(
                 plt,
-                baca.postevent.bound_details_right_padding(1.5),
+                baca.tweak.bound_details_right_padding(1.5),
                 rleak=True,
                 staff_padding=3,
             )
@@ -1666,7 +1666,7 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             baca.pitch(run, pitches)
         baca.spanners.xfb(
             run,
-            baca.postevent.bound_details_right_padding(1.5),
+            baca.tweak.bound_details_right_padding(1.5),
             rleak=True,
             staff_padding=3,
         )
@@ -1707,7 +1707,7 @@ def E1(
             baca.articulation(
                 phead,
                 "+",
-                baca.postevent.direction_down(),
+                baca.tweak.direction_down(),
             )
     if string_numbers:
         assert isinstance(string_numbers, list), repr(string_numbers)
@@ -1731,7 +1731,7 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
             pieces = baca.select.partition_in_halves(run)
             tweaks = []
             if bar_line == "1":
-                tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+                tweaks.append(baca.tweak.to_bar_line_true(index=-1))
             baca.hairpin(
                 pieces,
                 swells(peak),
@@ -1846,7 +1846,7 @@ def E2c(
         pieces = baca.select.partition_in_halves(pleaves)
         tweaks = []
         if to_bar_line is True:
-            tweaks.append(baca.postevent.to_bar_line_true(index=-1))
+            tweaks.append(baca.tweak.to_bar_line_true(index=-1))
         baca.hairpin(
             pieces,
             f"o< {peak}>o!",
@@ -1876,7 +1876,7 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     for plt in plts:
         assert len(plt) == 1
         baca.pitch(plt, double_stop)
-        baca.postevent.style_harmonic(target=plt[0].note_heads[1])
+        baca.tweak.style_harmonic(target=plt[0].note_heads[1])
         baca.spanners.trill(
             plt,
             alteration=alteration,
@@ -1986,7 +1986,7 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -2003,7 +2003,7 @@ def F2b2(pleaves, glissandi):
     nongrace_notes = abjad.select.notes(pleaves, grace=False)
     baca.alternate_bow_strokes(
         nongrace_notes,
-        baca.postevent.padding(1),
+        baca.tweak.padding(1),
     )
     baca.dynamic(
         pleaves[0],
@@ -2042,7 +2042,7 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -2066,7 +2066,7 @@ def F3b1(pleaves, fundamentals, dynamics):
         fourth = pitch + abjad.NamedInterval("P4")
         string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
         baca.pitch(pleaf, string)
-        baca.postevent.style_harmonic(target=pleaf.note_heads[1])
+        baca.tweak.style_harmonic(target=pleaf.note_heads[1])
     if ">" in dynamics:
         baca.hairpin(
             pleaves,
@@ -2085,9 +2085,9 @@ def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, tblf=False):
     )
     tweaks = []
     if bdrp is not None:
-        tweaks.append(baca.postevent.bound_details_right_padding(bdrp))
+        tweaks.append(baca.tweak.bound_details_right_padding(bdrp))
     if tblf is True:
-        tweaks.append(baca.postevent.to_bar_line_false())
+        tweaks.append(baca.tweak.to_bar_line_false())
     baca.spanners.xfb(
         pleaves,
         *tweaks,
@@ -2107,7 +2107,7 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -2128,7 +2128,7 @@ def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, bdr
     baca.pitch(pleaves, pitch)
     tweaks = []
     if bdrp is not None:
-        tweaks.append(baca.postevent.bound_details_right_padding(bdrp))
+        tweaks.append(baca.tweak.bound_details_right_padding(bdrp))
     baca.spanners.vibrato(
         baca.select.lparts(pleaves, vibrato_lparts),
         vibrato,
@@ -2235,7 +2235,7 @@ def G5b(pleaves, glissando, *, no_hairpin=False, pizz_tblf=False, rleak_pizz=Fal
     baca.stem_tremolo(pleaves)
     tweaks = []
     if pizz_tblf is True:
-        tweaks.append(baca.postevent.to_bar_line_false())
+        tweaks.append(baca.tweak.to_bar_line_false())
     baca.spanners.pizzicato(
         pleaves,
         *tweaks,
@@ -2295,8 +2295,8 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.glissando(
         pleaves[-3:],
         None,
-        baca.postevent.bound_details_right_end_on_accidental_false(index=-1),
-        baca.postevent.bound_details_right_end_on_accidental_false(index=-2),
+        baca.tweak.bound_details_right_end_on_accidental_false(index=-1),
+        baca.tweak.bound_details_right_end_on_accidental_false(index=-2),
         do_not_hide_middle_note_heads=True,
     )
     baca.spanners.trill(
@@ -2590,7 +2590,7 @@ def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, tblf
     plts = baca.select.plts(pleaves)
     tweaks = []
     if tblf is True:
-        tweaks.append(baca.postevent.to_bar_line_false(index=0))
+        tweaks.append(baca.tweak.to_bar_line_false(index=0))
     baca.spanners.scp(
         plts,
         scp,
@@ -2614,7 +2614,7 @@ def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -2670,7 +2670,7 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
 
 def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
     baca.pitch(pleaves[0], dyad)
-    baca.postevent.style_harmonic(target=pleaves[0].note_heads[1])
+    baca.tweak.style_harmonic(target=pleaves[0].note_heads[1])
     baca.pitch(pleaves[-1], stop_pitch)
     baca.glissando(pleaves)
     baca.spanners.text(
@@ -2698,7 +2698,7 @@ def M1_2(pleaves, fundamentals, hairpin):
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
-        baca.postevent.style_harmonic(target=pleaf.note_heads[1])
+        baca.tweak.style_harmonic(target=pleaf.note_heads[1])
     for phead in baca.select.pheads(pleaves):
         baca.up_bow(phead)
 
@@ -2777,7 +2777,7 @@ def M5b(pleaves, pitches, dynamics):
 def N1a(pleaves, pitches, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
     for chord in pleaves:
-        baca.postevent.style_harmonic(target=chord.note_heads[0])
+        baca.tweak.style_harmonic(target=chord.note_heads[0])
     baca.spanners.covered(
         pleaves,
         rleak=True,
@@ -2884,7 +2884,7 @@ def O1a(pleaves, pitches, hairpin, *, rleak=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        baca.postevent.direction_down(),
+        baca.tweak.direction_down(),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,
@@ -2900,7 +2900,7 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
     baca.hairpin(
         nongraces,
         hairpin,
-        baca.postevent.to_bar_line_true(),
+        baca.tweak.to_bar_line_true(),
         rleak=rleak,
     )
     baca.spanners.text(
@@ -2913,7 +2913,7 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        baca.postevent.direction_down(),
+        baca.tweak.direction_down(),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,
@@ -2932,7 +2932,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak=False):
     baca.hairpin(
         nongraces,
         hairpin,
-        baca.postevent.to_bar_line_true(),
+        baca.tweak.to_bar_line_true(),
         rleak=rleak,
     )
     baca.spanners.text(
@@ -2945,7 +2945,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
-        baca.postevent.direction_down(),
+        baca.tweak.direction_down(),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,

@@ -775,7 +775,7 @@ def K1a(pleaves, pitches, dynamic):
 def K1b1(pleaves, dyad, alteration, peaks):
     baca.pitch(pleaves, dyad)
     for pleaf in pleaves:
-        baca.postevent.style_harmonic(target=pleaf.note_heads[1])
+        baca.tweak.style_harmonic(target=pleaf.note_heads[1])
     baca.spanners.trill(
         pleaves,
         alteration=alteration,
@@ -869,7 +869,7 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
         baca.markup(
             pleaves[0],
             r"\wttc-non-stringere",
-            baca.postevent.staff_padding(9),
+            baca.tweak.staff_padding(9),
         )
     baca.override.note_head_style_harmonic(pleaves)
     baca.spanners.string_number(
@@ -888,7 +888,7 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 

@@ -299,7 +299,7 @@ def vn(m):
         no_hairpin=True,
         rleak_pizz=True,
     )
-    baca.hairpin(pleaves, "p>o!", baca.postevent.to_bar_line_true(), rleak=True)
+    baca.hairpin(pleaves, "p>o!", baca.tweak.to_bar_line_true(), rleak=True)
 
 
 def vc(m):

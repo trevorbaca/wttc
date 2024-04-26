@@ -404,7 +404,7 @@ def VC(voice, meters):
 def F1c(pleaves, chord, alteration, peaks):
     baca.pitch(pleaves, chord)
     for chord in pleaves:
-        baca.postevent.style_harmonic(target=chord.note_heads[1])
+        baca.tweak.style_harmonic(target=chord.note_heads[1])
     baca.spanners.trill(
         pleaves,
         alteration=alteration,
@@ -420,7 +420,7 @@ def F1c(pleaves, chord, alteration, peaks):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 

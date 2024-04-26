@@ -442,7 +442,7 @@ def A2c(run, glissando, hairpin_lparts, hairpin):
         else:
             baca.spanners.circle_bow(
                 plt,
-                baca.postevent.bound_details_right_padding(1.5),
+                baca.tweak.bound_details_right_padding(1.5),
                 rleak=True,
                 staff_padding=3,
             )

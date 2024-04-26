@@ -278,7 +278,7 @@ def fl(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< mf>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
     baca.pitch(
@@ -286,7 +286,7 @@ def fl(m):
         library.make_flute_covered_dyads("Db3"),
         allow_out_of_range=True,
     )
-    baca.postevent.style_harmonic(target=m[3][0].note_heads[0])
+    baca.tweak.style_harmonic(target=m[3][0].note_heads[0])
     baca.spanners.covered(
         m[3],
         rleak=True,
@@ -295,7 +295,7 @@ def fl(m):
     baca.hairpin(
         m[3],
         "mp>o!",
-        baca.postevent.to_bar_line_true(),
+        baca.tweak.to_bar_line_true(),
         rleak=True,
     )
     library.M4(library.pleaves(m[4], 99), "D#6 B3", "f|>p")
@@ -329,7 +329,7 @@ def ob(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< p>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
     library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!")
@@ -396,7 +396,7 @@ def vn(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< mp>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
     library.L2b2(
@@ -436,14 +436,14 @@ def vc(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< p>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
     baca.pitch(m[2, 3], "Db2")
     baca.spanners.scp(
         library.pleaves(m[2, 3], 99),
         "T -> P",
-        baca.postevent.to_bar_line_false(index=0),
+        baca.tweak.to_bar_line_false(index=0),
         staff_padding=4,
     )
     baca.hairpin(

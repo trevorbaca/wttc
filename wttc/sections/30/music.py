@@ -108,7 +108,7 @@ def fl(m):
     baca.hairpin(
         baca.select.clparts(m[1, 9], [1]),
         library.swells("mp mp mp mp p p p p pp"),
-        baca.postevent.to_bar_line_true(),
+        baca.tweak.to_bar_line_true(),
         rleak=True,
     )
 
@@ -129,8 +129,8 @@ def ob(m):
     baca.markup(
         m[4][1],
         r"\markup \bold brief",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-0.25),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-0.25),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
@@ -138,8 +138,8 @@ def ob(m):
     baca.markup(
         m[5][1],
         r"\markup \bold store",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-0.5),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-0.5),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
@@ -147,8 +147,8 @@ def ob(m):
     baca.markup(
         m[5][3],
         r"\markup \bold mem-",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-0.5),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-0.5),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
@@ -159,40 +159,40 @@ def ob(m):
     baca.markup(
         m[7][1],
         r"\markup \bold mem-",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-0.5),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-0.5),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
     baca.markup(
         m[7][2],
         r"\markup \bold bran-",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-0.85),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-0.85),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
     baca.markup(
         m[7][3],
         r"\markup \bold ces",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-1.25),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1.25),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
     baca.markup(
         m[8][1],
         r"\markup \bold are",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-0.5),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-0.5),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
     baca.markup(
         m[8][2],
         r"\markup \bold al-",
-        baca.postevent.parent_alignment_x(-1),
-        baca.postevent.self_alignment_x(-1),
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1),
         direction=abjad.DOWN,
         staff_padding=4.5,
     )
@@ -212,7 +212,7 @@ def gt1(m):
     baca.hairpin(
         baca.select.lparts(m[1, 9], [1, 2, 1, 2, 1, 2]),
         "p< mp> p< mp> pp< p>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -230,7 +230,7 @@ def gt2(m):
     baca.hairpin(
         baca.select.lparts(m[1, 9], [2, 1, 2, 1, 2, 1]),
         "p< mp> p< mp> pp< p>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -255,7 +255,7 @@ def vn(m):
     baca.hairpin(
         baca.select.lparts(m[1, 11], [2, 1, 2, 1, 2, 1, 2]),
         "mp> pp< mp> pp< mp> pp< mp>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
 
@@ -267,13 +267,13 @@ def vc(m):
     baca.hairpin(
         baca.select.lparts(m[1, 9], [1, 1, 1, 1, 1, 1, 1, 3]),
         "pp< mp> pp< mp> pp< mp> pp< mp>o!",
-        baca.postevent.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(index=-1),
         rleak=True,
     )
     baca.spanners.scp(
         baca.select.lparts(m[1, 9], [2, 2, 2, 4]),
         "Tposs -> O -> Tposs -> O -> Tposs",
-        baca.postevent.bound_details_right_padding(4.5, index=-1),
+        baca.tweak.bound_details_right_padding(4.5, index=-1),
         staff_padding=3,
     )
     baca.glissando(m[1, 9][:-1])
