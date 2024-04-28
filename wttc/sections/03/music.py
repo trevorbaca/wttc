@@ -437,7 +437,7 @@ def A2c(run, glissando, hairpin_lparts, hairpin):
             baca.articulation(
                 plt,
                 r"baca-circle-bowing",
-                staff_padding=3,
+                baca.tweak.staff_padding(3),
             )
         else:
             baca.spanners.circle_bow(

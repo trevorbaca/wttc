@@ -117,86 +117,130 @@ def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "owl")
     baca.pitches(m[2, 6], "F5 F5 Eb5 F5 Db5 C5 A4 C5 Db5 C5 A4", strict=True)
     baca.pitches(m[7, 9], "F4 Gb4 Ab4 A4 Gb4 Ab4 Gb4", strict=True)
-    baca.markup(m[2][0], r"\markup \bold more", direction=abjad.DOWN, staff_padding=4.5)
     baca.markup(
-        m[2][1], r"\markup \bold light", direction=abjad.DOWN, staff_padding=4.5
+        m[2][0],
+        r"\markup \bold more",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
     )
     baca.markup(
-        m[3][0], r"\markup \bold raised", direction=abjad.DOWN, staff_padding=4.5
+        m[2][1],
+        r"\markup \bold light",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
     )
-    baca.markup(m[3][1], r"\markup \bold eyes", direction=abjad.DOWN, staff_padding=4.5)
-    baca.markup(m[4][0], r"\markup \bold oh", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[3][0],
+        r"\markup \bold raised",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        m[3][1],
+        r"\markup \bold eyes",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        m[4][0],
+        r"\markup \bold oh",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
     baca.markup(
         m[4][1],
         r"\markup \bold brief",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-0.25),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
-    baca.markup(m[5][0], r"\markup \bold re-", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[5][0],
+        r"\markup \bold re-",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
     baca.markup(
         m[5][1],
         r"\markup \bold store",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-0.5),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
-    baca.markup(m[5][2], r"\markup \bold re-", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[5][2],
+        r"\markup \bold re-",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
     baca.markup(
         m[5][3],
         r"\markup \bold mem-",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-0.5),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
     baca.markup(
-        m[6][0], r"\markup \bold brance", direction=abjad.DOWN, staff_padding=4.5
+        m[6][0],
+        r"\markup \bold brance",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
     )
-    baca.markup(m[7][0], r"\markup \bold re-", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[7][0],
+        r"\markup \bold re-",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
     baca.markup(
         m[7][1],
         r"\markup \bold mem-",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-0.5),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
     baca.markup(
         m[7][2],
         r"\markup \bold bran-",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-0.85),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
     baca.markup(
         m[7][3],
         r"\markup \bold ces",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-1.25),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
     baca.markup(
         m[8][1],
         r"\markup \bold are",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-0.5),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
     baca.markup(
         m[8][2],
         r"\markup \bold al-",
         baca.tweak.parent_alignment_x(-1),
         baca.tweak.self_alignment_x(-1),
+        baca.tweak.staff_padding(4.5),
         direction=abjad.DOWN,
-        staff_padding=4.5,
     )
-    baca.markup(m[9][0], r"\markup \bold most", direction=abjad.DOWN, staff_padding=4.5)
+    baca.markup(
+        m[9][0],
+        r"\markup \bold most",
+        baca.tweak.staff_padding(4.5),
+        direction=abjad.DOWN,
+    )
 
 
 def gt1(m):

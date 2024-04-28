@@ -1643,7 +1643,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
             baca.articulation(
                 plt,
                 r"baca-circle-bowing",
-                staff_padding=1.5,
+                baca.tweak.staff_padding(1.5),
             )
     if dynamics:
         dynamics = dynamics.split()
@@ -3081,7 +3081,7 @@ def still_1a(pleaves, pitch, dynamic, *, tasto=False):
 def still_1b(pleaves, pitch, dynamic, *, up_bow=False):
     baca.pitch(pleaves, pitch)
     baca.dynamic(pleaves[0], dynamic)
-    baca.markup(pleaves[0], r"\wttc-with-screw", staff_padding=4)
+    baca.markup(pleaves[0], r"\wttc-with-screw", baca.tweak.staff_padding(4))
     if up_bow is True:
         baca.up_bow(pleaves[0], padding=1)
     else:
