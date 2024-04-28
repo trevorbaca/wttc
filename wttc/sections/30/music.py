@@ -250,8 +250,8 @@ def gt1(m):
     baca.spanners.text(
         m[1, 9],
         r"\wttc-with-screw =|",
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
     baca.hairpin(
         baca.select.lparts(m[1, 9], [1, 2, 1, 2, 1, 2]),
@@ -268,8 +268,8 @@ def gt2(m):
     baca.spanners.text(
         m[1, 9],
         r"\wttc-with-screw =|",
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
     baca.hairpin(
         baca.select.lparts(m[1, 9], [2, 1, 2, 1, 2, 1]),
@@ -287,14 +287,14 @@ def vn(m):
     baca.glissando(m[1, 11][:-1])
     baca.spanners.xfb(
         m[1, 11],
+        baca.tweak.staff_padding(3),
         rleak=True,
-        staff_padding=3,
     )
     baca.spanners.tasto(
         m[1, 11],
+        baca.tweak.staff_padding(5.5),
         descriptor="Tposs =|",
         rleak=True,
-        staff_padding=5.5,
     )
     baca.hairpin(
         baca.select.lparts(m[1, 11], [2, 1, 2, 1, 2, 1, 2]),
@@ -318,7 +318,7 @@ def vc(m):
         baca.select.lparts(m[1, 9], [2, 2, 2, 4]),
         "Tposs -> O -> Tposs -> O -> Tposs",
         baca.tweak.bound_details_right_padding(4.5, index=-1),
-        staff_padding=3,
+        baca.tweak.staff_padding(3),
     )
     baca.glissando(m[1, 9][:-1])
 

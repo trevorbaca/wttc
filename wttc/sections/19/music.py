@@ -778,10 +778,10 @@ def K1b1(pleaves, dyad, alteration, peaks):
         baca.tweak.style_harmonic(target=pleaf.note_heads[1])
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         harmonic=True,
         rleak=True,
-        staff_padding=3,
     )
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
@@ -799,8 +799,8 @@ def K1b2(pleaves, pitch, hairpin):
     baca.spanners.vibrato(
         pleaves,
         "VM =|",
+        baca.tweak.staff_padding(3),
         rleak=True,
-        staff_padding=3,
     )
 
 
@@ -828,7 +828,7 @@ def K2e(pleaves, pitch, hairpin, scp):
     baca.spanners.scp(
         [pleaves],
         scp,
-        staff_padding=3,
+        baca.tweak.staff_padding(3),
     )
     baca.hairpin(
         pleaves,
@@ -847,9 +847,9 @@ def L1a(
         baca.glissando(pleaves[-gliss:])
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         rleak=True,
-        staff_padding=3,
     )
     if hairpin_lparts is None:
         parts = pleaves
@@ -875,15 +875,15 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
     baca.spanners.string_number(
         pleaves,
         string_number,
+        baca.tweak.staff_padding(6.5),
         rleak=True,
-        staff_padding=6.5,
     )
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(4, grob="TrillSpanner"),
         alteration=alteration,
         harmonic=True,
         rleak=True,
-        staff_padding=4,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -952,13 +952,13 @@ def L5b(pleaves, glissando, hairpin):
     )
     baca.spanners.half_clt(
         pleaves,
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
     baca.spanners.damp(
         pleaves,
+        baca.tweak.staff_padding(8),
         rleak=True,
-        staff_padding=8,
     )
     baca.hairpin(
         pleaves,

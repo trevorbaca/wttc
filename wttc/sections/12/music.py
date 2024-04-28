@@ -1002,7 +1002,7 @@ def vc(m):
     baca.spanners.scp(
         [library.pleaves(m[28, 35], 1)],
         "T1 -> T4",
-        staff_padding=5.5,
+        baca.tweak.staff_padding(5.5),
     )
     library.H3(library.pleaves(m[36], 3), "Eb2", "F2", "F3", "D3", "mp f", "P1")
     library.H3(library.pleaves(m[37], 3)[:6], "Eb2", "F2", "F3", "D3", "mp f", "P1")

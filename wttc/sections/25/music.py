@@ -311,15 +311,15 @@ def N1c(runs, glissandi, hairpins, string_number):
     baca.stem_tremolo(runs)
     baca.spanners.pizzicato(
         runs,
+        baca.tweak.staff_padding(3),
         descriptor=r"\wttc-two-finger-pizzicato =|",
         rleak=True,
-        staff_padding=3,
     )
     baca.spanners.string_number(
         runs,
         string_number,
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
 
 

@@ -412,7 +412,7 @@ def A2b(
     hairpin,
     *,
     rleak=False,
-    damp_staff_padding=4.5,
+    staff_padding=4.5,
 ):
     baca.glissando(
         pleaves,
@@ -425,9 +425,9 @@ def A2b(
     )
     baca.spanners.damp(
         pleaves,
-        bound_details_right_padding=2,
+        baca.tweak.bound_details_right_padding(2),
+        baca.tweak.staff_padding(staff_padding),
         rleak=True,
-        staff_padding=damp_staff_padding,
     )
 
 
@@ -443,8 +443,8 @@ def A2c(run, glissando, hairpin_lparts, hairpin):
             baca.spanners.circle_bow(
                 plt,
                 baca.tweak.bound_details_right_padding(1.5),
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     baca.glissando(
         run,

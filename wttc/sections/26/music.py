@@ -718,18 +718,18 @@ def O1b(pleaves, pitches, hairpin, *, rleak=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-half-harmonic-pressure =|",
+        baca.tweak.staff_padding(5.5),
         left_broken_text=r"\baca-parenthesized-half-harm-markup",
         rleak=True,
-        staff_padding=5.5,
     )
     baca.spanners.text(
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
         baca.tweak.direction_down(),
+        baca.tweak.staff_padding(10.5),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,
-        staff_padding=10.5,
     )
 
 
@@ -778,7 +778,7 @@ def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
     baca.spanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
-        staff_padding=3,
+        baca.tweak.staff_padding(3),
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -790,9 +790,9 @@ def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak=False):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         rleak=True,
-        staff_padding=3,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -805,8 +805,8 @@ def P2a(pleaves, pitch, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
         rleak=True,
-        staff_padding=5.5,
     )
     baca.hairpin(
         [pleaves[:1], pleaves[1:]],
@@ -829,21 +829,21 @@ def P2c(pleaves, pitch, alteration, string_number, dynamic):
     baca.override.note_head_style_harmonic(pleaves)
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         rleak=True,
-        staff_padding=3,
     )
     for pleaf in pleaves[1:-1]:
         baca.spanners.circle_bow(
             pleaf,
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     baca.spanners.string_number(
         pleaves,
         string_number,
+        baca.tweak.staff_padding(8),
         rleak=True,
-        staff_padding=8,
     )
     baca.hairpin(
         pleaves[:2],
@@ -997,7 +997,11 @@ def vn(m):
     library.P3(library.pleaves(m[33, 34], 3), "Ab3 Ab5", [6, 7], 'o< "mf">o!')
     library.P3(library.pleaves(m[35], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
     library.P3(library.pleaves(m[36], 3), "Ab3 C7", [2, 3], "o< p>o!")
-    baca.spanners.damp(m[33, 36], rleak=True, staff_padding=10.5)
+    baca.spanners.damp(
+        m[33, 36],
+        baca.tweak.staff_padding(10.5),
+        rleak=True,
+    )
 
 
 def vc(m):

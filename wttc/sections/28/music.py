@@ -156,7 +156,11 @@ def vn(m):
     library.M1_2(library.pleaves(m[2, 3], 1)[2:9], "D4 E4 F4 F#4 G#4", "mf<f")
     library.P3(library.pleaves(m[4], 3), "Ab3 Ab6", [3, 4], "o< mp>o!")
     library.P3(library.pleaves(m[5], 3), "Ab3 C7", [2, 3], "o< p>o!")
-    baca.spanners.damp(m[4, 5], rleak=True, staff_padding=10.5)
+    baca.spanners.damp(
+        m[4, 5],
+        baca.tweak.staff_padding(10.5),
+        rleak=True,
+    )
 
 
 def vc(m):

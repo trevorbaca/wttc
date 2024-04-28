@@ -272,7 +272,7 @@ def fl(m):
     baca.pitch(m[1], "E6")
     baca.spanners.trill(
         m[1],
-        padding=1.25,
+        baca.tweak.padding(1.25),
         rleak=True,
     )
     baca.hairpin(
@@ -289,8 +289,8 @@ def fl(m):
     baca.tweak.style_harmonic(target=m[3][0].note_heads[0])
     baca.spanners.covered(
         m[3],
+        baca.tweak.staff_padding(3),
         rleak=True,
-        staff_padding=3,
     )
     baca.hairpin(
         m[3],
@@ -378,20 +378,20 @@ def vn(m):
     baca.override.note_head_style_harmonic(m[1])
     baca.spanners.trill(
         m[1],
+        baca.tweak.staff_padding(2, grob="TrillSpanner"),
         alteration="D4",
         rleak=True,
-        staff_padding=2,
     )
     baca.spanners.circle_bow(
         m[1],
+        baca.tweak.staff_padding(4.5),
         rleak=True,
-        staff_padding=4.5,
     )
     baca.spanners.string_number(
         m[1],
         3,
+        baca.tweak.staff_padding(7),
         rleak=True,
-        staff_padding=7,
     )
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
@@ -429,9 +429,9 @@ def vc(m):
     baca.override.note_head_style_harmonic(m[1])
     baca.spanners.trill(
         m[1],
+        baca.tweak.staff_padding(4, grob="TrillSpanner"),
         alteration="C2",
         rleak=True,
-        staff_padding=4,
     )
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
@@ -444,7 +444,7 @@ def vc(m):
         library.pleaves(m[2, 3], 99),
         "T -> P",
         baca.tweak.to_bar_line_false(index=0),
-        staff_padding=4,
+        baca.tweak.staff_padding(4),
     )
     baca.hairpin(
         library.pleaves(m[2, 3], 99),

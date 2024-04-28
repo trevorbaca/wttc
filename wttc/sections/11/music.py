@@ -407,15 +407,15 @@ def F1c(pleaves, chord, alteration, peaks):
         baca.tweak.style_harmonic(target=chord.note_heads[1])
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         harmonic=True,
         rleak=True,
-        staff_padding=3,
     )
     baca.spanners.half_clt(
         pleaves,
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
@@ -429,9 +429,9 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         rleak=True,
-        staff_padding=3,
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),

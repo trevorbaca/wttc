@@ -623,8 +623,8 @@ def M1_3(pleaves, glissandi, dynamics):
         baca.dynamic(leaf, dynamic)
     baca.spanners.pizzicato(
         pleaves,
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
 
 
@@ -637,9 +637,9 @@ def M3a(pleaves, pitch, dynamic):
         baca.dynamic(pleaves[0], dynamic)
     baca.spanners.pizzicato(
         pleaves,
+        baca.tweak.staff_padding(3),
         descriptor=r"\wttc-two-finger-tamburo =|",
         rleak=True,
-        staff_padding=3,
     )
 
 
@@ -649,15 +649,15 @@ def N1c(run, glissando, string_number, hairpin):
     baca.stem_tremolo(run)
     baca.spanners.pizzicato(
         run,
+        baca.tweak.staff_padding(3),
         descriptor=r"\wttc-two-finger-pizzicato =|",
         rleak=True,
-        staff_padding=3,
     )
     baca.spanners.string_number(
         run,
         string_number,
+        baca.tweak.staff_padding(5.5),
         rleak=True,
-        staff_padding=5.5,
     )
     baca.hairpin(
         run,

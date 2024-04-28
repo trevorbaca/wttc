@@ -478,10 +478,10 @@ def E4c(pleaves, pitch, alteration, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3, grob="TrillSpanner"),
         alteration=alteration,
         harmonic=True,
         rleak=True,
-        staff_padding=3,
     )
     pieces = baca.select.partition_in_halves(pleaves)
     baca.hairpin(
@@ -503,15 +503,15 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
                 baca.pitch(leaf, pitch_1)
         baca.spanners.trill(
             run,
+            baca.tweak.staff_padding(3, grob="TrillSpanner"),
             alteration=alteration,
             harmonic=True,
             rleak=True,
-            staff_padding=3,
         )
         baca.spanners.half_clt(
             run,
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
         pieces = baca.select.partition_in_halves(run)
         baca.hairpin(

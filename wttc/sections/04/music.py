@@ -819,8 +819,8 @@ def B1c(
     baca.spanners.string_number(
         abjad.select.leaves(runs)[1:],
         string_number,
+        baca.tweak.staff_padding(string_number_staff_padding),
         rleak=True,
-        staff_padding=string_number_staff_padding,
     )
     if dls_staff_padding:
         baca.override.dls_staff_padding(
@@ -855,6 +855,9 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
     for plt in plts[1:2]:
         assert len(plt) == 2
         tweaks = (baca.tweak.bound_details_right_padding(1),)
+        if staff_padding is not None:
+            tweak = baca.tweak.staff_padding(staff_padding, grob="TrillSpanner")
+            tweaks = tweaks + (tweak,)
         baca.spanners.trill(
             plt,
             *tweaks,
@@ -862,7 +865,6 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             force_trill_pitch_head_accidental=True,
             harmonic=True,
             rleak=True,
-            staff_padding=staff_padding,
         )
         baca.parenthesize(plt[1:])
         baca.untie(plt)
@@ -878,14 +880,18 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         rplt = baca.select.rleak(plt)
         if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
             right_broken = True
+        tweaks = ()
+        if staff_padding is not None:
+            tweak = baca.tweak.staff_padding(staff_padding, grob="TrillSpanner")
+            tweaks = tweaks + (tweak,)
         baca.spanners.trill(
             plt,
+            *tweaks,
             alteration=harmonic,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
             right_broken=right_broken,
             rleak=True,
-            staff_padding=staff_padding,
         )
     if lone_plts:
         baca.override.trill_spanner_dash_period(lone_plts, -1)
