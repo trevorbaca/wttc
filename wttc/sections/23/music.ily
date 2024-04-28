@@ -88,6 +88,8 @@ number.23.Skips = {
     %@% - \baca-start-mn-left-only "3"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 4]
     s1 * 4/4
