@@ -39,7 +39,7 @@ number.28.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xy: MNO + z: P"
+    - \baca-start-snm-left-only "[M55 = M54] xy: MNO + z: P"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -125,7 +125,7 @@ number.28.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "x: P"
+    - \baca-start-snm-left-only "[M56] x: P"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
     \tweak padding 1.5

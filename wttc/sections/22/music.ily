@@ -39,7 +39,7 @@ number.22.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "y: O"
+    - \baca-start-snm-left-only "[M44 = M41] y: O"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -79,7 +79,7 @@ number.22.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xyz: N (end)"
+    - \baca-start-snm-left-only "[M45 = M42] xyz: N (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -169,7 +169,7 @@ number.22.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "F (middle)"
+    - \baca-start-snm-left-only "[M46] F (middle) + B (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -228,8 +228,6 @@ number.22.Skips = {
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -254,10 +252,6 @@ number.22.Skips = {
     %@% - \baca-start-mn-left-only "8"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "B (middle)"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR

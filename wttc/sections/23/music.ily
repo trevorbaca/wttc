@@ -39,7 +39,7 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "x: N + yz: M (end)"
+    - \baca-start-snm-left-only "[M47] x: N + yz: M (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -127,7 +127,7 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "z: L"
+    - \baca-start-snm-left-only "[M48 = M28] z: L"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -265,7 +265,7 @@ number.23.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xz: J (beginning)"
+    - \baca-start-snm-left-only "[M49 = M29] xz: J (beginning)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

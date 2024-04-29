@@ -39,7 +39,7 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "z: E"
+    - \baca-start-snm-left-only "[M4 = M23] z: E + x: E"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -143,8 +143,6 @@ number.2.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'19'']"
       %! CLOCK_TIME
@@ -157,10 +155,6 @@ number.2.Skips = {
     %@% - \baca-start-mn-left-only "6"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "x: E"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -252,7 +246,7 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D (middle) + M (middle) + H (middle)"
+    - \baca-start-snm-left-only "[M5 = M24] D (middle) + M (middle) + H (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

@@ -61,7 +61,7 @@ def GLOBALS(skips, first_measure_number):
         ("L3.h", 42),
         ("L4.h_l", 43),
         ("L5.l", 45),
-        ("N (middle) + J (middle)", 47),
+        ("[M37] N (middle) + J (middle)", 47),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)

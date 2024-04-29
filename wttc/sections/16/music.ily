@@ -39,7 +39,7 @@ number.16.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xyz: D"
+    - \baca-start-snm-left-only "[M31 = M15] xyz: D"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -104,7 +104,7 @@ number.16.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "H (middle) + I (middle) + M (middle)"
+    - \baca-start-snm-left-only "[M32] H (middle) + I (middle) + M (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

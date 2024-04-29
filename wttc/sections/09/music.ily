@@ -39,7 +39,7 @@ number.9.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "z: F (end)"
+    - \baca-start-snm-left-only "[M17] z: F (end) + xy: F (end) / G (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -55,8 +55,6 @@ number.9.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'01'']"
       %! CLOCK_TIME
@@ -69,10 +67,6 @@ number.9.Skips = {
     %@% - \baca-start-mn-left-only "2"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "z: F (end) + xy: F (end) / G (end)"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 3]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -161,8 +155,6 @@ number.9.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'12'']"
       %! CLOCK_TIME
@@ -175,10 +167,6 @@ number.9.Skips = {
     %@% - \baca-start-mn-left-only "6"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "z: F (end)"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -220,7 +208,7 @@ number.9.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C (middle) + G (middle)"
+    - \baca-start-snm-left-only "[M18] C (middle) + G (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

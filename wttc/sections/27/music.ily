@@ -39,7 +39,7 @@ number.27.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xy: MNO + z: P"
+    - \baca-start-snm-left-only "[M54] xy: MNO + z: P"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

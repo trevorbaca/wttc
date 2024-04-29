@@ -30,7 +30,7 @@ frame = library.frame
 
 def GLOBALS(skips):
     stage_markup = (
-        ("xy: MNO + z: P", 1),
+        ("[M54] xy: MNO + z: P", 1),
         ("Still 4", 4),
     )
     baca.section.label_stage_numbers(skips, stage_markup)

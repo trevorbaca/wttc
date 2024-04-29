@@ -39,7 +39,7 @@ number.8.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "K (middle) + O (middle)"
+    - \baca-start-snm-left-only "[M13 = M11] K (middle) + O (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -108,7 +108,7 @@ number.8.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "x: ABC"
+    - \baca-start-snm-left-only "[M14] x: ABC + yz: A (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -145,8 +145,6 @@ number.8.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'16'']"
       %! CLOCK_TIME
@@ -159,10 +157,6 @@ number.8.Skips = {
     %@% - \baca-start-mn-left-only "6"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "yz: A (end)"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -204,7 +198,7 @@ number.8.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xyz: D"
+    - \baca-start-snm-left-only "[M15] xyz: D"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -273,7 +267,7 @@ number.8.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "I (middle)"
+    - \baca-start-snm-left-only "[M16] I (middle) + M (middle) + N (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -290,8 +284,6 @@ number.8.Skips = {
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -316,10 +308,6 @@ number.8.Skips = {
     %@% - \baca-start-mn-left-only "10"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "M (middle) + N (middle)"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
       %! ANCHOR_SKIP
     % [anchor skip]

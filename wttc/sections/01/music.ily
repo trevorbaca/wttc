@@ -39,7 +39,7 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "y: C (beginning)"
+    - \baca-start-snm-left-only "[M1] y: C (beginning)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -112,7 +112,7 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "E (middle)"
+    - \baca-start-snm-left-only "[M2] E (middle) + I (middle) + M (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -219,8 +219,6 @@ number.1.Skips = {
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
-      %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -245,10 +243,6 @@ number.1.Skips = {
     %@% - \baca-start-mn-left-only "8"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
-      %! STAGE_NUMBER
-    - \baca-start-snm-left-only "I (middle) + M (middle)"
-      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
 
     % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -315,7 +309,7 @@ number.1.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "x: A (end)) + y: B (end)"
+    - \baca-start-snm-left-only "[M3] x: A (end)) + y: B (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

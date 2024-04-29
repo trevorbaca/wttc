@@ -39,7 +39,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "y: O"
+    - \baca-start-snm-left-only "[M41] y: O"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -148,7 +148,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xyz: N (end)"
+    - \baca-start-snm-left-only "[M42] xyz: N (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -238,7 +238,7 @@ number.21.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "y: J (end) + z: J (end)"
+    - \baca-start-snm-left-only "[M43 = M40 = M38] y: J (end) + z: J (end)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

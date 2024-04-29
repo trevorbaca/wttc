@@ -39,7 +39,7 @@ number.14.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "xy: F (beginning)"
+    - \baca-start-snm-left-only "[M25] xy: F (beginning)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -209,7 +209,7 @@ number.14.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D (middle) + H (middle) + M (middle)"
+    - \baca-start-snm-left-only "[M26 = M24] D (middle) + H (middle) + M (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -246,6 +246,8 @@ number.14.Skips = {
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
+      %! STAGE_NUMBER
+    \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[0'24'']"
       %! CLOCK_TIME
@@ -258,6 +260,10 @@ number.14.Skips = {
     %@% - \baca-start-mn-left-only "10"
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
+      %! STAGE_NUMBER
+    - \baca-start-snm-left-only "[M27 = M25] xy: F (beginning)"
+      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM
 
     % [Skips measure 11]
     s1 * 6/4
