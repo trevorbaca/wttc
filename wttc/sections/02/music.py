@@ -29,9 +29,9 @@ frame = library.frame
 
 def GLOBALS(skips):
     stage_markup = (
-        ("E(z)", 1),
-        ("E(x)", 6),
-        ("D + M + H", 10),
+        ("z: E", 1),
+        ("x: E", 6),
+        ("D (middle) + M (middle) + H (middle)", 10),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)

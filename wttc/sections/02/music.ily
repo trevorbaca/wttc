@@ -39,7 +39,7 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "E(z)"
+    - \baca-start-snm-left-only "z: E"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -158,7 +158,7 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "E(x)"
+    - \baca-start-snm-left-only "x: E"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -252,7 +252,7 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D + M + H"
+    - \baca-start-snm-left-only "D (middle) + M (middle) + H (middle)"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
