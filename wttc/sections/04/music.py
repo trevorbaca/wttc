@@ -50,8 +50,8 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[1 - 1],
         "B",
+        baca.tweak.padding(1.5),
         font_size=6,
-        padding=1.5,
     )
 
 
@@ -775,9 +775,15 @@ def B1b(pleaves, terminations, *, up_bow=False):
         baca.staff_lines(final_leaf, 5)
         baca.staff_position(plt, 0)
         if up_bow is True:
-            baca.up_bow(plt.head, padding=1)
+            baca.up_bow(
+                plt.head,
+                baca.tweak.padding(1),
+            )
         else:
-            baca.down_bow(plt.head, padding=1)
+            baca.down_bow(
+                plt.head,
+                baca.tweak.padding(1),
+            )
         baca.hairpin(
             plt,
             f"o<{termination}",
@@ -898,7 +904,10 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
         baca.override.trill_spanner_style(lone_plts, "#'dashed-line")
     for plt in lone_plts:
         for pleaf in plt:
-            baca.triple_staccato(pleaf, padding=0.5)
+            baca.triple_staccato(
+                pleaf,
+                baca.tweak.padding(0.5),
+            )
 
 
 def fl(m):

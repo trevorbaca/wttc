@@ -68,8 +68,8 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[1 - 1],
         "C",
+        baca.tweak.padding(1.5),
         font_size=6,
-        padding=1.5,
     )
     baca.mark(
         skips[17 - 1],
@@ -81,8 +81,8 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[31 - 1],
         "D",
+        baca.tweak.padding(1.5),
         font_size=6,
-        padding=1.5,
     )
     baca.mark(
         skips[40 - 1],
@@ -798,9 +798,15 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
         baca.staff_lines(leaf, 5)
     for run, dynamic_ in zip(runs, dynamics_, strict=True):
         if upbow is True:
-            baca.up_bow(run[0], padding=1)
+            baca.up_bow(
+                run[0],
+                baca.tweak.padding(1),
+            )
         else:
-            baca.down_bow(run[0], padding=1)
+            baca.down_bow(
+                run[0],
+                baca.tweak.padding(1),
+            )
         if len(run) == 1:
             run = baca.select.rleak(run)
         baca.hairpin(

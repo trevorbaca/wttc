@@ -1107,7 +1107,10 @@ def B1b(pleaves, *, up_bow=False):
         baca.staff_lines(run[0], 1)
         rleaf = abjad.get.leaf(run[-1], 1)
         baca.staff_lines(rleaf, 5)
-        bow_mark(run[0], padding=1)
+        bow_mark(
+            run[0],
+            baca.tweak.padding(1),
+        )
         baca.hairpin(
             run,
             'o<|"mf"',
@@ -1292,7 +1295,10 @@ def C1_final(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
     baca.override.trill_spanner_dash_period(plts, -1)
     baca.override.trill_spanner_style(plts, "#'dashed-line")
     for pleaf in pleaves:
-        baca.triple_staccato(pleaf, padding=0.5)
+        baca.triple_staccato(
+            pleaf,
+            baca.tweak.padding(0.5),
+        )
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
@@ -2204,7 +2210,10 @@ def G4a(pleaves, *, once=False, up_bow=False):
         bow_mark = baca.down_bow
     plts = baca.select.plts(pleaves)
     for plt in plts:
-        bow_mark(plt.head, padding=1)
+        bow_mark(
+            plt.head,
+            baca.tweak.padding(1),
+        )
         baca.stop_on_string(plt.head)
     if once is True:
         string = '"ff"'
@@ -2553,7 +2562,10 @@ def K2c(pleaves):
     leaf = abjad.get.leaf(pleaves[-1], 1)
     baca.staff_lines(leaf, 5)
     for plt in baca.select.plts(pleaves):
-        baca.up_bow(plt[0], padding=1)
+        baca.up_bow(
+            plt[0],
+            baca.tweak.padding(1),
+        )
     baca.dynamic(pleaves[0], '"f"')
 
 
@@ -3091,6 +3103,12 @@ def still_1b(pleaves, pitch, dynamic, *, up_bow=False):
     baca.dynamic(pleaves[0], dynamic)
     baca.markup(pleaves[0], r"\wttc-with-screw", baca.tweak.staff_padding(4))
     if up_bow is True:
-        baca.up_bow(pleaves[0], padding=1)
+        baca.up_bow(
+            pleaves[0],
+            baca.tweak.padding(1),
+        )
     else:
-        baca.down_bow(pleaves[0], padding=1)
+        baca.down_bow(
+            pleaves[0],
+            baca.tweak.padding(1),
+        )

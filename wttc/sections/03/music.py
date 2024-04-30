@@ -42,8 +42,8 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[1 - 1],
         "A",
+        baca.tweak.padding(1.5),
         font_size=6,
-        padding=1.5,
     )
     baca.mark(
         skips[7 - 1],

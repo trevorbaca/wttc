@@ -62,15 +62,15 @@ def GLOBALS(skips, first_measure_number):
     baca.rehearsal_mark(
         skips[1 - 1],
         "G",
+        baca.tweak.padding(1.5),
         font_size=6,
-        padding=1.5,
     )
     baca.metronome_mark(skips[34 - 1], "50", manifests=library.manifests)
     baca.rehearsal_mark(
         skips[34 - 1],
         "H",
+        baca.tweak.padding(1.5),
         font_size=6,
-        padding=1.5,
     )
     baca.mark(
         skips[36 - 1],
