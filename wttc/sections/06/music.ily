@@ -83,7 +83,7 @@ number.6.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M11] K (middle) + O (middle)"
+    - \baca-start-snm-left-only "[M11] K + O"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

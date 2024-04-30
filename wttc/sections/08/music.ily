@@ -39,7 +39,7 @@ number.8.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M13 = M11] K (middle) + O (middle)"
+    - \baca-start-snm-left-only "[M13 = M11] K + O"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
@@ -267,7 +267,7 @@ number.8.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M16] I (middle) + M (middle) + N (middle)"
+    - \baca-start-snm-left-only "[M16] I + M + N"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

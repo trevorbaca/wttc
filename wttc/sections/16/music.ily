@@ -104,7 +104,7 @@ number.16.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M32] H (middle) + I (middle) + M (middle)"
+    - \baca-start-snm-left-only "[M32] H + I + M"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 

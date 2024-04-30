@@ -209,7 +209,7 @@ number.14.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M26 = M24] D (middle) + H (middle) + M (middle)"
+    - \baca-start-snm-left-only "[M26 = M24] D + H + M"
       %! STAGE_NUMBER
     \bacaStartTextSpanSNM
 
