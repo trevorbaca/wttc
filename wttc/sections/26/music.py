@@ -74,21 +74,21 @@ def GLOBALS(skips, first_measure_number):
     baca.mark(
         skips[10 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
     for n in [32, 36]:
         baca.mark(
             skips[n - 1],
             strings.long_fermata,
-            padding=1.5,
+            baca.tweak.padding(1.5, event=True),
             site="after",
         )
     for n in [34, 35]:
         baca.mark(
             skips[n - 1],
             strings.fermata,
-            padding=1.5,
+            baca.tweak.padding(1.5, event=True),
             site="after",
         )
 

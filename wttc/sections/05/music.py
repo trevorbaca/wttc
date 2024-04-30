@@ -74,7 +74,7 @@ def GLOBALS(skips):
     baca.mark(
         skips[17 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.metronome_mark(skips[31 - 1], "60", manifests=library.manifests)
@@ -87,19 +87,19 @@ def GLOBALS(skips):
     baca.mark(
         skips[40 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.mark(
         skips[46 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.mark(
         skips[48 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
 

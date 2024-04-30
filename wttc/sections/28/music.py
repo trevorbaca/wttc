@@ -39,13 +39,13 @@ def GLOBALS(skips):
     baca.mark(
         skips[4 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.mark(
         skips[5 - 1],
         strings.long_fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
 

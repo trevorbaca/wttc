@@ -33,7 +33,7 @@ def GLOBALS(skips):
     baca.mark(
         skips[11 - 1],
         strings.fermata,
-        padding=1.5,
+        baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.bar_line(skips[11 - 1], "|.")
