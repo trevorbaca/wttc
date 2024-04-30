@@ -2167,7 +2167,8 @@ number.3.Guitar.2.Staff = <<
 
 number.3.Violin.Music = {
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         % [Violin.Music measure 1]
           %! EXPLICIT_CLEF
@@ -2234,7 +2235,8 @@ number.3.Violin.Music = {
 
     }
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         d'16
           %! SPANNER_STOP
@@ -2339,7 +2341,8 @@ number.3.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         % [Violin.Music measure 2]
           %! STAFF_HIGHLIGHT
@@ -2375,7 +2378,8 @@ number.3.Violin.Music = {
 
     }
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         d'16
           %! SPANNER_STOP
@@ -2513,7 +2517,8 @@ number.3.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         % [Violin.Music measure 3]
           %! STAFF_HIGHLIGHT
@@ -2549,7 +2554,8 @@ number.3.Violin.Music = {
 
     }
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         e'16
           %! SPANNER_STOP
@@ -2714,7 +2720,8 @@ number.3.Violin.Music = {
     ]
     \revert DynamicLineSpanner.staff-padding
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 5]
         \override DynamicLineSpanner.staff-padding = 4
@@ -2755,7 +2762,8 @@ number.3.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         e'16
           %! SPANNER_STOP
@@ -2790,7 +2798,8 @@ number.3.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 6]
         e'16
@@ -2826,7 +2835,8 @@ number.3.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         e'16
           %! SPANNER_STOP
@@ -3019,7 +3029,8 @@ number.3.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanStringNumber
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 12]
           %! STAFF_HIGHLIGHT

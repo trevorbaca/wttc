@@ -1510,7 +1510,8 @@ number.15.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
     \revert DynamicLineSpanner.staff-padding
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 8]
         \override DynamicLineSpanner.staff-padding = 3.5
@@ -1545,7 +1546,8 @@ number.15.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         e'16
           %! SPANNER_STOP
@@ -1580,7 +1582,8 @@ number.15.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 9]
         e'16
@@ -1616,7 +1619,8 @@ number.15.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         e'16
           %! SPANNER_STOP

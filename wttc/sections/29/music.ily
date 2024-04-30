@@ -2608,7 +2608,8 @@ number.29.Violin.Music = {
       %! SPANNER_STOP
     \stopTrillSpan
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         % [Violin.Music measure 16]
         \override DynamicLineSpanner.staff-padding = 4
@@ -2643,7 +2644,8 @@ number.29.Violin.Music = {
 
     }
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         d'16
           %! SPANNER_STOP
@@ -2678,7 +2680,8 @@ number.29.Violin.Music = {
 
     }
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         d'16
           %! SPANNER_STOP
@@ -2713,7 +2716,8 @@ number.29.Violin.Music = {
 
     }
 
-    \repeat tremolo 2 {
+    \repeat tremolo 2
+    {
 
         d'16
           %! SPANNER_STOP

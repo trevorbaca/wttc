@@ -1809,7 +1809,8 @@ number.8.Violin.Music = {
 
     r16
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 4]
         \override DynamicLineSpanner.staff-padding = 3.5
@@ -1844,7 +1845,8 @@ number.8.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         e'16
           %! SPANNER_STOP
@@ -1879,7 +1881,8 @@ number.8.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         % [Violin.Music measure 5]
         e'16
@@ -1915,7 +1918,8 @@ number.8.Violin.Music = {
 
     }
 
-    \repeat tremolo 4 {
+    \repeat tremolo 4
+    {
 
         e'16
           %! SPANNER_STOP

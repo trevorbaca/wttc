@@ -67,7 +67,7 @@ def GLOBALS(skips, first_measure_number):
     baca.rehearsal_mark(
         skips[25 - 1],
         "P",
-        extra_offset=(3, 0),
+        baca.tweak.extra_offset((3, 0)),
         font_size=6,
         padding=1.5,
     )

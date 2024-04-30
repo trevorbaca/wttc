@@ -250,8 +250,8 @@ def gt1(cache):
     baca.dynamic(
         abjad.select.leaf(m[5], 0, grace=False),
         "p-ancora",
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1),
     )
 
 
@@ -278,8 +278,8 @@ def gt2(cache):
     baca.dynamic(
         abjad.select.leaf(m[5], 0, grace=False),
         "p-ancora",
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1),
     )
 
 

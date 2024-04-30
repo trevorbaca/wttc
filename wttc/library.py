@@ -2016,8 +2016,8 @@ def F2b2(pleaves, glissandi):
     baca.dynamic(
         pleaves[0],
         "f-sempre",
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1),
     )
     baca.spanners.text(
         pleaves,
@@ -2213,8 +2213,8 @@ def G4a(pleaves, *, once=False, up_bow=False):
     baca.dynamic(
         pleaves[0],
         string,
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1),
     )
 
 
@@ -2233,8 +2233,8 @@ def G4b(pleaves, *, once=False):
     baca.dynamic(
         pleaves[0],
         string,
-        parent_alignment_x=-1,
-        self_alignment_x=-1,
+        baca.tweak.parent_alignment_x(-1),
+        baca.tweak.self_alignment_x(-1),
     )
 
 
