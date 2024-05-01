@@ -27,7 +27,7 @@ number.23.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'00'']"
+    %@% - \baca-start-ct-left-only "[21'35'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -35,9 +35,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "1"
+    - \baca-start-mn-left-only "369"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "[M47] x: N + yz: M (end)"
       %! STAGE_NUMBER
@@ -54,9 +54,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'01'']"
+    %@% - \baca-start-ct-left-only "[21'36'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -64,9 +64,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "2"
+    - \baca-start-mn-left-only "370"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 3]
     s1 * 4/4
@@ -75,9 +75,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'04'']"
+    %@% - \baca-start-ct-left-only "[21'39'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -85,9 +85,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "3"
+    - \baca-start-mn-left-only "371"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -99,7 +99,7 @@ number.23.Skips = {
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -115,7 +115,7 @@ number.23.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'08'']"
+    %@% - \baca-start-ct-left-only "[21'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -123,9 +123,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "4"
+    - \baca-start-mn-left-only "372"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "[M48 = M28] z: L"
       %! STAGE_NUMBER
@@ -142,9 +142,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'09'']"
+    %@% - \baca-start-ct-left-only "[21'44'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -152,9 +152,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "5"
+    - \baca-start-mn-left-only "373"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 6]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -167,9 +167,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'12'']"
+    %@% - \baca-start-ct-left-only "[21'47'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -177,9 +177,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "6"
+    - \baca-start-mn-left-only "374"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -193,7 +193,7 @@ number.23.Skips = {
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -209,7 +209,7 @@ number.23.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'13'']"
+    %@% - \baca-start-ct-left-only "[21'48'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -217,9 +217,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "7"
+    - \baca-start-mn-left-only "375"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "Still 3"
       %! STAGE_NUMBER
@@ -237,7 +237,7 @@ number.23.Skips = {
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -253,7 +253,7 @@ number.23.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'24'']"
+    %@% - \baca-start-ct-left-only "[21'59'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -261,9 +261,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "8"
+    - \baca-start-mn-left-only "376"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "[M49 = M29] xz: J (beginning)"
       %! STAGE_NUMBER
@@ -276,9 +276,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'28'']"
+    %@% - \baca-start-ct-left-only "[22'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -286,9 +286,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "9"
+    - \baca-start-mn-left-only "377"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 10]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -301,9 +301,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'32'']"
+    %@% - \baca-start-ct-left-only "[22'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -311,9 +311,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "10"
+    - \baca-start-mn-left-only "378"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 11]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -326,9 +326,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[0'33'']" "[0'35'']"
+    %@% - \baca-start-ct-both "[22'08'']" "[22'10'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -336,9 +336,9 @@ number.23.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "11"
+    - \baca-start-mn-left-only "379"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -360,7 +360,7 @@ number.23.Skips = {
     \bacaStopTextSpanMM
       %! ANCHOR_SKIP
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
@@ -415,14 +415,14 @@ number.23.AltoFlute.Music = {
     % [AltoFlute.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_369
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_369
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -535,14 +535,14 @@ number.23.Oboe.Music = {
     % [Oboe.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_369
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_369
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -665,14 +665,14 @@ number.23.Guitar.1.Music = {
         % [Guitar.1.Music measure 1]
           %! EXPLICIT_CLEF
         \clef "treble"
-          %! MEASURE_1
+          %! MEASURE_369
           %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.X-extent = ##f
+        \once \override Staff.Clef.X-extent = ##f
           %! EXPLICIT_CLEF_COLOR
         \once \override Staff.Clef.color = #blue
-          %! MEASURE_1
+          %! MEASURE_369
           %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+        \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
         \override DynamicLineSpanner.staff-padding = 5
@@ -990,14 +990,14 @@ number.23.Guitar.2.Music = {
         % [Guitar.2.Music measure 1]
           %! EXPLICIT_CLEF
         \clef "treble"
-          %! MEASURE_1
+          %! MEASURE_369
           %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.X-extent = ##f
+        \once \override Staff.Clef.X-extent = ##f
           %! EXPLICIT_CLEF_COLOR
         \once \override Staff.Clef.color = #blue
-          %! MEASURE_1
+          %! MEASURE_369
           %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+        \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
         \override DynamicLineSpanner.staff-padding = 4
@@ -1321,14 +1321,14 @@ number.23.Violin.Music = {
         % [Violin.Music measure 1]
           %! EXPLICIT_CLEF
         \clef "treble"
-          %! MEASURE_1
+          %! MEASURE_369
           %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.X-extent = ##f
+        \once \override Staff.Clef.X-extent = ##f
           %! EXPLICIT_CLEF_COLOR
         \once \override Staff.Clef.color = #blue
-          %! MEASURE_1
+          %! MEASURE_369
           %! SHIFTED_CLEF
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+        \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
           %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #blue
         \override DynamicLineSpanner.staff-padding = 3
@@ -1681,14 +1681,14 @@ number.23.Cello.Music = {
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "bass"
-      %! MEASURE_1
+      %! MEASURE_369
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_369
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 6
@@ -1971,12 +1971,12 @@ number.23.Cello.Music = {
     % [Cello.Music measure 9]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_9
+      %! MEASURE_377
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_9
+      %! MEASURE_377
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION

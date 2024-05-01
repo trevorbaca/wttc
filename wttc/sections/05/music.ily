@@ -29,7 +29,7 @@ number.5.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'00'']"
+    %@% - \baca-start-ct-left-only "[3'30'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -37,9 +37,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "1"
+    - \baca-start-mn-left-only "52"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
@@ -56,11 +56,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'01'']"
+    %@% - \baca-start-ct-left-only "[3'31'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -68,9 +68,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "2"
+    - \baca-start-mn-left-only "53"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l_m"
       %! STAGE_NUMBER
@@ -83,11 +83,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'03'']"
+    %@% - \baca-start-ct-left-only "[3'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -95,9 +95,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "3"
+    - \baca-start-mn-left-only "54"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l_h"
       %! STAGE_NUMBER
@@ -110,9 +110,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'06'']"
+    %@% - \baca-start-ct-left-only "[3'36'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -120,9 +120,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "4"
+    - \baca-start-mn-left-only "55"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 5]
     s1 * 6/4
@@ -131,11 +131,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'08'']"
+    %@% - \baca-start-ct-left-only "[3'38'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -143,9 +143,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "5"
+    - \baca-start-mn-left-only "56"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
@@ -158,9 +158,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'10'']"
+    %@% - \baca-start-ct-left-only "[3'40'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -168,9 +168,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "6"
+    - \baca-start-mn-left-only "57"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 7]
     s1 * 6/4
@@ -179,11 +179,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'13'']"
+    %@% - \baca-start-ct-left-only "[3'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -191,9 +191,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "7"
+    - \baca-start-mn-left-only "58"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
@@ -206,9 +206,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'15'']"
+    %@% - \baca-start-ct-left-only "[3'45'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -216,9 +216,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "8"
+    - \baca-start-mn-left-only "59"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 9]
     s1 * 6/4
@@ -227,11 +227,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'18'']"
+    %@% - \baca-start-ct-left-only "[3'48'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -239,9 +239,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "9"
+    - \baca-start-mn-left-only "60"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C3.l + C1.l"
       %! STAGE_NUMBER
@@ -254,11 +254,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'20'']"
+    %@% - \baca-start-ct-left-only "[3'50'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -266,9 +266,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "10"
+    - \baca-start-mn-left-only "61"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
@@ -281,9 +281,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'22'']"
+    %@% - \baca-start-ct-left-only "[3'52'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -291,9 +291,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "11"
+    - \baca-start-mn-left-only "62"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 12]
     s1 * 6/4
@@ -302,11 +302,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'25'']"
+    %@% - \baca-start-ct-left-only "[3'55'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -314,9 +314,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "12"
+    - \baca-start-mn-left-only "63"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C3.l_m"
       %! STAGE_NUMBER
@@ -333,11 +333,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'27'']"
+    %@% - \baca-start-ct-left-only "[3'57'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -345,9 +345,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "13"
+    - \baca-start-mn-left-only "64"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
@@ -364,11 +364,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'28'']"
+    %@% - \baca-start-ct-left-only "[3'58'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -376,9 +376,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "14"
+    - \baca-start-mn-left-only "65"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
@@ -391,11 +391,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'31'']"
+    %@% - \baca-start-ct-left-only "[4'01'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -403,9 +403,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "15"
+    - \baca-start-mn-left-only "66"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C3.l_h"
       %! STAGE_NUMBER
@@ -418,9 +418,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'33'']"
+    %@% - \baca-start-ct-left-only "[4'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -428,9 +428,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "16"
+    - \baca-start-mn-left-only "67"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 17]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -443,11 +443,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'36'']"
+    %@% - \baca-start-ct-left-only "[4'06'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -455,9 +455,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "17"
+    - \baca-start-mn-left-only "68"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
@@ -472,11 +472,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'37'']"
+    %@% - \baca-start-ct-left-only "[4'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -484,9 +484,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "18"
+    - \baca-start-mn-left-only "69"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
@@ -503,11 +503,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'38'']"
+    %@% - \baca-start-ct-left-only "[4'08'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -515,9 +515,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "19"
+    - \baca-start-mn-left-only "70"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D1.l"
       %! STAGE_NUMBER
@@ -534,11 +534,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'40'']"
+    %@% - \baca-start-ct-left-only "[4'10'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -546,9 +546,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "20"
+    - \baca-start-mn-left-only "71"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
@@ -561,11 +561,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'41'']"
+    %@% - \baca-start-ct-left-only "[4'11'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -573,9 +573,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "21"
+    - \baca-start-mn-left-only "72"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C2.l"
       %! STAGE_NUMBER
@@ -588,11 +588,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'42'']"
+    %@% - \baca-start-ct-left-only "[4'12'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -600,9 +600,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "22"
+    - \baca-start-mn-left-only "73"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C3.l"
       %! STAGE_NUMBER
@@ -619,11 +619,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'44'']"
+    %@% - \baca-start-ct-left-only "[4'14'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -631,9 +631,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "23"
+    - \baca-start-mn-left-only "74"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D1.l_m"
       %! STAGE_NUMBER
@@ -646,9 +646,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'46'']"
+    %@% - \baca-start-ct-left-only "[4'16'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -656,9 +656,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "24"
+    - \baca-start-mn-left-only "75"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 25]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -671,11 +671,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'48'']"
+    %@% - \baca-start-ct-left-only "[4'18'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -683,9 +683,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "25"
+    - \baca-start-mn-left-only "76"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C2.l + C3.l"
       %! STAGE_NUMBER
@@ -702,11 +702,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'50'']"
+    %@% - \baca-start-ct-left-only "[4'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -714,9 +714,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "26"
+    - \baca-start-mn-left-only "77"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D1.l_h + C3.l"
       %! STAGE_NUMBER
@@ -729,9 +729,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'52'']"
+    %@% - \baca-start-ct-left-only "[4'22'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -739,9 +739,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "27"
+    - \baca-start-mn-left-only "78"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 28]
     s1 * 5/4
@@ -750,9 +750,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'54'']"
+    %@% - \baca-start-ct-left-only "[4'24'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -760,9 +760,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "28"
+    - \baca-start-mn-left-only "79"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 29]
     s1 * 5/4
@@ -771,9 +771,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'56'']"
+    %@% - \baca-start-ct-left-only "[4'26'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -781,9 +781,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "29"
+    - \baca-start-mn-left-only "80"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 30]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -796,11 +796,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'58'']"
+    %@% - \baca-start-ct-left-only "[4'28'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -808,9 +808,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "30"
+    - \baca-start-mn-left-only "81"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "C3.l"
       %! STAGE_NUMBER
@@ -830,7 +830,7 @@ number.5.Skips = {
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -846,7 +846,7 @@ number.5.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[0'59'']"
+    %@% - \baca-start-ct-left-only "[4'29'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -854,9 +854,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "31"
+    - \baca-start-mn-left-only "82"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D1.h_l + D2.l"
       %! STAGE_NUMBER
@@ -873,9 +873,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'03'']"
+    %@% - \baca-start-ct-left-only "[4'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -883,9 +883,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "32"
+    - \baca-start-mn-left-only "83"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 33]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -898,11 +898,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'09'']"
+    %@% - \baca-start-ct-left-only "[4'39'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -910,9 +910,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "33"
+    - \baca-start-mn-left-only "84"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D3.h_l"
       %! STAGE_NUMBER
@@ -925,11 +925,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'13'']"
+    %@% - \baca-start-ct-left-only "[4'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -937,9 +937,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "34"
+    - \baca-start-mn-left-only "85"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D2.l_h"
       %! STAGE_NUMBER
@@ -952,11 +952,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'17'']"
+    %@% - \baca-start-ct-left-only "[4'47'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -964,9 +964,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "35"
+    - \baca-start-mn-left-only "86"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D3.h"
       %! STAGE_NUMBER
@@ -979,9 +979,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'21'']"
+    %@% - \baca-start-ct-left-only "[4'51'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -989,9 +989,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "36"
+    - \baca-start-mn-left-only "87"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 37]
     s1 * 4/4
@@ -1000,11 +1000,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'25'']"
+    %@% - \baca-start-ct-left-only "[4'55'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1012,9 +1012,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "37"
+    - \baca-start-mn-left-only "88"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D1.l"
       %! STAGE_NUMBER
@@ -1027,11 +1027,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'29'']"
+    %@% - \baca-start-ct-left-only "[4'59'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1039,9 +1039,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "38"
+    - \baca-start-mn-left-only "89"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D1.l_h"
       %! STAGE_NUMBER
@@ -1054,11 +1054,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'33'']"
+    %@% - \baca-start-ct-left-only "[5'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1066,9 +1066,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "39"
+    - \baca-start-mn-left-only "90"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D2.h_l + D4.l"
       %! STAGE_NUMBER
@@ -1085,9 +1085,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'37'']"
+    %@% - \baca-start-ct-left-only "[5'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1095,9 +1095,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "40"
+    - \baca-start-mn-left-only "91"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -1112,11 +1112,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'43'']"
+    %@% - \baca-start-ct-left-only "[5'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1124,9 +1124,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "41"
+    - \baca-start-mn-left-only "92"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D4.l + D2.l"
       %! STAGE_NUMBER
@@ -1143,11 +1143,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'47'']"
+    %@% - \baca-start-ct-left-only "[5'17'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1155,9 +1155,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "42"
+    - \baca-start-mn-left-only "93"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D4.l_m + D2.m"
       %! STAGE_NUMBER
@@ -1174,11 +1174,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'53'']"
+    %@% - \baca-start-ct-left-only "[5'23'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1186,9 +1186,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "43"
+    - \baca-start-mn-left-only "94"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D4.l_h + D2.h"
       %! STAGE_NUMBER
@@ -1205,9 +1205,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[1'57'']"
+    %@% - \baca-start-ct-left-only "[5'27'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1215,9 +1215,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "44"
+    - \baca-start-mn-left-only "95"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
 
     % [Skips measure 45]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -1230,11 +1230,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[2'03'']"
+    %@% - \baca-start-ct-left-only "[5'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1242,9 +1242,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "45"
+    - \baca-start-mn-left-only "96"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D2+4.h_l"
       %! STAGE_NUMBER
@@ -1257,9 +1257,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[2'07'']"
+    %@% - \baca-start-ct-left-only "[5'37'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1267,9 +1267,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "46"
+    - \baca-start-mn-left-only "97"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -1280,11 +1280,11 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[2'11'']"
+    %@% - \baca-start-ct-left-only "[5'41'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1292,9 +1292,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "47"
+    - \baca-start-mn-left-only "98"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
       %! STAGE_NUMBER
     - \baca-start-snm-left-only "D2+4.h_l"
       %! STAGE_NUMBER
@@ -1307,9 +1307,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[2'15'']" "[2'19'']"
+    %@% - \baca-start-ct-both "[5'45'']" "[5'49'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1317,9 +1317,9 @@ number.5.Skips = {
       %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    %@% - \baca-start-mn-left-only "48"
+    - \baca-start-mn-left-only "99"
       %! MEASURE_NUMBER
-    %@% \bacaStartTextSpanMN
+    \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -1343,7 +1343,7 @@ number.5.Skips = {
     \bacaStopTextSpanMM
       %! ANCHOR_SKIP
       %! MEASURE_NUMBER
-    %@% \bacaStopTextSpanMN
+    \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
     \bacaStopTextSpanSNM
@@ -1509,14 +1509,14 @@ number.5.AltoFlute.Music = {
     % [AltoFlute.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 3
@@ -3387,14 +3387,14 @@ number.5.Oboe.Music = {
     % [Oboe.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 3
@@ -4037,14 +4037,14 @@ number.5.Guitar.1.Music = {
     % [Guitar.1.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -5305,14 +5305,14 @@ number.5.Guitar.2.Music = {
     % [Guitar.2.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -6585,14 +6585,14 @@ number.5.Violin.Music = {
     % [Violin.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "treble"
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
@@ -8653,14 +8653,14 @@ number.5.Cello.Music = {
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
     \clef "bass"
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_1
+      %! MEASURE_52
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
@@ -8938,12 +8938,12 @@ number.5.Cello.Music = {
     % [Cello.Music measure 4]
       %! EXPLICIT_CLEF
     \clef "bass"
-      %! MEASURE_4
+      %! MEASURE_55
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
-      %! MEASURE_4
+      %! MEASURE_55
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION

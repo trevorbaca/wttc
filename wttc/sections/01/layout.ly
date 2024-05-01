@@ -18,7 +18,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20 20 20)
+            \baca-lbsd #160 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-lax-spacing-section #1 #16
               %! BREAK
@@ -101,11 +101,11 @@
 
             % [PageLayout measure 8]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
-            \break
+            \pageBreak
             s1 * 3/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
@@ -129,11 +129,11 @@
 
             % [PageLayout measure 10]
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20 20 20)
+            \baca-lbsd-xy #250 #10 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
-            \pageBreak
+            \break
             s1 * 3/4
               %! SPACING
             %@% \bacaStopTextSpanSPM

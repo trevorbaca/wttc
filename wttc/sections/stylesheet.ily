@@ -11,4 +11,5 @@
 \layout { \context { \Score barNumberVisibility = #all-bar-numbers-visible } }
 
 local-measure-number-extra-offset = #'(0 . 7)
-stage-number-extra-offset = #'(0 . 13)
+local-measure-number-extra-offset = #'(0 . 10)
+stage-number-extra-offset = #'(0 . 19)

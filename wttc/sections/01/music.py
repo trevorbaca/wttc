@@ -445,6 +445,7 @@ def persist_score(score, environment):
     baca.section.activate_tags(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.MEASURE_NUMBER,
         baca.tags.STAGE_NUMBER,
     )
     baca.section.deactivate_tags(
@@ -453,7 +454,8 @@ def persist_score(score, environment):
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
-        includes=["../stylesheet.ily"],
+        includes=["../stylesheet.ily", "header.ily"],
+        preamble=[r"\markup \vspace #10", r"\stage-direction-A"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -465,15 +467,16 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (15, 20, 20, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(8, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, 160, distances),
         ),
         baca.layout.Page(
             2,
-            baca.layout.System(10, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(8, 10, distances),
+            baca.layout.System(10, 10, distances, x_offset=250),
         ),
     )
     spacing = baca.layout.Spacing(
@@ -492,7 +495,6 @@ def main():
     environment = baca.build.read_environment(
         __file__,
         baca.build.argv(),
-        section_not_included_in_score=True,
     )
     if environment.score():
         score = make_score(

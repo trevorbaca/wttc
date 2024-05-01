@@ -1,7 +1,10 @@
 \version "2.25.10"
 \include "../stylesheet.ily"
+\include "header.ily"
 \include "music.ily"
 
+\markup \vspace #10
+\stage-direction-A
 \score
 {
 

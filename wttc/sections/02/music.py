@@ -279,6 +279,7 @@ def persist_score(score, environment):
     baca.section.activate_tags(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.MEASURE_NUMBER,
         baca.tags.STAGE_NUMBER,
     )
     baca.section.deactivate_tags(
@@ -320,7 +321,6 @@ def main():
     environment = baca.build.read_environment(
         __file__,
         baca.build.argv(),
-        section_not_included_in_score=True,
     )
     if environment.score():
         score = make_score(

@@ -232,7 +232,6 @@
             ),
         ],
     },
-    "section_not_included_in_score": True,
     "start_clock_time": "0'00''",
     "stop_clock_time": "0'40''",
     "time_signatures": [

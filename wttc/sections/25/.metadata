@@ -23,8 +23,8 @@
     ],
     "bol_measure_numbers": [1, 9, 15],
     "duration": "1'15''",
-    "final_measure_number": 20,
-    "first_measure_number": 1,
+    "final_measure_number": 436,
+    "first_measure_number": 417,
     "has_anchor_skip": True,
     "persistent_indicators": {
         "AltoFlute.Staff": [
@@ -232,9 +232,8 @@
             ),
         ],
     },
-    "section_not_included_in_score": True,
-    "start_clock_time": "0'00''",
-    "stop_clock_time": "1'15''",
+    "start_clock_time": "23'34''",
+    "stop_clock_time": "24'49''",
     "time_signatures": [
         "6/4",
         "4/4",
