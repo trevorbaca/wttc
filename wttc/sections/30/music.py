@@ -256,7 +256,7 @@ def gt1(m):
     baca.hairpin(
         baca.select.lparts(m[1, 9], [1, 2, 1, 2, 1, 2]),
         "p< mp> p< mp> pp< p>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
@@ -274,7 +274,7 @@ def gt2(m):
     baca.hairpin(
         baca.select.lparts(m[1, 9], [2, 1, 2, 1, 2, 1]),
         "p< mp> p< mp> pp< p>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
@@ -299,7 +299,7 @@ def vn(m):
     baca.hairpin(
         baca.select.lparts(m[1, 11], [2, 1, 2, 1, 2, 1, 2]),
         "mp> pp< mp> pp< mp> pp< mp>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
@@ -311,13 +311,13 @@ def vc(m):
     baca.hairpin(
         baca.select.lparts(m[1, 9], [1, 1, 1, 1, 1, 1, 1, 3]),
         "pp< mp> pp< mp> pp< mp> pp< mp>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
     baca.spanners.scp(
         baca.select.lparts(m[1, 9], [2, 2, 2, 4]),
         "Tposs -> O -> Tposs -> O -> Tposs",
-        baca.tweak.bound_details_right_padding(4.5, index=-1),
+        baca.tweak.bound_details_right_padding(4.5, i=-1),
         baca.tweak.staff_padding(3),
     )
     baca.glissando(m[1, 9][:-1])

@@ -278,7 +278,7 @@ def fl(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< mf>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
     baca.pitch(
@@ -329,7 +329,7 @@ def ob(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< p>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
     library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!")
@@ -396,7 +396,7 @@ def vn(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< mp>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
     library.L2b2(
@@ -436,14 +436,14 @@ def vc(m):
     baca.hairpin(
         baca.select.lparts(m[1], [1, 1]),
         "o< p>o!",
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
     baca.pitch(m[2, 3], "Db2")
     baca.spanners.scp(
         library.pleaves(m[2, 3], 99),
         "T -> P",
-        baca.tweak.to_bar_line_false(index=0),
+        baca.tweak.to_bar_line_false(i=0),
         baca.tweak.staff_padding(4),
     )
     baca.hairpin(

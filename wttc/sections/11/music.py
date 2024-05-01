@@ -420,7 +420,7 @@ def F1c(pleaves, chord, alteration, peaks):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         library.swells(peaks),
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 

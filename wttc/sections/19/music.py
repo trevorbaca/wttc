@@ -888,7 +888,7 @@ def L2b1(pleaves, start, alteration, stop, string_number, hairpin_lparts, hairpi
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 

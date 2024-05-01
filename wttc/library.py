@@ -935,7 +935,7 @@ def swells(peaks):
 def to_bar_line_tweaks(to_bar_line=False):
     tweaks = []
     if to_bar_line is True:
-        tweaks.append(baca.tweak.to_bar_line_true(index=-1))
+        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     return tweaks
 
 
@@ -1213,7 +1213,7 @@ def B3(
         parts = plts
     tweaks = []
     if to_bar_line is True:
-        tweaks.append(baca.tweak.to_bar_line_true(index=-1))
+        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     baca.hairpin(
         parts,
         hairpin,
@@ -1615,7 +1615,7 @@ def D3a(pleaves, pitch, dynamics, *, to_bar_line=False):
     parts = baca.select.clparts(pleaves, [1])
     tweaks = []
     if to_bar_line is True:
-        tweaks.append(baca.tweak.to_bar_line_true(index=-1))
+        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     baca.hairpin(
         parts,
         swells(dynamics),
@@ -1745,7 +1745,7 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
             pieces = baca.select.partition_in_halves(run)
             tweaks = []
             if bar_line == "1":
-                tweaks.append(baca.tweak.to_bar_line_true(index=-1))
+                tweaks.append(baca.tweak.to_bar_line_true(i=-1))
             baca.hairpin(
                 pieces,
                 swells(peak),
@@ -1860,7 +1860,7 @@ def E2c(
         pieces = baca.select.partition_in_halves(pleaves)
         tweaks = []
         if to_bar_line is True:
-            tweaks.append(baca.tweak.to_bar_line_true(index=-1))
+            tweaks.append(baca.tweak.to_bar_line_true(i=-1))
         baca.hairpin(
             pieces,
             f"o< {peak}>o!",
@@ -2000,7 +2000,7 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
@@ -2056,7 +2056,7 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
@@ -2121,7 +2121,7 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
@@ -2312,8 +2312,8 @@ def H3(pleaves, pitch, alteration, peak, fall, dynamics, scp):
     baca.glissando(
         pleaves[-3:],
         None,
-        baca.tweak.bound_details_right_end_on_accidental_false(index=-1),
-        baca.tweak.bound_details_right_end_on_accidental_false(index=-2),
+        baca.tweak.bound_details_right_end_on_accidental_false(i=-1),
+        baca.tweak.bound_details_right_end_on_accidental_false(i=-2),
         do_not_hide_middle_note_heads=True,
     )
     baca.spanners.trill(
@@ -2610,7 +2610,7 @@ def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, tblf
     plts = baca.select.plts(pleaves)
     tweaks = []
     if tblf is True:
-        tweaks.append(baca.tweak.to_bar_line_false(index=0))
+        tweaks.append(baca.tweak.to_bar_line_false(i=0))
     baca.spanners.scp(
         plts,
         scp,
@@ -2634,7 +2634,7 @@ def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        baca.tweak.to_bar_line_true(index=-1),
+        baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
 
