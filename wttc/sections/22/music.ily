@@ -402,12 +402,12 @@ number.22.AltoFlute.Music = {
     \clef "treble"
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 3
@@ -736,12 +736,12 @@ number.22.Oboe.Music = {
     \clef "treble"
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 3
@@ -964,12 +964,12 @@ number.22.Guitar.1.Music = {
     \clef "treble"
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -1202,12 +1202,12 @@ number.22.Guitar.2.Music = {
     \clef "treble"
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -1565,12 +1565,12 @@ number.22.Violin.Music = {
     \clef "treble"
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -1920,12 +1920,12 @@ number.22.Cello.Music = {
     \clef "bass"
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_360
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -2037,12 +2037,12 @@ number.22.Cello.Music = {
     \clef "bass"
       %! MEASURE_364
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_364
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
     \override DynamicLineSpanner.staff-padding = 5.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f

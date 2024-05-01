@@ -1492,12 +1492,12 @@ number.19.AltoFlute.Music = {
     \clef "treble"
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
@@ -4692,12 +4692,12 @@ number.19.Oboe.Music = {
     \clef "treble"
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 3
@@ -5382,12 +5382,12 @@ number.19.Guitar.1.Music = {
     \clef "treble"
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 6
@@ -6067,12 +6067,12 @@ number.19.Guitar.2.Music = {
     \clef "treble"
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -6981,12 +6981,12 @@ number.19.Violin.Music = {
     \clef "treble"
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
@@ -11321,12 +11321,12 @@ number.19.Cello.Music = {
     \clef "bass"
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_292
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
@@ -12556,12 +12556,12 @@ number.19.Cello.Music = {
     \clef "treble"
       %! MEASURE_311
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_311
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -13223,12 +13223,12 @@ number.19.Cello.Music = {
     \clef "bass"
       %! MEASURE_318
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_318
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -15012,12 +15012,12 @@ number.19.Cello.Music = {
     \clef "treble"
       %! MEASURE_338
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_338
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override Beam.positions = #'(-8 . -8)
     \override DynamicLineSpanner.staff-padding = 10
     \override NoteHead.style = #'harmonic
