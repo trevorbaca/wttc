@@ -71,7 +71,7 @@ scene-i-lines-ii = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, picking up from before: }
+  \line { OWL, after measure 9, picking up from before: }
   \vspace #1
   \line { \hspace #8 When the time comes I'll be there. \hspace #1 \small (2) }
   \line { \hspace #8 You know that. \hspace #1 \small (3) }

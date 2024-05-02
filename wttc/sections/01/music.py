@@ -54,7 +54,7 @@ def GLOBALS(skips):
         baca.tweak.x_extent_false(),
     )
     baca.mark(
-        skips[7 - 1],
+        skips[9 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",

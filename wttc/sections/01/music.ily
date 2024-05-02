@@ -209,8 +209,6 @@ number.1.Skips = {
     - \baca-start-mn-left-only "7"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
-    \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 8]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -276,6 +274,8 @@ number.1.Skips = {
     - \baca-start-mn-left-only "9"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 10]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
