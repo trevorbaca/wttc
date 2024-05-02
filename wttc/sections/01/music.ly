@@ -4,7 +4,7 @@
 \include "music.ily"
 
 \markup \vspace #10
-\stage-direction-A
+\scene-i-stage-directions-i-section-layout
 \score
 {
 

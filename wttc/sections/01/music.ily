@@ -185,6 +185,12 @@ number.1.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    ^ \scene-i-lines-i-section-layout
+    - \tweak X-extent ##f
+    ^ \scene-i-stage-directions-ii-section-layout
+    - \tweak X-extent ##f
+    ^ \scene-i-stage-directions-iii-section-layout
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -250,6 +256,8 @@ number.1.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    ^ \scene-i-lines-ii-section-layout
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -319,6 +327,8 @@ number.1.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    ^ \scene-i-lines-iii-section-layout
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

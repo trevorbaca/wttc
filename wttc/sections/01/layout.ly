@@ -129,7 +129,7 @@
 
             % [PageLayout measure 10]
               %! BREAK
-            \baca-lbsd-xy #250 #10 #'(15 20 20 20 20 20)
+            \baca-lbsd-xy #250 #105 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
