@@ -1,3 +1,19 @@
+#(define-markup-command
+    (lnum layout props n)
+    (number?)
+    (interpret-markup layout props
+    #{
+    \markup
+    \line {
+        \hspace #1
+        \small
+        \line { ( \hspace #-0.5 #(number->string n) \hspace #-0.5 ) }
+        }
+    #}))
+
+lstart = \markup \hspace #8
+
+
 scene-i-stage-directions-i = \markuplist {
   The stage is set with chairs and desks for the musicians, all at one side.
   Elsewhere are a window (perhaps suspended) and a table on which stands a
@@ -40,7 +56,7 @@ scene-i-lines-i = \markuplist {
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \with-dimensions-from \null
-  \line { When the time comes . . . \hspace #1 \small (1) }
+  \line { When the time comes . . . \lnum #1 }
   }
 
 scene-i-lines-i-section-layout = \markup {
@@ -73,10 +89,10 @@ scene-i-lines-ii = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, after measure 9, picking up from before: }
   \vspace #1
-  \line { \hspace #8 When the time comes I'll be there. \hspace #1 \small (2) }
-  \line { \hspace #8 You know that. \hspace #1 \small (3) }
-  \line { \hspace #8 I'll not let you down. \hspace #1 \small (4) }
-  \line { \hspace #8 Never have, never will. \hspace #1 \small (5) }
+  \line { \lstart When the time comes I'll be there. \lnum #2 }
+  \line { \lstart You know that. \lnum #3 }
+  \line { \lstart I'll not let you down. \lnum #4 }
+  \line { \lstart Never have, never will. \lnum #5 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Musicians think, briefly, about what OWL has said. }
@@ -98,8 +114,8 @@ scene-i-lines-iii = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, a moment or two before measure 11 ends: }
   \vspace #1
-  \line { \hspace #8 Come on, what do I have to say all this for? \hspace #1 \small (6) }
-  \line { \hspace #8 You know me. \hspace #1 \small (7) }
+  \line { \lstart Come on, what do I have to say all this for? \lnum #6 }
+  \line { \lstart You know me. \lnum #7 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene i. Slight pause, but not too long. }

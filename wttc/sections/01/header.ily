@@ -43,6 +43,7 @@
     {
       \hspace #2
       for \hspace #0.75
+      the \hspace #0.75
       Cygnus \hspace #0.75
       Ensemble
     }
