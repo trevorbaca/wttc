@@ -13,8 +13,12 @@
 
 lstart = \markup \hspace #8
 
+dots = \markup \line { \hspace #0.75 . \hspace #-0.25 . \hspace #-0.25 . }
 
-scene-i-stage-directions-i = \markuplist {
+
+%%% SECENE 1: DIRECTIVES A - D %%%
+
+scene-i-directive-A = \markuplist {
   The stage is set with chairs and desks for the musicians, all at one side.
   Elsewhere are a window (perhaps suspended) and a table on which stands a
   glass of violets. OWL enters with the musicians, sits with them, may even
@@ -22,7 +26,7 @@ scene-i-stage-directions-i = \markuplist {
   member of the ensemble.
   }
 
-scene-i-stage-directions-i-section-layout = \markup {
+scene-i-directive-A-section-position = \markup {
   \fill-line {
   \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
@@ -30,57 +34,40 @@ scene-i-stage-directions-i-section-layout = \markup {
   \override #'(font-size . 4)
   \override #'(line-width . 240)
   \override #'(word-space . 2)
-  \justify { \scene-i-stage-directions-i }
+  \justify { \scene-i-directive-A }
   \null
   } }
 
-scene-i-stage-directions-ii = \markuplist {
+scene-i-directive-B = \markup {
+  \with-dimensions-from \null
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(baseline-skip . 5)
+  \override #'(line-width . 40)
+  \justify {
   At the end of measure 7, OWL suddenly starts to speak and, at the same time,
   stands up. Spotlight on OWL from this first instant of speech and movement.
   OWL does not yet notice or address either the audience or the other
-  musicians:
-  }
-
-scene-i-stage-directions-ii-section-layout = \markup {
-  \translate #'(92 . -14)
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
-  \override #'(line-width . 40)
-  \override #'(word-space . 2)
-  \justify { \scene-i-stage-directions-ii }
-  }
-
-scene-i-lines-i = \markuplist {
+  musicians: }
+  \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \with-dimensions-from \null
-  \line { When the time comes . . . \lnum #1 }
-  }
-
-scene-i-lines-i-section-layout = \markup {
-  \translate #'(92 . -64)
-  \scene-i-lines-i
-  }
-
-scene-i-stage-directions-iii = \markuplist {
-  Musicians wait a moment after OWL trails off, as though listening to what OWL
-  has left unsaid. Then play measures 8 and 9.
-  }
-
-scene-i-stage-directions-iii-section-layout = \markup {
-  \translate #'(92 . -73)
-  \with-dimensions-from \null
+  \line { When the time comes \dots \lnum #1 }
+  \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
   \override #'(line-width . 40)
-  \override #'(word-space . 2)
-  \justify { \scene-i-stage-directions-iii }
-  }
+  \justify {
+  Musicians wait a moment after OWL trails off, as though listening to what OWL
+  has left unsaid. Music starts again as OWL moves away from the musicians'
+  are, still not noticing the audeince, or anything else. }
+  } }
 
-scene-i-lines-ii = \markup
+scene-i-directive-B-section-position = \markup
+  \translate #'(92 . -22)
+  \scene-i-directive-B
+
+scene-i-directive-C = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -100,12 +87,12 @@ scene-i-lines-ii = \markup
   \line { Then play measures 10 and 11, as if in response. }
   }
 
-scene-i-lines-ii-section-layout = \markup {
+scene-i-directive-C-section-position = \markup {
   \translate #'(0 . -135)
-  \scene-i-lines-ii
+  \scene-i-directive-C
   }
 
-scene-i-lines-iii = \markup
+scene-i-directive-D = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -118,10 +105,173 @@ scene-i-lines-iii = \markup
   \line { \lstart You know me. \lnum #7 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene i. Slight pause, but not too long. }
+  \line { End scene 1. Slight pause, but not too long. }
   }
 
-scene-i-lines-iii-section-layout = \markup {
+scene-i-directive-D-section-position = \markup {
   \translate #'(0 . -135)
-  \scene-i-lines-iii
+  \scene-i-directive-D
   }
+
+%%% SCENE 2: DIRECTIVES A - H %%%
+
+scene-ii-directive-A = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL: }
+  \vspace #1
+  \line { \lstart All that time we had \dots \lnum #8 }
+  \line { \lstart When you would call me your Owl. \lnum #9 }
+  }
+
+scene-ii-directive-A-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-A
+  }
+
+scene-ii-directive-B = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL: }
+  \vspace #1
+  \line { \lstart I'll be there, \lnum #10 }
+  \line { \lstart Your Owl will be there, \lnum #11 }
+  }
+
+scene-ii-directive-B-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-B
+  }
+
+scene-ii-directive-C = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL: }
+  \vspace #1
+  \line { \lstart When the time comes. \lnum #12 }
+  }
+
+scene-ii-directive-C-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-C
+  }
+
+scene-ii-directive-D = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL, with guitar 2: }
+  \vspace #1
+  \line { \lstart Look: \lnum #13 }
+  }
+
+scene-ii-directive-D-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-D
+  }
+
+scene-ii-directive-E = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL, with guitar 2: }
+  \vspace #1
+  \line { \lstart This is me, \lnum #14 }
+  \line { \lstart Now, \lnum #15 }
+  }
+
+scene-ii-directive-E-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-E
+  }
+
+scene-ii-directive-F = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL, with guitar 2: }
+  \vspace #1
+  \line { \lstart On my way — \lnum #16 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL is diverted by a memory. }
+  }
+
+scene-ii-directive-F-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-F
+  }
+
+scene-ii-directive-G = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL: }
+  \vspace #1
+  \line { \lstart Waving, \lnum #17 }
+  \line { \lstart She was waving to us — \lnum #18 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { Violin cuts OWL off. }
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL pulls back from the memory. }
+  }
+
+scene-ii-directive-G-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-G
+  }
+
+scene-ii-directive-H = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL, unaccompanied: }
+  \vspace #1
+  \line { \lstart No \dots \lnum #19 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL's thought trails off completely. }
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { End scene 2. }
+  }
+
+scene-ii-directive-H-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-ii-directive-H
+  }
+
+%%% SCENE 29 %%%
+
+scene-xxix-directive-A = \markup {
+  \column {
+  \line { We did not. \lnum #296 }
+  \line { And that's the reason \dots \lnum #297 }
+  } }
