@@ -268,7 +268,9 @@ scene-ii-directive-H-section-position = \markup {
   \scene-ii-directive-H
   }
 
-%%% SCENE 29 %%%
+%%% SCENE 3: DIRECTIVES A - F %%%
+
+%%% SCENE 19 %%%
 
 scene-xxix-directive-A = \markup {
   \column {
