@@ -1,6 +1,7 @@
 \version "2.25.10"
 \include "../stylesheet.ily"
 \include "header.ily"
+\include "../../staging/scene-i.ily"
 \include "music.ily"
 
 \markup \vspace #10

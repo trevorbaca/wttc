@@ -469,7 +469,7 @@ def persist_score(score, environment):
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
-        includes=["../stylesheet.ily", "header.ily"],
+        includes=["../stylesheet.ily", "header.ily", "../../staging/scene-i.ily"],
         preamble=[
             r"\markup \vspace #10",
             r"\scene-i-directive-A-section-position",

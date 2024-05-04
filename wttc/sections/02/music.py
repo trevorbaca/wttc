@@ -288,7 +288,7 @@ def persist_score(score, environment):
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
-        includes=["../stylesheet.ily"],
+        includes=["../stylesheet.ily", "../../staging/scene-ii.ily"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,

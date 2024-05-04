@@ -1,5 +1,6 @@
 \version "2.25.10"
 \include "../stylesheet.ily"
+\include "../../staging/scene-xix.ily"
 \include "music.ily"
 
 \score
