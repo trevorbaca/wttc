@@ -1,6 +1,6 @@
 %%% SECENE 1: DIRECTIVES A - D %%%
 
-scene-i-directive-A = \markuplist {
+scene-i-A = \markuplist {
   The stage is set with chairs and desks for the musicians, all at one side.
   Elsewhere are a window (perhaps suspended) and a table on which stands a
   glass of violets. OWL enters with the musicians, sits with them, may even
@@ -8,7 +8,7 @@ scene-i-directive-A = \markuplist {
   member of the ensemble.
   }
 
-scene-i-directive-A-section-position = \markup {
+scene-i-A-section-position = \markup {
   \fill-line {
   \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
@@ -16,11 +16,11 @@ scene-i-directive-A-section-position = \markup {
   \override #'(font-size . 4)
   \override #'(line-width . 240)
   \override #'(word-space . 2)
-  \justify { \scene-i-directive-A }
+  \justify { \scene-i-A }
   \null
   } }
 
-scene-i-directive-B = \markup {
+scene-i-B = \markup {
   \with-dimensions-from \null
   \override #'(font-size . 4)
   \column {
@@ -45,11 +45,11 @@ scene-i-directive-B = \markup {
   are, still not noticing the audeince, or anything else. }
   } }
 
-scene-i-directive-B-section-position = \markup
+scene-i-B-section-position = \markup
   \translate #'(92 . -22)
-  \scene-i-directive-B
+  \scene-i-B
 
-scene-i-directive-C = \markup
+scene-i-C = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -69,12 +69,12 @@ scene-i-directive-C = \markup
   \line { Then play measures 10 and 11, as if in response. }
   }
 
-scene-i-directive-C-section-position = \markup {
+scene-i-C-section-position = \markup {
   \translate #'(0 . -135)
-  \scene-i-directive-C
+  \scene-i-C
   }
 
-scene-i-directive-D = \markup
+scene-i-D = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -90,7 +90,7 @@ scene-i-directive-D = \markup
   \line { End scene 1. Slight pause, but not too long. }
   }
 
-scene-i-directive-D-section-position = \markup {
+scene-i-D-section-position = \markup {
   \translate #'(0 . -135)
-  \scene-i-directive-D
+  \scene-i-D
   }

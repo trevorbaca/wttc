@@ -40,7 +40,7 @@ def GLOBALS(skips):
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
     baca.markup(
         skips[7 - 1],
-        r"\scene-i-directive-B-section-position",
+        r"\scene-i-B-section-position",
         baca.tweak.x_extent_false(),
     )
     baca.mark(
@@ -51,12 +51,12 @@ def GLOBALS(skips):
     )
     baca.markup(
         skips[9 - 1],
-        r"\scene-i-directive-C-section-position",
+        r"\scene-i-C-section-position",
         baca.tweak.x_extent_false(),
     )
     baca.markup(
         skips[11 - 1],
-        r"\scene-i-directive-D-section-position",
+        r"\scene-i-D-section-position",
         baca.tweak.x_extent_false(),
     )
 
@@ -472,7 +472,7 @@ def persist_score(score, environment):
         includes=["../stylesheet.ily", "header.ily", "../../staging/scene-i.ily"],
         preamble=[
             r"\markup \vspace #10",
-            r"\scene-i-directive-A-section-position",
+            r"\scene-i-A-section-position",
         ],
     )
     baca.build.persist_lilypond_file(

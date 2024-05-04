@@ -1,6 +1,6 @@
 %%% SCENE 2: DIRECTIVES A - H %%%
 
-scene-ii-directive-A = \markup
+scene-ii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -13,12 +13,12 @@ scene-ii-directive-A = \markup
   \line { \lstart When you would call me your Owl. \lnum #9 }
   }
 
-scene-ii-directive-A-section-position = \markup {
+scene-ii-A-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-A
+  \scene-ii-A
   }
 
-scene-ii-directive-B = \markup
+scene-ii-B = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -31,12 +31,12 @@ scene-ii-directive-B = \markup
   \line { \lstart Your Owl will be there, \lnum #11 }
   }
 
-scene-ii-directive-B-section-position = \markup {
+scene-ii-B-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-B
+  \scene-ii-B
   }
 
-scene-ii-directive-C = \markup
+scene-ii-C = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -48,12 +48,12 @@ scene-ii-directive-C = \markup
   \line { \lstart When the time comes. \lnum #12 }
   }
 
-scene-ii-directive-C-section-position = \markup {
+scene-ii-C-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-C
+  \scene-ii-C
   }
 
-scene-ii-directive-D = \markup
+scene-ii-D = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -65,12 +65,12 @@ scene-ii-directive-D = \markup
   \line { \lstart Look: \lnum #13 }
   }
 
-scene-ii-directive-D-section-position = \markup {
+scene-ii-D-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-D
+  \scene-ii-D
   }
 
-scene-ii-directive-E = \markup
+scene-ii-E = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -83,12 +83,12 @@ scene-ii-directive-E = \markup
   \line { \lstart Now, \lnum #15 }
   }
 
-scene-ii-directive-E-section-position = \markup {
+scene-ii-E-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-E
+  \scene-ii-E
   }
 
-scene-ii-directive-F = \markup
+scene-ii-F = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -103,12 +103,12 @@ scene-ii-directive-F = \markup
   \line { OWL is diverted by a memory. }
   }
 
-scene-ii-directive-F-section-position = \markup {
+scene-ii-F-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-F
+  \scene-ii-F
   }
 
-scene-ii-directive-G = \markup
+scene-ii-G = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -126,12 +126,12 @@ scene-ii-directive-G = \markup
   \line { OWL pulls back from the memory. }
   }
 
-scene-ii-directive-G-section-position = \markup {
+scene-ii-G-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-G
+  \scene-ii-G
   }
 
-scene-ii-directive-H = \markup
+scene-ii-H = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -148,8 +148,8 @@ scene-ii-directive-H = \markup
   \line { End scene 2. }
   }
 
-scene-ii-directive-H-section-position = \markup {
+scene-ii-H-section-position = \markup {
   \translate #'(0 . 0)
-  \scene-ii-directive-H
+  \scene-ii-H
   }
 

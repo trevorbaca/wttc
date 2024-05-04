@@ -186,7 +186,7 @@ number.1.Skips = {
     \time 6/4
     s1 * 6/4
     - \tweak X-extent ##f
-    ^ \scene-i-directive-B-section-position
+    ^ \scene-i-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -251,7 +251,7 @@ number.1.Skips = {
     \time 6/4
     s1 * 6/4
     - \tweak X-extent ##f
-    ^ \scene-i-directive-C-section-position
+    ^ \scene-i-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -324,7 +324,7 @@ number.1.Skips = {
     \time 6/4
     s1 * 6/4
     - \tweak X-extent ##f
-    ^ \scene-i-directive-D-section-position
+    ^ \scene-i-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

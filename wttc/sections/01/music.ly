@@ -5,7 +5,7 @@
 \include "music.ily"
 
 \markup \vspace #10
-\scene-i-directive-A-section-position
+\scene-i-A-section-position
 \score
 {
 
