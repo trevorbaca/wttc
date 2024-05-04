@@ -9,7 +9,7 @@ scene-iii-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Not now \dots \lnum #20 }
   }
 
 scene-iii-A-section-position = \markup {
@@ -24,9 +24,10 @@ scene-iii-B = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart \lnum #1 }
+  \justify {
+    Musicians pause a moment after [A], as if waiting to see if OWL has
+    anything to say. OWL looks to the players, but says nothing. The players
+    continue with [B]. }
   }
 
 scene-iii-B-section-position = \markup {
@@ -41,9 +42,17 @@ scene-iii-C = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { OWL, as though causing [B] to end: }
+  \vspace #1
+  \line { \lstart On my — \lnum #21 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { Slight puase after [B], with OWL perhaps changing position on stage. }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart To where I have to be to find you. \lnum #22 }
   }
 
 scene-iii-C-section-position = \markup {
@@ -60,7 +69,12 @@ scene-iii-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart It's all right: \lnum #23 }
+  \line { \lstart I know where to go. \lnum #24 }
+  \line { \lstart You did show me, \lnum #25 }
+  \line { \lstart So that I would know what to do \lnum #26 }
+  \line { \lstart If \dots \lnum #27 }
+  \line { \lstart If what? \lnum #28 }
   }
 
 scene-iii-D-section-position = \markup {
@@ -75,9 +89,9 @@ scene-iii-E = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, as music resumes: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart If you and I \dots \lnum #29 }
   }
 
 scene-iii-E-section-position = \markup {
@@ -92,9 +106,7 @@ scene-iii-F = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { End scene 3. }
   }
 
 scene-iii-F-section-position = \markup {

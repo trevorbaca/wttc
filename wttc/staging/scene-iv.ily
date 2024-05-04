@@ -9,7 +9,9 @@ scene-iv-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart What was it we had to look out for? \lnum #30 }
+  \line { \lstart Did we know it would take us away from each other? \lnum #31 }
+  \line { \lstart We had been with one another all the time, \lnum #32 }
   }
 
 scene-iv-A-section-position = \markup {
@@ -24,9 +26,9 @@ scene-iv-B = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, on the downbeat: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Close, \lnum #33 }
   }
 
 scene-iv-B-section-position = \markup {
@@ -41,9 +43,9 @@ scene-iv-C = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, at start of measure: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart You know that, \lnum #34 }
   }
 
 scene-iv-C-section-position = \markup {
@@ -58,9 +60,9 @@ scene-iv-D = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, at start of measure: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Like left and right, \lnum #35 }
   }
 
 scene-iv-D-section-position = \markup {
@@ -75,9 +77,9 @@ scene-iv-E = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, at start of measure: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Like night and day \lnum #36 }
   }
 
 scene-iv-E-section-position = \markup {
@@ -92,9 +94,10 @@ scene-iv-F = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, at start of measure: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Like head and heart, \lnum #37 }
+  \line { \lstart Like words and \lnum #38 }
   }
 
 scene-iv-F-section-position = \markup {
@@ -109,9 +112,9 @@ scene-iv-G = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, on downbeat: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Music — \lnum #39 }
   }
 
 scene-iv-G-section-position = \markup {
@@ -126,9 +129,10 @@ scene-iv-H = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart \lnum #1 }
+  \justify {
+    \bold { Still 1. } Sudden change in music and lighting as OWL is set uttering
+    and fixed in position with one foot locked in place. OWL struggles against this
+    fit, trying to pull the foot free. }
   }
 
 scene-iv-H-section-position = \markup {
@@ -143,9 +147,13 @@ scene-iv-I = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { OWL, middle of measure: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Again! \lnum #40 }
+  \line { \lstart Again. 
+    \footnote \line { Samuel Beckett: \italic { Words and Music } (1961),
+    final words in reverse order. }
+    \lnum #41 }
   }
 
 scene-iv-I-section-position = \markup {
@@ -162,7 +170,13 @@ scene-iv-J = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Like \dots \lnum #42 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \justify {
+    Slight pause, both OWL and musicians wondering what comes next.
+    Then words and music together.
+    }
   }
 
 scene-iv-J-section-position = \markup {
@@ -177,9 +191,9 @@ scene-iv-K = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \justify { OWL: }
   \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { \lstart Like give and take. \lnum #43 }
   }
 
 scene-iv-K-section-position = \markup {
@@ -194,9 +208,7 @@ scene-iv-L = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart \lnum #1 }
+  \line { End scene 4. }
   }
 
 scene-iv-L-section-position = \markup {
