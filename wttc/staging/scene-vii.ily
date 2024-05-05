@@ -129,9 +129,8 @@ scene-vii-H = \markup
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \justify {
-    OWL and musicians wait together in silence, long enough for the audience
-    to consider OWL's question. Then all proceed to [G].
-  }
+  OWL and musicians wait together in silence, long enough for the audience to
+  consider OWL's question. Then all proceed to [G]. }
   }
 
 scene-vii-H-section-position = \markup {
@@ -148,8 +147,7 @@ scene-vii-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  % TODO: check double quotes
-  \line { \lstart "Chamber," \lnum #72 }
+  \line { \lstart “Chamber,” \lnum #72 }
   }
 
 scene-vii-I-section-position = \markup {

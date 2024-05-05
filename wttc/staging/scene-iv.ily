@@ -151,9 +151,9 @@ scene-iv-I = \markup
   \vspace #1
   \line { \lstart Again! \lnum #40 }
   \line { \lstart Again. 
-    \footnote \line { Samuel Beckett: \italic { Words and Music } (1961),
-    final words in reverse order. }
-    \lnum #41 }
+  \footnote \line { Samuel Beckett: \italic { Words and Music } (1961),
+  final words in reverse order. }
+  \lnum #41 }
   }
 
 scene-iv-I-section-position = \markup {

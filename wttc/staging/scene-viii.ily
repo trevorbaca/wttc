@@ -9,8 +9,7 @@ scene-viii-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  % TODO: check double quotes
-  \line { \lstart "Chamber," \lnum #73 }
+  \line { \lstart “Chamber,” \lnum #73 }
   \line { \lstart Where I would find \lnum #74 }
   \line { \lstart A window. \lnum #75 }
   \vspace #1
