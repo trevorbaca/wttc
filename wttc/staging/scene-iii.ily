@@ -6,14 +6,11 @@ scene-iii-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart Not now \dots \lnum #20 }
+  \line { Not now \dots \lnum #20 }
   }
 
 scene-iii-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(64 . -38)
   \scene-iii-A
   }
 
@@ -24,14 +21,18 @@ scene-iii-B = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(line-width . 80)
   \justify {
-    Musicians pause a moment after [A], as if waiting to see if OWL has
-    anything to say. OWL looks to the players, but says nothing. The players
-    continue with [B]. }
+    Musicians pause a moment after \hspace #0.5
+    \override #'(font-name . "Adobe Garamond Pro Bold") \box A \hspace #-0.5 ,
+    as if waiting to see if OWL has
+    anything to say. OWL looks to the players, but says nothing.
+    Players continue with 
+    \override #'(font-name . "Adobe Garamond Pro Bold") \box B \hspace #-0.5 . }
   }
 
 scene-iii-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(78 . -38)
   \scene-iii-B
   }
 

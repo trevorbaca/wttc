@@ -594,6 +594,19 @@ def vc(m):
     library.B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", 1, staff_padding=5)
 
 
+def owl(skips):
+    baca.markup(
+        skips[7 - 1],
+        r"\scene-iii-A-section-position",
+        baca.tweak.x_extent_false(),
+    )
+    baca.markup(
+        skips[13 - 1],
+        r"\scene-iii-B-section-position",
+        baca.tweak.x_extent_false(),
+    )
+
+
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"][1, 6], 3.5)
     baca.override.dls_staff_padding(abjad.select.run(cache["fl"][8, 11], 0), 3.5)
@@ -623,7 +636,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         first_measure_number=first_measure_number,
         manifests=library.manifests,
     )
-    GLOBALS(score["Skips"])
+    skips = score["Skips"]
+    GLOBALS(skips)
     FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
@@ -645,6 +659,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    owl(skips)
     align_spanners(cache)
     return score
 
@@ -666,6 +681,8 @@ def persist_score(score, environment):
     )
     baca.section.deactivate_tags(
         score,
+        baca.tags.STAFF_HIGHLIGHT,
+        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -685,8 +702,8 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(8, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(8, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
