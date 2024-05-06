@@ -26,8 +26,8 @@ scene-iii-B = \markup
     Musicians pause a moment after \hspace #0.5
     \override #'(font-name . "Adobe Garamond Pro Bold") \box A \hspace #-0.5 ,
     as if waiting to see if OWL has
-    anything to say. OWL looks to the players, but says nothing.
-    Players continue with 
+    anything to say. OWL looks to the musicians, but says nothing.
+    Musicians continue with 
     \override #'(font-name . "Adobe Garamond Pro Bold") \box B \hspace #-0.5 . }
   }
 

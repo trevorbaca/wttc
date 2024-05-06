@@ -1,4 +1,4 @@
-%%% SECENE 1: DIRECTIVES A - D %%%
+%%% SECENE 1: A - D %%%
 
 scene-i-A = \markuplist {
   The stage is set with chairs and desks for the musicians, all at one side.

@@ -1,4 +1,4 @@
-%%% SCENE 2: DIRECTIVES A - H %%%
+%%% SCENE 2: A - H %%%
 
 scene-ii-A = \markup
   \with-dimensions-from \null
