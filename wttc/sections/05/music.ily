@@ -4,7 +4,7 @@ number.5.Skips = {
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
       %! RED_START_BAR
@@ -17,424 +17,424 @@ number.5.Skips = {
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
+%%% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "150" #blue
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "150" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
+%%% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
+    - \baca-invisible-line %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "150"
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "150" %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
+    \bacaStartTextSpanMM %@%
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'30'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "1"
+%%% - \baca-start-lmn-left-only "1"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "52"
+%%% - \baca-start-mn-left-only "52"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l"
+%%% - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 2]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'31'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "2"
+%%% - \baca-start-lmn-left-only "2"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "53"
+%%% - \baca-start-mn-left-only "53"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l_m"
+%%% - \baca-start-snm-left-only "C1.l_m"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 3]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "3"
+%%% - \baca-start-lmn-left-only "3"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "54"
+%%% - \baca-start-mn-left-only "54"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l_h"
+%%% - \baca-start-snm-left-only "C1.l_h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 4]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'36'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "4"
+%%% - \baca-start-lmn-left-only "4"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "55"
+%%% - \baca-start-mn-left-only "55"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 5]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'38'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "5"
+%%% - \baca-start-lmn-left-only "5"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "56"
+%%% - \baca-start-mn-left-only "56"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l"
+%%% - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 6]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'40'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "6"
+%%% - \baca-start-lmn-left-only "6"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "57"
+%%% - \baca-start-mn-left-only "57"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 7]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "7"
+%%% - \baca-start-lmn-left-only "7"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "58"
+%%% - \baca-start-mn-left-only "58"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C2.h"
+%%% - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 8]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'45'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "8"
+%%% - \baca-start-lmn-left-only "8"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "59"
+%%% - \baca-start-mn-left-only "59"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 9]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'48'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "9"
+%%% - \baca-start-lmn-left-only "9"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "60"
+%%% - \baca-start-mn-left-only "60"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C3.l + C1.l"
+%%% - \baca-start-snm-left-only "C3.l + C1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 10]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'50'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "10"
+%%% - \baca-start-lmn-left-only "10"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "61"
+%%% - \baca-start-mn-left-only "61"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C2.h"
+%%% - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 11]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'52'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "11"
+%%% - \baca-start-lmn-left-only "11"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "62"
+%%% - \baca-start-mn-left-only "62"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 12]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'55'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "12"
+%%% - \baca-start-lmn-left-only "12"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "63"
+%%% - \baca-start-mn-left-only "63"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C3.l_m"
+%%% - \baca-start-snm-left-only "C3.l_m"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 13]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'57'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "13"
+%%% - \baca-start-lmn-left-only "13"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "64"
+%%% - \baca-start-mn-left-only "64"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l"
+%%% - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 14]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[3'58'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "14"
+%%% - \baca-start-lmn-left-only "14"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "65"
+%%% - \baca-start-mn-left-only "65"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C2.h"
+%%% - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 15]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'01'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "15"
+%%% - \baca-start-lmn-left-only "15"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "66"
+%%% - \baca-start-mn-left-only "66"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C3.l_h"
+%%% - \baca-start-snm-left-only "C3.l_h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 16]
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "16"
+%%% - \baca-start-lmn-left-only "16"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "67"
+%%% - \baca-start-mn-left-only "67"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 17]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
@@ -443,27 +443,27 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'06'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "17"
+%%% - \baca-start-lmn-left-only "17"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "68"
+%%% - \baca-start-mn-left-only "68"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l"
+%%% - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -473,355 +473,355 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "18"
+%%% - \baca-start-lmn-left-only "18"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "69"
+%%% - \baca-start-mn-left-only "69"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C2.h"
+%%% - \baca-start-snm-left-only "C2.h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 19]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'08'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "19"
+%%% - \baca-start-lmn-left-only "19"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "70"
+%%% - \baca-start-mn-left-only "70"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D1.l"
+%%% - \baca-start-snm-left-only "D1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 20]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'10'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "20"
+%%% - \baca-start-lmn-left-only "20"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "71"
+%%% - \baca-start-mn-left-only "71"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C1.l"
+%%% - \baca-start-snm-left-only "C1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 21]
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'11'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "21"
+%%% - \baca-start-lmn-left-only "21"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "72"
+%%% - \baca-start-mn-left-only "72"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C2.l"
+%%% - \baca-start-snm-left-only "C2.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 22]
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'12'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "22"
+%%% - \baca-start-lmn-left-only "22"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "73"
+%%% - \baca-start-mn-left-only "73"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C3.l"
+%%% - \baca-start-snm-left-only "C3.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 23]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'14'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "23"
+%%% - \baca-start-lmn-left-only "23"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "74"
+%%% - \baca-start-mn-left-only "74"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D1.l_m"
+%%% - \baca-start-snm-left-only "D1.l_m"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 24]
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'16'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "24"
+%%% - \baca-start-lmn-left-only "24"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "75"
+%%% - \baca-start-mn-left-only "75"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 25]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'18'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "25"
+%%% - \baca-start-lmn-left-only "25"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "76"
+%%% - \baca-start-mn-left-only "76"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C2.l + C3.l"
+%%% - \baca-start-snm-left-only "C2.l + C3.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 26]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'20'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "26"
+%%% - \baca-start-lmn-left-only "26"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "77"
+%%% - \baca-start-mn-left-only "77"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D1.l_h + C3.l"
+%%% - \baca-start-snm-left-only "D1.l_h + C3.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 27]
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'22'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "27"
+%%% - \baca-start-lmn-left-only "27"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "78"
+%%% - \baca-start-mn-left-only "78"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 28]
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'24'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "28"
+%%% - \baca-start-lmn-left-only "28"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "79"
+%%% - \baca-start-mn-left-only "79"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 29]
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'26'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "29"
+%%% - \baca-start-lmn-left-only "29"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "80"
+%%% - \baca-start-mn-left-only "80"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 30]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'28'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "30"
+%%% - \baca-start-lmn-left-only "30"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "81"
+%%% - \baca-start-mn-left-only "81"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "C3.l"
+%%% - \baca-start-snm-left-only "C3.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 31]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
@@ -831,449 +831,449 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
+%%% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "60" #blue
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "60" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
+%%% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
+    - \baca-invisible-line %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "60"
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "60" %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
+    \bacaStartTextSpanMM %@%
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'29'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "31"
+%%% - \baca-start-lmn-left-only "31"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "82"
+%%% - \baca-start-mn-left-only "82"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D1.h_l + D2.l"
+%%% - \baca-start-snm-left-only "D1.h_l + D2.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 32]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "32"
+%%% - \baca-start-lmn-left-only "32"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "83"
+%%% - \baca-start-mn-left-only "83"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 33]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'39'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "33"
+%%% - \baca-start-lmn-left-only "33"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "84"
+%%% - \baca-start-mn-left-only "84"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D3.h_l"
+%%% - \baca-start-snm-left-only "D3.h_l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 34]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "34"
+%%% - \baca-start-lmn-left-only "34"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "85"
+%%% - \baca-start-mn-left-only "85"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D2.l_h"
+%%% - \baca-start-snm-left-only "D2.l_h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 35]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'47'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "35"
+%%% - \baca-start-lmn-left-only "35"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "86"
+%%% - \baca-start-mn-left-only "86"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D3.h"
+%%% - \baca-start-snm-left-only "D3.h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 36]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'51'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "36"
+%%% - \baca-start-lmn-left-only "36"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "87"
+%%% - \baca-start-mn-left-only "87"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 37]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'55'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "37"
+%%% - \baca-start-lmn-left-only "37"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "88"
+%%% - \baca-start-mn-left-only "88"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D1.l"
+%%% - \baca-start-snm-left-only "D1.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 38]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[4'59'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "38"
+%%% - \baca-start-lmn-left-only "38"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "89"
+%%% - \baca-start-mn-left-only "89"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D1.l_h"
+%%% - \baca-start-snm-left-only "D1.l_h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 39]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'03'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "39"
+%%% - \baca-start-lmn-left-only "39"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "90"
+%%% - \baca-start-mn-left-only "90"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D2.h_l + D4.l"
+%%% - \baca-start-snm-left-only "D2.h_l + D4.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 40]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'07'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "40"
+%%% - \baca-start-lmn-left-only "40"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "91"
+%%% - \baca-start-mn-left-only "91"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 41]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'13'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "41"
+%%% - \baca-start-lmn-left-only "41"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "92"
+%%% - \baca-start-mn-left-only "92"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D4.l + D2.l"
+%%% - \baca-start-snm-left-only "D4.l + D2.l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 42]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'17'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "42"
+%%% - \baca-start-lmn-left-only "42"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "93"
+%%% - \baca-start-mn-left-only "93"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D4.l_m + D2.m"
+%%% - \baca-start-snm-left-only "D4.l_m + D2.m"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 43]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'23'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "43"
+%%% - \baca-start-lmn-left-only "43"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "94"
+%%% - \baca-start-mn-left-only "94"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D4.l_h + D2.h"
+%%% - \baca-start-snm-left-only "D4.l_h + D2.h"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 44]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'27'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "44"
+%%% - \baca-start-lmn-left-only "44"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "95"
+%%% - \baca-start-mn-left-only "95"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 45]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'33'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "45"
+%%% - \baca-start-lmn-left-only "45"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "96"
+%%% - \baca-start-mn-left-only "96"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D2+4.h_l"
+%%% - \baca-start-snm-left-only "D2+4.h_l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 46]
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'37'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "46"
+%%% - \baca-start-lmn-left-only "46"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "97"
+%%% - \baca-start-mn-left-only "97"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -1282,27 +1282,27 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[5'41'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "47"
+%%% - \baca-start-lmn-left-only "47"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "98"
+%%% - \baca-start-mn-left-only "98"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "D2+4.h_l"
+%%% - \baca-start-snm-left-only "D2+4.h_l"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+%%% \bacaStartTextSpanSNM
 
     % [Skips measure 48]
     s1 * 4/4
@@ -1311,21 +1311,21 @@ number.5.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-both "[5'45'']" "[5'49'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "48"
+%%% - \baca-start-lmn-left-only "48"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "99"
+%%% - \baca-start-mn-left-only "99"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
@@ -1343,16 +1343,16 @@ number.5.Skips = {
     %@% \bacaStopTextSpanCT
       %! ANCHOR_SKIP
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! ANCHOR_SKIP
       %! EOS_STOP_MM_SPANNER
     \bacaStopTextSpanMM
       %! ANCHOR_SKIP
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+%%% \bacaStopTextSpanSNM
       %! ANCHOR_SKIP
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP
@@ -1519,7 +1519,7 @@ number.5.AltoFlute.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_52
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -1541,12 +1541,12 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“AltoFlute”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-afl-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-afl-markup
 
     % [AltoFlute.Music measure 2]
     r1
@@ -1558,7 +1558,7 @@ number.5.AltoFlute.Music = {
     c''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -1570,7 +1570,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1621,7 +1621,7 @@ number.5.AltoFlute.Music = {
     c''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -1633,7 +1633,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1687,7 +1687,7 @@ number.5.AltoFlute.Music = {
     c''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -1699,7 +1699,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1748,7 +1748,7 @@ number.5.AltoFlute.Music = {
     c''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -1760,7 +1760,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1797,7 +1797,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1818,7 +1818,7 @@ number.5.AltoFlute.Music = {
         c''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
+    %%% - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
 
@@ -1840,7 +1840,7 @@ number.5.AltoFlute.Music = {
     c''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -1852,7 +1852,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1889,7 +1889,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1910,7 +1910,7 @@ number.5.AltoFlute.Music = {
         c''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
+    %%% - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
 
@@ -1937,7 +1937,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1961,7 +1961,7 @@ number.5.AltoFlute.Music = {
     bf''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
     ]
@@ -2007,7 +2007,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -2034,7 +2034,7 @@ number.5.AltoFlute.Music = {
     bf''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -2043,7 +2043,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2078,7 +2078,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -2102,7 +2102,7 @@ number.5.AltoFlute.Music = {
     bf''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -2111,7 +2111,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2154,7 +2154,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -2162,9 +2162,9 @@ number.5.AltoFlute.Music = {
     \startTrillSpan d'''
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     \once \override Accidental.stencil = ##f
     \once \override Dots.font-size = -3
     \once \override Flag.font-size = -3
@@ -2174,7 +2174,7 @@ number.5.AltoFlute.Music = {
     bf''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -2183,7 +2183,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2214,7 +2214,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-mf-mp
       %! EXPLICIT_DYNAMIC
@@ -2223,7 +2223,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2245,15 +2245,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2263,7 +2263,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! DURATION_MULTIPLIER
@@ -2274,7 +2274,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2291,15 +2291,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2309,7 +2309,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! DURATION_MULTIPLIER
@@ -2320,7 +2320,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2336,15 +2336,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2354,7 +2354,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2365,7 +2365,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2381,15 +2381,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2399,7 +2399,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! DURATION_MULTIPLIER
@@ -2410,7 +2410,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2427,7 +2427,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-mf-mp
     [
@@ -2437,7 +2437,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2459,7 +2459,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-f-mf
       %! SPANNER_STOP
@@ -2470,7 +2470,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2500,15 +2500,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2518,7 +2518,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2529,7 +2529,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2546,15 +2546,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2564,7 +2564,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2575,7 +2575,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2591,15 +2591,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2609,7 +2609,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2620,7 +2620,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2636,15 +2636,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2654,7 +2654,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2665,7 +2665,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2681,15 +2681,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2699,7 +2699,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2710,7 +2710,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2727,15 +2727,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2745,7 +2745,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2756,7 +2756,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2772,15 +2772,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2790,7 +2790,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2801,7 +2801,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2817,15 +2817,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2835,7 +2835,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2846,7 +2846,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2862,15 +2862,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2880,7 +2880,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2891,7 +2891,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2908,15 +2908,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2926,7 +2926,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2937,7 +2937,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2953,15 +2953,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -2971,7 +2971,7 @@ number.5.AltoFlute.Music = {
     d'4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -2982,7 +2982,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3007,15 +3007,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -3025,7 +3025,7 @@ number.5.AltoFlute.Music = {
     cs'!4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -3036,7 +3036,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3052,15 +3052,15 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -3070,7 +3070,7 @@ number.5.AltoFlute.Music = {
     cs'!4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -3081,7 +3081,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3105,7 +3105,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-f-mf
       %! EXPLICIT_DYNAMIC
@@ -3114,7 +3114,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3125,7 +3125,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-mf-mp
       %! SPANNER_STOP
@@ -3137,7 +3137,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3156,7 +3156,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-mp-p
       %! SPANNER_STOP
@@ -3167,7 +3167,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3188,7 +3188,7 @@ number.5.AltoFlute.Music = {
     - \tenuto
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-p-pp
       %! SPANNER_STOP
@@ -3199,7 +3199,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3221,7 +3221,7 @@ number.5.AltoFlute.Music = {
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -3247,7 +3247,7 @@ number.5.AltoFlute.Music = {
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     ~
@@ -3267,7 +3267,7 @@ number.5.AltoFlute.Music = {
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
 
@@ -3281,7 +3281,7 @@ number.5.AltoFlute.Music = {
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     ~
@@ -3317,7 +3317,7 @@ number.5.AltoFlute.Music = {
     - \espressivo
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
     ~
@@ -3397,7 +3397,7 @@ number.5.Oboe.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_52
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -3421,12 +3421,12 @@ number.5.Oboe.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Oboe”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-ob-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-ob-markup
 
     % [Oboe.Music measure 2]
     R1 * 6/4
@@ -3463,7 +3463,7 @@ number.5.Oboe.Music = {
     e'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! EXPLICIT_DYNAMIC
@@ -3472,7 +3472,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -3511,7 +3511,7 @@ number.5.Oboe.Music = {
     d'''1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -3522,7 +3522,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3547,7 +3547,7 @@ number.5.Oboe.Music = {
     e'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! EXPLICIT_DYNAMIC
@@ -3556,7 +3556,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -3595,7 +3595,7 @@ number.5.Oboe.Music = {
     d'''1.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -3606,7 +3606,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -3639,7 +3639,7 @@ number.5.Oboe.Music = {
     d'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! EXPLICIT_DYNAMIC
@@ -3648,7 +3648,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3689,7 +3689,7 @@ number.5.Oboe.Music = {
     df'''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -3698,7 +3698,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -3740,7 +3740,7 @@ number.5.Oboe.Music = {
     df'''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -3749,7 +3749,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3793,7 +3793,7 @@ number.5.Oboe.Music = {
     df'''!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -3802,7 +3802,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3869,7 +3869,7 @@ number.5.Oboe.Music = {
     ef'''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -3878,7 +3878,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3916,7 +3916,7 @@ number.5.Oboe.Music = {
     ef'''!1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -3925,7 +3925,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -3954,7 +3954,7 @@ number.5.Oboe.Music = {
     d'''1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! EXPLICIT_DYNAMIC
@@ -3963,7 +3963,7 @@ number.5.Oboe.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -4047,7 +4047,7 @@ number.5.Guitar.1.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_52
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -4068,12 +4068,12 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-gt-i-markup
 
     % [Guitar.1.Music measure 2]
     R1 * 6/4
@@ -4123,7 +4123,7 @@ number.5.Guitar.1.Music = {
     d'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \laissezVibrer
@@ -4207,7 +4207,7 @@ number.5.Guitar.1.Music = {
     b8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_START
@@ -4298,7 +4298,7 @@ number.5.Guitar.1.Music = {
     r2.
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -4324,15 +4324,15 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -4342,14 +4342,14 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -4368,7 +4368,7 @@ number.5.Guitar.1.Music = {
     gf!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     \laissezVibrer
@@ -4383,7 +4383,7 @@ number.5.Guitar.1.Music = {
     r8.
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
       %! EXPLICIT_STAFF_LINES
@@ -4404,7 +4404,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4421,7 +4421,7 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
     \repeatTie
@@ -4444,7 +4444,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4457,18 +4457,18 @@ number.5.Guitar.1.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -4489,7 +4489,7 @@ number.5.Guitar.1.Music = {
     gf!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     \laissezVibrer
@@ -4521,7 +4521,7 @@ number.5.Guitar.1.Music = {
     af!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-mf-parenthesized
     \laissezVibrer
@@ -4536,7 +4536,7 @@ number.5.Guitar.1.Music = {
     r2
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
       %! EXPLICIT_STAFF_LINES
@@ -4559,7 +4559,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4568,13 +4568,13 @@ number.5.Guitar.1.Music = {
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
 
@@ -4596,7 +4596,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4607,7 +4607,7 @@ number.5.Guitar.1.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
     \repeatTie
@@ -4630,7 +4630,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4643,7 +4643,7 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
     \repeatTie
@@ -4666,7 +4666,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4679,13 +4679,13 @@ number.5.Guitar.1.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
 
@@ -4712,15 +4712,15 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -4730,7 +4730,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
       %! DURATION_MULTIPLIER
@@ -4757,7 +4757,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4768,9 +4768,9 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -4780,7 +4780,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
       %! DURATION_MULTIPLIER
@@ -4806,15 +4806,15 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -4824,7 +4824,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
       %! DURATION_MULTIPLIER
@@ -4856,7 +4856,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4866,7 +4866,7 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-ff
     \repeatTie
@@ -4891,15 +4891,15 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -4909,7 +4909,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
       %! DURATION_MULTIPLIER
@@ -4935,7 +4935,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4944,7 +4944,7 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
     ]
@@ -4969,7 +4969,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -4980,9 +4980,9 @@ number.5.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -4992,7 +4992,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! DURATION_MULTIPLIER
@@ -5018,7 +5018,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5032,9 +5032,9 @@ number.5.Guitar.1.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -5044,7 +5044,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -5070,7 +5070,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5083,9 +5083,9 @@ number.5.Guitar.1.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -5095,7 +5095,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! DURATION_MULTIPLIER
@@ -5124,7 +5124,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5134,7 +5134,7 @@ number.5.Guitar.1.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \repeatTie
@@ -5157,7 +5157,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5170,7 +5170,7 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \repeatTie
@@ -5193,7 +5193,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5209,7 +5209,7 @@ number.5.Guitar.1.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \repeatTie
@@ -5232,7 +5232,7 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5245,9 +5245,9 @@ number.5.Guitar.1.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -5257,7 +5257,7 @@ number.5.Guitar.1.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -5269,11 +5269,11 @@ number.5.Guitar.1.Music = {
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -5315,7 +5315,7 @@ number.5.Guitar.2.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_52
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -5338,12 +5338,12 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-gt-ii-markup
 
     % [Guitar.2.Music measure 2]
     R1 * 6/4
@@ -5403,7 +5403,7 @@ number.5.Guitar.2.Music = {
     d'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \laissezVibrer
@@ -5442,7 +5442,7 @@ number.5.Guitar.2.Music = {
     b8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_START
@@ -5500,7 +5500,7 @@ number.5.Guitar.2.Music = {
     b8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_START
@@ -5586,7 +5586,7 @@ number.5.Guitar.2.Music = {
     r2.
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(0 . 2)
@@ -5612,15 +5612,15 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -5630,14 +5630,14 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"8"
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -5656,7 +5656,7 @@ number.5.Guitar.2.Music = {
     f16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     \laissezVibrer
@@ -5671,7 +5671,7 @@ number.5.Guitar.2.Music = {
     r8.
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
       %! EXPLICIT_STAFF_LINES
@@ -5692,7 +5692,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5709,7 +5709,7 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
     \repeatTie
@@ -5732,7 +5732,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5742,13 +5742,13 @@ number.5.Guitar.2.Music = {
     b'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     \repeatTie
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -5769,7 +5769,7 @@ number.5.Guitar.2.Music = {
     f16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     \laissezVibrer
@@ -5801,7 +5801,7 @@ number.5.Guitar.2.Music = {
     g16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-mf-parenthesized
     \laissezVibrer
@@ -5816,7 +5816,7 @@ number.5.Guitar.2.Music = {
     r2
 
       %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
+%%% \once \override Staff.StaffSymbol.color = #blue
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
       %! EXPLICIT_STAFF_LINES
@@ -5839,7 +5839,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5848,13 +5848,13 @@ number.5.Guitar.2.Music = {
     \override Staff.BarLine.bar-extent = #'(0 . 2)
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
 
@@ -5876,7 +5876,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5887,7 +5887,7 @@ number.5.Guitar.2.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
     \repeatTie
@@ -5910,7 +5910,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5923,7 +5923,7 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
     \repeatTie
@@ -5946,7 +5946,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -5959,13 +5959,13 @@ number.5.Guitar.2.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
 
@@ -5992,15 +5992,15 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6010,7 +6010,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
       %! DURATION_MULTIPLIER
@@ -6037,7 +6037,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6048,9 +6048,9 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6060,7 +6060,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
       %! DURATION_MULTIPLIER
@@ -6086,15 +6086,15 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6104,7 +6104,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
       %! DURATION_MULTIPLIER
@@ -6136,7 +6136,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6146,7 +6146,7 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-ff
     \repeatTie
@@ -6171,15 +6171,15 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6189,7 +6189,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
       %! DURATION_MULTIPLIER
@@ -6215,7 +6215,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6224,7 +6224,7 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-mf
     ]
@@ -6249,7 +6249,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6260,9 +6260,9 @@ number.5.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6272,7 +6272,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! DURATION_MULTIPLIER
@@ -6298,7 +6298,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6312,9 +6312,9 @@ number.5.Guitar.2.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6324,7 +6324,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -6350,7 +6350,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6363,9 +6363,9 @@ number.5.Guitar.2.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6375,7 +6375,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! DURATION_MULTIPLIER
@@ -6404,7 +6404,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6414,7 +6414,7 @@ number.5.Guitar.2.Music = {
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \repeatTie
@@ -6437,7 +6437,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6450,7 +6450,7 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \repeatTie
@@ -6473,7 +6473,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6489,7 +6489,7 @@ number.5.Guitar.2.Music = {
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     \repeatTie
@@ -6512,7 +6512,7 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -6525,9 +6525,9 @@ number.5.Guitar.2.Music = {
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -6537,7 +6537,7 @@ number.5.Guitar.2.Music = {
     b'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! DURATION_MULTIPLIER
@@ -6549,11 +6549,11 @@ number.5.Guitar.2.Music = {
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -6595,7 +6595,7 @@ number.5.Violin.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_52
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -6615,12 +6615,12 @@ number.5.Violin.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-vn-markup
 
     \slashedGrace {
 
@@ -6638,7 +6638,7 @@ number.5.Violin.Music = {
     ef'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak stencil ##f
@@ -6683,7 +6683,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -6698,13 +6698,13 @@ number.5.Violin.Music = {
     \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     ef'!1 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! DURATION_MULTIPLIER
@@ -6715,7 +6715,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -6742,7 +6742,7 @@ number.5.Violin.Music = {
     ef'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak stencil ##f
@@ -6781,7 +6781,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -6796,13 +6796,13 @@ number.5.Violin.Music = {
     \startTrillSpan af'!
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     ef'!2. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! DURATION_MULTIPLIER
@@ -6813,7 +6813,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -6841,7 +6841,7 @@ number.5.Violin.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_START
@@ -6910,7 +6910,7 @@ number.5.Violin.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7013,7 +7013,7 @@ number.5.Violin.Music = {
     a16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_START
@@ -7039,7 +7039,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7088,13 +7088,13 @@ number.5.Violin.Music = {
     \bacaStartTextSpanSCP
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -7119,19 +7119,19 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
       %! SPANNER_STOP
@@ -7149,7 +7149,7 @@ number.5.Violin.Music = {
     a'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -7173,7 +7173,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7227,7 +7227,7 @@ number.5.Violin.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7257,7 +7257,7 @@ number.5.Violin.Music = {
     a16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_START
@@ -7283,7 +7283,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7332,13 +7332,13 @@ number.5.Violin.Music = {
     \bacaStartTextSpanSCP
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     bf'!4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -7363,19 +7363,19 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     bf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
       %! SPANNER_STOP
@@ -7393,7 +7393,7 @@ number.5.Violin.Music = {
     a'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -7417,7 +7417,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7458,7 +7458,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -7479,7 +7479,7 @@ number.5.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
+    %%% - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
           %! SPANNER_STOP
@@ -7507,7 +7507,7 @@ number.5.Violin.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7539,7 +7539,7 @@ number.5.Violin.Music = {
     a16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_START
@@ -7565,7 +7565,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7588,7 +7588,7 @@ number.5.Violin.Music = {
         a'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
+    %%% - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
         \revert DynamicLineSpanner.staff-padding
@@ -7609,7 +7609,7 @@ number.5.Violin.Music = {
     a'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -7635,7 +7635,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7686,7 +7686,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -7706,7 +7706,7 @@ number.5.Violin.Music = {
     b''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
     \revert Accidental.stencil
@@ -7736,7 +7736,7 @@ number.5.Violin.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7768,7 +7768,7 @@ number.5.Violin.Music = {
     a16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7797,7 +7797,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7857,7 +7857,7 @@ number.5.Violin.Music = {
     - \baca-staccati #3
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+%%% - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7886,7 +7886,7 @@ number.5.Violin.Music = {
     a16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -7915,7 +7915,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7954,7 +7954,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -7983,7 +7983,7 @@ number.5.Violin.Music = {
     b''2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -7992,7 +7992,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -8018,7 +8018,7 @@ number.5.Violin.Music = {
     a8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -8047,7 +8047,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -8085,7 +8085,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -8111,7 +8111,7 @@ number.5.Violin.Music = {
     b''2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! EXPLICIT_DYNAMIC
@@ -8120,7 +8120,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -8167,7 +8167,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -8175,9 +8175,9 @@ number.5.Violin.Music = {
     \startTrillSpan a''
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     \once \override Accidental.stencil = ##f
     \once \override Dots.font-size = -3
     \once \override Flag.font-size = -3
@@ -8187,7 +8187,7 @@ number.5.Violin.Music = {
     b''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -8196,7 +8196,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -8265,7 +8265,7 @@ number.5.Violin.Music = {
     gs!4
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+%%% - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
       %! SPANNER_START
@@ -8285,7 +8285,7 @@ number.5.Violin.Music = {
     gs!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -8414,7 +8414,7 @@ number.5.Violin.Music = {
     gs!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_START
@@ -8528,7 +8528,7 @@ number.5.Violin.Music = {
     a4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 1.5
@@ -8539,7 +8539,7 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -8575,7 +8575,7 @@ number.5.Violin.Music = {
     a4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
     - \tweak staff-padding 1.5
@@ -8617,11 +8617,11 @@ number.5.Violin.Music = {
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -8663,7 +8663,7 @@ number.5.Cello.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_52
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
@@ -8685,12 +8685,12 @@ number.5.Cello.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vc-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-vc-markup
 
     r8.
 
@@ -8710,7 +8710,7 @@ number.5.Cello.Music = {
     >16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     ~
@@ -8747,7 +8747,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_CLEF
     \clef "treble"
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -8767,7 +8767,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -8781,12 +8781,12 @@ number.5.Cello.Music = {
       %! SPANNER_START
     \startTrillSpan af'!
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -8796,7 +8796,7 @@ number.5.Cello.Music = {
     ef'!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! DURATION_MULTIPLIER
@@ -8807,7 +8807,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -8821,7 +8821,7 @@ number.5.Cello.Music = {
           %! EXPLICIT_CLEF
         \clef "bass"
           %! EXPLICIT_CLEF_COLOR
-        \once \override Staff.Clef.color = #blue
+    %%% \once \override Staff.Clef.color = #blue
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
           %! EXPLICIT_CLEF
@@ -8833,7 +8833,7 @@ number.5.Cello.Music = {
         \stopTrillSpan
         ~
           %! EXPLICIT_CLEF_REDRAW_COLOR
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    %%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     }
 
@@ -8844,7 +8844,7 @@ number.5.Cello.Music = {
     >8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     [
@@ -8873,7 +8873,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_CLEF
     \clef "treble"
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -8893,7 +8893,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -8907,12 +8907,12 @@ number.5.Cello.Music = {
       %! SPANNER_START
     \startTrillSpan af'!
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
@@ -8922,7 +8922,7 @@ number.5.Cello.Music = {
     ef'!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! DURATION_MULTIPLIER
@@ -8933,7 +8933,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -8948,7 +8948,7 @@ number.5.Cello.Music = {
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_55
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
@@ -8966,7 +8966,7 @@ number.5.Cello.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_STOP
@@ -8980,7 +8980,7 @@ number.5.Cello.Music = {
       %! SPANNER_START
     \startTrillSpan gf!
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -9024,7 +9024,7 @@ number.5.Cello.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -9141,7 +9141,7 @@ number.5.Cello.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_START
@@ -9185,7 +9185,7 @@ number.5.Cello.Music = {
     - \baca-staccati #3
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -9236,7 +9236,7 @@ number.5.Cello.Music = {
     - \baca-staccati #3
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+%%% - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
       %! SPANNER_START
@@ -9272,7 +9272,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9288,7 +9288,7 @@ number.5.Cello.Music = {
     f,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC
@@ -9297,7 +9297,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9342,7 +9342,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9358,13 +9358,13 @@ number.5.Cello.Music = {
     f,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9381,13 +9381,13 @@ number.5.Cello.Music = {
     f,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9410,7 +9410,7 @@ number.5.Cello.Music = {
     f,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_STOP
@@ -9426,7 +9426,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9443,7 +9443,7 @@ number.5.Cello.Music = {
     f,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -9459,7 +9459,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9476,7 +9476,7 @@ number.5.Cello.Music = {
     f,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_STOP
@@ -9501,7 +9501,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9552,7 +9552,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9566,7 +9566,7 @@ number.5.Cello.Music = {
     f,2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! SPANNER_STOP
@@ -9585,7 +9585,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9653,7 +9653,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9673,7 +9673,7 @@ number.5.Cello.Music = {
     f,16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
 
@@ -9702,7 +9702,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9711,7 +9711,7 @@ number.5.Cello.Music = {
     f,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
 
@@ -9738,7 +9738,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9752,7 +9752,7 @@ number.5.Cello.Music = {
     f,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_STOP
@@ -9768,7 +9768,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9777,7 +9777,7 @@ number.5.Cello.Music = {
     f,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -9793,7 +9793,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9802,7 +9802,7 @@ number.5.Cello.Music = {
     e,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -9818,7 +9818,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9827,7 +9827,7 @@ number.5.Cello.Music = {
     e,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! SPANNER_STOP
@@ -9852,7 +9852,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -9867,13 +9867,13 @@ number.5.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"11" #"12"
 
       %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
     e,16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
       %! SPANNER_STOP
@@ -9888,7 +9888,7 @@ number.5.Cello.Music = {
     ds,!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_START
@@ -9907,7 +9907,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9929,7 +9929,7 @@ number.5.Cello.Music = {
     e,16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_START
@@ -9948,7 +9948,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -9979,7 +9979,7 @@ number.5.Cello.Music = {
     f,8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
@@ -9998,7 +9998,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -10035,7 +10035,7 @@ number.5.Cello.Music = {
     af,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -10065,7 +10065,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -10084,7 +10084,7 @@ number.5.Cello.Music = {
     g,16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     [
@@ -10136,7 +10136,7 @@ number.5.Cello.Music = {
     af,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -10166,7 +10166,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -10187,7 +10187,7 @@ number.5.Cello.Music = {
     g,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     [
@@ -10267,7 +10267,7 @@ number.5.Cello.Music = {
     af,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
       %! SPANNER_STOP
@@ -10297,7 +10297,7 @@ number.5.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -10329,7 +10329,7 @@ number.5.Cello.Music = {
     g,8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     [
@@ -10409,7 +10409,7 @@ number.5.Cello.Music = {
     fs,!1
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+%%% - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
       %! SPANNER_STOP
@@ -10457,7 +10457,7 @@ number.5.Cello.Music = {
     fs,!1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! SPANNER_START
@@ -10495,11 +10495,11 @@ number.5.Cello.Music = {
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
-    %@% \abjad-invisible-music
+    \abjad-invisible-music %@%
       %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
-    \abjad-invisible-music-coloring
+%%% \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE

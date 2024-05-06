@@ -159,6 +159,40 @@ def vc(m):
     )
 
 
+def owl(skips):
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-A-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-B-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[2 - 1],
+        r"\scene-iv-C-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[3 - 1],
+        r"\scene-iv-D-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[4 - 1],
+        r"\scene-iv-E-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[5 - 1],
+        r"\scene-iv-F-section-position",
+        direction=abjad.DOWN,
+    )
+
+
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[4], 5)
@@ -187,7 +221,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         first_measure_number=first_measure_number,
         manifests=library.manifests,
     )
-    GLOBALS(score["Skips"])
+    skips = score["Skips"]
+    GLOBALS(skips)
     FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
@@ -209,6 +244,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    owl(skips)
     align_spanners(cache)
     return score
 
@@ -246,11 +282,11 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (8, 20, 30, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(2, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=distances, x_offset=100),
         ),
     )
     spacing = baca.layout.Spacing(

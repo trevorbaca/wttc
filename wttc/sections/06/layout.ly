@@ -1,4 +1,4 @@
-% first_page_number = 9
+% first_page_number = 10
 % page_count = 1
 % measure_count = 5 + 1
 % time_signatures = [
@@ -19,24 +19,22 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20 20 20)
+            \baca-lbsd-xy #100 #10 #'(8 20 30 20 20 20)
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #35 #1152
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \pageBreak
             s1 * 2/4
               %! SPACING
-            %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
+            %@% - \baca-start-spm-left-only "[1/48]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 2]
-              %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
-            \break
+            \noBreak
             s1 * 4/4
               %! SPACING
             %@% \bacaStopTextSpanSPM

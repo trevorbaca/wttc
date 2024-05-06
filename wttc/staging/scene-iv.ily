@@ -7,15 +7,18 @@ scene-iv-A = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { Scene 4. }
   \vspace #1
-  \line { \lstart What was it we had to look out for? \lnum #30 }
-  \line { \lstart Did we know it would take us away from each other? \lnum #31 }
-  \line { \lstart We had been with one another all the time, \lnum #32 }
+  \line { What was it we had to look out for? \lnum #30 }
+  \line { Did we know it would take us away from each other? \lnum #31 }
+  \line { We had been with one another all the time, \lnum #32 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { Music attaca. }
   }
 
 scene-iv-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(-100 . -40)
   \scene-iv-A
   }
 
@@ -26,13 +29,12 @@ scene-iv-B = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, on the downbeat: }
-  \vspace #1
-  \line { \lstart Close, \lnum #33 }
+  \line { On the downbeat: }
+  \line { Close, \lnum #33 }
   }
 
 scene-iv-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -40)
   \scene-iv-B
   }
 
@@ -42,14 +44,11 @@ scene-iv-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart You know that, \lnum #34 }
+  \line { You know that, \lnum #34 }
   }
 
 scene-iv-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -43)
   \scene-iv-C
   }
 
@@ -59,14 +58,11 @@ scene-iv-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Like left and right, \lnum #35 }
+  \line { Like left and right, \lnum #35 }
   }
 
 scene-iv-D-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -43)
   \scene-iv-D
   }
 
@@ -76,14 +72,11 @@ scene-iv-E = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Like night and day \lnum #36 }
+  \line { Like night and day \lnum #36 }
   }
 
 scene-iv-E-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -43)
   \scene-iv-E
   }
 
@@ -93,15 +86,12 @@ scene-iv-F = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Like head and heart, \lnum #37 }
-  \line { \lstart Like words and \lnum #38 }
+  \line { Like head and heart, \lnum #37 }
+  \line { Like words and \lnum #38 }
   }
 
 scene-iv-F-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -40)
   \scene-iv-F
   }
 
@@ -111,10 +101,7 @@ scene-iv-G = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, on downbeat: }
-  \vspace #1
-  \line { \lstart Music — \lnum #39 }
+  \line { Music — \lnum #39 }
   }
 
 scene-iv-G-section-position = \markup {
