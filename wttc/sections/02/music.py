@@ -215,19 +215,23 @@ def owl(cache):
     baca.markup(
         cache["ob"][2][0],
         r"\scene-ii-A-section-position",
+        direction=abjad.DOWN,
     )
     baca.markup(
         cache["ob"][4][0],
         r"\scene-ii-B-section-position",
+        direction=abjad.DOWN,
     )
     baca.markup(
         cache["ob"][6][1],
         r"\scene-ii-C-section-position",
+        direction=abjad.DOWN,
     )
     baca.markup(
         cache["ob"][7][0],
         r"\scene-ii-D-section-position",
         baca.tweak.self_alignment_x(0),
+        direction=abjad.DOWN,
     )
 
 

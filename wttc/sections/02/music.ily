@@ -920,7 +920,7 @@ number.2.Oboe.Music = {
 
     % [Oboe.Music measure 2]
     d'''16
-    ^ \scene-ii-A-section-position
+    _ \scene-ii-A-section-position
     \repeatTie
 
       %! SPANNER_START
@@ -983,7 +983,7 @@ number.2.Oboe.Music = {
 
     % [Oboe.Music measure 4]
     ds'''16
-    ^ \scene-ii-B-section-position
+    _ \scene-ii-B-section-position
     \repeatTie
 
       %! SPANNER_START
@@ -1049,7 +1049,7 @@ number.2.Oboe.Music = {
     \repeatTie
 
     r8.
-    ^ \scene-ii-C-section-position
+    _ \scene-ii-C-section-position
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1062,7 +1062,7 @@ number.2.Oboe.Music = {
     % [Oboe.Music measure 7]
     R1 * 4/4
     - \tweak self-alignment-X 0
-    ^ \scene-ii-D-section-position
+    _ \scene-ii-D-section-position
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 

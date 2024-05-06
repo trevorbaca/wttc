@@ -11,7 +11,7 @@ scene-ii-A = \markup
   }
 
 scene-ii-A-section-position = \markup {
-  \translate #'(0 . -16)
+  \translate #'(0 . -12)
   \scene-ii-A
   }
 
@@ -26,7 +26,7 @@ scene-ii-B = \markup
   }
 
 scene-ii-B-section-position = \markup {
-  \translate #'(0 . -16)
+  \translate #'(0 . -12)
   \scene-ii-B
   }
 
@@ -40,7 +40,7 @@ scene-ii-C = \markup
   }
 
 scene-ii-C-section-position = \markup {
-  \translate #'(0 . -18)
+  \translate #'(0 . -14)
   \scene-ii-C
   }
 
@@ -56,7 +56,7 @@ scene-ii-D = \markup
   }
 
 scene-ii-D-section-position = \markup {
-  \translate #'(-14 . -14)
+  \translate #'(-12 . -12)
   \scene-ii-D
   }
 
