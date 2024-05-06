@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library
@@ -138,6 +139,41 @@ def vc(m):
     library.C1_final(library.pleaves(m[2], 99), "D4", "F4", "mf mp p")
 
 
+def owl(skips):
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-G-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-H-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-I-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-J-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[2 - 1],
+        r"\scene-iv-K-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[2 - 1],
+        r"\scene-iv-L-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+
+
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1], 3)
@@ -165,7 +201,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         first_measure_number=first_measure_number,
         manifests=library.manifests,
     )
-    GLOBALS(score["Skips"])
+    skips = score["Skips"]
+    GLOBALS(skips)
     FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
@@ -187,6 +224,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    owl(skips)
     align_spanners(cache)
     return score
 
@@ -209,11 +247,13 @@ def persist_score(score, environment):
     )
     baca.section.deactivate_tags(
         score,
+        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily", "../../staging/scene-iv.ily"],
+        preamble=[r"\scene-iv-footnote", r"\noPageBreak"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -225,11 +265,12 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (8, 20, 45, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(2, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(8, 20, 45, 20, 20, 20)),
+            baca.layout.System(2, y_offset=10, distances=distances, x_offset=260),
         ),
     )
     spacing = baca.layout.Spacing(

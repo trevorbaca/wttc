@@ -14,6 +14,11 @@ number.7.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "07"
     s1 * 9/4
+    - \tweak X-extent ##f
+    _ \scene-iv-J-section-position
+    _ \scene-iv-G-section-position
+    _ \scene-iv-H-section-position
+    _ \scene-iv-I-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -39,9 +44,9 @@ number.7.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "Still 1"
+    %@% - \baca-start-snm-left-only "Still 1"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+    %@% \bacaStartTextSpanSNM
 
     % [Skips measure 2]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -49,6 +54,9 @@ number.7.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 2/4
     s1 * 2/4
+    - \tweak X-extent ##f
+    _ \scene-iv-L-section-position
+    _ \scene-iv-K-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -57,7 +65,7 @@ number.7.Skips = {
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+    %@% \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -83,9 +91,9 @@ number.7.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M12 = M1] x: B (end)"
+    %@% - \baca-start-snm-left-only "[M12 = M1] x: B (end)"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+    %@% \bacaStartTextSpanSNM
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -110,7 +118,7 @@ number.7.Skips = {
     \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+    %@% \bacaStopTextSpanSNM
       %! ANCHOR_SKIP
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP

@@ -3,6 +3,8 @@
 \include "../../staging/scene-iv.ily"
 \include "music.ily"
 
+\scene-iv-footnote
+\noPageBreak
 \score
 {
 

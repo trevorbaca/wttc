@@ -1,5 +1,16 @@
 %%% SCENE 4: A - L %%%
 
+scene-iv-footnote = \markup 
+  \override #'(font-name . "Adobe Garamond Pro")
+  \override #'(font-size . 4)
+  {
+  \footnote ""
+  \line { \super 1 \hspace #-0.5 Samuel Beckett:
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  { Words and Music }
+  (1961), final words in reverse order. }
+  }
+
 scene-iv-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
@@ -101,11 +112,13 @@ scene-iv-G = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { On downbeat: }
   \line { Music — \lnum #39 }
   }
 
 scene-iv-G-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -35)
   \scene-iv-G
   }
 
@@ -116,6 +129,7 @@ scene-iv-H = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(line-width . 50)
   \justify {
     \bold { Still 1. } Sudden change in music and lighting as OWL is set uttering
     and fixed in position with one foot locked in place. OWL struggles against this
@@ -123,7 +137,7 @@ scene-iv-H = \markup
   }
 
 scene-iv-H-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -45)
   \scene-iv-H
   }
 
@@ -133,18 +147,17 @@ scene-iv-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
+  \line { \hspace #18 Again! \lnum #40 }
+  \line { \hspace #18 Again. \hspace #-0.75 \super 1 \hspace #-0.75 \lnum #41 }
+  \vspace #0.5
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, middle of measure: }
-  \vspace #1
-  \line { \lstart Again! \lnum #40 }
-  \line { \lstart Again. 
-  \footnote \line { Samuel Beckett: \italic { Words and Music } (1961),
-  final words in reverse order. }
-  \lnum #41 }
+  \override #'(line-width . 55)
+  \justify { On this second “Again,” OWL frees the foot, and the fit is over
+  as suddenly as it began. }
   }
 
 scene-iv-I-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(60 . -42)
   \scene-iv-I
   }
 
@@ -155,19 +168,17 @@ scene-iv-J = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart Like \dots \lnum #42 }
-  \vspace #1
+  \line { Music and lighting return to how they were: }
+  \line { Like \dots \lnum #42 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(line-width . 55)
   \justify {
-    Slight pause, both OWL and musicians wondering what comes next.
-    Then words and music together.
-    }
+  Slight pause. OWL and the musicians wonder what comes next.
+  Then proceed together. }
   }
 
 scene-iv-J-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(180 . -41)
   \scene-iv-J
   }
 
@@ -178,13 +189,12 @@ scene-iv-K = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify { OWL: }
-  \vspace #1
-  \line { \lstart Like give and take. \lnum #43 }
+  \line { On the downbeat: }
+  \line { Like give and take. \lnum #43 }
   }
 
 scene-iv-K-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -46)
   \scene-iv-K
   }
 
@@ -199,6 +209,6 @@ scene-iv-L = \markup
   }
 
 scene-iv-L-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(50 . -49)
   \scene-iv-L
   }
