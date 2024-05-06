@@ -20,7 +20,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(15 21 21 21 21 21)
+            \baca-lbsd #10 #'(12 21 21 21 21 21)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
@@ -85,7 +85,7 @@
 
             % [PageLayout measure 6]
               %! BREAK
-            \baca-lbsd #160 #'(15 21 21 21 21 21)
+            \baca-lbsd #160 #'(12 21 21 21 21 21)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
@@ -165,7 +165,7 @@
 
             % [PageLayout measure 12]
               %! BREAK
-            \baca-lbsd #10 #'(15 21 21 21 21 21)
+            \baca-lbsd #10 #'(12 21 31 21 21 21)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK

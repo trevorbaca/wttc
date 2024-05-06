@@ -1,5 +1,6 @@
 fermata = r'''\markup \smaller \smaller \musicglyph #"scripts.ufermata"'''
 long_fermata = r'''\markup \smaller \smaller \musicglyph #"scripts.ulongfermata"'''
+short_fermata = r'''\markup \smaller \smaller \musicglyph #"scripts.ushortfermata"'''
 #
 owl_markup = r"\wttc-owl-markup"
 alto_flute_markup = r"\wttc-alto-flute-markup"

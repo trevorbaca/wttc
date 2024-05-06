@@ -380,6 +380,8 @@ number.3.Skips = {
     %@% - \baca-start-snm-left-only "A3.l + B1.l"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

@@ -43,25 +43,47 @@ scene-iii-C = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, as though causing [B] to end: }
+  \override #'(line-width . 38)
+  \justify {
+  At the very end of \hspace #0.5
+  \override #'(font-name . "Adobe Garamond Pro Bold") \box B \hspace #-0.5 ,
+  as though causing the music to end: }
   \vspace #1
-  \line { \lstart On my — \lnum #21 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Slight puase after [B], with OWL perhaps changing position on stage. }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart To where I have to be to find you. \lnum #22 }
+  \line { On my — \lnum #21 }
   }
 
 scene-iii-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(26 . -44)
   \scene-iii-C
   }
 
 scene-iii-D = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line {
+  Slight pause after \hspace #0.5
+  \override #'(font-name . "Adobe Garamond Pro Bold") \box B \hspace #-0.5 ,
+  OWL perhaps changing position on stage. }
+  \vspace #1
+  \line { To where I have to be to find you. \lnum #22 }
+  \vspace #1
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { Musicians silently consider this last line. }
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { Then begin \hspace #0.5
+  \override #'(font-name . "Adobe Garamond Pro Bold") \box C \hspace #-0.5 . }
+  }
+
+scene-iii-D-section-position = \markup {
+  \translate #'(80 . -43)
+  \scene-iii-D
+  }
+
+scene-iii-E = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
@@ -78,23 +100,6 @@ scene-iii-D = \markup
   \line { \lstart If what? \lnum #28 }
   }
 
-scene-iii-D-section-position = \markup {
-  \translate #'(0 . 0)
-  \scene-iii-D
-  }
-
-scene-iii-E = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, as music resumes: }
-  \vspace #1
-  \line { \lstart If you and I \dots \lnum #29 }
-  }
-
 scene-iii-E-section-position = \markup {
   \translate #'(0 . 0)
   \scene-iii-E
@@ -107,10 +112,27 @@ scene-iii-F = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 3. }
+  \line { OWL, as music resumes: }
+  \vspace #1
+  \line { \lstart If you and I \dots \lnum #29 }
   }
 
 scene-iii-F-section-position = \markup {
   \translate #'(0 . 0)
   \scene-iii-F
+  }
+
+scene-iii-G = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { End scene 3. }
+  }
+
+scene-iii-G-section-position = \markup {
+  \translate #'(0 . 0)
+  \scene-iii-G
   }
