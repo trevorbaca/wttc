@@ -211,6 +211,26 @@ def vc(m):
     baca.glissando(library.pleaves(m[10, 11], 1), "F2 Eqs2")
 
 
+def owl(cache):
+    baca.markup(
+        cache["ob"][2][0],
+        r"\scene-ii-A-section-position",
+    )
+    baca.markup(
+        cache["ob"][4][0],
+        r"\scene-ii-B-section-position",
+    )
+    baca.markup(
+        cache["ob"][6][1],
+        r"\scene-ii-C-section-position",
+    )
+    baca.markup(
+        cache["ob"][7][0],
+        r"\scene-ii-D-section-position",
+        baca.tweak.self_alignment_x(0),
+    )
+
+
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl.leaves(), 4)
@@ -263,6 +283,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    owl(cache)
     align_spanners(cache)
     return score
 
@@ -303,7 +324,7 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(15, 20, 30, 20, 20, 20)),
             baca.layout.System(10, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
         ),
     )

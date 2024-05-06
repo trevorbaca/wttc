@@ -6,15 +6,12 @@ scene-ii-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart All that time we had \dots \lnum #8 }
-  \line { \lstart When you would call me your Owl. \lnum #9 }
+  \line { All that time we had \dots \lnum #8 }
+  \line { When you would call me your Owl. \lnum #9 }
   }
 
 scene-ii-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -16)
   \scene-ii-A
   }
 
@@ -24,15 +21,12 @@ scene-ii-B = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart I'll be there, \lnum #10 }
-  \line { \lstart Your Owl will be there, \lnum #11 }
+  \line { I'll be there, \lnum #10 }
+  \line { Your Owl will be there, \lnum #11 }
   }
 
 scene-ii-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -16)
   \scene-ii-B
   }
 
@@ -42,14 +36,11 @@ scene-ii-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart When the time comes. \lnum #12 }
+  \line { When the time comes. \lnum #12 }
   }
 
 scene-ii-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -18)
   \scene-ii-C
   }
 
@@ -60,13 +51,12 @@ scene-ii-D = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, with guitar 2: }
-  \vspace #1
-  \line { \lstart Look: \lnum #13 }
+  \line { (with guitar 2) }
+  \line { Look: \lnum #13 }
   }
 
 scene-ii-D-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(14 . -14)
   \scene-ii-D
   }
 
