@@ -39,9 +39,9 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M4 = M23] z: E + x: E"
+    %@% - \baca-start-snm-left-only "[M4 = M23] z: E + x: E"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+    %@% \bacaStartTextSpanSNM
 
     % [Skips measure 2]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -49,6 +49,7 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+    _ \scene-ii-A-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -91,6 +92,7 @@ number.2.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
+    _ \scene-ii-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -137,6 +139,7 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    _ \scene-ii-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -162,6 +165,7 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+    _ \scene-ii-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -183,6 +187,7 @@ number.2.Skips = {
 
     % [Skips measure 8]
     s1 * 4/4
+    _ \scene-ii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -204,6 +209,7 @@ number.2.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
+    _ \scene-ii-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -232,7 +238,7 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+    %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[1'17'']"
       %! CLOCK_TIME
@@ -246,12 +252,15 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M5 = M24] D + M + H"
+    %@% - \baca-start-snm-left-only "[M5 = M24] D + M + H"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+    %@% \bacaStartTextSpanSNM
 
     % [Skips measure 11]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-ii-H-section-position
+    _ \scene-ii-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -270,6 +279,8 @@ number.2.Skips = {
     - \baca-start-mn-left-only "22"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -294,7 +305,7 @@ number.2.Skips = {
     \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+    %@% \bacaStopTextSpanSNM
       %! ANCHOR_SKIP
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP
@@ -920,7 +931,6 @@ number.2.Oboe.Music = {
 
     % [Oboe.Music measure 2]
     d'''16
-    _ \scene-ii-A-section-position
     \repeatTie
 
       %! SPANNER_START
@@ -983,7 +993,6 @@ number.2.Oboe.Music = {
 
     % [Oboe.Music measure 4]
     ds'''16
-    _ \scene-ii-B-section-position
     \repeatTie
 
       %! SPANNER_START
@@ -1049,7 +1058,6 @@ number.2.Oboe.Music = {
     \repeatTie
 
     r8.
-    _ \scene-ii-C-section-position
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -1061,8 +1069,6 @@ number.2.Oboe.Music = {
 
     % [Oboe.Music measure 7]
     R1 * 4/4
-    - \tweak self-alignment-X 0
-    _ \scene-ii-D-section-position
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 

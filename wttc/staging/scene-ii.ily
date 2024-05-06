@@ -11,7 +11,7 @@ scene-ii-A = \markup
   }
 
 scene-ii-A-section-position = \markup {
-  \translate #'(0 . -12)
+  \translate #'(0 . -41)
   \scene-ii-A
   }
 
@@ -26,7 +26,7 @@ scene-ii-B = \markup
   }
 
 scene-ii-B-section-position = \markup {
-  \translate #'(0 . -12)
+  \translate #'(0 . -41)
   \scene-ii-B
   }
 
@@ -40,7 +40,7 @@ scene-ii-C = \markup
   }
 
 scene-ii-C-section-position = \markup {
-  \translate #'(0 . -14)
+  \translate #'(0 . -43)
   \scene-ii-C
   }
 
@@ -50,13 +50,11 @@ scene-ii-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { (with guitar 2) }
   \line { Look: \lnum #13 }
   }
 
 scene-ii-D-section-position = \markup {
-  \translate #'(-12 . -12)
+  \translate #'(6 . -43)
   \scene-ii-D
   }
 
@@ -66,15 +64,12 @@ scene-ii-E = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, with guitar 2: }
-  \vspace #1
-  \line { \lstart This is me, \lnum #14 }
-  \line { \lstart Now, \lnum #15 }
+  \line { This is me, \lnum #14 }
+  \line { Now, \lnum #15 }
   }
 
 scene-ii-E-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -41)
   \scene-ii-E
   }
 
@@ -84,17 +79,13 @@ scene-ii-F = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, with guitar 2: }
-  \vspace #1
-  \line { \lstart On my way — \lnum #16 }
-  \vspace #1
+  \line { On my way — \lnum #16 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL is diverted by a memory. }
   }
 
 scene-ii-F-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -41)
   \scene-ii-F
   }
 
@@ -104,20 +95,14 @@ scene-ii-G = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
+  \line { Waving, \lnum #17 }
+  \line { She was waving to us — \lnum #18 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart Waving, \lnum #17 }
-  \line { \lstart She was waving to us — \lnum #18 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Violin cuts OWL off. }
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL pulls back from the memory. }
+  \line { OWL pulls back from the memory, cut off by violin. }
   }
 
 scene-ii-G-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -38)
   \scene-ii-G
   }
 
@@ -128,18 +113,17 @@ scene-ii-H = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, unaccompanied: }
-  \vspace #1
-  \line { \lstart No \dots \lnum #19 }
-  \vspace #1
+  \line { Alone: }
+  \line { No \dots \lnum #19 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL's thought trails off completely. }
+  \line { The thought trails off completely. }
+  \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 2. }
   }
 
 scene-ii-H-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(100 . -38)
   \scene-ii-H
   }
 

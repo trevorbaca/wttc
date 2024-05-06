@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 02 ##########################################
@@ -34,6 +34,12 @@ def GLOBALS(skips):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
+    baca.mark(
+        skips[11 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -211,26 +217,46 @@ def vc(m):
     baca.glissando(library.pleaves(m[10, 11], 1), "F2 Eqs2")
 
 
-def owl(cache):
+def owl(skips):
     baca.markup(
-        cache["ob"][2][0],
+        skips[2 - 1],
         r"\scene-ii-A-section-position",
         direction=abjad.DOWN,
     )
     baca.markup(
-        cache["ob"][4][0],
+        skips[4 - 1],
         r"\scene-ii-B-section-position",
         direction=abjad.DOWN,
     )
     baca.markup(
-        cache["ob"][6][1],
+        skips[6 - 1],
         r"\scene-ii-C-section-position",
         direction=abjad.DOWN,
     )
     baca.markup(
-        cache["ob"][7][0],
+        skips[7 - 1],
         r"\scene-ii-D-section-position",
-        baca.tweak.self_alignment_x(0),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[8 - 1],
+        r"\scene-ii-E-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[9 - 1],
+        r"\scene-ii-F-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[11 - 1],
+        r"\scene-ii-G-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[11 - 1],
+        r"\scene-ii-H-section-position",
+        baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
 
@@ -287,7 +313,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
-    owl(cache)
+    owl(score["Skips"])
     align_spanners(cache)
     return score
 
@@ -309,6 +335,7 @@ def persist_score(score, environment):
     )
     baca.section.deactivate_tags(
         score,
+        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -328,15 +355,14 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 30, 20, 20, 20)),
-            baca.layout.System(10, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(8, 20, 30, 20, 20, 20)),
+            baca.layout.System(10, y_offset=160, distances=(8, 20, 30, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 20),
+        default=(1, 24),
         overrides=[
-            baca.layout.Override(10, (1, 48)),
-            baca.layout.Override(11, (1, 64)),
+            baca.layout.Override((10, 11), (1, 64)),
         ],
     )
     baca.build.write_layout_ly(breaks, spacing)
