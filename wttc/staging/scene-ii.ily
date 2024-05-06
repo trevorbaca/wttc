@@ -56,7 +56,7 @@ scene-ii-D = \markup
   }
 
 scene-ii-D-section-position = \markup {
-  \translate #'(14 . -14)
+  \translate #'(-14 . -14)
   \scene-ii-D
   }
 

@@ -183,8 +183,9 @@
 
     \override Hairpin.to-barline = ##f
 
-    \override LaissezVibrerTie.layer = -2
     \shape #'((0 . 0) (0.5 . 0) (1 . 0) (2 . 0)) LaissezVibrerTie         
+    \override LaissezVibrerTie.layer = -2
+    \override LaissezVibrerTie.X-extent = ##f
 
     \override NoteCollision.merge-differently-dotted = ##t
 
