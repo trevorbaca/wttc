@@ -89,19 +89,16 @@ scene-iii-E = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart It's all right: \lnum #23 }
-  \line { \lstart I know where to go. \lnum #24 }
-  \line { \lstart You did show me, \lnum #25 }
-  \line { \lstart So that I would know what to do \lnum #26 }
-  \line { \lstart If \dots \lnum #27 }
-  \line { \lstart If what? \lnum #28 }
+  \line { It's all right: \lnum #23 }
+  \line { I know where to go. \lnum #24 }
+  \line { You did show me, \lnum #25 }
+  \line { So that I would know what to do \lnum #26 }
+  \line { If \dots \lnum #27 }
+  \line { If what? \lnum #28 }
   }
 
 scene-iii-E-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(40 . -36)
   \scene-iii-E
   }
 
@@ -112,13 +109,12 @@ scene-iii-F = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, as music resumes: }
-  \vspace #1
-  \line { \lstart If you and I \dots \lnum #29 }
+  \line { As music resumes: }
+  \line { If you and I \dots \lnum #29 }
   }
 
 scene-iii-F-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(6 . -45)
   \scene-iii-F
   }
 
@@ -133,6 +129,6 @@ scene-iii-G = \markup
   }
 
 scene-iii-G-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(40 . -41)
   \scene-iii-G
   }

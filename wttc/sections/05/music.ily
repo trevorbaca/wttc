@@ -438,6 +438,8 @@ number.5.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-iii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -467,6 +469,7 @@ number.5.Skips = {
 
     % [Skips measure 18]
     s1 * 3/4
+    _ \scene-iii-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -822,6 +825,7 @@ number.5.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+    - \tweak extra-offset #'(2 . 0)
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "D" #6
       %! CLOCK_TIME
@@ -1302,6 +1306,8 @@ number.5.Skips = {
 
     % [Skips measure 48]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-iii-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

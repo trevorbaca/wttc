@@ -81,6 +81,7 @@ def GLOBALS(skips):
     baca.rehearsal_mark(
         skips[31 - 1],
         "D",
+        baca.tweak.extra_offset((2, 0)),
         baca.tweak.padding(1.5),
         font_size=6,
     )
@@ -1059,6 +1060,26 @@ def vc(m):
     library.D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")
 
 
+def owl(skips):
+    baca.markup(
+        skips[17 - 1],
+        r"\scene-iii-E-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[18 - 1],
+        r"\scene-iii-F-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[48 - 1],
+        r"\scene-iii-G-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+
+
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"][1, 30], 3)
     baca.override.dls_staff_padding(cache["ob"][1, 30], 3)
@@ -1101,7 +1122,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         manifests=library.manifests,
         score_persistent_indicators=previous_persistent_indicators["Score"],
     )
-    GLOBALS(score["Skips"])
+    skips = score["Skips"]
+    GLOBALS(skips)
     FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
@@ -1130,6 +1152,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache["gt2"])
     vn(cache["vn"])
     vc(cache["vc"])
+    owl(skips)
     align_spanners(cache)
     return score
 
@@ -1151,6 +1174,7 @@ def persist_score(score, environment):
     baca.section.deactivate_tags(
         score,
         baca.tags.STAFF_HIGHLIGHT,
+        # baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -1170,13 +1194,18 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(15, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(10, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             2,
-            baca.layout.System(31, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(40, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(18, y_offset=10, distances=(12, 20, 30, 20, 20, 20)),
+            baca.layout.System(29, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
+        ),
+        baca.layout.Page(
+            3,
+            baca.layout.System(38, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(45, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
@@ -1184,7 +1213,6 @@ def make_layout():
         lax_spacing_section=[1, 2],
         forbid_new_spacing_section=[3],
         overrides=[
-            baca.layout.Override((13, 22), (1, 24)),
             baca.layout.Override((31, 39), (1, 28)),
             baca.layout.Override((40, 47), (1, 24)),
         ],
