@@ -189,7 +189,9 @@ scene-iv-K = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { On the downbeat: }
+  \line { A moment after the downbeat; }
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { As if noticing the music anew: }
   \line { Like give and take. \lnum #43 }
   }
 

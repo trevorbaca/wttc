@@ -34,14 +34,14 @@
               %! BREAK
             \baca-lbsd-xy #260 #10 #'(8 20 45 20 20 20)
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #48
+            \baca-new-strict-spacing-section #1 #64
               %! BREAK
             \break
             s1 * 2/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/48]"
+            %@% - \baca-start-spm-left-only "[1/64]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
