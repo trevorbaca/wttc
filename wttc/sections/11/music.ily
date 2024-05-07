@@ -583,6 +583,7 @@ number.11.Skips = {
 
     % [Skips measure 22]
     s1 * 3/4
+    _ \scene-vii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -614,7 +615,6 @@ number.11.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
-    _ \scene-vii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -784,6 +784,8 @@ number.11.Skips = {
     %@% - \baca-start-snm-left-only "F3.l"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
