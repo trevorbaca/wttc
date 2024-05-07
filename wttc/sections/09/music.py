@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 09 ##########################################
@@ -34,8 +34,20 @@ def GLOBALS(skips):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
+    baca.mark(
+        skips[6 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
     baca.metronome_mark(skips[7 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[11 - 1], "60", manifests=library.manifests)
+    baca.mark(
+        skips[12 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -317,22 +329,28 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
-        r"\scene-vi-A-section-position",
+        r"\scene-vi-title-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.markup(
         skips[1 - 1],
+        r"\scene-vi-A-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[2 - 1],
         r"\scene-vi-B-section-position",
         direction=abjad.DOWN,
     )
     baca.markup(
-        skips[3 - 1],
+        skips[4 - 1],
         r"\scene-vi-C-section-position",
         direction=abjad.DOWN,
     )
     baca.markup(
-        skips[5 - 1],
+        skips[6 - 1],
         r"\scene-vi-D-section-position",
         direction=abjad.DOWN,
     )
@@ -343,7 +361,7 @@ def owl(skips):
         direction=abjad.DOWN,
     )
     baca.markup(
-        skips[7 - 1],
+        skips[9 - 1],
         r"\scene-vi-F-section-position",
         direction=abjad.DOWN,
     )
@@ -446,11 +464,12 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (12, 20, 30, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
-            baca.layout.System(7, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=distances, x_offset=30),
+            baca.layout.System(7, y_offset=158, distances=(12, 20, 35, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
