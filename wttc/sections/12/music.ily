@@ -14,6 +14,8 @@ number.12.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "12"
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-vii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "G" #6
     _ \scene-vii-I-section-position
@@ -466,6 +468,8 @@ number.12.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-vii-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -910,6 +914,8 @@ number.12.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
+    - \tweak X-extent ##f
+    _ \scene-vii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "H" #6
       %! CLOCK_TIME
@@ -1042,6 +1048,8 @@ number.12.Skips = {
     %@% - \baca-start-snm-left-only "H3.l_h + H3.l_m + H.l"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

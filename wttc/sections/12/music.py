@@ -78,6 +78,12 @@ def GLOBALS(skips, first_measure_number):
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
+    baca.mark(
+        skips[37 - 1],
+        strings.short_fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -1013,7 +1019,25 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
+        r"\scene-vii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
         r"\scene-vii-I-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[18 - 1],
+        r"\scene-vii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[34 - 1],
+        r"\scene-vii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.markup(
@@ -1126,7 +1150,7 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(14, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(14, 20, 30, 20, 20, 20)),
             baca.layout.System(10, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(

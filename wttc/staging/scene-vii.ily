@@ -14,6 +14,20 @@ scene-vii-title-section-position = \markup {
   \scene-vii-title
   }
 
+scene-vii-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 7) }
+  }
+
+scene-vii-parenthesized-title-section-position = \markup {
+  \translate #'(-34 . 12)
+  \scene-vii-parenthesized-title
+  }
+
 scene-vii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
@@ -134,14 +148,11 @@ scene-vii-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
   \line { “Chamber,” \lnum #72 }
   }
 
 scene-vii-I-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -48)
   \scene-vii-I
   }
 
@@ -156,6 +167,6 @@ scene-vii-J = \markup
   }
 
 scene-vii-J-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(166 . -44)
   \scene-vii-J
   }

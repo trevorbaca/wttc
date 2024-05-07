@@ -22,7 +22,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(14 20 20 20 20 20)
+            \baca-lbsd #10 #'(14 20 30 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #20
               %! BREAK
