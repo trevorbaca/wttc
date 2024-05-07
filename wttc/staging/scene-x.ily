@@ -1,5 +1,19 @@
 %%% SCENE 10: A - D %%%
 
+scene-x-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 10. }
+  }
+
+scene-x-title-section-position = \markup {
+  \translate #'(-100 . 12)
+  \scene-x-title
+  }
+
 scene-x-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
@@ -7,22 +21,22 @@ scene-x-A = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL starts to walk away again from the window and table: }
-  \vspace #1
-  \line { \lstart This is it then. \lnum #128 }
-  \line {
-  \lstart This is where we'll have to be when we do
-  as we promised each other — \lnum #129 }
-  \vspace #1
+  \override #'(line-width . 54)
+  \justify { OWL starts to walk away again from the window and table. }
+  \vspace #2.5
+  \line { This is it then. \lnum #128 }
+  \line { This is where we'll have to be when we }
+  \line { do as we promised each other — \lnum #129 }
+  \vspace #2.5
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
-  \vspace #1
+  \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   }
 
 scene-x-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(-86 . -40)
   \scene-x-A
   }
 
@@ -32,14 +46,11 @@ scene-x-B = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart Promised \dots \lnum #130 }
+  \line { Promised \dots \lnum #130 }
   }
 
 scene-x-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -41)
   \scene-x-B
   }
 
@@ -52,19 +63,19 @@ scene-x-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL continues: }
   \vspace #1
-  \line { \lstart You'll know. \lnum #131 }
+  \line { You'll know. \lnum #131 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
-  \vspace #1
+  \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
-  \line { \lstart Will it have to do with \dots ? \lnum #132 }
+  \vspace #3
+  \line { Will it have to do with \dots ? \lnum #132 }
   }
 
 scene-x-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(76 . -30)
   \scene-x-C
   }
 
@@ -77,8 +88,8 @@ scene-x-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL continues: }
   \vspace #1
-  \line { \lstart Never mind. \lnum #133 }
-  \line { \lstart What sould I — ? \lnum #134 }
+  \line { Never mind. \lnum #133 }
+  \line { What sould I — ? \lnum #134 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
