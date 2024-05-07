@@ -1,4 +1,4 @@
-% first_page_number = 13
+% first_page_number = 14
 % page_count = 1
 % measure_count = 22 + 1
 % time_signatures = [
@@ -164,7 +164,7 @@
 
             % [PageLayout measure 12]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20 20 20)
+            \baca-lbsd #160 #'(10 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #32
               %! BREAK

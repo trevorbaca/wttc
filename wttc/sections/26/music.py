@@ -1169,17 +1169,17 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(11, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(11, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             2,
-            baca.layout.System(19, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(27, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(19, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(27, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             3,
-            baca.layout.System(33, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(33, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(

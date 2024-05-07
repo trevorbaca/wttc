@@ -1,4 +1,4 @@
-% first_page_number = 24
+% first_page_number = 25
 % page_count = 2
 % measure_count = 29 + 1
 % time_signatures = [
@@ -21,7 +21,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20 20 20)
+            \baca-lbsd #10 #'(12 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #32
               %! BREAK
@@ -112,7 +112,7 @@
 
             % [PageLayout measure 8]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20 20 20)
+            \baca-lbsd #160 #'(10 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #32
               %! BREAK
@@ -179,7 +179,7 @@
 
             % [PageLayout measure 13]
               %! BREAK
-            \baca-lbsd #10 #'(15 20 20 20 20 20)
+            \baca-lbsd #10 #'(12 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #20
               %! BREAK
@@ -311,7 +311,7 @@
 
             % [PageLayout measure 23]
               %! BREAK
-            \baca-lbsd #160 #'(15 20 20 20 20 20)
+            \baca-lbsd #160 #'(8 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #20
               %! BREAK

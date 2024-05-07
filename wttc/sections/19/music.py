@@ -1382,22 +1382,22 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(12, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(12, y_offset=160, distances=(10, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             2,
-            baca.layout.System(20, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(27, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(20, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
+            baca.layout.System(27, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             3,
-            baca.layout.System(33, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(40, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(33, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(40, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             4,
-            baca.layout.System(47, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(47, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
