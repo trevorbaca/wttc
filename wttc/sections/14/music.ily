@@ -16,6 +16,8 @@ number.14.Skips = {
     s1 * 6/4
     - \tweak X-extent ##f
     _ \scene-ix-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-ix-title-section-position
     _ \scene-ix-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -153,8 +155,6 @@ number.14.Skips = {
 
     % [Skips measure 7]
     s1 * 6/4
-    - \tweak X-extent ##f
-    _ \scene-ix-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -180,7 +180,6 @@ number.14.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
-    _ \scene-ix-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -222,7 +221,9 @@ number.14.Skips = {
     % [Skips measure 9]
     s1 * 4/4
     - \tweak X-extent ##f
-    _ \scene-ix-E-section-position
+    _ \scene-ix-C-continued-section-position
+    - \tweak X-extent ##f
+    _ \scene-ix-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -241,6 +242,8 @@ number.14.Skips = {
     - \baca-start-mn-left-only "235"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
     % [Skips measure 10]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -248,6 +251,9 @@ number.14.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-ix-parenthesized-title-section-position
+    _ \scene-ix-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -380,6 +386,8 @@ number.14.Skips = {
 
     % [Skips measure 16]
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-ix-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -398,6 +406,8 @@ number.14.Skips = {
     - \baca-start-mn-left-only "242"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
