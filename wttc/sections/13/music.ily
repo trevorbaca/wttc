@@ -39,9 +39,9 @@ number.13.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M23] z: E + x: E"
+    %@% - \baca-start-snm-left-only "[M23] z: E + x: E"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+    %@% \bacaStartTextSpanSNM
 
     % [Skips measure 2]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -232,7 +232,7 @@ number.13.Skips = {
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+    %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[13'07'']"
       %! CLOCK_TIME
@@ -246,9 +246,9 @@ number.13.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
       %! STAGE_NUMBER
-    - \baca-start-snm-left-only "[M24] D + H + M"
+    %@% - \baca-start-snm-left-only "[M24] D + H + M"
       %! STAGE_NUMBER
-    \bacaStartTextSpanSNM
+    %@% \bacaStartTextSpanSNM
 
     % [Skips measure 11]
     s1 * 4/4
@@ -294,7 +294,7 @@ number.13.Skips = {
     \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
-    \bacaStopTextSpanSNM
+    %@% \bacaStopTextSpanSNM
       %! ANCHOR_SKIP
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP

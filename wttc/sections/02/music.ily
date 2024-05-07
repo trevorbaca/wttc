@@ -49,7 +49,6 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
-    _ \scene-ii-A-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -92,7 +91,6 @@ number.2.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
-    _ \scene-ii-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -139,7 +137,6 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
-    _ \scene-ii-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -165,7 +162,6 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
-    _ \scene-ii-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -187,7 +183,6 @@ number.2.Skips = {
 
     % [Skips measure 8]
     s1 * 4/4
-    _ \scene-ii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -209,7 +204,6 @@ number.2.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
-    _ \scene-ii-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -258,9 +252,6 @@ number.2.Skips = {
 
     % [Skips measure 11]
     s1 * 4/4
-    - \tweak X-extent ##f
-    _ \scene-ii-H-section-position
-    _ \scene-ii-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

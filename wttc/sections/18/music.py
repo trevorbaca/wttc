@@ -998,6 +998,10 @@ def vc(m):
     K1b(library.pleaves(m[29], 99), "F3:Bb3", "C4", "mf mf")
 
 
+def owl(skips):
+    pass
+
+
 def align_spanners(cache):
     baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
     baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
@@ -1024,7 +1028,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         manifests=library.manifests,
         score_persistent_indicators=previous_persistent_indicators["Score"],
     )
-    GLOBALS(score["Skips"], first_measure_number)
+    skips = score["Skips"]
+    GLOBALS(skips, first_measure_number)
     FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
@@ -1053,6 +1058,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     gt2(cache)
     vn(cache["vn"])
     vc(cache["vc"])
+    owl(skips)
     align_spanners(cache)
     return score
 
@@ -1073,6 +1079,7 @@ def persist_score(score, environment):
     )
     baca.section.deactivate_tags(
         score,
+        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,

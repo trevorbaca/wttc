@@ -193,6 +193,10 @@ def owl(skips):
     )
 
 
+def owl(skips):
+    pass
+
+
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[4], 5)
@@ -266,6 +270,7 @@ def persist_score(score, environment):
     )
     baca.section.deactivate_tags(
         score,
+        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,

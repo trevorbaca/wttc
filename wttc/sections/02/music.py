@@ -261,6 +261,10 @@ def owl(skips):
     )
 
 
+def owl(skips):
+    pass
+
+
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl.leaves(), 4)
@@ -291,7 +295,8 @@ def make_score(first_measure_number, previous_persistent_indicators):
         first_measure_number=first_measure_number,
         manifests=library.manifests,
     )
-    GLOBALS(score["Skips"])
+    skips = score["Skips"]
+    GLOBALS(skips)
     FL(voices.fl, meters)
     OB(voices.ob, meters)
     GT1(voices.gt1, meters)
