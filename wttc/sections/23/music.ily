@@ -70,6 +70,7 @@ number.23.Skips = {
 
     % [Skips measure 3]
     s1 * 4/4
+    _ \scene-xv-A-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -93,6 +94,7 @@ number.23.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
+    _ \scene-xv-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -162,6 +164,8 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-xv-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -187,6 +191,8 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
+    _ \scene-xv-D-section-position
+    _ \scene-xv-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -231,6 +237,7 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    _ \scene-xv-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -321,6 +328,8 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 2/4
     s1 * 2/4
+    - \tweak X-extent ##f
+    _ \scene-xv-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

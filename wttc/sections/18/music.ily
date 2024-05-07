@@ -776,6 +776,8 @@ number.18.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xii-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

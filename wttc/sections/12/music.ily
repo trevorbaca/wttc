@@ -16,6 +16,7 @@ number.12.Skips = {
     s1 * 6/4
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "G" #6
+    _ \scene-vii-I-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -1015,6 +1016,8 @@ number.12.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 7/4
     s1 * 7/4
+    - \tweak X-extent ##f
+    _ \scene-vii-J-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

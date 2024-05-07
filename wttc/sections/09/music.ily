@@ -14,6 +14,9 @@ number.9.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "09"
     s1 * 2/4
+    - \tweak X-extent ##f
+    _ \scene-vi-A-section-position
+    _ \scene-vi-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -74,6 +77,7 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    _ \scene-vi-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -124,6 +128,7 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    _ \scene-vi-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -149,6 +154,8 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
+    - \tweak X-extent ##f
+    _ \scene-vi-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -174,6 +181,7 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    _ \scene-vi-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -315,6 +323,8 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-vi-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

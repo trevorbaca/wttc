@@ -1011,7 +1011,17 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-vii-I-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[37 - 1],
+        r"\scene-vii-J-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
 
 
 def align_spanners(cache):

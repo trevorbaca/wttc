@@ -324,7 +324,12 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xx-A-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
 
 
 def align_spanners(cache):

@@ -859,6 +859,8 @@ number.26.Skips = {
 
     % [Skips measure 32]
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -888,6 +890,7 @@ number.26.Skips = {
 
     % [Skips measure 33]
     s1 * 6/4
+    _ \scene-xvi-H-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -938,6 +941,7 @@ number.26.Skips = {
 
     % [Skips measure 35]
     s1 * 6/4
+    _ \scene-xvi-I-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -971,6 +975,8 @@ number.26.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-J-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

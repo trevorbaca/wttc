@@ -481,7 +481,76 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xix-A-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[3 - 1],
+        r"\scene-xix-B-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[4 - 1],
+        r"\scene-xix-C-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[7 - 1],
+        r"\scene-xix-D-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[8 - 1],
+        r"\scene-xix-E-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[9 - 1],
+        r"\scene-xix-F-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[10 - 1],
+        r"\scene-xix-G-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[12 - 1],
+        r"\scene-xix-H-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[12 - 1],
+        r"\scene-xix-I-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[13 - 1],
+        r"\scene-xix-J-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[14 - 1],
+        r"\scene-xix-K-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[15 - 1],
+        r"\scene-xix-L-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[16 - 1],
+        r"\scene-xix-M-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
 
 
 def align_spanners(cache):

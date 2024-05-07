@@ -1,3 +1,4 @@
+import abjad
 import baca
 
 from wttc import library, strings
@@ -532,7 +533,27 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[23 - 1],
+        r"\scene-vii-E-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[25 - 1],
+        r"\scene-vii-F-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[27 - 1],
+        r"\scene-vii-G-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[28 - 1],
+        r"\scene-vii-H-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
 
 
 def align_spanners(cache):

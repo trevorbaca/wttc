@@ -14,6 +14,9 @@ number.13.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "13"
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-viii-A-section-position
+    _ \scene-viii-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -204,6 +207,8 @@ number.13.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-viii-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -225,6 +230,7 @@ number.13.Skips = {
 
     % [Skips measure 10]
     s1 * 4/4
+    _ \scene-viii-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -252,6 +258,8 @@ number.13.Skips = {
 
     % [Skips measure 11]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-viii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

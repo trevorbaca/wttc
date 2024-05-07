@@ -614,6 +614,7 @@ number.11.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
+    _ \scene-vii-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -672,6 +673,7 @@ number.11.Skips = {
 
     % [Skips measure 25]
     s1 * 3/4
+    _ \scene-vii-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -730,6 +732,7 @@ number.11.Skips = {
 
     % [Skips measure 27]
     s1 * 9/4
+    _ \scene-vii-G-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -755,6 +758,8 @@ number.11.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-vii-H-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

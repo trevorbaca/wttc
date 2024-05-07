@@ -569,6 +569,7 @@ number.10.Skips = {
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 3)
     s1 * 5/4
+    _ \scene-vii-A-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -607,6 +608,11 @@ number.10.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-vii-C-section-position
+    - \tweak X-extent ##f
+    _ \scene-vii-D-section-position
+    _ \scene-vii-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

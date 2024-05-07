@@ -1,3 +1,4 @@
+import abjad
 import baca
 from abjadext import rmakers
 
@@ -177,7 +178,33 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xvii-A-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xvii-B-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[4 - 1],
+        r"\scene-xvii-C-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[4 - 1],
+        r"\scene-xvii-D-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[5 - 1],
+        r"\scene-xvii-D-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
 
 
 def align_spanners(cache):

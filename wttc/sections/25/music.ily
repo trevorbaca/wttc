@@ -16,6 +16,7 @@ number.25.Skips = {
     s1 * 6/4
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "N" #6
+    _ \scene-xvi-A-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -363,6 +364,8 @@ number.25.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -386,6 +389,7 @@ number.25.Skips = {
 
     % [Skips measure 15]
     s1 * 6/4
+    _ \scene-xvi-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -448,6 +452,7 @@ number.25.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
+    _ \scene-xvi-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -510,6 +515,7 @@ number.25.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
+    _ \scene-xvi-E-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -541,6 +547,8 @@ number.25.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 7/4
     s1 * 7/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
