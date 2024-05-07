@@ -14,6 +14,11 @@ number.7.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "07"
     s1 * 9/4
+    - \tweak X-extent ##f
+    _ \scene-iv-J-section-position
+    _ \scene-iv-G-section-position
+    _ \scene-iv-H-section-position
+    _ \scene-iv-I-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -49,6 +54,9 @@ number.7.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 2/4
     s1 * 2/4
+    - \tweak X-extent ##f
+    _ \scene-iv-L-section-position
+    _ \scene-iv-K-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

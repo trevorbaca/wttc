@@ -14,6 +14,8 @@ number.8.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "08"
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-v-title-section-position
     _ \scene-v-A-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -281,7 +283,7 @@ number.8.Skips = {
     \time 6/4
     s1 * 6/4
     - \tweak X-extent ##f
-    _ \scene-v-C-section-position
+    _ \scene-v-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

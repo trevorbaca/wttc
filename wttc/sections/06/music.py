@@ -193,10 +193,6 @@ def owl(skips):
     )
 
 
-def owl(skips):
-    pass
-
-
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[4], 5)

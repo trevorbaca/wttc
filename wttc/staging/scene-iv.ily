@@ -39,13 +39,11 @@ scene-iv-B = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { On the downbeat: }
   \line { Close, \lnum #33 }
   }
 
 scene-iv-B-section-position = \markup {
-  \translate #'(0 . -40)
+  \translate #'(0 . -43)
   \scene-iv-B
   }
 
