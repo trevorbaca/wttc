@@ -14,6 +14,8 @@ number.10.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "10"
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-vii-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "E" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
@@ -610,8 +612,6 @@ number.10.Skips = {
     s1 * 3/4
     - \tweak X-extent ##f
     _ \scene-vii-C-section-position
-    - \tweak X-extent ##f
-    _ \scene-vii-D-section-position
     _ \scene-vii-B-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -637,6 +637,8 @@ number.10.Skips = {
     %@% - \baca-start-snm-left-only "E3.l + F1.h"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

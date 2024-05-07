@@ -1,5 +1,19 @@
 %%% SCENE 7: A - J %%%
 
+scene-vii-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 7. }
+  }
+
+scene-vii-title-section-position = \markup {
+  \translate #'(-34 . 12)
+  \scene-vii-title
+  }
+
 scene-vii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
@@ -7,13 +21,12 @@ scene-vii-A = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, first time only: }
-  \vspace #1
-  \line { \lstart No doubt you'll come before long. \lnum #66 }
+  \line { First time only: }
+  \line { No doubt you'll come before long. \lnum #66 }
   }
 
 scene-vii-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -41)
   \scene-vii-A
   }
 
@@ -24,13 +37,12 @@ scene-vii-B = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, first time only: }
-  \vspace #1
-  \line { \lstart You will. \lnum #67 }
+  \line { First time only: }
+  \line { You will. \lnum #67 }
   }
 
 scene-vii-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -41)
   \scene-vii-B
   }
 
@@ -40,34 +52,19 @@ scene-vii-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
+  \line { I know you will. \lnum #68 }
   \vspace #1
-  \line { \lstart I know you will. \lnum #68 }
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(line-width . 42)
+  \justify {
+  Musicians wait a moment to weigh the meaning of this last line.
+  Then proceed to \override #'(font-name . "Adobe Garamond Pro Bold")
+  \box F \hspace #-0.5 . }
   }
 
 scene-vii-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(52 . -41)
   \scene-vii-C
-  }
-
-scene-vii-D = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify { Musicians wait a moment to weigh the meaning of OWL's last line.
-    Then proceed to [F].
-  }
-  \vspace #1
-  \line { \lstart \lnum #1 }
-  }
-
-scene-vii-D-section-position = \markup {
-  \translate #'(0 . 0)
-  \scene-vii-D
   }
 
 scene-vii-E = \markup
@@ -79,7 +76,7 @@ scene-vii-E = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, at start of measure, with violin: }
   \vspace #1
-  \line { \lstart What did you say at the time? \lnum #69 }
+  \line { What did you say at the time? \lnum #69 }
   }
 
 scene-vii-E-section-position = \markup {
@@ -96,7 +93,7 @@ scene-vii-F = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, at start of measure, with violin: }
   \vspace #1
-  \line { \lstart How I would come to a — \lnum #70 }
+  \line { How I would come to a — \lnum #70 }
   }
 
 scene-vii-F-section-position = \markup {
@@ -113,7 +110,7 @@ scene-vii-G = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, at start of measure, with violin: }
   \vspace #1
-  \line { \lstart What did you call it? — \lnum #71 }
+  \line { What did you call it? — \lnum #71 }
   }
 
 scene-vii-G-section-position = \markup {
@@ -147,7 +144,7 @@ scene-vii-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart “Chamber,” \lnum #72 }
+  \line { “Chamber,” \lnum #72 }
   }
 
 scene-vii-I-section-position = \markup {
