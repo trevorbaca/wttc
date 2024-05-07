@@ -170,6 +170,12 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-x-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[4 - 1],
         r"\scene-x-D-section-position",
         baca.tweak.x_extent_false(),
@@ -280,12 +286,10 @@ def make_layout():
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
-            baca.layout.System(3, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 32),
-        overrides=[baca.layout.Override((3, 4), (1, 64))],
+        default=(1, 48),
     )
     baca.build.write_layout_ly(breaks, spacing)
 

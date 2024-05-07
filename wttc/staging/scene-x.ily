@@ -14,6 +14,20 @@ scene-x-title-section-position = \markup {
   \scene-x-title
   }
 
+scene-x-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 10) }
+  }
+
+scene-x-parenthesized-title-section-position = \markup {
+  \translate #'(-34 . 12)
+  \scene-x-parenthesized-title
+  }
+
 scene-x-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
@@ -61,7 +75,7 @@ scene-x-C = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL continues: }
+  \line { OWL continues. }
   \vspace #1
   \line { You'll know. \lnum #131 }
   \vspace #1
@@ -86,19 +100,22 @@ scene-x-D = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL continues: }
+  \line { OWL continues. }
   \vspace #1
   \line { Never mind. \lnum #133 }
   \line { What sould I — ? \lnum #134 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
-  \vspace #1
+  \vspace #2
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \line { Pause. }
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 10. }
   }
 
 scene-x-D-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(76 . -31)
   \scene-x-D
   }
