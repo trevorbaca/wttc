@@ -16,6 +16,8 @@ number.13.Skips = {
     s1 * 3/4
     - \tweak X-extent ##f
     _ \scene-viii-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-viii-title-section-position
     _ \scene-viii-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -227,6 +229,8 @@ number.13.Skips = {
     - \baca-start-mn-left-only "224"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
 
     % [Skips measure 10]
     s1 * 4/4
@@ -278,6 +282,8 @@ number.13.Skips = {
     - \baca-start-mn-left-only "226"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

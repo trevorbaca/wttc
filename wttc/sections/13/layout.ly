@@ -19,7 +19,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(8 20 20 20 20 20)
+            \baca-lbsd-xy #80 #10 #'(8 20 30 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #16
               %! BREAK
@@ -136,7 +136,7 @@
 
             % [PageLayout measure 10]
               %! BREAK
-            \baca-lbsd #160 #'(8 20 20 20 20 20)
+            \baca-lbsd #160 #'(8 20 30 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
