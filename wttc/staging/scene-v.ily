@@ -10,7 +10,7 @@ scene-v-title = \markup
   }
 
 scene-v-title-section-position = \markup {
-  \translate #'(-32 . 10)
+  \translate #'(-32 . 14)
   \scene-v-title
   }
 
