@@ -21,7 +21,7 @@
         "Cello.Staff",
         "Cello.Music",
     ],
-    "bol_measure_numbers": [340, 344],
+    "bol_measure_numbers": [340, 346],
     "duration": "0'31''",
     "final_measure_number": 349,
     "first_measure_number": 340,

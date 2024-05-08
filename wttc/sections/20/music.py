@@ -2,7 +2,7 @@ import abjad
 import baca
 from abjadext import rmakers
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 20 ##########################################
@@ -39,6 +39,12 @@ def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
     baca.metronome_mark(skips[5 - 1], "75", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "100", manifests=library.manifests)
+    baca.mark(
+        skips[10 - 1],
+        strings.short_fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -264,6 +270,12 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
+        r"\scene-xiii-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
         r"\scene-xiii-A-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
@@ -384,11 +396,12 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (8, 20, 20, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
-            baca.layout.System(5, y_offset=160, distances=(10, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=distances, x_offset=40),
+            baca.layout.System(7, y_offset=160, distances=(10, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(

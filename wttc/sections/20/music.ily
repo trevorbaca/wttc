@@ -16,6 +16,8 @@ number.20.Skips = {
     s1 * 3/4
     - \tweak X-extent ##f
     _ \scene-xiii-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-xiii-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -301,6 +303,8 @@ number.20.Skips = {
     - \baca-start-mn-left-only "349"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
