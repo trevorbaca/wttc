@@ -492,7 +492,19 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
+        r"\scene-xvi-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
         r"\scene-xvi-A-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[13 - 1],
+        r"\scene-xvi-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.markup(
@@ -615,11 +627,10 @@ def persist_score(score, environment):
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.MEASURE_NUMBER,
-        baca.tags.STAGE_NUMBER,
     )
     baca.section.deactivate_tags(
         score,
-        baca.tags.STAGE_NUMBER,
+        baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -639,16 +650,18 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
-            baca.layout.System(9, y_offset=160, distances=(10, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(10, 20, 40, 20, 20, 20)),
+            baca.layout.System(8, y_offset=170, distances=(10, 20, 20, 20, 20, 20)),
         ),
         baca.layout.Page(
             2,
-            baca.layout.System(15, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(13, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(15, y_offset=160, distances=(12, 20, 30, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 32),
+        default=(1, 36),
+        overrides=[baca.layout.Override(20, (1, 24))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
