@@ -14,6 +14,8 @@ number.21.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "21"
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-xiii-parenthesized-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

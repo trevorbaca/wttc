@@ -240,6 +240,12 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-xiii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[2 - 1],
         r"\scene-xiii-C-section-position",
         direction=abjad.DOWN,
@@ -370,6 +376,7 @@ def persist_score(score, environment):
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily", "../../staging/scene-xiii.ily"],
+        preamble=[r"\scene-xiii-footnote", r"\noPageBreak"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -384,8 +391,8 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(12, 20, 20, 20, 20, 20)),
-            baca.layout.System(7, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(12, 20, 48, 20, 20, 20)),
+            baca.layout.System(8, y_offset=172, distances=(8, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
