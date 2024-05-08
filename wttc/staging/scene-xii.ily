@@ -39,7 +39,7 @@ scene-xii-A = \markup
   }
 
 scene-xii-A-section-position = \markup {
-  \translate #'(104 . -38)
+  \translate #'(112 . -38)
   \scene-xii-A
   }
 

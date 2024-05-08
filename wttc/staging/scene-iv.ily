@@ -1,5 +1,33 @@
 %%% SCENE 4: A - L %%%
 
+scene-iv-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 4. }
+  }
+
+scene-iv-title-section-position = \markup {
+  \translate #'(-130 . 12)
+  \scene-iv-title
+  }
+
+scene-iv-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 4) }
+  }
+
+scene-iv-parenthesized-title-section-position = \markup {
+  \translate #'(-34 . 12)
+  \scene-iv-parenthesized-title
+  }
+
 scene-iv-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
   \override #'(font-size . 4)
@@ -17,9 +45,6 @@ scene-iv-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Scene 4. }
-  \vspace #1
   \line { What was it we had to look out for? \lnum #30 }
   \line { Did we know it would take us away from each other? \lnum #31 }
   \line { We had been with one another all the time, \lnum #32 }

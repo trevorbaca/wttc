@@ -38,27 +38,6 @@ def GLOBALS(skips):
     baca.metronome_mark(skips[5 - 1], "60", manifests=library.manifests)
     baca.metronome_mark(skips[8 - 1], "50", manifests=library.manifests)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
-    baca.markup(
-        skips[7 - 1],
-        r"\scene-i-B-section-position",
-        baca.tweak.x_extent_false(),
-    )
-    baca.mark(
-        skips[9 - 1],
-        strings.fermata,
-        baca.tweak.padding(1.5, event=True),
-        site="after",
-    )
-    baca.markup(
-        skips[9 - 1],
-        r"\scene-i-C-section-position",
-        baca.tweak.x_extent_false(),
-    )
-    baca.markup(
-        skips[11 - 1],
-        r"\scene-i-D-section-position",
-        baca.tweak.x_extent_false(),
-    )
 
 
 def FL(voice, meters):
@@ -386,7 +365,41 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-i-title-section-position",
+        baca.tweak.x_extent_false(),
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-i-A-section-position",
+    )
+    baca.markup(
+        skips[7 - 1],
+        r"\scene-i-B-section-position",
+        baca.tweak.x_extent_false(),
+    )
+    baca.markup(
+        skips[8 - 1],
+        r"\scene-i-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+    )
+    baca.mark(
+        skips[9 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
+    baca.markup(
+        skips[9 - 1],
+        r"\scene-i-C-section-position",
+        baca.tweak.x_extent_false(),
+    )
+    baca.markup(
+        skips[11 - 1],
+        r"\scene-i-D-section-position",
+        baca.tweak.x_extent_false(),
+    )
 
 
 def align_spanners(cache):
@@ -477,10 +490,6 @@ def persist_score(score, environment):
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily", "header.ily", "../../staging/scene-i.ily"],
-        preamble=[
-            r"\markup \vspace #10",
-            r"\scene-i-A-section-position",
-        ],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,

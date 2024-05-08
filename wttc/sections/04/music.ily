@@ -14,6 +14,8 @@ number.4.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "04"
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-iii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "B" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -345,6 +347,8 @@ number.4.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-iii-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

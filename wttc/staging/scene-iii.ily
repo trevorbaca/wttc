@@ -1,5 +1,33 @@
 %%% SCENE 3: A - F %%%
 
+scene-iii-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 3. }
+  }
+
+scene-iii-title-section-position = \markup {
+  \translate #'(-32 . 12)
+  \scene-iii-title
+  }
+
+scene-iii-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 3) }
+  }
+
+scene-iii-parenthesized-title-section-position = \markup {
+  \translate #'(-34 . 12)
+  \scene-iii-parenthesized-title
+  }
+
 scene-iii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)

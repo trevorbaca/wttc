@@ -1,5 +1,19 @@
 %%% SCENE 2: A - H %%%
 
+scene-ii-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 2. }
+  }
+
+scene-ii-title-section-position = \markup {
+  \translate #'(-32 . 12)
+  \scene-ii-title
+  }
+
 scene-ii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)

@@ -16,6 +16,8 @@ number.7.Skips = {
     s1 * 9/4
     - \tweak X-extent ##f
     _ \scene-iv-J-section-position
+    - \tweak X-extent ##f
+    _ \scene-iv-parenthesized-title-section-position
     _ \scene-iv-G-section-position
     _ \scene-iv-H-section-position
     _ \scene-iv-I-section-position

@@ -16,6 +16,8 @@ number.6.Skips = {
     s1 * 2/4
     - \tweak X-extent ##f
     _ \scene-iv-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-iv-title-section-position
     _ \scene-iv-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line

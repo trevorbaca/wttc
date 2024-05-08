@@ -4,8 +4,6 @@
 \include "../../staging/scene-i.ily"
 \include "music.ily"
 
-\markup \vspace #10
-\scene-i-A-section-position
 \score
 {
 

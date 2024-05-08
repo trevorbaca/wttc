@@ -1062,6 +1062,12 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-iii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[17 - 1],
         r"\scene-iii-E-section-position",
         baca.tweak.x_extent_false(),
@@ -1069,7 +1075,19 @@ def owl(skips):
     )
     baca.markup(
         skips[18 - 1],
+        r"\scene-iii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[18 - 1],
         r"\scene-iii-F-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[38 - 1],
+        r"\scene-iii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.markup(

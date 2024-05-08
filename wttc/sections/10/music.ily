@@ -437,6 +437,8 @@ number.10.Skips = {
 
     % [Skips measure 16]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-vii-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

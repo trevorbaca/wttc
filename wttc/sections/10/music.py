@@ -736,6 +736,12 @@ def owl(skips):
         direction=abjad.DOWN,
     )
     baca.markup(
+        skips[16 - 1],
+        r"\scene-vii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[21 - 1],
         r"\scene-vii-A-section-position",
         direction=abjad.DOWN,

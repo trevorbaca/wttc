@@ -14,6 +14,8 @@ number.5.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "05"
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-iii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -469,6 +471,8 @@ number.5.Skips = {
 
     % [Skips measure 18]
     s1 * 3/4
+    - \tweak X-extent ##f
+    _ \scene-iii-parenthesized-title-section-position
     _ \scene-iii-F-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -1026,6 +1030,8 @@ number.5.Skips = {
 
     % [Skips measure 38]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-iii-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

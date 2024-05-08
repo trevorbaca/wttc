@@ -14,6 +14,9 @@ number.1.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "01"
     s1 * 3/4
+    - \tweak X-extent ##f
+    ^ \scene-i-title-section-position
+    ^ \scene-i-A-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -212,6 +215,8 @@ number.1.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+    - \tweak X-extent ##f
+    ^ \scene-i-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

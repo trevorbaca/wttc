@@ -14,6 +14,8 @@ number.3.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "03"
     s1 * 4/4
+    - \tweak X-extent ##f
+    ^ \scene-iii-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "A" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

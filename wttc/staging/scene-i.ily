@@ -1,24 +1,51 @@
 %%% SECENE 1: A - D %%%
 
-scene-i-A = \markuplist {
+scene-i-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 1. }
+  }
+
+scene-i-title-section-position = \markup {
+  \translate #'(100 . 32)
+  \scene-i-title
+  }
+
+scene-i-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 1) }
+  }
+
+scene-i-parenthesized-title-section-position = \markup {
+  \translate #'(-34 . 12)
+  \scene-i-parenthesized-title
+  }
+
+scene-i-A = \markup {
+  \with-dimensions-from \null
+  \override #'(font-size . 4)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(baseline-skip . 5)
+  \override #'(line-width . 194)
+  \justify {
   The stage is set with chairs and desks for the musicians, all at one side.
   Elsewhere are a window (perhaps suspended) and a table on which stands a
   glass of violets. OWL enters with the musicians, sits with them, may even
   have an instrument to bring on and mime playing, all totally discreet, a
-  member of the ensemble.
-  }
-
-scene-i-A-section-position = \markup {
-  \fill-line {
-  \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(baseline-skip . 6)
-  \override #'(font-size . 4)
-  \override #'(line-width . 240)
-  \override #'(word-space . 2)
-  \justify { \scene-i-A }
-  \null
+  member of the ensemble. }
   } }
+
+scene-i-A-section-position = \markup
+  \translate #'(126 . 34)
+  \scene-i-A
 
 scene-i-B = \markup {
   \with-dimensions-from \null
@@ -46,7 +73,7 @@ scene-i-B = \markup {
   } }
 
 scene-i-B-section-position = \markup
-  \translate #'(92 . -22)
+  \translate #'(90 . -22)
   \scene-i-B
 
 scene-i-C = \markup
@@ -58,10 +85,10 @@ scene-i-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, after measure 9, picking up from before: }
   \vspace #1
-  \line { \lstart When the time comes I'll be there. \lnum #2 }
-  \line { \lstart You know that. \lnum #3 }
-  \line { \lstart I'll not let you down. \lnum #4 }
-  \line { \lstart Never have, never will. \lnum #5 }
+  \line { When the time comes I'll be there. \lnum #2 }
+  \line { You know that. \lnum #3 }
+  \line { I'll not let you down. \lnum #4 }
+  \line { Never have, never will. \lnum #5 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Musicians think, briefly, about what OWL has said. }
@@ -83,8 +110,8 @@ scene-i-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, a moment or two before measure 11 ends: }
   \vspace #1
-  \line { \lstart Come on, what do I have to say all this for? \lnum #6 }
-  \line { \lstart You know me. \lnum #7 }
+  \line { Come on, what do I have to say all this for? \lnum #6 }
+  \line { You know me. \lnum #7 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 1. Slight pause, but not too long. }
