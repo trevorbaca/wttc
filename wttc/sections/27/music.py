@@ -2,7 +2,7 @@ import abjad
 import baca
 from abjadext import rmakers
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 27 ##########################################
@@ -37,6 +37,12 @@ def GLOBALS(skips):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[4 - 1], "48", manifests=library.manifests)
+    baca.mark(
+        skips[4 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -180,6 +186,12 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
+        r"\scene-xvii-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
         r"\scene-xvii-A-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
@@ -196,11 +208,6 @@ def owl(skips):
     )
     baca.markup(
         skips[4 - 1],
-        r"\scene-xvii-D-section-position",
-        direction=abjad.DOWN,
-    )
-    baca.markup(
-        skips[5 - 1],
         r"\scene-xvii-D-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
@@ -291,6 +298,7 @@ def persist_score(score, environment):
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily", "../../staging/scene-xvii.ily"],
+        preamble=[r"\scene-xvii-footnote", r"\noPageBreak"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -302,11 +310,12 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (10, 20, 30, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
-            baca.layout.System(4, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=distances, x_offset=80),
+            baca.layout.System(4, y_offset=150, distances=distances),
         ),
     )
     spacing = baca.layout.Spacing(

@@ -16,6 +16,8 @@ number.27.Skips = {
     s1 * 2/4
     - \tweak X-extent ##f
     _ \scene-xvii-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-xvii-title-section-position
     _ \scene-xvii-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -98,8 +100,9 @@ number.27.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
-    _ \scene-xvii-C-section-position
+    - \tweak X-extent ##f
     _ \scene-xvii-D-section-position
+    _ \scene-xvii-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -137,6 +140,8 @@ number.27.Skips = {
     %@% - \baca-start-snm-left-only "Still 4"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -147,10 +152,6 @@ number.27.Skips = {
     \time 1/4
       %! ANCHOR_SKIP
     s1 * 1/4
-      %! ANCHOR_SKIP
-    - \tweak X-extent ##f
-      %! ANCHOR_SKIP
-    _ \scene-xvii-D-section-position
       %! ANCHOR_SKIP
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
