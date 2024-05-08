@@ -1,20 +1,31 @@
 %%% SCENE 12: A - I %%%
 
+scene-xii-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 12. }
+  }
+
+scene-xii-title-section-position = \markup {
+  \translate #'(0 . 16)
+  \scene-xii-title
+  }
+
 scene-xii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
   \line { \lstart No, you'll be here, \lnum #162 }
   \line { \lstart When the time is right — \lnum #163 }
   }
 
 scene-xii-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(104 . -38)
   \scene-xii-A
   }
 

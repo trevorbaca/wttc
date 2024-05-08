@@ -14,6 +14,12 @@ number.17.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "17"
     s1 * 5/4
+    - \tweak X-extent ##f
+    _ \scene-xi-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-xi-title-section-position
+    - \tweak X-extent ##f
+    _ \scene-xii-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "I" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
@@ -199,6 +205,8 @@ number.17.Skips = {
     %@% - \baca-start-snm-left-only "I3.l + J1.l"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

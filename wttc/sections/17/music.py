@@ -49,6 +49,12 @@ def GLOBALS(skips, first_measure_number):
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
+    baca.mark(
+        skips[6 - 1],
+        strings.short_fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -331,6 +337,24 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-xi-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xi-A-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xii-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[6 - 1],
         r"\scene-xii-A-section-position",
         baca.tweak.x_extent_false(),
@@ -428,7 +452,11 @@ def persist_score(score, environment):
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
-        includes=["../stylesheet.ily", "../../staging/scene-xii.ily"],
+        includes=[
+            "../stylesheet.ily",
+            "../../staging/scene-xi.ily",
+            "../../staging/scene-xii.ily",
+        ],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -440,15 +468,18 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (8, 20, 20, 20, 20, 20)
+    distances_2 = (12, 20, 20, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
-            baca.layout.System(4, y_offset=160, distances=(12, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=15, distances=distances, x_offset=65),
+            baca.layout.System(4, y_offset=160, distances=distances_2, x_offset=65),
         ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 48),
+        overrides=[baca.layout.Override((4, 6), (1, 40))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 
