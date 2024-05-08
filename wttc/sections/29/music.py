@@ -663,11 +663,9 @@ def persist_score(score, environment):
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.MEASURE_NUMBER,
-        baca.tags.STAGE_NUMBER,
     )
     baca.section.deactivate_tags(
         score,
-        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -688,8 +686,8 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=distances, x_offset=68),
-            baca.layout.System(5, y_offset=160, distances=(15, 20, 30, 20, 20, 20)),
+            baca.layout.System(1, y_offset=0, distances=distances, x_offset=68),
+            baca.layout.System(5, y_offset=150, distances=(15, 20, 30, 20, 20, 20)),
         ),
         baca.layout.Page(
             2,

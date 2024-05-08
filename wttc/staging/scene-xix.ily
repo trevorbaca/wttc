@@ -10,7 +10,7 @@ scene-xix-title = \markup
   }
 
 scene-xix-title-section-position = \markup {
-  \translate #'(-76 . 12)
+  \translate #'(-96 . 6)
   \scene-xix-title
   }
 
