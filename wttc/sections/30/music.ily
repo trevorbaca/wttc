@@ -16,6 +16,10 @@ number.30.Skips = {
     s1 * 5/4
     - \tweak X-extent ##f
     _ \scene-xx-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-xx-B-section-position
+    - \tweak X-extent ##f
+    _ \scene-xx-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -232,6 +236,8 @@ number.30.Skips = {
 
     % [Skips measure 11]
     s1 * 5/4
+    - \tweak X-extent ##f
+    _ \colophon-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -252,7 +258,7 @@ number.30.Skips = {
     \bacaStartTextSpanMN
     \bar "|."
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

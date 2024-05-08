@@ -290,3 +290,24 @@ stemR = {
                                              #:sans "R"))
               -2))))
 }
+
+%%% COLOPHON %%%
+
+
+colophon = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro")
+  \override #'(baseline-skip . 5)
+  \general-align #X #right
+  \override #'(font-size . 2)
+  \right-column {
+  \line { New Haven, Conn. (May – July 2021); }
+  \line { Neukölln (Ber.), Ger. (August 2022 – June 2023); }
+  \line { New Haven, Conn. (July 2023 – May 2024). }
+  }
+
+colophon-section-position = \markup {
+  \translate #'(21 . -122)
+  \colophon
+  }
