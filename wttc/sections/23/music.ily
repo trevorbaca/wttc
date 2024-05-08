@@ -14,6 +14,8 @@ number.23.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "23"
     s1 * 2/4
+    - \tweak X-extent ##f
+    _ \scene-xv-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -348,6 +350,8 @@ number.23.Skips = {
     - \baca-start-mn-left-only "379"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

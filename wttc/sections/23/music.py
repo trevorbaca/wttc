@@ -46,6 +46,12 @@ def GLOBALS(skips):
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
+    baca.mark(
+        skips[11 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -260,6 +266,12 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-xv-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[3 - 1],
         r"\scene-xv-A-section-position",
         direction=abjad.DOWN,
@@ -387,6 +399,7 @@ def persist_score(score, environment):
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily", "../../staging/scene-xv.ily"],
+        preamble=[r"\scene-xv-footnote", r"\noPageBreak"],
     )
     baca.build.persist_lilypond_file(
         environment.arguments,
@@ -401,8 +414,8 @@ def make_layout():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
-            baca.layout.System(7, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=(8, 20, 30, 20, 20, 20)),
+            baca.layout.System(7, y_offset=152, distances=(8, 20, 35, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
