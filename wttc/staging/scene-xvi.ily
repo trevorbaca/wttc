@@ -138,7 +138,7 @@ scene-xvi-G = \markup
   }
 
 scene-xvi-G-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(70 . -41)
   \scene-xvi-G
   }
 
@@ -148,14 +148,11 @@ scene-xvi-H = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure, with violin: }
-  \vspace #1
   \line { Let it go. \lnum #260 }
   }
 
 scene-xvi-H-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -41)
   \scene-xvi-H
   }
 
@@ -165,14 +162,11 @@ scene-xvi-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure, with violin: }
-  \vspace #1
   \line { Let it go. \lnum #261 }
   }
 
 scene-xvi-I-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -41)
   \scene-xvi-I
   }
 
@@ -182,26 +176,23 @@ scene-xvi-J = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
   \line { I should not blame you. \lnum #262 }
   \line { It does me no good. \lnum #263 }
   \line { And in all honesty it was not your \dots \lnum #264 }
-  \vspace #1
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
+  \vspace #2
   \line { If blame there must be, where should it go? \lnum #265 }
-  \vspace #1
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
+  \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 16. }
   }
 
 scene-xvi-J-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(40 . -19)
   \scene-xvi-J
   }

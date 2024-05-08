@@ -14,6 +14,8 @@ number.26.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "26"
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "O" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -504,6 +506,8 @@ number.26.Skips = {
 
     % [Skips measure 19]
     s1 * 4/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -890,6 +894,8 @@ number.26.Skips = {
 
     % [Skips measure 33]
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xvi-parenthesized-title-section-position
     _ \scene-xvi-H-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
