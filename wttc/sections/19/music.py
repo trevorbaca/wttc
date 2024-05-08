@@ -1259,8 +1259,26 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-xii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[19 - 1],
         r"\scene-xii-C-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[20 - 1],
+        r"\scene-xii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[33 - 1],
+        r"\scene-xii-parenthesized-title-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
@@ -1291,7 +1309,19 @@ def owl(skips):
     )
     baca.markup(
         skips[47 - 1],
+        r"\scene-xii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[48 - 1],
         r"\scene-xii-I-section-position",
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[48 - 1],
+        r"\scene-xii-J-section-position",
+        baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
 
@@ -1427,12 +1457,12 @@ def make_layout():
         ),
         baca.layout.Page(
             3,
-            baca.layout.System(33, y_offset=10, distances=(8, 20, 20, 20, 20, 20)),
-            baca.layout.System(40, y_offset=160, distances=(8, 20, 20, 20, 20, 20)),
+            baca.layout.System(33, y_offset=10, distances=(8, 20, 30, 20, 20, 20)),
+            baca.layout.System(40, y_offset=160, distances=(8, 20, 30, 20, 20, 20)),
         ),
         baca.layout.Page(
             4,
-            baca.layout.System(47, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
+            baca.layout.System(47, y_offset=10, distances=(10, 20, 30, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(

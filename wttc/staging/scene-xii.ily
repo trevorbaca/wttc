@@ -1,4 +1,4 @@
-%%% SCENE 12: A - I %%%
+%%% SCENE 12: A - J %%%
 
 scene-xii-title = \markup
   \with-dimensions-from \null
@@ -80,21 +80,18 @@ scene-xii-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
   \line { What to do, what to do? \lnum #174 }
-  \vspace #1
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
+  \vspace #2
   \line { I know: \lnum #175 }
   \line { Let's see what I remember, \lnum #176 }
   \line { From all that time \dots \lnum #177 }
   }
 
 scene-xii-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(58 . -38)
   \scene-xii-C
   }
 
@@ -105,13 +102,12 @@ scene-xii-D = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure, with violin: }
-  \vspace #1
-  \line { (Slowly.) The green path \dots \lnum #178 }
+  \line { Slowly. }
+  \line { The green path \dots \lnum #178 }
   }
 
 scene-xii-D-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -41)
   \scene-xii-D
   }
 
@@ -122,13 +118,12 @@ scene-xii-E = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure, with guitars: }
-  \vspace #1
-  \line { (Fast.) What was it? When was this? \lnum #179 }
+  \line { Fast. }
+  \line { What was it? When was this? \lnum #179 }
   }
 
 scene-xii-E-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -41)
   \scene-xii-E
   }
 
@@ -139,14 +134,13 @@ scene-xii-F = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, middle of measure, with violin: }
-  \vspace #1
-  \line { (Slowly.) The green path \dots \lnum #180 }
+  \line { Slowly. }
+  \line { The green path \dots \lnum #180 }
   \line { It was a way — \lnum #181 }
   }
 
 scene-xii-F-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -38)
   \scene-xii-F
   }
 
@@ -157,13 +151,12 @@ scene-xii-G = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, with guitars: }
-  \vspace #1
-  \line { (Fast.) Waving to us, she was waving to us. And we — \lnum #182 }
+  \line { Fast. }
+  \line { Waving to us, she was waving to us. And we — \lnum #182 }
   }
 
 scene-xii-G-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -41)
   \scene-xii-G
   }
 
@@ -174,13 +167,12 @@ scene-xii-H = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, with violin: }
-  \vspace #1
-  \line { (Slowly.) No. \lnum #183 }
+  \line { Slowly. }
+  \line { No. \lnum #183 }
   }
 
 scene-xii-H-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(2 . -41)
   \scene-xii-H
   }
 
@@ -191,19 +183,27 @@ scene-xii-I = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { (Normal pace.) It's gone.\lnum #184 }
+  \line { Normal pace. }
+  \line { It's gone.\lnum #184 }
   \line { It's all gone. \lnum #185 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. Music slowing down. }
-  \vspace #1
+  }
+
+scene-xii-I-section-position = \markup {
+  \translate #'(0 . -41)
+  \scene-xii-I
+  }
+
+scene-xii-J = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 4)
+  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 12. }
   }
 
-scene-xii-I-section-position = \markup {
-  \translate #'(0 . 0)
-  \scene-xii-I
+scene-xii-J-section-position = \markup {
+  \translate #'(108 . -46)
+  \scene-xii-J
   }

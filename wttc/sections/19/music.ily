@@ -14,6 +14,8 @@ number.19.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "19"
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "K" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -533,6 +535,8 @@ number.19.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "L" #6
       %! CLOCK_TIME
@@ -883,6 +887,8 @@ number.19.Skips = {
 
     % [Skips measure 33]
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xii-parenthesized-title-section-position
     _ \scene-xii-D-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -1252,7 +1258,8 @@ number.19.Skips = {
 
     % [Skips measure 47]
     s1 * 6/4
-    _ \scene-xii-I-section-position
+    - \tweak X-extent ##f
+    _ \scene-xii-parenthesized-title-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1293,6 +1300,9 @@ number.19.Skips = {
 
     % [Skips measure 48]
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xii-J-section-position
+    _ \scene-xii-I-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
