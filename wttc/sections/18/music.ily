@@ -14,6 +14,8 @@ number.18.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "18"
     s1 * 6/4
+    - \tweak X-extent ##f
+    _ \scene-xii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "J" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -796,6 +798,8 @@ number.18.Skips = {
     - \baca-start-mn-left-only "291"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -958,7 +962,7 @@ number.18.AltoFlute.Music = {
     \set Staff.shortInstrumentName = \wttc-afl-markup %@%
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
+    %@% \staffHighlight lightpink
     g'''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1050,9 +1054,9 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         fs'!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1071,7 +1075,7 @@ number.18.AltoFlute.Music = {
     ]
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     % [AltoFlute.Music measure 3]
@@ -1080,7 +1084,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         gs'!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1098,7 +1102,7 @@ number.18.AltoFlute.Music = {
     \f
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r16
@@ -1106,7 +1110,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         gf'!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1124,13 +1128,13 @@ number.18.AltoFlute.Music = {
     \f
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         ds'!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1148,7 +1152,7 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     % [AltoFlute.Music measure 4]
@@ -1157,7 +1161,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         g'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1175,13 +1179,13 @@ number.18.AltoFlute.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     a'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1191,13 +1195,13 @@ number.18.AltoFlute.Music = {
     \f
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     a'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1207,13 +1211,13 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     a'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1223,11 +1227,11 @@ number.18.AltoFlute.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     a'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1240,9 +1244,9 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         gs'!16
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
@@ -1261,7 +1265,7 @@ number.18.AltoFlute.Music = {
     ]
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     % [AltoFlute.Music measure 5]
@@ -1270,7 +1274,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         bf'!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1288,11 +1292,11 @@ number.18.AltoFlute.Music = {
     \f
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     d'''16
     :32
       %! EXPLICIT_DYNAMIC
@@ -1351,9 +1355,9 @@ number.18.AltoFlute.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     a'16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1364,13 +1368,13 @@ number.18.AltoFlute.Music = {
     ]
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     af'!16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1380,13 +1384,13 @@ number.18.AltoFlute.Music = {
     \f
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     af'!16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1396,14 +1400,14 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r4
 
     % [AltoFlute.Music measure 7]
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     af'!16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1413,13 +1417,13 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     gf'!16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1429,13 +1433,13 @@ number.18.AltoFlute.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     gf'!16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1445,7 +1449,7 @@ number.18.AltoFlute.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
@@ -1453,7 +1457,7 @@ number.18.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     gf'!16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1463,14 +1467,14 @@ number.18.AltoFlute.Music = {
     \p
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     % [AltoFlute.Music measure 8]
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     gf'!16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1480,13 +1484,13 @@ number.18.AltoFlute.Music = {
     \p
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1496,11 +1500,11 @@ number.18.AltoFlute.Music = {
     \p
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1510,13 +1514,13 @@ number.18.AltoFlute.Music = {
     \pp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1526,11 +1530,11 @@ number.18.AltoFlute.Music = {
     \pp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1541,9 +1545,9 @@ number.18.AltoFlute.Music = {
     [
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
+    %@% \staffHighlight lightpink
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     f'''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1619,9 +1623,9 @@ number.18.AltoFlute.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     ef'''!8.
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1741,13 +1745,13 @@ number.18.AltoFlute.Music = {
     ]
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         bf'!16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1765,7 +1769,7 @@ number.18.AltoFlute.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     % [AltoFlute.Music measure 13]
@@ -1776,7 +1780,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         b'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1794,7 +1798,7 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -1805,7 +1809,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         b'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1823,7 +1827,7 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
 
     r16
@@ -1831,7 +1835,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         b'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1849,7 +1853,7 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     % [AltoFlute.Music measure 15]
@@ -1858,7 +1862,7 @@ number.18.AltoFlute.Music = {
     \slashedGrace {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
+        %@% \staffHighlight lightskyblue
         b'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1876,13 +1880,13 @@ number.18.AltoFlute.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     e'''8.
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1917,7 +1921,7 @@ number.18.AltoFlute.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r1
@@ -1932,7 +1936,7 @@ number.18.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     e'''8.
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2012,7 +2016,7 @@ number.18.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 23]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
       %! SPANNER_STOP
     \!
@@ -2022,7 +2026,7 @@ number.18.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2032,11 +2036,11 @@ number.18.AltoFlute.Music = {
     \p
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     g'''16
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2075,7 +2079,7 @@ number.18.AltoFlute.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2.
       %! SPANNER_STOP
     \!
@@ -2086,7 +2090,7 @@ number.18.AltoFlute.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2096,7 +2100,7 @@ number.18.AltoFlute.Music = {
     \p
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
@@ -2107,7 +2111,7 @@ number.18.AltoFlute.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     ef'!16
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2117,7 +2121,7 @@ number.18.AltoFlute.Music = {
     \pp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
@@ -2128,7 +2132,7 @@ number.18.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     ef'!16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -2138,7 +2142,7 @@ number.18.AltoFlute.Music = {
     \pp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r4
@@ -2146,7 +2150,7 @@ number.18.AltoFlute.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     ef'!16
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
@@ -2156,7 +2160,7 @@ number.18.AltoFlute.Music = {
     \pp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2
@@ -2235,7 +2239,7 @@ number.18.Oboe.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     a''16
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2287,7 +2291,7 @@ number.18.Oboe.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r1
@@ -2315,7 +2319,7 @@ number.18.Oboe.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     bf''!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2400,7 +2404,7 @@ number.18.Oboe.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r4
@@ -2421,7 +2425,7 @@ number.18.Oboe.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     b''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2453,7 +2457,7 @@ number.18.Oboe.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r1
@@ -2468,7 +2472,7 @@ number.18.Oboe.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     b''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2542,7 +2546,7 @@ number.18.Oboe.Music = {
 
     % [Oboe.Music measure 23]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
       %! SPANNER_STOP
     \!
@@ -2552,7 +2556,7 @@ number.18.Oboe.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
+    %@% \staffHighlight lightskyblue
     d'''16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2587,7 +2591,7 @@ number.18.Oboe.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2.
       %! SPANNER_STOP
     \!
@@ -2736,7 +2740,7 @@ number.18.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 g''
@@ -2761,7 +2765,7 @@ number.18.Guitar.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2
@@ -2777,7 +2781,7 @@ number.18.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 g''
@@ -2810,7 +2814,7 @@ number.18.Guitar.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2
@@ -2823,7 +2827,7 @@ number.18.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2833,7 +2837,7 @@ number.18.Guitar.1.Music = {
         \mf
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -2846,7 +2850,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -2858,7 +2862,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2868,7 +2872,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'-4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2880,7 +2884,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2890,7 +2894,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2902,7 +2906,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 5]
@@ -2917,7 +2921,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'-4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2930,7 +2934,7 @@ number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 6]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2940,7 +2944,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -2952,7 +2956,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2962,7 +2966,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -2974,7 +2978,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2983,7 +2987,7 @@ number.18.Guitar.1.Music = {
 
         % [Guitar.1.Music measure 7]
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'-4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2993,7 +2997,7 @@ number.18.Guitar.1.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3005,7 +3009,7 @@ number.18.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3015,7 +3019,7 @@ number.18.Guitar.1.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3027,7 +3031,7 @@ number.18.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         a'8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3037,7 +3041,7 @@ number.18.Guitar.1.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3049,7 +3053,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         a'8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3061,7 +3065,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3072,7 +3076,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         a'8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3084,7 +3088,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3092,7 +3096,7 @@ number.18.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3102,7 +3106,7 @@ number.18.Guitar.1.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3115,7 +3119,7 @@ number.18.Guitar.1.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3125,7 +3129,7 @@ number.18.Guitar.1.Music = {
         \pp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3140,7 +3144,7 @@ number.18.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 cs'''!
@@ -3165,7 +3169,7 @@ number.18.Guitar.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -3181,7 +3185,7 @@ number.18.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 cs'''!
@@ -3214,7 +3218,7 @@ number.18.Guitar.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -3246,7 +3250,7 @@ number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 16]
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     <g ef'!>1.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3259,14 +3263,14 @@ number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 18]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.1.Music measure 19]
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     <g d'>1.
 
     % [Guitar.1.Music measure 20]
@@ -3280,7 +3284,7 @@ number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 23]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3288,7 +3292,7 @@ number.18.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3298,7 +3302,7 @@ number.18.Guitar.1.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3307,7 +3311,7 @@ number.18.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 24]
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     <g b>1.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -3322,7 +3326,7 @@ number.18.Guitar.1.Music = {
     \repeatTie
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     <<
@@ -3333,7 +3337,7 @@ number.18.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 cs'''!
@@ -3366,7 +3370,7 @@ number.18.Guitar.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 26]
@@ -3385,7 +3389,7 @@ number.18.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 cs'''!
@@ -3410,7 +3414,7 @@ number.18.Guitar.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3420,7 +3424,7 @@ number.18.Guitar.1.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3432,7 +3436,7 @@ number.18.Guitar.1.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 28]
@@ -3448,7 +3452,7 @@ number.18.Guitar.1.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         b'8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3458,7 +3462,7 @@ number.18.Guitar.1.Music = {
         \pp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3603,7 +3607,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 fs''!
@@ -3646,7 +3650,7 @@ number.18.Guitar.2.Music = {
     \oneVoice
     \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r1
@@ -3666,7 +3670,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 fs''!
@@ -3691,7 +3695,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2.
 
     r8
@@ -3704,7 +3708,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 gs''!
@@ -3738,7 +3742,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3748,7 +3752,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3758,7 +3762,7 @@ number.18.Guitar.2.Music = {
         \mf
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3773,7 +3777,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'-4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3783,7 +3787,7 @@ number.18.Guitar.2.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3797,7 +3801,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3807,7 +3811,7 @@ number.18.Guitar.2.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3819,7 +3823,7 @@ number.18.Guitar.2.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'-4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3829,7 +3833,7 @@ number.18.Guitar.2.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3841,7 +3845,7 @@ number.18.Guitar.2.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3854,7 +3858,7 @@ number.18.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 5]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
 
     r4
@@ -3866,7 +3870,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3876,7 +3880,7 @@ number.18.Guitar.2.Music = {
         \mf
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3891,7 +3895,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         fs'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3901,7 +3905,7 @@ number.18.Guitar.2.Music = {
         \mf
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -3913,7 +3917,7 @@ number.18.Guitar.2.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3923,7 +3927,7 @@ number.18.Guitar.2.Music = {
         \mf
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3935,7 +3939,7 @@ number.18.Guitar.2.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3947,7 +3951,7 @@ number.18.Guitar.2.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3956,7 +3960,7 @@ number.18.Guitar.2.Music = {
 
         % [Guitar.2.Music measure 7]
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         gs'!8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3966,7 +3970,7 @@ number.18.Guitar.2.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -3980,7 +3984,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         a'8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -3990,7 +3994,7 @@ number.18.Guitar.2.Music = {
         \mp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -4004,7 +4008,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         a'8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -4014,7 +4018,7 @@ number.18.Guitar.2.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -4032,7 +4036,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 c'''
@@ -4057,7 +4061,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4065,7 +4069,7 @@ number.18.Guitar.2.Music = {
     {
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         a'8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -4075,7 +4079,7 @@ number.18.Guitar.2.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r4
 
     }
@@ -4087,7 +4091,7 @@ number.18.Guitar.2.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -4099,7 +4103,7 @@ number.18.Guitar.2.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     <<
@@ -4110,7 +4114,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 c'''
@@ -4143,7 +4147,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     % [Guitar.2.Music measure 9]
@@ -4162,7 +4166,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 d'''
@@ -4187,7 +4191,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
 
     r4
@@ -4219,7 +4223,7 @@ number.18.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 16]
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     <f df'!>1.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4232,14 +4236,14 @@ number.18.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 18]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Guitar.2.Music measure 19]
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     <f c'>1.
 
     % [Guitar.2.Music measure 20]
@@ -4253,7 +4257,7 @@ number.18.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 23]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     <<
@@ -4264,7 +4268,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 d'''
@@ -4301,11 +4305,11 @@ number.18.Guitar.2.Music = {
           %! ONE_VOICE_COMMAND
         \oneVoice
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -4315,7 +4319,7 @@ number.18.Guitar.2.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -4329,7 +4333,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'-4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -4339,14 +4343,14 @@ number.18.Guitar.2.Music = {
         \p
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
 
     % [Guitar.2.Music measure 24]
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     <f a>1.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4362,7 +4366,7 @@ number.18.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 26]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2
 
     <<
@@ -4373,7 +4377,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 d'''
@@ -4406,7 +4410,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -4422,7 +4426,7 @@ number.18.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
               %! STAFF_HIGHLIGHT
-            \staffHighlight lightpink
+            %@% \staffHighlight lightpink
             \voiceOne
             <
                 d'''
@@ -4447,7 +4451,7 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r4
@@ -4459,7 +4463,7 @@ number.18.Guitar.2.Music = {
         r4
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         as'!8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -4471,7 +4475,7 @@ number.18.Guitar.2.Music = {
     }
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r4
 
     % [Guitar.2.Music measure 28]
@@ -4485,7 +4489,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         b'8
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -4495,7 +4499,7 @@ number.18.Guitar.2.Music = {
         \pp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -4510,7 +4514,7 @@ number.18.Guitar.2.Music = {
         r8
 
           %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
+        %@% \staffHighlight lightgreen
         b'8
         - \bendAfter #'4
           %! REDUNDANT_DYNAMIC_COLOR
@@ -4520,7 +4524,7 @@ number.18.Guitar.2.Music = {
         \pp
 
           %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
+        %@% \stopStaffHighlight
         r8
 
     }
@@ -4621,7 +4625,7 @@ number.18.Violin.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     c'''8.
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -4782,7 +4786,7 @@ number.18.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r2
@@ -4790,7 +4794,7 @@ number.18.Violin.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     b''8.
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4885,7 +4889,7 @@ number.18.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r4
@@ -4893,7 +4897,7 @@ number.18.Violin.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     b''8
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5025,13 +5029,13 @@ number.18.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     a''16
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5163,13 +5167,13 @@ number.18.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     af''!16
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5305,7 +5309,7 @@ number.18.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r2.
@@ -5313,7 +5317,7 @@ number.18.Violin.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
+    %@% \staffHighlight hotpink
     g''8.
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5436,7 +5440,7 @@ number.18.Violin.Music = {
     \!
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r2.
@@ -5513,7 +5517,7 @@ number.18.Cello.Music = {
 
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     btqf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5542,7 +5546,7 @@ number.18.Cello.Music = {
     \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r1
@@ -5558,7 +5562,7 @@ number.18.Cello.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     btqf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5567,7 +5571,7 @@ number.18.Cello.Music = {
     \f
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
@@ -5575,7 +5579,7 @@ number.18.Cello.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     btqf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5584,7 +5588,7 @@ number.18.Cello.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2
@@ -5593,7 +5597,7 @@ number.18.Cello.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     btqf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5603,7 +5607,7 @@ number.18.Cello.Music = {
     \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -5617,7 +5621,7 @@ number.18.Cello.Music = {
     % [Cello.Music measure 6]
     \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     btqf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5646,7 +5650,7 @@ number.18.Cello.Music = {
     \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r4
@@ -5654,7 +5658,7 @@ number.18.Cello.Music = {
     r16
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     g'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5663,14 +5667,14 @@ number.18.Cello.Music = {
     \mf
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
 
     r2.
 
     % [Cello.Music measure 7]
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     g'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5679,13 +5683,13 @@ number.18.Cello.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     g'16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -5694,11 +5698,11 @@ number.18.Cello.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r2.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -5707,7 +5711,7 @@ number.18.Cello.Music = {
     \mp
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8.
 
     % [Cello.Music measure 8]
@@ -5716,7 +5720,7 @@ number.18.Cello.Music = {
     r8
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5725,7 +5729,7 @@ number.18.Cello.Music = {
     \p
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
 
     r4
@@ -5734,7 +5738,7 @@ number.18.Cello.Music = {
     r8.
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -5744,7 +5748,7 @@ number.18.Cello.Music = {
     \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -5825,7 +5829,7 @@ number.18.Cello.Music = {
 
     \once \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -5854,7 +5858,7 @@ number.18.Cello.Music = {
     \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -5893,7 +5897,7 @@ number.18.Cello.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
+    %@% \staffHighlight yellow
       %! SPANNER_START
     \pitchedTrill
     <
@@ -6006,7 +6010,7 @@ number.18.Cello.Music = {
 
     % [Cello.Music measure 27]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r1
       %! SPANNER_STOP
     \!
@@ -6017,7 +6021,7 @@ number.18.Cello.Music = {
 
     \once \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -6046,7 +6050,7 @@ number.18.Cello.Music = {
     \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -6054,7 +6058,7 @@ number.18.Cello.Music = {
     \bacaStopTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
+    %@% \staffHighlight yellow
       %! SPANNER_START
     \pitchedTrill
     <
@@ -6157,7 +6161,7 @@ number.18.Cello.Music = {
 
     % [Cello.Music measure 29]
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r16
       %! SPANNER_STOP
     \!
@@ -6166,7 +6170,7 @@ number.18.Cello.Music = {
 
     \once \override NoteHead.style = #'harmonic
       %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
+    %@% \staffHighlight lightgreen
     e'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6195,7 +6199,7 @@ number.18.Cello.Music = {
     \bacaStartTextSpanStringNumber
 
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
     r8
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -6205,7 +6209,7 @@ number.18.Cello.Music = {
     r4
 
       %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
+    %@% \staffHighlight yellow
       %! SPANNER_START
     \pitchedTrill
     <
@@ -6337,7 +6341,7 @@ number.18.Cello.Music = {
     \startStaff
       %! ANCHOR_NOTE
       %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
+    %@% \stopStaffHighlight
       %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE

@@ -14,14 +14,28 @@ scene-xii-title-section-position = \markup {
   \scene-xii-title
   }
 
+scene-xii-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 12) }
+  }
+
+scene-xii-parenthesized-title-section-position = \markup {
+  \translate #'(-32 . 12)
+  \scene-xii-parenthesized-title
+  }
+
 scene-xii-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \line { \lstart No, you'll be here, \lnum #162 }
-  \line { \lstart When the time is right — \lnum #163 }
+  \line { No, you'll be here, \lnum #162 }
+  \line { When the time is right — \lnum #163 }
   }
 
 scene-xii-A-section-position = \markup {
@@ -35,31 +49,28 @@ scene-xii-B = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart You know, that's something I could never do, \lnum #164 }
-  \line { \lstart Know when the time was right, \lnum #165 }
-  \line { \lstart But you'll know, \lnum #166 }
-  \line { \lstart And you'll know what to do then and how to do it, \lnum #167 }
-  \line { \lstart So that it'll be better than it was \lnum #168 }
-  \line { \lstart Before. \lnum #169 }
-  \vspace #1
+  \line { You know, that's something I could never do, \lnum #164 }
+  \line { Know when the time was right, \lnum #165 }
+  \line { But you'll know, \lnum #166 }
+  \line { And you'll know what to do then and how to do it, \lnum #167 }
+  \line { So that it'll be better than it was \lnum #168 }
+  \line { Before. \lnum #169 }
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
-  \line { \lstart For this time it will not come to an end, \lnum #170 }
-  \line { \lstart Will it? \lnum #171 }
-  \line { \lstart It'll go on. \lnum #172 }
-  \vspace #1
+  \vspace #2
+  \line { For this time it will not come to an end, \lnum #170 }
+  \line { Will it? \lnum #171 }
+  \line { It'll go on. \lnum #172 }
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
-  \line { \lstart That's my expectation, any — \lnum #173 }
+  \vspace #2
+  \line { That's my expectation, any — \lnum #173 }
   }
 
 scene-xii-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(60 . -20)
   \scene-xii-B
   }
 
@@ -72,14 +83,14 @@ scene-xii-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart What to do, what to do? \lnum #174 }
+  \line { What to do, what to do? \lnum #174 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   \vspace #1
-  \line { \lstart I know: \lnum #175 }
-  \line { \lstart Let's see what I remember, \lnum #176 }
-  \line { \lstart From all that time \dots \lnum #177 }
+  \line { I know: \lnum #175 }
+  \line { Let's see what I remember, \lnum #176 }
+  \line { From all that time \dots \lnum #177 }
   }
 
 scene-xii-C-section-position = \markup {
@@ -96,7 +107,7 @@ scene-xii-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, at start of measure, with violin: }
   \vspace #1
-  \line { \lstart (Slowly.) The green path \dots \lnum #178 }
+  \line { (Slowly.) The green path \dots \lnum #178 }
   }
 
 scene-xii-D-section-position = \markup {
@@ -113,7 +124,7 @@ scene-xii-E = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, at start of measure, with guitars: }
   \vspace #1
-  \line { \lstart (Fast.) What was it? When was this? \lnum #179 }
+  \line { (Fast.) What was it? When was this? \lnum #179 }
   }
 
 scene-xii-E-section-position = \markup {
@@ -130,8 +141,8 @@ scene-xii-F = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, middle of measure, with violin: }
   \vspace #1
-  \line { \lstart (Slowly.) The green path \dots \lnum #180 }
-  \line { \lstart It was a way — \lnum #181 }
+  \line { (Slowly.) The green path \dots \lnum #180 }
+  \line { It was a way — \lnum #181 }
   }
 
 scene-xii-F-section-position = \markup {
@@ -148,7 +159,7 @@ scene-xii-G = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, with guitars: }
   \vspace #1
-  \line { \lstart (Fast.) Waving to us, she was waving to us. And we — \lnum #182 }
+  \line { (Fast.) Waving to us, she was waving to us. And we — \lnum #182 }
   }
 
 scene-xii-G-section-position = \markup {
@@ -165,7 +176,7 @@ scene-xii-H = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL, with violin: }
   \vspace #1
-  \line { \lstart (Slowly.) No. \lnum #183 }
+  \line { (Slowly.) No. \lnum #183 }
   }
 
 scene-xii-H-section-position = \markup {
@@ -182,8 +193,8 @@ scene-xii-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL: }
   \vspace #1
-  \line { \lstart (Normal pace.) It's gone.\lnum #184 }
-  \line { \lstart It's all gone. \lnum #185 }
+  \line { (Normal pace.) It's gone.\lnum #184 }
+  \line { It's all gone. \lnum #185 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. Music slowing down. }

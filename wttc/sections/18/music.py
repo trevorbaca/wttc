@@ -67,6 +67,12 @@ def GLOBALS(skips, first_measure_number):
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
+    baca.mark(
+        skips[29 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -1000,6 +1006,12 @@ def vc(m):
 
 def owl(skips):
     baca.markup(
+        skips[1 - 1],
+        r"\scene-xii-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
         skips[29 - 1],
         r"\scene-xii-B-section-position",
         baca.tweak.x_extent_false(),
@@ -1080,11 +1092,10 @@ def persist_score(score, environment):
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.MEASURE_NUMBER,
-        baca.tags.STAGE_NUMBER,
     )
     baca.section.deactivate_tags(
         score,
-        baca.tags.STAGE_NUMBER,
+        baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,
