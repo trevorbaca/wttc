@@ -98,13 +98,13 @@ def GLOBALS(skips):
     )
     baca.mark(
         skips[15 - 1],
-        strings.fermata,
+        strings.long_fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.mark(
         skips[16 - 1],
-        strings.fermata,
+        strings.long_fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
@@ -483,6 +483,12 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
+        r"\scene-xix-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
         r"\scene-xix-A-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
@@ -495,6 +501,7 @@ def owl(skips):
     baca.markup(
         skips[4 - 1],
         r"\scene-xix-C-section-position",
+        baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.markup(
@@ -526,6 +533,12 @@ def owl(skips):
     baca.markup(
         skips[12 - 1],
         r"\scene-xix-I-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[13 - 1],
+        r"\scene-xix-parenthesized-title-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
@@ -671,18 +684,22 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (15, 20, 25, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
-            baca.layout.System(12, y_offset=160, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=distances, x_offset=68),
+            baca.layout.System(5, y_offset=160, distances=(15, 20, 30, 20, 20, 20)),
+        ),
+        baca.layout.Page(
+            2,
+            baca.layout.System(13, y_offset=10, distances=(15, 20, 25, 20, 20, 20)),
+            baca.layout.System(16, y_offset=160, distances=distances, x_offset=220),
         ),
     )
     spacing = baca.layout.Spacing(
-        default=(1, 64),
-        overrides=[
-            baca.layout.Override([3, 12, 14, 16], (1, 32)),
-        ],
+        default=(1, 96),
+        overrides=[baca.layout.Override([3, 12, 14, 16], (1, 48))],
     )
     baca.build.write_layout_ly(breaks, spacing)
 

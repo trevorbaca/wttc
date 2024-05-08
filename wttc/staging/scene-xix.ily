@@ -1,20 +1,45 @@
 %%% SCENE 19: A - M %%%
 
+scene-xix-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 19. }
+  }
+
+scene-xix-title-section-position = \markup {
+  \translate #'(-76 . 12)
+  \scene-xix-title
+  }
+
+scene-xix-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 19) }
+  }
+
+scene-xix-parenthesized-title-section-position = \markup {
+  \translate #'(-32 . 12)
+  \scene-xix-parenthesized-title
+  }
+
 scene-xix-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart We did not. \lnum #296 }
-  \line { \lstart And that's the reason \dots \lnum #297 }
+  \line { We did not. \lnum #296 }
+  \line { And that's the reason \dots \lnum #297 }
   }
 
 scene-xix-A-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(-74 . -47)
   \scene-xix-A
   }
 
@@ -24,14 +49,11 @@ scene-xix-B = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart That's the reason \dots \lnum #298 }
+  \line { That's the reason \dots \lnum #298 }
   }
 
 scene-xix-B-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -47)
   \scene-xix-B
   }
 
@@ -41,19 +63,16 @@ scene-xix-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart “Make yourself at home.” \lnum #299 }
-  \vspace #1
+  \line { “Make yourself at home.” \lnum #299 }
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
-  \line { \lstart Call this home? \lnum #300 }
+  \vspace #2
+  \line { Call this home? \lnum #300 }
   }
 
 scene-xix-C-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(50 . -47)
   \scene-xix-C
   }
 
@@ -63,17 +82,11 @@ scene-xix-D = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Window. \lnum #301 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
+  \line { Window. \lnum #301 }
   }
 
 scene-xix-D-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -49)
   \scene-xix-D
   }
 
@@ -83,17 +96,11 @@ scene-xix-E = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Table. \lnum #302 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
+  \line { Table. \lnum #302 }
   }
 
 scene-xix-E-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -49)
   \scene-xix-E
   }
 
@@ -103,17 +110,11 @@ scene-xix-F = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Flowers. \lnum #303 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
+  \line { Flowers. \lnum #303 }
   }
 
 scene-xix-F-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -49)
   \scene-xix-F
   }
 
@@ -123,17 +124,11 @@ scene-xix-G = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart In a glass. \lnum #304 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
+  \line { In a glass. \lnum #304 }
   }
 
 scene-xix-G-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -49)
   \scene-xix-G
   }
 
@@ -144,16 +139,12 @@ scene-xix-H = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, on beat 2: }
-  \vspace #1
-  \line { \lstart Violets. \lnum #305 }
-  \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
+  \line { With violin & cello. }
+  \line { Violets. \lnum #305 }
   }
 
 scene-xix-H-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(18 . -47)
   \scene-xix-H
   }
 
@@ -163,17 +154,14 @@ scene-xix-I = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart Never mind. \lnum #306 }
-  \vspace #1
+  \line { Never mind. \lnum #306 }
+  \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   }
 
 scene-xix-I-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(90 . -51)
   \scene-xix-I
   }
 
@@ -183,14 +171,11 @@ scene-xix-J = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart Never mind. \lnum #307 }
+  \line { Never mind. \lnum #307 }
   }
 
 scene-xix-J-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -47)
   \scene-xix-J
   }
 
@@ -201,13 +186,12 @@ scene-xix-K = \markup
   \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL, at start of measure: }
-  \vspace #1
-  \line { \lstart (loud) Never mind! \lnum #308 }
+  \line { Loud. }
+  \line { Never mind! \lnum #308 }
   }
 
 scene-xix-K-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(0 . -45)
   \scene-xix-K
   }
 
@@ -217,14 +201,11 @@ scene-xix-L = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL: }
-  \vspace #1
-  \line { \lstart It's all over. \lnum #309 }
+  \line { It's all over. \lnum #309 }
   }
 
 scene-xix-L-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(50 . -47)
   \scene-xix-L
   }
 
@@ -239,6 +220,6 @@ scene-xix-M = \markup
   }
 
 scene-xix-M-section-position = \markup {
-  \translate #'(0 . 0)
+  \translate #'(74 . -45)
   \scene-xix-M
   }

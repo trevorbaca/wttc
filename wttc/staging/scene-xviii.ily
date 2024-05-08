@@ -6,7 +6,7 @@ scene-xviii-title = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 8)
   \column {
-  \line { SCENE \hspace #1 17. }
+  \line { SCENE \hspace #1 18. }
   }
 
 scene-xviii-title-section-position = \markup {
@@ -74,7 +74,7 @@ scene-xviii-D = \markup
   \line { But we did not. \lnum #295 }
   \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 17. }
+  \line { End scene 18. }
   }
 
 scene-xviii-D-section-position = \markup {

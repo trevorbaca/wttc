@@ -16,6 +16,8 @@ number.29.Skips = {
     s1 * 1/4
     - \tweak X-extent ##f
     _ \scene-xix-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-xix-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -132,6 +134,7 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
+    - \tweak X-extent ##f
     _ \scene-xix-C-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -507,6 +510,8 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
+    - \tweak X-extent ##f
+    _ \scene-xix-parenthesized-title-section-position
     _ \scene-xix-J-section-position
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -631,7 +636,7 @@ number.29.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
 
     % [Skips measure 16]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -679,7 +684,7 @@ number.29.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -3259,12 +3264,12 @@ number.29.Cello.Music = {
     \clef "tenor"
       %! MEASURE_493
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_493
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
@@ -3312,12 +3317,12 @@ number.29.Cello.Music = {
     \clef "bass"
       %! MEASURE_494
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.X-extent = ##f
+%%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_494
       %! SHIFTED_CLEF
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
