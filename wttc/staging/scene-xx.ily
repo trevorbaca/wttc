@@ -57,7 +57,7 @@ scene-xx-B = \markup
   }
 
 scene-xx-B-section-position = \markup {
-  \translate #'(200 . 30)
+  \translate #'(200 . 16)
   \scene-xx-B
   }
 
