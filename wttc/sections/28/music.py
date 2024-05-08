@@ -182,6 +182,12 @@ def vc(m):
 def owl(skips):
     baca.markup(
         skips[1 - 1],
+        r"\scene-xviii-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[1 - 1],
         r"\scene-xviii-A-section-position",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
@@ -295,11 +301,12 @@ def persist_score(score, environment):
 
 
 def make_layout():
+    distances = (10, 20, 30, 20, 20, 20)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset=10, distances=(10, 20, 20, 20, 20, 20)),
-            baca.layout.System(4, y_offset=160, distances=(10, 20, 20, 20, 20, 20)),
+            baca.layout.System(1, y_offset=10, distances=distances, x_offset=80),
+            baca.layout.System(5, y_offset=160, distances=(10, 20, 20, 20, 20, 20)),
         ),
     )
     spacing = baca.layout.Spacing(
