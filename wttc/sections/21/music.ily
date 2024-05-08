@@ -4,7 +4,7 @@ number.21.Skips = {
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
       %! RED_START_BAR
@@ -17,29 +17,29 @@ number.21.Skips = {
     - \tweak X-extent ##f
     _ \scene-xiii-parenthesized-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
+%%% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "60" #blue
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "60" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
+%%% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
+    - \baca-invisible-line %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "60"
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "60" %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
+    \bacaStartTextSpanMM %@%
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'24'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "1"
+%%% - \baca-start-lmn-left-only "1"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "350"
+%%% - \baca-start-mn-left-only "350"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
     %@% - \baca-start-snm-left-only "[M41] y: O"
       %! STAGE_NUMBER
@@ -51,25 +51,25 @@ number.21.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'28'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "2"
+%%% - \baca-start-lmn-left-only "2"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "351"
+%%% - \baca-start-mn-left-only "351"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 3]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
@@ -78,36 +78,36 @@ number.21.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
+%%% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "48" #blue
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "48" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
+%%% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
+    - \baca-invisible-line %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "48"
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "48" %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
+    \bacaStartTextSpanMM %@%
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'32'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "3"
+%%% - \baca-start-lmn-left-only "3"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "352"
+%%% - \baca-start-mn-left-only "352"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
     %@% - \baca-start-snm-left-only "Still 2"
       %! STAGE_NUMBER
@@ -115,7 +115,7 @@ number.21.Skips = {
 
     % [Skips measure 4]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
@@ -123,36 +123,36 @@ number.21.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
+%%% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "75" #blue
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "75" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
+%%% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
+    - \baca-invisible-line %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "75"
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "75" %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
+    \bacaStartTextSpanMM %@%
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'43'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "4"
+%%% - \baca-start-lmn-left-only "4"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "353"
+%%% - \baca-start-mn-left-only "353"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
     %@% - \baca-start-snm-left-only "[M42] xyz: N (end)"
       %! STAGE_NUMBER
@@ -163,86 +163,86 @@ number.21.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'46'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "5"
+%%% - \baca-start-lmn-left-only "5"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "354"
+%%% - \baca-start-mn-left-only "354"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 6]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'49'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "6"
+%%% - \baca-start-lmn-left-only "6"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "355"
+%%% - \baca-start-mn-left-only "355"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-invisible-line
+%%% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "100" #blue
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "100" #blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    \bacaStartTextSpanMM
+%%% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-invisible-line
+    - \baca-invisible-line %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "100"
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "100" %@%
       %! EXPLICIT_METRONOME_MARK
-    %@% \bacaStartTextSpanMM
+    \bacaStartTextSpanMM %@%
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'53'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "7"
+%%% - \baca-start-lmn-left-only "7"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "356"
+%%% - \baca-start-mn-left-only "356"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
       %! STAGE_NUMBER
     %@% - \baca-start-snm-left-only "[M43 = M40 = M38] y: J (end) + z: J (end)"
       %! STAGE_NUMBER
@@ -250,57 +250,57 @@ number.21.Skips = {
 
     % [Skips measure 8]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'55'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "8"
+%%% - \baca-start-lmn-left-only "8"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "357"
+%%% - \baca-start-mn-left-only "357"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-left-only "[20'59'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "9"
+%%% - \baca-start-lmn-left-only "9"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "358"
+%%% - \baca-start-mn-left-only "358"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
     % [Skips measure 10]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
+%%% \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
@@ -309,21 +309,21 @@ number.21.Skips = {
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! CLOCK_TIME
     %@% - \baca-start-ct-both "[21'00'']" "[21'04'']"
       %! CLOCK_TIME
     %@% \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
-    - \baca-start-lmn-left-only "10"
+%%% - \baca-start-lmn-left-only "10"
       %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN
+%%% \bacaStartTextSpanLMN
       %! MEASURE_NUMBER
-    - \baca-start-mn-left-only "359"
+%%% - \baca-start-mn-left-only "359"
       %! MEASURE_NUMBER
-    \bacaStartTextSpanMN
+%%% \bacaStartTextSpanMN
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -339,13 +339,13 @@ number.21.Skips = {
     %@% \bacaStopTextSpanCT
       %! ANCHOR_SKIP
       %! LOCAL_MEASURE_NUMBER
-    \bacaStopTextSpanLMN
+%%% \bacaStopTextSpanLMN
       %! ANCHOR_SKIP
       %! EOS_STOP_MM_SPANNER
     \bacaStopTextSpanMM
       %! ANCHOR_SKIP
       %! MEASURE_NUMBER
-    \bacaStopTextSpanMN
+%%% \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
@@ -399,7 +399,7 @@ number.21.AltoFlute.Music.item.1 = {
     a'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \sfp
       %! SPANNER_START
@@ -428,7 +428,7 @@ number.21.AltoFlute.Music.item.1 = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -454,7 +454,7 @@ number.21.AltoFlute.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_350
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -475,7 +475,7 @@ number.21.AltoFlute.Music = {
     af'''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
       %! EXPLICIT_INSTRUMENT_ALERT
@@ -483,18 +483,18 @@ number.21.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
     \glissando
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-afl-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-afl-markup
 
     \hide NoteHead
     \override Accidental.stencil = ##f
@@ -506,14 +506,14 @@ number.21.AltoFlute.Music = {
     a'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -524,14 +524,14 @@ number.21.AltoFlute.Music = {
     a'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -547,14 +547,14 @@ number.21.AltoFlute.Music = {
     g'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -571,7 +571,7 @@ number.21.AltoFlute.Music = {
     g'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
     ]
@@ -585,7 +585,7 @@ number.21.AltoFlute.Music = {
     c''\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! EXPLICIT_DYNAMIC
@@ -594,7 +594,7 @@ number.21.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -716,7 +716,7 @@ number.21.AltoFlute.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
 
@@ -789,7 +789,7 @@ number.21.Oboe.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_350
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -812,12 +812,12 @@ number.21.Oboe.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Oboe”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-ob-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-ob-markup
 
     % [Oboe.Music measure 2]
     R1 * 4/4
@@ -881,7 +881,7 @@ number.21.Guitar.1.Music.item.1 = {
     f'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
 
@@ -897,7 +897,7 @@ number.21.Guitar.1.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_350
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -918,12 +918,12 @@ number.21.Guitar.1.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-gt-i-markup
 
     % [Guitar.1.Music measure 2]
     R1 * 4/4
@@ -939,7 +939,7 @@ number.21.Guitar.1.Music = {
     f16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak padding 1
@@ -966,7 +966,7 @@ number.21.Guitar.1.Music = {
     :32
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+%%% - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
       %! SPANNER_START
@@ -1010,7 +1010,7 @@ number.21.Guitar.1.Music = {
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-p-parenthesized
       %! SPANNER_STOP
@@ -1112,7 +1112,7 @@ number.21.Guitar.1.Music = {
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
+    %%% - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
 
@@ -1143,7 +1143,7 @@ number.21.Guitar.2.Music.item.1 = {
     fs'''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
 
@@ -1159,7 +1159,7 @@ number.21.Guitar.2.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_350
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -1182,12 +1182,12 @@ number.21.Guitar.2.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Guitar”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-gt-ii-markup
 
     % [Guitar.2.Music measure 2]
     R1 * 4/4
@@ -1203,7 +1203,7 @@ number.21.Guitar.2.Music = {
     f16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak padding 1
@@ -1230,7 +1230,7 @@ number.21.Guitar.2.Music = {
     :32
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+%%% - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
       %! SPANNER_START
@@ -1274,7 +1274,7 @@ number.21.Guitar.2.Music = {
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-p-parenthesized
       %! SPANNER_STOP
@@ -1375,7 +1375,7 @@ number.21.Guitar.2.Music = {
         - \bendAfter #'4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
+    %%% - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
 
@@ -1428,7 +1428,7 @@ number.21.Violin.Music.item.1 = {
     f'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \sfp
       %! SPANNER_START
@@ -1457,7 +1457,7 @@ number.21.Violin.Music.item.1 = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -1484,7 +1484,7 @@ number.21.Violin.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_350
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -1505,12 +1505,12 @@ number.21.Violin.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vn-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-vn-markup
 
     % [Violin.Music measure 2]
     R1 * 4/4
@@ -1524,7 +1524,7 @@ number.21.Violin.Music = {
     <b fs'!>\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_START
@@ -1547,7 +1547,7 @@ number.21.Violin.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1701,7 +1701,7 @@ number.21.Cello.Music = {
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_350
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
@@ -1724,12 +1724,12 @@ number.21.Cello.Music = {
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
       %! -PARTS
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
-    \set Staff.shortInstrumentName = \wttc-vc-markup %@%
+    %@% \set Staff.shortInstrumentName = \wttc-vc-markup
 
     % [Cello.Music measure 2]
     R1 * 4/4
@@ -1743,7 +1743,7 @@ number.21.Cello.Music = {
     <e, c>\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
       %! SPANNER_START
@@ -1766,7 +1766,7 @@ number.21.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1792,7 +1792,7 @@ number.21.Cello.Music = {
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+%%% \once \override Staff.Clef.color = #blue
       %! MEASURE_354
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -1807,7 +1807,7 @@ number.21.Cello.Music = {
     <e'' gs''!>1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
       %! SPANNER_START
@@ -1824,13 +1824,13 @@ number.21.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
     \glissando
       %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+%%% \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     % [Cello.Music measure 6]
     \hide NoteHead
@@ -1846,7 +1846,7 @@ number.21.Cello.Music = {
     <cs''! es''!>16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
+%%% - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
     \revert NoteHead.style

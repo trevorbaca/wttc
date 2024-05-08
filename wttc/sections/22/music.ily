@@ -16,6 +16,8 @@ number.22.Skips = {
     s1 * 4/4
     - \tweak X-extent ##f
     _ \scene-xiv-A-section-position
+    - \tweak X-extent ##f
+    _ \scene-xiv-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -283,6 +285,8 @@ number.22.Skips = {
     - \baca-start-mn-left-only "368"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -2043,12 +2047,12 @@ number.22.Cello.Music = {
     \clef "bass"
       %! MEASURE_364
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.X-extent = ##f
+    \once \override Staff.Clef.X-extent = ##f
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! MEASURE_364
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
     \override DynamicLineSpanner.staff-padding = 5.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f

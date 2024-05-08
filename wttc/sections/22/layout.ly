@@ -19,7 +19,7 @@
               %! BREAK
             \autoPageBreaksOff
               %! BREAK
-            \baca-lbsd #10 #'(12 20 20 20 20 20)
+            \baca-lbsd-xy #40 #10 #'(12 20 40 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #24
               %! BREAK
@@ -58,24 +58,22 @@
 
             % [PageLayout measure 4]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #35 #576
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 5/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
+            %@% - \baca-start-spm-left-only "[1/24]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 5]
-              %! BREAK
-            \baca-lbsd #160 #'(10 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #24
               %! BREAK
-            \break
+            \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
@@ -99,22 +97,24 @@
 
             % [PageLayout measure 7]
               %! SPACING_COMMAND
-            \baca-new-strict-spacing-section #1 #24
+            \baca-new-strict-spacing-section #35 #576
               %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
               %! SPACING
-            %@% - \baca-start-spm-left-only "[1/24]"
+            %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
             % [PageLayout measure 8]
+              %! BREAK
+            \baca-lbsd #170 #'(10 20 20 20 20 20)
               %! SPACING_COMMAND
             \baca-new-strict-spacing-section #1 #48
               %! BREAK
-            \noBreak
+            \break
             s1 * 2/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
