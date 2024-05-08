@@ -769,7 +769,18 @@ def vc(m):
 
 
 def owl(skips):
-    pass
+    baca.markup(
+        skips[1 - 1],
+        r"\scene-xvi-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.markup(
+        skips[20 - 1],
+        r"\scene-xvi-parenthesized-title-section-position",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
 
 
 def align_spanners(cache):
@@ -855,11 +866,10 @@ def persist_score(score, environment):
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.MEASURE_NUMBER,
-        baca.tags.STAGE_NUMBER,
     )
     baca.section.deactivate_tags(
         score,
-        baca.tags.STAGE_NUMBER,
+        baca.tags.STAFF_HIGHLIGHT,
     )
     lilypond_file = baca.lilypond.file(
         score,

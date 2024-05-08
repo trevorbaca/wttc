@@ -1,5 +1,33 @@
 %%% SCENE 16: A - J %%%
 
+scene-xvi-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 8)
+  \column {
+  \line { SCENE \hspace #1 16. }
+  }
+
+scene-xvi-title-section-position = \markup {
+  \translate #'(-32 . 12)
+  \scene-xvi-title
+  }
+
+scene-xvi-parenthesized-title = \markup
+  \with-dimensions-from \null
+  \override #'(baseline-skip . 5)
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \override #'(font-size . 6)
+  \column {
+  \line { (SCENE \hspace #1 16) }
+  }
+
+scene-xvi-parenthesized-title-section-position = \markup {
+  \translate #'(-32 . 12)
+  \scene-xvi-parenthesized-title
+  }
+
 scene-xvi-A = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
