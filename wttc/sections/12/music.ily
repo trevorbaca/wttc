@@ -32,9 +32,9 @@ number.12.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'12'']"
+    - \baca-start-ct-left-only "[10'12'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "1"
       %! LOCAL_MEASURE_NUMBER
@@ -51,7 +51,7 @@ number.12.Skips = {
     % [Skips measure 2]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -59,9 +59,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'15'']"
+    - \baca-start-ct-left-only "[10'15'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "2"
       %! LOCAL_MEASURE_NUMBER
@@ -78,15 +78,15 @@ number.12.Skips = {
     % [Skips measure 3]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'19'']"
+    - \baca-start-ct-left-only "[10'19'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "3"
       %! LOCAL_MEASURE_NUMBER
@@ -99,7 +99,7 @@ number.12.Skips = {
     % [Skips measure 4]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -107,9 +107,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'22'']"
+    - \baca-start-ct-left-only "[10'22'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "4"
       %! LOCAL_MEASURE_NUMBER
@@ -126,7 +126,7 @@ number.12.Skips = {
     % [Skips measure 5]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -134,9 +134,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'26'']"
+    - \baca-start-ct-left-only "[10'26'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "5"
       %! LOCAL_MEASURE_NUMBER
@@ -153,7 +153,7 @@ number.12.Skips = {
     % [Skips measure 6]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -161,9 +161,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'30'']"
+    - \baca-start-ct-left-only "[10'30'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "6"
       %! LOCAL_MEASURE_NUMBER
@@ -184,7 +184,7 @@ number.12.Skips = {
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -192,9 +192,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'33'']"
+    - \baca-start-ct-left-only "[10'33'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "7"
       %! LOCAL_MEASURE_NUMBER
@@ -215,7 +215,7 @@ number.12.Skips = {
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -223,9 +223,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'35'']"
+    - \baca-start-ct-left-only "[10'35'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "8"
       %! LOCAL_MEASURE_NUMBER
@@ -242,15 +242,15 @@ number.12.Skips = {
     % [Skips measure 9]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'39'']"
+    - \baca-start-ct-left-only "[10'39'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "9"
       %! LOCAL_MEASURE_NUMBER
@@ -263,7 +263,7 @@ number.12.Skips = {
     % [Skips measure 10]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -271,9 +271,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'42'']"
+    - \baca-start-ct-left-only "[10'42'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "10"
       %! LOCAL_MEASURE_NUMBER
@@ -290,15 +290,15 @@ number.12.Skips = {
     % [Skips measure 11]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'46'']"
+    - \baca-start-ct-left-only "[10'46'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "11"
       %! LOCAL_MEASURE_NUMBER
@@ -311,7 +311,7 @@ number.12.Skips = {
     % [Skips measure 12]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -319,9 +319,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'49'']"
+    - \baca-start-ct-left-only "[10'49'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "12"
       %! LOCAL_MEASURE_NUMBER
@@ -338,15 +338,15 @@ number.12.Skips = {
     % [Skips measure 13]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'53'']"
+    - \baca-start-ct-left-only "[10'53'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "13"
       %! LOCAL_MEASURE_NUMBER
@@ -359,7 +359,7 @@ number.12.Skips = {
     % [Skips measure 14]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -367,9 +367,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[10'57'']"
+    - \baca-start-ct-left-only "[10'57'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "14"
       %! LOCAL_MEASURE_NUMBER
@@ -386,15 +386,15 @@ number.12.Skips = {
     % [Skips measure 15]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'00'']"
+    - \baca-start-ct-left-only "[11'00'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "15"
       %! LOCAL_MEASURE_NUMBER
@@ -407,7 +407,7 @@ number.12.Skips = {
     % [Skips measure 16]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -415,9 +415,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'04'']"
+    - \baca-start-ct-left-only "[11'04'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "16"
       %! LOCAL_MEASURE_NUMBER
@@ -438,7 +438,7 @@ number.12.Skips = {
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -446,9 +446,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'07'']"
+    - \baca-start-ct-left-only "[11'07'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "17"
       %! LOCAL_MEASURE_NUMBER
@@ -471,7 +471,7 @@ number.12.Skips = {
     - \tweak X-extent ##f
     _ \scene-vii-parenthesized-title-section-position
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -479,9 +479,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'09'']"
+    - \baca-start-ct-left-only "[11'09'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "18"
       %! LOCAL_MEASURE_NUMBER
@@ -498,15 +498,15 @@ number.12.Skips = {
     % [Skips measure 19]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'13'']"
+    - \baca-start-ct-left-only "[11'13'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "19"
       %! LOCAL_MEASURE_NUMBER
@@ -519,7 +519,7 @@ number.12.Skips = {
     % [Skips measure 20]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -527,9 +527,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'16'']"
+    - \baca-start-ct-left-only "[11'16'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "20"
       %! LOCAL_MEASURE_NUMBER
@@ -546,15 +546,15 @@ number.12.Skips = {
     % [Skips measure 21]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'20'']"
+    - \baca-start-ct-left-only "[11'20'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "21"
       %! LOCAL_MEASURE_NUMBER
@@ -567,7 +567,7 @@ number.12.Skips = {
     % [Skips measure 22]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -575,9 +575,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'24'']"
+    - \baca-start-ct-left-only "[11'24'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "22"
       %! LOCAL_MEASURE_NUMBER
@@ -598,7 +598,7 @@ number.12.Skips = {
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -606,9 +606,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'27'']"
+    - \baca-start-ct-left-only "[11'27'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "23"
       %! LOCAL_MEASURE_NUMBER
@@ -629,7 +629,7 @@ number.12.Skips = {
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -637,9 +637,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'29'']"
+    - \baca-start-ct-left-only "[11'29'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "24"
       %! LOCAL_MEASURE_NUMBER
@@ -656,15 +656,15 @@ number.12.Skips = {
     % [Skips measure 25]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'33'']"
+    - \baca-start-ct-left-only "[11'33'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "25"
       %! LOCAL_MEASURE_NUMBER
@@ -677,7 +677,7 @@ number.12.Skips = {
     % [Skips measure 26]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -685,9 +685,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'36'']"
+    - \baca-start-ct-left-only "[11'36'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "26"
       %! LOCAL_MEASURE_NUMBER
@@ -704,15 +704,15 @@ number.12.Skips = {
     % [Skips measure 27]
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'40'']"
+    - \baca-start-ct-left-only "[11'40'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "27"
       %! LOCAL_MEASURE_NUMBER
@@ -729,7 +729,7 @@ number.12.Skips = {
     \time 2/4
     s1 * 2/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -737,9 +737,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'43'']"
+    - \baca-start-ct-left-only "[11'43'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "28"
       %! LOCAL_MEASURE_NUMBER
@@ -760,7 +760,7 @@ number.12.Skips = {
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -768,9 +768,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'45'']"
+    - \baca-start-ct-left-only "[11'45'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "29"
       %! LOCAL_MEASURE_NUMBER
@@ -791,7 +791,7 @@ number.12.Skips = {
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -799,9 +799,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'48'']"
+    - \baca-start-ct-left-only "[11'48'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "30"
       %! LOCAL_MEASURE_NUMBER
@@ -822,7 +822,7 @@ number.12.Skips = {
     \time 4/4
     s1 * 4/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -830,9 +830,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'50'']"
+    - \baca-start-ct-left-only "[11'50'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "31"
       %! LOCAL_MEASURE_NUMBER
@@ -853,7 +853,7 @@ number.12.Skips = {
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -861,9 +861,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'52'']"
+    - \baca-start-ct-left-only "[11'52'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "32"
       %! LOCAL_MEASURE_NUMBER
@@ -884,7 +884,7 @@ number.12.Skips = {
     \time 8/4
     s1 * 8/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -892,9 +892,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[11'56'']"
+    - \baca-start-ct-left-only "[11'56'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "33"
       %! LOCAL_MEASURE_NUMBER
@@ -919,7 +919,7 @@ number.12.Skips = {
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "H" #6
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
@@ -940,9 +940,9 @@ number.12.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[12'01'']"
+    - \baca-start-ct-left-only "[12'01'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "34"
       %! LOCAL_MEASURE_NUMBER
@@ -959,7 +959,7 @@ number.12.Skips = {
     % [Skips measure 35]
     s1 * 5/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -967,9 +967,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[12'07'']"
+    - \baca-start-ct-left-only "[12'07'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "35"
       %! LOCAL_MEASURE_NUMBER
@@ -990,7 +990,7 @@ number.12.Skips = {
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -998,9 +998,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[12'13'']"
+    - \baca-start-ct-left-only "[12'13'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "36"
       %! LOCAL_MEASURE_NUMBER
@@ -1025,7 +1025,7 @@ number.12.Skips = {
     - \tweak X-extent ##f
     _ \scene-vii-J-section-position
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
@@ -1033,9 +1033,9 @@ number.12.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStopTextSpanSNM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[12'20'']" "[12'28'']"
+    - \baca-start-ct-both "[12'20'']" "[12'28'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "37"
       %! LOCAL_MEASURE_NUMBER
@@ -1062,7 +1062,7 @@ number.12.Skips = {
     s1 * 1/4
       %! ANCHOR_SKIP
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! ANCHOR_SKIP
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN

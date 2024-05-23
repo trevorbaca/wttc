@@ -29,9 +29,9 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'24'']"
+    - \baca-start-ct-left-only "[20'24'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "1"
       %! LOCAL_MEASURE_NUMBER
@@ -49,15 +49,15 @@ number.21.Skips = {
     s1 * 4/4
     _ \scene-xiii-C-section-position
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'28'']"
+    - \baca-start-ct-left-only "[20'28'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "2"
       %! LOCAL_MEASURE_NUMBER
@@ -76,7 +76,7 @@ number.21.Skips = {
     _ \scene-xiii-D-section-position
     _ \scene-xiii-E-section-position
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
@@ -97,9 +97,9 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'32'']"
+    - \baca-start-ct-left-only "[20'32'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "3"
       %! LOCAL_MEASURE_NUMBER
@@ -121,7 +121,7 @@ number.21.Skips = {
     s1 * 4/4
     _ \scene-xiii-F-section-position
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
@@ -142,9 +142,9 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'43'']"
+    - \baca-start-ct-left-only "[20'43'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "4"
       %! LOCAL_MEASURE_NUMBER
@@ -161,15 +161,15 @@ number.21.Skips = {
     % [Skips measure 5]
     s1 * 4/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'46'']"
+    - \baca-start-ct-left-only "[20'46'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "5"
       %! LOCAL_MEASURE_NUMBER
@@ -186,15 +186,15 @@ number.21.Skips = {
     \time 5/4
     s1 * 5/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'49'']"
+    - \baca-start-ct-left-only "[20'49'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "6"
       %! LOCAL_MEASURE_NUMBER
@@ -211,7 +211,7 @@ number.21.Skips = {
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
     \bacaStopTextSpanMM
@@ -232,9 +232,9 @@ number.21.Skips = {
       %! EXPLICIT_METRONOME_MARK
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'53'']"
+    - \baca-start-ct-left-only "[20'53'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "7"
       %! LOCAL_MEASURE_NUMBER
@@ -255,15 +255,15 @@ number.21.Skips = {
     \time 6/4
     s1 * 6/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'55'']"
+    - \baca-start-ct-left-only "[20'55'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "8"
       %! LOCAL_MEASURE_NUMBER
@@ -280,15 +280,15 @@ number.21.Skips = {
     \time 3/4
     s1 * 3/4
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-left-only "[20'59'']"
+    - \baca-start-ct-left-only "[20'59'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "9"
       %! LOCAL_MEASURE_NUMBER
@@ -307,15 +307,15 @@ number.21.Skips = {
     - \tweak X-extent ##f
     _ \scene-xiii-G-section-position
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN
       %! MEASURE_NUMBER
     \bacaStopTextSpanMN
       %! CLOCK_TIME
-    %@% - \baca-start-ct-both "[21'00'']" "[21'04'']"
+    - \baca-start-ct-both "[21'00'']" "[21'04'']"
       %! CLOCK_TIME
-    %@% \bacaStartTextSpanCT
+    \bacaStartTextSpanCT
       %! LOCAL_MEASURE_NUMBER
     - \baca-start-lmn-left-only "10"
       %! LOCAL_MEASURE_NUMBER
@@ -336,7 +336,7 @@ number.21.Skips = {
     s1 * 1/4
       %! ANCHOR_SKIP
       %! CLOCK_TIME
-    %@% \bacaStopTextSpanCT
+    \bacaStopTextSpanCT
       %! ANCHOR_SKIP
       %! LOCAL_MEASURE_NUMBER
     \bacaStopTextSpanLMN

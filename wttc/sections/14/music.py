@@ -334,6 +334,7 @@ def persist_score(score, environment):
     )
     baca.section.activate_tags(
         score,
+        baca.tags.CLOCK_TIME,
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.MEASURE_NUMBER,
     )
