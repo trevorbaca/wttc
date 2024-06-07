@@ -6,12 +6,19 @@ def main():
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, 160, distances),
+            baca.layout.System(1, 10, distances),
         ),
         baca.layout.Page(
             2,
+            baca.layout.System(5, 10, distances),
+        ),
+        baca.layout.Page(
+            3,
             baca.layout.System(8, 10, distances),
-            baca.layout.System(10, 10 + 95, distances, x_offset=250),
+        ),
+        baca.layout.Page(
+            4,
+            baca.layout.System(10, 10, distances),
         ),
     )
     spacing = baca.layout.Spacing(
