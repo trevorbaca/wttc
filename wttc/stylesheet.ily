@@ -235,22 +235,22 @@
 
 wttc-owl-markup = \markup \hcenter-in #22 "OWL"
 
-wttc-alto-flute-markup = \markup \hcenter-in #22 "Alto flute"
+wttc-alto-flute-markup = \markup \hcenter-in #16 "Alto flute"
 wttc-afl-markup = \markup \hcenter-in #12 "Al. fl."
 
-wttc-oboe-markup = \markup \hcenter-in #22 "Oboe"
+wttc-oboe-markup = \markup \hcenter-in #16 "Oboe"
 wttc-ob-markup = \markup \hcenter-in #12 "Ob."
 
-wttc-guitar-i-markup = \markup \hcenter-in #22 "Guitar 1"
+wttc-guitar-i-markup = \markup \hcenter-in #16 "Guitar 1"
 wttc-gt-i-markup = \markup \hcenter-in #12 "Gt. 1"
 
-wttc-guitar-ii-markup = \markup \hcenter-in #22 "Guitar 2"
+wttc-guitar-ii-markup = \markup \hcenter-in #16 "Guitar 2"
 wttc-gt-ii-markup = \markup \hcenter-in #12 "Gt. 2"
 
-wttc-violin-markup = \markup \hcenter-in #22 "Violin"
+wttc-violin-markup = \markup \hcenter-in #16 "Violin"
 wttc-vn-markup = \markup \hcenter-in #12 "Vn."
 
-wttc-cello-markup = \markup \hcenter-in #22 "Cello"
+wttc-cello-markup = \markup \hcenter-in #16 "Cello"
 wttc-vc-markup = \markup \hcenter-in #12 "Vc."
 
 %%% MARKUP %%%
