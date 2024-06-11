@@ -6,8 +6,11 @@
 % }
 
 %%% #(set-default-paper-size "my size" 'landscape)
-#(set-default-paper-size '(cons (* 8.5 in) (* 4.5 in)) 'landscape)
+% #(set-default-paper-size '(cons (* 8.5 in) (* 4.5 in)) 'landscape)
+% #(set-default-paper-size '(cons (* 11 in) (* 11 in)) 'landscape)
+#(set-default-paper-size "letter")
 #(set-global-staff-size 8)
+% #(set-global-staff-size 10)
 
 \paper
 {

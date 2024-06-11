@@ -2,17 +2,22 @@ import baca
 
 
 def main():
-    distances = (15, 20, 20, 20, 20, 30)
+    distances = (6,)
+    # y_offset_1 = 12
+    # y_offset_2 = 40
+    y_offset_3 = 68
+    y_offset_4 = 96
+    y_offset_5 = 124
+    y_offset_6 = 152
+    # y_offset_7 = 180
+    # y_offset_8 = 208
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, 30, distances),
-            baca.layout.System(4, 220, distances),
-        ),
-        baca.layout.Page(
-            2,
-            baca.layout.System(8, 30, distances),
-            baca.layout.System(10, 220, distances),
+            baca.layout.System(1, y_offset_3, distances=distances),
+            baca.layout.System(4, y_offset_4, distances=distances),
+            baca.layout.System(8, y_offset_5, distances=distances),
+            baca.layout.System(10, y_offset_6, distances=distances),
         ),
     )
     spacing = baca.layout.Spacing(
