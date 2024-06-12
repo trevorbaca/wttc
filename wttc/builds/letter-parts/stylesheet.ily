@@ -28,7 +28,32 @@
 
 \header
 {
-  title = "14-point staff"
+  composer = \markup
+    \override #'(font-name . "Adobe Garamond Pro")
+    \fontsize #4
+    "Trevor Bača (*1975)"
+  poet = \markup
+    \override #'(font-name . "Adobe Garamond Pro")
+    \fontsize #4
+    "Paul Griffiths (*1947)"
+  tagline = \markup \null
+  title = \markup \center-column {
+    \override #'(font-name . "Adobe Garamond Pro Bold")
+    \fontsize #6
+    \override #'(word-space . 2)
+    \line { when the time comes }
+    \vspace #1
+    \override #'(font-name . "Adobe Garamond Pro Italic")
+    \fontsize #2
+    \override #'(word-space . 1.5)
+    \line { for stage actor & six players }
+    \vspace #3
+    \override #'(font-name . "Adobe Garamond Pro Bold Italic")
+    \fontsize #3
+    \override #'(word-space . 1.5)
+    \line { \part-name-markup }
+    \vspace #3
+  }
 }
 
 \layout {
