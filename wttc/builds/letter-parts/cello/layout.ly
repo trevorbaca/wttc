@@ -66,16 +66,7 @@
               %! BREAK
             \baca-lbsd #68 #'(6)
               %! SPACING_COMMAND
-
-
-
-            %%% \baca-new-lax-spacing-section #1 #12
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
-
-
+            \baca-new-lax-spacing-section #1 #12
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -86,11 +77,7 @@
 
             % [PageLayout measure 2]
               %! SPACING_COMMAND
-            %%%% \baca-new-lax-spacing-section #1 #12
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
+            \baca-new-lax-spacing-section #1 #12
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -110,10 +97,7 @@
               %! BREAK
             \baca-lbsd #96 #'(6)
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #1 #32
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \break
             s1 * 6/4
@@ -126,11 +110,7 @@
 
             % [PageLayout measure 5]
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #1 #32
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -143,12 +123,7 @@
 
             % [PageLayout measure 6]
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #1 #32
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
-
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -161,12 +136,8 @@
 
             % [PageLayout measure 7]
               %! SPACING_COMMAND
-
-            %%% \baca-new-strict-spacing-section #35 #768
-            %%%   %! BREAK
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
+            \baca-new-strict-spacing-section #35 #768
+              %! BREAK
             \noBreak
             s1 * 6/4
               %! SPACING
@@ -180,13 +151,7 @@
               %! BREAK
             \baca-lbsd #124 #'(6)
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #1 #48
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
-
-
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \break
             s1 * 3/4
@@ -199,12 +164,7 @@
 
             % [PageLayout measure 9]
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #35 #1152
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
-
+            \baca-new-strict-spacing-section #35 #1152
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -219,14 +179,9 @@
               %! BREAK
             \baca-lbsd #152 #'(6)
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #1 #48
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
-
-
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
-            %%% \break
+            \break
             s1 * 3/4
               %! SPACING
             %@% \bacaStopTextSpanSPM
@@ -237,10 +192,7 @@
 
             % [PageLayout measure 11]
               %! SPACING_COMMAND
-            %%% \baca-new-strict-spacing-section #1 #48
-            \newSpacingSection
-            \set Score.proportionalNotationDuration = ##f
-
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \noBreak
             s1 * 6/4
