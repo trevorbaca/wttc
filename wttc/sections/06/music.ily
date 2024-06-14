@@ -791,7 +791,7 @@ number.6.Guitar.2.Staff = <<
 number.6.Violin.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         % [Violin.Music measure 1]
@@ -850,7 +850,7 @@ number.6.Violin.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         r8
@@ -974,7 +974,7 @@ number.6.Violin.Staff = <<
 number.6.Cello.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         % [Cello.Music measure 1]
@@ -1037,7 +1037,7 @@ number.6.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         r16

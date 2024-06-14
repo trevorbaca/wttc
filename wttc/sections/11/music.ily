@@ -2016,7 +2016,7 @@ number.11.Oboe.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
+    \tuplet 8/9
     {
 
         % [Oboe.Music measure 23]
@@ -2160,7 +2160,7 @@ number.11.Oboe.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
+    \tuplet 8/9
     {
 
         % [Oboe.Music measure 26]
@@ -2702,7 +2702,7 @@ number.11.Guitar.2.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2723,7 +2723,7 @@ number.11.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 9]
@@ -2736,7 +2736,7 @@ number.11.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -2777,7 +2777,7 @@ number.11.Guitar.2.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2798,7 +2798,7 @@ number.11.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 12]
@@ -2811,7 +2811,7 @@ number.11.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -2852,7 +2852,7 @@ number.11.Guitar.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2880,7 +2880,7 @@ number.11.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 15]
@@ -2893,7 +2893,7 @@ number.11.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -2907,7 +2907,7 @@ number.11.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         f''4
@@ -2921,7 +2921,7 @@ number.11.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2940,7 +2940,7 @@ number.11.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -2956,7 +2956,7 @@ number.11.Guitar.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -5190,7 +5190,7 @@ number.11.Cello.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
+    \tuplet 8/9
     {
 
         % [Cello.Music measure 23]
@@ -5362,7 +5362,7 @@ number.11.Cello.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 9/8
+    \tuplet 8/9
     {
 
         % [Cello.Music measure 26]

@@ -552,7 +552,7 @@ number.28.Guitar.2.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -572,7 +572,7 @@ number.28.Guitar.2.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4

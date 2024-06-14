@@ -651,7 +651,7 @@ number.22.AltoFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [AltoFlute.Music measure 8]
@@ -871,7 +871,7 @@ number.22.Oboe.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -905,7 +905,7 @@ number.22.Oboe.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Oboe.Music measure 9]
@@ -1338,7 +1338,7 @@ number.22.Guitar.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1367,7 +1367,7 @@ number.22.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 6]
@@ -1380,7 +1380,7 @@ number.22.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -1394,7 +1394,7 @@ number.22.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         f''4
@@ -1408,7 +1408,7 @@ number.22.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1427,7 +1427,7 @@ number.22.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -1443,7 +1443,7 @@ number.22.Guitar.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1460,7 +1460,7 @@ number.22.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 8]

@@ -1533,7 +1533,7 @@ number.3.Guitar.1.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1560,7 +1560,7 @@ number.3.Guitar.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -1583,7 +1583,7 @@ number.3.Guitar.1.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1617,7 +1617,7 @@ number.3.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.1.Music measure 7]
@@ -1657,7 +1657,7 @@ number.3.Guitar.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1696,7 +1696,7 @@ number.3.Guitar.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.1.Music measure 12]
@@ -1727,7 +1727,7 @@ number.3.Guitar.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1770,7 +1770,7 @@ number.3.Guitar.1.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         b'8
@@ -1802,7 +1802,7 @@ number.3.Guitar.1.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1910,7 +1910,7 @@ number.3.Guitar.2.Music = {
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! STAFF_HIGHLIGHT
@@ -1935,7 +1935,7 @@ number.3.Guitar.2.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1964,7 +1964,7 @@ number.3.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 5]
@@ -1987,7 +1987,7 @@ number.3.Guitar.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -2027,7 +2027,7 @@ number.3.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2067,7 +2067,7 @@ number.3.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         b'8
@@ -2104,7 +2104,7 @@ number.3.Guitar.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8

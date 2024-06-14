@@ -674,7 +674,7 @@ number.23.Guitar.1.Music.item.2 = {
 number.23.Guitar.1.Music = {
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Guitar.1.Music measure 1]
@@ -754,7 +754,7 @@ number.23.Guitar.1.Music = {
     \revert TupletNumber.text
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 2. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Guitar.1.Music measure 3]
@@ -910,7 +910,7 @@ number.23.Guitar.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         fs'!8
@@ -926,7 +926,7 @@ number.23.Guitar.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.1.Music measure 11]
@@ -999,7 +999,7 @@ number.23.Guitar.2.Music.item.3 = {
 number.23.Guitar.2.Music = {
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Guitar.2.Music measure 1]
@@ -1080,7 +1080,7 @@ number.23.Guitar.2.Music = {
     \revert TupletNumber.text
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 2. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Guitar.2.Music measure 3]
@@ -1275,7 +1275,7 @@ number.23.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1295,7 +1295,7 @@ number.23.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 11]
@@ -1330,7 +1330,7 @@ number.23.Guitar.2.Staff = <<
 number.23.Violin.Music = {
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Violin.Music measure 1]
@@ -1448,7 +1448,7 @@ number.23.Violin.Music = {
     b4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         c'8.
@@ -1472,7 +1472,7 @@ number.23.Violin.Music = {
     d'4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Violin.Music measure 5]
@@ -1533,7 +1533,7 @@ number.23.Violin.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         \hide NoteHead
@@ -1574,7 +1574,7 @@ number.23.Violin.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         \hide NoteHead

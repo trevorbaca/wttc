@@ -481,7 +481,7 @@ number.7.Violin.Music = {
     \bacaStopTextSpanSCP
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         % [Violin.Music measure 2]
@@ -509,7 +509,7 @@ number.7.Violin.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         r8
@@ -623,7 +623,7 @@ number.7.Cello.Music = {
     \bacaStopTextSpanSCP
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         % [Cello.Music measure 2]
@@ -653,7 +653,7 @@ number.7.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/6
+    \tuplet 6/4
     {
 
         r16

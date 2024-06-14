@@ -1171,7 +1171,7 @@ number.2.Guitar.1.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1194,7 +1194,7 @@ number.2.Guitar.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1217,7 +1217,7 @@ number.2.Guitar.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1236,7 +1236,7 @@ number.2.Guitar.1.Music = {
     r2
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75
@@ -1397,7 +1397,7 @@ number.2.Guitar.2.Music = {
     r2
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75
@@ -1699,7 +1699,7 @@ number.2.Violin.Music = {
     r4
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75

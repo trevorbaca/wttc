@@ -1729,7 +1729,7 @@ number.29.Guitar.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.1.Music measure 6]
@@ -1809,7 +1809,7 @@ number.29.Guitar.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.1.Music measure 10]
@@ -2052,7 +2052,7 @@ number.29.Guitar.2.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 9]
@@ -2074,7 +2074,7 @@ number.29.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 10]
@@ -3144,7 +3144,7 @@ number.29.Cello.Music = {
 
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Cello.Music measure 10]

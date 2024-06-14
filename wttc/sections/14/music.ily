@@ -1485,7 +1485,7 @@ number.14.Guitar.1.Music = {
     r2
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75
@@ -1684,7 +1684,7 @@ number.14.Guitar.2.Music = {
     r2
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75
@@ -1862,7 +1862,7 @@ number.14.Violin.Music = {
     r4
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75

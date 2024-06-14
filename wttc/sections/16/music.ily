@@ -489,7 +489,7 @@ number.16.Guitar.1.Music = {
     r1
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \once \override Beam.grow-direction = #right
@@ -638,7 +638,7 @@ number.16.Guitar.2.Music = {
     r1
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \once \override Beam.grow-direction = #right
@@ -1178,7 +1178,7 @@ number.16.Violin.Music = {
 
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Violin.Music measure 4]

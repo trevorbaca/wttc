@@ -1209,7 +1209,7 @@ number.1.Guitar.1.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1298,7 +1298,7 @@ number.1.Guitar.1.Music = {
     ]
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75
@@ -1479,7 +1479,7 @@ number.1.Guitar.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1517,7 +1517,7 @@ number.1.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         e'32
@@ -1540,7 +1540,7 @@ number.1.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Guitar.2.Music measure 9]
@@ -1561,7 +1561,7 @@ number.1.Guitar.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         cs''!16.
@@ -1587,7 +1587,7 @@ number.1.Guitar.2.Music = {
     }
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \once \override Beam.grow-direction = #left
@@ -1702,7 +1702,7 @@ number.1.Violin.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1981,7 +1981,7 @@ number.1.Violin.Music = {
     r16
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) { \rhythm { 1 } + \rhythm { 8. } }
-    \times 1/1
+    \tuplet 1/1
     {
 
         \override Staff.Stem.stemlet-length = 0.75
@@ -2616,7 +2616,7 @@ number.1.Cello.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         a'8
@@ -2648,7 +2648,7 @@ number.1.Cello.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4

@@ -1268,7 +1268,7 @@ number.17.Guitar.1.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         <<
@@ -1315,7 +1315,7 @@ number.17.Guitar.1.Music = {
     }
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Guitar.1.Music measure 3]
@@ -1460,7 +1460,7 @@ number.17.Guitar.1.Music = {
     r4.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         <<
@@ -1702,7 +1702,7 @@ number.17.Guitar.2.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         <<
@@ -1745,7 +1745,7 @@ number.17.Guitar.2.Music = {
     }
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1 }
-    \times 1/1
+    \tuplet 1/1
     {
 
         % [Guitar.2.Music measure 3]
@@ -1902,7 +1902,7 @@ number.17.Guitar.2.Music = {
     r4.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         <<
