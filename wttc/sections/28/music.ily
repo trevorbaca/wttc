@@ -138,7 +138,7 @@ number.28.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 5]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -167,7 +167,7 @@ number.28.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

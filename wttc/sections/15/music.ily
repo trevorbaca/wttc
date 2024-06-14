@@ -307,7 +307,7 @@ number.15.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

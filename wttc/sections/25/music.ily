@@ -391,7 +391,7 @@ number.25.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 15]
     s1 * 6/4

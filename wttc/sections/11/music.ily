@@ -467,7 +467,7 @@ number.11.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 18]
     s1 * 3/4
@@ -791,7 +791,7 @@ number.11.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

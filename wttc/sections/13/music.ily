@@ -232,7 +232,7 @@ number.13.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ushortfermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ushortfermata"
 
     % [Skips measure 10]
     s1 * 4/4
@@ -285,7 +285,7 @@ number.13.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

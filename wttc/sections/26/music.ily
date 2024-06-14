@@ -286,7 +286,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 11]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -892,7 +892,7 @@ number.26.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
     % [Skips measure 33]
     s1 * 6/4
@@ -945,7 +945,7 @@ number.26.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 35]
     s1 * 6/4
@@ -975,7 +975,7 @@ number.26.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ufermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 36]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -1010,7 +1010,7 @@ number.26.Skips = {
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

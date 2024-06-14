@@ -260,7 +260,7 @@ number.30.Skips = {
     \bacaStartTextSpanMN
     \bar "|."
     \tweak padding 1.5
-    \mark \markup \smaller \smaller \musicglyph #"scripts.ulongfermata"
+    \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
