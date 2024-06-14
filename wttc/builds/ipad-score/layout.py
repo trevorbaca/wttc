@@ -24,7 +24,7 @@ def main():
             baca.layout.Override((8, 11), (1, 48)),
         ],
     )
-    baca.build.write_layout_ly(breaks, spacing, curtail_measure_count=11)
+    baca.build.write_layout_ily(breaks, spacing, curtail_measure_count=11)
 
 
 if __name__ == "__main__":
