@@ -3222,7 +3222,7 @@ number.29.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
@@ -3302,7 +3302,7 @@ number.29.Cello.Music = {
       %! EXPLICIT_DYNAMIC
     \p
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START

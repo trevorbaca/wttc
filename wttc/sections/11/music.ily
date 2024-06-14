@@ -3116,7 +3116,7 @@ number.11.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
@@ -4013,7 +4013,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
@@ -4219,7 +4219,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
@@ -4404,7 +4404,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
@@ -5026,7 +5026,7 @@ number.11.Cello.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+    - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START

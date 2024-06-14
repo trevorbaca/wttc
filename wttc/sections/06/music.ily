@@ -832,7 +832,7 @@ number.6.Violin.Music = {
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
           %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
         \startTrillSpan fs''!
           %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -866,7 +866,7 @@ number.6.Violin.Music = {
         - \tweak padding 0.5
         - \baca-staccati #3
           %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
         \startTrillSpan fs''!
         \revert TrillSpanner.dash-period
@@ -1026,7 +1026,7 @@ number.6.Cello.Music = {
         - \tweak padding 0.5
         - \baca-staccati #3
           %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
         \startTrillSpan f'!
 
@@ -1053,7 +1053,7 @@ number.6.Cello.Music = {
         - \tweak padding 0.5
         - \baca-staccati #3
           %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
         \startTrillSpan f'!
 
@@ -1072,7 +1072,7 @@ number.6.Cello.Music = {
         - \tweak padding 0.5
         - \baca-staccati #3
           %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
+        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
         \startTrillSpan f'!
         \revert TrillSpanner.dash-period
