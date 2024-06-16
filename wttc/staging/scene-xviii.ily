@@ -73,7 +73,7 @@ scene-xviii-D = \markup
   \override #'(font-size . 4)
   \column {
   \line { But we did not. \lnum #295 }
-  \combine \null \combine \null \vspace #4
+  \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 18. }
   }

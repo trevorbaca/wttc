@@ -56,7 +56,7 @@ scene-xvi-B = \markup
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Agitation mounting. }
-  \combine \null \combine \null \vspace #1
+  \vspace #1
   \line { No memory of how long it would have been by then, \lnum #252 }
   \line { How long it would take me to come here, \lnum #253 }
   \line { This way — \lnum #254 }
@@ -180,15 +180,15 @@ scene-xvi-J = \markup
   \line { I should not blame you. \lnum #262 }
   \line { It does me no good. \lnum #263 }
   \line { And in all honesty it was not your \dots \lnum #264 }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \line { If blame there must be, where should it go? \lnum #265 }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \combine \null \vspace #4
+  \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 16. }
   }

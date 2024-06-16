@@ -36,7 +36,7 @@ scene-xiii-A = \markup
   \override #'(font-size . 4)
   \column {
   \line { I have a fear. \lnum #186 }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   }
@@ -54,25 +54,25 @@ scene-xiii-B = \markup
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Return to normality. }
-  \combine \null \combine \null \vspace #1
+  \vspace #1
   \line { “Make yourself at home.” \lnum #187 }
   \line { This was you. \lnum #188 }
   \line { “Make yourself at home, \lnum #189 }
   \line { “Owl, \lnum #190 }
   \line { “My owl, \lnum #191 }
   \line { “My sweet owl,” \lnum #192 }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \line { No. \lnum #193 }
   \line { “My owl, \lnum #194 }
   \line { “If you should be there before me, \lnum #195 }
   \line { “When the time comes.” \lnum #196 }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \combine \null \vspace #2
+  \vspace #2
   \line { Did I ask when that would be? \lnum #197 }
   }
 
@@ -130,7 +130,7 @@ scene-xiii-E = \markup
   ha! \hspace #10
   falls \hspace #10
   keep \hspace #-0.5 \super 2 \lnum #200 }
-  \combine \null \combine \null \vspace #0.75
+  \vspace #0.75
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { On this last word, OWL frees the arm, and the fit is over as suddenly as
   it began. }
