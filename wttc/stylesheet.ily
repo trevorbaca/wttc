@@ -274,25 +274,6 @@ wttc-final-note-sounds-ottava-higher-markup = \markup
     final note sounds 8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va higher
   }
 
-%%% STEM RIMBALZANDO %%%
-
-stemR = {
-  \once \override Stem.stencil =
-    #(lambda (grob)
-       (let* ((x-parent (ly:grob-parent grob X))
-              (is-rest? (ly:grob? (ly:grob-object x-parent 'rest))))
-         (if is-rest?
-             empty-stencil
-             (ly:stencil-combine-at-edge
-              (ly:stem::print grob)
-              Y
-              (- (ly:grob-property grob 'direction))
-              (grob-interpret-markup grob
-                                     (markup #:center-column #:fontsize 0 
-                                             #:sans "R"))
-              -2))))
-}
-
 %%% COLOPHON %%%
 
 
