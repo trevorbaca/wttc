@@ -1,3 +1,4 @@
+\version "2.25.13"
 \include "../../stylesheet.ily"
 %% #(set! paper-alist (cons '("my size" . (cons (* 8.5 in) (* 4.5 in))) paper-alist))
 

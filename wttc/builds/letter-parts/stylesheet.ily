@@ -1,3 +1,4 @@
+\version "2.25.13"
 \include "../../stylesheet.ily"
 
 #(set-default-paper-size "letter")
@@ -42,17 +43,17 @@
     \fontsize #6
     \override #'(word-space . 2)
     \line { when the time comes }
-    \vspace #1
+    \combine \null \vspace #1
     \override #'(font-name . "Adobe Garamond Pro Italic")
     \fontsize #2
     \override #'(word-space . 1.5)
     \line { for stage actor & six players }
-    \vspace #3
+    \combine \null \vspace #3
     \override #'(font-name . "Adobe Garamond Pro Bold Italic")
     \fontsize #3
     \override #'(word-space . 1.5)
     \line { \part-name-markup }
-    \vspace #3
+    \combine \null \vspace #3
   }
 }
 

@@ -1,3 +1,4 @@
+\version "2.25.13"
 #(set-default-paper-size "ledger")
 #(set-global-staff-size 10)
 
@@ -74,6 +75,7 @@
     \consists Staff_collecting_engraver
     \consists Time_signature_engraver
     \accepts GlobalSkips
+    \defaultchild GlobalSkips
     \accepts GlobalRests
     \accepts PageLayout
 
@@ -286,7 +288,7 @@ stemR = {
               Y
               (- (ly:grob-property grob 'direction))
               (grob-interpret-markup grob
-                                     (markup #:center-align #:fontsize 0 
+                                     (markup #:center-column #:fontsize 0 
                                              #:sans "R"))
               -2))))
 }
