@@ -43,17 +43,17 @@
     \fontsize #6
     \override #'(word-space . 2)
     \line { when the time comes }
-    \combine \null \combine \null \combine \null \vspace #1
+    \vspace #1
     \override #'(font-name . "Adobe Garamond Pro Italic")
     \fontsize #2
     \override #'(word-space . 1.5)
     \line { for stage actor & six players }
-    \combine \null \combine \null \combine \null \vspace #3
+    \vspace #3
     \override #'(font-name . "Adobe Garamond Pro Bold Italic")
     \fontsize #3
     \override #'(word-space . 1.5)
     \line { \part-name-markup }
-    \combine \null \combine \null \combine \null \vspace #3
+    \vspace #3
   }
 }
 
