@@ -83,12 +83,12 @@ scene-vi-E = \markup
   \line { You say, \lnum #55 }
   \line { No doublt of that. \lnum #56 }
   \line { Tell me where I must go to find — \lnum #57 }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 50)
   \justify { OWL notices the window, table, etc., for the first time and rushes
     to where these are. The audience remains unremarked and unaddressed. }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \line { Right! \lnum #58 }
   \line { This is it! \lnum #59 }
   \line { Now I remember: \lnum #60 }
@@ -142,7 +142,7 @@ scene-vi-G = \markup
   \override #'(font-size . 4)
   \column {
   \line { I must be here before you, then. \lnum #65 }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 6. }
   }

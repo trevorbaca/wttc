@@ -38,14 +38,14 @@ scene-x-A = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 54)
   \justify { OWL starts to walk away again from the window and table. }
-  \combine \null \vspace #2.5
+  \combine \null \combine \null \vspace #2.5
   \line { This is it then. \lnum #128 }
   \line { This is where we'll have to be when we }
   \line { do as we promised each other — \lnum #129 }
-  \combine \null \vspace #2.5
+  \combine \null \combine \null \vspace #2.5
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
-  \combine \null \vspace #3
+  \combine \null \combine \null \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   }
@@ -77,15 +77,15 @@ scene-x-C = \markup
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL continues. }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \line { You'll know. \lnum #131 }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
-  \combine \null \vspace #3
+  \combine \null \combine \null \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \vspace #3
+  \combine \null \combine \null \vspace #3
   \line { Will it have to do with \dots ? \lnum #132 }
   }
 
@@ -102,16 +102,16 @@ scene-x-D = \markup
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL continues. }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \line { Never mind. \lnum #133 }
   \line { What sould I — ? \lnum #134 }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL stops. }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 10. }
   }

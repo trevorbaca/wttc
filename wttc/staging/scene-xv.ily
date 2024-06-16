@@ -55,13 +55,13 @@ scene-xv-C = \markup
   \line { Did I think it could have gone on like it was? \lnum #237 }
   \line { Nothing does. \lnum #238 }
   \line { Look: \lnum #239 }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL turns to face stage rear. }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \line { Things come and go — \lnum #240 }
   }
 
@@ -95,7 +95,7 @@ scene-xv-E = \markup
   \override #'(font-size . 4)
   \column {
   \line { \hspace #40 Let us not speak! \hspace #-0.5 \super 3 }
-  \combine \null \vspace #0.25
+  \combine \null \combine \null \vspace #0.25
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \justify { Instantly, OWL turns, and the fit is over as suddenly as it began.
   Music and lighting return to how they were. }
@@ -129,10 +129,10 @@ scene-xv-G = \markup
   \override #'(font-size . 4)
   \column {
   \line { Time goes by and still you \dots \lnum #245 }
-  \combine \null \vspace #3
+  \combine \null \combine \null \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \vspace #3
+  \combine \null \combine \null \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 15. }
   }

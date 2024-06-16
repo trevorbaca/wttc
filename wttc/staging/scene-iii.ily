@@ -77,7 +77,7 @@ scene-iii-C = \markup
   At the very end of \hspace #0.5
   \override #'(font-name . "Adobe Garamond Pro Bold") \box B \hspace #-0.5 ,
   as though causing the music to end: }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \line { On my — \lnum #21 }
   }
 
@@ -97,9 +97,9 @@ scene-iii-D = \markup
   Slight pause after \hspace #0.5
   \override #'(font-name . "Adobe Garamond Pro Bold") \box B \hspace #-0.5 ,
   OWL perhaps changing position on stage. }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \line { To where I have to be to find you. \lnum #22 }
-  \combine \null \vspace #1
+  \combine \null \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Musicians silently consider this last line. }
   \override #'(font-name . "Adobe Garamond Pro Italic")

@@ -132,7 +132,7 @@ scene-ii-H = \markup
   \line { No \dots \lnum #19 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { The thought trails off completely. }
-  \combine \null \vspace #4
+  \combine \null \combine \null \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 2. }
   }

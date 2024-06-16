@@ -22,10 +22,10 @@ scene-xx-A = \markup
   \override #'(font-size . 4)
   \column {
   \line { What to do, what to do? \lnum #310 }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \line { You'll come. \lnum #311 }
   \line { Some time. \lnum #312 }
   \line { It will not be long now. \lnum #313 }
@@ -34,11 +34,11 @@ scene-xx-A = \markup
   \line { And I'll say what I have to say. \lnum #316 }
   \line { And you'll be here. \lnum #317 }
   \line { With me. \lnum #318 }
-  \combine \null \vspace #2
+  \combine \null \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Slowly. }
   \line { Is that not so? \lnum #319 }
-  \combine \null \vspace #4
+  \combine \null \combine \null \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   }
