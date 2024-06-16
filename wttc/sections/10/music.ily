@@ -567,7 +567,7 @@ number.10.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 21]
-    \bar ".|:"
+    \bar ".|:-|"
       %! MEASURE_149
       %! NOT_MOL
 %%% \once \override Score.BarLine.X-extent = #'(0 . 2)
