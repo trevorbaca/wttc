@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 8: A - E %%%
 
 scene-viii-title = \markup
@@ -23,28 +24,28 @@ scene-viii-A = \markup
   \line { “Chamber,” \lnum #73 }
   \line { Where I would find \lnum #74 }
   \line { A window. \lnum #75 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 50)
   \justify {
   OWL touches the window. If this is suspended, the gesture must invisibly be
   restricted from causing it to move. }
-  \vspace #1
+  \combine \null \vspace #1
   \line { And a table. \lnum #76 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL touches the table. }
-  \vspace #1
+  \combine \null \vspace #1
   \line { And flowers on the table. \lnum #77 }
   \line { In a glass. \lnum #78 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 50)
   \justify {
     OWL bends over to examine the flowers but does not touch them or the glass. }
-  \vspace #1
+  \combine \null \vspace #1
   \line { Violets. \lnum #79 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 50)
   \justify { OWL sniffs the flowers, but again there is no touching. }
@@ -107,7 +108,7 @@ scene-viii-E = \markup
   \column {
   \line { That's something. \lnum #82 }
   \line { It's all as it should be. \lnum #83 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 8. }
   }

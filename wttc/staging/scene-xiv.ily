@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 14: A - D %%%
 
 scene-xiv-title = \markup
@@ -69,7 +70,7 @@ scene-xiv-D = \markup
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Begin these lines in measure 367. }
-  \vspace #1
+  \combine \null \vspace #1
   \line { And you had your hand on my shoulder, \lnum #215 }
   \line { Your right hand, it was. \lnum #216 }
   \line { On my left shoulder. \lnum #217 }
@@ -83,17 +84,17 @@ scene-xiv-D = \markup
   \line { We did look. \lnum #225 }
   \line { All over. \lnum #226 }
   \line { But she was not to be seen. \lnum #227 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #1
+  \combine \null \vspace #1
   \line { “Make yourself at home, \lnum #228 }
   \line { “If you should be there before me. \lnum #229 }
   \line { “I hope I'll be there before you, \lnum #230 }
   \line { “But if not, \lnum #231 }
   \line { “Make yourself at home. \lnum #232 }
   \line { “All right?” \lnum #233 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 14. }
   }

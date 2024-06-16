@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 7: A - J %%%
 
 scene-vii-title = \markup
@@ -67,7 +68,7 @@ scene-vii-C = \markup
   \override #'(font-size . 4)
   \column {
   \line { I know you will. \lnum #68 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 42)
   \justify {

@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 4: A - L %%%
 
 scene-iv-title = \markup
@@ -48,7 +49,7 @@ scene-iv-A = \markup
   \line { What was it we had to look out for? \lnum #30 }
   \line { Did we know it would take us away from each other? \lnum #31 }
   \line { We had been with one another all the time, \lnum #32 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Music attaca. }
   }
@@ -172,7 +173,7 @@ scene-iv-I = \markup
   \column {
   \line { \hspace #18 Again! \lnum #40 }
   \line { \hspace #18 Again. \hspace #-0.75 \super 1 \hspace #-0.75 \lnum #41 }
-  \vspace #0.5
+  \combine \null \vspace #0.5
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 55)
   \justify { On this second “Again,” OWL frees the foot, and the fit is over

@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 9: A - E %%%
 
 scene-ix-title = \markup
@@ -120,7 +121,7 @@ scene-ix-C-continued = \markup
   \line { No doubt of that. \lnum #121 }
   \line { No doubt at all. \lnum #122 }
   \line { And it'll be — \lnum #123 }
-  \vspace #1
+  \combine \null \vspace #1
   \override #'(line-width . 80)
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \justify { OWL looks back at the window, returns to it quickly, goes behind it,
@@ -153,13 +154,13 @@ scene-ix-E = \markup
   \override #'(font-size . 4)
   \column {
   \line { Nothing at all. \lnum #125 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #2
+  \combine \null \vspace #2
   \line { It's night-time. \lnum #126 }
   \line { No-one out there. \lnum #127 }
-  \vspace #3
+  \combine \null \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 9. }
   }

@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 18: A - D %%%
 
 scene-xviii-title = \markup
@@ -72,7 +73,7 @@ scene-xviii-D = \markup
   \override #'(font-size . 4)
   \column {
   \line { But we did not. \lnum #295 }
-  \vspace #4
+  \combine \null \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 18. }
   }

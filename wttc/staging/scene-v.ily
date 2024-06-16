@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 5: A - D %%%
 
 scene-v-title = \markup

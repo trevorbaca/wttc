@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 2: A - H %%%
 
 scene-ii-title = \markup
@@ -131,7 +132,7 @@ scene-ii-H = \markup
   \line { No \dots \lnum #19 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { The thought trails off completely. }
-  \vspace #4
+  \combine \null \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 2. }
   }

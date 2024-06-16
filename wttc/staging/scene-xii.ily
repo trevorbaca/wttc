@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 12: A - J %%%
 
 scene-xii-title = \markup
@@ -55,17 +56,17 @@ scene-xii-B = \markup
   \line { And you'll know what to do then and how to do it, \lnum #167 }
   \line { So that it'll be better than it was \lnum #168 }
   \line { Before. \lnum #169 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #2
+  \combine \null \vspace #2
   \line { For this time it will not come to an end, \lnum #170 }
   \line { Will it? \lnum #171 }
   \line { It'll go on. \lnum #172 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #2
+  \combine \null \vspace #2
   \line { That's my expectation, any — \lnum #173 }
   }
 
@@ -81,10 +82,10 @@ scene-xii-C = \markup
   \override #'(font-size . 4)
   \column {
   \line { What to do, what to do? \lnum #174 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #2
+  \combine \null \vspace #2
   \line { I know: \lnum #175 }
   \line { Let's see what I remember, \lnum #176 }
   \line { From all that time \dots \lnum #177 }

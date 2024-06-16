@@ -1,3 +1,4 @@
+\version "2.25.16"
 %%% SCENE 19: A - M %%%
 
 scene-xix-title = \markup
@@ -64,10 +65,10 @@ scene-xix-C = \markup
   \override #'(font-size . 4)
   \column {
   \line { “Make yourself at home.” \lnum #299 }
-  \vspace #2
+  \combine \null \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
-  \vspace #2
+  \combine \null \vspace #2
   \line { Call this home? \lnum #300 }
   }
 
@@ -155,7 +156,7 @@ scene-xix-I = \markup
   \override #'(font-size . 4)
   \column {
   \line { Never mind. \lnum #306 }
-  \vspace #4
+  \combine \null \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   }
