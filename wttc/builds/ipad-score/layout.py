@@ -31,7 +31,7 @@ def main():
     sections_directory = baca.path.get_contents_directory(build_directory) / "sections"
     time_signatures = baca.build.accumulate_time_signatures(sections_directory)
     baca.build.write_layout_ily(
-        breaks, time_signatures, spacing, curtail_measure_count=11
+        breaks, time_signatures, curtail_measure_count=11, spacing=spacing
     )
 
 
