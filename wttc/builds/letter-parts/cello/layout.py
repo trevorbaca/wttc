@@ -29,7 +29,7 @@ def main(environment):
             baca.layout.Override((8, 11), (1, 48)),
         ],
     )
-    return baca.build.write_layout_ily(
+    return baca.section.make_layout_score(
         breaks, environment.time_signatures, curtail_measure_count=11, spacing=spacing
     )
 

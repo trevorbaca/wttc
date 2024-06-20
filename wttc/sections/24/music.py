@@ -903,7 +903,7 @@ def make_layout(environment):
         default=(1, 20),
         lax_spacing_section=[11, 12],
     )
-    return baca.build.write_layout_ily(
+    return baca.section.make_layout_score(
         breaks,
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,

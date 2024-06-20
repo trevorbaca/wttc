@@ -375,7 +375,7 @@ def make_layout(environment):
             baca.layout.Override(9, (1, 64)),
         ],
     )
-    return baca.build.write_layout_ily(
+    return baca.section.make_layout_score(
         breaks,
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
