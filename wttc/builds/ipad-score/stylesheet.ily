@@ -1,12 +1,13 @@
 \version "2.25.16"
 \include "../../stylesheet.ily"
+
 %% #(set! paper-alist (cons '("my size" . (cons (* 8.5 in) (* 4.5 in))) paper-alist))
 
 % \paper {
 %   #(set-paper-size "my size")
 % }
 
-%%% #(set-default-paper-size "my size" 'landscape)
+% #(set-default-paper-size "my size" 'landscape)
 % #(set-default-paper-size '(cons (* 8.5 in) (* 4.5 in)) 'landscape)
 % #(set-default-paper-size '(cons (* 11 in) (* 11 in)) 'landscape)
 #(set-default-paper-size "letter")
@@ -15,10 +16,10 @@
 
 \paper
 {
-  bottom-margin = 3\mm
-  left-margin = 16\mm
-  right-margin = 15\mm
-  top-margin = 3\mm
+  bottom-margin = 3
+  left-margin = 16
+  right-margin = 15
+  top-margin = 3
 }
 
 \paper
