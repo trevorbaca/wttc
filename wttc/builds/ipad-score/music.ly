@@ -3,6 +3,7 @@
 \version "2.25.16"
 
 \include "stylesheet.ily"
+\include "layout.ily"
 \include "../../staging/scene-i.ily"
 \include "_sections/01.ily"
 
@@ -10,7 +11,7 @@
 {
   <<
     {
-      \include "layout.ily"
+      \page-layout-score
     }
     {
       \include "_sections/01.ly"
