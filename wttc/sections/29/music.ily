@@ -16,9 +16,13 @@ number.29.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "29"
     s1 * 1/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -89,6 +93,7 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     _ \scene-xix-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -136,7 +141,9 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -254,6 +261,7 @@ number.29.Skips = {
 
     % [Skips measure 7]
     s1 * 1/4
+      %! +SECTION
     _ \scene-xix-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -297,6 +305,7 @@ number.29.Skips = {
 
     % [Skips measure 8]
     s1 * 1/4
+      %! +SECTION
     _ \scene-xix-E-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -340,6 +349,7 @@ number.29.Skips = {
 
     % [Skips measure 9]
     s1 * 1/4
+      %! +SECTION
     _ \scene-xix-F-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -381,7 +391,9 @@ number.29.Skips = {
 
     % [Skips measure 10]
     s1 * 1/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-G-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -463,8 +475,11 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-I-section-position
+      %! +SECTION
     _ \scene-xix-H-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -512,8 +527,11 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-parenthesized-title-section-position
+      %! +SECTION
     _ \scene-xix-J-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -559,6 +577,7 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     _ \scene-xix-K-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -598,7 +617,9 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-L-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -646,7 +667,9 @@ number.29.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xix-M-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

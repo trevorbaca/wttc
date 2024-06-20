@@ -16,9 +16,13 @@ number.9.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "09"
     s1 * 2/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-vi-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-vi-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -55,6 +59,7 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     _ \scene-vi-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -106,6 +111,7 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     _ \scene-vi-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -157,8 +163,11 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-vi-E-section-position
+      %! +SECTION
     _ \scene-vi-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -248,6 +257,7 @@ number.9.Skips = {
 
     % [Skips measure 9]
     s1 * 6/4
+      %! +SECTION
     _ \scene-vi-F-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -329,7 +339,9 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-vi-G-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

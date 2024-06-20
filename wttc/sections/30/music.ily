@@ -16,11 +16,17 @@ number.30.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "30"
     s1 * 5/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xx-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xx-B-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xx-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -238,7 +244,9 @@ number.30.Skips = {
 
     % [Skips measure 11]
     s1 * 5/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \colophon-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

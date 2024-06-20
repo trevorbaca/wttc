@@ -16,7 +16,9 @@ number.3.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "03"
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     ^ \scene-iii-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "A" #6
@@ -190,7 +192,9 @@ number.3.Skips = {
 
     % [Skips measure 7]
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     ^ \scene-iii-A-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -358,7 +362,9 @@ number.3.Skips = {
 
     % [Skips measure 13]
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     ^ \scene-iii-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

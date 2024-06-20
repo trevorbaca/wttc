@@ -16,10 +16,15 @@ number.28.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "28"
     s1 * 2/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xviii-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xviii-title-section-position
+      %! +SECTION
     _ \scene-xviii-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -98,7 +103,9 @@ number.28.Skips = {
 
     % [Skips measure 4]
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xviii-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -146,7 +153,9 @@ number.28.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xviii-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

@@ -16,7 +16,9 @@ number.24.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "24"
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xvi-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "M" #6
@@ -517,7 +519,9 @@ number.24.Skips = {
 
     % [Skips measure 20]
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xvi-parenthesized-title-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

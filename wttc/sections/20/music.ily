@@ -16,9 +16,13 @@ number.20.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "20"
     s1 * 3/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xiii-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xiii-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -285,7 +289,9 @@ number.20.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xiii-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

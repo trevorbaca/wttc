@@ -30,7 +30,10 @@ def main(environment):
         ],
     )
     return baca.section.make_layout_score(
-        breaks, environment.time_signatures, curtail_measure_count=11, spacing=spacing
+        breaks,
+        environment.time_signatures,
+        curtail_measure_count=11,
+        spacing=spacing,
     )
 
 

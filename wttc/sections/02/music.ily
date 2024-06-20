@@ -16,7 +16,9 @@ number.2.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "02"
     s1 * 3/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ii-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -53,6 +55,7 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     _ \scene-ii-A-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -96,6 +99,7 @@ number.2.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
+      %! +SECTION
     _ \scene-ii-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -143,6 +147,7 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     _ \scene-ii-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -169,6 +174,7 @@ number.2.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     _ \scene-ii-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -191,6 +197,7 @@ number.2.Skips = {
 
     % [Skips measure 8]
     s1 * 4/4
+      %! +SECTION
     _ \scene-ii-E-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -213,6 +220,7 @@ number.2.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
+      %! +SECTION
     _ \scene-ii-F-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -262,8 +270,11 @@ number.2.Skips = {
 
     % [Skips measure 11]
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ii-H-section-position
+      %! +SECTION
     _ \scene-ii-G-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

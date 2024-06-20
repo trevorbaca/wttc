@@ -16,7 +16,9 @@ number.18.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "18"
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "J" #6
@@ -348,7 +350,9 @@ number.18.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xii-parenthesized-title-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -782,7 +786,9 @@ number.18.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xii-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

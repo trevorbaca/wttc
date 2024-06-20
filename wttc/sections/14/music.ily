@@ -16,10 +16,15 @@ number.14.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "14"
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ix-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ix-title-section-position
+      %! +SECTION
     _ \scene-ix-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -222,9 +227,13 @@ number.14.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ix-C-continued-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ix-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -253,8 +262,11 @@ number.14.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ix-parenthesized-title-section-position
+      %! +SECTION
     _ \scene-ix-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -388,7 +400,9 @@ number.14.Skips = {
 
     % [Skips measure 16]
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-ix-E-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

@@ -16,7 +16,9 @@ number.23.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "23"
     s1 * 2/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xv-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -74,6 +76,7 @@ number.23.Skips = {
 
     % [Skips measure 3]
     s1 * 4/4
+      %! +SECTION
     _ \scene-xv-A-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -98,6 +101,7 @@ number.23.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
+      %! +SECTION
     _ \scene-xv-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -168,7 +172,9 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xv-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -195,7 +201,9 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
+      %! +SECTION
     _ \scene-xv-D-section-position
+      %! +SECTION
     _ \scene-xv-E-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -241,6 +249,7 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     _ \scene-xv-F-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -332,7 +341,9 @@ number.23.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 2/4
     s1 * 2/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xv-G-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

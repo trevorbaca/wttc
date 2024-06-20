@@ -16,10 +16,15 @@ number.27.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "27"
     s1 * 2/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xvii-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xvii-title-section-position
+      %! +SECTION
     _ \scene-xvii-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -102,8 +107,11 @@ number.27.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 9/4
     s1 * 9/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xvii-D-section-position
+      %! +SECTION
     _ \scene-xvii-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

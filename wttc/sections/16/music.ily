@@ -16,7 +16,9 @@ number.16.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "16"
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-x-parenthesized-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -118,7 +120,9 @@ number.16.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-x-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

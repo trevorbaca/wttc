@@ -16,7 +16,9 @@ number.4.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "04"
     s1 * 6/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-iii-parenthesized-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "B" #6
@@ -349,7 +351,9 @@ number.4.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-iii-parenthesized-title-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -459,8 +463,11 @@ number.4.Skips = {
 
     % [Skips measure 16]
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-iii-D-section-position
+      %! +SECTION
     _ \scene-iii-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

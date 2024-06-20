@@ -16,11 +16,17 @@ number.17.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "17"
     s1 * 5/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xi-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xi-title-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xii-title-section-position
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "I" #6
@@ -181,7 +187,9 @@ number.17.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 7/4
     s1 * 7/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xii-A-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

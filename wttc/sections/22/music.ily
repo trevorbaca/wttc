@@ -16,9 +16,13 @@ number.22.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "22"
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xiv-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xiv-title-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -51,6 +55,7 @@ number.22.Skips = {
 
     % [Skips measure 2]
     s1 * 4/4
+      %! +SECTION
     _ \scene-xiv-B-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -142,6 +147,7 @@ number.22.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
+      %! +SECTION
     _ \scene-xiv-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -267,7 +273,9 @@ number.22.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-xiv-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT

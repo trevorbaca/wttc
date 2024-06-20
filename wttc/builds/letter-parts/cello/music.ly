@@ -7,16 +7,30 @@ part-name-markup = \markup "cello part"
 %\layout { ragged-right = ##t }
 \layout { ragged-last = ##f }
 \include "../../../staging/scene-i.ily"
+\include "../../../staging/scene-ii.ily"
+\include "../../../staging/scene-iii.ily"
+\include "../../../staging/scene-iv.ily"
+\include "../../../staging/scene-v.ily"
+\include "../../../staging/scene-vi.ily"
 \include "../_sections/01.ily"
+\include "../_sections/02.ily"
+\include "../_sections/03.ily"
+\include "../_sections/04.ily"
+\include "../_sections/05.ily"
+\include "../_sections/06.ily"
+\include "../_sections/07.ily"
+\include "../_sections/08.ily"
+\include "../_sections/09.ily"
 
 
 \score
 {
   <<
-    { \include "layout.ily" }
+    % { \include "layout.ily" }
     \keepWithTag Cello
     {
       \include "../_sections/01.ly"
+      \include "../_sections/02.ly"
     }
   >>
 }

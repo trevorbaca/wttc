@@ -16,10 +16,15 @@ number.6.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "06"
     s1 * 2/4
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-iv-A-section-position
+      %! +SECTION
     - \tweak X-extent ##f
+      %! +SECTION
     _ \scene-iv-title-section-position
+      %! +SECTION
     _ \scene-iv-B-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -56,6 +61,7 @@ number.6.Skips = {
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
+      %! +SECTION
     _ \scene-iv-C-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -97,6 +103,7 @@ number.6.Skips = {
 
     % [Skips measure 3]
     s1 * 4/4
+      %! +SECTION
     _ \scene-iv-D-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -119,6 +126,7 @@ number.6.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
+      %! +SECTION
     _ \scene-iv-E-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -141,6 +149,7 @@ number.6.Skips = {
 
     % [Skips measure 5]
     s1 * 4/4
+      %! +SECTION
     _ \scene-iv-F-section-position
       %! CLOCK_TIME
     \bacaStopTextSpanCT
