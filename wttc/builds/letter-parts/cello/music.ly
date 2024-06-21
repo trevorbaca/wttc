@@ -21,13 +21,13 @@ part-name-markup = \markup "cello part"
 \include "../_sections/07.ily"
 \include "../_sections/08.ily"
 \include "../_sections/09.ily"
-% \include "layout.ily"
+\include "layout.ily"
 
 \score
 {
   <<
     {
-      \page-layout-score
+      % \page-layout-score
     }
     \keepWithTag Cello
     {
