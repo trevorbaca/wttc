@@ -98,6 +98,7 @@
       (right-edge extra-space . 0.0)
       )
     \override TimeSignature.break-visibility = #end-of-line-invisible
+    \override TupletNumber.font-size = -2
   }
   indent = 0
   ragged-right = ##f
