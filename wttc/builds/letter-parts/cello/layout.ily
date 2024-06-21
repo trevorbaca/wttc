@@ -112,6 +112,76 @@ PageLayout = {
 }
 
 
+Breaks = {
+
+    % [Breaks measure 1]
+      %! BREAK
+    \autoPageBreaksOff
+      %! BREAK
+    \baca-lbsd #68 #'(6)
+      %! BREAK
+    \pageBreak
+    s1 * 3/4
+
+    % [Breaks measure 2]
+      %! BREAK
+    \noBreak
+    s1 * 6/4
+
+    % [Breaks measure 3]
+      %! BREAK
+    \noBreak
+    s1 * 6/4
+
+    % [Breaks measure 4]
+      %! BREAK
+    \baca-lbsd #96 #'(6)
+      %! BREAK
+    \break
+    s1 * 6/4
+
+    % [Breaks measure 5]
+      %! BREAK
+    \noBreak
+    s1 * 3/4
+
+    % [Breaks measure 6]
+      %! BREAK
+    \noBreak
+    s1 * 4/4
+
+    % [Breaks measure 7]
+      %! BREAK
+    \noBreak
+    s1 * 6/4
+
+    % [Breaks measure 8]
+      %! BREAK
+    \baca-lbsd #124 #'(6)
+      %! BREAK
+    \break
+    s1 * 3/4
+
+    % [Breaks measure 9]
+      %! BREAK
+    \noBreak
+    s1 * 6/4
+
+    % [Breaks measure 10]
+      %! BREAK
+    \baca-lbsd #152 #'(6)
+      %! BREAK
+    \break
+    s1 * 3/4
+
+    % [Breaks measure 11]
+      %! BREAK
+    \noBreak
+    s1 * 6/4
+
+}
+
+
 page-layout-score = \context Score = "Score"
 <<
 
@@ -122,74 +192,7 @@ page-layout-score = \context Score = "Score"
         { \PageLayout }
 
         \context GlobalSkips = "Breaks"
-        {
-
-            % [Breaks measure 1]
-              %! BREAK
-            \autoPageBreaksOff
-              %! BREAK
-            \baca-lbsd #68 #'(6)
-              %! BREAK
-            \pageBreak
-            s1 * 3/4
-
-            % [Breaks measure 2]
-              %! BREAK
-            \noBreak
-            s1 * 6/4
-
-            % [Breaks measure 3]
-              %! BREAK
-            \noBreak
-            s1 * 6/4
-
-            % [Breaks measure 4]
-              %! BREAK
-            \baca-lbsd #96 #'(6)
-              %! BREAK
-            \break
-            s1 * 6/4
-
-            % [Breaks measure 5]
-              %! BREAK
-            \noBreak
-            s1 * 3/4
-
-            % [Breaks measure 6]
-              %! BREAK
-            \noBreak
-            s1 * 4/4
-
-            % [Breaks measure 7]
-              %! BREAK
-            \noBreak
-            s1 * 6/4
-
-            % [Breaks measure 8]
-              %! BREAK
-            \baca-lbsd #124 #'(6)
-              %! BREAK
-            \break
-            s1 * 3/4
-
-            % [Breaks measure 9]
-              %! BREAK
-            \noBreak
-            s1 * 6/4
-
-            % [Breaks measure 10]
-              %! BREAK
-            \baca-lbsd #152 #'(6)
-              %! BREAK
-            \break
-            s1 * 3/4
-
-            % [Breaks measure 11]
-              %! BREAK
-            \noBreak
-            s1 * 6/4
-
-        }
+        { \Breaks }
 
     >>
 
