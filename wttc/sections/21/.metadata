@@ -3,6 +3,7 @@
         "Score",
         "GlobalContext",
         "Skips",
+        "TimeSignatures",
         "MusicContext",
         "WindSectionStaffGroup",
         "AltoFlute.Staff",
@@ -207,7 +208,7 @@
                 value="100",
             ),
             baca.Memento(
-                context="Skips",
+                context="TimeSignatures",
                 edition=None,
                 manifest=None,
                 prototype="abjad.TimeSignature",

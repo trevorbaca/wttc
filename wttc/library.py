@@ -545,7 +545,7 @@ def is_obgc_polyphony_container(component):
 
 def make_empty_score():
     tag = baca.helpers.function_name(inspect.currentframe())
-    global_context = baca.score.make_global_context()
+    global_context = baca.score.make_global_context(make_time_signatures_context=True)
     alto_flute_music_voice = abjad.Voice(name="AltoFlute.Music", tag=tag)
     alto_flute_music_staff = abjad.Staff(
         [alto_flute_music_voice],
