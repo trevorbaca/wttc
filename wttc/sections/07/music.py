@@ -247,6 +247,7 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
+        delete_nonmeaningful_global_rests=True,
         do_not_color_repeat_pitch_classes=True,
         do_not_replace_rests_with_multimeasure_rests=True,
         global_rests_in_topmost_staff=True,

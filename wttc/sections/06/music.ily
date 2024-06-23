@@ -225,26 +225,6 @@ number.6.TimeSignatures = {
 }
 
 
-number.6.Rests = {
-
-    % [Rests measure 1]
-    R1 * 2/4
-
-    % [Rests measure 2]
-    R1 * 4/4
-
-    % [Rests measure 3]
-    R1 * 4/4
-
-    % [Rests measure 4]
-    R1 * 4/4
-
-    % [Rests measure 5]
-    R1 * 4/4
-
-}
-
-
 number.6.AltoFlute.Music.item.1 = {
 
     \once \override Dots.X-extent = ##f
@@ -464,9 +444,6 @@ number.6.AltoFlute.Music = {
 
 
 number.6.AltoFlute.Staff = <<
-
-    \context GlobalRests = "Rests"
-    { \number.6.Rests }
 
     \context Voice = "AltoFlute.Music"
     { \number.6.AltoFlute.Music }

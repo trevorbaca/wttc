@@ -195,23 +195,6 @@ number.16.TimeSignatures = {
 }
 
 
-number.16.Rests = {
-
-    % [Rests measure 1]
-    R1 * 4/4
-
-    % [Rests measure 2]
-    R1 * 6/4
-
-    % [Rests measure 3]
-    R1 * 6/4
-
-    % [Rests measure 4]
-    R1 * 4/4
-
-}
-
-
 number.16.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
@@ -358,9 +341,6 @@ number.16.AltoFlute.Music = {
 
 
 number.16.AltoFlute.Staff = <<
-
-    \context GlobalRests = "Rests"
-    { \number.16.Rests }
 
     \context Voice = "AltoFlute.Music"
     { \number.16.AltoFlute.Music }

@@ -365,38 +365,6 @@ number.22.TimeSignatures = {
 }
 
 
-number.22.Rests = {
-
-    % [Rests measure 1]
-    R1 * 4/4
-
-    % [Rests measure 2]
-    R1 * 4/4
-
-    % [Rests measure 3]
-    R1 * 4/4
-
-    % [Rests measure 4]
-    R1 * 5/4
-
-    % [Rests measure 5]
-    R1 * 6/4
-
-    % [Rests measure 6]
-    R1 * 6/4
-
-    % [Rests measure 7]
-    R1 * 6/4
-
-    % [Rests measure 8]
-    R1 * 2/4
-
-    % [Rests measure 9]
-    R1 * 4/4
-
-}
-
-
 number.22.AltoFlute.Music.item.1 = {
 
     \once \override Dots.X-extent = ##f
@@ -774,9 +742,6 @@ number.22.AltoFlute.Music = {
 
 
 number.22.AltoFlute.Staff = <<
-
-    \context GlobalRests = "Rests"
-    { \number.22.Rests }
 
     \context Voice = "AltoFlute.Music"
     { \number.22.AltoFlute.Music }

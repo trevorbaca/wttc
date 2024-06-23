@@ -58,6 +58,12 @@
 
 \layout
 {
+  indent = 0
+  ragged-right = ##f
+}
+
+\layout
+{
   \context
   {
     \GlobalContext
@@ -89,10 +95,8 @@
       (next-note semi-fixed-space . 3.0) 
       (right-edge extra-space . 0.0)
       )
-    \override BarNumber.color = #red
+    \override BarNumber.break-visibility = #end-of-line-invisible
     \override TimeSignature.break-visibility = #end-of-line-invisible
     \override TupletNumber.font-size = -2
   }
-  indent = 0
-  ragged-right = ##f
 }

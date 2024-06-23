@@ -1132,122 +1132,6 @@ number.24.TimeSignatures = {
 }
 
 
-number.24.Rests = {
-
-    % [Rests measure 1]
-    R1 * 6/4
-
-    % [Rests measure 2]
-    R1 * 6/4
-
-    % [Rests measure 3]
-    R1 * 6/4
-
-    % [Rests measure 4]
-    R1 * 6/4
-
-    % [Rests measure 5]
-    R1 * 6/4
-
-    % [Rests measure 6]
-    R1 * 6/4
-
-    % [Rests measure 7]
-    R1 * 3/4
-
-    % [Rests measure 8]
-    R1 * 6/4
-
-    % [Rests measure 9]
-    R1 * 6/4
-
-    % [Rests measure 10]
-    R1 * 6/4
-
-    % [Rests measure 11]
-    R1 * 6/4
-
-    % [Rests measure 12]
-    R1 * 6/4
-
-    % [Rests measure 13]
-    R1 * 6/4
-
-    % [Rests measure 14]
-    R1 * 6/4
-
-    % [Rests measure 15]
-    R1 * 6/4
-
-    % [Rests measure 16]
-    R1 * 6/4
-
-    % [Rests measure 17]
-    R1 * 3/4
-
-    % [Rests measure 18]
-    R1 * 6/4
-
-    % [Rests measure 19]
-    R1 * 6/4
-
-    % [Rests measure 20]
-    R1 * 6/4
-
-    % [Rests measure 21]
-    R1 * 6/4
-
-    % [Rests measure 22]
-    R1 * 6/4
-
-    % [Rests measure 23]
-    R1 * 3/4
-
-    % [Rests measure 24]
-    R1 * 6/4
-
-    % [Rests measure 25]
-    R1 * 6/4
-
-    % [Rests measure 26]
-    R1 * 6/4
-
-    % [Rests measure 27]
-    R1 * 6/4
-
-    % [Rests measure 28]
-    R1 * 6/4
-
-    % [Rests measure 29]
-    R1 * 6/4
-
-    % [Rests measure 30]
-    R1 * 3/4
-
-    % [Rests measure 31]
-    R1 * 6/4
-
-    % [Rests measure 32]
-    R1 * 6/4
-
-    % [Rests measure 33]
-    R1 * 6/4
-
-    % [Rests measure 34]
-    R1 * 6/4
-
-    % [Rests measure 35]
-    R1 * 6/4
-
-    % [Rests measure 36]
-    R1 * 6/4
-
-    % [Rests measure 37]
-    R1 * 6/4
-
-}
-
-
 number.24.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
@@ -1594,9 +1478,6 @@ number.24.AltoFlute.Music = {
 
 
 number.24.AltoFlute.Staff = <<
-
-    \context GlobalRests = "Rests"
-    { \number.24.Rests }
 
     \context Voice = "AltoFlute.Music"
     { \number.24.AltoFlute.Music }

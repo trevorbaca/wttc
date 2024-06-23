@@ -370,44 +370,6 @@ number.2.TimeSignatures = {
 }
 
 
-number.2.Rests = {
-
-    % [Rests measure 1]
-    R1 * 3/4
-
-    % [Rests measure 2]
-    R1 * 4/4
-
-    % [Rests measure 3]
-    R1 * 4/4
-
-    % [Rests measure 4]
-    R1 * 4/4
-
-    % [Rests measure 5]
-    R1 * 4/4
-
-    % [Rests measure 6]
-    R1 * 6/4
-
-    % [Rests measure 7]
-    R1 * 4/4
-
-    % [Rests measure 8]
-    R1 * 4/4
-
-    % [Rests measure 9]
-    R1 * 4/4
-
-    % [Rests measure 10]
-    R1 * 4/4
-
-    % [Rests measure 11]
-    R1 * 4/4
-
-}
-
-
 number.2.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
@@ -885,9 +847,6 @@ number.2.AltoFlute.Music = {
 
 
 number.2.AltoFlute.Staff = <<
-
-    \context GlobalRests = "Rests"
-    { \number.2.Rests }
 
     \context Voice = "AltoFlute.Music"
     { \number.2.AltoFlute.Music }
