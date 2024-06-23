@@ -5,6 +5,8 @@ number.26.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=60
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -633,6 +635,8 @@ number.26.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 25]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
     s1 * 6/4
     - \tweak extra-offset #'(3 . 0)
     - \tweak padding 1.5

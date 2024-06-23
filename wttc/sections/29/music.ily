@@ -5,6 +5,8 @@ number.29.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -50,6 +52,8 @@ number.29.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 2]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=60
     s1 * 1/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -84,6 +88,8 @@ number.29.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 3]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=75
     s1 * 6/4
       %! +SECTION
     _ \scene-xix-B-section-position
@@ -128,6 +134,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 4]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=150
     s1 * 1/4
       %! +SECTION
     - \tweak X-extent ##f
@@ -174,6 +182,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 5]
+      %! REDUNDANT_METRONOME_MARK
+    \tempo 4=150
     s1 * 1/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -214,6 +224,8 @@ number.29.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 6]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=75
     s1 * 1/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -248,6 +260,8 @@ number.29.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 7]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
     s1 * 1/4
       %! +SECTION
     _ \scene-xix-D-section-position
@@ -292,6 +306,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 8]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=50
     s1 * 1/4
       %! +SECTION
     _ \scene-xix-E-section-position
@@ -336,6 +352,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 9]
+      %! REDUNDANT_METRONOME_MARK
+    \tempo 4=50
     s1 * 1/4
       %! +SECTION
     _ \scene-xix-F-section-position
@@ -378,6 +396,8 @@ number.29.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 10]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
     s1 * 1/4
       %! +SECTION
     - \tweak X-extent ##f
@@ -418,6 +438,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 11]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=150
     s1 * 1/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -458,6 +480,8 @@ number.29.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 12]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=60
     s1 * 4/4
       %! +SECTION
     - \tweak X-extent ##f
@@ -506,6 +530,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 13]
+      %! REDUNDANT_METRONOME_MARK
+    \tempo 4=60
     s1 * 1/4
       %! +SECTION
     - \tweak X-extent ##f
@@ -552,6 +578,8 @@ number.29.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 14]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=150
     s1 * 6/4
       %! +SECTION
     _ \scene-xix-K-section-position
@@ -588,6 +616,8 @@ number.29.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 15]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=50
     s1 * 1/4
       %! +SECTION
     - \tweak X-extent ##f
@@ -634,6 +664,8 @@ number.29.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
     % [Skips measure 16]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=75
     s1 * 4/4
       %! +SECTION
     - \tweak X-extent ##f

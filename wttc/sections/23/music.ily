@@ -5,6 +5,8 @@ number.23.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=75
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -92,6 +94,8 @@ number.23.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 4]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=150
     s1 * 4/4
       %! +SECTION
     _ \scene-xv-B-section-position
@@ -180,6 +184,8 @@ number.23.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 7]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=48
     s1 * 9/4
       %! +SECTION
     _ \scene-xv-D-section-position
@@ -224,6 +230,8 @@ number.23.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 8]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
     s1 * 6/4
       %! +SECTION
     _ \scene-xv-F-section-position

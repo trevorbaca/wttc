@@ -5,6 +5,8 @@ number.9.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -167,6 +169,8 @@ number.9.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 7]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=150
     s1 * 6/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -272,6 +276,8 @@ number.9.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 11]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=60
     s1 * 6/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT

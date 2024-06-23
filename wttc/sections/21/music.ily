@@ -5,6 +5,8 @@ number.21.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=60
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -69,6 +71,8 @@ number.21.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 3]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=48
     s1 * 9/4
       %! +SECTION
     _ \scene-xiii-D-section-position
@@ -113,6 +117,8 @@ number.21.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 4]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=75
     s1 * 4/4
       %! +SECTION
     _ \scene-xiii-F-section-position
@@ -197,6 +203,8 @@ number.21.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 7]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=100
     s1 * 3/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
