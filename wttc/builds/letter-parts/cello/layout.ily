@@ -4,7 +4,7 @@ Breaks = {
 
     % [Breaks measure 1]
     \autoPageBreaksOff
-    \baca-lbsd #38 #'(6)
+    \baca-lbsd #64 #'(6)
     \pageBreak
     s1 * 3/4
 
@@ -17,7 +17,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 4]
-    \baca-lbsd #64 #'(6)
+    \baca-lbsd #90 #'(6)
     \break
     s1 * 6/4
 
@@ -34,7 +34,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 8]
-    \baca-lbsd #90 #'(6)
+    \baca-lbsd #142 #'(6)
     \break
     s1 * 3/4
 
@@ -43,8 +43,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 10]
-    \baca-lbsd #116 #'(6)
-    \break
+    \baca-lbsd #12 #'(6)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 11]
@@ -52,7 +52,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 12]
-    \baca-lbsd #142 #'(6)
+    \baca-lbsd #38 #'(6)
     \break
     s1 * 3/4
 
@@ -85,8 +85,8 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 20]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
+    \baca-lbsd #64 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 21]

@@ -7,20 +7,20 @@ def main(environment):
     y_offset_2 = 38
     y_offset_3 = 64
     y_offset_4 = 90
-    y_offset_5 = 116
+    # y_offset_5 = 116
     y_offset_6 = 142
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset_2, distances=distances),
-            baca.layout.System(4, y_offset_3, distances=distances),
-            baca.layout.System(8, y_offset_4, distances=distances),
-            baca.layout.System(10, y_offset_5, distances=distances),
-            baca.layout.System(12, y_offset_6, distances=distances),
+            baca.layout.System(1, y_offset_3, distances=distances),
+            baca.layout.System(4, y_offset_4, distances=distances),
+            baca.layout.System(8, y_offset_6, distances=distances),
         ),
         baca.layout.Page(
             2,
-            baca.layout.System(20, y_offset_1, distances=distances),
+            baca.layout.System(10, y_offset_1, distances=distances),
+            baca.layout.System(12, y_offset_2, distances=distances),
+            baca.layout.System(20, y_offset_3, distances=distances),
         ),
     )
     """

@@ -377,6 +377,11 @@ def owl(skips):
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
+        skips[1 - 1],
+        r"\scene-i-A-part-position",
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    wrappers = baca.markup(
         skips[7 - 1],
         r"\scene-i-B-section-position",
         baca.tweak.x_extent_false(),

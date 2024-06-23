@@ -18,6 +18,8 @@ number.1.Skips = {
     - \tweak X-extent ##f
       %! +SECTION
     ^ \scene-i-title-section-position
+      %! +PARTS
+%%% ^ \scene-i-A-part-position
       %! +SECTION
     ^ \scene-i-A-section-position
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

@@ -4,8 +4,8 @@
 
 part-name-markup = \markup "cello part"
 \include "../stylesheet.ily"
-%\layout { ragged-right = ##t }
-\layout { ragged-last = ##f }
+\layout { ragged-right = ##t }
+% \layout { ragged-last = ##f }
 \include "../../../staging/scene-i.ily"
 \include "../../../staging/scene-ii.ily"
 \include "../../../staging/scene-iii.ily"

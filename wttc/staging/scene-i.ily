@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SECENE 1: A - D %%%
 
 scene-i-title = \markup
@@ -29,6 +30,13 @@ scene-i-parenthesized-title-section-position = \markup {
   \scene-i-parenthesized-title
   }
 
+scene-i-A-words = \markuplist {
+  \upright \bold { SCENE 1. } The stage is set with chairs and desks for the
+  musicians, all at one side. Elsewhere are a window (perhaps suspended) and a
+  table on which stands a glass of violets. OWL enters with the musicians, sits
+  with them, may even have an instrument to bring on and mime playing, all
+  totally discreet, a member of the ensemble. }
+
 scene-i-A = \markup {
   \with-dimensions-from \null
   \override #'(font-size . 4)
@@ -47,6 +55,17 @@ scene-i-A = \markup {
 scene-i-A-section-position = \markup
   \translate #'(126 . 34)
   \scene-i-A
+
+scene-i-A-part-position = \markup {
+  \translate #'(-5 . 20)
+  \with-dimensions-from \null
+  \override #'(font-size . 2)
+  \column {
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \override #'(baseline-skip . 4)
+  \override #'(line-width . 110)
+  \justify { \scene-i-A-words }
+  } }
 
 scene-i-B = \markup {
   \with-dimensions-from \null
