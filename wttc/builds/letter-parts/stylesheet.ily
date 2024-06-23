@@ -37,19 +37,19 @@
     \fontsize #4
     "Paul Griffiths (*1947)"
   tagline = \markup \null
-  title = \markup \center-column {
+  title = \markup
+    \override #'(baseline-skip . 6)
+    \center-column {
     \override #'(font-name . "Adobe Garamond Pro Bold")
     \fontsize #6
     \override #'(word-space . 2)
     \line { when the time comes }
-    \vspace #1
     \override #'(font-name . "Adobe Garamond Pro Italic")
-    \fontsize #2
+    \fontsize #1
     \override #'(word-space . 1.5)
     \line { for stage actor & six players }
-    \vspace #3
     \override #'(font-name . "Adobe Garamond Pro Bold Italic")
-    \fontsize #3
+    \fontsize #1
     \override #'(word-space . 1.5)
     \line { \part-name-markup }
     \vspace #3
@@ -62,19 +62,10 @@
   {
     \GlobalContext
     \remove Time_signature_engraver
-    \override BarNumber.X-offset = -2.5
-    \override BarNumber.Y-offset = -2
-  }
-  \context
-  {
-    \GlobalRests
-    %\override MultiMeasureRestText.extra-offset = #'(0 . -3)
-    %\override MultiMeasureRestText.font-size = 0
   }
   \context
   {
     \GlobalSkips
-    % \override TextSpanner.color = #red
     \override TextSpanner.font-size = 1
   }
   \context
@@ -86,6 +77,7 @@
   \context
   {
     \Score
+    \consists Bar_number_engraver
     \override BarLine.hair-thickness = 2.5
     \override BarLine.space-alist = #'(
       (time-signature extra-space . 1.0)
@@ -97,6 +89,7 @@
       (next-note semi-fixed-space . 3.0) 
       (right-edge extra-space . 0.0)
       )
+    \override BarNumber.color = #red
     \override TimeSignature.break-visibility = #end-of-line-invisible
     \override TupletNumber.font-size = -2
   }
