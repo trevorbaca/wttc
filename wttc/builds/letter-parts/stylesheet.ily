@@ -14,7 +14,7 @@
   )
   top-markup-spacing = #'(
     (basic-distance . 0)
-    (minimum-distance . 6)
+    (minimum-distance . 2)
     (padding . 0)
     (stretchability . 0)
   )
@@ -30,11 +30,11 @@
 {
   composer = \markup
     \override #'(font-name . "Adobe Garamond Pro")
-    \fontsize #4
+    \fontsize #3
     "Trevor Bača (*1975)"
   poet = \markup
     \override #'(font-name . "Adobe Garamond Pro")
-    \fontsize #4
+    \fontsize #3
     "Paul Griffiths (*1947)"
   tagline = \markup \null
   title = \markup
@@ -52,7 +52,7 @@
     \fontsize #1
     \override #'(word-space . 1.5)
     \line { \part-name-markup }
-    \vspace #3
+    \vspace #0.5
   }
 }
 
@@ -84,6 +84,7 @@
   {
     \Score
     \consists Bar_number_engraver
+    \consists Metronome_mark_engraver
     \override BarLine.hair-thickness = 2.5
     \override BarLine.space-alist = #'(
       (time-signature extra-space . 1.0)

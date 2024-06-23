@@ -26,9 +26,7 @@ part-name-markup = \markup "cello part"
 \score
 {
   <<
-    {
-      % \page-layout-score
-    }
+    { \page-layout-score }
     \keepWithTag Cello
     {
       \include "../_sections/01.ly"

@@ -4,7 +4,7 @@ Breaks = {
 
     % [Breaks measure 1]
     \autoPageBreaksOff
-    \baca-lbsd #68 #'(6)
+    \baca-lbsd #38 #'(6)
     \pageBreak
     s1 * 3/4
 
@@ -17,7 +17,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 4]
-    \baca-lbsd #96 #'(6)
+    \baca-lbsd #64 #'(6)
     \break
     s1 * 6/4
 
@@ -34,7 +34,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 8]
-    \baca-lbsd #124 #'(6)
+    \baca-lbsd #90 #'(6)
     \break
     s1 * 3/4
 
@@ -43,7 +43,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 10]
-    \baca-lbsd #152 #'(6)
+    \baca-lbsd #116 #'(6)
     \break
     s1 * 3/4
 
@@ -51,145 +51,51 @@ Breaks = {
     \noBreak
     s1 * 6/4
 
-}
-
-
-SpacingCommands = {
-
-    % [SpacingCommands measure 1]
-    \baca-new-lax-spacing-section #1 #12
+    % [Breaks measure 12]
+    \baca-lbsd #142 #'(6)
+    \break
     s1 * 3/4
 
-    % [SpacingCommands measure 2]
-    \baca-new-lax-spacing-section #1 #12
-    s1 * 6/4
-
-    % [SpacingCommands measure 3]
-    s1 * 6/4
-
-    % [SpacingCommands measure 4]
-    \baca-new-strict-spacing-section #1 #32
-    s1 * 6/4
-
-    % [SpacingCommands measure 5]
-    \baca-new-strict-spacing-section #1 #32
-    s1 * 3/4
-
-    % [SpacingCommands measure 6]
-    \baca-new-strict-spacing-section #1 #32
+    % [Breaks measure 13]
+    \noBreak
     s1 * 4/4
 
-    % [SpacingCommands measure 7]
-    \baca-new-strict-spacing-section #35 #768
-    s1 * 6/4
-
-    % [SpacingCommands measure 8]
-    \baca-new-strict-spacing-section #1 #48
-    s1 * 3/4
-
-    % [SpacingCommands measure 9]
-    \baca-new-strict-spacing-section #35 #1152
-    s1 * 6/4
-
-    % [SpacingCommands measure 10]
-    \baca-new-strict-spacing-section #1 #48
-    s1 * 3/4
-
-    % [SpacingCommands measure 11]
-    \baca-new-strict-spacing-section #35 #1152
-    s1 * 6/4
-
-}
-
-
-SpacingAnnotations = {
-
-    % [SpacingAnnotations measure 1]
-    s1 * 3/4
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/12]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 2]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/12]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 3]
-    s1 * 6/4
-
-    % [SpacingAnnotations measure 4]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 5]
-    s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 6]
+    % [Breaks measure 14]
+    \noBreak
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
-    % [SpacingAnnotations measure 7]
+    % [Breaks measure 15]
+    \noBreak
+    s1 * 4/4
+
+    % [Breaks measure 16]
+    \noBreak
+    s1 * 4/4
+
+    % [Breaks measure 17]
+    \noBreak
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
-    % [SpacingAnnotations measure 8]
-    s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
+    % [Breaks measure 18]
+    \noBreak
+    s1 * 4/4
 
-    % [SpacingAnnotations measure 9]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
+    % [Breaks measure 19]
+    \noBreak
+    s1 * 4/4
 
-    % [SpacingAnnotations measure 10]
-    s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
+    % [Breaks measure 20]
+    \baca-lbsd #12 #'(6)
+    \pageBreak
+    s1 * 4/4
 
-    % [SpacingAnnotations measure 11]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
+    % [Breaks measure 21]
+    \noBreak
+    s1 * 4/4
+
+    % [Breaks measure 22]
+    \noBreak
+    s1 * 4/4
 
 }
 
@@ -198,17 +104,11 @@ page-layout-score = \context Score = "Score"
 {
 
     \context GlobalContext = "GlobalContext"
-    <<
+    {
 
         \context GlobalSkips = "Breaks"
         { \Breaks }
 
-        \context GlobalSkips = "SpacingCommands"
-        { \SpacingCommands }
-
-        \context GlobalSkips = "SpacingAnnotations"
-        { \SpacingAnnotations }
-
-    >>
+    }
 
 }
