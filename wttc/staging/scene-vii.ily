@@ -2,120 +2,131 @@
 
 %%% SCENE 7: A - J %%%
 
-scene-vii-title = \markup
+scene-vii-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 7. }
-  }
+
+scene-vii-title = \markup
+  \override #'(font-size . 8)
+  \scene-vii-title-words
 
 scene-vii-title-section-position = \markup
   \translate #'(-34 . 12)
   \scene-vii-title
 
-scene-vii-parenthesized-title = \markup
+scene-vii-parenthesized-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 6)
-  \column {
   \line { (SCENE \hspace #1 7) }
-  }
+
+scene-vii-parenthesized-title = \markup
+  \override #'(font-size . 6)
+  \scene-vii-parenthesized-title-words
 
 scene-vii-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \scene-vii-parenthesized-title
 
-scene-vii-A = \markup
+scene-vii-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { First time only: }
+  \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { No doubt you'll come before long. \lnum #66 }
   }
+
+scene-vii-A = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-vii-A-words
 
 scene-vii-A-section-position = \markup
   \translate #'(0 . -41)
   \scene-vii-A
 
-scene-vii-B = \markup
+scene-vii-B-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { First time only: }
+  \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { You will. \lnum #67 }
   }
+
+scene-vii-B = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-vii-B-words
 
 scene-vii-B-section-position = \markup
   \translate #'(0 . -41)
   \scene-vii-B
 
-scene-vii-C = \markup
+scene-vii-C-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { I know you will. \lnum #68 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 42)
   \justify {
   Musicians wait a moment to weigh the meaning of this last line.
   Then proceed to \override #'(font-name . "Adobe Garamond Pro Bold")
   \box F \hspace #-0.5 . }
   }
 
+scene-vii-C = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 42)
+  \scene-vii-C-words
+
 scene-vii-C-section-position = \markup
   \translate #'(52 . -41)
   \scene-vii-C
 
-scene-vii-E = \markup
+scene-vii-E-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { What did you say at the time? \lnum #69 }
-  }
+
+scene-vii-E = \markup
+  \override #'(font-size . 4)
+  \scene-vii-E-words
 
 scene-vii-E-section-position = \markup
   \translate #'(0 . -48)
   \scene-vii-E
 
-scene-vii-F = \markup
+scene-vii-F-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { How I would come to a — \lnum #70 }
-  }
+
+scene-vii-F = \markup
+  \override #'(font-size . 4)
+  \scene-vii-F-words
 
 scene-vii-F-section-position = \markup
   \translate #'(0 . -48)
   \scene-vii-F
 
-scene-vii-G = \markup
+scene-vii-G-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { What did you call it? — \lnum #71 }
-  }
+
+scene-vii-G = \markup
+  \override #'(font-size . 4)
+  \scene-vii-G-words
 
 scene-vii-G-section-position = \markup
   \translate #'(0 . -46)
   \scene-vii-G
+
+% HERE
 
 scene-vii-H = \markup
   \with-dimensions-from \null

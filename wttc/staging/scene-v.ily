@@ -2,52 +2,53 @@
 
 %%% SCENE 5: A - D %%%
 
-scene-v-title = \markup
+scene-v-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE 5. }
-  }
+
+scene-v-title = \markup
+  \override #'(font-size . 8)
+  \scene-v-title-words
 
 scene-v-title-section-position = \markup
   \translate #'(-32 . 14)
   \scene-v-title
 
-scene-v-A = \markup
+scene-v-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { You know, it could all be as it was, \lnum #44 }
-  }
+
+scene-v-A = \markup
+  \override #'(font-size . 4)
+  \scene-v-A-words
 
 scene-v-A-section-position = \markup
   \translate #'(0 . -46)
   \scene-v-A
 
-scene-v-B = \markup
+scene-v-B-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL is fearful of pronouncing the next word: }
+  \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Again. \lnum #45 }
   }
+
+scene-v-B = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-v-B-words
 
 scene-v-B-section-position = \markup
   \translate #'(0 . -44)
   \scene-v-B
 
-scene-v-C = \markup
+scene-v-C-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { As cello completes diminuendo: }
@@ -55,19 +56,23 @@ scene-v-C = \markup
   \line { It's all in my head. \lnum #47 }
   }
 
+scene-v-C = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-v-C-words
+
 scene-v-C-section-position = \markup
   \translate #'(8 . -42)
   \scene-v-C
 
-scene-v-D = \markup
+scene-v-D-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 5. }
-  }
+
+scene-v-D = \markup
+  \override #'(font-size . 4)
+  \scene-v-D-words
 
 scene-v-D-section-position = \markup
   \translate #'(124 . -44)
