@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 12: A - J %%%
 
 scene-xii-title = \markup
@@ -10,10 +11,9 @@ scene-xii-title = \markup
   \line { SCENE \hspace #1 12. }
   }
 
-scene-xii-title-section-position = \markup {
+scene-xii-title-section-position = \markup
   \translate #'(0 . 16)
   \scene-xii-title
-  }
 
 scene-xii-parenthesized-title = \markup
   \with-dimensions-from \null
@@ -24,10 +24,9 @@ scene-xii-parenthesized-title = \markup
   \line { (SCENE \hspace #1 12) }
   }
 
-scene-xii-parenthesized-title-section-position = \markup {
+scene-xii-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-xii-parenthesized-title
-  }
 
 scene-xii-A = \markup
   \with-dimensions-from \null
@@ -39,10 +38,9 @@ scene-xii-A = \markup
   \line { When the time is right — \lnum #163 }
   }
 
-scene-xii-A-section-position = \markup {
+scene-xii-A-section-position = \markup
   \translate #'(112 . -38)
   \scene-xii-A
-  }
 
 scene-xii-B = \markup
   \with-dimensions-from \null
@@ -70,10 +68,9 @@ scene-xii-B = \markup
   \line { That's my expectation, any — \lnum #173 }
   }
 
-scene-xii-B-section-position = \markup {
+scene-xii-B-section-position = \markup
   \translate #'(60 . -20)
   \scene-xii-B
-  }
 
 scene-xii-C = \markup
   \with-dimensions-from \null
@@ -91,10 +88,9 @@ scene-xii-C = \markup
   \line { From all that time \dots \lnum #177 }
   }
 
-scene-xii-C-section-position = \markup {
+scene-xii-C-section-position = \markup
   \translate #'(58 . -38)
   \scene-xii-C
-  }
 
 scene-xii-D = \markup
   \with-dimensions-from \null
@@ -107,10 +103,9 @@ scene-xii-D = \markup
   \line { The green path \dots \lnum #178 }
   }
 
-scene-xii-D-section-position = \markup {
+scene-xii-D-section-position = \markup
   \translate #'(2 . -41)
   \scene-xii-D
-  }
 
 scene-xii-E = \markup
   \with-dimensions-from \null
@@ -123,10 +118,9 @@ scene-xii-E = \markup
   \line { What was it? When was this? \lnum #179 }
   }
 
-scene-xii-E-section-position = \markup {
+scene-xii-E-section-position = \markup
   \translate #'(2 . -41)
   \scene-xii-E
-  }
 
 scene-xii-F = \markup
   \with-dimensions-from \null
@@ -140,10 +134,9 @@ scene-xii-F = \markup
   \line { It was a way — \lnum #181 }
   }
 
-scene-xii-F-section-position = \markup {
+scene-xii-F-section-position = \markup
   \translate #'(2 . -38)
   \scene-xii-F
-  }
 
 scene-xii-G = \markup
   \with-dimensions-from \null
@@ -156,10 +149,9 @@ scene-xii-G = \markup
   \line { Waving to us, she was waving to us. And we — \lnum #182 }
   }
 
-scene-xii-G-section-position = \markup {
+scene-xii-G-section-position = \markup
   \translate #'(2 . -41)
   \scene-xii-G
-  }
 
 scene-xii-H = \markup
   \with-dimensions-from \null
@@ -172,10 +164,9 @@ scene-xii-H = \markup
   \line { No. \lnum #183 }
   }
 
-scene-xii-H-section-position = \markup {
+scene-xii-H-section-position = \markup
   \translate #'(2 . -41)
   \scene-xii-H
-  }
 
 scene-xii-I = \markup
   \with-dimensions-from \null
@@ -189,10 +180,9 @@ scene-xii-I = \markup
   \line { It's all gone. \lnum #185 }
   }
 
-scene-xii-I-section-position = \markup {
+scene-xii-I-section-position = \markup
   \translate #'(0 . -41)
   \scene-xii-I
-  }
 
 scene-xii-J = \markup
   \with-dimensions-from \null
@@ -204,7 +194,6 @@ scene-xii-J = \markup
   \line { End scene 12. }
   }
 
-scene-xii-J-section-position = \markup {
+scene-xii-J-section-position = \markup
   \translate #'(108 . -46)
   \scene-xii-J
-  }

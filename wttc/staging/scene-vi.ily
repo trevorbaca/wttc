@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 6: A - G %%%
 
 scene-vi-title = \markup
@@ -10,10 +11,9 @@ scene-vi-title = \markup
   \line { SCENE \hspace #1 6. }
   }
 
-scene-vi-title-section-position = \markup {
+scene-vi-title-section-position = \markup
   \translate #'(-60 . 12)
   \scene-vi-title
-  }
 
 scene-vi-A = \markup
   \with-dimensions-from \null
@@ -25,10 +25,9 @@ scene-vi-A = \markup
   \line { You tell me what to do. \lnum #49 }
   }
 
-scene-vi-A-section-position = \markup {
+scene-vi-A-section-position = \markup
   \translate #'(-60 . -46)
   \scene-vi-A
-  }
 
 scene-vi-B = \markup
   \with-dimensions-from \null
@@ -39,10 +38,9 @@ scene-vi-B = \markup
   \line { You lay it all out for me, \lnum #50 }
   }
 
-scene-vi-B-section-position = \markup {
+scene-vi-B-section-position = \markup
   \translate #'(0 . -46)
   \scene-vi-B
-  }
 
 scene-vi-C = \markup
   \with-dimensions-from \null
@@ -53,10 +51,9 @@ scene-vi-C = \markup
   \line { Tell me where to go \lnum #51 }
   }
 
-scene-vi-C-section-position = \markup {
+scene-vi-C-section-position = \markup
   \translate #'(0 . -46)
   \scene-vi-C
-  }
 
 scene-vi-D = \markup
   \with-dimensions-from \null
@@ -68,10 +65,9 @@ scene-vi-D = \markup
   \line { You say, \lnum #53 }
   }
 
-scene-vi-D-section-position = \markup {
+scene-vi-D-section-position = \markup
   \translate #'(0 . -46)
   \scene-vi-D
-  }
 
 scene-vi-E = \markup
   \with-dimensions-from \null
@@ -94,11 +90,9 @@ scene-vi-E = \markup
   \line { Now I remember: \lnum #60 }
   }
 
-scene-vi-E-section-position = \markup {
+scene-vi-E-section-position = \markup
   \translate #'(80 . -46)
   \scene-vi-E
-  }
-
 
 scene-vi-before-F = \markup
   \with-dimensions-from \null
@@ -110,11 +104,9 @@ scene-vi-before-F = \markup
   \line { Freely, not coordinated with music: }
   }
 
-scene-vi-before-F-section-position = \markup {
+scene-vi-before-F-section-position = \markup
   \translate #'(0 . -41)
   \scene-vi-before-F
-  }
-
 
 scene-vi-F = \markup
   \with-dimensions-from \null
@@ -130,10 +122,9 @@ scene-vi-F = \markup
   \line { Each little \dots \lnum #64 }
   }
 
-scene-vi-F-section-position = \markup {
+scene-vi-F-section-position = \markup
   \translate #'(0 . -42)
   \scene-vi-F
-  }
 
 scene-vi-G = \markup
   \with-dimensions-from \null
@@ -147,7 +138,6 @@ scene-vi-G = \markup
   \line { End scene 6. }
   }
 
-scene-vi-G-section-position = \markup {
+scene-vi-G-section-position = \markup
   \translate #'(63 . -46)
   \scene-vi-G
-  }

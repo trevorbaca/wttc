@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 7: A - J %%%
 
 scene-vii-title = \markup
@@ -10,10 +11,9 @@ scene-vii-title = \markup
   \line { SCENE \hspace #1 7. }
   }
 
-scene-vii-title-section-position = \markup {
+scene-vii-title-section-position = \markup
   \translate #'(-34 . 12)
   \scene-vii-title
-  }
 
 scene-vii-parenthesized-title = \markup
   \with-dimensions-from \null
@@ -24,10 +24,9 @@ scene-vii-parenthesized-title = \markup
   \line { (SCENE \hspace #1 7) }
   }
 
-scene-vii-parenthesized-title-section-position = \markup {
+scene-vii-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \scene-vii-parenthesized-title
-  }
 
 scene-vii-A = \markup
   \with-dimensions-from \null
@@ -40,10 +39,9 @@ scene-vii-A = \markup
   \line { No doubt you'll come before long. \lnum #66 }
   }
 
-scene-vii-A-section-position = \markup {
+scene-vii-A-section-position = \markup
   \translate #'(0 . -41)
   \scene-vii-A
-  }
 
 scene-vii-B = \markup
   \with-dimensions-from \null
@@ -56,10 +54,9 @@ scene-vii-B = \markup
   \line { You will. \lnum #67 }
   }
 
-scene-vii-B-section-position = \markup {
+scene-vii-B-section-position = \markup
   \translate #'(0 . -41)
   \scene-vii-B
-  }
 
 scene-vii-C = \markup
   \with-dimensions-from \null
@@ -77,10 +74,9 @@ scene-vii-C = \markup
   \box F \hspace #-0.5 . }
   }
 
-scene-vii-C-section-position = \markup {
+scene-vii-C-section-position = \markup
   \translate #'(52 . -41)
   \scene-vii-C
-  }
 
 scene-vii-E = \markup
   \with-dimensions-from \null
@@ -91,10 +87,9 @@ scene-vii-E = \markup
   \line { What did you say at the time? \lnum #69 }
   }
 
-scene-vii-E-section-position = \markup {
+scene-vii-E-section-position = \markup
   \translate #'(0 . -48)
   \scene-vii-E
-  }
 
 scene-vii-F = \markup
   \with-dimensions-from \null
@@ -105,10 +100,9 @@ scene-vii-F = \markup
   \line { How I would come to a — \lnum #70 }
   }
 
-scene-vii-F-section-position = \markup {
+scene-vii-F-section-position = \markup
   \translate #'(0 . -48)
   \scene-vii-F
-  }
 
 scene-vii-G = \markup
   \with-dimensions-from \null
@@ -119,10 +113,9 @@ scene-vii-G = \markup
   \line { What did you call it? — \lnum #71 }
   }
 
-scene-vii-G-section-position = \markup {
+scene-vii-G-section-position = \markup
   \translate #'(0 . -46)
   \scene-vii-G
-  }
 
 scene-vii-H = \markup
   \with-dimensions-from \null
@@ -138,10 +131,9 @@ scene-vii-H = \markup
   \override #'(font-name "Adobe Garamond Pro Bold") \box G \hspace #-0.5 . }
   }
 
-scene-vii-H-section-position = \markup {
+scene-vii-H-section-position = \markup
   \translate #'(46 . -40)
   \scene-vii-H
-  }
 
 scene-vii-I = \markup
   \with-dimensions-from \null
@@ -152,10 +144,9 @@ scene-vii-I = \markup
   \line { “Chamber,” \lnum #72 }
   }
 
-scene-vii-I-section-position = \markup {
+scene-vii-I-section-position = \markup
   \translate #'(0 . -48)
   \scene-vii-I
-  }
 
 scene-vii-J = \markup
   \with-dimensions-from \null
@@ -167,7 +158,6 @@ scene-vii-J = \markup
   \line { End scene 7. }
   }
 
-scene-vii-J-section-position = \markup {
+scene-vii-J-section-position = \markup
   \translate #'(166 . -44)
   \scene-vii-J
-  }

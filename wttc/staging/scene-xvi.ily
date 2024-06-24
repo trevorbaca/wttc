@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 16: A - J %%%
 
 scene-xvi-title = \markup
@@ -10,10 +11,9 @@ scene-xvi-title = \markup
   \line { SCENE \hspace #1 16. }
   }
 
-scene-xvi-title-section-position = \markup {
+scene-xvi-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-xvi-title
-  }
 
 scene-xvi-parenthesized-title = \markup
   \with-dimensions-from \null
@@ -24,10 +24,9 @@ scene-xvi-parenthesized-title = \markup
   \line { (SCENE \hspace #1 16) }
   }
 
-scene-xvi-parenthesized-title-section-position = \markup {
+scene-xvi-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-xvi-parenthesized-title
-  }
 
 scene-xvi-A = \markup
   \with-dimensions-from \null
@@ -43,10 +42,9 @@ scene-xvi-A = \markup
   \line { As if you had no memory of — \lnum #251 }
   }
 
-scene-xvi-A-section-position = \markup {
+scene-xvi-A-section-position = \markup
   \translate #'(0 . -38)
   \scene-xvi-A
-  }
 
 scene-xvi-B = \markup
   \with-dimensions-from \null
@@ -62,10 +60,9 @@ scene-xvi-B = \markup
   \line { This way — \lnum #254 }
   }
 
-scene-xvi-B-section-position = \markup {
+scene-xvi-B-section-position = \markup
   \translate #'(120 . -41)
   \scene-xvi-B
-  }
 
 scene-xvi-C = \markup
   \with-dimensions-from \null
@@ -78,10 +75,9 @@ scene-xvi-C = \markup
   \line { Way! \lnum #255 }
   }
 
-scene-xvi-C-section-position = \markup {
+scene-xvi-C-section-position = \markup
   \translate #'(28 . -43)
   \scene-xvi-C
-  }
 
 scene-xvi-D = \markup
   \with-dimensions-from \null
@@ -94,10 +90,9 @@ scene-xvi-D = \markup
   \line { No. \lnum #256 }
   }
 
-scene-xvi-D-section-position = \markup {
+scene-xvi-D-section-position = \markup
   \translate #'(4 . -43)
   \scene-xvi-D
-  }
 
 scene-xvi-E = \markup
   \with-dimensions-from \null
@@ -110,10 +105,9 @@ scene-xvi-E = \markup
   \line { Stopping before saying “way” }
   }
 
-scene-xvi-E-section-position = \markup {
+scene-xvi-E-section-position = \markup
   \translate #'(4 . -43)
   \scene-xvi-E
-  }
 
 scene-xvi-F = \markup
   \with-dimensions-from \null
@@ -124,10 +118,9 @@ scene-xvi-F = \markup
   \line { And all the time — \lnum #258 }
   }
 
-scene-xvi-F-section-position = \markup {
+scene-xvi-F-section-position = \markup
   \translate #'(70 . -46)
   \scene-xvi-F
-  }
 
 scene-xvi-G = \markup
   \with-dimensions-from \null
@@ -138,10 +131,9 @@ scene-xvi-G = \markup
   \line { Never mind. \lnum #259 }
   }
 
-scene-xvi-G-section-position = \markup {
+scene-xvi-G-section-position = \markup
   \translate #'(70 . -41)
   \scene-xvi-G
-  }
 
 scene-xvi-H = \markup
   \with-dimensions-from \null
@@ -152,10 +144,9 @@ scene-xvi-H = \markup
   \line { Let it go. \lnum #260 }
   }
 
-scene-xvi-H-section-position = \markup {
+scene-xvi-H-section-position = \markup
   \translate #'(0 . -41)
   \scene-xvi-H
-  }
 
 scene-xvi-I = \markup
   \with-dimensions-from \null
@@ -166,10 +157,9 @@ scene-xvi-I = \markup
   \line { Let it go. \lnum #261 }
   }
 
-scene-xvi-I-section-position = \markup {
+scene-xvi-I-section-position = \markup
   \translate #'(0 . -41)
   \scene-xvi-I
-  }
 
 scene-xvi-J = \markup
   \with-dimensions-from \null
@@ -193,7 +183,6 @@ scene-xvi-J = \markup
   \line { End scene 16. }
   }
 
-scene-xvi-J-section-position = \markup {
+scene-xvi-J-section-position = \markup
   \translate #'(40 . -19)
   \scene-xvi-J
-  }

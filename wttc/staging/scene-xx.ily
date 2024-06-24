@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 20: A - C %%%
 
 scene-xx-title = \markup
@@ -10,10 +11,9 @@ scene-xx-title = \markup
   \line { SCENE \hspace #1 20. }
   }
 
-scene-xx-title-section-position = \markup {
+scene-xx-title-section-position = \markup
   \translate #'(-32 . 140)
   \scene-xx-title
-  }
 
 scene-xx-A = \markup
   \with-dimensions-from \null
@@ -43,10 +43,9 @@ scene-xx-A = \markup
   \line { Pause. }
   }
 
-scene-xx-A-section-position = \markup {
+scene-xx-A-section-position = \markup
   \translate #'(-8 . 126)
   \scene-xx-A
-  }
 
 scene-xx-B = \markup
   \with-dimensions-from \null
@@ -57,10 +56,9 @@ scene-xx-B = \markup
   \line { To sing. \hspace #-0.5 \super 5 }
   }
 
-scene-xx-B-section-position = \markup {
+scene-xx-B-section-position = \markup
   \translate #'(200 . 16)
   \scene-xx-B
-  }
 
 scene-xx-C = \markup
   \with-dimensions-from \null
@@ -72,10 +70,9 @@ scene-xx-C = \markup
   \line { End scene 20. }
   }
 
-scene-xx-C-section-position = \markup {
+scene-xx-C-section-position = \markup
   \translate #'(0 . 0)
   \scene-xx-C
-  }
 
 scene-xx-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

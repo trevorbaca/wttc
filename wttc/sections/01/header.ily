@@ -10,46 +10,22 @@
     \fontsize #6
     "Paul Griffiths (*1947)"
   tagline = \markup \null
-  title = \markup \center-column
-  {
-    \override #'(font-name . "Adobe Garamond Pro")
-    \fontsize #16
-    \line
-    {
-      \concat
-      {
-        when
+  title = \markup
+    \center-column {
+      \override #'(font-name . "Adobe Garamond Pro Italic")
+      \fontsize #3
+      \override #'(word-space . 2)
+      \line { to the Cygnus Ensemble }
+      \vspace #1
+      \override #'(font-name . "Adobe Garamond Pro")
+      \fontsize #16
+      \override #'(word-space . 10)
+      \line { when the time comes }
+      \vspace #2.5
+      \override #'(font-name . "Adobe Garamond Pro Italic")
+      \fontsize #3
+      \override #'(word-space . 2)
+      \line
+      { for stage actor & six players }
       }
-      \hspace #4
-      \concat
-      {
-        the
-      }
-      \concat
-      {
-        time
-      }
-      \hspace #4
-      \concat
-      {
-        comes
-      }
-    }
-    " "
-    " "
-    " "
-    \override #'(font-name . "Adobe Garamond Pro Italic")
-    \fontsize #3
-    \line
-    {
-      \hspace #2
-      for \hspace #0.75
-      the \hspace #0.75
-      Cygnus \hspace #0.75
-      Ensemble
-    }
-    " "
-    " "
-    " "
-  }
 }

@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 11: A %%%
 
 scene-xi-title = \markup
@@ -10,10 +11,9 @@ scene-xi-title = \markup
   \line { SCENE \hspace #1 11. }
   }
 
-scene-xi-title-section-position = \markup {
+scene-xi-title-section-position = \markup
   \translate #'(-90 . -2)
   \scene-xi-title
-  }
 
 scene-xi-A = \markup
   \with-dimensions-from \null
@@ -81,7 +81,6 @@ scene-xi-A = \markup
   \line { End scene 11. }
   }
 
-scene-xi-A-section-position = \markup {
+scene-xi-A-section-position = \markup
   \translate #'(-90 . -20)
   \scene-xi-A
-  }

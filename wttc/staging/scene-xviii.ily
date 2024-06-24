@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 18: A - D %%%
 
 scene-xviii-title = \markup
@@ -10,10 +11,9 @@ scene-xviii-title = \markup
   \line { SCENE \hspace #1 18. }
   }
 
-scene-xviii-title-section-position = \markup {
+scene-xviii-title-section-position = \markup
   \translate #'(-90 . 12)
   \scene-xviii-title
-  }
 
 scene-xviii-A = \markup
   \with-dimensions-from \null
@@ -27,10 +27,9 @@ scene-xviii-A = \markup
   \line { We should have stayed on it. \lnum #286 }
   }
 
-scene-xviii-A-section-position = \markup {
+scene-xviii-A-section-position = \markup
   \translate #'(-90 . -41)
   \scene-xviii-A
-  }
 
 scene-xviii-B = \markup
   \with-dimensions-from \null
@@ -41,10 +40,9 @@ scene-xviii-B = \markup
   \line { Then all of this \dots \lnum #287 }
   }
 
-scene-xviii-B-section-position = \markup {
+scene-xviii-B-section-position = \markup
   \translate #'(4 . -43)
   \scene-xviii-B
-  }
 
 scene-xviii-C = \markup
   \with-dimensions-from \null
@@ -61,10 +59,9 @@ scene-xviii-C = \markup
   \line { Never mind what. \lnum #294 }
   }
 
-scene-xviii-C-section-position = \markup {
+scene-xviii-C-section-position = \markup
   \translate #'(128 . -31)
   \scene-xviii-C
-  }
 
 scene-xviii-D = \markup
   \with-dimensions-from \null
@@ -78,7 +75,6 @@ scene-xviii-D = \markup
   \line { End scene 18. }
   }
 
-scene-xviii-D-section-position = \markup {
+scene-xviii-D-section-position = \markup
   \translate #'(60 . -41)
   \scene-xviii-D
-  }

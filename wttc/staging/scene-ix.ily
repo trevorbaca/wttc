@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 9: A - E %%%
 
 scene-ix-title = \markup
@@ -10,10 +11,9 @@ scene-ix-title = \markup
   \line { SCENE \hspace #1 9. }
   }
 
-scene-ix-title-section-position = \markup {
+scene-ix-title-section-position = \markup
   \translate #'(-90 . 12)
   \scene-ix-title
-  }
 
 scene-ix-parenthesized-title = \markup
   \with-dimensions-from \null
@@ -24,10 +24,9 @@ scene-ix-parenthesized-title = \markup
   \line { (SCENE \hspace #1 9) }
   }
 
-scene-ix-parenthesized-title-section-position = \markup {
+scene-ix-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-ix-parenthesized-title
-  }
 
 scene-ix-A = \markup
   \with-dimensions-from \null
@@ -47,10 +46,9 @@ scene-ix-A = \markup
   \line { And all this time \dots \lnum #92 }
   }
 
-scene-ix-A-section-position = \markup {
+scene-ix-A-section-position = \markup
   \translate #'(-74 . -24)
   \scene-ix-A
-  }
 
 scene-ix-B = \markup
   \with-dimensions-from \null
@@ -66,10 +64,9 @@ scene-ix-B = \markup
   the audience. }
   }
 
-scene-ix-B-section-position = \markup {
+scene-ix-B-section-position = \markup
   \translate #'(0 . -41)
   \scene-ix-B
-  }
 
 scene-ix-C = \markup
   \with-dimensions-from \null
@@ -100,10 +97,9 @@ scene-ix-C = \markup
   \line { Did you say? \lnum #113 }
   }
 
-scene-ix-C-section-position = \markup {
+scene-ix-C-section-position = \markup
   \translate #'(120 . -10)
   \scene-ix-C
-  }
 
 scene-ix-C-continued = \markup
   \with-dimensions-from \null
@@ -128,10 +124,9 @@ scene-ix-C-continued = \markup
   and looks through it in the direction of the audience. }
   }
 
-scene-ix-C-continued-section-position = \markup {
+scene-ix-C-continued-section-position = \markup
   \translate #'(200 . -10)
   \scene-ix-C-continued
-  }
 
 scene-ix-D = \markup
   \with-dimensions-from \null
@@ -142,10 +137,9 @@ scene-ix-D = \markup
   \line { Nothing. \lnum #124 }
   }
 
-scene-ix-D-section-position = \markup {
+scene-ix-D-section-position = \markup
   \translate #'(0 . -41)
   \scene-ix-D
-  }
 
 scene-ix-E = \markup
   \with-dimensions-from \null
@@ -165,7 +159,6 @@ scene-ix-E = \markup
   \line { End scene 9. }
   }
 
-scene-ix-E-section-position = \markup {
+scene-ix-E-section-position = \markup
   \translate #'(50 . -38)
   \scene-ix-E
-  }

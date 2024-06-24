@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 8: A - E %%%
 
 scene-viii-title = \markup
@@ -10,10 +11,9 @@ scene-viii-title = \markup
   \line { SCENE \hspace #1 8. }
   }
 
-scene-viii-title-section-position = \markup {
+scene-viii-title-section-position = \markup
   \translate #'(-110 . 12)
   \scene-viii-title
-  }
 
 scene-viii-A = \markup
   \with-dimensions-from \null
@@ -51,10 +51,9 @@ scene-viii-A = \markup
   \justify { OWL sniffs the flowers, but again there is no touching. }
   }
 
-scene-viii-A-section-position = \markup {
+scene-viii-A-section-position = \markup
   \translate #'(-84 . -20)
   \scene-viii-A
-  }
 
 scene-viii-B = \markup
   \with-dimensions-from \null
@@ -67,10 +66,9 @@ scene-viii-B = \markup
   \line { OWL stands back up. }
   }
 
-scene-viii-B-section-position = \markup {
+scene-viii-B-section-position = \markup
   \translate #'(4 . -43)
   \scene-viii-B
-  }
 
 scene-viii-C = \markup
   \with-dimensions-from \null
@@ -81,10 +79,9 @@ scene-viii-C = \markup
   \line { But still, \lnum #81.1 }
   }
 
-scene-viii-C-section-position = \markup {
+scene-viii-C-section-position = \markup
   \translate #'(36 . -41)
   \scene-viii-C
-  }
 
 scene-viii-D = \markup
   \with-dimensions-from \null
@@ -95,10 +92,9 @@ scene-viii-D = \markup
   \line { violets. \lnum #81.2 }
   }
 
-scene-viii-D-section-position = \markup {
+scene-viii-D-section-position = \markup
   \translate #'(0 . -41)
   \scene-viii-D
-  }
 
 scene-viii-E = \markup
   \with-dimensions-from \null
@@ -113,7 +109,6 @@ scene-viii-E = \markup
   \line { End scene 8. }
   }
 
-scene-viii-E-section-position = \markup {
+scene-viii-E-section-position = \markup
   \translate #'(92 . -38)
   \scene-viii-E
-  }

@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 17: A - E %%%
 
 scene-xvii-title = \markup
@@ -10,10 +11,9 @@ scene-xvii-title = \markup
   \line { SCENE \hspace #1 17. }
   }
 
-scene-xvii-title-section-position = \markup {
+scene-xvii-title-section-position = \markup
   \translate #'(-102 . 12)
   \scene-xvii-title
-  }
 
 scene-xvii-A = \markup
   \with-dimensions-from \null
@@ -30,10 +30,9 @@ scene-xvii-A = \markup
   \line { But to what? \lnum #272 }
   }
 
-scene-xvii-A-section-position = \markup {
+scene-xvii-A-section-position = \markup
   \translate #'(-102 . -41)
   \scene-xvii-A
-  }
 
 scene-xvii-B = \markup
   \with-dimensions-from \null
@@ -44,10 +43,9 @@ scene-xvii-B = \markup
   \line { Where? \lnum #273 }
   }
 
-scene-xvii-B-section-position = \markup {
+scene-xvii-B-section-position = \markup
   \translate #'(6 . -41)
   \scene-xvii-B
-  }
 
 scene-xvii-C = \markup
   \with-dimensions-from \null
@@ -63,10 +61,9 @@ scene-xvii-C = \markup
   to stop this movement. }
   }
 
-scene-xvii-C-section-position = \markup {
+scene-xvii-C-section-position = \markup
   \translate #'(0 . -41)
   \scene-xvii-C
-  }
 
 scene-xvii-D = \markup
   \with-dimensions-from \null
@@ -97,10 +94,9 @@ scene-xvii-D = \markup
   \line { End scene 17. }
   }
 
-scene-xvii-D-section-position = \markup {
+scene-xvii-D-section-position = \markup
   \translate #'(200 . -21)
   \scene-xvii-D
-  }
 
 scene-xvii-E = \markup
   \with-dimensions-from \null
@@ -112,15 +108,9 @@ scene-xvii-E = \markup
   \line { End scene 17. }
   }
 
-scene-xvii-E-section-position = \markup {
+scene-xvii-E-section-position = \markup
   \translate #'(0 . 0)
   \scene-xvii-E
-  }
-
-
-%  \footnote \line { Samuel Beckett: \italic { What Where }, available statements
-%  reading backwards from the end. }
-
 
 scene-xvii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

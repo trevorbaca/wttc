@@ -1,33 +1,32 @@
 \version "2.25.16"
+
 %%% SCENE 4: A - L %%%
 
-scene-iv-title = \markup
+scene-iv-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 4. }
-  }
 
-scene-iv-title-section-position = \markup {
+scene-iv-title = \markup
+  \override #'(font-size . 8)
+  \scene-iv-title-words
+
+scene-iv-title-section-position = \markup
   \translate #'(-130 . 12)
   \scene-iv-title
-  }
+
+scene-iv-parenthesized-title-words = \markup
+  \with-dimensions-from \null
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \line { (SCENE \hspace #1 4) }
 
 scene-iv-parenthesized-title = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 6)
-  \column {
-  \line { (SCENE \hspace #1 4) }
-  }
+  \scene-iv-parenthesized-title-words
 
-scene-iv-parenthesized-title-section-position = \markup {
+scene-iv-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \scene-iv-parenthesized-title
-  }
 
 scene-iv-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
@@ -40,11 +39,9 @@ scene-iv-footnote = \markup
   (1961), final words in reverse order. }
   }
 
-scene-iv-A = \markup
+scene-iv-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { What was it we had to look out for? \lnum #30 }
   \line { Did we know it would take us away from each other? \lnum #31 }
@@ -54,66 +51,69 @@ scene-iv-A = \markup
   \line { Music attaca. }
   }
 
-scene-iv-A-section-position = \markup {
+scene-iv-A = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-iv-A-words
+
+scene-iv-A-section-position = \markup
   \translate #'(-100 . -40)
   \scene-iv-A
-  }
+
+scene-iv-B-words = \markup
+  \with-dimensions-from \null
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \line { Close, \lnum #33 }
 
 scene-iv-B = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
-  \column {
-  \line { Close, \lnum #33 }
-  }
+  \scene-iv-B-words
 
-scene-iv-B-section-position = \markup {
+scene-iv-B-section-position = \markup
   \translate #'(0 . -43)
   \scene-iv-B
-  }
+
+scene-iv-C-words = \markup
+  \with-dimensions-from \null
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \line { You know that, \lnum #34 }
 
 scene-iv-C = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
-  \column {
-  \line { You know that, \lnum #34 }
-  }
+  \scene-iv-C-words
 
-scene-iv-C-section-position = \markup {
+scene-iv-C-section-position = \markup
   \translate #'(0 . -43)
   \scene-iv-C
-  }
+
+scene-iv-D-words = \markup
+  \with-dimensions-from \null
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \line { Like left and right, \lnum #35 }
 
 scene-iv-D = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
-  \column {
-  \line { Like left and right, \lnum #35 }
-  }
+  \scene-iv-D-words
 
-scene-iv-D-section-position = \markup {
+scene-iv-D-section-position = \markup
   \translate #'(0 . -43)
   \scene-iv-D
-  }
+
+
+scene-iv-E-words = \markup
+  \with-dimensions-from \null
+  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \line { Like night and day \lnum #36 }
 
 scene-iv-E = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
-  \column {
-  \line { Like night and day \lnum #36 }
-  }
+  \scene-iv-E-words
 
-scene-iv-E-section-position = \markup {
+scene-iv-E-section-position = \markup
   \translate #'(0 . -43)
   \scene-iv-E
-  }
+
+% HERE
 
 scene-iv-F = \markup
   \with-dimensions-from \null
@@ -125,10 +125,9 @@ scene-iv-F = \markup
   \line { Like words and \lnum #38 }
   }
 
-scene-iv-F-section-position = \markup {
+scene-iv-F-section-position = \markup
   \translate #'(0 . -40)
   \scene-iv-F
-  }
 
 scene-iv-G = \markup
   \with-dimensions-from \null
@@ -141,10 +140,9 @@ scene-iv-G = \markup
   \line { Music — \lnum #39 }
   }
 
-scene-iv-G-section-position = \markup {
+scene-iv-G-section-position = \markup
   \translate #'(0 . -35)
   \scene-iv-G
-  }
 
 scene-iv-H = \markup
   \with-dimensions-from \null
@@ -160,10 +158,9 @@ scene-iv-H = \markup
     fit, trying to pull the foot free. }
   }
 
-scene-iv-H-section-position = \markup {
+scene-iv-H-section-position = \markup
   \translate #'(0 . -45)
   \scene-iv-H
-  }
 
 scene-iv-I = \markup
   \with-dimensions-from \null
@@ -180,10 +177,9 @@ scene-iv-I = \markup
   as suddenly as it began. }
   }
 
-scene-iv-I-section-position = \markup {
+scene-iv-I-section-position = \markup
   \translate #'(60 . -42)
   \scene-iv-I
-  }
 
 scene-iv-J = \markup
   \with-dimensions-from \null
@@ -201,10 +197,9 @@ scene-iv-J = \markup
   Then proceed together. }
   }
 
-scene-iv-J-section-position = \markup {
+scene-iv-J-section-position = \markup
   \translate #'(180 . -41)
   \scene-iv-J
-  }
 
 scene-iv-K = \markup
   \with-dimensions-from \null
@@ -219,10 +214,9 @@ scene-iv-K = \markup
   \line { Like give and take. \lnum #43 }
   }
 
-scene-iv-K-section-position = \markup {
+scene-iv-K-section-position = \markup
   \translate #'(0 . -46)
   \scene-iv-K
-  }
 
 scene-iv-L = \markup
   \with-dimensions-from \null
@@ -234,7 +228,6 @@ scene-iv-L = \markup
   \line { End scene 4. }
   }
 
-scene-iv-L-section-position = \markup {
+scene-iv-L-section-position = \markup
   \translate #'(50 . -49)
   \scene-iv-L
-  }

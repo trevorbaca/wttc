@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 15: A - G %%%
 
 scene-xv-title = \markup
@@ -10,10 +11,9 @@ scene-xv-title = \markup
   \line { SCENE \hspace #1 15. }
   }
 
-scene-xv-title-section-position = \markup {
+scene-xv-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-xv-title
-  }
 
 scene-xv-A = \markup
   \with-dimensions-from \null
@@ -26,10 +26,9 @@ scene-xv-A = \markup
   \line { All right, I say. \lnum #234 }
   }
 
-scene-xv-A-section-position = \markup {
+scene-xv-A-section-position = \markup
   \translate #'(16 . -37)
   \scene-xv-A
-  }
 
 scene-xv-B = \markup
   \with-dimensions-from \null
@@ -40,10 +39,9 @@ scene-xv-B = \markup
   \line { Home. \lnum #235 }
   }
 
-scene-xv-B-section-position = \markup {
+scene-xv-B-section-position = \markup
   \translate #'(2 . -41)
   \scene-xv-B
-  }
 
 scene-xv-C = \markup
   \with-dimensions-from \null
@@ -65,10 +63,9 @@ scene-xv-C = \markup
   \line { Things come and go — \lnum #240 }
   }
 
-scene-xv-C-section-position = \markup {
+scene-xv-C-section-position = \markup
   \translate #'(60 . -21)
   \scene-xv-C
-  }
 
 scene-xv-D = \markup
   \with-dimensions-from \null
@@ -83,10 +80,9 @@ scene-xv-D = \markup
   round to face the audience. After a few seconds, OWL shouts out: }
   }
 
-scene-xv-D-section-position = \markup {
+scene-xv-D-section-position = \markup
   \translate #'(0 . -35)
   \scene-xv-D
-  }
 
 scene-xv-E = \markup
   \with-dimensions-from \null
@@ -101,10 +97,9 @@ scene-xv-E = \markup
   Music and lighting return to how they were. }
   }
 
-scene-xv-E-section-position = \markup {
+scene-xv-E-section-position = \markup
   \translate #'(0 . -46)
   \scene-xv-E
-  }
 
 scene-xv-F = \markup
   \with-dimensions-from \null
@@ -117,10 +112,9 @@ scene-xv-F = \markup
   \line { All of us. \lnum #244 }
   }
 
-scene-xv-F-section-position = \markup {
+scene-xv-F-section-position = \markup
   \translate #'(0 . -39)
   \scene-xv-F
-  }
 
 scene-xv-G = \markup
   \with-dimensions-from \null
@@ -137,11 +131,9 @@ scene-xv-G = \markup
   \line { End scene 15. }
   }
 
-scene-xv-G-section-position = \markup {
+scene-xv-G-section-position = \markup
   \translate #'(30 . -41)
   \scene-xv-G
-  }
-
 
 scene-xv-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

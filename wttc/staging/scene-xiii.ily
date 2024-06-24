@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 13: A - G %%%
 
 scene-xiii-title = \markup
@@ -10,10 +11,9 @@ scene-xiii-title = \markup
   \line { SCENE \hspace #1 13. }
   }
 
-scene-xiii-title-section-position = \markup {
+scene-xiii-title-section-position = \markup
   \translate #'(-60 . 12)
   \scene-xiii-title
-  }
 
 scene-xiii-parenthesized-title = \markup
   \with-dimensions-from \null
@@ -24,10 +24,9 @@ scene-xiii-parenthesized-title = \markup
   \line { (SCENE \hspace #1 13) }
   }
 
-scene-xiii-parenthesized-title-section-position = \markup {
+scene-xiii-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-xiii-parenthesized-title
-  }
 
 scene-xiii-A = \markup
   \with-dimensions-from \null
@@ -41,10 +40,9 @@ scene-xiii-A = \markup
   \line { Pause. }
   }
 
-scene-xiii-A-section-position = \markup {
+scene-xiii-A-section-position = \markup
   \translate #'(-60 . -38)
   \scene-xiii-A
-  }
 
 scene-xiii-B = \markup
   \with-dimensions-from \null
@@ -76,10 +74,9 @@ scene-xiii-B = \markup
   \line { Did I ask when that would be? \lnum #197 }
   }
 
-scene-xiii-B-section-position = \markup {
+scene-xiii-B-section-position = \markup
   \translate #'(62 . -12)
   \scene-xiii-B
-  }
 
 scene-xiii-C = \markup
   \with-dimensions-from \null
@@ -91,10 +88,9 @@ scene-xiii-C = \markup
   \line { I — \lnum #199 }
   }
 
-scene-xiii-C-section-position = \markup {
+scene-xiii-C-section-position = \markup
   \translate #'(0 . -53)
   \scene-xiii-C
-  }
 
 scene-xiii-D = \markup
   \with-dimensions-from \null
@@ -110,10 +106,9 @@ scene-xiii-D = \markup
   this fit, trying to pull the arm free. }
   }
 
-scene-xiii-D-section-position = \markup {
+scene-xiii-D-section-position = \markup
   \translate #'(0 . -45)
   \scene-xiii-D
-  }
 
 scene-xiii-E = \markup
   \with-dimensions-from \null
@@ -138,10 +133,9 @@ scene-xiii-E = \markup
   \line { Music and lighting return to how they were. }
   }
 
-scene-xiii-E-section-position = \markup {
+scene-xiii-E-section-position = \markup
   \translate #'(0 . -57)
   \scene-xiii-E
-  }
 
 scene-xiii-F = \markup
   \with-dimensions-from \null
@@ -159,10 +153,9 @@ scene-xiii-F = \markup
   \line { If it could have stayed like that \dots \lnum #206 }
   }
 
-scene-xiii-F-section-position = \markup {
+scene-xiii-F-section-position = \markup
   \translate #'(0 . -40)
   \scene-xiii-F
-  }
 
 scene-xiii-G = \markup
   \with-dimensions-from \null
@@ -174,10 +167,9 @@ scene-xiii-G = \markup
   \line { End scene 13. }
   }
 
-scene-xiii-G-section-position = \markup {
+scene-xiii-G-section-position = \markup
   \translate #'(60 . -38)
   \scene-xiii-G
-  }
 
 scene-xiii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

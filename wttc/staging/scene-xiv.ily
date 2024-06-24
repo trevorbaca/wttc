@@ -1,4 +1,5 @@
 \version "2.25.16"
+
 %%% SCENE 14: A - D %%%
 
 scene-xiv-title = \markup
@@ -10,10 +11,9 @@ scene-xiv-title = \markup
   \line { SCENE \hspace #1 14. }
   }
 
-scene-xiv-title-section-position = \markup {
+scene-xiv-title-section-position = \markup
   \translate #'(-60 . 12)
   \scene-xiv-title
-  }
 
 scene-xiv-A = \markup
   \with-dimensions-from \null
@@ -24,10 +24,9 @@ scene-xiv-A = \markup
   \line { Where was I? \lnum #207 }
   }
 
-scene-xiv-A-section-position = \markup {
+scene-xiv-A-section-position = \markup
   \translate #'(-58 . -48)
   \scene-xiv-A
-  }
 
 scene-xiv-B = \markup
   \with-dimensions-from \null
@@ -42,10 +41,9 @@ scene-xiv-B = \markup
   \line { Waving, \lnum #212 }
   }
 
-scene-xiv-B-section-position = \markup {
+scene-xiv-B-section-position = \markup
   \translate #'(0 . -41)
   \scene-xiv-B
-  }
 
 scene-xiv-C = \markup
   \with-dimensions-from \null
@@ -57,10 +55,9 @@ scene-xiv-C = \markup
   \line { Waving to us. \lnum #214 }
   }
 
-scene-xiv-C-section-position = \markup {
+scene-xiv-C-section-position = \markup
   \translate #'(0 . -48)
   \scene-xiv-C
-  }
 
 scene-xiv-D = \markup
   \with-dimensions-from \null
@@ -99,7 +96,6 @@ scene-xiv-D = \markup
   \line { End scene 14. }
   }
 
-scene-xiv-D-section-position = \markup {
+scene-xiv-D-section-position = \markup
   \translate #'(80 . 0)
   \scene-xiv-D
-  }
