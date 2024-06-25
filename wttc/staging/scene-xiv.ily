@@ -3,7 +3,7 @@
 
 % SCENE 14: A - D
 
-scene-xiv-title-words = \markup
+scene-xiv-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 14. }
@@ -11,9 +11,9 @@ scene-xiv-title-words = \markup
 scene-xiv-title-section-position = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
-  \scene-xiv-title-words
+  \scene-xiv-title
 
-scene-xiv-A-words = \markup
+scene-xiv-A = \markup
   \wdfn
   \adobe-bold
   \line { Where was I? \lnum #207 }
@@ -21,9 +21,9 @@ scene-xiv-A-words = \markup
 scene-xiv-A-section-position = \markup
   \translate #'(-58 . -48)
   \section-font-size
-  \scene-xiv-A-words
+  \scene-xiv-A
 
-scene-xiv-B-words = \markup
+scene-xiv-B = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -37,9 +37,9 @@ scene-xiv-B-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xiv-B-words
+  \scene-xiv-B
 
-scene-xiv-C-words = \markup
+scene-xiv-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -50,9 +50,9 @@ scene-xiv-C-section-position = \markup
   \translate #'(0 . -48)
   \section-baseline-skip
   \section-font-size
-  \scene-xiv-C-words
+  \scene-xiv-C
 
-scene-xiv-D-words = \markup
+scene-xiv-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -90,4 +90,4 @@ scene-xiv-D-section-position = \markup
   \translate #'(80 . 0)
   \section-baseline-skip
   \section-font-size
-  \scene-xiv-D-words
+  \scene-xiv-D

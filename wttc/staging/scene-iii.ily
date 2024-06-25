@@ -3,7 +3,7 @@
 
 % SCENE 3: A - F
 
-scene-iii-title-words = \markup
+scene-iii-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 3. }
@@ -11,9 +11,9 @@ scene-iii-title-words = \markup
 scene-iii-title-section-position = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
-  \scene-iii-title-words
+  \scene-iii-title
 
-scene-iii-parenthesized-title-words = \markup
+scene-iii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 3) }
@@ -21,9 +21,9 @@ scene-iii-parenthesized-title-words = \markup
 scene-iii-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
-  \scene-iii-parenthesized-title-words
+  \scene-iii-parenthesized-title
 
-scene-iii-A-words = \markup
+scene-iii-A = \markup
   \wdfn
   \adobe-bold
   \line { Not now \dots \lnum #20 }
@@ -31,9 +31,9 @@ scene-iii-A-words = \markup
 scene-iii-A-section-position = \markup
   \translate #'(64 . -38)
   \section-font-size
-  \scene-iii-A-words
+  \scene-iii-A
 
-scene-iii-B-words = \markup
+scene-iii-B = \markup
   \wdfn
   \adobe-italic
   \justify { Musicians pause a moment after \hspace #0.5 \override #'(font-name
@@ -47,9 +47,9 @@ scene-iii-B-section-position = \markup
   \translate #'(78 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-iii-B-words
+  \scene-iii-B
 
-scene-iii-C-words = \markup
+scene-iii-C = \markup
   \wdfn
   \column {
   \adobe-italic
@@ -64,9 +64,9 @@ scene-iii-C-section-position = \markup
   \translate #'(26 . -44)
   \section-baseline-skip
   \section-font-size
-  \scene-iii-C-words
+  \scene-iii-C
 
-scene-iii-D-words = \markup
+scene-iii-D = \markup
   \wdfn
   \column {
   \adobe-italic
@@ -85,9 +85,9 @@ scene-iii-D-section-position = \markup
   \translate #'(80 . -43)
   \section-baseline-skip
   \section-font-size
-  \scene-iii-D-words
+  \scene-iii-D
 
-scene-iii-E-words = \markup
+scene-iii-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -102,9 +102,9 @@ scene-iii-E-section-position = \markup
   \translate #'(40 . -36)
   \section-baseline-skip
   \section-font-size
-  \scene-iii-E-words
+  \scene-iii-E
 
-scene-iii-F-words = \markup
+scene-iii-F = \markup
   \wdfn
   \column {
   \adobe-italic
@@ -116,9 +116,9 @@ scene-iii-F-section-position = \markup
   \translate #'(6 . -45)
   \section-baseline-skip
   \section-font-size
-  \scene-iii-F-words
+  \scene-iii-F
 
-scene-iii-G-words = \markup 
+scene-iii-G = \markup 
   \wdfn
   \adobe-italic
   \line { End scene 3. }
@@ -126,4 +126,4 @@ scene-iii-G-words = \markup
 scene-iii-G-section-position = \markup
   \translate #'(40 . -41)
   \section-font-size
-  \scene-iii-G-words
+  \scene-iii-G

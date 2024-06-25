@@ -3,7 +3,7 @@
 
 % SCENE 8: A - E
 
-scene-viii-title-words = \markup
+scene-viii-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 8. }
@@ -11,9 +11,9 @@ scene-viii-title-words = \markup
 scene-viii-title-section-position = \markup
   \translate #'(-110 . 12)
   \section-title-font-size
-  \scene-viii-title-words
+  \scene-viii-title
 
-scene-viii-A-words = \markup
+scene-viii-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -47,9 +47,9 @@ scene-viii-A-section-position = \markup
   \translate #'(-84 . -20)
   \section-baseline-skip
   \section-font-size
-  \scene-viii-A-words
+  \scene-viii-A
 
-scene-viii-B-words = \markup
+scene-viii-B = \markup
   \wdfn
   \column {
   \adobe-bold
@@ -61,9 +61,9 @@ scene-viii-B-section-position = \markup
   \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
-  \scene-viii-B-words
+  \scene-viii-B
 
-scene-viii-C-words = \markup
+scene-viii-C = \markup
   \wdfn
   \adobe-bold
   \line { But still, \lnum #81.1 }
@@ -71,9 +71,9 @@ scene-viii-C-words = \markup
 scene-viii-C-section-position = \markup
   \translate #'(36 . -41)
   \section-font-size
-  \scene-viii-C-words
+  \scene-viii-C
 
-scene-viii-D-words = \markup
+scene-viii-D = \markup
   \wdfn
   \adobe-bold
   \line { violets. \lnum #81.2 }
@@ -81,9 +81,9 @@ scene-viii-D-words = \markup
 scene-viii-D-section-position = \markup
   \translate #'(0 . -41)
   \section-font-size
-  \scene-viii-D-words
+  \scene-viii-D
 
-scene-viii-E-words = \markup
+scene-viii-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -97,4 +97,4 @@ scene-viii-E-section-position = \markup
   \translate #'(92 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-viii-E-words
+  \scene-viii-E

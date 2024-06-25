@@ -3,7 +3,7 @@
 
 % SCENE 6: A - G
 
-scene-vi-title-words = \markup
+scene-vi-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 6. }
@@ -11,9 +11,9 @@ scene-vi-title-words = \markup
 scene-vi-title-section-position = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
-  \scene-vi-title-words
+  \scene-vi-title
 
-scene-vi-A-words = \markup
+scene-vi-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -24,9 +24,9 @@ scene-vi-A-section-position = \markup
   \translate #'(-60 . -46)
   \section-baseline-skip
   \section-font-size
-  \scene-vi-A-words
+  \scene-vi-A
 
-scene-vi-B-words = \markup
+scene-vi-B = \markup
   \wdfn
   \adobe-bold
   \line { You lay it all out for me, \lnum #50 }
@@ -34,9 +34,9 @@ scene-vi-B-words = \markup
 scene-vi-B-section-position = \markup
   \translate #'(0 . -46)
   \section-font-size
-  \scene-vi-B-words
+  \scene-vi-B
 
-scene-vi-C-words = \markup
+scene-vi-C = \markup
   \wdfn
   \adobe-bold
   \line { Tell me where to go \lnum #51 }
@@ -44,9 +44,9 @@ scene-vi-C-words = \markup
 scene-vi-C-section-position = \markup
   \translate #'(0 . -46)
   \section-font-size
-  \scene-vi-C-words
+  \scene-vi-C
 
-scene-vi-D-words = \markup
+scene-vi-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -57,9 +57,9 @@ scene-vi-D-section-position = \markup
   \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
-  \scene-vi-D-words
+  \scene-vi-D
 
-scene-vi-E-words = \markup
+scene-vi-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -81,9 +81,9 @@ scene-vi-E-section-position = \markup
   \translate #'(80 . -46)
   \section-baseline-skip
   \section-font-size
-  \scene-vi-E-words
+  \scene-vi-E
 
-scene-vi-before-F-words = \markup
+scene-vi-before-F = \markup
   \wdfn
   \adobe-italic
   \line { Freely, not coordinated with music: }
@@ -91,9 +91,9 @@ scene-vi-before-F-words = \markup
 scene-vi-before-F-section-position = \markup
   \translate #'(0 . -41)
   \section-font-size
-  \scene-vi-before-F-words
+  \scene-vi-before-F
 
-scene-vi-F-words = \markup
+scene-vi-F = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -108,9 +108,9 @@ scene-vi-F-section-position = \markup
   \translate #'(0 . -42)
   \section-baseline-skip
   \section-font-size
-  \scene-vi-F-words
+  \scene-vi-F
 
-scene-vi-G-words = \markup
+scene-vi-G = \markup
   \wdfn
   \column {
   \adobe-bold
@@ -123,4 +123,4 @@ scene-vi-G-section-position = \markup
   \translate #'(63 . -46)
   \section-baseline-skip
   \section-font-size
-  \scene-vi-G-words
+  \scene-vi-G

@@ -3,7 +3,7 @@
 
 % SCENE 19: A - M
 
-scene-xix-title-words = \markup
+scene-xix-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 19. }
@@ -11,9 +11,9 @@ scene-xix-title-words = \markup
 scene-xix-title-section-position = \markup
   \translate #'(-96 . 6)
   \section-title-font-size
-  \scene-xix-title-words
+  \scene-xix-title
 
-scene-xix-parenthesized-title-words = \markup
+scene-xix-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 19) }
@@ -21,9 +21,9 @@ scene-xix-parenthesized-title-words = \markup
 scene-xix-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
-  \scene-xix-parenthesized-title-words
+  \scene-xix-parenthesized-title
 
-scene-xix-A-words = \markup
+scene-xix-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -34,9 +34,9 @@ scene-xix-A-section-position = \markup
   \translate #'(-74 . -47)
   \section-baseline-skip
   \section-font-size
-  \scene-xix-A-words
+  \scene-xix-A
 
-scene-xix-B-words = \markup
+scene-xix-B = \markup
   \wdfn
   \adobe-bold
   \line { That's the reason \dots \lnum #298 }
@@ -44,9 +44,9 @@ scene-xix-B-words = \markup
 scene-xix-B-section-position = \markup
   \translate #'(0 . -47)
   \section-font-size
-  \scene-xix-B-words
+  \scene-xix-B
 
-scene-xix-C-words = \markup
+scene-xix-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -61,9 +61,9 @@ scene-xix-C-section-position = \markup
   \translate #'(50 . -47)
   \section-baseline-skip
   \section-font-size
-  \scene-xix-C-words
+  \scene-xix-C
 
-scene-xix-D-words = \markup
+scene-xix-D = \markup
   \wdfn
   \adobe-bold
   \line { Window. \lnum #301 }
@@ -71,9 +71,9 @@ scene-xix-D-words = \markup
 scene-xix-D-section-position = \markup
   \translate #'(0 . -49)
   \section-font-size
-  \scene-xix-D-words
+  \scene-xix-D
 
-scene-xix-E-words = \markup
+scene-xix-E = \markup
   \wdfn
   \adobe-bold
   \line { Table. \lnum #302 }
@@ -81,9 +81,9 @@ scene-xix-E-words = \markup
 scene-xix-E-section-position = \markup
   \translate #'(0 . -49)
   \section-font-size
-  \scene-xix-E-words
+  \scene-xix-E
 
-scene-xix-F-words = \markup
+scene-xix-F = \markup
   \wdfn
   \adobe-bold
   \line { Flowers. \lnum #303 }
@@ -91,9 +91,9 @@ scene-xix-F-words = \markup
 scene-xix-F-section-position = \markup
   \translate #'(0 . -49)
   \section-font-size
-  \scene-xix-F-words
+  \scene-xix-F
 
-scene-xix-G-words = \markup
+scene-xix-G = \markup
   \wdfn
   \adobe-bold
   \line { In a glass. \lnum #304 }
@@ -101,9 +101,9 @@ scene-xix-G-words = \markup
 scene-xix-G-section-position = \markup
   \translate #'(0 . -49)
   \section-font-size
-  \scene-xix-G-words
+  \scene-xix-G
 
-scene-xix-H-words = \markup
+scene-xix-H = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -115,9 +115,9 @@ scene-xix-H-section-position = \markup
   \translate #'(18 . -47)
   \section-baseline-skip
   \section-font-size
-  \scene-xix-H-words
+  \scene-xix-H
 
-scene-xix-I-words = \markup
+scene-xix-I = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -130,9 +130,9 @@ scene-xix-I-section-position = \markup
   \translate #'(90 . -51)
   \section-baseline-skip
   \section-font-size
-  \scene-xix-I-words
+  \scene-xix-I
 
-scene-xix-J-words = \markup
+scene-xix-J = \markup
   \wdfn
   \adobe-bold
   \line { Never mind. \lnum #307 }
@@ -140,9 +140,9 @@ scene-xix-J-words = \markup
 scene-xix-J-section-position = \markup
   \translate #'(0 . -47)
   \section-font-size
-  \scene-xix-J-words
+  \scene-xix-J
 
-scene-xix-K-words = \markup
+scene-xix-K = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -154,9 +154,9 @@ scene-xix-K-section-position = \markup
   \translate #'(0 . -45)
   \section-baseline-skip
   \section-font-size
-  \scene-xix-K-words
+  \scene-xix-K
 
-scene-xix-L-words = \markup
+scene-xix-L = \markup
   \wdfn
   \adobe-bold
   \line { It's all over. \lnum #309 }
@@ -164,9 +164,9 @@ scene-xix-L-words = \markup
 scene-xix-L-section-position = \markup
   \translate #'(50 . -47)
   \section-font-size
-  \scene-xix-L-words
+  \scene-xix-L
 
-scene-xix-M-words = \markup
+scene-xix-M = \markup
   \wdfn
   \adobe-italic
   \line { End scene 19. }
@@ -174,4 +174,4 @@ scene-xix-M-words = \markup
 scene-xix-M-section-position = \markup
   \translate #'(74 . -45)
   \section-font-size
-  \scene-xix-M-words
+  \scene-xix-M

@@ -3,7 +3,7 @@
 
 % SCENE 10: A - D
 
-scene-x-title-words = \markup
+scene-x-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 10. }
@@ -11,9 +11,9 @@ scene-x-title-words = \markup
 scene-x-title-section-position = \markup
   \translate #'(-100 . 12)
   \section-title-font-size
-  \scene-x-title-words
+  \scene-x-title
 
-scene-x-parenthesized-title-words = \markup
+scene-x-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 10) }
@@ -21,9 +21,9 @@ scene-x-parenthesized-title-words = \markup
 scene-x-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
-  \scene-x-parenthesized-title-words
+  \scene-x-parenthesized-title
 
-scene-x-A-words = \markup
+scene-x-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -45,9 +45,9 @@ scene-x-A-section-position = \markup
   \translate #'(-86 . -40)
   \section-baseline-skip
   \section-font-size
-  \scene-x-A-words
+  \scene-x-A
 
-scene-x-B-words = \markup
+scene-x-B = \markup
   \wdfn
   \adobe-bold
   \line { Promised \dots \lnum #130 }
@@ -55,9 +55,9 @@ scene-x-B-words = \markup
 scene-x-B-section-position = \markup
   \translate #'(2 . -41)
   \section-font-size
-  \scene-x-B-words
+  \scene-x-B
 
-scene-x-C-words = \markup
+scene-x-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -78,9 +78,9 @@ scene-x-C-section-position = \markup
   \translate #'(76 . -30)
   \section-baseline-skip
   \section-font-size
-  \scene-x-C-words
+  \scene-x-C
 
-scene-x-D-words = \markup
+scene-x-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -103,4 +103,4 @@ scene-x-D-section-position = \markup
   \translate #'(76 . -31)
   \section-baseline-skip
   \section-font-size
-  \scene-x-D-words
+  \scene-x-D

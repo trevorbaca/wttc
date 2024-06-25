@@ -3,16 +3,16 @@
 
 % SCENE 17: A - E
 
-scene-xvii-title-words = \markup
+scene-xvii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 17. }
 
 scene-xvii-title-section-position = \markup
   \translate #'(-102 . 12)
   \section-title-font-size
-  \scene-xvii-title-words
+  \scene-xvii-title
 
-scene-xvii-A-words = \markup
+scene-xvii-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -28,9 +28,9 @@ scene-xvii-A-section-position = \markup
   \translate #'(-102 . -41)
   \section-font-size
   \section-baseline-skip
-  \scene-xvii-A-words
+  \scene-xvii-A
 
-scene-xvii-B-words = \markup
+scene-xvii-B = \markup
   \wdfn
   \adobe-bold
   \line { Where? \lnum #273 }
@@ -38,9 +38,9 @@ scene-xvii-B-words = \markup
 scene-xvii-B-section-position = \markup
   \translate #'(6 . -41)
   \section-font-size
-  \scene-xvii-B-words
+  \scene-xvii-B
 
-scene-xvii-C-words = \markup
+scene-xvii-C = \markup
   \wdfn
   \adobe-italic
   \justify { Still 4. Sudden change in music and lighting as OWL is fixed in
@@ -53,9 +53,9 @@ scene-xvii-C-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xvii-C-words
+  \scene-xvii-C
 
-scene-xvii-D-words = \markup
+scene-xvii-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -84,9 +84,9 @@ scene-xvii-D-section-position = \markup
   \translate #'(200 . -21)
   \section-baseline-skip
   \section-font-size
-  \scene-xvii-D-words
+  \scene-xvii-D
 
-scene-xvii-E-words = \markup
+scene-xvii-E = \markup
   \wdfn
   \adobe-italic
   \line { End scene 17. }
@@ -94,7 +94,7 @@ scene-xvii-E-words = \markup
 scene-xvii-E-section-position = \markup
   \translate #'(0 . 0)
   \section-font-size
-  \scene-xvii-E-words
+  \scene-xvii-E
 
 scene-xvii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

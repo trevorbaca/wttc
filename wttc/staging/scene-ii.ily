@@ -3,7 +3,7 @@
 
 % SCENE 2: A - H
 
-scene-ii-title-words = \markup
+scene-ii-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 2. }
@@ -11,9 +11,9 @@ scene-ii-title-words = \markup
 scene-ii-title-section-position = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
-  \scene-ii-title-words
+  \scene-ii-title
 
-scene-ii-A-words = \markup
+scene-ii-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -24,9 +24,9 @@ scene-ii-A-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-A-words
+  \scene-ii-A
 
-scene-ii-B-words = \markup
+scene-ii-B = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -37,9 +37,9 @@ scene-ii-B-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-B-words
+  \scene-ii-B
 
-scene-ii-C-words = \markup
+scene-ii-C = \markup
   \wdfn
   \adobe-bold
   \line { When the time comes. \lnum #12 }
@@ -48,9 +48,9 @@ scene-ii-C-section-position = \markup
   \translate #'(0 . -43)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-C-words
+  \scene-ii-C
 
-scene-ii-D-words = \markup
+scene-ii-D = \markup
   \wdfn
   \adobe-bold
   \line { Look: \lnum #13 }
@@ -59,9 +59,9 @@ scene-ii-D-section-position = \markup
   \translate #'(6 . -43)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-D-words
+  \scene-ii-D
 
-scene-ii-E-words = \markup
+scene-ii-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -72,9 +72,9 @@ scene-ii-E-section-position = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-E-words
+  \scene-ii-E
 
-scene-ii-F-words = \markup
+scene-ii-F = \markup
   \wdfn
   \column {
   \adobe-bold
@@ -86,9 +86,9 @@ scene-ii-F-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-F-words
+  \scene-ii-F
 
-scene-ii-G-words = \markup
+scene-ii-G = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -101,9 +101,9 @@ scene-ii-G-section-position = \markup
   \translate #'(0 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-G-words
+  \scene-ii-G
 
-scene-ii-H-words = \markup
+scene-ii-H = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -120,5 +120,5 @@ scene-ii-H-section-position = \markup
   \translate #'(100 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-ii-H-words
+  \scene-ii-H
 

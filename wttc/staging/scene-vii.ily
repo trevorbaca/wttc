@@ -3,7 +3,7 @@
 
 % SCENE 7: A - J
 
-scene-vii-title-words = \markup
+scene-vii-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 7. }
@@ -11,9 +11,9 @@ scene-vii-title-words = \markup
 scene-vii-title-section-position = \markup
   \translate #'(-34 . 12)
   \section-title-font-size
-  \scene-vii-title-words
+  \scene-vii-title
 
-scene-vii-parenthesized-title-words = \markup
+scene-vii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 7) }
@@ -21,9 +21,9 @@ scene-vii-parenthesized-title-words = \markup
 scene-vii-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
-  \scene-vii-parenthesized-title-words
+  \scene-vii-parenthesized-title
 
-scene-vii-A-words = \markup
+scene-vii-A = \markup
   \wdfn
   \column {
   \adobe-italic
@@ -35,9 +35,9 @@ scene-vii-A-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-vii-A-words
+  \scene-vii-A
 
-scene-vii-B-words = \markup
+scene-vii-B = \markup
   \wdfn
   \column {
   \adobe-italic
@@ -49,9 +49,9 @@ scene-vii-B-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-vii-B-words
+  \scene-vii-B
 
-scene-vii-C-words = \markup
+scene-vii-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -67,9 +67,9 @@ scene-vii-C-section-position = \markup
   \translate #'(52 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-vii-C-words
+  \scene-vii-C
 
-scene-vii-E-words = \markup
+scene-vii-E = \markup
   \wdfn
   \adobe-bold
   \line { What did you say at the time? \lnum #69 }
@@ -77,9 +77,9 @@ scene-vii-E-words = \markup
 scene-vii-E-section-position = \markup
   \translate #'(0 . -48)
   \section-font-size
-  \scene-vii-E-words
+  \scene-vii-E
 
-scene-vii-F-words = \markup
+scene-vii-F = \markup
   \wdfn
   \adobe-bold
   \line { How I would come to a — \lnum #70 }
@@ -87,9 +87,9 @@ scene-vii-F-words = \markup
 scene-vii-F-section-position = \markup
   \translate #'(0 . -48)
   \section-font-size
-  \scene-vii-F-words
+  \scene-vii-F
 
-scene-vii-G-words = \markup
+scene-vii-G = \markup
   \wdfn
   \adobe-bold
   \line { What did you call it? — \lnum #71 }
@@ -97,9 +97,9 @@ scene-vii-G-words = \markup
 scene-vii-G-section-position = \markup
   \translate #'(0 . -46)
   \section-font-size
-  \scene-vii-G-words
+  \scene-vii-G
 
-scene-vii-H-words = \markup
+scene-vii-H = \markup
   \wdfn
   \adobe-italic
   \justify { OWL and musicians wait together in silence, long enough for the
@@ -111,9 +111,9 @@ scene-vii-H-section-position = \markup
   \translate #'(46 . -40)
   \section-baseline-skip
   \section-font-size
-  \scene-vii-H-words
+  \scene-vii-H
 
-scene-vii-I-words = \markup
+scene-vii-I = \markup
   \wdfn
   \adobe-bold
   \line { “Chamber,” \lnum #72 }
@@ -121,9 +121,9 @@ scene-vii-I-words = \markup
 scene-vii-I-section-position = \markup
   \translate #'(0 . -48)
   \section-font-size
-  \scene-vii-I-words
+  \scene-vii-I
 
-scene-vii-J-words = \markup
+scene-vii-J = \markup
   \wdfn
   \adobe-italic
   \line { End scene 7. }
@@ -131,4 +131,4 @@ scene-vii-J-words = \markup
 scene-vii-J-section-position = \markup
   \translate #'(166 . -44)
   \section-font-size
-  \scene-vii-J-words
+  \scene-vii-J

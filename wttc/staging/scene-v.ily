@@ -3,7 +3,7 @@
 
 % SCENE 5: A - D
 
-scene-v-title-words = \markup
+scene-v-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE 5. }
@@ -11,9 +11,9 @@ scene-v-title-words = \markup
 scene-v-title-section-position = \markup
   \translate #'(-32 . 14)
   \section-title-font-size
-  \scene-v-title-words
+  \scene-v-title
 
-scene-v-A-words = \markup
+scene-v-A = \markup
   \wdfn
   \adobe-bold
   \line { You know, it could all be as it was, \lnum #44 }
@@ -21,9 +21,9 @@ scene-v-A-words = \markup
 scene-v-A-section-position = \markup
   \translate #'(0 . -46)
   \section-font-size
-  \scene-v-A-words
+  \scene-v-A
 
-scene-v-B-words = \markup
+scene-v-B = \markup
   \wdfn
   \column {
   \adobe-italic
@@ -35,9 +35,9 @@ scene-v-B-section-position = \markup
   \translate #'(0 . -44)
   \section-baseline-skip
   \section-font-size
-  \scene-v-B-words
+  \scene-v-B
 
-scene-v-C-words = \markup
+scene-v-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -50,9 +50,9 @@ scene-v-C-section-position = \markup
   \translate #'(8 . -42)
   \section-baseline-skip
   \section-font-size
-  \scene-v-C-words
+  \scene-v-C
 
-scene-v-D-words = \markup
+scene-v-D = \markup
   \wdfn
   \adobe-italic
   \line { End scene 5. }
@@ -60,4 +60,4 @@ scene-v-D-words = \markup
 scene-v-D-section-position = \markup
   \translate #'(124 . -44)
   \section-font-size
-  \scene-v-D-words
+  \scene-v-D

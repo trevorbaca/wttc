@@ -3,7 +3,7 @@
 
 % SCENE 11: A
 
-scene-xi-title-words = \markup
+scene-xi-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 11. }
@@ -11,9 +11,9 @@ scene-xi-title-words = \markup
 scene-xi-title-section-position = \markup
   \translate #'(-90 . -2)
   \section-title-font-size
-  \scene-xi-title-words
+  \scene-xi-title
 
-scene-xi-A-words = \markup
+scene-xi-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -80,4 +80,4 @@ scene-xi-A-section-position = \markup
   \translate #'(-90 . -20)
   \section-baseline-skip
   \section-font-size
-  \scene-xi-A-words
+  \scene-xi-A

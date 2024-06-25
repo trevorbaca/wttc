@@ -3,7 +3,7 @@
 
 % SCENE 18: A - D
 
-scene-xviii-title-words = \markup
+scene-xviii-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 18. }
@@ -11,9 +11,9 @@ scene-xviii-title-words = \markup
 scene-xviii-title-section-position = \markup
   \translate #'(-90 . 12)
   \section-title-font-size
-  \scene-xviii-title-words
+  \scene-xviii-title
 
-scene-xviii-A-words = \markup
+scene-xviii-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -26,9 +26,9 @@ scene-xviii-A-section-position = \markup
   \translate #'(-90 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xviii-A-words
+  \scene-xviii-A
 
-scene-xviii-B-words = \markup
+scene-xviii-B = \markup
   \wdfn
   \adobe-bold
   \line { Then all of this \dots \lnum #287 }
@@ -36,9 +36,9 @@ scene-xviii-B-words = \markup
 scene-xviii-B-section-position = \markup
   \translate #'(4 . -43)
   \section-font-size
-  \scene-xviii-B-words
+  \scene-xviii-B
 
-scene-xviii-C-words = \markup
+scene-xviii-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -54,9 +54,9 @@ scene-xviii-C-section-position = \markup
   \translate #'(128 . -31)
   \section-baseline-skip
   \section-font-size
-  \scene-xviii-C-words
+  \scene-xviii-C
 
-scene-xviii-D-words = \markup
+scene-xviii-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -69,4 +69,4 @@ scene-xviii-D-section-position = \markup
   \translate #'(60 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xviii-D-words
+  \scene-xviii-D

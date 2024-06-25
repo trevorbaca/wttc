@@ -3,7 +3,7 @@
 
 % SCENE 20: A - C
 
-scene-xx-title-words = \markup
+scene-xx-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 20. }
@@ -11,9 +11,9 @@ scene-xx-title-words = \markup
 scene-xx-title-section-position = \markup
   \translate #'(-32 . 140)
   \section-title-font-size
-  \scene-xx-title-words
+  \scene-xx-title
 
-scene-xx-A-words = \markup
+scene-xx-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -42,9 +42,9 @@ scene-xx-A-section-position = \markup
   \translate #'(-8 . 126)
   \section-baseline-skip
   \section-font-size
-  \scene-xx-A-words
+  \scene-xx-A
 
-scene-xx-B-words = \markup
+scene-xx-B = \markup
   \wdfn
   \adobe-bold
   \line { To sing. \hspace #-0.5 \super 5 }
@@ -52,9 +52,9 @@ scene-xx-B-words = \markup
 scene-xx-B-section-position = \markup
   \translate #'(200 . 16)
   \parenthesized-section-title-font-size
-  \scene-xx-B-words
+  \scene-xx-B
 
-scene-xx-C-words = \markup
+scene-xx-C = \markup
   \wdfn
   \adobe-italic
   \line { End scene 20. }
@@ -62,7 +62,7 @@ scene-xx-C-words = \markup
 scene-xx-C-section-position = \markup
   \translate #'(0 . 0)
   \section-font-size
-  \scene-xx-C-words
+  \scene-xx-C
 
 scene-xx-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

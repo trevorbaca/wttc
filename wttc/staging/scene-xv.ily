@@ -3,16 +3,16 @@
 
 % SCENE 15: A - G
 
-scene-xv-title-words = \markup
+scene-xv-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 15. }
 
 scene-xv-title-section-position = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
-  \scene-xv-title-words
+  \scene-xv-title
 
-scene-xv-A-words = \markup
+scene-xv-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -24,18 +24,18 @@ scene-xv-A-section-position = \markup
   \translate #'(16 . -37)
   \section-baseline-skip
   \section-font-size
-  \scene-xv-A-words
+  \scene-xv-A
 
-scene-xv-B-words = \markup
+scene-xv-B = \markup
   \adobe-bold
   \line { Home. \lnum #235 }
 
 scene-xv-B-section-position = \markup
   \translate #'(2 . -41)
   \section-font-size
-  \scene-xv-B-words
+  \scene-xv-B
 
-scene-xv-C-words = \markup
+scene-xv-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -56,9 +56,9 @@ scene-xv-C-section-position = \markup
   \translate #'(60 . -21)
   \section-baseline-skip
   \section-font-size
-  \scene-xv-C-words
+  \scene-xv-C
 
-scene-xv-D-words = \markup
+scene-xv-D = \markup
   \wdfn
   \adobe-italic
   \justify { Still 3. Sudden change in music and lighting as OWL is fixed in
@@ -70,9 +70,9 @@ scene-xv-D-section-position = \markup
   \translate #'(0 . -35)
   \section-baseline-skip
   \section-font-size
-  \scene-xv-D-words
+  \scene-xv-D
 
-scene-xv-E-words = \markup
+scene-xv-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -86,9 +86,9 @@ scene-xv-E-section-position = \markup
   \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
-  \scene-xv-E-words
+  \scene-xv-E
 
-scene-xv-F-words = \markup
+scene-xv-F = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -100,9 +100,9 @@ scene-xv-F-section-position = \markup
   \translate #'(0 . -39)
   \section-baseline-skip
   \section-font-size
-  \scene-xv-F-words
+  \scene-xv-F
 
-scene-xv-G-words = \markup
+scene-xv-G = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -118,7 +118,7 @@ scene-xv-G-section-position = \markup
   \translate #'(30 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xv-G-words
+  \scene-xv-G
 
 scene-xv-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

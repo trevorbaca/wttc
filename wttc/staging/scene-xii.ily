@@ -3,7 +3,7 @@
 
 % SCENE 12: A - J
 
-scene-xii-title-words = \markup
+scene-xii-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 12. }
@@ -11,9 +11,9 @@ scene-xii-title-words = \markup
 scene-xii-title-section-position = \markup
   \translate #'(0 . 16)
   \section-title-font-size
-  \scene-xii-title-words
+  \scene-xii-title
 
-scene-xii-parenthesized-title-words = \markup
+scene-xii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 12) }
@@ -21,9 +21,9 @@ scene-xii-parenthesized-title-words = \markup
 scene-xii-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
-  \scene-xii-parenthesized-title-words
+  \scene-xii-parenthesized-title
 
-scene-xii-A-words = \markup
+scene-xii-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -34,9 +34,9 @@ scene-xii-A-section-position = \markup
   \translate #'(112 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-A-words
+  \scene-xii-A
 
-scene-xii-B-words = \markup
+scene-xii-B = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -63,9 +63,9 @@ scene-xii-B-section-position = \markup
   \translate #'(60 . -20)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-B-words
+  \scene-xii-B
 
-scene-xii-C-words = \markup
+scene-xii-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -82,9 +82,9 @@ scene-xii-C-section-position = \markup
   \translate #'(58 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-C-words
+  \scene-xii-C
 
-scene-xii-D-words = \markup
+scene-xii-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -96,9 +96,9 @@ scene-xii-D-section-position = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-D-words
+  \scene-xii-D
 
-scene-xii-E-words = \markup
+scene-xii-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -110,9 +110,9 @@ scene-xii-E-section-position = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-E-words
+  \scene-xii-E
 
-scene-xii-F-words = \markup
+scene-xii-F = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -125,9 +125,9 @@ scene-xii-F-section-position = \markup
   \translate #'(2 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-F-words
+  \scene-xii-F
 
-scene-xii-G-words = \markup
+scene-xii-G = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -139,9 +139,9 @@ scene-xii-G-section-position = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-G-words
+  \scene-xii-G
 
-scene-xii-H-words = \markup
+scene-xii-H = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -153,9 +153,9 @@ scene-xii-H-section-position = \markup
   \section-baseline-skip
   \section-font-size
   \translate #'(2 . -41)
-  \scene-xii-H-words
+  \scene-xii-H
 
-scene-xii-I-words = \markup
+scene-xii-I = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -168,9 +168,9 @@ scene-xii-I-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-xii-I-words
+  \scene-xii-I
 
-scene-xii-J-words = \markup
+scene-xii-J = \markup
   \wdfn
   \adobe-italic
   \line { End scene 12. }
@@ -178,4 +178,4 @@ scene-xii-J-words = \markup
 scene-xii-J-section-position = \markup
   \translate #'(108 . -46)
   \section-font-size
-  \scene-xii-J-words
+  \scene-xii-J

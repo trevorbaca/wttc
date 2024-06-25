@@ -3,16 +3,16 @@
 
 % SCENE 13: A - G
 
-scene-xiii-title-words = \markup
+scene-xiii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 13. }
 
 scene-xiii-title-section-position = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
-  \scene-xiii-title-words
+  \scene-xiii-title
 
-scene-xiii-parenthesized-title-words = \markup
+scene-xiii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 13) }
@@ -20,9 +20,9 @@ scene-xiii-parenthesized-title-words = \markup
 scene-xiii-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
-  \scene-xiii-parenthesized-title-words
+  \scene-xiii-parenthesized-title
 
-scene-xiii-A-words = \markup
+scene-xiii-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -35,9 +35,9 @@ scene-xiii-A-section-position = \markup
   \translate #'(-60 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-xiii-A-words
+  \scene-xiii-A
 
-scene-xiii-B-words = \markup
+scene-xiii-B = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -68,9 +68,9 @@ scene-xiii-B-section-position = \markup
   \translate #'(62 . -12)
   \section-baseline-skip
   \section-font-size
-  \scene-xiii-B-words
+  \scene-xiii-B
 
-scene-xiii-C-words = \markup
+scene-xiii-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -81,9 +81,9 @@ scene-xiii-C-section-position = \markup
   \translate #'(0 . -53)
   \section-baseline-skip
   \section-font-size
-  \scene-xiii-C-words
+  \scene-xiii-C
 
-scene-xiii-D-words = \markup
+scene-xiii-D = \markup
   \wdfn
   \adobe-italic
   \justify { Still 2. Sudden change in music and lighting as OWL is set
@@ -95,9 +95,9 @@ scene-xiii-D-section-position = \markup
   \translate #'(0 . -45)
   \section-baseline-skip
   \section-font-size
-  \scene-xiii-D-words
+  \scene-xiii-D
 
-scene-xiii-E-words = \markup
+scene-xiii-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -121,9 +121,9 @@ scene-xiii-E-section-position = \markup
   \translate #'(0 . -57)
   \section-baseline-skip
   \section-font-size
-  \scene-xiii-E-words
+  \scene-xiii-E
 
-scene-xiii-F-words = \markup
+scene-xiii-F = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -140,9 +140,9 @@ scene-xiii-F-section-position = \markup
   \translate #'(0 . -40)
   \section-baseline-skip
   \section-font-size
-  \scene-xiii-F-words
+  \scene-xiii-F
 
-scene-xiii-G-words = \markup
+scene-xiii-G = \markup
   \wdfn
   \adobe-italic
   \line { End scene 13. }
@@ -150,7 +150,7 @@ scene-xiii-G-words = \markup
 scene-xiii-G-section-position = \markup
   \translate #'(60 . -38)
   \section-font-size
-  \scene-xiii-G-words
+  \scene-xiii-G
 
 scene-xiii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

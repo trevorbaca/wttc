@@ -3,7 +3,7 @@
 
 % SCENE 9: A - E
 
-scene-ix-title-words = \markup
+scene-ix-title = \markup
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 9. }
@@ -11,9 +11,9 @@ scene-ix-title-words = \markup
 scene-ix-title-section-position = \markup
   \translate #'(-90 . 12)
   \section-title-font-size
-  \scene-ix-title-words
+  \scene-ix-title
 
-scene-ix-parenthesized-title-words = \markup
+scene-ix-parenthesized-title = \markup
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 9) }
@@ -21,9 +21,9 @@ scene-ix-parenthesized-title-words = \markup
 scene-ix-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
-  \scene-ix-parenthesized-title-words
+  \scene-ix-parenthesized-title
 
-scene-ix-A-words = \markup
+scene-ix-A = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -42,9 +42,9 @@ scene-ix-A-section-position = \markup
   \translate #'(-74 . -24)
   \section-baseline-skip
   \section-font-size
-  \scene-ix-A-words
+  \scene-ix-A
 
-scene-ix-B-words = \markup
+scene-ix-B = \markup
   \wdfn
   \adobe-italic
   \justify { Music starts. After a few moments, OWL starts to walk away from
@@ -56,9 +56,9 @@ scene-ix-B-section-position = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \scene-ix-B-words
+  \scene-ix-B
 
-scene-ix-C-words = \markup
+scene-ix-C = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -88,9 +88,9 @@ scene-ix-C-section-position = \markup
   \translate #'(120 . -10)
   \section-baseline-skip
   \section-font-size
-  \scene-ix-C-words
+  \scene-ix-C
 
-scene-ix-C-continued-words = \markup
+scene-ix-C-continued = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -114,9 +114,9 @@ scene-ix-C-continued-section-position = \markup
   \translate #'(200 . -10)
   \section-baseline-skip
   \section-font-size
-  \scene-ix-C-continued-words
+  \scene-ix-C-continued
 
-scene-ix-D-words = \markup
+scene-ix-D = \markup
   \wdfn
   \adobe-bold
   \line { Nothing. \lnum #124 }
@@ -124,9 +124,9 @@ scene-ix-D-words = \markup
 scene-ix-D-section-position = \markup
   \translate #'(0 . -41)
   \section-font-size
-  \scene-ix-D-words
+  \scene-ix-D
 
-scene-ix-E-words = \markup
+scene-ix-E = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -145,4 +145,4 @@ scene-ix-E-section-position = \markup
   \translate #'(50 . -38)
   \section-baseline-skip
   \section-font-size
-  \scene-ix-E-words
+  \scene-ix-E
