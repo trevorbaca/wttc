@@ -2,24 +2,21 @@
 
 %%% SCENE 17: A - E %%%
 
-scene-xvii-title = \markup
-  \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
+scene-xvii-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 17. }
-  }
+
+scene-xvii-title = \markup
+  \override #'(font-size . 8)
+  \scene-xvii-title-words
 
 scene-xvii-title-section-position = \markup
   \translate #'(-102 . 12)
   \scene-xvii-title
 
-scene-xvii-A = \markup
+scene-xvii-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { The sun rose on a long, long day, \lnum #266 }
   \line { A day that seemed to go on and on and never end, \lnum #267 }
@@ -27,52 +24,53 @@ scene-xvii-A = \markup
   \line { Heavenly. \lnum #269 }
   \line { We must have been on our way — \lnum #270 }
   \line { Waving — \lnum #271 }
-  \line { But to what? \lnum #272 }
-  }
+  \line { But to what? \lnum #272 } }
+
+scene-xvii-A = \markup
+  \override #'(font-size . 4)
+  \override #'(baseline-skip . 5)
+  \scene-xvii-A-words
 
 scene-xvii-A-section-position = \markup
   \translate #'(-102 . -41)
   \scene-xvii-A
 
-scene-xvii-B = \markup
+scene-xvii-B-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { Where? \lnum #273 }
-  }
+
+scene-xvii-B = \markup
+  \override #'(font-size . 4)
+  \scene-xvii-B-words
 
 scene-xvii-B-section-position = \markup
   \translate #'(6 . -41)
   \scene-xvii-B
 
-scene-xvii-C = \markup
+scene-xvii-C-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 180)
   \justify { Still 4. Sudden change in music and lighting as OWL is fixed in
   position and set uttering, head snapping from left to right with the
   dialogue, which goes fast. OWL struggles with both hands on sides of head
   to stop this movement. }
-  }
+
+scene-xvii-C = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 180)
+  \scene-xvii-C-words
 
 scene-xvii-C-section-position = \markup
   \translate #'(0 . -41)
   \scene-xvii-C
 
-scene-xvii-D = \markup
+scene-xvii-D-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 120)
   \line { Lines to be delivered during measure 476: }
   \vspace #2
   \line { All is that. \lnum #274 }
@@ -86,13 +84,17 @@ scene-xvii-D = \markup
   \line { No! \hspace #-0.5 \super 4 \lnum #282 }
   \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 60)
   \justify { On this last word, OWL succeeds in stopping the movement, and the fit
   is over as suddenly as it began. Music and lighting return to how they were. }
   \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 17. }
-  }
+  \line { End scene 17. } }
+
+scene-xvii-D = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 60)
+  \scene-xvii-D-words
 
 scene-xvii-D-section-position = \markup
   \translate #'(200 . -21)

@@ -2,44 +2,46 @@
 
 %%% SCENE 14: A - D %%%
 
-scene-xiv-title = \markup
+scene-xiv-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 14. }
-  }
+
+scene-xiv-title = \markup
+  \override #'(font-size . 8)
+  \scene-xiv-title-words
 
 scene-xiv-title-section-position = \markup
   \translate #'(-60 . 12)
   \scene-xiv-title
 
-scene-xiv-A = \markup
+scene-xiv-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { Where was I? \lnum #207 }
-  }
+
+scene-xiv-A = \markup
+  \override #'(font-size . 4)
+  \scene-xiv-A-words
 
 scene-xiv-A-section-position = \markup
   \translate #'(-58 . -48)
   \scene-xiv-A
 
-scene-xiv-B = \markup
+scene-xiv-B-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { On that green path. \lnum #208 }
   \line { I remember your words: \lnum #209 }
   \line { “This'll take us there, \lnum #210 }
   \line { “This is the way —” \lnum #211 }
-  \line { Waving, \lnum #212 }
-  }
+  \line { Waving, \lnum #212 } }
+
+scene-xiv-B = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-xiv-B-words
 
 scene-xiv-B-section-position = \markup
   \translate #'(0 . -41)
@@ -47,23 +49,18 @@ scene-xiv-B-section-position = \markup
 
 scene-xiv-C = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { And there she was, \lnum #213 }
-  \line { Waving to us. \lnum #214 }
-  }
+  \line { Waving to us. \lnum #214 } }
 
 scene-xiv-C-section-position = \markup
   \translate #'(0 . -48)
   \scene-xiv-C
 
-scene-xiv-D = \markup
+scene-xiv-D-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Begin these lines in measure 367. }
@@ -93,8 +90,12 @@ scene-xiv-D = \markup
   \line { “All right?” \lnum #233 }
   \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 14. }
-  }
+  \line { End scene 14. } }
+
+scene-xiv-D = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-xiv-D-words
 
 scene-xiv-D-section-position = \markup
   \translate #'(80 . 0)

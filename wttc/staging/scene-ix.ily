@@ -2,37 +2,35 @@
 
 %%% SCENE 9: A - E %%%
 
-scene-ix-title = \markup
+scene-ix-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 9. }
-  }
+
+scene-ix-title = \markup
+  \override #'(font-size . 8)
+  \scene-ix-title-words
 
 scene-ix-title-section-position = \markup
   \translate #'(-90 . 12)
   \scene-ix-title
 
-scene-ix-parenthesized-title = \markup
+scene-ix-parenthesized-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 6)
-  \column {
   \line { (SCENE \hspace #1 9) }
-  }
+
+scene-ix-parenthesized-title = \markup
+  \override #'(font-size . 6)
+  \scene-ix-parenthesized-title-words
 
 scene-ix-parenthesized-title-section-position = \markup
   \translate #'(-32 . 12)
   \scene-ix-parenthesized-title
 
-scene-ix-A = \markup
+scene-ix-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { It's as if you had seen it all \lnum #84 }
   \line { Before, \lnum #85 }
@@ -46,33 +44,36 @@ scene-ix-A = \markup
   \line { And all this time \dots \lnum #92 }
   }
 
+scene-ix-A = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-ix-A-words
+
 scene-ix-A-section-position = \markup
   \translate #'(-74 . -24)
   \scene-ix-A
 
+scene-ix-B-words = \markup
+  \with-dimensions-from \null
+  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \justify { Music starts. After a few moments, OWL starts to walk away from
+  the window and table, looks around the rest of the “chamber,” but does not
+  engage with the audience. }
+
 scene-ix-B = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
   \override #'(font-size . 4)
-  \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
   \override #'(line-width . 100)
-  \justify {
-  Music starts. After a few moments, OWL starts to walk away from the window
-  and table, looks around the rest of the “chamber,” but does not engage with
-  the audience. }
-  }
+  \scene-ix-B-words
 
 scene-ix-B-section-position = \markup
   \translate #'(0 . -41)
   \scene-ix-B
 
-scene-ix-C = \markup
+scene-ix-C-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { So this is it. \lnum #93 }
   \line { I must be there. \lnum #94 }
@@ -97,15 +98,18 @@ scene-ix-C = \markup
   \line { Did you say? \lnum #113 }
   }
 
+scene-ix-C = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-ix-C-words
+
 scene-ix-C-section-position = \markup
   \translate #'(120 . -10)
   \scene-ix-C
 
-scene-ix-C-continued = \markup
+scene-ix-C-continued-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { I cannot remember. \lnum #114 }
   \line { But come you will, \lnum #115 }
@@ -118,34 +122,36 @@ scene-ix-C-continued = \markup
   \line { No doubt at all. \lnum #122 }
   \line { And it'll be — \lnum #123 }
   \vspace #1
-  \override #'(line-width . 80)
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \justify { OWL looks back at the window, returns to it quickly, goes behind it,
-  and looks through it in the direction of the audience. }
-  }
+  and looks through it in the direction of the audience. } }
+
+scene-ix-C-continued = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 80)
+  \scene-ix-C-continued-words
 
 scene-ix-C-continued-section-position = \markup
   \translate #'(200 . -10)
   \scene-ix-C-continued
 
-scene-ix-D = \markup
+scene-ix-D-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { Nothing. \lnum #124 }
-  }
+
+scene-ix-D = \markup
+  \override #'(font-size . 4)
+  \scene-ix-D-words
 
 scene-ix-D-section-position = \markup
   \translate #'(0 . -41)
   \scene-ix-D
 
-scene-ix-E = \markup
+scene-ix-E-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { Nothing at all. \lnum #125 }
   \vspace #2
@@ -156,8 +162,12 @@ scene-ix-E = \markup
   \line { No-one out there. \lnum #127 }
   \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 9. }
-  }
+  \line { End scene 9. } }
+
+scene-ix-E = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-ix-E-words
 
 scene-ix-E-section-position = \markup
   \translate #'(50 . -38)

@@ -2,40 +2,37 @@
 
 %%% SCENE 10: A - D %%%
 
-scene-x-title = \markup
+scene-x-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 10. }
-  }
+
+scene-x-title = \markup
+  \override #'(font-size . 8)
+  \scene-x-title-words
 
 scene-x-title-section-position = \markup
   \translate #'(-100 . 12)
   \scene-x-title
 
-scene-x-parenthesized-title = \markup
+scene-x-parenthesized-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 6)
-  \column {
   \line { (SCENE \hspace #1 10) }
-  }
+
+scene-x-parenthesized-title = \markup
+  \override #'(font-size . 6)
+  \scene-x-parenthesized-title-words
 
 scene-x-parenthesized-title-section-position = \markup
   \translate #'(-34 . 12)
   \scene-x-parenthesized-title
 
-scene-x-A = \markup
+scene-x-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 54)
   \justify { OWL starts to walk away again from the window and table. }
   \vspace #2.5
   \line { This is it then. \lnum #128 }
@@ -46,31 +43,34 @@ scene-x-A = \markup
   \line { OWL stops. }
   \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
-  }
+  \line { Pause. } }
+
+scene-x-A = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 54)
+  \scene-x-A-words
 
 scene-x-A-section-position = \markup
   \translate #'(-86 . -40)
   \scene-x-A
 
-scene-x-B = \markup
+scene-x-B-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { Promised \dots \lnum #130 }
-  }
+
+scene-x-B = \markup
+  \override #'(font-size . 4)
+  \scene-x-B-words
 
 scene-x-B-section-position = \markup
   \translate #'(2 . -41)
   \scene-x-B
 
-scene-x-C = \markup
+scene-x-C-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL continues. }
@@ -83,18 +83,20 @@ scene-x-C = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. }
   \vspace #3
-  \line { Will it have to do with \dots ? \lnum #132 }
-  }
+  \line { Will it have to do with \dots ? \lnum #132 } }
+
+scene-x-C = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-x-C-words
 
 scene-x-C-section-position = \markup
   \translate #'(76 . -30)
   \scene-x-C
 
-scene-x-D = \markup
+scene-x-D-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { OWL continues. }
@@ -109,8 +111,12 @@ scene-x-D = \markup
   \line { Pause. }
   \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 10. }
-  }
+  \line { End scene 10. } }
+
+scene-x-D = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-x-D-words
 
 scene-x-D-section-position = \markup
   \translate #'(76 . -31)

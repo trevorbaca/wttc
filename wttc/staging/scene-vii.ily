@@ -126,48 +126,45 @@ scene-vii-G-section-position = \markup
   \translate #'(0 . -46)
   \scene-vii-G
 
-% HERE
-
-scene-vii-H = \markup
+scene-vii-H-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 60)
   \justify {
   OWL and musicians wait together in silence, long enough for the audience to
   consider OWL's question. Then all proceed to
   \override #'(font-name "Adobe Garamond Pro Bold") \box G \hspace #-0.5 . }
-  }
+
+scene-vii-H = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 60)
+  \scene-vii-H-words
 
 scene-vii-H-section-position = \markup
   \translate #'(46 . -40)
   \scene-vii-H
 
-scene-vii-I = \markup
+scene-vii-I-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \line { “Chamber,” \lnum #72 }
-  }
+
+scene-vii-I = \markup
+  \override #'(font-size . 4)
+  \scene-vii-I-words
 
 scene-vii-I-section-position = \markup
   \translate #'(0 . -48)
   \scene-vii-I
 
-scene-vii-J = \markup
+scene-vii-J-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 7. }
-  }
+
+scene-vii-J = \markup
+  \override #'(font-size . 4)
+  \scene-vii-J-words
 
 scene-vii-J-section-position = \markup
   \translate #'(166 . -44)

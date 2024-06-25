@@ -2,24 +2,22 @@
 
 %%% SCENE 20: A - C %%%
 
-scene-xx-title = \markup
+scene-xx-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 20. }
-  }
+
+scene-xx-title = \markup
+  \override #'(font-size . 8)
+  \scene-xx-title-words
 
 scene-xx-title-section-position = \markup
   \translate #'(-32 . 140)
   \scene-xx-title
 
-scene-xx-A = \markup
+scene-xx-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { What to do, what to do? \lnum #310 }
   \vspace #2
@@ -40,35 +38,38 @@ scene-xx-A = \markup
   \line { Is that not so? \lnum #319 }
   \vspace #4
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Pause. }
-  }
+  \line { Pause. } }
+
+scene-xx-A = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \scene-xx-A-words
 
 scene-xx-A-section-position = \markup
   \translate #'(-8 . 126)
   \scene-xx-A
 
-scene-xx-B = \markup
+scene-xx-B-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 6)
-  \column {
   \line { To sing. \hspace #-0.5 \super 5 }
-  }
+
+scene-xx-B = \markup
+  \override #'(font-size . 6)
+  \scene-xx-B-words
 
 scene-xx-B-section-position = \markup
   \translate #'(200 . 16)
   \scene-xx-B
 
-scene-xx-C = \markup
+scene-xx-C-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 20. }
-  }
+
+scene-xx-C = \markup
+  \override #'(font-size . 4)
+  \scene-xx-C-words
 
 scene-xx-C-section-position = \markup
   \translate #'(0 . 0)
@@ -81,5 +82,4 @@ scene-xx-footnote = \markup
   \footnote ""
   \line {
   \super 5 \hspace #-0.5 
-  The song is composed of words not hitherto delivered in the piece. }
-  }
+  The song is composed of words not hitherto delivered in the piece. } }

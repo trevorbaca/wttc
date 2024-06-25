@@ -2,24 +2,22 @@
 
 %%% SCENE 11: A %%%
 
-scene-xi-title = \markup
+scene-xi-title-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 8)
-  \column {
   \line { SCENE \hspace #1 11. }
-  }
+
+scene-xi-title = \markup
+  \override #'(font-size . 8)
+  \scene-xi-title-words
 
 scene-xi-title-section-position = \markup
   \translate #'(-90 . -2)
   \scene-xi-title
 
-scene-xi-A = \markup
+scene-xi-A-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
   \column {
   \line { But could I be the one that's late, \lnum #135 }
   \line { And you have been here and gone \lnum #136 }
@@ -35,7 +33,6 @@ scene-xi-A = \markup
   \line { No way —. \lnum #141 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \override #'(line-width . 60)
   \justify { Pause. OWL looks from left to right, expecting something to happen, then
   goes on when the coast is evidently clear. }
   \vspace #2
@@ -78,8 +75,13 @@ scene-xi-A = \markup
   \line { Pause. }
   \vspace #3
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 11. }
-  }
+  \line { End scene 11. } }
+
+scene-xi-A = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
+  \override #'(line-width . 60)
+  \scene-xi-A-words
 
 scene-xi-A-section-position = \markup
   \translate #'(-90 . -20)
