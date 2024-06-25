@@ -7,37 +7,29 @@ scene-iv-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 4. }
 
-scene-iv-title = \markup
-  \override #'(font-size . 8)
-  \scene-iv-title-words
-
 scene-iv-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-130 . 12)
-  \scene-iv-title
+  \scene-iv-title-words
 
 scene-iv-parenthesized-title-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { (SCENE \hspace #1 4) }
 
-scene-iv-parenthesized-title = \markup
-  \override #'(font-size . 6)
-  \scene-iv-parenthesized-title-words
-
 scene-iv-parenthesized-title-section-position = \markup
+  \override #'(font-size . 6)
   \translate #'(-34 . 12)
-  \scene-iv-parenthesized-title
+  \scene-iv-parenthesized-title-words
 
 scene-iv-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
   \override #'(font-size . 4)
   {
   \footnote ""
-  \line { \super 1 \hspace #-0.5 Samuel Beckett:
-  \override #'(font-name . "Adobe Garamond Pro Italic")
-  { Words and Music }
-  (1961), final words in reverse order. }
-  }
+  \line { \super 1 \hspace #-0.5 Samuel Beckett: \override #'(font-name .
+  "Adobe Garamond Pro Italic") { Words and Music } (1961), final words in
+  reverse order. } }
 
 scene-iv-A-words = \markup
   \with-dimensions-from \null
@@ -48,87 +40,66 @@ scene-iv-A-words = \markup
   \line { We had been with one another all the time, \lnum #32 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { Music attaca. }
-  }
-
-scene-iv-A = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
-  \scene-iv-A-words
+  \line { Music attaca. } }
 
 scene-iv-A-section-position = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
   \translate #'(-100 . -40)
-  \scene-iv-A
+  \scene-iv-A-words
 
 scene-iv-B-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Close, \lnum #33 }
 
-scene-iv-B = \markup
-  \override #'(font-size . 4)
-  \scene-iv-B-words
-
 scene-iv-B-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -43)
-  \scene-iv-B
+  \scene-iv-B-words
 
 scene-iv-C-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { You know that, \lnum #34 }
 
-scene-iv-C = \markup
-  \override #'(font-size . 4)
-  \scene-iv-C-words
-
 scene-iv-C-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -43)
-  \scene-iv-C
+  \scene-iv-C-words
 
 scene-iv-D-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Like left and right, \lnum #35 }
 
-scene-iv-D = \markup
-  \override #'(font-size . 4)
-  \scene-iv-D-words
-
 scene-iv-D-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -43)
-  \scene-iv-D
-
+  \scene-iv-D-words
 
 scene-iv-E-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Like night and day \lnum #36 }
 
-scene-iv-E = \markup
-  \override #'(font-size . 4)
-  \scene-iv-E-words
-
 scene-iv-E-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -43)
-  \scene-iv-E
+  \scene-iv-E-words
 
 scene-iv-F-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \column {
   \line { Like head and heart, \lnum #37 }
-  \line { Like words and \lnum #38 }
-  }
-
-scene-iv-F = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
-  \scene-iv-F-words
+  \line { Like words and \lnum #38 } }
 
 scene-iv-F-section-position = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
   \translate #'(0 . -40)
-  \scene-iv-F
+  \scene-iv-F-words
 
 scene-iv-G-words = \markup
   \with-dimensions-from \null
@@ -136,36 +107,27 @@ scene-iv-G-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { On downbeat: }
   \override #'(font-name . "Adobe Garamond Pro Bold")
-  \line { Music — \lnum #39 }
-  }
-
-scene-iv-G = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
-  \scene-iv-G-words
+  \line { Music — \lnum #39 } }
 
 scene-iv-G-section-position = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
   \translate #'(0 . -35)
-  \scene-iv-G
+  \scene-iv-G-words
 
 scene-iv-H-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify {
-  \bold { Still 1. } Sudden change in music and lighting as OWL is set uttering
-  and fixed in position with one foot locked in place. OWL struggles against
-  this fit, trying to pull the foot free.
-  }
+  \justify { \bold { Still 1. } Sudden change in music and lighting as OWL is
+  set uttering and fixed in position with one foot locked in place. OWL
+  struggles against this fit, trying to pull the foot free. }
 
-scene-iv-H = \markup
+scene-iv-H-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 50)
-  \scene-iv-H-words
-
-scene-iv-H-section-position = \markup
   \translate #'(0 . -45)
-  \scene-iv-H
+  \scene-iv-H-words
 
 scene-iv-I-words = \markup
   \with-dimensions-from \null
@@ -178,15 +140,12 @@ scene-iv-I-words = \markup
   \justify { On this second “Again,” OWL frees the foot, and the fit is over
   as suddenly as it began. } }
 
-scene-iv-I = \markup
+scene-iv-I-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 55)
-  \scene-iv-I-words
-
-scene-iv-I-section-position = \markup
   \translate #'(60 . -42)
-  \scene-iv-I
+  \scene-iv-I-words
 
 scene-iv-J-words = \markup
   \with-dimensions-from \null
@@ -199,15 +158,12 @@ scene-iv-J-words = \markup
   \justify { Slight pause. OWL and the musicians wonder what comes next.
   Then proceed together. } }
 
-scene-iv-J = \markup
+scene-iv-J-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 55)
-  \scene-iv-J-words
-
-scene-iv-J-section-position = \markup
   \translate #'(180 . -41)
-  \scene-iv-J
+  \scene-iv-J-words
 
 scene-iv-K-words = \markup
   \with-dimensions-from \null
@@ -219,24 +175,18 @@ scene-iv-K-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Like give and take. \lnum #43 } }
 
-scene-iv-K = \markup
+scene-iv-K-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-iv-K-words
-
-scene-iv-K-section-position = \markup
   \translate #'(0 . -46)
-  \scene-iv-K
+  \scene-iv-K-words
 
 scene-iv-L-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 4. }
 
-scene-iv-L = \markup
-  \override #'(font-size . 4)
-  \scene-iv-L-words
-
 scene-iv-L-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(50 . -49)
-  \scene-iv-L
+  \scene-iv-L-words

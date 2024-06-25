@@ -6,13 +6,10 @@ scene-xvii-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 17. }
 
-scene-xvii-title = \markup
-  \override #'(font-size . 8)
-  \scene-xvii-title-words
-
 scene-xvii-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-102 . 12)
-  \scene-xvii-title
+  \scene-xvii-title-words
 
 scene-xvii-A-words = \markup
   \with-dimensions-from \null
@@ -26,27 +23,21 @@ scene-xvii-A-words = \markup
   \line { Waving — \lnum #271 }
   \line { But to what? \lnum #272 } }
 
-scene-xvii-A = \markup
+scene-xvii-A-section-position = \markup
   \override #'(font-size . 4)
   \override #'(baseline-skip . 5)
-  \scene-xvii-A-words
-
-scene-xvii-A-section-position = \markup
   \translate #'(-102 . -41)
-  \scene-xvii-A
+  \scene-xvii-A-words
 
 scene-xvii-B-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Where? \lnum #273 }
 
-scene-xvii-B = \markup
-  \override #'(font-size . 4)
-  \scene-xvii-B-words
-
 scene-xvii-B-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(6 . -41)
-  \scene-xvii-B
+  \scene-xvii-B-words
 
 scene-xvii-C-words = \markup
   \with-dimensions-from \null
@@ -56,15 +47,12 @@ scene-xvii-C-words = \markup
   dialogue, which goes fast. OWL struggles with both hands on sides of head
   to stop this movement. }
 
-scene-xvii-C = \markup
+scene-xvii-C-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 180)
-  \scene-xvii-C-words
-
-scene-xvii-C-section-position = \markup
   \translate #'(0 . -41)
-  \scene-xvii-C
+  \scene-xvii-C-words
 
 scene-xvii-D-words = \markup
   \with-dimensions-from \null
@@ -90,29 +78,22 @@ scene-xvii-D-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 17. } }
 
-scene-xvii-D = \markup
+scene-xvii-D-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 60)
+  \translate #'(200 . -21)
   \scene-xvii-D-words
 
-scene-xvii-D-section-position = \markup
-  \translate #'(200 . -21)
-  \scene-xvii-D
-
-scene-xvii-E = \markup
+scene-xvii-E-words = \markup
   \with-dimensions-from \null
-  \override #'(baseline-skip . 5)
-  \override #'(font-name . "Adobe Garamond Pro Bold")
-  \override #'(font-size . 4)
-  \column {
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 17. }
-  }
 
 scene-xvii-E-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . 0)
-  \scene-xvii-E
+  \scene-xvii-E-words
 
 scene-xvii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
@@ -121,5 +102,4 @@ scene-xvii-footnote = \markup
   \footnote ""
   \line { \super 4 \hspace #-0.5 Samuel Beckett:
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  { What Where }, available statements reading backwards from the end. }
-  }
+  { What Where }, available statements reading backwards from the end. } }

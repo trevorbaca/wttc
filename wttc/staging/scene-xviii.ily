@@ -7,13 +7,10 @@ scene-xviii-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 18. }
 
-scene-xviii-title = \markup
-  \override #'(font-size . 8)
-  \scene-xviii-title-words
-
 scene-xviii-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-90 . 12)
-  \scene-xviii-title
+  \scene-xviii-title-words
 
 scene-xviii-A-words = \markup
   \with-dimensions-from \null
@@ -24,27 +21,21 @@ scene-xviii-A-words = \markup
   \line { We could have stayed on it. \lnum #285 }
   \line { We should have stayed on it. \lnum #286 } }
 
-scene-xviii-A = \markup
+scene-xviii-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xviii-A-words
-
-scene-xviii-A-section-position = \markup
   \translate #'(-90 . -41)
-  \scene-xviii-A
+  \scene-xviii-A-words
 
 scene-xviii-B-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Then all of this \dots \lnum #287 }
 
-scene-xviii-B = \markup
-  \override #'(font-size . 4)
-  \scene-xviii-B-words
-
 scene-xviii-B-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(4 . -43)
-  \scene-xviii-B
+  \scene-xviii-B-words
 
 scene-xviii-C-words = \markup
   \with-dimensions-from \null
@@ -58,14 +49,11 @@ scene-xviii-C-words = \markup
   \line { Keep to it. \lnum #293 }
   \line { Never mind what. \lnum #294 } }
 
-scene-xviii-C = \markup
+scene-xviii-C-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xviii-C-words
-
-scene-xviii-C-section-position = \markup
   \translate #'(128 . -31)
-  \scene-xviii-C
+  \scene-xviii-C-words
 
 scene-xviii-D-words = \markup
   \with-dimensions-from \null
@@ -76,11 +64,8 @@ scene-xviii-D-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 18. } }
 
-scene-xviii-D = \markup
+scene-xviii-D-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xviii-D-words
-
-scene-xviii-D-section-position = \markup
   \translate #'(60 . -41)
-  \scene-xviii-D
+  \scene-xviii-D-words

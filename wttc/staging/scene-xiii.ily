@@ -6,26 +6,20 @@ scene-xiii-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 13. }
 
-scene-xiii-title = \markup
-  \override #'(font-size . 8)
-  \scene-xiii-title-words
-
 scene-xiii-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-60 . 12)
-  \scene-xiii-title
+  \scene-xiii-title-words
 
 scene-xiii-parenthesized-title-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { (SCENE \hspace #1 13) }
 
-scene-xiii-parenthesized-title = \markup
-  \override #'(font-size . 6)
-  \scene-xiii-parenthesized-title-words
-
 scene-xiii-parenthesized-title-section-position = \markup
+  \override #'(font-size . 6)
   \translate #'(-32 . 12)
-  \scene-xiii-parenthesized-title
+  \scene-xiii-parenthesized-title-words
 
 scene-xiii-A-words = \markup
   \with-dimensions-from \null
@@ -36,14 +30,11 @@ scene-xiii-A-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. } }
 
-scene-xiii-A = \markup
+scene-xiii-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xiii-A-words
-
-scene-xiii-A-section-position = \markup
   \translate #'(-60 . -38)
-  \scene-xiii-A
+  \scene-xiii-A-words
 
 scene-xiii-B-words = \markup
   \with-dimensions-from \null
@@ -72,14 +63,11 @@ scene-xiii-B-words = \markup
   \vspace #2
   \line { Did I ask when that would be? \lnum #197 } }
 
-scene-xiii-B = \markup
+scene-xiii-B-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xiii-B-words
-
-scene-xiii-B-section-position = \markup
   \translate #'(62 . -12)
-  \scene-xiii-B
+  \scene-xiii-B-words
 
 scene-xiii-C-words = \markup
   \with-dimensions-from \null
@@ -88,14 +76,11 @@ scene-xiii-C-words = \markup
   \line { I did not. \lnum #198 }
   \line { I — \lnum #199 } }
 
-scene-xiii-C = \markup
+scene-xiii-C-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xiii-C-words
-
-scene-xiii-C-section-position = \markup
   \translate #'(0 . -53)
-  \scene-xiii-C
+  \scene-xiii-C-words
 
 scene-xiii-D-words = \markup
   \with-dimensions-from \null
@@ -104,15 +89,12 @@ scene-xiii-D-words = \markup
   uttering and fixed in position with one arm extended. Words are abrupt,
   single. OWL struggles against this fit, trying to pull the arm free. }
 
-scene-xiii-D = \markup
+scene-xiii-D-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 140)
-  \scene-xiii-D-words
-
-scene-xiii-D-section-position = \markup
   \translate #'(0 . -45)
-  \scene-xiii-D
+  \scene-xiii-D-words
 
 scene-xiii-E-words = \markup
   \with-dimensions-from \null
@@ -134,14 +116,11 @@ scene-xiii-E-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Music and lighting return to how they were. } }
 
-scene-xiii-E = \markup
+scene-xiii-E-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xiii-E-words
-
-scene-xiii-E-section-position = \markup
   \translate #'(0 . -57)
-  \scene-xiii-E
+  \scene-xiii-E-words
 
 scene-xiii-F-words = \markup
   \with-dimensions-from \null
@@ -156,27 +135,21 @@ scene-xiii-F-words = \markup
   \line { If we could have held on to it \dots \lnum #205 }
   \line { If it could have stayed like that \dots \lnum #206 } }
 
-scene-xiii-F = \markup
+scene-xiii-F-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xiii-F-words
-
-scene-xiii-F-section-position = \markup
   \translate #'(0 . -40)
-  \scene-xiii-F
+  \scene-xiii-F-words
 
 scene-xiii-G-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 13. }
 
-scene-xiii-G = \markup
-  \override #'(font-size . 4)
-  \scene-xiii-G-words
-
 scene-xiii-G-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(60 . -38)
-  \scene-xiii-G
+  \scene-xiii-G-words
 
 scene-xiii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

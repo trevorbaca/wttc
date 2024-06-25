@@ -7,26 +7,20 @@ scene-xiv-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 14. }
 
-scene-xiv-title = \markup
-  \override #'(font-size . 8)
-  \scene-xiv-title-words
-
 scene-xiv-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-60 . 12)
-  \scene-xiv-title
+  \scene-xiv-title-words
 
 scene-xiv-A-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Where was I? \lnum #207 }
 
-scene-xiv-A = \markup
-  \override #'(font-size . 4)
-  \scene-xiv-A-words
-
 scene-xiv-A-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(-58 . -48)
-  \scene-xiv-A
+  \scene-xiv-A-words
 
 scene-xiv-B-words = \markup
   \with-dimensions-from \null
@@ -38,16 +32,13 @@ scene-xiv-B-words = \markup
   \line { “This is the way —” \lnum #211 }
   \line { Waving, \lnum #212 } }
 
-scene-xiv-B = \markup
+scene-xiv-B-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
+  \translate #'(0 . -41)
   \scene-xiv-B-words
 
-scene-xiv-B-section-position = \markup
-  \translate #'(0 . -41)
-  \scene-xiv-B
-
-scene-xiv-C = \markup
+scene-xiv-C-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \column {
@@ -55,8 +46,10 @@ scene-xiv-C = \markup
   \line { Waving to us. \lnum #214 } }
 
 scene-xiv-C-section-position = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
   \translate #'(0 . -48)
-  \scene-xiv-C
+  \scene-xiv-C-words
 
 scene-xiv-D-words = \markup
   \with-dimensions-from \null
@@ -92,11 +85,8 @@ scene-xiv-D-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 14. } }
 
-scene-xiv-D = \markup
+scene-xiv-D-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xiv-D-words
-
-scene-xiv-D-section-position = \markup
   \translate #'(80 . 0)
-  \scene-xiv-D
+  \scene-xiv-D-words

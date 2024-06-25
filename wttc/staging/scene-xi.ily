@@ -7,13 +7,10 @@ scene-xi-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 11. }
 
-scene-xi-title = \markup
-  \override #'(font-size . 8)
-  \scene-xi-title-words
-
 scene-xi-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-90 . -2)
-  \scene-xi-title
+  \scene-xi-title-words
 
 scene-xi-A-words = \markup
   \with-dimensions-from \null
@@ -77,12 +74,9 @@ scene-xi-A-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 11. } }
 
-scene-xi-A = \markup
+scene-xi-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 60)
-  \scene-xi-A-words
-
-scene-xi-A-section-position = \markup
   \translate #'(-90 . -20)
-  \scene-xi-A
+  \scene-xi-A-words

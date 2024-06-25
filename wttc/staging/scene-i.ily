@@ -7,35 +7,28 @@ scene-i-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 1. }
 
-scene-i-title = \markup
-  \override #'(font-size . 8)
-  \scene-i-title-words
-
 scene-i-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(100 . 32)
-  \scene-i-title
+  \scene-i-title-words
 
 scene-i-parenthesized-title-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { (SCENE \hspace #1 1) }
 
-scene-i-parenthesized-title = \markup
-  \override #'(font-size . 6)
-  \scene-i-parenthesized-title-words
-
 scene-i-parenthesized-title-section-position = \markup
+  \override #'(font-size . 6)
   \translate #'(-34 . 12)
-  \scene-i-parenthesized-title
+  \scene-i-parenthesized-title-words
 
 scene-i-A-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify {
-  The stage is set with chairs and desks for the musicians, all at one side.
-  Elsewhere are a window (perhaps suspended) and a table on which stands a
-  glass of violets. OWL enters with the musicians, sits with them, may even
-  have an instrument to bring on and mime playing, all totally discreet, a
+  \justify { The stage is set with chairs and desks for the musicians, all at
+  one side. Elsewhere are a window (perhaps suspended) and a table on which
+  stands a glass of violets. OWL enters with the musicians, sits with them, may
+  even have an instrument to bring on and mime playing, all totally discreet, a
   member of the ensemble. }
 
 scene-i-A-section-position = \markup
@@ -54,10 +47,9 @@ scene-i-A-part-position = \markup
 
 scene-i-B-words-i = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify {
-  At the end of measure 7, OWL suddenly starts to speak and, at the same time,
-  stands up. Spotlight on OWL from this first instant of speech and movement.
-  OWL does not yet notice or address either the audience or the other
+  \justify { At the end of measure 7, OWL suddenly starts to speak and, at the
+  same time, stands up. Spotlight on OWL from this first instant of speech and
+  movement. OWL does not yet notice or address either the audience or the other
   musicians: }
 
 scene-i-B-words-ii = \markup
@@ -66,27 +58,22 @@ scene-i-B-words-ii = \markup
 
 scene-i-B-words-iii = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify {
-  Musicians wait a moment after OWL trails off, as though listening to what OWL
-  has left unsaid. Music starts again as OWL moves away from the musicians'
-  are, still not noticing the audeince, or anything else. }
+  \justify { Musicians wait a moment after OWL trails off, as though listening
+  to what OWL has left unsaid. Music starts again as OWL moves away from the
+  musicians' are, still not noticing the audeince, or anything else. }
 
-scene-i-B = \markup
+scene-i-B-section-position = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 40)
+  \translate #'(90 . -22)
   \column {
   \scene-i-B-words-i
   \vspace #3
   \scene-i-B-words-ii
   \vspace #3
-  \scene-i-B-words-iii
-  }
-
-scene-i-B-section-position = \markup
-  \translate #'(90 . -22)
-  \scene-i-B
+  \scene-i-B-words-iii }
 
 scene-i-C-words-i = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
@@ -98,8 +85,7 @@ scene-i-C-words-ii = \markuplist
   \line { When the time comes I'll be there. \lnum #2 }
   \line { You know that. \lnum #3 }
   \line { I'll not let you down. \lnum #4 }
-  \line { Never have, never will. \lnum #5 }
-  }
+  \line { Never have, never will. \lnum #5 } }
 
 scene-i-C-words-iii = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
@@ -109,22 +95,18 @@ scene-i-C-words-iv = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Then play measures 10 and 11, as if in response. }
 
-scene-i-C = \markup
+scene-i-C-section-position = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
+  \translate #'(0 . -135)
   \column {
   \scene-i-C-words-i
   \vspace #1
   \scene-i-C-words-ii
   \vspace #1
   \scene-i-C-words-iii
-  \scene-i-C-words-iv
-  }
-
-scene-i-C-section-position = \markup
-  \translate #'(0 . -135)
-  \scene-i-C
+  \scene-i-C-words-iv }
 
 scene-i-D-words-i = \markup 
   \override #'(font-name . "Adobe Garamond Pro Italic")
@@ -134,25 +116,20 @@ scene-i-D-words-ii = \markuplist
   \override #'(font-name . "Adobe Garamond Pro Bold")
   {
   \line { Come on, what do I have to say all this for? \lnum #6 }
-  \line { You know me. \lnum #7 }
-  }
+  \line { You know me. \lnum #7 } }
 
 scene-i-D-words-iii = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 1. Slight pause, but not too long. }
 
-scene-i-D = \markup
+scene-i-D-section-position = \markup
   \with-dimensions-from \null
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
+  \translate #'(0 . -135)
   \column {
   \scene-i-D-words-i
   \vspace #1
   \scene-i-D-words-ii
   \vspace #1
-  \scene-i-D-words-iii
-  }
-
-scene-i-D-section-position = \markup
-  \translate #'(0 . -135)
-  \scene-i-D
+  \scene-i-D-words-iii }

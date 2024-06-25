@@ -6,13 +6,10 @@ scene-xv-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 15. }
 
-scene-xv-title = \markup
-  \override #'(font-size . 8)
-  \scene-xv-title-words
-
 scene-xv-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-32 . 12)
-  \scene-xv-title
+  \scene-xv-title-words
 
 scene-xv-A-words = \markup
   \with-dimensions-from \null
@@ -22,26 +19,20 @@ scene-xv-A-words = \markup
   \line { As if ending music. }
   \line { All right, I say. \lnum #234 } }
 
-scene-xv-A = \markup
+scene-xv-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xv-A-words
-
-scene-xv-A-section-position = \markup
   \translate #'(16 . -37)
-  \scene-xv-A
+  \scene-xv-A-words
 
 scene-xv-B-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Home. \lnum #235 }
 
-scene-xv-B = \markup
-  \override #'(font-size . 4)
-  \scene-xv-B-words
-
 scene-xv-B-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(2 . -41)
-  \scene-xv-B
+  \scene-xv-B-words
 
 scene-xv-C-words = \markup
   \with-dimensions-from \null
@@ -60,14 +51,11 @@ scene-xv-C-words = \markup
   \vspace #1
   \line { Things come and go — \lnum #240 } }
 
-scene-xv-C = \markup
+scene-xv-C-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xv-C-words
-
-scene-xv-C-section-position = \markup
   \translate #'(60 . -21)
-  \scene-xv-C
+  \scene-xv-C-words
 
 scene-xv-D-words = \markup
   \with-dimensions-from \null
@@ -76,15 +64,12 @@ scene-xv-D-words = \markup
   position facing stage rear. OWL struggles against this fit, trying to pull
   round to face the audience. After a few seconds, OWL shouts out: }
 
-scene-xv-D = \markup
+scene-xv-D-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 140)
-  \scene-xv-D-words
-
-scene-xv-D-section-position = \markup
   \translate #'(0 . -35)
-  \scene-xv-D
+  \scene-xv-D-words
 
 scene-xv-E-words = \markup
   \with-dimensions-from \null
@@ -96,14 +81,11 @@ scene-xv-E-words = \markup
   \justify { Instantly, OWL turns, and the fit is over as suddenly as it began.
   Music and lighting return to how they were. } }
 
-scene-xv-E = \markup
+scene-xv-E-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xv-E-words
-
-scene-xv-E-section-position = \markup
   \translate #'(0 . -46)
-  \scene-xv-E
+  \scene-xv-E-words
 
 scene-xv-F-words = \markup
   \with-dimensions-from \null
@@ -113,14 +95,11 @@ scene-xv-F-words = \markup
   \line { We all know this. \lnum #243 }
   \line { All of us. \lnum #244 } }
 
-scene-xv-F = \markup
+scene-xv-F-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xv-F-words
-
-scene-xv-F-section-position = \markup
   \translate #'(0 . -39)
-  \scene-xv-F
+  \scene-xv-F-words
 
 scene-xv-G-words = \markup
   \with-dimensions-from \null
@@ -134,14 +113,11 @@ scene-xv-G-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 15. } }
 
-scene-xv-G = \markup
+scene-xv-G-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xv-G-words
-
-scene-xv-G-section-position = \markup
   \translate #'(30 . -41)
-  \scene-xv-G
+  \scene-xv-G-words
 
 scene-xv-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

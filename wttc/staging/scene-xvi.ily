@@ -6,26 +6,20 @@ scene-xvi-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 16. }
 
-scene-xvi-title = \markup
-  \override #'(font-size . 8)
-  \scene-xvi-title-words
-
 scene-xvi-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-32 . 12)
-  \scene-xvi-title
+  \scene-xvi-title-words
 
 scene-xvi-parenthesized-title-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { (SCENE \hspace #1 16) }
 
-scene-xvi-parenthesized-title = \markup
-  \override #'(font-size . 6)
-  \scene-xvi-parenthesized-title-words
-
 scene-xvi-parenthesized-title-section-position = \markup
+  \override #'(font-size . 6)
   \translate #'(-32 . 12)
-  \scene-xvi-parenthesized-title
+  \scene-xvi-parenthesized-title-words
 
 scene-xvi-A-words = \markup
   \with-dimensions-from \null
@@ -38,14 +32,11 @@ scene-xvi-A-words = \markup
   \line { “Make yourself at home.” \lnum #250 }
   \line { As if you had no memory of — \lnum #251 } }
 
-scene-xvi-A = \markup
+scene-xvi-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xvi-A-words
-
-scene-xvi-A-section-position = \markup
   \translate #'(0 . -38)
-  \scene-xvi-A
+  \scene-xvi-A-words
 
 scene-xvi-B-words = \markup
   \with-dimensions-from \null
@@ -58,14 +49,11 @@ scene-xvi-B-words = \markup
   \line { How long it would take me to come here, \lnum #253 }
   \line { This way — \lnum #254 } }
 
-scene-xvi-B = \markup
+scene-xvi-B-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xvi-B-words
-
-scene-xvi-B-section-position = \markup
   \translate #'(120 . -41)
-  \scene-xvi-B
+  \scene-xvi-B-words
 
 scene-xvi-C-words = \markup
   \with-dimensions-from \null
@@ -75,14 +63,11 @@ scene-xvi-C-words = \markup
   \line { Loud, extended. }
   \line { Way! \lnum #255 } }
 
-scene-xvi-C = \markup
+scene-xvi-C-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xvi-C-words
-
-scene-xvi-C-section-position = \markup
   \translate #'(28 . -43)
-  \scene-xvi-C
+  \scene-xvi-C-words
 
 scene-xvi-D-words = \markup
   \with-dimensions-from \null
@@ -92,14 +77,11 @@ scene-xvi-D-words = \markup
   \line { Abruptly back to normal. }
   \line { No. \lnum #256 } }
 
-scene-xvi-D = \markup
+scene-xvi-D-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xvi-D-words
-
-scene-xvi-D-section-position = \markup
   \translate #'(4 . -43)
-  \scene-xvi-D
+  \scene-xvi-D-words
 
 scene-xvi-E-words = \markup
   \with-dimensions-from \null
@@ -109,66 +91,51 @@ scene-xvi-E-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Stopping before saying “way” } }
 
-scene-xvi-E = \markup
+scene-xvi-E-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xvi-E-words
-
-scene-xvi-E-section-position = \markup
   \translate #'(4 . -43)
-  \scene-xvi-E
+  \scene-xvi-E-words
 
 scene-xvi-F-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { And all the time — \lnum #258 }
 
-scene-xvi-F = \markup
-  \override #'(font-size . 4)
-  \scene-xvi-F-words
-
 scene-xvi-F-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(70 . -46)
-  \scene-xvi-F
+  \scene-xvi-F-words
 
 scene-xvi-G-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Never mind. \lnum #259 }
 
-scene-xvi-G = \markup
-  \override #'(font-size . 4)
-  \scene-xvi-G-words
-
 scene-xvi-G-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(70 . -41)
-  \scene-xvi-G
+  \scene-xvi-G-words
 
 scene-xvi-H-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Let it go. \lnum #260 }
 
-scene-xvi-H = \markup
-  \override #'(font-size . 4)
-  \scene-xvi-H-words
-
 scene-xvi-H-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -41)
-  \scene-xvi-H
+  \scene-xvi-H-words
 
 scene-xvi-I-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Let it go. \lnum #261 }
 
-scene-xvi-I = \markup
-  \override #'(font-size . 4)
-  \scene-xvi-I-words
-
 scene-xvi-I-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -41)
-  \scene-xvi-I
+  \scene-xvi-I-words
 
 scene-xvi-J-words = \markup
   \with-dimensions-from \null
@@ -189,11 +156,8 @@ scene-xvi-J-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 16. } }
 
-scene-xvi-J = \markup
+scene-xvi-J-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xvi-J-words
-
-scene-xvi-J-section-position = \markup
   \translate #'(40 . -19)
-  \scene-xvi-J
+  \scene-xvi-J-words

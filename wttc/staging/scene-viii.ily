@@ -7,13 +7,10 @@ scene-viii-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 8. }
 
-scene-viii-title = \markup
-  \override #'(font-size . 8)
-  \scene-viii-title-words
-
 scene-viii-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-110 . 12)
-  \scene-viii-title
+  \scene-viii-title-words
 
 scene-viii-A-words = \markup
   \with-dimensions-from \null
@@ -42,18 +39,14 @@ scene-viii-A-words = \markup
   \line { Violets. \lnum #79 }
   \vspace #1
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \justify { OWL sniffs the flowers, but again there is no touching. }
-  }
+  \justify { OWL sniffs the flowers, but again there is no touching. } }
 
-scene-viii-A = \markup
+scene-viii-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
   \override #'(line-width . 50)
-  \scene-viii-A-words
-
-scene-viii-A-section-position = \markup
   \translate #'(-84 . -20)
-  \scene-viii-A
+  \scene-viii-A-words
 
 scene-viii-B-words = \markup
   \with-dimensions-from \null
@@ -61,43 +54,33 @@ scene-viii-B-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { Nothing. \lnum #80 }
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { OWL stands back up. }
-  }
-
-scene-viii-B = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
-  \scene-viii-B-words
+  \line { OWL stands back up. } }
 
 scene-viii-B-section-position = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
   \translate #'(4 . -43)
-  \scene-viii-B
+  \scene-viii-B-words
 
 scene-viii-C-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { But still, \lnum #81.1 }
 
-scene-viii-C = \markup
-  \override #'(font-size . 4)
-  \scene-viii-C-words
-
 scene-viii-C-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(36 . -41)
-  \scene-viii-C
+  \scene-viii-C-words
 
 scene-viii-D-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { violets. \lnum #81.2 }
 
-scene-viii-D = \markup
-  \override #'(font-size . 4)
-  \scene-viii-D-words
-
 scene-viii-D-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . -41)
-  \scene-viii-D
+  \scene-viii-D-words
 
 scene-viii-E-words = \markup
   \with-dimensions-from \null
@@ -107,14 +90,10 @@ scene-viii-E-words = \markup
   \line { It's all as it should be. \lnum #83 }
   \vspace #2
   \override #'(font-name . "Adobe Garamond Pro Italic")
-  \line { End scene 8. }
-  }
-
-scene-viii-E = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
-  \scene-viii-E-words
+  \line { End scene 8. } }
 
 scene-viii-E-section-position = \markup
+  \override #'(baseline-skip . 5)
+  \override #'(font-size . 4)
   \translate #'(92 . -38)
-  \scene-viii-E
+  \scene-viii-E-words

@@ -7,13 +7,10 @@ scene-xx-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 20. }
 
-scene-xx-title = \markup
-  \override #'(font-size . 8)
-  \scene-xx-title-words
-
 scene-xx-title-section-position = \markup
+  \override #'(font-size . 8)
   \translate #'(-32 . 140)
-  \scene-xx-title
+  \scene-xx-title-words
 
 scene-xx-A-words = \markup
   \with-dimensions-from \null
@@ -40,40 +37,31 @@ scene-xx-A-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { Pause. } }
 
-scene-xx-A = \markup
+scene-xx-A-section-position = \markup
   \override #'(baseline-skip . 5)
   \override #'(font-size . 4)
-  \scene-xx-A-words
-
-scene-xx-A-section-position = \markup
   \translate #'(-8 . 126)
-  \scene-xx-A
+  \scene-xx-A-words
 
 scene-xx-B-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { To sing. \hspace #-0.5 \super 5 }
 
-scene-xx-B = \markup
-  \override #'(font-size . 6)
-  \scene-xx-B-words
-
 scene-xx-B-section-position = \markup
+  \override #'(font-size . 6)
   \translate #'(200 . 16)
-  \scene-xx-B
+  \scene-xx-B-words
 
 scene-xx-C-words = \markup
   \with-dimensions-from \null
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \line { End scene 20. }
 
-scene-xx-C = \markup
-  \override #'(font-size . 4)
-  \scene-xx-C-words
-
 scene-xx-C-section-position = \markup
+  \override #'(font-size . 4)
   \translate #'(0 . 0)
-  \scene-xx-C
+  \scene-xx-C-words
 
 scene-xx-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
