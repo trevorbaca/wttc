@@ -9,8 +9,8 @@ scene-xviii-title-words = \markup
   \line { SCENE \hspace #1 18. }
 
 scene-xviii-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-90 . 12)
+  \section-title-font-size
   \scene-xviii-title-words
 
 scene-xviii-A-words = \markup
@@ -23,9 +23,9 @@ scene-xviii-A-words = \markup
   \line { We should have stayed on it. \lnum #286 } }
 
 scene-xviii-A-section-position = \markup
+  \translate #'(-90 . -41)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-90 . -41)
   \scene-xviii-A-words
 
 scene-xviii-B-words = \markup
@@ -34,8 +34,8 @@ scene-xviii-B-words = \markup
   \line { Then all of this \dots \lnum #287 }
 
 scene-xviii-B-section-position = \markup
-  \section-font-size
   \translate #'(4 . -43)
+  \section-font-size
   \scene-xviii-B-words
 
 scene-xviii-C-words = \markup
@@ -51,9 +51,9 @@ scene-xviii-C-words = \markup
   \line { Never mind what. \lnum #294 } }
 
 scene-xviii-C-section-position = \markup
+  \translate #'(128 . -31)
   \section-baseline-skip
   \section-font-size
-  \translate #'(128 . -31)
   \scene-xviii-C-words
 
 scene-xviii-D-words = \markup
@@ -66,7 +66,7 @@ scene-xviii-D-words = \markup
   \line { End scene 18. } }
 
 scene-xviii-D-section-position = \markup
+  \translate #'(60 . -41)
   \section-baseline-skip
   \section-font-size
-  \translate #'(60 . -41)
   \scene-xviii-D-words

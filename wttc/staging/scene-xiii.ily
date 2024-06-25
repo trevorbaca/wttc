@@ -8,8 +8,8 @@ scene-xiii-title-words = \markup
   \line { SCENE \hspace #1 13. }
 
 scene-xiii-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-60 . 12)
+  \section-title-font-size
   \scene-xiii-title-words
 
 scene-xiii-parenthesized-title-words = \markup
@@ -18,8 +18,8 @@ scene-xiii-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 13) }
 
 scene-xiii-parenthesized-title-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(-32 . 12)
+  \parenthesized-section-title-font-size
   \scene-xiii-parenthesized-title-words
 
 scene-xiii-A-words = \markup
@@ -32,9 +32,9 @@ scene-xiii-A-words = \markup
   \line { Pause. } }
 
 scene-xiii-A-section-position = \markup
+  \translate #'(-60 . -38)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-60 . -38)
   \scene-xiii-A-words
 
 scene-xiii-B-words = \markup
@@ -65,9 +65,9 @@ scene-xiii-B-words = \markup
   \line { Did I ask when that would be? \lnum #197 } }
 
 scene-xiii-B-section-position = \markup
+  \translate #'(62 . -12)
   \section-baseline-skip
   \section-font-size
-  \translate #'(62 . -12)
   \scene-xiii-B-words
 
 scene-xiii-C-words = \markup
@@ -78,9 +78,9 @@ scene-xiii-C-words = \markup
   \line { I — \lnum #199 } }
 
 scene-xiii-C-section-position = \markup
+  \translate #'(0 . -53)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -53)
   \scene-xiii-C-words
 
 scene-xiii-D-words = \markup
@@ -91,10 +91,10 @@ scene-xiii-D-words = \markup
   single. OWL struggles against this fit, trying to pull the arm free. }
 
 scene-xiii-D-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 140)
   \translate #'(0 . -45)
+  \section-baseline-skip
+  \section-font-size
   \scene-xiii-D-words
 
 scene-xiii-E-words = \markup
@@ -118,9 +118,9 @@ scene-xiii-E-words = \markup
   \line { Music and lighting return to how they were. } }
 
 scene-xiii-E-section-position = \markup
+  \translate #'(0 . -57)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -57)
   \scene-xiii-E-words
 
 scene-xiii-F-words = \markup
@@ -137,9 +137,9 @@ scene-xiii-F-words = \markup
   \line { If it could have stayed like that \dots \lnum #206 } }
 
 scene-xiii-F-section-position = \markup
+  \translate #'(0 . -40)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -40)
   \scene-xiii-F-words
 
 scene-xiii-G-words = \markup
@@ -148,8 +148,8 @@ scene-xiii-G-words = \markup
   \line { End scene 13. }
 
 scene-xiii-G-section-position = \markup
-  \section-font-size
   \translate #'(60 . -38)
+  \section-font-size
   \scene-xiii-G-words
 
 scene-xiii-footnote = \markup 

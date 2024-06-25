@@ -9,8 +9,8 @@ scene-viii-title-words = \markup
   \line { SCENE \hspace #1 8. }
 
 scene-viii-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-110 . 12)
+  \section-title-font-size
   \scene-viii-title-words
 
 scene-viii-A-words = \markup
@@ -43,10 +43,10 @@ scene-viii-A-words = \markup
   \justify { OWL sniffs the flowers, but again there is no touching. } }
 
 scene-viii-A-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 50)
   \translate #'(-84 . -20)
+  \section-baseline-skip
+  \section-font-size
   \scene-viii-A-words
 
 scene-viii-B-words = \markup
@@ -58,9 +58,9 @@ scene-viii-B-words = \markup
   \line { OWL stands back up. } }
 
 scene-viii-B-section-position = \markup
+  \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
-  \translate #'(4 . -43)
   \scene-viii-B-words
 
 scene-viii-C-words = \markup
@@ -69,8 +69,8 @@ scene-viii-C-words = \markup
   \line { But still, \lnum #81.1 }
 
 scene-viii-C-section-position = \markup
-  \section-font-size
   \translate #'(36 . -41)
+  \section-font-size
   \scene-viii-C-words
 
 scene-viii-D-words = \markup
@@ -79,8 +79,8 @@ scene-viii-D-words = \markup
   \line { violets. \lnum #81.2 }
 
 scene-viii-D-section-position = \markup
-  \section-font-size
   \translate #'(0 . -41)
+  \section-font-size
   \scene-viii-D-words
 
 scene-viii-E-words = \markup
@@ -94,7 +94,7 @@ scene-viii-E-words = \markup
   \line { End scene 8. } }
 
 scene-viii-E-section-position = \markup
+  \translate #'(92 . -38)
   \section-baseline-skip
   \section-font-size
-  \translate #'(92 . -38)
   \scene-viii-E-words

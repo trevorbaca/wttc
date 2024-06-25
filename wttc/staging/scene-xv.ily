@@ -8,8 +8,8 @@ scene-xv-title-words = \markup
   \line { SCENE \hspace #1 15. }
 
 scene-xv-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-32 . 12)
+  \section-title-font-size
   \scene-xv-title-words
 
 scene-xv-A-words = \markup
@@ -21,9 +21,9 @@ scene-xv-A-words = \markup
   \line { All right, I say. \lnum #234 } }
 
 scene-xv-A-section-position = \markup
+  \translate #'(16 . -37)
   \section-baseline-skip
   \section-font-size
-  \translate #'(16 . -37)
   \scene-xv-A-words
 
 scene-xv-B-words = \markup
@@ -31,8 +31,8 @@ scene-xv-B-words = \markup
   \line { Home. \lnum #235 }
 
 scene-xv-B-section-position = \markup
-  \section-font-size
   \translate #'(2 . -41)
+  \section-font-size
   \scene-xv-B-words
 
 scene-xv-C-words = \markup
@@ -53,9 +53,9 @@ scene-xv-C-words = \markup
   \line { Things come and go — \lnum #240 } }
 
 scene-xv-C-section-position = \markup
+  \translate #'(60 . -21)
   \section-baseline-skip
   \section-font-size
-  \translate #'(60 . -21)
   \scene-xv-C-words
 
 scene-xv-D-words = \markup
@@ -66,10 +66,10 @@ scene-xv-D-words = \markup
   round to face the audience. After a few seconds, OWL shouts out: }
 
 scene-xv-D-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 140)
   \translate #'(0 . -35)
+  \section-baseline-skip
+  \section-font-size
   \scene-xv-D-words
 
 scene-xv-E-words = \markup
@@ -83,9 +83,9 @@ scene-xv-E-words = \markup
   Music and lighting return to how they were. } }
 
 scene-xv-E-section-position = \markup
+  \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -46)
   \scene-xv-E-words
 
 scene-xv-F-words = \markup
@@ -97,9 +97,9 @@ scene-xv-F-words = \markup
   \line { All of us. \lnum #244 } }
 
 scene-xv-F-section-position = \markup
+  \translate #'(0 . -39)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -39)
   \scene-xv-F-words
 
 scene-xv-G-words = \markup
@@ -115,9 +115,9 @@ scene-xv-G-words = \markup
   \line { End scene 15. } }
 
 scene-xv-G-section-position = \markup
+  \translate #'(30 . -41)
   \section-baseline-skip
   \section-font-size
-  \translate #'(30 . -41)
   \scene-xv-G-words
 
 scene-xv-footnote = \markup 

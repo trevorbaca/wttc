@@ -9,8 +9,8 @@ scene-xiv-title-words = \markup
   \line { SCENE \hspace #1 14. }
 
 scene-xiv-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-60 . 12)
+  \section-title-font-size
   \scene-xiv-title-words
 
 scene-xiv-A-words = \markup
@@ -19,8 +19,8 @@ scene-xiv-A-words = \markup
   \line { Where was I? \lnum #207 }
 
 scene-xiv-A-section-position = \markup
-  \section-font-size
   \translate #'(-58 . -48)
+  \section-font-size
   \scene-xiv-A-words
 
 scene-xiv-B-words = \markup
@@ -34,9 +34,9 @@ scene-xiv-B-words = \markup
   \line { Waving, \lnum #212 } }
 
 scene-xiv-B-section-position = \markup
+  \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -41)
   \scene-xiv-B-words
 
 scene-xiv-C-words = \markup
@@ -47,9 +47,9 @@ scene-xiv-C-words = \markup
   \line { Waving to us. \lnum #214 } }
 
 scene-xiv-C-section-position = \markup
+  \translate #'(0 . -48)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -48)
   \scene-xiv-C-words
 
 scene-xiv-D-words = \markup
@@ -87,7 +87,7 @@ scene-xiv-D-words = \markup
   \line { End scene 14. } }
 
 scene-xiv-D-section-position = \markup
+  \translate #'(80 . 0)
   \section-baseline-skip
   \section-font-size
-  \translate #'(80 . 0)
   \scene-xiv-D-words

@@ -9,8 +9,8 @@ scene-ix-title-words = \markup
   \line { SCENE \hspace #1 9. }
 
 scene-ix-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-90 . 12)
+  \section-title-font-size
   \scene-ix-title-words
 
 scene-ix-parenthesized-title-words = \markup
@@ -19,8 +19,8 @@ scene-ix-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 9) }
 
 scene-ix-parenthesized-title-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(-32 . 12)
+  \parenthesized-section-title-font-size
   \scene-ix-parenthesized-title-words
 
 scene-ix-A-words = \markup
@@ -39,9 +39,9 @@ scene-ix-A-words = \markup
   \line { And all this time \dots \lnum #92 } }
 
 scene-ix-A-section-position = \markup
+  \translate #'(-74 . -24)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-74 . -24)
   \scene-ix-A-words
 
 scene-ix-B-words = \markup
@@ -52,10 +52,10 @@ scene-ix-B-words = \markup
   engage with the audience. }
 
 scene-ix-B-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 100)
   \translate #'(0 . -41)
+  \section-baseline-skip
+  \section-font-size
   \scene-ix-B-words
 
 scene-ix-C-words = \markup
@@ -85,9 +85,9 @@ scene-ix-C-words = \markup
   \line { Did you say? \lnum #113 } }
 
 scene-ix-C-section-position = \markup
+  \translate #'(120 . -10)
   \section-baseline-skip
   \section-font-size
-  \translate #'(120 . -10)
   \scene-ix-C-words
 
 scene-ix-C-continued-words = \markup
@@ -110,10 +110,10 @@ scene-ix-C-continued-words = \markup
   and looks through it in the direction of the audience. } }
 
 scene-ix-C-continued-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 80)
   \translate #'(200 . -10)
+  \section-baseline-skip
+  \section-font-size
   \scene-ix-C-continued-words
 
 scene-ix-D-words = \markup
@@ -122,8 +122,8 @@ scene-ix-D-words = \markup
   \line { Nothing. \lnum #124 }
 
 scene-ix-D-section-position = \markup
-  \section-font-size
   \translate #'(0 . -41)
+  \section-font-size
   \scene-ix-D-words
 
 scene-ix-E-words = \markup
@@ -142,7 +142,7 @@ scene-ix-E-words = \markup
   \line { End scene 9. } }
 
 scene-ix-E-section-position = \markup
+  \translate #'(50 . -38)
   \section-baseline-skip
   \section-font-size
-  \translate #'(50 . -38)
   \scene-ix-E-words

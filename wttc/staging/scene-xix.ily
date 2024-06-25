@@ -9,8 +9,8 @@ scene-xix-title-words = \markup
   \line { SCENE \hspace #1 19. }
 
 scene-xix-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-96 . 6)
+  \section-title-font-size
   \scene-xix-title-words
 
 scene-xix-parenthesized-title-words = \markup
@@ -19,8 +19,8 @@ scene-xix-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 19) }
 
 scene-xix-parenthesized-title-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(-32 . 12)
+  \parenthesized-section-title-font-size
   \scene-xix-parenthesized-title-words
 
 scene-xix-A-words = \markup
@@ -31,9 +31,9 @@ scene-xix-A-words = \markup
   \line { And that's the reason \dots \lnum #297 } }
 
 scene-xix-A-section-position = \markup
+  \translate #'(-74 . -47)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-74 . -47)
   \scene-xix-A-words
 
 scene-xix-B-words = \markup
@@ -42,8 +42,8 @@ scene-xix-B-words = \markup
   \line { That's the reason \dots \lnum #298 }
 
 scene-xix-B-section-position = \markup
-  \section-font-size
   \translate #'(0 . -47)
+  \section-font-size
   \scene-xix-B-words
 
 scene-xix-C-words = \markup
@@ -58,9 +58,9 @@ scene-xix-C-words = \markup
   \line { Call this home? \lnum #300 } }
 
 scene-xix-C-section-position = \markup
+  \translate #'(50 . -47)
   \section-baseline-skip
   \section-font-size
-  \translate #'(50 . -47)
   \scene-xix-C-words
 
 scene-xix-D-words = \markup
@@ -69,8 +69,8 @@ scene-xix-D-words = \markup
   \line { Window. \lnum #301 }
 
 scene-xix-D-section-position = \markup
-  \section-font-size
   \translate #'(0 . -49)
+  \section-font-size
   \scene-xix-D-words
 
 scene-xix-E-words = \markup
@@ -79,8 +79,8 @@ scene-xix-E-words = \markup
   \line { Table. \lnum #302 }
 
 scene-xix-E-section-position = \markup
-  \section-font-size
   \translate #'(0 . -49)
+  \section-font-size
   \scene-xix-E-words
 
 scene-xix-F-words = \markup
@@ -89,8 +89,8 @@ scene-xix-F-words = \markup
   \line { Flowers. \lnum #303 }
 
 scene-xix-F-section-position = \markup
-  \section-font-size
   \translate #'(0 . -49)
+  \section-font-size
   \scene-xix-F-words
 
 scene-xix-G-words = \markup
@@ -99,8 +99,8 @@ scene-xix-G-words = \markup
   \line { In a glass. \lnum #304 }
 
 scene-xix-G-section-position = \markup
-  \section-font-size
   \translate #'(0 . -49)
+  \section-font-size
   \scene-xix-G-words
 
 scene-xix-H-words = \markup
@@ -112,9 +112,9 @@ scene-xix-H-words = \markup
   \line { Violets. \lnum #305 } }
 
 scene-xix-H-section-position = \markup
+  \translate #'(18 . -47)
   \section-baseline-skip
   \section-font-size
-  \translate #'(18 . -47)
   \scene-xix-H-words
 
 scene-xix-I-words = \markup
@@ -127,9 +127,9 @@ scene-xix-I-words = \markup
   \line { Pause. } }
 
 scene-xix-I-section-position = \markup
+  \translate #'(90 . -51)
   \section-baseline-skip
   \section-font-size
-  \translate #'(90 . -51)
   \scene-xix-I-words
 
 scene-xix-J-words = \markup
@@ -138,8 +138,8 @@ scene-xix-J-words = \markup
   \line { Never mind. \lnum #307 }
 
 scene-xix-J-section-position = \markup
-  \section-font-size
   \translate #'(0 . -47)
+  \section-font-size
   \scene-xix-J-words
 
 scene-xix-K-words = \markup
@@ -151,9 +151,9 @@ scene-xix-K-words = \markup
   \line { Never mind! \lnum #308 } }
 
 scene-xix-K-section-position = \markup
+  \translate #'(0 . -45)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -45)
   \scene-xix-K-words
 
 scene-xix-L-words = \markup
@@ -162,8 +162,8 @@ scene-xix-L-words = \markup
   \line { It's all over. \lnum #309 }
 
 scene-xix-L-section-position = \markup
-  \section-font-size
   \translate #'(50 . -47)
+  \section-font-size
   \scene-xix-L-words
 
 scene-xix-M-words = \markup
@@ -172,6 +172,6 @@ scene-xix-M-words = \markup
   \line { End scene 19. }
 
 scene-xix-M-section-position = \markup
-  \section-font-size
   \translate #'(74 . -45)
+  \section-font-size
   \scene-xix-M-words

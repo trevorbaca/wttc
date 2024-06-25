@@ -8,8 +8,8 @@ scene-xvii-title-words = \markup
   \line { SCENE \hspace #1 17. }
 
 scene-xvii-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-102 . 12)
+  \section-title-font-size
   \scene-xvii-title-words
 
 scene-xvii-A-words = \markup
@@ -25,9 +25,9 @@ scene-xvii-A-words = \markup
   \line { But to what? \lnum #272 } }
 
 scene-xvii-A-section-position = \markup
+  \translate #'(-102 . -41)
   \section-font-size
   \section-baseline-skip
-  \translate #'(-102 . -41)
   \scene-xvii-A-words
 
 scene-xvii-B-words = \markup
@@ -36,8 +36,8 @@ scene-xvii-B-words = \markup
   \line { Where? \lnum #273 }
 
 scene-xvii-B-section-position = \markup
-  \section-font-size
   \translate #'(6 . -41)
+  \section-font-size
   \scene-xvii-B-words
 
 scene-xvii-C-words = \markup
@@ -49,10 +49,10 @@ scene-xvii-C-words = \markup
   to stop this movement. }
 
 scene-xvii-C-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 180)
   \translate #'(0 . -41)
+  \section-baseline-skip
+  \section-font-size
   \scene-xvii-C-words
 
 scene-xvii-D-words = \markup
@@ -80,10 +80,10 @@ scene-xvii-D-words = \markup
   \line { End scene 17. } }
 
 scene-xvii-D-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 60)
   \translate #'(200 . -21)
+  \section-baseline-skip
+  \section-font-size
   \scene-xvii-D-words
 
 scene-xvii-E-words = \markup
@@ -92,8 +92,8 @@ scene-xvii-E-words = \markup
   \line { End scene 17. }
 
 scene-xvii-E-section-position = \markup
-  \section-font-size
   \translate #'(0 . 0)
+  \section-font-size
   \scene-xvii-E-words
 
 scene-xvii-footnote = \markup 

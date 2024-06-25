@@ -9,8 +9,8 @@ scene-x-title-words = \markup
   \line { SCENE \hspace #1 10. }
 
 scene-x-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-100 . 12)
+  \section-title-font-size
   \scene-x-title-words
 
 scene-x-parenthesized-title-words = \markup
@@ -19,8 +19,8 @@ scene-x-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 10) }
 
 scene-x-parenthesized-title-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(-34 . 12)
+  \parenthesized-section-title-font-size
   \scene-x-parenthesized-title-words
 
 scene-x-A-words = \markup
@@ -41,10 +41,10 @@ scene-x-A-words = \markup
   \line { Pause. } }
 
 scene-x-A-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 54)
   \translate #'(-86 . -40)
+  \section-baseline-skip
+  \section-font-size
   \scene-x-A-words
 
 scene-x-B-words = \markup
@@ -53,8 +53,8 @@ scene-x-B-words = \markup
   \line { Promised \dots \lnum #130 }
 
 scene-x-B-section-position = \markup
-  \section-font-size
   \translate #'(2 . -41)
+  \section-font-size
   \scene-x-B-words
 
 scene-x-C-words = \markup
@@ -75,9 +75,9 @@ scene-x-C-words = \markup
   \line { Will it have to do with \dots ? \lnum #132 } }
 
 scene-x-C-section-position = \markup
+  \translate #'(76 . -30)
   \section-baseline-skip
   \section-font-size
-  \translate #'(76 . -30)
   \scene-x-C-words
 
 scene-x-D-words = \markup
@@ -100,7 +100,7 @@ scene-x-D-words = \markup
   \line { End scene 10. } }
 
 scene-x-D-section-position = \markup
+  \translate #'(76 . -31)
   \section-baseline-skip
   \section-font-size
-  \translate #'(76 . -31)
   \scene-x-D-words

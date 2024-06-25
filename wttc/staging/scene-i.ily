@@ -9,8 +9,8 @@ scene-i-title-words = \markup
   \line { SCENE \hspace #1 1. }
 
 scene-i-title-section-position = \markup
-  \section-title-font-size
   \translate #'(100 . 32)
+  \section-title-font-size
   \scene-i-title-words
 
 scene-i-parenthesized-title-words = \markup
@@ -33,10 +33,10 @@ scene-i-A-words = \markup
   member of the ensemble. }
 
 scene-i-A-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 194)
   \translate #'(126 . 34)
+  \section-baseline-skip
+  \section-font-size
   \scene-i-A-words
 
 scene-i-A-part-position = \markup
@@ -64,11 +64,11 @@ scene-i-B-words-iii = \markup
   musicians' are, still not noticing the audeince, or anything else. }
 
 scene-i-B-section-position = \markup
+  \override #'(line-width . 40)
+  \translate #'(90 . -22)
   \wdfn
   \section-baseline-skip
   \section-font-size
-  \override #'(line-width . 40)
-  \translate #'(90 . -22)
   \column {
   \scene-i-B-words-i
   \vspace #3
@@ -97,10 +97,10 @@ scene-i-C-words-iv = \markup
   \line { Then play measures 10 and 11, as if in response. }
 
 scene-i-C-section-position = \markup
+  \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -135)
   \column {
   \scene-i-C-words-i
   \vspace #1
@@ -124,10 +124,10 @@ scene-i-D-words-iii = \markup
   \line { End scene 1. Slight pause, but not too long. }
 
 scene-i-D-section-position = \markup
+  \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -135)
   \column {
   \scene-i-D-words-i
   \vspace #1

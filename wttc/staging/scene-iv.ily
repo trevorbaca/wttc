@@ -9,8 +9,8 @@ scene-iv-title-words = \markup
   \line { SCENE \hspace #1 4. }
 
 scene-iv-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-130 . 12)
+  \section-title-font-size
   \scene-iv-title-words
 
 scene-iv-parenthesized-title-words = \markup
@@ -19,8 +19,8 @@ scene-iv-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 4) }
 
 scene-iv-parenthesized-title-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(-34 . 12)
+  \parenthesized-section-title-font-size
   \scene-iv-parenthesized-title-words
 
 scene-iv-footnote = \markup 
@@ -28,9 +28,8 @@ scene-iv-footnote = \markup
   \section-font-size
   {
   \footnote ""
-  \line { \super 1 \hspace #-0.5 Samuel Beckett: \override #'(font-name .
-  "Adobe Garamond Pro Italic") { Words and Music } (1961), final words in
-  reverse order. } }
+  \line { \super 1 \hspace #-0.5 Samuel Beckett: \adobe-italic { Words and
+  Music } (1961), final words in reverse order. } }
 
 scene-iv-A-words = \markup
   \wdfn
@@ -44,9 +43,9 @@ scene-iv-A-words = \markup
   \line { Music attaca. } }
 
 scene-iv-A-section-position = \markup
+  \translate #'(-100 . -40)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-100 . -40)
   \scene-iv-A-words
 
 scene-iv-B-words = \markup
@@ -55,8 +54,8 @@ scene-iv-B-words = \markup
   \line { Close, \lnum #33 }
 
 scene-iv-B-section-position = \markup
-  \section-font-size
   \translate #'(0 . -43)
+  \section-font-size
   \scene-iv-B-words
 
 scene-iv-C-words = \markup
@@ -65,8 +64,8 @@ scene-iv-C-words = \markup
   \line { You know that, \lnum #34 }
 
 scene-iv-C-section-position = \markup
-  \section-font-size
   \translate #'(0 . -43)
+  \section-font-size
   \scene-iv-C-words
 
 scene-iv-D-words = \markup
@@ -75,8 +74,8 @@ scene-iv-D-words = \markup
   \line { Like left and right, \lnum #35 }
 
 scene-iv-D-section-position = \markup
-  \section-font-size
   \translate #'(0 . -43)
+  \section-font-size
   \scene-iv-D-words
 
 scene-iv-E-words = \markup
@@ -85,8 +84,8 @@ scene-iv-E-words = \markup
   \line { Like night and day \lnum #36 }
 
 scene-iv-E-section-position = \markup
-  \section-font-size
   \translate #'(0 . -43)
+  \section-font-size
   \scene-iv-E-words
 
 scene-iv-F-words = \markup
@@ -97,9 +96,9 @@ scene-iv-F-words = \markup
   \line { Like words and \lnum #38 } }
 
 scene-iv-F-section-position = \markup
+  \translate #'(0 . -40)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -40)
   \scene-iv-F-words
 
 scene-iv-G-words = \markup
@@ -111,9 +110,9 @@ scene-iv-G-words = \markup
   \line { Music — \lnum #39 } }
 
 scene-iv-G-section-position = \markup
+  \translate #'(0 . -35)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -35)
   \scene-iv-G-words
 
 scene-iv-H-words = \markup
@@ -124,10 +123,10 @@ scene-iv-H-words = \markup
   struggles against this fit, trying to pull the foot free. }
 
 scene-iv-H-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 50)
   \translate #'(0 . -45)
+  \section-baseline-skip
+  \section-font-size
   \scene-iv-H-words
 
 scene-iv-I-words = \markup
@@ -142,10 +141,10 @@ scene-iv-I-words = \markup
   as suddenly as it began. } }
 
 scene-iv-I-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 55)
   \translate #'(60 . -42)
+  \section-baseline-skip
+  \section-font-size
   \scene-iv-I-words
 
 scene-iv-J-words = \markup
@@ -160,10 +159,10 @@ scene-iv-J-words = \markup
   Then proceed together. } }
 
 scene-iv-J-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 55)
   \translate #'(180 . -41)
+  \section-baseline-skip
+  \section-font-size
   \scene-iv-J-words
 
 scene-iv-K-words = \markup
@@ -177,9 +176,9 @@ scene-iv-K-words = \markup
   \line { Like give and take. \lnum #43 } }
 
 scene-iv-K-section-position = \markup
+  \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -46)
   \scene-iv-K-words
 
 scene-iv-L-words = \markup
@@ -188,6 +187,6 @@ scene-iv-L-words = \markup
   \line { End scene 4. }
 
 scene-iv-L-section-position = \markup
-  \section-font-size
   \translate #'(50 . -49)
+  \section-font-size
   \scene-iv-L-words

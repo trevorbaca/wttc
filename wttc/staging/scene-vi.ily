@@ -9,8 +9,8 @@ scene-vi-title-words = \markup
   \line { SCENE \hspace #1 6. }
 
 scene-vi-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-60 . 12)
+  \section-title-font-size
   \scene-vi-title-words
 
 scene-vi-A-words = \markup
@@ -21,9 +21,9 @@ scene-vi-A-words = \markup
   \line { You tell me what to do. \lnum #49 } }
 
 scene-vi-A-section-position = \markup
+  \translate #'(-60 . -46)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-60 . -46)
   \scene-vi-A-words
 
 scene-vi-B-words = \markup
@@ -32,8 +32,8 @@ scene-vi-B-words = \markup
   \line { You lay it all out for me, \lnum #50 }
 
 scene-vi-B-section-position = \markup
-  \section-font-size
   \translate #'(0 . -46)
+  \section-font-size
   \scene-vi-B-words
 
 scene-vi-C-words = \markup
@@ -42,8 +42,8 @@ scene-vi-C-words = \markup
   \line { Tell me where to go \lnum #51 }
 
 scene-vi-C-section-position = \markup
-  \section-font-size
   \translate #'(0 . -46)
+  \section-font-size
   \scene-vi-C-words
 
 scene-vi-D-words = \markup
@@ -54,9 +54,9 @@ scene-vi-D-words = \markup
   \line { You say, \lnum #53 } }
 
 scene-vi-D-section-position = \markup
+  \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -46)
   \scene-vi-D-words
 
 scene-vi-E-words = \markup
@@ -77,10 +77,10 @@ scene-vi-E-words = \markup
   \line { Now I remember: \lnum #60 } }
 
 scene-vi-E-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 50)
   \translate #'(80 . -46)
+  \section-baseline-skip
+  \section-font-size
   \scene-vi-E-words
 
 scene-vi-before-F-words = \markup
@@ -89,8 +89,8 @@ scene-vi-before-F-words = \markup
   \line { Freely, not coordinated with music: }
 
 scene-vi-before-F-section-position = \markup
-  \section-font-size
   \translate #'(0 . -41)
+  \section-font-size
   \scene-vi-before-F-words
 
 scene-vi-F-words = \markup
@@ -105,9 +105,9 @@ scene-vi-F-words = \markup
   \line { Each little \dots \lnum #64 } }
 
 scene-vi-F-section-position = \markup
+  \translate #'(0 . -42)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -42)
   \scene-vi-F-words
 
 scene-vi-G-words = \markup
@@ -120,7 +120,7 @@ scene-vi-G-words = \markup
   \line { End scene 6. } }
 
 scene-vi-G-section-position = \markup
+  \translate #'(63 . -46)
   \section-baseline-skip
   \section-font-size
-  \translate #'(63 . -46)
   \scene-vi-G-words

@@ -9,8 +9,8 @@ scene-xi-title-words = \markup
   \line { SCENE \hspace #1 11. }
 
 scene-xi-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-90 . -2)
+  \section-title-font-size
   \scene-xi-title-words
 
 scene-xi-A-words = \markup
@@ -76,8 +76,8 @@ scene-xi-A-words = \markup
   \line { End scene 11. } }
 
 scene-xi-A-section-position = \markup
-  \section-baseline-skip
-  \section-font-size
   \override #'(line-width . 60)
   \translate #'(-90 . -20)
+  \section-baseline-skip
+  \section-font-size
   \scene-xi-A-words

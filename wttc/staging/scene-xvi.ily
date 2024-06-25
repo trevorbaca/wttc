@@ -8,8 +8,8 @@ scene-xvi-title-words = \markup
   \line { SCENE \hspace #1 16. }
 
 scene-xvi-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-32 . 12)
+  \section-title-font-size
   \scene-xvi-title-words
 
 scene-xvi-parenthesized-title-words = \markup
@@ -18,8 +18,8 @@ scene-xvi-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 16) }
 
 scene-xvi-parenthesized-title-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(-32 . 12)
+  \parenthesized-section-title-font-size
   \scene-xvi-parenthesized-title-words
 
 scene-xvi-A-words = \markup
@@ -34,9 +34,9 @@ scene-xvi-A-words = \markup
   \line { As if you had no memory of — \lnum #251 } }
 
 scene-xvi-A-section-position = \markup
+  \translate #'(0 . -38)
   \section-baseline-skip
   \section-font-size
-  \translate #'(0 . -38)
   \scene-xvi-A-words
 
 scene-xvi-B-words = \markup
@@ -51,9 +51,9 @@ scene-xvi-B-words = \markup
   \line { This way — \lnum #254 } }
 
 scene-xvi-B-section-position = \markup
+  \translate #'(120 . -41)
   \section-baseline-skip
   \section-font-size
-  \translate #'(120 . -41)
   \scene-xvi-B-words
 
 scene-xvi-C-words = \markup
@@ -65,9 +65,9 @@ scene-xvi-C-words = \markup
   \line { Way! \lnum #255 } }
 
 scene-xvi-C-section-position = \markup
+  \translate #'(28 . -43)
   \section-baseline-skip
   \section-font-size
-  \translate #'(28 . -43)
   \scene-xvi-C-words
 
 scene-xvi-D-words = \markup
@@ -79,9 +79,9 @@ scene-xvi-D-words = \markup
   \line { No. \lnum #256 } }
 
 scene-xvi-D-section-position = \markup
+  \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
-  \translate #'(4 . -43)
   \scene-xvi-D-words
 
 scene-xvi-E-words = \markup
@@ -93,9 +93,9 @@ scene-xvi-E-words = \markup
   \line { Stopping before saying “way” } }
 
 scene-xvi-E-section-position = \markup
+  \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
-  \translate #'(4 . -43)
   \scene-xvi-E-words
 
 scene-xvi-F-words = \markup
@@ -104,8 +104,8 @@ scene-xvi-F-words = \markup
   \line { And all the time — \lnum #258 }
 
 scene-xvi-F-section-position = \markup
-  \section-font-size
   \translate #'(70 . -46)
+  \section-font-size
   \scene-xvi-F-words
 
 scene-xvi-G-words = \markup
@@ -114,8 +114,8 @@ scene-xvi-G-words = \markup
   \line { Never mind. \lnum #259 }
 
 scene-xvi-G-section-position = \markup
-  \section-font-size
   \translate #'(70 . -41)
+  \section-font-size
   \scene-xvi-G-words
 
 scene-xvi-H-words = \markup
@@ -124,8 +124,8 @@ scene-xvi-H-words = \markup
   \line { Let it go. \lnum #260 }
 
 scene-xvi-H-section-position = \markup
-  \section-font-size
   \translate #'(0 . -41)
+  \section-font-size
   \scene-xvi-H-words
 
 scene-xvi-I-words = \markup
@@ -134,8 +134,8 @@ scene-xvi-I-words = \markup
   \line { Let it go. \lnum #261 }
 
 scene-xvi-I-section-position = \markup
-  \section-font-size
   \translate #'(0 . -41)
+  \section-font-size
   \scene-xvi-I-words
 
 scene-xvi-J-words = \markup
@@ -158,7 +158,7 @@ scene-xvi-J-words = \markup
   \line { End scene 16. } }
 
 scene-xvi-J-section-position = \markup
+  \translate #'(40 . -19)
   \section-baseline-skip
   \section-font-size
-  \translate #'(40 . -19)
   \scene-xvi-J-words

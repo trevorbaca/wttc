@@ -9,8 +9,8 @@ scene-xx-title-words = \markup
   \line { SCENE \hspace #1 20. }
 
 scene-xx-title-section-position = \markup
-  \section-title-font-size
   \translate #'(-32 . 140)
+  \section-title-font-size
   \scene-xx-title-words
 
 scene-xx-A-words = \markup
@@ -39,9 +39,9 @@ scene-xx-A-words = \markup
   \line { Pause. } }
 
 scene-xx-A-section-position = \markup
+  \translate #'(-8 . 126)
   \section-baseline-skip
   \section-font-size
-  \translate #'(-8 . 126)
   \scene-xx-A-words
 
 scene-xx-B-words = \markup
@@ -50,8 +50,8 @@ scene-xx-B-words = \markup
   \line { To sing. \hspace #-0.5 \super 5 }
 
 scene-xx-B-section-position = \markup
-  \parenthesized-section-title-font-size
   \translate #'(200 . 16)
+  \parenthesized-section-title-font-size
   \scene-xx-B-words
 
 scene-xx-C-words = \markup
@@ -60,8 +60,8 @@ scene-xx-C-words = \markup
   \line { End scene 20. }
 
 scene-xx-C-section-position = \markup
-  \section-font-size
   \translate #'(0 . 0)
+  \section-font-size
   \scene-xx-C-words
 
 scene-xx-footnote = \markup 
