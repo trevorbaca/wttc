@@ -4,8 +4,8 @@
 % SCENE 20: A - C
 
 scene-xx-title-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { SCENE \hspace #1 20. }
 
 scene-xx-title-section-position = \markup
@@ -14,12 +14,12 @@ scene-xx-title-section-position = \markup
   \scene-xx-title-words
 
 scene-xx-A-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { What to do, what to do? \lnum #310 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #2
   \line { You'll come. \lnum #311 }
@@ -31,22 +31,22 @@ scene-xx-A-words = \markup
   \line { And you'll be here. \lnum #317 }
   \line { With me. \lnum #318 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Slowly. }
   \line { Is that not so? \lnum #319 }
   \vspace #4
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. } }
 
 scene-xx-A-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(-8 . 126)
   \scene-xx-A-words
 
 scene-xx-B-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { To sing. \hspace #-0.5 \super 5 }
 
 scene-xx-B-section-position = \markup
@@ -55,18 +55,18 @@ scene-xx-B-section-position = \markup
   \scene-xx-B-words
 
 scene-xx-C-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \wdfn
+  \adobe-italic
   \line { End scene 20. }
 
 scene-xx-C-section-position = \markup
-  \override #'(font-size . 4)
+  \section-font-size
   \translate #'(0 . 0)
   \scene-xx-C-words
 
 scene-xx-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
-  \override #'(font-size . 4)
+  \section-font-size
   {
   \footnote ""
   \line {

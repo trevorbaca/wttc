@@ -4,7 +4,7 @@
 % SCENE 13: A - G
 
 scene-xiii-title-words = \markup
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \adobe-bold
   \line { SCENE \hspace #1 13. }
 
 scene-xiii-title-section-position = \markup
@@ -13,8 +13,8 @@ scene-xiii-title-section-position = \markup
   \scene-xiii-title-words
 
 scene-xiii-parenthesized-title-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { (SCENE \hspace #1 13) }
 
 scene-xiii-parenthesized-title-section-position = \markup
@@ -23,25 +23,25 @@ scene-xiii-parenthesized-title-section-position = \markup
   \scene-xiii-parenthesized-title-words
 
 scene-xiii-A-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { I have a fear. \lnum #186 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. } }
 
 scene-xiii-A-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(-60 . -38)
   \scene-xiii-A-words
 
 scene-xiii-B-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Return to normality. }
   \vspace #1
   \line { “Make yourself at home.” \lnum #187 }
@@ -51,7 +51,7 @@ scene-xiii-B-words = \markup
   \line { “My owl, \lnum #191 }
   \line { “My sweet owl,” \lnum #192 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #2
   \line { No. \lnum #193 }
@@ -59,47 +59,47 @@ scene-xiii-B-words = \markup
   \line { “If you should be there before me, \lnum #195 }
   \line { “When the time comes.” \lnum #196 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #2
   \line { Did I ask when that would be? \lnum #197 } }
 
 scene-xiii-B-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(62 . -12)
   \scene-xiii-B-words
 
 scene-xiii-C-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { I did not. \lnum #198 }
   \line { I — \lnum #199 } }
 
 scene-xiii-C-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(0 . -53)
   \scene-xiii-C-words
 
 scene-xiii-D-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \wdfn
+  \adobe-italic
   \justify { Still 2. Sudden change in music and lighting as OWL is set
   uttering and fixed in position with one arm extended. Words are abrupt,
   single. OWL struggles against this fit, trying to pull the arm free. }
 
 scene-xiii-D-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \override #'(line-width . 140)
   \translate #'(0 . -45)
   \scene-xiii-D-words
 
 scene-xiii-E-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { 
   \hspace #10
@@ -111,23 +111,23 @@ scene-xiii-E-words = \markup
   falls \hspace #10
   keep \hspace #-0.5 \super 2 \lnum #200 }
   \vspace #0.75
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { On this last word, OWL frees the arm, and the fit is over as suddenly as
   it began. }
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Music and lighting return to how they were. } }
 
 scene-xiii-E-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(0 . -57)
   \scene-xiii-E-words
 
 scene-xiii-F-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Freely, not coordinated with music: }
   \line { I would never do that, \lnum #201 }
   \line { Never did do that. \lnum #202 }
@@ -137,27 +137,27 @@ scene-xiii-F-words = \markup
   \line { If it could have stayed like that \dots \lnum #206 } }
 
 scene-xiii-F-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(0 . -40)
   \scene-xiii-F-words
 
 scene-xiii-G-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \wdfn
+  \adobe-italic
   \line { End scene 13. }
 
 scene-xiii-G-section-position = \markup
-  \override #'(font-size . 4)
+  \section-font-size
   \translate #'(60 . -38)
   \scene-xiii-G-words
 
 scene-xiii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
-  \override #'(font-size . 4)
+  \section-font-size
   {
   \footnote ""
   \line { \super 2 \hspace #-0.5 Samuel Beckett:
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   { Not I }, final words of phrases, as available,
   from the end, omitting repetitions and words already used in the present script. } }

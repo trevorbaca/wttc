@@ -4,8 +4,8 @@
 % SCENE 11: A
 
 scene-xi-title-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { SCENE \hspace #1 11. }
 
 scene-xi-title-section-position = \markup
@@ -14,8 +14,8 @@ scene-xi-title-section-position = \markup
   \scene-xi-title-words
 
 scene-xi-A-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { But could I be the one that's late, \lnum #135 }
   \line { And you have been here and gone \lnum #136 }
@@ -23,14 +23,14 @@ scene-xi-A-words = \markup
   \line { You could not see me, and so you }
   \line { left and went \dots \lnum #138 }
   \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #1
   \line { No, it's all all right. \lnum #139 }
   \line { You would not have gone like that, \lnum #140 }
   \line { No way —. \lnum #141 }
   \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \justify { Pause. OWL looks from left to right, expecting something to happen, then
   goes on when the coast is evidently clear. }
   \vspace #2
@@ -56,28 +56,28 @@ scene-xi-A-words = \markup
   \line { And all that time \dots, \lnum #155 }
   \line { Then — \lnum #156 }
   \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #1
   \line { Never mind. \lnum #157 }
   \line { You would have left something to tell me. \lnum #158 }
   \line { You would have left it on the table. \lnum #159 }
   \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { OWL looks back at the table. }
   \vspace #1
   \line { Nothing. \lnum #160 }
   \line { Nothing at all. \lnum #161 }
   \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #3
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { End scene 11. } }
 
 scene-xi-A-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \override #'(line-width . 60)
   \translate #'(-90 . -20)
   \scene-xi-A-words

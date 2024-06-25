@@ -4,7 +4,7 @@
 % SCENE 17: A - E
 
 scene-xvii-title-words = \markup
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \adobe-bold
   \line { SCENE \hspace #1 17. }
 
 scene-xvii-title-section-position = \markup
@@ -13,8 +13,8 @@ scene-xvii-title-section-position = \markup
   \scene-xvii-title-words
 
 scene-xvii-A-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { The sun rose on a long, long day, \lnum #266 }
   \line { A day that seemed to go on and on and never end, \lnum #267 }
@@ -25,41 +25,41 @@ scene-xvii-A-words = \markup
   \line { But to what? \lnum #272 } }
 
 scene-xvii-A-section-position = \markup
-  \override #'(font-size . 4)
-  \override #'(baseline-skip . 5)
+  \section-font-size
+  \section-baseline-skip
   \translate #'(-102 . -41)
   \scene-xvii-A-words
 
 scene-xvii-B-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { Where? \lnum #273 }
 
 scene-xvii-B-section-position = \markup
-  \override #'(font-size . 4)
+  \section-font-size
   \translate #'(6 . -41)
   \scene-xvii-B-words
 
 scene-xvii-C-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \wdfn
+  \adobe-italic
   \justify { Still 4. Sudden change in music and lighting as OWL is fixed in
   position and set uttering, head snapping from left to right with the
   dialogue, which goes fast. OWL struggles with both hands on sides of head
   to stop this movement. }
 
 scene-xvii-C-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \override #'(line-width . 180)
   \translate #'(0 . -41)
   \scene-xvii-C-words
 
 scene-xvii-D-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Lines to be delivered during measure 476: }
   \vspace #2
   \line { All is that. \lnum #274 }
@@ -72,35 +72,35 @@ scene-xvii-D-words = \markup
   \line { \hspace #40 On so — \lnum #281 }
   \line { No! \hspace #-0.5 \super 4 \lnum #282 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \justify { On this last word, OWL succeeds in stopping the movement, and the fit
   is over as suddenly as it began. Music and lighting return to how they were. }
   \vspace #4
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { End scene 17. } }
 
 scene-xvii-D-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \override #'(line-width . 60)
   \translate #'(200 . -21)
   \scene-xvii-D-words
 
 scene-xvii-E-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \wdfn
+  \adobe-italic
   \line { End scene 17. }
 
 scene-xvii-E-section-position = \markup
-  \override #'(font-size . 4)
+  \section-font-size
   \translate #'(0 . 0)
   \scene-xvii-E-words
 
 scene-xvii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")
-  \override #'(font-size . 4)
+  \section-font-size
   {
   \footnote ""
   \line { \super 4 \hspace #-0.5 Samuel Beckett:
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   { What Where }, available statements reading backwards from the end. } }

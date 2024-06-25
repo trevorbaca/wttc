@@ -4,8 +4,8 @@
 % SCENE 9: A - E
 
 scene-ix-title-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { SCENE \hspace #1 9. }
 
 scene-ix-title-section-position = \markup
@@ -14,8 +14,8 @@ scene-ix-title-section-position = \markup
   \scene-ix-title-words
 
 scene-ix-parenthesized-title-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { (SCENE \hspace #1 9) }
 
 scene-ix-parenthesized-title-section-position = \markup
@@ -24,8 +24,8 @@ scene-ix-parenthesized-title-section-position = \markup
   \scene-ix-parenthesized-title-words
 
 scene-ix-A-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { It's as if you had seen it all \lnum #84 }
   \line { Before, \lnum #85 }
@@ -39,28 +39,28 @@ scene-ix-A-words = \markup
   \line { And all this time \dots \lnum #92 } }
 
 scene-ix-A-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(-74 . -24)
   \scene-ix-A-words
 
 scene-ix-B-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \wdfn
+  \adobe-italic
   \justify { Music starts. After a few moments, OWL starts to walk away from
   the window and table, looks around the rest of the “chamber,” but does not
   engage with the audience. }
 
 scene-ix-B-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \override #'(line-width . 100)
   \translate #'(0 . -41)
   \scene-ix-B-words
 
 scene-ix-C-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { So this is it. \lnum #93 }
   \line { I must be there. \lnum #94 }
@@ -85,14 +85,14 @@ scene-ix-C-words = \markup
   \line { Did you say? \lnum #113 } }
 
 scene-ix-C-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(120 . -10)
   \scene-ix-C-words
 
 scene-ix-C-continued-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { I cannot remember. \lnum #114 }
   \line { But come you will, \lnum #115 }
@@ -105,44 +105,44 @@ scene-ix-C-continued-words = \markup
   \line { No doubt at all. \lnum #122 }
   \line { And it'll be — \lnum #123 }
   \vspace #1
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \justify { OWL looks back at the window, returns to it quickly, goes behind it,
   and looks through it in the direction of the audience. } }
 
 scene-ix-C-continued-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \override #'(line-width . 80)
   \translate #'(200 . -10)
   \scene-ix-C-continued-words
 
 scene-ix-D-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \line { Nothing. \lnum #124 }
 
 scene-ix-D-section-position = \markup
-  \override #'(font-size . 4)
+  \section-font-size
   \translate #'(0 . -41)
   \scene-ix-D-words
 
 scene-ix-E-words = \markup
-  \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \wdfn
+  \adobe-bold
   \column {
   \line { Nothing at all. \lnum #125 }
   \vspace #2
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { Pause. }
   \vspace #2
   \line { It's night-time. \lnum #126 }
   \line { No-one out there. \lnum #127 }
   \vspace #3
-  \override #'(font-name . "Adobe Garamond Pro Italic")
+  \adobe-italic
   \line { End scene 9. } }
 
 scene-ix-E-section-position = \markup
-  \override #'(baseline-skip . 5)
-  \override #'(font-size . 4)
+  \section-baseline-skip
+  \section-font-size
   \translate #'(50 . -38)
   \scene-ix-E-words
