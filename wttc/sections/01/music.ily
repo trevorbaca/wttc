@@ -14,12 +14,16 @@ number.1.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "01"
     s1 * 3/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-i-title-parts-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
     ^ \scene-i-title-section-format
       %! +PARTS
-%%% ^ \scene-i-A-part-format
+%%% ^ \scene-i-A-parts-format
       %! +SECTION
     ^ \scene-i-A-section-format
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

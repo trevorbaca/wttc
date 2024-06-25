@@ -10,6 +10,18 @@
   \override #'(font-size . 6)
   \etc
 
+\markup parts-baseline-skip = \markup
+  \override #'(baseline-skip . 4)
+  \etc
+
+\markup parts-font-size = \markup
+  \override #'(font-size . 2)
+  \etc
+
+\markup parts-title-font-size = \markup
+  \override #'(font-size . 4)
+  \etc
+
 \markup section-baseline-skip = \markup
   \override #'(baseline-skip . 5)
   \etc

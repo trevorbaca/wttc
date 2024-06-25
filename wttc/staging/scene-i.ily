@@ -13,6 +13,12 @@ scene-i-title-section-format = \markup
   \section-title-font-size
   \scene-i-title
 
+scene-i-title-parts-format = \markup
+  % \translate #'(44 . 30)
+  \translate #'(44 . 26)
+  \parts-title-font-size
+  \scene-i-title
+
 scene-i-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -39,11 +45,11 @@ scene-i-A-section-format = \markup
   \section-font-size
   \scene-i-A
 
-scene-i-A-part-format = \markup
-  \override #'(baseline-skip . 4)
-  \override #'(font-size . 2)
+scene-i-A-parts-format = \markup
   \override #'(line-width . 110)
-  \translate #'(-5 . 20)
+  \translate #'(-5 . 18)
+  \parts-baseline-skip
+  \parts-font-size
   \scene-i-A
 
 scene-i-B-i = \markup

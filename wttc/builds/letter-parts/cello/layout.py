@@ -34,10 +34,13 @@ def main(environment):
         ],
     )
     """
+    spacing = baca.layout.Spacing(
+        default=(1, 12),
+    )
     return baca.section.make_layout_score(
         breaks,
         environment.time_signatures[:22],
-        # spacing=spacing,
+        spacing=spacing,
     )
 
 
