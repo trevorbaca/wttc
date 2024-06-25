@@ -13,6 +13,11 @@ scene-x-title-section-format = \markup
   \section-title-font-size
   \scene-x-title
 
+scene-x-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-x-title
+
 scene-x-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -47,6 +52,13 @@ scene-x-A-section-format = \markup
   \section-font-size
   \scene-x-A
 
+scene-x-A-parts-format = \markup
+  \override #'(line-width . 54)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-x-A
+
 scene-x-B = \markup
   \wdfn
   \adobe-bold
@@ -54,6 +66,11 @@ scene-x-B = \markup
 
 scene-x-B-section-format = \markup
   \translate #'(2 . -41)
+  \section-font-size
+  \scene-x-B
+
+scene-x-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-x-B
 
@@ -80,6 +97,12 @@ scene-x-C-section-format = \markup
   \section-font-size
   \scene-x-C
 
+scene-x-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-x-C
+
 scene-x-D = \markup
   \wdfn
   \adobe-bold
@@ -101,6 +124,12 @@ scene-x-D = \markup
 
 scene-x-D-section-format = \markup
   \translate #'(76 . -31)
+  \section-baseline-skip
+  \section-font-size
+  \scene-x-D
+
+scene-x-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-x-D

@@ -12,6 +12,11 @@ scene-xvii-title-section-format = \markup
   \section-title-font-size
   \scene-xvii-title
 
+scene-xvii-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xvii-title
+
 scene-xvii-A = \markup
   \wdfn
   \adobe-bold
@@ -30,6 +35,12 @@ scene-xvii-A-section-format = \markup
   \section-baseline-skip
   \scene-xvii-A
 
+scene-xvii-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \section-baseline-skip
+  \scene-xvii-A
+
 scene-xvii-B = \markup
   \wdfn
   \adobe-bold
@@ -37,6 +48,11 @@ scene-xvii-B = \markup
 
 scene-xvii-B-section-format = \markup
   \translate #'(6 . -41)
+  \section-font-size
+  \scene-xvii-B
+
+scene-xvii-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xvii-B
 
@@ -51,6 +67,13 @@ scene-xvii-C = \markup
 scene-xvii-C-section-format = \markup
   \override #'(line-width . 180)
   \translate #'(0 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xvii-C
+
+scene-xvii-C-parts-format = \markup
+  \override #'(line-width . 180)
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xvii-C
@@ -86,12 +109,24 @@ scene-xvii-D-section-format = \markup
   \section-font-size
   \scene-xvii-D
 
+scene-xvii-D-parts-format = \markup
+  \override #'(line-width . 60)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xvii-D
+
 scene-xvii-E = \markup
   \wdfn
   \adobe-italic
   \line { End scene 17. }
 
 scene-xvii-E-section-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-xvii-E
+
+scene-xvii-E-parts-format = \markup
   \translate #'(0 . 0)
   \section-font-size
   \scene-xvii-E

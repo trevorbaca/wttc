@@ -13,6 +13,11 @@ scene-xix-title-section-format = \markup
   \section-title-font-size
   \scene-xix-title
 
+scene-xix-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xix-title
+
 scene-xix-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -36,6 +41,12 @@ scene-xix-A-section-format = \markup
   \section-font-size
   \scene-xix-A
 
+scene-xix-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xix-A
+
 scene-xix-B = \markup
   \wdfn
   \adobe-bold
@@ -43,6 +54,11 @@ scene-xix-B = \markup
 
 scene-xix-B-section-format = \markup
   \translate #'(0 . -47)
+  \section-font-size
+  \scene-xix-B
+
+scene-xix-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xix-B
 
@@ -63,6 +79,12 @@ scene-xix-C-section-format = \markup
   \section-font-size
   \scene-xix-C
 
+scene-xix-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xix-C
+
 scene-xix-D = \markup
   \wdfn
   \adobe-bold
@@ -70,6 +92,11 @@ scene-xix-D = \markup
 
 scene-xix-D-section-format = \markup
   \translate #'(0 . -49)
+  \section-font-size
+  \scene-xix-D
+
+scene-xix-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xix-D
 
@@ -83,6 +110,11 @@ scene-xix-E-section-format = \markup
   \section-font-size
   \scene-xix-E
 
+scene-xix-E-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-xix-E
+
 scene-xix-F = \markup
   \wdfn
   \adobe-bold
@@ -90,6 +122,11 @@ scene-xix-F = \markup
 
 scene-xix-F-section-format = \markup
   \translate #'(0 . -49)
+  \section-font-size
+  \scene-xix-F
+
+scene-xix-F-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xix-F
 
@@ -103,6 +140,11 @@ scene-xix-G-section-format = \markup
   \section-font-size
   \scene-xix-G
 
+scene-xix-G-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-xix-G
+
 scene-xix-H = \markup
   \wdfn
   \adobe-bold
@@ -113,6 +155,12 @@ scene-xix-H = \markup
 
 scene-xix-H-section-format = \markup
   \translate #'(18 . -47)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xix-H
+
+scene-xix-H-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xix-H
@@ -132,6 +180,12 @@ scene-xix-I-section-format = \markup
   \section-font-size
   \scene-xix-I
 
+scene-xix-I-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xix-I
+
 scene-xix-J = \markup
   \wdfn
   \adobe-bold
@@ -139,6 +193,11 @@ scene-xix-J = \markup
 
 scene-xix-J-section-format = \markup
   \translate #'(0 . -47)
+  \section-font-size
+  \scene-xix-J
+
+scene-xix-J-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xix-J
 
@@ -156,6 +215,12 @@ scene-xix-K-section-format = \markup
   \section-font-size
   \scene-xix-K
 
+scene-xix-K-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xix-K
+
 scene-xix-L = \markup
   \wdfn
   \adobe-bold
@@ -166,6 +231,11 @@ scene-xix-L-section-format = \markup
   \section-font-size
   \scene-xix-L
 
+scene-xix-L-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-xix-L
+
 scene-xix-M = \markup
   \wdfn
   \adobe-italic
@@ -173,5 +243,10 @@ scene-xix-M = \markup
 
 scene-xix-M-section-format = \markup
   \translate #'(74 . -45)
+  \section-font-size
+  \scene-xix-M
+
+scene-xix-M-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xix-M

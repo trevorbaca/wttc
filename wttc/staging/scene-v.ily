@@ -13,6 +13,11 @@ scene-v-title-section-format = \markup
   \section-title-font-size
   \scene-v-title
 
+scene-v-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-v-title
+
 scene-v-A = \markup
   \wdfn
   \adobe-bold
@@ -20,6 +25,11 @@ scene-v-A = \markup
 
 scene-v-A-section-format = \markup
   \translate #'(0 . -46)
+  \section-font-size
+  \scene-v-A
+
+scene-v-A-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-v-A
 
@@ -33,6 +43,12 @@ scene-v-B = \markup
 
 scene-v-B-section-format = \markup
   \translate #'(0 . -44)
+  \section-baseline-skip
+  \section-font-size
+  \scene-v-B
+
+scene-v-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-v-B
@@ -52,6 +68,12 @@ scene-v-C-section-format = \markup
   \section-font-size
   \scene-v-C
 
+scene-v-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-v-C
+
 scene-v-D = \markup
   \wdfn
   \adobe-italic
@@ -59,5 +81,10 @@ scene-v-D = \markup
 
 scene-v-D-section-format = \markup
   \translate #'(124 . -44)
+  \section-font-size
+  \scene-v-D
+
+scene-v-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-v-D

@@ -13,6 +13,11 @@ scene-vi-title-section-format = \markup
   \section-title-font-size
   \scene-vi-title
 
+scene-vi-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-vi-title
+
 scene-vi-A = \markup
   \wdfn
   \adobe-bold
@@ -22,6 +27,12 @@ scene-vi-A = \markup
 
 scene-vi-A-section-format = \markup
   \translate #'(-60 . -46)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vi-A
+
+scene-vi-A-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-vi-A
@@ -36,6 +47,11 @@ scene-vi-B-section-format = \markup
   \section-font-size
   \scene-vi-B
 
+scene-vi-B-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-vi-B
+
 scene-vi-C = \markup
   \wdfn
   \adobe-bold
@@ -43,6 +59,11 @@ scene-vi-C = \markup
 
 scene-vi-C-section-format = \markup
   \translate #'(0 . -46)
+  \section-font-size
+  \scene-vi-C
+
+scene-vi-C-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-vi-C
 
@@ -55,6 +76,12 @@ scene-vi-D = \markup
 
 scene-vi-D-section-format = \markup
   \translate #'(0 . -46)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vi-D
+
+scene-vi-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-vi-D
@@ -83,6 +110,13 @@ scene-vi-E-section-format = \markup
   \section-font-size
   \scene-vi-E
 
+scene-vi-E-parts-format = \markup
+  \override #'(line-width . 50)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vi-E
+
 scene-vi-before-F = \markup
   \wdfn
   \adobe-italic
@@ -90,6 +124,11 @@ scene-vi-before-F = \markup
 
 scene-vi-before-F-section-format = \markup
   \translate #'(0 . -41)
+  \section-font-size
+  \scene-vi-before-F
+
+scene-vi-before-F-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-vi-before-F
 
@@ -110,6 +149,12 @@ scene-vi-F-section-format = \markup
   \section-font-size
   \scene-vi-F
 
+scene-vi-F-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vi-F
+
 scene-vi-G = \markup
   \wdfn
   \column {
@@ -121,6 +166,12 @@ scene-vi-G = \markup
 
 scene-vi-G-section-format = \markup
   \translate #'(63 . -46)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vi-G
+
+scene-vi-G-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-vi-G

@@ -13,6 +13,11 @@ scene-vii-title-section-format = \markup
   \section-title-font-size
   \scene-vii-title
 
+scene-vii-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-vii-title
+
 scene-vii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -37,6 +42,12 @@ scene-vii-A-section-format = \markup
   \section-font-size
   \scene-vii-A
 
+scene-vii-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vii-A
+
 scene-vii-B = \markup
   \wdfn
   \column {
@@ -47,6 +58,12 @@ scene-vii-B = \markup
 
 scene-vii-B-section-format = \markup
   \translate #'(0 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vii-B
+
+scene-vii-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-vii-B
@@ -69,6 +86,13 @@ scene-vii-C-section-format = \markup
   \section-font-size
   \scene-vii-C
 
+scene-vii-C-parts-format = \markup
+  \override #'(line-width . 42)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vii-C
+
 scene-vii-E = \markup
   \wdfn
   \adobe-bold
@@ -76,6 +100,11 @@ scene-vii-E = \markup
 
 scene-vii-E-section-format = \markup
   \translate #'(0 . -48)
+  \section-font-size
+  \scene-vii-E
+
+scene-vii-E-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-vii-E
 
@@ -89,6 +118,11 @@ scene-vii-F-section-format = \markup
   \section-font-size
   \scene-vii-F
 
+scene-vii-F-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-vii-F
+
 scene-vii-G = \markup
   \wdfn
   \adobe-bold
@@ -96,6 +130,11 @@ scene-vii-G = \markup
 
 scene-vii-G-section-format = \markup
   \translate #'(0 . -46)
+  \section-font-size
+  \scene-vii-G
+
+scene-vii-G-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-vii-G
 
@@ -113,6 +152,13 @@ scene-vii-H-section-format = \markup
   \section-font-size
   \scene-vii-H
 
+scene-vii-H-parts-format = \markup
+  \override #'(line-width . 60)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-vii-H
+
 scene-vii-I = \markup
   \wdfn
   \adobe-bold
@@ -123,6 +169,11 @@ scene-vii-I-section-format = \markup
   \section-font-size
   \scene-vii-I
 
+scene-vii-I-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-vii-I
+
 scene-vii-J = \markup
   \wdfn
   \adobe-italic
@@ -130,5 +181,10 @@ scene-vii-J = \markup
 
 scene-vii-J-section-format = \markup
   \translate #'(166 . -44)
+  \section-font-size
+  \scene-vii-J
+
+scene-vii-J-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-vii-J

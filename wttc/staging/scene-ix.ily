@@ -13,6 +13,11 @@ scene-ix-title-section-format = \markup
   \section-title-font-size
   \scene-ix-title
 
+scene-ix-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-ix-title
+
 scene-ix-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -44,6 +49,12 @@ scene-ix-A-section-format = \markup
   \section-font-size
   \scene-ix-A
 
+scene-ix-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-ix-A
+
 scene-ix-B = \markup
   \wdfn
   \adobe-italic
@@ -54,6 +65,13 @@ scene-ix-B = \markup
 scene-ix-B-section-format = \markup
   \override #'(line-width . 100)
   \translate #'(0 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-ix-B
+
+scene-ix-B-parts-format = \markup
+  \override #'(line-width . 100)
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-ix-B
@@ -90,6 +108,12 @@ scene-ix-C-section-format = \markup
   \section-font-size
   \scene-ix-C
 
+scene-ix-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-ix-C
+
 scene-ix-C-continued = \markup
   \wdfn
   \adobe-bold
@@ -116,6 +140,13 @@ scene-ix-C-continued-section-format = \markup
   \section-font-size
   \scene-ix-C-continued
 
+scene-ix-C-continued-parts-format = \markup
+  \override #'(line-width . 80)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-ix-C-continued
+
 scene-ix-D = \markup
   \wdfn
   \adobe-bold
@@ -123,6 +154,11 @@ scene-ix-D = \markup
 
 scene-ix-D-section-format = \markup
   \translate #'(0 . -41)
+  \section-font-size
+  \scene-ix-D
+
+scene-ix-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-ix-D
 
@@ -143,6 +179,12 @@ scene-ix-E = \markup
 
 scene-ix-E-section-format = \markup
   \translate #'(50 . -38)
+  \section-baseline-skip
+  \section-font-size
+  \scene-ix-E
+
+scene-ix-E-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-ix-E

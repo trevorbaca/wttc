@@ -13,6 +13,11 @@ scene-xx-title-section-format = \markup
   \section-title-font-size
   \scene-xx-title
 
+scene-xx-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xx-title
+
 scene-xx-A = \markup
   \wdfn
   \adobe-bold
@@ -44,6 +49,12 @@ scene-xx-A-section-format = \markup
   \section-font-size
   \scene-xx-A
 
+scene-xx-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xx-A
+
 scene-xx-B = \markup
   \wdfn
   \adobe-bold
@@ -54,12 +65,22 @@ scene-xx-B-section-format = \markup
   \parenthesized-section-title-font-size
   \scene-xx-B
 
+scene-xx-B-parts-format = \markup
+  \translate #'(0 . 0)
+  \parenthesized-section-title-font-size
+  \scene-xx-B
+
 scene-xx-C = \markup
   \wdfn
   \adobe-italic
   \line { End scene 20. }
 
 scene-xx-C-section-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-xx-C
+
+scene-xx-C-parts-format = \markup
   \translate #'(0 . 0)
   \section-font-size
   \scene-xx-C

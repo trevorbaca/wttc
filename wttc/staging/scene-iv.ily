@@ -13,6 +13,11 @@ scene-iv-title-section-format = \markup
   \section-title-font-size
   \scene-iv-title
 
+scene-iv-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-iv-title
+
 scene-iv-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -48,6 +53,12 @@ scene-iv-A-section-format = \markup
   \section-font-size
   \scene-iv-A
 
+scene-iv-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-A
+
 scene-iv-B = \markup
   \wdfn
   \adobe-bold
@@ -55,6 +66,11 @@ scene-iv-B = \markup
 
 scene-iv-B-section-format = \markup
   \translate #'(0 . -43)
+  \section-font-size
+  \scene-iv-B
+
+scene-iv-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-iv-B
 
@@ -68,6 +84,11 @@ scene-iv-C-section-format = \markup
   \section-font-size
   \scene-iv-C
 
+scene-iv-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-iv-C
+
 scene-iv-D = \markup
   \wdfn
   \adobe-bold
@@ -75,6 +96,11 @@ scene-iv-D = \markup
 
 scene-iv-D-section-format = \markup
   \translate #'(0 . -43)
+  \section-font-size
+  \scene-iv-D
+
+scene-iv-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-iv-D
 
@@ -88,6 +114,11 @@ scene-iv-E-section-format = \markup
   \section-font-size
   \scene-iv-E
 
+scene-iv-E-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-iv-E
+
 scene-iv-F = \markup
   \wdfn
   \adobe-bold
@@ -97,6 +128,12 @@ scene-iv-F = \markup
 
 scene-iv-F-section-format = \markup
   \translate #'(0 . -40)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-F
+
+scene-iv-F-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-iv-F
@@ -115,6 +152,12 @@ scene-iv-G-section-format = \markup
   \section-font-size
   \scene-iv-G
 
+scene-iv-G-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-G
+
 scene-iv-H = \markup
   \wdfn
   \adobe-italic
@@ -125,6 +168,13 @@ scene-iv-H = \markup
 scene-iv-H-section-format = \markup
   \override #'(line-width . 50)
   \translate #'(0 . -45)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-H
+
+scene-iv-H-parts-format = \markup
+  \override #'(line-width . 50)
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-iv-H
@@ -147,6 +197,13 @@ scene-iv-I-section-format = \markup
   \section-font-size
   \scene-iv-I
 
+scene-iv-I-parts-format = \markup
+  \override #'(line-width . 55)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-I
+
 scene-iv-J = \markup
   \wdfn
   \column {
@@ -161,6 +218,13 @@ scene-iv-J = \markup
 scene-iv-J-section-format = \markup
   \override #'(line-width . 55)
   \translate #'(180 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-J
+
+scene-iv-J-parts-format = \markup
+  \override #'(line-width . 55)
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-iv-J
@@ -181,6 +245,12 @@ scene-iv-K-section-format = \markup
   \section-font-size
   \scene-iv-K
 
+scene-iv-K-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-iv-K
+
 scene-iv-L = \markup
   \wdfn
   \adobe-italic
@@ -188,5 +258,10 @@ scene-iv-L = \markup
 
 scene-iv-L-section-format = \markup
   \translate #'(50 . -49)
+  \section-font-size
+  \scene-iv-L
+
+scene-iv-L-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-iv-L

@@ -13,6 +13,11 @@ scene-xii-title-section-format = \markup
   \section-title-font-size
   \scene-xii-title
 
+scene-xii-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xii-title
+
 scene-xii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -32,6 +37,12 @@ scene-xii-A = \markup
 
 scene-xii-A-section-format = \markup
   \translate #'(112 . -38)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-A
+
+scene-xii-A-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xii-A
@@ -65,6 +76,12 @@ scene-xii-B-section-format = \markup
   \section-font-size
   \scene-xii-B
 
+scene-xii-B-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-B
+
 scene-xii-C = \markup
   \wdfn
   \adobe-bold
@@ -84,6 +101,12 @@ scene-xii-C-section-format = \markup
   \section-font-size
   \scene-xii-C
 
+scene-xii-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-C
+
 scene-xii-D = \markup
   \wdfn
   \adobe-bold
@@ -98,6 +121,12 @@ scene-xii-D-section-format = \markup
   \section-font-size
   \scene-xii-D
 
+scene-xii-D-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-D
+
 scene-xii-E = \markup
   \wdfn
   \adobe-bold
@@ -108,6 +137,12 @@ scene-xii-E = \markup
 
 scene-xii-E-section-format = \markup
   \translate #'(2 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-E
+
+scene-xii-E-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xii-E
@@ -127,6 +162,12 @@ scene-xii-F-section-format = \markup
   \section-font-size
   \scene-xii-F
 
+scene-xii-F-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-F
+
 scene-xii-G = \markup
   \wdfn
   \adobe-bold
@@ -137,6 +178,12 @@ scene-xii-G = \markup
 
 scene-xii-G-section-format = \markup
   \translate #'(2 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-G
+
+scene-xii-G-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xii-G
@@ -155,6 +202,12 @@ scene-xii-H-section-format = \markup
   \translate #'(2 . -41)
   \scene-xii-H
 
+scene-xii-H-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-H
+
 scene-xii-I = \markup
   \wdfn
   \adobe-bold
@@ -170,6 +223,12 @@ scene-xii-I-section-format = \markup
   \section-font-size
   \scene-xii-I
 
+scene-xii-I-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xii-I
+
 scene-xii-J = \markup
   \wdfn
   \adobe-italic
@@ -177,5 +236,10 @@ scene-xii-J = \markup
 
 scene-xii-J-section-format = \markup
   \translate #'(108 . -46)
+  \section-font-size
+  \scene-xii-J
+
+scene-xii-J-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xii-J

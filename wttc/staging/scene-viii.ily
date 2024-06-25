@@ -13,6 +13,11 @@ scene-viii-title-section-format = \markup
   \section-title-font-size
   \scene-viii-title
 
+scene-viii-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-viii-title
+
 scene-viii-A = \markup
   \wdfn
   \adobe-bold
@@ -49,6 +54,13 @@ scene-viii-A-section-format = \markup
   \section-font-size
   \scene-viii-A
 
+scene-viii-A-parts-format = \markup
+  \override #'(line-width . 50)
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-viii-A
+
 scene-viii-B = \markup
   \wdfn
   \column {
@@ -63,6 +75,12 @@ scene-viii-B-section-format = \markup
   \section-font-size
   \scene-viii-B
 
+scene-viii-B-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-viii-B
+
 scene-viii-C = \markup
   \wdfn
   \adobe-bold
@@ -73,6 +91,11 @@ scene-viii-C-section-format = \markup
   \section-font-size
   \scene-viii-C
 
+scene-viii-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-font-size
+  \scene-viii-C
+
 scene-viii-D = \markup
   \wdfn
   \adobe-bold
@@ -80,6 +103,11 @@ scene-viii-D = \markup
 
 scene-viii-D-section-format = \markup
   \translate #'(0 . -41)
+  \section-font-size
+  \scene-viii-D
+
+scene-viii-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-viii-D
 
@@ -95,6 +123,12 @@ scene-viii-E = \markup
 
 scene-viii-E-section-format = \markup
   \translate #'(92 . -38)
+  \section-baseline-skip
+  \section-font-size
+  \scene-viii-E
+
+scene-viii-E-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-viii-E

@@ -12,6 +12,11 @@ scene-xiii-title-section-format = \markup
   \section-title-font-size
   \scene-xiii-title
 
+scene-xiii-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xiii-title
+
 scene-xiii-parenthesized-title = \markup
   \wdfn
   \adobe-bold
@@ -33,6 +38,12 @@ scene-xiii-A = \markup
 
 scene-xiii-A-section-format = \markup
   \translate #'(-60 . -38)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiii-A
+
+scene-xiii-A-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xiii-A
@@ -70,6 +81,12 @@ scene-xiii-B-section-format = \markup
   \section-font-size
   \scene-xiii-B
 
+scene-xiii-B-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiii-B
+
 scene-xiii-C = \markup
   \wdfn
   \adobe-bold
@@ -79,6 +96,12 @@ scene-xiii-C = \markup
 
 scene-xiii-C-section-format = \markup
   \translate #'(0 . -53)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiii-C
+
+scene-xiii-C-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xiii-C
@@ -93,6 +116,13 @@ scene-xiii-D = \markup
 scene-xiii-D-section-format = \markup
   \override #'(line-width . 140)
   \translate #'(0 . -45)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiii-D
+
+scene-xiii-D-parts-format = \markup
+  \override #'(line-width . 140)
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xiii-D
@@ -123,6 +153,12 @@ scene-xiii-E-section-format = \markup
   \section-font-size
   \scene-xiii-E
 
+scene-xiii-E-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiii-E
+
 scene-xiii-F = \markup
   \wdfn
   \adobe-bold
@@ -142,6 +178,12 @@ scene-xiii-F-section-format = \markup
   \section-font-size
   \scene-xiii-F
 
+scene-xiii-F-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiii-F
+
 scene-xiii-G = \markup
   \wdfn
   \adobe-italic
@@ -149,6 +191,11 @@ scene-xiii-G = \markup
 
 scene-xiii-G-section-format = \markup
   \translate #'(60 . -38)
+  \section-font-size
+  \scene-xiii-G
+
+scene-xiii-G-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xiii-G
 

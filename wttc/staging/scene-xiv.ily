@@ -13,6 +13,11 @@ scene-xiv-title-section-format = \markup
   \section-title-font-size
   \scene-xiv-title
 
+scene-xiv-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xiv-title
+
 scene-xiv-A = \markup
   \wdfn
   \adobe-bold
@@ -20,6 +25,11 @@ scene-xiv-A = \markup
 
 scene-xiv-A-section-format = \markup
   \translate #'(-58 . -48)
+  \section-font-size
+  \scene-xiv-A
+
+scene-xiv-A-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xiv-A
 
@@ -39,6 +49,12 @@ scene-xiv-B-section-format = \markup
   \section-font-size
   \scene-xiv-B
 
+scene-xiv-B-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiv-B
+
 scene-xiv-C = \markup
   \wdfn
   \adobe-bold
@@ -48,6 +64,12 @@ scene-xiv-C = \markup
 
 scene-xiv-C-section-format = \markup
   \translate #'(0 . -48)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiv-C
+
+scene-xiv-C-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xiv-C
@@ -88,6 +110,12 @@ scene-xiv-D = \markup
 
 scene-xiv-D-section-format = \markup
   \translate #'(80 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xiv-D
+
+scene-xiv-D-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xiv-D

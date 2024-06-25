@@ -12,6 +12,11 @@ scene-xv-title-section-format = \markup
   \section-title-font-size
   \scene-xv-title
 
+scene-xv-title-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-title-font-size
+  \scene-xv-title
+
 scene-xv-A = \markup
   \wdfn
   \adobe-bold
@@ -26,12 +31,23 @@ scene-xv-A-section-format = \markup
   \section-font-size
   \scene-xv-A
 
+scene-xv-A-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xv-A
+
 scene-xv-B = \markup
   \adobe-bold
   \line { Home. \lnum #235 }
 
 scene-xv-B-section-format = \markup
   \translate #'(2 . -41)
+  \section-font-size
+  \scene-xv-B
+
+scene-xv-B-parts-format = \markup
+  \translate #'(0 . 0)
   \section-font-size
   \scene-xv-B
 
@@ -58,6 +74,12 @@ scene-xv-C-section-format = \markup
   \section-font-size
   \scene-xv-C
 
+scene-xv-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xv-C
+
 scene-xv-D = \markup
   \wdfn
   \adobe-italic
@@ -68,6 +90,13 @@ scene-xv-D = \markup
 scene-xv-D-section-format = \markup
   \override #'(line-width . 140)
   \translate #'(0 . -35)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xv-D
+
+scene-xv-D-parts-format = \markup
+  \override #'(line-width . 140)
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xv-D
@@ -88,6 +117,12 @@ scene-xv-E-section-format = \markup
   \section-font-size
   \scene-xv-E
 
+scene-xv-E-parts-format = \markup
+  \translate #'(0 . 0)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xv-E
+
 scene-xv-F = \markup
   \wdfn
   \adobe-bold
@@ -98,6 +133,12 @@ scene-xv-F = \markup
 
 scene-xv-F-section-format = \markup
   \translate #'(0 . -39)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xv-F
+
+scene-xv-F-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xv-F
@@ -116,6 +157,12 @@ scene-xv-G = \markup
 
 scene-xv-G-section-format = \markup
   \translate #'(30 . -41)
+  \section-baseline-skip
+  \section-font-size
+  \scene-xv-G
+
+scene-xv-G-parts-format = \markup
+  \translate #'(0 . 0)
   \section-baseline-skip
   \section-font-size
   \scene-xv-G

@@ -14,7 +14,6 @@ scene-i-title-section-format = \markup
   \scene-i-title
 
 scene-i-title-parts-format = \markup
-  % \translate #'(44 . 30)
   \translate #'(44 . 26)
   \parts-title-font-size
   \scene-i-title
@@ -82,6 +81,19 @@ scene-i-B-section-format = \markup
   \vspace #3
   \scene-i-B-iii }
 
+scene-i-B-parts-format = \markup
+  \override #'(line-width . 40)
+  \translate #'(0 . 0)
+  \wdfn
+  \section-baseline-skip
+  \section-font-size
+  \column {
+  \scene-i-B-i
+  \vspace #3
+  \scene-i-B-ii
+  \vspace #3
+  \scene-i-B-iii }
+
 scene-i-C-i = \markup
   \adobe-italic
   \line { OWL, after measure 9, picking up from before: }
@@ -115,6 +127,19 @@ scene-i-C-section-format = \markup
   \scene-i-C-iii
   \scene-i-C-iv }
 
+scene-i-C-parts-format = \markup
+  \translate #'(0 . 0)
+  \wdfn
+  \section-baseline-skip
+  \section-font-size
+  \column {
+  \scene-i-C-i
+  \vspace #1
+  \scene-i-C-ii
+  \vspace #1
+  \scene-i-C-iii
+  \scene-i-C-iv }
+
 scene-i-D-i = \markup 
   \adobe-italic
   \line { OWL, a moment or two before measure 11 ends: }
@@ -131,6 +156,18 @@ scene-i-D-iii = \markup
 
 scene-i-D-section-format = \markup
   \translate #'(0 . -135)
+  \wdfn
+  \section-baseline-skip
+  \section-font-size
+  \column {
+  \scene-i-D-i
+  \vspace #1
+  \scene-i-D-ii
+  \vspace #1
+  \scene-i-D-iii }
+
+scene-i-D-parts-format = \markup
+  \translate #'(0 . 0)
   \wdfn
   \section-baseline-skip
   \section-font-size
