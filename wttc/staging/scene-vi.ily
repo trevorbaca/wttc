@@ -1,6 +1,7 @@
 \version "2.25.16"
+\include "share.ily"
 
-%%% SCENE 6: A - G %%%
+% SCENE 6: A - G
 
 scene-vi-title-words = \markup
   \with-dimensions-from \null
@@ -8,7 +9,7 @@ scene-vi-title-words = \markup
   \line { SCENE \hspace #1 6. }
 
 scene-vi-title-section-position = \markup
-  \override #'(font-size . 8)
+  \section-title-font-size
   \translate #'(-60 . 12)
   \scene-vi-title-words
 

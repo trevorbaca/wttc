@@ -1,13 +1,14 @@
 \version "2.25.16"
+\include "share.ily"
 
-%%% SCENE 16: A - J %%%
+% SCENE 16: A - J
 
 scene-xvi-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 16. }
 
 scene-xvi-title-section-position = \markup
-  \override #'(font-size . 8)
+  \section-title-font-size
   \translate #'(-32 . 12)
   \scene-xvi-title-words
 
@@ -17,7 +18,7 @@ scene-xvi-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 16) }
 
 scene-xvi-parenthesized-title-section-position = \markup
-  \override #'(font-size . 6)
+  \parenthesized-section-title-font-size
   \translate #'(-32 . 12)
   \scene-xvi-parenthesized-title-words
 

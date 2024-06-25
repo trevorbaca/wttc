@@ -1,6 +1,7 @@
 \version "2.25.16"
+\include "share.ily"
 
-%%% SCENE 20: A - C %%%
+% SCENE 20: A - C
 
 scene-xx-title-words = \markup
   \with-dimensions-from \null
@@ -8,7 +9,7 @@ scene-xx-title-words = \markup
   \line { SCENE \hspace #1 20. }
 
 scene-xx-title-section-position = \markup
-  \override #'(font-size . 8)
+  \section-title-font-size
   \translate #'(-32 . 140)
   \scene-xx-title-words
 
@@ -49,7 +50,7 @@ scene-xx-B-words = \markup
   \line { To sing. \hspace #-0.5 \super 5 }
 
 scene-xx-B-section-position = \markup
-  \override #'(font-size . 6)
+  \parenthesized-section-title-font-size
   \translate #'(200 . 16)
   \scene-xx-B-words
 

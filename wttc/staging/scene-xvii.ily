@@ -1,13 +1,14 @@
 \version "2.25.16"
+\include "share.ily"
 
-%%% SCENE 17: A - E %%%
+% SCENE 17: A - E
 
 scene-xvii-title-words = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \line { SCENE \hspace #1 17. }
 
 scene-xvii-title-section-position = \markup
-  \override #'(font-size . 8)
+  \section-title-font-size
   \translate #'(-102 . 12)
   \scene-xvii-title-words
 

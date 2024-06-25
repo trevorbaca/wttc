@@ -1,14 +1,15 @@
 \version "2.25.16"
+\include "share.ily"
 
-%%% SECENE 1: A - D %%%
+% SCENE 1: A - D
 
 scene-i-title-words = \markup
   \with-dimensions-from \null
-  \override #'(font-name . "Adobe Garamond Pro Bold")
+  \adobe-bold
   \line { SCENE \hspace #1 1. }
 
 scene-i-title-section-position = \markup
-  \override #'(font-size . 8)
+  \section-title-font-size
   \translate #'(100 . 32)
   \scene-i-title-words
 
@@ -18,7 +19,7 @@ scene-i-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 1) }
 
 scene-i-parenthesized-title-section-position = \markup
-  \override #'(font-size . 6)
+  \parenthesized-section-title-font-size
   \translate #'(-34 . 12)
   \scene-i-parenthesized-title-words
 

@@ -1,6 +1,7 @@
 \version "2.25.16"
+\include "share.ily"
 
-%%% SCENE 12: A - J %%%
+% SCENE 12: A - J
 
 scene-xii-title-words = \markup
   \with-dimensions-from \null
@@ -8,7 +9,7 @@ scene-xii-title-words = \markup
   \line { SCENE \hspace #1 12. }
 
 scene-xii-title-section-position = \markup
-  \override #'(font-size . 8)
+  \section-title-font-size
   \translate #'(0 . 16)
   \scene-xii-title-words
 
@@ -18,7 +19,7 @@ scene-xii-parenthesized-title-words = \markup
   \line { (SCENE \hspace #1 12) }
 
 scene-xii-parenthesized-title-section-position = \markup
-  \override #'(font-size . 6)
+  \parenthesized-section-title-font-size
   \translate #'(-32 . 12)
   \scene-xii-parenthesized-title-words
 
