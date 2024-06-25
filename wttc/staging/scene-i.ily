@@ -66,7 +66,7 @@ scene-i-B-iii = \markup
   \adobe-italic
   \justify { Musicians wait a moment after OWL trails off, as though listening
   to what OWL has left unsaid. Music starts again as OWL moves away from the
-  musicians' are, still not noticing the audeince, or anything else. }
+  musicians' area, still not noticing the audeince, or anything else. }
 
 scene-i-B-section-format = \markup
   \override #'(line-width . 40)
@@ -82,16 +82,16 @@ scene-i-B-section-format = \markup
   \scene-i-B-iii }
 
 scene-i-B-parts-format = \markup
-  \override #'(line-width . 40)
-  \translate #'(0 . 0)
+  \override #'(line-width . 110)
+  \translate #'(-102 . -25)
   \wdfn
   \parts-baseline-skip
   \parts-font-size
   \column {
   \scene-i-B-i
-  \vspace #3
+  \vspace #2
   \scene-i-B-ii
-  \vspace #3
+  \vspace #1
   \scene-i-B-iii }
 
 scene-i-C-i = \markup
@@ -128,7 +128,7 @@ scene-i-C-section-format = \markup
   \scene-i-C-iv }
 
 scene-i-C-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(-48 . -22.5)
   \wdfn
   \parts-baseline-skip
   \parts-font-size
@@ -167,7 +167,7 @@ scene-i-D-section-format = \markup
   \scene-i-D-iii }
 
 scene-i-D-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(-51 . -22.5)
   \wdfn
   \parts-baseline-skip
   \parts-font-size

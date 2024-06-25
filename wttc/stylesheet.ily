@@ -141,6 +141,7 @@
     % \override SpacingSpanner.strict-grace-spacing = ##t
     % \override SpacingSpanner.strict-note-spacing = ##t
     \override SpacingSpanner.uniform-stretching = ##t
+    \override StaffSymbol.layer = 99
     \override StemTremolo.beam-width = 1.5
     \override StemTremolo.flag-count = 4
     \override StemTremolo.slope = 0.5

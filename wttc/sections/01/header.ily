@@ -26,6 +26,6 @@
       \fontsize #3
       \override #'(word-space . 2)
       \line
-      { for stage actor & six players }
+      { for stage actor & six musicians }
       }
 }

@@ -24,6 +24,12 @@
     (padding . 0)
     (stretchability . 0)
   )
+  evenFooterMarkup = \markup
+    \if \should-print-page-number
+    \fill-line { \fromproperty #'page:page-number-string }
+  evenHeaderMarkup = \markup \null
+  oddFooterMarkup = \evenFooterMarkup
+  oddHeaderMarkup = \markup \null
 }
 
 \header
@@ -44,15 +50,17 @@
     \fontsize #6
     \override #'(word-space . 2)
     \line { when the time comes }
+    \vspace #0.75
     \override #'(font-name . "Adobe Garamond Pro Italic")
     \fontsize #1
     \override #'(word-space . 1.5)
-    \line { for stage actor & six players }
+    \line { for stage actor & six musicians }
+    \vspace #0.75
     \override #'(font-name . "Adobe Garamond Pro Bold Italic")
     \fontsize #1
     \override #'(word-space . 1.5)
     \line { \part-name-markup }
-    \vspace #0.5
+    \vspace #2
   }
 }
 
