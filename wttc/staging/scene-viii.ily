@@ -15,7 +15,7 @@ scene-viii-title-section-format = \markup
 
 scene-viii-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-viii-title
 
 scene-viii-A = \markup
@@ -57,8 +57,8 @@ scene-viii-A-section-format = \markup
 scene-viii-A-parts-format = \markup
   \override #'(line-width . 50)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-viii-A
 
 scene-viii-B = \markup
@@ -77,8 +77,8 @@ scene-viii-B-section-format = \markup
 
 scene-viii-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-viii-B
 
 scene-viii-C = \markup
@@ -93,7 +93,7 @@ scene-viii-C-section-format = \markup
 
 scene-viii-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-viii-C
 
 scene-viii-D = \markup
@@ -108,7 +108,7 @@ scene-viii-D-section-format = \markup
 
 scene-viii-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-viii-D
 
 scene-viii-E = \markup
@@ -129,6 +129,6 @@ scene-viii-E-section-format = \markup
 
 scene-viii-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-viii-E

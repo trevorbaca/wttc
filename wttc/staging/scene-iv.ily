@@ -15,7 +15,7 @@ scene-iv-title-section-format = \markup
 
 scene-iv-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-iv-title
 
 scene-iv-parenthesized-title = \markup
@@ -55,8 +55,8 @@ scene-iv-A-section-format = \markup
 
 scene-iv-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-A
 
 scene-iv-B = \markup
@@ -71,7 +71,7 @@ scene-iv-B-section-format = \markup
 
 scene-iv-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iv-B
 
 scene-iv-C = \markup
@@ -86,7 +86,7 @@ scene-iv-C-section-format = \markup
 
 scene-iv-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iv-C
 
 scene-iv-D = \markup
@@ -101,7 +101,7 @@ scene-iv-D-section-format = \markup
 
 scene-iv-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iv-D
 
 scene-iv-E = \markup
@@ -116,7 +116,7 @@ scene-iv-E-section-format = \markup
 
 scene-iv-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iv-E
 
 scene-iv-F = \markup
@@ -134,8 +134,8 @@ scene-iv-F-section-format = \markup
 
 scene-iv-F-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-F
 
 scene-iv-G = \markup
@@ -154,8 +154,8 @@ scene-iv-G-section-format = \markup
 
 scene-iv-G-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-G
 
 scene-iv-H = \markup
@@ -175,8 +175,8 @@ scene-iv-H-section-format = \markup
 scene-iv-H-parts-format = \markup
   \override #'(line-width . 50)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-H
 
 scene-iv-I = \markup
@@ -200,8 +200,8 @@ scene-iv-I-section-format = \markup
 scene-iv-I-parts-format = \markup
   \override #'(line-width . 55)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-I
 
 scene-iv-J = \markup
@@ -225,8 +225,8 @@ scene-iv-J-section-format = \markup
 scene-iv-J-parts-format = \markup
   \override #'(line-width . 55)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-J
 
 scene-iv-K = \markup
@@ -247,8 +247,8 @@ scene-iv-K-section-format = \markup
 
 scene-iv-K-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iv-K
 
 scene-iv-L = \markup
@@ -263,5 +263,5 @@ scene-iv-L-section-format = \markup
 
 scene-iv-L-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iv-L

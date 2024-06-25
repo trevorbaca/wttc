@@ -183,6 +183,10 @@ number.1.Skips = {
 
     % [Skips measure 7]
     s1 * 6/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-i-B-parts-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
@@ -248,6 +252,10 @@ number.1.Skips = {
 
     % [Skips measure 9]
     s1 * 6/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-i-C-parts-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
@@ -317,6 +325,10 @@ number.1.Skips = {
 
     % [Skips measure 11]
     s1 * 6/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-i-D-parts-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION

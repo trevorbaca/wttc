@@ -15,7 +15,7 @@ scene-xii-title-section-format = \markup
 
 scene-xii-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-xii-title
 
 scene-xii-parenthesized-title = \markup
@@ -43,8 +43,8 @@ scene-xii-A-section-format = \markup
 
 scene-xii-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-A
 
 scene-xii-B = \markup
@@ -78,8 +78,8 @@ scene-xii-B-section-format = \markup
 
 scene-xii-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-B
 
 scene-xii-C = \markup
@@ -103,8 +103,8 @@ scene-xii-C-section-format = \markup
 
 scene-xii-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-C
 
 scene-xii-D = \markup
@@ -123,8 +123,8 @@ scene-xii-D-section-format = \markup
 
 scene-xii-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-D
 
 scene-xii-E = \markup
@@ -143,8 +143,8 @@ scene-xii-E-section-format = \markup
 
 scene-xii-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-E
 
 scene-xii-F = \markup
@@ -164,8 +164,8 @@ scene-xii-F-section-format = \markup
 
 scene-xii-F-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-F
 
 scene-xii-G = \markup
@@ -184,8 +184,8 @@ scene-xii-G-section-format = \markup
 
 scene-xii-G-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-G
 
 scene-xii-H = \markup
@@ -204,8 +204,8 @@ scene-xii-H-section-format = \markup
 
 scene-xii-H-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-H
 
 scene-xii-I = \markup
@@ -225,8 +225,8 @@ scene-xii-I-section-format = \markup
 
 scene-xii-I-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xii-I
 
 scene-xii-J = \markup
@@ -241,5 +241,5 @@ scene-xii-J-section-format = \markup
 
 scene-xii-J-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xii-J

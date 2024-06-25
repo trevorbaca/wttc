@@ -15,7 +15,7 @@ scene-xi-title-section-format = \markup
 
 scene-xi-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-xi-title
 
 scene-xi-A = \markup
@@ -90,6 +90,6 @@ scene-xi-A-section-format = \markup
 scene-xi-A-parts-format = \markup
   \override #'(line-width . 60)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xi-A

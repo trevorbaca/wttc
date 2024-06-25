@@ -15,7 +15,7 @@ scene-v-title-section-format = \markup
 
 scene-v-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-v-title
 
 scene-v-A = \markup
@@ -30,7 +30,7 @@ scene-v-A-section-format = \markup
 
 scene-v-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-v-A
 
 scene-v-B = \markup
@@ -49,8 +49,8 @@ scene-v-B-section-format = \markup
 
 scene-v-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-v-B
 
 scene-v-C = \markup
@@ -70,8 +70,8 @@ scene-v-C-section-format = \markup
 
 scene-v-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-v-C
 
 scene-v-D = \markup
@@ -86,5 +86,5 @@ scene-v-D-section-format = \markup
 
 scene-v-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-v-D

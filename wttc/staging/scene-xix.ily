@@ -15,7 +15,7 @@ scene-xix-title-section-format = \markup
 
 scene-xix-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-xix-title
 
 scene-xix-parenthesized-title = \markup
@@ -43,8 +43,8 @@ scene-xix-A-section-format = \markup
 
 scene-xix-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xix-A
 
 scene-xix-B = \markup
@@ -59,7 +59,7 @@ scene-xix-B-section-format = \markup
 
 scene-xix-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-B
 
 scene-xix-C = \markup
@@ -81,8 +81,8 @@ scene-xix-C-section-format = \markup
 
 scene-xix-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xix-C
 
 scene-xix-D = \markup
@@ -97,7 +97,7 @@ scene-xix-D-section-format = \markup
 
 scene-xix-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-D
 
 scene-xix-E = \markup
@@ -112,7 +112,7 @@ scene-xix-E-section-format = \markup
 
 scene-xix-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-E
 
 scene-xix-F = \markup
@@ -127,7 +127,7 @@ scene-xix-F-section-format = \markup
 
 scene-xix-F-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-F
 
 scene-xix-G = \markup
@@ -142,7 +142,7 @@ scene-xix-G-section-format = \markup
 
 scene-xix-G-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-G
 
 scene-xix-H = \markup
@@ -161,8 +161,8 @@ scene-xix-H-section-format = \markup
 
 scene-xix-H-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xix-H
 
 scene-xix-I = \markup
@@ -182,8 +182,8 @@ scene-xix-I-section-format = \markup
 
 scene-xix-I-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xix-I
 
 scene-xix-J = \markup
@@ -198,7 +198,7 @@ scene-xix-J-section-format = \markup
 
 scene-xix-J-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-J
 
 scene-xix-K = \markup
@@ -217,8 +217,8 @@ scene-xix-K-section-format = \markup
 
 scene-xix-K-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-xix-K
 
 scene-xix-L = \markup
@@ -233,7 +233,7 @@ scene-xix-L-section-format = \markup
 
 scene-xix-L-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-L
 
 scene-xix-M = \markup
@@ -248,5 +248,5 @@ scene-xix-M-section-format = \markup
 
 scene-xix-M-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-xix-M

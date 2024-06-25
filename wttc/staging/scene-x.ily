@@ -15,7 +15,7 @@ scene-x-title-section-format = \markup
 
 scene-x-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-x-title
 
 scene-x-parenthesized-title = \markup
@@ -55,8 +55,8 @@ scene-x-A-section-format = \markup
 scene-x-A-parts-format = \markup
   \override #'(line-width . 54)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-x-A
 
 scene-x-B = \markup
@@ -71,7 +71,7 @@ scene-x-B-section-format = \markup
 
 scene-x-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-x-B
 
 scene-x-C = \markup
@@ -99,8 +99,8 @@ scene-x-C-section-format = \markup
 
 scene-x-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-x-C
 
 scene-x-D = \markup
@@ -130,6 +130,6 @@ scene-x-D-section-format = \markup
 
 scene-x-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-x-D

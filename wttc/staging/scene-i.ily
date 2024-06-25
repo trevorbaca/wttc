@@ -72,8 +72,8 @@ scene-i-B-section-format = \markup
   \override #'(line-width . 40)
   \translate #'(90 . -22)
   \wdfn
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \column {
   \scene-i-B-i
   \vspace #3
@@ -85,8 +85,8 @@ scene-i-B-parts-format = \markup
   \override #'(line-width . 40)
   \translate #'(0 . 0)
   \wdfn
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \column {
   \scene-i-B-i
   \vspace #3
@@ -130,8 +130,8 @@ scene-i-C-section-format = \markup
 scene-i-C-parts-format = \markup
   \translate #'(0 . 0)
   \wdfn
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \column {
   \scene-i-C-i
   \vspace #1
@@ -169,8 +169,8 @@ scene-i-D-section-format = \markup
 scene-i-D-parts-format = \markup
   \translate #'(0 . 0)
   \wdfn
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \column {
   \scene-i-D-i
   \vspace #1

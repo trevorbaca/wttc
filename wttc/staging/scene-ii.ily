@@ -15,7 +15,7 @@ scene-ii-title-section-format = \markup
 
 scene-ii-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-ii-title
 
 scene-ii-A = \markup
@@ -33,8 +33,8 @@ scene-ii-A-section-format = \markup
 
 scene-ii-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-A
 
 scene-ii-B = \markup
@@ -52,8 +52,8 @@ scene-ii-B-section-format = \markup
 
 scene-ii-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-B
 
 scene-ii-C = \markup
@@ -69,8 +69,8 @@ scene-ii-C-section-format = \markup
 
 scene-ii-C-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-C
 
 scene-ii-D = \markup
@@ -86,8 +86,8 @@ scene-ii-D-section-format = \markup
 
 scene-ii-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-D
 
 scene-ii-E = \markup
@@ -105,8 +105,8 @@ scene-ii-E-section-format = \markup
 
 scene-ii-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-E
 
 scene-ii-F = \markup
@@ -125,8 +125,8 @@ scene-ii-F-section-format = \markup
 
 scene-ii-F-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-F
 
 scene-ii-G = \markup
@@ -146,8 +146,8 @@ scene-ii-G-section-format = \markup
 
 scene-ii-G-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-G
 
 scene-ii-H = \markup
@@ -171,7 +171,7 @@ scene-ii-H-section-format = \markup
 
 scene-ii-H-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-ii-H
 

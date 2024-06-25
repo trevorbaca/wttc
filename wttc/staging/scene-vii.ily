@@ -15,7 +15,7 @@ scene-vii-title-section-format = \markup
 
 scene-vii-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-vii-title
 
 scene-vii-parenthesized-title = \markup
@@ -44,8 +44,8 @@ scene-vii-A-section-format = \markup
 
 scene-vii-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-vii-A
 
 scene-vii-B = \markup
@@ -64,8 +64,8 @@ scene-vii-B-section-format = \markup
 
 scene-vii-B-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-vii-B
 
 scene-vii-C = \markup
@@ -89,8 +89,8 @@ scene-vii-C-section-format = \markup
 scene-vii-C-parts-format = \markup
   \override #'(line-width . 42)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-vii-C
 
 scene-vii-E = \markup
@@ -105,7 +105,7 @@ scene-vii-E-section-format = \markup
 
 scene-vii-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-vii-E
 
 scene-vii-F = \markup
@@ -120,7 +120,7 @@ scene-vii-F-section-format = \markup
 
 scene-vii-F-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-vii-F
 
 scene-vii-G = \markup
@@ -135,7 +135,7 @@ scene-vii-G-section-format = \markup
 
 scene-vii-G-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-vii-G
 
 scene-vii-H = \markup
@@ -155,8 +155,8 @@ scene-vii-H-section-format = \markup
 scene-vii-H-parts-format = \markup
   \override #'(line-width . 60)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-vii-H
 
 scene-vii-I = \markup
@@ -171,7 +171,7 @@ scene-vii-I-section-format = \markup
 
 scene-vii-I-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-vii-I
 
 scene-vii-J = \markup
@@ -186,5 +186,5 @@ scene-vii-J-section-format = \markup
 
 scene-vii-J-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-vii-J

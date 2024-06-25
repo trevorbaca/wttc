@@ -15,7 +15,7 @@ scene-iii-title-section-format = \markup
 
 scene-iii-title-parts-format = \markup
   \translate #'(0 . 0)
-  \section-title-font-size
+  \parts-title-font-size
   \scene-iii-title
 
 scene-iii-parenthesized-title = \markup
@@ -40,7 +40,7 @@ scene-iii-A-section-format = \markup
 
 scene-iii-A-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iii-A
 
 scene-iii-B = \markup
@@ -62,8 +62,8 @@ scene-iii-B-section-format = \markup
 scene-iii-B-parts-format = \markup
   \override #'(line-width . 80)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iii-B
 
 scene-iii-C = \markup
@@ -86,8 +86,8 @@ scene-iii-C-section-format = \markup
 scene-iii-C-parts-format = \markup
   \override #'(line-width . 38)
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iii-C
 
 scene-iii-D = \markup
@@ -113,8 +113,8 @@ scene-iii-D-section-format = \markup
 
 scene-iii-D-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iii-D
 
 scene-iii-E = \markup
@@ -136,8 +136,8 @@ scene-iii-E-section-format = \markup
 
 scene-iii-E-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iii-E
 
 scene-iii-F = \markup
@@ -156,8 +156,8 @@ scene-iii-F-section-format = \markup
 
 scene-iii-F-parts-format = \markup
   \translate #'(0 . 0)
-  \section-baseline-skip
-  \section-font-size
+  \parts-baseline-skip
+  \parts-font-size
   \scene-iii-F
 
 scene-iii-G = \markup 
@@ -172,5 +172,5 @@ scene-iii-G-section-format = \markup
 
 scene-iii-G-parts-format = \markup
   \translate #'(0 . 0)
-  \section-font-size
+  \parts-font-size
   \scene-iii-G
