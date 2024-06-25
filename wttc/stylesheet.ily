@@ -210,7 +210,6 @@ colophon = \markup
   \line { New Haven, Conn. (July 2023 – May 2024). }
   }
 
-colophon-section-position = \markup {
+colophon-section-format = \markup
   \translate #'(21 . -122)
   \colophon
-  }

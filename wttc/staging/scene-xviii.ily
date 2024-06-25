@@ -8,7 +8,7 @@ scene-xviii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 18. }
 
-scene-xviii-title-section-position = \markup
+scene-xviii-title-section-format = \markup
   \translate #'(-90 . 12)
   \section-title-font-size
   \scene-xviii-title
@@ -22,7 +22,7 @@ scene-xviii-A = \markup
   \line { We could have stayed on it. \lnum #285 }
   \line { We should have stayed on it. \lnum #286 } }
 
-scene-xviii-A-section-position = \markup
+scene-xviii-A-section-format = \markup
   \translate #'(-90 . -41)
   \section-baseline-skip
   \section-font-size
@@ -33,7 +33,7 @@ scene-xviii-B = \markup
   \adobe-bold
   \line { Then all of this \dots \lnum #287 }
 
-scene-xviii-B-section-position = \markup
+scene-xviii-B-section-format = \markup
   \translate #'(4 . -43)
   \section-font-size
   \scene-xviii-B
@@ -50,7 +50,7 @@ scene-xviii-C = \markup
   \line { Keep to it. \lnum #293 }
   \line { Never mind what. \lnum #294 } }
 
-scene-xviii-C-section-position = \markup
+scene-xviii-C-section-format = \markup
   \translate #'(128 . -31)
   \section-baseline-skip
   \section-font-size
@@ -65,7 +65,7 @@ scene-xviii-D = \markup
   \adobe-italic
   \line { End scene 18. } }
 
-scene-xviii-D-section-position = \markup
+scene-xviii-D-section-format = \markup
   \translate #'(60 . -41)
   \section-baseline-skip
   \section-font-size

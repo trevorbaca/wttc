@@ -7,7 +7,7 @@ scene-xvii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 17. }
 
-scene-xvii-title-section-position = \markup
+scene-xvii-title-section-format = \markup
   \translate #'(-102 . 12)
   \section-title-font-size
   \scene-xvii-title
@@ -24,7 +24,7 @@ scene-xvii-A = \markup
   \line { Waving — \lnum #271 }
   \line { But to what? \lnum #272 } }
 
-scene-xvii-A-section-position = \markup
+scene-xvii-A-section-format = \markup
   \translate #'(-102 . -41)
   \section-font-size
   \section-baseline-skip
@@ -35,7 +35,7 @@ scene-xvii-B = \markup
   \adobe-bold
   \line { Where? \lnum #273 }
 
-scene-xvii-B-section-position = \markup
+scene-xvii-B-section-format = \markup
   \translate #'(6 . -41)
   \section-font-size
   \scene-xvii-B
@@ -48,7 +48,7 @@ scene-xvii-C = \markup
   dialogue, which goes fast. OWL struggles with both hands on sides of head
   to stop this movement. }
 
-scene-xvii-C-section-position = \markup
+scene-xvii-C-section-format = \markup
   \override #'(line-width . 180)
   \translate #'(0 . -41)
   \section-baseline-skip
@@ -79,7 +79,7 @@ scene-xvii-D = \markup
   \adobe-italic
   \line { End scene 17. } }
 
-scene-xvii-D-section-position = \markup
+scene-xvii-D-section-format = \markup
   \override #'(line-width . 60)
   \translate #'(200 . -21)
   \section-baseline-skip
@@ -91,7 +91,7 @@ scene-xvii-E = \markup
   \adobe-italic
   \line { End scene 17. }
 
-scene-xvii-E-section-position = \markup
+scene-xvii-E-section-format = \markup
   \translate #'(0 . 0)
   \section-font-size
   \scene-xvii-E

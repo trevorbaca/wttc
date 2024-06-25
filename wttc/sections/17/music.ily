@@ -17,15 +17,15 @@ number.17.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xi-A-section-position
+    _ \scene-xi-A-section-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xi-title-section-position
+    _ \scene-xi-title-section-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-title-section-position
+    _ \scene-xii-title-section-format
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "I" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
@@ -172,7 +172,7 @@ number.17.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-A-section-position
+    _ \scene-xii-A-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

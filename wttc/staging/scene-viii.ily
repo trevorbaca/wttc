@@ -8,7 +8,7 @@ scene-viii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 8. }
 
-scene-viii-title-section-position = \markup
+scene-viii-title-section-format = \markup
   \translate #'(-110 . 12)
   \section-title-font-size
   \scene-viii-title
@@ -42,7 +42,7 @@ scene-viii-A = \markup
   \adobe-italic
   \justify { OWL sniffs the flowers, but again there is no touching. } }
 
-scene-viii-A-section-position = \markup
+scene-viii-A-section-format = \markup
   \override #'(line-width . 50)
   \translate #'(-84 . -20)
   \section-baseline-skip
@@ -57,7 +57,7 @@ scene-viii-B = \markup
   \adobe-italic
   \line { OWL stands back up. } }
 
-scene-viii-B-section-position = \markup
+scene-viii-B-section-format = \markup
   \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
@@ -68,7 +68,7 @@ scene-viii-C = \markup
   \adobe-bold
   \line { But still, \lnum #81.1 }
 
-scene-viii-C-section-position = \markup
+scene-viii-C-section-format = \markup
   \translate #'(36 . -41)
   \section-font-size
   \scene-viii-C
@@ -78,7 +78,7 @@ scene-viii-D = \markup
   \adobe-bold
   \line { violets. \lnum #81.2 }
 
-scene-viii-D-section-position = \markup
+scene-viii-D-section-format = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-viii-D
@@ -93,7 +93,7 @@ scene-viii-E = \markup
   \adobe-italic
   \line { End scene 8. } }
 
-scene-viii-E-section-position = \markup
+scene-viii-E-section-format = \markup
   \translate #'(92 . -38)
   \section-baseline-skip
   \section-font-size

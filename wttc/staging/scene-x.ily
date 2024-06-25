@@ -8,7 +8,7 @@ scene-x-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 10. }
 
-scene-x-title-section-position = \markup
+scene-x-title-section-format = \markup
   \translate #'(-100 . 12)
   \section-title-font-size
   \scene-x-title
@@ -18,7 +18,7 @@ scene-x-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 10) }
 
-scene-x-parenthesized-title-section-position = \markup
+scene-x-parenthesized-title-section-format = \markup
   \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
   \scene-x-parenthesized-title
@@ -40,7 +40,7 @@ scene-x-A = \markup
   \adobe-italic
   \line { Pause. } }
 
-scene-x-A-section-position = \markup
+scene-x-A-section-format = \markup
   \override #'(line-width . 54)
   \translate #'(-86 . -40)
   \section-baseline-skip
@@ -52,7 +52,7 @@ scene-x-B = \markup
   \adobe-bold
   \line { Promised \dots \lnum #130 }
 
-scene-x-B-section-position = \markup
+scene-x-B-section-format = \markup
   \translate #'(2 . -41)
   \section-font-size
   \scene-x-B
@@ -74,7 +74,7 @@ scene-x-C = \markup
   \vspace #3
   \line { Will it have to do with \dots ? \lnum #132 } }
 
-scene-x-C-section-position = \markup
+scene-x-C-section-format = \markup
   \translate #'(76 . -30)
   \section-baseline-skip
   \section-font-size
@@ -99,7 +99,7 @@ scene-x-D = \markup
   \adobe-italic
   \line { End scene 10. } }
 
-scene-x-D-section-position = \markup
+scene-x-D-section-format = \markup
   \translate #'(76 . -31)
   \section-baseline-skip
   \section-font-size

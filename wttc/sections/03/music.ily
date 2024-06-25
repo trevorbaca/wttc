@@ -17,7 +17,7 @@ number.3.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-iii-title-section-position
+    ^ \scene-iii-title-section-format
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "A" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -177,7 +177,7 @@ number.3.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-iii-A-section-position
+    ^ \scene-iii-A-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -339,7 +339,7 @@ number.3.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-iii-B-section-position
+    ^ \scene-iii-B-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

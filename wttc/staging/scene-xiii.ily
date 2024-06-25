@@ -7,7 +7,7 @@ scene-xiii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 13. }
 
-scene-xiii-title-section-position = \markup
+scene-xiii-title-section-format = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
   \scene-xiii-title
@@ -17,7 +17,7 @@ scene-xiii-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 13) }
 
-scene-xiii-parenthesized-title-section-position = \markup
+scene-xiii-parenthesized-title-section-format = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
   \scene-xiii-parenthesized-title
@@ -31,7 +31,7 @@ scene-xiii-A = \markup
   \adobe-italic
   \line { Pause. } }
 
-scene-xiii-A-section-position = \markup
+scene-xiii-A-section-format = \markup
   \translate #'(-60 . -38)
   \section-baseline-skip
   \section-font-size
@@ -64,7 +64,7 @@ scene-xiii-B = \markup
   \vspace #2
   \line { Did I ask when that would be? \lnum #197 } }
 
-scene-xiii-B-section-position = \markup
+scene-xiii-B-section-format = \markup
   \translate #'(62 . -12)
   \section-baseline-skip
   \section-font-size
@@ -77,7 +77,7 @@ scene-xiii-C = \markup
   \line { I did not. \lnum #198 }
   \line { I — \lnum #199 } }
 
-scene-xiii-C-section-position = \markup
+scene-xiii-C-section-format = \markup
   \translate #'(0 . -53)
   \section-baseline-skip
   \section-font-size
@@ -90,7 +90,7 @@ scene-xiii-D = \markup
   uttering and fixed in position with one arm extended. Words are abrupt,
   single. OWL struggles against this fit, trying to pull the arm free. }
 
-scene-xiii-D-section-position = \markup
+scene-xiii-D-section-format = \markup
   \override #'(line-width . 140)
   \translate #'(0 . -45)
   \section-baseline-skip
@@ -117,7 +117,7 @@ scene-xiii-E = \markup
   \adobe-italic
   \line { Music and lighting return to how they were. } }
 
-scene-xiii-E-section-position = \markup
+scene-xiii-E-section-format = \markup
   \translate #'(0 . -57)
   \section-baseline-skip
   \section-font-size
@@ -136,7 +136,7 @@ scene-xiii-F = \markup
   \line { If we could have held on to it \dots \lnum #205 }
   \line { If it could have stayed like that \dots \lnum #206 } }
 
-scene-xiii-F-section-position = \markup
+scene-xiii-F-section-format = \markup
   \translate #'(0 . -40)
   \section-baseline-skip
   \section-font-size
@@ -147,7 +147,7 @@ scene-xiii-G = \markup
   \adobe-italic
   \line { End scene 13. }
 
-scene-xiii-G-section-position = \markup
+scene-xiii-G-section-format = \markup
   \translate #'(60 . -38)
   \section-font-size
   \scene-xiii-G

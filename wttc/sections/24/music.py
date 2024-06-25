@@ -771,14 +771,14 @@ def vc(m):
 def owl(skips):
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-xvi-title-section-position",
+        r"\scene-xvi-title-section-format",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[20 - 1],
-        r"\scene-xvi-parenthesized-title-section-position",
+        r"\scene-xvi-parenthesized-title-section-format",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )

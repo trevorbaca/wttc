@@ -8,7 +8,7 @@ scene-v-title = \markup
   \adobe-bold
   \line { SCENE 5. }
 
-scene-v-title-section-position = \markup
+scene-v-title-section-format = \markup
   \translate #'(-32 . 14)
   \section-title-font-size
   \scene-v-title
@@ -18,7 +18,7 @@ scene-v-A = \markup
   \adobe-bold
   \line { You know, it could all be as it was, \lnum #44 }
 
-scene-v-A-section-position = \markup
+scene-v-A-section-format = \markup
   \translate #'(0 . -46)
   \section-font-size
   \scene-v-A
@@ -31,7 +31,7 @@ scene-v-B = \markup
   \adobe-bold
   \line { Again. \lnum #45 } }
 
-scene-v-B-section-position = \markup
+scene-v-B-section-format = \markup
   \translate #'(0 . -44)
   \section-baseline-skip
   \section-font-size
@@ -46,7 +46,7 @@ scene-v-C = \markup
   \line { But it's time I did what I should. \lnum #46 }
   \line { It's all in my head. \lnum #47 } }
 
-scene-v-C-section-position = \markup
+scene-v-C-section-format = \markup
   \translate #'(8 . -42)
   \section-baseline-skip
   \section-font-size
@@ -57,7 +57,7 @@ scene-v-D = \markup
   \adobe-italic
   \line { End scene 5. }
 
-scene-v-D-section-position = \markup
+scene-v-D-section-format = \markup
   \translate #'(124 . -44)
   \section-font-size
   \scene-v-D

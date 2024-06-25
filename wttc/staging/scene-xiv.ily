@@ -8,7 +8,7 @@ scene-xiv-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 14. }
 
-scene-xiv-title-section-position = \markup
+scene-xiv-title-section-format = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
   \scene-xiv-title
@@ -18,7 +18,7 @@ scene-xiv-A = \markup
   \adobe-bold
   \line { Where was I? \lnum #207 }
 
-scene-xiv-A-section-position = \markup
+scene-xiv-A-section-format = \markup
   \translate #'(-58 . -48)
   \section-font-size
   \scene-xiv-A
@@ -33,7 +33,7 @@ scene-xiv-B = \markup
   \line { “This is the way —” \lnum #211 }
   \line { Waving, \lnum #212 } }
 
-scene-xiv-B-section-position = \markup
+scene-xiv-B-section-format = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
@@ -46,7 +46,7 @@ scene-xiv-C = \markup
   \line { And there she was, \lnum #213 }
   \line { Waving to us. \lnum #214 } }
 
-scene-xiv-C-section-position = \markup
+scene-xiv-C-section-format = \markup
   \translate #'(0 . -48)
   \section-baseline-skip
   \section-font-size
@@ -86,7 +86,7 @@ scene-xiv-D = \markup
   \adobe-italic
   \line { End scene 14. } }
 
-scene-xiv-D-section-position = \markup
+scene-xiv-D-section-format = \markup
   \translate #'(80 . 0)
   \section-baseline-skip
   \section-font-size

@@ -17,17 +17,17 @@ number.7.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iv-J-section-position
+    _ \scene-iv-J-section-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iv-parenthesized-title-section-position
+    _ \scene-iv-parenthesized-title-section-format
       %! +SECTION
-    _ \scene-iv-G-section-position
+    _ \scene-iv-G-section-format
       %! +SECTION
-    _ \scene-iv-H-section-position
+    _ \scene-iv-H-section-format
       %! +SECTION
-    _ \scene-iv-I-section-position
+    _ \scene-iv-I-section-format
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -64,9 +64,9 @@ number.7.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iv-L-section-position
+    _ \scene-iv-L-section-format
       %! +SECTION
-    _ \scene-iv-K-section-position
+    _ \scene-iv-K-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

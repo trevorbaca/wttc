@@ -8,7 +8,7 @@ scene-xx-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 20. }
 
-scene-xx-title-section-position = \markup
+scene-xx-title-section-format = \markup
   \translate #'(-32 . 140)
   \section-title-font-size
   \scene-xx-title
@@ -38,7 +38,7 @@ scene-xx-A = \markup
   \adobe-italic
   \line { Pause. } }
 
-scene-xx-A-section-position = \markup
+scene-xx-A-section-format = \markup
   \translate #'(-8 . 126)
   \section-baseline-skip
   \section-font-size
@@ -49,7 +49,7 @@ scene-xx-B = \markup
   \adobe-bold
   \line { To sing. \hspace #-0.5 \super 5 }
 
-scene-xx-B-section-position = \markup
+scene-xx-B-section-format = \markup
   \translate #'(200 . 16)
   \parenthesized-section-title-font-size
   \scene-xx-B
@@ -59,7 +59,7 @@ scene-xx-C = \markup
   \adobe-italic
   \line { End scene 20. }
 
-scene-xx-C-section-position = \markup
+scene-xx-C-section-format = \markup
   \translate #'(0 . 0)
   \section-font-size
   \scene-xx-C

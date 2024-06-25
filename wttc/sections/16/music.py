@@ -171,14 +171,14 @@ def vc(m):
 def owl(skips):
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-x-parenthesized-title-section-position",
+        r"\scene-x-parenthesized-title-section-format",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[4 - 1],
-        r"\scene-x-D-section-position",
+        r"\scene-x-D-section-format",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
@@ -271,7 +271,7 @@ def persist_score(score, environment):
             "../../staging/scene-xi.ily",
         ],
     )
-    lilypond_file.items.extend(["", r"\pageBreak", r"\scene-xi-A-section-position"])
+    lilypond_file.items.extend(["", r"\pageBreak", r"\scene-xi-A-section-format"])
     baca.build.persist_lilypond_file(
         environment.arguments,
         environment.section_directory,

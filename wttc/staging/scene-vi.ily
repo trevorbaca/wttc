@@ -8,7 +8,7 @@ scene-vi-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 6. }
 
-scene-vi-title-section-position = \markup
+scene-vi-title-section-format = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
   \scene-vi-title
@@ -20,7 +20,7 @@ scene-vi-A = \markup
   \line { That day — remember that day? \lnum #48 }
   \line { You tell me what to do. \lnum #49 } }
 
-scene-vi-A-section-position = \markup
+scene-vi-A-section-format = \markup
   \translate #'(-60 . -46)
   \section-baseline-skip
   \section-font-size
@@ -31,7 +31,7 @@ scene-vi-B = \markup
   \adobe-bold
   \line { You lay it all out for me, \lnum #50 }
 
-scene-vi-B-section-position = \markup
+scene-vi-B-section-format = \markup
   \translate #'(0 . -46)
   \section-font-size
   \scene-vi-B
@@ -41,7 +41,7 @@ scene-vi-C = \markup
   \adobe-bold
   \line { Tell me where to go \lnum #51 }
 
-scene-vi-C-section-position = \markup
+scene-vi-C-section-format = \markup
   \translate #'(0 . -46)
   \section-font-size
   \scene-vi-C
@@ -53,7 +53,7 @@ scene-vi-D = \markup
   \line { When the time comes, \lnum #52 }
   \line { You say, \lnum #53 } }
 
-scene-vi-D-section-position = \markup
+scene-vi-D-section-format = \markup
   \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
@@ -76,7 +76,7 @@ scene-vi-E = \markup
   \line { This is it! \lnum #59 }
   \line { Now I remember: \lnum #60 } }
 
-scene-vi-E-section-position = \markup
+scene-vi-E-section-format = \markup
   \override #'(line-width . 50)
   \translate #'(80 . -46)
   \section-baseline-skip
@@ -88,7 +88,7 @@ scene-vi-before-F = \markup
   \adobe-italic
   \line { Freely, not coordinated with music: }
 
-scene-vi-before-F-section-position = \markup
+scene-vi-before-F-section-format = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-vi-before-F
@@ -104,7 +104,7 @@ scene-vi-F = \markup
   \line { All as it should be! \lnum #63 }
   \line { Each little \dots \lnum #64 } }
 
-scene-vi-F-section-position = \markup
+scene-vi-F-section-format = \markup
   \translate #'(0 . -42)
   \section-baseline-skip
   \section-font-size
@@ -119,7 +119,7 @@ scene-vi-G = \markup
   \adobe-italic
   \line { End scene 6. } }
 
-scene-vi-G-section-position = \markup
+scene-vi-G-section-format = \markup
   \translate #'(63 . -46)
   \section-baseline-skip
   \section-font-size

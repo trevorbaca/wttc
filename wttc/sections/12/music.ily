@@ -17,11 +17,11 @@ number.12.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-parenthesized-title-section-position
+    _ \scene-vii-parenthesized-title-section-format
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "G" #6
       %! +SECTION
-    _ \scene-vii-I-section-position
+    _ \scene-vii-I-section-format
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -458,7 +458,7 @@ number.12.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-parenthesized-title-section-position
+    _ \scene-vii-parenthesized-title-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -872,7 +872,7 @@ number.12.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-parenthesized-title-section-position
+    _ \scene-vii-parenthesized-title-section-format
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "H" #6
       %! CLOCK_TIME
@@ -974,7 +974,7 @@ number.12.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-J-section-position
+    _ \scene-vii-J-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

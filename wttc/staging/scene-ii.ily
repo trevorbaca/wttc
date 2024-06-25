@@ -8,7 +8,7 @@ scene-ii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 2. }
 
-scene-ii-title-section-position = \markup
+scene-ii-title-section-format = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
   \scene-ii-title
@@ -20,7 +20,7 @@ scene-ii-A = \markup
   \line { All that time we had \dots \lnum #8 }
   \line { When you would call me your Owl. \lnum #9 } }
 
-scene-ii-A-section-position = \markup
+scene-ii-A-section-format = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
@@ -33,7 +33,7 @@ scene-ii-B = \markup
   \line { I'll be there, \lnum #10 }
   \line { Your Owl will be there, \lnum #11 } }
 
-scene-ii-B-section-position = \markup
+scene-ii-B-section-format = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
@@ -44,7 +44,7 @@ scene-ii-C = \markup
   \adobe-bold
   \line { When the time comes. \lnum #12 }
 
-scene-ii-C-section-position = \markup
+scene-ii-C-section-format = \markup
   \translate #'(0 . -43)
   \section-baseline-skip
   \section-font-size
@@ -55,7 +55,7 @@ scene-ii-D = \markup
   \adobe-bold
   \line { Look: \lnum #13 }
 
-scene-ii-D-section-position = \markup
+scene-ii-D-section-format = \markup
   \translate #'(6 . -43)
   \section-baseline-skip
   \section-font-size
@@ -68,7 +68,7 @@ scene-ii-E = \markup
   \line { This is me, \lnum #14 }
   \line { Now, \lnum #15 } }
 
-scene-ii-E-section-position = \markup
+scene-ii-E-section-format = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
@@ -82,7 +82,7 @@ scene-ii-F = \markup
   \adobe-italic
   \line { OWL is diverted by a memory. } }
 
-scene-ii-F-section-position = \markup
+scene-ii-F-section-format = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
@@ -97,7 +97,7 @@ scene-ii-G = \markup
   \adobe-italic
   \line { OWL pulls back from the memory, cut off by violin. } }
 
-scene-ii-G-section-position = \markup
+scene-ii-G-section-format = \markup
   \translate #'(0 . -38)
   \section-baseline-skip
   \section-font-size
@@ -116,7 +116,7 @@ scene-ii-H = \markup
   \adobe-italic
   \line { End scene 2. } }
 
-scene-ii-H-section-position = \markup
+scene-ii-H-section-format = \markup
   \translate #'(100 . -38)
   \section-baseline-skip
   \section-font-size

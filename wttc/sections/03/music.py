@@ -603,19 +603,19 @@ def vc(m):
 def owl(skips):
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-iii-title-section-position",
+        r"\scene-iii-title-section-format",
         baca.tweak.x_extent_false(),
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[7 - 1],
-        r"\scene-iii-A-section-position",
+        r"\scene-iii-A-section-format",
         baca.tweak.x_extent_false(),
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[13 - 1],
-        r"\scene-iii-B-section-position",
+        r"\scene-iii-B-section-format",
         baca.tweak.x_extent_false(),
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)

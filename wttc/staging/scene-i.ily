@@ -8,7 +8,7 @@ scene-i-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 1. }
 
-scene-i-title-section-position = \markup
+scene-i-title-section-format = \markup
   \translate #'(100 . 32)
   \section-title-font-size
   \scene-i-title
@@ -18,7 +18,7 @@ scene-i-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 1) }
 
-scene-i-parenthesized-title-section-position = \markup
+scene-i-parenthesized-title-section-format = \markup
   \parenthesized-section-title-font-size
   \translate #'(-34 . 12)
   \scene-i-parenthesized-title
@@ -32,14 +32,14 @@ scene-i-A = \markup
   even have an instrument to bring on and mime playing, all totally discreet, a
   member of the ensemble. }
 
-scene-i-A-section-position = \markup
+scene-i-A-section-format = \markup
   \override #'(line-width . 194)
   \translate #'(126 . 34)
   \section-baseline-skip
   \section-font-size
   \scene-i-A
 
-scene-i-A-part-position = \markup
+scene-i-A-part-format = \markup
   \override #'(baseline-skip . 4)
   \override #'(font-size . 2)
   \override #'(line-width . 110)
@@ -63,7 +63,7 @@ scene-i-B-iii = \markup
   to what OWL has left unsaid. Music starts again as OWL moves away from the
   musicians' are, still not noticing the audeince, or anything else. }
 
-scene-i-B-section-position = \markup
+scene-i-B-section-format = \markup
   \override #'(line-width . 40)
   \translate #'(90 . -22)
   \wdfn
@@ -96,7 +96,7 @@ scene-i-C-iv = \markup
   \adobe-italic
   \line { Then play measures 10 and 11, as if in response. }
 
-scene-i-C-section-position = \markup
+scene-i-C-section-format = \markup
   \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip
@@ -123,7 +123,7 @@ scene-i-D-iii = \markup
   \adobe-italic
   \line { End scene 1. Slight pause, but not too long. }
 
-scene-i-D-section-position = \markup
+scene-i-D-section-format = \markup
   \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip

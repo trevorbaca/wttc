@@ -17,7 +17,7 @@ number.4.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-parenthesized-title-section-position
+    _ \scene-iii-parenthesized-title-section-format
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "B" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -324,7 +324,7 @@ number.4.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-parenthesized-title-section-position
+    _ \scene-iii-parenthesized-title-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -436,9 +436,9 @@ number.4.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-D-section-position
+    _ \scene-iii-D-section-format
       %! +SECTION
-    _ \scene-iii-C-section-position
+    _ \scene-iii-C-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

@@ -17,15 +17,15 @@ number.30.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xx-A-section-position
+    _ \scene-xx-A-section-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xx-B-section-position
+    _ \scene-xx-B-section-format
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xx-title-section-position
+    _ \scene-xx-title-section-format
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -245,7 +245,7 @@ number.30.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \colophon-section-position
+    _ \colophon-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

@@ -8,7 +8,7 @@ scene-iii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 3. }
 
-scene-iii-title-section-position = \markup
+scene-iii-title-section-format = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
   \scene-iii-title
@@ -18,7 +18,7 @@ scene-iii-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 3) }
 
-scene-iii-parenthesized-title-section-position = \markup
+scene-iii-parenthesized-title-section-format = \markup
   \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
   \scene-iii-parenthesized-title
@@ -28,7 +28,7 @@ scene-iii-A = \markup
   \adobe-bold
   \line { Not now \dots \lnum #20 }
 
-scene-iii-A-section-position = \markup
+scene-iii-A-section-format = \markup
   \translate #'(64 . -38)
   \section-font-size
   \scene-iii-A
@@ -42,7 +42,7 @@ scene-iii-B = \markup
   Musicians continue with \adobe-bold
   \box B \hspace #-0.5 . }
 
-scene-iii-B-section-position = \markup
+scene-iii-B-section-format = \markup
   \override #'(line-width . 80)
   \translate #'(78 . -38)
   \section-baseline-skip
@@ -59,7 +59,7 @@ scene-iii-C = \markup
   \adobe-bold
   \line { On my — \lnum #21 } }
 
-scene-iii-C-section-position = \markup
+scene-iii-C-section-format = \markup
   \override #'(line-width . 38)
   \translate #'(26 . -44)
   \section-baseline-skip
@@ -81,7 +81,7 @@ scene-iii-D = \markup
   \adobe-italic
   \line { Then begin \hspace #0.5 \adobe-bold \box C \hspace #-0.5 . } }
 
-scene-iii-D-section-position = \markup
+scene-iii-D-section-format = \markup
   \translate #'(80 . -43)
   \section-baseline-skip
   \section-font-size
@@ -98,7 +98,7 @@ scene-iii-E = \markup
   \line { If \dots \lnum #27 }
   \line { If what? \lnum #28 } }
 
-scene-iii-E-section-position = \markup
+scene-iii-E-section-format = \markup
   \translate #'(40 . -36)
   \section-baseline-skip
   \section-font-size
@@ -112,7 +112,7 @@ scene-iii-F = \markup
   \adobe-bold
   \line { If you and I \dots \lnum #29 } }
 
-scene-iii-F-section-position = \markup
+scene-iii-F-section-format = \markup
   \translate #'(6 . -45)
   \section-baseline-skip
   \section-font-size
@@ -123,7 +123,7 @@ scene-iii-G = \markup
   \adobe-italic
   \line { End scene 3. }
 
-scene-iii-G-section-position = \markup
+scene-iii-G-section-format = \markup
   \translate #'(40 . -41)
   \section-font-size
   \scene-iii-G

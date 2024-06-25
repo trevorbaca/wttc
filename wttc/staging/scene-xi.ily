@@ -8,7 +8,7 @@ scene-xi-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 11. }
 
-scene-xi-title-section-position = \markup
+scene-xi-title-section-format = \markup
   \translate #'(-90 . -2)
   \section-title-font-size
   \scene-xi-title
@@ -75,7 +75,7 @@ scene-xi-A = \markup
   \adobe-italic
   \line { End scene 11. } }
 
-scene-xi-A-section-position = \markup
+scene-xi-A-section-format = \markup
   \override #'(line-width . 60)
   \translate #'(-90 . -20)
   \section-baseline-skip

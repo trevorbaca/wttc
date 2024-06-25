@@ -7,7 +7,7 @@ scene-xv-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 15. }
 
-scene-xv-title-section-position = \markup
+scene-xv-title-section-format = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
   \scene-xv-title
@@ -20,7 +20,7 @@ scene-xv-A = \markup
   \line { As if ending music. }
   \line { All right, I say. \lnum #234 } }
 
-scene-xv-A-section-position = \markup
+scene-xv-A-section-format = \markup
   \translate #'(16 . -37)
   \section-baseline-skip
   \section-font-size
@@ -30,7 +30,7 @@ scene-xv-B = \markup
   \adobe-bold
   \line { Home. \lnum #235 }
 
-scene-xv-B-section-position = \markup
+scene-xv-B-section-format = \markup
   \translate #'(2 . -41)
   \section-font-size
   \scene-xv-B
@@ -52,7 +52,7 @@ scene-xv-C = \markup
   \vspace #1
   \line { Things come and go — \lnum #240 } }
 
-scene-xv-C-section-position = \markup
+scene-xv-C-section-format = \markup
   \translate #'(60 . -21)
   \section-baseline-skip
   \section-font-size
@@ -65,7 +65,7 @@ scene-xv-D = \markup
   position facing stage rear. OWL struggles against this fit, trying to pull
   round to face the audience. After a few seconds, OWL shouts out: }
 
-scene-xv-D-section-position = \markup
+scene-xv-D-section-format = \markup
   \override #'(line-width . 140)
   \translate #'(0 . -35)
   \section-baseline-skip
@@ -82,7 +82,7 @@ scene-xv-E = \markup
   \justify { Instantly, OWL turns, and the fit is over as suddenly as it began.
   Music and lighting return to how they were. } }
 
-scene-xv-E-section-position = \markup
+scene-xv-E-section-format = \markup
   \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
@@ -96,7 +96,7 @@ scene-xv-F = \markup
   \line { We all know this. \lnum #243 }
   \line { All of us. \lnum #244 } }
 
-scene-xv-F-section-position = \markup
+scene-xv-F-section-format = \markup
   \translate #'(0 . -39)
   \section-baseline-skip
   \section-font-size
@@ -114,7 +114,7 @@ scene-xv-G = \markup
   \adobe-italic
   \line { End scene 15. } }
 
-scene-xv-G-section-position = \markup
+scene-xv-G-section-format = \markup
   \translate #'(30 . -41)
   \section-baseline-skip
   \section-font-size

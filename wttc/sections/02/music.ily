@@ -17,7 +17,7 @@ number.2.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-ii-title-section-position
+    _ \scene-ii-title-section-format
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -50,7 +50,7 @@ number.2.Skips = {
     % [Skips measure 2]
     s1 * 4/4
       %! +SECTION
-    _ \scene-ii-A-section-position
+    _ \scene-ii-A-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -94,7 +94,7 @@ number.2.Skips = {
     % [Skips measure 4]
     s1 * 4/4
       %! +SECTION
-    _ \scene-ii-B-section-position
+    _ \scene-ii-B-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -138,7 +138,7 @@ number.2.Skips = {
     % [Skips measure 6]
     s1 * 6/4
       %! +SECTION
-    _ \scene-ii-C-section-position
+    _ \scene-ii-C-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -161,7 +161,7 @@ number.2.Skips = {
     % [Skips measure 7]
     s1 * 4/4
       %! +SECTION
-    _ \scene-ii-D-section-position
+    _ \scene-ii-D-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -184,7 +184,7 @@ number.2.Skips = {
     % [Skips measure 8]
     s1 * 4/4
       %! +SECTION
-    _ \scene-ii-E-section-position
+    _ \scene-ii-E-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -207,7 +207,7 @@ number.2.Skips = {
     % [Skips measure 9]
     s1 * 4/4
       %! +SECTION
-    _ \scene-ii-F-section-position
+    _ \scene-ii-F-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -259,9 +259,9 @@ number.2.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-ii-H-section-position
+    _ \scene-ii-H-section-format
       %! +SECTION
-    _ \scene-ii-G-section-position
+    _ \scene-ii-G-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

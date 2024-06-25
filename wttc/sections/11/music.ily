@@ -17,7 +17,7 @@ number.11.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-parenthesized-title-section-position
+    _ \scene-vii-parenthesized-title-section-format
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "F" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -458,7 +458,7 @@ number.11.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-parenthesized-title-section-position
+    _ \scene-vii-parenthesized-title-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -568,7 +568,7 @@ number.11.Skips = {
     % [Skips measure 22]
     s1 * 3/4
       %! +SECTION
-    _ \scene-vii-E-section-position
+    _ \scene-vii-E-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -651,7 +651,7 @@ number.11.Skips = {
     % [Skips measure 25]
     s1 * 3/4
       %! +SECTION
-    _ \scene-vii-F-section-position
+    _ \scene-vii-F-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -707,7 +707,7 @@ number.11.Skips = {
     % [Skips measure 27]
     s1 * 9/4
       %! +SECTION
-    _ \scene-vii-G-section-position
+    _ \scene-vii-G-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -732,7 +732,7 @@ number.11.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-vii-H-section-position
+    _ \scene-vii-H-section-format
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

@@ -8,7 +8,7 @@ scene-ix-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 9. }
 
-scene-ix-title-section-position = \markup
+scene-ix-title-section-format = \markup
   \translate #'(-90 . 12)
   \section-title-font-size
   \scene-ix-title
@@ -18,7 +18,7 @@ scene-ix-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 9) }
 
-scene-ix-parenthesized-title-section-position = \markup
+scene-ix-parenthesized-title-section-format = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
   \scene-ix-parenthesized-title
@@ -38,7 +38,7 @@ scene-ix-A = \markup
   \line { Still here, \lnum #91 }
   \line { And all this time \dots \lnum #92 } }
 
-scene-ix-A-section-position = \markup
+scene-ix-A-section-format = \markup
   \translate #'(-74 . -24)
   \section-baseline-skip
   \section-font-size
@@ -51,7 +51,7 @@ scene-ix-B = \markup
   the window and table, looks around the rest of the “chamber,” but does not
   engage with the audience. }
 
-scene-ix-B-section-position = \markup
+scene-ix-B-section-format = \markup
   \override #'(line-width . 100)
   \translate #'(0 . -41)
   \section-baseline-skip
@@ -84,7 +84,7 @@ scene-ix-C = \markup
   \line { And would you be here by then? \lnum #112 }
   \line { Did you say? \lnum #113 } }
 
-scene-ix-C-section-position = \markup
+scene-ix-C-section-format = \markup
   \translate #'(120 . -10)
   \section-baseline-skip
   \section-font-size
@@ -109,7 +109,7 @@ scene-ix-C-continued = \markup
   \justify { OWL looks back at the window, returns to it quickly, goes behind it,
   and looks through it in the direction of the audience. } }
 
-scene-ix-C-continued-section-position = \markup
+scene-ix-C-continued-section-format = \markup
   \override #'(line-width . 80)
   \translate #'(200 . -10)
   \section-baseline-skip
@@ -121,7 +121,7 @@ scene-ix-D = \markup
   \adobe-bold
   \line { Nothing. \lnum #124 }
 
-scene-ix-D-section-position = \markup
+scene-ix-D-section-format = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-ix-D
@@ -141,7 +141,7 @@ scene-ix-E = \markup
   \adobe-italic
   \line { End scene 9. } }
 
-scene-ix-E-section-position = \markup
+scene-ix-E-section-format = \markup
   \translate #'(50 . -38)
   \section-baseline-skip
   \section-font-size
