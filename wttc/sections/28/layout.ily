@@ -17,15 +17,12 @@
             s1 * 2/4
 
             % [Breaks measure 2]
-            \noBreak
             s1 * 6/4
 
             % [Breaks measure 3]
-            \noBreak
             s1 * 6/4
 
             % [Breaks measure 4]
-            \noBreak
             s1 * 6/4
 
             % [Breaks measure 5]
@@ -34,7 +31,6 @@
             s1 * 3/4
 
             % [anchor skip]
-            \noBreak
               %! ANCHOR_SKIP
             s1 * 1/4
 
