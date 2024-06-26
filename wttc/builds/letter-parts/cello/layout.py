@@ -23,26 +23,22 @@ def main(environment):
             baca.layout.System(20, y_offset_4, distances=distances),
         ),
     )
-    """
-    spacing = baca.layout.Spacing(
-        default=(1, 12),
-        lax_spacing_sections=[1, 2],
-        empty_spacing_sections=[3],
-        overrides=[
-            baca.layout.Override((4, 7), (1, 32)),
-            baca.layout.Override((8, 11), (1, 48)),
+    spacing_dictionary = {
+        1: "vanilla",
+        2: (1, 12),
+        3: [
+            r"\baca-new-vanilla-spacing-section",
+            r"\grace { s8 }",
+            "s1 * 2/4",
+            r"\baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)",
+            "s1 * 4/4",
         ],
-    )
-    """
-    spacing = baca.layout.Spacing(
-        default=(1, 12),
-        # default="vanilla",
-    )
+        4: "vanilla",
+    }
     return baca.section.make_layout_score(
         breaks,
-        # environment.time_signatures[:22],
         environment.time_signatures[:11],
-        spacing=spacing,
+        spacing_dictionary=spacing_dictionary,
     )
 
 
