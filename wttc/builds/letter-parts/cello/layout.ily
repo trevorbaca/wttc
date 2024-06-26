@@ -44,43 +44,6 @@ Breaks = {
     % [Breaks measure 11]
     s1 * 6/4
 
-    % [Breaks measure 12]
-    \baca-lbsd #64 #'(6)
-    \break
-    s1 * 3/4
-
-    % [Breaks measure 13]
-    s1 * 4/4
-
-    % [Breaks measure 14]
-    s1 * 4/4
-
-    % [Breaks measure 15]
-    s1 * 4/4
-
-    % [Breaks measure 16]
-    s1 * 4/4
-
-    % [Breaks measure 17]
-    s1 * 6/4
-
-    % [Breaks measure 18]
-    s1 * 4/4
-
-    % [Breaks measure 19]
-    s1 * 4/4
-
-    % [Breaks measure 20]
-    \baca-lbsd #90 #'(6)
-    \break
-    s1 * 4/4
-
-    % [Breaks measure 21]
-    s1 * 4/4
-
-    % [Breaks measure 22]
-    s1 * 4/4
-
 }
 
 
@@ -129,50 +92,6 @@ SpacingCommands = {
     % [SpacingCommands measure 11]
     \baca-new-strict-spacing-section #35 #288
     s1 * 6/4
-
-    % [SpacingCommands measure 12]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 3/4
-
-    % [SpacingCommands measure 13]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 14]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 15]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 16]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 17]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 6/4
-
-    % [SpacingCommands measure 18]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 19]
-    \baca-new-strict-spacing-section #35 #288
-    s1 * 4/4
-
-    % [SpacingCommands measure 20]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 21]
-    \baca-new-strict-spacing-section #1 #12
-    s1 * 4/4
-
-    % [SpacingCommands measure 22]
-    \baca-new-strict-spacing-section #35 #288
-    s1 * 4/4
 
 }
 

@@ -26,8 +26,8 @@ def main(environment):
     """
     spacing = baca.layout.Spacing(
         default=(1, 12),
-        lax_spacing_section=[1, 2],
-        forbid_new_spacing_section=[3],
+        lax_spacing_sections=[1, 2],
+        empty_spacing_sections=[3],
         overrides=[
             baca.layout.Override((4, 7), (1, 32)),
             baca.layout.Override((8, 11), (1, 48)),
@@ -36,10 +36,12 @@ def main(environment):
     """
     spacing = baca.layout.Spacing(
         default=(1, 12),
+        # default="vanilla",
     )
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:22],
+        # environment.time_signatures[:22],
+        environment.time_signatures[:11],
         spacing=spacing,
     )
 
