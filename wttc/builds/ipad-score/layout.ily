@@ -95,98 +95,6 @@ SpacingCommands = {
 }
 
 
-SpacingAnnotations = {
-
-    % [SpacingAnnotations measure 1]
-    s1 * 3/4
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/12]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 2]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/12]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 3]
-    s1 * 6/4
-
-    % [SpacingAnnotations measure 4]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 5]
-    s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 6]
-    s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 7]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 8]
-    s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 9]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 10]
-    s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
-
-    % [SpacingAnnotations measure 11]
-    s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-
-}
-
-
 page-layout-score = \context Score = "Score"
 {
 
@@ -198,9 +106,6 @@ page-layout-score = \context Score = "Score"
 
         \context GlobalSkips = "SpacingCommands"
         { \SpacingCommands }
-
-        \context GlobalSkips = "SpacingAnnotations"
-        { \SpacingAnnotations }
 
     >>
 
