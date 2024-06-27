@@ -100,6 +100,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 27]
+    \baca-lbsd #64 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 28]
@@ -109,7 +111,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 30]
-    \baca-lbsd #90 #'(6)
+    \baca-lbsd #99 #'(6)
     \break
     s1 * 4/4
 
@@ -120,7 +122,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 33]
-    \baca-lbsd #116 #'(6)
+    \baca-lbsd #125 #'(6)
     \break
     s1 * 3/4
 

@@ -30,16 +30,19 @@ scene-iii-parenthesized-title-section = \markup
 
 scene-iii-A = \markup
   \wdfn
-  \adobe-bold
-  \line { Not now \dots \lnum #20 }
+  \column {
+  \adobe-italic \line { During the fermata. }
+  \adobe-bold \line { Not now \dots \lnum #20 } }
 
 scene-iii-A-section = \markup
   \translate #'(64 . -38)
+  \section-baseline-skip
   \section-font-size
   \scene-iii-A
 
 scene-iii-A-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-78 . -22)
+  \parts-baseline-skip
   \parts-font-size
   \scene-iii-A
 
@@ -60,8 +63,8 @@ scene-iii-B-section = \markup
   \scene-iii-B
 
 scene-iii-B-parts = \markup
-  \override #'(line-width . 80)
-  \translate #'(0 . 0)
+  \override #'(line-width . 82)
+  \translate #'(-78 . -23)
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-B
