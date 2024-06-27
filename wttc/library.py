@@ -936,6 +936,7 @@ def swells(peaks):
 
 
 def to_bar_line_tweaks(to_bar_line=False):
+    """Hairpins."""
     tweaks = []
     if to_bar_line is True:
         tweaks.append(baca.tweak.to_bar_line_true(i=-1))
@@ -1577,15 +1578,14 @@ def D1b(
     pleaves,
     pitch,
     hairpin_string,
-    # hairpin_pieces,
     hairpin_counts,
     scp_string,
-    # scp_pieces,
     scp_counts,
     *,
     do_not_bookend=False,
     rleak=False,
     rleak_hairpin=False,
+    scp_tweaks=(),
     tbl=False,
 ):
     if pitch is not None:
@@ -1608,6 +1608,7 @@ def D1b(
         scp_pieces,
         scp_string,
         baca.tweak.staff_padding(3),
+        *scp_tweaks,
         do_not_bookend=do_not_bookend,
         rleak=rleak,
     )

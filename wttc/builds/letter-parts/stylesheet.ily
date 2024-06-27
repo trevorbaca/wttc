@@ -26,7 +26,7 @@
   )
   evenFooterMarkup = \markup
     \if \should-print-page-number
-    \fill-line { \fromproperty #'page:page-number-string }
+    \fill-line { \concat { ( \fromproperty #'page:page-number-string ) } }
   evenHeaderMarkup = \markup \null
   oddFooterMarkup = \evenFooterMarkup
   oddHeaderMarkup = \markup \null

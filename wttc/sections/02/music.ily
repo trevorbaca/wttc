@@ -2003,6 +2003,8 @@ number.2.Cello.Music = {
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

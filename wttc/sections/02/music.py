@@ -195,7 +195,7 @@ def vn(m):
     library.E2c(library.pleaves(m[1, 2][:4], 2), "B3", "C#4", "mp")
 
     @baca.call
-    def bloc():
+    def block():
         plts = baca.select.plts(library.pleaves(m[2, 6], 2))
         dynamics = "mp p pp ppp".split()
         for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -214,6 +214,7 @@ def vc(m):
         [1, 2],
         "P1 => T => P2",
         [1, 2],
+        scp_tweaks=[baca.tweak.to_bar_line_false(i=0)],
     )
     baca.glissando(library.pleaves(m[10, 11], 1), "F2 Eqs2")
 

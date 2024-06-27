@@ -200,7 +200,7 @@ def vn(m):
     library.E2c(library.pleaves(m[1, 2][:4], 2), "B3", "C#4", "mp")
 
     @baca.call
-    def bloc():
+    def block():
         plts = baca.select.plts(library.pleaves(m[2, 6], 2))
         dynamics = "mp p pp ppp".split()
         for plt, dynamic in zip(plts, dynamics, strict=True):

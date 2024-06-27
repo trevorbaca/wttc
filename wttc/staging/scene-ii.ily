@@ -14,7 +14,7 @@ scene-ii-title-section-format = \markup
   \scene-ii-title
 
 scene-ii-title-parts-format = \markup
-  \translate #'(-2 . 8)
+  \translate #'(-8 . 8)
   \parts-title-font-size
   \scene-ii-title
 
@@ -111,7 +111,6 @@ scene-ii-E-parts-format = \markup
 
 scene-ii-F = \markup
   \wdfn
-  \override #'(line-width . 20)
   \column {
   \adobe-bold
   \line { On my way — \lnum #16 }
@@ -125,6 +124,7 @@ scene-ii-F-section-format = \markup
   \scene-ii-F
 
 scene-ii-F-parts-format = \markup
+  \override #'(line-width . 20)
   \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
