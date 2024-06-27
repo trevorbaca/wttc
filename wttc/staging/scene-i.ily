@@ -142,7 +142,7 @@ scene-i-C-parts-format = \markup
 
 scene-i-D-i = \markup 
   \adobe-italic
-  \line { OWL, a moment or two before measure 11 ends: }
+  \line { OWL, beginning a moment or two before measure 11 ends: }
 
 scene-i-D-ii = \markuplist
   \adobe-bold

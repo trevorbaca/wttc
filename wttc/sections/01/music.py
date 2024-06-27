@@ -409,12 +409,13 @@ def owl(skips):
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     #
-    baca.mark(
+    wrappers = baca.mark(
         skips[9 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     #
     wrappers = baca.markup(
         skips[9 - 1],

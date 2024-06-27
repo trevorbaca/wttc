@@ -14,7 +14,7 @@ scene-ii-title-section-format = \markup
   \scene-ii-title
 
 scene-ii-title-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(-2 . 8)
   \parts-title-font-size
   \scene-ii-title
 
@@ -32,7 +32,7 @@ scene-ii-A-section-format = \markup
   \scene-ii-A
 
 scene-ii-A-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-A
@@ -51,7 +51,7 @@ scene-ii-B-section-format = \markup
   \scene-ii-B
 
 scene-ii-B-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-B
@@ -68,7 +68,7 @@ scene-ii-C-section-format = \markup
   \scene-ii-C
 
 scene-ii-C-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-C
@@ -85,7 +85,7 @@ scene-ii-D-section-format = \markup
   \scene-ii-D
 
 scene-ii-D-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-D
@@ -104,18 +104,19 @@ scene-ii-E-section-format = \markup
   \scene-ii-E
 
 scene-ii-E-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-E
 
 scene-ii-F = \markup
   \wdfn
+  \override #'(line-width . 20)
   \column {
   \adobe-bold
   \line { On my way — \lnum #16 }
   \adobe-italic
-  \line { OWL is diverted by a memory. } }
+  \justify { OWL is diverted by a memory. } }
 
 scene-ii-F-section-format = \markup
   \translate #'(0 . -41)
@@ -124,7 +125,7 @@ scene-ii-F-section-format = \markup
   \scene-ii-F
 
 scene-ii-F-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-F
@@ -145,7 +146,7 @@ scene-ii-G-section-format = \markup
   \scene-ii-G
 
 scene-ii-G-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -20)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-G
@@ -159,7 +160,6 @@ scene-ii-H = \markup
   \line { No \dots \lnum #19 }
   \adobe-italic
   \line { The thought trails off completely. }
-  \vspace #4
   \adobe-italic
   \line { End scene 2. } }
 
@@ -170,7 +170,7 @@ scene-ii-H-section-format = \markup
   \scene-ii-H
 
 scene-ii-H-parts-format = \markup
-  \translate #'(0 . 0)
+  \translate #'(-35 . -45)
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-H

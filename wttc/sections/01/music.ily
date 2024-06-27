@@ -278,7 +278,9 @@ number.1.Skips = {
     - \baca-start-mn-left-only "9"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+      %! -PARTS
     \tweak padding 1.5
+      %! -PARTS
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 10]

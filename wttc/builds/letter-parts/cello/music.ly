@@ -30,7 +30,7 @@ part-name-markup = \markup "cello part"
     \keepWithTag Cello
     {
       \include "../_sections/01.ly"
-      % \include "../_sections/02.ly"
+      \include "../_sections/02.ly"
     }
   >>
 }

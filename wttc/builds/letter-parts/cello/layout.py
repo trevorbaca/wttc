@@ -3,6 +3,7 @@ import baca
 
 def main(environment):
     distances = (6,)
+    half = int(26 / 2)
     y_offset_1 = 12
     # y_offset_2 = 38
     y_offset_3 = 64
@@ -20,6 +21,12 @@ def main(environment):
             baca.layout.System(8, y_offset_1, distances=distances),
             baca.layout.System(10, y_offset_4, distances=distances),
         ),
+        baca.layout.Page(
+            3,
+            baca.layout.System(12, y_offset_1, distances=distances),
+            baca.layout.System(17, y_offset_3 - half, distances=distances),
+            baca.layout.System(21, y_offset_4, distances=distances),
+        ),
     )
     spacing_dictionary = {
         1: "vanilla",
@@ -32,10 +39,11 @@ def main(environment):
             "s1 * 4/4",
         ],
         4: "vanilla",
+        12: (1, 12),
     }
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:11],
+        environment.time_signatures[:22],
         spacing_dictionary=spacing_dictionary,
     )
 
