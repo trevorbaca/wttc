@@ -326,28 +326,28 @@ def vc(m):
 def owl(skips):
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-xx-title-section-format",
+        r"\scene-xx-title-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-xx-A-section-format",
+        r"\scene-xx-A-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-xx-B-section-format",
+        r"\scene-xx-B-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[11 - 1],
-        r"\colophon-section-format",
+        r"\colophon-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )

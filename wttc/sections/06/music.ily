@@ -17,13 +17,13 @@ number.6.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iv-A-section-format
+    _ \scene-iv-A-section
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iv-title-section-format
+    _ \scene-iv-title-section
       %! +SECTION
-    _ \scene-iv-B-section-format
+    _ \scene-iv-B-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -58,7 +58,7 @@ number.6.Skips = {
     \tempo 4=75
     s1 * 4/4
       %! +SECTION
-    _ \scene-iv-C-section-format
+    _ \scene-iv-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -100,7 +100,7 @@ number.6.Skips = {
     % [Skips measure 3]
     s1 * 4/4
       %! +SECTION
-    _ \scene-iv-D-section-format
+    _ \scene-iv-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -123,7 +123,7 @@ number.6.Skips = {
     % [Skips measure 4]
     s1 * 4/4
       %! +SECTION
-    _ \scene-iv-E-section-format
+    _ \scene-iv-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -146,7 +146,7 @@ number.6.Skips = {
     % [Skips measure 5]
     s1 * 4/4
       %! +SECTION
-    _ \scene-iv-F-section-format
+    _ \scene-iv-F-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

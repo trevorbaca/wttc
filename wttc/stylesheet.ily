@@ -118,11 +118,15 @@
     \remove System_start_delimiter_engraver
     \override BarLine.hair-thickness = 0.5
     \override BarLine.X-extent = #'(0 . 0)
+    \override BarNumber.layer = 2
+    \override BarNumber.whiteout = ##t
     \override Beam.damping = 99
     \override BreathingSign.X-extent = ##f
     \override BreathingSign.extra-offset = #'(-1.5 . 0)
     \override Clef.layer = -1
     \override Clef.whiteout-style = #'outline
+    \override Dots.layer = 2
+    \override Dots.whiteout = ##t
     \override Glissando.thickness = 3
     \override Hairpin.to-barline = ##f
     \shape #'((0 . 0) (0.5 . 0) (1 . 0) (2 . 0)) LaissezVibrerTie         
@@ -147,6 +151,12 @@
     \override StemTremolo.slope = 0.5
     \override TextSpanner.to-barline = ##t
     \override TrillPitchAccidental.avoid-slur = #'ignore
+    \override TrillPitchAccidental.layer = 2
+    % \override TrillPitchAccidental.whiteout = ##t
+    \override TrillPitchHead.layer = 2
+    % \override TrillPitchHead.whiteout = ##t
+    \override TrillPitchParentheses.layer = 2
+    % \override TrillPitchParentheses.whiteout = ##t
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 2
     \override TupletNumber.font-size = 1
@@ -211,6 +221,6 @@ colophon = \markup
   \line { New Haven, Conn. (July 2023 – May 2024). }
   }
 
-colophon-section-format = \markup
+colophon-section = \markup
   \translate #'(21 . -122)
   \colophon

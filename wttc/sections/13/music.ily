@@ -17,13 +17,13 @@ number.13.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-viii-A-section-format
+    _ \scene-viii-A-section
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-viii-title-section-format
+    _ \scene-viii-title-section
       %! +SECTION
-    _ \scene-viii-B-section-format
+    _ \scene-viii-B-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -205,7 +205,7 @@ number.13.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-viii-C-section-format
+    _ \scene-viii-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -230,7 +230,7 @@ number.13.Skips = {
     % [Skips measure 10]
     s1 * 4/4
       %! +SECTION
-    _ \scene-viii-D-section-format
+    _ \scene-viii-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -261,7 +261,7 @@ number.13.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-viii-E-section-format
+    _ \scene-viii-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

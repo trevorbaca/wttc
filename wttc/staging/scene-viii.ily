@@ -8,12 +8,12 @@ scene-viii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 8. }
 
-scene-viii-title-section-format = \markup
+scene-viii-title-section = \markup
   \translate #'(-110 . 12)
   \section-title-font-size
   \scene-viii-title
 
-scene-viii-title-parts-format = \markup
+scene-viii-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-viii-title
@@ -47,14 +47,14 @@ scene-viii-A = \markup
   \adobe-italic
   \justify { OWL sniffs the flowers, but again there is no touching. } }
 
-scene-viii-A-section-format = \markup
+scene-viii-A-section = \markup
   \override #'(line-width . 50)
   \translate #'(-84 . -20)
   \section-baseline-skip
   \section-font-size
   \scene-viii-A
 
-scene-viii-A-parts-format = \markup
+scene-viii-A-parts = \markup
   \override #'(line-width . 50)
   \translate #'(0 . 0)
   \parts-baseline-skip
@@ -69,13 +69,13 @@ scene-viii-B = \markup
   \adobe-italic
   \line { OWL stands back up. } }
 
-scene-viii-B-section-format = \markup
+scene-viii-B-section = \markup
   \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
   \scene-viii-B
 
-scene-viii-B-parts-format = \markup
+scene-viii-B-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -86,12 +86,12 @@ scene-viii-C = \markup
   \adobe-bold
   \line { But still, \lnum #81.1 }
 
-scene-viii-C-section-format = \markup
+scene-viii-C-section = \markup
   \translate #'(36 . -41)
   \section-font-size
   \scene-viii-C
 
-scene-viii-C-parts-format = \markup
+scene-viii-C-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-viii-C
@@ -101,12 +101,12 @@ scene-viii-D = \markup
   \adobe-bold
   \line { violets. \lnum #81.2 }
 
-scene-viii-D-section-format = \markup
+scene-viii-D-section = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-viii-D
 
-scene-viii-D-parts-format = \markup
+scene-viii-D-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-viii-D
@@ -121,13 +121,13 @@ scene-viii-E = \markup
   \adobe-italic
   \line { End scene 8. } }
 
-scene-viii-E-section-format = \markup
+scene-viii-E-section = \markup
   \translate #'(92 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-viii-E
 
-scene-viii-E-parts-format = \markup
+scene-viii-E-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size

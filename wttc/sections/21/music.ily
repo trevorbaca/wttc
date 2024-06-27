@@ -17,7 +17,7 @@ number.21.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xiii-parenthesized-title-section-format
+    _ \scene-xiii-parenthesized-title-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -50,7 +50,7 @@ number.21.Skips = {
     % [Skips measure 2]
     s1 * 4/4
       %! +SECTION
-    _ \scene-xiii-C-section-format
+    _ \scene-xiii-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -75,9 +75,9 @@ number.21.Skips = {
     \tempo 4=48
     s1 * 9/4
       %! +SECTION
-    _ \scene-xiii-D-section-format
+    _ \scene-xiii-D-section
       %! +SECTION
-    _ \scene-xiii-E-section-format
+    _ \scene-xiii-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -121,7 +121,7 @@ number.21.Skips = {
     \tempo 4=75
     s1 * 4/4
       %! +SECTION
-    _ \scene-xiii-F-section-format
+    _ \scene-xiii-F-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -291,7 +291,7 @@ number.21.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xiii-G-section-format
+    _ \scene-xiii-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

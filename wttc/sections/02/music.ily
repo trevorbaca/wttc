@@ -17,11 +17,11 @@ number.2.Skips = {
       %! +PARTS
 %%% - \tweak X-extent ##f
       %! +PARTS
-%%% _ \scene-ii-title-parts-format
+%%% _ \scene-ii-title-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-ii-title-section-format
+    _ \scene-ii-title-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -54,9 +54,9 @@ number.2.Skips = {
     % [Skips measure 2]
     s1 * 4/4
       %! +PARTS
-%%% _ \scene-ii-A-parts-format
+%%% _ \scene-ii-A-parts
       %! +SECTION
-    _ \scene-ii-A-section-format
+    _ \scene-ii-A-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -100,9 +100,9 @@ number.2.Skips = {
     % [Skips measure 4]
     s1 * 4/4
       %! +PARTS
-%%% _ \scene-ii-B-parts-format
+%%% _ \scene-ii-B-parts
       %! +SECTION
-    _ \scene-ii-B-section-format
+    _ \scene-ii-B-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -146,9 +146,9 @@ number.2.Skips = {
     % [Skips measure 6]
     s1 * 6/4
       %! +PARTS
-%%% _ \scene-ii-C-parts-format
+%%% _ \scene-ii-C-parts
       %! +SECTION
-    _ \scene-ii-C-section-format
+    _ \scene-ii-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -171,9 +171,9 @@ number.2.Skips = {
     % [Skips measure 7]
     s1 * 4/4
       %! +PARTS
-%%% _ \scene-ii-D-parts-format
+%%% _ \scene-ii-D-parts
       %! +SECTION
-    _ \scene-ii-D-section-format
+    _ \scene-ii-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -196,9 +196,9 @@ number.2.Skips = {
     % [Skips measure 8]
     s1 * 4/4
       %! +PARTS
-%%% _ \scene-ii-E-parts-format
+%%% _ \scene-ii-E-parts
       %! +SECTION
-    _ \scene-ii-E-section-format
+    _ \scene-ii-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -221,9 +221,9 @@ number.2.Skips = {
     % [Skips measure 9]
     s1 * 4/4
       %! +PARTS
-%%% _ \scene-ii-F-parts-format
+%%% _ \scene-ii-F-parts
       %! +SECTION
-    _ \scene-ii-F-section-format
+    _ \scene-ii-F-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -275,15 +275,15 @@ number.2.Skips = {
       %! +PARTS
 %%% - \tweak X-extent ##f
       %! +PARTS
-%%% _ \scene-ii-H-parts-format
+%%% _ \scene-ii-H-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-ii-H-section-format
+    _ \scene-ii-H-section
       %! +PARTS
-%%% _ \scene-ii-G-parts-format
+%%% _ \scene-ii-G-parts
       %! +SECTION
-    _ \scene-ii-G-section-format
+    _ \scene-ii-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

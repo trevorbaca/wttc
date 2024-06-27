@@ -17,7 +17,7 @@ number.5.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-parenthesized-title-section-format
+    _ \scene-iii-parenthesized-title-section
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -429,7 +429,7 @@ number.5.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-E-section-format
+    _ \scene-iii-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -462,9 +462,9 @@ number.5.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-parenthesized-title-section-format
+    _ \scene-iii-parenthesized-title-section
       %! +SECTION
-    _ \scene-iii-F-section-format
+    _ \scene-iii-F-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -990,7 +990,7 @@ number.5.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-parenthesized-title-section-format
+    _ \scene-iii-parenthesized-title-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1250,7 +1250,7 @@ number.5.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-iii-G-section-format
+    _ \scene-iii-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

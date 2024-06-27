@@ -8,12 +8,12 @@ scene-ix-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 9. }
 
-scene-ix-title-section-format = \markup
+scene-ix-title-section = \markup
   \translate #'(-90 . 12)
   \section-title-font-size
   \scene-ix-title
 
-scene-ix-title-parts-format = \markup
+scene-ix-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-ix-title
@@ -23,7 +23,7 @@ scene-ix-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 9) }
 
-scene-ix-parenthesized-title-section-format = \markup
+scene-ix-parenthesized-title-section = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
   \scene-ix-parenthesized-title
@@ -43,13 +43,13 @@ scene-ix-A = \markup
   \line { Still here, \lnum #91 }
   \line { And all this time \dots \lnum #92 } }
 
-scene-ix-A-section-format = \markup
+scene-ix-A-section = \markup
   \translate #'(-74 . -24)
   \section-baseline-skip
   \section-font-size
   \scene-ix-A
 
-scene-ix-A-parts-format = \markup
+scene-ix-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -62,14 +62,14 @@ scene-ix-B = \markup
   the window and table, looks around the rest of the “chamber,” but does not
   engage with the audience. }
 
-scene-ix-B-section-format = \markup
+scene-ix-B-section = \markup
   \override #'(line-width . 100)
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-ix-B
 
-scene-ix-B-parts-format = \markup
+scene-ix-B-parts = \markup
   \override #'(line-width . 100)
   \translate #'(0 . 0)
   \parts-baseline-skip
@@ -102,13 +102,13 @@ scene-ix-C = \markup
   \line { And would you be here by then? \lnum #112 }
   \line { Did you say? \lnum #113 } }
 
-scene-ix-C-section-format = \markup
+scene-ix-C-section = \markup
   \translate #'(120 . -10)
   \section-baseline-skip
   \section-font-size
   \scene-ix-C
 
-scene-ix-C-parts-format = \markup
+scene-ix-C-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -133,14 +133,14 @@ scene-ix-C-continued = \markup
   \justify { OWL looks back at the window, returns to it quickly, goes behind it,
   and looks through it in the direction of the audience. } }
 
-scene-ix-C-continued-section-format = \markup
+scene-ix-C-continued-section = \markup
   \override #'(line-width . 80)
   \translate #'(200 . -10)
   \section-baseline-skip
   \section-font-size
   \scene-ix-C-continued
 
-scene-ix-C-continued-parts-format = \markup
+scene-ix-C-continued-parts = \markup
   \override #'(line-width . 80)
   \translate #'(0 . 0)
   \parts-baseline-skip
@@ -152,12 +152,12 @@ scene-ix-D = \markup
   \adobe-bold
   \line { Nothing. \lnum #124 }
 
-scene-ix-D-section-format = \markup
+scene-ix-D-section = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-ix-D
 
-scene-ix-D-parts-format = \markup
+scene-ix-D-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-ix-D
@@ -177,13 +177,13 @@ scene-ix-E = \markup
   \adobe-italic
   \line { End scene 9. } }
 
-scene-ix-E-section-format = \markup
+scene-ix-E-section = \markup
   \translate #'(50 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-ix-E
 
-scene-ix-E-parts-format = \markup
+scene-ix-E-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size

@@ -17,11 +17,11 @@ number.22.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xiv-A-section-format
+    _ \scene-xiv-A-section
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xiv-title-section-format
+    _ \scene-xiv-title-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -56,7 +56,7 @@ number.22.Skips = {
     \tempo 4=75
     s1 * 4/4
       %! +SECTION
-    _ \scene-xiv-B-section-format
+    _ \scene-xiv-B-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -142,7 +142,7 @@ number.22.Skips = {
     \tempo 4=150
     s1 * 6/4
       %! +SECTION
-    _ \scene-xiv-C-section-format
+    _ \scene-xiv-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -264,7 +264,7 @@ number.22.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xiv-D-section-format
+    _ \scene-xiv-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

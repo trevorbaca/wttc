@@ -8,12 +8,12 @@ scene-vi-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 6. }
 
-scene-vi-title-section-format = \markup
+scene-vi-title-section = \markup
   \translate #'(-60 . 12)
   \section-title-font-size
   \scene-vi-title
 
-scene-vi-title-parts-format = \markup
+scene-vi-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-vi-title
@@ -25,13 +25,13 @@ scene-vi-A = \markup
   \line { That day — remember that day? \lnum #48 }
   \line { You tell me what to do. \lnum #49 } }
 
-scene-vi-A-section-format = \markup
+scene-vi-A-section = \markup
   \translate #'(-60 . -46)
   \section-baseline-skip
   \section-font-size
   \scene-vi-A
 
-scene-vi-A-parts-format = \markup
+scene-vi-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -42,12 +42,12 @@ scene-vi-B = \markup
   \adobe-bold
   \line { You lay it all out for me, \lnum #50 }
 
-scene-vi-B-section-format = \markup
+scene-vi-B-section = \markup
   \translate #'(0 . -46)
   \section-font-size
   \scene-vi-B
 
-scene-vi-B-parts-format = \markup
+scene-vi-B-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vi-B
@@ -57,12 +57,12 @@ scene-vi-C = \markup
   \adobe-bold
   \line { Tell me where to go \lnum #51 }
 
-scene-vi-C-section-format = \markup
+scene-vi-C-section = \markup
   \translate #'(0 . -46)
   \section-font-size
   \scene-vi-C
 
-scene-vi-C-parts-format = \markup
+scene-vi-C-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vi-C
@@ -74,13 +74,13 @@ scene-vi-D = \markup
   \line { When the time comes, \lnum #52 }
   \line { You say, \lnum #53 } }
 
-scene-vi-D-section-format = \markup
+scene-vi-D-section = \markup
   \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
   \scene-vi-D
 
-scene-vi-D-parts-format = \markup
+scene-vi-D-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -103,14 +103,14 @@ scene-vi-E = \markup
   \line { This is it! \lnum #59 }
   \line { Now I remember: \lnum #60 } }
 
-scene-vi-E-section-format = \markup
+scene-vi-E-section = \markup
   \override #'(line-width . 50)
   \translate #'(80 . -46)
   \section-baseline-skip
   \section-font-size
   \scene-vi-E
 
-scene-vi-E-parts-format = \markup
+scene-vi-E-parts = \markup
   \override #'(line-width . 50)
   \translate #'(0 . 0)
   \parts-baseline-skip
@@ -122,12 +122,12 @@ scene-vi-before-F = \markup
   \adobe-italic
   \line { Freely, not coordinated with music: }
 
-scene-vi-before-F-section-format = \markup
+scene-vi-before-F-section = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-vi-before-F
 
-scene-vi-before-F-parts-format = \markup
+scene-vi-before-F-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vi-before-F
@@ -143,13 +143,13 @@ scene-vi-F = \markup
   \line { All as it should be! \lnum #63 }
   \line { Each little \dots \lnum #64 } }
 
-scene-vi-F-section-format = \markup
+scene-vi-F-section = \markup
   \translate #'(0 . -42)
   \section-baseline-skip
   \section-font-size
   \scene-vi-F
 
-scene-vi-F-parts-format = \markup
+scene-vi-F-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -164,13 +164,13 @@ scene-vi-G = \markup
   \adobe-italic
   \line { End scene 6. } }
 
-scene-vi-G-section-format = \markup
+scene-vi-G-section = \markup
   \translate #'(63 . -46)
   \section-baseline-skip
   \section-font-size
   \scene-vi-G
 
-scene-vi-G-parts-format = \markup
+scene-vi-G-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size

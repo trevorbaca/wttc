@@ -17,7 +17,7 @@ number.19.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-parenthesized-title-section-format
+    _ \scene-xii-parenthesized-title-section
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "K" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -485,7 +485,7 @@ number.19.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-C-section-format
+    _ \scene-xii-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -512,7 +512,7 @@ number.19.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-parenthesized-title-section-format
+    _ \scene-xii-parenthesized-title-section
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "L" #6
       %! CLOCK_TIME
@@ -858,9 +858,9 @@ number.19.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-parenthesized-title-section-format
+    _ \scene-xii-parenthesized-title-section
       %! +SECTION
-    _ \scene-xii-D-section-format
+    _ \scene-xii-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -937,7 +937,7 @@ number.19.Skips = {
     % [Skips measure 36]
     s1 * 3/4
       %! +SECTION
-    _ \scene-xii-E-section-format
+    _ \scene-xii-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1014,7 +1014,7 @@ number.19.Skips = {
     % [Skips measure 39]
     s1 * 6/4
       %! +SECTION
-    _ \scene-xii-F-section-format
+    _ \scene-xii-F-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1091,7 +1091,7 @@ number.19.Skips = {
     % [Skips measure 42]
     s1 * 3/4
       %! +SECTION
-    _ \scene-xii-G-section-format
+    _ \scene-xii-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1168,7 +1168,7 @@ number.19.Skips = {
     % [Skips measure 45]
     s1 * 6/4
       %! +SECTION
-    _ \scene-xii-H-section-format
+    _ \scene-xii-H-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1222,7 +1222,7 @@ number.19.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-parenthesized-title-section-format
+    _ \scene-xii-parenthesized-title-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1266,9 +1266,9 @@ number.19.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xii-J-section-format
+    _ \scene-xii-J-section
       %! +SECTION
-    _ \scene-xii-I-section-format
+    _ \scene-xii-I-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

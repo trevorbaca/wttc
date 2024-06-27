@@ -14,11 +14,21 @@ number.3.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "03"
     s1 * 4/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-iii-title-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-iii-title-section-format
+    ^ \scene-iii-title-section
+      %! +PARTS
+%%% - \tweak extra-offset #'(-10 . 4)
+      %! +PARTS
+%%% - \baca-rehearsal-mark-markup "A" #2
+      %! -PARTS
     - \tweak padding 1.5
+      %! -PARTS
     - \baca-rehearsal-mark-markup "A" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -174,10 +184,14 @@ number.3.Skips = {
 
     % [Skips measure 7]
     s1 * 4/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-iii-A-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-iii-A-section-format
+    ^ \scene-iii-A-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -336,10 +350,14 @@ number.3.Skips = {
 
     % [Skips measure 13]
     s1 * 6/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% ^ \scene-iii-B-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-iii-B-section-format
+    ^ \scene-iii-B-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

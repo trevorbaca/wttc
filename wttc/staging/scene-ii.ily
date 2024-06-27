@@ -8,12 +8,12 @@ scene-ii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 2. }
 
-scene-ii-title-section-format = \markup
+scene-ii-title-section = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
   \scene-ii-title
 
-scene-ii-title-parts-format = \markup
+scene-ii-title-parts = \markup
   \translate #'(-8 . 8)
   \parts-title-font-size
   \scene-ii-title
@@ -25,13 +25,13 @@ scene-ii-A = \markup
   \line { All that time we had \dots \lnum #8 }
   \line { When you would call me your Owl. \lnum #9 } }
 
-scene-ii-A-section-format = \markup
+scene-ii-A-section = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-ii-A
 
-scene-ii-A-parts-format = \markup
+scene-ii-A-parts = \markup
   \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
@@ -44,13 +44,13 @@ scene-ii-B = \markup
   \line { I'll be there, \lnum #10 }
   \line { Your Owl will be there, \lnum #11 } }
 
-scene-ii-B-section-format = \markup
+scene-ii-B-section = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-ii-B
 
-scene-ii-B-parts-format = \markup
+scene-ii-B-parts = \markup
   \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
@@ -61,13 +61,13 @@ scene-ii-C = \markup
   \adobe-bold
   \line { When the time comes. \lnum #12 }
 
-scene-ii-C-section-format = \markup
+scene-ii-C-section = \markup
   \translate #'(0 . -43)
   \section-baseline-skip
   \section-font-size
   \scene-ii-C
 
-scene-ii-C-parts-format = \markup
+scene-ii-C-parts = \markup
   \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
@@ -78,13 +78,13 @@ scene-ii-D = \markup
   \adobe-bold
   \line { Look: \lnum #13 }
 
-scene-ii-D-section-format = \markup
+scene-ii-D-section = \markup
   \translate #'(6 . -43)
   \section-baseline-skip
   \section-font-size
   \scene-ii-D
 
-scene-ii-D-parts-format = \markup
+scene-ii-D-parts = \markup
   \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
@@ -97,13 +97,13 @@ scene-ii-E = \markup
   \line { This is me, \lnum #14 }
   \line { Now, \lnum #15 } }
 
-scene-ii-E-section-format = \markup
+scene-ii-E-section = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-ii-E
 
-scene-ii-E-parts-format = \markup
+scene-ii-E-parts = \markup
   \translate #'(0 . -15)
   \parts-baseline-skip
   \parts-font-size
@@ -117,13 +117,13 @@ scene-ii-F = \markup
   \adobe-italic
   \justify { OWL is diverted by a memory. } }
 
-scene-ii-F-section-format = \markup
+scene-ii-F-section = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-ii-F
 
-scene-ii-F-parts-format = \markup
+scene-ii-F-parts = \markup
   \override #'(line-width . 20)
   \translate #'(0 . -15)
   \parts-baseline-skip
@@ -139,13 +139,13 @@ scene-ii-G = \markup
   \adobe-italic
   \line { OWL pulls back from the memory, cut off by violin. } }
 
-scene-ii-G-section-format = \markup
+scene-ii-G-section = \markup
   \translate #'(0 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-ii-G
 
-scene-ii-G-parts-format = \markup
+scene-ii-G-parts = \markup
   \translate #'(0 . -20)
   \parts-baseline-skip
   \parts-font-size
@@ -163,13 +163,13 @@ scene-ii-H = \markup
   \adobe-italic
   \line { End scene 2. } }
 
-scene-ii-H-section-format = \markup
+scene-ii-H-section = \markup
   \translate #'(100 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-ii-H
 
-scene-ii-H-parts-format = \markup
+scene-ii-H-parts = \markup
   \translate #'(-35 . -45)
   \parts-baseline-skip
   \parts-font-size

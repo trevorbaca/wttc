@@ -492,52 +492,52 @@ def vc(m):
 def owl(skips):
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-xvi-parenthesized-title-section-format",
+        r"\scene-xvi-parenthesized-title-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[1 - 1],
-        r"\scene-xvi-A-section-format",
+        r"\scene-xvi-A-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[13 - 1],
-        r"\scene-xvi-parenthesized-title-section-format",
+        r"\scene-xvi-parenthesized-title-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[14 - 1],
-        r"\scene-xvi-B-section-format",
+        r"\scene-xvi-B-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[15 - 1],
-        r"\scene-xvi-C-section-format",
+        r"\scene-xvi-C-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[17 - 1],
-        r"\scene-xvi-D-section-format",
+        r"\scene-xvi-D-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[19 - 1],
-        r"\scene-xvi-E-section-format",
+        r"\scene-xvi-E-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[20 - 1],
-        r"\scene-xvi-F-section-format",
+        r"\scene-xvi-F-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )

@@ -17,7 +17,7 @@ number.23.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xv-title-section-format
+    _ \scene-xv-title-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -71,7 +71,7 @@ number.23.Skips = {
     % [Skips measure 3]
     s1 * 4/4
       %! +SECTION
-    _ \scene-xv-A-section-format
+    _ \scene-xv-A-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -98,7 +98,7 @@ number.23.Skips = {
     \tempo 4=150
     s1 * 4/4
       %! +SECTION
-    _ \scene-xv-B-section-format
+    _ \scene-xv-B-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -163,7 +163,7 @@ number.23.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xv-C-section-format
+    _ \scene-xv-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -188,9 +188,9 @@ number.23.Skips = {
     \tempo 4=48
     s1 * 9/4
       %! +SECTION
-    _ \scene-xv-D-section-format
+    _ \scene-xv-D-section
       %! +SECTION
-    _ \scene-xv-E-section-format
+    _ \scene-xv-E-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -234,7 +234,7 @@ number.23.Skips = {
     \tempo 4=100
     s1 * 6/4
       %! +SECTION
-    _ \scene-xv-F-section-format
+    _ \scene-xv-F-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -320,7 +320,7 @@ number.23.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xv-G-section-format
+    _ \scene-xv-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

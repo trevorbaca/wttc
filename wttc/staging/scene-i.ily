@@ -8,12 +8,12 @@ scene-i-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 1. }
 
-scene-i-title-section-format = \markup
+scene-i-title-section = \markup
   \translate #'(100 . 32)
   \section-title-font-size
   \scene-i-title
 
-scene-i-title-parts-format = \markup
+scene-i-title-parts = \markup
   \translate #'(44 . 26)
   \parts-title-font-size
   \scene-i-title
@@ -23,7 +23,7 @@ scene-i-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 1) }
 
-scene-i-parenthesized-title-section-format = \markup
+scene-i-parenthesized-title-section = \markup
   \parenthesized-section-title-font-size
   \translate #'(-34 . 12)
   \scene-i-parenthesized-title
@@ -37,14 +37,14 @@ scene-i-A = \markup
   even have an instrument to bring on and mime playing, all totally discreet, a
   member of the ensemble. }
 
-scene-i-A-section-format = \markup
+scene-i-A-section = \markup
   \override #'(line-width . 194)
   \translate #'(126 . 34)
   \section-baseline-skip
   \section-font-size
   \scene-i-A
 
-scene-i-A-parts-format = \markup
+scene-i-A-parts = \markup
   \override #'(line-width . 110)
   \translate #'(-5 . 18)
   \parts-baseline-skip
@@ -68,7 +68,7 @@ scene-i-B-iii = \markup
   to what OWL has left unsaid. Music starts again as OWL moves away from the
   musicians' area, still not noticing the audeince, or anything else. }
 
-scene-i-B-section-format = \markup
+scene-i-B-section = \markup
   \override #'(line-width . 40)
   \translate #'(90 . -22)
   \wdfn
@@ -81,7 +81,7 @@ scene-i-B-section-format = \markup
   \vspace #3
   \scene-i-B-iii }
 
-scene-i-B-parts-format = \markup
+scene-i-B-parts = \markup
   \override #'(line-width . 110)
   \translate #'(-102 . -25)
   \wdfn
@@ -114,7 +114,7 @@ scene-i-C-iv = \markup
   \adobe-italic
   \line { Then play measures 10 and 11, as if in response. }
 
-scene-i-C-section-format = \markup
+scene-i-C-section = \markup
   \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip
@@ -127,8 +127,8 @@ scene-i-C-section-format = \markup
   \scene-i-C-iii
   \scene-i-C-iv }
 
-scene-i-C-parts-format = \markup
-  \translate #'(-48 . -22.5)
+scene-i-C-parts = \markup
+  \translate #'(-38 . -22.5)
   \wdfn
   \parts-baseline-skip
   \parts-font-size
@@ -154,7 +154,7 @@ scene-i-D-iii = \markup
   \adobe-italic
   \line { End scene 1. Slight pause, but not too long. }
 
-scene-i-D-section-format = \markup
+scene-i-D-section = \markup
   \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip
@@ -166,7 +166,7 @@ scene-i-D-section-format = \markup
   \vspace #1
   \scene-i-D-iii }
 
-scene-i-D-parts-format = \markup
+scene-i-D-parts = \markup
   \translate #'(-51 . -22.5)
   \wdfn
   \parts-baseline-skip

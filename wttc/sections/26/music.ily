@@ -17,7 +17,7 @@ number.26.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-parenthesized-title-section-format
+    _ \scene-xvi-parenthesized-title-section
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "O" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -479,7 +479,7 @@ number.26.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-parenthesized-title-section-format
+    _ \scene-xvi-parenthesized-title-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -828,7 +828,7 @@ number.26.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-G-section-format
+    _ \scene-xvi-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -861,9 +861,9 @@ number.26.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-parenthesized-title-section-format
+    _ \scene-xvi-parenthesized-title-section
       %! +SECTION
-    _ \scene-xvi-H-section-format
+    _ \scene-xvi-H-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -915,7 +915,7 @@ number.26.Skips = {
     % [Skips measure 35]
     s1 * 6/4
       %! +SECTION
-    _ \scene-xvi-I-section-format
+    _ \scene-xvi-I-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -948,7 +948,7 @@ number.26.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-J-section-format
+    _ \scene-xvi-J-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

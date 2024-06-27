@@ -8,12 +8,12 @@ scene-xviii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 18. }
 
-scene-xviii-title-section-format = \markup
+scene-xviii-title-section = \markup
   \translate #'(-90 . 12)
   \section-title-font-size
   \scene-xviii-title
 
-scene-xviii-title-parts-format = \markup
+scene-xviii-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-xviii-title
@@ -27,13 +27,13 @@ scene-xviii-A = \markup
   \line { We could have stayed on it. \lnum #285 }
   \line { We should have stayed on it. \lnum #286 } }
 
-scene-xviii-A-section-format = \markup
+scene-xviii-A-section = \markup
   \translate #'(-90 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xviii-A
 
-scene-xviii-A-parts-format = \markup
+scene-xviii-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -44,12 +44,12 @@ scene-xviii-B = \markup
   \adobe-bold
   \line { Then all of this \dots \lnum #287 }
 
-scene-xviii-B-section-format = \markup
+scene-xviii-B-section = \markup
   \translate #'(4 . -43)
   \section-font-size
   \scene-xviii-B
 
-scene-xviii-B-parts-format = \markup
+scene-xviii-B-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xviii-B
@@ -66,13 +66,13 @@ scene-xviii-C = \markup
   \line { Keep to it. \lnum #293 }
   \line { Never mind what. \lnum #294 } }
 
-scene-xviii-C-section-format = \markup
+scene-xviii-C-section = \markup
   \translate #'(128 . -31)
   \section-baseline-skip
   \section-font-size
   \scene-xviii-C
 
-scene-xviii-C-parts-format = \markup
+scene-xviii-C-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -87,13 +87,13 @@ scene-xviii-D = \markup
   \adobe-italic
   \line { End scene 18. } }
 
-scene-xviii-D-section-format = \markup
+scene-xviii-D-section = \markup
   \translate #'(60 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xviii-D
 
-scene-xviii-D-parts-format = \markup
+scene-xviii-D-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size

@@ -7,12 +7,12 @@ scene-xvi-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 16. }
 
-scene-xvi-title-section-format = \markup
+scene-xvi-title-section = \markup
   \translate #'(-32 . 12)
   \section-title-font-size
   \scene-xvi-title
 
-scene-xvi-title-parts-format = \markup
+scene-xvi-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-xvi-title
@@ -22,7 +22,7 @@ scene-xvi-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 16) }
 
-scene-xvi-parenthesized-title-section-format = \markup
+scene-xvi-parenthesized-title-section = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
   \scene-xvi-parenthesized-title
@@ -38,13 +38,13 @@ scene-xvi-A = \markup
   \line { “Make yourself at home.” \lnum #250 }
   \line { As if you had no memory of — \lnum #251 } }
 
-scene-xvi-A-section-format = \markup
+scene-xvi-A-section = \markup
   \translate #'(0 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-xvi-A
 
-scene-xvi-A-parts-format = \markup
+scene-xvi-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -61,13 +61,13 @@ scene-xvi-B = \markup
   \line { How long it would take me to come here, \lnum #253 }
   \line { This way — \lnum #254 } }
 
-scene-xvi-B-section-format = \markup
+scene-xvi-B-section = \markup
   \translate #'(120 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xvi-B
 
-scene-xvi-B-parts-format = \markup
+scene-xvi-B-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -81,13 +81,13 @@ scene-xvi-C = \markup
   \line { Loud, extended. }
   \line { Way! \lnum #255 } }
 
-scene-xvi-C-section-format = \markup
+scene-xvi-C-section = \markup
   \translate #'(28 . -43)
   \section-baseline-skip
   \section-font-size
   \scene-xvi-C
 
-scene-xvi-C-parts-format = \markup
+scene-xvi-C-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -101,13 +101,13 @@ scene-xvi-D = \markup
   \line { Abruptly back to normal. }
   \line { No. \lnum #256 } }
 
-scene-xvi-D-section-format = \markup
+scene-xvi-D-section = \markup
   \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
   \scene-xvi-D
 
-scene-xvi-D-parts-format = \markup
+scene-xvi-D-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -121,13 +121,13 @@ scene-xvi-E = \markup
   \adobe-italic
   \line { Stopping before saying “way” } }
 
-scene-xvi-E-section-format = \markup
+scene-xvi-E-section = \markup
   \translate #'(4 . -43)
   \section-baseline-skip
   \section-font-size
   \scene-xvi-E
 
-scene-xvi-E-parts-format = \markup
+scene-xvi-E-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -138,12 +138,12 @@ scene-xvi-F = \markup
   \adobe-bold
   \line { And all the time — \lnum #258 }
 
-scene-xvi-F-section-format = \markup
+scene-xvi-F-section = \markup
   \translate #'(70 . -46)
   \section-font-size
   \scene-xvi-F
 
-scene-xvi-F-parts-format = \markup
+scene-xvi-F-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xvi-F
@@ -153,12 +153,12 @@ scene-xvi-G = \markup
   \adobe-bold
   \line { Never mind. \lnum #259 }
 
-scene-xvi-G-section-format = \markup
+scene-xvi-G-section = \markup
   \translate #'(70 . -41)
   \section-font-size
   \scene-xvi-G
 
-scene-xvi-G-parts-format = \markup
+scene-xvi-G-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xvi-G
@@ -168,12 +168,12 @@ scene-xvi-H = \markup
   \adobe-bold
   \line { Let it go. \lnum #260 }
 
-scene-xvi-H-section-format = \markup
+scene-xvi-H-section = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-xvi-H
 
-scene-xvi-H-parts-format = \markup
+scene-xvi-H-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xvi-H
@@ -183,12 +183,12 @@ scene-xvi-I = \markup
   \adobe-bold
   \line { Let it go. \lnum #261 }
 
-scene-xvi-I-section-format = \markup
+scene-xvi-I-section = \markup
   \translate #'(0 . -41)
   \section-font-size
   \scene-xvi-I
 
-scene-xvi-I-parts-format = \markup
+scene-xvi-I-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xvi-I
@@ -212,13 +212,13 @@ scene-xvi-J = \markup
   \adobe-italic
   \line { End scene 16. } }
 
-scene-xvi-J-section-format = \markup
+scene-xvi-J-section = \markup
   \translate #'(40 . -19)
   \section-baseline-skip
   \section-font-size
   \scene-xvi-J
 
-scene-xvi-J-parts-format = \markup
+scene-xvi-J-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size

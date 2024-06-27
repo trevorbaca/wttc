@@ -8,12 +8,12 @@ scene-xii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 12. }
 
-scene-xii-title-section-format = \markup
+scene-xii-title-section = \markup
   \translate #'(0 . 16)
   \section-title-font-size
   \scene-xii-title
 
-scene-xii-title-parts-format = \markup
+scene-xii-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-xii-title
@@ -23,7 +23,7 @@ scene-xii-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 12) }
 
-scene-xii-parenthesized-title-section-format = \markup
+scene-xii-parenthesized-title-section = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
   \scene-xii-parenthesized-title
@@ -35,13 +35,13 @@ scene-xii-A = \markup
   \line { No, you'll be here, \lnum #162 }
   \line { When the time is right — \lnum #163 } }
 
-scene-xii-A-section-format = \markup
+scene-xii-A-section = \markup
   \translate #'(112 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-xii-A
 
-scene-xii-A-parts-format = \markup
+scene-xii-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -70,13 +70,13 @@ scene-xii-B = \markup
   \vspace #2
   \line { That's my expectation, any — \lnum #173 } }
 
-scene-xii-B-section-format = \markup
+scene-xii-B-section = \markup
   \translate #'(60 . -20)
   \section-baseline-skip
   \section-font-size
   \scene-xii-B
 
-scene-xii-B-parts-format = \markup
+scene-xii-B-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -95,13 +95,13 @@ scene-xii-C = \markup
   \line { Let's see what I remember, \lnum #176 }
   \line { From all that time \dots \lnum #177 } }
 
-scene-xii-C-section-format = \markup
+scene-xii-C-section = \markup
   \translate #'(58 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-xii-C
 
-scene-xii-C-parts-format = \markup
+scene-xii-C-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -115,13 +115,13 @@ scene-xii-D = \markup
   \line { Slowly. }
   \line { The green path \dots \lnum #178 } }
 
-scene-xii-D-section-format = \markup
+scene-xii-D-section = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xii-D
 
-scene-xii-D-parts-format = \markup
+scene-xii-D-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -135,13 +135,13 @@ scene-xii-E = \markup
   \line { Fast. }
   \line { What was it? When was this? \lnum #179 } }
 
-scene-xii-E-section-format = \markup
+scene-xii-E-section = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xii-E
 
-scene-xii-E-parts-format = \markup
+scene-xii-E-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -156,13 +156,13 @@ scene-xii-F = \markup
   \line { The green path \dots \lnum #180 }
   \line { It was a way — \lnum #181 } }
 
-scene-xii-F-section-format = \markup
+scene-xii-F-section = \markup
   \translate #'(2 . -38)
   \section-baseline-skip
   \section-font-size
   \scene-xii-F
 
-scene-xii-F-parts-format = \markup
+scene-xii-F-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -176,13 +176,13 @@ scene-xii-G = \markup
   \line { Fast. }
   \line { Waving to us, she was waving to us. And we — \lnum #182 } }
 
-scene-xii-G-section-format = \markup
+scene-xii-G-section = \markup
   \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xii-G
 
-scene-xii-G-parts-format = \markup
+scene-xii-G-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -196,13 +196,13 @@ scene-xii-H = \markup
   \line { Slowly. }
   \line { No. \lnum #183 } }
 
-scene-xii-H-section-format = \markup
+scene-xii-H-section = \markup
   \section-baseline-skip
   \section-font-size
   \translate #'(2 . -41)
   \scene-xii-H
 
-scene-xii-H-parts-format = \markup
+scene-xii-H-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -217,13 +217,13 @@ scene-xii-I = \markup
   \line { It's gone.\lnum #184 }
   \line { It's all gone. \lnum #185 } }
 
-scene-xii-I-section-format = \markup
+scene-xii-I-section = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-xii-I
 
-scene-xii-I-parts-format = \markup
+scene-xii-I-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -234,12 +234,12 @@ scene-xii-J = \markup
   \adobe-italic
   \line { End scene 12. }
 
-scene-xii-J-section-format = \markup
+scene-xii-J-section = \markup
   \translate #'(108 . -46)
   \section-font-size
   \scene-xii-J
 
-scene-xii-J-parts-format = \markup
+scene-xii-J-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xii-J

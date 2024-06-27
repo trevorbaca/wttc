@@ -17,15 +17,15 @@ number.1.Skips = {
       %! +PARTS
 %%% - \tweak X-extent ##f
       %! +PARTS
-%%% ^ \scene-i-title-parts-format
+%%% ^ \scene-i-title-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-i-title-section-format
+    ^ \scene-i-title-section
       %! +PARTS
-%%% ^ \scene-i-A-parts-format
+%%% ^ \scene-i-A-parts
       %! +SECTION
-    ^ \scene-i-A-section-format
+    ^ \scene-i-A-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -186,11 +186,11 @@ number.1.Skips = {
       %! +PARTS
 %%% - \tweak X-extent ##f
       %! +PARTS
-%%% ^ \scene-i-B-parts-format
+%%% ^ \scene-i-B-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-i-B-section-format
+    ^ \scene-i-B-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -217,7 +217,7 @@ number.1.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-i-parenthesized-title-section-format
+    ^ \scene-i-parenthesized-title-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -255,11 +255,11 @@ number.1.Skips = {
       %! +PARTS
 %%% - \tweak X-extent ##f
       %! +PARTS
-%%% ^ \scene-i-C-parts-format
+%%% ^ \scene-i-C-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-i-C-section-format
+    ^ \scene-i-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -330,11 +330,11 @@ number.1.Skips = {
       %! +PARTS
 %%% - \tweak X-extent ##f
       %! +PARTS
-%%% ^ \scene-i-D-parts-format
+%%% ^ \scene-i-D-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    ^ \scene-i-D-section-format
+    ^ \scene-i-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -2730,6 +2730,12 @@ number.1.Cello.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
+      %! +PARTS
+%%% \once \override TrillPitchAccidental.whiteout = ##t
+      %! +PARTS
+%%% \once \override TrillPitchHead.whiteout = ##t
+      %! +PARTS
+%%% \once \override TrillPitchParentheses.whiteout = ##t
       %! SPANNER_START
     \pitchedTrill
     cs!8.

@@ -17,9 +17,9 @@ number.8.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-v-title-section-format
+    _ \scene-v-title-section
       %! +SECTION
-    _ \scene-v-A-section-format
+    _ \scene-v-A-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -142,7 +142,7 @@ number.8.Skips = {
     % [Skips measure 6]
     s1 * 6/4
       %! +SECTION
-    _ \scene-v-B-section-format
+    _ \scene-v-B-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -207,7 +207,7 @@ number.8.Skips = {
     % [Skips measure 8]
     s1 * 6/4
       %! +SECTION
-    _ \scene-v-C-section-format
+    _ \scene-v-C-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -276,7 +276,7 @@ number.8.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-v-D-section-format
+    _ \scene-v-D-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

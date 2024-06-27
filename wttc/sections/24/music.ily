@@ -17,7 +17,7 @@ number.24.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-title-section-format
+    _ \scene-xvi-title-section
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "M" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -504,7 +504,7 @@ number.24.Skips = {
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
-    _ \scene-xvi-parenthesized-title-section-format
+    _ \scene-xvi-parenthesized-title-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

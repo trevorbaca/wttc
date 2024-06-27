@@ -8,12 +8,12 @@ scene-vii-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 7. }
 
-scene-vii-title-section-format = \markup
+scene-vii-title-section = \markup
   \translate #'(-34 . 12)
   \section-title-font-size
   \scene-vii-title
 
-scene-vii-title-parts-format = \markup
+scene-vii-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-vii-title
@@ -23,7 +23,7 @@ scene-vii-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 7) }
 
-scene-vii-parenthesized-title-section-format = \markup
+scene-vii-parenthesized-title-section = \markup
   \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
   \scene-vii-parenthesized-title
@@ -36,13 +36,13 @@ scene-vii-A = \markup
   \adobe-bold
   \line { No doubt you'll come before long. \lnum #66 } }
 
-scene-vii-A-section-format = \markup
+scene-vii-A-section = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-vii-A
 
-scene-vii-A-parts-format = \markup
+scene-vii-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -56,13 +56,13 @@ scene-vii-B = \markup
   \adobe-bold
   \line { You will. \lnum #67 } }
 
-scene-vii-B-section-format = \markup
+scene-vii-B-section = \markup
   \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-vii-B
 
-scene-vii-B-parts-format = \markup
+scene-vii-B-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -79,14 +79,14 @@ scene-vii-C = \markup
   Then proceed to \adobe-bold \box F
   \hspace #-0.5 . } }
 
-scene-vii-C-section-format = \markup
+scene-vii-C-section = \markup
   \override #'(line-width . 42)
   \translate #'(52 . -41)
   \section-baseline-skip
   \section-font-size
   \scene-vii-C
 
-scene-vii-C-parts-format = \markup
+scene-vii-C-parts = \markup
   \override #'(line-width . 42)
   \translate #'(0 . 0)
   \parts-baseline-skip
@@ -98,12 +98,12 @@ scene-vii-E = \markup
   \adobe-bold
   \line { What did you say at the time? \lnum #69 }
 
-scene-vii-E-section-format = \markup
+scene-vii-E-section = \markup
   \translate #'(0 . -48)
   \section-font-size
   \scene-vii-E
 
-scene-vii-E-parts-format = \markup
+scene-vii-E-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vii-E
@@ -113,12 +113,12 @@ scene-vii-F = \markup
   \adobe-bold
   \line { How I would come to a — \lnum #70 }
 
-scene-vii-F-section-format = \markup
+scene-vii-F-section = \markup
   \translate #'(0 . -48)
   \section-font-size
   \scene-vii-F
 
-scene-vii-F-parts-format = \markup
+scene-vii-F-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vii-F
@@ -128,12 +128,12 @@ scene-vii-G = \markup
   \adobe-bold
   \line { What did you call it? — \lnum #71 }
 
-scene-vii-G-section-format = \markup
+scene-vii-G-section = \markup
   \translate #'(0 . -46)
   \section-font-size
   \scene-vii-G
 
-scene-vii-G-parts-format = \markup
+scene-vii-G-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vii-G
@@ -145,14 +145,14 @@ scene-vii-H = \markup
   audience to consider OWL's question. Then all proceed to \adobe-bold \box G
   \hspace #-0.5 . }
 
-scene-vii-H-section-format = \markup
+scene-vii-H-section = \markup
   \override #'(line-width . 60)
   \translate #'(46 . -40)
   \section-baseline-skip
   \section-font-size
   \scene-vii-H
 
-scene-vii-H-parts-format = \markup
+scene-vii-H-parts = \markup
   \override #'(line-width . 60)
   \translate #'(0 . 0)
   \parts-baseline-skip
@@ -164,12 +164,12 @@ scene-vii-I = \markup
   \adobe-bold
   \line { “Chamber,” \lnum #72 }
 
-scene-vii-I-section-format = \markup
+scene-vii-I-section = \markup
   \translate #'(0 . -48)
   \section-font-size
   \scene-vii-I
 
-scene-vii-I-parts-format = \markup
+scene-vii-I-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vii-I
@@ -179,12 +179,12 @@ scene-vii-J = \markup
   \adobe-italic
   \line { End scene 7. }
 
-scene-vii-J-section-format = \markup
+scene-vii-J-section = \markup
   \translate #'(166 . -44)
   \section-font-size
   \scene-vii-J
 
-scene-vii-J-parts-format = \markup
+scene-vii-J-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-vii-J

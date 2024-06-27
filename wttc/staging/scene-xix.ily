@@ -8,12 +8,12 @@ scene-xix-title = \markup
   \adobe-bold
   \line { SCENE \hspace #1 19. }
 
-scene-xix-title-section-format = \markup
+scene-xix-title-section = \markup
   \translate #'(-96 . 6)
   \section-title-font-size
   \scene-xix-title
 
-scene-xix-title-parts-format = \markup
+scene-xix-title-parts = \markup
   \translate #'(0 . 0)
   \parts-title-font-size
   \scene-xix-title
@@ -23,7 +23,7 @@ scene-xix-parenthesized-title = \markup
   \adobe-bold
   \line { (SCENE \hspace #1 19) }
 
-scene-xix-parenthesized-title-section-format = \markup
+scene-xix-parenthesized-title-section = \markup
   \translate #'(-32 . 12)
   \parenthesized-section-title-font-size
   \scene-xix-parenthesized-title
@@ -35,13 +35,13 @@ scene-xix-A = \markup
   \line { We did not. \lnum #296 }
   \line { And that's the reason \dots \lnum #297 } }
 
-scene-xix-A-section-format = \markup
+scene-xix-A-section = \markup
   \translate #'(-74 . -47)
   \section-baseline-skip
   \section-font-size
   \scene-xix-A
 
-scene-xix-A-parts-format = \markup
+scene-xix-A-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -52,12 +52,12 @@ scene-xix-B = \markup
   \adobe-bold
   \line { That's the reason \dots \lnum #298 }
 
-scene-xix-B-section-format = \markup
+scene-xix-B-section = \markup
   \translate #'(0 . -47)
   \section-font-size
   \scene-xix-B
 
-scene-xix-B-parts-format = \markup
+scene-xix-B-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-B
@@ -73,13 +73,13 @@ scene-xix-C = \markup
   \vspace #2
   \line { Call this home? \lnum #300 } }
 
-scene-xix-C-section-format = \markup
+scene-xix-C-section = \markup
   \translate #'(50 . -47)
   \section-baseline-skip
   \section-font-size
   \scene-xix-C
 
-scene-xix-C-parts-format = \markup
+scene-xix-C-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -90,12 +90,12 @@ scene-xix-D = \markup
   \adobe-bold
   \line { Window. \lnum #301 }
 
-scene-xix-D-section-format = \markup
+scene-xix-D-section = \markup
   \translate #'(0 . -49)
   \section-font-size
   \scene-xix-D
 
-scene-xix-D-parts-format = \markup
+scene-xix-D-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-D
@@ -105,12 +105,12 @@ scene-xix-E = \markup
   \adobe-bold
   \line { Table. \lnum #302 }
 
-scene-xix-E-section-format = \markup
+scene-xix-E-section = \markup
   \translate #'(0 . -49)
   \section-font-size
   \scene-xix-E
 
-scene-xix-E-parts-format = \markup
+scene-xix-E-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-E
@@ -120,12 +120,12 @@ scene-xix-F = \markup
   \adobe-bold
   \line { Flowers. \lnum #303 }
 
-scene-xix-F-section-format = \markup
+scene-xix-F-section = \markup
   \translate #'(0 . -49)
   \section-font-size
   \scene-xix-F
 
-scene-xix-F-parts-format = \markup
+scene-xix-F-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-F
@@ -135,12 +135,12 @@ scene-xix-G = \markup
   \adobe-bold
   \line { In a glass. \lnum #304 }
 
-scene-xix-G-section-format = \markup
+scene-xix-G-section = \markup
   \translate #'(0 . -49)
   \section-font-size
   \scene-xix-G
 
-scene-xix-G-parts-format = \markup
+scene-xix-G-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-G
@@ -153,13 +153,13 @@ scene-xix-H = \markup
   \line { With violin & cello. }
   \line { Violets. \lnum #305 } }
 
-scene-xix-H-section-format = \markup
+scene-xix-H-section = \markup
   \translate #'(18 . -47)
   \section-baseline-skip
   \section-font-size
   \scene-xix-H
 
-scene-xix-H-parts-format = \markup
+scene-xix-H-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -174,13 +174,13 @@ scene-xix-I = \markup
   \adobe-italic
   \line { Pause. } }
 
-scene-xix-I-section-format = \markup
+scene-xix-I-section = \markup
   \translate #'(90 . -51)
   \section-baseline-skip
   \section-font-size
   \scene-xix-I
 
-scene-xix-I-parts-format = \markup
+scene-xix-I-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -191,12 +191,12 @@ scene-xix-J = \markup
   \adobe-bold
   \line { Never mind. \lnum #307 }
 
-scene-xix-J-section-format = \markup
+scene-xix-J-section = \markup
   \translate #'(0 . -47)
   \section-font-size
   \scene-xix-J
 
-scene-xix-J-parts-format = \markup
+scene-xix-J-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-J
@@ -209,13 +209,13 @@ scene-xix-K = \markup
   \line { Loud. }
   \line { Never mind! \lnum #308 } }
 
-scene-xix-K-section-format = \markup
+scene-xix-K-section = \markup
   \translate #'(0 . -45)
   \section-baseline-skip
   \section-font-size
   \scene-xix-K
 
-scene-xix-K-parts-format = \markup
+scene-xix-K-parts = \markup
   \translate #'(0 . 0)
   \parts-baseline-skip
   \parts-font-size
@@ -226,12 +226,12 @@ scene-xix-L = \markup
   \adobe-bold
   \line { It's all over. \lnum #309 }
 
-scene-xix-L-section-format = \markup
+scene-xix-L-section = \markup
   \translate #'(50 . -47)
   \section-font-size
   \scene-xix-L
 
-scene-xix-L-parts-format = \markup
+scene-xix-L-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-L
@@ -241,12 +241,12 @@ scene-xix-M = \markup
   \adobe-italic
   \line { End scene 19. }
 
-scene-xix-M-section-format = \markup
+scene-xix-M-section = \markup
   \translate #'(74 . -45)
   \section-font-size
   \scene-xix-M
 
-scene-xix-M-parts-format = \markup
+scene-xix-M-parts = \markup
   \translate #'(0 . 0)
   \parts-font-size
   \scene-xix-M

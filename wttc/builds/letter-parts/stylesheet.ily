@@ -106,6 +106,8 @@
       )
     \override BarNumber.break-visibility = #end-of-line-invisible
     \override TimeSignature.break-visibility = #end-of-line-invisible
+    \override TimeSignature.layer = 2
+    \override TimeSignature.whiteout = ##t
     \override TupletNumber.font-size = -2
   }
 }
