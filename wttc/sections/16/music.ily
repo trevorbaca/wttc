@@ -1316,8 +1316,6 @@ number.16.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 1.5
-      %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
@@ -1327,8 +1325,6 @@ number.16.Cello.Music = {
     - \baca-text-spanner-left-text "XFB"
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 1.5
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

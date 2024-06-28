@@ -14,7 +14,7 @@ scene-iv-title-section = \markup
   \scene-iv-title
 
 scene-iv-title-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-6 . 36)
   \parts-title-font-size
   \scene-iv-title
 
@@ -54,7 +54,7 @@ scene-iv-A-section = \markup
   \scene-iv-A
 
 scene-iv-A-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(24 . 26)
   \parts-baseline-skip
   \parts-font-size
   \scene-iv-A
@@ -70,7 +70,7 @@ scene-iv-B-section = \markup
   \scene-iv-B
 
 scene-iv-B-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -20)
   \parts-font-size
   \scene-iv-B
 
@@ -85,7 +85,7 @@ scene-iv-C-section = \markup
   \scene-iv-C
 
 scene-iv-C-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -20)
   \parts-font-size
   \scene-iv-C
 
@@ -100,7 +100,7 @@ scene-iv-D-section = \markup
   \scene-iv-D
 
 scene-iv-D-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -20)
   \parts-font-size
   \scene-iv-D
 
@@ -115,7 +115,7 @@ scene-iv-E-section = \markup
   \scene-iv-E
 
 scene-iv-E-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -20)
   \parts-font-size
   \scene-iv-E
 
@@ -133,7 +133,7 @@ scene-iv-F-section = \markup
   \scene-iv-F
 
 scene-iv-F-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -20)
   \parts-baseline-skip
   \parts-font-size
   \scene-iv-F

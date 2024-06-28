@@ -1675,7 +1675,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         )
 
 
-def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
+def D4c(pleaves, pitches, *, dynamic=None, hairpin=None, right_padding=None):
     runs = abjad.select.runs(pleaves)
     for run in runs:
         if " " in pitches:
@@ -1683,16 +1683,23 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None):
             baca.glissando(run, f"{start_pitch} {stop_pitch}")
         else:
             baca.pitch(run, pitches)
+        if right_padding is None:
+            tweaks = ()
+        else:
+            tweak = baca.tweak.bound_details_right_padding(1.5)
+            tweaks = (tweak,)
         baca.spanners.xfb(
             run,
-            baca.tweak.bound_details_right_padding(1.5),
+            # baca.tweak.bound_details_right_padding(1.5),
+            *tweaks,
             baca.tweak.staff_padding(3),
             rleak=True,
         )
         baca.spanners.scp(
             run,
             "T =|",
-            baca.tweak.bound_details_right_padding(1.5),
+            # baca.tweak.bound_details_right_padding(1.5),
+            *tweaks,
             baca.tweak.staff_padding(6.5),
             rleak=True,
         )

@@ -105,6 +105,8 @@
       (right-edge extra-space . 0.0)
       )
     \override BarNumber.break-visibility = #end-of-line-invisible
+    \override MetronomeMark.color = #red
+    \override MetronomeMark.X-extent = ##f
     \override TimeSignature.break-visibility = #end-of-line-invisible
     \override TimeSignature.layer = 2
     \override TimeSignature.whiteout = ##t

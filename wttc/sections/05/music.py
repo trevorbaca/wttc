@@ -135,6 +135,7 @@ def GLOBALS(skips):
         (0, 7),
         after=True,
     )
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
 
 
 def FL(voice, meters):
@@ -1087,7 +1088,12 @@ def vc(m):
         ["mf>o!", "mp>o!", "p>o!"],
     )
     D2c(library.pleaves(m[41, 44], 2), 5 * ["G2 Ab2"], 5 * [None])
-    library.D4c(library.pleaves(m[41, 44], 4), "Ab2 G2", hairpin="mp>p")
+    library.D4c(
+        library.pleaves(m[41, 44], 4),
+        "Ab2 G2",
+        hairpin="mp>p",
+        right_padding=1.5,
+    )
     library.D4c(library.pleaves(m[45, 46], 4), "F#2", dynamic="p")
     library.D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")
 

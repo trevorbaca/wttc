@@ -1291,7 +1291,8 @@ number.5.Skips = {
     - \baca-start-mn-left-only "99"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
-    \once \override Score.RehearsalMark.extra-offset = #'(0 . 7)
+      %! +LETTER_PARTS_CELLO
+%%% \once \override Score.RehearsalMark.extra-offset = #'(0 . 7)
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
@@ -10477,8 +10478,6 @@ number.5.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 1.5
-      %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
@@ -10488,8 +10487,6 @@ number.5.Cello.Music = {
     - \baca-text-spanner-left-text "XFB"
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 1.5
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -10523,8 +10520,6 @@ number.5.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 1.5
-      %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
@@ -10534,8 +10529,6 @@ number.5.Cello.Music = {
     - \baca-text-spanner-left-text "XFB"
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 1.5
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

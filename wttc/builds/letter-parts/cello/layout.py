@@ -75,6 +75,11 @@ def main(environment):
             baca.layout.System(94, y_offset_5, distances=distances),
             baca.layout.System(96, y_offset_6, distances=distances),
         ),
+        baca.layout.Page(
+            9,
+            baca.layout.System(100, y_offset_2, distances=distances),
+            baca.layout.System(103, y_offset_4, distances=distances),
+        ),
     )
     spacing_dictionary = {
         1: "vanilla",
@@ -94,7 +99,7 @@ def main(environment):
     }
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:99],
+        environment.time_signatures[:104],
         spacing_dictionary=spacing_dictionary,
     )
 

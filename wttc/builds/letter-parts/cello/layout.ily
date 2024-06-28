@@ -364,6 +364,25 @@ Breaks = {
     % [Breaks measure 99]
     s1 * 4/4
 
+    % [Breaks measure 100]
+    \baca-lbsd #38 #'(6)
+    \pageBreak
+    s1 * 2/4
+
+    % [Breaks measure 101]
+    s1 * 4/4
+
+    % [Breaks measure 102]
+    s1 * 4/4
+
+    % [Breaks measure 103]
+    \baca-lbsd #90 #'(6)
+    \break
+    s1 * 4/4
+
+    % [Breaks measure 104]
+    s1 * 4/4
+
 }
 
 
@@ -675,6 +694,21 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 99]
+    s1 * 4/4
+
+    % [SpacingCommands measure 100]
+    s1 * 2/4
+
+    % [SpacingCommands measure 101]
+    s1 * 4/4
+
+    % [SpacingCommands measure 102]
+    s1 * 4/4
+
+    % [SpacingCommands measure 103]
+    s1 * 4/4
+
+    % [SpacingCommands measure 104]
     s1 * 4/4
 
 }
