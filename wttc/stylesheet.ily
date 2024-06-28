@@ -151,12 +151,12 @@
     \override StemTremolo.slope = 0.5
     \override TextSpanner.to-barline = ##t
     \override TrillPitchAccidental.avoid-slur = #'ignore
-    \override TrillPitchAccidental.layer = 2
-    % \override TrillPitchAccidental.whiteout = ##t
-    \override TrillPitchHead.layer = 2
-    % \override TrillPitchHead.whiteout = ##t
+    \override TrillPitchAccidental.layer = 3
+    \override TrillPitchAccidental.whiteout = ##t
+    \override TrillPitchHead.layer = 3
+    \override TrillPitchHead.whiteout = ##t
     \override TrillPitchParentheses.layer = 2
-    % \override TrillPitchParentheses.whiteout = ##t
+    \override TrillPitchParentheses.whiteout = ##t
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 2
     \override TupletNumber.font-size = 1

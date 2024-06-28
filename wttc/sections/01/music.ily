@@ -2730,12 +2730,6 @@ number.1.Cello.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-      %! +PARTS
-%%% \once \override TrillPitchAccidental.whiteout = ##t
-      %! +PARTS
-%%% \once \override TrillPitchHead.whiteout = ##t
-      %! +PARTS
-%%% \once \override TrillPitchParentheses.whiteout = ##t
       %! SPANNER_START
     \pitchedTrill
     cs!8.
