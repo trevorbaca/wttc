@@ -302,6 +302,8 @@ number.2.Skips = {
     - \baca-start-mn-left-only "22"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+      %! +LETTER_PARTS_CELLO
+%%% \once \override Score.RehearsalMark.extra-offset = #'(0 . 3.5)
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 

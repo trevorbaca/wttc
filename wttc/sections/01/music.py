@@ -402,6 +402,13 @@ def owl(skips):
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
     #
+    baca.mark(
+        skips[7 - 1],
+        strings.short_fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
+    #
     wrappers = baca.markup(
         skips[8 - 1],
         r"\scene-i-parenthesized-title-section",
@@ -441,6 +448,13 @@ def owl(skips):
         baca.tweak.x_extent_false(),
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    baca.mark(
+        skips[11 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def align_spanners(cache):

@@ -61,6 +61,13 @@ def GLOBALS(skips):
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
+    wrappers = baca.override.rehearsal_mark_extra_offset(
+        skips[7 - 1],
+        (0, 3.5),
+        after=True,
+    )
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
+    #
     baca.mark(
         skips[13 - 1],
         strings.short_fermata,

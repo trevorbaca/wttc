@@ -226,8 +226,6 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 61]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 62]
@@ -237,8 +235,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 64]
-    \baca-lbsd #38 #'(6)
-    \break
+    \baca-lbsd #12 #'(6)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 65]
@@ -248,19 +246,17 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 67]
-    \baca-lbsd #64 #'(6)
-    \break
     s1 * 6/4
 
     % [Breaks measure 68]
     s1 * 3/4
 
     % [Breaks measure 69]
+    \baca-lbsd #64 #'(6)
+    \break
     s1 * 3/4
 
     % [Breaks measure 70]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 5/4
 
     % [Breaks measure 71]
@@ -270,7 +266,7 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 73]
-    \baca-lbsd #116 #'(6)
+    \baca-lbsd #90 #'(6)
     \break
     s1 * 3/4
 
@@ -281,7 +277,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 76]
-    \baca-lbsd #142 #'(6)
+    \baca-lbsd #116 #'(6)
     \break
     s1 * 6/4
 
@@ -292,8 +288,8 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 79]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
+    \baca-lbsd #142 #'(6)
+    \break
     s1 * 5/4
 
     % [Breaks measure 80]
@@ -303,8 +299,8 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 82]
-    \baca-lbsd #38 #'(6)
-    \break
+    \baca-lbsd #12 #'(6)
+    \pageBreak
     s1 * 4/4
 
     % [Breaks measure 83]
@@ -314,7 +310,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 85]
-    \baca-lbsd #64 #'(6)
+    \baca-lbsd #38 #'(6)
     \break
     s1 * 4/4
 
@@ -325,7 +321,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 88]
-    \baca-lbsd #90 #'(6)
+    \baca-lbsd #64 #'(6)
     \break
     s1 * 4/4
 
@@ -336,18 +332,18 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 91]
-    \baca-lbsd #116 #'(6)
-    \break
     s1 * 6/4
 
     % [Breaks measure 92]
+    \baca-lbsd #90 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 93]
     s1 * 6/4
 
     % [Breaks measure 94]
-    \baca-lbsd #142 #'(6)
+    \baca-lbsd #116 #'(6)
     \break
     s1 * 4/4
 
@@ -355,11 +351,11 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 96]
+    \baca-lbsd #142 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 97]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
     s1 * 4/4
 
     % [Breaks measure 98]

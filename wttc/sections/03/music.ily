@@ -216,6 +216,8 @@ number.3.Skips = {
     %@% - \baca-start-snm-left-only "A2.h + A3.h"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+      %! +LETTER_PARTS_CELLO
+%%% \once \override Score.RehearsalMark.extra-offset = #'(0 . 3.5)
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 

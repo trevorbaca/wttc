@@ -128,7 +128,7 @@ scene-i-C-section = \markup
   \scene-i-C-iv }
 
 scene-i-C-parts = \markup
-  \translate #'(-38 . -22.5)
+  \translate #'(-10 . -30)
   \wdfn
   \parts-baseline-skip
   \parts-font-size
@@ -167,7 +167,7 @@ scene-i-D-section = \markup
   \scene-i-D-iii }
 
 scene-i-D-parts = \markup
-  \translate #'(-51 . -22.5)
+  \translate #'(-24 . -32)
   \wdfn
   \parts-baseline-skip
   \parts-font-size

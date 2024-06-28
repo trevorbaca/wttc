@@ -19,7 +19,7 @@ number.5.Skips = {
       %! +SECTION
     _ \scene-iii-parenthesized-title-section
       %! +PARTS
-%%% - \tweak extra-offset #'(-6 . 4)
+%%% - \tweak extra-offset #'(-4 . 4)
       %! +PARTS
 %%% - \baca-rehearsal-mark-markup "C" #2
       %! -PARTS
@@ -432,6 +432,10 @@ number.5.Skips = {
 
     % [Skips measure 17]
     s1 * 3/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% _ \scene-iii-E-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
@@ -469,6 +473,8 @@ number.5.Skips = {
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-iii-parenthesized-title-section
+      %! +PARTS
+%%% _ \scene-iii-F-parts
       %! +SECTION
     _ \scene-iii-F-section
       %! CLOCK_TIME
@@ -797,6 +803,7 @@ number.5.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 31]
+    \once \override Score.MetronomeMark.extra-offset = #'(-3 . 0.5)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 4/4
@@ -1076,6 +1083,8 @@ number.5.Skips = {
     - \baca-start-mn-left-only "91"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+      %! +LETTER_PARTS_CELLO
+%%% \once \override Score.RehearsalMark.extra-offset = #'(0 . 3.5)
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
@@ -1260,9 +1269,9 @@ number.5.Skips = {
 
     % [Skips measure 48]
     s1 * 4/4
-      %! +SECTION
+      %! -PARTS
     - \tweak X-extent ##f
-      %! +SECTION
+      %! -PARTS
     _ \scene-iii-G-section
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -1282,6 +1291,7 @@ number.5.Skips = {
     - \baca-start-mn-left-only "99"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \once \override Score.RehearsalMark.extra-offset = #'(0 . 7)
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 

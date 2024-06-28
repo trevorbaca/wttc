@@ -209,6 +209,8 @@ number.1.Skips = {
     - \baca-start-mn-left-only "7"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ushortfermata"
 
     % [Skips measure 8]
       %! LILYPOND_TEMPO_COMMAND
@@ -351,6 +353,8 @@ number.1.Skips = {
     - \baca-start-mn-left-only "11"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
