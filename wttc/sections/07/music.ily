@@ -5,6 +5,8 @@ number.7.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! +LETTER_PARTS_CELLO
+%%% \once \override Score.MetronomeMark.extra-offset = #'(-3 . 0)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=48
       %! RED_START_BAR
