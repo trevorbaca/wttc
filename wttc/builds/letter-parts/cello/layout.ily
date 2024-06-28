@@ -132,6 +132,64 @@ Breaks = {
     % [Breaks measure 35]
     s1 * 6/4
 
+    % [Breaks measure 36]
+    \baca-lbsd #12 #'(6)
+    \pageBreak
+    s1 * 6/4
+
+    % [Breaks measure 37]
+    s1 * 4/4
+
+    % [Breaks measure 38]
+    s1 * 3/4
+
+    % [Breaks measure 39]
+    \baca-lbsd #38 #'(6)
+    \break
+    s1 * 4/4
+
+    % [Breaks measure 40]
+    s1 * 4/4
+
+    % [Breaks measure 41]
+    s1 * 4/4
+
+    % [Breaks measure 42]
+    \baca-lbsd #64 #'(6)
+    \break
+    s1 * 4/4
+
+    % [Breaks measure 43]
+    s1 * 3/4
+
+    % [Breaks measure 44]
+    s1 * 4/4
+
+    % [Breaks measure 45]
+    \baca-lbsd #90 #'(6)
+    \break
+    s1 * 4/4
+
+    % [Breaks measure 46]
+    s1 * 3/4
+
+    % [Breaks measure 47]
+    s1 * 4/4
+
+    % [Breaks measure 48]
+    \baca-lbsd #116 #'(6)
+    \break
+    s1 * 4/4
+
+    % [Breaks measure 49]
+    s1 * 4/4
+
+    % [Breaks measure 50]
+    s1 * 4/4
+
+    % [Breaks measure 51]
+    s1 * 4/4
+
 }
 
 
@@ -252,6 +310,54 @@ SpacingCommands = {
 
     % [SpacingCommands measure 35]
     s1 * 6/4
+
+    % [SpacingCommands measure 36]
+    s1 * 6/4
+
+    % [SpacingCommands measure 37]
+    s1 * 4/4
+
+    % [SpacingCommands measure 38]
+    s1 * 3/4
+
+    % [SpacingCommands measure 39]
+    s1 * 4/4
+
+    % [SpacingCommands measure 40]
+    s1 * 4/4
+
+    % [SpacingCommands measure 41]
+    s1 * 4/4
+
+    % [SpacingCommands measure 42]
+    s1 * 4/4
+
+    % [SpacingCommands measure 43]
+    s1 * 3/4
+
+    % [SpacingCommands measure 44]
+    s1 * 4/4
+
+    % [SpacingCommands measure 45]
+    s1 * 4/4
+
+    % [SpacingCommands measure 46]
+    s1 * 3/4
+
+    % [SpacingCommands measure 47]
+    s1 * 4/4
+
+    % [SpacingCommands measure 48]
+    s1 * 4/4
+
+    % [SpacingCommands measure 49]
+    s1 * 4/4
+
+    % [SpacingCommands measure 50]
+    s1 * 4/4
+
+    % [SpacingCommands measure 51]
+    s1 * 4/4
 
 }
 
