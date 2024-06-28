@@ -116,6 +116,8 @@ number.7.Skips = {
     %@% - \baca-start-snm-left-only "[M12 = M1] x: B (end)"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -232,6 +234,11 @@ number.7.AltoFlute.Music = {
       %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
+
+    % [AltoFlute.Music measure 2]
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
 }
 

@@ -14,7 +14,7 @@ scene-v-title-section = \markup
   \scene-v-title
 
 scene-v-title-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-8 . 16)
   \parts-title-font-size
   \scene-v-title
 
@@ -29,7 +29,7 @@ scene-v-A-section = \markup
   \scene-v-A
 
 scene-v-A-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -17)
   \parts-font-size
   \scene-v-A
 
@@ -37,7 +37,8 @@ scene-v-B = \markup
   \wdfn
   \column {
   \adobe-italic
-  \line { OWL is fearful of pronouncing the next word: }
+  \justify { OWL is fearful of pronouncing the next word: }
+  \vspace #1
   \adobe-bold
   \line { Again. \lnum #45 } }
 
@@ -48,8 +49,9 @@ scene-v-B-section = \markup
   \scene-v-B
 
 scene-v-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
+  \override #'(line-width . 24)
+  \translate #'(-1 . -17)
+  \parts-compressed-baseline-skip
   \parts-font-size
   \scene-v-B
 
@@ -69,7 +71,7 @@ scene-v-C-section = \markup
   \scene-v-C
 
 scene-v-C-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(0 . -17)
   \parts-baseline-skip
   \parts-font-size
   \scene-v-C

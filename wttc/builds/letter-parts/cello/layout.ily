@@ -394,7 +394,7 @@ Breaks = {
     s1 * 2/4
 
     % [Breaks measure 107]
-    \baca-lbsd #12 #'(6)
+    \baca-lbsd #20 #'(6)
     \pageBreak
     s1 * 4/4
 
@@ -402,11 +402,11 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 109]
-    \baca-lbsd #38 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 110]
+    \baca-lbsd #56 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 111]
@@ -416,7 +416,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 113]
-    \baca-lbsd #64 #'(6)
+    \baca-lbsd #92 #'(6)
     \break
     s1 * 4/4
 
@@ -427,9 +427,51 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 116]
-    \baca-lbsd #90 #'(6)
+    \baca-lbsd #122 #'(6)
     \break
     s1 * 6/4
+
+    % [Breaks measure 117]
+    \baca-lbsd #25 #'(6)
+    \pageBreak
+    s1 * 2/4
+
+    % [Breaks measure 118]
+    s1 * 6/4
+
+    % [Breaks measure 119]
+    s1 * 3/4
+
+    % [Breaks measure 120]
+    s1 * 4/4
+
+    % [Breaks measure 121]
+    s1 * 6/4
+
+    % [Breaks measure 122]
+    s1 * 5/4
+
+    % [Breaks measure 123]
+    \baca-lbsd #98 #'(6)
+    \break
+    s1 * 6/4
+
+    % [Breaks measure 124]
+    s1 * 6/4
+
+    % [Breaks measure 125]
+    s1 * 6/4
+
+    % [Breaks measure 126]
+    \baca-lbsd #132 #'(6)
+    \break
+    s1 * 6/4
+
+    % [Breaks measure 127]
+    s1 * 6/4
+
+    % [Breaks measure 128]
+    s1 * 3/4
 
 }
 
@@ -796,6 +838,42 @@ SpacingCommands = {
 
     % [SpacingCommands measure 116]
     s1 * 6/4
+
+    % [SpacingCommands measure 117]
+    s1 * 2/4
+
+    % [SpacingCommands measure 118]
+    s1 * 6/4
+
+    % [SpacingCommands measure 119]
+    s1 * 3/4
+
+    % [SpacingCommands measure 120]
+    s1 * 4/4
+
+    % [SpacingCommands measure 121]
+    s1 * 6/4
+
+    % [SpacingCommands measure 122]
+    s1 * 5/4
+
+    % [SpacingCommands measure 123]
+    s1 * 6/4
+
+    % [SpacingCommands measure 124]
+    s1 * 6/4
+
+    % [SpacingCommands measure 125]
+    s1 * 6/4
+
+    % [SpacingCommands measure 126]
+    s1 * 6/4
+
+    % [SpacingCommands measure 127]
+    s1 * 6/4
+
+    % [SpacingCommands measure 128]
+    s1 * 3/4
 
 }
 

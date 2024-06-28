@@ -18,6 +18,13 @@ def main(environment):
     y_offset_5_3 = base + 2 * width
     y_offset_5_4 = base + 3 * width
     y_offset_5_5 = base + 4 * width
+    #
+    base = 20
+    width = 36
+    y_offset_4_1 = base + 0 * width
+    y_offset_4_2 = base + 1 * width
+    y_offset_4_3 = base + 2 * width
+    y_offset_4_4 = base + 3 * width
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
@@ -84,10 +91,16 @@ def main(environment):
         ),
         baca.layout.Page(
             10,
-            baca.layout.System(107, y_offset_1, distances=distances),
-            baca.layout.System(109, y_offset_2, distances=distances),
-            baca.layout.System(113, y_offset_3, distances=distances),
-            baca.layout.System(116, y_offset_4, distances=distances),
+            baca.layout.System(107, y_offset_4_1, distances=distances),
+            baca.layout.System(110, y_offset_4_2, distances=distances),
+            baca.layout.System(113, y_offset_4_3, distances=distances),
+            baca.layout.System(116, y_offset_4_4 - 6, distances=distances),
+        ),
+        baca.layout.Page(
+            11,
+            baca.layout.System(117, y_offset_1 + half, distances=distances),
+            baca.layout.System(123, y_offset_5 - 18, distances=distances),
+            baca.layout.System(126, y_offset_6 - 10, distances=distances),
         ),
     )
     spacing_dictionary = {
@@ -110,7 +123,7 @@ def main(environment):
     }
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:116],
+        environment.time_signatures[:128],
         spacing_dictionary=spacing_dictionary,
     )
 

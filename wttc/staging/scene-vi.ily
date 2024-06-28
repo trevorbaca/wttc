@@ -14,7 +14,7 @@ scene-vi-title-section = \markup
   \scene-vi-title
 
 scene-vi-title-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-8 . 20)
   \parts-title-font-size
   \scene-vi-title
 
@@ -32,7 +32,7 @@ scene-vi-A-section = \markup
   \scene-vi-A
 
 scene-vi-A-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(30 . 14)
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-A
@@ -48,7 +48,7 @@ scene-vi-B-section = \markup
   \scene-vi-B
 
 scene-vi-B-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-10 . -17)
   \parts-font-size
   \scene-vi-B
 
@@ -63,7 +63,7 @@ scene-vi-C-section = \markup
   \scene-vi-C
 
 scene-vi-C-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-10 . -17)
   \parts-font-size
   \scene-vi-C
 
@@ -81,7 +81,7 @@ scene-vi-D-section = \markup
   \scene-vi-D
 
 scene-vi-D-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-20 . -17)
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-D
@@ -94,11 +94,11 @@ scene-vi-E = \markup
   \line { You say, \lnum #55 }
   \line { No doublt of that. \lnum #56 }
   \line { Tell me where I must go to find — \lnum #57 }
-  \vspace #1
+  \vspace #0.5
   \adobe-italic
   \justify { OWL notices the window, table, etc., for the first time and rushes
   to where these are. The audience remains unremarked and unaddressed. }
-  \vspace #2
+  \vspace #1
   \line { Right! \lnum #58 }
   \line { This is it! \lnum #59 }
   \line { Now I remember: \lnum #60 } }
@@ -112,7 +112,7 @@ scene-vi-E-section = \markup
 
 scene-vi-E-parts = \markup
   \override #'(line-width . 50)
-  \translate #'(0 . 0)
+  \translate #'(-70 . -26)
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-E
@@ -150,7 +150,7 @@ scene-vi-F-section = \markup
   \scene-vi-F
 
 scene-vi-F-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-64 . -12)
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-F
@@ -160,7 +160,7 @@ scene-vi-G = \markup
   \column {
   \adobe-bold
   \line { I must be here before you, then. \lnum #65 }
-  \vspace #2
+  % \vspace #2
   \adobe-italic
   \line { End scene 6. } }
 
@@ -171,7 +171,7 @@ scene-vi-G-section = \markup
   \scene-vi-G
 
 scene-vi-G-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-54 . -21)
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-G

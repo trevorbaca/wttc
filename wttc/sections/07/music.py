@@ -41,6 +41,12 @@ def GLOBALS(skips):
         site="after",
     )
     baca.metronome_mark(skips[2 - 1], "50", manifests=library.manifests)
+    baca.mark(
+        skips[2 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -50,6 +56,7 @@ def FL(voice, meters):
         [32, "-"],
         material=1,
     )
+    rhythm.mmrests(2)
 
 
 def OB(voice, meters):

@@ -14,10 +14,16 @@ number.8.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "08"
     s1 * 4/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% _ \scene-v-title-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-v-title-section
+      %! +PARTS
+%%% _ \scene-v-A-parts
       %! +SECTION
     _ \scene-v-A-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -141,6 +147,8 @@ number.8.Skips = {
 
     % [Skips measure 6]
     s1 * 6/4
+      %! +PARTS
+%%% _ \scene-v-B-parts
       %! +SECTION
     _ \scene-v-B-section
       %! CLOCK_TIME
@@ -163,6 +171,8 @@ number.8.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 7]
+      %! +LETTER_PARTS_CELLO
+%%% \once \override Score.MetronomeMark.extra-offset = #'(-3 . 0)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 4/4
@@ -206,6 +216,8 @@ number.8.Skips = {
 
     % [Skips measure 8]
     s1 * 6/4
+      %! +PARTS
+%%% _ \scene-v-C-parts
       %! +SECTION
     _ \scene-v-C-section
       %! CLOCK_TIME

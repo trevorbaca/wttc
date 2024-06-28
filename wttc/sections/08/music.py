@@ -37,6 +37,11 @@ def GLOBALS(skips):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "60", manifests=library.manifests)
+    wrappers = baca.override.metronome_mark_extra_offset(
+        skips[7 - 1],
+        (-3, 0),
+    )
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
     baca.metronome_mark(skips[9 - 1], "50", manifests=library.manifests)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
 
@@ -313,10 +318,25 @@ def owl(skips):
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[1 - 1],
+        r"\scene-v-title-parts",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    wrappers = baca.markup(
+        skips[1 - 1],
         r"\scene-v-A-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.markup(
+        skips[1 - 1],
+        r"\scene-v-A-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
     wrappers = baca.markup(
         skips[6 - 1],
         r"\scene-v-B-section",
@@ -324,11 +344,25 @@ def owl(skips):
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
+        skips[6 - 1],
+        r"\scene-v-B-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    wrappers = baca.markup(
         skips[8 - 1],
         r"\scene-v-C-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.markup(
+        skips[8 - 1],
+        r"\scene-v-C-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
     wrappers = baca.markup(
         skips[10 - 1],
         r"\scene-v-D-section",

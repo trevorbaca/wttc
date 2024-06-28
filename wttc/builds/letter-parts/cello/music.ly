@@ -37,6 +37,7 @@ part-name-markup = \markup "cello part"
       \include "_sections/06.ly"
       \include "_sections/07.ly"
       \include "_sections/08.ly"
+      \include "_sections/09.ly"
     }
   >>
 }
