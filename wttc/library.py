@@ -889,13 +889,14 @@ def rhythm(
 
 
 def rotate_rehearsal_mark_literal(leaf):
-    baca.literal(
+    wrappers = baca.literal(
         leaf,
         [
             r"\override Staff.RehearsalMark.direction = #down",
             r"\override Staff.RehearsalMark.rotation = #'(180 0 0)",
         ],
     )
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def run(leaves, material_number, run_index):

@@ -34,13 +34,12 @@ def GLOBALS(skips):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
-    wrappers = baca.mark(
+    baca.mark(
         skips[11 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
-    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def FL(voice, meters):

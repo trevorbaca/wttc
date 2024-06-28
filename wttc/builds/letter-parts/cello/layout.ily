@@ -141,50 +141,52 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 38]
+    \baca-lbsd #38 #'(6)
+    \break
     s1 * 3/4
 
     % [Breaks measure 39]
-    \baca-lbsd #38 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 40]
     s1 * 4/4
 
     % [Breaks measure 41]
+    \baca-lbsd #64 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 42]
-    \baca-lbsd #64 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 43]
     s1 * 3/4
 
     % [Breaks measure 44]
+    \baca-lbsd #90 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 45]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 46]
     s1 * 3/4
 
     % [Breaks measure 47]
+    \baca-lbsd #116 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 48]
-    \baca-lbsd #116 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 49]
     s1 * 4/4
 
     % [Breaks measure 50]
+    \baca-lbsd #142 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 51]

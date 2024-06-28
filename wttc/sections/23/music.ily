@@ -587,7 +587,9 @@ number.23.Oboe.Music = {
     %@% \once \override Staff.InstrumentName.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
@@ -1043,7 +1045,9 @@ number.23.Guitar.2.Music = {
         \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+          %! -PARTS
         \override Staff.RehearsalMark.direction = #down
+          %! -PARTS
         \override Staff.RehearsalMark.rotation = #'(180 0 0)
         \override Staff.Stem.stemlet-length = 0.75
           %! EXPLICIT_CLEF
@@ -1734,7 +1738,9 @@ number.23.Cello.Music = {
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t

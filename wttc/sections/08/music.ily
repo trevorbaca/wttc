@@ -900,7 +900,9 @@ number.8.Oboe.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
@@ -1341,7 +1343,9 @@ number.8.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
@@ -2329,7 +2333,9 @@ number.8.Cello.Music = {
     \override DynamicLineSpanner.staff-padding = 5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t

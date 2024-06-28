@@ -302,9 +302,7 @@ number.2.Skips = {
     - \baca-start-mn-left-only "22"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
-      %! -PARTS
     \tweak padding 1.5
-      %! -PARTS
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
       %! ANCHOR_SKIP
@@ -904,7 +902,9 @@ number.2.Oboe.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
@@ -1344,7 +1344,9 @@ number.2.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
@@ -1933,7 +1935,9 @@ number.2.Cello.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t

@@ -1477,7 +1477,9 @@ number.4.Oboe.Music = {
     \override DynamicLineSpanner.staff-padding = 6.5
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
     \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
     \override TrillSpanner.staff-padding = 3
     \override TupletBracket.direction = #down
@@ -2885,7 +2887,9 @@ number.4.Guitar.2.Music = {
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+          %! -PARTS
         \override Staff.RehearsalMark.direction = #down
+          %! -PARTS
         \override Staff.RehearsalMark.rotation = #'(180 0 0)
         \override TupletBracket.direction = #down
         \override TupletBracket.positions = #'(-5 . -5)
@@ -4905,7 +4909,9 @@ number.4.Cello.Music = {
         %@% \once \override Staff.InstrumentName.color = #blue
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+          %! -PARTS
         \override Staff.RehearsalMark.direction = #down
+          %! -PARTS
         \override Staff.RehearsalMark.rotation = #'(180 0 0)
         \override TupletBracket.direction = #down
           %! EXPLICIT_CLEF
