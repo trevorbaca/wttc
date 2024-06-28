@@ -36,6 +36,10 @@
             % [anchor skip]
               %! ANCHOR_SKIP
             s1 * 1/4
+              %! ANCHOR_SKIP
+            \once \override Score.BarLine.transparent = ##t
+              %! ANCHOR_SKIP
+            \once \override Score.SpanBar.transparent = ##t
 
         }   %*% Breaks
 
@@ -67,9 +71,14 @@
             s1 * 7/4
 
             % [anchor skip]
+              %! ANCHOR_SKIP
             \baca-new-strict-spacing-section #1 #4
               %! ANCHOR_SKIP
             s1 * 1/4
+              %! ANCHOR_SKIP
+            \once \override Score.BarLine.transparent = ##t
+              %! ANCHOR_SKIP
+            \once \override Score.SpanBar.transparent = ##t
 
         }   %*% SpacingCommands
 
