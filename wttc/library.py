@@ -1280,9 +1280,9 @@ def C1_final(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
     plts = baca.select.plts(pleaves)
     for i, plt in enumerate(plts):
         assert len(plt) == 1
-        baca.literal(
+        baca.articulation(
             plt[0],
-            r"\trill",
+            "trill",
         )
     for pleaf in pleaves:
         baca.triple_staccato(

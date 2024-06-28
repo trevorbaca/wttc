@@ -858,8 +858,8 @@ number.6.Violin.Music = {
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
-        \trill
         d''8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -887,8 +887,8 @@ number.6.Violin.Music = {
 
         r8
 
-        \trill
         d''8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -1038,8 +1038,8 @@ number.6.Cello.Music = {
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
-        \trill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -1058,8 +1058,8 @@ number.6.Cello.Music = {
 
         r16
 
-        \trill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -1070,8 +1070,8 @@ number.6.Cello.Music = {
 
         r16
 
-        \trill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue

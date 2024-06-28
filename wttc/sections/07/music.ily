@@ -528,8 +528,8 @@ number.7.Violin.Music = {
     {
 
         % [Violin.Music measure 2]
-        \trill
         d''8
+        - \trill
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
         - \tweak color #(x11-color 'DeepPink1)
@@ -548,8 +548,8 @@ number.7.Violin.Music = {
 
         r8
 
-        \trill
         d''8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -656,8 +656,8 @@ number.7.Cello.Music = {
         % [Cello.Music measure 2]
         r8.
 
-        \trill
         d'8
+        - \trill
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
         - \tweak color #(x11-color 'DeepPink1)
@@ -676,8 +676,8 @@ number.7.Cello.Music = {
 
         r16
 
-        \trill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -688,8 +688,8 @@ number.7.Cello.Music = {
 
         r16
 
-        \trill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
