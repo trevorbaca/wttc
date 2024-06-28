@@ -1225,6 +1225,7 @@ def owl(skips):
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    #
     wrappers = baca.markup(
         skips[12 - 1],
         r"\scene-iii-parenthesized-title-section",
@@ -1232,6 +1233,7 @@ def owl(skips):
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    #
     wrappers = baca.markup(
         skips[16 - 1],
         r"\scene-iii-C-section",
@@ -1240,11 +1242,25 @@ def owl(skips):
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[16 - 1],
+        r"\scene-iii-C-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    wrappers = baca.markup(
+        skips[16 - 1],
         r"\scene-iii-D-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.markup(
+        skips[16 - 1],
+        r"\scene-iii-D-parts",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
 
 
 def align_spanners(cache):

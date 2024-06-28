@@ -14,7 +14,7 @@
   )
   top-markup-spacing = #'(
     (basic-distance . 0)
-    (minimum-distance . 2)
+    (minimum-distance . 8)
     (padding . 0)
     (stretchability . 0)
   )

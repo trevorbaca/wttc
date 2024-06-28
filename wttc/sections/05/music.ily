@@ -18,7 +18,13 @@ number.5.Skips = {
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-iii-parenthesized-title-section
+      %! +PARTS
+%%% - \tweak extra-offset #'(-6 . 4)
+      %! +PARTS
+%%% - \baca-rehearsal-mark-markup "C" #2
+      %! -PARTS
     - \tweak padding 1.5
+      %! -PARTS
     - \baca-rehearsal-mark-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -794,8 +800,15 @@ number.5.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 4/4
+      %! +PARTS
+%%% - \tweak extra-offset #'(-6 . 4)
+      %! +PARTS
+%%% - \baca-rehearsal-mark-markup "D" #2
+      %! -PARTS
     - \tweak extra-offset #'(2 . 0)
+      %! -PARTS
     - \tweak padding 1.5
+      %! -PARTS
     - \baca-rehearsal-mark-markup "D" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT

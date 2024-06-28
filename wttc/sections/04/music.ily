@@ -441,10 +441,16 @@ number.4.Skips = {
 
     % [Skips measure 16]
     s1 * 4/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% _ \scene-iii-D-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-iii-D-section
+      %! +PARTS
+%%% _ \scene-iii-C-parts
       %! +SECTION
     _ \scene-iii-C-section
       %! CLOCK_TIME

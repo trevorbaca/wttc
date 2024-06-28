@@ -11,6 +11,13 @@ def main(environment):
     y_offset_4 = 90
     y_offset_5 = 116
     y_offset_6 = 142
+    base = 12
+    width = 32
+    y_offset_5_1 = base + 0 * width
+    y_offset_5_2 = base + 1 * width
+    y_offset_5_3 = base + 2 * width
+    y_offset_5_4 = base + 3 * width
+    y_offset_5_5 = base + 4 * width
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
@@ -38,12 +45,40 @@ def main(environment):
         ),
         baca.layout.Page(
             5,
-            baca.layout.System(36, y_offset_1, distances=distances),
-            baca.layout.System(38, y_offset_2, distances=distances),
-            baca.layout.System(41, y_offset_3, distances=distances),
-            baca.layout.System(44, y_offset_4, distances=distances),
-            baca.layout.System(47, y_offset_5, distances=distances),
-            baca.layout.System(50, y_offset_6, distances=distances),
+            baca.layout.System(36, y_offset_5_1, distances=distances),
+            baca.layout.System(38, y_offset_5_2, distances=distances),
+            baca.layout.System(41, y_offset_5_3, distances=distances),
+            baca.layout.System(44, y_offset_5_4, distances=distances),
+            baca.layout.System(47, y_offset_5_5, distances=distances),
+        ),
+        baca.layout.Page(
+            6,
+            baca.layout.System(50, y_offset_1, distances=distances),
+            baca.layout.System(52, y_offset_4, distances=distances),
+            baca.layout.System(55, y_offset_5, distances=distances),
+            baca.layout.System(58, y_offset_6, distances=distances),
+        ),
+        baca.layout.Page(
+            7,
+            baca.layout.System(61, y_offset_1, distances=distances),
+            baca.layout.System(64, y_offset_2, distances=distances),
+            baca.layout.System(67, y_offset_3, distances=distances),
+            baca.layout.System(70, y_offset_4, distances=distances),
+            baca.layout.System(73, y_offset_5, distances=distances),
+            baca.layout.System(76, y_offset_6, distances=distances),
+        ),
+        baca.layout.Page(
+            8,
+            baca.layout.System(79, y_offset_1, distances=distances),
+            baca.layout.System(82, y_offset_2, distances=distances),
+            baca.layout.System(85, y_offset_3, distances=distances),
+            baca.layout.System(88, y_offset_4, distances=distances),
+            baca.layout.System(91, y_offset_5, distances=distances),
+            baca.layout.System(94, y_offset_6, distances=distances),
+        ),
+        baca.layout.Page(
+            9,
+            baca.layout.System(97, y_offset_1, distances=distances),
         ),
     )
     spacing_dictionary = {
@@ -64,7 +99,7 @@ def main(environment):
     }
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:51],
+        environment.time_signatures[:99],
         spacing_dictionary=spacing_dictionary,
     )
 

@@ -87,8 +87,8 @@ scene-iii-C-section = \markup
   \scene-iii-C
 
 scene-iii-C-parts = \markup
-  \override #'(line-width . 38)
-  \translate #'(0 . 0)
+  \override #'(line-width . 80)
+  \translate #'(7 . -24)
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-C
@@ -115,7 +115,7 @@ scene-iii-D-section = \markup
   \scene-iii-D
 
 scene-iii-D-parts = \markup
-  \translate #'(0 . 0)
+  \translate #'(-25 . -40)
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-D
