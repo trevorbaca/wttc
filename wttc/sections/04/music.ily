@@ -5,6 +5,8 @@ number.4.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! +LETTER_PARTS_VC
+%%% \once \override Score.MetronomeMark.extra-offset = #'(-2 . 0)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
       %! RED_START_BAR
@@ -18,7 +20,13 @@ number.4.Skips = {
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-iii-parenthesized-title-section
+      %! +PARTS
+%%% - \tweak extra-offset #'(-6 . 4)
+      %! +PARTS
+%%% - \baca-rehearsal-mark-markup "B" #2
+      %! -PARTS
     - \tweak padding 1.5
+      %! -PARTS
     - \baca-rehearsal-mark-markup "B" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
