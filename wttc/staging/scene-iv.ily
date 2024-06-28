@@ -14,7 +14,7 @@ scene-iv-title-section = \markup
   \scene-iv-title
 
 scene-iv-title-parts = \markup
-  \translate #'(-6 . 36)
+  \translate #'(-8 . 34)
   \parts-title-font-size
   \scene-iv-title
 
@@ -70,7 +70,7 @@ scene-iv-B-section = \markup
   \scene-iv-B
 
 scene-iv-B-parts = \markup
-  \translate #'(0 . -20)
+  \translate #'(0 . -18)
   \parts-font-size
   \scene-iv-B
 
@@ -85,7 +85,7 @@ scene-iv-C-section = \markup
   \scene-iv-C
 
 scene-iv-C-parts = \markup
-  \translate #'(0 . -20)
+  \translate #'(0 . -18)
   \parts-font-size
   \scene-iv-C
 
@@ -100,7 +100,7 @@ scene-iv-D-section = \markup
   \scene-iv-D
 
 scene-iv-D-parts = \markup
-  \translate #'(0 . -20)
+  \translate #'(0 . -18)
   \parts-font-size
   \scene-iv-D
 
@@ -115,7 +115,7 @@ scene-iv-E-section = \markup
   \scene-iv-E
 
 scene-iv-E-parts = \markup
-  \translate #'(0 . -20)
+  \translate #'(0 . -18)
   \parts-font-size
   \scene-iv-E
 
@@ -133,7 +133,7 @@ scene-iv-F-section = \markup
   \scene-iv-F
 
 scene-iv-F-parts = \markup
-  \translate #'(0 . -20)
+  \translate #'(0 . -18)
   \parts-baseline-skip
   \parts-font-size
   \scene-iv-F
@@ -153,9 +153,9 @@ scene-iv-G-section = \markup
   \scene-iv-G
 
 scene-iv-G-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
+  \translate #'(0 . -22)
+  \parts-compressed-baseline-skip
+  \parts-compressed-font-size
   \scene-iv-G
 
 scene-iv-H = \markup
@@ -172,19 +172,12 @@ scene-iv-H-section = \markup
   \section-font-size
   \scene-iv-H
 
-scene-iv-H-parts = \markup
-  \override #'(line-width . 50)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iv-H
-
 scene-iv-I = \markup
   \wdfn
   \adobe-bold
-  \column {
-  \line { \hspace #18 Again! \lnum #40 }
-  \line { \hspace #18 Again. \hspace #-0.75 \super 1 \hspace #-0.75 \lnum #41 }
+  \center-column {
+  \line { Again! \lnum #40 }
+  \line { Again. \hspace #-0.75 \super 1 \hspace #-0.75 \lnum #41 }
   \vspace #0.5
   \adobe-italic
   \justify { On this second “Again,” OWL frees the foot, and the fit is over
@@ -192,23 +185,23 @@ scene-iv-I = \markup
 
 scene-iv-I-section = \markup
   \override #'(line-width . 55)
-  \translate #'(60 . -42)
+  \translate #'(60 . -40)
   \section-baseline-skip
   \section-font-size
   \scene-iv-I
 
 scene-iv-I-parts = \markup
-  \override #'(line-width . 55)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
+  \override #'(line-width . 36)
+  \translate #'(26 . -21)
+  \parts-compressed-baseline-skip
+  \parts-compressed-font-size
   \scene-iv-I
 
 scene-iv-J = \markup
   \wdfn
-  \column {
+  \center-column {
   \adobe-italic
-  \line { Music and lighting return to how they were: }
+  \justify { Music and lighting return to how they were: }
   \adobe-bold
   \line { Like \dots \lnum #42 }
   \adobe-italic
@@ -223,10 +216,10 @@ scene-iv-J-section = \markup
   \scene-iv-J
 
 scene-iv-J-parts = \markup
-  \override #'(line-width . 55)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
+  \override #'(line-width . 36)
+  \translate #'(72 . -18)
+  \parts-compressed-baseline-skip
+  \parts-compressed-font-size
   \scene-iv-J
 
 scene-iv-K = \markup
@@ -246,9 +239,9 @@ scene-iv-K-section = \markup
   \scene-iv-K
 
 scene-iv-K-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
+  \translate #'(32 . -15)
+  \parts-compressed-baseline-skip
+  \parts-compressed-font-size
   \scene-iv-K
 
 scene-iv-L = \markup

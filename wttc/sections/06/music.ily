@@ -851,8 +851,6 @@ number.6.Violin.Music = {
         \override DynamicLineSpanner.staff-padding = 5
           %! EXPLICIT_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
-        \override TrillSpanner.dash-period = -1
-        \override TrillSpanner.style = #'dashed-line
           %! EXPLICIT_CLEF
         \set Staff.forceClef = ##t
           %! -PARTS
@@ -860,8 +858,7 @@ number.6.Violin.Music = {
           %! -PARTS
           %! EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vn-markup
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -872,10 +869,6 @@ number.6.Violin.Music = {
         - \baca-staccati #3
           %! EXPLICIT_INSTRUMENT_ALERT
         %@% ^ \baca-explicit-instrument-markup "(“Violin”)"
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan fs''!
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
@@ -885,8 +878,6 @@ number.6.Violin.Music = {
         \set Staff.shortInstrumentName = \wttc-vn-markup %@%
 
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -896,8 +887,7 @@ number.6.Violin.Music = {
 
         r8
 
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -906,16 +896,8 @@ number.6.Violin.Music = {
         \mp
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan fs''!
-        \revert TrillSpanner.dash-period
-        \revert TrillSpanner.style
 
         r8
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -1056,10 +1038,7 @@ number.6.Cello.Music = {
           %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-vc-markup %@%
 
-        \override TrillSpanner.dash-period = -1
-        \override TrillSpanner.style = #'dashed-line
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1068,14 +1047,8 @@ number.6.Cello.Music = {
         \mf
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
         r16
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -1085,8 +1058,7 @@ number.6.Cello.Music = {
 
         r16
 
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1095,17 +1067,10 @@ number.6.Cello.Music = {
         \mp
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
         r16
-          %! SPANNER_STOP
-        \stopTrillSpan
 
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1114,19 +1079,11 @@ number.6.Cello.Music = {
         \p
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
-        \revert TrillSpanner.dash-period
-        \revert TrillSpanner.style
 
     }
 
     % [Cello.Music measure 2]
     r4
-      %! SPANNER_STOP
-    \stopTrillSpan
 
     r8.
 

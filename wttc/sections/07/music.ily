@@ -14,6 +14,10 @@ number.7.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "07"
     s1 * 9/4
+      %! +PARTS
+%%% - \tweak X-extent ##f
+      %! +PARTS
+%%% _ \scene-iv-J-parts
       %! +SECTION
     - \tweak X-extent ##f
       %! +SECTION
@@ -22,10 +26,14 @@ number.7.Skips = {
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-iv-parenthesized-title-section
+      %! +PARTS
+%%% _ \scene-iv-G-parts
       %! +SECTION
     _ \scene-iv-G-section
       %! +SECTION
     _ \scene-iv-H-section
+      %! +PARTS
+%%% _ \scene-iv-I-parts
       %! +SECTION
     _ \scene-iv-I-section
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -56,6 +64,8 @@ number.7.Skips = {
     %@% - \baca-start-snm-left-only "Still 1"
       %! STAGE_NUMBER
     %@% \bacaStartTextSpanSNM
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 2]
       %! LILYPOND_TEMPO_COMMAND
@@ -65,6 +75,8 @@ number.7.Skips = {
     - \tweak X-extent ##f
       %! +SECTION
     _ \scene-iv-L-section
+      %! +PARTS
+%%% _ \scene-iv-K-parts
       %! +SECTION
     _ \scene-iv-K-section
       %! CLOCK_TIME
@@ -509,10 +521,7 @@ number.7.Violin.Music = {
     {
 
         % [Violin.Music measure 2]
-        \override TrillSpanner.dash-period = -1
-        \override TrillSpanner.style = #'dashed-line
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d''8
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
@@ -521,14 +530,8 @@ number.7.Violin.Music = {
         \mf
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan fs''!
 
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -538,8 +541,7 @@ number.7.Violin.Music = {
 
         r8
 
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -548,16 +550,8 @@ number.7.Violin.Music = {
         \mp
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan fs''!
-        \revert TrillSpanner.dash-period
-        \revert TrillSpanner.style
 
         r8
-          %! SPANNER_STOP
-        \stopTrillSpan
         \revert DynamicLineSpanner.staff-padding
 
     }
@@ -655,10 +649,7 @@ number.7.Cello.Music = {
         % [Cello.Music measure 2]
         r8.
 
-        \override TrillSpanner.dash-period = -1
-        \override TrillSpanner.style = #'dashed-line
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d'8
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
@@ -667,14 +658,8 @@ number.7.Cello.Music = {
         \mf
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
         r16
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -684,8 +669,7 @@ number.7.Cello.Music = {
 
         r16
 
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -694,17 +678,10 @@ number.7.Cello.Music = {
         \mp
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
         r16
-          %! SPANNER_STOP
-        \stopTrillSpan
 
-          %! SPANNER_START
-        \pitchedTrill
+        \trill
         d'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -713,15 +690,7 @@ number.7.Cello.Music = {
         \p
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_STOP
-        \stopTrillSpan
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
         \revert DynamicLineSpanner.staff-padding
-        \revert TrillSpanner.dash-period
-        \revert TrillSpanner.style
 
     }
 

@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 07 ##########################################
@@ -34,6 +34,12 @@ def GLOBALS(skips):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "48", manifests=library.manifests)
+    baca.mark(
+        skips[1 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
     baca.metronome_mark(skips[2 - 1], "50", manifests=library.manifests)
 
 
@@ -147,6 +153,7 @@ def owl(skips):
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    #
     wrappers = baca.markup(
         skips[1 - 1],
         r"\scene-iv-G-section",
@@ -155,10 +162,18 @@ def owl(skips):
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[1 - 1],
+        r"\scene-iv-G-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    wrappers = baca.markup(
+        skips[1 - 1],
         r"\scene-iv-H-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    #
     wrappers = baca.markup(
         skips[1 - 1],
         r"\scene-iv-I-section",
@@ -167,17 +182,39 @@ def owl(skips):
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
         skips[1 - 1],
+        r"\scene-iv-I-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    wrappers = baca.markup(
+        skips[1 - 1],
         r"\scene-iv-J-section",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     wrappers = baca.markup(
+        skips[1 - 1],
+        r"\scene-iv-J-parts",
+        baca.tweak.x_extent_false(),
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
+    wrappers = baca.markup(
         skips[2 - 1],
         r"\scene-iv-K-section",
         direction=abjad.DOWN,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.markup(
+        skips[2 - 1],
+        r"\scene-iv-K-parts",
+        direction=abjad.DOWN,
+    )
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    #
     wrappers = baca.markup(
         skips[2 - 1],
         r"\scene-iv-L-section",

@@ -14,6 +14,14 @@
   \override #'(baseline-skip . 4)
   \etc
 
+\markup parts-compressed-baseline-skip = \markup
+  \override #'(baseline-skip . 3)
+  \etc
+
+\markup parts-compressed-font-size = \markup
+  \override #'(font-size . 0)
+  \etc
+
 \markup parts-font-size = \markup
   \override #'(font-size . 2)
   \etc

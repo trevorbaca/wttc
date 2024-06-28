@@ -1280,25 +1280,10 @@ def C1_final(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
     plts = baca.select.plts(pleaves)
     for i, plt in enumerate(plts):
         assert len(plt) == 1
-        right_broken = False
-        rplt = baca.select.rleak(plt)
-        if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
-            right_broken = True
-        tweaks = ()
-        if staff_padding is not None:
-            tweak = baca.tweak.staff_padding(staff_padding, grob="TrillSpanner")
-            tweaks = tweaks + (tweak,)
-        baca.spanners.trill(
-            plt,
-            *tweaks,
-            alteration=harmonic,
-            force_trill_pitch_head_accidental=True,
-            harmonic=True,
-            right_broken=right_broken,
-            rleak=True,
+        baca.literal(
+            plt[0],
+            r"\trill",
         )
-    baca.override.trill_spanner_dash_period(plts, -1)
-    baca.override.trill_spanner_style(plts, "#'dashed-line")
     for pleaf in pleaves:
         baca.triple_staccato(
             pleaf,
