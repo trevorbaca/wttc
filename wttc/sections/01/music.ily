@@ -950,8 +950,6 @@ number.1.Oboe.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'''4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1924,8 +1922,6 @@ number.1.Violin.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     b4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2423,8 +2419,6 @@ number.1.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef'!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2548,8 +2542,6 @@ number.1.Cello.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef'!4 * 2/1

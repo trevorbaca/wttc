@@ -1006,8 +1006,6 @@ number.11.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     af'!4 * 3/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1152,8 +1150,6 @@ number.11.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     af'!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1257,8 +1253,6 @@ number.11.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 9/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1325,8 +1319,6 @@ number.11.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 7/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1381,8 +1373,6 @@ number.11.AltoFlute.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 9/4
@@ -1445,8 +1435,6 @@ number.11.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 7/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1502,8 +1490,6 @@ number.11.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 9/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1547,8 +1533,6 @@ number.11.AltoFlute.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 7/4
@@ -1604,8 +1588,6 @@ number.11.AltoFlute.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     d'4 * 9/4
@@ -1912,8 +1894,6 @@ number.11.Oboe.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f'''4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1966,8 +1946,6 @@ number.11.Oboe.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f'''4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2011,8 +1989,6 @@ number.11.Oboe.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f'''4 * 3/2
@@ -2110,8 +2086,6 @@ number.11.Oboe.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f'''4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2155,8 +2129,6 @@ number.11.Oboe.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f'''4 * 3/2
@@ -3157,8 +3129,6 @@ number.11.Violin.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     <
         d''
@@ -3210,8 +3180,6 @@ number.11.Violin.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     <
@@ -4056,8 +4024,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     <
         d'
@@ -4109,8 +4075,6 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     <
@@ -4257,8 +4221,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 2/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4361,8 +4323,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 7/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4440,8 +4400,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4499,8 +4457,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 1/1
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4555,8 +4511,6 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 2/1
@@ -4615,8 +4569,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 3/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4671,8 +4623,6 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     ef,!4 * 2/1
@@ -5074,8 +5024,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f,4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5132,8 +5080,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f,4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5189,8 +5135,6 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f,4 * 3/2
@@ -5304,8 +5248,6 @@ number.11.Cello.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f,4 * 3/2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5361,8 +5303,6 @@ number.11.Cello.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f,4 * 3/2

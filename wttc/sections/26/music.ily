@@ -2114,8 +2114,6 @@ number.26.AltoFlute.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f'''4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -6053,8 +6051,6 @@ number.26.Violin.Music = {
     \abjad-invisible-music-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-      %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f''4 * 1/2

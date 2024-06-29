@@ -869,8 +869,6 @@ number.28.Violin.Music = {
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
-    \once \override NoteHead.stencil = ##f
-      %! FRAMED_LEAF
     \once \override Stem.thickness = 6
     f''4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
