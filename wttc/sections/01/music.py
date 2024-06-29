@@ -315,11 +315,11 @@ def vn(m):
     library.E2c(runs[3], "B3", "C#4", "p", to_bar_line=True)
     library.I2b(library.run(m[8, 9], 2, 0), "B4", "C5", "f")
     library.M5b(library.pleaves(m[9], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
-    library.B1c(abjad.select.run(library.pleaves(m[10], 99), 0), "p", "B4", "A4 C5", 2)
+    library.B1c(abjad.select.run(library.pleaves(m[10], 99), 0), "p", "B4", "A4 C5", 3)
     library.B1c(
-        abjad.select.run(library.pleaves(m[10, 11], 99), 1), "p", "B4", "A4 C5", 2
+        abjad.select.run(library.pleaves(m[10, 11], 99), 1), "p", "B4", "A4 C5", 3
     )
-    library.B1c(abjad.select.run(library.pleaves(m[11], 99), 1), "pp", "B4", "A4 C5", 2)
+    library.B1c(abjad.select.run(library.pleaves(m[11], 99), 1), "pp", "B4", "A4 C5", 3)
 
 
 def vc(m):

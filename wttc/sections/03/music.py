@@ -543,13 +543,13 @@ def vn(m):
         [7],
         '"f">o!',
     )
-    library.B1c(library.pleaves(m[11], 99), "mp", "B4", "A4 C5", 2)
+    library.B1c(library.pleaves(m[11], 99), "mp", "B4", "A4 C5", 3)
     library.A1b(library.pleaves(m[12], 1), "E4 G#4", "pp")
-    library.B1c(abjad.select.run(library.pleaves(m[12], 99), 0), "p", "B4", "A4 C5", 2)
+    library.B1c(abjad.select.run(library.pleaves(m[12], 99), 0), "p", "B4", "A4 C5", 3)
     library.B1c(
-        abjad.select.run(library.pleaves(m[12, 13], 99), 1), "p", "B4", "A4 C5", 2
+        abjad.select.run(library.pleaves(m[12, 13], 99), 1), "p", "B4", "A4 C5", 3
     )
-    library.B1c(abjad.select.run(library.pleaves(m[13], 99), 1), "pp", "B4", "A4 C5", 2)
+    library.B1c(abjad.select.run(library.pleaves(m[13], 99), 1), "pp", "B4", "A4 C5", 3)
 
 
 def vc(m):

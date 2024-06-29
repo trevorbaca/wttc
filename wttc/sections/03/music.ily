@@ -3023,9 +3023,9 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-string-ii-markup
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -3131,9 +3131,9 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-string-ii-markup
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -3194,9 +3194,9 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-string-ii-markup
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -3264,9 +3264,9 @@ number.3.Violin.Music = {
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-string-ii-markup
+        - \baca-text-spanner-left-markup \baca-string-iii-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
