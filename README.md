@@ -7,7 +7,7 @@ when the time comes
     https://img.shields.io/badge/code%20style-black-000000.svg)](
     https://github.com/ambv/black)
 
-when the time comes for stage actor & six players.
+when the time comes for stage actor & six musicians.
 
 Text by Paul Griffiths.
 
