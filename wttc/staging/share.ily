@@ -1,7 +1,5 @@
 \version "2.25.16"
 
-\include "positioning.ily"
-
 \markup adobe-bold = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")
   \etc
