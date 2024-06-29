@@ -219,8 +219,17 @@ colophon = \markup
   \line { New Haven, Conn. (May – July 2021); }
   \line { Neukölln (Ber.), Ger. (August 2022 – June 2023); }
   \line { New Haven, Conn. (July 2023 – May 2024). }
+  \line { Neukölln (Ber.), Ger. (June 2024 – July 2024); }
   }
 
 colophon-section = \markup
   \translate #'(21 . -122)
   \colophon
+
+#(define-markup-command (mm-feed layout props amount) (number?)
+ (let ((o-s (ly:output-def-lookup layout 'output-scale)))
+   (ly:make-stencil "" '(0 . 0) (cons 0 (abs (/ amount o-s))))))
+
+#(define-markup-command (put-mm layout props dir amount arg)
+ (ly:dir? number? markup?) (interpret-markup layout props
+   (markup #:put-adjacent Y dir arg #:mm-feed amount)))
