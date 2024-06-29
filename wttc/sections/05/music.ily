@@ -1641,7 +1641,7 @@ number.5.AltoFlute.Music = {
 
     c''4
 
-    \afterGrace
+    \afterGrace 15/16
     bf'!4
     {
 
@@ -1706,7 +1706,7 @@ number.5.AltoFlute.Music = {
 
     bf'!4
 
-    \afterGrace
+    \afterGrace 15/16
     bf'!8
     {
 
@@ -1769,7 +1769,7 @@ number.5.AltoFlute.Music = {
 
     c''4
 
-    \afterGrace
+    \afterGrace 15/16
     bf'!4
     {
 
@@ -1863,7 +1863,7 @@ number.5.AltoFlute.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     c''4
     {
 
@@ -1955,7 +1955,7 @@ number.5.AltoFlute.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     c''4
     {
 
@@ -7114,7 +7114,7 @@ number.5.Violin.Music = {
 
     g'4
 
-    \afterGrace
+    \afterGrace 15/16
     b'4
     {
 
@@ -7248,7 +7248,7 @@ number.5.Violin.Music = {
 
     g'4
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     {
 
@@ -7358,7 +7358,7 @@ number.5.Violin.Music = {
 
     g'4
 
-    \afterGrace
+    \afterGrace 15/16
     b'4
     {
 
@@ -7525,7 +7525,7 @@ number.5.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g'4
     {
 
@@ -7634,7 +7634,7 @@ number.5.Violin.Music = {
     \override NoteHead.no-ledgers = ##t
     c'4
 
-    \afterGrace
+    \afterGrace 15/16
     f'4
     {
 
@@ -7706,7 +7706,7 @@ number.5.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g'4
     {
 
@@ -7877,7 +7877,7 @@ number.5.Violin.Music = {
 
     f'4
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     {
 
@@ -10071,7 +10071,7 @@ number.5.Cello.Music = {
 
     f,4
 
-    \afterGrace
+    \afterGrace 15/16
     f,4
     {
 
@@ -10174,7 +10174,7 @@ number.5.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g,4
     {
 
@@ -10277,7 +10277,7 @@ number.5.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g,4
     {
 
@@ -10298,7 +10298,7 @@ number.5.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     g,8.
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -10419,7 +10419,7 @@ number.5.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g,16
     {
 
@@ -10440,7 +10440,7 @@ number.5.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     g,8
       %! SPANNER_START
     - \baca-dashed-line-with-hook

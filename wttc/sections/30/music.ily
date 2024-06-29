@@ -1779,7 +1779,7 @@ number.30.Violin.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-        \afterGrace
+        \afterGrace 15/16
         c'1
         :32
         {
@@ -2120,7 +2120,7 @@ number.30.Cello.Music = {
         \revert NoteColumn.glissando-skip
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
-        \afterGrace
+        \afterGrace 15/16
         <f, c>1
         {
 

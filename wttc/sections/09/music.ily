@@ -576,7 +576,7 @@ number.9.AltoFlute.Music = {
     [
     \repeatTie
 
-    \afterGrace
+    \afterGrace 15/16
     bf'!8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -828,7 +828,7 @@ number.9.AltoFlute.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     c''4
     {
 
@@ -1969,7 +1969,7 @@ number.9.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -2060,7 +2060,7 @@ number.9.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -2144,7 +2144,7 @@ number.9.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -2223,7 +2223,7 @@ number.9.Violin.Music = {
 
     g'4
 
-    \afterGrace
+    \afterGrace 15/16
     b'4
     {
 
@@ -2386,7 +2386,7 @@ number.9.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g'4
     {
 

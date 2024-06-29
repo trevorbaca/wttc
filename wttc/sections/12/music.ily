@@ -1391,7 +1391,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -1415,7 +1415,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -1438,7 +1438,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1462,7 +1462,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -1485,7 +1485,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1508,7 +1508,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -1675,7 +1675,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1699,7 +1699,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -1722,7 +1722,7 @@ number.12.AltoFlute.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightgreen
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1909,7 +1909,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2643,7 +2643,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     bf'!8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -2800,7 +2800,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     bf'!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3009,7 +3009,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     bf'!8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -3103,7 +3103,7 @@ number.12.AltoFlute.Music = {
     \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     \stopStaffHighlight
-    \afterGrace
+    \afterGrace 15/16
     bf'!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -8994,7 +8994,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     fs''!32
     ]
     - \tweak bound-details.right.end-on-accidental ##f
@@ -9071,7 +9071,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     fs''!32
     ]
     - \tweak bound-details.right.end-on-accidental ##f
@@ -9147,7 +9147,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     g''32
     ]
     - \tweak bound-details.right.end-on-accidental ##f
@@ -9218,7 +9218,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     gs''!32
     ]
     - \tweak bound-details.right.end-on-accidental ##f
@@ -10967,7 +10967,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     f32
     ]
     - \tweak bound-details.right.end-on-accidental ##f
@@ -11043,7 +11043,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     ef!32
     ]
     - \tweak bound-details.right.end-on-accidental ##f
@@ -11114,7 +11114,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     d32
     ]
     - \tweak bound-details.right.end-on-accidental ##f

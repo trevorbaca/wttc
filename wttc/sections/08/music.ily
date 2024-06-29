@@ -638,7 +638,7 @@ number.8.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 6]
     \override DynamicLineSpanner.staff-padding = 3
-    \afterGrace
+    \afterGrace 15/16
     bf'''!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3027,7 +3027,7 @@ number.8.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
     {

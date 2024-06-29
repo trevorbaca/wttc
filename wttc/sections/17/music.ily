@@ -2296,7 +2296,7 @@ number.17.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
       %! SPANNER_START
     \pitchedTrill
     cs!8
@@ -2391,7 +2391,7 @@ number.17.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     d4
     {
 
@@ -2463,7 +2463,7 @@ number.17.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     d2
     {
 
@@ -2663,7 +2663,7 @@ number.17.Cello.Music = {
 
     g,4
 
-    \afterGrace
+    \afterGrace 15/16
     f,4
     {
 
@@ -2748,7 +2748,7 @@ number.17.Cello.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     g,4
     {
 

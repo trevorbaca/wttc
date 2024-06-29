@@ -4062,7 +4062,7 @@ number.10.Violin.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     c''4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4107,7 +4107,7 @@ number.10.Violin.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     c''4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4153,7 +4153,7 @@ number.10.Violin.Music = {
     % [Violin.Music measure 10]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     c''4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

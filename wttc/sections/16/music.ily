@@ -1173,7 +1173,7 @@ number.16.Violin.Music = {
       %! SPANNER_START
     \<
 
-    \afterGrace
+    \afterGrace 15/16
     fs''!32
     ]
     - \tweak bound-details.right.end-on-accidental ##f

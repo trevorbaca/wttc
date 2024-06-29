@@ -4547,7 +4547,7 @@ number.24.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     b'2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4866,7 +4866,7 @@ number.24.Violin.Music = {
     :32
 
     % [Violin.Music measure 37]
-    \afterGrace
+    \afterGrace 15/16
     d''1.
     :32
     {
@@ -6105,7 +6105,7 @@ number.24.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     b'2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6467,7 +6467,7 @@ number.24.Cello.Music = {
     :32
 
     % [Cello.Music measure 37]
-    \afterGrace
+    \afterGrace 15/16
     f''1.
     :32
     {

@@ -1011,7 +1011,7 @@ number.27.Cello.Music = {
 
     g'4
 
-    \afterGrace
+    \afterGrace 15/16
     f'4
     {
 

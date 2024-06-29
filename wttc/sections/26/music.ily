@@ -5873,7 +5873,7 @@ number.26.Violin.Music = {
     \override NoteHead.no-ledgers = ##t
     c'4
 
-    \afterGrace
+    \afterGrace 15/16
     f'4
     {
 
@@ -5954,7 +5954,7 @@ number.26.Violin.Music = {
 
     f''4
 
-    \afterGrace
+    \afterGrace 15/16
     g''4
     {
 
@@ -6010,7 +6010,7 @@ number.26.Violin.Music = {
 
     a''4
 
-    \afterGrace
+    \afterGrace 15/16
     e'''4
     {
 
@@ -6076,7 +6076,7 @@ number.26.Violin.Music = {
       %! SPANNER_START
     \>
 
-    \afterGrace
+    \afterGrace 15/16
     d'''4
     {
 

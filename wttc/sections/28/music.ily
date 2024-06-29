@@ -825,7 +825,7 @@ number.28.Violin.Music = {
 
     a''4
 
-    \afterGrace
+    \afterGrace 15/16
     e'''4
     {
 
@@ -891,7 +891,7 @@ number.28.Violin.Music = {
       %! SPANNER_START
     \>
 
-    \afterGrace
+    \afterGrace 15/16
     d'''4
     {
 
@@ -1129,7 +1129,7 @@ number.28.Cello.Music = {
 
     g'4
 
-    \afterGrace
+    \afterGrace 15/16
     f'4
     {
 

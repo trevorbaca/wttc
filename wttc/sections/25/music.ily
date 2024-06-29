@@ -2945,7 +2945,7 @@ number.25.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     b'4
     :32
     {
@@ -2989,7 +2989,7 @@ number.25.Violin.Music = {
     a'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -3047,7 +3047,7 @@ number.25.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -4070,7 +4070,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -4114,7 +4114,7 @@ number.25.Cello.Music = {
     a'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     b'4
     :32
     {
@@ -4172,7 +4172,7 @@ number.25.Cello.Music = {
     b'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     c''4
     :32
     {
@@ -4251,7 +4251,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     d4
     :32
     {
@@ -4316,7 +4316,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     d4
     :32
     {
@@ -4396,7 +4396,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     e4
     :32
     {
@@ -4569,7 +4569,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     d4
     :32
     {
@@ -4634,7 +4634,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     e4
     :32
     {
@@ -4714,7 +4714,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
     {
@@ -4939,7 +4939,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
     {
@@ -5019,7 +5019,7 @@ number.25.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
     {

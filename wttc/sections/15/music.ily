@@ -477,7 +477,7 @@ number.15.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 10]
     \override DynamicLineSpanner.staff-padding = 3
-    \afterGrace
+    \afterGrace 15/16
     bf'''!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

@@ -968,7 +968,7 @@ number.29.AltoFlute.Music = {
     \>
 
     % [AltoFlute.Music measure 4]
-    \afterGrace
+    \afterGrace 15/16
     gs'''!4
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2582,7 +2582,7 @@ number.29.Violin.Music = {
     r4
 
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     gs'!2.
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -3123,7 +3123,7 @@ number.29.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Cello.Music measure 8]
-    \afterGrace
+    \afterGrace 15/16
     a,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3167,7 +3167,7 @@ number.29.Cello.Music = {
 
 
     % [Cello.Music measure 9]
-    \afterGrace
+    \afterGrace 15/16
     gs,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3396,7 +3396,7 @@ number.29.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \afterGrace
+    \afterGrace 15/16
     af,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

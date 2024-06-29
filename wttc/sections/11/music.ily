@@ -3586,7 +3586,7 @@ number.11.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -3706,7 +3706,7 @@ number.11.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -3811,7 +3811,7 @@ number.11.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -3907,7 +3907,7 @@ number.11.Violin.Music = {
     g'4
     :32
 
-    \afterGrace
+    \afterGrace 15/16
     g'4
     :32
     {
@@ -4699,7 +4699,7 @@ number.11.Cello.Music = {
     \revert NoteHead.style
 
     % [Cello.Music measure 12]
-    \afterGrace
+    \afterGrace 15/16
     d,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4756,7 +4756,7 @@ number.11.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     d,4
     - \tweak padding 1
     - \upbow
@@ -4784,7 +4784,7 @@ number.11.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     dqf,!4
     - \tweak padding 1
     - \downbow
@@ -4824,7 +4824,7 @@ number.11.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     dqf,!4
     - \tweak padding 1
     - \upbow
@@ -4852,7 +4852,7 @@ number.11.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     cs,!4
     - \tweak padding 1
     - \downbow
@@ -4889,7 +4889,7 @@ number.11.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     cs,!4
     - \tweak padding 1
     - \upbow
@@ -4917,7 +4917,7 @@ number.11.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     cqs,!4
     - \tweak padding 1
     - \downbow
@@ -4954,7 +4954,7 @@ number.11.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     cqs,!4
     - \tweak padding 1
     - \upbow
@@ -4982,7 +4982,7 @@ number.11.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     c,4
     - \tweak padding 1
     - \downbow

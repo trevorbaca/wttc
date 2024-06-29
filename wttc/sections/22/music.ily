@@ -2094,7 +2094,7 @@ number.22.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     dqf,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2139,7 +2139,7 @@ number.22.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     cs,!4
     - \tweak padding 1
     - \upbow
@@ -2176,7 +2176,7 @@ number.22.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     cs,!4
     - \tweak padding 1
     - \downbow
@@ -2204,7 +2204,7 @@ number.22.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     cqs,!4
     - \tweak padding 1
     - \upbow
@@ -2241,7 +2241,7 @@ number.22.Cello.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
-    \afterGrace
+    \afterGrace 15/16
     cqs,!4
     - \tweak padding 1
     - \downbow
@@ -2269,7 +2269,7 @@ number.22.Cello.Music = {
     }
 
 
-    \afterGrace
+    \afterGrace 15/16
     c,4
     - \tweak padding 1
     - \upbow
@@ -2468,7 +2468,7 @@ number.22.Cello.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    \afterGrace
+    \afterGrace 15/16
     d'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

@@ -1773,7 +1773,7 @@ number.1.Violin.Music = {
     }
 
     % [Violin.Music measure 6]
-    \afterGrace
+    \afterGrace 15/16
     c''4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1814,7 +1814,7 @@ number.1.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
-    \afterGrace
+    \afterGrace 15/16
     c''4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1856,7 +1856,7 @@ number.1.Violin.Music = {
     \bacaStopTextSpanDamp
 
     % [Violin.Music measure 7]
-    \afterGrace
+    \afterGrace 15/16
     c''4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2128,7 +2128,7 @@ number.1.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     b'16
     {
 
@@ -2192,7 +2192,7 @@ number.1.Violin.Music = {
     b'4
 
     % [Violin.Music measure 11]
-    \afterGrace
+    \afterGrace 15/16
     b'8.
     {
 
@@ -2255,7 +2255,7 @@ number.1.Violin.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     b'16
     {
 
@@ -2780,7 +2780,7 @@ number.1.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     d2
     {
 
@@ -2870,7 +2870,7 @@ number.1.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     c'8.
     {
 
@@ -2993,7 +2993,7 @@ number.1.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     c'16
     {
 
