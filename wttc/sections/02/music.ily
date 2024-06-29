@@ -1563,10 +1563,6 @@ number.2.Violin.Music = {
 
     % [Violin.Music measure 2]
     b16
-      %! SPANNER_STOP
-    \!
-      %! SPANNER_STOP
-    \stopTrillSpan
     \repeatTie
 
       %! SPANNER_START
@@ -1577,6 +1573,10 @@ number.2.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
+      %! SPANNER_STOP
+    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

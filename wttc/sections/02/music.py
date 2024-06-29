@@ -198,7 +198,7 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
-    library.E2c(library.pleaves(m[1, 2][:4], 2), "B3", "C#4", "mp")
+    library.E2c(library.pleaves(m[1, 2][:5], 2), "B3", "C#4", "mp")
 
     @baca.call
     def block():
