@@ -59,11 +59,11 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 16]
+    \baca-lbsd #51 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 17]
-    \baca-lbsd #51 #'(6)
-    \break
     s1 * 6/4
 
     % [Breaks measure 18]
