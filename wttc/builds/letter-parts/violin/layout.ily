@@ -15,11 +15,11 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 4]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 6/4
 
     % [Breaks measure 5]
+    \baca-lbsd #90 #'(6)
+    \break
     s1 * 3/4
 
     % [Breaks measure 6]
@@ -483,18 +483,12 @@ SpacingCommands = {
     s1 * 3/4
 
     % [SpacingCommands measure 2]
-    \baca-new-strict-spacing-section #1 #12
     s1 * 6/4
 
     % [SpacingCommands measure 3]
-    \baca-new-vanilla-spacing-section
-    \grace { s8 }
-    s1 * 2/4
-    \baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)
-    s1 * 4/4
+    s1 * 6/4
 
     % [SpacingCommands measure 4]
-    \baca-new-vanilla-spacing-section
     s1 * 6/4
 
     % [SpacingCommands measure 5]

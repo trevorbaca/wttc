@@ -29,7 +29,8 @@ def main(environment):
         baca.layout.Page(
             1,
             baca.layout.System(1, y_offset_3, distances=distances),
-            baca.layout.System(4, y_offset_4, distances=distances),
+            # baca.layout.System(4, y_offset_4, distances=distances),
+            baca.layout.System(5, y_offset_4, distances=distances),
         ),
         baca.layout.Page(
             2,
@@ -105,15 +106,15 @@ def main(environment):
     )
     spacing_dictionary = {
         1: "vanilla",
-        2: (1, 12),
-        3: [
-            r"\baca-new-vanilla-spacing-section",
-            r"\grace { s8 }",
-            "s1 * 2/4",
-            r"\baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)",
-            "s1 * 4/4",
-        ],
-        4: "vanilla",
+        # 2: (1, 12),
+        #        3: [
+        #            r"\baca-new-vanilla-spacing-section",
+        #            r"\grace { s8 }",
+        #            "s1 * 2/4",
+        #            r"\baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)",
+        #            "s1 * 4/4",
+        #        ],
+        #         4: "vanilla",
         8: (1, 12),
         10: "vanilla",
         12: (1, 12),
