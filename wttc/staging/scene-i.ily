@@ -173,6 +173,4 @@ scene-i-D-parts = \markup
   \column {
   \scene-i-D-i
   \vspace #1
-  \scene-i-D-ii
-  \vspace #1
-  \scene-i-D-iii }
+  \scene-i-D-ii }

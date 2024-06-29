@@ -149,23 +149,24 @@ scene-vi-F-parts = \markup
   \parts-font-size
   \scene-vi-F
 
-scene-vi-G = \markup
-  \wdfn
-  \column {
-  \adobe-bold
-  \line { I must be here before you, then. \lnum #65 }
-  % \vspace #2
-  \adobe-italic
-  \line { End scene 6. } }
-
 scene-vi-G-section = \markup
   \translate #'(63 . -46)
   \section-baseline-skip
   \section-font-size
-  \scene-vi-G
+  \wdfn
+  \column {
+  \adobe-bold
+  \line { I must be here before you, then. \lnum #65 }
+  \vspace #2
+  \adobe-italic
+  \line { End scene 6. } }
 
 scene-vi-G-parts = \markup
   \scene-vi-G-parts-positioning
   \parts-baseline-skip
   \parts-font-size
-  \scene-vi-G
+  \wdfn
+  \column {
+  \adobe-bold
+  \line { I must be here before you, then. \lnum #65 } }
+

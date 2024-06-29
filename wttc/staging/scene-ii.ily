@@ -151,7 +151,10 @@ scene-ii-G-parts = \markup
   \parts-font-size
   \scene-ii-G
 
-scene-ii-H = \markup
+scene-ii-H-section = \markup
+  \translate #'(100 . -38)
+  \section-baseline-skip
+  \section-font-size
   \wdfn
   \adobe-bold
   \column {
@@ -163,15 +166,15 @@ scene-ii-H = \markup
   \adobe-italic
   \line { End scene 2. } }
 
-scene-ii-H-section = \markup
-  \translate #'(100 . -38)
-  \section-baseline-skip
-  \section-font-size
-  \scene-ii-H
-
 scene-ii-H-parts = \markup
   \scene-ii-H-parts-positioning
   \parts-baseline-skip
   \parts-font-size
-  \scene-ii-H
-
+  \wdfn
+  \adobe-bold
+  \column {
+  \adobe-italic
+  \line { Alone: }
+  \line { No \dots \lnum #19 }
+  \adobe-italic
+  \line { The thought trails off completely. } }
