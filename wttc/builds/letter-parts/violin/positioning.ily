@@ -1,3 +1,5 @@
+\version "2.25.16"
+
 % SCENE 1
 
 \markup scene-i-B-parts-positioning = \markup
