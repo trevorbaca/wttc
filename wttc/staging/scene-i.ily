@@ -82,8 +82,7 @@ scene-i-B-section = \markup
   \scene-i-B-iii }
 
 scene-i-B-parts = \markup
-  \override #'(line-width . 110)
-  \translate #'(-102 . -25)
+  \scene-i-B-parts-positioning
   \wdfn
   \parts-baseline-skip
   \parts-font-size
@@ -128,7 +127,7 @@ scene-i-C-section = \markup
   \scene-i-C-iv }
 
 scene-i-C-parts = \markup
-  \translate #'(-10 . -30)
+  \scene-i-C-parts-positioning
   \wdfn
   \parts-baseline-skip
   \parts-font-size
@@ -167,7 +166,7 @@ scene-i-D-section = \markup
   \scene-i-D-iii }
 
 scene-i-D-parts = \markup
-  \translate #'(-24 . -32)
+  \scene-i-D-parts-positioning
   \wdfn
   \parts-baseline-skip
   \parts-font-size

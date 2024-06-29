@@ -14,7 +14,7 @@ scene-v-title-section = \markup
   \scene-v-title
 
 scene-v-title-parts = \markup
-  \translate #'(-8 . 16)
+  \scene-v-title-parts-positioning
   \parts-title-font-size
   \scene-v-title
 
@@ -29,7 +29,7 @@ scene-v-A-section = \markup
   \scene-v-A
 
 scene-v-A-parts = \markup
-  \translate #'(0 . -17)
+  \scene-v-A-parts-positioning
   \parts-font-size
   \scene-v-A
 
@@ -49,8 +49,7 @@ scene-v-B-section = \markup
   \scene-v-B
 
 scene-v-B-parts = \markup
-  \override #'(line-width . 24)
-  \translate #'(-1 . -17)
+  \scene-v-B-parts-positioning
   \parts-compressed-baseline-skip
   \parts-font-size
   \scene-v-B
@@ -71,7 +70,7 @@ scene-v-C-section = \markup
   \scene-v-C
 
 scene-v-C-parts = \markup
-  \translate #'(0 . -17)
+  \scene-v-C-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-v-C
@@ -84,9 +83,4 @@ scene-v-D = \markup
 scene-v-D-section = \markup
   \translate #'(124 . -44)
   \section-font-size
-  \scene-v-D
-
-scene-v-D-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
   \scene-v-D

@@ -14,7 +14,7 @@ scene-iii-title-section = \markup
   \scene-iii-title
 
 scene-iii-title-parts = \markup
-  \translate #'(-10 . 8)
+  \scene-iii-title-parts-positioning
   \parts-title-font-size
   \scene-iii-title
 
@@ -41,7 +41,7 @@ scene-iii-A-section = \markup
   \scene-iii-A
 
 scene-iii-A-parts = \markup
-  \translate #'(-33 . -22)
+  \scene-iii-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-A
@@ -49,11 +49,10 @@ scene-iii-A-parts = \markup
 scene-iii-B = \markup
   \wdfn
   \adobe-italic
-  \justify { Musicians pause a moment after \hspace #0.5 \override #'(font-name
-  . "Adobe Garamond Pro Bold") \box A \hspace #-0.5 , as if waiting to see if
-  OWL has anything to say. OWL looks to the musicians, but says nothing.
-  Musicians continue with \adobe-bold
-  \box B \hspace #-0.5 . }
+  \justify { Musicians pause a moment after \hspace #0.5 \adobe-bold \box A
+  \hspace #-0.5 , as if waiting to see if OWL has anything to say. OWL looks to
+  the musicians, but says nothing. Musicians continue with \adobe-bold \box B
+  \hspace #-0.5 . }
 
 scene-iii-B-section = \markup
   \override #'(line-width . 80)
@@ -63,8 +62,7 @@ scene-iii-B-section = \markup
   \scene-iii-B
 
 scene-iii-B-parts = \markup
-  \override #'(line-width . 82)
-  \translate #'(-60 . -23)
+  \scene-iii-B-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-B
@@ -87,8 +85,7 @@ scene-iii-C-section = \markup
   \scene-iii-C
 
 scene-iii-C-parts = \markup
-  \override #'(line-width . 80)
-  \translate #'(7 . -29)
+  \scene-iii-C-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-C
@@ -115,7 +112,7 @@ scene-iii-D-section = \markup
   \scene-iii-D
 
 scene-iii-D-parts = \markup
-  \translate #'(-25 . -48)
+  \scene-iii-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-D
@@ -138,7 +135,7 @@ scene-iii-E-section = \markup
   \scene-iii-E
 
 scene-iii-E-parts = \markup
-  \translate #'(-50 . -21)
+  \scene-iii-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-E
@@ -158,7 +155,7 @@ scene-iii-F-section = \markup
   \scene-iii-F
 
 scene-iii-F-parts = \markup
-  \translate #'(13 . -17)
+  \scene-iii-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-iii-F

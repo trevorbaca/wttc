@@ -14,7 +14,7 @@ scene-ii-title-section = \markup
   \scene-ii-title
 
 scene-ii-title-parts = \markup
-  \translate #'(-8 . 8)
+  \scene-ii-title-parts-positioning
   \parts-title-font-size
   \scene-ii-title
 
@@ -32,7 +32,7 @@ scene-ii-A-section = \markup
   \scene-ii-A
 
 scene-ii-A-parts = \markup
-  \translate #'(0 . -15)
+  \scene-ii-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-A
@@ -51,7 +51,7 @@ scene-ii-B-section = \markup
   \scene-ii-B
 
 scene-ii-B-parts = \markup
-  \translate #'(0 . -15)
+  \scene-ii-B-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-B
@@ -68,7 +68,7 @@ scene-ii-C-section = \markup
   \scene-ii-C
 
 scene-ii-C-parts = \markup
-  \translate #'(0 . -15)
+  \scene-ii-C-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-C
@@ -85,7 +85,7 @@ scene-ii-D-section = \markup
   \scene-ii-D
 
 scene-ii-D-parts = \markup
-  \translate #'(0 . -15)
+  \scene-ii-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-D
@@ -105,6 +105,7 @@ scene-ii-E-section = \markup
 
 scene-ii-E-parts = \markup
   \translate #'(0 . -15)
+  \scene-ii-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-E
@@ -124,8 +125,7 @@ scene-ii-F-section = \markup
   \scene-ii-F
 
 scene-ii-F-parts = \markup
-  \override #'(line-width . 20)
-  \translate #'(0 . -15)
+  \scene-ii-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-F
@@ -146,7 +146,7 @@ scene-ii-G-section = \markup
   \scene-ii-G
 
 scene-ii-G-parts = \markup
-  \translate #'(0 . -20)
+  \scene-ii-G-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-G
@@ -170,7 +170,7 @@ scene-ii-H-section = \markup
   \scene-ii-H
 
 scene-ii-H-parts = \markup
-  \translate #'(-35 . -45)
+  \scene-ii-H-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-ii-H

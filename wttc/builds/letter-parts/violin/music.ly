@@ -2,10 +2,11 @@
 
 \version "2.25.16"
 
-part-name-markup = \markup "cello part"
+part-name-markup = \markup "violin part"
 \include "../stylesheet.ily"
 % \layout { ragged-right = ##t }
 \layout { ragged-last = ##f }
+\include "positioning.ily"
 \include "../../../staging/scene-i.ily"
 \include "../../../staging/scene-ii.ily"
 \include "../../../staging/scene-iii.ily"

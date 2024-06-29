@@ -14,7 +14,7 @@ scene-vi-title-section = \markup
   \scene-vi-title
 
 scene-vi-title-parts = \markup
-  \translate #'(-8 . 20)
+  \scene-vi-title-parts-positioning
   \parts-title-font-size
   \scene-vi-title
 
@@ -32,7 +32,7 @@ scene-vi-A-section = \markup
   \scene-vi-A
 
 scene-vi-A-parts = \markup
-  \translate #'(30 . 14)
+  \scene-vi-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-A
@@ -48,7 +48,7 @@ scene-vi-B-section = \markup
   \scene-vi-B
 
 scene-vi-B-parts = \markup
-  \translate #'(-10 . -17)
+  \scene-vi-B-parts-positioning
   \parts-font-size
   \scene-vi-B
 
@@ -63,7 +63,7 @@ scene-vi-C-section = \markup
   \scene-vi-C
 
 scene-vi-C-parts = \markup
-  \translate #'(-10 . -17)
+  \scene-vi-C-parts-positioning
   \parts-font-size
   \scene-vi-C
 
@@ -81,7 +81,7 @@ scene-vi-D-section = \markup
   \scene-vi-D
 
 scene-vi-D-parts = \markup
-  \translate #'(-20 . -17)
+  \scene-vi-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-D
@@ -111,8 +111,7 @@ scene-vi-E-section = \markup
   \scene-vi-E
 
 scene-vi-E-parts = \markup
-  \override #'(line-width . 50)
-  \translate #'(-70 . -26)
+  \scene-vi-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-E
@@ -125,11 +124,6 @@ scene-vi-before-F = \markup
 scene-vi-before-F-section = \markup
   \translate #'(0 . -41)
   \section-font-size
-  \scene-vi-before-F
-
-scene-vi-before-F-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
   \scene-vi-before-F
 
 scene-vi-F = \markup
@@ -150,7 +144,7 @@ scene-vi-F-section = \markup
   \scene-vi-F
 
 scene-vi-F-parts = \markup
-  \translate #'(-64 . -12)
+  \scene-vi-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-F
@@ -171,7 +165,7 @@ scene-vi-G-section = \markup
   \scene-vi-G
 
 scene-vi-G-parts = \markup
-  \translate #'(-54 . -21)
+  \scene-vi-G-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \scene-vi-G
