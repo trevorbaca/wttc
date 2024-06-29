@@ -104,7 +104,6 @@ scene-ii-E-section = \markup
   \scene-ii-E
 
 scene-ii-E-parts = \markup
-  \translate #'(0 . -15)
   \scene-ii-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size

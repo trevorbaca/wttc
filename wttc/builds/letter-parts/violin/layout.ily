@@ -59,11 +59,11 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 16]
-    \baca-lbsd #51 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 17]
+    \baca-lbsd #51 #'(6)
+    \break
     s1 * 6/4
 
     % [Breaks measure 18]
@@ -513,6 +513,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 12]
+    \baca-new-strict-spacing-section #1 #12
     s1 * 3/4
 
     % [SpacingCommands measure 13]
@@ -528,6 +529,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 17]
+    \baca-new-vanilla-spacing-section
     s1 * 6/4
 
     % [SpacingCommands measure 18]
