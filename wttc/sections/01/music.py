@@ -249,6 +249,7 @@ def VC(voice, meters):
 
 def fl(m):
     baca.instrument(m[1][0], "AltoFlute", manifests=library.manifests)
+    baca.instrument_name(m[1][0], r"\wttc-alto-flute-markup")
     baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E3a(library.pleaves(m[4, 5], 3))
@@ -268,6 +269,7 @@ def fl(m):
 
 def ob(m):
     baca.instrument(m[1][0], "Oboe", manifests=library.manifests)
+    baca.instrument_name(m[1][0], r"\wttc-oboe-markup")
     baca.short_instrument_name(m[1][0], "Ob.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
@@ -278,6 +280,7 @@ def ob(m):
 
 def gt1(m):
     baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
+    baca.instrument_name(m[1][0], r"\wttc-guitar-i-markup")
     baca.short_instrument_name(m[1][0], "Gt. 1", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E1(
@@ -293,6 +296,7 @@ def gt1(m):
 
 def gt2(m):
     baca.instrument(m[1][0], "Guitar", manifests=library.manifests)
+    baca.instrument_name(m[1][0], r"\wttc-guitar-ii-markup")
     baca.short_instrument_name(m[1][0], "Gt. 2", library.manifests)
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
@@ -311,6 +315,7 @@ def gt2(m):
 
 def vn(m):
     baca.instrument(m[1][0], "Violin", manifests=library.manifests)
+    baca.instrument_name(m[1][0], r"\wttc-violin-markup")
     baca.short_instrument_name(m[1][0], "Vn.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E1(
@@ -336,6 +341,7 @@ def vn(m):
 
 def vc(m):
     baca.instrument(m[1][0], "Cello", manifests=library.manifests)
+    baca.instrument_name(m[1][0], r"\wttc-cello-markup")
     baca.short_instrument_name(m[1][0], "Vc.", library.manifests)
     baca.clef(m[1][0], "bass")
     library.rotate_rehearsal_mark_literal(m[1][0])
