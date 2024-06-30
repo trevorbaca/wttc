@@ -1212,6 +1212,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
+        measure_initial_grace_notes={3: r"\grace { s8 }"},
         score_persistent_indicators=previous_persistent_indicators["Score"],
     )
     skips = score["Skips"]
@@ -1299,8 +1300,7 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
-        lax_spacing_sections=[1, 2],
-        empty_spacing_sections=[3],
+        vanilla_spacing_sections=[1, 3],
         overrides=[
             baca.layout.Override((31, 39), (1, 28)),
             baca.layout.Override((40, 47), (1, 24)),
@@ -1311,6 +1311,7 @@ def make_layout(environment):
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
         has_anchor_skip=environment.metadata["has_anchor_skip"],
+        measure_initial_grace_notes={3: r"\grace { s8 }"},
         spacing=spacing,
     )
 

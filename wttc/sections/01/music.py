@@ -514,6 +514,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
+        measure_initial_grace_notes={3: r"\grace { s8 }"},
     )
     skips = score["Skips"]
     GLOBALS(skips)
@@ -602,6 +603,7 @@ def make_layout(environment):
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
         has_anchor_skip=environment.metadata["has_anchor_skip"],
+        measure_initial_grace_notes={3: r"\grace { s8 }"},
         spacing=spacing,
     )
 

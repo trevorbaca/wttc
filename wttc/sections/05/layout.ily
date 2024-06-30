@@ -20,6 +20,7 @@
             s1 * 6/4
 
             % [Breaks measure 3]
+            \grace { s8 }
             s1 * 6/4
 
             % [Breaks measure 4]
@@ -181,14 +182,16 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-new-lax-spacing-section #1 #20
+            \baca-new-vanilla-spacing-section
             s1 * 3/4
 
             % [SpacingCommands measure 2]
-            \baca-new-lax-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
             s1 * 6/4
 
             % [SpacingCommands measure 3]
+            \baca-new-vanilla-spacing-section
+            \grace { s8 }
             s1 * 6/4
 
             % [SpacingCommands measure 4]

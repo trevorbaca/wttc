@@ -113,7 +113,10 @@ def main(environment):
     return baca.section.make_layout_score(
         breaks,
         environment.time_signatures[:128],
-        measure_initial_grace_notes={38: r"\grace { s8 }"},
+        measure_initial_grace_notes={
+            38: r"\grace { s8 }",
+            54: r"\grace { s8 }",
+        },
         spacing_dictionary=spacing_dictionary,
     )
 
