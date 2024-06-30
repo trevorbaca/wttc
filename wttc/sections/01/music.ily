@@ -474,7 +474,6 @@ number.1.TimeSignatures = {
 number.1.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
-      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -490,7 +489,6 @@ number.1.AltoFlute.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-afl-markup
@@ -859,7 +857,6 @@ number.1.AltoFlute.Staff = <<
 number.1.Oboe.Music = {
 
     % [Oboe.Music measure 1]
-      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -875,11 +872,6 @@ number.1.Oboe.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! -PARTS
-    \override Staff.RehearsalMark.direction = #down
-      %! -PARTS
-    \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-ob-markup
@@ -1149,7 +1141,6 @@ number.1.Oboe.Staff = <<
 number.1.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
-      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1165,7 +1156,6 @@ number.1.Guitar.1.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-gt-i-markup
@@ -1398,7 +1388,6 @@ number.1.Guitar.1.Staff = <<
 number.1.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 1]
-      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1414,11 +1403,6 @@ number.1.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! -PARTS
-    \override Staff.RehearsalMark.direction = #down
-      %! -PARTS
-    \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-gt-ii-markup
@@ -1690,7 +1674,6 @@ number.1.Guitar.2.Staff = <<
 number.1.Violin.Music = {
 
     % [Violin.Music measure 1]
-      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_1
@@ -1706,7 +1689,6 @@ number.1.Violin.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vn-markup
@@ -2291,9 +2273,8 @@ number.1.Violin.Staff = <<
 number.1.Cello.Music = {
 
     % [Cello.Music measure 1]
-      %! +SECTION
       %! EXPLICIT_CLEF
-    \clef "bass"
+    \clef "treble"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -2301,17 +2282,12 @@ number.1.Cello.Music = {
     \once \override Staff.Clef.color = #blue
       %! MEASURE_1
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! -PARTS
-    \override Staff.RehearsalMark.direction = #down
-      %! -PARTS
-    \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vc-markup
@@ -2379,13 +2355,13 @@ number.1.Cello.Music = {
         f
     >2
 
-      %! EXPLICIT_CLEF
+      %! REDUNDANT_CLEF
     \clef "treble"
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REDUNDANT_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
+      %! REDUNDANT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
+      %! REDUNDANT_CLEF
     \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
@@ -2415,8 +2391,8 @@ number.1.Cello.Music = {
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan af'!
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+      %! REDUNDANT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepPink4)
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music

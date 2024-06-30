@@ -405,7 +405,6 @@ number.2.TimeSignatures = {
 number.2.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
-      %! +SECTION
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
@@ -415,7 +414,6 @@ number.2.AltoFlute.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-afl-markup
@@ -868,7 +866,6 @@ number.2.AltoFlute.Staff = <<
 number.2.Oboe.Music = {
 
     % [Oboe.Music measure 1]
-      %! +SECTION
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
@@ -878,7 +875,10 @@ number.2.Oboe.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
+      %! -PARTS
+    \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-ob-markup
@@ -1129,7 +1129,6 @@ number.2.Oboe.Staff = <<
 number.2.Guitar.1.Music = {
 
     % [Guitar.1.Music measure 1]
-      %! +SECTION
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
@@ -1140,7 +1139,6 @@ number.2.Guitar.1.Music = {
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
     \override TupletBracket.direction = #up
-      %! +SECTION
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-gt-i-markup
@@ -1304,7 +1302,6 @@ number.2.Guitar.1.Staff = <<
 number.2.Guitar.2.Music = {
 
     % [Guitar.2.Music measure 1]
-      %! +SECTION
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
@@ -1314,7 +1311,10 @@ number.2.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
+      %! -PARTS
+    \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-gt-ii-markup
@@ -1463,7 +1463,6 @@ number.2.Guitar.2.Staff = <<
 number.2.Violin.Music = {
 
     % [Violin.Music measure 1]
-      %! +SECTION
       %! REAPPLIED_CLEF
     \clef "treble"
       %! REAPPLIED_CLEF_COLOR
@@ -1473,7 +1472,6 @@ number.2.Violin.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! +SECTION
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vn-markup
@@ -1893,6 +1891,10 @@ number.2.Cello.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
+    \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vc-markup

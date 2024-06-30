@@ -303,6 +303,7 @@ def attach_obgcs(counts, grace_lists):
 
 
 def attach_section_initial_persistent_indicators(leaf, voice_abbreviation, clef=None):
+    """
     if voice_abbreviation == "fl":
         wrappers = baca.instrument(leaf, "AltoFlute", manifests=manifests)
         baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
@@ -346,6 +347,7 @@ def attach_section_initial_persistent_indicators(leaf, voice_abbreviation, clef=
         baca.short_instrument_name(leaf, "Vc.", manifests)
         wrappers = baca.clef(leaf, clef or "bass")
         baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    """
     if voice_abbreviation in ("ob", "owl", "gt2", "vc"):
         rotate_rehearsal_mark_literal(leaf)
 
