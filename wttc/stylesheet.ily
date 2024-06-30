@@ -115,6 +115,8 @@
     \remove Metronome_mark_engraver
     \remove Mark_engraver
     \remove System_start_delimiter_engraver
+    \override Accidnetal.layer = 2
+    \override Accidental.whiteout = ##t
     \override BarLine.hair-thickness = 0.5
     \override BarLine.X-extent = #'(0 . 0)
     \override BarNumber.layer = 2

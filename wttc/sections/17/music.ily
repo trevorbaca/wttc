@@ -287,6 +287,7 @@ number.17.TimeSignatures = {
 number.17.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 1]
+      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_257
@@ -302,10 +303,10 @@ number.17.AltoFlute.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-alto-flute-markup
+    \set Staff.instrumentName = \wttc-afl-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
@@ -706,6 +707,7 @@ number.17.AltoFlute.Staff = <<
 number.17.Oboe.Music = {
 
     % [Oboe.Music measure 1]
+      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_257
@@ -725,10 +727,10 @@ number.17.Oboe.Music = {
     \override Staff.RehearsalMark.direction = #down
       %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
+      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-oboe-markup
+    \set Staff.instrumentName = \wttc-ob-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
@@ -1182,6 +1184,7 @@ number.17.Guitar.1.Music = {
         {
 
             % [Guitar.1.Music measure 1]
+              %! +SECTION
               %! EXPLICIT_CLEF
             \clef "treble"
               %! MEASURE_257
@@ -1196,10 +1199,10 @@ number.17.Guitar.1.Music = {
             %@% \once \override Staff.InstrumentName.color = #blue
               %! EXPLICIT_CLEF_COLOR_CANCELLATION
             %@% \override Staff.Clef.color = ##f
+              %! +SECTION
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-              %! -PARTS
-            \set Staff.instrumentName = \wttc-guitar-i-markup
+            \set Staff.instrumentName = \wttc-gt-i-markup
               %! -PARTS
               %! EXPLICIT_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \wttc-gt-i-markup
@@ -1614,6 +1617,7 @@ number.17.Guitar.2.Music = {
         {
 
             % [Guitar.2.Music measure 1]
+              %! +SECTION
               %! EXPLICIT_CLEF
             \clef "treble"
               %! MEASURE_257
@@ -1632,10 +1636,10 @@ number.17.Guitar.2.Music = {
             \override Staff.RehearsalMark.direction = #down
               %! -PARTS
             \override Staff.RehearsalMark.rotation = #'(180 0 0)
+              %! +SECTION
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-              %! -PARTS
-            \set Staff.instrumentName = \wttc-guitar-ii-markup
+            \set Staff.instrumentName = \wttc-gt-ii-markup
               %! -PARTS
               %! EXPLICIT_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \wttc-gt-ii-markup
@@ -1990,6 +1994,7 @@ number.17.Guitar.2.Staff = <<
 number.17.Violin.Music = {
 
     % [Violin.Music measure 1]
+      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "treble"
       %! MEASURE_257
@@ -2005,10 +2010,10 @@ number.17.Violin.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-violin-markup
+    \set Staff.instrumentName = \wttc-vn-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
@@ -2255,6 +2260,7 @@ number.17.Violin.Staff = <<
 number.17.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! +SECTION
       %! EXPLICIT_CLEF
     \clef "bass"
       %! MEASURE_257
@@ -2274,10 +2280,10 @@ number.17.Cello.Music = {
     \override Staff.RehearsalMark.direction = #down
       %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
+      %! +SECTION
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! -PARTS
-    \set Staff.instrumentName = \wttc-cello-markup
+    \set Staff.instrumentName = \wttc-vc-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup

@@ -30,7 +30,7 @@
         "AltoFlute.Staff": [
             baca.Memento(
                 context="AltoFlute.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
@@ -38,7 +38,7 @@
             ),
             baca.Memento(
                 context="AltoFlute.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
@@ -57,18 +57,18 @@
             baca.Memento(
                 context="Cello.Music",
                 edition=None,
-                manifest="instruments",
-                prototype=None,
-                synthetic_offset=None,
-                value="Cello",
-            ),
-            baca.Memento(
-                context="Cello.Music",
-                edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
                 value="bass",
+            ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=Tag(string="+SECTION"),
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Cello",
             ),
             baca.Memento(
                 context="Cello.Music",
@@ -92,7 +92,7 @@
         "Guitar.1.Staff": [
             baca.Memento(
                 context="Guitar.1.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
@@ -100,7 +100,7 @@
             ),
             baca.Memento(
                 context="Guitar.1.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
@@ -128,7 +128,7 @@
         "Guitar.2.Staff": [
             baca.Memento(
                 context="Guitar.2.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
@@ -136,7 +136,7 @@
             ),
             baca.Memento(
                 context="Guitar.2.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
@@ -154,7 +154,7 @@
         "Oboe.Staff": [
             baca.Memento(
                 context="Oboe.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
@@ -162,7 +162,7 @@
             ),
             baca.Memento(
                 context="Oboe.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
@@ -198,7 +198,7 @@
         "Violin.Staff": [
             baca.Memento(
                 context="Violin.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
@@ -206,7 +206,7 @@
             ),
             baca.Memento(
                 context="Violin.Music",
-                edition=None,
+                edition=Tag(string="+SECTION"),
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
