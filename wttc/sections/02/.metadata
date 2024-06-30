@@ -66,19 +66,19 @@
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="treble",
+            ),
+            baca.Memento(
+                context="Cello.Music",
                 edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
                 value="Cello",
-            ),
-            baca.Memento(
-                context="Cello.Music",
-                edition=Tag(string="+SECTION"),
-                manifest=None,
-                prototype="abjad.Clef",
-                synthetic_offset=None,
-                value="bass",
             ),
             baca.Memento(
                 context="Cello.Music",

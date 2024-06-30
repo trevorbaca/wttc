@@ -697,6 +697,11 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC(voices.vc, meters)
     library.attach_not_yet_pitched(score)
     library.force_repeat_tie(score)
+    baca.section.reapply_persistent_indicators(
+        voices,
+        previous_persistent_indicators,
+        manifests=library.manifests,
+    )
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
@@ -775,7 +780,7 @@ def main():
     if environment.score():
         score = make_score(
             environment.first_measure_number,
-            {},
+            environment.previous_metadata["persistent_indicators"],
             environment.timing,
         )
         persist_score(score, environment)

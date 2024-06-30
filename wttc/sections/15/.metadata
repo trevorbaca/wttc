@@ -74,6 +74,14 @@
             ),
             baca.Memento(
                 context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Cello.Music",
                 edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
@@ -87,6 +95,14 @@
                 prototype=None,
                 synthetic_offset=None,
                 value="Vc.",
+            ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
         "Guitar.1.Music": [

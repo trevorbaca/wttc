@@ -172,12 +172,12 @@ def VC(voice, meters):
 
 
 def fl(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "fl")
+    # library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.D3a(library.pleaves(m[10, 11], 3), "A3", 8 * "p ", to_bar_line=True)
 
 
 def ob(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "ob")
+    # library.attach_section_initial_persistent_indicators(m[1][0], "ob")
     library.E2a(library.pleaves(m[1, 2], 2)[:4], "D6", "E6", "0", peaks="mp")
     library.E2a(
         library.pleaves(m[2, 6][1:], 2), "D#6", "E6", "0000", starts="mp p pp pp"
@@ -185,19 +185,19 @@ def ob(m):
 
 
 def gt1(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    # library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
     library.E4b(library.pleaves(m[6, 9], 4), "C4", "p")
     library.M5a(library.pleaves(m[10, 11], 5), "A2 Ab2 G2 Gb2", "0010")
 
 
 def gt2(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
+    # library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.E4b(library.pleaves(m[6, 9], 4), "C4", "p")
     library.M5a(library.pleaves(m[10, 11], 5), "E4 F4 F#4 G4", "1101")
 
 
 def vn(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    # library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.E2c(library.pleaves(m[1, 2][:5], 2), "B3", "C#4", "mp")
 
     @baca.call
@@ -212,7 +212,7 @@ def vn(m):
 
 
 def vc(m):
-    library.attach_section_initial_persistent_indicators(m[1][0], "vc")
+    # library.attach_section_initial_persistent_indicators(m[1][0], "vc")
     library.D1b(
         library.pleaves(m[10, 11], 1),
         None,
@@ -388,6 +388,11 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC(voices.vc, meters)
     library.attach_not_yet_pitched(score)
     library.force_repeat_tie(score)
+    baca.section.reapply_persistent_indicators(
+        voices,
+        previous_persistent_indicators,
+        manifests=library.manifests,
+    )
     cache = baca.section.cache_leaves(
         score,
         len(meters()),
@@ -412,6 +417,7 @@ def persist_score(score, environment):
         environment,
         library.manifests,
         do_not_color_repeat_pitch_classes=True,
+        do_not_error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
     )
     baca.section.activate_tags(
@@ -468,7 +474,7 @@ def main():
     if environment.score():
         score = make_score(
             environment.first_measure_number,
-            {},
+            environment.previous_metadata["persistent_indicators"],
             environment.timing,
         )
         persist_score(score, environment)

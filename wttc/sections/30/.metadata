@@ -56,6 +56,14 @@
         "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Cello.Music",
                 edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
@@ -78,8 +86,24 @@
                 synthetic_offset=None,
                 value="Vc.",
             ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
+            ),
         ],
         "Guitar.1.Staff": [
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
             baca.Memento(
                 context="Guitar.1.Music",
                 edition=Tag(string="+SECTION"),
@@ -104,8 +128,24 @@
                 synthetic_offset=None,
                 value="Gt. 1",
             ),
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
+            ),
         ],
         "Guitar.2.Staff": [
+            baca.Memento(
+                context="Guitar.2.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
             baca.Memento(
                 context="Guitar.2.Music",
                 edition=Tag(string="+SECTION"),
@@ -129,6 +169,14 @@
                 prototype=None,
                 synthetic_offset=None,
                 value="Gt. 2",
+            ),
+            baca.Memento(
+                context="Guitar.2.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
         "Oboe.Staff": [
@@ -178,6 +226,14 @@
         "Violin.Staff": [
             baca.Memento(
                 context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Violin.Music",
                 edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
@@ -199,6 +255,14 @@
                 prototype=None,
                 synthetic_offset=None,
                 value="Vn.",
+            ),
+            baca.Memento(
+                context="Violin.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
     },

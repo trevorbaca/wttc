@@ -256,6 +256,14 @@
         "Violin.Staff": [
             baca.Memento(
                 context="Violin.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=5,
+            ),
+            baca.Memento(
+                context="Violin.Music",
                 edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
@@ -277,6 +285,14 @@
                 prototype=None,
                 synthetic_offset=None,
                 value="Vn.",
+            ),
+            baca.Memento(
+                context="Violin.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=5,
             ),
         ],
     },

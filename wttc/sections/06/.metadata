@@ -102,6 +102,14 @@
         "Guitar.1.Staff": [
             baca.Memento(
                 context="Guitar.1.Music",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=1,
+            ),
+            baca.Memento(
+                context="Guitar.1.Music",
                 edition=Tag(string="+SECTION"),
                 manifest="instruments",
                 prototype=None,
@@ -123,6 +131,14 @@
                 prototype=None,
                 synthetic_offset=None,
                 value="Gt. 1",
+            ),
+            baca.Memento(
+                context="Guitar.1.Music",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=1,
             ),
         ],
         "Guitar.2.Music": [
