@@ -111,9 +111,9 @@ scene-vi-E-section = \markup
   \scene-vi-E
 
 scene-vi-E-parts = \markup
-  \scene-vi-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-vi-E-parts-positioning
   \scene-vi-E
 
 scene-vi-before-F = \markup
@@ -144,9 +144,9 @@ scene-vi-F-section = \markup
   \scene-vi-F
 
 scene-vi-F-parts = \markup
-  \scene-vi-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-vi-F-parts-positioning
   \scene-vi-F
 
 scene-vi-G-section = \markup

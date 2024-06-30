@@ -465,6 +465,8 @@ number.7.Violin.Music = {
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
     \clef "treble"
+      %! +LETTER_PARTS_VIOLIN
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 6)
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -531,6 +533,8 @@ number.7.Violin.Music = {
     {
 
         % [Violin.Music measure 2]
+          %! +LETTER_PARTS_VIOLIN
+    %%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 3)
         d''8
         - \trill
           %! REDUNDANT_DYNAMIC_COLOR

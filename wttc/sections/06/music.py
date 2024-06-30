@@ -145,6 +145,8 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    wrappers = baca.override.metronome_mark_extra_offset(m[1][0], (0, 3))
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_VIOLIN"))
     library.C1_final(library.pleaves(m[1], 99), "D5", "F#5", "mf mp")
     library.K2d(library.pleaves(m[3, 4], 2), "Ab3", "mf")
 

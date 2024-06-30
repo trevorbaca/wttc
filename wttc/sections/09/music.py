@@ -290,6 +290,8 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    wrappers = baca.override.metronome_mark_extra_offset(m[1][0], (0, 7))
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_VIOLIN"))
     library.F3b2(library.pleaves(m[1, 2], 3), "Ab4 Gb4", "pp>o!")
     library.F3b2(library.pleaves(m[3, 5][:10], 3), "Ab4 Gb4", "pp>o!", bdrp=2)
     library.F3b2(library.pleaves(m[5, 6][-9:], 3), "Ab4 Gb4", "pp>o!")
@@ -306,6 +308,8 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
+    wrappers = baca.override.metronome_mark_extra_offset(m[11][0], (0, 3))
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_VIOLIN"))
     pleaves = library.pleaves(m[11], 5)
     library.G5b(
         pleaves,

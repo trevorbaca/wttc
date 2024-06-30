@@ -2014,6 +2014,8 @@ number.8.Violin.Music = {
     \!
 
     % [Violin.Music measure 7]
+      %! +LETTER_PARTS_VIOLIN
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 5)
     \override DynamicLineSpanner.staff-padding = 6
     \override NoteHead.style = #'harmonic
     gs!4
@@ -2165,6 +2167,8 @@ number.8.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 10]
+      %! +LETTER_PARTS_VIOLIN
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 2)
     \override Beam.positions = #'(-6 . -6)
     \override DynamicLineSpanner.staff-padding = 7
     \override NoteHead.style = #'harmonic

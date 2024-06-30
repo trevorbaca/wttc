@@ -202,6 +202,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 54]
+    \grace { s8 }
     s1 * 6/4
 
     % [Breaks measure 55]
@@ -227,6 +228,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 61]
+    \baca-lbsd #12 #'(6)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 62]
@@ -236,14 +239,16 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 64]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
+    \baca-lbsd #38 #'(6)
+    \break
     s1 * 3/4
 
     % [Breaks measure 65]
     s1 * 6/4
 
     % [Breaks measure 66]
+    \baca-lbsd #64 #'(6)
+    \break
     s1 * 6/4
 
     % [Breaks measure 67]
@@ -253,7 +258,7 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 69]
-    \baca-lbsd #64 #'(6)
+    \baca-lbsd #116 #'(6)
     \break
     s1 * 3/4
 
@@ -264,11 +269,11 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 72]
+    \baca-lbsd #12 #'(6)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 73]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 3/4
 
     % [Breaks measure 74]
@@ -278,7 +283,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 76]
-    \baca-lbsd #116 #'(6)
+    \baca-lbsd #38 #'(6)
     \break
     s1 * 6/4
 
@@ -289,7 +294,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 79]
-    \baca-lbsd #142 #'(6)
+    \baca-lbsd #64 #'(6)
     \break
     s1 * 5/4
 
@@ -300,8 +305,6 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 82]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
     s1 * 4/4
 
     % [Breaks measure 83]
@@ -311,8 +314,6 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 85]
-    \baca-lbsd #38 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 86]
@@ -322,7 +323,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 88]
-    \baca-lbsd #64 #'(6)
+    \baca-lbsd #90 #'(6)
     \break
     s1 * 4/4
 
@@ -336,8 +337,6 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 92]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 4/4
 
     % [Breaks measure 93]
@@ -433,7 +432,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 117]
-    \baca-lbsd #25 #'(6)
+    \baca-lbsd #18.5 #'(6)
     \pageBreak
     s1 * 2/4
 
@@ -444,6 +443,8 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 120]
+    \baca-lbsd #44.5 #'(6)
+    \break
     s1 * 4/4
 
     % [Breaks measure 121]
@@ -453,7 +454,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 123]
-    \baca-lbsd #98 #'(6)
+    \baca-lbsd #105 #'(6)
     \break
     s1 * 6/4
 
@@ -464,7 +465,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 126]
-    \baca-lbsd #132 #'(6)
+    \baca-lbsd #140 #'(6)
     \break
     s1 * 6/4
 
@@ -643,6 +644,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 54]
+    \grace { s8 }
     s1 * 6/4
 
     % [SpacingCommands measure 55]
