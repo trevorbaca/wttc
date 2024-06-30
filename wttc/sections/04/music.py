@@ -1281,6 +1281,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
+        measure_initial_grace_notes={3: r"\grace { s8 }"},
         score_persistent_indicators=previous_persistent_indicators["Score"],
     )
     skips = score["Skips"]

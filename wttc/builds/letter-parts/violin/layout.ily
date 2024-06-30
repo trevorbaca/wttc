@@ -143,6 +143,7 @@ Breaks = {
     % [Breaks measure 38]
     \baca-lbsd #44 #'(6)
     \break
+    \grace { s8 }
     s1 * 3/4
 
     % [Breaks measure 39]
@@ -593,6 +594,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 38]
+    \grace { s8 }
     s1 * 3/4
 
     % [SpacingCommands measure 39]
