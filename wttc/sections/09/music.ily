@@ -1201,6 +1201,8 @@ number.9.Oboe.Music = {
     \>
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan f'''
 
     e'''1
@@ -1249,6 +1251,8 @@ number.9.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2332,6 +2336,8 @@ number.9.Violin.Music = {
     \glissando
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan bf'
 

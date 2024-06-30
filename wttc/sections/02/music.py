@@ -209,10 +209,17 @@ def vn(m):
 
     library.M5b(library.pleaves(m[10, 11], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
     library.H3(library.pleaves(m[11], 3), "E4", "F#4", "F#5", "D#4", "mp f", "P1")
+    baca.override.rehearsal_mark_extra_offset(
+        m[11][-1],
+        (0, 4),
+        after=True,
+        context="Staff",
+    )
 
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc")
+    baca.clef(m[10][0], "bass")
     library.D1b(
         library.pleaves(m[10, 11], 1),
         None,

@@ -892,6 +892,8 @@ number.13.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     d'''2 * 4/8
@@ -956,6 +958,8 @@ number.13.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 3]
@@ -986,6 +990,8 @@ number.13.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1018,6 +1024,8 @@ number.13.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 5]
@@ -1048,6 +1056,8 @@ number.13.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 

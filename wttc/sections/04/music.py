@@ -898,34 +898,16 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             rleak=True,
         )
     lone_plts = plts[2:]
-    for i, plt in enumerate(lone_plts):
-        assert len(plt) == 1
-        right_broken = False
-        rplt = baca.select.rleak(plt)
-        if abjad.get.has_indicator(rplt[-1], baca.enums.ANCHOR_NOTE):
-            right_broken = True
-        tweaks = ()
-        if staff_padding is not None:
-            tweak = baca.tweak.staff_padding(staff_padding, grob="TrillSpanner")
-            tweaks = tweaks + (tweak,)
-        baca.spanners.trill(
-            plt,
-            *tweaks,
-            alteration=harmonic,
-            force_trill_pitch_head_accidental=True,
-            harmonic=True,
-            right_broken=right_broken,
-            rleak=True,
-        )
-    if lone_plts:
-        baca.override.trill_spanner_dash_period(lone_plts, -1)
-        baca.override.trill_spanner_style(lone_plts, "#'dashed-line")
     for plt in lone_plts:
-        for pleaf in plt:
-            baca.triple_staccato(
-                pleaf,
-                baca.tweak.padding(0.5),
-            )
+        assert len(plt) == 1
+        baca.articulation(
+            plt[0],
+            "trill",
+        )
+        baca.triple_staccato(
+            plt[0],
+            baca.tweak.padding(0.5),
+        )
 
 
 def fl(m):
@@ -938,7 +920,7 @@ def fl(m):
         [7, 2],
         "p< f>o!",
         rleak=True,
-        trill_staff_padding=3,
+        tssp=3,
     )
     library.B1a_foo(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
     library.B3(
@@ -948,7 +930,7 @@ def fl(m):
         [5, 2],
         "p< f>o!",
         rleak=True,
-        trill_staff_padding=5.5,
+        tssp=5.5,
     )
     library.B1a_foo(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
     library.B3(
@@ -958,7 +940,7 @@ def fl(m):
         None,
         "f>o!",
         rleak=True,
-        trill_staff_padding=3,
+        tssp=3,
     )
     library.B1a_foo(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
     library.B1a_foo(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
@@ -968,7 +950,7 @@ def fl(m):
         "Db4",
         None,
         "sfp>o!",
-        trill_staff_padding=3,
+        tssp=3,
     )
     library.B1a_foo(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
     library.B3(
@@ -977,7 +959,7 @@ def fl(m):
         "B3",
         None,
         "sfp>o!",
-        trill_staff_padding=3,
+        tssp=3,
     )
     library.B1a_foo(library.pleaves(m[14, 15], 1), "D4", "p -")
     library.B3(
@@ -987,7 +969,7 @@ def fl(m):
         [1, 1],
         "sfpp< p>o!",
         rleak=True,
-        trill_staff_padding=3,
+        tssp=3,
     )
     baca.override.tuplet_bracket_direction_down(m.leaves())
     baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
@@ -1078,7 +1060,6 @@ def gt1(m):
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    baca.staff_lines(m[1][0], 5)
     B1b(library.pleaves(m[1], 1), '"mf"', up_bow=True)
     library.B2a(library.pleaves(m[1], 2), "D5", "p mp")
     B1b(library.pleaves(m[2], 1), '"f"', up_bow=True)
@@ -1174,8 +1155,8 @@ def vn(m):
         "mp mf",
         dls_staff_padding=3,
     )
-    C1(library.pleaves(m[14], 99), "D5", "F#5")
-    C1(library.pleaves(m[15], 99), "D5", "F#5")
+    C1(library.pleaves(m[14], 99), "D5", "F#5", staff_padding=3)
+    C1(library.pleaves(m[15], 99), "D5", "F#5", staff_padding=3)
     C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
 
 
@@ -1212,9 +1193,9 @@ def vc(m):
         string_number_staff_padding=5,
     )
     library.B4b(library.pleaves(m[11, 13], 4), 4, "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
-    C1(library.pleaves(m[14], 99), "D4", "F4")
-    C1(library.pleaves(m[15], 99), "D4", "F4")
-    C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p")
+    C1(library.pleaves(m[14], 99), "D4", "F4", staff_padding=5.5)
+    C1(library.pleaves(m[15], 99), "D4", "F4", staff_padding=5.5)
+    C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p", staff_padding=4.5)
 
 
 def owl(skips):

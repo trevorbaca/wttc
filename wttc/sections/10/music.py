@@ -548,7 +548,6 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    baca.staff_lines(m[1][0], 5)
     library.E1(
         library.pleaves(m[1, 5], 1),
         "A4",
@@ -573,7 +572,6 @@ def gt1(m):
 
 def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
-    baca.staff_lines(m[1][0], 5)
     library.E1(
         library.pleaves(m[1, 5], 1),
         "A4",
@@ -661,7 +659,6 @@ def vc(m):
         "A4",
         "f mp ff",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[4, 1, 4],
     )
     library.E3b(library.pleaves(m[3, 7], 3), "A#3:D#4", "E#4")
@@ -679,7 +676,6 @@ def vc(m):
         "A4",
         "ff",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[3],
     )
     library.E1(
@@ -687,7 +683,6 @@ def vc(m):
         "A4",
         "ff",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[1],
     )
     library.E1(
@@ -695,7 +690,6 @@ def vc(m):
         "A4",
         "mp mf",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[4, 1],
     )
     library.E1(
@@ -703,7 +697,6 @@ def vc(m):
         "A4",
         "ff",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[2],
     )
     library.E1(
@@ -711,7 +704,6 @@ def vc(m):
         "A4",
         "mp",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[3],
     )
     library.E1(
@@ -719,7 +711,6 @@ def vc(m):
         "A4",
         "f",
         pizzicato=True,
-        staff_padding=4,
         string_numbers=[4],
     )
     F1c(library.pleaves(m[20, 22], 99), "C#4", "E#4", "F#4", "mp mf f")

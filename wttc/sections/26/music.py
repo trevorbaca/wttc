@@ -1006,6 +1006,7 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc")
+    baca.clef(m[1][0], "bass")
     O2b(library.pleaves(m[2, 3], 2)[:-1], "p -")
     O2b(library.pleaves(m[3, 5], 2)[1:], "mp mf - -")
     O2b(library.pleaves(m[8, 10], 2), '"f" mf mp p -')

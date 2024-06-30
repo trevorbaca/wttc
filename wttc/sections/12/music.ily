@@ -1241,8 +1241,6 @@ number.12.AltoFlute.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     ds''!2. * 6/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
@@ -1309,10 +1307,6 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         fs'''!16 * 1408/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1408" #"1024"
@@ -1378,10 +1372,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1398,14 +1388,10 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1421,14 +1407,10 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1444,15 +1426,11 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     % [AltoFlute.Music measure 3]
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1468,14 +1446,10 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1491,14 +1465,10 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1514,10 +1484,6 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     ds''!4
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1581,10 +1547,6 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         fs'''!16 * 1728/2048
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1728" #"2048"
@@ -1660,10 +1622,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1680,14 +1638,10 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1703,14 +1657,10 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1726,10 +1676,6 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     ds''!4
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1793,10 +1739,6 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         fs'''!16 * 896/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
@@ -1892,10 +1834,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     g''8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1912,8 +1850,6 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     r4
@@ -1921,8 +1857,6 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 9]
     r2.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     e''2. * 6/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
@@ -2200,10 +2134,6 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'''16 * 15744/5120
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2321,10 +2251,6 @@ number.12.AltoFlute.Music = {
           %! SPANNER_STOP
         \!
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c''16 * 7872/5120
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2446,10 +2372,6 @@ number.12.AltoFlute.Music = {
       %! SPANNER_STOP
     \!
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     e''4
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2513,10 +2435,6 @@ number.12.AltoFlute.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         c'''16 * 896/1024
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"896" #"1024"
@@ -2612,10 +2530,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     bf'!8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -2632,8 +2546,6 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     r4
@@ -2656,8 +2568,6 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 22]
     r2.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     e''2. * 6/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
@@ -2703,10 +2613,6 @@ number.12.AltoFlute.Music = {
     \>
 
     % [AltoFlute.Music measure 23]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
       %! SPANNER_START
     \pitchedTrill
     cs'''!2. * 6/12
@@ -2765,10 +2671,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     bf'!8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2787,8 +2689,6 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     r4
@@ -2798,8 +2698,6 @@ number.12.AltoFlute.Music = {
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight burlywood
     e'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2907,15 +2805,11 @@ number.12.AltoFlute.Music = {
       %! SPANNER_STOP
     \!
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     % [AltoFlute.Music measure 29]
     r2.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
       %! SPANNER_START
     \pitchedTrill
     cs'''!2. * 6/12
@@ -2972,10 +2866,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     bf'!8.
       %! REDUNDANT_DYNAMIC_COLOR
@@ -2994,8 +2884,6 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     % [AltoFlute.Music measure 31]
@@ -3006,8 +2894,6 @@ number.12.AltoFlute.Music = {
     % [AltoFlute.Music measure 32]
     r2.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
       %! SPANNER_START
     \pitchedTrill
     cs'''!2. * 6/12
@@ -3064,10 +2950,6 @@ number.12.AltoFlute.Music = {
     [
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     \afterGrace 15/16
     bf'!8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3086,16 +2968,12 @@ number.12.AltoFlute.Music = {
     }
 
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2.
 
     r1
     \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 34]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
     f'''2. * 6/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"12"
@@ -3110,7 +2988,7 @@ number.12.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
 
@@ -3246,7 +3124,7 @@ number.12.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
 
@@ -3425,7 +3303,7 @@ number.12.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
 
@@ -3589,8 +3467,6 @@ number.12.AltoFlute.Music = {
     \>
 
     % [AltoFlute.Music measure 37]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     R1 * 7/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"7" #"4"
@@ -3647,8 +3523,6 @@ number.12.Oboe.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
         \once \override Beam.grow-direction = #left
         cs'''!16 * 3648/7168
           %! DURATION_MULTIPLIER
@@ -3723,8 +3597,6 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r1
@@ -3743,8 +3615,6 @@ number.12.Oboe.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
         \once \override Beam.grow-direction = #left
         cs'''!16 * 3648/7168
           %! DURATION_MULTIPLIER
@@ -3819,8 +3689,6 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r1
@@ -3834,8 +3702,6 @@ number.12.Oboe.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
         \once \override Beam.grow-direction = #left
         cs'''!16 * 4992/13312
           %! DURATION_MULTIPLIER
@@ -3940,8 +3806,6 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r1
@@ -3970,8 +3834,6 @@ number.12.Oboe.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
         \once \override Beam.grow-direction = #right
         g''16 * 5152/1024
           %! EXPLICIT_DYNAMIC_COLOR
@@ -4125,8 +3987,6 @@ number.12.Oboe.Music = {
     }
     \revert TupletNumber.text
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2.
 
     % [Oboe.Music measure 15]
@@ -4141,8 +4001,6 @@ number.12.Oboe.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightskyblue
         \once \override Beam.grow-direction = #left
         g''16 * 2304/7168
           %! DURATION_MULTIPLIER
@@ -4252,8 +4110,6 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r1
@@ -4283,8 +4139,6 @@ number.12.Oboe.Music = {
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Oboe.Music measure 23]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
       %! SPANNER_START
     \pitchedTrill
     gs''!2. * 6/12
@@ -4340,8 +4194,6 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4368,8 +4220,6 @@ number.12.Oboe.Music = {
     % [Oboe.Music measure 28]
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     d'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4383,15 +4233,11 @@ number.12.Oboe.Music = {
     - \baca-stop-on-string
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     % [Oboe.Music measure 29]
     r2.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
       %! SPANNER_START
     \pitchedTrill
     gs''!2. * 6/12
@@ -4447,8 +4293,6 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4460,8 +4304,6 @@ number.12.Oboe.Music = {
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     d'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4475,8 +4317,6 @@ number.12.Oboe.Music = {
     - \baca-stop-on-string
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
@@ -4484,8 +4324,6 @@ number.12.Oboe.Music = {
     % [Oboe.Music measure 32]
     r2.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
       %! SPANNER_START
     \pitchedTrill
     gs''!2. * 6/12
@@ -4541,16 +4379,12 @@ number.12.Oboe.Music = {
     \!
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2...
       %! SPANNER_STOP
     \stopTrillSpan
 
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     d'4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4564,16 +4398,12 @@ number.12.Oboe.Music = {
     - \baca-stop-on-string
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
     \revert DynamicLineSpanner.staff-padding
 
     % [Oboe.Music measure 34]
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     d'4
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4587,8 +4417,6 @@ number.12.Oboe.Music = {
     - \baca-stop-on-string
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r2
@@ -4596,8 +4424,6 @@ number.12.Oboe.Music = {
     % [Oboe.Music measure 35]
     r8.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     df'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4614,8 +4440,6 @@ number.12.Oboe.Music = {
     - \baca-stop-on-string
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r2
@@ -4625,8 +4449,6 @@ number.12.Oboe.Music = {
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     c'8
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4640,8 +4462,6 @@ number.12.Oboe.Music = {
     - \baca-stop-on-string
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r2.
@@ -4713,8 +4533,6 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 2]
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4732,14 +4550,10 @@ number.12.Guitar.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4747,14 +4561,10 @@ number.12.Guitar.1.Music = {
       %! REDUNDANT_DYNAMIC
     \p
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4762,15 +4572,11 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     % [Guitar.1.Music measure 3]
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4778,14 +4584,10 @@ number.12.Guitar.1.Music = {
       %! REDUNDANT_DYNAMIC
     \mp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4793,14 +4595,10 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mf
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4810,8 +4608,6 @@ number.12.Guitar.1.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
@@ -4819,8 +4615,6 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 4]
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         a'16 * 28992/5120
           %! EXPLICIT_DYNAMIC_COLOR
@@ -4885,12 +4679,8 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 5]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4908,14 +4698,10 @@ number.12.Guitar.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -4923,14 +4709,10 @@ number.12.Guitar.1.Music = {
       %! REDUNDANT_DYNAMIC
     \mf
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4940,8 +4722,6 @@ number.12.Guitar.1.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
@@ -4949,8 +4729,6 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 6]
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         a'16 * 28992/5120
           %! EXPLICIT_DYNAMIC_COLOR
@@ -5051,12 +4829,8 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 8]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5074,8 +4848,6 @@ number.12.Guitar.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -5084,8 +4856,6 @@ number.12.Guitar.1.Music = {
 
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
       %! EXPLICIT_STAFF_LINES
     \stopStaff
       %! EXPLICIT_STAFF_LINES
@@ -5114,23 +4884,17 @@ number.12.Guitar.1.Music = {
     b'16
     ]
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r4
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'16
     - \baca-stop-on-string
     - \tweak padding 1
     - \downbow
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r4
@@ -5138,36 +4902,26 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 9]
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'8
     - \baca-stop-on-string
     - \tweak padding 1
     - \downbow
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'16
     - \baca-stop-on-string
     - \tweak padding 1
     - \downbow
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'16
     - \baca-stop-on-string
     - \tweak padding 1
@@ -5178,8 +4932,6 @@ number.12.Guitar.1.Music = {
     b'16
     ]
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r4
@@ -5187,21 +4939,15 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 10]
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'16
     - \baca-stop-on-string
     - \tweak padding 1
     - \downbow
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'8
     - \baca-stop-on-string
     - \tweak padding 1
@@ -5218,8 +4964,6 @@ number.12.Guitar.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
@@ -5230,8 +4974,6 @@ number.12.Guitar.1.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         as'!16 * 5616/1024
           %! EXPLICIT_DYNAMIC_COLOR
@@ -5275,8 +5017,6 @@ number.12.Guitar.1.Music = {
     }
     \revert TupletNumber.text
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     % [Guitar.1.Music measure 12]
@@ -5304,8 +5044,6 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 16]
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         c''16 * 28992/5120
           %! EXPLICIT_DYNAMIC_COLOR
@@ -5418,12 +5156,8 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 18]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     a8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5445,16 +5179,12 @@ number.12.Guitar.1.Music = {
     \tuplet 3/2
     {
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -5478,8 +5208,6 @@ number.12.Guitar.1.Music = {
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5490,8 +5218,6 @@ number.12.Guitar.1.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -5499,8 +5225,6 @@ number.12.Guitar.1.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5509,15 +5233,11 @@ number.12.Guitar.1.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5531,15 +5251,11 @@ number.12.Guitar.1.Music = {
         % [Guitar.1.Music measure 19]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5552,8 +5268,6 @@ number.12.Guitar.1.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -5561,8 +5275,6 @@ number.12.Guitar.1.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5571,15 +5283,11 @@ number.12.Guitar.1.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5593,15 +5301,11 @@ number.12.Guitar.1.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5614,8 +5318,6 @@ number.12.Guitar.1.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -5635,8 +5337,6 @@ number.12.Guitar.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -5646,8 +5346,6 @@ number.12.Guitar.1.Music = {
     {
 
         % [Guitar.1.Music measure 22]
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         c''16 * 28992/5120
           %! EXPLICIT_DYNAMIC_COLOR
@@ -5748,12 +5446,8 @@ number.12.Guitar.1.Music = {
     \revert TupletNumber.text
 
     % [Guitar.1.Music measure 24]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     a8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5775,16 +5469,12 @@ number.12.Guitar.1.Music = {
     \tuplet 3/2
     {
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
           %! SPANNER_STOP
         \bacaStopTextSpanPizzicato
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -5808,8 +5498,6 @@ number.12.Guitar.1.Music = {
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5820,8 +5508,6 @@ number.12.Guitar.1.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -5829,8 +5515,6 @@ number.12.Guitar.1.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5839,15 +5523,11 @@ number.12.Guitar.1.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5861,15 +5541,11 @@ number.12.Guitar.1.Music = {
         % [Guitar.1.Music measure 25]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5882,8 +5558,6 @@ number.12.Guitar.1.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -5891,8 +5565,6 @@ number.12.Guitar.1.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5901,15 +5573,11 @@ number.12.Guitar.1.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5923,15 +5591,11 @@ number.12.Guitar.1.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \downbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -5944,8 +5608,6 @@ number.12.Guitar.1.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -5965,8 +5627,6 @@ number.12.Guitar.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -5974,8 +5634,6 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 28]
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     df''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5983,8 +5641,6 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 29]
@@ -5995,8 +5651,6 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 30]
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     a8.
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -6014,15 +5668,11 @@ number.12.Guitar.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
     % [Guitar.1.Music measure 31]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     ef''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6030,14 +5680,10 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     d''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6045,12 +5691,8 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     b'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6058,8 +5700,6 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mf
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 32]
@@ -6070,8 +5710,6 @@ number.12.Guitar.1.Music = {
     % [Guitar.1.Music measure 33]
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
     a8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6089,16 +5727,12 @@ number.12.Guitar.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     df''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6106,12 +5740,8 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     c''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6119,14 +5749,10 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mf
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight yellow
     a'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6134,16 +5760,12 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \f
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.1.Music measure 34]
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     af'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6151,16 +5773,12 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mf
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     g'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6168,12 +5786,8 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     a'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6181,15 +5795,11 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     % [Guitar.1.Music measure 35]
     r8.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     af'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6197,15 +5807,11 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \f
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     % [Guitar.1.Music measure 36]
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     g'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6213,14 +5819,10 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     gf'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6228,12 +5830,8 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     ef'!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6241,8 +5839,6 @@ number.12.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r2.
@@ -6323,8 +5919,6 @@ number.12.Guitar.2.Music = {
 
         r2
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
         fs''!4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6442,10 +6036,6 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         as'!16 * 11520/11264
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6518,10 +6108,6 @@ number.12.Guitar.2.Music = {
         \!
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightgreen
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         fs''!4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6577,10 +6163,6 @@ number.12.Guitar.2.Music = {
         [
         \repeatTie
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         as'!16 * 2176/1024
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6625,14 +6207,10 @@ number.12.Guitar.2.Music = {
     \revert TupletNumber.text
 
     % [Guitar.2.Music measure 7]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
       %! EXPLICIT_STAFF_LINES
     \stopStaff
       %! EXPLICIT_STAFF_LINES
@@ -6659,14 +6237,10 @@ number.12.Guitar.2.Music = {
 
     b'8
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r8.
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'16
     - \baca-stop-on-string
     - \tweak padding 1
@@ -6676,16 +6250,12 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 8]
     b'8
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r2
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'8
     - \baca-stop-on-string
     - \tweak padding 1
@@ -6696,8 +6266,6 @@ number.12.Guitar.2.Music = {
     b'16
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r4
@@ -6707,8 +6275,6 @@ number.12.Guitar.2.Music = {
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'16
     - \baca-stop-on-string
     - \tweak padding 1
@@ -6719,8 +6285,6 @@ number.12.Guitar.2.Music = {
     b'16
     ]
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r16
 
     r2.
@@ -6728,8 +6292,6 @@ number.12.Guitar.2.Music = {
     % [Guitar.2.Music measure 10]
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
     b'8
     - \baca-stop-on-string
     - \tweak padding 1
@@ -6751,8 +6313,6 @@ number.12.Guitar.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
     r2
@@ -6763,8 +6323,6 @@ number.12.Guitar.2.Music = {
     \tuplet 1/1
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 10000/2048
           %! EXPLICIT_DYNAMIC_COLOR
@@ -6812,8 +6370,6 @@ number.12.Guitar.2.Music = {
     }
     \revert TupletNumber.text
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     % [Guitar.2.Music measure 12]
@@ -6843,8 +6399,6 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 16]
         r1
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         b'4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6904,14 +6458,10 @@ number.12.Guitar.2.Music = {
     \revert TupletNumber.text
 
     % [Guitar.2.Music measure 17]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8.
 
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue
-      %! STAFF_HIGHLIGHT
-    \staffHighlight hotpink
       %! EXPLICIT_STAFF_LINES
     \stopStaff
       %! EXPLICIT_STAFF_LINES
@@ -6938,8 +6488,6 @@ number.12.Guitar.2.Music = {
 
     b'8
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
@@ -6951,15 +6499,11 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 18]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -6970,15 +6514,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -6989,8 +6529,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -6998,8 +6536,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7008,15 +6544,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7030,15 +6562,11 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 19]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7051,8 +6579,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -7060,8 +6586,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7070,15 +6594,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7092,15 +6612,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7113,8 +6629,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -7134,8 +6648,6 @@ number.12.Guitar.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -7145,8 +6657,6 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 22]
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         \once \override Beam.grow-direction = #right
         b'16 * 4000/1024
           %! EXPLICIT_DYNAMIC_COLOR
@@ -7250,14 +6760,10 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 24]
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -7281,8 +6787,6 @@ number.12.Guitar.2.Music = {
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7293,15 +6797,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7312,8 +6812,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -7321,8 +6819,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7331,15 +6827,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7353,15 +6845,11 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 25]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7374,8 +6862,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -7383,8 +6869,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7393,15 +6877,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7415,15 +6895,11 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
         - \upbow
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7436,8 +6912,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
         - \tweak padding 1
@@ -7457,8 +6931,6 @@ number.12.Guitar.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     R1 * 6/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"6" #"4"
@@ -7470,8 +6942,6 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 28]
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
         e''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7481,8 +6951,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     % [Guitar.2.Music measure 29]
@@ -7504,8 +6972,6 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
         c''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7513,8 +6979,6 @@ number.12.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
         \f
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7535,8 +6999,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
         bf'!8
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
@@ -7546,8 +7008,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7556,8 +7016,6 @@ number.12.Guitar.2.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight yellow
         b'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7573,12 +7031,8 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 34]
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         bf'!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7588,8 +7042,6 @@ number.12.Guitar.2.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -7597,8 +7049,6 @@ number.12.Guitar.2.Music = {
     {
 
         % [Guitar.2.Music measure 35]
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         gf'!8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7606,8 +7056,6 @@ number.12.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
         \mp
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r4
 
     }
@@ -7621,8 +7069,6 @@ number.12.Guitar.2.Music = {
         % [Guitar.2.Music measure 36]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         f'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7630,8 +7076,6 @@ number.12.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7642,8 +7086,6 @@ number.12.Guitar.2.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
         e'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -7651,8 +7093,6 @@ number.12.Guitar.2.Music = {
           %! EXPLICIT_DYNAMIC
         \f
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -7766,8 +7206,6 @@ number.12.Violin.Music = {
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight burlywood
     af'!8
     :32
       %! SPANNER_START
@@ -7972,8 +7410,6 @@ number.12.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r4
@@ -7995,8 +7431,6 @@ number.12.Violin.Music = {
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight burlywood
     e'8
     :32
       %! SPANNER_START
@@ -8205,8 +7639,6 @@ number.12.Violin.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 23]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
@@ -8222,8 +7654,6 @@ number.12.Violin.Music = {
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight burlywood
     b8
     :32
       %! SPANNER_START
@@ -8330,8 +7760,6 @@ number.12.Violin.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
     \revert DynamicLineSpanner.staff-padding
 
@@ -8361,8 +7789,6 @@ number.12.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"8" #"4"
 
     % [Violin.Music measure 34]
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightskyblue
       %! SPANNER_START
     \pitchedTrill
     c'''2. * 6/12
@@ -8379,7 +7805,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan cs'''
 
@@ -8517,7 +7943,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan c'''
 
@@ -8698,7 +8124,7 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan bf''
 
@@ -8858,10 +8284,6 @@ number.12.Violin.Music = {
       %! SPANNER_START
     \>
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
       %! SPANNER_START
     \pitchedTrill
     e'8
@@ -9176,9 +8598,6 @@ number.12.Violin.Music = {
       %! ANCHOR_NOTE
     \startStaff
       %! ANCHOR_NOTE
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
-      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
     b'1 * 1/4
@@ -9260,8 +8679,6 @@ number.12.Cello.Music = {
 
     r16
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
     g,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -9335,16 +8752,12 @@ number.12.Cello.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         d8
         - \baca-stop-on-string
           %! EXPLICIT_DYNAMIC_COLOR
@@ -9359,8 +8772,6 @@ number.12.Cello.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -9370,15 +8781,11 @@ number.12.Cello.Music = {
         % [Cello.Music measure 7]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d4
         - \baca-stop-on-string
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -9388,13 +8795,9 @@ number.12.Cello.Music = {
         % [Cello.Music measure 8]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -9407,15 +8810,11 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d4
         - \baca-stop-on-string
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -9424,13 +8823,9 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -9442,13 +8837,9 @@ number.12.Cello.Music = {
     \tuplet 3/2
     {
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d4
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -9461,8 +8852,6 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
         [
@@ -9472,16 +8861,12 @@ number.12.Cello.Music = {
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
-          %! STAFF_HIGHLIGHT
-        \staffHighlight lightpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 5
           %! EXPLICIT_STAFF_LINES
         \startStaff
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         g,8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -9634,8 +9019,6 @@ number.12.Cello.Music = {
     \bacaStopTextSpanVibrato
     \repeatTie
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r8
@@ -9648,8 +9031,6 @@ number.12.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! STAFF_HIGHLIGHT
-    \staffHighlight burlywood
     g'8
     :32
       %! SPANNER_START
@@ -9798,10 +9179,6 @@ number.12.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     gs,!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -9867,16 +9244,12 @@ number.12.Cello.Music = {
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         d8
         - \baca-stop-on-string
           %! EXPLICIT_DYNAMIC_COLOR
@@ -9894,8 +9267,6 @@ number.12.Cello.Music = {
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -9905,15 +9276,11 @@ number.12.Cello.Music = {
         % [Cello.Music measure 17]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d4
         - \baca-stop-on-string
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -9923,13 +9290,9 @@ number.12.Cello.Music = {
         % [Cello.Music measure 18]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -9940,13 +9303,9 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -9957,15 +9316,11 @@ number.12.Cello.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -9974,13 +9329,9 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -9994,13 +9345,9 @@ number.12.Cello.Music = {
         % [Cello.Music measure 19]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -10013,8 +9360,6 @@ number.12.Cello.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         d8
         - \baca-stop-on-string
 
@@ -10031,8 +9376,6 @@ number.12.Cello.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -10049,8 +9392,6 @@ number.12.Cello.Music = {
         %@% \override Staff.Clef.color = ##f
           %! EXPLICIT_CLEF
         \set Staff.forceClef = ##t
-          %! STAFF_HIGHLIGHT
-        \staffHighlight burlywood
         ef'!4
         :32
           %! SPANNER_START
@@ -10251,8 +9592,6 @@ number.12.Cello.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r8
 
     r2
@@ -10266,8 +9605,6 @@ number.12.Cello.Music = {
 
           %! EXPLICIT_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #blue
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
           %! EXPLICIT_STAFF_LINES
         \stopStaff
           %! EXPLICIT_STAFF_LINES
@@ -10289,8 +9626,6 @@ number.12.Cello.Music = {
           %! EXPLICIT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(0 . 2)
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -10301,13 +9636,9 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -10318,15 +9649,11 @@ number.12.Cello.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
 
     }
 
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -10335,13 +9662,9 @@ number.12.Cello.Music = {
 
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -10355,13 +9678,9 @@ number.12.Cello.Music = {
         % [Cello.Music measure 25]
         r8
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
 
-          %! STAFF_HIGHLIGHT
-        \stopStaffHighlight
         r8
 
     }
@@ -10374,8 +9693,6 @@ number.12.Cello.Music = {
 
         r4
 
-          %! STAFF_HIGHLIGHT
-        \staffHighlight hotpink
         b'8
         - \baca-stop-on-string
 
@@ -10392,14 +9709,10 @@ number.12.Cello.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r4
 
     r8
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight burlywood
     af!8
     :32
       %! SPANNER_START
@@ -10514,10 +9827,6 @@ number.12.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightpink
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     gs,!4
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -10757,14 +10066,10 @@ number.12.Cello.Music = {
     \repeatTie
 
     % [Cello.Music measure 36]
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
     r1
 
     r4
 
-      %! STAFF_HIGHLIGHT
-    \staffHighlight lightgreen
       %! SPANNER_START
     \pitchedTrill
     ef,!8
@@ -11064,9 +10369,6 @@ number.12.Cello.Music = {
     \once \override Staff.StaffSymbol.transparent = ##t
       %! ANCHOR_NOTE
     \startStaff
-      %! ANCHOR_NOTE
-      %! STAFF_HIGHLIGHT
-    \stopStaffHighlight
       %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE

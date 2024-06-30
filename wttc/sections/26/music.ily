@@ -6135,10 +6135,16 @@ number.26.Violin.Staff = <<
 number.26.Cello.Music = {
 
     % [Cello.Music measure 1]
-      %! REAPPLIED_CLEF
-    \clef "treble"
-      %! REAPPLIED_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'green4)
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_437
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_437
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
@@ -6147,13 +6153,13 @@ number.26.Cello.Music = {
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
-      %! REAPPLIED_CLEF_COLOR_CANCELLATION
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! -PARTS
     \override Staff.RehearsalMark.direction = #down
       %! -PARTS
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
-      %! REAPPLIED_CLEF
+      %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vc-markup
       %! -PARTS
@@ -6175,8 +6181,8 @@ number.26.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! REAPPLIED_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
       %! -PARTS
@@ -6202,7 +6208,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
@@ -6220,7 +6226,7 @@ number.26.Cello.Music = {
     \tuplet 3/2
     {
 
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -6240,7 +6246,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -6278,7 +6284,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6304,7 +6310,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'4
+        d4
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6325,7 +6331,7 @@ number.26.Cello.Music = {
         % [Cello.Music measure 5]
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -6342,7 +6348,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
         ~
 
@@ -6352,7 +6358,7 @@ number.26.Cello.Music = {
     \tuplet 3/2
     {
 
-        b'8
+        d8
         :32
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -6403,7 +6409,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6421,7 +6427,7 @@ number.26.Cello.Music = {
     \tuplet 3/2
     {
 
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -6441,7 +6447,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6463,7 +6469,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'4
+        d4
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6488,7 +6494,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6510,7 +6516,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'4
+        d4
         :32
 
     }
@@ -6549,7 +6555,7 @@ number.26.Cello.Music = {
         \once \override Staff.StaffSymbol.line-count = 1
           %! EXPLICIT_STAFF_LINES
         \startStaff
-        b'8
+        d8
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6575,7 +6581,7 @@ number.26.Cello.Music = {
         % [Cello.Music measure 12]
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'4
+        d4
         :32
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -6655,7 +6661,7 @@ number.26.Cello.Music = {
         \startStaff
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
-        b'4
+        d4
         :32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -6681,7 +6687,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
 
           %! STAFF_HIGHLIGHT
@@ -6698,7 +6704,7 @@ number.26.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight lightskyblue
-        b'8
+        d8
         :32
         ~
 
@@ -6708,7 +6714,7 @@ number.26.Cello.Music = {
     \tuplet 3/2
     {
 
-        b'8
+        d8
         :32
 
           %! EXPLICIT_STAFF_LINES_COLOR

@@ -3285,7 +3285,7 @@ number.3.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
-    \clef "treble"
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR

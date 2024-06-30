@@ -800,6 +800,7 @@ def K1b(pleaves, dyad, alteration, peaks):
         baca.tweak.style_harmonic(target=pleaf.note_heads[1])
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(3),
         alteration=alteration,
         harmonic=True,
         rleak=True,

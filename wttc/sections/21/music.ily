@@ -1771,7 +1771,21 @@ number.21.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 3]
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_352
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_352
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
     \override DynamicLineSpanner.staff-padding = 5
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
     <e, c>\breve
@@ -1804,6 +1818,8 @@ number.21.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -1820,15 +1836,21 @@ number.21.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 5]
-      %! REDUNDANT_CLEF
+      %! EXPLICIT_CLEF
     \clef "treble"
-      %! REDUNDANT_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
+      %! MEASURE_354
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_354
+      %! SHIFTED_CLEF
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
-      %! REDUNDANT_CLEF_COLOR_CANCELLATION
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! REDUNDANT_CLEF
+      %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
@@ -1857,8 +1879,8 @@ number.21.Cello.Music = {
       %! SPANNER_START
     \<
     \glissando
-      %! REDUNDANT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepPink4)
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     % [Cello.Music measure 6]
     \hide NoteHead

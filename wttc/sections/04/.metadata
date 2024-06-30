@@ -78,7 +78,7 @@
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
-                value="treble",
+                value="bass",
             ),
             baca.Memento(
                 context="Cello.Music",

@@ -420,7 +420,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    library.highlight_staves(cache)
+    # library.highlight_staves(cache)
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])

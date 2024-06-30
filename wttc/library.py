@@ -1197,13 +1197,13 @@ def B3(
     debug=False,
     rleak=False,
     to_bar_line=False,
-    trill_staff_padding=None,
+    tssp=None,
 ):
     nongraces = baca.select.pleaves(plts, grace=False)
     nongrace_plts = baca.select.plts(nongraces)
     tweaks = ()
-    if trill_staff_padding is not None:
-        tweak = baca.tweak.staff_padding(trill_staff_padding, grob="TrillSpanner")
+    if tssp is not None:
+        tweak = baca.tweak.staff_padding(tssp)
         tweaks = (tweak,)
     for nongrace_plt in nongrace_plts:
         baca.pitch(nongrace_plt, nongrace_pitch)
@@ -1388,6 +1388,7 @@ def C2a(pleaves, pitch_1, alteration, dynamic, pitch_2=None, *, tbl=None):
     baca.pitch(plts[0], pitch_1)
     baca.spanners.trill(
         plts[0],
+        baca.tweak.staff_padding(5.5),
         alteration=alteration,
         rleak=True,
     )
@@ -1503,6 +1504,7 @@ def C3a(
     if trill:
         baca.spanners.trill(
             all_leaves,
+            baca.tweak.staff_padding(3),
             alteration=trill,
             harmonic=harmonic,
             rleak=True,
@@ -1514,6 +1516,7 @@ def C3b(
 ):
     baca.spanners.trill(
         pleaves,
+        baca.tweak.staff_padding(5.5),
         alteration=alteration,
         rleak=True,
     )
@@ -1758,6 +1761,7 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
             )
             baca.spanners.trill(
                 run,
+                baca.tweak.staff_padding(5.5),
                 alteration=alteration,
                 rleak=True,
             )
@@ -1773,6 +1777,7 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
             )
             baca.spanners.trill(
                 plt,
+                baca.tweak.staff_padding(5.5),
                 alteration=alteration,
                 rleak=True,
             )
@@ -2291,11 +2296,11 @@ def H1b(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def H2(pleaves, pitch, alteration, peaks, *, tbl=False):
+def H2(pleaves, pitch, alteration, peaks, *, tbl=False, tssp=5.5):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         rleak=True,
     )
@@ -2627,11 +2632,11 @@ def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, tblf
     )
 
 
-def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin):
+def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, tssp=5.5):
     baca.pitches(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         rleak=True,
     )

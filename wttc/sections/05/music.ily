@@ -1991,6 +1991,8 @@ number.5.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan d'''
 
     \override Accidental.stencil = ##f
@@ -2014,6 +2016,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
     ]
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 2.5)
     \revert Accidental.stencil
     \revert Dots.font-size
     \revert Flag.font-size
@@ -2060,6 +2063,8 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -2131,6 +2136,8 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -2207,6 +2214,8 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3488,6 +3497,8 @@ number.5.Oboe.Music = {
     \>
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan f'''
 
     e'''1
@@ -3534,6 +3545,8 @@ number.5.Oboe.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
       %! STAFF_HIGHLIGHT
@@ -3571,6 +3584,8 @@ number.5.Oboe.Music = {
       %! SPANNER_START
     \>
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan f'''
 
@@ -3621,6 +3636,8 @@ number.5.Oboe.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 13]
@@ -3660,6 +3677,8 @@ number.5.Oboe.Music = {
       %! SPANNER_START
     \>
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -3714,6 +3733,8 @@ number.5.Oboe.Music = {
     \>
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan ef'''
 
     df'''2
@@ -3761,6 +3782,8 @@ number.5.Oboe.Music = {
       %! SPANNER_START
     \>
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan ef'''
 
@@ -3815,6 +3838,8 @@ number.5.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan ef'''
 
@@ -7172,6 +7197,8 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan bf'
 
     \hide NoteHead
@@ -7416,6 +7443,8 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan bf'
 
     \hide NoteHead
@@ -7634,6 +7663,8 @@ number.5.Violin.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan bf'
 
     \hide NoteHead
@@ -7681,6 +7712,8 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -7743,6 +7776,7 @@ number.5.Violin.Music = {
     \once \override Parentheses.font-size = 3
     \parenthesize
     <ef'!>4
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 3)
     \revert DynamicLineSpanner.staff-padding
 
     % [Violin.Music measure 18]
@@ -7950,6 +7984,8 @@ number.5.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan a''
 
     \override Accidental.stencil = ##f
@@ -8081,6 +8117,8 @@ number.5.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan a''
 
     \override Accidental.stencil = ##f
@@ -8162,6 +8200,8 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -8649,7 +8689,7 @@ number.5.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
-    \clef "treble"
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -8735,13 +8775,13 @@ number.5.Cello.Music = {
         f
     >2
 
-      %! REDUNDANT_CLEF
+      %! EXPLICIT_CLEF
     \clef "treble"
-      %! REDUNDANT_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
-      %! REDUNDANT_CLEF_COLOR_CANCELLATION
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! REDUNDANT_CLEF
+      %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
@@ -8771,8 +8811,8 @@ number.5.Cello.Music = {
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan af'!
-      %! REDUNDANT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepPink4)
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music

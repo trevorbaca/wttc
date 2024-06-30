@@ -779,7 +779,7 @@ number.1.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan e''
 
@@ -872,6 +872,10 @@ number.1.Oboe.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
+    \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-ob-markup
@@ -934,6 +938,8 @@ number.1.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1403,6 +1409,10 @@ number.1.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
+    \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-gt-ii-markup
@@ -2274,7 +2284,7 @@ number.1.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
-    \clef "treble"
+    \clef "bass"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -2282,12 +2292,16 @@ number.1.Cello.Music = {
     \once \override Staff.Clef.color = #blue
       %! MEASURE_1
       %! SHIFTED_CLEF
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #blue
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+      %! -PARTS
+    \override Staff.RehearsalMark.direction = #down
+      %! -PARTS
+    \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vc-markup
@@ -2355,13 +2369,13 @@ number.1.Cello.Music = {
         f
     >2
 
-      %! REDUNDANT_CLEF
+      %! EXPLICIT_CLEF
     \clef "treble"
-      %! REDUNDANT_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
-      %! REDUNDANT_CLEF_COLOR_CANCELLATION
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! REDUNDANT_CLEF
+      %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
@@ -2391,8 +2405,8 @@ number.1.Cello.Music = {
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan af'!
-      %! REDUNDANT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepPink4)
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music

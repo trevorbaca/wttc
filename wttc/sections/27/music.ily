@@ -845,7 +845,7 @@ number.27.Cello.Music = {
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
-    \clef "treble"
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -920,7 +920,7 @@ number.27.Cello.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    b'4
+    d4
 
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
@@ -928,7 +928,7 @@ number.27.Cello.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    b'8
+    d8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -972,14 +972,14 @@ number.27.Cello.Music = {
     >8
     \repeatTie
 
-      %! EXPLICIT_CLEF
+      %! REDUNDANT_CLEF
     \clef "bass"
-      %! EXPLICIT_CLEF_COLOR
-    \once \override Staff.Clef.color = #blue
+      %! REDUNDANT_CLEF_COLOR
+    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
     \override NoteHead.style = #'harmonic
-      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+      %! REDUNDANT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-      %! EXPLICIT_CLEF
+      %! REDUNDANT_CLEF
     \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
@@ -999,8 +999,8 @@ number.27.Cello.Music = {
     - \tweak TrillSpanner.staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
-      %! EXPLICIT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+      %! REDUNDANT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepPink4)
 
     \hide NoteHead
     \override Accidental.stencil = ##f

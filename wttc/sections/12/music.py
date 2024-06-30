@@ -867,9 +867,9 @@ def fl(m):
     library.G3a(library.pleaves(m[30], 3), "F4 E4", "p")
     library.G2a2(library.pleaves(m[32, 33], 2), "G#5", "B5", "pp")
     library.G3a(library.pleaves(m[33], 3), "F4 E4", "p")
-    library.H2(library.pleaves(m[34], 2), "C6", None, "p p mp")
-    library.H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf")
-    library.H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", tbl=True)
+    library.H2(library.pleaves(m[34], 2), "C6", None, "p p mp", tssp=7)
+    library.H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf", tssp=7)
+    library.H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", tbl=True, tssp=7)
 
 
 def ob(m):
@@ -1104,7 +1104,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    library.highlight_staves(cache)
+    # library.highlight_staves(cache)
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])

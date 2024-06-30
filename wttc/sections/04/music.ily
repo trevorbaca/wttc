@@ -714,7 +714,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \<
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -735,7 +735,7 @@ number.4.AltoFlute.Music = {
     \pitchedTrill
     g''4
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -755,7 +755,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_STOP
         \stopTrillSpan
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -786,7 +786,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -879,7 +879,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \<
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 5.5
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -896,7 +896,7 @@ number.4.AltoFlute.Music = {
         g''8
         ]
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 5.5
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -936,7 +936,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 5.5
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \startTrillSpan a''
 
@@ -1018,7 +1018,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan gs''
 
@@ -1163,7 +1163,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan g''
 
@@ -1280,7 +1280,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \>
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan f''
 
@@ -1305,7 +1305,7 @@ number.4.AltoFlute.Music = {
         \pitchedTrill
         ef''!8
           %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan f''
 
@@ -1418,7 +1418,7 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan e''
 
@@ -2864,11 +2864,11 @@ number.4.Guitar.2.Music = {
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-          %! REDUNDANT_STAFF_LINES_COLOR
-        \once \override Staff.StaffSymbol.color = #(x11-color 'DeepPink1)
+          %! REAPPLIED_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
-          %! REDUNDANT_BAR_EXTENT
+          %! REAPPLIED_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
@@ -2884,11 +2884,11 @@ number.4.Guitar.2.Music = {
           %! -PARTS
           %! REAPPLIED_SHORT_INSTRUMENT_NAME
         \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-          %! REDUNDANT_STAFF_LINES
+          %! REAPPLIED_STAFF_LINES
         \stopStaff
-          %! REDUNDANT_STAFF_LINES
+          %! REAPPLIED_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 5
-          %! REDUNDANT_STAFF_LINES
+          %! REAPPLIED_STAFF_LINES
         \startStaff
         r16
           %! REAPPLIED_DYNAMIC_COLOR
@@ -4650,6 +4650,8 @@ number.4.Violin.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
+        - \tweak TrillSpanner.staff-padding 3
+          %! SPANNER_START
         - \tweak bound-details.right.padding 1
           %! SPANNER_START
         \startTrillSpan fs''!
@@ -4765,11 +4767,8 @@ number.4.Violin.Music = {
           %! SPANNER_START
         \>
 
-        \override TrillSpanner.dash-period = -1
-        \override TrillSpanner.style = #'dashed-line
-          %! SPANNER_START
-        \pitchedTrill
         d''8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -4781,12 +4780,6 @@ number.4.Violin.Music = {
         \!
           %! SPANNER_STOP
         \stopTrillSpan
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
-          %! SPANNER_START
-        \startTrillSpan fs''!
 
     }
 
@@ -4794,9 +4787,8 @@ number.4.Violin.Music = {
     \tuplet 6/4
     {
 
-          %! SPANNER_START
-        \pitchedTrill
         d''8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -4804,20 +4796,10 @@ number.4.Violin.Music = {
         \mf
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_STOP
-        \stopTrillSpan
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
-          %! SPANNER_START
-        \startTrillSpan fs''!
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -4829,9 +4811,8 @@ number.4.Violin.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight yellow
-          %! SPANNER_START
-        \pitchedTrill
         d''8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -4839,20 +4820,10 @@ number.4.Violin.Music = {
         \mp
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        - \tweak TrillSpanner.staff-padding 3
-          %! SPANNER_START
-        \startTrillSpan fs''!
-        \revert TrillSpanner.dash-period
-        \revert TrillSpanner.style
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8
-          %! SPANNER_STOP
-        \stopTrillSpan
         \revert DynamicLineSpanner.staff-padding
         \revert TupletBracket.direction
         \revert TupletBracket.staff-padding
@@ -4878,7 +4849,7 @@ number.4.Cello.Music = {
 
         % [Cello.Music measure 1]
           %! REAPPLIED_CLEF
-        \clef "treble"
+        \clef "bass"
           %! REAPPLIED_CLEF_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -6069,6 +6040,8 @@ number.4.Cello.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
+        - \tweak TrillSpanner.staff-padding 5.5
+          %! SPANNER_START
         - \tweak bound-details.right.padding 1
           %! SPANNER_START
         \startTrillSpan f'!
@@ -6154,6 +6127,8 @@ number.4.Cello.Music = {
           %! SPANNER_START
         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
           %! SPANNER_START
+        - \tweak TrillSpanner.staff-padding 4.5
+          %! SPANNER_START
         - \tweak bound-details.right.padding 1
           %! SPANNER_START
         \startTrillSpan f'!
@@ -6182,11 +6157,8 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \>
 
-        \override TrillSpanner.dash-period = -1
-        \override TrillSpanner.style = #'dashed-line
-          %! SPANNER_START
-        \pitchedTrill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -6198,10 +6170,6 @@ number.4.Cello.Music = {
         \!
           %! SPANNER_STOP
         \stopTrillSpan
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
     }
 
@@ -6212,14 +6180,11 @@ number.4.Cello.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r8.
-          %! SPANNER_STOP
-        \stopTrillSpan
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight yellow
-          %! SPANNER_START
-        \pitchedTrill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -6227,16 +6192,10 @@ number.4.Cello.Music = {
         \mf
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r16
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -6248,9 +6207,8 @@ number.4.Cello.Music = {
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight yellow
-          %! SPANNER_START
-        \pitchedTrill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -6258,22 +6216,15 @@ number.4.Cello.Music = {
         \mp
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r16
-          %! SPANNER_STOP
-        \stopTrillSpan
 
           %! STAFF_HIGHLIGHT
         %@% \staffHighlight yellow
-          %! SPANNER_START
-        \pitchedTrill
         d'8
+        - \trill
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -6281,13 +6232,7 @@ number.4.Cello.Music = {
         \p
         - \tweak padding 0.5
         - \baca-staccati #3
-          %! SPANNER_START
-        - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
-          %! SPANNER_START
-        \startTrillSpan f'!
         \revert DynamicLineSpanner.staff-padding
-        \revert TrillSpanner.dash-period
-        \revert TrillSpanner.style
         \revert TupletBracket.direction
 
     }
@@ -6316,16 +6261,12 @@ number.4.Cello.Music = {
       %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
-    b'1 * 1/4
+    d1 * 1/4
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SPANNER_STOP
-    \stopTrillSpan
 
 }
 

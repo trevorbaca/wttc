@@ -436,7 +436,7 @@ def F2a2(pleaves, pitch, alteration, hairpin_lparts, peaks):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(3, grob="TrillSpanner"),
+        baca.tweak.staff_padding(6),
         alteration=alteration,
         rleak=True,
     )
@@ -626,7 +626,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(meters()),
         library.voice_abbreviations,
     )
-    library.highlight_staves(cache)
+    # library.highlight_staves(cache)
     library.check_material_annotations(score)
     fl(cache["fl"])
     ob(cache["ob"])

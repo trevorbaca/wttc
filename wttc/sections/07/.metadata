@@ -122,7 +122,7 @@
                 manifest=None,
                 prototype="baca.StaffLines",
                 synthetic_offset=None,
-                value=1,
+                value=5,
             ),
             baca.Memento(
                 context="Guitar.1.Music",
@@ -138,7 +138,7 @@
                 manifest=None,
                 prototype="baca.BarExtent",
                 synthetic_offset=None,
-                value=1,
+                value=5,
             ),
         ],
         "Guitar.2.Music": [

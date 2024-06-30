@@ -134,6 +134,7 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
+    baca.staff_lines(m[1][0], 5)
     library.O3b(library.pleaves(m[3], 3), "A5", "p")
 
 

@@ -1901,6 +1901,8 @@ number.10.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -1959,6 +1961,8 @@ number.10.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2019,6 +2023,8 @@ number.10.Oboe.Music = {
       %! SPANNER_START
     \<
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2091,6 +2097,8 @@ number.10.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     d'''2 * 4/8
@@ -2155,6 +2163,8 @@ number.10.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 16]
@@ -2185,6 +2195,8 @@ number.10.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2217,6 +2229,8 @@ number.10.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 18]
@@ -2247,6 +2261,8 @@ number.10.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -2300,12 +2316,12 @@ number.10.Guitar.1.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-      %! REDUNDANT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #(x11-color 'DeepPink1)
+      %! REAPPLIED_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 3
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
-      %! REDUNDANT_BAR_EXTENT
+      %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -2315,11 +2331,11 @@ number.10.Guitar.1.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
-      %! REDUNDANT_STAFF_LINES
+      %! REAPPLIED_STAFF_LINES
     \stopStaff
-      %! REDUNDANT_STAFF_LINES
+      %! REAPPLIED_STAFF_LINES
     \once \override Staff.StaffSymbol.line-count = 5
-      %! REDUNDANT_STAFF_LINES
+      %! REAPPLIED_STAFF_LINES
     \startStaff
     r8.
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -2918,12 +2934,12 @@ number.10.Guitar.2.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-      %! REDUNDANT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #(x11-color 'DeepPink1)
+      %! REAPPLIED_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 3
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
-      %! REDUNDANT_BAR_EXTENT
+      %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -2937,11 +2953,11 @@ number.10.Guitar.2.Music = {
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
-      %! REDUNDANT_STAFF_LINES
+      %! REAPPLIED_STAFF_LINES
     \stopStaff
-      %! REDUNDANT_STAFF_LINES
+      %! REAPPLIED_STAFF_LINES
     \once \override Staff.StaffSymbol.line-count = 5
-      %! REDUNDANT_STAFF_LINES
+      %! REAPPLIED_STAFF_LINES
     \startStaff
     r8.
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -5114,7 +5130,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
           %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -5158,7 +5174,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-i-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5194,7 +5210,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5354,7 +5370,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5599,7 +5615,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-i-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5667,7 +5683,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5705,7 +5721,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-i-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5790,7 +5806,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-ii-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5858,7 +5874,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iii-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 
@@ -5993,7 +6009,7 @@ number.10.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-parenthesized-string-iv-markup
           %! SPANNER_START
-        - \tweak staff-padding 4
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanStringNumber
 

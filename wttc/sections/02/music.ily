@@ -916,6 +916,8 @@ number.2.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     d'''2 * 4/8
@@ -980,6 +982,8 @@ number.2.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 3]
@@ -1010,6 +1014,8 @@ number.2.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1042,6 +1048,8 @@ number.2.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan e'''
 
     % [Oboe.Music measure 5]
@@ -1072,6 +1080,8 @@ number.2.Oboe.Music = {
     \>
     - \tweak stencil ##f
     ~
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1831,6 +1841,7 @@ number.2.Violin.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     ]
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 4)
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
@@ -1955,6 +1966,20 @@ number.2.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 10]
+      %! EXPLICIT_CLEF
+    \clef "bass"
+      %! MEASURE_21
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.X-extent = ##f
+      %! EXPLICIT_CLEF_COLOR
+    \once \override Staff.Clef.color = #blue
+      %! MEASURE_21
+      %! SHIFTED_CLEF
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! EXPLICIT_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f
+      %! EXPLICIT_CLEF
+    \set Staff.forceClef = ##t
     f,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1979,6 +2004,8 @@ number.2.Cello.Music = {
       %! SPANNER_START
     \>
     \glissando
+      %! EXPLICIT_CLEF_REDRAW_COLOR
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     % [Cello.Music measure 11]
     \hide NoteHead

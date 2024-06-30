@@ -947,7 +947,7 @@ number.16.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan bf''
 

@@ -2464,7 +2464,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan
 
@@ -2637,7 +2637,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan
 
@@ -2817,7 +2817,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan
 
@@ -2981,7 +2981,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan
 
@@ -3027,7 +3027,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan
 
@@ -3072,7 +3072,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan
 
@@ -3132,7 +3132,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan
 
@@ -3588,7 +3588,7 @@ number.19.AltoFlute.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan
 
@@ -4865,7 +4865,7 @@ number.19.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan bf'''
 
@@ -4936,7 +4936,7 @@ number.19.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan bf'''
 
@@ -5002,7 +5002,7 @@ number.19.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan bf'''
 
@@ -5083,7 +5083,7 @@ number.19.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan bf'''
 
@@ -5136,7 +5136,7 @@ number.19.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan a'''
 
@@ -5210,7 +5210,7 @@ number.19.Oboe.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan a'''
 
@@ -12179,7 +12179,7 @@ number.19.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan b'
 
@@ -12332,7 +12332,7 @@ number.19.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan b'
 
@@ -12441,7 +12441,7 @@ number.19.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan b'
 
@@ -12534,7 +12534,7 @@ number.19.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan c''
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -12822,7 +12822,7 @@ number.19.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan c''
 
@@ -13015,7 +13015,7 @@ number.19.Cello.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan c''
 

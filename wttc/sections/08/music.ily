@@ -960,6 +960,8 @@ number.8.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan f'''
 
     e'''4
@@ -1053,7 +1055,7 @@ number.8.Guitar.1.Music = {
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -1065,7 +1067,7 @@ number.8.Guitar.1.Music = {
       %! REAPPLIED_STAFF_LINES
     \stopStaff
       %! REAPPLIED_STAFF_LINES
-    \once \override Staff.StaffSymbol.line-count = 1
+    \once \override Staff.StaffSymbol.line-count = 5
       %! REAPPLIED_STAFF_LINES
     \startStaff
     R1 * 4/4
@@ -1128,16 +1130,13 @@ number.8.Guitar.1.Music = {
 
         r8
 
-          %! REDUNDANT_STAFF_LINES_COLOR
-        \once \override Staff.StaffSymbol.color = #(x11-color 'DeepPink1)
-          %! -PARTS
-          %! REDUNDANT_BAR_EXTENT
-        \override Staff.BarLine.bar-extent = #'(-2 . 0)
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES_COLOR
+        \once \override Staff.StaffSymbol.color = #blue
+          %! EXPLICIT_STAFF_LINES
         \stopStaff
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1
-          %! REDUNDANT_STAFF_LINES
+          %! EXPLICIT_STAFF_LINES
         \startStaff
         b'4
         - \tweak padding 1
@@ -1155,6 +1154,9 @@ number.8.Guitar.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \<
+          %! -PARTS
+          %! EXPLICIT_BAR_EXTENT
+        \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
     }
 

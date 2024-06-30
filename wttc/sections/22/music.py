@@ -243,7 +243,7 @@ def fl(m):
         None,
         "f>o!",
         rleak=True,
-        trill_staff_padding=3,
+        tssp=3,
     )
 
 
@@ -254,7 +254,9 @@ def ob(m):
         "Eqf6 Eqf6  E6 E6  Eqs6 Eqs6",
         "f p f p f p",
     )
-    library.B3(library.pleaves(m[8, 9], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True)
+    library.B3(
+        library.pleaves(m[8, 9], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True, tssp=3
+    )
 
 
 def gt1(cache):
@@ -293,7 +295,6 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
-    baca.clef(m[3][0], "treble")
     library.N2b2(
         library.pleaves(m[3, 4], 2), "E5:G#5", "C#5:E#5", "pp<|mp", staff_padding=3
     )

@@ -5963,6 +5963,8 @@ number.18.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan c'
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -6120,6 +6122,8 @@ number.18.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SPANNER_START
     \startTrillSpan c'
 
     % [Cello.Music measure 28]
@@ -6268,6 +6272,8 @@ number.18.Cello.Music = {
     \<
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan c'
 

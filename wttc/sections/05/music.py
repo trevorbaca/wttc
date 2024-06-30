@@ -878,6 +878,12 @@ def fl(m):
     library.C3a(m[12], "G4", "F#4", "mp|>o !o<|mf", m[13][:3])
     library.C3a(m[15], "G4", "F#4", "mp|>o !o<|f", m[16][:3])
     library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff")
+    baca.override.rehearsal_mark_extra_offset(
+        m[17][-1],
+        (0, 2.5),
+        after=True,
+        context="Staff",
+    )
     library.C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!", rleak=True)
     library.C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!", rleak=True)
     library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True)
@@ -987,6 +993,12 @@ def vn(m):
         trill="m2",
     )
     library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")
+    baca.override.rehearsal_mark_extra_offset(
+        m[17][-1],
+        (0, 3),
+        after=True,
+        context="Staff",
+    )
     library.C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
     library.C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
     library.C3b(

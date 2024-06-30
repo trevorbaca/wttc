@@ -732,7 +732,7 @@ number.22.AltoFlute.Music = {
       %! SPANNER_START
     \>
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan gs''
 
@@ -910,6 +910,8 @@ number.22.Oboe.Music = {
           %! SPANNER_START
         \<
           %! SPANNER_START
+        - \tweak staff-padding 3
+          %! SPANNER_START
         \startTrillSpan ds''
 
     }
@@ -950,6 +952,8 @@ number.22.Oboe.Music = {
         \pitchedTrill
         cs''!8
         ]
+          %! SPANNER_START
+        - \tweak staff-padding 3
           %! SPANNER_START
         \startTrillSpan ds''
 
@@ -2007,16 +2011,8 @@ number.22.Cello.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Cello.Music measure 3]
-      %! REDUNDANT_CLEF
-    \clef "treble"
-      %! REDUNDANT_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
-      %! REDUNDANT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! REDUNDANT_CLEF
-    \set Staff.forceClef = ##t
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
     <e'' gs''!>1
@@ -2044,8 +2040,6 @@ number.22.Cello.Music = {
       %! SPANNER_START
     \<
     \glissando
-      %! REDUNDANT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepPink4)
 
     % [Cello.Music measure 4]
     \hide NoteHead

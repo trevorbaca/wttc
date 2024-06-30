@@ -231,6 +231,7 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "bass")
+    baca.clef(m[3][0], "bass")
     library.still_1a(library.pleaves(m[3], 1), "E2:C3", "mf", tasto=True)
     baca.clef(m[5][0], "treble")
     library.N2b2(
