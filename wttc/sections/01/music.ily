@@ -3,16 +3,8 @@
 number.1.Skips = {
 
     % [Skips measure 1]
-      %! RED_START_BAR
-    %@% \baca-thick-red-bar-line
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=150
-      %! RED_START_BAR
-    %@% \tweak break-visibility ##(#t #t #f)
-      %! RED_START_BAR
-    %@% \tweak color #red
-      %! RED_START_BAR
-    %@% \mark \markup \with-dimensions-from \null "01"
     s1 * 3/4
       %! +PARTS
 %%% - \tweak X-extent ##f
@@ -491,7 +483,6 @@ number.1.AltoFlute.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \set Staff.instrumentName = \wttc-afl-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-afl-markup
@@ -878,7 +869,6 @@ number.1.Oboe.Music = {
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \set Staff.instrumentName = \wttc-ob-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-ob-markup
@@ -1164,7 +1154,6 @@ number.1.Guitar.1.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \set Staff.instrumentName = \wttc-gt-i-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-i-markup
@@ -1415,7 +1404,6 @@ number.1.Guitar.2.Music = {
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \set Staff.instrumentName = \wttc-gt-ii-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-gt-ii-markup
@@ -1701,7 +1689,6 @@ number.1.Violin.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \set Staff.instrumentName = \wttc-vn-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vn-markup
@@ -2304,7 +2291,6 @@ number.1.Cello.Music = {
     \override Staff.RehearsalMark.rotation = #'(180 0 0)
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    \set Staff.instrumentName = \wttc-vc-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \wttc-vc-markup
