@@ -871,7 +871,7 @@ number.29.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak padding 1.25
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1342,6 +1342,7 @@ number.29.AltoFlute.Music = {
     - \tweak staff-padding 3
       %! SPANNER_START
     \bacaStartTextSpanCovered
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 3)
 
     % [AltoFlute.Music measure 16]
     b'1 * 8/16
@@ -1473,6 +1474,8 @@ number.29.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
     \startTrillSpan d'''
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -1548,7 +1551,7 @@ number.29.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan a'''
 
@@ -2389,7 +2392,7 @@ number.29.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 4
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -2511,7 +2514,7 @@ number.29.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 5
       %! SPANNER_START
     \startTrillSpan cs'''
 
@@ -2644,7 +2647,7 @@ number.29.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -3249,6 +3252,7 @@ number.29.Cello.Music = {
       %! SPANNER_START
     \pitchedTrill
     ef,!4 * 2/4
+    - \tweak padding 2
     - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
@@ -3275,7 +3279,7 @@ number.29.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan f,
 

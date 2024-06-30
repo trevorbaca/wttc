@@ -9889,7 +9889,7 @@ number.19.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -10146,7 +10146,7 @@ number.19.Violin.Music = {
     \>
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan a''
 

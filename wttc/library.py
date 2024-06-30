@@ -1512,11 +1512,19 @@ def C3a(
 
 
 def C3b(
-    pleaves, pitch, alteration, hairpin, dummy_pitch="F5", *, once=False, rleak=False
+    pleaves,
+    pitch,
+    alteration,
+    hairpin,
+    dummy_pitch="F5",
+    *,
+    once=False,
+    rleak=False,
+    tssp=5.5,
 ):
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(5.5),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         rleak=True,
     )
@@ -1980,11 +1988,13 @@ def F2a1(pleaves, pitches, dynamics):
         pleaf.written_pitch = pitch
 
 
-def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
+def F2b1(
+    pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices, *, tssp=3
+):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(3, grob="TrillSpanner"),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         harmonic=True,
         rleak=True,
@@ -1999,7 +2009,7 @@ def F2b1(pleaves, pitch, alteration, hairpin_lparts, peaks, down_bow_indices):
                 descriptor="½ clt ||",
                 rleak=True,
             )
-            baca.down_bow(part[0], full=True)
+            baca.down_bow(part[0], baca.tweak.padding(2), full=True)
         else:
             baca.spanners.circle_bow(
                 part,
@@ -2658,13 +2668,14 @@ def L2b2(
     gliss=None,
     rleak=False,
     tbl=False,
+    tssp=5.5,
 ):
     baca.pitches(pleaves, pitches, strict=True)
     if gliss is not None:
         baca.glissando(pleaves[gliss:])
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         rleak=True,
     )
@@ -2697,15 +2708,15 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
     )
 
 
-def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None):
+def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None, *, tssp=3):
     baca.pitch(pleaves[0], dyad)
     baca.tweak.style_harmonic(target=pleaves[0].note_heads[1])
-    baca.pitch(pleaves[-1], stop_pitch)
+    baca.pitch(pleaves[1:], stop_pitch)
     baca.glissando(pleaves)
     baca.spanners.text(
         pleaves,
         r"\wttc-non-stringere ||",
-        baca.tweak.staff_padding(3),
+        baca.tweak.staff_padding(tssp),
         rleak=True,
     )
     if hairpin_lparts is None:
@@ -3018,12 +3029,21 @@ def O4a(pleaves, pitch, hairpin, *, rleak=False):
     baca.breathe(pleaves[-1])
 
 
-def P1b(pleaves, glissando, alteration, hairpin_lparts, hairpin, *, rleak=False):
+def P1b(
+    pleaves,
+    glissando,
+    alteration,
+    hairpin_lparts,
+    hairpin,
+    *,
+    rleak=False,
+    tssp=3,
+):
     baca.glissando(pleaves, glissando)
     baca.override.note_head_style_harmonic(pleaves)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(3, grob="TrillSpanner"),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         rleak=True,
     )

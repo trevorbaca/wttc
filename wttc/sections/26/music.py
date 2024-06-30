@@ -790,7 +790,7 @@ def P1a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, rleak=False):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(3, grob="TrillSpanner"),
+        baca.tweak.staff_padding(5.5),
         alteration=alteration,
         rleak=True,
     )
@@ -805,7 +805,7 @@ def P2a(pleaves, pitch, peak):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
+        baca.tweak.staff_padding(7),
         rleak=True,
     )
     baca.hairpin(
@@ -1030,6 +1030,7 @@ def vc(m):
         [2, 2],
         "o< mf>o!",
         rleak=True,
+        tssp=5.5,
     )
     library.P1b(
         library.pleaves(m[25, 26], 1),
@@ -1038,6 +1039,7 @@ def vc(m):
         [1, 2],
         "o< mp>o!",
         rleak=True,
+        tssp=8.5,
     )
     library.P1b(
         library.pleaves(m[27, 28], 1),
@@ -1046,6 +1048,7 @@ def vc(m):
         [1, 2],
         "o< p>o!",
         rleak=True,
+        tssp=8.5,
     )
     library.P1b(
         library.pleaves(m[29, 32], 1),
@@ -1054,6 +1057,7 @@ def vc(m):
         [3, 2],
         "o< f>o!",
         rleak=True,
+        tssp=8.5,
     )
 
 

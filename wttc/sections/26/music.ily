@@ -2688,7 +2688,7 @@ number.26.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
 
@@ -2744,7 +2744,7 @@ number.26.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
 
@@ -2805,7 +2805,7 @@ number.26.AltoFlute.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTrillSpan
 
@@ -3051,7 +3051,7 @@ number.26.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3095,7 +3095,7 @@ number.26.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3137,7 +3137,7 @@ number.26.Oboe.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3199,7 +3199,7 @@ number.26.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3260,7 +3260,7 @@ number.26.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -3325,7 +3325,7 @@ number.26.Oboe.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -6988,7 +6988,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7039,7 +7039,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7088,7 +7088,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7153,7 +7153,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8.5
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7219,7 +7219,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8.5
       %! SPANNER_START
     \startTrillSpan c,
 
@@ -7289,7 +7289,7 @@ number.26.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8.5
       %! SPANNER_START
     \startTrillSpan c,
 

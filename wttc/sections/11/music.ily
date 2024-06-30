@@ -3941,7 +3941,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan f,
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -4118,7 +4118,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan f,
 
@@ -4151,6 +4151,7 @@ number.11.Cello.Music = {
 
     % [Cello.Music measure 10]
     ef,!2 * 4/8
+    - \tweak padding 2
     - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
@@ -4263,6 +4264,7 @@ number.11.Cello.Music = {
 
     % [Cello.Music measure 11]
     ef,!2 * 5/8
+    - \tweak padding 2
     - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"8"

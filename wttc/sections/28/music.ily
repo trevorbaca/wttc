@@ -1015,7 +1015,7 @@ number.28.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-non-stringere
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
       %! EXPLICIT_DYNAMIC
@@ -1030,21 +1030,17 @@ number.28.Cello.Music = {
     \<
     \glissando
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     \hide NoteHead
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    d4
+    c''4
 
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
     \revert Accidental.stencil
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
-    d8
+    c''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1088,15 +1084,7 @@ number.28.Cello.Music = {
     >8
     \repeatTie
 
-      %! REDUNDANT_CLEF
-    \clef "bass"
-      %! REDUNDANT_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
     \override NoteHead.style = #'harmonic
-      %! REDUNDANT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! REDUNDANT_CLEF
-    \set Staff.forceClef = ##t
       %! SPANNER_START
     \pitchedTrill
     e''8
@@ -1112,11 +1100,9 @@ number.28.Cello.Music = {
     \<
     \glissando
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTrillSpan c,
-      %! REDUNDANT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepPink4)
 
     \hide NoteHead
     \override Accidental.stencil = ##f

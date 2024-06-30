@@ -272,7 +272,7 @@ def fl(m):
     baca.pitch(m[1], "E6")
     baca.spanners.trill(
         m[1],
-        baca.tweak.padding(1.25),
+        baca.tweak.staff_padding(7),
         rleak=True,
     )
     baca.hairpin(
@@ -315,6 +315,12 @@ def fl(m):
     library.D4a(library.pleaves(m[13], 4), "F#5", "mf")
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", once=True)
     library.B1a_foo(library.pleaves(m[15], 1), "Eb4", '"f"')
+    baca.override.rehearsal_mark_extra_offset(
+        m[15][-1],
+        (0, 3),
+        after=True,
+        context="Staff",
+    )
     library.A1a(library.pleaves(m[16], 1), "F#4", "mf", tbl=True)
 
 
@@ -323,6 +329,7 @@ def ob(m):
     baca.pitch(m[1], "C6")
     baca.spanners.trill(
         m[1],
+        baca.tweak.staff_padding(5.5),
         alteration="D6",
         rleak=True,
     )
@@ -332,7 +339,7 @@ def ob(m):
         baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
     )
-    library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!")
+    library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!", tssp=7)
     library.J2a2(library.pleaves(m[7], 2), "B5", [1], "sfp>o!", rleak=True, tbl=True)
 
 
@@ -407,9 +414,10 @@ def vn(m):
         "o< f>o!",
         rleak=True,
         tbl=True,
+        tssp=4,
     )
     library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, tbl=True)
-    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", tbl=True)
+    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", tbl=True, tssp=5)
     library.E2b(
         library.pleaves(m[12], 2),
         "G#4 C5",
@@ -419,7 +427,7 @@ def vn(m):
         xfb=True,
     )
     library.D4b(library.pleaves(m[13], 4), "G#3", dynamics="mp", no_spanner=True)
-    library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp")
+    library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", tssp=3)
     library.A1b(library.pleaves(m[16], 1), "D4 F4", "mp mp p p", tbl=True)
 
 
@@ -471,7 +479,7 @@ def vc(m):
         bdrp=2.5,
     )
     library.G4b(library.pleaves(m[10], 4), once=True)
-    library.F2b1(library.pleaves(m[11], 2), "Eb2", "F2", [1, 1], '"f"', [0])
+    library.F2b1(library.pleaves(m[11], 2), "Eb2", "F2", [1, 1], '"f"', [0], tssp=8)
     baca.clef(m[12][0], "tenor")
     library.E3b(library.pleaves(m[12], 3), "A#3:D#4", "E#4")
     baca.dynamic(m[12][1], "p")
