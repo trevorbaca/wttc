@@ -1349,6 +1349,9 @@ number.29.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND

@@ -534,6 +534,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -568,6 +571,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
 
     b'2 * 4/8
@@ -582,6 +588,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -611,6 +620,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
 
     % [AltoFlute.Music measure 2]
@@ -626,6 +638,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -653,6 +668,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -678,6 +696,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -703,6 +724,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -721,6 +745,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -746,6 +773,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -765,6 +795,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -790,6 +823,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -813,6 +849,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -842,6 +881,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
 
     a'2 * 4/8
@@ -856,6 +898,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -885,6 +930,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
 
     % [AltoFlute.Music measure 6]
@@ -900,6 +948,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -929,6 +980,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
 
     a'2 * 4/8
@@ -943,6 +997,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -972,6 +1029,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
 
@@ -988,6 +1048,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1015,6 +1078,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1211,6 +1277,9 @@ number.3.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
 
       %! INVISIBLE_MUSIC_COMMAND
@@ -1236,6 +1305,9 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>

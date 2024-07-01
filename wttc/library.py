@@ -253,6 +253,13 @@ def _reference_meters():
     )
 
 
+def all_hairpins_to_bar_line_tweak():
+    """
+    Set text spanner to-barline tweaks in a different way.
+    """
+    return (baca.tweak.to_bar_line_true(),)
+
+
 def annotate(items, n):
     assert n in (1, 2, 3, 4, 5, 99), repr(n)
     for item in items:
@@ -1025,12 +1032,12 @@ def e4(twelfths=False):
     return counts
 
 
-def A1a(pleaves, pitch, peaks, *, fhtbl=False):
+def A1a(pleaves, pitch, peaks):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
-        *final_hairpin_to_bar_line_tweak(fhtbl),
+        *all_hairpins_to_bar_line_tweak(),
         rleak=True,
     )
 

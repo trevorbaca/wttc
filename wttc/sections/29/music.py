@@ -321,7 +321,7 @@ def fl(m):
         after=True,
         context="Staff",
     )
-    library.A1a(library.pleaves(m[16], 1), "F#4", "mf", fhtbl=True)
+    library.A1a(library.pleaves(m[16], 1), "F#4", "mf")
 
 
 def ob(m):
