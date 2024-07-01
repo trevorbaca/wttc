@@ -701,6 +701,8 @@ number.22.AltoFlute.Music = {
     }
 
     c'4
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
     \revert TupletBracket.staff-padding
@@ -719,8 +721,6 @@ number.22.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-      %! SPANNER_STOP
-    \bacaStopTextSpanCovered
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

@@ -1330,26 +1330,16 @@ number.29.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
+    - \tweak staff-padding 3
+    ^ \baca-cov-markup
       %! SPANNER_STOP
     \stopTrillSpan
-      %! SPANNER_START
-    - \baca-dashed-line-with-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \baca-cov-markup
-      %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SPANNER_START
-    \bacaStartTextSpanCovered
     \once \override Staff.RehearsalMark.extra-offset = #'(0 . 3)
 
     % [AltoFlute.Music measure 16]
     b'1 * 8/16
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"8" #"16"
-      %! SPANNER_STOP
-    \bacaStopTextSpanCovered
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

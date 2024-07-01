@@ -943,7 +943,7 @@ def fl(m):
         tssp=3,
     )
     library.B1a_foo(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
-    library.B1a_foo(library.pleaves(m[7, 8], 1), "Eb4", '"f"')
+    library.B1a_foo(library.pleaves(m[7, 8], 1), "Eb4", '"f"', stblf=True)
     library.B3(
         library.run(m[8, 9], 3, 0),
         "C5",
@@ -952,7 +952,13 @@ def fl(m):
         "sfp>o!",
         tssp=3,
     )
-    library.B1a_foo(library.pleaves(m[10, 12], 1), "Eb4", "mp -", left_broken_none=True)
+    library.B1a_foo(
+        library.pleaves(m[10, 12], 1),
+        "Eb4",
+        "mp -",
+        left_broken_none=True,
+        stblf=True,
+    )
     library.B3(
         library.run(m[12, 13], 3, 0),
         "Bb4",
@@ -961,7 +967,7 @@ def fl(m):
         "sfp>o!",
         tssp=3,
     )
-    library.B1a_foo(library.pleaves(m[14, 15], 1), "D4", "p -")
+    library.B1a_foo(library.pleaves(m[14, 15], 1), "D4", "p -", stblf=True)
     library.B3(
         library.pleaves(m[15, 16], 3),
         "A4",

@@ -687,6 +687,8 @@ number.4.AltoFlute.Music = {
     {
 
         c'4
+          %! SPANNER_STOP
+        \bacaStopTextSpanCovered
 
         \grace {
 
@@ -695,8 +697,6 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             %@% \stopStaffHighlight
             af'!16
-              %! SPANNER_STOP
-            \bacaStopTextSpanCovered
 
         }
 
@@ -851,6 +851,8 @@ number.4.AltoFlute.Music = {
     {
 
         c'8
+          %! SPANNER_STOP
+        \bacaStopTextSpanCovered
         [
 
         \grace {
@@ -860,8 +862,6 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             %@% \stopStaffHighlight
             af'!16
-              %! SPANNER_STOP
-            \bacaStopTextSpanCovered
 
         }
 
@@ -991,6 +991,8 @@ number.4.AltoFlute.Music = {
     }
 
     c'4
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
     \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 4]
@@ -1007,8 +1009,6 @@ number.4.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-      %! SPANNER_STOP
-    \bacaStopTextSpanCovered
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1087,12 +1087,12 @@ number.4.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2.
-      %! SPANNER_STOP
-    \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 7]
     r2.
@@ -1116,6 +1116,8 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
     \bacaStartTextSpanCovered
     - \tweak stencil ##f
     ~
@@ -1124,13 +1126,13 @@ number.4.AltoFlute.Music = {
     % [AltoFlute.Music measure 8]
     \override DynamicLineSpanner.staff-padding = 6.5
     af'16
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
     \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r8.
-      %! SPANNER_STOP
-    \bacaStopTextSpanCovered
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
@@ -1217,6 +1219,8 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
     \bacaStartTextSpanCovered
 
       %! STAFF_HIGHLIGHT
@@ -1249,6 +1253,8 @@ number.4.AltoFlute.Music = {
         % [AltoFlute.Music measure 12]
         \override DynamicLineSpanner.staff-padding = 6.5
         af'8
+          %! SPANNER_STOP
+        \bacaStopTextSpanCovered
         \repeatTie
 
         \grace {
@@ -1258,8 +1264,6 @@ number.4.AltoFlute.Music = {
               %! STAFF_HIGHLIGHT
             %@% \stopStaffHighlight
             e'16
-              %! SPANNER_STOP
-            \bacaStopTextSpanCovered
 
         }
 
@@ -1363,6 +1367,8 @@ number.4.AltoFlute.Music = {
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
+    - \tweak to-barline ##f
+      %! SPANNER_START
     \bacaStartTextSpanCovered
 
       %! STAFF_HIGHLIGHT
@@ -1390,6 +1396,8 @@ number.4.AltoFlute.Music = {
 
     % [AltoFlute.Music measure 15]
     g'4
+      %! SPANNER_STOP
+    \bacaStopTextSpanCovered
     \repeatTie
 
     \slashedGrace {
@@ -1399,8 +1407,6 @@ number.4.AltoFlute.Music = {
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         cs'!8
-          %! SPANNER_STOP
-        \bacaStopTextSpanCovered
 
     }
 
