@@ -659,10 +659,7 @@ def owl(skips):
 
 
 def align_spanners(cache):
-    baca.override.dls_staff_padding(cache["fl"][1, 6], 3.5)
-    baca.override.dls_staff_padding(abjad.select.run(cache["fl"][8, 11], 0), 3.5)
-    baca.override.dls_staff_padding(abjad.select.run(cache["fl"][12], 0), 3.5)
-    baca.override.dls_staff_padding(abjad.select.run(cache["fl"][13], 0), 3.5)
+    baca.override.dls_staff_padding(cache["fl"][1, 13], 4)
     baca.override.dls_staff_padding(cache["gt1"][1, 7], 5)
     baca.override.dls_staff_padding(cache["gt1"][11, 13], 9)
     baca.override.dls_staff_padding(cache["gt2"][1, 7], 4.5)

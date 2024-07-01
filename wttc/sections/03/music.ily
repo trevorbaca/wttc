@@ -509,7 +509,7 @@ number.3.AltoFlute.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-    \override DynamicLineSpanner.staff-padding = 3.5
+    \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
@@ -1033,7 +1033,6 @@ number.3.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 7]
     a'4.. * 4/7
@@ -1131,7 +1130,6 @@ number.3.AltoFlute.Music = {
 
 
     % [AltoFlute.Music measure 8]
-    \override DynamicLineSpanner.staff-padding = 3.5
     f'''1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1222,7 +1220,6 @@ number.3.AltoFlute.Music = {
         g'''8
           %! SPANNER_STOP
         \!
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1262,7 +1259,6 @@ number.3.AltoFlute.Music = {
     \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 12]
-    \override DynamicLineSpanner.staff-padding = 3.5
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightpink
     a'2 * 4/8
@@ -1341,7 +1337,6 @@ number.3.AltoFlute.Music = {
         gs'''!8
           %! SPANNER_STOP
         \!
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1383,7 +1378,6 @@ number.3.AltoFlute.Music = {
     \bacaStopTextSpanCovered
 
     % [AltoFlute.Music measure 13]
-    \override DynamicLineSpanner.staff-padding = 3.5
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
     \afterGrace 15/16
@@ -1409,7 +1403,6 @@ number.3.AltoFlute.Music = {
         a'''8
           %! SPANNER_STOP
         \!
-        \revert DynamicLineSpanner.staff-padding
 
     }
 
@@ -1449,6 +1442,7 @@ number.3.AltoFlute.Music = {
     r8
       %! SPANNER_STOP
     \bacaStopTextSpanCovered
+    \revert DynamicLineSpanner.staff-padding
 
 }
 
