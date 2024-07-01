@@ -260,7 +260,7 @@ def fl(m):
     library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
     library.C3a(m[10], "G4", "F#4", "mp|>o !o<|mf", m[11][:3])
     library.G1a(library.pleaves(m[11], 1), "B4", [1, 1], "p")
-    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", htbl=True)
+    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", fhtbl=True)
 
 
 def ob(m):
@@ -268,9 +268,9 @@ def ob(m):
     library.G2a2(library.pleaves(m[2, 3], 2), "G#5", "B5", "p")
     library.H1a(library.pleaves(m[4], 99), "D4", "f")
     library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
-    library.C2a(library.pleaves(m[8, 9], 2), "E6", "F6", "mf", "Eb6", htbl=True)
-    library.C2a(library.pleaves(m[10], 2), "D6", "E6", "p", htbl=True)
-    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", htbl=True)
+    library.C2a(library.pleaves(m[8, 9], 2), "E6", "F6", "mf", "Eb6", fhtbl=True)
+    library.C2a(library.pleaves(m[10], 2), "D6", "E6", "p", fhtbl=True)
+    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", fhtbl=True)
 
 
 def gt1(m):

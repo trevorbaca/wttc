@@ -208,7 +208,7 @@ def ob(m):
         [2],
         "sfp>o!",
         rleak=True,
-        htbl=True,
+        fhtbl=True,
     )
 
 
