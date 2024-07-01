@@ -1060,7 +1060,7 @@ def ob(m):
         [2],
         "sfp>o!",
         rleak=True,
-        tbl=True,
+        htbl=True,
     )
 
 

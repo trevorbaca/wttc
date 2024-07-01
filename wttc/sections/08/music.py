@@ -252,8 +252,8 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.C2a(library.pleaves(m[5], 2), "E6", "F6", "mf", "Eb6", tbl=True)
-    library.D1a(library.pleaves(m[7, 8], 1), "D6", "mf", rleak=True, tbl=True)
+    library.C2a(library.pleaves(m[5], 2), "E6", "F6", "mf", "Eb6", htbl=True)
+    library.D1a(library.pleaves(m[7, 8], 1), "D6", "mf", rleak=True, htbl=True)
 
 
 def gt1(m):
@@ -283,7 +283,7 @@ def gt2(m):
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.K2d(library.pleaves(m[2, 3], 2), "Ab3", "mf")
-    library.A1b(library.pleaves(m[4, 5], 1), "E4 G#4", "pp p mp mp", tbl=True)
+    library.A1b(library.pleaves(m[4, 5], 1), "E4 G#4", "pp p mp mp", htbl=True)
     wrappers = baca.override.metronome_mark_extra_offset(m[7][0], (0, 5))
     baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_VIOLIN"))
     library.D4b(library.pleaves(m[7, 8], 4), "G#3", dynamics="mp - mf - - -")

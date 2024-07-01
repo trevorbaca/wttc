@@ -299,7 +299,7 @@ def fl(m):
         rleak=True,
     )
     library.M4(library.pleaves(m[4], 99), "D#6 B3", "f|>p")
-    library.K3a(library.pleaves(m[6], 3), "G3", "mp", tbl=True)
+    library.K3a(library.pleaves(m[6], 3), "G3", "mp", htbl=True)
     library.J2a2(
         library.pleaves(m[7], 2),
         "B5",
@@ -307,10 +307,10 @@ def fl(m):
         "sfp>o!",
         fluttertongue=True,
         rleak=True,
-        tbl=True,
+        htbl=True,
     )
-    library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", tbl=True)
-    library.H2(library.pleaves(m[9], 2), "C6", None, "p", tbl=True)
+    library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", htbl=True)
+    library.H2(library.pleaves(m[9], 2), "C6", None, "p", htbl=True)
     library.E3a(library.pleaves(m[12], 3))
     library.D4a(library.pleaves(m[13], 4), "F#5", "mf")
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", once=True)
@@ -321,7 +321,7 @@ def fl(m):
         after=True,
         context="Staff",
     )
-    library.A1a(library.pleaves(m[16], 1), "F#4", "mf", tbl=True)
+    library.A1a(library.pleaves(m[16], 1), "F#4", "mf", htbl=True)
 
 
 def ob(m):
@@ -340,7 +340,7 @@ def ob(m):
         rleak=True,
     )
     library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!", tssp=7)
-    library.J2a2(library.pleaves(m[7], 2), "B5", [1], "sfp>o!", rleak=True, tbl=True)
+    library.J2a2(library.pleaves(m[7], 2), "B5", [1], "sfp>o!", rleak=True, htbl=True)
 
 
 def gt1(cache):
@@ -413,11 +413,11 @@ def vn(m):
         [1, 1],
         "o< f>o!",
         rleak=True,
-        tbl=True,
+        htbl=True,
         tssp=4,
     )
-    library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, tbl=True)
-    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", tbl=True, tssp=5)
+    library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, htbl=True)
+    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", htbl=True, tssp=5)
     library.E2b(
         library.pleaves(m[12], 2),
         "G#4 C5",
@@ -428,7 +428,7 @@ def vn(m):
     )
     library.D4b(library.pleaves(m[13], 4), "G#3", dynamics="mp", no_spanner=True)
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", tssp=3)
-    library.A1b(library.pleaves(m[16], 1), "D4 F4", "mp mp p p", tbl=True)
+    library.A1b(library.pleaves(m[16], 1), "D4 F4", "mp mp p p", htbl=True)
 
 
 def vc(m):
