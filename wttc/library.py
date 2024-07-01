@@ -1086,16 +1086,12 @@ def B1a(pleaves, pitch, dynamic):
     baca.dynamic(pleaves[0], dynamic)
 
 
-def B1a_foo(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
+def B1a_foo(pleaves, pitch, dynamics, *, left_broken_none=False):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
-    if cov is True:
-        descriptor = r"\baca-cov-markup =|"
-    else:
-        descriptor = r"\baca-covered-markup =|"
     if left_broken_none is True:
         left_broken_text = None
     else:
@@ -1103,7 +1099,7 @@ def B1a_foo(pleaves, pitch, dynamics, *, cov=False, left_broken_none=False):
     baca.spanners.covered(
         pleaves,
         baca.tweak.staff_padding(3),
-        descriptor=descriptor,
+        descriptor=r"\baca-cov-markup =|",
         left_broken_text=left_broken_text,
         rleak=True,
     )

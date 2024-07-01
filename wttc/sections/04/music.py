@@ -922,7 +922,7 @@ def fl(m):
         rleak=True,
         tssp=3,
     )
-    library.B1a_foo(library.pleaves(m[2], 1), "G3", "mf -", cov=True)
+    library.B1a_foo(library.pleaves(m[2], 1), "G3", "mf -")
     library.B3(
         library.run(m[2, 3], 3, 1),
         "D5",
@@ -932,7 +932,7 @@ def fl(m):
         rleak=True,
         tssp=5.5,
     )
-    library.B1a_foo(library.pleaves(m[3], 1), "G3", '"f"', cov=True)
+    library.B1a_foo(library.pleaves(m[3], 1), "G3", '"f"')
     library.B3(
         library.pleaves(m[4], 3),
         "C#5",

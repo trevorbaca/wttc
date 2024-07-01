@@ -235,7 +235,7 @@ def fl(m):
         "sfp>o!",
         rleak=True,
     )
-    library.B1a_foo(library.pleaves(m[8], 1), "G3", "mf", cov=True)
+    library.B1a_foo(library.pleaves(m[8], 1), "G3", "mf")
     library.B3(
         library.pleaves(m[9], 3),
         "C#5",
