@@ -166,7 +166,7 @@ def fl(m):
         "o< p>o o< p>o o< p>o o< p>o!",
         fhtbl=True,
     )
-    library.D3a(library.pleaves(m[8, 9], 3), "A3", 8 * "p ", to_bar_line=True)
+    library.D3a(library.pleaves(m[8, 9], 3), "A3", 8 * "p ")
     library.F1a(
         library.pleaves(m[10, 16], 1),
         "Eb4",

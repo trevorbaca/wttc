@@ -1631,16 +1631,13 @@ def D1b(
     )
 
 
-def D3a(pleaves, pitch, dynamics, *, to_bar_line=False):
+def D3a(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     parts = baca.select.clparts(pleaves, [1])
-    tweaks = []
-    if to_bar_line is True:
-        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     baca.hairpin(
         parts,
         swells(dynamics),
-        *tweaks,
+        *all_hairpins_to_bar_line_tweak(),
         rleak=True,
     )
 

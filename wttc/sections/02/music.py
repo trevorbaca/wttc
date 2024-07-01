@@ -173,7 +173,7 @@ def VC(voice, meters):
 
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
-    library.D3a(library.pleaves(m[10, 11], 3), "A3", 8 * "p ", to_bar_line=True)
+    library.D3a(library.pleaves(m[10, 11], 3), "A3", 8 * "p ")
 
 
 def ob(m):
