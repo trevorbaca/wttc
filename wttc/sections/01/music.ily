@@ -667,6 +667,8 @@ number.1.AltoFlute.Music = {
     - \flageolet
 
     % [AltoFlute.Music measure 5]
+      %! +LETTER_PARTS_FLUTE
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 10)
     ef''''!32
     - \flageolet
 

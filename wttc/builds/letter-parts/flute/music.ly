@@ -1,8 +1,8 @@
-% when the time comes (2021-24) cello part
+% when the time comes (2021-24) alto flute part
 
 \version "2.25.16"
 
-part-name-markup = \markup "cello part"
+part-name-markup = \markup "alto flute part"
 \include "../stylesheet.ily"
 % \layout { ragged-right = ##t }
 \layout { ragged-last = ##f }
@@ -28,7 +28,7 @@ part-name-markup = \markup "cello part"
 {
   <<
     { \page-layout-score }
-    \keepWithTag Cello
+    \keepWithTag AltoFlute
     {
       \include "_sections/01.ly"
       \include "_sections/02.ly"

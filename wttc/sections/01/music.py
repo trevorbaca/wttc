@@ -253,6 +253,8 @@ def fl(m):
     baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E3a(library.pleaves(m[4, 5], 3))
+    wrappers = baca.override.metronome_mark_extra_offset(m[5][0], (0, 10))
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_FLUTE"))
     library.E4a(library.pleaves(m[7], 4), "B5", "p")
     library.I2a(library.run(m[9], 2, 0), "C#6", "mf")
     library.B3(

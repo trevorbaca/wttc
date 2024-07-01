@@ -7,12 +7,12 @@
   \translate #'(-102 . -25)
   \etc
 \markup scene-i-C-parts-positioning = \markup \translate #'(-10 . -30) \etc
-\markup scene-i-D-parts-positioning = \markup \translate #'(-24 . -32) \etc
+\markup scene-i-D-parts-positioning = \markup \translate #'(-39 . -32) \etc
 
 % SCENE 2
 
 \markup scene-ii-title-parts-positioning = \markup \translate #'(-8 . 8) \etc
-\markup scene-ii-A-parts-positioning = \markup \translate #'(0 . -15) \etc
+\markup scene-ii-A-parts-positioning = \markup \translate #'(-10 . -15) \etc
 \markup scene-ii-B-parts-positioning = \markup \translate #'(0 . -15) \etc
 \markup scene-ii-C-parts-positioning = \markup \translate #'(0 . -15) \etc
 \markup scene-ii-D-parts-positioning = \markup \translate #'(0 . -15) \etc
@@ -26,7 +26,7 @@
 
 % SCENE 3
 
-\markup scene-iii-title-parts-positioning = \markup \translate #'(-10 . 8) \etc
+\markup scene-iii-title-parts-positioning = \markup \translate #'(-10 . 16) \etc
 \markup scene-iii-A-parts-positioning = \markup \translate #'(-33 . -22) \etc
 \markup scene-iii-B-parts-positioning = \markup
   \override #'(line-width . 82)

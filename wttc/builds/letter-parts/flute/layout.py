@@ -4,7 +4,6 @@ import baca
 def main(environment):
     distances = (6,)
     half = int(26 / 2)
-    two_thirds = int(26 * 2 / 3)
     y_offset_1 = 12
     y_offset_2 = 38
     y_offset_3 = 64
@@ -44,17 +43,16 @@ def main(environment):
         ),
         baca.layout.Page(
             4,
-            baca.layout.System(23, y_offset_1, distances=distances),
-            baca.layout.System(25, y_offset_2, distances=distances),
-            baca.layout.System(27, y_offset_3, distances=distances),
-            baca.layout.System(30, y_offset_5 - two_thirds, distances=distances),
-            baca.layout.System(33, y_offset_6 - two_thirds, distances=distances),
+            baca.layout.System(23, y_offset_4_1, distances=distances),
+            baca.layout.System(27, y_offset_4_2, distances=distances),
+            baca.layout.System(30, y_offset_4_3, distances=distances),
+            baca.layout.System(33, y_offset_4_4, distances=distances),
         ),
         baca.layout.Page(
             5,
             baca.layout.System(36, y_offset_5_1, distances=distances),
-            baca.layout.System(38, y_offset_5_2, distances=distances),
-            baca.layout.System(41, y_offset_5_3, distances=distances),
+            baca.layout.System(37, y_offset_5_2, distances=distances),
+            baca.layout.System(39, y_offset_5_3, distances=distances),
             baca.layout.System(44, y_offset_5_4, distances=distances),
             baca.layout.System(47, y_offset_5_5, distances=distances),
         ),
@@ -105,19 +103,6 @@ def main(environment):
     )
     spacing_dictionary = {
         1: "vanilla",
-        2: (1, 12),
-        3: [
-            r"\baca-new-vanilla-spacing-section",
-            r"\grace { s8 }",
-            "s1 * 2/4",
-            r"\baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)",
-            "s1 * 4/4",
-        ],
-        4: "vanilla",
-        8: (1, 12),
-        10: "vanilla",
-        12: (1, 12),
-        23: "vanilla",
         105: (1, 12),
         106: "vanilla",
     }
