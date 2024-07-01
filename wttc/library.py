@@ -1227,8 +1227,6 @@ def B3(
             alteration="M2",
             rleak=True,
         )
-        baca.untie(nongrace_plt)
-        baca.parenthesize(nongrace_plt[1:])
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
     if abjad.get.grace(plts[0]):

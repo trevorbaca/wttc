@@ -267,6 +267,12 @@ def fl(m):
         to_bar_line=True,
         tssp=3,
     )
+    baca.override.rehearsal_mark_extra_offset(
+        m[11][-1],
+        (0, 3.5),
+        after=True,
+        context="Staff",
+    )
 
 
 def ob(m):

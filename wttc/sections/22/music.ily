@@ -909,6 +909,7 @@ number.22.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \<
+        ~
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -921,8 +922,7 @@ number.22.Oboe.Music = {
     {
 
         % [Oboe.Music measure 9]
-        \parenthesize
-        cs''!8
+        cs''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue

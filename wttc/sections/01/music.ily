@@ -775,16 +775,19 @@ number.1.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    - \tweak stencil ##f
+    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan e''
 
     % [AltoFlute.Music measure 11]
-    \parenthesize
     d''1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
-    \parenthesize
     d''2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -804,6 +807,8 @@ number.1.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \repeatTie
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 3.5)
     \revert DynamicLineSpanner.staff-padding
 
       %! ANCHOR_NOTE

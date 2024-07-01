@@ -715,6 +715,7 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \<
+        ~
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -722,7 +723,6 @@ number.4.AltoFlute.Music = {
 
     }
 
-    \parenthesize
     g''4
 
     \grace {
@@ -787,6 +787,7 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        ~
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -799,7 +800,6 @@ number.4.AltoFlute.Music = {
     {
 
         % [AltoFlute.Music measure 2]
-        \parenthesize
         g''8
 
           %! STAFF_HIGHLIGHT
@@ -897,6 +897,7 @@ number.4.AltoFlute.Music = {
         \pitchedTrill
         g''8
         ]
+        ~
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -908,7 +909,6 @@ number.4.AltoFlute.Music = {
     \tuplet 3/2
     {
 
-        \parenthesize
         g''4
 
         \grace {
@@ -937,6 +937,7 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        ~
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -949,7 +950,6 @@ number.4.AltoFlute.Music = {
     {
 
         % [AltoFlute.Music measure 3]
-        \parenthesize
         g''8
 
           %! STAFF_HIGHLIGHT
@@ -1166,6 +1166,8 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        - \tweak stencil ##f
+        ~
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -1173,21 +1175,25 @@ number.4.AltoFlute.Music = {
 
     }
 
-    \parenthesize
     f''4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [AltoFlute.Music measure 9]
-    \parenthesize
     f''2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
     {
 
-        \parenthesize
         f''8
           %! SPANNER_STOP
         \!
+        \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -1285,6 +1291,8 @@ number.4.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        - \tweak stencil ##f
+        ~
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -1296,8 +1304,8 @@ number.4.AltoFlute.Music = {
     \tuplet 3/2
     {
 
-        \parenthesize
-        ef''!4
+        ef''4
+        \repeatTie
 
         \grace {
 
@@ -1310,6 +1318,7 @@ number.4.AltoFlute.Music = {
           %! SPANNER_START
         \pitchedTrill
         ef''!8
+        ~
           %! SPANNER_START
         - \tweak staff-padding 3
           %! SPANNER_START
@@ -1317,21 +1326,24 @@ number.4.AltoFlute.Music = {
 
     }
 
-    \parenthesize
-    ef''!2
+    ef''2
+    - \tweak stencil ##f
+    ~
 
     % [AltoFlute.Music measure 13]
-    \parenthesize
-    ef''!2
+    ef''2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
     {
 
-        \parenthesize
-        ef''!8
+        ef''8
           %! SPANNER_STOP
         \!
+        \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -1425,13 +1437,14 @@ number.4.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    - \tweak stencil ##f
+    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan e''
 
     % [AltoFlute.Music measure 16]
-    \parenthesize
     d''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1448,6 +1461,7 @@ number.4.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -1569,6 +1583,7 @@ number.4.Oboe.Music = {
           %! SPANNER_START
         \pitchedTrill
         d''8
+        ~
           %! SPANNER_START
         \startTrillSpan e''
 
@@ -1578,7 +1593,6 @@ number.4.Oboe.Music = {
     \tuplet 3/2
     {
 
-        \parenthesize
         d''4
 
         \grace {
@@ -1607,12 +1621,12 @@ number.4.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        ~
           %! SPANNER_START
         \startTrillSpan e''
 
     }
 
-    \parenthesize
     d''4
 
     % [Oboe.Music measure 2]
@@ -1680,6 +1694,7 @@ number.4.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        ~
           %! SPANNER_START
         \startTrillSpan e''
 
@@ -1689,7 +1704,6 @@ number.4.Oboe.Music = {
     \tuplet 3/2
     {
 
-        \parenthesize
         d''4
 
         \grace {
@@ -1746,6 +1760,7 @@ number.4.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \<
+        ~
           %! SPANNER_START
         \startTrillSpan ds''
 
@@ -1756,8 +1771,7 @@ number.4.Oboe.Music = {
     {
 
         % [Oboe.Music measure 4]
-        \parenthesize
-        cs''!8
+        cs''8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
@@ -1852,26 +1866,32 @@ number.4.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        - \tweak stencil ##f
+        ~
           %! SPANNER_START
         \startTrillSpan d''
 
     }
 
-    \parenthesize
     c''4
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Oboe.Music measure 9]
-    \parenthesize
     c''2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
     {
 
-        \parenthesize
         c''8
           %! SPANNER_STOP
         \!
+        \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
@@ -1924,26 +1944,32 @@ number.4.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+        - \tweak stencil ##f
+        ~
           %! SPANNER_START
         \startTrillSpan c''
 
     }
 
-    \parenthesize
-    bf'!2.
+    bf'2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Oboe.Music measure 13]
-    \parenthesize
-    bf'!2
+    bf'2
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
     {
 
-        \parenthesize
-        bf'!8
+        bf'8
           %! SPANNER_STOP
         \!
+        \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
