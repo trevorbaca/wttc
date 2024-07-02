@@ -88,7 +88,8 @@ def GLOBALS(skips):
         site="after",
     )
     baca.metronome_mark(skips[31 - 1], "60", manifests=library.manifests)
-    baca.override.metronome_mark_extra_offset(skips[31 - 1], (-3, 0.5))
+    wrappers = baca.override.metronome_mark_extra_offset(skips[31 - 1], (-3, 0.5))
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     #
     wrappers = baca.rehearsal_mark(
         skips[31 - 1],
@@ -813,9 +814,13 @@ def D2a(pleaves, pitches, hairpin_strings):
     plt_pairs = abjad.sequence.partition_by_counts(plts, [2], cyclic=True)
     hairpins = hairpin_strings.split()
     for plt_pair, hairpin in zip(plt_pairs, hairpins, strict=True):
-        hairpin_string = f"{hairpin}>o!"
+        assert "-" in hairpin, repr(hairpin)
+        dynamic_1, dynamic_2 = hairpin.split("-")
+        leaves = abjad.select.leaves(plt_pair)
+        baca.dynamic(leaves[0], dynamic_1)
+        hairpin_string = f"{dynamic_2}>o!"
         baca.hairpin(
-            plt_pair,
+            leaves[1:],
             hairpin_string,
             rleak=True,
         )
@@ -880,7 +885,7 @@ def fl(m):
     library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff", tssp=4)
     baca.override.rehearsal_mark_extra_offset(
         m[17][-1],
-        (0, 2.5),
+        (0, 3.5),
         after=True,
         context="Staff",
     )
@@ -890,7 +895,15 @@ def fl(m):
     library.C3b(
         library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!", rleak=True, tssp=5
     )
-    library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True, tssp=5)
+    library.C3b(
+        library.pleaves(m[30], 3),
+        "G#5",
+        "A5",
+        "o< p>o!",
+        no_glissando=True,
+        rleak=True,
+        tssp=5,
+    )
     D2a(library.pleaves(m[32], 2), "Eb6 D6", "mf-mp")
     D2a(library.pleaves(m[33, 34], 2), "Eb6 D6", "mf-mp f-mf")
     D2a(
@@ -1012,7 +1025,15 @@ def vn(m):
     library.C3b(
         library.pleaves(m[25, 27], 3), "G#5", "A5", "o< mp>o!", rleak=True, tssp=3
     )
-    library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True, tssp=3)
+    library.C3b(
+        library.pleaves(m[30], 3),
+        "G#5",
+        "A5",
+        "o< p>o!",
+        no_glissando=True,
+        rleak=True,
+        tssp=3,
+    )
     library.D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
     library.D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p>o!", no_spanner=True)
     library.D4b(

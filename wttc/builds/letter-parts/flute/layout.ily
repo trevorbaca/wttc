@@ -261,11 +261,11 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 72]
+    \baca-lbsd #90 #'(6)
+    \break
     s1 * 3/4
 
     % [Breaks measure 73]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 3/4
 
     % [Breaks measure 74]

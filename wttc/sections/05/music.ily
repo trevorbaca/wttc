@@ -804,6 +804,7 @@ number.5.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 31]
+      %! +SECTION
     \once \override Score.MetronomeMark.extra-offset = #'(-3 . 0.5)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
@@ -2024,7 +2025,7 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
     ]
-    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 2.5)
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 3.5)
 
     % [AltoFlute.Music measure 18]
       %! STAFF_HIGHLIGHT
@@ -2216,7 +2217,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
       %! SPANNER_START
     - \tweak staff-padding 5
       %! SPANNER_START
@@ -2274,7 +2274,14 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-mf-mp
+    \mf
+
+    g'''2
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2285,8 +2292,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    g'''2
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
@@ -2503,8 +2508,16 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-mf-mp
+    \mf
     [
+
+    g'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2515,9 +2528,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    g'''16
-    ]
     ~
 
     % [AltoFlute.Music measure 34]
@@ -2535,9 +2545,17 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-f-mf
+    \f
       %! SPANNER_STOP
     \!
+
+    g'''8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2548,9 +2566,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    g'''8
-    ]
     - \tweak stencil ##f
     ~
 
@@ -3233,7 +3248,14 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-f-mf
+    \f
+
+    gqf'''!4
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \mf
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3244,19 +3266,25 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    gqf'''!4
 
     gqf'''!16
     - \tenuto
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \mf
+      %! SPANNER_STOP
+    \!
+    [
+
+    gf'''!8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-mf-mp
-      %! SPANNER_STOP
-    \!
-    [
+    \mp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3267,9 +3295,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    gf'''!8.
-    ]
     - \tweak stencil ##f
     ~
 
@@ -3280,13 +3305,21 @@ number.5.AltoFlute.Music = {
 
     gf'''!16
     - \tenuto
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \mp
+      %! SPANNER_STOP
+    \!
+
+    gtqf'''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-mp-p
-      %! SPANNER_STOP
-    \!
+    \p
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3297,9 +3330,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    gtqf'''!16
-    ]
     ~
 
     gtqf'''4
@@ -3312,13 +3342,21 @@ number.5.AltoFlute.Music = {
 
     gtqf'''!16
     - \tenuto
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \p
+      %! SPANNER_STOP
+    \!
+
+    f'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-    \baca-p-pp
-      %! SPANNER_STOP
-    \!
+    \pp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3329,9 +3367,6 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-
-    f'''8
-    ]
     - \tweak stencil ##f
     ~
 
@@ -8302,7 +8337,6 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    \glissando
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

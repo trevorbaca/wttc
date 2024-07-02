@@ -38,7 +38,7 @@
   \etc
 \markup scene-iii-D-parts-positioning = \markup \translate #'(-35 . -48) \etc
 \markup scene-iii-E-parts-positioning = \markup \translate #'(-50 . -21) \etc
-\markup scene-iii-F-parts-positioning = \markup \translate #'(13 . -17) \etc
+\markup scene-iii-F-parts-positioning = \markup \translate #'(13 . -13) \etc
 
 % SCENE 4
 

@@ -1528,6 +1528,7 @@ def C3b(
     alteration,
     hairpin,
     *,
+    no_glissando=False,
     once=False,
     rleak=False,
     tssp=5.5,
@@ -1539,7 +1540,8 @@ def C3b(
         rleak=True,
     )
     baca.pitch(pleaves, pitch)
-    baca.glissando(pleaves)
+    if no_glissando is False:
+        baca.glissando(pleaves)
     if "<" in hairpin and ">" in hairpin:
         baca.hairpin(
             [pleaves[:-1], pleaves[-1:]],
