@@ -37,18 +37,18 @@
   \translate #'(-35 . -29)
   \etc
 \markup scene-iii-D-parts-positioning = \markup \translate #'(-35 . -48) \etc
-\markup scene-iii-E-parts-positioning = \markup \translate #'(-50 . -21) \etc
+\markup scene-iii-E-parts-positioning = \markup \translate #'(-50 . -23) \etc
 \markup scene-iii-F-parts-positioning = \markup \translate #'(13 . -13) \etc
 
 % SCENE 4
 
 \markup scene-iv-title-parts-positioning = \markup \translate #'(-8 . 34) \etc
 \markup scene-iv-A-parts-positioning = \markup \translate #'(24 . 26) \etc
-\markup scene-iv-B-parts-positioning = \markup \translate #'(0 . -18) \etc
-\markup scene-iv-C-parts-positioning = \markup \translate #'(0 . -18) \etc
-\markup scene-iv-D-parts-positioning = \markup \translate #'(0 . -18) \etc
-\markup scene-iv-E-parts-positioning = \markup \translate #'(0 . -18) \etc
-\markup scene-iv-F-parts-positioning = \markup \translate #'(0 . -18) \etc
+\markup scene-iv-B-parts-positioning = \markup \translate #'(0 . -13) \etc
+\markup scene-iv-C-parts-positioning = \markup \translate #'(0 . -13) \etc
+\markup scene-iv-D-parts-positioning = \markup \translate #'(0 . -13) \etc
+\markup scene-iv-E-parts-positioning = \markup \translate #'(6 . -21) \etc
+\markup scene-iv-F-parts-positioning = \markup \translate #'(-12 . -21) \etc
 \markup scene-iv-G-parts-positioning = \markup \translate #'(0 . -22) \etc
 \markup scene-iv-I-parts-positioning = \markup
   \override #'(line-width . 36)
@@ -63,12 +63,12 @@
 % SCENE 5
 
 \markup scene-v-title-parts-positioning = \markup \translate #'(-8 . 16) \etc
-\markup scene-v-A-parts-positioning = \markup \translate #'(0 . -17) \etc
+\markup scene-v-A-parts-positioning = \markup \translate #'(0 . -21) \etc
 \markup scene-v-B-parts-positioning = \markup
   \override #'(line-width . 24)
   \translate #'(-1 . -17)
   \etc
-\markup scene-v-C-parts-positioning = \markup \translate #'(0 . -17) \etc
+\markup scene-v-C-parts-positioning = \markup \translate #'(0 . -13) \etc
 
 % SCENE 6
 
@@ -79,7 +79,7 @@
 \markup scene-vi-D-parts-positioning = \markup \translate #'(-20 . -17) \etc
 \markup scene-vi-E-parts-positioning = \markup
   \override #'(line-width . 50)
-  \translate #'(-70 . -26)
+  \translate #'(-67 . -26)
   \etc
-\markup scene-vi-F-parts-positioning = \markup \translate #'(-64 . -12) \etc
-\markup scene-vi-G-parts-positioning = \markup \translate #'(-54 . -21) \etc
+\markup scene-vi-F-parts-positioning = \markup \translate #'(-55 . -12) \etc
+\markup scene-vi-G-parts-positioning = \markup \translate #'(-64 . -23) \etc

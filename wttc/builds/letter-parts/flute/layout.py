@@ -76,7 +76,7 @@ def main(environment):
             baca.layout.System(82, y_offset_1, distances=distances),
             baca.layout.System(85, y_offset_2, distances=distances),
             baca.layout.System(88, y_offset_3, distances=distances),
-            baca.layout.System(92, y_offset_4, distances=distances),
+            baca.layout.System(91, y_offset_4, distances=distances),
             baca.layout.System(94, y_offset_5, distances=distances),
             baca.layout.System(96, y_offset_6, distances=distances),
         ),

@@ -282,6 +282,8 @@ number.8.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 10]
+      %! +LETTER_PARTS_FLUTE
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 4)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 6/4
@@ -2559,17 +2561,7 @@ number.8.Cello.Music = {
 
     r4
 
-      %! REDUNDANT_CLEF
-    \clef "bass"
-      %! REDUNDANT_CLEF_COLOR
-    \once \override Staff.Clef.color = #(x11-color 'DeepPink1)
-      %! REDUNDANT_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f
-      %! REDUNDANT_CLEF
-    \set Staff.forceClef = ##t
     r16
-      %! REDUNDANT_CLEF_REDRAW_COLOR
-    \override Staff.Clef.color = #(x11-color 'DeepPink4)
 
     \override NoteHead.style = #'harmonic
     d8.

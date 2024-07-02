@@ -37,13 +37,12 @@ def GLOBALS(skips):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "60", manifests=library.manifests)
-    wrappers = baca.override.metronome_mark_extra_offset(
-        skips[7 - 1],
-        (-3, 0),
-    )
+    wrappers = baca.override.metronome_mark_extra_offset(skips[7 - 1], (-3, 0))
     baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
     baca.metronome_mark(skips[9 - 1], "50", manifests=library.manifests)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
+    wrappers = baca.override.metronome_mark_extra_offset(skips[10 - 1], (0, 4))
+    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_FLUTE"))
 
 
 def FL(voice, meters):
@@ -302,7 +301,6 @@ def vc(m):
         "o< p>o!",
         [12, 9],
     )
-    baca.clef(m[4][3], "bass")
     library.B4b(library.pleaves(m[4, 6], 4), 3, "D3 E4 C3 D4 B2 C4 A2", "f mf pp")
     library.D4c(library.pleaves(m[7, 8], 4), "Ab2 G2", hairpin="mp>p")
     baca.clef(m[10][0], "treble")
