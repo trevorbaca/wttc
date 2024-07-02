@@ -263,6 +263,7 @@ def fl(m):
         "G#3",
         [2, 1],
         "sfpp< p>o!",
+        hairpin_includes_grace=True,
         rleak=True,
         to_bar_line=True,
         tssp=3,

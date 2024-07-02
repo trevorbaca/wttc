@@ -1208,7 +1208,7 @@ def B3(
     hairpin_lparts,
     hairpin,
     *,
-    debug=False,
+    hairpin_includes_grace=False,
     rleak=False,
     to_bar_line=False,
     tssp=None,
@@ -1238,6 +1238,7 @@ def B3(
     tweaks = []
     if to_bar_line is True:
         tweaks.append(baca.tweak.to_bar_line_true(i=-1))
+    parts[0] = grace_plts + abjad.select.leaves(parts[0])
     baca.hairpin(
         parts,
         hairpin,

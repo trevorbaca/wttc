@@ -255,7 +255,14 @@ def ob(m):
         "f p f p f p",
     )
     library.B3(
-        library.pleaves(m[8, 9], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True, tssp=3
+        library.pleaves(m[8, 9], 3),
+        "C#5",
+        "D4",
+        [1, 3],
+        "p< f>o!",
+        hairpin_includes_grace=True,
+        rleak=True,
+        tssp=3,
     )
 
 

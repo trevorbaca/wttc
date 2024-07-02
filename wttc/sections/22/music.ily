@@ -891,24 +891,24 @@ number.22.Oboe.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightgreen
             d'16
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+            \p
+              %! EXPLICIT_DYNAMIC_COLOR
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak color #blue
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            \<
 
         }
 
           %! SPANNER_START
         \pitchedTrill
         cs''!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-        \p
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \<
         ~
           %! SPANNER_START
         - \tweak staff-padding 3
