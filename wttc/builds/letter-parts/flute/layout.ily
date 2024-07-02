@@ -202,19 +202,17 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 55]
-    \baca-lbsd #116 #'(6)
-    \break
     s1 * 6/4
 
     % [Breaks measure 56]
+    \baca-lbsd #116 #'(6)
+    \break
     s1 * 6/4
 
     % [Breaks measure 57]
     s1 * 6/4
 
     % [Breaks measure 58]
-    \baca-lbsd #142 #'(6)
-    \break
     s1 * 6/4
 
     % [Breaks measure 59]
@@ -224,6 +222,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 61]
+    \baca-lbsd #142 #'(6)
+    \break
     s1 * 6/4
 
     % [Breaks measure 62]
@@ -233,14 +233,14 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 64]
-    \baca-lbsd #12 #'(6)
-    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 65]
     s1 * 6/4
 
     % [Breaks measure 66]
+    \baca-lbsd #12 #'(6)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 67]

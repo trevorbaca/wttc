@@ -1527,7 +1527,6 @@ def C3b(
     pitch,
     alteration,
     hairpin,
-    dummy_pitch="F5",
     *,
     once=False,
     rleak=False,
@@ -1539,26 +1538,20 @@ def C3b(
         alteration=alteration,
         rleak=True,
     )
-    baca.untie(pleaves)
-    baca.pitch(pleaves[:1], pitch)
-    if once is not True:
-        baca.override.accidental_stencil_false(pleaves[1:])
-        baca.override.dots_font_size(pleaves[1:], -3)
-        baca.override.flag_font_size(pleaves[1:], -3)
-        baca.override.note_head_font_size(pleaves[1:], -3)
-        baca.override.note_head_no_ledgers(pleaves[1:], True)
-        baca.override.stem_direction_up(pleaves[1:])
-        baca.pitch(pleaves[1:], dummy_pitch)
+    baca.pitch(pleaves, pitch)
+    baca.glissando(pleaves)
     if "<" in hairpin and ">" in hairpin:
         baca.hairpin(
             [pleaves[:-1], pleaves[-1:]],
             hairpin,
+            *final_hairpin_to_bar_line_tweak(True),
             rleak=rleak,
         )
     else:
         baca.hairpin(
             [pleaves],
             hairpin,
+            *final_hairpin_to_bar_line_tweak(True),
             rleak=rleak,
         )
 

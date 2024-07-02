@@ -1991,27 +1991,33 @@ number.5.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    \<
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    \<
+    \glissando
+      %! SPANNER_START
+    - \tweak staff-padding 4
       %! SPANNER_START
     \startTrillSpan d'''
 
+    \hide NoteHead
     \override Accidental.stencil = ##f
-    \override Dots.font-size = -3
-    \override Flag.font-size = -3
-    \override NoteHead.font-size = -3
+    \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \override Stem.direction = #up
-    bf''!4
+    cs'''!4
 
     % [AltoFlute.Music measure 17]
-    bf''!2
+    cs'''!2
 
-    bf''!8.
+    cs'''!8.
     [
 
-    bf''!16
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    cs'''!16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2019,12 +2025,6 @@ number.5.AltoFlute.Music = {
     \ff
     ]
     \once \override Staff.RehearsalMark.extra-offset = #'(0 . 2.5)
-    \revert Accidental.stencil
-    \revert Dots.font-size
-    \revert Flag.font-size
-    \revert NoteHead.font-size
-    \revert NoteHead.no-ledgers
-    \revert Stem.direction
 
     % [AltoFlute.Music measure 18]
       %! STAFF_HIGHLIGHT
@@ -2065,29 +2065,32 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 5
       %! SPANNER_START
     \startTrillSpan d'''
 
     % [AltoFlute.Music measure 22]
+    \hide NoteHead
     \override Accidental.stencil = ##f
-    \override Dots.font-size = -3
-    \override Flag.font-size = -3
-    \override NoteHead.font-size = -3
+    \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \override Stem.direction = #up
-    bf''!2.
+    cs'''!2.
 
     % [AltoFlute.Music measure 23]
-    bf''!2.
+    cs'''!2.
 
-    bf''!2
+    cs'''!2
 
     % [AltoFlute.Music measure 24]
-    bf''!2.
+    cs'''!2.
 
-    bf''!2
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    cs'''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2102,13 +2105,10 @@ number.5.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
-    \revert Accidental.stencil
-    \revert Dots.font-size
-    \revert Flag.font-size
-    \revert NoteHead.font-size
-    \revert NoteHead.no-ledgers
-    \revert Stem.direction
 
     % [AltoFlute.Music measure 25]
       %! STAFF_HIGHLIGHT
@@ -2138,26 +2138,29 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 5
       %! SPANNER_START
     \startTrillSpan d'''
 
     % [AltoFlute.Music measure 26]
+    \hide NoteHead
     \override Accidental.stencil = ##f
-    \override Dots.font-size = -3
-    \override Flag.font-size = -3
-    \override NoteHead.font-size = -3
+    \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \override Stem.direction = #up
-    bf''!2.
+    cs'''!2.
 
-    bf''!2
+    cs'''!2
 
     % [AltoFlute.Music measure 27]
-    bf''!2.
+    cs'''!2.
 
-    bf''!2
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    cs'''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2172,13 +2175,10 @@ number.5.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
-    \revert Accidental.stencil
-    \revert Dots.font-size
-    \revert Flag.font-size
-    \revert NoteHead.font-size
-    \revert NoteHead.no-ledgers
-    \revert Stem.direction
 
     % [AltoFlute.Music measure 28]
       %! STAFF_HIGHLIGHT
@@ -2216,8 +2216,9 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 5
       %! SPANNER_START
     \startTrillSpan d'''
 
@@ -2225,13 +2226,7 @@ number.5.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Accidental.stencil = ##f
-    \once \override Dots.font-size = -3
-    \once \override Flag.font-size = -3
-    \once \override NoteHead.font-size = -3
-    \once \override NoteHead.no-ledgers = ##t
-    \once \override Stem.direction = #up
-    bf''!4
+    cs'''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2244,6 +2239,9 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -7815,34 +7813,34 @@ number.5.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    \<
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    \<
+    \glissando
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
     % [Violin.Music measure 16]
+    \hide NoteHead
     \override Accidental.stencil = ##f
-    \override Dots.font-size = -3
-    \override Flag.font-size = -3
-    \override NoteHead.font-size = -3
+    \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \override Stem.direction = #up
-    b''1.
+    gs''!1.
 
     % [Violin.Music measure 17]
-    b''8
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    gs''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
-    \revert Accidental.stencil
-    \revert Dots.font-size
-    \revert Flag.font-size
-    \revert NoteHead.font-size
-    \revert NoteHead.no-ledgers
-    \revert Stem.direction
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -8087,31 +8085,34 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
+    \hide NoteHead
     \override Accidental.stencil = ##f
-    \override Dots.font-size = -3
-    \override Flag.font-size = -3
-    \override NoteHead.font-size = -3
+    \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \override Stem.direction = #up
-    b''4
+    gs''!4
 
     % [Violin.Music measure 22]
-    b''2.
+    gs''!2.
 
     % [Violin.Music measure 23]
-    b''2.
+    gs''!2.
 
-    b''2
+    gs''!2
 
     % [Violin.Music measure 24]
-    b''2.
+    gs''!2.
 
-    b''2
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    gs''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -8126,13 +8127,10 @@ number.5.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
-    \revert Accidental.stencil
-    \revert Dots.font-size
-    \revert Flag.font-size
-    \revert NoteHead.font-size
-    \revert NoteHead.no-ledgers
-    \revert Stem.direction
 
     % [Violin.Music measure 25]
       %! STAFF_HIGHLIGHT
@@ -8220,28 +8218,31 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
+    \hide NoteHead
     \override Accidental.stencil = ##f
-    \override Dots.font-size = -3
-    \override Flag.font-size = -3
-    \override NoteHead.font-size = -3
+    \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \override Stem.direction = #up
-    b''2.
+    gs''!2.
 
     % [Violin.Music measure 26]
-    b''2.
+    gs''!2.
 
-    b''2
+    gs''!2
 
     % [Violin.Music measure 27]
-    b''2.
+    gs''!2.
 
-    b''2
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    gs''!2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -8256,14 +8257,11 @@ number.5.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
-    \revert Accidental.stencil
-    \revert Dots.font-size
     \revert DynamicLineSpanner.staff-padding
-    \revert Flag.font-size
-    \revert NoteHead.font-size
-    \revert NoteHead.no-ledgers
-    \revert Stem.direction
 
     % [Violin.Music measure 28]
       %! STAFF_HIGHLIGHT
@@ -8304,8 +8302,9 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan a''
 
@@ -8313,13 +8312,7 @@ number.5.Violin.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Accidental.stencil = ##f
-    \once \override Dots.font-size = -3
-    \once \override Flag.font-size = -3
-    \once \override NoteHead.font-size = -3
-    \once \override NoteHead.no-ledgers = ##t
-    \once \override Stem.direction = #up
-    b''4
+    gs''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -8332,6 +8325,9 @@ number.5.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>

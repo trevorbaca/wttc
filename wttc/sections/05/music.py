@@ -877,16 +877,20 @@ def fl(m):
     library.C3a(library.pleaves(m[9], 3), "G4", "F#4", "mp|>o!")
     library.C3a(m[12], "G4", "F#4", "mp|>o !o<|mf", m[13][:3])
     library.C3a(m[15], "G4", "F#4", "mp|>o !o<|f", m[16][:3])
-    library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff")
+    library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<|ff", tssp=4)
     baca.override.rehearsal_mark_extra_offset(
         m[17][-1],
         (0, 2.5),
         after=True,
         context="Staff",
     )
-    library.C3b(library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!", rleak=True)
-    library.C3b(library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!", rleak=True)
-    library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True)
+    library.C3b(
+        library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!", rleak=True, tssp=5
+    )
+    library.C3b(
+        library.pleaves(m[25, 27], 3), "G#5", "A5", "o< p>o!", rleak=True, tssp=5
+    )
+    library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True, tssp=5)
     D2a(library.pleaves(m[32], 2), "Eb6 D6", "mf-mp")
     D2a(library.pleaves(m[33, 34], 2), "Eb6 D6", "mf-mp f-mf")
     D2a(
@@ -992,7 +996,7 @@ def vn(m):
         string_number=3,
         trill="m2",
     )
-    library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", dummy_pitch="B5")
+    library.C3b(abjad.select.run(m[15, 17], 1), "G#5", "A5", "o<mp", tssp=3)
     baca.override.rehearsal_mark_extra_offset(
         m[17][-1],
         (0, 3),
@@ -1002,30 +1006,13 @@ def vn(m):
     library.C2b(library.pleaves(m[18, 19], 2), "A3", "Ab4", "p>o!")
     library.C2b(library.pleaves(m[20, 21], 2), "A3", "G4", "p>o", do_not_bookend=True)
     library.C3b(
-        library.pleaves(m[21, 24], 3),
-        "G#5",
-        "A5",
-        "o< mp>o!",
-        dummy_pitch="B5",
-        rleak=True,
+        library.pleaves(m[21, 24], 3), "G#5", "A5", "o< mp>o!", rleak=True, tssp=3
     )
     library.C2b(library.pleaves(m[25], 2), "A3", "Gb4", "p>o", do_not_bookend=True)
     library.C3b(
-        library.pleaves(m[25, 27], 3),
-        "G#5",
-        "A5",
-        "o< mp>o!",
-        dummy_pitch="B5",
-        rleak=True,
+        library.pleaves(m[25, 27], 3), "G#5", "A5", "o< mp>o!", rleak=True, tssp=3
     )
-    library.C3b(
-        library.pleaves(m[30], 3),
-        "G#5",
-        "A5",
-        "o< p>o!",
-        dummy_pitch="B5",
-        rleak=True,
-    )
+    library.C3b(library.pleaves(m[30], 3), "G#5", "A5", "o< p>o!", rleak=True, tssp=3)
     library.D4b(library.pleaves(m[40, 44], 4), "G#3", dynamics="p mp - - - - mf - - -")
     library.D4b(library.pleaves(m[45, 46], 4), "A3", hairpin="p>o!", no_spanner=True)
     library.D4b(

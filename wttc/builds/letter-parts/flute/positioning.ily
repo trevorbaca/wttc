@@ -34,9 +34,9 @@
   \etc
 \markup scene-iii-C-parts-positioning = \markup
   \override #'(line-width . 80)
-  \translate #'(7 . -29)
+  \translate #'(-35 . -29)
   \etc
-\markup scene-iii-D-parts-positioning = \markup \translate #'(-25 . -48) \etc
+\markup scene-iii-D-parts-positioning = \markup \translate #'(-35 . -48) \etc
 \markup scene-iii-E-parts-positioning = \markup \translate #'(-50 . -21) \etc
 \markup scene-iii-F-parts-positioning = \markup \translate #'(13 . -17) \etc
 

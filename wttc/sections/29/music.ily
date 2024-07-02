@@ -1298,7 +1298,11 @@ number.29.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -1308,13 +1312,11 @@ number.29.AltoFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    b'4 * 1/4
+    cs'''!4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2638,7 +2640,11 @@ number.29.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
+    \glissando
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2648,17 +2654,11 @@ number.29.Violin.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Accidental.stencil = ##f
       %! FRAMED_LEAF
     \once \override Accidental.stencil = ##f
-    \once \override Dots.font-size = -3
-    \once \override Flag.font-size = -3
-    \once \override NoteHead.font-size = -3
-    \once \override NoteHead.no-ledgers = ##t
-    \once \override Stem.direction = #up
       %! FRAMED_LEAF
     \once \override Stem.thickness = 6
-    f''4 * 1/4
+    gs''!4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue

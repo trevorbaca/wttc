@@ -967,7 +967,9 @@ def fl(m):
         "sfp>o!",
         tssp=3,
     )
-    library.B1a_foo(library.pleaves(m[14, 15], 1), "D4", "p -", stblf=True)
+    library.B1a_foo(
+        library.pleaves(m[14, 15], 1), "D4", "p -", left_broken_none=True, stblf=True
+    )
     library.B3(
         library.pleaves(m[15, 16], 3),
         "A4",
