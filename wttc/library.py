@@ -1097,7 +1097,7 @@ def B1a(pleaves, pitch, dynamic):
     baca.dynamic(pleaves[0], dynamic)
 
 
-def B1a_foo(pleaves, pitch, dynamics, *, left_broken_none=False, stblf=False):
+def B1a_foo(pleaves, pitch, dynamics, *, stblf=False):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
@@ -1106,10 +1106,6 @@ def B1a_foo(pleaves, pitch, dynamics, *, left_broken_none=False, stblf=False):
     if len(pleaves) == 1:
         baca.markup(pleaves[0], r"\baca-cov-markup", baca.tweak.staff_padding(3))
     else:
-        if left_broken_none is True:
-            left_broken_text = None
-        else:
-            left_broken_text = r"\baca-parenthesized-cov-markup"
         tweaks = ()
         if stblf is True:
             tweak = baca.tweak.to_bar_line_false()
@@ -1119,7 +1115,7 @@ def B1a_foo(pleaves, pitch, dynamics, *, left_broken_none=False, stblf=False):
             baca.tweak.staff_padding(3),
             *tweaks,
             descriptor=r"\baca-cov-markup =|",
-            left_broken_text=left_broken_text,
+            left_broken_text=None,
         )
 
 
