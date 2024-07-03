@@ -1185,13 +1185,13 @@ number.4.AltoFlute.Music = {
         f''8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \stopTrillSpan
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
         \revert DynamicLineSpanner.staff-padding
 
     }
@@ -1297,13 +1297,13 @@ number.4.AltoFlute.Music = {
     {
 
         ef''4
+          %! SPANNER_STOP
+        \stopTrillSpan
         \repeatTie
 
         \grace {
 
             e'16
-              %! SPANNER_STOP
-            \stopTrillSpan
 
         }
 
@@ -1335,13 +1335,13 @@ number.4.AltoFlute.Music = {
         ef''8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \stopTrillSpan
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -1887,13 +1887,13 @@ number.4.Oboe.Music = {
         c''8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \stopTrillSpan
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 
@@ -1965,13 +1965,13 @@ number.4.Oboe.Music = {
         bf'8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \stopTrillSpan
         \repeatTie
 
           %! STAFF_HIGHLIGHT
         %@% \stopStaffHighlight
         r4
-          %! SPANNER_STOP
-        \stopTrillSpan
 
     }
 

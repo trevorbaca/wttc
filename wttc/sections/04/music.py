@@ -1375,7 +1375,6 @@ def make_layout(environment):
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
         has_anchor_skip=environment.metadata["has_anchor_skip"],
-        # measure_initial_grace_notes={3: [r"\grace { s8 }"]},
         spacing=spacing,
     )
 

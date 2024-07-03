@@ -1229,7 +1229,7 @@ def B3(
             nongrace_plt,
             *tweaks,
             alteration="M2",
-            rleak=True,
+            rleak=rleak,
         )
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
@@ -1239,10 +1239,6 @@ def B3(
         parts = baca.select.lparts(plts, hairpin_lparts)
     else:
         parts = plts
-    # tweaks = []
-    # TODO: remove
-    # if to_bar_line is True:
-    #    tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     parts[0] = grace_plts + abjad.select.leaves(parts[0])
     baca.hairpin(
         parts,
