@@ -2,7 +2,7 @@
 
 part-name-markup = \markup "oboe part"
 \include "../stylesheet.ily"
-\layout { ragged-right = ##t }
+% \layout { ragged-right = ##t }
 % \layout { ragged-last = ##f }
 \include "positioning.ily"
 \include "../../../staging/scene-i.ily"

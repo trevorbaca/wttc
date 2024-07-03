@@ -85,7 +85,8 @@ number.4.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 3]
-    \grace { s8 }
+    %! +LETTER_PARTS_VIOLIN
+%%% \grace { s8 }
     s1 * 3/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -529,7 +530,8 @@ number.4.TimeSignatures = {
     \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
-    \grace { s8 }
+    %! +LETTER_PARTS_VIOLIN
+%%% \grace { s8 }
     s1 * 3/4
 
     % [TimeSignatures measure 4]

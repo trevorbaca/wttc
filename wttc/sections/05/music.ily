@@ -83,7 +83,10 @@ number.5.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 3]
-    \grace { s8 }
+    %! +LETTER_PARTS_VIOLIN
+%%% \grace { s8 }
+    %! +LETTER_PARTS_CELLO
+%%% \grace { s8 }
     s1 * 6/4
       %! CLOCK_TIME
     \bacaStopTextSpanCT
@@ -1342,7 +1345,10 @@ number.5.TimeSignatures = {
     s1 * 6/4
 
     % [TimeSignatures measure 3]
-    \grace { s8 }
+    %! +LETTER_PARTS_VIOLIN
+%%% \grace { s8 }
+    %! +LETTER_PARTS_CELLO
+%%% \grace { s8 }
     s1 * 6/4
 
     % [TimeSignatures measure 4]

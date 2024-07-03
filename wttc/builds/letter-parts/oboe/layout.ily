@@ -477,7 +477,7 @@ Breaks = {
 SpacingCommands = {
 
     % [SpacingCommands measure 1]
-    \baca-new-natural-spacing-section
+    \baca-new-strict-spacing-section #1 #12
     s1 * 3/4
 
     % [SpacingCommands measure 2]
@@ -499,6 +499,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 8]
+    \baca-new-strict-spacing-section #1 #16
     s1 * 3/4
 
     % [SpacingCommands measure 9]
@@ -508,6 +509,7 @@ SpacingCommands = {
     s1 * 3/4
 
     % [SpacingCommands measure 11]
+    \baca-new-strict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 12]
@@ -790,11 +792,9 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 105]
-    \baca-new-strict-spacing-section #1 #12
     s1 * 9/4
 
     % [SpacingCommands measure 106]
-    \baca-new-natural-spacing-section
     s1 * 2/4
 
     % [SpacingCommands measure 107]
