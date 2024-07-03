@@ -20,7 +20,8 @@
             s1 * 6/4
 
             % [Breaks measure 3]
-            \grace { s8 }
+            %! +LETTER_PARTS_CELLO
+        %%% \grace { s8 }
             s1 * 6/4
 
             % [Breaks measure 4]
@@ -73,7 +74,8 @@
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \grace { s8 }
+            %! +LETTER_PARTS_CELLO
+        %%% \grace { s8 }
             s1 * 6/4
 
             % [SpacingCommands measure 4]

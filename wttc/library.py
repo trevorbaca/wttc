@@ -1077,8 +1077,7 @@ def A3b(
     scp,
     *,
     rleak=False,
-    # TODO: reverse keyword:
-    do_not_rleak_scp=False,
+    rleak_scp=False,
 ):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
@@ -1090,7 +1089,7 @@ def A3b(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
         baca.tweak.staff_padding(3),
-        rleak=not do_not_rleak_scp,
+        rleak=rleak_scp,
     )
 
 

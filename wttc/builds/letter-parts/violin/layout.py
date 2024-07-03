@@ -114,8 +114,8 @@ def main(environment):
         breaks,
         environment.time_signatures[:128],
         measure_initial_grace_notes={
-            38: r"\grace { s8 }",
-            54: r"\grace { s8 }",
+            38: [r"\grace { s8 }"],
+            54: [r"\grace { s8 }"],
         },
         spacing_dictionary=spacing_dictionary,
     )

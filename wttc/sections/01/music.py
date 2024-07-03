@@ -392,6 +392,7 @@ def vc(m):
         [1],
         "T =|",
         rleak=True,
+        rleak_scp=True,
     )
     baca.clef(m[11][3], "treble")
     library.B1c(library.run(m[11], 99, 0), "pp", "C4", "B3 D4", 1, staff_padding=3)
