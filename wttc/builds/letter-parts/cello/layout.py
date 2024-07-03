@@ -104,22 +104,22 @@ def main(environment):
         ),
     )
     spacing_dictionary = {
-        1: "vanilla",
+        1: "natural",
         2: (1, 12),
         3: [
-            r"\baca-new-vanilla-spacing-section",
+            r"\baca-new-natural-spacing-section",
             r"\grace { s8 }",
             "s1 * 2/4",
             r"\baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)",
             "s1 * 4/4",
         ],
-        4: "vanilla",
+        4: "natural",
         8: (1, 12),
-        10: "vanilla",
+        10: "natural",
         12: (1, 12),
-        23: "vanilla",
+        23: "natural",
         105: (1, 12),
-        106: "vanilla",
+        106: "natural",
     }
     return baca.section.make_layout_score(
         breaks,

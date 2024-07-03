@@ -102,9 +102,9 @@ def main(environment):
         ),
     )
     spacing_dictionary = {
-        1: "vanilla",
+        1: "natural",
         105: (1, 12),
-        106: "vanilla",
+        106: "natural",
     }
     return baca.section.make_layout_score(
         breaks,

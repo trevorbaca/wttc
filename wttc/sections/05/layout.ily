@@ -182,7 +182,7 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-new-vanilla-spacing-section
+            \baca-new-natural-spacing-section
             s1 * 3/4
 
             % [SpacingCommands measure 2]
@@ -190,7 +190,7 @@
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \baca-new-vanilla-spacing-section
+            \baca-new-natural-spacing-section
             \grace { s8 }
             s1 * 6/4
 
