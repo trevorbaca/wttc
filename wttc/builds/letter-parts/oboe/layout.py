@@ -103,6 +103,7 @@ def main(environment):
     )
     spacing_dictionary = {
         1: "natural",
+        # 1: (1, 12),
         105: (1, 12),
         106: "natural",
     }
