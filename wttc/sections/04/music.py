@@ -971,8 +971,6 @@ def fl(m):
         rleak=True,
         tssp=3,
     )
-    baca.override.tuplet_bracket_direction_down(m.leaves())
-    baca.override.tuplet_bracket_staff_padding(m.leaves(), 1.5)
 
 
 def ob(m):
@@ -986,8 +984,6 @@ def ob(m):
     library.B3(library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True)
     library.B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
     library.B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")
-    baca.override.tuplet_bracket_direction_down(m.leaves())
-    baca.override.trill_spanner_staff_padding(m.leaves(), 3)
 
 
 def group_leaves_by_staff_lines(leaves):
@@ -1082,13 +1078,8 @@ def gt2(m):
     library.B4a(library.pleaves(m[12], 4), "G3 Gb3 F3", "mf mp p")
     library.B5(library.pleaves(m[12, 14], 5), "E3:G3", "mf mp")
     library.B2a(library.pleaves(m[14, 15], 2), "F#5", "p mp p")
-    baca.override.tuplet_bracket_direction_down(m.leaves())
     override_uneven_staff_padding(m[1, 3], only_dls=True)
     override_uneven_staff_padding(m[5, 6], only_dls=True)
-    baca.override.tuplet_bracket_staff_padding(m[14], 3)
-    baca.override.tuplet_bracket_positions(m[1, 6], (-5, -5))
-    baca.override.tuplet_bracket_positions(m[8], (-5, -5))
-    baca.override.tuplet_bracket_positions(m[11], (-5, -5))
 
 
 def vn(m):
@@ -1257,8 +1248,13 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(fl[10], 3)
     baca.override.dls_staff_padding(fl[12, 13], 6.5)
     baca.override.dls_staff_padding(fl[14, 16], 3)
+    baca.override.tuplet_bracket_direction_down(fl.leaves())
+    baca.override.tuplet_bracket_staff_padding(fl.leaves(), 1.5)
     ob = cache["ob"]
     baca.override.dls_staff_padding(ob.leaves(), 6.5)
+    baca.override.tuplet_bracket_direction_down(ob.leaves())
+    baca.override.tuplet_bracket_staff_padding(ob[12], 2)
+    baca.override.trill_spanner_staff_padding(ob.leaves(), 3)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[7], 4)
     baca.override.dls_staff_padding(gt1[9, 10], 4)
@@ -1269,6 +1265,11 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt2[9, 10], 4)
     baca.override.dls_staff_padding(gt2[11], 8)
     baca.override.dls_staff_padding(gt2[12, 13], 4)
+    baca.override.tuplet_bracket_direction_down(gt2.leaves())
+    baca.override.tuplet_bracket_positions(gt2[1, 6], (-5, -5))
+    baca.override.tuplet_bracket_positions(gt2[8], (-5, -5))
+    baca.override.tuplet_bracket_positions(gt2[11], (-5, -5))
+    baca.override.tuplet_bracket_staff_padding(gt2[14], 3)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[14, 16], 6)
     baca.override.tuplet_bracket_direction_down(vn.leaves())

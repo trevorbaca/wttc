@@ -1850,7 +1850,6 @@ number.2.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 5.5
@@ -1858,7 +1857,6 @@ number.2.Violin.Music = {
     \startTrillSpan fs'
 
     e'32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     e'32

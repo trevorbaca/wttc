@@ -4208,12 +4208,10 @@ number.12.Oboe.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-    - \tweak stencil ##f
     ~
 
     d'8
     - \baca-stop-on-string
-    \repeatTie
 
     r8
 
@@ -4292,12 +4290,10 @@ number.12.Oboe.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-    - \tweak stencil ##f
     ~
 
     d'8
     - \baca-stop-on-string
-    \repeatTie
 
     r8
 
@@ -4437,12 +4433,10 @@ number.12.Oboe.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \ff
-    - \tweak stencil ##f
     ~
 
     c'8.
     - \baca-stop-on-string
-    \repeatTie
 
     r16
 
@@ -6242,11 +6236,9 @@ number.12.Guitar.2.Music = {
     - \baca-stop-on-string
     - \tweak padding 1
     - \upbow
-    - \tweak stencil ##f
     ~
 
     b'16
-    \repeatTie
 
     r8.
 
@@ -6278,11 +6270,9 @@ number.12.Guitar.2.Music = {
     - \baca-stop-on-string
     - \tweak padding 1
     - \upbow
-    - \tweak stencil ##f
     ~
 
     b'16
-    \repeatTie
 
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue
@@ -8294,7 +8284,6 @@ number.12.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 5.5
@@ -8302,7 +8291,6 @@ number.12.Violin.Music = {
     \startTrillSpan fs'
 
     e'32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     e'16
@@ -8374,12 +8362,10 @@ number.12.Violin.Music = {
 
     e'8
     [
-    - \tweak stencil ##f
-    ~
     \repeatTie
+    ~
 
     e'32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     e'16
@@ -8450,12 +8436,10 @@ number.12.Violin.Music = {
 
     f'8
     [
-    - \tweak stencil ##f
-    ~
     \repeatTie
+    ~
 
     f'32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     f'16
@@ -8518,7 +8502,6 @@ number.12.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 5.5
@@ -8526,7 +8509,6 @@ number.12.Violin.Music = {
     \startTrillSpan gs'
 
     fs'32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     fs'!16
@@ -10076,13 +10058,14 @@ number.12.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    ~
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan f,
 
     \override NoteHead.style = #'harmonic
-    ef,!32
+    ef,32
     - \tweak bound-details.right.end-on-accidental ##f
     \glissando
       %! EXPLICIT_DYNAMIC
@@ -10146,12 +10129,10 @@ number.12.Cello.Music = {
 
     ef,8
     [
-    - \tweak stencil ##f
-    ~
     \repeatTie
+    ~
 
     ef,32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     ef,!16
@@ -10222,12 +10203,10 @@ number.12.Cello.Music = {
 
     df,8
     [
-    - \tweak stencil ##f
-    ~
     \repeatTie
+    ~
 
     df,32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     df,!16
@@ -10290,7 +10269,6 @@ number.12.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 5.5
@@ -10298,7 +10276,6 @@ number.12.Cello.Music = {
     \startTrillSpan d,
 
     c,32
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
     c,16

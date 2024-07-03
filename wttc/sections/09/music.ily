@@ -1089,12 +1089,10 @@ number.9.Oboe.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-    - \tweak stencil ##f
     ~
 
     d'8
     - \baca-stop-on-string
-    \repeatTie
 
     r8
 

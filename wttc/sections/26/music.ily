@@ -4897,12 +4897,10 @@ number.26.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
-    - \tweak stencil ##f
     ~
 
     b'16
     :32
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5112,12 +5110,10 @@ number.26.Violin.Music = {
     %@% \staffHighlight lightskyblue
     b'8
     :32
-    - \tweak stencil ##f
     ~
 
     b'16
     :32
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5290,7 +5286,6 @@ number.26.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-    - \tweak stencil ##f
     ~
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -5298,7 +5293,6 @@ number.26.Violin.Music = {
 
     b'16
     :32
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5388,12 +5382,10 @@ number.26.Violin.Music = {
     %@% \staffHighlight lightskyblue
     b'8
     :32
-    - \tweak stencil ##f
     ~
 
     b'16
     :32
-    \repeatTie
 
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue

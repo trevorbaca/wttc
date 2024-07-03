@@ -2572,11 +2572,9 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
 
     g'''8.
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3373,11 +3371,9 @@ number.5.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
 
     f'''2.
-    \repeatTie
 
     % [AltoFlute.Music measure 41]
       %! STAFF_HIGHLIGHT
@@ -4631,13 +4627,11 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'8. * 2/3
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -4853,13 +4847,11 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'2. * 11/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"11" #"12"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -5037,7 +5029,6 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'16
@@ -5046,7 +5037,6 @@ number.5.Guitar.1.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-ff
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5195,14 +5185,12 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     % [Guitar.1.Music measure 46]
     b'8 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -5245,13 +5233,11 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'8. * 2/3
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -5366,14 +5352,12 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     % [Guitar.1.Music measure 48]
     b'4
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5405,13 +5389,11 @@ number.5.Guitar.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'2 * 7/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"7" #"8"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -5913,7 +5895,6 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'8.
@@ -5922,7 +5903,6 @@ number.5.Guitar.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
-    \repeatTie
 
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #blue
@@ -6127,13 +6107,11 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'2. * 11/12
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"11" #"12"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -6311,7 +6289,6 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'16
@@ -6320,7 +6297,6 @@ number.5.Guitar.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-effort-ff
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -6469,14 +6445,12 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 46]
     b'8 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -6519,13 +6493,11 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'8. * 2/3
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -6640,14 +6612,12 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 48]
     b'4
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     b'16
       %! EXPLICIT_DYNAMIC_COLOR
@@ -6679,13 +6649,11 @@ number.5.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     b'2 * 7/8
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"7" #"8"
-    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -6820,12 +6788,10 @@ number.5.Violin.Music = {
 
     ef'8
     ]
-    - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 2]
     ef'2
-    \repeatTie
 
       %! SPANNER_START
     \pitchedTrill

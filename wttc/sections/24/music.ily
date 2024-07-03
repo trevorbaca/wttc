@@ -1868,11 +1868,9 @@ number.24.Guitar.1.Music = {
     }
 
     a'8
-    - \tweak stencil ##f
     ~
 
     a'4
-    \repeatTie
 
     % [Guitar.1.Music measure 5]
       %! STAFF_HIGHLIGHT
@@ -1946,12 +1944,10 @@ number.24.Guitar.1.Music = {
     }
 
     a'8
-    - \tweak stencil ##f
     ~
 
     a'16
     [
-    \repeatTie
 
     g'8.
     ]
@@ -2051,11 +2047,9 @@ number.24.Guitar.1.Music = {
 
     e'8
     ]
-    - \tweak stencil ##f
     ~
 
     e'4
-    \repeatTie
 
     % [Guitar.1.Music measure 13]
     ef'!4
@@ -2068,12 +2062,10 @@ number.24.Guitar.1.Music = {
 
     df'!8
     ]
-    - \tweak stencil ##f
     ~
 
     df'16
     [
-    \repeatTie
 
     c'8.
     ]
@@ -2175,11 +2167,9 @@ number.24.Guitar.1.Music = {
     }
 
     c'8
-    - \tweak stencil ##f
     ~
 
     c'4
-    \repeatTie
 
     % [Guitar.1.Music measure 17]
     b8.
@@ -2313,12 +2303,10 @@ number.24.Guitar.1.Music = {
     }
 
     c'8
-    - \tweak stencil ##f
     ~
 
     c'16
     [
-    \repeatTie
 
     b8.
     ]
@@ -2563,11 +2551,9 @@ number.24.Guitar.1.Music = {
     }
 
     c'8
-    - \tweak stencil ##f
     ~
 
     c'4
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
@@ -2765,7 +2751,6 @@ number.24.Guitar.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 2]
@@ -2773,7 +2758,6 @@ number.24.Guitar.2.Music = {
     :32
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Guitar.2.Music measure 3]
     fs1.
@@ -2999,12 +2983,10 @@ number.24.Guitar.2.Music = {
 
     e'8
     ]
-    - \tweak stencil ##f
     ~
 
     e'16
     [
-    \repeatTie
 
     fs'!8.
     ]
@@ -3017,12 +2999,10 @@ number.24.Guitar.2.Music = {
 
     gs'!8
     ]
-    - \tweak stencil ##f
     ~
 
     gs'8.
     [
-    \repeatTie
 
     a'16
     ]
@@ -3034,12 +3014,10 @@ number.24.Guitar.2.Music = {
 
     as'!8
     ]
-    - \tweak stencil ##f
     ~
 
     as'8.
     [
-    \repeatTie
 
     b'16
     ]
@@ -3156,12 +3134,10 @@ number.24.Guitar.2.Music = {
 
     ds''!8
     ]
-    - \tweak stencil ##f
     ~
 
     ds''16
     [
-    \repeatTie
 
     e''8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3440,13 +3416,11 @@ number.24.Guitar.2.Music = {
 
     e''8
     ]
-    - \tweak stencil ##f
     ~
 
     % [Guitar.2.Music measure 30]
     e''16
     [
-    \repeatTie
 
     f''8.
     ]
@@ -3479,14 +3453,12 @@ number.24.Guitar.2.Music = {
     - \tweak staff-padding 3
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
-    - \tweak stencil ##f
     ~
 
     f4
     :32
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [Guitar.2.Music measure 31]
     f1.
@@ -3914,7 +3886,6 @@ number.24.Violin.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 6]
@@ -3924,7 +3895,6 @@ number.24.Violin.Music = {
         a'
     >16
     [
-    \repeatTie
 
     <
         f'
@@ -4098,7 +4068,6 @@ number.24.Violin.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 11]
@@ -4108,7 +4077,6 @@ number.24.Violin.Music = {
         a'
     >16
     [
-    \repeatTie
 
     <
         f'
@@ -4419,7 +4387,6 @@ number.24.Violin.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     <
@@ -4427,7 +4394,6 @@ number.24.Violin.Music = {
         \tweak style #'harmonic
         d''
     >8
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5397,7 +5363,6 @@ number.24.Cello.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     <
@@ -5405,7 +5370,6 @@ number.24.Cello.Music = {
         \tweak style #'harmonic
         a'
     >8
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5698,7 +5662,6 @@ number.24.Cello.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     <
@@ -5706,7 +5669,6 @@ number.24.Cello.Music = {
         \tweak style #'harmonic
         a'
     >8
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -5915,7 +5877,6 @@ number.24.Cello.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     <
@@ -5924,7 +5885,6 @@ number.24.Cello.Music = {
         bf'
     >16
     [
-    \repeatTie
 
     <
         fs'!

@@ -1871,7 +1871,6 @@ number.17.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
       %! SPANNER_START
     - \tweak TrillSpanner.staff-padding 3
@@ -1886,7 +1885,6 @@ number.17.Violin.Music = {
     \pp
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    \repeatTie
 
     r8.
       %! SPANNER_STOP

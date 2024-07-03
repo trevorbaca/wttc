@@ -1912,6 +1912,7 @@ number.4.Oboe.Music = {
     {
 
         % [Oboe.Music measure 12]
+        \override TupletBracket.staff-padding = 2
         r8
 
         \grace {
@@ -1951,6 +1952,7 @@ number.4.Oboe.Music = {
     - \tweak stencil ##f
     ~
     \repeatTie
+    \revert TupletBracket.staff-padding
 
     % [Oboe.Music measure 13]
     bf'2

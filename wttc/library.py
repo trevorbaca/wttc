@@ -497,8 +497,12 @@ def final_hairpin_to_bar_line_tweaks(fhtbl=False):
 
 
 def force_repeat_tie(components, threshold=(1, 8)):
+
+    def inequality(item):
+        return item > abjad.Duration(threshold)
+
     tag = baca.helpers.function_name(inspect.currentframe())
-    rmakers.force_repeat_tie(components, threshold=threshold, tag=tag)
+    rmakers.force_repeat_tie(components, threshold=inequality, tag=tag)
 
 
 def frame(written_n, framed_n, *, chords=False, left=False):

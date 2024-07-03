@@ -297,7 +297,6 @@ number.28.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
     ~
 
     <
@@ -307,7 +306,6 @@ number.28.AltoFlute.Music = {
     >4
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     % [AltoFlute.Music measure 2]
     <
@@ -746,7 +744,6 @@ number.28.Violin.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     % [Violin.Music measure 3]
@@ -756,7 +753,6 @@ number.28.Violin.Music = {
         a'
     >16
     [
-    \repeatTie
 
     <
         f'
@@ -1074,7 +1070,6 @@ number.28.Cello.Music = {
     >8
     - \upbow
     ]
-    - \tweak stencil ##f
     ~
 
     <
@@ -1082,7 +1077,6 @@ number.28.Cello.Music = {
         \tweak style #'harmonic
         a'
     >8
-    \repeatTie
 
     \override NoteHead.style = #'harmonic
       %! SPANNER_START

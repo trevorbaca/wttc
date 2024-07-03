@@ -6152,11 +6152,9 @@ number.19.Guitar.2.Music = {
     b'8
     - \tweak padding 1
     - \upbow
-    - \tweak stencil ##f
     ~
 
     b'16
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -7041,12 +7039,10 @@ number.19.Violin.Music = {
     a8
     :32
     - \baca-stop-on-string
-    - \tweak stencil ##f
     ~
 
     a16
     :32
-    \repeatTie
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -13402,7 +13398,6 @@ number.19.Cello.Music = {
     - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
-    - \tweak stencil ##f
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -13411,7 +13406,6 @@ number.19.Cello.Music = {
 
         % [Cello.Music measure 29]
         ef,16
-        \repeatTie
 
         ef,!4
           %! SPANNER_STOP
@@ -13921,7 +13915,6 @@ number.19.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    - \tweak stencil ##f
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -13929,7 +13922,6 @@ number.19.Cello.Music = {
     {
 
         ef,4
-        \repeatTie
 
         ef,!8
           %! SPANNER_STOP
