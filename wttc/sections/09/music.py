@@ -449,18 +449,24 @@ def owl(skips):
 
 
 def align_spanners(cache):
-    baca.override.dls_staff_padding(cache["fl"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["ob"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["gt1"][1, 6], 4)
-    baca.override.dls_staff_padding(cache["gt1"][7], 3)
-    baca.override.dls_staff_padding(cache["gt1"][11, 12], 6)
-    baca.override.tuplet_bracket_direction_up(cache["gt2"][4])
-    baca.override.dls_staff_padding(cache["gt2"][1, 6], 4)
-    baca.override.dls_staff_padding(cache["gt2"][9], 3)
-    baca.override.dls_staff_padding(cache["gt2"][11, 12], 6.5)
-    baca.override.dls_staff_padding(cache["vn"][1, 6], 3)
-    baca.override.dls_staff_padding(cache["vn"][7, 12], 6)
-    baca.override.dls_staff_padding(cache["vc"].leaves(), 5)
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl.leaves(), 4)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob.leaves(), 4)
+    gt1 = cache["gt1"]
+    baca.override.dls_staff_padding(gt1[1, 6], 4)
+    baca.override.dls_staff_padding(gt1[7], 3)
+    baca.override.dls_staff_padding(gt1[11, 12], 6)
+    gt2 = cache["gt2"]
+    baca.override.tuplet_bracket_direction_up(gt2[4])
+    baca.override.dls_staff_padding(gt2[1, 6], 4)
+    baca.override.dls_staff_padding(gt2[9], 3)
+    baca.override.dls_staff_padding(gt2[11, 12], 6.5)
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn[1, 6], 3)
+    baca.override.dls_staff_padding(vn[7, 12], 6)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc.leaves(), 5)
 
 
 @baca.build.timed("make_score")

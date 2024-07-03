@@ -371,22 +371,28 @@ def owl(skips):
 
 
 def align_spanners(cache):
-    baca.override.dls_staff_padding(cache["fl"].leaves(), 3)
-    baca.override.dls_staff_padding(cache["ob"].leaves(), 3)
+    fl = cache["fl"]
+    baca.override.dls_staff_padding(fl.leaves(), 3)
+    ob = cache["ob"]
+    baca.override.dls_staff_padding(ob.leaves(), 3)
+    gt1 = cache["gt1"]
     baca.override.dls_staff_padding(
-        abjad.select.leaves(cache["gt1"].leaves(), grace=False)[:2], 4
+        abjad.select.leaves(gt1.leaves(), grace=False)[:2], 4
     )
     baca.override.dls_staff_padding(
-        abjad.select.leaves(cache["gt1"].leaves(), grace=False)[2:], 5
+        abjad.select.leaves(gt1.leaves(), grace=False)[2:], 5
+    )
+    gt2 = cache["gt2"]
+    baca.override.dls_staff_padding(
+        abjad.select.leaves(gt2.leaves(), grace=False)[:2], 4
     )
     baca.override.dls_staff_padding(
-        abjad.select.leaves(cache["gt2"].leaves(), grace=False)[:2], 4
+        abjad.select.leaves(gt2.leaves(), grace=False)[2:], 5
     )
-    baca.override.dls_staff_padding(
-        abjad.select.leaves(cache["gt2"].leaves(), grace=False)[2:], 5
-    )
-    baca.override.dls_staff_padding(cache["vn"].leaves(), 4)
-    baca.override.dls_staff_padding(cache["vc"].leaves(), 4)
+    vn = cache["vn"]
+    baca.override.dls_staff_padding(vn.leaves(), 4)
+    vc = cache["vc"]
+    baca.override.dls_staff_padding(vc.leaves(), 4)
 
 
 @baca.build.timed("make_score")
