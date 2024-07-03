@@ -38,11 +38,11 @@ def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "75", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "60", manifests=library.manifests)
     wrappers = baca.override.metronome_mark_extra_offset(skips[7 - 1], (-3, 0))
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
     baca.metronome_mark(skips[9 - 1], "50", manifests=library.manifests)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
     wrappers = baca.override.metronome_mark_extra_offset(skips[10 - 1], (0, 4))
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_FLUTE"))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_FLUTE)
 
 
 def FL(voice, meters):
@@ -284,10 +284,10 @@ def vn(m):
     library.K2d(library.pleaves(m[2, 3], 2), "Ab3", "mf")
     library.A1b(library.pleaves(m[4, 5], 1), "E4 G#4", "pp p mp mp", fhtbl=True)
     wrappers = baca.override.metronome_mark_extra_offset(m[7][0], (0, 5))
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_VIOLIN"))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_VIOLIN)
     library.D4b(library.pleaves(m[7, 8], 4), "G#3", dynamics="mp - mf - - -")
     wrappers = baca.override.metronome_mark_extra_offset(m[10][0], (0, 2))
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_VIOLIN"))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_VIOLIN)
     library.N3b(
         library.pleaves(m[10], 3), library.Q1, [16, 18], "o< mf>o!", -6, t="+m2"
     )

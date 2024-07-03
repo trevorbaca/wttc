@@ -1,5 +1,3 @@
-% when the time comes (2021-24) cello part
-
 \version "2.25.16"
 
 part-name-markup = \markup "cello part"

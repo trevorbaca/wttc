@@ -36,7 +36,11 @@ def GLOBALS(skips):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[5 - 1], "60", manifests=library.manifests)
+    wrappers = baca.override.metronome_mark_extra_offset(skips[5 - 1], (0, 10))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_FLUTE)
     baca.metronome_mark(skips[8 - 1], "50", manifests=library.manifests)
+    wrappers = baca.override.metronome_mark_extra_offset(skips[8 - 1], (-1, 0))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_OBOE)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
 
 
@@ -79,12 +83,14 @@ def OB(voice, meters):
     )
     rhythm(
         meters(8),
-        [-1, 2, -2, 2, "-"],
+        [-1, 2, -1, -1, 2, -1, "-"],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(9),
-        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        [-1, 2, -1, -1, 2, -1, -1, 2, -1, -1, 2, -1, "-"],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm.mmrests(10, 11)
@@ -253,8 +259,6 @@ def fl(m):
     baca.short_instrument_name(m[1][0], "Afl.", library.manifests)
     baca.clef(m[1][0], "treble")
     library.E3a(library.pleaves(m[4, 5], 3))
-    wrappers = baca.override.metronome_mark_extra_offset(m[5][0], (0, 10))
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_FLUTE"))
     library.E4a(library.pleaves(m[7], 4), "B5", "p")
     library.I2a(library.run(m[9], 2, 0), "C#6", "mf")
     library.B3(
@@ -283,8 +287,7 @@ def ob(m):
     baca.clef(m[1][0], "treble")
     library.rotate_rehearsal_mark_literal(m[1][0])
     library.E2a(library.pleaves(m[7], 2), "D6", "E6", bar_lines="1", peaks="mp")
-    library.I1a(library.pleaves(m[8], 1), "D#6", "E6", "p -")
-    library.I1a(library.pleaves(m[9], 1), "D#6", "E6", "(p) mp mf f")
+    library.I1a(library.pleaves(m[8, 9], 1), "D#6", "E6", "p - - mp mf f")
 
 
 def gt1(m):

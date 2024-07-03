@@ -118,6 +118,8 @@ number.1.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 5]
+      %! +LETTER_PARTS_FLUTE
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 10)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 3/4
@@ -206,6 +208,8 @@ number.1.Skips = {
     \mark \markup \smaller \smaller \musicglyph "scripts.ushortfermata"
 
     % [Skips measure 8]
+      %! +LETTER_PARTS_OBOE
+%%% \once \override Score.MetronomeMark.extra-offset = #'(-1 . 0)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 3/4
@@ -667,8 +671,6 @@ number.1.AltoFlute.Music = {
     - \flageolet
 
     % [AltoFlute.Music measure 5]
-      %! +LETTER_PARTS_FLUTE
-%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 10)
     ef''''!32
     - \flageolet
 
@@ -985,21 +987,16 @@ number.1.Oboe.Music = {
 
       %! SPANNER_START
     \pitchedTrill
-    ds'''!16
+    ds'''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-    [
-    ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
-
-    ds'''16
-    ]
 
     r16
       %! SPANNER_STOP
@@ -1009,16 +1006,11 @@ number.1.Oboe.Music = {
 
       %! SPANNER_START
     \pitchedTrill
-    ds'''!16
-    [
-    ~
+    ds'''!8
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
-
-    ds'''16
-    ]
 
     r16
       %! SPANNER_STOP
@@ -1031,21 +1023,11 @@ number.1.Oboe.Music = {
 
       %! SPANNER_START
     \pitchedTrill
-    ds'''!16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \baca-p-parenthesized
-    [
-    ~
+    ds'''!8
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
-
-    ds'''16
-    ]
 
     r16
       %! SPANNER_STOP
@@ -1055,21 +1037,16 @@ number.1.Oboe.Music = {
 
       %! SPANNER_START
     \pitchedTrill
-    ds'''!16
+    ds'''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
-    [
-    ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
-
-    ds'''16
-    ]
 
     r16
       %! SPANNER_STOP
@@ -1079,21 +1056,16 @@ number.1.Oboe.Music = {
 
       %! SPANNER_START
     \pitchedTrill
-    ds'''!16
+    ds'''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-    [
-    ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
-
-    ds'''16
-    ]
 
     r16
       %! SPANNER_STOP
@@ -1103,21 +1075,16 @@ number.1.Oboe.Music = {
 
       %! SPANNER_START
     \pitchedTrill
-    ds'''!16
+    ds'''!8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \f
-    [
-    ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
-
-    ds'''16
-    ]
 
     r16
       %! SPANNER_STOP

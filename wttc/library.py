@@ -13,6 +13,14 @@ def BG(*arguments):
     return baca.rhythm.BG(*arguments, slur=False)
 
 
+ONLY_LETTER_PARTS_CELLO = abjad.Tag("+LETTER_PARTS_CELLO")
+ONLY_LETTER_PARTS_FLUTE = abjad.Tag("+LETTER_PARTS_FLUTE")
+ONLY_LETTER_PARTS_GUITAR_1 = abjad.Tag("+LETTER_PARTS_GUITAR_1")
+ONLY_LETTER_PARTS_GUITAR_2 = abjad.Tag("+LETTER_PARTS_GUITAR_2")
+ONLY_LETTER_PARTS_OBOE = abjad.Tag("+LETTER_PARTS_OBOE")
+ONLY_LETTER_PARTS_VIOLIN = abjad.Tag("+LETTER_PARTS_VIOLIN")
+
+
 @dataclasses.dataclass(frozen=True, order=True, slots=True, unsafe_hash=True)
 class M:
     argument: typing.Any
@@ -2360,7 +2368,7 @@ def I1a(pleaves, pitch, alteration, dynamics):
     for plt in plts:
         baca.spanners.trill(
             plt,
-            baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
+            baca.tweak.staff_padding(5.5),
             alteration=alteration,
             rleak=True,
         )

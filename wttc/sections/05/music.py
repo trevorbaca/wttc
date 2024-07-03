@@ -118,7 +118,7 @@ def GLOBALS(skips):
         (0, 3.5),
         after=True,
     )
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
     baca.mark(
         skips[46 - 1],
         strings.fermata,
@@ -136,7 +136,7 @@ def GLOBALS(skips):
         (0, 7),
         after=True,
     )
-    baca.tags.tag(wrappers, abjad.Tag("+LETTER_PARTS_CELLO"))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
 
 
 def FL(voice, meters):

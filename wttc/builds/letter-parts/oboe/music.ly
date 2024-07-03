@@ -1,6 +1,6 @@
 \version "2.25.16"
 
-part-name-markup = \markup "violin part"
+part-name-markup = \markup "oboe part"
 \include "../stylesheet.ily"
 % \layout { ragged-right = ##t }
 \layout { ragged-last = ##f }
@@ -26,7 +26,7 @@ part-name-markup = \markup "violin part"
 {
   <<
     { \page-layout-score }
-    \keepWithTag Violin
+    \keepWithTag Oboe
     {
       \include "_sections/01.ly"
       \include "_sections/02.ly"

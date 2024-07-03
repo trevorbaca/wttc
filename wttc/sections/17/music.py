@@ -85,23 +85,27 @@ def OB(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        [-1, 2, -1, -1, 2, -1, -1, 2, -1, -1, 2, -1, "-"],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(2),
-        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        [-1, 2, -1, -1, 2, -1, -1, 2, -1, -1, 2, -1, "-"],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(3),
-        [-1, 2, -2, 2, -2, 2, -2, 2, "-"],
+        [-1, 2, -1, -1, 2, -1, -1, 2, -1, -1, 2, -1, "-"],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm.mmrests(4)
     rhythm(
         meters(5),
         [-12, -1, 2, -1, "-"],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm.mmrests(6)
