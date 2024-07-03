@@ -1883,7 +1883,7 @@ number.1.Violin.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan cs'
 

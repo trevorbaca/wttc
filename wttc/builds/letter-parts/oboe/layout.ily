@@ -543,6 +543,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 22]
+    \baca-new-strict-spacing-section #1 #16
     s1 * 4/4
 
     % [SpacingCommands measure 23]
@@ -585,6 +586,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 36]
+    \baca-new-natural-spacing-section
     s1 * 6/4
 
     % [SpacingCommands measure 37]

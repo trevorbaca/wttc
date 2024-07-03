@@ -1564,7 +1564,7 @@ number.13.Violin.Music = {
     \<
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan cs'
 
@@ -1630,7 +1630,7 @@ number.13.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan cs'
 
@@ -1663,7 +1663,7 @@ number.13.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan cs'
 
@@ -1696,7 +1696,7 @@ number.13.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan cs'
 
@@ -1729,7 +1729,7 @@ number.13.Violin.Music = {
     - \tweak stencil ##f
     ~
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 3
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan cs'
 

@@ -977,8 +977,12 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.B3(library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", rleak=True)
-    library.B3(library.pleaves(m[2], 3), "D5", "Eb4", [2, 4], "p< f>o!", rleak=True)
+    library.B3(
+        library.pleaves(m[1], 3), "D5", "Eb4", [7, 2], "p< f>o!", fhtbl=True, rleak=True
+    )
+    library.B3(
+        library.pleaves(m[2], 3), "D5", "Eb4", [2, 4], "p< f>o!", fhtbl=True, rleak=True
+    )
     library.B3(library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True)
     library.B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
     library.B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")

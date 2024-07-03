@@ -1212,9 +1212,9 @@ def B3(
     hairpin_lparts,
     hairpin,
     *,
+    fhtbl=False,
     hairpin_includes_grace=False,
     rleak=False,
-    to_bar_line=False,
     tssp=None,
 ):
     nongraces = baca.select.pleaves(plts, grace=False)
@@ -1239,14 +1239,15 @@ def B3(
         parts = baca.select.lparts(plts, hairpin_lparts)
     else:
         parts = plts
-    tweaks = []
-    if to_bar_line is True:
-        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
+    # tweaks = []
+    # TODO: remove
+    # if to_bar_line is True:
+    #    tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     parts[0] = grace_plts + abjad.select.leaves(parts[0])
     baca.hairpin(
         parts,
         hairpin,
-        *tweaks,
+        *final_hairpin_to_bar_line_tweak(fhtbl),
         rleak=rleak,
     )
 
@@ -1864,14 +1865,14 @@ def E2c(
     peak,
     *,
     diminuendo=False,
+    fhtbl=False,
     stop_pitch=None,
-    to_bar_line=False,
 ):
     if stop_pitch is None:
         baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(3, grob="TrillSpanner"),
+        baca.tweak.staff_padding(3),
         alteration=alteration,
         rleak=True,
     )
@@ -1883,13 +1884,10 @@ def E2c(
         )
     else:
         pieces = baca.select.partition_in_halves(pleaves)
-        tweaks = []
-        if to_bar_line is True:
-            tweaks.append(baca.tweak.to_bar_line_true(i=-1))
         baca.hairpin(
             pieces,
             f"o< {peak}>o!",
-            *tweaks,
+            *final_hairpin_to_bar_line_tweak(fhtbl),
             rleak=True,
         )
 

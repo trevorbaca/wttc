@@ -631,7 +631,7 @@ def vn(m):
     library.E2b(runs[0], "G#4 C5", "mf", damp=True, rleak=True)
     library.E2b(runs[1], "G#4 C5", "mp", damp=True, rleak=True)
     library.E2b(runs[2], "G#4 C5", "p", damp=True, rleak=True)
-    library.E2c(runs[3], "B3", "C#4", "p", to_bar_line=True)
+    library.E2c(runs[3], "B3", "C#4", "p", fhtbl=True)
     E4c(library.pleaves(m[11], 4), "D#5", "G#5", "p")
     library.E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")
     E4c(library.pleaves(m[12], 4), "D#5", "G#5", "mp")

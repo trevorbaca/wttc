@@ -105,6 +105,8 @@ def main(environment):
         1: (1, 12),
         8: (1, 16),
         11: (1, 16),
+        22: (1, 16),
+        36: "natural",
     }
     return baca.section.make_layout_score(
         breaks,
