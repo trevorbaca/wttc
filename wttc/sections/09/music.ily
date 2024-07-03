@@ -532,7 +532,7 @@ number.9.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -696,7 +696,7 @@ number.9.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -899,7 +899,7 @@ number.9.AltoFlute.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTrillSpan e'''
 
@@ -1033,7 +1033,7 @@ number.9.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 3.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -1117,7 +1117,7 @@ number.9.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 3.5
       %! SPANNER_START
     \startTrillSpan b''
 
@@ -1274,7 +1274,7 @@ number.9.Oboe.Music = {
       %! SPANNER_START
     \<
       %! SPANNER_START
-    - \tweak TrillSpanner.staff-padding 5.5
+    - \tweak staff-padding 3.5
       %! SPANNER_START
     \startTrillSpan b''
 

@@ -39,7 +39,7 @@ def GLOBALS(skips):
     wrappers = baca.override.metronome_mark_extra_offset(skips[5 - 1], (0, 10))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_FLUTE)
     baca.metronome_mark(skips[8 - 1], "50", manifests=library.manifests)
-    wrappers = baca.override.metronome_mark_extra_offset(skips[8 - 1], (-1, 0))
+    wrappers = baca.override.metronome_mark_extra_offset(skips[8 - 1], (-3, 2))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_OBOE)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
 

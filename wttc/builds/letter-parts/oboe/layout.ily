@@ -258,11 +258,11 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 71]
+    \baca-lbsd #90 #'(6)
+    \break
     s1 * 3/4
 
     % [Breaks measure 72]
-    \baca-lbsd #90 #'(6)
-    \break
     s1 * 3/4
 
     % [Breaks measure 73]
@@ -387,7 +387,7 @@ Breaks = {
     s1 * 9/4
 
     % [Breaks measure 106]
-    \baca-lbsd #127 #'(6)
+    \baca-lbsd #129 #'(6)
     \break
     s1 * 2/4
 
@@ -422,7 +422,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 115]
-    \baca-lbsd #122 #'(6)
+    \baca-lbsd #128 #'(6)
     \break
     s1 * 4/4
 
@@ -430,7 +430,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 117]
-    \baca-lbsd #25 #'(6)
+    \baca-lbsd #18.5 #'(6)
     \pageBreak
     s1 * 2/4
 
@@ -444,7 +444,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 121]
-    \baca-lbsd #51 #'(6)
+    \baca-lbsd #38 #'(6)
     \break
     s1 * 6/4
 
@@ -452,7 +452,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 123]
-    \baca-lbsd #98 #'(6)
+    \baca-lbsd #103 #'(6)
     \break
     s1 * 6/4
 
@@ -463,7 +463,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 126]
-    \baca-lbsd #132 #'(6)
+    \baca-lbsd #140 #'(6)
     \break
     s1 * 6/4
 

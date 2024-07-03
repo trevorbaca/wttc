@@ -34,6 +34,8 @@ def GLOBALS(skips):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
+    wrappers = baca.override.metronome_mark_extra_offset(skips[1 - 1], (-3, 2))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_OBOE)
     #
     baca.mark(
         skips[11 - 1],

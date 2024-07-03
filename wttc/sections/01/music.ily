@@ -210,7 +210,7 @@ number.1.Skips = {
 
     % [Skips measure 8]
       %! +LETTER_PARTS_OBOE
-%%% \once \override Score.MetronomeMark.extra-offset = #'(-1 . 0)
+%%% \once \override Score.MetronomeMark.extra-offset = #'(-3 . 2)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 3/4

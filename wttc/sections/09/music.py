@@ -265,12 +265,12 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.G2a2(library.pleaves(m[2, 3], 2), "G#5", "B5", "p")
+    library.G2a2(library.pleaves(m[2, 3], 2), "G#5", "B5", "p", tssp=3.5)
     library.H1a(library.pleaves(m[4], 99), "D4", "f")
-    library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p")
+    library.G2a2(library.pleaves(m[5, 6], 2), "G#5", "B5", "p", tssp=3.5)
     library.C2a(library.pleaves(m[8, 9], 2), "E6", "F6", "mf", "Eb6", fhtbl=True)
     library.C2a(library.pleaves(m[10], 2), "D6", "E6", "p", fhtbl=True)
-    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", fhtbl=True)
+    library.G2a2(library.pleaves(m[12], 2), "G#5", "B5", "mp", fhtbl=True, tssp=3.5)
 
 
 def gt1(m):

@@ -2176,11 +2176,11 @@ def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, bdr
     )
 
 
-def G2a2(pleaves, pitch, alteration, peak, *, fhtbl=False):
+def G2a2(pleaves, pitch, alteration, peak, *, fhtbl=False, tssp=5.5):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(
         pleaves,
-        baca.tweak.staff_padding(5.5, grob="TrillSpanner"),
+        baca.tweak.staff_padding(tssp),
         alteration=alteration,
         rleak=True,
     )

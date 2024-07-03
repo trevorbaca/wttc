@@ -173,6 +173,8 @@ number.8.Skips = {
     % [Skips measure 7]
       %! +LETTER_PARTS_CELLO
 %%% \once \override Score.MetronomeMark.extra-offset = #'(-3 . 0)
+      %! +LETTER_PARTS_OBOE
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 4)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 4/4

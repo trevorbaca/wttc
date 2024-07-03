@@ -10,7 +10,14 @@
   oddHeaderMarkup = \markup \null
 }
 
-\layout { \context { \Score barNumberVisibility = #all-bar-numbers-visible } }
+\layout
+{
+  \context
+  {
+    \Score
+    barNumberVisibility = #all-bar-numbers-visible
+  }
+}
 
 measure-number-extra-offset = #'(0 . 8)
 local-measure-number-extra-offset = #'(0 . 8)

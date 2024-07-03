@@ -43,9 +43,7 @@ scene-iv-A = \markup
   \line { What was it we had to look out for? \lnum #30 }
   \line { Did we know it would take us away from each other? \lnum #31 }
   \line { We had been with one another all the time, \lnum #32 }
-  \vspace #1
-  \adobe-italic
-  \line { Music attaca. } }
+  \adobe-italic \line { Music attaca. } }
 
 scene-iv-A-section = \markup
   \translate #'(-100 . -40)
@@ -143,8 +141,7 @@ scene-iv-G = \markup
   \column {
   \adobe-italic
   \line { On downbeat: }
-  \adobe-bold
-  \line { Music — \lnum #39 } }
+  \adobe-bold \line { Music — \lnum #39 } }
 
 scene-iv-G-section = \markup
   \translate #'(0 . -35)
