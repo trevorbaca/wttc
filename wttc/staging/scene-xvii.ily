@@ -58,10 +58,9 @@ scene-xvii-B-parts = \markup
 
 scene-xvii-C = \markup
   \wdfn
-  \adobe-italic
-  \justify { Still 4. Sudden change in music and lighting as OWL is fixed in
-  position and set uttering, head snapping from left to right with the
-  dialogue, which goes fast. OWL struggles with both hands on sides of head
+  \adobe-italic \justify { Still 4. Sudden change in music and lighting as OWL
+  is fixed in position and set uttering, head snapping from left to right with
+  the dialogue, which goes fast. OWL struggles with both hands on sides of head
   to stop this movement. }
 
 scene-xvii-C-section = \markup
@@ -82,8 +81,7 @@ scene-xvii-D = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Lines to be delivered during measure 476: }
+  \adobe-italic \line { Lines to be delivered during measure 476: }
   \vspace #2
   \line { All is that. \lnum #274 }
   \line { \hspace #40 Good. \lnum #275 }
@@ -95,12 +93,11 @@ scene-xvii-D = \markup
   \line { \hspace #40 On so — \lnum #281 }
   \line { No! \hspace #-0.5 \super 4 \lnum #282 }
   \vspace #2
-  \adobe-italic
-  \justify { On this last word, OWL succeeds in stopping the movement, and the fit
-  is over as suddenly as it began. Music and lighting return to how they were. }
+  \adobe-italic \justify { On this last word, OWL succeeds in stopping the
+  movement, and the fit is over as suddenly as it began. Music and lighting
+  return to how they were. }
   \vspace #4
-  \adobe-italic
-  \line { End scene 17. } }
+  \adobe-italic \line { End scene 17. } }
 
 scene-xvii-D-section = \markup
   \override #'(line-width . 60)
@@ -118,8 +115,7 @@ scene-xvii-D-parts = \markup
 
 scene-xvii-E = \markup
   \wdfn
-  \adobe-italic
-  \line { End scene 17. }
+  \adobe-italic \line { End scene 17. }
 
 scene-xvii-E-section = \markup
   \translate #'(0 . 0)
@@ -136,6 +132,5 @@ scene-xvii-footnote = \markup
   \section-font-size
   {
   \footnote ""
-  \line { \super 4 \hspace #-0.5 Samuel Beckett:
-  \adobe-italic
-  { What Where }, available statements reading backwards from the end. } }
+  \line { \super 4 \hspace #-0.5 Samuel Beckett: \adobe-italic { What Where },
+  available statements reading backwards from the end. } }

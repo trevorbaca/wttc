@@ -30,10 +30,9 @@ scene-vii-parenthesized-title-section = \markup
 
 scene-vii-A = \markup
   \wdfn
-  \column {
-  \adobe-italic
-  \line { First time only: }
   \adobe-bold
+  \column {
+  \adobe-italic \line { First time only: }
   \line { No doubt you'll come before long. \lnum #66 } }
 
 scene-vii-A-section = \markup
@@ -50,10 +49,9 @@ scene-vii-A-parts = \markup
 
 scene-vii-B = \markup
   \wdfn
-  \column {
-  \adobe-italic
-  \line { First time only: }
   \adobe-bold
+  \column {
+  \adobe-italic \line { First time only: }
   \line { You will. \lnum #67 } }
 
 scene-vii-B-section = \markup
@@ -74,10 +72,8 @@ scene-vii-C = \markup
   \column {
   \line { I know you will. \lnum #68 }
   \vspace #1
-  \adobe-italic
-  \justify { Musicians wait a moment to weigh the meaning of this last line.
-  Then proceed to \adobe-bold \box F
-  \hspace #-0.5 . } }
+  \adobe-italic \justify { Musicians wait a moment to weigh the meaning of this
+  last line. Then proceed to \adobe-bold \box F \hspace #-0.5 . } }
 
 scene-vii-C-section = \markup
   \override #'(line-width . 42)
@@ -140,10 +136,9 @@ scene-vii-G-parts = \markup
 
 scene-vii-H = \markup
   \wdfn
-  \adobe-italic
-  \justify { OWL and musicians wait together in silence, long enough for the
-  audience to consider OWL's question. Then all proceed to \adobe-bold \box G
-  \hspace #-0.5 . }
+  \adobe-italic \justify { OWL and musicians wait together in silence, long
+  enough for the audience to consider OWL's question. Then all proceed to
+  \adobe-bold \box G \hspace #-0.5 . }
 
 scene-vii-H-section = \markup
   \override #'(line-width . 60)

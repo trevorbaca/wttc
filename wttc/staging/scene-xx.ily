@@ -24,8 +24,7 @@ scene-xx-A = \markup
   \column {
   \line { What to do, what to do? \lnum #310 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { You'll come. \lnum #311 }
   \line { Some time. \lnum #312 }
@@ -36,12 +35,10 @@ scene-xx-A = \markup
   \line { And you'll be here. \lnum #317 }
   \line { With me. \lnum #318 }
   \vspace #2
-  \adobe-italic
-  \line { Slowly. }
+  \adobe-italic \line { Slowly. }
   \line { Is that not so? \lnum #319 }
   \vspace #4
-  \adobe-italic
-  \line { Pause. } }
+  \adobe-italic \line { Pause. } }
 
 scene-xx-A-section = \markup
   \translate #'(-8 . 126)
@@ -67,8 +64,7 @@ scene-xx-B-section = \markup
 
 scene-xx-C = \markup
   \wdfn
-  \adobe-italic
-  \line { End scene 20. }
+  \adobe-italic \line { End scene 20. }
 
 scene-xx-C-section = \markup
   \translate #'(0 . 0)
@@ -85,6 +81,5 @@ scene-xx-footnote = \markup
   \section-font-size
   {
   \footnote ""
-  \line {
-  \super 5 \hspace #-0.5 
-  The song is composed of words not hitherto delivered in the piece. } }
+  \line { \super 5 \hspace #-0.5 The song is composed of words not hitherto
+  delivered in the piece. } }

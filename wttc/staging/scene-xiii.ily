@@ -33,8 +33,7 @@ scene-xiii-A = \markup
   \column {
   \line { I have a fear. \lnum #186 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. } }
+  \adobe-italic \line { Pause. } }
 
 scene-xiii-A-section = \markup
   \translate #'(-60 . -38)
@@ -52,8 +51,7 @@ scene-xiii-B = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Return to normality. }
+  \adobe-italic \line { Return to normality. }
   \vspace #1
   \line { “Make yourself at home.” \lnum #187 }
   \line { This was you. \lnum #188 }
@@ -62,16 +60,14 @@ scene-xiii-B = \markup
   \line { “My owl, \lnum #191 }
   \line { “My sweet owl,” \lnum #192 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { No. \lnum #193 }
   \line { “My owl, \lnum #194 }
   \line { “If you should be there before me, \lnum #195 }
   \line { “When the time comes.” \lnum #196 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { Did I ask when that would be? \lnum #197 } }
 
@@ -108,10 +104,9 @@ scene-xiii-C-parts = \markup
 
 scene-xiii-D = \markup
   \wdfn
-  \adobe-italic
-  \justify { Still 2. Sudden change in music and lighting as OWL is set
-  uttering and fixed in position with one arm extended. Words are abrupt,
-  single. OWL struggles against this fit, trying to pull the arm free. }
+  \adobe-italic \justify { Still 2. Sudden change in music and lighting as OWL
+  is set uttering and fixed in position with one arm extended. Words are
+  abrupt, single. OWL struggles against this fit, trying to pull the arm free. }
 
 scene-xiii-D-section = \markup
   \override #'(line-width . 140)
@@ -141,11 +136,9 @@ scene-xiii-E = \markup
   falls \hspace #10
   keep \hspace #-0.5 \super 2 \lnum #200 }
   \vspace #0.75
-  \adobe-italic
-  \line { On this last word, OWL frees the arm, and the fit is over as suddenly as
-  it began. }
-  \adobe-italic
-  \line { Music and lighting return to how they were. } }
+  \adobe-italic \line { On this last word, OWL frees the arm, and the fit is
+  over as suddenly as it began. }
+  \adobe-italic \line { Music and lighting return to how they were. } }
 
 scene-xiii-E-section = \markup
   \translate #'(0 . -57)
@@ -163,8 +156,7 @@ scene-xiii-F = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Freely, not coordinated with music: }
+  \adobe-italic \line { Freely, not coordinated with music: }
   \line { I would never do that, \lnum #201 }
   \line { Never did do that. \lnum #202 }
   \line { Not in all that time. \lnum #203 }
@@ -204,7 +196,6 @@ scene-xiii-footnote = \markup
   \section-font-size
   {
   \footnote ""
-  \line { \super 2 \hspace #-0.5 Samuel Beckett:
-  \adobe-italic
-  { Not I }, final words of phrases, as available,
-  from the end, omitting repetitions and words already used in the present script. } }
+  \line { \super 2 \hspace #-0.5 Samuel Beckett: \adobe-italic { Not I }, final
+  words of phrases, as available, from the end, omitting repetitions and words
+  already used in the present script. } }

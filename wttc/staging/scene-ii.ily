@@ -111,11 +111,10 @@ scene-ii-E-parts = \markup
 
 scene-ii-F = \markup
   \wdfn
-  \column {
   \adobe-bold
+  \column {
   \line { On my way — \lnum #16 }
-  \adobe-italic
-  \justify { OWL is diverted by a memory. } }
+  \adobe-italic \justify { OWL is diverted by a memory. } }
 
 scene-ii-F-section = \markup
   \translate #'(0 . -41)
@@ -135,8 +134,7 @@ scene-ii-G = \markup
   \column {
   \line { Waving, \lnum #17 }
   \line { She was waving to us — \lnum #18 }
-  \adobe-italic
-  \line { OWL pulls back from the memory, cut off by violin. } }
+  \adobe-italic \line { OWL pulls back from the memory, cut off by violin. } }
 
 scene-ii-G-section = \markup
   \translate #'(0 . -38)
@@ -157,13 +155,10 @@ scene-ii-H-section = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Alone: }
+  \adobe-italic \line { Alone: }
   \line { No \dots \lnum #19 }
-  \adobe-italic
-  \line { The thought trails off completely. }
-  \adobe-italic
-  \line { End scene 2. } }
+  \adobe-italic \line { The thought trails off completely. }
+  \adobe-italic \line { End scene 2. } }
 
 scene-ii-H-parts = \markup
   \scene-ii-H-parts-positioning
@@ -172,8 +167,6 @@ scene-ii-H-parts = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Alone: }
+  \adobe-italic \line { Alone: }
   \line { No \dots \lnum #19 }
-  \adobe-italic
-  \line { The thought trails off completely. } }
+  \adobe-italic \line { The thought trails off completely. } }

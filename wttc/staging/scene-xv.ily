@@ -21,8 +21,7 @@ scene-xv-A = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { As if ending music. }
+  \adobe-italic \line { As if ending music. }
   \line { All right, I say. \lnum #234 } }
 
 scene-xv-A-section = \markup
@@ -60,11 +59,9 @@ scene-xv-C = \markup
   \line { Nothing does. \lnum #238 }
   \line { Look: \lnum #239 }
   \vspace #1
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #1
-  \adobe-italic
-  \line { OWL turns to face stage rear. }
+  \adobe-italic \line { OWL turns to face stage rear. }
   \vspace #1
   \line { Things come and go — \lnum #240 } }
 
@@ -82,10 +79,10 @@ scene-xv-C-parts = \markup
 
 scene-xv-D = \markup
   \wdfn
-  \adobe-italic
-  \justify { Still 3. Sudden change in music and lighting as OWL is fixed in
-  position facing stage rear. OWL struggles against this fit, trying to pull
-  round to face the audience. After a few seconds, OWL shouts out: }
+  \adobe-italic \justify { Still 3. Sudden change in music and lighting as OWL
+  is fixed in position facing stage rear. OWL struggles against this fit,
+  trying to pull round to face the audience. After a few seconds, OWL shouts
+  out: }
 
 scene-xv-D-section = \markup
   \override #'(line-width . 140)
@@ -107,9 +104,8 @@ scene-xv-E = \markup
   \column {
   \line { \hspace #40 Let us not speak! \hspace #-0.5 \super 3 }
   \vspace #0.25
-  \adobe-italic
-  \justify { Instantly, OWL turns, and the fit is over as suddenly as it began.
-  Music and lighting return to how they were. } }
+  \adobe-italic \justify { Instantly, OWL turns, and the fit is over as
+  suddenly as it began. Music and lighting return to how they were. } }
 
 scene-xv-E-section = \markup
   \translate #'(0 . -46)
@@ -149,11 +145,9 @@ scene-xv-G = \markup
   \column {
   \line { Time goes by and still you \dots \lnum #245 }
   \vspace #3
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #3
-  \adobe-italic
-  \line { End scene 15. } }
+  \adobe-italic \line { End scene 15. } }
 
 scene-xv-G-section = \markup
   \translate #'(30 . -41)
@@ -172,6 +166,5 @@ scene-xv-footnote = \markup
   \section-font-size
   {
   \footnote ""
-  \line { \super 3 \hspace #-0.5 Samuel Beckett:
-  \adobe-italic
-  { Come and Go }, first available phrase } }
+  \line { \super 3 \hspace #-0.5 Samuel Beckett: \adobe-italic { Come and Go },
+  first available phrase } }

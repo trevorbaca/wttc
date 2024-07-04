@@ -68,8 +68,7 @@ scene-xix-C = \markup
   \column {
   \line { “Make yourself at home.” \lnum #299 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { Call this home? \lnum #300 } }
 
@@ -149,8 +148,7 @@ scene-xix-H = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { With violin & cello. }
+  \adobe-italic \line { With violin & cello. }
   \line { Violets. \lnum #305 } }
 
 scene-xix-H-section = \markup
@@ -205,8 +203,7 @@ scene-xix-K = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Loud. }
+  \adobe-italic \line { Loud. }
   \line { Never mind! \lnum #308 } }
 
 scene-xix-K-section = \markup
@@ -238,8 +235,7 @@ scene-xix-L-parts = \markup
 
 scene-xix-M = \markup
   \wdfn
-  \adobe-italic
-  \line { End scene 19. }
+  \adobe-italic \line { End scene 19. }
 
 scene-xix-M-section = \markup
   \translate #'(74 . -45)

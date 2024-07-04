@@ -121,6 +121,8 @@ number.1.Skips = {
     % [Skips measure 5]
       %! +LETTER_PARTS_FLUTE
 %%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 10)
+      %! +LETTER_PARTS_GUITAR_1
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 4)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 3/4

@@ -26,26 +26,22 @@ scene-viii-A = \markup
   \line { Where I would find \lnum #74 }
   \line { A window. \lnum #75 }
   \vspace #1
-  \adobe-italic
-  \justify { OWL touches the window. If this is suspended, the gesture must
-  invisibly be restricted from causing it to move. }
+  \adobe-italic \justify { OWL touches the window. If this is suspended, the
+  gesture must invisibly be restricted from causing it to move. }
   \vspace #1
   \line { And a table. \lnum #76 }
   \vspace #1
-  \adobe-italic
-  \line { OWL touches the table. }
+  \adobe-italic \line { OWL touches the table. }
   \vspace #1
   \line { And flowers on the table. \lnum #77 }
   \line { In a glass. \lnum #78 }
   \vspace #1
-  \adobe-italic
-  \justify { OWL bends over to examine the flowers but does not touch them or
-  the glass. }
+  \adobe-italic \justify { OWL bends over to examine the flowers but does not
+  touch them or the glass. }
   \vspace #1
   \line { Violets. \lnum #79 }
   \vspace #1
-  \adobe-italic
-  \justify { OWL sniffs the flowers, but again there is no touching. } }
+  \adobe-italic \justify { OWL sniffs the flowers, but again there is no touching. } }
 
 scene-viii-A-section = \markup
   \override #'(line-width . 50)
@@ -63,11 +59,10 @@ scene-viii-A-parts = \markup
 
 scene-viii-B = \markup
   \wdfn
-  \column {
   \adobe-bold
+  \column {
   \line { Nothing. \lnum #80 }
-  \adobe-italic
-  \line { OWL stands back up. } }
+  \adobe-italic \line { OWL stands back up. } }
 
 scene-viii-B-section = \markup
   \translate #'(4 . -43)
@@ -118,8 +113,7 @@ scene-viii-E = \markup
   \line { That's something. \lnum #82 }
   \line { It's all as it should be. \lnum #83 }
   \vspace #2
-  \adobe-italic
-  \line { End scene 8. } }
+  \adobe-italic \line { End scene 8. } }
 
 scene-viii-E-section = \markup
   \translate #'(92 . -38)

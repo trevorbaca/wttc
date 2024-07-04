@@ -57,10 +57,9 @@ scene-ix-A-parts = \markup
 
 scene-ix-B = \markup
   \wdfn
-  \adobe-italic
-  \justify { Music starts. After a few moments, OWL starts to walk away from
-  the window and table, looks around the rest of the “chamber,” but does not
-  engage with the audience. }
+  \adobe-italic \justify { Music starts. After a few moments, OWL starts to
+  walk away from the window and table, looks around the rest of the “chamber,”
+  but does not engage with the audience. }
 
 scene-ix-B-section = \markup
   \override #'(line-width . 100)
@@ -129,9 +128,8 @@ scene-ix-C-continued = \markup
   \line { No doubt at all. \lnum #122 }
   \line { And it'll be — \lnum #123 }
   \vspace #1
-  \adobe-italic
-  \justify { OWL looks back at the window, returns to it quickly, goes behind it,
-  and looks through it in the direction of the audience. } }
+  \adobe-italic \justify { OWL looks back at the window, returns to it quickly,
+  goes behind it, and looks through it in the direction of the audience. } }
 
 scene-ix-C-continued-section = \markup
   \override #'(line-width . 80)
@@ -168,14 +166,12 @@ scene-ix-E = \markup
   \column {
   \line { Nothing at all. \lnum #125 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { It's night-time. \lnum #126 }
   \line { No-one out there. \lnum #127 }
   \vspace #3
-  \adobe-italic
-  \line { End scene 9. } }
+  \adobe-italic \line { End scene 9. } }
 
 scene-ix-E-section = \markup
   \translate #'(50 . -38)

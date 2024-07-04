@@ -35,11 +35,9 @@ scene-v-A-parts = \markup
 
 scene-v-B = \markup
   \wdfn
-  \column {
-  \adobe-italic
-  \justify { OWL is fearful of pronouncing the next word: }
-  \vspace #1
   \adobe-bold
+  \column {
+  \adobe-italic \justify { OWL is fearful of pronouncing the next word: }
   \line { Again. \lnum #45 } }
 
 scene-v-B-section = \markup
@@ -58,8 +56,7 @@ scene-v-C = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { As cello completes diminuendo: }
+  \adobe-italic \line { As cello completes diminuendo: }
   \line { But it's time I did what I should. \lnum #46 }
   \line { It's all in my head. \lnum #47 } }
 

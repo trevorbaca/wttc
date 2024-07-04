@@ -54,8 +54,7 @@ scene-xvi-B = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Agitation mounting. }
+  \adobe-italic \line { Agitation mounting. }
   \vspace #1
   \line { No memory of how long it would have been by then, \lnum #252 }
   \line { How long it would take me to come here, \lnum #253 }
@@ -77,8 +76,7 @@ scene-xvi-C = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Loud, extended. }
+  \adobe-italic \line { Loud, extended. }
   \line { Way! \lnum #255 } }
 
 scene-xvi-C-section = \markup
@@ -97,8 +95,7 @@ scene-xvi-D = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Abruptly back to normal. }
+  \adobe-italic \line { Abruptly back to normal. }
   \line { No. \lnum #256 } }
 
 scene-xvi-D-section = \markup
@@ -118,8 +115,7 @@ scene-xvi-E = \markup
   \adobe-bold
   \column {
   \line { That — \lnum #257 }
-  \adobe-italic
-  \line { Stopping before saying “way” } }
+  \adobe-italic \line { Stopping before saying “way” } }
 
 scene-xvi-E-section = \markup
   \translate #'(4 . -43)
@@ -201,16 +197,13 @@ scene-xvi-J = \markup
   \line { It does me no good. \lnum #263 }
   \line { And in all honesty it was not your \dots \lnum #264 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { If blame there must be, where should it go? \lnum #265 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #4
-  \adobe-italic
-  \line { End scene 16. } }
+  \adobe-italic \line { End scene 16. } }
 
 scene-xvi-J-section = \markup
   \translate #'(40 . -19)

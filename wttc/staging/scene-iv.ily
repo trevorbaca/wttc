@@ -138,10 +138,10 @@ scene-iv-F-parts = \markup
 
 scene-iv-G = \markup
   \wdfn
+  \adobe-bold
   \column {
-  \adobe-italic
-  \line { On downbeat: }
-  \adobe-bold \line { Music — \lnum #39 } }
+  \adobe-italic \line { On downbeat: }
+  \line { Music — \lnum #39 } }
 
 scene-iv-G-section = \markup
   \translate #'(0 . -35)
@@ -157,10 +157,9 @@ scene-iv-G-parts = \markup
 
 scene-iv-H = \markup
   \wdfn
-  \adobe-italic
-  \justify { \bold { Still 1. } Sudden change in music and lighting as OWL is
-  set uttering and fixed in position with one foot locked in place. OWL
-  struggles against this fit, trying to pull the foot free. }
+  \adobe-italic \justify { \bold { Still 1. } Sudden change in music and
+  lighting as OWL is set uttering and fixed in position with one foot locked in
+  place. OWL struggles against this fit, trying to pull the foot free. }
 
 scene-iv-H-section = \markup
   \override #'(line-width . 50)
@@ -175,10 +174,8 @@ scene-iv-I = \markup
   \center-column {
   \line { Again! \lnum #40 }
   \line { Again. \hspace #-0.75 \super 1 \hspace #-0.75 \lnum #41 }
-  \vspace #0.5
-  \adobe-italic
-  \justify { On this second “Again,” OWL frees the foot, and the fit is over
-  as suddenly as it began. } }
+  \adobe-italic \justify { On this second “Again,” OWL frees the foot, and the
+  fit is over as suddenly as it began. } }
 
 scene-iv-I-section = \markup
   \override #'(line-width . 55)
@@ -195,14 +192,12 @@ scene-iv-I-parts = \markup
 
 scene-iv-J = \markup
   \wdfn
-  \center-column {
-  \adobe-italic
-  \justify { Music and lighting return to how they were: }
   \adobe-bold
+  \center-column {
+  \adobe-italic \justify { Music and lighting return to how they were: }
   \line { Like \dots \lnum #42 }
-  \adobe-italic
-  \justify { Slight pause. OWL and the musicians wonder what comes next.
-  Then proceed together. } }
+  \adobe-italic \justify { Slight pause. OWL and the musicians wonder what
+  comes next. Then proceed together. } }
 
 scene-iv-J-section = \markup
   \override #'(line-width . 55)

@@ -58,15 +58,13 @@ scene-xii-B = \markup
   \line { So that it'll be better than it was \lnum #168 }
   \line { Before. \lnum #169 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { For this time it will not come to an end, \lnum #170 }
   \line { Will it? \lnum #171 }
   \line { It'll go on. \lnum #172 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { That's my expectation, any — \lnum #173 } }
 
@@ -88,8 +86,7 @@ scene-xii-C = \markup
   \column {
   \line { What to do, what to do? \lnum #174 }
   \vspace #2
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #2
   \line { I know: \lnum #175 }
   \line { Let's see what I remember, \lnum #176 }
@@ -111,8 +108,7 @@ scene-xii-D = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Slowly. }
+  \adobe-italic \line { Slowly. }
   \line { The green path \dots \lnum #178 } }
 
 scene-xii-D-section = \markup
@@ -131,8 +127,7 @@ scene-xii-E = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Fast. }
+  \adobe-italic \line { Fast. }
   \line { What was it? When was this? \lnum #179 } }
 
 scene-xii-E-section = \markup
@@ -151,8 +146,7 @@ scene-xii-F = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Slowly. }
+  \adobe-italic \line { Slowly. }
   \line { The green path \dots \lnum #180 }
   \line { It was a way — \lnum #181 } }
 
@@ -172,8 +166,7 @@ scene-xii-G = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Fast. }
+  \adobe-italic \line { Fast. }
   \line { Waving to us, she was waving to us. And we — \lnum #182 } }
 
 scene-xii-G-section = \markup
@@ -192,8 +185,7 @@ scene-xii-H = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Slowly. }
+  \adobe-italic \line { Slowly. }
   \line { No. \lnum #183 } }
 
 scene-xii-H-section = \markup
@@ -212,8 +204,7 @@ scene-xii-I = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Normal pace. }
+  \adobe-italic \line { Normal pace. }
   \line { It's gone.\lnum #184 }
   \line { It's all gone. \lnum #185 } }
 
@@ -231,8 +222,7 @@ scene-xii-I-parts = \markup
 
 scene-xii-J = \markup
   \wdfn
-  \adobe-italic
-  \line { End scene 12. }
+  \adobe-italic \line { End scene 12. }
 
 scene-xii-J-section = \markup
   \translate #'(108 . -46)

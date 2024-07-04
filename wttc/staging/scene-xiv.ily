@@ -78,8 +78,7 @@ scene-xiv-D = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Begin these lines in measure 367. }
+  \adobe-italic \line { Begin these lines in measure 367. }
   \vspace #1
   \line { And you had your hand on my shoulder, \lnum #215 }
   \line { Your right hand, it was. \lnum #216 }
@@ -95,8 +94,7 @@ scene-xiv-D = \markup
   \line { All over. \lnum #226 }
   \line { But she was not to be seen. \lnum #227 }
   \vspace #1
-  \adobe-italic
-  \line { Pause. }
+  \adobe-italic \line { Pause. }
   \vspace #1
   \line { “Make yourself at home, \lnum #228 }
   \line { “If you should be there before me. \lnum #229 }
@@ -105,8 +103,7 @@ scene-xiv-D = \markup
   \line { “Make yourself at home. \lnum #232 }
   \line { “All right?” \lnum #233 }
   \vspace #2
-  \adobe-italic
-  \line { End scene 14. } }
+  \adobe-italic \line { End scene 14. } }
 
 scene-xiv-D-section = \markup
   \translate #'(80 . 0)

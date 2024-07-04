@@ -84,8 +84,7 @@ scene-xviii-D = \markup
   \column {
   \line { But we did not. \lnum #295 }
   \vspace #4
-  \adobe-italic
-  \line { End scene 18. } }
+  \adobe-italic \line { End scene 18. } }
 
 scene-xviii-D-section = \markup
   \translate #'(60 . -41)

@@ -94,11 +94,10 @@ scene-vi-E = \markup
   \line { You say, \lnum #55 }
   \line { No doublt of that. \lnum #56 }
   \line { Tell me where I must go to find — \lnum #57 }
-  \vspace #0.5
-  \adobe-italic
-  \justify { OWL notices the window, table, etc., for the first time and rushes
-  to where these are. The audience remains unremarked and unaddressed. }
-  \vspace #1
+  \adobe-italic \justify { OWL notices the window, table, etc., for the first
+  time and rushes to where these are. The audience remains unremarked and
+  unaddressed. }
+  \line { \null }
   \line { Right! \lnum #58 }
   \line { This is it! \lnum #59 }
   \line { Now I remember: \lnum #60 } }
@@ -130,8 +129,7 @@ scene-vi-F = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic
-  \line { Freely, not coordinated with music: }
+  \adobe-italic \line { Freely, not coordinated with music: }
   \line { You did tell me it would be like this. \lnum #61 }
   \line { It's all as it should be ! \lnum #62 }
   \line { All as it should be! \lnum #63 }
@@ -154,19 +152,19 @@ scene-vi-G-section = \markup
   \section-baseline-skip
   \section-font-size
   \wdfn
-  \column {
   \adobe-bold
+  \column {
   \line { I must be here before you, then. \lnum #65 }
-  \vspace #2
-  \adobe-italic
-  \line { End scene 6. } }
+  \line { \null }
+  \line { \null }
+  \adobe-italic \line { End scene 6. } }
 
 scene-vi-G-parts = \markup
   \scene-vi-G-parts-positioning
   \parts-baseline-skip
   \parts-font-size
   \wdfn
-  \column {
   \adobe-bold
+  \column {
   \line { I must be here before you, then. \lnum #65 } }
 

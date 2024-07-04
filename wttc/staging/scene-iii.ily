@@ -30,9 +30,10 @@ scene-iii-parenthesized-title-section = \markup
 
 scene-iii-A = \markup
   \wdfn
+  \adobe-bold
   \column {
   \adobe-italic \line { During the fermata. }
-  \adobe-bold \line { Not now \dots \lnum #20 } }
+  \line { Not now \dots \lnum #20 } }
 
 scene-iii-A-section = \markup
   \translate #'(64 . -38)
@@ -48,11 +49,10 @@ scene-iii-A-parts = \markup
 
 scene-iii-B = \markup
   \wdfn
-  \adobe-italic
-  \justify { Musicians pause a moment after \hspace #0.5 \adobe-bold \box A
-  \hspace #-0.5 , as if waiting to see if OWL has anything to say. OWL looks to
-  the musicians, but says nothing. Musicians continue with \adobe-bold \box B
-  \hspace #-0.5 . }
+  \adobe-italic \justify { Musicians pause a moment after \hspace #0.5
+  \adobe-bold \box A \hspace #-0.5 , as if waiting to see if OWL has anything
+  to say. OWL looks to the musicians, but says nothing. Musicians continue with
+  \adobe-bold \box B \hspace #-0.5 . }
 
 scene-iii-B-section = \markup
   \override #'(line-width . 80)
@@ -69,12 +69,11 @@ scene-iii-B-parts = \markup
 
 scene-iii-C = \markup
   \wdfn
-  \column {
-  \adobe-italic
-  \justify { At the very end of \hspace #0.5 \adobe-bold \box B \hspace #-0.5 ,
-  as though causing the music to end: }
-  \vspace #1
   \adobe-bold
+  \column {
+  \adobe-italic \justify { At the very end of \hspace #0.5 \adobe-bold \box B
+  \hspace #-0.5 , as though causing the music to end: }
+  \line { \null }
   \line { On my — \lnum #21 } }
 
 scene-iii-C-section = \markup
@@ -92,18 +91,15 @@ scene-iii-C-parts = \markup
 
 scene-iii-D = \markup
   \wdfn
-  \column {
-  \adobe-italic
-  \line { Slight pause after \hspace #0.5 \adobe-bold \box B \hspace #-0.5 ,
-  OWL perhaps changing position on stage. }
-  \vspace #1
   \adobe-bold
+  \column {
+  \adobe-italic \line { Slight pause after \hspace #0.5 \adobe-bold \box B
+  \hspace #-0.5 , OWL perhaps changing position on stage. }
+  \line { \null }
   \line { To where I have to be to find you. \lnum #22 }
-  \vspace #1
-  \adobe-italic
-  \line { Musicians silently consider this last line. }
-  \adobe-italic
-  \line { Then begin \hspace #0.5 \adobe-bold \box C \hspace #-0.5 . } }
+  \line { \null }
+  \adobe-italic \line { Musicians silently consider this last line. }
+  \adobe-italic \line { Then begin \hspace #0.5 \adobe-bold \box C \hspace #-0.5 . } }
 
 scene-iii-D-section = \markup
   \translate #'(80 . -43)
@@ -142,10 +138,9 @@ scene-iii-E-parts = \markup
 
 scene-iii-F = \markup
   \wdfn
-  \column {
-  \adobe-italic
-  \line { As music resumes: }
   \adobe-bold
+  \column {
+  \adobe-italic \line { As music resumes: }
   \line { If you and I \dots \lnum #29 } }
 
 scene-iii-F-section = \markup

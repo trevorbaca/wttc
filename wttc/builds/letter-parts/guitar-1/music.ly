@@ -4,6 +4,7 @@ part-name-markup = \markup "guitar 1 part"
 \include "../stylesheet.ily"
 % \layout { ragged-right = ##t }
 % \layout { ragged-last = ##f }
+% \paper { annotate-spacing = ##t }
 \include "positioning.ily"
 \include "../../../staging/scene-i.ily"
 \include "../../../staging/scene-ii.ily"
@@ -26,7 +27,7 @@ part-name-markup = \markup "guitar 1 part"
 {
   <<
     { \page-layout-score }
-    \keepWithTag Guitar.1
+    \keepWithTag #'Guitar.1
     {
       \include "_sections/01.ly"
       \include "_sections/02.ly"
