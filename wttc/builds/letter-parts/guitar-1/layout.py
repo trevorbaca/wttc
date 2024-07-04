@@ -3,9 +3,7 @@ import baca
 
 def main(environment):
     distances = (6,)
-    whole = 26
     half = 13
-    quarter = 6.5
     y_offset_1 = 12
     y_offset_2 = 38
     y_offset_3 = 64
@@ -15,7 +13,7 @@ def main(environment):
     base = 12
     width = 32
     y_offset_5_1 = base + 0 * width
-    y_offset_5_2 = base + 1 * width
+    # y_offset_5_2 = base + 1 * width
     y_offset_5_3 = base + 2 * width
     y_offset_5_4 = base + 3 * width
     y_offset_5_5 = base + 4 * width

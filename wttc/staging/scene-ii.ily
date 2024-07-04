@@ -167,6 +167,6 @@ scene-ii-H-parts = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic \line { Alone: }
+  \adobe-italic \line { During the fermata: }
   \line { No \dots \lnum #19 }
   \adobe-italic \line { The thought trails off completely. } }
