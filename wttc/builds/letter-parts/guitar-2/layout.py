@@ -88,7 +88,7 @@ def main(environment):
         baca.layout.Page(
             10,
             baca.layout.System(107, y_offset_4_1, distances=distances),
-            baca.layout.System(111, y_offset_4_2, distances=distances),
+            baca.layout.System(110, y_offset_4_2, distances=distances),
             baca.layout.System(113, y_offset_4_3, distances=distances),
             baca.layout.System(115, y_offset_4_4, distances=distances),
         ),
@@ -110,6 +110,7 @@ def main(environment):
         11: (1, 12),
         19: (1, 12),
         25: (1, 12),
+        29: (1, 12),
         33: "natural",
         51: (1, 4),
         52: (1, 12),
@@ -117,12 +118,12 @@ def main(environment):
         82: "natural",
         100: (1, 20),
         104: (1, 20),
+        107: "natural",
+        110: (1, 20),
         114: (1, 20),
         115: "natural",
         117: (1, 16),
-        121: (1, 8),
-        123: (1, 12),
-        124: (1, 8),
+        126: (1, 16),
         127: "natural",
     }
     return baca.section.make_layout_score(

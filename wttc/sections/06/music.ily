@@ -5,6 +5,8 @@ number.6.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! +LETTER_PARTS_GUITAR_2
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 2)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
       %! RED_START_BAR
@@ -64,6 +66,8 @@ number.6.Skips = {
     %@% \bacaStartTextSpanSNM
 
     % [Skips measure 2]
+      %! +LETTER_PARTS_GUITAR_2
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 2)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 4/4

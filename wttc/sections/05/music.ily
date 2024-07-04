@@ -4341,6 +4341,11 @@ number.5.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
     d'''16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-p-parenthesized
     \laissezVibrer
     \revert DynamicLineSpanner.staff-padding
 
@@ -4429,6 +4434,11 @@ number.5.Guitar.1.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
     b8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-mp-parenthesized
       %! SPANNER_START
     - \baca-invisible-line
       %! SPANNER_START
@@ -5717,6 +5727,11 @@ number.5.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
     b8
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \baca-mp-parenthesized
       %! SPANNER_START
     - \baca-invisible-line
       %! SPANNER_START

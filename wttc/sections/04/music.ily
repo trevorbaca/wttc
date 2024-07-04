@@ -8,7 +8,9 @@ number.4.Skips = {
       %! +LETTER_PARTS_CELLO
 %%% \once \override Score.MetronomeMark.extra-offset = #'(-2 . 0)
       %! +LETTER_PARTS_GUITAR_1
-%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 4)
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 2)
+      %! +LETTER_PARTS_GUITAR_2
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 2)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
       %! RED_START_BAR
@@ -3745,7 +3747,8 @@ number.4.Guitar.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 14]
-    \override TupletBracket.staff-padding = 3
+    \override DynamicLineSpanner.staff-padding = 8
+    \override TupletBracket.staff-padding = 3.5
     <e' g'>4
     - \tweak stencil ##f
     ~
@@ -3791,9 +3794,11 @@ number.4.Guitar.2.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r2
+    \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.staff-padding
 
     % [Guitar.2.Music measure 15]
+    \override DynamicLineSpanner.staff-padding = 5
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3819,6 +3824,7 @@ number.4.Guitar.2.Music = {
     }
 
     r4
+    \revert DynamicLineSpanner.staff-padding
 
     % [Guitar.2.Music measure 16]
     R1 * 4/4

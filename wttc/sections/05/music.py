@@ -934,8 +934,10 @@ def ob(m):
 
 def gt1(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt1")
-    library.C3c(library.pleaves(m[9, 14], 3), "D5", "p -", lv=True)
-    library.C3c(library.pleaves(m[22, 26], 3), "B2", "mp -", pizz=True, staff_padding=3)
+    library.C3c(library.pleaves(m[9, 14], 3), "D5", "p (p)", lv=True)
+    library.C3c(
+        library.pleaves(m[22, 26], 3), "B2", "mp (mp)", pizz=True, staff_padding=3
+    )
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True)
     D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True)
     D2b(library.pleaves(m[39, 40], 2), '"f" "mf" mp p')
@@ -952,7 +954,7 @@ def gt2(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "gt2")
     library.C3c(library.pleaves(m[11], 3), "D5", "p", lv=True)
     library.C3c(
-        library.pleaves(m[16, 30], 3), "B2", "mf mp -", pizz=True, staff_padding=3
+        library.pleaves(m[16, 30], 3), "B2", "mf mp (mp)", pizz=True, staff_padding=3
     )
     D2b(library.pleaves(m[32], 2), '"mf"', staff_lines_1=True, upbow=True)
     D2b(library.pleaves(m[33, 34], 2), '"mf" "f"', staff_lines_1=True, upbow=True)

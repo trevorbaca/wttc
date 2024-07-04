@@ -42,9 +42,13 @@ def GLOBALS(skips):
     wrappers = baca.override.metronome_mark_extra_offset(skips[7 - 1], (-3, 0))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
     baca.metronome_mark(skips[9 - 1], "50", manifests=library.manifests)
+    wrappers = baca.override.metronome_mark_extra_offset(skips[9 - 1], (0, 3))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_GUITAR_2)
     baca.metronome_mark(skips[10 - 1], "75", manifests=library.manifests)
     wrappers = baca.override.metronome_mark_extra_offset(skips[10 - 1], (0, 4))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_FLUTE)
+    wrappers = baca.override.metronome_mark_extra_offset(skips[10 - 1], (5, 3))
+    baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_GUITAR_2)
 
 
 def FL(voice, meters):

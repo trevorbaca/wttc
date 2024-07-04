@@ -242,6 +242,8 @@ number.8.Skips = {
     \bacaStartTextSpanMN
 
     % [Skips measure 9]
+      %! +LETTER_PARTS_GUITAR_2
+%%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 3)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 4/4
@@ -286,6 +288,8 @@ number.8.Skips = {
     % [Skips measure 10]
       %! +LETTER_PARTS_FLUTE
 %%% \once \override Score.MetronomeMark.extra-offset = #'(0 . 4)
+      %! +LETTER_PARTS_GUITAR_2
+%%% \once \override Score.MetronomeMark.extra-offset = #'(5 . 3)
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 6/4
