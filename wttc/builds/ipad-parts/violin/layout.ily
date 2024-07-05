@@ -12,12 +12,15 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 3]
+    \grace { s8 } % DUMMY GRACE
     s1 * 6/4
 
     % [Breaks measure 4]
     s1 * 6/4
 
     % [Breaks measure 5]
+    \baca-lbsd #10 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 6]
@@ -439,19 +442,20 @@ Breaks = {
 SpacingCommands = {
 
     % [SpacingCommands measure 1]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #1 #32
     s1 * 3/4
 
     % [SpacingCommands measure 2]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 3]
-    \baca-new-strict-spacing-section #1 #16
+    \grace { s8 } % DUMMY GRACE
+    \baca-new-strict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 4]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 5]

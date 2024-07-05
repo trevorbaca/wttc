@@ -531,7 +531,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         append_anchor_skip=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
-        measure_initial_grace_notes={3: ["%! +LETTER_PARTS_CELLO", r"\grace { s8 }"]},
+        # measure_initial_grace_notes={3: ["%! +LETTER_PARTS_CELLO", r"\grace { s8 }"]},
     )
     skips = score["Skips"]
     GLOBALS(skips)
