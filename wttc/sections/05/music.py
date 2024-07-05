@@ -1323,7 +1323,7 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
-        natural_spacing_sections=[1, 3],
+        start_nonstrict_spacing=[1, 3],
         overrides=[
             baca.layout.Override((31, 39), (1, 28)),
             baca.layout.Override((40, 47), (1, 24)),
