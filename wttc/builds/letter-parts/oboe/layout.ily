@@ -588,7 +588,10 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 36]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 6/4
 
     % [SpacingCommands measure 37]

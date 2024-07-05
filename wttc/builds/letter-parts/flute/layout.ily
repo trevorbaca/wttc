@@ -477,7 +477,10 @@ Breaks = {
 SpacingCommands = {
 
     % [SpacingCommands measure 1]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 3/4
 
     % [SpacingCommands measure 2]
@@ -794,7 +797,10 @@ SpacingCommands = {
     s1 * 9/4
 
     % [SpacingCommands measure 106]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 2/4
 
     % [SpacingCommands measure 107]

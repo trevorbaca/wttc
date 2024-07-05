@@ -500,7 +500,10 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 8]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 3/4
 
     % [SpacingCommands measure 9]
@@ -581,7 +584,10 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 33]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 3/4
 
     % [SpacingCommands measure 34]
@@ -732,7 +738,10 @@ SpacingCommands = {
     s1 * 3/4
 
     % [SpacingCommands measure 82]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 4/4
 
     % [SpacingCommands measure 83]
@@ -810,7 +819,10 @@ SpacingCommands = {
     s1 * 2/4
 
     % [SpacingCommands measure 107]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 4/4
 
     % [SpacingCommands measure 108]
@@ -837,7 +849,10 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 115]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 4/4
 
     % [SpacingCommands measure 116]
@@ -876,7 +891,10 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 127]
-    \baca-new-natural-spacing-section
+    \set Score.proportionalNotationDuration = ##f
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
     s1 * 6/4
 
     % [SpacingCommands measure 128]
