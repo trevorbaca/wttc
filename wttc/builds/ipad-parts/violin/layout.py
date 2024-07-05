@@ -110,7 +110,7 @@ def main(environment):
     )
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:128],
+        environment.time_signatures[:11],
         spacing=spacing,
     )
 
