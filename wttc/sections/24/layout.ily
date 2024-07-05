@@ -184,11 +184,11 @@
             s1 * 6/4
 
             % [SpacingCommands measure 11]
-            \baca-new-lax-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
             s1 * 6/4
 
             % [SpacingCommands measure 12]
-            \baca-new-lax-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
             s1 * 6/4
 
             % [SpacingCommands measure 13]

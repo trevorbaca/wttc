@@ -901,7 +901,6 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
-        lax_spacing_sections=[11, 12],
     )
     return baca.section.make_layout_score(
         breaks,
