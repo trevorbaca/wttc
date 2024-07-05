@@ -608,8 +608,7 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 16),
-        lax_spacing_sections=[1, 2],
-        empty_spacing_sections=[3],
+        lax_spacing_sections=[1, 2, 3],
         overrides=[
             baca.layout.Override((4, 7), (1, 32)),
             baca.layout.Override((8, 11), (1, 48)),
@@ -620,7 +619,7 @@ def make_layout(environment):
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
         has_anchor_skip=environment.metadata["has_anchor_skip"],
-        measure_initial_grace_notes={3: [r"\grace { s8 }"]},
+        measure_initial_grace_notes={3: [r"\grace { s8 } % DUMMY GRACE"]},
         spacing=spacing,
     )
 

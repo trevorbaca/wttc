@@ -20,7 +20,7 @@
             s1 * 6/4
 
             % [Breaks measure 3]
-            \grace { s8 }
+            \grace { s8 } % DUMMY GRACE
             s1 * 6/4
 
             % [Breaks measure 4]
@@ -73,7 +73,8 @@
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \grace { s8 }
+            \baca-new-lax-spacing-section #1 #16
+            \grace { s8 } % DUMMY GRACE
             s1 * 6/4
 
             % [SpacingCommands measure 4]
