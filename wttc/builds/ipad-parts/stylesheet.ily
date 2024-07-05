@@ -74,19 +74,6 @@
 {
   \context
   {
-    \GlobalContext
-  }
-  \context
-  {
-    \GlobalSkips
-    % \override TextSpanner.font-size = 1
-  }
-  \context
-  {
-    \Staff
-  }
-  \context
-  {
     \Score
     \consists Bar_number_engraver
     \override BarLine.hair-thickness = 2.5
@@ -101,13 +88,6 @@
       (right-edge extra-space . 0.0)
       )
     \override BarNumber.break-visibility = #end-of-line-invisible
-    % \override Glissando.minimum-length = 5
-    % \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
-    % \override MetronomeMark.color = #red
-    % \override MetronomeMark.X-extent = ##f
-    % \override TimeSignature.break-visibility = #end-of-line-invisible
-    % \override TimeSignature.layer = 2
-    % \override TimeSignature.whiteout = ##t
-    % \override TupletNumber.font-size = -2
+    proportionalNotationDuration = \musicLength 1 * #(/ 1 32)
   }
 }

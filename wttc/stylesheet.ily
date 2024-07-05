@@ -143,8 +143,8 @@
       ((-2 . 0) (-1 . 0) (-0.5 . 0) (0 . 0))
     )
     \override RepeatTie.X-extent = ##f
-    % \override SpacingSpanner.strict-grace-spacing = ##t
-    % \override SpacingSpanner.strict-note-spacing = ##t
+    \override SpacingSpanner.strict-grace-spacing = ##t
+    \override SpacingSpanner.strict-note-spacing = ##t
     \override SpacingSpanner.uniform-stretching = ##t
     \override StaffSymbol.layer = 99
     \override StemTremolo.beam-width = 1.5
