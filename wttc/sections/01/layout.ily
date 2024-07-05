@@ -65,7 +65,7 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-start-strict-spacing-section #1 #16
+            \baca-start-nonstrict-spacing-section #1 #16
             s1 * 3/4
 
             % [SpacingCommands measure 2]
@@ -73,7 +73,7 @@
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \baca-start-strict-spacing-section #1 #16
+            \baca-start-nonstrict-spacing-section #1 #16
             \grace { s8 } % DUMMY GRACE
             s1 * 6/4
 

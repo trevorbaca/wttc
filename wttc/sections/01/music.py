@@ -612,6 +612,9 @@ def make_layout(environment):
             baca.layout.Override((4, 7), (1, 32)),
             baca.layout.Override((8, 11), (1, 48)),
         ],
+        nonstrict_overrides=[
+            baca.layout.Override([1, 3], (1, 16)),
+        ],
     )
     return baca.section.make_layout_score(
         breaks,
