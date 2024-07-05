@@ -106,14 +106,11 @@ def main(environment):
     spacing_dictionary = {
         1: "natural",
         2: (1, 12),
-        3: [
-            r"\override Score.SpacingSpanner.strict-grace-spacing = ##f",
-            r"\override Score.SpacingSpanner.strict-note-spacing = ##f",
-            r"\newSpacingSection",
-            r"\grace { s8 } % DUMMY GRACE",
-            "s1 * 6/4",
-        ],
-        4: "natural",
+        3: "natural",
+        4: (1, 8),
+        5: (1, 16),
+        6: (1, 16),
+        7: (1, 1),
         8: (1, 12),
         10: "natural",
         12: (1, 12),
@@ -124,6 +121,7 @@ def main(environment):
     return baca.section.make_layout_score(
         breaks,
         environment.time_signatures[:128],
+        measure_initial_grace_notes={3: [r"\grace { s8 } % DUMMY GRACE"]},
         spacing_dictionary=spacing_dictionary,
     )
 

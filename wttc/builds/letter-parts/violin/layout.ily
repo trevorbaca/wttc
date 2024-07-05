@@ -481,10 +481,7 @@ Breaks = {
 SpacingCommands = {
 
     % [SpacingCommands measure 1]
-    \set Score.proportionalNotationDuration = ##f
-    \override Score.SpacingSpanner.strict-grace-spacing = ##f
-    \override Score.SpacingSpanner.strict-note-spacing = ##f
-    \newSpacingSection
+    \baca-start-nonstrict-spacing-section
     s1 * 3/4
 
     % [SpacingCommands measure 2]
@@ -534,10 +531,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 17]
-    \set Score.proportionalNotationDuration = ##f
-    \override Score.SpacingSpanner.strict-grace-spacing = ##f
-    \override Score.SpacingSpanner.strict-note-spacing = ##f
-    \newSpacingSection
+    \baca-start-nonstrict-spacing-section
     s1 * 6/4
 
     % [SpacingCommands measure 18]
@@ -808,10 +802,7 @@ SpacingCommands = {
     s1 * 9/4
 
     % [SpacingCommands measure 106]
-    \set Score.proportionalNotationDuration = ##f
-    \override Score.SpacingSpanner.strict-grace-spacing = ##f
-    \override Score.SpacingSpanner.strict-note-spacing = ##f
-    \newSpacingSection
+    \baca-start-nonstrict-spacing-section
     s1 * 2/4
 
     % [SpacingCommands measure 107]
