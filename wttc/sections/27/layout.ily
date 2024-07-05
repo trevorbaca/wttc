@@ -41,24 +41,24 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-new-strict-spacing-section #1 #32
+            \baca-start-strict-spacing-section #1 #32
             s1 * 2/4
 
             % [SpacingCommands measure 2]
-            \baca-new-strict-spacing-section #1 #32
+            \baca-start-strict-spacing-section #1 #32
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \baca-new-strict-spacing-section #35 #768
+            \baca-start-strict-spacing-section #35 #768
             s1 * 6/4
 
             % [SpacingCommands measure 4]
-            \baca-new-strict-spacing-section #1 #64
+            \baca-start-strict-spacing-section #1 #64
             s1 * 9/4
 
             % [anchor skip]
               %! ANCHOR_SKIP
-            \baca-new-strict-spacing-section #1 #4
+            \baca-start-strict-spacing-section #1 #4
               %! ANCHOR_SKIP
             s1 * 1/4
               %! ANCHOR_SKIP

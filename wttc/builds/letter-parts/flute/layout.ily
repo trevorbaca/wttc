@@ -790,7 +790,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 105]
-    \baca-new-strict-spacing-section #1 #12
+    \baca-start-strict-spacing-section #1 #12
     s1 * 9/4
 
     % [SpacingCommands measure 106]

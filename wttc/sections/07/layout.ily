@@ -35,16 +35,16 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-new-strict-spacing-section #35 #1152
+            \baca-start-strict-spacing-section #35 #1152
             s1 * 9/4
 
             % [SpacingCommands measure 2]
-            \baca-new-strict-spacing-section #1 #64
+            \baca-start-strict-spacing-section #1 #64
             s1 * 2/4
 
             % [anchor skip]
               %! ANCHOR_SKIP
-            \baca-new-strict-spacing-section #1 #4
+            \baca-start-strict-spacing-section #1 #4
               %! ANCHOR_SKIP
             s1 * 1/4
               %! ANCHOR_SKIP
