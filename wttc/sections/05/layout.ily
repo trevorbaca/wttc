@@ -182,7 +182,7 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-start-nonstrict-spacing-section
+            \baca-start-nonstrict-spacing-section #1 #20
             s1 * 3/4
 
             % [SpacingCommands measure 2]
@@ -190,7 +190,7 @@
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \baca-start-nonstrict-spacing-section
+            \baca-start-nonstrict-spacing-section #1 #20
             \grace { s8 }
             s1 * 6/4
 

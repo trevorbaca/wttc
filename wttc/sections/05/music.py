@@ -1323,10 +1323,13 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
-        start_nonstrict_spacing=[1, 3],
         overrides=[
             baca.layout.Override((31, 39), (1, 28)),
             baca.layout.Override((40, 47), (1, 24)),
+        ],
+        nonstrict_overrides=[
+            baca.layout.Override(1, (1, 20)),
+            baca.layout.Override(3, (1, 20)),
         ],
     )
     return baca.section.make_layout_score(

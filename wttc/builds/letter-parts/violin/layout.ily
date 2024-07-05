@@ -481,7 +481,7 @@ Breaks = {
 SpacingCommands = {
 
     % [SpacingCommands measure 1]
-    \baca-start-nonstrict-spacing-section
+    \baca-start-nonstrict-spacing-section #1 #12
     s1 * 3/4
 
     % [SpacingCommands measure 2]
@@ -531,7 +531,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 17]
-    \baca-start-nonstrict-spacing-section
+    \baca-start-nonstrict-spacing-section #1 #12
     s1 * 6/4
 
     % [SpacingCommands measure 18]
@@ -802,7 +802,7 @@ SpacingCommands = {
     s1 * 9/4
 
     % [SpacingCommands measure 106]
-    \baca-start-nonstrict-spacing-section
+    \baca-start-nonstrict-spacing-section #1 #12
     s1 * 2/4
 
     % [SpacingCommands measure 107]

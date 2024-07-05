@@ -104,11 +104,11 @@ def main(environment):
         ),
     )
     spacing_dictionary = {
-        1: "nonstrict",
+        1: "nonstrict 1/12",
         12: (1, 12),
-        17: "nonstrict",
+        17: "nonstrict 1/12",
         105: (1, 12),
-        106: "nonstrict",
+        106: "nonstrict 1/12",
     }
     return baca.section.make_layout_score(
         breaks,

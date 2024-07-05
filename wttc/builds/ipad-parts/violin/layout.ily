@@ -51,7 +51,7 @@ Breaks = {
 SpacingCommands = {
 
     % [SpacingCommands measure 1]
-    \baca-start-nonstrict-spacing-section
+    \baca-start-nonstrict-spacing-section #1 #32
     s1 * 3/4
 
     % [SpacingCommands measure 2]
@@ -59,7 +59,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 3]
-    \baca-start-nonstrict-spacing-section
+    \baca-start-nonstrict-spacing-section #1 #32
     \grace { s8 } % DUMMY GRACE
     s1 * 6/4
 

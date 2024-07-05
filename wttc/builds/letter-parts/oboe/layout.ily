@@ -588,7 +588,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 36]
-    \baca-start-nonstrict-spacing-section
+    \baca-start-nonstrict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 37]

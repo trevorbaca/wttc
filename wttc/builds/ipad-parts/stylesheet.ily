@@ -88,6 +88,5 @@
       (right-edge extra-space . 0.0)
       )
     \override BarNumber.break-visibility = #end-of-line-invisible
-    proportionalNotationDuration = \musicLength 1 * #(/ 1 32)
   }
 }
