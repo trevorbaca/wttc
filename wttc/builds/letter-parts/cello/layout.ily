@@ -490,11 +490,11 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 3]
-    \baca-new-natural-spacing-section
-    \grace { s8 }
-    s1 * 2/4
-    \baca-new-strict-spacing-nonsection #(* 1 60) #(* 12 24)
-    s1 * 4/4
+    \override Score.SpacingSpanner.strict-grace-spacing = ##f
+    \override Score.SpacingSpanner.strict-note-spacing = ##f
+    \newSpacingSection
+    \grace { s8 } % DUMMY GRACE
+    s1 * 6/4
 
     % [SpacingCommands measure 4]
     \set Score.proportionalNotationDuration = ##f
