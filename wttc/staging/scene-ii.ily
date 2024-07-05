@@ -14,8 +14,8 @@ scene-ii-title-section = \markup
   \scene-ii-title
 
 scene-ii-title-parts = \markup
-  \scene-ii-title-parts-positioning
   \parts-title-font-size
+  \scene-ii-title-parts-positioning
   \scene-ii-title
 
 scene-ii-A = \markup
@@ -32,9 +32,9 @@ scene-ii-A-section = \markup
   \scene-ii-A
 
 scene-ii-A-parts = \markup
-  \scene-ii-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-A-parts-positioning
   \scene-ii-A
 
 scene-ii-B = \markup
@@ -51,9 +51,9 @@ scene-ii-B-section = \markup
   \scene-ii-B
 
 scene-ii-B-parts = \markup
-  \scene-ii-B-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-B-parts-positioning
   \scene-ii-B
 
 scene-ii-C = \markup
@@ -68,9 +68,9 @@ scene-ii-C-section = \markup
   \scene-ii-C
 
 scene-ii-C-parts = \markup
-  \scene-ii-C-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-C-parts-positioning
   \scene-ii-C
 
 scene-ii-D = \markup
@@ -85,9 +85,9 @@ scene-ii-D-section = \markup
   \scene-ii-D
 
 scene-ii-D-parts = \markup
-  \scene-ii-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-D-parts-positioning
   \scene-ii-D
 
 scene-ii-E = \markup
@@ -104,9 +104,9 @@ scene-ii-E-section = \markup
   \scene-ii-E
 
 scene-ii-E-parts = \markup
-  \scene-ii-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-E-parts-positioning
   \scene-ii-E
 
 scene-ii-F = \markup
@@ -123,9 +123,9 @@ scene-ii-F-section = \markup
   \scene-ii-F
 
 scene-ii-F-parts = \markup
-  \scene-ii-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-F-parts-positioning
   \scene-ii-F
 
 scene-ii-G = \markup
@@ -143,9 +143,9 @@ scene-ii-G-section = \markup
   \scene-ii-G
 
 scene-ii-G-parts = \markup
-  \scene-ii-G-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-G-parts-positioning
   \scene-ii-G
 
 scene-ii-H-section = \markup
@@ -161,9 +161,9 @@ scene-ii-H-section = \markup
   \adobe-italic \line { End scene 2. } }
 
 scene-ii-H-parts = \markup
-  \scene-ii-H-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-ii-H-parts-positioning
   \wdfn
   \adobe-bold
   \column {

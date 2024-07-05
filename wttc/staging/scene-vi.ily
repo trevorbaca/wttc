@@ -14,8 +14,8 @@ scene-vi-title-section = \markup
   \scene-vi-title
 
 scene-vi-title-parts = \markup
-  \scene-vi-title-parts-positioning
   \parts-title-font-size
+  \scene-vi-title-parts-positioning
   \scene-vi-title
 
 scene-vi-A = \markup
@@ -32,9 +32,9 @@ scene-vi-A-section = \markup
   \scene-vi-A
 
 scene-vi-A-parts = \markup
-  \scene-vi-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-vi-A-parts-positioning
   \scene-vi-A
 
 scene-vi-B = \markup
@@ -48,8 +48,8 @@ scene-vi-B-section = \markup
   \scene-vi-B
 
 scene-vi-B-parts = \markup
-  \scene-vi-B-parts-positioning
   \parts-font-size
+  \scene-vi-B-parts-positioning
   \scene-vi-B
 
 scene-vi-C = \markup
@@ -63,8 +63,8 @@ scene-vi-C-section = \markup
   \scene-vi-C
 
 scene-vi-C-parts = \markup
-  \scene-vi-C-parts-positioning
   \parts-font-size
+  \scene-vi-C-parts-positioning
   \scene-vi-C
 
 scene-vi-D = \markup
@@ -81,9 +81,9 @@ scene-vi-D-section = \markup
   \scene-vi-D
 
 scene-vi-D-parts = \markup
-  \scene-vi-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-vi-D-parts-positioning
   \scene-vi-D
 
 scene-vi-E = \markup
@@ -160,9 +160,9 @@ scene-vi-G-section = \markup
   \adobe-italic \line { End scene 6. } }
 
 scene-vi-G-parts = \markup
-  \scene-vi-G-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-vi-G-parts-positioning
   \wdfn
   \adobe-bold
   \column {

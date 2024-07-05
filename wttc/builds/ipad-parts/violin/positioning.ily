@@ -2,6 +2,11 @@
 
 % SCENE 1
 
+\markup scene-i-title-parts-positioning = \markup \translate #'(44 . 26) \etc
+\markup scene-i-A-parts-positioning = \markup
+  \override #'(line-width . 110)
+  \translate #'(-5 . 18)
+  \etc
 \markup scene-i-B-parts-positioning = \markup
   \override #'(line-width . 110)
   \translate #'(-82 . -25)

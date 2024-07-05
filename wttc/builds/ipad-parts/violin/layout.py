@@ -7,7 +7,7 @@ def main(environment):
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset + 40, distances),
+            baca.layout.System(1, y_offset + 70, distances),
         ),
         baca.layout.Page(
             2,

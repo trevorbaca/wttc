@@ -14,8 +14,8 @@ scene-iv-title-section = \markup
   \scene-iv-title
 
 scene-iv-title-parts = \markup
-  \scene-iv-title-parts-positioning
   \parts-title-font-size
+  \scene-iv-title-parts-positioning
   \scene-iv-title
 
 scene-iv-parenthesized-title = \markup
@@ -52,9 +52,9 @@ scene-iv-A-section = \markup
   \scene-iv-A
 
 scene-iv-A-parts = \markup
-  \scene-iv-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iv-A-parts-positioning
   \scene-iv-A
 
 scene-iv-B = \markup
@@ -68,8 +68,8 @@ scene-iv-B-section = \markup
   \scene-iv-B
 
 scene-iv-B-parts = \markup
-  \scene-iv-B-parts-positioning
   \parts-font-size
+  \scene-iv-B-parts-positioning
   \scene-iv-B
 
 scene-iv-C = \markup
@@ -83,8 +83,8 @@ scene-iv-C-section = \markup
   \scene-iv-C
 
 scene-iv-C-parts = \markup
-  \scene-iv-C-parts-positioning
   \parts-font-size
+  \scene-iv-C-parts-positioning
   \scene-iv-C
 
 scene-iv-D = \markup
@@ -98,8 +98,8 @@ scene-iv-D-section = \markup
   \scene-iv-D
 
 scene-iv-D-parts = \markup
-  \scene-iv-D-parts-positioning
   \parts-font-size
+  \scene-iv-D-parts-positioning
   \scene-iv-D
 
 scene-iv-E = \markup
@@ -113,8 +113,8 @@ scene-iv-E-section = \markup
   \scene-iv-E
 
 scene-iv-E-parts = \markup
-  \scene-iv-E-parts-positioning
   \parts-font-size
+  \scene-iv-E-parts-positioning
   \scene-iv-E
 
 scene-iv-F = \markup
@@ -131,9 +131,9 @@ scene-iv-F-section = \markup
   \scene-iv-F
 
 scene-iv-F-parts = \markup
-  \scene-iv-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iv-F-parts-positioning
   \scene-iv-F
 
 scene-iv-G = \markup
@@ -150,9 +150,9 @@ scene-iv-G-section = \markup
   \scene-iv-G
 
 scene-iv-G-parts = \markup
-  \scene-iv-G-parts-positioning
   \parts-compressed-baseline-skip
   \parts-compressed-font-size
+  \scene-iv-G-parts-positioning
   \scene-iv-G
 
 scene-iv-H = \markup
@@ -185,9 +185,9 @@ scene-iv-I-section = \markup
   \scene-iv-I
 
 scene-iv-I-parts = \markup
-  \scene-iv-I-parts-positioning
   \parts-compressed-baseline-skip
   \parts-compressed-font-size
+  \scene-iv-I-parts-positioning
   \scene-iv-I
 
 scene-iv-J = \markup
@@ -207,9 +207,9 @@ scene-iv-J-section = \markup
   \scene-iv-J
 
 scene-iv-J-parts = \markup
-  \scene-iv-J-parts-positioning
   \parts-compressed-baseline-skip
   \parts-compressed-font-size
+  \scene-iv-J-parts-positioning
   \scene-iv-J
 
 scene-iv-K = \markup
@@ -229,9 +229,9 @@ scene-iv-K-section = \markup
   \scene-iv-K
 
 scene-iv-K-parts = \markup
-  \scene-iv-K-parts-positioning
   \parts-compressed-baseline-skip
   \parts-compressed-font-size
+  \scene-iv-K-parts-positioning
   \scene-iv-K
 
 scene-iv-L = \markup

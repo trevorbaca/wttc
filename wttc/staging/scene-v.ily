@@ -14,8 +14,8 @@ scene-v-title-section = \markup
   \scene-v-title
 
 scene-v-title-parts = \markup
-  \scene-v-title-parts-positioning
   \parts-title-font-size
+  \scene-v-title-parts-positioning
   \scene-v-title
 
 scene-v-A = \markup
@@ -29,8 +29,8 @@ scene-v-A-section = \markup
   \scene-v-A
 
 scene-v-A-parts = \markup
-  \scene-v-A-parts-positioning
   \parts-font-size
+  \scene-v-A-parts-positioning
   \scene-v-A
 
 scene-v-B = \markup
@@ -47,9 +47,9 @@ scene-v-B-section = \markup
   \scene-v-B
 
 scene-v-B-parts = \markup
-  \scene-v-B-parts-positioning
   \parts-compressed-baseline-skip
   \parts-font-size
+  \scene-v-B-parts-positioning
   \scene-v-B
 
 scene-v-C = \markup
@@ -67,9 +67,9 @@ scene-v-C-section = \markup
   \scene-v-C
 
 scene-v-C-parts = \markup
-  \scene-v-C-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-v-C-parts-positioning
   \scene-v-C
 
 scene-v-D = \markup

@@ -2,6 +2,8 @@
 
 % SCENE 1
 
+\markup scene-i-title-parts-positioning = \markup \translate #'(0 . 0) \etc
+\markup scene-i-A-parts-positioning = \markup \translate #'(0 . 0) \etc
 \markup scene-i-B-parts-positioning = \markup \translate #'(0 . 0) \etc
 \markup scene-i-C-parts-positioning = \markup \translate #'(0 . 0) \etc
 \markup scene-i-D-parts-positioning = \markup \translate #'(0 . 0) \etc

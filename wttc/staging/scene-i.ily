@@ -14,8 +14,8 @@ scene-i-title-section = \markup
   \scene-i-title
 
 scene-i-title-parts = \markup
-  \translate #'(44 . 26)
   \parts-title-font-size
+  \scene-i-title-parts-positioning
   \scene-i-title
 
 scene-i-parenthesized-title = \markup
@@ -45,10 +45,9 @@ scene-i-A-section = \markup
   \scene-i-A
 
 scene-i-A-parts = \markup
-  \override #'(line-width . 110)
-  \translate #'(-5 . 18)
   \parts-baseline-skip
   \parts-font-size
+  \scene-i-A-parts-positioning
   \scene-i-A
 
 scene-i-B = \markup
@@ -76,9 +75,9 @@ scene-i-B-section = \markup
   \scene-i-B
 
 scene-i-B-parts = \markup
-  \scene-i-B-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-i-B-parts-positioning
   \scene-i-B
 
 scene-i-C = \markup
@@ -103,13 +102,13 @@ scene-i-C-section = \markup
   \scene-i-C
 
 scene-i-C-parts = \markup
-  \scene-i-C-parts-positioning
   \wdfn
   \parts-baseline-skip
   \parts-font-size
+  \scene-i-C-parts-positioning
   \scene-i-C
 
-scene-i-D= \markup
+scene-i-D = \markup
   \wdfn
   \adobe-bold
   \column {
@@ -127,7 +126,7 @@ scene-i-D-section = \markup
   \scene-i-D
 
 scene-i-D-parts = \markup
-  \scene-i-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-i-D-parts-positioning
   \scene-i-D

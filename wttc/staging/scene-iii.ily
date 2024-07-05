@@ -14,8 +14,8 @@ scene-iii-title-section = \markup
   \scene-iii-title
 
 scene-iii-title-parts = \markup
-  \scene-iii-title-parts-positioning
   \parts-title-font-size
+  \scene-iii-title-parts-positioning
   \scene-iii-title
 
 scene-iii-parenthesized-title = \markup
@@ -42,9 +42,9 @@ scene-iii-A-section = \markup
   \scene-iii-A
 
 scene-iii-A-parts = \markup
-  \scene-iii-A-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iii-A-parts-positioning
   \scene-iii-A
 
 scene-iii-B = \markup
@@ -62,9 +62,9 @@ scene-iii-B-section = \markup
   \scene-iii-B
 
 scene-iii-B-parts = \markup
-  \scene-iii-B-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iii-B-parts-positioning
   \scene-iii-B
 
 scene-iii-C = \markup
@@ -84,9 +84,9 @@ scene-iii-C-section = \markup
   \scene-iii-C
 
 scene-iii-C-parts = \markup
-  \scene-iii-C-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iii-C-parts-positioning
   \scene-iii-C
 
 scene-iii-D = \markup
@@ -108,9 +108,9 @@ scene-iii-D-section = \markup
   \scene-iii-D
 
 scene-iii-D-parts = \markup
-  \scene-iii-D-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iii-D-parts-positioning
   \scene-iii-D
 
 scene-iii-E = \markup
@@ -131,9 +131,9 @@ scene-iii-E-section = \markup
   \scene-iii-E
 
 scene-iii-E-parts = \markup
-  \scene-iii-E-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iii-E-parts-positioning
   \scene-iii-E
 
 scene-iii-F = \markup
@@ -150,9 +150,9 @@ scene-iii-F-section = \markup
   \scene-iii-F
 
 scene-iii-F-parts = \markup
-  \scene-iii-F-parts-positioning
   \parts-baseline-skip
   \parts-font-size
+  \scene-iii-F-parts-positioning
   \scene-iii-F
 
 scene-iii-G = \markup 

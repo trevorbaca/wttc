@@ -5,7 +5,7 @@ Breaks = {
     % [Breaks measure 1]
     \autoLineBreaksOff
     \autoPageBreaksOff
-    \baca-lbsd #50 #'(15 20 20 20 20 20)
+    \baca-lbsd #80 #'(15 20 20 20 20 20)
     s1 * 3/4
 
     % [Breaks measure 2]
