@@ -88,5 +88,6 @@
       (right-edge extra-space . 0.0)
       )
     \override BarNumber.break-visibility = #end-of-line-invisible
+    \override BarNumber.font-size = 6
   }
 }
