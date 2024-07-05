@@ -106,11 +106,13 @@ def main(environment):
         default=(1, 16),
         overrides=[
             baca.layout.Override((1, 4), (1, 32)),
+            baca.layout.Override((5, 11), (1, 32)),
         ],
     )
     return baca.section.make_layout_score(
         breaks,
         environment.time_signatures[:11],
+        measure_initial_grace_notes={3: [r"\grace { s8 } % DUMMY GRACE"]},
         spacing=spacing,
     )
 

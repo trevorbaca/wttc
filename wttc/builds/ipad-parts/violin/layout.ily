@@ -12,6 +12,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 3]
+    \grace { s8 } % DUMMY GRACE
     s1 * 6/4
 
     % [Breaks measure 4]
@@ -59,6 +60,7 @@ SpacingCommands = {
 
     % [SpacingCommands measure 3]
     \baca-new-strict-spacing-section #1 #32
+    \grace { s8 } % DUMMY GRACE
     s1 * 6/4
 
     % [SpacingCommands measure 4]
@@ -66,31 +68,31 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 5]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #1 #32
     s1 * 3/4
 
     % [SpacingCommands measure 6]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
 
     % [SpacingCommands measure 7]
-    \baca-new-strict-spacing-section #35 #384
+    \baca-new-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 8]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #1 #32
     s1 * 3/4
 
     % [SpacingCommands measure 9]
-    \baca-new-strict-spacing-section #35 #384
+    \baca-new-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 10]
-    \baca-new-strict-spacing-section #1 #16
+    \baca-new-strict-spacing-section #1 #32
     s1 * 3/4
 
     % [SpacingCommands measure 11]
-    \baca-new-strict-spacing-section #35 #384
+    \baca-new-strict-spacing-section #35 #768
     s1 * 6/4
 
 }
