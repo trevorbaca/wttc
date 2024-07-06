@@ -7,7 +7,7 @@ def main(environment):
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, 30, (15, 12, 12, 12, 12, 12)),
+            baca.layout.System(1, 42, (8, 13, 13, 13, 13, 13)),
         ),
         baca.layout.Page(
             2,
@@ -156,7 +156,7 @@ def main(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
-        centered_bar_number_transparent_true=[1],
+        centered_bar_number_transparent_true=[1, 4],
         # TODO: change `overrides` to `strict_overrides`
         overrides=[
             baca.layout.Override((1, 4), (1, 32)),

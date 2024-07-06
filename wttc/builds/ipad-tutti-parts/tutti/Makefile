@@ -4,7 +4,6 @@ music:
 	@interpret-build-music --keep-temporary-files
 	@cd _sections && activate-tag --undo MEASURE_NUMBER
 	@mylily music.ly
-	@open music.pdf
 
 front-cover:
 	@xelatex front-cover.tex; xelatex front-cover.tex
