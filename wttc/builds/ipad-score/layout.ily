@@ -5,7 +5,7 @@ Breaks = {
     % [Breaks measure 1]
     \autoLineBreaksOff
     \autoPageBreaksOff
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd #30 #'(15 12 12 12 12 12)
     s1 * 3/4
 
     % [Breaks measure 2]
@@ -470,6 +470,7 @@ SpacingCommands = {
 
     % [SpacingCommands measure 1]
     \baca-start-nonstrict-spacing-section #1 #32
+    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 3/4
 
     % [SpacingCommands measure 2]
@@ -483,6 +484,7 @@ SpacingCommands = {
 
     % [SpacingCommands measure 4]
     \baca-start-strict-spacing-section #35 #768
+    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 6/4
 
     % [SpacingCommands measure 5]

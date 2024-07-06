@@ -30,6 +30,7 @@
   evenHeaderMarkup = \markup \null
   oddFooterMarkup = \evenFooterMarkup
   oddHeaderMarkup = \markup \null
+  print-first-page-number = ##t
 }
 
 \paper
@@ -41,37 +42,31 @@
 {
   composer = \markup
     \override #'(font-name . "Adobe Garamond Pro")
-    \fontsize #3
+    \fontsize #2
     "Trevor Bača (*1975)"
   poet = \markup
     \override #'(font-name . "Adobe Garamond Pro")
-    \fontsize #3
+    \fontsize #2
     "Paul Griffiths (*1947)"
   tagline = \markup \null
   title = \markup
-    \override #'(baseline-skip . 6)
     \center-column {
     \override #'(font-name . "Adobe Garamond Pro Bold")
-    \fontsize #6
+    \fontsize #4
     \override #'(word-space . 2)
     \line { when the time comes }
-    \vspace #0.75
     \override #'(font-name . "Adobe Garamond Pro Italic")
-    \fontsize #1
     \override #'(word-space . 1.5)
     \line { for stage actor & six musicians }
-    \vspace #0.75
     \override #'(font-name . "Adobe Garamond Pro Bold Italic")
-    \fontsize #1
     \override #'(word-space . 1.5)
     \line { \part-name-markup }
-    \vspace #2
   }
 }
 
 \layout
 {
-  indent = 0
+  indent = 8 
   ragged-right = ##t
 }
 
