@@ -5,7 +5,7 @@ Breaks = {
     % [Breaks measure 1]
     \autoLineBreaksOff
     \autoPageBreaksOff
-    \baca-lbsd #75 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     s1 * 3/4
 
     % [Breaks measure 2]
@@ -19,7 +19,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 5]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -30,7 +30,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 8]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -38,7 +38,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 10]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -46,7 +46,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 12]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -63,7 +63,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 17]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
@@ -77,7 +77,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 21]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -85,7 +85,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 23]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -99,7 +99,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 27]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -110,7 +110,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 30]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -121,7 +121,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 33]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -132,7 +132,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 36]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
@@ -143,7 +143,7 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 39]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -151,7 +151,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 41]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -165,7 +165,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 45]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -179,7 +179,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 49]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -190,7 +190,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 52]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -205,7 +205,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 56]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
@@ -219,7 +219,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 60]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
@@ -233,7 +233,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 64]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -247,7 +247,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 68]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -258,7 +258,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 71]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -275,7 +275,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 76]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
@@ -289,7 +289,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 80]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 5/4
 
@@ -303,7 +303,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 84]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -317,7 +317,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 88]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -331,7 +331,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 92]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -345,7 +345,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 96]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -359,7 +359,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 100]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 2/4
 
@@ -376,7 +376,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 105]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 9/4
 
@@ -384,7 +384,7 @@ Breaks = {
     s1 * 2/4
 
     % [Breaks measure 107]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -398,7 +398,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 111]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -412,7 +412,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 115]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -420,7 +420,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 117]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 2/4
 
@@ -431,7 +431,7 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 120]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -442,7 +442,7 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 123]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
@@ -453,7 +453,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 126]
-    \baca-lbsd #10 #'(15 20 20 20 30 30)
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 

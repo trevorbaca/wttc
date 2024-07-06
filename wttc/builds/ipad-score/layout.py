@@ -2,12 +2,12 @@ import baca
 
 
 def main(environment):
-    distances = (15, 20, 20, 20, 30, 30)
-    y_offset = 10
+    distances = (15, 20, 20, 20, 20, 20)
+    y_offset = 0
     breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
-            baca.layout.System(1, y_offset + 65, distances),
+            baca.layout.System(1, y_offset, distances),
         ),
         baca.layout.Page(
             2,

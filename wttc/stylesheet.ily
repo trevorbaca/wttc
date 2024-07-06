@@ -119,6 +119,7 @@
     \override Accidental.whiteout = ##t
     \override BarLine.hair-thickness = 0.5
     \override BarLine.X-extent = #'(0 . 0)
+    \override BarNumber.color = #blue
     \override BarNumber.layer = 2
     \override BarNumber.whiteout = ##t
     \override Beam.damping = 99
@@ -163,6 +164,8 @@
     \override TupletBracket.padding = 2
     \override TupletNumber.font-size = 1
     autoBeaming = ##f
+    barNumberVisibility = #all-bar-numbers-visible
+    centerBarNumbers = ##t
     tupletFullLength = ##t
   }
 }

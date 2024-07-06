@@ -2,7 +2,7 @@
 \include "../../stylesheet.ily"
 
 #(set-default-paper-size "letterlandscape")
-#(set-global-staff-size 10)
+#(set-global-staff-size 18)
 
 \paper
 {
@@ -30,6 +30,11 @@
   evenHeaderMarkup = \markup \null
   oddFooterMarkup = \evenFooterMarkup
   oddHeaderMarkup = \markup \null
+}
+
+\paper
+{
+  top-margin = 0
 }
 
 \header
@@ -87,7 +92,10 @@
       (next-note semi-fixed-space . 3.0) 
       (right-edge extra-space . 0.0)
       )
-    \override BarNumber.break-visibility = #end-of-line-invisible
-    \override BarNumber.font-size = 6
+    \override CenteredBarNumber.color = #blue
+    \override CenteredBarNumber.extra-offset = #'(0 . -6)
+    \override CenteredBarNumber.font-size = 2
   }
 }
+
+metronome-mark-spanner-extra-offset = #'(0 . 0)
