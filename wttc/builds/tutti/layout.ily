@@ -484,7 +484,6 @@ SpacingCommands = {
 
     % [SpacingCommands measure 4]
     \baca-start-strict-spacing-section #35 #768
-    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 6/4
 
     % [SpacingCommands measure 5]
