@@ -9,8 +9,8 @@ scene-iii-title = \markup
   \line { SCENE \hspace #1 3. }
 
 scene-iii-title-section = \markup
-  \translate #'(-32 . 12)
   \section-title-font-size
+  \scene-iii-title-positioning
   \scene-iii-title
 
 scene-iii-title-parts = \markup
@@ -24,8 +24,8 @@ scene-iii-parenthesized-title = \markup
   \line { (SCENE \hspace #1 3) }
 
 scene-iii-parenthesized-title-section = \markup
-  \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
+  \scene-iii-parenthesized-title-positioning
   \scene-iii-parenthesized-title
 
 scene-iii-A = \markup
@@ -36,9 +36,9 @@ scene-iii-A = \markup
   \line { Not now \dots \lnum #20 } }
 
 scene-iii-A-section = \markup
-  \translate #'(64 . -38)
   \section-baseline-skip
   \section-font-size
+  \scene-iii-A-positioning
   \scene-iii-A
 
 scene-iii-A-parts = \markup
@@ -55,10 +55,9 @@ scene-iii-B = \markup
   \adobe-bold \box B \hspace #-0.5 . }
 
 scene-iii-B-section = \markup
-  \override #'(line-width . 80)
-  \translate #'(78 . -38)
   \section-baseline-skip
   \section-font-size
+  \scene-iii-B-positioning
   \scene-iii-B
 
 scene-iii-B-parts = \markup
@@ -77,10 +76,9 @@ scene-iii-C = \markup
   \line { On my — \lnum #21 } }
 
 scene-iii-C-section = \markup
-  \override #'(line-width . 38)
-  \translate #'(26 . -44)
   \section-baseline-skip
   \section-font-size
+  \scene-iii-C-positioning
   \scene-iii-C
 
 scene-iii-C-parts = \markup
@@ -102,9 +100,9 @@ scene-iii-D = \markup
   \adobe-italic \line { Then begin \hspace #0.5 \adobe-bold \box C \hspace #-0.5 . } }
 
 scene-iii-D-section = \markup
-  \translate #'(80 . -43)
   \section-baseline-skip
   \section-font-size
+  \scene-iii-D-positioning
   \scene-iii-D
 
 scene-iii-D-parts = \markup
@@ -125,9 +123,9 @@ scene-iii-E = \markup
   \line { If what? \lnum #28 } }
 
 scene-iii-E-section = \markup
-  \translate #'(40 . -36)
   \section-baseline-skip
   \section-font-size
+  \scene-iii-E-positioning
   \scene-iii-E
 
 scene-iii-E-parts = \markup
@@ -144,9 +142,9 @@ scene-iii-F = \markup
   \line { If you and I \dots \lnum #29 } }
 
 scene-iii-F-section = \markup
-  \translate #'(6 . -45)
   \section-baseline-skip
   \section-font-size
+  \scene-iii-F-positioning
   \scene-iii-F
 
 scene-iii-F-parts = \markup
@@ -161,6 +159,6 @@ scene-iii-G = \markup
   \line { End scene 3. }
 
 scene-iii-G-section = \markup
-  \translate #'(40 . -41)
   \section-font-size
+  \scene-iii-G-positioning
   \scene-iii-G

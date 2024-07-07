@@ -9,8 +9,8 @@ scene-v-title = \markup
   \line { SCENE 5. }
 
 scene-v-title-section = \markup
-  \translate #'(-32 . 14)
   \section-title-font-size
+  \scene-v-title-positioning
   \scene-v-title
 
 scene-v-title-parts = \markup
@@ -24,8 +24,8 @@ scene-v-A = \markup
   \line { You know, it could all be as it was, \lnum #44 }
 
 scene-v-A-section = \markup
-  \translate #'(0 . -46)
   \section-font-size
+  \scene-v-A-positioning
   \scene-v-A
 
 scene-v-A-parts = \markup
@@ -41,9 +41,9 @@ scene-v-B = \markup
   \line { Again. \lnum #45 } }
 
 scene-v-B-section = \markup
-  \translate #'(0 . -44)
   \section-baseline-skip
   \section-font-size
+  \scene-v-B-positioning
   \scene-v-B
 
 scene-v-B-parts = \markup
@@ -61,9 +61,9 @@ scene-v-C = \markup
   \line { It's all in my head. \lnum #47 } }
 
 scene-v-C-section = \markup
-  \translate #'(8 . -42)
   \section-baseline-skip
   \section-font-size
+  \scene-v-C-positioning
   \scene-v-C
 
 scene-v-C-parts = \markup
@@ -78,6 +78,6 @@ scene-v-D = \markup
   \line { End scene 5. }
 
 scene-v-D-section = \markup
-  \translate #'(124 . -44)
   \section-font-size
+  \scene-v-D-positioning
   \scene-v-D

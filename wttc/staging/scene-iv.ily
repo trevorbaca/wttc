@@ -9,8 +9,8 @@ scene-iv-title = \markup
   \line { SCENE \hspace #1 4. }
 
 scene-iv-title-section = \markup
-  \translate #'(-130 . 12)
   \section-title-font-size
+  \scene-iv-title-positioning
   \scene-iv-title
 
 scene-iv-title-parts = \markup
@@ -24,8 +24,8 @@ scene-iv-parenthesized-title = \markup
   \line { (SCENE \hspace #1 4) }
 
 scene-iv-parenthesized-title-section = \markup
-  \translate #'(-34 . 12)
   \parenthesized-section-title-font-size
+  \scene-iv-parenthesized-title-positioning
   \scene-iv-parenthesized-title
 
 scene-iv-footnote = \markup 
@@ -46,9 +46,9 @@ scene-iv-A = \markup
   \adobe-italic \line { Music attaca. } }
 
 scene-iv-A-section = \markup
-  \translate #'(-100 . -40)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-A-positioning
   \scene-iv-A
 
 scene-iv-A-parts = \markup
@@ -63,8 +63,8 @@ scene-iv-B = \markup
   \line { Close, \lnum #33 }
 
 scene-iv-B-section = \markup
-  \translate #'(0 . -43)
   \section-font-size
+  \scene-iv-B-positioning
   \scene-iv-B
 
 scene-iv-B-parts = \markup
@@ -78,8 +78,8 @@ scene-iv-C = \markup
   \line { You know that, \lnum #34 }
 
 scene-iv-C-section = \markup
-  \translate #'(0 . -43)
   \section-font-size
+  \scene-iv-C-positioning
   \scene-iv-C
 
 scene-iv-C-parts = \markup
@@ -93,8 +93,8 @@ scene-iv-D = \markup
   \line { Like left and right, \lnum #35 }
 
 scene-iv-D-section = \markup
-  \translate #'(0 . -43)
   \section-font-size
+  \scene-iv-D-positioning
   \scene-iv-D
 
 scene-iv-D-parts = \markup
@@ -108,8 +108,8 @@ scene-iv-E = \markup
   \line { Like night and day \lnum #36 }
 
 scene-iv-E-section = \markup
-  \translate #'(0 . -43)
   \section-font-size
+  \scene-iv-E-positioning
   \scene-iv-E
 
 scene-iv-E-parts = \markup
@@ -125,9 +125,9 @@ scene-iv-F = \markup
   \line { Like words and \lnum #38 } }
 
 scene-iv-F-section = \markup
-  \translate #'(0 . -40)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-F-positioning
   \scene-iv-F
 
 scene-iv-F-parts = \markup
@@ -144,9 +144,9 @@ scene-iv-G = \markup
   \line { Music — \lnum #39 } }
 
 scene-iv-G-section = \markup
-  \translate #'(0 . -35)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-G-positioning
   \scene-iv-G
 
 scene-iv-G-parts = \markup
@@ -162,10 +162,9 @@ scene-iv-H = \markup
   place. OWL struggles against this fit, trying to pull the foot free. }
 
 scene-iv-H-section = \markup
-  \override #'(line-width . 50)
-  \translate #'(0 . -45)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-H-positioning
   \scene-iv-H
 
 scene-iv-I = \markup
@@ -178,10 +177,9 @@ scene-iv-I = \markup
   fit is over as suddenly as it began. } }
 
 scene-iv-I-section = \markup
-  \override #'(line-width . 55)
-  \translate #'(60 . -40)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-I-positioning
   \scene-iv-I
 
 scene-iv-I-parts = \markup
@@ -200,10 +198,9 @@ scene-iv-J = \markup
   comes next. Then proceed together. } }
 
 scene-iv-J-section = \markup
-  \override #'(line-width . 55)
-  \translate #'(180 . -41)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-J-positioning
   \scene-iv-J
 
 scene-iv-J-parts = \markup
@@ -223,9 +220,9 @@ scene-iv-K = \markup
   \line { Like give and take. \lnum #43 } }
 
 scene-iv-K-section = \markup
-  \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
+  \scene-iv-K-positioning
   \scene-iv-K
 
 scene-iv-K-parts = \markup
@@ -240,6 +237,6 @@ scene-iv-L = \markup
   \line { End scene 4. }
 
 scene-iv-L-section = \markup
-  \translate #'(50 . -49)
   \section-font-size
+  \scene-iv-L-positioning
   \scene-iv-L

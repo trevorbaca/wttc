@@ -9,8 +9,8 @@ scene-vi-title = \markup
   \line { SCENE \hspace #1 6. }
 
 scene-vi-title-section = \markup
-  \translate #'(-60 . 12)
   \section-title-font-size
+  \scene-vi-title-positioning
   \scene-vi-title
 
 scene-vi-title-parts = \markup
@@ -26,9 +26,9 @@ scene-vi-A = \markup
   \line { You tell me what to do. \lnum #49 } }
 
 scene-vi-A-section = \markup
-  \translate #'(-60 . -46)
   \section-baseline-skip
   \section-font-size
+  \scene-vi-A-positioning
   \scene-vi-A
 
 scene-vi-A-parts = \markup
@@ -43,8 +43,8 @@ scene-vi-B = \markup
   \line { You lay it all out for me, \lnum #50 }
 
 scene-vi-B-section = \markup
-  \translate #'(0 . -46)
   \section-font-size
+  \scene-vi-B-positioning
   \scene-vi-B
 
 scene-vi-B-parts = \markup
@@ -58,8 +58,8 @@ scene-vi-C = \markup
   \line { Tell me where to go \lnum #51 }
 
 scene-vi-C-section = \markup
-  \translate #'(0 . -46)
   \section-font-size
+  \scene-vi-C-positioning
   \scene-vi-C
 
 scene-vi-C-parts = \markup
@@ -75,9 +75,9 @@ scene-vi-D = \markup
   \line { You say, \lnum #53 } }
 
 scene-vi-D-section = \markup
-  \translate #'(0 . -46)
   \section-baseline-skip
   \section-font-size
+  \scene-vi-D-positioning
   \scene-vi-D
 
 scene-vi-D-parts = \markup
@@ -103,10 +103,9 @@ scene-vi-E = \markup
   \line { Now I remember: \lnum #60 } }
 
 scene-vi-E-section = \markup
-  \override #'(line-width . 50)
-  \translate #'(80 . -46)
   \section-baseline-skip
   \section-font-size
+  \scene-vi-E-positioning
   \scene-vi-E
 
 scene-vi-E-parts = \markup
@@ -121,8 +120,8 @@ scene-vi-before-F = \markup
   \line { Freely, not coordinated with music: }
 
 scene-vi-before-F-section = \markup
-  \translate #'(0 . -41)
   \section-font-size
+  \scene-vi-before-F-positioning
   \scene-vi-before-F
 
 scene-vi-F = \markup
@@ -136,9 +135,9 @@ scene-vi-F = \markup
   \line { Each little \dots \lnum #64 } }
 
 scene-vi-F-section = \markup
-  \translate #'(0 . -42)
   \section-baseline-skip
   \section-font-size
+  \scene-vi-F-positioning
   \scene-vi-F
 
 scene-vi-F-parts = \markup
@@ -148,9 +147,9 @@ scene-vi-F-parts = \markup
   \scene-vi-F
 
 scene-vi-G-section = \markup
-  \translate #'(63 . -46)
   \section-baseline-skip
   \section-font-size
+  \scene-vi-G-positioning
   \wdfn
   \adobe-bold
   \column {

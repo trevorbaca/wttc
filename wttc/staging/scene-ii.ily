@@ -9,8 +9,8 @@ scene-ii-title = \markup
   \line { SCENE \hspace #1 2. }
 
 scene-ii-title-section = \markup
-  \translate #'(-32 . 12)
   \section-title-font-size
+  \scene-ii-title-positioning
   \scene-ii-title
 
 scene-ii-title-parts = \markup
@@ -26,9 +26,9 @@ scene-ii-A = \markup
   \line { When you would call me your Owl. \lnum #9 } }
 
 scene-ii-A-section = \markup
-  \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-A-positioning
   \scene-ii-A
 
 scene-ii-A-parts = \markup
@@ -45,9 +45,9 @@ scene-ii-B = \markup
   \line { Your Owl will be there, \lnum #11 } }
 
 scene-ii-B-section = \markup
-  \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-B-positioning
   \scene-ii-B
 
 scene-ii-B-parts = \markup
@@ -62,9 +62,9 @@ scene-ii-C = \markup
   \line { When the time comes. \lnum #12 }
 
 scene-ii-C-section = \markup
-  \translate #'(0 . -43)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-C-positioning
   \scene-ii-C
 
 scene-ii-C-parts = \markup
@@ -79,9 +79,9 @@ scene-ii-D = \markup
   \line { Look: \lnum #13 }
 
 scene-ii-D-section = \markup
-  \translate #'(6 . -43)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-D-positioning
   \scene-ii-D
 
 scene-ii-D-parts = \markup
@@ -98,9 +98,9 @@ scene-ii-E = \markup
   \line { Now, \lnum #15 } }
 
 scene-ii-E-section = \markup
-  \translate #'(2 . -41)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-E-positioning
   \scene-ii-E
 
 scene-ii-E-parts = \markup
@@ -117,9 +117,9 @@ scene-ii-F = \markup
   \adobe-italic \justify { OWL is diverted by a memory. } }
 
 scene-ii-F-section = \markup
-  \translate #'(0 . -41)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-F-positioning
   \scene-ii-F
 
 scene-ii-F-parts = \markup
@@ -137,9 +137,9 @@ scene-ii-G = \markup
   \adobe-italic \line { OWL pulls back from the memory, cut off by violin. } }
 
 scene-ii-G-section = \markup
-  \translate #'(0 . -38)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-G-positioning
   \scene-ii-G
 
 scene-ii-G-parts = \markup
@@ -149,9 +149,9 @@ scene-ii-G-parts = \markup
   \scene-ii-G
 
 scene-ii-H-section = \markup
-  \translate #'(100 . -38)
   \section-baseline-skip
   \section-font-size
+  \scene-ii-H-positioning
   \wdfn
   \adobe-bold
   \column {

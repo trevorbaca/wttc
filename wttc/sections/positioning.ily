@@ -91,5 +91,6 @@
   \override #'(line-width . 50)
   \translate #'(80 . -46)
   \etc
+\markup scene-vi-before-F-positioning = \markup \translate #'(0 . -41) \etc
 \markup scene-vi-F-positioning = \markup \translate #'(0 . -41) \etc
 \markup scene-vi-G-positioning = \markup \translate #'(63 . -46) \etc

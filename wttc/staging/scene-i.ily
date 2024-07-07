@@ -9,8 +9,8 @@ scene-i-title = \markup
   \line { SCENE \hspace #1 1. }
 
 scene-i-title-section = \markup
-  \translate #'(100 . 32)
   \section-title-font-size
+  \scene-i-title-positioning
   \scene-i-title
 
 scene-i-title-parts = \markup
@@ -25,7 +25,7 @@ scene-i-parenthesized-title = \markup
 
 scene-i-parenthesized-title-section = \markup
   \parenthesized-section-title-font-size
-  \translate #'(-34 . 12)
+  \scene-i-parenthesized-title-positioning
   \scene-i-parenthesized-title
 
 scene-i-A = \markup
@@ -38,10 +38,9 @@ scene-i-A = \markup
   member of the ensemble. }
 
 scene-i-A-section = \markup
-  \override #'(line-width . 194)
-  \translate #'(126 . 34)
   \section-baseline-skip
   \section-font-size
+  \scene-i-A-positioning
   \scene-i-A
 
 scene-i-A-parts = \markup
@@ -68,10 +67,9 @@ scene-i-B = \markup
   else. } }
 
 scene-i-B-section = \markup
-  \override #'(line-width . 40)
-  \translate #'(90 . -22)
   \parts-baseline-skip
   \parts-font-size
+  \scene-i-B-positioning
   \scene-i-B
 
 scene-i-B-parts = \markup
@@ -95,10 +93,10 @@ scene-i-C = \markup
   \adobe-italic \line { Then play measures 10 and 11, as if in response. } }
 
 scene-i-C-section = \markup
-  \translate #'(0 . -135)
   \wdfn
   \section-baseline-skip
   \section-font-size
+  \scene-i-C-positioning
   \scene-i-C
 
 scene-i-C-parts = \markup
@@ -120,9 +118,9 @@ scene-i-D = \markup
   \adobe-italic \line { End scene 1. Slight pause, but not too long. } }
 
 scene-i-D-section = \markup
-  \translate #'(0 . -135)
   \section-baseline-skip
   \section-font-size
+  \scene-i-D-positioning
   \scene-i-D
 
 scene-i-D-parts = \markup
