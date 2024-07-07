@@ -1,5 +1,6 @@
 \version "2.25.16"
 \include "../stylesheet.ily"
+\include "positioning.ily"
 \include "../staging/positioning.ily"
 
 \paper
