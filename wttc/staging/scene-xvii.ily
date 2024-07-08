@@ -1,23 +1,13 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 17: A - E
-
 scene-xvii-title = \markup
+  \scene-xvii-title-positioning
   \adobe-bold
   \line { SCENE \hspace #1 17. }
 
-scene-xvii-title-section = \markup
-  \translate #'(-102 . 12)
-  \section-title-font-size
-  \scene-xvii-title
-
-scene-xvii-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-xvii-title
-
 scene-xvii-A = \markup
+  \scene-xvii-A-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -29,55 +19,22 @@ scene-xvii-A = \markup
   \line { Waving — \lnum #271 }
   \line { But to what? \lnum #272 } }
 
-scene-xvii-A-section = \markup
-  \translate #'(-102 . -41)
-  \section-font-size
-  \section-baseline-skip
-  \scene-xvii-A
-
-scene-xvii-A-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \parts-baseline-skip
-  \scene-xvii-A
-
 scene-xvii-B = \markup
+  \scene-xvii-B-positioning
   \wdfn
   \adobe-bold
   \line { Where? \lnum #273 }
 
-scene-xvii-B-section = \markup
-  \translate #'(6 . -41)
-  \section-font-size
-  \scene-xvii-B
-
-scene-xvii-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xvii-B
-
 scene-xvii-C = \markup
+  \scene-xvii-C-positioning
   \wdfn
   \adobe-italic \justify { Still 4. Sudden change in music and lighting as OWL
   is fixed in position and set uttering, head snapping from left to right with
   the dialogue, which goes fast. OWL struggles with both hands on sides of head
   to stop this movement. }
 
-scene-xvii-C-section = \markup
-  \override #'(line-width . 180)
-  \translate #'(0 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvii-C
-
-scene-xvii-C-parts = \markup
-  \override #'(line-width . 180)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvii-C
-
 scene-xvii-D = \markup
+  \scene-xvii-D-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -99,33 +56,10 @@ scene-xvii-D = \markup
   \vspace #4
   \adobe-italic \line { End scene 17. } }
 
-scene-xvii-D-section = \markup
-  \override #'(line-width . 60)
-  \translate #'(200 . -21)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvii-D
-
-scene-xvii-D-parts = \markup
-  \override #'(line-width . 60)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvii-D
-
 scene-xvii-E = \markup
+  \scene-xvii-E-positioning
   \wdfn
   \adobe-italic \line { End scene 17. }
-
-scene-xvii-E-section = \markup
-  \translate #'(0 . 0)
-  \section-font-size
-  \scene-xvii-E
-
-scene-xvii-E-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xvii-E
 
 scene-xvii-footnote = \markup 
   \override #'(font-name . "Adobe Garamond Pro")

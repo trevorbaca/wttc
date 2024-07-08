@@ -14,14 +14,11 @@ number.12.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "12"
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-parenthesized-title-section
+    _ \scene-vii-parenthesized-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "G" #6
-      %! +SECTION
-    _ \scene-vii-I-section
+    _ \scene-vii-I
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -455,10 +452,8 @@ number.12.Skips = {
 
     % [Skips measure 18]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-parenthesized-title-section
+    _ \scene-vii-parenthesized-title
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -869,10 +864,8 @@ number.12.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 5/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-parenthesized-title-section
+    _ \scene-vii-parenthesized-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "H" #6
       %! CLOCK_TIME
@@ -971,10 +964,8 @@ number.12.Skips = {
 
     % [Skips measure 37]
     s1 * 7/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-J-section
+    _ \scene-vii-J
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

@@ -1,72 +1,36 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 3: A - F
-
 scene-iii-title = \markup
+  \scene-iii-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 3. }
 
-scene-iii-title-section = \markup
-  \section-title-font-size
-  \scene-iii-title-positioning
-  \scene-iii-title
-
-scene-iii-title-parts = \markup
-  \parts-title-font-size
-  \scene-iii-title-parts-positioning
-  \scene-iii-title
-
 scene-iii-parenthesized-title = \markup
+  \scene-iii-parenthesized-title-positioning
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 3) }
 
-scene-iii-parenthesized-title-section = \markup
-  \parenthesized-section-title-font-size
-  \scene-iii-parenthesized-title-positioning
-  \scene-iii-parenthesized-title
-
 scene-iii-A = \markup
+  \scene-iii-A-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \line { During the fermata. }
   \line { Not now \dots \lnum #20 } }
 
-scene-iii-A-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-iii-A-positioning
-  \scene-iii-A
-
-scene-iii-A-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iii-A-parts-positioning
-  \scene-iii-A
-
 scene-iii-B = \markup
+  \scene-iii-B-positioning
   \wdfn
   \adobe-italic \justify { Musicians pause a moment after \hspace #0.5
   \adobe-bold \box A \hspace #-0.5 , as if waiting to see if OWL has anything
   to say. OWL looks to the musicians, but says nothing. Musicians continue with
   \adobe-bold \box B \hspace #-0.5 . }
 
-scene-iii-B-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-iii-B-positioning
-  \scene-iii-B
-
-scene-iii-B-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iii-B-parts-positioning
-  \scene-iii-B
-
 scene-iii-C = \markup
+  \scene-iii-C-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -75,19 +39,8 @@ scene-iii-C = \markup
   \line { \null }
   \line { On my — \lnum #21 } }
 
-scene-iii-C-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-iii-C-positioning
-  \scene-iii-C
-
-scene-iii-C-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iii-C-parts-positioning
-  \scene-iii-C
-
 scene-iii-D = \markup
+  \scene-iii-D-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -99,19 +52,8 @@ scene-iii-D = \markup
   \adobe-italic \line { Musicians silently consider this last line. }
   \adobe-italic \line { Then begin \hspace #0.5 \adobe-bold \box C \hspace #-0.5 . } }
 
-scene-iii-D-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-iii-D-positioning
-  \scene-iii-D
-
-scene-iii-D-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iii-D-parts-positioning
-  \scene-iii-D
-
 scene-iii-E = \markup
+  \scene-iii-E-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -122,43 +64,17 @@ scene-iii-E = \markup
   \line { If \dots \lnum #27 }
   \line { If what? \lnum #28 } }
 
-scene-iii-E-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-iii-E-positioning
-  \scene-iii-E
-
-scene-iii-E-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iii-E-parts-positioning
-  \scene-iii-E
-
 scene-iii-F = \markup
+  \scene-iii-F-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \line { As music resumes: }
   \line { If you and I \dots \lnum #29 } }
 
-scene-iii-F-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-iii-F-positioning
-  \scene-iii-F
-
-scene-iii-F-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-iii-F-parts-positioning
-  \scene-iii-F
-
 scene-iii-G = \markup 
+  \scene-iii-G-positioning
   \wdfn
   \adobe-italic
   \line { End scene 3. }
 
-scene-iii-G-section = \markup
-  \section-font-size
-  \scene-iii-G-positioning
-  \scene-iii-G

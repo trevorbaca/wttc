@@ -16,26 +16,11 @@ number.6.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "06"
     s1 * 2/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-iv-A-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iv-A-section
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-iv-title-parts
-      %! +SECTION
+    _ \scene-iv-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iv-title-section
-      %! +PARTS
-%%% _ \scene-iv-B-parts
-      %! +SECTION
-    _ \scene-iv-B-section
+    _ \scene-iv-title
+    _ \scene-iv-B
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -71,10 +56,7 @@ number.6.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 4/4
-      %! +PARTS
-%%% _ \scene-iv-C-parts
-      %! +SECTION
-    _ \scene-iv-C-section
+    _ \scene-iv-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -115,10 +97,7 @@ number.6.Skips = {
 
     % [Skips measure 3]
     s1 * 4/4
-      %! +PARTS
-%%% _ \scene-iv-D-parts
-      %! +SECTION
-    _ \scene-iv-D-section
+    _ \scene-iv-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -140,10 +119,7 @@ number.6.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
-      %! +PARTS
-%%% _ \scene-iv-E-parts
-      %! +SECTION
-    _ \scene-iv-E-section
+    _ \scene-iv-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -165,10 +141,7 @@ number.6.Skips = {
 
     % [Skips measure 5]
     s1 * 4/4
-      %! +PARTS
-%%% _ \scene-iv-F-parts
-      %! +SECTION
-    _ \scene-iv-F-section
+    _ \scene-iv-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

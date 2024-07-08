@@ -14,16 +14,11 @@ number.27.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "27"
     s1 * 2/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xvii-A-section
-      %! +SECTION
+    _ \scene-xvii-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xvii-title-section
-      %! +SECTION
-    _ \scene-xvii-B-section
+    _ \scene-xvii-title
+    _ \scene-xvii-B
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -99,12 +94,9 @@ number.27.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=48
     s1 * 9/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xvii-D-section
-      %! +SECTION
-    _ \scene-xvii-C-section
+    _ \scene-xvii-D
+    _ \scene-xvii-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

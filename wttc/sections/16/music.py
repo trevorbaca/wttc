@@ -169,20 +169,18 @@ def vc(m):
 
 
 def owl(skips):
-    wrappers = baca.markup(
+    baca.markup(
         skips[1 - 1],
-        r"\scene-x-parenthesized-title-section",
+        r"\scene-x-parenthesized-title",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
+    baca.markup(
         skips[4 - 1],
-        r"\scene-x-D-section",
+        r"\scene-x-D",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
 
 
 def align_spanners(cache):
@@ -276,7 +274,7 @@ def persist_score(score, environment):
             "../../staging/scene-xi.ily",
         ],
     )
-    lilypond_file.items.extend(["", r"\pageBreak", r"\scene-xi-A-section"])
+    lilypond_file.items.extend(["", r"\pageBreak", r"\scene-xi-A"])
     baca.build.persist_lilypond_file(
         environment.arguments,
         environment.section_directory,

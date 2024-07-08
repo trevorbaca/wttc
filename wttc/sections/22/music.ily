@@ -14,14 +14,10 @@ number.22.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "22"
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiv-A-section
-      %! +SECTION
+    _ \scene-xiv-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiv-title-section
+    _ \scene-xiv-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -55,8 +51,7 @@ number.22.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 4/4
-      %! +SECTION
-    _ \scene-xiv-B-section
+    _ \scene-xiv-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -141,8 +136,7 @@ number.22.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=150
     s1 * 6/4
-      %! +SECTION
-    _ \scene-xiv-C-section
+    _ \scene-xiv-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -261,10 +255,8 @@ number.22.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiv-D-section
+    _ \scene-xiv-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

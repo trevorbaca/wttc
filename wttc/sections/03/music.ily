@@ -14,14 +14,8 @@ number.3.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "03"
     s1 * 4/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% ^ \scene-iii-title-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    ^ \scene-iii-title-section
+    ^ \scene-iii-title
       %! +PARTS
 %%% - \tweak extra-offset #'(-10 . 4)
       %! +PARTS
@@ -184,14 +178,8 @@ number.3.Skips = {
 
     % [Skips measure 7]
     s1 * 4/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% ^ \scene-iii-A-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    ^ \scene-iii-A-section
+    ^ \scene-iii-A
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -352,14 +340,8 @@ number.3.Skips = {
 
     % [Skips measure 13]
     s1 * 6/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% ^ \scene-iii-B-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    ^ \scene-iii-B-section
+    ^ \scene-iii-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

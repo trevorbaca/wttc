@@ -14,10 +14,8 @@ number.10.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "10"
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-title-section
+    _ \scene-vii-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "E" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
@@ -407,10 +405,8 @@ number.10.Skips = {
 
     % [Skips measure 16]
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-parenthesized-title-section
+    _ \scene-vii-parenthesized-title
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -541,8 +537,7 @@ number.10.Skips = {
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 3)
     s1 * 5/4
-      %! +SECTION
-    _ \scene-vii-A-section
+    _ \scene-vii-A
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -577,12 +572,9 @@ number.10.Skips = {
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 4)
     s1 * 3/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vii-C-section
-      %! +SECTION
-    _ \scene-vii-B-section
+    _ \scene-vii-C
+    _ \scene-vii-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

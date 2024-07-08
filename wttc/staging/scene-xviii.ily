@@ -1,24 +1,14 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 18: A - D
-
 scene-xviii-title = \markup
+  \scene-xviii-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 18. }
 
-scene-xviii-title-section = \markup
-  \translate #'(-90 . 12)
-  \section-title-font-size
-  \scene-xviii-title
-
-scene-xviii-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-xviii-title
-
 scene-xviii-A = \markup
+  \scene-xviii-A-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -27,34 +17,14 @@ scene-xviii-A = \markup
   \line { We could have stayed on it. \lnum #285 }
   \line { We should have stayed on it. \lnum #286 } }
 
-scene-xviii-A-section = \markup
-  \translate #'(-90 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xviii-A
-
-scene-xviii-A-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xviii-A
-
 scene-xviii-B = \markup
+  \scene-xviii-B-positioning
   \wdfn
   \adobe-bold
   \line { Then all of this \dots \lnum #287 }
 
-scene-xviii-B-section = \markup
-  \translate #'(4 . -43)
-  \section-font-size
-  \scene-xviii-B
-
-scene-xviii-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xviii-B
-
 scene-xviii-C = \markup
+  \scene-xviii-C-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -66,19 +36,8 @@ scene-xviii-C = \markup
   \line { Keep to it. \lnum #293 }
   \line { Never mind what. \lnum #294 } }
 
-scene-xviii-C-section = \markup
-  \translate #'(128 . -31)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xviii-C
-
-scene-xviii-C-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xviii-C
-
 scene-xviii-D = \markup
+  \scene-xviii-D-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -86,14 +45,3 @@ scene-xviii-D = \markup
   \vspace #4
   \adobe-italic \line { End scene 18. } }
 
-scene-xviii-D-section = \markup
-  \translate #'(60 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xviii-D
-
-scene-xviii-D-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xviii-D

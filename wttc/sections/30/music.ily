@@ -14,18 +14,12 @@ number.30.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "30"
     s1 * 5/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xx-A-section
-      %! +SECTION
+    _ \scene-xx-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xx-B-section
-      %! +SECTION
+    _ \scene-xx-B
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xx-title-section
+    _ \scene-xx-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

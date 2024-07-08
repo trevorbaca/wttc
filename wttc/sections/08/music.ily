@@ -14,18 +14,9 @@ number.8.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "08"
     s1 * 4/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-v-title-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-v-title-section
-      %! +PARTS
-%%% _ \scene-v-A-parts
-      %! +SECTION
-    _ \scene-v-A-section
+    _ \scene-v-title
+    _ \scene-v-A
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -147,10 +138,7 @@ number.8.Skips = {
 
     % [Skips measure 6]
     s1 * 6/4
-      %! +PARTS
-%%% _ \scene-v-B-parts
-      %! +SECTION
-    _ \scene-v-B-section
+    _ \scene-v-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -218,10 +206,7 @@ number.8.Skips = {
 
     % [Skips measure 8]
     s1 * 6/4
-      %! +PARTS
-%%% _ \scene-v-C-parts
-      %! +SECTION
-    _ \scene-v-C-section
+    _ \scene-v-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -293,10 +278,8 @@ number.8.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-v-D-section
+    _ \scene-v-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

@@ -14,10 +14,8 @@ number.21.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "21"
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiii-parenthesized-title-section
+    _ \scene-xiii-parenthesized-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -49,8 +47,7 @@ number.21.Skips = {
 
     % [Skips measure 2]
     s1 * 4/4
-      %! +SECTION
-    _ \scene-xiii-C-section
+    _ \scene-xiii-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -74,10 +71,8 @@ number.21.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=48
     s1 * 9/4
-      %! +SECTION
-    _ \scene-xiii-D-section
-      %! +SECTION
-    _ \scene-xiii-E-section
+    _ \scene-xiii-D
+    _ \scene-xiii-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -120,8 +115,7 @@ number.21.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 4/4
-      %! +SECTION
-    _ \scene-xiii-F-section
+    _ \scene-xiii-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -288,10 +282,8 @@ number.21.Skips = {
 
     % [Skips measure 10]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiii-G-section
+    _ \scene-xiii-G
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

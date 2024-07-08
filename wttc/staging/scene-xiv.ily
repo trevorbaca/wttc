@@ -1,39 +1,20 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 14: A - D
-
 scene-xiv-title = \markup
+  \scene-xiv-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 14. }
 
-scene-xiv-title-section = \markup
-  \translate #'(-60 . 12)
-  \section-title-font-size
-  \scene-xiv-title
-
-scene-xiv-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-xiv-title
-
 scene-xiv-A = \markup
+  \scene-xiv-A-positioning
   \wdfn
   \adobe-bold
   \line { Where was I? \lnum #207 }
 
-scene-xiv-A-section = \markup
-  \translate #'(-58 . -48)
-  \section-font-size
-  \scene-xiv-A
-
-scene-xiv-A-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xiv-A
-
 scene-xiv-B = \markup
+  \scene-xiv-B-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -43,38 +24,16 @@ scene-xiv-B = \markup
   \line { “This is the way —” \lnum #211 }
   \line { Waving, \lnum #212 } }
 
-scene-xiv-B-section = \markup
-  \translate #'(0 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xiv-B
-
-scene-xiv-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xiv-B
-
 scene-xiv-C = \markup
+  \scene-xiv-C-positioning
   \wdfn
   \adobe-bold
   \column {
   \line { And there she was, \lnum #213 }
   \line { Waving to us. \lnum #214 } }
 
-scene-xiv-C-section = \markup
-  \translate #'(0 . -48)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xiv-C
-
-scene-xiv-C-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xiv-C
-
 scene-xiv-D = \markup
+  \scene-xiv-D-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -105,14 +64,3 @@ scene-xiv-D = \markup
   \vspace #2
   \adobe-italic \line { End scene 14. } }
 
-scene-xiv-D-section = \markup
-  \translate #'(80 . 0)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xiv-D
-
-scene-xiv-D-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xiv-D

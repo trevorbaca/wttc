@@ -14,14 +14,10 @@ number.20.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "20"
     s1 * 3/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiii-A-section
-      %! +SECTION
+    _ \scene-xiii-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiii-title-section
+    _ \scene-xiii-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -263,10 +259,8 @@ number.20.Skips = {
 
     % [Skips measure 10]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xiii-B-section
+    _ \scene-xiii-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

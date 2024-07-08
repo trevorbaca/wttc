@@ -14,10 +14,8 @@ number.18.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "18"
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-parenthesized-title-section
+    _ \scene-xii-parenthesized-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "J" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -332,10 +330,8 @@ number.18.Skips = {
 
     % [Skips measure 13]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-parenthesized-title-section
+    _ \scene-xii-parenthesized-title
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -744,10 +740,8 @@ number.18.Skips = {
 
     % [Skips measure 29]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-B-section
+    _ \scene-xii-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

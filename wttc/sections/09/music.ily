@@ -14,22 +14,10 @@ number.9.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "09"
     s1 * 2/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-vi-A-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vi-A-section
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-vi-title-parts
-      %! +SECTION
+    _ \scene-vi-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vi-title-section
+    _ \scene-vi-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -61,10 +49,7 @@ number.9.Skips = {
 
     % [Skips measure 2]
     s1 * 6/4
-      %! +PARTS
-%%% _ \scene-vi-B-parts
-      %! +SECTION
-    _ \scene-vi-B-section
+    _ \scene-vi-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -107,10 +92,7 @@ number.9.Skips = {
 
     % [Skips measure 4]
     s1 * 4/4
-      %! +PARTS
-%%% _ \scene-vi-C-parts
-      %! +SECTION
-    _ \scene-vi-C-section
+    _ \scene-vi-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -153,18 +135,9 @@ number.9.Skips = {
 
     % [Skips measure 6]
     s1 * 5/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-vi-E-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vi-E-section
-      %! +PARTS
-%%% _ \scene-vi-D-parts
-      %! +SECTION
-    _ \scene-vi-D-section
+    _ \scene-vi-E
+    _ \scene-vi-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -251,10 +224,7 @@ number.9.Skips = {
 
     % [Skips measure 9]
     s1 * 6/4
-      %! +PARTS
-%%% _ \scene-vi-F-parts
-      %! +SECTION
-    _ \scene-vi-F-section
+    _ \scene-vi-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -333,14 +303,8 @@ number.9.Skips = {
 
     % [Skips measure 12]
     s1 * 3/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-vi-G-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-vi-G-section
+    _ \scene-vi-G
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

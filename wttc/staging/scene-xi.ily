@@ -1,24 +1,14 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 11: A
-
 scene-xi-title = \markup
+  \scene-xi-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 11. }
 
-scene-xi-title-section = \markup
-  \translate #'(-90 . -2)
-  \section-title-font-size
-  \scene-xi-title
-
-scene-xi-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-xi-title
-
 scene-xi-A = \markup
+  \scene-xi-A-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -74,16 +64,3 @@ scene-xi-A = \markup
   \vspace #3
   \adobe-italic \line { End scene 11. } }
 
-scene-xi-A-section = \markup
-  \override #'(line-width . 60)
-  \translate #'(-90 . -20)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xi-A
-
-scene-xi-A-parts = \markup
-  \override #'(line-width . 60)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xi-A

@@ -1,72 +1,36 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 7: A - J
-
 scene-vii-title = \markup
+  \scene-vii-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 7. }
 
-scene-vii-title-section = \markup
-  \translate #'(-34 . 12)
-  \section-title-font-size
-  \scene-vii-title
-
-scene-vii-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-vii-title
-
 scene-vii-parenthesized-title = \markup
+  \scene-vii-parenthesized-title-positioning
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 7) }
 
-scene-vii-parenthesized-title-section = \markup
-  \translate #'(-34 . 12)
-  \parenthesized-section-title-font-size
-  \scene-vii-parenthesized-title
-
 scene-vii-A = \markup
+  \scene-vii-A-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \line { First time only: }
   \line { No doubt you'll come before long. \lnum #66 } }
 
-scene-vii-A-section = \markup
-  \translate #'(0 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-vii-A
-
-scene-vii-A-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vii-A
-
 scene-vii-B = \markup
+  \scene-vii-B-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \line { First time only: }
   \line { You will. \lnum #67 } }
 
-scene-vii-B-section = \markup
-  \translate #'(0 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-vii-B
-
-scene-vii-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vii-B
-
 scene-vii-C = \markup
+  \scene-vii-C-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -75,111 +39,42 @@ scene-vii-C = \markup
   \adobe-italic \justify { Musicians wait a moment to weigh the meaning of this
   last line. Then proceed to \adobe-bold \box F \hspace #-0.5 . } }
 
-scene-vii-C-section = \markup
-  \override #'(line-width . 42)
-  \translate #'(52 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-vii-C
-
-scene-vii-C-parts = \markup
-  \override #'(line-width . 42)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vii-C
+% TODO: is scene-vii-D missing?
 
 scene-vii-E = \markup
+  \scene-vii-E-positioning
   \wdfn
   \adobe-bold
   \line { What did you say at the time? \lnum #69 }
 
-scene-vii-E-section = \markup
-  \translate #'(0 . -48)
-  \section-font-size
-  \scene-vii-E
-
-scene-vii-E-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-vii-E
-
 scene-vii-F = \markup
+  \scene-vii-F-positioning
   \wdfn
   \adobe-bold
   \line { How I would come to a — \lnum #70 }
 
-scene-vii-F-section = \markup
-  \translate #'(0 . -48)
-  \section-font-size
-  \scene-vii-F
-
-scene-vii-F-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-vii-F
-
 scene-vii-G = \markup
+  \scene-vii-G-positioning
   \wdfn
   \adobe-bold
   \line { What did you call it? — \lnum #71 }
 
-scene-vii-G-section = \markup
-  \translate #'(0 . -46)
-  \section-font-size
-  \scene-vii-G
-
-scene-vii-G-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-vii-G
-
 scene-vii-H = \markup
+  \scene-vii-H-positioning
   \wdfn
   \adobe-italic \justify { OWL and musicians wait together in silence, long
   enough for the audience to consider OWL's question. Then all proceed to
   \adobe-bold \box G \hspace #-0.5 . }
 
-scene-vii-H-section = \markup
-  \override #'(line-width . 60)
-  \translate #'(46 . -40)
-  \section-baseline-skip
-  \section-font-size
-  \scene-vii-H
-
-scene-vii-H-parts = \markup
-  \override #'(line-width . 60)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vii-H
-
 scene-vii-I = \markup
+  \scene-vii-I-positioning
   \wdfn
   \adobe-bold
   \line { “Chamber,” \lnum #72 }
 
-scene-vii-I-section = \markup
-  \translate #'(0 . -48)
-  \section-font-size
-  \scene-vii-I
-
-scene-vii-I-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-vii-I
-
 scene-vii-J = \markup
+  \scene-vii-J-positioning
   \wdfn
   \adobe-italic
   \line { End scene 7. }
 
-scene-vii-J-section = \markup
-  \translate #'(166 . -44)
-  \section-font-size
-  \scene-vii-J
-
-scene-vii-J-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-vii-J

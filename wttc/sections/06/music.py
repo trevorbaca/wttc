@@ -167,100 +167,43 @@ def vc(m):
 
 
 def owl(skips):
-    wrappers = baca.markup(
+    baca.markup(
         skips[1 - 1],
-        r"\scene-iv-title-section",
+        r"\scene-iv-title",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
+    baca.markup(
         skips[1 - 1],
-        r"\scene-iv-title-parts",
+        r"\scene-iv-A",
         baca.tweak.x_extent_false(),
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[1 - 1],
-        r"\scene-iv-A-section",
-        baca.tweak.x_extent_false(),
+        r"\scene-iv-B",
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[1 - 1],
-        r"\scene-iv-A-parts",
-        baca.tweak.x_extent_false(),
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
-        skips[1 - 1],
-        r"\scene-iv-B-section",
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[1 - 1],
-        r"\scene-iv-B-parts",
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[2 - 1],
-        r"\scene-iv-C-section",
+        r"\scene-iv-C",
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[2 - 1],
-        r"\scene-iv-C-parts",
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[3 - 1],
-        r"\scene-iv-D-section",
+        r"\scene-iv-D",
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[3 - 1],
-        r"\scene-iv-D-parts",
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[4 - 1],
-        r"\scene-iv-E-section",
+        r"\scene-iv-E",
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[4 - 1],
-        r"\scene-iv-E-parts",
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[5 - 1],
-        r"\scene-iv-F-section",
+        r"\scene-iv-F",
         direction=abjad.DOWN,
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[5 - 1],
-        r"\scene-iv-F-parts",
-        direction=abjad.DOWN,
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
 
 
 def align_spanners(cache):

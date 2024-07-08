@@ -14,10 +14,8 @@ number.19.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "19"
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-parenthesized-title-section
+    _ \scene-xii-parenthesized-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "K" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -482,10 +480,8 @@ number.19.Skips = {
 
     % [Skips measure 19]
     s1 * 5/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-C-section
+    _ \scene-xii-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -509,10 +505,8 @@ number.19.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=150
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-parenthesized-title-section
+    _ \scene-xii-parenthesized-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "L" #6
       %! CLOCK_TIME
@@ -855,12 +849,9 @@ number.19.Skips = {
 
     % [Skips measure 33]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-parenthesized-title-section
-      %! +SECTION
-    _ \scene-xii-D-section
+    _ \scene-xii-parenthesized-title
+    _ \scene-xii-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -936,8 +927,7 @@ number.19.Skips = {
 
     % [Skips measure 36]
     s1 * 3/4
-      %! +SECTION
-    _ \scene-xii-E-section
+    _ \scene-xii-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1013,8 +1003,7 @@ number.19.Skips = {
 
     % [Skips measure 39]
     s1 * 6/4
-      %! +SECTION
-    _ \scene-xii-F-section
+    _ \scene-xii-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1090,8 +1079,7 @@ number.19.Skips = {
 
     % [Skips measure 42]
     s1 * 3/4
-      %! +SECTION
-    _ \scene-xii-G-section
+    _ \scene-xii-G
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1167,8 +1155,7 @@ number.19.Skips = {
 
     % [Skips measure 45]
     s1 * 6/4
-      %! +SECTION
-    _ \scene-xii-H-section
+    _ \scene-xii-H
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1219,10 +1206,8 @@ number.19.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-parenthesized-title-section
+    _ \scene-xii-parenthesized-title
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1263,12 +1248,9 @@ number.19.Skips = {
 
     % [Skips measure 48]
     s1 * 6/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-J-section
-      %! +SECTION
-    _ \scene-xii-I-section
+    _ \scene-xii-J
+    _ \scene-xii-I
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

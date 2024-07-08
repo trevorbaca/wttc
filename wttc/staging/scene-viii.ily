@@ -1,24 +1,14 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 8: A - E
-
 scene-viii-title = \markup
+  \scene-viii-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 8. }
 
-scene-viii-title-section = \markup
-  \translate #'(-110 . 12)
-  \section-title-font-size
-  \scene-viii-title
-
-scene-viii-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-viii-title
-
 scene-viii-A = \markup
+  \scene-viii-A-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -43,70 +33,28 @@ scene-viii-A = \markup
   \vspace #1
   \adobe-italic \justify { OWL sniffs the flowers, but again there is no touching. } }
 
-scene-viii-A-section = \markup
-  \override #'(line-width . 50)
-  \translate #'(-84 . -20)
-  \section-baseline-skip
-  \section-font-size
-  \scene-viii-A
-
-scene-viii-A-parts = \markup
-  \override #'(line-width . 50)
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-viii-A
-
 scene-viii-B = \markup
+  \scene-viii-B-positioning
   \wdfn
   \adobe-bold
   \column {
   \line { Nothing. \lnum #80 }
   \adobe-italic \line { OWL stands back up. } }
 
-scene-viii-B-section = \markup
-  \translate #'(4 . -43)
-  \section-baseline-skip
-  \section-font-size
-  \scene-viii-B
-
-scene-viii-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-viii-B
-
 scene-viii-C = \markup
+  \scene-viii-C-positioning
   \wdfn
   \adobe-bold
   \line { But still, \lnum #81.1 }
 
-scene-viii-C-section = \markup
-  \translate #'(36 . -41)
-  \section-font-size
-  \scene-viii-C
-
-scene-viii-C-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-viii-C
-
 scene-viii-D = \markup
+  \scene-viii-D-positioning
   \wdfn
   \adobe-bold
   \line { violets. \lnum #81.2 }
 
-scene-viii-D-section = \markup
-  \translate #'(0 . -41)
-  \section-font-size
-  \scene-viii-D
-
-scene-viii-D-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-viii-D
-
 scene-viii-E = \markup
+  \scene-viii-E-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -115,14 +63,3 @@ scene-viii-E = \markup
   \vspace #2
   \adobe-italic \line { End scene 8. } }
 
-scene-viii-E-section = \markup
-  \translate #'(92 . -38)
-  \section-baseline-skip
-  \section-font-size
-  \scene-viii-E
-
-scene-viii-E-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-viii-E

@@ -14,10 +14,8 @@ number.23.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "23"
     s1 * 2/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xv-title-section
+    _ \scene-xv-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -70,8 +68,7 @@ number.23.Skips = {
 
     % [Skips measure 3]
     s1 * 4/4
-      %! +SECTION
-    _ \scene-xv-A-section
+    _ \scene-xv-A
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -97,8 +94,7 @@ number.23.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=150
     s1 * 4/4
-      %! +SECTION
-    _ \scene-xv-B-section
+    _ \scene-xv-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -160,10 +156,8 @@ number.23.Skips = {
 
     % [Skips measure 6]
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xv-C-section
+    _ \scene-xv-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -187,10 +181,8 @@ number.23.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=48
     s1 * 9/4
-      %! +SECTION
-    _ \scene-xv-D-section
-      %! +SECTION
-    _ \scene-xv-E-section
+    _ \scene-xv-D
+    _ \scene-xv-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -233,8 +225,7 @@ number.23.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=100
     s1 * 6/4
-      %! +SECTION
-    _ \scene-xv-F-section
+    _ \scene-xv-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -317,10 +308,8 @@ number.23.Skips = {
 
     % [Skips measure 11]
     s1 * 2/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xv-G-section
+    _ \scene-xv-G
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

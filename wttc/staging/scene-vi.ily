@@ -1,92 +1,42 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 6: A - G
-
 scene-vi-title = \markup
+  \scene-vi-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 6. }
 
-scene-vi-title-section = \markup
-  \section-title-font-size
-  \scene-vi-title-positioning
-  \scene-vi-title
-
-scene-vi-title-parts = \markup
-  \parts-title-font-size
-  \scene-vi-title-parts-positioning
-  \scene-vi-title
-
 scene-vi-A = \markup
+  \scene-vi-A-positioning
   \wdfn
   \adobe-bold
   \column {
   \line { That day — remember that day? \lnum #48 }
   \line { You tell me what to do. \lnum #49 } }
 
-scene-vi-A-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-vi-A-positioning
-  \scene-vi-A
-
-scene-vi-A-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vi-A-parts-positioning
-  \scene-vi-A
-
 scene-vi-B = \markup
+  \scene-vi-B-positioning
   \wdfn
   \adobe-bold
   \line { You lay it all out for me, \lnum #50 }
 
-scene-vi-B-section = \markup
-  \section-font-size
-  \scene-vi-B-positioning
-  \scene-vi-B
-
-scene-vi-B-parts = \markup
-  \parts-font-size
-  \scene-vi-B-parts-positioning
-  \scene-vi-B
-
 scene-vi-C = \markup
+  \scene-vi-C-positioning
   \wdfn
   \adobe-bold
   \line { Tell me where to go \lnum #51 }
 
-scene-vi-C-section = \markup
-  \section-font-size
-  \scene-vi-C-positioning
-  \scene-vi-C
-
-scene-vi-C-parts = \markup
-  \parts-font-size
-  \scene-vi-C-parts-positioning
-  \scene-vi-C
-
 scene-vi-D = \markup
+  \scene-vi-D-positioning
   \wdfn
   \adobe-bold
   \column {
   \line { When the time comes, \lnum #52 }
   \line { You say, \lnum #53 } }
 
-scene-vi-D-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-vi-D-positioning
-  \scene-vi-D
-
-scene-vi-D-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vi-D-parts-positioning
-  \scene-vi-D
-
 scene-vi-E = \markup
+  \scene-vi-E-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -102,29 +52,14 @@ scene-vi-E = \markup
   \line { This is it! \lnum #59 }
   \line { Now I remember: \lnum #60 } }
 
-scene-vi-E-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-vi-E-positioning
-  \scene-vi-E
-
-scene-vi-E-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vi-E-parts-positioning
-  \scene-vi-E
-
 scene-vi-before-F = \markup
+  \scene-vi-before-F-positioning
   \wdfn
   \adobe-italic
   \line { Freely, not coordinated with music: }
 
-scene-vi-before-F-section = \markup
-  \section-font-size
-  \scene-vi-before-F-positioning
-  \scene-vi-before-F
-
 scene-vi-F = \markup
+  \scene-vi-F-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -134,21 +69,7 @@ scene-vi-F = \markup
   \line { All as it should be! \lnum #63 }
   \line { Each little \dots \lnum #64 } }
 
-scene-vi-F-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-vi-F-positioning
-  \scene-vi-F
-
-scene-vi-F-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vi-F-parts-positioning
-  \scene-vi-F
-
-scene-vi-G-section = \markup
-  \section-baseline-skip
-  \section-font-size
+scene-vi-G = \markup
   \scene-vi-G-positioning
   \wdfn
   \adobe-bold
@@ -157,13 +78,4 @@ scene-vi-G-section = \markup
   \line { \null }
   \line { \null }
   \adobe-italic \line { End scene 6. } }
-
-scene-vi-G-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-vi-G-parts-positioning
-  \wdfn
-  \adobe-bold
-  \column {
-  \line { I must be here before you, then. \lnum #65 } }
 

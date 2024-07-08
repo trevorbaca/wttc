@@ -14,16 +14,11 @@ number.13.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "13"
     s1 * 3/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-viii-A-section
-      %! +SECTION
+    _ \scene-viii-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-viii-title-section
-      %! +SECTION
-    _ \scene-viii-B-section
+    _ \scene-viii-title
+    _ \scene-viii-B
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -202,10 +197,8 @@ number.13.Skips = {
 
     % [Skips measure 9]
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-viii-C-section
+    _ \scene-viii-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -229,8 +222,7 @@ number.13.Skips = {
 
     % [Skips measure 10]
     s1 * 4/4
-      %! +SECTION
-    _ \scene-viii-D-section
+    _ \scene-viii-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -258,10 +250,8 @@ number.13.Skips = {
 
     % [Skips measure 11]
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-viii-E-section
+    _ \scene-viii-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

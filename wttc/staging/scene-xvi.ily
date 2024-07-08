@@ -1,33 +1,19 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 16: A - J
-
 scene-xvi-title = \markup
+  \scene-xvi-title-positioning
   \adobe-bold
   \line { SCENE \hspace #1 16. }
 
-scene-xvi-title-section = \markup
-  \translate #'(-32 . 12)
-  \section-title-font-size
-  \scene-xvi-title
-
-scene-xvi-title-parts = \markup
-  \translate #'(0 . 0)
-  \parts-title-font-size
-  \scene-xvi-title
-
 scene-xvi-parenthesized-title = \markup
+  \scene-xvi-parenthesized-title-positioning
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 16) }
 
-scene-xvi-parenthesized-title-section = \markup
-  \translate #'(-32 . 12)
-  \parenthesized-section-title-font-size
-  \scene-xvi-parenthesized-title
-
 scene-xvi-A = \markup
+  \scene-xvi-A-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -38,19 +24,8 @@ scene-xvi-A = \markup
   \line { “Make yourself at home.” \lnum #250 }
   \line { As if you had no memory of — \lnum #251 } }
 
-scene-xvi-A-section = \markup
-  \translate #'(0 . -38)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvi-A
-
-scene-xvi-A-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvi-A
-
 scene-xvi-B = \markup
+  \scene-xvi-B-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -60,136 +35,56 @@ scene-xvi-B = \markup
   \line { How long it would take me to come here, \lnum #253 }
   \line { This way — \lnum #254 } }
 
-scene-xvi-B-section = \markup
-  \translate #'(120 . -41)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvi-B
-
-scene-xvi-B-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvi-B
-
 scene-xvi-C = \markup
+  \scene-xvi-C-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \line { Loud, extended. }
   \line { Way! \lnum #255 } }
 
-scene-xvi-C-section = \markup
-  \translate #'(28 . -43)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvi-C
-
-scene-xvi-C-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvi-C
-
 scene-xvi-D = \markup
+  \scene-xvi-D-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \line { Abruptly back to normal. }
   \line { No. \lnum #256 } }
 
-scene-xvi-D-section = \markup
-  \translate #'(4 . -43)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvi-D
-
-scene-xvi-D-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvi-D
-
 scene-xvi-E = \markup
+  \scene-xvi-E-positioning
   \wdfn
   \adobe-bold
   \column {
   \line { That — \lnum #257 }
   \adobe-italic \line { Stopping before saying “way” } }
 
-scene-xvi-E-section = \markup
-  \translate #'(4 . -43)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvi-E
-
-scene-xvi-E-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvi-E
-
 scene-xvi-F = \markup
+  \scene-xvi-F-positioning
   \wdfn
   \adobe-bold
   \line { And all the time — \lnum #258 }
 
-scene-xvi-F-section = \markup
-  \translate #'(70 . -46)
-  \section-font-size
-  \scene-xvi-F
-
-scene-xvi-F-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xvi-F
-
 scene-xvi-G = \markup
+  \scene-xvi-G-positioning
   \wdfn
   \adobe-bold
   \line { Never mind. \lnum #259 }
 
-scene-xvi-G-section = \markup
-  \translate #'(70 . -41)
-  \section-font-size
-  \scene-xvi-G
-
-scene-xvi-G-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xvi-G
-
 scene-xvi-H = \markup
+  \scene-xvi-H-positioning
   \wdfn
   \adobe-bold
   \line { Let it go. \lnum #260 }
 
-scene-xvi-H-section = \markup
-  \translate #'(0 . -41)
-  \section-font-size
-  \scene-xvi-H
-
-scene-xvi-H-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xvi-H
-
 scene-xvi-I = \markup
+  \scene-xvi-I-positioning
   \wdfn
   \adobe-bold
   \line { Let it go. \lnum #261 }
 
-scene-xvi-I-section = \markup
-  \translate #'(0 . -41)
-  \section-font-size
-  \scene-xvi-I
-
-scene-xvi-I-parts = \markup
-  \translate #'(0 . 0)
-  \parts-font-size
-  \scene-xvi-I
-
 scene-xvi-J = \markup
+  \scene-xvi-J-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -205,14 +100,3 @@ scene-xvi-J = \markup
   \vspace #4
   \adobe-italic \line { End scene 16. } }
 
-scene-xvi-J-section = \markup
-  \translate #'(40 . -19)
-  \section-baseline-skip
-  \section-font-size
-  \scene-xvi-J
-
-scene-xvi-J-parts = \markup
-  \translate #'(0 . 0)
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-xvi-J

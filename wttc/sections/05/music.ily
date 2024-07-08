@@ -14,10 +14,8 @@ number.5.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "05"
     s1 * 3/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iii-parenthesized-title-section
+    _ \scene-iii-parenthesized-title
       %! +PARTS
 %%% - \tweak extra-offset #'(-4 . 4)
       %! +PARTS
@@ -436,14 +434,8 @@ number.5.Skips = {
 
     % [Skips measure 17]
     s1 * 3/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-iii-E-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iii-E-section
+    _ \scene-iii-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -473,14 +465,9 @@ number.5.Skips = {
 
     % [Skips measure 18]
     s1 * 3/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iii-parenthesized-title-section
-      %! +PARTS
-%%% _ \scene-iii-F-parts
-      %! +SECTION
-    _ \scene-iii-F-section
+    _ \scene-iii-parenthesized-title
+    _ \scene-iii-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1012,10 +999,8 @@ number.5.Skips = {
 
     % [Skips measure 38]
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iii-parenthesized-title-section
+    _ \scene-iii-parenthesized-title
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -1274,10 +1259,8 @@ number.5.Skips = {
 
     % [Skips measure 48]
     s1 * 4/4
-      %! -PARTS
     - \tweak X-extent ##f
-      %! -PARTS
-    _ \scene-iii-G-section
+    _ \scene-iii-G
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

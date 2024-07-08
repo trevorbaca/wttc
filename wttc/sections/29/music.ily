@@ -14,14 +14,10 @@ number.29.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "29"
     s1 * 1/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-A-section
-      %! +SECTION
+    _ \scene-xix-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-title-section
+    _ \scene-xix-title
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -91,8 +87,7 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 6/4
-      %! +SECTION
-    _ \scene-xix-B-section
+    _ \scene-xix-B
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -137,10 +132,8 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=150
     s1 * 1/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-C-section
+    _ \scene-xix-C
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -263,8 +256,7 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=100
     s1 * 1/4
-      %! +SECTION
-    _ \scene-xix-D-section
+    _ \scene-xix-D
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -309,8 +301,7 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 1/4
-      %! +SECTION
-    _ \scene-xix-E-section
+    _ \scene-xix-E
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -355,8 +346,7 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 1/4
-      %! +SECTION
-    _ \scene-xix-F-section
+    _ \scene-xix-F
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -399,10 +389,8 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=100
     s1 * 1/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-G-section
+    _ \scene-xix-G
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -483,12 +471,9 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-I-section
-      %! +SECTION
-    _ \scene-xix-H-section
+    _ \scene-xix-I
+    _ \scene-xix-H
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -533,12 +518,9 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=60
     s1 * 1/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-parenthesized-title-section
-      %! +SECTION
-    _ \scene-xix-J-section
+    _ \scene-xix-parenthesized-title
+    _ \scene-xix-J
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -581,8 +563,7 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=150
     s1 * 6/4
-      %! +SECTION
-    _ \scene-xix-K-section
+    _ \scene-xix-K
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -619,10 +600,8 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 1/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-L-section
+    _ \scene-xix-L
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
@@ -667,10 +646,8 @@ number.29.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=75
     s1 * 4/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xix-M-section
+    _ \scene-xix-M
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

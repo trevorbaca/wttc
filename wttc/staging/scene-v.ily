@@ -1,58 +1,28 @@
 \version "2.25.16"
 \include "share.ily"
 
-% SCENE 5: A - D
-
 scene-v-title = \markup
+  \scene-v-title-positioning
   \wdfn
   \adobe-bold
   \line { SCENE 5. }
 
-scene-v-title-section = \markup
-  \section-title-font-size
-  \scene-v-title-positioning
-  \scene-v-title
-
-scene-v-title-parts = \markup
-  \parts-title-font-size
-  \scene-v-title-parts-positioning
-  \scene-v-title
-
 scene-v-A = \markup
+  \scene-v-A-positioning
   \wdfn
   \adobe-bold
   \line { You know, it could all be as it was, \lnum #44 }
 
-scene-v-A-section = \markup
-  \section-font-size
-  \scene-v-A-positioning
-  \scene-v-A
-
-scene-v-A-parts = \markup
-  \parts-font-size
-  \scene-v-A-parts-positioning
-  \scene-v-A
-
 scene-v-B = \markup
+  \scene-v-B-positioning
   \wdfn
   \adobe-bold
   \column {
   \adobe-italic \justify { OWL is fearful of pronouncing the next word: }
   \line { Again. \lnum #45 } }
 
-scene-v-B-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-v-B-positioning
-  \scene-v-B
-
-scene-v-B-parts = \markup
-  \parts-compressed-baseline-skip
-  \parts-font-size
-  \scene-v-B-parts-positioning
-  \scene-v-B
-
 scene-v-C = \markup
+  \scene-v-C-positioning
   \wdfn
   \adobe-bold
   \column {
@@ -60,24 +30,9 @@ scene-v-C = \markup
   \line { But it's time I did what I should. \lnum #46 }
   \line { It's all in my head. \lnum #47 } }
 
-scene-v-C-section = \markup
-  \section-baseline-skip
-  \section-font-size
-  \scene-v-C-positioning
-  \scene-v-C
-
-scene-v-C-parts = \markup
-  \parts-baseline-skip
-  \parts-font-size
-  \scene-v-C-parts-positioning
-  \scene-v-C
-
 scene-v-D = \markup
+  \scene-v-D-positioning
   \wdfn
   \adobe-italic
   \line { End scene 5. }
 
-scene-v-D-section = \markup
-  \section-font-size
-  \scene-v-D-positioning
-  \scene-v-D

@@ -403,89 +403,74 @@ def vc(m):
 
 
 def owl(skips):
-    wrappers = baca.markup(
+    baca.markup(
         skips[1 - 1],
-        r"\scene-i-title-section",
+        r"\scene-i-title",
         baca.tweak.x_extent_false(),
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
+    baca.markup(
         skips[1 - 1],
-        r"\scene-i-title-parts",
+        r"\scene-i-A",
         baca.tweak.x_extent_false(),
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
-        skips[1 - 1],
-        r"\scene-i-A-section",
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[1 - 1],
-        r"\scene-i-A-parts",
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[7 - 1],
-        r"\scene-i-B-section",
+        r"\scene-i-B",
         baca.tweak.x_extent_false(),
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[7 - 1],
-        r"\scene-i-B-parts",
-        baca.tweak.x_extent_false(),
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
     baca.mark(
         skips[7 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
-    #
-    wrappers = baca.markup(
+    baca.markup(
         skips[8 - 1],
-        r"\scene-i-parenthesized-title-section",
+        r"\scene-i-parenthesized-title",
         baca.tweak.x_extent_false(),
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    #
     baca.mark(
         skips[9 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
-    #
-    wrappers = baca.markup(
+    #    #
+    #    wrappers = baca.markup(
+    #        skips[9 - 1],
+    #        r"\scene-i-C-section",
+    #        baca.tweak.x_extent_false(),
+    #    )
+    #    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    #    wrappers = baca.markup(
+    #        skips[9 - 1],
+    #        r"\scene-i-C-parts",
+    #        baca.tweak.x_extent_false(),
+    #    )
+    #    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    baca.markup(
         skips[9 - 1],
-        r"\scene-i-C-section",
+        r"\scene-i-C",
         baca.tweak.x_extent_false(),
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[9 - 1],
-        r"\scene-i-C-parts",
-        baca.tweak.x_extent_false(),
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
-    #
-    wrappers = baca.markup(
+    #    #
+    #    wrappers = baca.markup(
+    #        skips[11 - 1],
+    #        r"\scene-i-D-section",
+    #        baca.tweak.x_extent_false(),
+    #    )
+    #    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    #    wrappers = baca.markup(
+    #        skips[11 - 1],
+    #        r"\scene-i-D-parts",
+    #        baca.tweak.x_extent_false(),
+    #    )
+    #    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
+    baca.markup(
         skips[11 - 1],
-        r"\scene-i-D-section",
+        r"\scene-i-D",
         baca.tweak.x_extent_false(),
     )
-    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.markup(
-        skips[11 - 1],
-        r"\scene-i-D-parts",
-        baca.tweak.x_extent_false(),
-    )
-    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
     #
     baca.mark(
         skips[11 - 1],

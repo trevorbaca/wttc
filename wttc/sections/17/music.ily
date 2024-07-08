@@ -14,18 +14,12 @@ number.17.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "17"
     s1 * 5/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xi-A-section
-      %! +SECTION
+    _ \scene-xi-A
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xi-title-section
-      %! +SECTION
+    _ \scene-xi-title
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-title-section
+    _ \scene-xii-title
     - \tweak padding 1.5
     - \baca-rehearsal-mark-markup "I" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
@@ -169,10 +163,8 @@ number.17.Skips = {
 
     % [Skips measure 6]
     s1 * 7/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-xii-A-section
+    _ \scene-xii-A
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

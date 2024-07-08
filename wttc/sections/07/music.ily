@@ -16,28 +16,13 @@ number.7.Skips = {
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "07"
     s1 * 9/4
-      %! +PARTS
-%%% - \tweak X-extent ##f
-      %! +PARTS
-%%% _ \scene-iv-J-parts
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iv-J-section
-      %! +SECTION
+    _ \scene-iv-J
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iv-parenthesized-title-section
-      %! +PARTS
-%%% _ \scene-iv-G-parts
-      %! +SECTION
-    _ \scene-iv-G-section
-      %! +SECTION
-    _ \scene-iv-H-section
-      %! +PARTS
-%%% _ \scene-iv-I-parts
-      %! +SECTION
-    _ \scene-iv-I-section
+    _ \scene-iv-parenthesized-title
+    _ \scene-iv-G
+    _ \scene-iv-H
+    _ \scene-iv-I
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -73,14 +58,9 @@ number.7.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=50
     s1 * 2/4
-      %! +SECTION
     - \tweak X-extent ##f
-      %! +SECTION
-    _ \scene-iv-L-section
-      %! +PARTS
-%%% _ \scene-iv-K-parts
-      %! +SECTION
-    _ \scene-iv-K-section
+    _ \scene-iv-L
+    _ \scene-iv-K
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
