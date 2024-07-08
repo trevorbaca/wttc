@@ -157,16 +157,15 @@ def main(environment):
     spacing = baca.layout.Spacing(
         default=(1, 32),
         centered_bar_number_transparent_true=[1, 4],
-        # TODO: change `overrides` to `strict_overrides`
-        overrides=[
-            baca.layout.Override((1, 4), (1, 32)),
-            baca.layout.Override((5, 11), (1, 32)),
-        ],
         nonstrict_overrides=[
             baca.layout.Override(1, (1, 32)),
             baca.layout.Override(3, (1, 32)),
             baca.layout.Override(52, (1, 32)),
             baca.layout.Override(54, (1, 32)),
+        ],
+        strict_overrides=[
+            baca.layout.Override((1, 4), (1, 32)),
+            baca.layout.Override((5, 11), (1, 32)),
         ],
     )
     return baca.section.make_layout_score(

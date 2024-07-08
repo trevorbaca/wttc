@@ -491,7 +491,7 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
-        overrides=[
+        strict_overrides=[
             baca.layout.Override((7, 10), (1, 20)),
             baca.layout.Override((11, 12), (1, 48)),
         ],
