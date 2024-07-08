@@ -20,9 +20,13 @@ number.3.Skips = {
 %%% - \tweak extra-offset #'(-10 . 4)
       %! +PARTS
 %%% - \baca-rehearsal-mark-markup "A" #2
-      %! -PARTS
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8.5)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "A" #6
+      %! +SECTION
     - \tweak padding 1.5
-      %! -PARTS
+      %! +SECTION
     - \baca-rehearsal-mark-markup "A" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line

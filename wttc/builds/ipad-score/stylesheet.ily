@@ -90,6 +90,8 @@
     \override CenteredBarNumber.color = #blue
     \override CenteredBarNumber.extra-offset = #'(0 . -6)
     \override CenteredBarNumber.font-size = 2
+    \override Glissando.minimum-length = 5
+    \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
   }
 }
 

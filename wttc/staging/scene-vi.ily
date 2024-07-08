@@ -75,7 +75,5 @@ scene-vi-G = \markup
   \adobe-bold
   \column {
   \line { I must be here before you, then. \lnum #65 }
-  \line { \null }
-  \line { \null }
   \adobe-italic \line { End scene 6. } }
 

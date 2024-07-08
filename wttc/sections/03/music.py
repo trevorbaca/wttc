@@ -46,7 +46,14 @@ def GLOBALS(skips):
         baca.tweak.padding(1.5),
         font_size=6,
     )
-    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.rehearsal_mark(
+        skips[1 - 1],
+        "A",
+        baca.tweak.extra_offset((0, -8.5)),
+        font_size=6,
+    )
+    baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
     wrappers = baca.rehearsal_mark(
         skips[1 - 1],
         "A",

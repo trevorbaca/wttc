@@ -20,9 +20,13 @@ number.5.Skips = {
 %%% - \tweak extra-offset #'(-4 . 4)
       %! +PARTS
 %%% - \baca-rehearsal-mark-markup "C" #2
-      %! -PARTS
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8.5)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "C" #6
+      %! +SECTION
     - \tweak padding 1.5
-      %! -PARTS
+      %! +SECTION
     - \baca-rehearsal-mark-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -803,11 +807,15 @@ number.5.Skips = {
 %%% - \tweak extra-offset #'(-6 . 4)
       %! +PARTS
 %%% - \baca-rehearsal-mark-markup "D" #2
-      %! -PARTS
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8.5)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "D" #6
+      %! +SECTION
     - \tweak extra-offset #'(2 . 0)
-      %! -PARTS
+      %! +SECTION
     - \tweak padding 1.5
-      %! -PARTS
+      %! +SECTION
     - \baca-rehearsal-mark-markup "D" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT

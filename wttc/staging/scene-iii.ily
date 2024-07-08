@@ -44,8 +44,9 @@ scene-iii-D = \markup
   \wdfn
   \adobe-bold
   \column {
-  \adobe-italic \line { Slight pause after \hspace #0.5 \adobe-bold \box B
+  \adobe-italic \justify { Slight pause after \hspace #0.5 \adobe-bold \box B
   \hspace #-0.5 , OWL perhaps changing position on stage. }
+  \line { \null }
   \line { \null }
   \line { To where I have to be to find you. \lnum #22 }
   \line { \null }

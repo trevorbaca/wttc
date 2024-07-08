@@ -8,6 +8,14 @@
   \override #'(font-name . "Adobe Garamond Pro Italic")
   \etc
 
+\markup ipad-baseline-skip = \markup
+  \override #'(baseline-skip . 3.5)
+  \etc
+
+\markup ipad-font-size = \markup
+  \override #'(font-size . 0)
+  \etc
+
 \markup parenthesized-section-title-font-size = \markup
   \override #'(font-size . 6)
   \etc

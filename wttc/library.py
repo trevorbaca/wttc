@@ -13,6 +13,7 @@ def BG(*arguments):
     return baca.rhythm.BG(*arguments, slur=False)
 
 
+ONLY_IPAD_SCORE = abjad.Tag("+IPAD_SCORE")
 ONLY_LETTER_PARTS_CELLO = abjad.Tag("+LETTER_PARTS_CELLO")
 ONLY_LETTER_PARTS_FLUTE = abjad.Tag("+LETTER_PARTS_FLUTE")
 ONLY_LETTER_PARTS_GUITAR_1 = abjad.Tag("+LETTER_PARTS_GUITAR_1")

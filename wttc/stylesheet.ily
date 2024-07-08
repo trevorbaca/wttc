@@ -129,6 +129,8 @@
     \override Clef.whiteout-style = #'outline
     \override Dots.layer = 2
     \override Dots.whiteout = ##t
+    \override Glissando.minimum-length = 5
+    \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
     \override Glissando.thickness = 3
     \override Hairpin.to-barline = ##f
     \shape #'((0 . 0) (0.5 . 0) (1 . 0) (2 . 0)) LaissezVibrerTie         

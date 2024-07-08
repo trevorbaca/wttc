@@ -60,7 +60,14 @@ def GLOBALS(skips):
         baca.tweak.padding(1.5),
         font_size=6,
     )
-    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.rehearsal_mark(
+        skips[1 - 1],
+        "B",
+        baca.tweak.extra_offset((0, -7)),
+        font_size=6,
+    )
+    baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
     wrappers = baca.rehearsal_mark(
         skips[1 - 1],
         "B",
@@ -1362,12 +1369,18 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 48),
+        nonstrict_overrides=[
+            baca.layout.Override((1, 6), (1, 48)),
+        ],
     )
     return baca.section.make_layout_score(
         breaks,
         environment.metadata["time_signatures"],
         first_measure_number=environment.first_measure_number,
         has_anchor_skip=environment.metadata["has_anchor_skip"],
+        measure_initial_grace_notes={
+            3: [r"\grace { s8 } % DUMMY GRACE"],
+        },
         spacing=spacing,
     )
 

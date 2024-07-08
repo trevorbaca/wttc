@@ -20,6 +20,7 @@
             s1 * 4/4
 
             % [Breaks measure 3]
+            \grace { s8 } % DUMMY GRACE
             s1 * 3/4
 
             % [Breaks measure 4]
@@ -79,27 +80,28 @@
         {   %*% SpacingCommands
 
             % [SpacingCommands measure 1]
-            \baca-start-strict-spacing-section #1 #48
+            \baca-start-nonstrict-spacing-section #1 #48
             s1 * 6/4
 
             % [SpacingCommands measure 2]
-            \baca-start-strict-spacing-section #1 #48
+            \baca-start-nonstrict-spacing-section #1 #48
             s1 * 4/4
 
             % [SpacingCommands measure 3]
-            \baca-start-strict-spacing-section #1 #48
+            \baca-start-nonstrict-spacing-section #1 #48
+            \grace { s8 } % DUMMY GRACE
             s1 * 3/4
 
             % [SpacingCommands measure 4]
-            \baca-start-strict-spacing-section #1 #48
+            \baca-start-nonstrict-spacing-section #1 #48
             s1 * 4/4
 
             % [SpacingCommands measure 5]
-            \baca-start-strict-spacing-section #35 #1152
+            \baca-start-nonstrict-spacing-section #35 #1152
             s1 * 4/4
 
             % [SpacingCommands measure 6]
-            \baca-start-strict-spacing-section #1 #48
+            \baca-start-nonstrict-spacing-section #1 #48
             s1 * 4/4
 
             % [SpacingCommands measure 7]
