@@ -1,90 +1,242 @@
 \version "2.25.16"
+\include "../../../staging/share.ily"
+\include "../transparent-markups.ily"
 
 % SCENE 1
 
-\markup scene-i-title-parts-positioning = \markup \translate #'(44 . 26) \etc
-\markup scene-i-A-parts-positioning = \markup
+\markup scene-i-title-positioning = \markup
+  \parts-title-font-size
+  \translate #'(44 . 26)
+  \etc
+\markup scene-i-A-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
   \override #'(line-width . 110)
   \translate #'(-5 . 18)
   \etc
-\markup scene-i-B-parts-positioning = \markup
+\markup scene-i-B-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
   \override #'(line-width . 110)
   \translate #'(-72 . -25)
   \etc
-\markup scene-i-C-parts-positioning = \markup \translate #'(-20 . -30) \etc
-\markup scene-i-D-parts-positioning = \markup \translate #'(-16 . -28) \etc
+\markup scene-i-C-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-20 . -30)
+  \etc
+\markup scene-i-D-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-16 . -28)
+  \etc
 
 % SCENE 2
 
-\markup scene-ii-title-parts-positioning = \markup \translate #'(-8 . 8) \etc
-\markup scene-ii-A-parts-positioning = \markup \translate #'(-10 . -15) \etc
-\markup scene-ii-B-parts-positioning = \markup \translate #'(0 . -15) \etc
-\markup scene-ii-C-parts-positioning = \markup \translate #'(0 . -15) \etc
-\markup scene-ii-D-parts-positioning = \markup \translate #'(0 . -15) \etc
-\markup scene-ii-E-parts-positioning = \markup \translate #'(0 . -15) \etc
-\markup scene-ii-F-parts-positioning = \markup \translate #'(0 . -15) \etc
-\markup scene-ii-G-parts-positioning = \markup \translate #'(-16 . -18) \etc
-\markup scene-ii-H-parts-positioning = \markup \translate #'(-34 . -45) \etc
+\markup scene-ii-title-positioning = \markup
+  \parts-title-font-size
+  \translate #'(-8 . 8)
+  \etc
+\markup scene-ii-A-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-10 . -15)
+  \etc
+\markup scene-ii-B-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -15)
+  \etc
+\markup scene-ii-C-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -15)
+  \etc
+\markup scene-ii-D-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -15)
+  \etc
+\markup scene-ii-E-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -15)
+  \etc
+\markup scene-ii-F-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -15)
+  \etc
+\markup scene-ii-G-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-16 . -18)
+  \etc
+\markup scene-ii-H-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-34 . -45)
+  \etc
 
 % SCENE 3
 
-\markup scene-iii-title-parts-positioning = \markup \translate #'(-10 . 16) \etc
-\markup scene-iii-A-parts-positioning = \markup \translate #'(-40 . -22) \etc
-\markup scene-iii-B-parts-positioning = \markup
+\markup scene-iii-title-positioning = \markup
+  \parts-title-font-size
+  \translate #'(-10 . 16)
+  \etc
+\markup scene-iii-A-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-40 . -22)
+  \etc
+\markup scene-iii-B-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
   \override #'(line-width . 82)
   \translate #'(-72 . -24)
   \etc
-\markup scene-iii-C-parts-positioning = \markup
+\markup scene-iii-C-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
   \override #'(line-width . 80)
   \translate #'(-65 . -25)
   \etc
-\markup scene-iii-D-parts-positioning = \markup \translate #'(-65 . -44) \etc
-\markup scene-iii-E-parts-positioning = \markup \translate #'(-55 . -24) \etc
-\markup scene-iii-F-parts-positioning = \markup \translate #'(9 . -13) \etc
+\markup scene-iii-D-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-65 . -44)
+  \etc
+\markup scene-iii-E-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-55 . -24)
+  \etc
+\markup scene-iii-F-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(9 . -13)
+  \etc
 
 % SCENE 4
 
-\markup scene-iv-title-parts-positioning = \markup \translate #'(-8 . 34) \etc
-\markup scene-iv-A-parts-positioning = \markup \translate #'(24 . 24) \etc
-\markup scene-iv-B-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-iv-C-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-iv-D-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-iv-E-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-iv-F-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-iv-G-parts-positioning = \markup \translate #'(0 . -20) \etc
-\markup scene-iv-I-parts-positioning = \markup
+\markup scene-iv-title-positioning = \markup
+  \parts-title-font-size
+  \translate #'(-8 . 34)
+  \etc
+\markup scene-iv-A-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(24 . 24)
+  \etc
+\markup scene-iv-B-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-iv-C-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-iv-D-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-iv-E-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-iv-F-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-iv-G-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -20)
+  \etc
+\markup scene-iv-I-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
   \override #'(line-width . 36)
   \translate #'(26 . -20)
   \etc
-\markup scene-iv-J-parts-positioning = \markup
+\markup scene-iv-J-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
   \override #'(line-width . 36)
   \translate #'(72 . -20)
   \etc
-\markup scene-iv-K-parts-positioning = \markup \translate #'(42 . -13) \etc
+\markup scene-iv-K-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(42 . -13)
+  \etc
 
 % SCENE 5
 
-\markup scene-v-title-parts-positioning = \markup \translate #'(-8 . 16) \etc
-\markup scene-v-A-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-v-B-parts-positioning = \markup \translate #'(-1 . -13) \etc
-\markup scene-v-C-parts-positioning = \markup \translate #'(0 . -13) \etc
+\markup scene-v-title-positioning = \markup
+  \parts-title-font-size
+  \translate #'(-8 . 16)
+  \etc
+\markup scene-v-A-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-v-B-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-1 . -13)
+  \etc
+\markup scene-v-C-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
 
 % SCENE 6
 
-\markup scene-vi-title-parts-positioning = \markup \translate #'(-8 . 15) \etc
-\markup scene-vi-A-parts-positioning = \markup \translate #'(30 . 10) \etc
-\markup scene-vi-B-parts-positioning = \markup \translate #'(-10 . -13) \etc
-\markup scene-vi-C-parts-positioning = \markup \translate #'(0 . -18) \etc
-\markup scene-vi-D-parts-positioning = \markup \translate #'(0 . -13) \etc
-\markup scene-vi-E-parts-positioning = \markup
+\markup scene-vi-title-positioning = \markup
+  \parts-title-font-size
+  \translate #'(-8 . 15)
+  \etc
+\markup scene-vi-A-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(30 . 10)
+  \etc
+\markup scene-vi-B-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-10 . -13)
+  \etc
+\markup scene-vi-C-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -18)
+  \etc
+\markup scene-vi-D-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(0 . -13)
+  \etc
+\markup scene-vi-E-positioning = \markup
   \override #'(baseline-skip . 3)
   \override #'(font-size . 0)
   \override #'(line-width . 50)
   \translate #'(-50 . -25)
   \etc
-\markup scene-vi-F-parts-positioning = \markup
+\markup scene-vi-F-positioning = \markup
   \override #'(baseline-skip . 3)
   \override #'(font-size . 0)
   \translate #'(-26 . -18)
   \etc
-\markup scene-vi-G-parts-positioning = \markup \translate #'(-28 . -20) \etc
+\markup scene-vi-G-positioning = \markup
+  \parts-baseline-skip
+  \parts-font-size
+  \translate #'(-28 . -20)
+  \etc
