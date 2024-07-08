@@ -1,7 +1,6 @@
 \version "2.25.16"
 \include "../staging/share.ily"
 
-
 % SCENE 1
 
 \markup scene-i-title-positioning = \markup

@@ -1,5 +1,5 @@
 \version "2.25.16"
-\include "../../../stylesheet.ily"
+\include "../../stylesheet.ily"
 
 #(set-default-paper-size "letterlandscape")
 #(set-global-staff-size 18)
