@@ -167,7 +167,6 @@
     \override TupletNumber.font-size = 1
     autoBeaming = ##f
     barNumberVisibility = #all-bar-numbers-visible
-    centerBarNumbers = ##t
     tupletFullLength = ##t
   }
 }
