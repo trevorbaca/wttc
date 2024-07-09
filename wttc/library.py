@@ -1742,10 +1742,10 @@ def E1(
         baca.bend_after(pleaves, bends)
     if pizzicato is True:
         for phead in baca.select.pheads(pleaves):
-            baca.markup(
+            baca.articulation(
                 phead,
-                r"\markup pizz.",
-                direction=abjad.DOWN,
+                "+",
+                baca.tweak.direction_down(),
             )
     if string_numbers:
         assert isinstance(string_numbers, list), repr(string_numbers)

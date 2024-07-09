@@ -3523,9 +3523,10 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
+        - \tweak direction #down
+        - \stopped
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Violin”)"
-        _ \markup pizz.
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3569,7 +3570,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3605,7 +3607,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3837,7 +3840,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3876,7 +3880,8 @@ number.10.Violin.Music = {
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
         \ff
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3911,7 +3916,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3943,7 +3949,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -3980,7 +3987,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -4714,7 +4722,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -4746,7 +4755,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -4783,7 +4793,8 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5094,9 +5105,10 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
+        - \tweak direction #down
+        - \stopped
           %! REAPPLIED_INSTRUMENT_ALERT
         %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-        _ \markup pizz.
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5139,7 +5151,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5174,7 +5187,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5333,7 +5347,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5577,7 +5592,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5644,7 +5660,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5681,7 +5698,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5765,7 +5783,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \ff
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5832,7 +5851,8 @@ number.10.Cello.Music = {
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
         \mp
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -5966,7 +5986,8 @@ number.10.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START

@@ -1695,7 +1695,8 @@ number.1.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -2602,7 +2603,8 @@ number.1.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mp
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
@@ -2635,7 +2637,8 @@ number.1.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
-        _ \markup pizz.
+        - \tweak direction #down
+        - \stopped
           %! SPANNER_START
         - \baca-invisible-line
           %! SPANNER_START
