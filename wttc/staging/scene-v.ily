@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-v-title = \markup
-  \scene-v-title-positioning
+  \scene-v-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE 5. }
 
 scene-v-A = \markup
-  \scene-v-A-positioning
+  \scene-v-A-overrides
   \wdfn
   \adobe-bold
   \line { You know, it could all be as it was, \lnum #44 }
 
 scene-v-B = \markup
-  \scene-v-B-positioning
+  \scene-v-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -22,7 +22,7 @@ scene-v-B = \markup
   \line { Again. \lnum #45 } }
 
 scene-v-C = \markup
-  \scene-v-C-positioning
+  \scene-v-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -31,7 +31,7 @@ scene-v-C = \markup
   \line { It's all in my head. \lnum #47 } }
 
 scene-v-D = \markup
-  \scene-v-D-positioning
+  \scene-v-D-overrides
   \wdfn
   \adobe-italic
   \line { End scene 5. }

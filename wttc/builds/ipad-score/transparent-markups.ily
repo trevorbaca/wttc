@@ -2,39 +2,39 @@
 
 % SCENE 1
 
-\markup scene-i-parenthesized-title-positioning = \markup
+\markup scene-i-parenthesized-title-overrides = \markup
   \transparent
   \etc
 
 % SCENE 3
 
-\markup scene-iii-parenthesized-title-positioning = \markup
+\markup scene-iii-parenthesized-title-overrides = \markup
   \transparent
   \etc
-\markup scene-iii-G-positioning = \markup
+\markup scene-iii-G-overrides = \markup
   \transparent
   \etc
 
 % SCENE 4
 
-\markup scene-iv-parenthesized-title-positioning = \markup
+\markup scene-iv-parenthesized-title-overrides = \markup
   \transparent
   \etc
-\markup scene-iv-H-positioning = \markup
+\markup scene-iv-H-overrides = \markup
   \transparent
   \etc
-\markup scene-iv-L-positioning = \markup
+\markup scene-iv-L-overrides = \markup
   \transparent
   \etc
 
 % SCENE 5
 
-\markup scene-v-D-positioning = \markup
+\markup scene-v-D-overrides = \markup
   \transparent
   \etc
 
 % SCENE 6
 
-\markup scene-vi-before-F-positioning = \markup
+\markup scene-vi-before-F-overrides = \markup
   \transparent
   \etc

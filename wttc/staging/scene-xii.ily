@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-xii-title = \markup
-  \scene-xii-title-positioning
+  \scene-xii-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 12. }
 
 scene-xii-parenthesized-title = \markup
-  \scene-xii-parenthesized-title-positioning
+  \scene-xii-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 12) }
 
 scene-xii-A = \markup
-  \scene-xii-A-positioning
+  \scene-xii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -22,7 +22,7 @@ scene-xii-A = \markup
   \line { When the time is right — \lnum #163 } }
 
 scene-xii-B = \markup
-  \scene-xii-B-positioning
+  \scene-xii-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -44,7 +44,7 @@ scene-xii-B = \markup
   \line { That's my expectation, any — \lnum #173 } }
 
 scene-xii-C = \markup
-  \scene-xii-C-positioning
+  \scene-xii-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -57,7 +57,7 @@ scene-xii-C = \markup
   \line { From all that time \dots \lnum #177 } }
 
 scene-xii-D = \markup
-  \scene-xii-D-positioning
+  \scene-xii-D-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -65,7 +65,7 @@ scene-xii-D = \markup
   \line { The green path \dots \lnum #178 } }
 
 scene-xii-E = \markup
-  \scene-xii-E-positioning
+  \scene-xii-E-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -73,7 +73,7 @@ scene-xii-E = \markup
   \line { What was it? When was this? \lnum #179 } }
 
 scene-xii-F = \markup
-  \scene-xii-F-positioning
+  \scene-xii-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -82,7 +82,7 @@ scene-xii-F = \markup
   \line { It was a way — \lnum #181 } }
 
 scene-xii-G = \markup
-  \scene-xii-G-positioning
+  \scene-xii-G-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -90,7 +90,7 @@ scene-xii-G = \markup
   \line { Waving to us, she was waving to us. And we — \lnum #182 } }
 
 scene-xii-H = \markup
-  \scene-xii-H-positioning
+  \scene-xii-H-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -98,7 +98,7 @@ scene-xii-H = \markup
   \line { No. \lnum #183 } }
 
 scene-xii-I = \markup
-  \scene-xii-I-positioning
+  \scene-xii-I-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -107,7 +107,7 @@ scene-xii-I = \markup
   \line { It's all gone. \lnum #185 } }
 
 scene-xii-J = \markup
-  \scene-xii-J-positioning
+  \scene-xii-J-overrides
   \wdfn
   \adobe-italic \line { End scene 12. }
 

@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-ii-title = \markup
-  \scene-ii-title-positioning
+  \scene-ii-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 2. }
 
 scene-ii-A = \markup
-  \scene-ii-A-positioning
+  \scene-ii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -16,7 +16,7 @@ scene-ii-A = \markup
   \line { When you would call me your Owl. \lnum #9 } }
 
 scene-ii-B = \markup
-  \scene-ii-B-positioning
+  \scene-ii-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -24,19 +24,19 @@ scene-ii-B = \markup
   \line { Your Owl will be there, \lnum #11 } }
 
 scene-ii-C = \markup
-  \scene-ii-C-positioning
+  \scene-ii-C-overrides
   \wdfn
   \adobe-bold
   \line { When the time comes. \lnum #12 }
 
 scene-ii-D = \markup
-  \scene-ii-D-positioning
+  \scene-ii-D-overrides
   \wdfn
   \adobe-bold
   \line { Look: \lnum #13 }
 
 scene-ii-E = \markup
-  \scene-ii-E-positioning
+  \scene-ii-E-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -44,7 +44,7 @@ scene-ii-E = \markup
   \line { Now, \lnum #15 } }
 
 scene-ii-F = \markup
-  \scene-ii-F-positioning
+  \scene-ii-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -52,7 +52,7 @@ scene-ii-F = \markup
   \adobe-italic \justify { OWL is diverted by a memory. } }
 
 scene-ii-G = \markup
-  \scene-ii-G-positioning
+  \scene-ii-G-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -61,7 +61,7 @@ scene-ii-G = \markup
   \adobe-italic \line { OWL pulls back from the memory, cut off by violin. } }
 
 scene-ii-H = \markup
-  \scene-ii-H-positioning
+  \scene-ii-H-overrides
   \wdfn
   \adobe-bold
   \column {

@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-iii-title = \markup
-  \scene-iii-title-positioning
+  \scene-iii-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 3. }
 
 scene-iii-parenthesized-title = \markup
-  \scene-iii-parenthesized-title-positioning
+  \scene-iii-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 3) }
 
 scene-iii-A = \markup
-  \scene-iii-A-positioning
+  \scene-iii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -22,7 +22,7 @@ scene-iii-A = \markup
   \line { Not now \dots \lnum #20 } }
 
 scene-iii-B = \markup
-  \scene-iii-B-positioning
+  \scene-iii-B-overrides
   \wdfn
   \adobe-italic \justify { Musicians pause a moment after \hspace #0.5
   \adobe-bold \box A \hspace #-0.5 , as if waiting to see if OWL has anything
@@ -30,7 +30,7 @@ scene-iii-B = \markup
   \adobe-bold \box B \hspace #-0.5 . }
 
 scene-iii-C = \markup
-  \scene-iii-C-positioning
+  \scene-iii-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -40,7 +40,7 @@ scene-iii-C = \markup
   \line { On my — \lnum #21 } }
 
 scene-iii-D = \markup
-  \scene-iii-D-positioning
+  \scene-iii-D-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -54,7 +54,7 @@ scene-iii-D = \markup
   \adobe-italic \line { Then begin \hspace #0.5 \adobe-bold \box C \hspace #-0.5 . } }
 
 scene-iii-E = \markup
-  \scene-iii-E-positioning
+  \scene-iii-E-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -66,7 +66,7 @@ scene-iii-E = \markup
   \line { If what? \lnum #28 } }
 
 scene-iii-F = \markup
-  \scene-iii-F-positioning
+  \scene-iii-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -74,7 +74,7 @@ scene-iii-F = \markup
   \line { If you and I \dots \lnum #29 } }
 
 scene-iii-G = \markup 
-  \scene-iii-G-positioning
+  \scene-iii-G-overrides
   \wdfn
   \adobe-italic
   \line { End scene 3. }

@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-ix-title = \markup
-  \scene-ix-title-positioning
+  \scene-ix-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 9. }
 
 scene-ix-parenthesized-title = \markup
-  \scene-ix-parenthesized-title-positioning
+  \scene-ix-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 9) }
 
 scene-ix-A = \markup
-  \scene-ix-A-positioning
+  \scene-ix-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -30,14 +30,14 @@ scene-ix-A = \markup
   \line { And all this time \dots \lnum #92 } }
 
 scene-ix-B = \markup
-  \scene-ix-B-positioning
+  \scene-ix-B-overrides
   \wdfn
   \adobe-italic \justify { Music starts. After a few moments, OWL starts to
   walk away from the window and table, looks around the rest of the “chamber,”
   but does not engage with the audience. }
 
 scene-ix-C = \markup
-  \scene-ix-C-positioning
+  \scene-ix-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -64,7 +64,7 @@ scene-ix-C = \markup
   \line { Did you say? \lnum #113 } }
 
 scene-ix-C-continued = \markup
-  \scene-ix-C-continued-positioning
+  \scene-ix-C-continued-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -83,13 +83,13 @@ scene-ix-C-continued = \markup
   goes behind it, and looks through it in the direction of the audience. } }
 
 scene-ix-D = \markup
-  \scene-ix-D-positioning
+  \scene-ix-D-overrides
   \wdfn
   \adobe-bold
   \line { Nothing. \lnum #124 }
 
 scene-ix-E = \markup
-  \scene-ix-E-positioning
+  \scene-ix-E-overrides
   \wdfn
   \adobe-bold
   \column {

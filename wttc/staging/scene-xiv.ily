@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-xiv-title = \markup
-  \scene-xiv-title-positioning
+  \scene-xiv-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 14. }
 
 scene-xiv-A = \markup
-  \scene-xiv-A-positioning
+  \scene-xiv-A-overrides
   \wdfn
   \adobe-bold
   \line { Where was I? \lnum #207 }
 
 scene-xiv-B = \markup
-  \scene-xiv-B-positioning
+  \scene-xiv-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -25,7 +25,7 @@ scene-xiv-B = \markup
   \line { Waving, \lnum #212 } }
 
 scene-xiv-C = \markup
-  \scene-xiv-C-positioning
+  \scene-xiv-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -33,7 +33,7 @@ scene-xiv-C = \markup
   \line { Waving to us. \lnum #214 } }
 
 scene-xiv-D = \markup
-  \scene-xiv-D-positioning
+  \scene-xiv-D-overrides
   \wdfn
   \adobe-bold
   \column {

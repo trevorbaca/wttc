@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-xx-title = \markup
-  \scene-xx-title-positioning
+  \scene-xx-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 20. }
 
 scene-xx-A = \markup
-  \scene-xx-A-positioning
+  \scene-xx-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -31,13 +31,13 @@ scene-xx-A = \markup
   \adobe-italic \line { Pause. } }
 
 scene-xx-B = \markup
-  \scene-xx-B-positioning
+  \scene-xx-B-overrides
   \wdfn
   \adobe-bold
   \line { To sing. \hspace #-0.5 \super 5 }
 
 scene-xx-C = \markup
-  \scene-xx-C-positioning
+  \scene-xx-C-overrides
   \wdfn
   \adobe-italic \line { End scene 20. }
 

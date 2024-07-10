@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-x-title = \markup
-  \scene-x-title-positioning
+  \scene-x-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 10. }
 
 scene-x-parenthesized-title = \markup
-  \scene-x-parenthesized-title-positioning
+  \scene-x-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 10) }
 
 scene-x-A = \markup
-  \scene-x-A-positioning
+  \scene-x-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -29,13 +29,13 @@ scene-x-A = \markup
   \adobe-italic \line { Pause. } }
 
 scene-x-B = \markup
-  \scene-x-B-positioning
+  \scene-x-B-overrides
   \wdfn
   \adobe-bold
   \line { Promised \dots \lnum #130 }
 
 scene-x-C = \markup
-  \scene-x-C-positioning
+  \scene-x-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -50,7 +50,7 @@ scene-x-C = \markup
   \line { Will it have to do with \dots ? \lnum #132 } }
 
 scene-x-D = \markup
-  \scene-x-D-positioning
+  \scene-x-D-overrides
   \wdfn
   \adobe-bold
   \column {

@@ -4,19 +4,19 @@
 scene-i-title = \markup
   \wdfn
   \adobe-bold
-  \scene-i-title-positioning
+  \scene-i-title-overrides
   \line { SCENE \hspace #1 1. }
 
 scene-i-parenthesized-title = \markup
   \wdfn
   \adobe-bold
-  \scene-i-parenthesized-title-positioning
+  \scene-i-parenthesized-title-overrides
   \line { (SCENE \hspace #1 1) }
 
 scene-i-A = \markup
   \wdfn
   \adobe-italic
-  \scene-i-A-positioning
+  \scene-i-A-overrides
   \justify { The stage is set with chairs and desks for the musicians, all at
   one side. Elsewhere are a window (perhaps suspended) and a table on which
   stands a glass of violets. OWL enters with the musicians, sits with them, may
@@ -24,7 +24,7 @@ scene-i-A = \markup
   member of the ensemble. }
 
 scene-i-B = \markup
-  \scene-i-B-positioning
+  \scene-i-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -42,7 +42,7 @@ scene-i-B = \markup
   else. } }
 
 scene-i-C = \markup
-  \scene-i-C-positioning
+  \scene-i-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -57,7 +57,7 @@ scene-i-C = \markup
   \adobe-italic \line { Then play measures 10 and 11, as if in response. } }
 
 scene-i-D = \markup
-  \scene-i-D-positioning
+  \scene-i-D-overrides
   \wdfn
   \adobe-bold
   \column {

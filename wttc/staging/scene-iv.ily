@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-iv-title = \markup
-  \scene-iv-title-positioning
+  \scene-iv-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 4. }
 
 scene-iv-parenthesized-title = \markup
-  \scene-iv-parenthesized-title-positioning
+  \scene-iv-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 4) }
@@ -22,7 +22,7 @@ scene-iv-footnote = \markup
   Music } (1961), final words in reverse order. } }
 
 scene-iv-A = \markup
-  \scene-iv-A-positioning
+  \scene-iv-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -32,31 +32,31 @@ scene-iv-A = \markup
   \adobe-italic \line { Music attaca. } }
 
 scene-iv-B = \markup
-  \scene-iv-B-positioning
+  \scene-iv-B-overrides
   \wdfn
   \adobe-bold
   \line { Close, \lnum #33 }
 
 scene-iv-C = \markup
-  \scene-iv-C-positioning
+  \scene-iv-C-overrides
   \wdfn
   \adobe-bold
   \line { You know that, \lnum #34 }
 
 scene-iv-D = \markup
-  \scene-iv-D-positioning
+  \scene-iv-D-overrides
   \wdfn
   \adobe-bold
   \line { Like left and right, \lnum #35 }
 
 scene-iv-E = \markup
-  \scene-iv-E-positioning
+  \scene-iv-E-overrides
   \wdfn
   \adobe-bold
   \line { Like night and day \lnum #36 }
 
 scene-iv-F = \markup
-  \scene-iv-F-positioning
+  \scene-iv-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -64,7 +64,7 @@ scene-iv-F = \markup
   \line { Like words and \lnum #38 } }
 
 scene-iv-G = \markup
-  \scene-iv-G-positioning
+  \scene-iv-G-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -72,14 +72,14 @@ scene-iv-G = \markup
   \line { Music — \lnum #39 } }
 
 scene-iv-H = \markup
-  \scene-iv-H-positioning
+  \scene-iv-H-overrides
   \wdfn
   \adobe-italic \justify { \bold { Still 1. } Sudden change in music and
   lighting as OWL is set uttering and fixed in position with one foot locked in
   place. OWL struggles against this fit, trying to pull the foot free. }
 
 scene-iv-I = \markup
-  \scene-iv-I-positioning
+  \scene-iv-I-overrides
   \wdfn
   \adobe-bold
   \center-column {
@@ -89,7 +89,7 @@ scene-iv-I = \markup
   fit is over as suddenly as it began. } }
 
 scene-iv-J = \markup
-  \scene-iv-J-positioning
+  \scene-iv-J-overrides
   \wdfn
   \adobe-bold
   \center-column {
@@ -99,7 +99,7 @@ scene-iv-J = \markup
   comes next. Then proceed together. } }
 
 scene-iv-K = \markup
-  \scene-iv-K-positioning
+  \scene-iv-K-overrides
   \wdfn
   \column {
   \adobe-italic
@@ -110,7 +110,7 @@ scene-iv-K = \markup
   \line { Like give and take. \lnum #43 } }
 
 scene-iv-L = \markup
-  \scene-iv-L-positioning
+  \scene-iv-L-overrides
   \wdfn
   \adobe-italic
   \line { End scene 4. }

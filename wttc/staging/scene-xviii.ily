@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-xviii-title = \markup
-  \scene-xviii-title-positioning
+  \scene-xviii-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 18. }
 
 scene-xviii-A = \markup
-  \scene-xviii-A-positioning
+  \scene-xviii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -18,13 +18,13 @@ scene-xviii-A = \markup
   \line { We should have stayed on it. \lnum #286 } }
 
 scene-xviii-B = \markup
-  \scene-xviii-B-positioning
+  \scene-xviii-B-overrides
   \wdfn
   \adobe-bold
   \line { Then all of this \dots \lnum #287 }
 
 scene-xviii-C = \markup
-  \scene-xviii-C-positioning
+  \scene-xviii-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -37,7 +37,7 @@ scene-xviii-C = \markup
   \line { Never mind what. \lnum #294 } }
 
 scene-xviii-D = \markup
-  \scene-xviii-D-positioning
+  \scene-xviii-D-overrides
   \wdfn
   \adobe-bold
   \column {

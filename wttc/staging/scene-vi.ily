@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-vi-title = \markup
-  \scene-vi-title-positioning
+  \scene-vi-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 6. }
 
 scene-vi-A = \markup
-  \scene-vi-A-positioning
+  \scene-vi-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -16,19 +16,19 @@ scene-vi-A = \markup
   \line { You tell me what to do. \lnum #49 } }
 
 scene-vi-B = \markup
-  \scene-vi-B-positioning
+  \scene-vi-B-overrides
   \wdfn
   \adobe-bold
   \line { You lay it all out for me, \lnum #50 }
 
 scene-vi-C = \markup
-  \scene-vi-C-positioning
+  \scene-vi-C-overrides
   \wdfn
   \adobe-bold
   \line { Tell me where to go \lnum #51 }
 
 scene-vi-D = \markup
-  \scene-vi-D-positioning
+  \scene-vi-D-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -36,7 +36,7 @@ scene-vi-D = \markup
   \line { You say, \lnum #53 } }
 
 scene-vi-E = \markup
-  \scene-vi-E-positioning
+  \scene-vi-E-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -53,13 +53,13 @@ scene-vi-E = \markup
   \line { Now I remember: \lnum #60 } }
 
 scene-vi-before-F = \markup
-  \scene-vi-before-F-positioning
+  \scene-vi-before-F-overrides
   \wdfn
   \adobe-italic
   \line { Freely, not coordinated with music: }
 
 scene-vi-F = \markup
-  \scene-vi-F-positioning
+  \scene-vi-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -70,7 +70,7 @@ scene-vi-F = \markup
   \line { Each little \dots \lnum #64 } }
 
 scene-vi-G = \markup
-  \scene-vi-G-positioning
+  \scene-vi-G-overrides
   \wdfn
   \adobe-bold
   \column {

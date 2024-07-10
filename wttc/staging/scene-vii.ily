@@ -2,19 +2,19 @@
 \include "share.ily"
 
 scene-vii-title = \markup
-  \scene-vii-title-positioning
+  \scene-vii-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 7. }
 
 scene-vii-parenthesized-title = \markup
-  \scene-vii-parenthesized-title-positioning
+  \scene-vii-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 7) }
 
 scene-vii-A = \markup
-  \scene-vii-A-positioning
+  \scene-vii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -22,7 +22,7 @@ scene-vii-A = \markup
   \line { No doubt you'll come before long. \lnum #66 } }
 
 scene-vii-B = \markup
-  \scene-vii-B-positioning
+  \scene-vii-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -30,7 +30,7 @@ scene-vii-B = \markup
   \line { You will. \lnum #67 } }
 
 scene-vii-C = \markup
-  \scene-vii-C-positioning
+  \scene-vii-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -42,38 +42,38 @@ scene-vii-C = \markup
 % TODO: is scene-vii-D missing?
 
 scene-vii-E = \markup
-  \scene-vii-E-positioning
+  \scene-vii-E-overrides
   \wdfn
   \adobe-bold
   \line { What did you say at the time? \lnum #69 }
 
 scene-vii-F = \markup
-  \scene-vii-F-positioning
+  \scene-vii-F-overrides
   \wdfn
   \adobe-bold
   \line { How I would come to a — \lnum #70 }
 
 scene-vii-G = \markup
-  \scene-vii-G-positioning
+  \scene-vii-G-overrides
   \wdfn
   \adobe-bold
   \line { What did you call it? — \lnum #71 }
 
 scene-vii-H = \markup
-  \scene-vii-H-positioning
+  \scene-vii-H-overrides
   \wdfn
   \adobe-italic \justify { OWL and musicians wait together in silence, long
   enough for the audience to consider OWL's question. Then all proceed to
   \adobe-bold \box G \hspace #-0.5 . }
 
 scene-vii-I = \markup
-  \scene-vii-I-positioning
+  \scene-vii-I-overrides
   \wdfn
   \adobe-bold
   \line { “Chamber,” \lnum #72 }
 
 scene-vii-J = \markup
-  \scene-vii-J-positioning
+  \scene-vii-J-overrides
   \wdfn
   \adobe-italic
   \line { End scene 7. }

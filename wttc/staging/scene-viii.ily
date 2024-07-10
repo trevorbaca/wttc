@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-viii-title = \markup
-  \scene-viii-title-positioning
+  \scene-viii-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 8. }
 
 scene-viii-A = \markup
-  \scene-viii-A-positioning
+  \scene-viii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -34,7 +34,7 @@ scene-viii-A = \markup
   \adobe-italic \justify { OWL sniffs the flowers, but again there is no touching. } }
 
 scene-viii-B = \markup
-  \scene-viii-B-positioning
+  \scene-viii-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -42,19 +42,19 @@ scene-viii-B = \markup
   \adobe-italic \line { OWL stands back up. } }
 
 scene-viii-C = \markup
-  \scene-viii-C-positioning
+  \scene-viii-C-overrides
   \wdfn
   \adobe-bold
   \line { But still, \lnum #81.1 }
 
 scene-viii-D = \markup
-  \scene-viii-D-positioning
+  \scene-viii-D-overrides
   \wdfn
   \adobe-bold
   \line { violets. \lnum #81.2 }
 
 scene-viii-E = \markup
-  \scene-viii-E-positioning
+  \scene-viii-E-overrides
   \wdfn
   \adobe-bold
   \column {

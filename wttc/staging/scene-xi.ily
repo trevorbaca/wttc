@@ -2,13 +2,13 @@
 \include "share.ily"
 
 scene-xi-title = \markup
-  \scene-xi-title-positioning
+  \scene-xi-title-overrides
   \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 11. }
 
 scene-xi-A = \markup
-  \scene-xi-A-positioning
+  \scene-xi-A-overrides
   \wdfn
   \adobe-bold
   \column {

@@ -2,12 +2,12 @@
 \include "share.ily"
 
 scene-xv-title = \markup
-  \scene-xv-title-positioning
+  \scene-xv-title-overrides
   \adobe-bold
   \line { SCENE \hspace #1 15. }
 
 scene-xv-A = \markup
-  \scene-xv-A-positioning
+  \scene-xv-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -15,12 +15,12 @@ scene-xv-A = \markup
   \line { All right, I say. \lnum #234 } }
 
 scene-xv-B = \markup
-  \scene-xv-B-positioning
+  \scene-xv-B-overrides
   \adobe-bold
   \line { Home. \lnum #235 }
 
 scene-xv-C = \markup
-  \scene-xv-C-positioning
+  \scene-xv-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -36,7 +36,7 @@ scene-xv-C = \markup
   \line { Things come and go — \lnum #240 } }
 
 scene-xv-D = \markup
-  \scene-xv-D-positioning
+  \scene-xv-D-overrides
   \wdfn
   \adobe-italic \justify { Still 3. Sudden change in music and lighting as OWL
   is fixed in position facing stage rear. OWL struggles against this fit,
@@ -44,7 +44,7 @@ scene-xv-D = \markup
   out: }
 
 scene-xv-E = \markup
-  \scene-xv-E-positioning
+  \scene-xv-E-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -54,7 +54,7 @@ scene-xv-E = \markup
   suddenly as it began. Music and lighting return to how they were. } }
 
 scene-xv-F = \markup
-  \scene-xv-F-positioning
+  \scene-xv-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -63,7 +63,7 @@ scene-xv-F = \markup
   \line { All of us. \lnum #244 } }
 
 scene-xv-G = \markup
-  \scene-xv-G-positioning
+  \scene-xv-G-overrides
   \wdfn
   \adobe-bold
   \column {

@@ -2,18 +2,18 @@
 \include "share.ily"
 
 scene-xiii-title = \markup
-  \scene-xiii-title-positioning
+  \scene-xiii-title-overrides
   \adobe-bold
   \line { SCENE \hspace #1 13. }
 
 scene-xiii-parenthesized-title = \markup
-  \scene-xiii-parenthesized-title-positioning
+  \scene-xiii-parenthesized-title-overrides
   \wdfn
   \adobe-bold
   \line { (SCENE \hspace #1 13) }
 
 scene-xiii-A = \markup
-  \scene-xiii-A-positioning
+  \scene-xiii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -22,7 +22,7 @@ scene-xiii-A = \markup
   \adobe-italic \line { Pause. } }
 
 scene-xiii-B = \markup
-  \scene-xiii-B-positioning
+  \scene-xiii-B-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -47,7 +47,7 @@ scene-xiii-B = \markup
   \line { Did I ask when that would be? \lnum #197 } }
 
 scene-xiii-C = \markup
-  \scene-xiii-C-positioning
+  \scene-xiii-C-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -55,14 +55,14 @@ scene-xiii-C = \markup
   \line { I — \lnum #199 } }
 
 scene-xiii-D = \markup
-  \scene-xiii-D-positioning
+  \scene-xiii-D-overrides
   \wdfn
   \adobe-italic \justify { Still 2. Sudden change in music and lighting as OWL
   is set uttering and fixed in position with one arm extended. Words are
   abrupt, single. OWL struggles against this fit, trying to pull the arm free. }
 
 scene-xiii-E = \markup
-  \scene-xiii-E-positioning
+  \scene-xiii-E-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -81,7 +81,7 @@ scene-xiii-E = \markup
   \adobe-italic \line { Music and lighting return to how they were. } }
 
 scene-xiii-F = \markup
-  \scene-xiii-F-positioning
+  \scene-xiii-F-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -94,7 +94,7 @@ scene-xiii-F = \markup
   \line { If it could have stayed like that \dots \lnum #206 } }
 
 scene-xiii-G = \markup
-  \scene-xiii-G-positioning
+  \scene-xiii-G-overrides
   \wdfn
   \adobe-italic
   \line { End scene 13. }

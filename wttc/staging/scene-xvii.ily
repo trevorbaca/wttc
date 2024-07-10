@@ -2,12 +2,12 @@
 \include "share.ily"
 
 scene-xvii-title = \markup
-  \scene-xvii-title-positioning
+  \scene-xvii-title-overrides
   \adobe-bold
   \line { SCENE \hspace #1 17. }
 
 scene-xvii-A = \markup
-  \scene-xvii-A-positioning
+  \scene-xvii-A-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -20,13 +20,13 @@ scene-xvii-A = \markup
   \line { But to what? \lnum #272 } }
 
 scene-xvii-B = \markup
-  \scene-xvii-B-positioning
+  \scene-xvii-B-overrides
   \wdfn
   \adobe-bold
   \line { Where? \lnum #273 }
 
 scene-xvii-C = \markup
-  \scene-xvii-C-positioning
+  \scene-xvii-C-overrides
   \wdfn
   \adobe-italic \justify { Still 4. Sudden change in music and lighting as OWL
   is fixed in position and set uttering, head snapping from left to right with
@@ -34,7 +34,7 @@ scene-xvii-C = \markup
   to stop this movement. }
 
 scene-xvii-D = \markup
-  \scene-xvii-D-positioning
+  \scene-xvii-D-overrides
   \wdfn
   \adobe-bold
   \column {
@@ -57,7 +57,7 @@ scene-xvii-D = \markup
   \adobe-italic \line { End scene 17. } }
 
 scene-xvii-E = \markup
-  \scene-xvii-E-positioning
+  \scene-xvii-E-overrides
   \wdfn
   \adobe-italic \line { End scene 17. }
 
