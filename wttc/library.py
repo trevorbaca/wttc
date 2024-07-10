@@ -500,6 +500,13 @@ def final_to_bar_line_true(argument):
     return tweaks
 
 
+def first_to_bar_line_false(argument):
+    tweaks = []
+    if argument is True:
+        tweaks.append(baca.tweak.to_bar_line_false(i=0))
+    return tweaks
+
+
 def force_repeat_tie(components, threshold=(1, 8)):
 
     def inequality(item):
@@ -2291,12 +2298,9 @@ def G4b(pleaves, *, once=False):
 def G5b(pleaves, glissando, *, no_hairpin=False, pizz_tblf=False, rleak_pizz=False):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
-    tweaks = []
-    if pizz_tblf is True:
-        tweaks.append(baca.tweak.to_bar_line_false())
     baca.spanners.pizzicato(
         pleaves,
-        *tweaks,
+        *to_bar_line_false(pizz_tblf),
         baca.tweak.staff_padding(3),
         descriptor=r"\wttc-two-f-pizz =|",
         left_broken_text=r"\wttc-parenthesized-two-finger-pizz",
@@ -2649,13 +2653,10 @@ def K3b(pleaves, pitch, dynamics):
 def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, tblf=False):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
-    tweaks = []
-    if tblf is True:
-        tweaks.append(baca.tweak.to_bar_line_false(i=0))
     baca.spanners.scp(
         plts,
         scp,
-        *tweaks,
+        *first_to_bar_line_false(tblf),
         baca.tweak.staff_padding(staff_padding),
     )
     baca.hairpin(
