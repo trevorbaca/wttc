@@ -626,6 +626,7 @@ def vn(m):
         "G#4 C5",
         "mf",
         damp=True,
+        ftstblf=True,
         string_number=3,
         xfb=True,
     )
@@ -637,9 +638,9 @@ def vn(m):
         string_numbers=[4, 3, 4, 3, 4],
     )
     runs = abjad.select.runs(library.pleaves(m[9, 10], 2))
-    library.E2b(runs[0], "G#4 C5", "mf", damp=True, rleak=True)
-    library.E2b(runs[1], "G#4 C5", "mp", damp=True, rleak=True)
-    library.E2b(runs[2], "G#4 C5", "p", damp=True, rleak=True)
+    library.E2b(runs[0], "G#4 C5", "mf", damp=True)
+    library.E2b(runs[1], "G#4 C5", "mp", damp=True)
+    library.E2b(runs[2], "G#4 C5", "p", damp=True)
     library.E2c(runs[3], "B3", "C#4", "p", fhtbl=True)
     E4c(library.pleaves(m[11], 4), "D#5", "G#5", "p")
     library.E2c(library.pleaves(m[11], 2), "B3", "C#4", "p")

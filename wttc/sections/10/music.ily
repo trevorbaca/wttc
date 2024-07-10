@@ -3741,6 +3741,8 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
+        - \tweak to-barline ##f
+          %! SPANNER_START
         \bacaStartTextSpanStringNumber
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -3750,6 +3752,8 @@ number.10.Violin.Music = {
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
           %! SPANNER_START
         - \tweak staff-padding 3
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -3812,6 +3816,8 @@ number.10.Violin.Music = {
         - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
           %! SPANNER_START
         - \tweak staff-padding 3
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! SPANNER_START
         \bacaStartTextSpanDamp
         \glissando
@@ -4058,6 +4064,8 @@ number.10.Violin.Music = {
         gs'!8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanDamp
 
     }
 
@@ -4065,8 +4073,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! SPANNER_STOP
-    \bacaStopTextSpanDamp
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
@@ -4103,6 +4109,8 @@ number.10.Violin.Music = {
         gs'!8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanDamp
 
     }
 
@@ -4110,8 +4118,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! SPANNER_STOP
-    \bacaStopTextSpanDamp
 
     % [Violin.Music measure 10]
       %! STAFF_HIGHLIGHT
@@ -4149,6 +4155,8 @@ number.10.Violin.Music = {
         gs'!8
           %! SPANNER_STOP
         \!
+          %! SPANNER_STOP
+        \bacaStopTextSpanDamp
 
     }
 
@@ -4156,8 +4164,6 @@ number.10.Violin.Music = {
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
     r16
-      %! SPANNER_STOP
-    \bacaStopTextSpanDamp
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightskyblue
