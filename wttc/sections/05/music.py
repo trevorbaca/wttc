@@ -933,16 +933,16 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6", fhtbl=True)
+    library.C2a(library.pleaves(m[7, 8], 2), "E6", "F6", "mf", "Eb6", ftblt=True)
     library.C2a(library.pleaves(m[9], 2), "D6", "E6", "p")
-    library.C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6", fhtbl=True)
-    library.C2a(library.pleaves(m[12], 2), "D6", "E6", "p", fhtbl=True)
+    library.C2a(library.pleaves(m[10, 11], 2), "E6", "F6", "mf", "Eb6", ftblt=True)
+    library.C2a(library.pleaves(m[12], 2), "D6", "E6", "p", ftblt=True)
     library.C2a(library.pleaves(m[14], 2), "D6", "E6", "mf")
-    library.C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p", fhtbl=True)
+    library.C2a(library.pleaves(m[18, 19], 2), "Db6", "Eb6", "p", ftblt=True)
     library.C2a(library.pleaves(m[20, 21], 2), "Db6", "Eb6", "p")
     library.C2a(library.pleaves(m[25], 2), "Db6", "Eb6", "p")
     library.D1a(library.pleaves(m[32, 33], 1), "Eb6", "mp")
-    library.D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp", rleak=True, fhtbl=True)
+    library.D1a(library.pleaves(m[35, 36], 1), "Eb6", "mp", rleak=True, ftblt=True)
     library.D1a(library.pleaves(m[38, 40], 1), "D6", "mf", rleak=True)
 
 

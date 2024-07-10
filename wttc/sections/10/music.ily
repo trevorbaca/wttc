@@ -4330,6 +4330,9 @@ number.10.Violin.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \>
 
     % [Violin.Music measure 12]

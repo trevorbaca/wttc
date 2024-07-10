@@ -299,7 +299,7 @@ def fl(m):
         rleak=True,
     )
     library.M4(library.pleaves(m[4], 99), "D#6 B3", "f|>p")
-    library.K3a(library.pleaves(m[6], 3), "G3", "mp", fhtbl=True)
+    library.K3a(library.pleaves(m[6], 3), "G3", "mp", ftblt=True)
     library.J2a2(
         library.pleaves(m[7], 2),
         "B5",
@@ -307,10 +307,10 @@ def fl(m):
         "sfp>o!",
         fluttertongue=True,
         rleak=True,
-        fhtbl=True,
+        ftblt=True,
     )
-    library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", fhtbl=True)
-    library.H2(library.pleaves(m[9], 2), "C6", None, "p", fhtbl=True)
+    library.J1a(library.pleaves(m[8], 99), "Eqf6", "p", ftblt=True)
+    library.H2(library.pleaves(m[9], 2), "C6", None, "p", ftblt=True)
     library.E3a(library.pleaves(m[12], 3))
     library.D4a(library.pleaves(m[13], 4), "F#5", "mf")
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", once=True)
@@ -340,7 +340,7 @@ def ob(m):
         rleak=True,
     )
     library.L2a(library.pleaves(m[5], 2), "G#6", "A6", [1, 1], "o< f>o!", tssp=7)
-    library.J2a2(library.pleaves(m[7], 2), "B5", [1], "sfp>o!", rleak=True, fhtbl=True)
+    library.J2a2(library.pleaves(m[7], 2), "B5", [1], "sfp>o!", rleak=True, ftblt=True)
 
 
 def gt1(cache):
@@ -413,11 +413,11 @@ def vn(m):
         [1, 1],
         "o< f>o!",
         rleak=True,
-        fhtbl=True,
+        ftblt=True,
         tssp=4,
     )
-    library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, fhtbl=True)
-    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", fhtbl=True, tssp=5)
+    library.K3a(library.pleaves(m[6], 3), "C4", "mf", circle_bow=True, ftblt=True)
+    library.H2(library.pleaves(m[9], 2), "C6", "C#6", "p", ftblt=True, tssp=5)
     library.E2b(
         library.pleaves(m[12], 2),
         "G#4 C5",
@@ -428,7 +428,7 @@ def vn(m):
     )
     library.D4b(library.pleaves(m[13], 4), "G#3", dynamics="mp", no_spanner=True)
     library.C3b(library.pleaves(m[14], 3), "G#5", "A5", "o<mp", tssp=3)
-    library.A1b(library.pleaves(m[16], 1), "D4 F4", "mp mp p p", fhtbl=True)
+    library.A1b(library.pleaves(m[16], 1), "D4 F4", "mp mp p p", ftblt=True)
 
 
 def vc(m):
