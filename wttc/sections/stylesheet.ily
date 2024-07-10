@@ -1,7 +1,6 @@
 \version "2.25.16"
 \include "../stylesheet.ily"
 \include "markup-overrides.ily"
-\include "../staging/markup-overrides.ily"
 
 \paper
 {
