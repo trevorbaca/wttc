@@ -533,6 +533,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
         baca.hairpin(
             pieces,
             library.swells(peak),
+            *library.final_to_bar_line_true(True),
             rleak=True,
         )
 

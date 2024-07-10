@@ -210,6 +210,10 @@ def main(environment):
             51,
             baca.layout.System(147, y_offset, distances),
         ),
+        baca.layout.Page(
+            52,
+            baca.layout.System(149, y_offset, distances),
+        ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
@@ -220,6 +224,7 @@ def main(environment):
             baca.layout.Override((62, 63), (1, 20)),
             baca.layout.Override(68, (1, 20)),
             baca.layout.Override(105, (1, 28)),
+            baca.layout.Override(139, (1, 64)),
         ],
         nonstrict_overrides=[
             baca.layout.Override(1, (1, 32)),

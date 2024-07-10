@@ -553,6 +553,8 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 149]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 150]
@@ -1128,7 +1130,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 139]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #64
     s1 * 4/4
 
     % [SpacingCommands measure 140]
@@ -1164,7 +1166,7 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 148]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 5/4
 
     % [SpacingCommands measure 149]
