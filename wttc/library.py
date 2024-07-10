@@ -2137,7 +2137,7 @@ def F3b1(pleaves, fundamentals, dynamics):
         baca.dynamic(pleaves[0], dynamics)
 
 
-def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, tblf=False):
+def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, stblf=False):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
     baca.hairpin(
@@ -2150,15 +2150,14 @@ def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, tblf=False):
     baca.spanners.xfb(
         pleaves,
         *bound_details_right_padding(bdrp),
-        # TODO: always stblf, htblf instead of tblf
-        *to_bar_line_false(tblf),
+        *to_bar_line_false(stblf),
         baca.tweak.staff_padding(3),
         rleak=rleak,
     )
     baca.spanners.tasto(
         pleaves,
         *bound_details_right_padding(bdrp),
-        *to_bar_line_false(tblf),
+        *to_bar_line_false(stblf),
         baca.tweak.staff_padding(5.5),
         rleak=rleak,
     )
@@ -2650,13 +2649,15 @@ def K3b(pleaves, pitch, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def L1b(pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, tblf=False):
+def L1b(
+    pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, sftblf=False
+):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     baca.spanners.scp(
         plts,
         scp,
-        *first_to_bar_line_false(tblf),
+        *first_to_bar_line_false(sftblf),
         baca.tweak.staff_padding(staff_padding),
     )
     baca.hairpin(

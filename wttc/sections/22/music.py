@@ -296,7 +296,7 @@ def vn(m):
         rleak=True,
     )
     library.F3b1(library.pleaves(m[5], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
-    library.F3b2(library.pleaves(m[5, 8], 3)[4:], "Ab4 Gb4", "p>o!", tblf=True)
+    library.F3b2(library.pleaves(m[5, 8], 3)[4:], "Ab4 Gb4", "p>o!", stblf=True)
     library.B2b(library.pleaves(m[8], 2), "D5", "ff", dls_staff_padding=3)
 
 
