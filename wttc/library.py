@@ -372,6 +372,14 @@ def attacks(counts, *, n=1):
     return result
 
 
+def bound_details_right_padding(argument):
+    tweaks = []
+    if argument is not None:
+        tweak = baca.tweak.bound_details_right_padding(argument)
+        tweaks.append(tweak)
+    return tweaks
+
+
 def check_material_annotations(argument):
     for pleaf in baca.select.pleaves(argument, exclude=baca.enums.HIDDEN):
         indicators = abjad.get.indicators(pleaf, Material)
@@ -1127,14 +1135,10 @@ def B1a_foo(pleaves, pitch, dynamics, *, stblf=False):
     if len(pleaves) == 1:
         baca.markup(pleaves[0], r"\baca-cov-markup", baca.tweak.staff_padding(3))
     else:
-        tweaks = ()
-        if stblf is True:
-            tweak = baca.tweak.to_bar_line_false()
-            tweaks = (tweak,)
         baca.spanners.covered(
             pleaves,
             baca.tweak.staff_padding(3),
-            *tweaks,
+            *to_bar_line_false(stblf),
             descriptor=r"\baca-cov-markup =|",
             left_broken_text=None,
         )
@@ -2136,17 +2140,18 @@ def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, tblf=False):
     tweaks = []
     if bdrp is not None:
         tweaks.append(baca.tweak.bound_details_right_padding(bdrp))
-    if tblf is True:
-        tweaks.append(baca.tweak.to_bar_line_false())
     baca.spanners.xfb(
         pleaves,
-        *tweaks,
+        *bound_details_right_padding(bdrp),
+        # TODO: always stblf, htblf instead of tblf
+        *to_bar_line_false(tblf),
         baca.tweak.staff_padding(3),
         rleak=rleak,
     )
     baca.spanners.tasto(
         pleaves,
-        *tweaks,
+        *bound_details_right_padding(bdrp),
+        *to_bar_line_false(tblf),
         baca.tweak.staff_padding(5.5),
         rleak=rleak,
     )
