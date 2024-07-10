@@ -262,10 +262,6 @@ def _reference_meters():
     )
 
 
-def all_to_bar_line_true():
-    return [baca.tweak.to_bar_line_true()]
-
-
 def annotate(items, n):
     assert n in (1, 2, 3, 4, 5, 99), repr(n)
     for item in items:
@@ -482,16 +478,16 @@ def filter_material(items, n):
     return result
 
 
-def final_to_bar_line_false(ftblf=False):
+def final_to_bar_line_false(argument):
     tweaks = []
-    if ftblf is True:
+    if argument is True:
         tweaks.append(baca.tweak.to_bar_line_false(i=-1))
     return tweaks
 
 
-def final_to_bar_line_true(ftblt=False):
+def final_to_bar_line_true(argument):
     tweaks = []
-    if ftblt is True:
+    if argument is True:
         tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     return tweaks
 
@@ -974,6 +970,20 @@ def swells(peaks):
     return string
 
 
+def to_bar_line_false(argument):
+    tweaks = []
+    if argument is True:
+        tweaks.append(baca.tweak.to_bar_line_false())
+    return tweaks
+
+
+def to_bar_line_true(argument):
+    tweaks = []
+    if argument is True:
+        tweaks.append(baca.tweak.to_bar_line_true())
+    return tweaks
+
+
 def unannotate(items):
     for item in items:
         for leaf in abjad.select.leaves(item):
@@ -1049,7 +1059,7 @@ def A1a(pleaves, pitch, peaks):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
-        *all_to_bar_line_true(),
+        *to_bar_line_true(True),
         rleak=True,
     )
 
@@ -1361,7 +1371,7 @@ def C1b(pleaves, dyad, alteration, peak):
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         f"o< {peak}>o!",
-        *all_to_bar_line_true(),
+        *to_bar_line_true(True),
         rleak=True,
     )
 
@@ -1635,7 +1645,7 @@ def D3a(pleaves, pitch, dynamics):
     baca.hairpin(
         parts,
         swells(dynamics),
-        *all_to_bar_line_true(),
+        *to_bar_line_true(True),
         rleak=True,
     )
 
@@ -1818,14 +1828,14 @@ def E2b(
         baca.spanners.xfb(
             first_plt,
             baca.tweak.staff_padding(3),
-            *final_to_bar_line_false(ftblf=ftstblf),
+            *final_to_bar_line_false(ftstblf),
             rleak=rleak,
         )
         baca.spanners.string_number(
             first_plt,
             string_number,
             baca.tweak.staff_padding(5.5),
-            *final_to_bar_line_false(ftblf=ftstblf),
+            *final_to_bar_line_false(ftstblf),
             rleak=rleak,
         )
     if damp is True:
@@ -1837,7 +1847,7 @@ def E2b(
         baca.spanners.damp(
             leaves,
             baca.tweak.staff_padding(3),
-            *final_to_bar_line_false(ftblf=ftstblf),
+            *final_to_bar_line_false(ftstblf),
             rleak=rleak,
         )
     if once is True:
@@ -2026,7 +2036,7 @@ def F2b1(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        *final_to_bar_line_true(),
+        *final_to_bar_line_true(True),
         rleak=True,
     )
 
@@ -2082,7 +2092,7 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        *final_to_bar_line_true(),
+        *final_to_bar_line_true(True),
         rleak=True,
     )
 
@@ -2147,7 +2157,7 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        *final_to_bar_line_true(),
+        *final_to_bar_line_true(True),
         rleak=True,
     )
 
@@ -2660,7 +2670,6 @@ def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, tssp=5.5):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        *final_to_bar_line_true(),
         rleak=True,
     )
 
@@ -2947,7 +2956,7 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
     baca.hairpin(
         nongraces,
         hairpin,
-        *all_to_bar_line_true(),
+        *to_bar_line_true(True),
         rleak=rleak,
     )
     baca.spanners.text(
@@ -2979,7 +2988,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak=False):
     baca.hairpin(
         nongraces,
         hairpin,
-        *all_to_bar_line_true(),
+        *to_bar_line_true(True),
         rleak=rleak,
     )
     baca.spanners.text(
