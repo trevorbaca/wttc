@@ -482,26 +482,14 @@ def filter_material(items, n):
     return result
 
 
-def final_hairpin_to_bar_line_true_tweaks(ftblt=False):
-    """
-    Hairpins only, because to-barline = ##f is set in stylesheets.
-
-    Set text spanner to-barline tweaks in a different way.
-    """
-    tweaks = []
-    if ftblt is True:
-        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
-    return tweaks
-
-
-def final_to_bar_line_false_tweaks(ftblf=False):
+def final_to_bar_line_false(ftblf=False):
     tweaks = []
     if ftblf is True:
         tweaks.append(baca.tweak.to_bar_line_false(i=-1))
     return tweaks
 
 
-def final_to_bar_line_true_tweaks(ftblt=False):
+def final_to_bar_line_true(ftblt=False):
     tweaks = []
     if ftblt is True:
         tweaks.append(baca.tweak.to_bar_line_true(i=-1))
@@ -1071,7 +1059,7 @@ def A1b(pleaves, pitches, peaks, *, ftblt=False):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
 
@@ -1258,7 +1246,7 @@ def B3(
     baca.hairpin(
         parts,
         hairpin,
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=rleak,
     )
 
@@ -1426,7 +1414,7 @@ def C2a(pleaves, pitch_1, alteration, dynamic, pitch_2=None, *, ftblt=None):
     baca.hairpin(
         pleaves,
         f"{dynamic}>o!",
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
 
@@ -1563,14 +1551,14 @@ def C3b(
         baca.hairpin(
             [pleaves[:-1], pleaves[-1:]],
             hairpin,
-            *final_hairpin_to_bar_line_true_tweaks(True),
+            *final_to_bar_line_true(True),
             rleak=rleak,
         )
     else:
         baca.hairpin(
             [pleaves],
             hairpin,
-            *final_hairpin_to_bar_line_true_tweaks(True),
+            *final_to_bar_line_true(True),
             rleak=rleak,
         )
 
@@ -1596,7 +1584,7 @@ def D1a(pleaves, pitch, dynamic, *, rleak=False, ftblt=False):
     baca.hairpin(
         pleaves,
         f"{dynamic}>o!",
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=rleak,
     )
 
@@ -1628,7 +1616,7 @@ def D1b(
     baca.hairpin(
         hairpin_pieces,
         hairpin_string,
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=rleak_hairpin,
     )
     baca.spanners.scp(
@@ -1781,7 +1769,7 @@ def E2a(pleaves, pitch, alteration, bar_lines, *, peaks=None, starts=None):
             baca.hairpin(
                 pieces,
                 swells(peak),
-                *final_hairpin_to_bar_line_true_tweaks(bar_line == "1"),
+                *final_to_bar_line_true(bar_line == "1"),
                 rleak=True,
             )
             baca.spanners.trill(
@@ -1830,14 +1818,14 @@ def E2b(
         baca.spanners.xfb(
             first_plt,
             baca.tweak.staff_padding(3),
-            *final_to_bar_line_false_tweaks(ftblf=ftstblf),
+            *final_to_bar_line_false(ftblf=ftstblf),
             rleak=rleak,
         )
         baca.spanners.string_number(
             first_plt,
             string_number,
             baca.tweak.staff_padding(5.5),
-            *final_to_bar_line_false_tweaks(ftblf=ftstblf),
+            *final_to_bar_line_false(ftblf=ftstblf),
             rleak=rleak,
         )
     if damp is True:
@@ -1849,7 +1837,7 @@ def E2b(
         baca.spanners.damp(
             leaves,
             baca.tweak.staff_padding(3),
-            *final_to_bar_line_false_tweaks(ftblf=ftstblf),
+            *final_to_bar_line_false(ftblf=ftstblf),
             rleak=rleak,
         )
     if once is True:
@@ -1900,7 +1888,7 @@ def E2c(
         baca.hairpin(
             pieces,
             f"o< {peak}>o!",
-            *final_hairpin_to_bar_line_true_tweaks(ftblt),
+            *final_to_bar_line_true(ftblt),
             rleak=True,
         )
 
@@ -1983,7 +1971,7 @@ def F1a(pleaves, pitch, hairpin_lparts, hairpin, *, ftblt=False):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
 
@@ -2038,7 +2026,7 @@ def F2b1(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        *final_hairpin_to_bar_line_true_tweaks(),
+        *final_to_bar_line_true(),
         rleak=True,
     )
 
@@ -2094,7 +2082,7 @@ def F2b3(pleaves, pitch, alteration, hairpin_lparts, peaks, *, staff_padding=3):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        *final_hairpin_to_bar_line_true_tweaks(),
+        *final_to_bar_line_true(),
         rleak=True,
     )
 
@@ -2159,7 +2147,7 @@ def G1a(pleaves, pitch, hairpin_lparts, peaks):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         swells(peaks),
-        *final_hairpin_to_bar_line_true_tweaks(),
+        *final_to_bar_line_true(),
         rleak=True,
     )
 
@@ -2204,7 +2192,7 @@ def G2a2(pleaves, pitch, alteration, peak, *, ftblt=False, tssp=5.5):
     baca.hairpin(
         baca.select.lparts(pleaves, [1, 1]),
         swells(peak),
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
 
@@ -2336,7 +2324,7 @@ def H2(pleaves, pitch, alteration, peaks, *, ftblt=False, tssp=5.5):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
 
@@ -2476,7 +2464,7 @@ def J1a(pleaves, pitches, dynamic, *, ftblt=False):
     baca.hairpin(
         pleaves,
         f"{dynamic}>o!",
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
 
@@ -2501,7 +2489,7 @@ def J2a2(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=rleak,
     )
 
@@ -2621,7 +2609,7 @@ def K3a(pleaves, pitch, peaks, *, circle_bow=False, ftblt=False):
     baca.hairpin(
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=True,
     )
     if circle_bow is True:
@@ -2672,7 +2660,7 @@ def L2a(pleaves, pitch, alteration, hairpin_lparts, hairpin, *, tssp=5.5):
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        *final_hairpin_to_bar_line_true_tweaks(),
+        *final_to_bar_line_true(),
         rleak=True,
     )
 
@@ -2704,7 +2692,7 @@ def L2b2(
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        *final_hairpin_to_bar_line_true_tweaks(ftblt),
+        *final_to_bar_line_true(ftblt),
         rleak=rleak,
     )
 
