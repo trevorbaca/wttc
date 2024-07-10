@@ -1128,7 +1128,7 @@ def vc(m):
         library.pleaves(m[41, 44], 4),
         "Ab2 G2",
         hairpin="mp>p",
-        right_padding=1.5,
+        sbdrp=1.5,
     )
     library.D4c(library.pleaves(m[45, 46], 4), "F#2", dynamic="p")
     library.D4c(library.pleaves(m[47, 48], 4), "F#2", dynamic="pp")

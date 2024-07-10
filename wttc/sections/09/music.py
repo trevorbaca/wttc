@@ -293,7 +293,7 @@ def vn(m):
     wrappers = baca.override.metronome_mark_extra_offset(m[1][0], (0, 7))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_VIOLIN)
     library.F3b2(library.pleaves(m[1, 2], 3), "Ab4 Gb4", "pp>o!")
-    library.F3b2(library.pleaves(m[3, 5][:10], 3), "Ab4 Gb4", "pp>o!", bdrp=2)
+    library.F3b2(library.pleaves(m[3, 5][:10], 3), "Ab4 Gb4", "pp>o!", sbdrp=2)
     library.F3b2(library.pleaves(m[5, 6][-9:], 3), "Ab4 Gb4", "pp>o!")
     after_grace = abjad.select.note(m[5], 0, grace=True)
     baca.override.note_column_x_extent(after_grace, (0, 3))

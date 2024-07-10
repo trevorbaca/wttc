@@ -1219,7 +1219,7 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
     if conjoin is True:
         baca.spanners.pizzicato(
             notes,
-            baca.tweak.bound_details_right_padding(-0.5),
+            *bound_details_right_padding(-0.5),
             baca.tweak.staff_padding(3),
         )
         if dls_staff_padding:
@@ -1686,7 +1686,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         if not no_spanner:
             baca.spanners.circle_bow(
                 plt,
-                baca.tweak.bound_details_right_padding(1.5),
+                *bound_details_right_padding(1.5),
                 baca.tweak.staff_padding(3),
                 rleak=True,
             )
@@ -1707,7 +1707,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
         )
 
 
-def D4c(pleaves, pitches, *, dynamic=None, hairpin=None, right_padding=None):
+def D4c(pleaves, pitches, *, dynamic=None, hairpin=None, sbdrp=None):
     runs = abjad.select.runs(pleaves)
     for run in runs:
         if " " in pitches:
@@ -1715,23 +1715,16 @@ def D4c(pleaves, pitches, *, dynamic=None, hairpin=None, right_padding=None):
             baca.glissando(run, f"{start_pitch} {stop_pitch}")
         else:
             baca.pitch(run, pitches)
-        if right_padding is None:
-            tweaks = ()
-        else:
-            tweak = baca.tweak.bound_details_right_padding(1.5)
-            tweaks = (tweak,)
         baca.spanners.xfb(
             run,
-            # baca.tweak.bound_details_right_padding(1.5),
-            *tweaks,
+            *bound_details_right_padding(sbdrp),
             baca.tweak.staff_padding(3),
             rleak=True,
         )
         baca.spanners.scp(
             run,
             "T =|",
-            # baca.tweak.bound_details_right_padding(1.5),
-            *tweaks,
+            *bound_details_right_padding(sbdrp),
             baca.tweak.staff_padding(6.5),
             rleak=True,
         )
@@ -2137,26 +2130,23 @@ def F3b1(pleaves, fundamentals, dynamics):
         baca.dynamic(pleaves[0], dynamics)
 
 
-def F3b2(pleaves, glissando, hairpin, *, bdrp=None, rleak=False, stblf=False):
+def F3b2(pleaves, glissando, hairpin, *, rleak=False, sbdrp=None, stblf=False):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
     baca.hairpin(
         pleaves,
         hairpin,
     )
-    tweaks = []
-    if bdrp is not None:
-        tweaks.append(baca.tweak.bound_details_right_padding(bdrp))
     baca.spanners.xfb(
         pleaves,
-        *bound_details_right_padding(bdrp),
+        *bound_details_right_padding(sbdrp),
         *to_bar_line_false(stblf),
         baca.tweak.staff_padding(3),
         rleak=rleak,
     )
     baca.spanners.tasto(
         pleaves,
-        *bound_details_right_padding(bdrp),
+        *bound_details_right_padding(sbdrp),
         *to_bar_line_false(stblf),
         baca.tweak.staff_padding(5.5),
         rleak=rleak,
@@ -2185,15 +2175,14 @@ def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
     )
 
 
-def G1c(pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, bdrp=None):
+def G1c(
+    pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, sbdrp=None
+):
     baca.pitch(pleaves, pitch)
-    tweaks = []
-    if bdrp is not None:
-        tweaks.append(baca.tweak.bound_details_right_padding(bdrp))
     baca.spanners.vibrato(
         baca.select.lparts(pleaves, vibrato_lparts),
         vibrato,
-        *tweaks,
+        *bound_details_right_padding(sbdrp),
         baca.tweak.staff_padding(3),
     )
     baca.hairpin(
