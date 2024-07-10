@@ -497,6 +497,20 @@ def final_hairpin_to_bar_line_tweaks(fhtbl=False):
     return tweaks
 
 
+def final_to_bar_line_false_tweaks(ftblf=False):
+    tweaks = []
+    if ftblf is True:
+        tweaks.append(baca.tweak.to_bar_line_false(i=-1))
+    return tweaks
+
+
+def final_to_bar_line_true_tweaks(ftblt=False):
+    tweaks = []
+    if ftblt is True:
+        tweaks.append(baca.tweak.to_bar_line_true(i=-1))
+    return tweaks
+
+
 def force_repeat_tie(components, threshold=(1, 8)):
 
     def inequality(item):
@@ -1803,10 +1817,12 @@ def E2b(
     peak,
     *,
     damp=False,
+    ftstblf=False,
     once=False,
     rleak=False,
     string_number=None,
     xfb=False,
+    xstblf=False,
 ):
     assert damp or xfb
     low_pitch, high_pitch = pitches.split()
@@ -1817,12 +1833,14 @@ def E2b(
         baca.spanners.xfb(
             first_plt,
             baca.tweak.staff_padding(3),
+            *final_to_bar_line_false_tweaks(ftblf=ftstblf),
             rleak=rleak,
         )
         baca.spanners.string_number(
             first_plt,
             string_number,
             baca.tweak.staff_padding(5.5),
+            *final_to_bar_line_false_tweaks(ftblf=ftstblf),
             rleak=rleak,
         )
     if damp is True:
@@ -1834,6 +1852,7 @@ def E2b(
         baca.spanners.damp(
             leaves,
             baca.tweak.staff_padding(3),
+            *final_to_bar_line_false_tweaks(ftblf=ftstblf),
             rleak=rleak,
         )
     if once is True:

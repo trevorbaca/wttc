@@ -181,6 +181,35 @@ def main(environment):
             44,
             baca.layout.System(127, y_offset, distances),
         ),
+        #
+        baca.layout.Page(
+            45,
+            baca.layout.System(129, y_offset, distances),
+        ),
+        baca.layout.Page(
+            46,
+            baca.layout.System(132, y_offset, distances),
+        ),
+        baca.layout.Page(
+            47,
+            baca.layout.System(135, y_offset, distances),
+        ),
+        baca.layout.Page(
+            48,
+            baca.layout.System(138, y_offset, distances),
+        ),
+        baca.layout.Page(
+            49,
+            baca.layout.System(141, y_offset, distances),
+        ),
+        baca.layout.Page(
+            50,
+            baca.layout.System(144, y_offset, distances),
+        ),
+        baca.layout.Page(
+            51,
+            baca.layout.System(147, y_offset, distances),
+        ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
@@ -219,7 +248,7 @@ def main(environment):
     )
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:128],
+        environment.time_signatures[:150],
         measure_initial_grace_notes={
             3: [r"\grace { s8 } % DUMMY GRACE"],
             38: [r"\grace { s8 } % DUMMY GRACE"],

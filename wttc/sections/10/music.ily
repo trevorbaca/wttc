@@ -16,7 +16,13 @@ number.10.Skips = {
     s1 * 4/4
     - \tweak X-extent ##f
     _ \scene-vii-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "E" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "E" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -3506,9 +3512,10 @@ number.10.Violin.Music = {
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-        \override DynamicLineSpanner.staff-padding = 3
+        \override DynamicLineSpanner.staff-padding = 6.5
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.direction = #down
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
         \set Staff.instrumentName = \wttc-vn-markup
@@ -3637,6 +3644,8 @@ number.10.Violin.Music = {
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
+        - \tweak to-barline ##f
+          %! SPANNER_START
         \bacaStartTextSpanStringNumber
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -3646,6 +3655,8 @@ number.10.Violin.Music = {
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
           %! SPANNER_START
         - \tweak staff-padding 3
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -3684,7 +3695,6 @@ number.10.Violin.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
@@ -3696,17 +3706,17 @@ number.10.Violin.Music = {
         \revert NoteHead.no-ledgers
         \undo \hide NoteHead
         c''8
-        \revert NoteHead.style
-
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
-        r4
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
         \bacaStopTextSpanBowSpeed
           %! SPANNER_STOP
         \bacaStopTextSpanStringNumber
+        \revert NoteHead.style
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r4
 
     }
 
@@ -3777,6 +3787,10 @@ number.10.Violin.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \mf
+          %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+          %! SPANNER_STOP
+        \bacaStopTextSpanStringNumber
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -3790,10 +3804,6 @@ number.10.Violin.Music = {
         \revert NoteHead.style
 
         c''4
-          %! SPANNER_STOP
-        \bacaStopTextSpanBowSpeed
-          %! SPANNER_STOP
-        \bacaStopTextSpanStringNumber
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START
@@ -3813,16 +3823,15 @@ number.10.Violin.Music = {
     {
 
         % [Violin.Music measure 5]
-        \override DynamicLineSpanner.staff-padding = 3
         gs'!8
-
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
-        r4
           %! SPANNER_STOP
         \!
           %! SPANNER_STOP
         \bacaStopTextSpanDamp
+
+          %! STAFF_HIGHLIGHT
+        %@% \stopStaffHighlight
+        r4
 
     }
 
@@ -3862,8 +3871,11 @@ number.10.Violin.Music = {
     }
 
     r2
+    \revert DynamicLineSpanner.staff-padding
+    \revert TupletBracket.direction
 
     % [Violin.Music measure 6]
+    \override DynamicLineSpanner.staff-padding = 4
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5084,7 +5096,7 @@ number.10.Cello.Music = {
         \once \override Staff.Clef.color = #(x11-color 'green4)
           %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-        \override DynamicLineSpanner.staff-padding = 5
+        \override DynamicLineSpanner.staff-padding = 4
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
           %! -PARTS
@@ -5212,7 +5224,7 @@ number.10.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 3]
-    \override DynamicLineSpanner.staff-padding = 4
+    \override DynamicLineSpanner.staff-padding = 6
     r8.
 
     \override TrillSpanner.dash-period = -1
@@ -5330,7 +5342,7 @@ number.10.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 4]
-    \override DynamicLineSpanner.staff-padding = 5
+    \override DynamicLineSpanner.staff-padding = 4
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -5370,7 +5382,7 @@ number.10.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Cello.Music measure 5]
-    \override DynamicLineSpanner.staff-padding = 4
+    \override DynamicLineSpanner.staff-padding = 6
     r8.
 
       %! STAFF_HIGHLIGHT

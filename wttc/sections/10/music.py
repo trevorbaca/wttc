@@ -48,12 +48,22 @@ def GLOBALS(skips, first_measure_number):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
-    baca.rehearsal_mark(
+    #
+    wrappers = baca.rehearsal_mark(
         skips[1 - 1],
         "E",
         baca.tweak.padding(1.5),
         font_size=6,
     )
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.rehearsal_mark(
+        skips[1 - 1],
+        "E",
+        baca.tweak.extra_offset((0, -8)),
+        font_size=6,
+    )
+    baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
+    #
     baca.mark(
         skips[10 - 1],
         strings.fermata,
@@ -607,7 +617,7 @@ def vn(m):
         library.pleaves(m[2], 2) + m[3][:1],
         "G#4 C5",
         "p",
-        rleak=True,
+        ftstblf=True,
         string_number=3,
         xfb=True,
     )
@@ -616,7 +626,6 @@ def vn(m):
         "G#4 C5",
         "mf",
         damp=True,
-        rleak=True,
         string_number=3,
         xfb=True,
     )
@@ -762,14 +771,15 @@ def align_spanners(cache):
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[1, 22], 3)
     vn = cache["vn"]
-    baca.override.dls_staff_padding(vn[1, 2], 3)
-    baca.override.dls_staff_padding(vn[5, 8], 3)
+    baca.override.dls_staff_padding(vn[1, 5], 6.5)
+    baca.override.dls_staff_padding(vn[6, 8], 4)
     baca.override.dls_staff_padding(vn[9, 22], 4)
+    baca.override.tuplet_bracket_direction_down(vn[1, 5])
     vc = cache["vc"]
-    baca.override.dls_staff_padding(vc[1, 2], 5)
-    baca.override.dls_staff_padding(vc[3], 4)
-    baca.override.dls_staff_padding(vc[4], 5)
-    baca.override.dls_staff_padding(vc[5, 6], 4)
+    baca.override.dls_staff_padding(vc[1, 2], 4)
+    baca.override.dls_staff_padding(vc[3], 6)
+    baca.override.dls_staff_padding(vc[4], 4)
+    baca.override.dls_staff_padding(vc[5, 6], 6)
     baca.override.dls_staff_padding(vc[7, 9], 5)
     baca.override.dls_staff_padding(vc[19, 22], 5)
 
