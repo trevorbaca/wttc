@@ -2,7 +2,7 @@
 
 part-name-markup = \markup "iPad-formatted score"
 \include "stylesheet.ily"
-\include "positioning.ily"
+\include "markup-overrides.ily"
 \include "../../staging/scene-i.ily"
 \include "../../staging/scene-ii.ily"
 \include "../../staging/scene-iii.ily"

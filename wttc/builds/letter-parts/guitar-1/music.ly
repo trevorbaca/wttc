@@ -5,7 +5,7 @@ part-name-markup = \markup "guitar 1 part"
 % \layout { ragged-right = ##t }
 % \layout { ragged-last = ##f }
 % \paper { annotate-spacing = ##t }
-\include "positioning.ily"
+\include "markup-overrides.ily"
 \include "../../../staging/scene-i.ily"
 \include "../../../staging/scene-ii.ily"
 \include "../../../staging/scene-iii.ily"
