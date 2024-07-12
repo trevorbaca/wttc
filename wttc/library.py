@@ -2050,7 +2050,8 @@ def F2b2(pleaves, glissandi):
         baca.glissando(part, glissando)
         baca.spanners.scp(
             part,
-            ". -> P",
+            "O -> P3",
+            baca.tweak.bound_details_right_padding(2.5),
             baca.tweak.staff_padding(4),
         )
     nongrace_notes = abjad.select.notes(pleaves, grace=False)
@@ -2068,6 +2069,7 @@ def F2b2(pleaves, glissandi):
         pleaves,
         r"\wttc-alla-punta =|",
         baca.tweak.staff_padding(6.5),
+        left_broken_text=r"\wttc-parenthesized-pta",
         rleak=True,
     )
 

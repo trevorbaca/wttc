@@ -2099,17 +2099,19 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-alla-punta
       %! SPANNER_START
+    - \tweak bound-details.left-broken.text \wttc-parenthesized-pta
+      %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
     \startTextSpan
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
-    - \baca-text-spanner-left-text "."
+    - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P"
+    - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2133,11 +2135,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
-    - \baca-text-spanner-left-text "."
+    - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P"
+    - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2170,11 +2172,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
-    - \baca-text-spanner-left-text "."
+    - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P"
+    - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2198,11 +2200,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
-    - \baca-text-spanner-left-text "."
+    - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P"
+    - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2235,11 +2237,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
-    - \baca-text-spanner-left-text "."
+    - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P"
+    - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2263,11 +2265,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
-    - \baca-text-spanner-left-text "."
+    - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P"
+    - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    - \tweak bound-details.right.padding 2.5
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START

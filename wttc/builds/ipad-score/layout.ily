@@ -600,28 +600,30 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 162]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 163]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
-    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 164]
     s1 * 6/4
 
     % [Breaks measure 165]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 166]
     s1 * 6/4
 
     % [Breaks measure 167]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
-    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 168]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 169]
@@ -1317,11 +1319,11 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 161]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 162]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 163]
@@ -1329,7 +1331,7 @@ SpacingCommands = {
     s1 * 3/4
 
     % [SpacingCommands measure 164]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 165]
@@ -1337,11 +1339,11 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 166]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 167]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 3/4
 
     % [SpacingCommands measure 168]
