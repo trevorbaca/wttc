@@ -560,6 +560,104 @@ Breaks = {
     % [Breaks measure 150]
     s1 * 3/4
 
+    % [Breaks measure 151]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 3/4
+
+    % [Breaks measure 152]
+    s1 * 6/4
+
+    % [Breaks measure 153]
+    s1 * 6/4
+
+    % [Breaks measure 154]
+    s1 * 6/4
+
+    % [Breaks measure 155]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 6/4
+
+    % [Breaks measure 156]
+    s1 * 6/4
+
+    % [Breaks measure 157]
+    s1 * 6/4
+
+    % [Breaks measure 158]
+    s1 * 6/4
+
+    % [Breaks measure 159]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 6/4
+
+    % [Breaks measure 160]
+    s1 * 6/4
+
+    % [Breaks measure 161]
+    s1 * 6/4
+
+    % [Breaks measure 162]
+    s1 * 6/4
+
+    % [Breaks measure 163]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 3/4
+
+    % [Breaks measure 164]
+    s1 * 6/4
+
+    % [Breaks measure 165]
+    s1 * 6/4
+
+    % [Breaks measure 166]
+    s1 * 6/4
+
+    % [Breaks measure 167]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 3/4
+
+    % [Breaks measure 168]
+    s1 * 3/4
+
+    % [Breaks measure 169]
+    s1 * 4/4
+
+    % [Breaks measure 170]
+    s1 * 3/4
+
+    % [Breaks measure 171]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 3/4
+
+    % [Breaks measure 172]
+    s1 * 3/4
+
+    % [Breaks measure 173]
+    s1 * 9/4
+
+    % [Breaks measure 174]
+    s1 * 3/4
+
+    % [Breaks measure 175]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
+    s1 * 3/4
+
+    % [Breaks measure 176]
+    s1 * 9/4
+
+    % [Breaks measure 177]
+    s1 * 9/4
+
+    % [Breaks measure 178]
+    s1 * 3/4
+
 }
 
 
@@ -1174,6 +1272,119 @@ SpacingCommands = {
     s1 * 5/4
 
     % [SpacingCommands measure 150]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 3/4
+
+    % [SpacingCommands measure 151]
+    \baca-start-strict-spacing-section #1 #32
+    \once \override Score.CenteredBarNumber.transparent = ##t
+    s1 * 3/4
+
+    % [SpacingCommands measure 152]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 153]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 154]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 6/4
+
+    % [SpacingCommands measure 155]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 156]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 157]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 158]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 6/4
+
+    % [SpacingCommands measure 159]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 160]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 161]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 162]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 6/4
+
+    % [SpacingCommands measure 163]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 164]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 165]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 166]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 6/4
+
+    % [SpacingCommands measure 167]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 168]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 169]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 170]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 3/4
+
+    % [SpacingCommands measure 171]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 172]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 173]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 9/4
+
+    % [SpacingCommands measure 174]
+    \baca-start-strict-spacing-section #35 #768
+    s1 * 3/4
+
+    % [SpacingCommands measure 175]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 176]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 9/4
+
+    % [SpacingCommands measure 177]
+    \baca-start-strict-spacing-section #1 #32
+    s1 * 9/4
+
+    % [SpacingCommands measure 178]
     \baca-start-strict-spacing-section #35 #768
     s1 * 3/4
 

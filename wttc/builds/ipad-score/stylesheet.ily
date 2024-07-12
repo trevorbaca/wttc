@@ -92,6 +92,7 @@
     \override CenteredBarNumber.font-size = 2
     \override Glissando.minimum-length = 5
     \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
+    \override TupletNumber.font-size = -2
     centerBarNumbers = ##t
   }
 }

@@ -2027,10 +2027,9 @@ def F2b1(
             baca.spanners.half_clt(
                 part,
                 baca.tweak.staff_padding(5.5),
-                descriptor="½ clt ||",
+                descriptor=r"\markup { \baca-full-downbow-markup ½ clt } ||",
                 rleak=True,
             )
-            baca.down_bow(part[0], baca.tweak.padding(2), full=True)
         else:
             baca.spanners.circle_bow(
                 part,

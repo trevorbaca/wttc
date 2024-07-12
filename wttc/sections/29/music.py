@@ -479,7 +479,7 @@ def vc(m):
         sbdrp=2.5,
     )
     library.G4b(library.pleaves(m[10], 4), once=True)
-    library.F2b1(library.pleaves(m[11], 2), "Eb2", "F2", [1, 1], '"f"', [0], tssp=8)
+    library.F2b1(library.pleaves(m[11], 2), "Eb2", "F2", [1, 1], '"f"', [0])
     baca.clef(m[12][0], "tenor")
     library.E3b(library.pleaves(m[12], 3), "A#3:D#4", "E#4")
     baca.dynamic(m[12][1], "p")

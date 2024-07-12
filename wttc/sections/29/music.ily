@@ -3219,14 +3219,12 @@ number.29.Cello.Music = {
       %! SPANNER_START
     \pitchedTrill
     ef,!4 * 2/4
-    - \tweak padding 2
-    - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! SPANNER_START
     - \baca-invisible-line
       %! SPANNER_START
-    - \baca-text-spanner-left-text "½ clt"
+    - \baca-text-spanner-left-markup \markup { \baca-full-downbow-markup ½ clt }
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
       %! SPANNER_START
@@ -3246,7 +3244,7 @@ number.29.Cello.Music = {
       %! SPANNER_START
     - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph "noteheads.s0harmonic" #}))
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 3
       %! SPANNER_START
     \startTrillSpan f,
 

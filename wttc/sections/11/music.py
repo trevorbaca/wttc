@@ -51,12 +51,22 @@ def GLOBALS(skips, first_measure_number):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
-    baca.rehearsal_mark(
+    #
+    wrappers = baca.rehearsal_mark(
         skips[1 - 1],
         "F",
         baca.tweak.padding(1.5),
         font_size=6,
     )
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.rehearsal_mark(
+        skips[1 - 1],
+        "F",
+        baca.tweak.extra_offset((0, -8.5)),
+        font_size=6,
+    )
+    baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
+    #
     baca.mark(
         skips[17 - 1],
         strings.fermata,
@@ -584,6 +594,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt1.leaves(), 3)
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2.leaves(), 3)
+    baca.override.tuplet_bracket_direction_up(gt2[8, 17])
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn.leaves(), 3)
     vc = cache["vc"]

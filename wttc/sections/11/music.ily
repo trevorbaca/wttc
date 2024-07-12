@@ -16,7 +16,13 @@ number.11.Skips = {
     s1 * 3/4
     - \tweak X-extent ##f
     _ \scene-vii-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8.5)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "F" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "F" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -2549,6 +2555,7 @@ number.11.Guitar.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"2"
 
     % [Guitar.2.Music measure 8]
+    \override TupletBracket.direction = #up
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2772,6 +2779,7 @@ number.11.Guitar.2.Music = {
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+    \revert TupletBracket.direction
 
     % [Guitar.2.Music measure 18]
     R1 * 3/4
@@ -4134,8 +4142,6 @@ number.11.Cello.Music = {
 
     % [Cello.Music measure 10]
     ef,!2 * 4/8
-    - \tweak padding 2
-    - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"8"
       %! SPANNER_STOP
@@ -4145,7 +4151,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \baca-invisible-line
       %! SPANNER_START
-    - \baca-text-spanner-left-text "½ clt"
+    - \baca-text-spanner-left-markup \markup { \baca-full-downbow-markup ½ clt }
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
       %! SPANNER_START
@@ -4247,8 +4253,6 @@ number.11.Cello.Music = {
 
     % [Cello.Music measure 11]
     ef,!2 * 5/8
-    - \tweak padding 2
-    - \baca-full-downbow
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"5" #"8"
       %! SPANNER_STOP
@@ -4258,7 +4262,7 @@ number.11.Cello.Music = {
       %! SPANNER_START
     - \baca-invisible-line
       %! SPANNER_START
-    - \baca-text-spanner-left-text "½ clt"
+    - \baca-text-spanner-left-markup \markup { \baca-full-downbow-markup ½ clt }
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
       %! SPANNER_START

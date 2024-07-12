@@ -161,10 +161,10 @@
     \override TrillPitchHead.whiteout = ##t
     \override TrillPitchParentheses.layer = 2
     \override TrillPitchParentheses.whiteout = ##t
-    \override TrillSpanner.Y-extent = ##f
+    \override TrillSpanner.bound-details.left-broken.text = \markup \null
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 2
-    \override TupletNumber.font-size = 1
+    \override TupletNumber.font-size = 0
     autoBeaming = ##f
     barNumberVisibility = #all-bar-numbers-visible
     tupletFullLength = ##t

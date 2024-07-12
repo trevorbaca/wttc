@@ -214,10 +214,40 @@ def main(environment):
             52,
             baca.layout.System(149, y_offset, distances),
         ),
+        #
+        baca.layout.Page(
+            53,
+            baca.layout.System(151, y_offset, distances),
+        ),
+        baca.layout.Page(
+            54,
+            baca.layout.System(155, y_offset, distances),
+        ),
+        baca.layout.Page(
+            55,
+            baca.layout.System(159, y_offset, distances),
+        ),
+        baca.layout.Page(
+            56,
+            baca.layout.System(163, y_offset, distances),
+        ),
+        baca.layout.Page(
+            57,
+            baca.layout.System(167, y_offset, distances),
+        ),
+        baca.layout.Page(
+            58,
+            baca.layout.System(171, y_offset, distances),
+        ),
+        baca.layout.Page(
+            59,
+            baca.layout.System(175, y_offset, distances),
+        ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
-        centered_bar_number_transparent_true=[1, 4, 12, 23, 52, 100, 106, 117, 123],
+        centered_bar_number_transparent_true=[1, 4, 12, 23, 52, 100, 106, 117]
+        + [123, 151],
         strict_overrides=[
             baca.layout.Override((6, 7), (1, 16)),
             baca.layout.Override(9, (1, 20)),
@@ -253,7 +283,7 @@ def main(environment):
     )
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:150],
+        environment.time_signatures[:178],
         measure_initial_grace_notes={
             3: [r"\grace { s8 } % DUMMY GRACE"],
             38: [r"\grace { s8 } % DUMMY GRACE"],
