@@ -2109,9 +2109,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P3"
+    - \baca-text-spanner-right-markup \markup \right-align P3
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2
+    - \tweak bound-details.right.attach-dir 1
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.1
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2137,9 +2139,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P3"
+    - \baca-text-spanner-right-markup \markup \right-align P3
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2
+    - \tweak bound-details.right.attach-dir 1
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.1
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2174,9 +2178,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P3"
+    - \baca-text-spanner-right-markup \markup \right-align P3
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2
+    - \tweak bound-details.right.attach-dir 1
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.1
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2202,9 +2208,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P3"
+    - \baca-text-spanner-right-markup \markup \right-align P3
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2
+    - \tweak bound-details.right.attach-dir 1
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.1
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2239,9 +2247,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P3"
+    - \baca-text-spanner-right-markup \markup \right-align P3
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2
+    - \tweak bound-details.right.attach-dir 1
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.1
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
@@ -2267,9 +2277,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P3"
+    - \baca-text-spanner-right-markup \markup \right-align P3
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2
+    - \tweak bound-details.right.attach-dir 1
+      %! SPANNER_START
+    - \tweak bound-details.right.padding -0.1
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START

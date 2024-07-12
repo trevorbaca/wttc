@@ -2050,8 +2050,9 @@ def F2b2(pleaves, glissandi):
         baca.glissando(part, glissando)
         baca.spanners.scp(
             part,
-            "O -> P3",
-            baca.tweak.bound_details_right_padding(2),
+            r"O -> \markup \right-align P3",
+            baca.tweak.bound_details_right_attach_dir(1),
+            baca.tweak.bound_details_right_padding(-0.1),
             baca.tweak.staff_padding(5.5),
         )
     nongrace_notes = abjad.select.notes(pleaves, grace=False)

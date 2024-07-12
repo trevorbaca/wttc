@@ -7108,6 +7108,7 @@ number.12.Violin.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
+    \revert Staff.RehearsalMark.extra-offset
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \wttc-vn-markup

@@ -937,6 +937,11 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    baca.literal(
+        m[1][0],
+        r"\revert Staff.RehearsalMark.extra-offset",
+        site="before",
+    )
     library.G5b(
         library.pleaves(m[13, 16], 5),
         "Ab4/3 F4/2 A4/2 E4/2 Gb4/3 Eb4/3 F4/2 D4/3 E4/2 Db4/1",
