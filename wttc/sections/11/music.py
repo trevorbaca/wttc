@@ -385,9 +385,10 @@ def VC(voice, meters):
     )
     rhythm(
         meters(12, 17),
-        [AG([2], 4), -12, AG([2], 4), AG([2], 4), -16, AG([2], 4), AG([2], 4)]
-        + [-20, AG([2], 4), AG([2], 4), -24, AG([2], 4), AG([2], 4)]
-        + [-28, AG([2], 4), AG([2], 4), "-"],
+        [AG([2], 4), -12, AG([2], 4, "7/8"), AG([2], 4)]
+        + [-16, AG([2], 4, "7/8"), AG([2], 4)]
+        + [-20, AG([2], 4, "7/8"), AG([2], 4), -24, AG([2], 4), AG([2], 4)]
+        + [-28, AG([2], 4, "7/8"), AG([2], 4), "-"],
         material=2,
     )
     rhythm(
@@ -696,6 +697,9 @@ def make_layout(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
+        nonstrict_overrides=[
+            baca.layout.Override((12, 16), (1, 32)),
+        ],
     )
     return baca.section.make_layout_score(
         breaks,

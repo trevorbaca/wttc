@@ -2101,7 +2101,7 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \wttc-parenthesized-pta
       %! SPANNER_START
-    - \tweak staff-padding 6.5
+    - \tweak staff-padding 8
       %! SPANNER_START
     \startTextSpan
       %! SPANNER_START
@@ -2111,11 +2111,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2.5
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
     \glissando
@@ -2139,11 +2139,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2.5
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
     \glissando
@@ -2176,11 +2176,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2.5
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
     \glissando
@@ -2204,11 +2204,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2.5
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
     \glissando
@@ -2241,11 +2241,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2.5
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
     \glissando
@@ -2269,11 +2269,11 @@ number.22.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-right-text "P3"
       %! SPANNER_START
-    - \tweak bound-details.right.padding 2.5
+    - \tweak bound-details.right.padding 2
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 4
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
     \glissando

@@ -282,6 +282,7 @@ def main(environment):
             baca.layout.Override(70, (1, 32)),
             baca.layout.Override(91, (1, 32)),
             baca.layout.Override((121, 122), (1, 24)),
+            baca.layout.Override((162, 166), (1, 32)),
         ],
     )
     return baca.section.make_layout_score(

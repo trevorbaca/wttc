@@ -1323,23 +1323,23 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 162]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 163]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #32
     s1 * 3/4
 
     % [SpacingCommands measure 164]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-nonstrict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 165]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 166]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #32
     s1 * 6/4
 
     % [SpacingCommands measure 167]

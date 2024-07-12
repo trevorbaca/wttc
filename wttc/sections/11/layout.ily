@@ -161,23 +161,23 @@
             s1 * 6/4
 
             % [SpacingCommands measure 12]
-            \baca-start-strict-spacing-section #1 #32
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 6/4
 
             % [SpacingCommands measure 13]
-            \baca-start-strict-spacing-section #1 #32
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 3/4
 
             % [SpacingCommands measure 14]
-            \baca-start-strict-spacing-section #1 #32
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 6/4
 
             % [SpacingCommands measure 15]
-            \baca-start-strict-spacing-section #1 #32
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 6/4
 
             % [SpacingCommands measure 16]
-            \baca-start-strict-spacing-section #1 #32
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 6/4
 
             % [SpacingCommands measure 17]
