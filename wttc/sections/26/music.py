@@ -250,6 +250,7 @@ def OB(voice, meters):
         [-21, "+", -9],
         material=1,
     )
+    rhythm.mmrests(33, 36)
 
 
 def GT1(voice, meters):
