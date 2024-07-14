@@ -512,6 +512,11 @@ def vn(m):
     library.F3b1(library.pleaves(m[11, 12], 3), "D#5 E5 F5 F#5", "p")
     library.F3b1(library.pleaves(m[14], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
     library.F3b2(library.pleaves(m[14, 17], 3)[4:], "Ab4 Gb4", "p>o!", rleak=True)
+    baca.override.rehearsal_mark_extra_offset(
+        m[18][0],
+        (0, 6),
+        context="Staff",
+    )
     library.F3b2(library.pleaves(m[22, 23], 3), "Ab4 Gb4", "pp>o!", rleak=True)
     library.F3b2(library.pleaves(m[25, 26], 3), "Ab4 Gb4", "pp>o!", rleak=True)
     library.F3b2(library.pleaves(m[27, 28], 3), "Ab4 Gb4", "pp>o!", rleak=True)

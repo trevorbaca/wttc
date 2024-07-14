@@ -3320,6 +3320,7 @@ number.11.Violin.Music = {
 
 
     % [Violin.Music measure 18]
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 6)
     R1 * 3/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"

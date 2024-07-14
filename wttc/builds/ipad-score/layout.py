@@ -246,6 +246,59 @@ def main(environment):
             60,
             baca.layout.System(175, y_offset, distances),
         ),
+        #
+        baca.layout.Page(
+            61,
+            baca.layout.System(179, y_offset, distances),
+        ),
+        baca.layout.Page(
+            62,
+            baca.layout.System(182, y_offset, distances),
+        ),
+        baca.layout.Page(
+            63,
+            baca.layout.System(185, y_offset, distances),
+        ),
+        baca.layout.Page(
+            64,
+            baca.layout.System(188, y_offset, distances),
+        ),
+        baca.layout.Page(
+            65,
+            baca.layout.System(191, y_offset, distances),
+        ),
+        baca.layout.Page(
+            66,
+            baca.layout.System(194, y_offset, distances),
+        ),
+        baca.layout.Page(
+            67,
+            baca.layout.System(197, y_offset, distances),
+        ),
+        baca.layout.Page(
+            68,
+            baca.layout.System(200, y_offset, distances),
+        ),
+        baca.layout.Page(
+            69,
+            baca.layout.System(203, y_offset, distances),
+        ),
+        baca.layout.Page(
+            70,
+            baca.layout.System(206, y_offset, distances),
+        ),
+        baca.layout.Page(
+            71,
+            baca.layout.System(209, y_offset, distances),
+        ),
+        baca.layout.Page(
+            72,
+            baca.layout.System(212, y_offset, distances),
+        ),
+        baca.layout.Page(
+            73,
+            baca.layout.System(214, y_offset, distances),
+        ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
@@ -287,7 +340,7 @@ def main(environment):
     )
     return baca.section.make_layout_score(
         breaks,
-        environment.time_signatures[:178],
+        environment.time_signatures[:215],
         measure_initial_grace_notes={
             3: [r"\grace { s8 } % DUMMY GRACE"],
             38: [r"\grace { s8 } % DUMMY GRACE"],
