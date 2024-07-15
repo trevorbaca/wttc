@@ -783,6 +783,17 @@ def main(environment):
             baca.layout.Override(91, (1, 32)),
             baca.layout.Override((121, 122), (1, 24)),
             baca.layout.Override((162, 166), (1, 32)),
+            baca.layout.Override([181, 183, 196, 202, 208, 211], (1, 32)),
+            baca.layout.Override([214, 215, 255, 257, 258, 260], (1, 32)),
+            baca.layout.Override((264, 267), (1, 32)),
+            baca.layout.Override((274, 277), (1, 32)),
+            baca.layout.Override((274, 277), (1, 32)),
+            baca.layout.Override((364, 368), (1, 32)),
+            baca.layout.Override([380, 383, 385, 391, 395, 401, 408, 412], (1, 32)),
+            baca.layout.Override((417, 419), (1, 32)),
+            baca.layout.Override((468, 472), (1, 32)),
+            baca.layout.Override((479, 481), (1, 32)),
+            baca.layout.Override([490], (1, 32)),
         ],
     )
     return baca.section.make_layout_score(
