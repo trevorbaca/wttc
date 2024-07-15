@@ -466,7 +466,7 @@ def vc(m):
         [2],
         "f|>pp",
         staff_padding=3,
-        sftblf=True,
+        sztblf=True,
     )
     library.I3b(library.pleaves(m[8], 3), "A2/1 Gtqs2", [1, 1], "T -> O", [2], "p<mp")
     library.G1c(

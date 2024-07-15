@@ -500,13 +500,6 @@ def final_to_bar_line_true(argument):
     return tweaks
 
 
-def first_to_bar_line_false(argument):
-    tweaks = []
-    if argument is True:
-        tweaks.append(baca.tweak.to_bar_line_false(i=0))
-    return tweaks
-
-
 def force_repeat_tie(components, threshold=(1, 8)):
 
     def inequality(item):
@@ -1004,6 +997,13 @@ def unannotate(items):
         for leaf in abjad.select.leaves(item):
             assert abjad.get.has_indicator(leaf, Material), repr(leaf)
             abjad.detach(Material, leaf)
+
+
+def zero_to_bar_line_false(argument):
+    tweaks = []
+    if argument is True:
+        tweaks.append(baca.tweak.to_bar_line_false(i=0))
+    return tweaks
 
 
 instruments = {
@@ -1619,11 +1619,9 @@ def D1b(
     scp_counts,
     *,
     do_not_bookend=False,
-    # TODO: remove hftblt because unused?
-    hftblt=False,
     hrleak=False,
-    scp_tweaks=(),
     srleak=False,
+    sztblf=False,
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
@@ -1638,14 +1636,13 @@ def D1b(
     baca.hairpin(
         hairpin_pieces,
         hairpin_string,
-        *final_to_bar_line_true(hftblt),
         rleak=hrleak,
     )
     baca.spanners.scp(
         scp_pieces,
         scp_string,
         baca.tweak.staff_padding(3),
-        *scp_tweaks,
+        *zero_to_bar_line_false(sztblf),
         do_not_bookend=do_not_bookend,
         rleak=srleak,
     )
@@ -2650,14 +2647,14 @@ def K3b(pleaves, pitch, dynamics):
 
 
 def L1b(
-    pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, sftblf=False
+    pleaves, pitch, scp, hairpin_lparts, hairpin, *, staff_padding=5.5, sztblf=False
 ):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     baca.spanners.scp(
         plts,
         scp,
-        *first_to_bar_line_false(sftblf),
+        *zero_to_bar_line_false(sztblf),
         baca.tweak.staff_padding(staff_padding),
     )
     baca.hairpin(

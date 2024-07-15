@@ -229,7 +229,7 @@ def vc(m):
         [1, 2],
         "P1 => T => P2",
         [1, 2],
-        scp_tweaks=[baca.tweak.to_bar_line_false(i=0)],
+        sztblf=True,
     )
     baca.glissando(library.pleaves(m[10, 11], 1), "F2 Eqs2")
 
