@@ -1619,10 +1619,11 @@ def D1b(
     scp_counts,
     *,
     do_not_bookend=False,
-    rleak=False,
-    rleak_hairpin=False,
+    # TODO: remove hftblt because unused?
+    hftblt=False,
+    hrleak=False,
     scp_tweaks=(),
-    ftblt=False,
+    srleak=False,
 ):
     if pitch is not None:
         baca.pitch(pleaves, pitch)
@@ -1637,8 +1638,8 @@ def D1b(
     baca.hairpin(
         hairpin_pieces,
         hairpin_string,
-        *final_to_bar_line_true(ftblt),
-        rleak=rleak_hairpin,
+        *final_to_bar_line_true(hftblt),
+        rleak=hrleak,
     )
     baca.spanners.scp(
         scp_pieces,
@@ -1646,7 +1647,7 @@ def D1b(
         baca.tweak.staff_padding(3),
         *scp_tweaks,
         do_not_bookend=do_not_bookend,
-        rleak=rleak,
+        rleak=srleak,
     )
 
 
@@ -2178,14 +2179,22 @@ def G1b(pleaves, pitches, hairpin, hairpin_lparts=None):
 
 
 def G1c(
-    pleaves, pitch, vibrato_lparts, vibrato, hairpin_lparts, hairpin, *, sbdrp=None
+    pleaves,
+    pitch,
+    vibrato_lparts,
+    vibrato,
+    hairpin_lparts,
+    hairpin,
+    *,
+    sbdrp=None,
+    ssp=3,
 ):
     baca.pitch(pleaves, pitch)
     baca.spanners.vibrato(
         baca.select.lparts(pleaves, vibrato_lparts),
         vibrato,
         *bound_details_right_padding(sbdrp),
-        baca.tweak.staff_padding(3),
+        baca.tweak.staff_padding(ssp),
     )
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
@@ -2285,16 +2294,16 @@ def G4b(pleaves, *, once=False):
     )
 
 
-def G5b(pleaves, glissando, *, no_hairpin=False, pizz_tblf=False, rleak_pizz=False):
+def G5b(pleaves, glissando, *, no_hairpin=False, srleak=False, ssp=3, stblf=False):
     baca.glissando(pleaves, glissando)
     baca.stem_tremolo(pleaves)
     baca.spanners.pizzicato(
         pleaves,
-        *to_bar_line_false(pizz_tblf),
-        baca.tweak.staff_padding(3),
+        *to_bar_line_false(stblf),
+        baca.tweak.staff_padding(ssp),
         descriptor=r"\wttc-two-f-pizz =|",
         left_broken_text=r"\wttc-parenthesized-two-finger-pizz",
-        rleak=rleak_pizz,
+        rleak=srleak,
     )
     if no_hairpin is False:
         left = len(pleaves) // 2 + 1

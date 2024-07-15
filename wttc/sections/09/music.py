@@ -315,7 +315,7 @@ def vn(m):
         pleaves,
         "Db4/2 Bb3/2 C4/2 A3",
         no_hairpin=True,
-        rleak_pizz=True,
+        srleak=True,
     )
     baca.hairpin(pleaves, "p>o!", baca.tweak.to_bar_line_true(), rleak=True)
 
@@ -329,7 +329,7 @@ def vc(m):
         pleaves,
         "D4/1 B3/2 Db4/3 B3/2 C4/3 A3/2 B3",
         no_hairpin=True,
-        pizz_tblf=True,
+        stblf=True,
     )
     baca.hairpin(baca.select.lparts(pleaves, [3, 11]), "o< mp>o!")
 

@@ -1083,8 +1083,8 @@ def vc(m):
         [2, 2],
         "T =|",
         None,
-        rleak=True,
-        rleak_hairpin=True,
+        hrleak=True,
+        srleak=True,
     )
     library.D1b(
         library.pleaves(m[22, 30], 99),
@@ -1093,8 +1093,8 @@ def vc(m):
         [2, 2, 3, 2, 2, 4],
         "T -> P1 -> T -> P2 -> T",
         [7, 2, 2, 4],
-        rleak=True,
-        rleak_hairpin=True,
+        hrleak=True,
+        srleak=True,
     )
     library.D1b(
         library.pleaves(m[31, 33], 1),
@@ -1103,7 +1103,7 @@ def vc(m):
         [2, 4],
         "T -> P2 -> T -> P1 -> T",
         [2, 1, 1, 1],
-        rleak=True,
+        srleak=True,
     )
     D2c(library.pleaves(m[33, 34], 2), ["E2 F2", "E2 F2"], 2 * ['o<"f"'])
     library.D1b(
@@ -1113,8 +1113,8 @@ def vc(m):
         [1, 1, 1, 1, 2],
         "T -> P1 -> T -> P2 -> T -> P2",
         [1, 1, 1, 1, 2],
-        rleak=True,
-        rleak_hairpin=True,
+        hrleak=True,
+        srleak=True,
     )
     baca.glissando(library.pleaves(m[34, 39], 1)[:-1], "F2 E2")
     baca.pitch(library.pleaves(m[34, 39], 1)[-1:], "E2")

@@ -8677,7 +8677,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "NV"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
     - \tweak stencil ##f
@@ -8713,7 +8713,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
     - \tweak stencil ##f
@@ -8866,7 +8866,7 @@ number.12.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-text "NV"
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanVibrato
           %! EXPLICIT_DYNAMIC
@@ -8914,7 +8914,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "molto"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
     - \tweak stencil ##f
@@ -8960,7 +8960,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "NV"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
       %! EXPLICIT_DYNAMIC
@@ -8992,7 +8992,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
     - \tweak stencil ##f
@@ -9027,7 +9027,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \wttc-parenthesized-two-finger-pizz
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
       %! EXPLICIT_DYNAMIC
@@ -9178,7 +9178,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "molto"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
       %! EXPLICIT_DYNAMIC
@@ -9212,7 +9212,7 @@ number.12.Cello.Music = {
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanVibrato
     - \tweak stencil ##f
@@ -9369,8 +9369,6 @@ number.12.Cello.Music = {
     \tuplet 3/2
     {
 
-        r8
-
           %! EXPLICIT_CLEF
         \clef "treble"
           %! EXPLICIT_CLEF_COLOR
@@ -9379,6 +9377,10 @@ number.12.Cello.Music = {
         %@% \override Staff.Clef.color = ##f
           %! EXPLICIT_CLEF
         \set Staff.forceClef = ##t
+        r8
+          %! EXPLICIT_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+
         ef'!4
         :32
           %! SPANNER_START
@@ -9388,7 +9390,7 @@ number.12.Cello.Music = {
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \wttc-parenthesized-two-finger-pizz
           %! SPANNER_START
-        - \tweak staff-padding 3
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
           %! EXPLICIT_DYNAMIC
@@ -9402,8 +9404,6 @@ number.12.Cello.Music = {
           %! SPANNER_START
         \<
         \glissando
-          %! EXPLICIT_CLEF_REDRAW_COLOR
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     }
 

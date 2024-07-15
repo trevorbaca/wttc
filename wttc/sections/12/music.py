@@ -994,6 +994,7 @@ def vc(m):
         "NV -> vib. -> NV",
         [3, 1],
         "ppp<|f",
+        ssp=5.5,
     )
     library.G4b(library.pleaves(m[6, 9], 4))
     library.G1c(
@@ -1003,9 +1004,12 @@ def vc(m):
         "NV -> molto -> NV -> molto -> NV",
         [2, 2, 2, 2, 1],
         "ppp<| f> p<| mf>o !",
+        ssp=5.5,
     )
     baca.clef(m[13][-1], "treble")
-    library.G5b(library.pleaves(m[13, 15], 5), "G4/2 E4/2 Gb4/3 Eb4/2 F4/3 D4 E4")
+    library.G5b(
+        library.pleaves(m[13, 15], 5), "G4/2 E4/2 Gb4/3 Eb4/2 F4/3 D4 E4", ssp=5.5
+    )
     baca.clef(library.pleaves(m[15], 1)[0], "bass")
     library.G1c(
         library.pleaves(m[15, 16], 1),
@@ -1014,12 +1018,14 @@ def vc(m):
         "molto -> NV -> molto",
         [4],
         "sfp>o!",
+        ssp=5.5,
     )
     library.G4b(library.pleaves(m[16, 19], 4))
-    baca.clef(library.pleaves(m[19], 5)[0], "treble")
+    baca.clef(m[19][-2], "treble")
     library.G5b(
         library.pleaves(m[19, 23], 5),
         "Eb4/3 C4/3 D4/3 B3/3 Db4/3 B3/2 C4/3 A3/2 B3",
+        ssp=5.5,
     )
     library.G4b(library.pleaves(m[24, 25], 4))
     library.G5b(
