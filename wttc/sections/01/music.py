@@ -273,7 +273,8 @@ def fl(m):
         "sfpp< p>o!",
         hftblt=True,
         hairpin_includes_grace=True,
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=3,
     )
     baca.override.rehearsal_mark_extra_offset(
@@ -386,7 +387,7 @@ def vc(m):
     baca.clef(m[8][0], "bass")
     library.I2c(library.pleaves(m[8, 9], 2), "C#3", "D#3", "E3", "D3", "f")
     baca.clef(m[10][0], "treble")
-    library.B1c(library.run(m[10], 99, 0), "p", "C4", "B3 D4", 1, staff_padding=3)
+    library.B1c(library.run(m[10], 99, 0), "p", "C4", "B3 D4", 1, ssp=3)
     baca.clef(m[11][0], "bass")
     library.A3b(
         library.pleaves(m[11], 3),
@@ -395,11 +396,11 @@ def vc(m):
         "p>o!",
         [1],
         "T =|",
-        rleak=True,
-        rleak_scp=True,
+        hrleak=True,
+        srleak=True,
     )
     baca.clef(m[11][3], "treble")
-    library.B1c(library.run(m[11], 99, 0), "pp", "C4", "B3 D4", 1, staff_padding=3)
+    library.B1c(library.run(m[11], 99, 0), "pp", "C4", "B3 D4", 1, ssp=3)
 
 
 def owl(skips):

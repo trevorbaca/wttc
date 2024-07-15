@@ -520,8 +520,8 @@ def vc(m):
         "p>o!",
         [2],
         "T =|",
-        rleak=True,
-        rleak_scp=True,
+        hrleak=True,
+        srleak=True,
     )
     library.A3b(
         library.pleaves(m[8, 9], 3),
@@ -547,7 +547,7 @@ def vc(m):
         [2],
         "O -> P2",
     )
-    library.B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", 1, staff_padding=5)
+    library.B1c(library.run(m[11, 12], 99, 0), "mp", "C4", "B3 D4", 1, ssp=5)
     library.A3b(
         library.pleaves(m[12], 3),
         "Eb2:Ab2",
@@ -555,10 +555,10 @@ def vc(m):
         "o< p>o!",
         [3],
         "T =|",
-        rleak=True,
-        rleak_scp=True,
+        hrleak=True,
+        srleak=True,
     )
-    library.B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", 1, staff_padding=5)
+    library.B1c(library.run(m[12], 99, 1), "p", "C4", "B3 D4", 1, ssp=5)
     library.A3b(
         library.pleaves(m[13], 3),
         "Eb2:Ab2",
@@ -566,10 +566,10 @@ def vc(m):
         "p>o!",
         [1],
         "T =|",
-        rleak=True,
-        rleak_scp=True,
+        hrleak=True,
+        srleak=True,
     )
-    library.B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", 1, staff_padding=5)
+    library.B1c(library.run(m[13], 99, 0), "pp", "C4", "B3 D4", 1, ssp=5)
 
 
 def owl(skips):

@@ -927,7 +927,8 @@ def fl(m):
         "Eb4",
         [7, 2],
         "p< f>o!",
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=3,
     )
     library.B1a_foo(library.pleaves(m[2], 1), "G3", "mf -")
@@ -937,7 +938,8 @@ def fl(m):
         "Eb4",
         [5, 2],
         "p< f>o!",
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=5.5,
     )
     library.B1a_foo(library.pleaves(m[3], 1), "G3", '"f"')
@@ -947,7 +949,8 @@ def fl(m):
         "D#5",
         None,
         "f>o!",
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=3,
     )
     library.B1a_foo(library.pleaves(m[4, 6], 1), "Eb4", '"f" mf mp')
@@ -976,7 +979,8 @@ def fl(m):
         "G#3",
         [1, 1],
         "sfpp< p>o!",
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=3,
     )
 
@@ -990,7 +994,8 @@ def ob(m):
         [7, 2],
         "p< f>o!",
         hftblt=True,
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
     )
     library.B3(
         library.pleaves(m[2], 3),
@@ -999,9 +1004,18 @@ def ob(m):
         [2, 4],
         "p< f>o!",
         hftblt=True,
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
     )
-    library.B3(library.pleaves(m[3, 4], 3), "C#5", "D4", [1, 3], "p< f>o!", rleak=True)
+    library.B3(
+        library.pleaves(m[3, 4], 3),
+        "C#5",
+        "D4",
+        [1, 3],
+        "p< f>o!",
+        hrleak=True,
+        tsrleak=True,
+    )
     library.B3(library.pleaves(m[8, 9], 3), "C5", "Db4", None, "sfp>o!")
     library.B3(library.pleaves(m[12, 13], 3), "Bb4", "B3", None, "sfp>o!")
 
@@ -1112,7 +1126,7 @@ def vn(m):
         "mp",
         dls_staff_padding=6,
     )
-    library.B2b(library.pleaves(m[1], 2), "D5", "mp p", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[1], 2), "D5", "mp p", dlssp=3)
     B1c(
         library.run(m[2, 3], 1, 0),
         3,
@@ -1121,7 +1135,7 @@ def vn(m):
         "mf",
         dls_staff_padding=6,
     )
-    library.B2b(library.pleaves(m[2], 2), "D5", "f", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[2], 2), "D5", "f", dlssp=3)
     B1c(
         library.run(m[2, 3], 1, 1),
         3,
@@ -1130,7 +1144,7 @@ def vn(m):
         "f",
         dls_staff_padding=6,
     )
-    library.B2b(library.pleaves(m[3], 2), "D5", "ff", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[3], 2), "D5", "ff", dlssp=3)
     B1c(
         library.runs(m[4, 5], 1),
         3,
@@ -1140,12 +1154,7 @@ def vn(m):
         diminuendo=True,
         dls_staff_padding=6,
     )
-    library.B2b(
-        library.pleaves(m[6, 7], 2),
-        "D#5",
-        "f ff mp",
-        dls_staff_padding=3,
-    )
+    library.B2b(library.pleaves(m[6, 7], 2), "D#5", "f ff mp", dlssp=3)
     B1c(
         library.runs(m[7], 1),
         3,
@@ -1155,7 +1164,7 @@ def vn(m):
         diminuendo=True,
         dls_staff_padding=6,
     )
-    library.B2b(library.pleaves(m[8], 2), "D#5", "f", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[8], 2), "D#5", "f", dlssp=3)
     B1c(
         library.runs(m[10], 1),
         3,
@@ -1164,12 +1173,7 @@ def vn(m):
         "mp",
         dls_staff_padding=6,
     )
-    library.B2b(
-        library.pleaves(m[11, 12], 2),
-        "F5",
-        "mp mf",
-        dls_staff_padding=3,
-    )
+    library.B2b(library.pleaves(m[11, 12], 2), "F5", "mp mf", dlssp=3)
     C1(library.pleaves(m[14], 99), "D5", "F#5", tssp=3)
     C1(library.pleaves(m[15], 99), "D5", "F#5", tssp=3)
     C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", tssp=3)

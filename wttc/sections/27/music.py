@@ -169,7 +169,7 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
-    library.M1_1(library.pleaves(m[2], 1)[:3], "D#4:G#4", "C5", "o<f", tssp=5.5)
+    library.M1_1(library.pleaves(m[2], 1)[:3], "D#4:G#4", "C5", "o<f", ssp=5.5)
     library.M1_2(library.pleaves(m[2, 3], 1)[3:7], "C#4 D#4 E4", "mf<f")
     rmakers.unbeam(m[3][2:4])
     library.P1b(

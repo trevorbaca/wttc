@@ -242,7 +242,8 @@ def fl(m):
         "D#5",
         None,
         "f>o!",
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=3,
     )
 
@@ -261,7 +262,8 @@ def ob(m):
         [1, 3],
         "p< f>o!",
         hairpin_includes_grace=True,
-        rleak=True,
+        hrleak=True,
+        tsrleak=True,
         tssp=3,
     )
 
@@ -297,7 +299,7 @@ def vn(m):
     )
     library.F3b1(library.pleaves(m[5], 3)[:-1], "E5 F5 F#5 G5", "p>pp")
     library.F3b2(library.pleaves(m[5, 8], 3)[4:], "Ab4 Gb4", "p>o!", stblf=True)
-    library.B2b(library.pleaves(m[8], 2), "D5", "ff", dls_staff_padding=3)
+    library.B2b(library.pleaves(m[8], 2), "D5", "ff", dlssp=3)
 
 
 def vc(m):

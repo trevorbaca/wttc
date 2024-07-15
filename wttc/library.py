@@ -1160,20 +1160,20 @@ def A3b(
     scp_lparts,
     scp,
     *,
-    rleak=False,
-    rleak_scp=False,
+    hrleak=False,
+    srleak=False,
 ):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
         baca.select.lparts(pleaves, hairpin_lparts),
         hairpin,
-        rleak=rleak,
+        rleak=hrleak,
     )
     baca.spanners.scp(
         baca.select.lparts(pleaves, scp_lparts),
         scp,
         baca.tweak.staff_padding(3),
-        rleak=rleak_scp,
+        rleak=srleak,
     )
 
 
@@ -1227,14 +1227,14 @@ def B1b(pleaves, *, up_bow=False):
         )
 
 
-def B1c(run, dynamic, grace_pitch, glissando, string_number, *, staff_padding=3):
+def B1c(run, dynamic, grace_pitch, glissando, string_number, *, ssp=3):
     baca.override.note_head_style_harmonic(run)
     baca.pitch(run[0], grace_pitch)
     baca.glissando(run[1:], glissando)
     baca.spanners.string_number(
         run,
         string_number,
-        baca.tweak.staff_padding(staff_padding),
+        baca.tweak.staff_padding(ssp),
         rleak=True,
     )
     baca.hairpin(
@@ -1253,7 +1253,7 @@ def B2a(pleaves, pitch, dynamics):
         baca.laissez_vibrer(plt.tail)
 
 
-def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
+def B2b(notes, pitch, dynamics, *, dlssp=None):
     baca.pitch(notes, pitch)
     dynamics_list = dynamics.split()
     conjoin = 1 < len(notes)
@@ -1266,10 +1266,10 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
                 descriptor=r"\baca-pizz-markup ||",
                 rleak=True,
             )
-            if dls_staff_padding:
+            if dlssp:
                 baca.override.dls_staff_padding(
                     baca.select.rleak([note]),
-                    dls_staff_padding,
+                    dlssp,
                 )
     if conjoin is True:
         baca.spanners.pizzicato(
@@ -1277,11 +1277,8 @@ def B2b(notes, pitch, dynamics, *, dls_staff_padding=None):
             *bound_details_right_padding(-0.5),
             baca.tweak.staff_padding(3),
         )
-        if dls_staff_padding:
-            baca.override.dls_staff_padding(
-                notes,
-                dls_staff_padding,
-            )
+        if dlssp:
+            baca.override.dls_staff_padding(notes, dlssp)
 
 
 def B3(
@@ -1293,7 +1290,8 @@ def B3(
     *,
     hairpin_includes_grace=False,
     hftblt=False,
-    rleak=False,
+    hrleak=False,
+    tsrleak=False,
     tssp=None,
 ):
     nongraces = baca.select.pleaves(plts, grace=False)
@@ -1304,7 +1302,7 @@ def B3(
             nongrace_plt,
             *staff_padding(tssp),
             alteration="M2",
-            rleak=rleak,
+            rleak=tsrleak,
         )
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
@@ -1319,7 +1317,7 @@ def B3(
         parts,
         hairpin,
         *final_to_bar_line_true(hftblt),
-        rleak=rleak,
+        rleak=hrleak,
     )
 
 
@@ -2779,7 +2777,7 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
     )
 
 
-def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None, *, tssp=3):
+def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None, *, ssp=3):
     baca.pitch(pleaves[0], dyad)
     baca.tweak.style_harmonic(target=pleaves[0].note_heads[1])
     baca.pitch(pleaves[1:], stop_pitch)
@@ -2787,7 +2785,7 @@ def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None, *, tssp=3):
     baca.spanners.text(
         pleaves,
         r"\wttc-non-stringere ||",
-        baca.tweak.staff_padding(tssp),
+        baca.tweak.staff_padding(ssp),
         rleak=True,
     )
     if hairpin_lparts is None:
