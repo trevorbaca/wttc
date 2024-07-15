@@ -2587,7 +2587,6 @@ number.9.Cello.Music = {
     % [Cello.Music measure 5]
     f,4
     \repeatTie
-    ~
     \revert NoteHead.style
 
     r1

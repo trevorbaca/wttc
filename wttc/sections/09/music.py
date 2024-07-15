@@ -240,7 +240,7 @@ def VC(voice, meters):
     rhythm.mmrests(1, 2)
     rhythm(
         meters(3, 5),
-        [-8, t(4), t(8), t(8), t(4), "-"],
+        [-8, t(4), t(8), t(8), 4, "-"],
         do_not_rewrite_meter=True,
         material=2,
     )

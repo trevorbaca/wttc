@@ -5712,7 +5712,6 @@ number.26.Violin.Music = {
       %! SPANNER_START
     \>
     \repeatTie
-    ~
     \revert NoteHead.style
 
       %! STAFF_HIGHLIGHT

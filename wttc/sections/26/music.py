@@ -566,7 +566,7 @@ def VN(voice, meters):
     )
     rhythm(
         meters(27),
-        [t(12 + 3), "-", t(3)],
+        [12 + 3, "-", t(3)],
         material=2,
     )
     rhythm(
