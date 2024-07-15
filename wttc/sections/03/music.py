@@ -435,58 +435,6 @@ def A2a(pleaves, pitches, dynamics):
         baca.dynamic(pleaf, dynamic)
 
 
-def A2b(
-    pleaves,
-    glissando_pitches,
-    hairpin_lparts,
-    hairpin,
-    *,
-    rleak=False,
-    staff_padding=4.5,
-):
-    baca.glissando(
-        pleaves,
-        glissando_pitches,
-    )
-    baca.hairpin(
-        baca.select.lparts(pleaves, hairpin_lparts),
-        hairpin,
-        rleak=rleak,
-    )
-    baca.spanners.damp(
-        pleaves,
-        baca.tweak.bound_details_right_padding(2),
-        baca.tweak.staff_padding(staff_padding),
-        rleak=True,
-    )
-
-
-def A2c(run, glissando, hairpin_lparts, hairpin):
-    for plt in baca.select.plts(run):
-        if abjad.get.duration(plt) <= abjad.Duration(1, 16):
-            baca.articulation(
-                plt,
-                r"baca-circle-bowing",
-                baca.tweak.staff_padding(3),
-            )
-        else:
-            baca.spanners.circle_bow(
-                plt,
-                baca.tweak.bound_details_right_padding(1.5),
-                baca.tweak.staff_padding(3),
-                rleak=True,
-            )
-    baca.glissando(
-        run,
-        glissando,
-    )
-    baca.hairpin(
-        baca.select.lparts(run, hairpin_lparts),
-        hairpin,
-        rleak=True,
-    )
-
-
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.A1a(library.pleaves(m[1, 2], 1), "F#4", "mf mf mp")
@@ -523,28 +471,28 @@ def gt2(m):
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
     library.A1b(library.pleaves(m[1], 1), "D4 F4", "mp mp")
-    A2b(
+    library.A2b(
         library.pleaves(m[1], 2),
         "D5/2 Eb4",
         [1, 2],
         "o< mp>o!",
     )
     library.A1b(library.pleaves(m[2], 1), "D4 F#4", "p p")
-    A2b(
+    library.A2b(
         library.pleaves(m[2], 2),
         "Db5/2 E4 C5/2 F4/2 B4",
         [5, 3],
         "o< mf>o!",
     )
     library.A1b(library.pleaves(m[3], 1), "E4 G4", "p p")
-    A2b(
+    library.A2b(
         library.pleaves(m[3, 4], 2),
         "B4 E4/3 C5 F4 D5 G4 E5 A4 F5 G4 G5/2 A4",
         [7, 3, 5],
         'o< "f"-- !>o!',
     )
     library.A1b(library.pleaves(m[5, 6], 1), "E4 G#4", "pp p mp mp")
-    A2b(
+    library.A2b(
         library.pleaves(m[7], 2),
         "Bb4 E4 C5 F4 D5/2 G4",
         [7],
@@ -561,10 +509,10 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc")
-    A2c(library.run(m[1, 2], 2, 0), "B2/4 D3 D3", [4, 2], "o< p>o!")
-    A2c(library.run(m[2, 3], 2, 1), "Bb2/7 Db3 Db3", [7, 4], "o< mp>o!")
-    A2c(library.run(m[3, 5], 2, 1), "Ab2/14 Cb3/7 Cb3", [14, 7], "o< mf>o!")
-    A2c(library.run(m[6, 7], 2, 0), "G2/4 Bb2 Bb2", [4, 2], "o< mf>o!")
+    library.A2c(library.run(m[1, 2], 2, 0), "B2/4 D3 D3", [4, 2], "o< p>o!")
+    library.A2c(library.run(m[2, 3], 2, 1), "Bb2/7 Db3 Db3", [7, 4], "o< mp>o!")
+    library.A2c(library.run(m[3, 5], 2, 1), "Ab2/14 Cb3/7 Cb3", [14, 7], "o< mf>o!")
+    library.A2c(library.run(m[6, 7], 2, 0), "G2/4 Bb2 Bb2", [4, 2], "o< mf>o!")
     library.A3b(
         library.pleaves(m[7], 3),
         "Gb2:Cb3",

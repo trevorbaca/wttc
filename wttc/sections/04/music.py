@@ -864,7 +864,7 @@ def B1c(
         )
 
 
-def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
+def C1(pleaves, fundamental, harmonic, dynamics=None, *, tssp=None):
     notes = abjad.select.notes(pleaves)
     baca.pitch(notes, fundamental)
     chords = abjad.select.chords(pleaves)
@@ -889,13 +889,10 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, staff_padding=None):
             baca.dynamic(plt.head, dynamic)
     for plt in plts[1:2]:
         assert len(plt) == 2
-        tweaks = (baca.tweak.bound_details_right_padding(1),)
-        if staff_padding is not None:
-            tweak = baca.tweak.staff_padding(staff_padding, grob="TrillSpanner")
-            tweaks = tweaks + (tweak,)
         baca.spanners.trill(
             plt,
-            *tweaks,
+            *library.bound_details_right_padding(1),
+            *library.staff_padding(tssp),
             alteration=harmonic,
             force_trill_pitch_head_accidental=True,
             harmonic=True,
@@ -1161,9 +1158,9 @@ def vn(m):
         "mp mf",
         dls_staff_padding=3,
     )
-    C1(library.pleaves(m[14], 99), "D5", "F#5", staff_padding=3)
-    C1(library.pleaves(m[15], 99), "D5", "F#5", staff_padding=3)
-    C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", staff_padding=3)
+    C1(library.pleaves(m[14], 99), "D5", "F#5", tssp=3)
+    C1(library.pleaves(m[15], 99), "D5", "F#5", tssp=3)
+    C1(library.pleaves(m[16], 99), "D5", "F#5", "f mf mp", tssp=3)
 
 
 def vc(m):
@@ -1199,9 +1196,9 @@ def vc(m):
         string_number_staff_padding=5,
     )
     library.B4b(library.pleaves(m[11, 13], 4), 4, "C3 D4 B2 C4 A2 B3 G2", "f mf pp")
-    C1(library.pleaves(m[14], 99), "D4", "F4", staff_padding=5.5)
-    C1(library.pleaves(m[15], 99), "D4", "F4", staff_padding=5.5)
-    C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p", staff_padding=4.5)
+    C1(library.pleaves(m[14], 99), "D4", "F4", tssp=5.5)
+    C1(library.pleaves(m[15], 99), "D4", "F4", tssp=5.5)
+    C1(library.pleaves(m[16], 99), "D4", "F4", "f mf mp p", tssp=4.5)
 
 
 def owl(skips):

@@ -978,6 +978,13 @@ def swells(peaks):
     return string
 
 
+def staff_padding(argument):
+    tweaks = []
+    if argument is not None:
+        tweaks.append(baca.tweak.staff_padding(argument))
+    return tweaks
+
+
 def to_bar_line_false(argument):
     tweaks = []
     if argument is True:
@@ -1085,6 +1092,54 @@ def A1b(pleaves, pitches, peaks, *, ftblt=False):
         baca.select.clparts(pleaves, [1]),
         swells(peaks),
         *final_to_bar_line_true(ftblt),
+        rleak=True,
+    )
+
+
+def A2b(
+    pleaves,
+    glissando_pitches,
+    hairpin_lparts,
+    hairpin,
+):
+    baca.glissando(
+        pleaves,
+        glissando_pitches,
+    )
+    baca.hairpin(
+        baca.select.lparts(pleaves, hairpin_lparts),
+        hairpin,
+    )
+    baca.spanners.damp(
+        pleaves,
+        baca.tweak.bound_details_right_padding(2),
+        baca.tweak.staff_padding(4.5),
+        rleak=True,
+    )
+
+
+def A2c(run, glissando, hairpin_lparts, hairpin):
+    for plt in baca.select.plts(run):
+        if abjad.get.duration(plt) <= abjad.Duration(1, 16):
+            baca.articulation(
+                plt,
+                r"baca-circle-bowing",
+                baca.tweak.staff_padding(3),
+            )
+        else:
+            baca.spanners.circle_bow(
+                plt,
+                baca.tweak.bound_details_right_padding(1.5),
+                baca.tweak.staff_padding(3),
+                rleak=True,
+            )
+    baca.glissando(
+        run,
+        glissando,
+    )
+    baca.hairpin(
+        baca.select.lparts(run, hairpin_lparts),
+        hairpin,
         rleak=True,
     )
 
@@ -1243,15 +1298,11 @@ def B3(
 ):
     nongraces = baca.select.pleaves(plts, grace=False)
     nongrace_plts = baca.select.plts(nongraces)
-    tweaks = ()
-    if tssp is not None:
-        tweak = baca.tweak.staff_padding(tssp)
-        tweaks = (tweak,)
     for nongrace_plt in nongrace_plts:
         baca.pitch(nongrace_plt, nongrace_pitch)
         baca.spanners.trill(
             nongrace_plt,
-            *tweaks,
+            *staff_padding(tssp),
             alteration="M2",
             rleak=rleak,
         )
@@ -1320,7 +1371,7 @@ def B5(pleaves, pitches, dynamics):
         baca.dynamic(plt.head, dynamic)
 
 
-def C1_final(pleaves, fundamental, harmonic, dynamics, *, staff_padding=None):
+def C1_final(pleaves, fundamental, harmonic, dynamics):
     baca.pitch(pleaves, fundamental)
     plts = baca.select.plts(pleaves)
     for i, plt in enumerate(plts):
