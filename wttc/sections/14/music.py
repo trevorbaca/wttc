@@ -164,7 +164,7 @@ def fl(m):
         "Eb4",
         11 * [1],
         "o< p>o o< p>o o< p>o o< p>o!",
-        ftblt=True,
+        hftblt=True,
     )
     library.D3a(library.pleaves(m[8, 9], 3), "A3", 8 * "p ")
     library.F1a(
@@ -172,7 +172,7 @@ def fl(m):
         "Eb4",
         11 * [1],
         "o< p>o o< p>o o< p>o o< p>o!",
-        ftblt=True,
+        hftblt=True,
     )
 
 

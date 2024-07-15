@@ -271,7 +271,7 @@ def fl(m):
         "G#3",
         [2, 1],
         "sfpp< p>o!",
-        ftblt=True,
+        hftblt=True,
         hairpin_includes_grace=True,
         rleak=True,
         tssp=3,
@@ -345,7 +345,7 @@ def vn(m):
     library.E2b(runs[0], "G#4 C5", "mf", damp=True, rleak=True)
     library.E2b(runs[1], "G#4 C5", "mp", damp=True, rleak=True)
     library.E2b(runs[2], "G#4 C5", "p", damp=True, rleak=True)
-    library.E2c(runs[3], "B3", "C#4", "p", ftblt=True)
+    library.E2c(runs[3], "B3", "C#4", "p", hftblt=True)
     library.I2b(library.run(m[8, 9], 2, 0), "B4", "C5", "f")
     library.M5b(library.pleaves(m[9], 5), "G4 Gqs4 G#4 Gtqs4 A4", "ff f mf mp p")
     library.B1c(abjad.select.run(library.pleaves(m[10], 99), 0), "p", "B4", "A4 C5", 3)

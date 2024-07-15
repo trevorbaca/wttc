@@ -132,7 +132,7 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.D1a(library.pleaves(m[1, 2], 1), "D6", "mf", rleak=True, ftblt=True)
+    library.D1a(library.pleaves(m[1, 2], 1), "D6", "mf", rleak=True, hftblt=True)
 
 
 def gt1(m):

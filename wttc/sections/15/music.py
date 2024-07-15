@@ -166,7 +166,7 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    library.C2a(library.pleaves(m[9], 2), "E6", "F6", "mf", "Eb6", ftblt=True)
+    library.C2a(library.pleaves(m[9], 2), "E6", "F6", "mf", "Eb6", hftblt=True)
 
 
 def gt1(cache):
@@ -208,7 +208,7 @@ def vn(m):
         staff_padding=8,
     )
     rmakers.unbeam(m[1][9:11])
-    library.A1b(library.pleaves(m[8, 9], 1), "E4 G#4", "pp p mp mp", ftblt=True)
+    library.A1b(library.pleaves(m[8, 9], 1), "E4 G#4", "pp p mp mp", hftblt=True)
 
 
 def vc(m):

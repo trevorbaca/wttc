@@ -889,7 +889,9 @@ def fl(m):
     library.G3a(library.pleaves(m[33], 3), "F4 E4", "p")
     library.H2(library.pleaves(m[34], 2), "C6", None, "p p mp", tssp=7)
     library.H2(library.pleaves(m[35], 2), "D6", None, "p p mp mf", tssp=7)
-    library.H2(library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", ftblt=True, tssp=7)
+    library.H2(
+        library.pleaves(m[36], 2), "E6", None, "mf mf mf mf", hftblt=True, tssp=7
+    )
 
 
 def ob(m):

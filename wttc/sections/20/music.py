@@ -207,8 +207,8 @@ def ob(m):
         "C#6",
         [2],
         "sfp>o!",
+        hftblt=True,
         rleak=True,
-        ftblt=True,
     )
 
 
