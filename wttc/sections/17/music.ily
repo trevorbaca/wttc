@@ -958,7 +958,7 @@ number.17.Guitar.1.Music.item.1 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
-    c'''2
+    r2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -971,7 +971,7 @@ number.17.Guitar.1.Music.item.1 = {
 number.17.Guitar.1.Music.item.2 = {
 
     \voiceTwo
-    b''2.
+    r2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -986,7 +986,7 @@ number.17.Guitar.1.Music.item.3 = {
 
     \override DynamicLineSpanner.staff-padding = 5
     \voiceTwo
-    ef'''!1
+    r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -999,7 +999,7 @@ number.17.Guitar.1.Music.item.3 = {
 number.17.Guitar.1.Music.item.4 = {
 
     \voiceTwo
-    ef'''!1
+    r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1050,12 +1050,7 @@ number.17.Guitar.1.Music = {
               %! REAPPLIED_STAFF_LINES
             \startStaff
             \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                c'''
-                df'''!
-            >16 * 4/5
+            df'''!16 * 4/5
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
             - \tweak color #(x11-color 'green4)
@@ -1086,6 +1081,10 @@ number.17.Guitar.1.Music = {
             e'''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+            c'''16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
 
@@ -1104,12 +1103,7 @@ number.17.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                b''
-                e'''
-            >16 * 4/5
+            e'''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
@@ -1120,6 +1114,10 @@ number.17.Guitar.1.Music = {
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
             c'''16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+            b''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
@@ -1145,12 +1143,7 @@ number.17.Guitar.1.Music = {
                 \set fontSize = #-3
                 \slash
                 \voiceOne
-                <
-                    df'''!
-                    \tweak font-size 0
-                    \tweak transparent ##t
-                    ef'''
-                >16 * 4/5
+                df'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 [
@@ -1165,6 +1158,10 @@ number.17.Guitar.1.Music = {
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
                 df'''!16 * 4/5
+                  %! DURATION_MULTIPLIER
+                %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+                ef'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 )
@@ -1319,12 +1316,7 @@ number.17.Guitar.1.Music = {
                 \set fontSize = #-3
                 \slash
                 \voiceOne
-                <
-                    df'''!
-                    \tweak font-size 0
-                    \tweak transparent ##t
-                    ef'''
-                >16 * 4/5
+                df'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 [
@@ -1339,6 +1331,10 @@ number.17.Guitar.1.Music = {
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
                 df'''!16 * 4/5
+                  %! DURATION_MULTIPLIER
+                %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+                ef'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 )
@@ -1376,7 +1372,7 @@ number.17.Guitar.2.Music.item.1 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
-    e'''2
+    r2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1389,7 +1385,7 @@ number.17.Guitar.2.Music.item.1 = {
 number.17.Guitar.2.Music.item.2 = {
 
     \voiceTwo
-    df'''!2.
+    r2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1404,7 +1400,7 @@ number.17.Guitar.2.Music.item.3 = {
 
     \override DynamicLineSpanner.staff-padding = 5
     \voiceTwo
-    df'''!1
+    r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1417,7 +1413,7 @@ number.17.Guitar.2.Music.item.3 = {
 number.17.Guitar.2.Music.item.4 = {
 
     \voiceTwo
-    df'''!1
+    r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1472,12 +1468,7 @@ number.17.Guitar.2.Music = {
               %! REAPPLIED_STAFF_LINES
             \startStaff
             \voiceOne
-            <
-                ef'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                e'''
-            >16 * 4/5
+            ef'''!16 * 4/5
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
             - \tweak color #(x11-color 'green4)
@@ -1504,6 +1495,10 @@ number.17.Guitar.2.Music = {
             c'''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+            e'''16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
             ]
 
@@ -1522,12 +1517,7 @@ number.17.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                c'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                df'''
-            >16 * 4/5
+            c'''16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
@@ -1542,6 +1532,10 @@ number.17.Guitar.2.Music = {
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
             e'''16 * 4/5
+              %! DURATION_MULTIPLIER
+            %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+            df'''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             )
@@ -1567,12 +1561,7 @@ number.17.Guitar.2.Music = {
                 \set fontSize = #-3
                 \slash
                 \voiceOne
-                <
-                    \tweak font-size 0
-                    \tweak transparent ##t
-                    df'''
-                    ef'''!
-                >16 * 4/5
+                ef'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 [
@@ -1583,6 +1572,10 @@ number.17.Guitar.2.Music = {
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
                 ef'''!16 * 4/5
+                  %! DURATION_MULTIPLIER
+                %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+                df'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 )
@@ -1749,12 +1742,7 @@ number.17.Guitar.2.Music = {
                 \set fontSize = #-3
                 \slash
                 \voiceOne
-                <
-                    \tweak font-size 0
-                    \tweak transparent ##t
-                    df'''
-                    ef'''!
-                >16 * 4/5
+                ef'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 [
@@ -1765,6 +1753,10 @@ number.17.Guitar.2.Music = {
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
 
                 ef'''!16 * 4/5
+                  %! DURATION_MULTIPLIER
+                %@% ^ \baca-duration-multiplier-markup #"4" #"5"
+
+                df'''!16 * 4/5
                   %! DURATION_MULTIPLIER
                 %@% ^ \baca-duration-multiplier-markup #"4" #"5"
                 )

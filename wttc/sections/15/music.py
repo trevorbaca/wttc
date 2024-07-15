@@ -73,12 +73,14 @@ def GT1(voice, meters):
     rhythm.mmrests(1, 3)
     rhythm(
         meters(4),
-        [-12, OBGCF([1, 1], [2]), -2, -8],
+        [-12, OBGCF([1, 1, 1], [-2]), -2, -8],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(5),
-        [-12, OBGCF([1, 1, 1], [2]), -2, -8],
+        [-12, OBGCF([1, 1, 1, 1], [-2]), -2, -8],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -101,12 +103,14 @@ def GT2(voice, meters):
     rhythm.mmrests(1, 3)
     rhythm(
         meters(4),
-        [OBGCF([1, 1, 1], [2]), -2, -20],
+        [OBGCF([1, 1, 1, 1], [-2]), -2, -20],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(5),
-        [-6, OBGCF([1, 1], [2]), -14, OBGCF([1, 1, 1], [2])],
+        [-4, -2, OBGCF([1, 1, 1], [-2]), -12, -2, OBGCF([1, 1, 1, 1], [-2])],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm.make_one_beat_tuplets(
@@ -177,8 +181,8 @@ def gt1(cache):
     #
     cache.rebuild()
     m = cache["gt1"]
-    baca.dynamic(abjad.select.leaf(m[4], 0, grace=False, pitched=True), "mf")
-    baca.dynamic(abjad.select.leaf(m[5], 0, grace=False, pitched=True), "mp")
+    baca.dynamic(abjad.select.leaf(m[4], 1, grace=False), "mf")
+    baca.dynamic(abjad.select.leaf(m[5], 1, grace=False), "mp")
     library.J3b(library.pleaves(m[6, 7], 3), 2 * "F#3 ", "mf mf", "11")
     library.B1b(library.pleaves(m[10], 99))
 
@@ -192,9 +196,9 @@ def gt2(cache):
     #
     cache.rebuild()
     m = cache["gt2"]
-    baca.dynamic(abjad.select.leaf(m[4], 0, grace=False, pitched=True), "f")
-    baca.dynamic(abjad.select.leaf(m[5], 0, grace=False, pitched=True), "mp")
-    baca.dynamic(abjad.select.leaf(m[5], 1, grace=False, pitched=True), "p")
+    baca.dynamic(abjad.select.leaf(m[4], 0, grace=False), "f")
+    baca.dynamic(abjad.select.leaf(m[5], 2, grace=False), "mp")
+    baca.dynamic(abjad.select.leaf(m[5], 5, grace=False), "p")
     library.J3b(library.pleaves(m[6, 7], 3), 2 * "F#3 ", "mf mp", "10")
     library.B1b(library.pleaves(m[10], 99), up_bow=True)
 

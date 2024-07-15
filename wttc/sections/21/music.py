@@ -108,6 +108,7 @@ def GT1(voice, meters):
         extra_counts=[-1],
         material=3,
     )
+    library.replace_obgc_main_notes_with_rests(voice)
 
 
 def GT2(voice, meters):
@@ -137,6 +138,7 @@ def GT2(voice, meters):
         material=3,
         overlap=[-12],
     )
+    library.replace_obgc_main_notes_with_rests(voice)
 
 
 def VN(voice, meters):
@@ -200,7 +202,7 @@ def gt1(cache):
     #
     cache.rebuild()
     m = cache["gt1"]
-    baca.dynamic(abjad.select.leaf(m[8], 0, grace=False, pitched=True), "p")
+    baca.dynamic(abjad.select.leaf(m[8], 1, grace=False), "p")
     library.J3b(library.pleaves(m[8, 10], 3), "A#3 B3", "- pp", "11")
 
 
@@ -214,7 +216,7 @@ def gt2(cache):
     #
     cache.rebuild()
     m = cache["gt2"]
-    baca.dynamic(abjad.select.leaf(m[8], 0, grace=False, pitched=True), "p")
+    baca.dynamic(abjad.select.leaf(m[8], 1, grace=False), "p")
     library.J3b(library.pleaves(m[8, 10], 3), "A#3 B3 B3", "- pp -", "111")
 
 

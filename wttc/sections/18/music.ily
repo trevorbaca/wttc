@@ -2636,8 +2636,9 @@ number.18.Oboe.Staff = <<
 
 number.18.Guitar.1.Music.item.1 = {
 
-    \voiceTwo
-    b''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2649,8 +2650,9 @@ number.18.Guitar.1.Music.item.1 = {
 
 number.18.Guitar.1.Music.item.2 = {
 
-    \voiceTwo
-    cs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2662,8 +2664,9 @@ number.18.Guitar.1.Music.item.2 = {
 
 number.18.Guitar.1.Music.item.3 = {
 
-    \voiceTwo
-    f'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2675,8 +2678,9 @@ number.18.Guitar.1.Music.item.3 = {
 
 number.18.Guitar.1.Music.item.4 = {
 
-    \voiceTwo
-    g'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2688,8 +2692,9 @@ number.18.Guitar.1.Music.item.4 = {
 
 number.18.Guitar.1.Music.item.5 = {
 
-    \voiceTwo
-    g'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
     - \tweak color #(x11-color 'DeepPink1)
@@ -2701,8 +2706,9 @@ number.18.Guitar.1.Music.item.5 = {
 
 number.18.Guitar.1.Music.item.6 = {
 
-    \voiceTwo
-    f'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
 
 }
 
@@ -2763,12 +2769,7 @@ number.18.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                g''
-                \tweak font-size 0
-                \tweak transparent ##t
-                b''
-            >16
+            g''16
             [
             (
 
@@ -2785,8 +2786,6 @@ number.18.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r2
@@ -2804,12 +2803,7 @@ number.18.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                g''
-                \tweak font-size 0
-                \tweak transparent ##t
-                cs'''
-            >16 * 2/3
+            g''16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -2834,8 +2828,6 @@ number.18.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r2
@@ -3167,12 +3159,7 @@ number.18.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                cs'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                f'''
-            >16
+            cs'''!16
             [
             (
 
@@ -3189,8 +3176,6 @@ number.18.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -3208,12 +3193,7 @@ number.18.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                cs'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                g'''
-            >16 * 2/3
+            cs'''!16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -3238,8 +3218,6 @@ number.18.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -3360,12 +3338,7 @@ number.18.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                cs'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                g'''
-            >16 * 2/3
+            cs'''!16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -3390,8 +3363,6 @@ number.18.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     % [Guitar.1.Music measure 26]
@@ -3412,12 +3383,7 @@ number.18.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                cs'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                f'''
-            >16
+            cs'''!16
             [
             (
 
@@ -3434,8 +3400,6 @@ number.18.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -3504,8 +3468,9 @@ number.18.Guitar.1.Staff = <<
 
 number.18.Guitar.2.Music.item.1 = {
 
-    \voiceTwo
-    c'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -3517,8 +3482,9 @@ number.18.Guitar.2.Music.item.1 = {
 
 number.18.Guitar.2.Music.item.2 = {
 
-    \voiceTwo
-    as''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -3530,8 +3496,9 @@ number.18.Guitar.2.Music.item.2 = {
 
 number.18.Guitar.2.Music.item.3 = {
 
-    \voiceTwo
-    d'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -3543,24 +3510,27 @@ number.18.Guitar.2.Music.item.3 = {
 
 number.18.Guitar.2.Music.item.4 = {
 
-    \voiceTwo
-    e'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
 
 }
 
 
 number.18.Guitar.2.Music.item.5 = {
 
-    \voiceTwo
-    fs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
 
 }
 
 
 number.18.Guitar.2.Music.item.6 = {
 
-    \voiceTwo
-    fs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -3572,24 +3542,27 @@ number.18.Guitar.2.Music.item.6 = {
 
 number.18.Guitar.2.Music.item.7 = {
 
-    \voiceTwo
-    gs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
 
 }
 
 
 number.18.Guitar.2.Music.item.8 = {
 
-    \voiceTwo
-    gs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
 
 }
 
 
 number.18.Guitar.2.Music.item.9 = {
 
-    \voiceTwo
-    fs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
 
 }
 
@@ -3637,12 +3610,7 @@ number.18.Guitar.2.Music = {
               %! REAPPLIED_STAFF_LINES
             \startStaff
             \voiceOne
-            <
-                fs''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                c'''
-            >16 * 2/3
+            fs''!16 * 2/3
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
             - \tweak color #(x11-color 'green4)
@@ -3682,8 +3650,6 @@ number.18.Guitar.2.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     \override DynamicLineSpanner.staff-padding = 3
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r1
@@ -3705,12 +3671,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                fs''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                as''
-            >16
+            fs''!16
             [
             (
 
@@ -3727,8 +3688,6 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r2.
 
     r8
@@ -3743,12 +3702,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                gs''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                d'''
-            >16 * 2/3
+            gs''!16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -3774,8 +3728,6 @@ number.18.Guitar.2.Music = {
     % [Guitar.2.Music measure 3]
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4071,12 +4023,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                c'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                e'''
-            >16
+            c'''16
             [
             (
 
@@ -4093,8 +4040,6 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -4149,12 +4094,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                c'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                fs'''
-            >16 * 2/3
+            c'''16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -4179,8 +4119,6 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     % [Guitar.2.Music measure 9]
@@ -4201,12 +4139,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                d'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                fs'''
-            >16
+            d'''16
             [
             (
 
@@ -4223,8 +4156,6 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r1
 
     r4
@@ -4303,12 +4234,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                d'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                gs'''
-            >16 * 2/3
+            d'''16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -4337,8 +4263,6 @@ number.18.Guitar.2.Music = {
 
           %! ONE_VOICE_COMMAND
         \oneVoice
-          %! STAFF_HIGHLIGHT
-        %@% \stopStaffHighlight
         r8
 
           %! STAFF_HIGHLIGHT
@@ -4412,12 +4336,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                d'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                gs'''
-            >16 * 2/3
+            d'''16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -4442,8 +4361,6 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r2.
@@ -4461,12 +4378,7 @@ number.18.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                d'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                fs'''
-            >16
+            d'''16
             [
             (
 
@@ -4483,8 +4395,6 @@ number.18.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r4

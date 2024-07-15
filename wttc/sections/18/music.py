@@ -470,6 +470,8 @@ def GT1(voice, meters):
         voice.extend(j3_measures[28 - before_fermata])
         voice.extend(j3_measures[29 - before_fermata])
 
+    library.replace_obgc_main_notes_with_rests(voice)
+
 
 def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
@@ -619,6 +621,8 @@ def GT2(voice, meters):
         library.overlap_previous_measure(voice, components, meters(27))
         voice.extend(j3_measures[28 - before_fermata])
         voice.extend(j3_measures[29 - before_fermata])
+
+    library.replace_obgc_main_notes_with_rests(voice)
 
 
 def VN(voice, meters):
@@ -913,11 +917,11 @@ def gt1(cache):
     #
     cache.rebuild()
     m = cache["gt1"]
-    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False, pitched=True), "mf")
-    baca.dynamic(abjad.select.leaf(m[2], 0, grace=False, pitched=True), "mp")
-    baca.dynamic(abjad.select.leaf(m[9], 1, grace=False, pitched=True), "mp")
-    baca.dynamic(abjad.select.leaf(m[10], 0, grace=False, pitched=True), "f")
-    baca.dynamic(abjad.select.leaf(m[25], 1, grace=False, pitched=True), "p")
+    baca.dynamic(abjad.select.leaf(m[1], 1, grace=False), "mf")
+    baca.dynamic(abjad.select.leaf(m[2], 1, grace=False), "mp")
+    baca.dynamic(abjad.select.leaf(m[9], 4, grace=False), "mp")
+    baca.dynamic(abjad.select.leaf(m[10], 1, grace=False), "f")
+    baca.dynamic(abjad.select.leaf(m[25], 2, grace=False), "p")
 
 
 def gt2(cache):
@@ -948,10 +952,10 @@ def gt2(cache):
     #
     cache.rebuild()
     m = cache["gt2"]
-    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False, pitched=True), "f")
-    baca.dynamic(abjad.select.leaf(m[2], 0, grace=False, pitched=True), "mp")
-    baca.dynamic(abjad.select.leaf(m[2], 1, grace=False, pitched=True), "p")
-    baca.dynamic(abjad.select.leaf(m[10], 0, grace=False, pitched=True), "mf")
+    baca.dynamic(abjad.select.leaf(m[1], 0, grace=False), "f")
+    baca.dynamic(abjad.select.leaf(m[2], 2, grace=False), "mp")
+    baca.dynamic(abjad.select.leaf(m[2], 5, grace=False), "p")
+    baca.dynamic(abjad.select.leaf(m[10], 1, grace=False), "mf")
 
 
 def vn(m):

@@ -1646,8 +1646,7 @@ number.29.Oboe.Staff = <<
 number.29.Guitar.1.Music.item.1 = {
 
     \override DynamicLineSpanner.staff-padding = 3
-    \voiceTwo
-    ef'''!4
+    r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1777,12 +1776,7 @@ number.29.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                df'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                ef'''
-            >16 * 4/5
+            df'''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [
@@ -1920,8 +1914,7 @@ number.29.Guitar.1.Staff = <<
 number.29.Guitar.2.Music.item.1 = {
 
     \override DynamicLineSpanner.staff-padding = 3
-    \voiceTwo
-    df'''!4
+    r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -2044,12 +2037,7 @@ number.29.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                \tweak font-size 0
-                \tweak transparent ##t
-                df'''
-                ef'''!
-            >16 * 4/5
+            ef'''!16 * 4/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"4" #"5"
             [

@@ -191,6 +191,7 @@ def GT1(voice, meters):
     rhythm.mmrests(11, 14)
     rhythm(meters(15), [c(4, 2)], material=5)
     rhythm.mmrests(16)
+    library.replace_obgc_main_notes_with_rests(voice)
 
 
 def GT2(voice, meters):
@@ -217,6 +218,7 @@ def GT2(voice, meters):
     rhythm(meters(14), [1, "-"], material=3)
     rhythm(meters(15), [c(4, 2)], material=5)
     rhythm.mmrests(16)
+    library.replace_obgc_main_notes_with_rests(voice)
 
 
 def VN(voice, meters):

@@ -125,12 +125,13 @@ def GT1(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [OBGC(4 * [1], [8]), OBGC(3 * [1], [12])],
+        [OBGC(5 * [1], [-8]), OBGC(4 * [1], [-12])],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(2),
-        T([OBGC(4 * [1], [16])], "4:5"),
+        T([OBGC(5 * [1], [-16])], "4:5"),
         material=1,
     )
     rhythm(
@@ -145,7 +146,7 @@ def GT1(voice, meters):
     )
     rhythm(
         meters(5),
-        T([OBGC(4 * [1], [16])], "4:5"),
+        T([OBGC(5 * [1], [-16])], "4:5"),
         material=1,
     )
     rhythm.mmrests(6)
@@ -155,12 +156,13 @@ def GT2(voice, meters):
     rhythm = library.Rhythm(voice, meters)
     rhythm(
         meters(1),
-        [OBGC(3 * [1], [8]), OBGC(4 * [1], [12])],
+        [OBGC(4 * [1], [-8]), OBGC(5 * [1], [-12])],
+        do_not_rewrite_meter=True,
         material=1,
     )
     rhythm(
         meters(2),
-        T([OBGC(3 * [1], [16])], "4:5"),
+        T([OBGC(4 * [1], [-16])], "4:5"),
         material=1,
     )
     rhythm(
@@ -175,7 +177,7 @@ def GT2(voice, meters):
     )
     rhythm(
         meters(5),
-        T([OBGC(3 * [1], [16])], "4:5"),
+        T([OBGC(4 * [1], [-16])], "4:5"),
         material=1,
     )
     rhythm.mmrests(6)

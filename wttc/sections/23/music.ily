@@ -649,8 +649,7 @@ number.23.Oboe.Staff = <<
 
 number.23.Guitar.1.Music.item.1 = {
 
-    \voiceTwo
-    b''8
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -662,8 +661,7 @@ number.23.Guitar.1.Music.item.1 = {
 
 number.23.Guitar.1.Music.item.2 = {
 
-    \voiceTwo
-    cs'''!8
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -842,12 +840,7 @@ number.23.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                g''
-                \tweak font-size 0
-                \tweak transparent ##t
-                b''
-            >16
+            g''16
             [
             (
 
@@ -879,12 +872,7 @@ number.23.Guitar.1.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                g''
-                \tweak font-size 0
-                \tweak transparent ##t
-                cs'''
-            >16 * 2/3
+            g''16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -966,8 +954,7 @@ number.23.Guitar.1.Staff = <<
 number.23.Guitar.2.Music.item.1 = {
 
     \override DynamicLineSpanner.staff-padding = 3
-    \voiceTwo
-    c'''8
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -979,8 +966,7 @@ number.23.Guitar.2.Music.item.1 = {
 
 number.23.Guitar.2.Music.item.2 = {
 
-    \voiceTwo
-    as''!8
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -992,8 +978,7 @@ number.23.Guitar.2.Music.item.2 = {
 
 number.23.Guitar.2.Music.item.3 = {
 
-    \voiceTwo
-    d'''8
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1177,12 +1162,7 @@ number.23.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                fs''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                c'''
-            >16 * 2/3
+            fs''!16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [
@@ -1226,12 +1206,7 @@ number.23.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                fs''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                as''
-            >16
+            fs''!16
             [
             (
 
@@ -1260,12 +1235,7 @@ number.23.Guitar.2.Music = {
             \set fontSize = #-3
             \slash
             \voiceOne
-            <
-                gs''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                d'''
-            >16 * 2/3
+            gs''!16 * 2/3
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"3"
             [

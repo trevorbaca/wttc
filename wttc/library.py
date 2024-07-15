@@ -293,7 +293,7 @@ def attach_not_yet_pitched(score):
         abjad.attach(baca.enums.NOT_YET_PITCHED, pleaf)
 
 
-def attach_obgcs(counts, grace_lists):
+def attach_obgcs(counts, grace_lists, *, rest_main_notes=False):
     result = []
     cyclic_grace_lists = abjad.CyclicTuple(grace_lists)
     i = 0
@@ -301,6 +301,8 @@ def attach_obgcs(counts, grace_lists):
         if count < 0:
             result.append(count)
         else:
+            if rest_main_notes is True:
+                count *= -1
             grace_list = cyclic_grace_lists[i]
             if grace_list:
                 obgc = OBGCF(grace_list, [count])
@@ -866,6 +868,15 @@ def plts(leaves, material_number):
     plts = baca.select.plts(leaves)
     plts = filter_material(plts, material_number)
     return plts
+
+
+def replace_obgc_main_notes_with_rests(voice):
+    prototype = abjad.OnBeatGraceContainer
+    for obgc in abjad.select.components(voice, prototype):
+        note = obgc.get_first_nongrace_leaf()
+        assert isinstance(note, abjad.Note)
+        rest = abjad.Rest(note.written_duration)
+        abjad.mutate.replace([note], [rest])
 
 
 def respell(counts, index, respelling):

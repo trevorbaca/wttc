@@ -881,8 +881,9 @@ number.21.Oboe.Staff = <<
 
 number.21.Guitar.1.Music.item.1 = {
 
-    \voiceTwo
-    f'''8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1062,12 +1063,7 @@ number.21.Guitar.1.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                cs'''!
-                \tweak font-size 0
-                \tweak transparent ##t
-                f'''
-            >16
+            cs'''!16
             [
             (
 
@@ -1084,8 +1080,6 @@ number.21.Guitar.1.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1153,8 +1147,9 @@ number.21.Guitar.1.Staff = <<
 
 number.21.Guitar.2.Music.item.1 = {
 
-    \voiceTwo
-    fs'''!8
+      %! STAFF_HIGHLIGHT
+    %@% \stopStaffHighlight
+    r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1338,12 +1333,7 @@ number.21.Guitar.2.Music = {
               %! STAFF_HIGHLIGHT
             %@% \staffHighlight lightpink
             \voiceOne
-            <
-                d'''
-                \tweak font-size 0
-                \tweak transparent ##t
-                fs'''
-            >16
+            d'''16
             [
             (
 
@@ -1360,8 +1350,6 @@ number.21.Guitar.2.Music = {
 
       %! ONE_VOICE_COMMAND
     \oneVoice
-      %! STAFF_HIGHLIGHT
-    %@% \stopStaffHighlight
     r8
 
     r4
