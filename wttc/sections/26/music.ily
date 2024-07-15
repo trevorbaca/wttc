@@ -16,7 +16,13 @@ number.26.Skips = {
     s1 * 4/4
     - \tweak X-extent ##f
     _ \scene-xvi-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(12 . -1)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "O" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "O" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -634,8 +640,15 @@ number.26.Skips = {
       %! LILYPOND_TEMPO_COMMAND
     \tempo 4=100
     s1 * 6/4
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(1 . -8)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "P" #6
+      %! +SECTION
     - \tweak extra-offset #'(3 . 0)
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "P" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT

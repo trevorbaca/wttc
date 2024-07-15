@@ -20,7 +20,13 @@ number.17.Skips = {
     _ \scene-xi-title
     - \tweak X-extent ##f
     _ \scene-xii-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "I" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "I" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line

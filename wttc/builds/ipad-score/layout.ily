@@ -3150,6 +3150,7 @@ SpacingCommands = {
 
     % [SpacingCommands measure 311]
     \baca-start-strict-spacing-section #1 #32
+    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 6/4
 
     % [SpacingCommands measure 312]

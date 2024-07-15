@@ -750,7 +750,8 @@ def main(environment):
     spacing = baca.layout.Spacing(
         default=(1, 32),
         centered_bar_number_transparent_true=[1, 4, 12, 23, 52, 100, 106, 117]
-        + [123, 151],
+        + [123, 151]
+        + [311],
         strict_overrides=[
             baca.layout.Override((6, 7), (1, 16)),
             baca.layout.Override(9, (1, 20)),

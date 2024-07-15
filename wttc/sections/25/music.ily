@@ -16,7 +16,13 @@ number.25.Skips = {
     s1 * 6/4
     - \tweak X-extent ##f
     _ \scene-xvi-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "N" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "N" #6
     _ \scene-xvi-A
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

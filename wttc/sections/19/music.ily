@@ -16,7 +16,13 @@ number.19.Skips = {
     s1 * 6/4
     - \tweak X-extent ##f
     _ \scene-xii-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "K" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "K" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -507,7 +513,13 @@ number.19.Skips = {
     s1 * 6/4
     - \tweak X-extent ##f
     _ \scene-xii-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(16 . -1)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "L" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "L" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT

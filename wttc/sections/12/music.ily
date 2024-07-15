@@ -16,7 +16,13 @@ number.12.Skips = {
     s1 * 6/4
     - \tweak X-extent ##f
     _ \scene-vii-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(0 . -8)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "G" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "G" #6
     _ \scene-vii-I
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -866,7 +872,13 @@ number.12.Skips = {
     s1 * 5/4
     - \tweak X-extent ##f
     _ \scene-vii-parenthesized-title
+      %! +IPAD_SCORE
+%%% - \tweak extra-offset #'(12 . -1)
+      %! +IPAD_SCORE
+%%% - \baca-rehearsal-mark-markup "H" #6
+      %! +SECTION
     - \tweak padding 1.5
+      %! +SECTION
     - \baca-rehearsal-mark-markup "H" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT

@@ -59,19 +59,39 @@ def GLOBALS(skips, first_measure_number):
     )
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "100", manifests=library.manifests)
-    baca.rehearsal_mark(
+    #
+    wrappers = baca.rehearsal_mark(
         skips[1 - 1],
         "G",
         baca.tweak.padding(1.5),
         font_size=6,
     )
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.rehearsal_mark(
+        skips[1 - 1],
+        "G",
+        baca.tweak.extra_offset((0, -8)),
+        font_size=6,
+    )
+    baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
+    #
     baca.metronome_mark(skips[34 - 1], "50", manifests=library.manifests)
-    baca.rehearsal_mark(
+    #
+    wrappers = baca.rehearsal_mark(
         skips[34 - 1],
         "H",
         baca.tweak.padding(1.5),
         font_size=6,
     )
+    baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
+    wrappers = baca.rehearsal_mark(
+        skips[34 - 1],
+        "H",
+        baca.tweak.extra_offset((12, -1)),
+        font_size=6,
+    )
+    baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
+    #
     baca.mark(
         skips[36 - 1],
         strings.fermata,
