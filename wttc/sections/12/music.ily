@@ -7105,6 +7105,7 @@ number.12.Violin.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 6)
     \override DynamicLineSpanner.staff-padding = 4
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f

@@ -3629,7 +3629,6 @@ number.11.Violin.Music = {
         :32
           %! SPANNER_STOP
         \!
-        \override Staff.RehearsalMark.extra-offset = #'(0 . 6)
         \revert DynamicLineSpanner.staff-padding
 
     }

@@ -937,6 +937,11 @@ def gt2(m):
 
 def vn(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vn")
+    baca.override.rehearsal_mark_extra_offset(
+        m[1][0],
+        (0, 6),
+        context="Staff",
+    )
     baca.literal(
         m[1][0],
         r"\revert Staff.RehearsalMark.extra-offset",
