@@ -37,6 +37,11 @@ def GLOBALS(skips):
         site="after",
     )
     baca.bar_line(skips[11 - 1], "|.")
+    baca.literal(
+        skips[11 - 1],
+        r"\override Score.CenteredBarNumber.transparent = ##t",
+        site="after",
+    )
 
 
 def FL(voice, meters):
@@ -301,6 +306,10 @@ def vn(m):
         "mp> pp< mp> pp< mp> pp< mp>o!",
         baca.tweak.to_bar_line_true(i=-1),
         rleak=True,
+    )
+    baca.literal(
+        m[11][-1],
+        r"\override Staff.RehearsalMark.extra-offset = #'(0 . 6)",
     )
 
 

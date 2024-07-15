@@ -259,6 +259,7 @@ number.30.Skips = {
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
     \bar "|."
+    \override Score.CenteredBarNumber.transparent = ##t
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
@@ -1783,6 +1784,7 @@ number.30.Violin.Music = {
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
             \abjad-invisible-music-coloring
+            \override Staff.RehearsalMark.extra-offset = #'(0 . 6)
             c'4
               %! SPANNER_STOP
             \!
