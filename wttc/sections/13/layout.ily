@@ -102,7 +102,7 @@
             s1 * 4/4
 
             % [SpacingCommands measure 11]
-            \baca-start-strict-spacing-section #1 #64
+            \baca-start-nonstrict-spacing-section #1 #48
             s1 * 4/4
 
             % [anchor skip]

@@ -376,7 +376,9 @@ def make_layout(environment):
         default=(1, 16),
         strict_overrides=[
             baca.layout.Override(8, (1, 48)),
-            baca.layout.Override(9, (1, 64)),
+        ],
+        nonstrict_overrides=[
+            baca.layout.Override(9, (1, 48)),
         ],
     )
     return baca.section.make_layout_score(

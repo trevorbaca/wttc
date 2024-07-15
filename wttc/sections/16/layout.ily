@@ -47,7 +47,7 @@
             s1 * 6/4
 
             % [SpacingCommands measure 3]
-            \baca-start-strict-spacing-section #1 #48
+            \baca-start-nonstrict-spacing-section #1 #48
             s1 * 6/4
 
             % [SpacingCommands measure 4]

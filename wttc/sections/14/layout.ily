@@ -111,7 +111,7 @@
             s1 * 4/4
 
             % [SpacingCommands measure 9]
-            \baca-start-strict-spacing-section #35 #1536
+            \baca-start-nonstrict-spacing-section #35 #1152
             s1 * 4/4
 
             % [SpacingCommands measure 10]

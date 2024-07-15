@@ -1201,14 +1201,16 @@ def make_layout(environment):
         ),
         baca.layout.Page(
             3,
-            baca.layout.System(34, y_offset=10, distances=(15, 20, 20, 20, 20, 20)),
+            baca.layout.System(34, y_offset=10, distances=(15, 20, 20, 20, 20, 24)),
         ),
     )
     spacing = baca.layout.Spacing(
         default=(1, 20),
         strict_overrides=[
             baca.layout.Override((34, 35), (1, 32)),
-            baca.layout.Override((36, 37), (1, 64)),
+        ],
+        nonstrict_overrides=[
+            baca.layout.Override((36, 37), (1, 32)),
         ],
     )
     return baca.section.make_layout_score(

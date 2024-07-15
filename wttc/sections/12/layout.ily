@@ -119,7 +119,7 @@
             s1 * 8/4
 
             % [Breaks measure 34]
-            \baca-lbsd #10 #'(15 20 20 20 20 20)
+            \baca-lbsd #10 #'(15 20 20 20 20 24)
             \pageBreak
             s1 * 5/4
 
@@ -286,11 +286,11 @@
             s1 * 5/4
 
             % [SpacingCommands measure 36]
-            \baca-start-strict-spacing-section #1 #64
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 6/4
 
             % [SpacingCommands measure 37]
-            \baca-start-strict-spacing-section #1 #64
+            \baca-start-nonstrict-spacing-section #1 #32
             s1 * 7/4
 
             % [anchor skip]
