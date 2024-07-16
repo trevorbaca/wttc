@@ -1004,6 +1004,7 @@ def vn(m):
 
 def vc(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "vc", "treble")
+    baca.clef(m[1][0], "treble")
     library.J3c(library.pleaves(m[2, 5], 3), 4 * "Btqf4 ", "mf f mf mp")
     library.J3c(
         library.pleaves(m[6, 9], 3),
