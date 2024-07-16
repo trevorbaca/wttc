@@ -2297,6 +2297,7 @@ def G2a2(pleaves, pitch, alteration, peak, *, hftblt=False, tssp=5.5):
         baca.select.lparts(pleaves, [1, 1]),
         swells(peak),
         *final_to_bar_line_true(hftblt),
+        baca.tweak.endpoint_alignments_left_center(),
         rleak=True,
     )
 

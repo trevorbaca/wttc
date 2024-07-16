@@ -494,6 +494,9 @@ number.9.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -523,6 +526,9 @@ number.9.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -661,6 +667,9 @@ number.9.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -690,6 +699,9 @@ number.9.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -867,6 +879,9 @@ number.9.AltoFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -896,6 +911,9 @@ number.9.AltoFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
@@ -1001,6 +1019,9 @@ number.9.Oboe.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! SPANNER_START
     - \tweak staff-padding 3.5
@@ -1030,6 +1051,9 @@ number.9.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1085,6 +1109,9 @@ number.9.Oboe.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! SPANNER_START
     - \tweak staff-padding 3.5
@@ -1114,6 +1141,9 @@ number.9.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1242,6 +1272,9 @@ number.9.Oboe.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
     \<
       %! SPANNER_START
     - \tweak staff-padding 3.5
@@ -1271,6 +1304,9 @@ number.9.Oboe.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak endpoint-alignments #'(-1 . 0)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
