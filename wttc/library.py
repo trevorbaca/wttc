@@ -2259,6 +2259,31 @@ def G1c(
     )
 
 
+def G2a1(pleaves, pitch, peak):
+    baca.pitch(pleaves, pitch)
+    pheads = baca.select.pheads(pleaves)
+    baca.color_fingerings(
+        pheads,
+        [1, 2, 1, 2, 3, 1, 3, 2],
+    )
+    if ">" in peak:
+        baca.hairpin(
+            pleaves,
+            peak,
+        )
+    else:
+        left = len(pleaves) // 2
+        right = len(pleaves) - left
+        parts = baca.select.lparts(pleaves, [left, right])
+        last_leaf = parts[-1][-1]
+        assert last_leaf.written_duration == abjad.Duration(1, 16), repr(last_leaf)
+        baca.hairpin(
+            parts,
+            swells(peak),
+            *final_to_bar_line_false(True),
+        )
+
+
 def G2a2(pleaves, pitch, alteration, peak, *, hftblt=False, tssp=5.5):
     baca.pitch(pleaves, pitch)
     baca.spanners.trill(

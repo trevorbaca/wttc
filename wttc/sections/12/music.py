@@ -815,28 +815,6 @@ def VC(voice, meters):
     baca.section.append_anchor_note(voice)
 
 
-def G2a1(pleaves, pitch, peak):
-    baca.pitch(pleaves, pitch)
-    pheads = baca.select.pheads(pleaves)
-    baca.color_fingerings(
-        pheads,
-        [1, 2, 1, 2, 3, 1, 3, 2],
-    )
-    if ">" in peak:
-        baca.hairpin(
-            pleaves,
-            peak,
-        )
-    else:
-        left = len(pheads) // 2 + 1
-        right = len(pheads) - left
-        baca.hairpin(
-            baca.select.lparts(pleaves, [left, right]),
-            library.swells(peak),
-            rleak=True,
-        )
-
-
 def G3c(pleaves, pitch):
     baca.pitch(pleaves, pitch)
     baca.hairpin(
@@ -861,23 +839,23 @@ def G5a(pleaves, glissandi, starts):
 def fl(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "fl")
     library.G1a(library.pleaves(m[1], 1), "A#4", [1, 2], "p")
-    G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
+    library.G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
     library.G3a(library.pleaves(m[2, 3], 3), "D5 C5", "p p mp mp mf mf")
     library.G1a(library.pleaves(m[3, 4], 1), "A#4", [2, 2], "mp")
-    G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
+    library.G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
     library.G3a(library.pleaves(m[5], 3), "D5 C5", "mf mf f")
     library.G1a(library.pleaves(m[5, 6], 1), "A#4", [2, 2], "mf")
-    G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
+    library.G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
     library.G3a(library.pleaves(m[8], 3), "D5 C5", "f")
     library.G1a(library.pleaves(m[9, 12], 1), "B4", 12 * [1], "mf mf mp mp p p")
-    G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
+    library.G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
     G5a(
         library.pleaves(m[14, 15], 5),
         ["G4 F4", "Gb4 E4", "F4 Eb4", "E4 D4"],
         "mf mp p pp",
     )
     library.G1a(library.pleaves(m[15, 16], 1), "B4", [2, 2], "mf")
-    G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
+    library.G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
     library.G3a(library.pleaves(m[18], 3), "F4 E4", "f")
     library.G1a(library.pleaves(m[22], 1), "B4", [1, 1], "p")
     library.G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
@@ -896,11 +874,11 @@ def fl(m):
 
 def ob(m):
     library.attach_section_initial_persistent_indicators(m[1][0], "ob")
-    G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
-    G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
-    G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
-    G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
-    G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
+    library.G2a1(library.pleaves(m[1, 2], 2), "C#6", "p")
+    library.G2a1(library.pleaves(m[4, 5], 2), "C#6", "mp")
+    library.G2a1(library.pleaves(m[6, 8], 2), "C#6", "mf")
+    library.G2a1(library.pleaves(m[12, 14], 2), "G5", "f>o!")
+    library.G2a1(library.pleaves(m[16, 18], 2), "G5", "f")
     library.G2a2(library.pleaves(m[23, 24], 2), "G#5", "B5", "mp")
     library.H1a(library.pleaves(m[28], 99), "D4", "f")
     library.G2a2(library.pleaves(m[29, 30], 2), "G#5", "B5", "p")
@@ -1096,6 +1074,7 @@ def align_spanners(cache):
     baca.override.dls_staff_padding(gt1[1, 33], 4)
     gt2 = cache["gt2"]
     baca.override.dls_staff_padding(gt2[1, 33], 6)
+    baca.override.tuplet_bracket_staff_padding(gt2[5, 6], 2)
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[1, 16], 4)
     baca.override.dls_staff_padding(vn[19, 22], 5)

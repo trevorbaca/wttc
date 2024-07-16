@@ -1355,6 +1355,9 @@ number.12.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak to-barline ##f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \>
 
         fs'''!16 * 3136/1024
@@ -1600,6 +1603,9 @@ number.12.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak to-barline ##f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \>
 
         fs'''!16 * 4368/2048
@@ -1800,6 +1806,9 @@ number.12.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -2496,6 +2505,9 @@ number.12.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -3576,6 +3588,9 @@ number.12.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak to-barline ##f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \>
 
         cs'''!16 * 17088/7168
@@ -3666,6 +3681,9 @@ number.12.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -3768,6 +3786,9 @@ number.12.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##f
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -4052,19 +4073,14 @@ number.12.Oboe.Music = {
         ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 3 }
 
         g''16 * 13440/7168
-          %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"13440" #"7168"
-        ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 2 }
-
-        g''16 * 14592/7168
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \f
           %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"14592" #"7168"
-        ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
+        %@% ^ \baca-duration-multiplier-markup #"13440" #"7168"
+        ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 2 }
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak circled-tip ##t
@@ -4074,7 +4090,15 @@ number.12.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak to-barline ##f
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \>
+
+        g''16 * 14592/7168
+          %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"14592" #"7168"
+        ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
 
         g''16 * 15744/7168
           %! DURATION_MULTIPLIER
@@ -6078,6 +6102,7 @@ number.12.Guitar.2.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"31488" #"11264"
 
+        \override TupletBracket.staff-padding = 2
         bs'!16 * 34176/11264
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"34176" #"11264"
@@ -6199,6 +6224,7 @@ number.12.Guitar.2.Music = {
           %! SPANNER_STOP
         \!
         ]
+        \revert TupletBracket.staff-padding
 
     }
     \revert TupletNumber.text
