@@ -2280,6 +2280,7 @@ def G2a1(pleaves, pitch, peak):
         baca.hairpin(
             parts,
             swells(peak),
+            baca.tweak.endpoint_alignments_left_center(),
             *final_to_bar_line_false(True),
         )
 

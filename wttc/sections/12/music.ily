@@ -1325,6 +1325,9 @@ number.12.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         fs'''!16 * 1920/1024
@@ -1353,6 +1356,9 @@ number.12.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -1568,6 +1574,9 @@ number.12.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         fs'''!16 * 2400/2048
@@ -1601,6 +1610,9 @@ number.12.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -1763,6 +1775,9 @@ number.12.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         fs'''!16 * 1248/1024
@@ -1806,6 +1821,9 @@ number.12.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -2462,6 +2480,9 @@ number.12.AltoFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         c'''16 * 1248/1024
@@ -2505,6 +2526,9 @@ number.12.AltoFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -3553,6 +3577,9 @@ number.12.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         cs'''!16 * 7680/7168
@@ -3586,6 +3613,9 @@ number.12.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -3648,6 +3678,9 @@ number.12.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         cs'''!16 * 7680/7168
@@ -3681,6 +3714,9 @@ number.12.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -3738,6 +3774,9 @@ number.12.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         cs'''!16 * 10368/13312
@@ -3786,6 +3825,9 @@ number.12.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
@@ -4040,6 +4082,9 @@ number.12.Oboe.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
         \<
 
         g''16 * 4992/7168
@@ -4088,6 +4133,9 @@ number.12.Oboe.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #blue
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak endpoint-alignments #'(-1 . 0)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak to-barline ##f
