@@ -213,7 +213,7 @@ def vn(m):
     library.H3(library.pleaves(m[11], 3), "E4", "F#4", "F#5", "D#4", "mp f", "P1")
     baca.override.rehearsal_mark_extra_offset(
         m[11][-1],
-        (0, 4),
+        (0, 2),
         after=True,
         context="Staff",
     )

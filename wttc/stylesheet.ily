@@ -161,7 +161,8 @@
     \override TrillPitchHead.whiteout = ##t
     \override TrillPitchParentheses.layer = 2
     \override TrillPitchParentheses.whiteout = ##t
-    \override TrillSpanner.bound-details.left-broken.text = \markup \null
+    % \override TrillSpanner.bound-details.left-broken.text = \markup \null
+    \override TrillSpanner.bound-details.left-broken.end-on-note = #f
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 2
     \override TupletNumber.font-size = 0

@@ -48,10 +48,6 @@ def GLOBALS(skips):
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
-    baca.bar_line(
-        skips[12 - 1],
-        "|.",
-    )
 
 
 def FL(voice, meters):

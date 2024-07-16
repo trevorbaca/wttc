@@ -3041,8 +3041,16 @@ def O1a(pleaves, pitches, hairpin, *, rleak=False):
 
 def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
-    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    baca.pitches(
+        pleaves,
+        pitches,
+        allow_obgc_mutation=True,
+        allow_out_of_range=True,
+        strict=True,
+    )
     nongraces = abjad.select.notes(pleaves, grace=False)
+    for nongrace in nongraces:
+        nongrace.written_pitch -= 12
     baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,
@@ -3061,7 +3069,7 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
         baca.tweak.direction_down(),
-        baca.tweak.staff_padding(8),
+        baca.tweak.staff_padding(7),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,
@@ -3070,7 +3078,14 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
 
 def O1b(pleaves, pitches, hairpin, *, rleak=False):
     pitches = " ".join([_ + "4" for _ in pitches.split()])
-    baca.pitches(pleaves, pitches, allow_obgc_mutation=True, strict=True)
+    pitches = pitches[:-1] + "3"
+    baca.pitches(
+        pleaves,
+        pitches,
+        allow_obgc_mutation=True,
+        allow_out_of_range=True,
+        strict=True,
+    )
     graces = abjad.select.notes(pleaves, grace=True)
     baca.override.note_head_style_harmonic_black(graces)
     nongraces = abjad.select.notes(pleaves, grace=False)
@@ -3085,7 +3100,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak=False):
     baca.spanners.text(
         nongraces,
         r"\wttc-half-harmonic-pressure =|",
-        baca.tweak.staff_padding(5.5),
+        baca.tweak.staff_padding(4),
         left_broken_text=r"\baca-parenthesized-half-harm-markup",
         rleak=True,
     )
@@ -3093,7 +3108,7 @@ def O1b(pleaves, pitches, hairpin, *, rleak=False):
         nongraces,
         r"\wttc-final-note-sounds-ottava-higher-markup =|",
         baca.tweak.direction_down(),
-        baca.tweak.staff_padding(8),
+        baca.tweak.staff_padding(7),
         direction=abjad.DOWN,
         lilypond_id=1,
         rleak=True,

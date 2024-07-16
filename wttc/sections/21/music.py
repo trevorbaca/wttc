@@ -279,7 +279,7 @@ def owl(skips):
 def align_spanners(cache):
     fl = cache["fl"]
     baca.override.dls_staff_padding(fl[1, 5], 3)
-    baca.override.dls_staff_padding(fl[6], 4)
+    baca.override.dls_staff_padding(fl[6], 10)
     baca.override.dls_staff_padding(fl[7, 10], 4)
     gt1 = cache["gt1"]
     baca.override.dls_staff_padding(gt1[3], 5.5)
@@ -297,7 +297,7 @@ def align_spanners(cache):
     baca.override.tuplet_bracket_direction_up(gt2[9, 10])
     vn = cache["vn"]
     baca.override.dls_staff_padding(vn[3], 5)
-    baca.override.dls_staff_padding(vn[6], 4.5)
+    baca.override.dls_staff_padding(vn[6], 10)
     vc = cache["vc"]
     baca.override.dls_staff_padding(vc[3], 5)
     baca.override.dls_staff_padding(vc[5, 6], 4)

@@ -1853,7 +1853,7 @@ number.2.Violin.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     ]
-    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 4)
+    \once \override Staff.RehearsalMark.extra-offset = #'(0 . 2)
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 

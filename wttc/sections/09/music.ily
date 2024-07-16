@@ -323,7 +323,6 @@ number.9.Skips = {
     - \baca-start-mn-left-only "128"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
-    \bar "|."
     \tweak padding 1.5
     \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 

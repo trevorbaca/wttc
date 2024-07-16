@@ -415,7 +415,7 @@ number.21.AltoFlute.Music.item.1 = {
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
-    a'8.
+    a8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -438,7 +438,7 @@ number.21.AltoFlute.Music.item.1 = {
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTextSpanOne
       %! EXPLICIT_DYNAMIC
@@ -457,7 +457,7 @@ number.21.AltoFlute.Music.item.1 = {
     - \tweak stencil ##f
     ~
 
-    a'1
+    a1
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
 
@@ -629,7 +629,7 @@ number.21.AltoFlute.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [AltoFlute.Music measure 6]
-    \override DynamicLineSpanner.staff-padding = 4
+    \override DynamicLineSpanner.staff-padding = 10
     r16
 
     <<
@@ -645,7 +645,7 @@ number.21.AltoFlute.Music = {
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                a'
+                a
                 bf'!
             >16 * 4/5
               %! DURATION_MULTIPLIER
@@ -1439,7 +1439,7 @@ number.21.Violin.Music.item.1 = {
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
     \voiceTwo
-    f'8.
+    f8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1452,7 +1452,7 @@ number.21.Violin.Music.item.1 = {
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-parenthesized-half-harm-markup
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    - \tweak staff-padding 4
       %! SPANNER_START
     \startTextSpan
       %! SPANNER_START
@@ -1462,7 +1462,7 @@ number.21.Violin.Music.item.1 = {
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
-    - \tweak staff-padding 8
+    - \tweak staff-padding 7
       %! SPANNER_START
     \startTextSpanOne
       %! EXPLICIT_DYNAMIC
@@ -1481,7 +1481,7 @@ number.21.Violin.Music.item.1 = {
     - \tweak stencil ##f
     ~
 
-    f'1
+    f1
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -1579,7 +1579,7 @@ number.21.Violin.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Violin.Music measure 6]
-    \override DynamicLineSpanner.staff-padding = 4.5
+    \override DynamicLineSpanner.staff-padding = 10
     r16
 
     <<
@@ -1595,7 +1595,7 @@ number.21.Violin.Music = {
             <
                 \tweak font-size 0
                 \tweak transparent ##t
-                f'
+                f
                 g'
             >16 * 4/5
               %! DURATION_MULTIPLIER
