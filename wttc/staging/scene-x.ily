@@ -44,9 +44,9 @@ scene-x-C = \markup
   \line { You'll know. \lnum #131 }
   \vspace #1
   \adobe-italic \line { OWL stops. }
-  \vspace #3
+  \vspace #1
   \adobe-italic \line { Pause. }
-  \vspace #3
+  \vspace #1
   \line { Will it have to do with \dots ? \lnum #132 } }
 
 scene-x-D = \markup

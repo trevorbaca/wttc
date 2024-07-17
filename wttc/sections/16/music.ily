@@ -130,6 +130,8 @@ number.16.Skips = {
     - \baca-start-mn-left-only "256"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ulongfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]

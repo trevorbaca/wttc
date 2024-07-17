@@ -342,7 +342,8 @@ def main(environment):
         # section 15
         baca.layout.Page(
             83,
-            baca.layout.System(243, y_offset, distances),
+            # baca.layout.System(243, y_offset, distances),
+            baca.layout.System(243, y_offset, distances, x_offset=40),
         ),
         baca.layout.Page(
             84,
@@ -751,8 +752,8 @@ def main(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
-        centered_bar_number_transparent_true=[1, 4, 12, 52, 100, 106, 117]
-        + [123, 151, 216, 227, 260, 311, 340, 346, 356, 367, 369, 473, 477, 481, 509],
+        centered_bar_number_transparent_true=[1, 4, 12, 52, 100, 106, 117, 123, 151]
+        + [216, 227, 243, 260, 311, 340, 346, 356, 367, 369, 473, 477, 481, 509],
         strict_overrides=[
             baca.layout.Override((6, 7), (1, 16)),
             baca.layout.Override(9, (1, 20)),
@@ -769,6 +770,12 @@ def main(environment):
             # baca.layout.Override((239, 242), (1, 12)),
             # baca.layout.Override((239, 242), (1, 8)),
             baca.layout.Override((239, 242), (1, 10)),
+            # baca.layout.Override((243, 245), (1, 24)),
+            # baca.layout.Override((243, 245), (1, 12)),
+            baca.layout.Override((243, 245), (1, 16)),
+            # baca.layout.Override((250, 252), (1, 24)),
+            # baca.layout.Override((250, 252), (1, 16)),
+            baca.layout.Override((250, 252), (1, 20)),
         ],
         nonstrict_overrides=[
             baca.layout.Override(1, (1, 32)),
@@ -795,7 +802,9 @@ def main(environment):
             baca.layout.Override((121, 122), (1, 24)),
             baca.layout.Override((162, 166), (1, 32)),
             baca.layout.Override([181, 183, 196, 202, 208, 211], (1, 32)),
-            baca.layout.Override([214, 215, 255, 257, 258, 260], (1, 32)),
+            baca.layout.Override([214, 215, 257, 258, 260], (1, 32)),
+            # baca.layout.Override((255, 256), (1, 24)),
+            baca.layout.Override((255, 256), (1, 28)),
             baca.layout.Override((264, 267), (1, 32)),
             baca.layout.Override((274, 277), (1, 32)),
             baca.layout.Override((274, 277), (1, 32)),

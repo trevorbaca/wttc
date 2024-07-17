@@ -897,7 +897,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 243]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #40 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
@@ -2878,15 +2878,16 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 243]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #16
+    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 4/4
 
     % [SpacingCommands measure 244]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 245]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #384
     s1 * 4/4
 
     % [SpacingCommands measure 246]
@@ -2906,15 +2907,15 @@ SpacingCommands = {
     s1 * 2/4
 
     % [SpacingCommands measure 250]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #20
     s1 * 4/4
 
     % [SpacingCommands measure 251]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #20
     s1 * 4/4
 
     % [SpacingCommands measure 252]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #480
     s1 * 6/4
 
     % [SpacingCommands measure 253]
@@ -2926,11 +2927,11 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 255]
-    \baca-start-nonstrict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #28
     s1 * 6/4
 
     % [SpacingCommands measure 256]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-nonstrict-spacing-section #35 #672
     s1 * 4/4
 
     % [SpacingCommands measure 257]
