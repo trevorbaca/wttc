@@ -78,7 +78,7 @@ scene-ix-C-continued = \markup
   \line { No doubt of that. \lnum #121 }
   \line { No doubt at all. \lnum #122 }
   \line { And it'll be — \lnum #123 }
-  \vspace #1
+  % \vspace #1
   \adobe-italic \justify { OWL looks back at the window, returns to it quickly,
   goes behind it, and looks through it in the direction of the audience. } }
 

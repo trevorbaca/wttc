@@ -165,6 +165,7 @@ def main(environment):
             40,
             baca.layout.System(115, y_offset, distances),
         ),
+        # section 9 / scene 6
         baca.layout.Page(
             41,
             baca.layout.System(117, y_offset, distances),
@@ -181,7 +182,7 @@ def main(environment):
             44,
             baca.layout.System(127, y_offset, distances),
         ),
-        #
+        # section 10 / scene 7 (begin)
         baca.layout.Page(
             45,
             baca.layout.System(129, y_offset, distances),
@@ -214,6 +215,7 @@ def main(environment):
             52,
             baca.layout.System(149, y_offset, distances),
         ),
+        # section 11 (scene 7, cont)
         baca.layout.Page(
             53,
             baca.layout.System(151, y_offset, distances),
@@ -246,7 +248,7 @@ def main(environment):
             60,
             baca.layout.System(175, y_offset, distances),
         ),
-        #
+        # section 12 (scene 7, cont)
         baca.layout.Page(
             61,
             baca.layout.System(179, y_offset, distances),
@@ -299,10 +301,10 @@ def main(environment):
             73,
             baca.layout.System(214, y_offset, distances),
         ),
-        #
+        # section 13 / scene 8
         baca.layout.Page(
             74,
-            baca.layout.System(216, y_offset, distances),
+            baca.layout.System(216, y_offset, distances, x_offset=40),
         ),
         baca.layout.Page(
             75,
@@ -316,10 +318,10 @@ def main(environment):
             77,
             baca.layout.System(225, y_offset, distances),
         ),
-        #
+        # section 14
         baca.layout.Page(
             78,
-            baca.layout.System(227, y_offset, distances),
+            baca.layout.System(227, y_offset, distances, x_offset=40),
         ),
         baca.layout.Page(
             79,
@@ -337,7 +339,7 @@ def main(environment):
             82,
             baca.layout.System(239, y_offset, distances),
         ),
-        #
+        # section 15
         baca.layout.Page(
             83,
             baca.layout.System(243, y_offset, distances),
@@ -350,7 +352,7 @@ def main(environment):
             85,
             baca.layout.System(250, y_offset, distances),
         ),
-        #
+        # section 16
         baca.layout.Page(
             86,
             baca.layout.System(253, y_offset, distances),
@@ -359,7 +361,7 @@ def main(environment):
             87,
             baca.layout.System(255, y_offset, distances),
         ),
-        #
+        # section 17
         baca.layout.Page(
             88,
             baca.layout.System(257, y_offset, distances),
@@ -750,7 +752,7 @@ def main(environment):
     spacing = baca.layout.Spacing(
         default=(1, 32),
         centered_bar_number_transparent_true=[1, 4, 12, 52, 100, 106, 117]
-        + [123, 151, 260, 311, 340, 346, 356, 367, 369, 473, 477, 481, 509],
+        + [123, 151, 216, 227, 260, 311, 340, 346, 356, 367, 369, 473, 477, 481, 509],
         strict_overrides=[
             baca.layout.Override((6, 7), (1, 16)),
             baca.layout.Override(9, (1, 20)),
@@ -758,6 +760,15 @@ def main(environment):
             baca.layout.Override(68, (1, 20)),
             baca.layout.Override(105, (1, 28)),
             baca.layout.Override(139, (1, 64)),
+            baca.layout.Override((175, 178), (1, 10)),
+            baca.layout.Override((216, 218), (1, 20)),
+            baca.layout.Override((216, 218), (1, 20)),
+            baca.layout.Override((222, 224), (1, 24)),
+            baca.layout.Override((227, 229), (1, 12)),
+            baca.layout.Override((234, 235), (1, 24)),
+            # baca.layout.Override((239, 242), (1, 12)),
+            # baca.layout.Override((239, 242), (1, 8)),
+            baca.layout.Override((239, 242), (1, 10)),
         ],
         nonstrict_overrides=[
             baca.layout.Override(1, (1, 32)),

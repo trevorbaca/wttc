@@ -16,6 +16,10 @@
   \override #'(font-size . 0)
   \etc
 
+\markup ipad-title-font-size = \markup
+  \override #'(font-size . 4)
+  \etc
+
 \markup parenthesized-section-title-font-size = \markup
   \override #'(font-size . 6)
   \etc

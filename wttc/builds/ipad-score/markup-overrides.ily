@@ -5,7 +5,7 @@
 % SCENE 1
 
 \markup scene-i-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(59 . 20.5)
   \etc
 \markup scene-i-A-overrides = \markup
@@ -34,7 +34,7 @@
 % SCENE 2
 
 \markup scene-ii-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(0 . -8)
   \etc
 \markup scene-ii-A-overrides = \markup
@@ -81,7 +81,7 @@
 % SCENE 3
 
 \markup scene-iii-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(10 . -9)
   \etc
 \markup scene-iii-A-overrides = \markup
@@ -121,7 +121,7 @@
 % SCENE 4
 
 \markup scene-iv-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(0 . -8)
   \etc
 \markup scene-iv-A-overrides = \markup
@@ -180,7 +180,7 @@
 % SCENE 5
 
 \markup scene-v-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(0 . -8) 
   \etc
 \markup scene-v-A-overrides = \markup
@@ -202,7 +202,7 @@
 % SCENE 6
 
 \markup scene-vi-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(0 . -8)
   \etc
 \markup scene-vi-A-overrides = \markup
@@ -245,12 +245,8 @@
 % SCENE 7
 
 \markup scene-vii-title-overrides = \markup
-  \parts-title-font-size
-  \translate #'(-34 . 12)
-  \etc
-\markup scene-vii-parenthesized-title-overrides = \markup
-  \parts-title-font-size
-  \translate #'(-34 . 12)
+  \ipad-title-font-size
+  \translate #'(8 . -8)
   \etc
 \markup scene-vii-A-overrides = \markup
   \ipad-baseline-skip
@@ -286,8 +282,8 @@
 \markup scene-vii-H-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \override #'(line-width . 60)
-  \translate #'(46 . -40)
+  \override #'(line-width . 30)
+  \translate #'(17 . -46)
   \etc
 \markup scene-vii-I-overrides = \markup
   \ipad-baseline-skip
@@ -297,73 +293,69 @@
 \markup scene-vii-J-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(166 . -44)
+  \translate #'(87 . -44)
   \etc
 
 % SCENE 8
 
 \markup scene-viii-title-overrides = \markup
-  \parts-title-font-size
-  \translate #'(-110 . 12)
+  \ipad-title-font-size
+  \translate #'(-50 . -8)
   \etc
 \markup scene-viii-A-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \override #'(line-width . 50)
-  \translate #'(-84 . -20)
+  \override #'(line-width . 30)
+  \translate #'(-50 . -20)
   \etc
 \markup scene-viii-B-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(4 . -43)
+  \translate #'(4 . -46)
   \etc
 \markup scene-viii-C-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(36 . -41)
+  \translate #'(48 . -46)
   \etc
 \markup scene-viii-D-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(0 . -41)
+  \translate #'(0 . -46)
   \etc
 \markup scene-viii-E-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(92 . -38)
+  \translate #'(70 . -43)
   \etc
 
 % SCENE 9
 
 \markup scene-ix-title-overrides = \markup
-  \parts-title-font-size
-  \translate #'(-90 . 12)
-  \etc
-\markup scene-ix-parenthesized-title-overrides = \markup
-  \parts-title-font-size
-  \translate #'(-32 . 12)
+  \ipad-title-font-size
+  \translate #'(-50 . -8)
   \etc
 \markup scene-ix-A-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(-74 . -24)
+  \translate #'(-50 . -24)
   \etc
 \markup scene-ix-B-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \override #'(line-width . 100)
+  \override #'(line-width . 64)
   \translate #'(0 . -41)
   \etc
 \markup scene-ix-C-overrides = \markup
   \ipad-baseline-skip
-  \ipad-font-size
-  \translate #'(120 . -10)
+  \override #'(font-size . -1)
+  \translate #'(60 . -5)
   \etc
 \markup scene-ix-C-continued-overrides = \markup
   \ipad-baseline-skip
-  \ipad-font-size
-  \override #'(line-width . 80)
-  \translate #'(200 . -10)
+  \override #'(font-size . -1)
+  \override #'(line-width . 44)
+  \translate #'(60 . -80)
   \etc
 \markup scene-ix-D-overrides = \markup
   \ipad-baseline-skip
@@ -373,17 +365,18 @@
 \markup scene-ix-E-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(50 . -38)
+  \translate #'(32 . -38)
   \etc
 
 % SCENE 10
+% HERE
 
 \markup scene-x-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-100 . 12)
   \etc
 \markup scene-x-parenthesized-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-34 . 12)
   \etc
 \markup scene-x-A-overrides = \markup
@@ -411,7 +404,7 @@
 % SCENE 11
 
 \markup scene-xi-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-90 . -2)
   \etc
 \markup scene-xi-A-overrides = \markup
@@ -424,11 +417,11 @@
 % SCENE 12
 
 \markup scene-xii-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(0 . 16)
   \etc
 \markup scene-xii-parenthesized-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 12)
   \etc
 \markup scene-xii-A-overrides = \markup
@@ -485,11 +478,11 @@
 % SCENE 13
 
 \markup scene-xiii-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-60 . 12)
   \etc
 \markup scene-xiii-parenthesized-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 12)
   \etc
 \markup scene-xiii-A-overrides = \markup
@@ -532,7 +525,7 @@
 % SCENE 14
 
 \markup scene-xiv-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-60 . 12)
   \etc
 \markup scene-xiv-A-overrides = \markup
@@ -559,7 +552,7 @@
 % SCENE 15
 
 \markup scene-xv-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 12)
   \etc
 \markup scene-xv-A-overrides = \markup
@@ -602,11 +595,11 @@
 % SCENE 16
 
 \markup scene-xvi-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 12)
   \etc
 \markup scene-xvi-parenthesized-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 12)
   \etc
 \markup scene-xvi-A-overrides = \markup
@@ -663,7 +656,7 @@
 % SCENE 17
 
 \markup scene-xvii-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-102 . 12)
   \etc
 \markup scene-xvii-A-overrides = \markup
@@ -697,7 +690,7 @@
 % SCENE 18
 
 \markup scene-xviii-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-90 . 12)
   \etc
 \markup scene-xviii-A-overrides = \markup
@@ -724,11 +717,11 @@
 % SCENE 19
 
 \markup scene-xix-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-96 . 6)
   \etc
 \markup scene-xix-parenthesized-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 12)
   \etc
 \markup scene-xix-A-overrides = \markup
@@ -800,7 +793,7 @@
 % SCENE 20
 
 \markup scene-xx-title-overrides = \markup
-  \parts-title-font-size
+  \ipad-title-font-size
   \translate #'(-32 . 140)
   \etc
 \markup scene-xx-A-overrides = \markup
