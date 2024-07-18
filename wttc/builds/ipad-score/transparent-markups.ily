@@ -34,3 +34,7 @@
 % SCENE 10
 
 \markup scene-x-parenthesized-title-overrides = \markup \transparent \etc
+
+% SCENE 12
+
+\markup scene-xii-parenthesized-title-overrides = \markup \transparent \etc

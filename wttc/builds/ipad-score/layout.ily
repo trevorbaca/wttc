@@ -949,7 +949,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 257]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #60 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 5/4
 
@@ -1136,25 +1136,27 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 306]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 307]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
-    \pageBreak
     s1 * 4/4
 
     % [Breaks measure 308]
     s1 * 5/4
 
     % [Breaks measure 309]
-    s1 * 5/4
-
-    % [Breaks measure 310]
     \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 5/4
 
+    % [Breaks measure 310]
+    s1 * 5/4
+
     % [Breaks measure 311]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 312]
@@ -2952,11 +2954,11 @@ SpacingCommands = {
     s1 * 8/4
 
     % [SpacingCommands measure 261]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #18
     s1 * 5/4
 
     % [SpacingCommands measure 262]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #432
     s1 * 7/4
 
     % [SpacingCommands measure 263]
@@ -3068,11 +3070,11 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 290]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #24
     s1 * 3/4
 
     % [SpacingCommands measure 291]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #576
     s1 * 6/4
 
     % [SpacingCommands measure 292]
@@ -3128,11 +3130,11 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 305]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 306]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #1 #32
     s1 * 5/4
 
     % [SpacingCommands measure 307]
@@ -3140,15 +3142,15 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 308]
-    \baca-start-strict-spacing-section #1 #32
-    s1 * 5/4
-
-    % [SpacingCommands measure 309]
     \baca-start-strict-spacing-section #35 #768
     s1 * 5/4
 
+    % [SpacingCommands measure 309]
+    \baca-start-strict-spacing-section #1 #24
+    s1 * 5/4
+
     % [SpacingCommands measure 310]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #576
     s1 * 5/4
 
     % [SpacingCommands measure 311]

@@ -400,34 +400,32 @@
 
 \markup scene-xi-title-overrides = \markup
   \ipad-title-font-size
-  \translate #'(-90 . -2)
+  \translate #'(-66 . -2)
   \etc
 \markup scene-xi-A-overrides = \markup
-  \ipad-baseline-skip
-  \ipad-font-size
-  \override #'(line-width . 60)
-  \translate #'(-90 . -20)
+  % \ipad-baseline-skip
+  \override #'(baseline-skip . 2.8)
+  % \ipad-font-size
+  \override #'(font-size . -1.5)
+  \override #'(line-width . 40)
+  \translate #'(-66 . -8)
   \etc
 
 % SCENE 12
 
 \markup scene-xii-title-overrides = \markup
   \ipad-title-font-size
-  \translate #'(0 . 16)
-  \etc
-\markup scene-xii-parenthesized-title-overrides = \markup
-  \ipad-title-font-size
-  \translate #'(-32 . 12)
+  \translate #'(8 . -8)
   \etc
 \markup scene-xii-A-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(112 . -38)
+  \translate #'(70 . -43)
   \etc
 \markup scene-xii-B-overrides = \markup
   \ipad-baseline-skip
   \ipad-font-size
-  \translate #'(60 . -20)
+  \translate #'(68 . -31)
   \etc
 \markup scene-xii-C-overrides = \markup
   \ipad-baseline-skip

@@ -17,16 +17,18 @@ scene-xi-A = \markup
   \line { Again? \lnum #137 }
   \line { You could not see me, and so you }
   \line { left and went \dots \lnum #138 }
-  \vspace #1
+  % \vspace #1
   \adobe-italic \line { Pause. }
-  \vspace #1
+  % \vspace #1
   \line { No, it's all all right. \lnum #139 }
   \line { You would not have gone like that, \lnum #140 }
   \line { No way —. \lnum #141 }
-  \vspace #1
+  % \vspace #1
+  \vspace #0.25
   \adobe-italic \justify { Pause. OWL looks from left to right, expecting
   something to happen, then goes on when the coast is evidently clear. }
-  \vspace #2
+  % \vspace #2
+  \vspace #0.5
   \line { No. \lnum #142 }
   \line { If you had done, for some reason, \lnum #143 }
   \line { If you had had to go, \lnum #144 }
@@ -48,19 +50,19 @@ scene-xi-A = \markup
   \line { Again, \lnum #154 }
   \line { And all that time \dots, \lnum #155 }
   \line { Then — \lnum #156 }
-  \vspace #1
+  % \vspace #1
   \adobe-italic \line { Pause. }
-  \vspace #1
+  % \vspace #1
   \line { Never mind. \lnum #157 }
   \line { You would have left something to tell me. \lnum #158 }
   \line { You would have left it on the table. \lnum #159 }
-  \vspace #1
+  % \vspace #1
   \adobe-italic \line { OWL looks back at the table. }
-  \vspace #1
+  % \vspace #1
   \line { Nothing. \lnum #160 }
   \line { Nothing at all. \lnum #161 }
-  \vspace #1
+  % \vspace #1
   \adobe-italic \line { Pause. }
-  \vspace #3
+  % \vspace #3
   \adobe-italic \line { End scene 11. } }
 
