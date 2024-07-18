@@ -111,6 +111,12 @@ def GLOBALS(skips, first_measure_number):
     baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
     #
     baca.metronome_mark(skips[47 - 1], "75", manifests=library.manifests)
+    baca.mark(
+        skips[48 - 1],
+        strings.fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):

@@ -466,301 +466,339 @@ def main(environment):
         ),
         baca.layout.Page(
             112,
-            baca.layout.System(316, y_offset, distances),
+            baca.layout.System(315, y_offset, distances),
         ),
+        #
         baca.layout.Page(
             113,
-            baca.layout.System(319, y_offset, distances),
+            baca.layout.System(317, y_offset, distances),
         ),
         baca.layout.Page(
             114,
-            baca.layout.System(323, y_offset, distances),
+            baca.layout.System(319, y_offset, distances),
         ),
         baca.layout.Page(
             115,
-            baca.layout.System(326, y_offset, distances),
+            baca.layout.System(321, y_offset, distances),
         ),
         baca.layout.Page(
             116,
-            baca.layout.System(329, y_offset, distances),
+            baca.layout.System(323, y_offset, distances),
         ),
         baca.layout.Page(
             117,
-            baca.layout.System(332, y_offset, distances),
+            baca.layout.System(325, y_offset, distances),
         ),
         baca.layout.Page(
             118,
-            baca.layout.System(335, y_offset, distances),
+            baca.layout.System(327, y_offset, distances),
         ),
         baca.layout.Page(
             119,
-            baca.layout.System(338, y_offset, distances),
+            baca.layout.System(329, y_offset, distances),
         ),
-        # section 20
         baca.layout.Page(
             120,
-            baca.layout.System(340, y_offset, distances),
+            baca.layout.System(331, y_offset, distances),
         ),
         baca.layout.Page(
             121,
-            baca.layout.System(344, y_offset, distances),
+            baca.layout.System(333, y_offset, distances),
         ),
         baca.layout.Page(
             122,
-            baca.layout.System(346, y_offset, distances),
+            baca.layout.System(335, y_offset, distances),
         ),
-        # section 21
         baca.layout.Page(
             123,
-            baca.layout.System(350, y_offset, distances),
+            baca.layout.System(337, y_offset, distances),
         ),
         baca.layout.Page(
             124,
-            baca.layout.System(352, y_offset, distances),
+            baca.layout.System(339, y_offset, (15, 20, 22.5, 17.5, 20, 20)),
         ),
+        # section 20 / SCENE 13 (begin)
         baca.layout.Page(
             125,
-            baca.layout.System(353, y_offset, distances),
+            baca.layout.System(340, y_offset, distances, x_offset=20),
         ),
         baca.layout.Page(
             126,
-            baca.layout.System(356, y_offset, distances),
+            baca.layout.System(344, y_offset, distances),
         ),
-        # section 22
         baca.layout.Page(
             127,
-            baca.layout.System(360, y_offset, distances),
+            baca.layout.System(346, y_offset, distances),
         ),
+        # section 21 / SCENE 13 (cont)
         baca.layout.Page(
             128,
-            baca.layout.System(362, y_offset, distances),
+            baca.layout.System(350, y_offset, distances),
         ),
+        # Still 2
         baca.layout.Page(
             129,
-            baca.layout.System(364, y_offset, distances),
+            baca.layout.System(352, y_offset, (15, 15, 30, 17.5, 17.5, 20)),
         ),
         baca.layout.Page(
             130,
-            baca.layout.System(367, y_offset, distances),
+            baca.layout.System(353, y_offset, (15, 15, 35, 15, 15, 20)),
         ),
-        # section 23
         baca.layout.Page(
             131,
-            baca.layout.System(369, y_offset, distances),
+            baca.layout.System(356, y_offset, distances),
         ),
+        # section 22 / SCENE 14
         baca.layout.Page(
             132,
-            baca.layout.System(372, y_offset, distances),
+            baca.layout.System(
+                360, y_offset, (15, 15, 30, 17.5, 17.5, 20), x_offset=40
+            ),
         ),
         baca.layout.Page(
             133,
-            baca.layout.System(375, y_offset, distances),
+            baca.layout.System(362, y_offset, distances),
         ),
         baca.layout.Page(
             134,
-            baca.layout.System(376, y_offset, distances),
+            baca.layout.System(364, y_offset, distances),
         ),
-        # section 24
         baca.layout.Page(
             135,
-            baca.layout.System(380, y_offset, distances),
+            baca.layout.System(367, y_offset, distances),
         ),
+        # section 23 / SCENE 15
         baca.layout.Page(
             136,
-            baca.layout.System(383, y_offset, distances),
+            baca.layout.System(369, y_offset, distances),
         ),
         baca.layout.Page(
             137,
-            baca.layout.System(386, y_offset, distances),
+            baca.layout.System(372, y_offset, distances),
         ),
         baca.layout.Page(
             138,
-            baca.layout.System(389, y_offset, distances),
+            baca.layout.System(375, y_offset, (15, 15, 30, 17.5, 17.5, 20)),
         ),
         baca.layout.Page(
             139,
-            baca.layout.System(392, y_offset, distances),
+            baca.layout.System(376, y_offset, distances),
         ),
+        # section 24 / [M] / SCENE 16 (begin)
         baca.layout.Page(
             140,
-            baca.layout.System(395, y_offset, distances),
+            baca.layout.System(380, y_offset, distances),
         ),
         baca.layout.Page(
             141,
-            baca.layout.System(398, y_offset, distances),
+            baca.layout.System(383, y_offset, distances),
         ),
         baca.layout.Page(
             142,
-            baca.layout.System(401, y_offset, distances),
+            baca.layout.System(386, y_offset, distances),
         ),
         baca.layout.Page(
             143,
-            baca.layout.System(404, y_offset, distances),
+            baca.layout.System(389, y_offset, distances),
         ),
         baca.layout.Page(
             144,
-            baca.layout.System(407, y_offset, distances),
+            baca.layout.System(392, y_offset, distances),
         ),
         baca.layout.Page(
             145,
-            baca.layout.System(410, y_offset, distances),
+            baca.layout.System(395, y_offset, distances),
         ),
         baca.layout.Page(
             146,
-            baca.layout.System(413, y_offset, distances),
+            baca.layout.System(398, y_offset, distances),
         ),
-        # section 25
         baca.layout.Page(
             147,
-            baca.layout.System(417, y_offset, distances),
+            baca.layout.System(401, y_offset, distances),
         ),
         baca.layout.Page(
             148,
-            baca.layout.System(420, y_offset, distances),
+            baca.layout.System(404, y_offset, distances),
         ),
         baca.layout.Page(
             149,
-            baca.layout.System(423, y_offset, distances),
+            baca.layout.System(407, y_offset, distances),
         ),
         baca.layout.Page(
             150,
-            baca.layout.System(426, y_offset, distances),
+            baca.layout.System(410, y_offset, distances),
         ),
         baca.layout.Page(
             151,
-            baca.layout.System(429, y_offset, distances),
+            baca.layout.System(413, y_offset, distances),
         ),
+        # section 25 / [N] / SCENE 16 (cont)
         baca.layout.Page(
             152,
-            baca.layout.System(431, y_offset, distances),
+            # baca.layout.System(417, y_offset, distances),
+            baca.layout.System(417, y_offset, (15, 15, 30, 17.5, 17.5, 20)),
         ),
         baca.layout.Page(
             153,
-            baca.layout.System(433, y_offset, distances),
+            baca.layout.System(420, y_offset, distances),
         ),
         baca.layout.Page(
             154,
+            baca.layout.System(423, y_offset, distances),
+        ),
+        baca.layout.Page(
+            155,
+            baca.layout.System(426, y_offset, distances),
+        ),
+        baca.layout.Page(
+            156,
+            baca.layout.System(428, y_offset, distances),
+        ),
+        baca.layout.Page(
+            157,
+            baca.layout.System(430, y_offset, distances),
+        ),
+        baca.layout.Page(
+            158,
+            baca.layout.System(431, y_offset, distances),
+        ),
+        baca.layout.Page(
+            159,
+            baca.layout.System(433, y_offset, distances),
+        ),
+        baca.layout.Page(
+            160,
             baca.layout.System(435, y_offset, distances),
         ),
         # section 26
         baca.layout.Page(
-            155,
+            161,
             baca.layout.System(437, y_offset, distances),
         ),
         baca.layout.Page(
-            156,
+            162,
             baca.layout.System(439, y_offset, distances),
         ),
         baca.layout.Page(
-            157,
+            163,
             baca.layout.System(443, y_offset, distances),
         ),
         baca.layout.Page(
-            158,
+            164,
             baca.layout.System(445, y_offset, distances),
         ),
         baca.layout.Page(
-            159,
+            165,
             baca.layout.System(447, y_offset, distances),
         ),
         baca.layout.Page(
-            160,
+            166,
             baca.layout.System(450, y_offset, distances),
         ),
         baca.layout.Page(
-            161,
+            167,
             baca.layout.System(453, y_offset, distances),
         ),
         baca.layout.Page(
-            162,
+            168,
             baca.layout.System(456, y_offset, distances),
         ),
         baca.layout.Page(
-            163,
+            169,
             baca.layout.System(459, y_offset, distances),
         ),
         baca.layout.Page(
-            164,
+            170,
             baca.layout.System(462, y_offset, distances),
         ),
         baca.layout.Page(
-            165,
+            171,
             baca.layout.System(465, y_offset, distances),
         ),
         baca.layout.Page(
-            166,
+            172,
             baca.layout.System(469, y_offset, distances),
         ),
-        # section 27
-        baca.layout.Page(
-            167,
-            baca.layout.System(473, y_offset, distances),
-        ),
-        baca.layout.Page(
-            168,
-            baca.layout.System(476, y_offset, distances),
-        ),
-        # section 28
-        baca.layout.Page(
-            169,
-            baca.layout.System(477, y_offset, distances),
-        ),
-        baca.layout.Page(
-            170,
-            baca.layout.System(480, y_offset, distances),
-        ),
-        baca.layout.Page(
-            171,
-            baca.layout.System(481, y_offset, distances),
-        ),
-        # section 29
-        baca.layout.Page(
-            172,
-            baca.layout.System(482, y_offset, distances),
-        ),
+        # section 27 / SCENE 17
         baca.layout.Page(
             173,
-            baca.layout.System(486, y_offset, distances),
+            baca.layout.System(473, y_offset, distances, x_offset=40),
         ),
+        # Still 4
         baca.layout.Page(
             174,
-            baca.layout.System(489, y_offset, distances),
+            baca.layout.System(476, y_offset, (15, 15, 30, 17.5, 17.5, 20)),
         ),
+        # section 28 / SCENE 18
         baca.layout.Page(
             175,
-            baca.layout.System(492, y_offset, distances),
+            # baca.layout.System(477, y_offset, distances),
+            baca.layout.System(477, y_offset, distances, x_offset=40),
         ),
         baca.layout.Page(
             176,
-            baca.layout.System(494, y_offset, distances),
+            baca.layout.System(480, y_offset, distances),
         ),
         baca.layout.Page(
             177,
+            baca.layout.System(481, y_offset, distances),
+        ),
+        # section 29 / SCENE 19
+        baca.layout.Page(
+            178,
+            baca.layout.System(482, y_offset, distances, x_offset=30),
+        ),
+        baca.layout.Page(
+            179,
+            baca.layout.System(485, y_offset, distances),
+        ),
+        baca.layout.Page(
+            180,
+            baca.layout.System(486, y_offset, distances),
+        ),
+        baca.layout.Page(
+            181,
+            baca.layout.System(489, y_offset, distances),
+        ),
+        baca.layout.Page(
+            182,
+            baca.layout.System(492, y_offset, distances),
+        ),
+        baca.layout.Page(
+            183,
+            baca.layout.System(494, y_offset, distances),
+        ),
+        baca.layout.Page(
+            184,
             baca.layout.System(497, y_offset, distances),
         ),
         # section 30
         baca.layout.Page(
-            178,
-            baca.layout.System(498, y_offset, distances),
+            185,
+            # baca.layout.System(498, y_offset, distances),
+            # baca.layout.System(498, y_offset, distances, x_offset=40),
+            baca.layout.System(498, y_offset, distances, x_offset=48),
         ),
         baca.layout.Page(
-            179,
-            baca.layout.System(501, y_offset, distances),
+            186,
+            baca.layout.System(500, y_offset, distances),
         ),
         baca.layout.Page(
-            180,
-            baca.layout.System(504, y_offset, distances),
+            187,
+            baca.layout.System(503, y_offset, distances),
         ),
         baca.layout.Page(
-            181,
-            baca.layout.System(507, y_offset, distances),
+            188,
+            baca.layout.System(506, y_offset, distances),
         ),
         #
     )
     spacing = baca.layout.Spacing(
         default=(1, 32),
         centered_bar_number_transparent_true=[1, 4, 12, 52, 100, 106, 117, 123, 151]
-        + [216, 227, 243, 260, 311, 340, 346, 356, 367, 369, 473, 477, 481, 509],
+        + [216, 227, 243, 260, 311, 340, 346, 356, 367, 369, 372, 430]
+        + [473, 477, 481, 509],
         strict_overrides=[
             baca.layout.Override((6, 7), (1, 16)),
             baca.layout.Override(9, (1, 20)),
@@ -780,6 +818,30 @@ def main(environment):
             baca.layout.Override((261, 262), (1, 18)),
             baca.layout.Override((290, 291), (1, 24)),
             baca.layout.Override((309, 310), (1, 24)),
+            baca.layout.Override((372, 374), (1, 17)),
+            baca.layout.Override((376, 379), (1, 15)),
+            baca.layout.Override(430, (1, 24)),
+            baca.layout.Override(436, (1, 20)),
+            baca.layout.Override((465, 468), (1, 10)),
+            baca.layout.Override((469, 472), (1, 11)),
+            baca.layout.Override((474, 475), (1, 16)),
+            baca.layout.Override(476, (1, 20)),
+            baca.layout.Override((478, 479), (1, 16)),
+            # baca.layout.Override((482, 483), (1, 128)),
+            # baca.layout.Override((482, 483), (1, 96)),
+            baca.layout.Override((482, 483), (1, 112)),
+            # baca.layout.Override(484, (1, 16)),
+            # baca.layout.Override(484, (1, 8)),
+            baca.layout.Override(484, (1, 12)),
+            # baca.layout.Override(485, (1, 128)),
+            baca.layout.Override(485, (1, 96)),
+            baca.layout.Override((486, 488), (1, 128)),
+            baca.layout.Override((489, 491), (1, 128)),
+            baca.layout.Override(492, (1, 128)),
+            baca.layout.Override(494, (1, 112)),
+            baca.layout.Override(495, (1, 16)),
+            baca.layout.Override(496, (1, 96)),
+            baca.layout.Override((498, 499), (1, 24)),
         ],
         nonstrict_overrides=[
             baca.layout.Override(1, (1, 32)),
@@ -811,12 +873,13 @@ def main(environment):
             baca.layout.Override((264, 267), (1, 32)),
             baca.layout.Override((274, 277), (1, 32)),
             baca.layout.Override((274, 277), (1, 32)),
+            baca.layout.Override((340, 343), (1, 16)),
+            baca.layout.Override((346, 349), (1, 13)),
+            baca.layout.Override((356, 359), (1, 20)),
             baca.layout.Override((364, 368), (1, 32)),
             baca.layout.Override([380, 383, 385, 391, 395, 401, 408, 412], (1, 32)),
             baca.layout.Override((417, 419), (1, 32)),
-            baca.layout.Override((468, 472), (1, 32)),
-            baca.layout.Override((479, 481), (1, 32)),
-            baca.layout.Override([490], (1, 32)),
+            baca.layout.Override((480, 481), (1, 32)),
         ],
     )
     return baca.section.make_layout_score(

@@ -176,6 +176,8 @@ number.23.Skips = {
     - \baca-start-mn-left-only "374"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ufermata"
 
     % [Skips measure 7]
       %! LILYPOND_TEMPO_COMMAND

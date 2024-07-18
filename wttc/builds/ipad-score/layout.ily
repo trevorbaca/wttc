@@ -1171,14 +1171,16 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 315]
-    s1 * 6/4
-
-    % [Breaks measure 316]
     \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
+    % [Breaks measure 316]
+    s1 * 6/4
+
     % [Breaks measure 317]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 318]
@@ -1193,6 +1195,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 321]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 322]
@@ -1207,14 +1211,16 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 325]
-    s1 * 6/4
-
-    % [Breaks measure 326]
     \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
+    % [Breaks measure 326]
+    s1 * 6/4
+
     % [Breaks measure 327]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 328]
@@ -1229,14 +1235,16 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 331]
-    s1 * 6/4
-
-    % [Breaks measure 332]
     \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
+    % [Breaks measure 332]
+    s1 * 6/4
+
     % [Breaks measure 333]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 3/4
 
     % [Breaks measure 334]
@@ -1251,18 +1259,20 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 337]
-    s1 * 6/4
-
-    % [Breaks measure 338]
     \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 6/4
 
+    % [Breaks measure 338]
+    s1 * 6/4
+
     % [Breaks measure 339]
+    \baca-lbsd #0 #'(15 20 22.5 17.5 20 20)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 340]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #20 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 3/4
 
@@ -1306,12 +1316,12 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 352]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd #0 #'(15 15 30 17.5 17.5 20)
     \pageBreak
     s1 * 9/4
 
     % [Breaks measure 353]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd #0 #'(15 15 35 15 15 20)
     \pageBreak
     s1 * 4/4
 
@@ -1336,7 +1346,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 360]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #40 #0 #'(15 15 30 17.5 17.5 20)
     \pageBreak
     s1 * 4/4
 
@@ -1393,7 +1403,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 375]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd #0 #'(15 15 30 17.5 17.5 20)
     \pageBreak
     s1 * 9/4
 
@@ -1547,7 +1557,7 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 417]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd #0 #'(15 15 30 17.5 17.5 20)
     \pageBreak
     s1 * 6/4
 
@@ -1588,14 +1598,16 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 428]
-    s1 * 4/4
-
-    % [Breaks measure 429]
     \baca-lbsd #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 4/4
 
+    % [Breaks measure 429]
+    s1 * 4/4
+
     % [Breaks measure 430]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 6/4
 
     % [Breaks measure 431]
@@ -1755,7 +1767,7 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 473]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #40 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 2/4
 
@@ -1766,12 +1778,12 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 476]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd #0 #'(15 15 30 17.5 17.5 20)
     \pageBreak
     s1 * 9/4
 
     % [Breaks measure 477]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #40 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 2/4
 
@@ -1792,7 +1804,7 @@ Breaks = {
     s1 * 3/4
 
     % [Breaks measure 482]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #30 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 1/4
 
@@ -1803,6 +1815,8 @@ Breaks = {
     s1 * 6/4
 
     % [Breaks measure 485]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 1/4
 
     % [Breaks measure 486]
@@ -1852,7 +1866,7 @@ Breaks = {
     s1 * 4/4
 
     % [Breaks measure 498]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \baca-lbsd-xy #48 #0 #'(15 20 20 20 20 20)
     \pageBreak
     s1 * 5/4
 
@@ -1860,33 +1874,33 @@ Breaks = {
     s1 * 5/4
 
     % [Breaks measure 500]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 501]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
-    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 502]
     s1 * 5/4
 
     % [Breaks measure 503]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 504]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
-    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 505]
     s1 * 5/4
 
     % [Breaks measure 506]
+    \baca-lbsd #0 #'(15 20 20 20 20 20)
+    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 507]
-    \baca-lbsd #0 #'(15 20 20 20 20 20)
-    \pageBreak
     s1 * 5/4
 
     % [Breaks measure 508]
@@ -3167,15 +3181,15 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 314]
-    \baca-start-strict-spacing-section #1 #32
-    s1 * 6/4
-
-    % [SpacingCommands measure 315]
     \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
-    % [SpacingCommands measure 316]
+    % [SpacingCommands measure 315]
     \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 316]
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 317]
@@ -3191,7 +3205,7 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 320]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 321]
@@ -3207,15 +3221,15 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 324]
-    \baca-start-strict-spacing-section #1 #32
-    s1 * 6/4
-
-    % [SpacingCommands measure 325]
     \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
-    % [SpacingCommands measure 326]
+    % [SpacingCommands measure 325]
     \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 326]
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 327]
@@ -3231,15 +3245,15 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 330]
-    \baca-start-strict-spacing-section #1 #32
-    s1 * 6/4
-
-    % [SpacingCommands measure 331]
     \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
-    % [SpacingCommands measure 332]
+    % [SpacingCommands measure 331]
     \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 332]
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 333]
@@ -3255,15 +3269,15 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 336]
-    \baca-start-strict-spacing-section #1 #32
-    s1 * 6/4
-
-    % [SpacingCommands measure 337]
     \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
-    % [SpacingCommands measure 338]
+    % [SpacingCommands measure 337]
     \baca-start-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 338]
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 339]
@@ -3271,20 +3285,20 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 340]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #16
     \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 3/4
 
     % [SpacingCommands measure 341]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 342]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #16
     s1 * 3/4
 
     % [SpacingCommands measure 343]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-nonstrict-spacing-section #35 #384
     s1 * 6/4
 
     % [SpacingCommands measure 344]
@@ -3296,20 +3310,20 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 346]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #13
     \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 3/4
 
     % [SpacingCommands measure 347]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #13
     s1 * 6/4
 
     % [SpacingCommands measure 348]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #13
     s1 * 3/4
 
     % [SpacingCommands measure 349]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-nonstrict-spacing-section #35 #312
     s1 * 6/4
 
     % [SpacingCommands measure 350]
@@ -3337,20 +3351,20 @@ SpacingCommands = {
     s1 * 5/4
 
     % [SpacingCommands measure 356]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #20
     \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 3/4
 
     % [SpacingCommands measure 357]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #20
     s1 * 6/4
 
     % [SpacingCommands measure 358]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-nonstrict-spacing-section #1 #20
     s1 * 3/4
 
     % [SpacingCommands measure 359]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-nonstrict-spacing-section #35 #480
     s1 * 6/4
 
     % [SpacingCommands measure 360]
@@ -3404,15 +3418,16 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 372]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #17
+    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 4/4
 
     % [SpacingCommands measure 373]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #17
     s1 * 6/4
 
     % [SpacingCommands measure 374]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #408
     s1 * 4/4
 
     % [SpacingCommands measure 375]
@@ -3420,19 +3435,19 @@ SpacingCommands = {
     s1 * 9/4
 
     % [SpacingCommands measure 376]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #15
     s1 * 6/4
 
     % [SpacingCommands measure 377]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #15
     s1 * 6/4
 
     % [SpacingCommands measure 378]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #15
     s1 * 3/4
 
     % [SpacingCommands measure 379]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #360
     s1 * 2/4
 
     % [SpacingCommands measure 380]
@@ -3624,19 +3639,20 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 427]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 6/4
 
     % [SpacingCommands measure 428]
-    \baca-start-strict-spacing-section #35 #768
-    s1 * 4/4
-
-    % [SpacingCommands measure 429]
     \baca-start-strict-spacing-section #1 #32
     s1 * 4/4
 
-    % [SpacingCommands measure 430]
+    % [SpacingCommands measure 429]
     \baca-start-strict-spacing-section #35 #768
+    s1 * 4/4
+
+    % [SpacingCommands measure 430]
+    \baca-start-strict-spacing-section #35 #576
+    \once \override Score.CenteredBarNumber.transparent = ##t
     s1 * 6/4
 
     % [SpacingCommands measure 431]
@@ -3660,7 +3676,7 @@ SpacingCommands = {
     s1 * 5/4
 
     % [SpacingCommands measure 436]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #480
     s1 * 7/4
 
     % [SpacingCommands measure 437]
@@ -3776,35 +3792,35 @@ SpacingCommands = {
     s1 * 6/4
 
     % [SpacingCommands measure 465]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #10
     s1 * 6/4
 
     % [SpacingCommands measure 466]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #10
     s1 * 6/4
 
     % [SpacingCommands measure 467]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #10
     s1 * 6/4
 
     % [SpacingCommands measure 468]
-    \baca-start-nonstrict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #240
     s1 * 6/4
 
     % [SpacingCommands measure 469]
-    \baca-start-nonstrict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #11
     s1 * 6/4
 
     % [SpacingCommands measure 470]
-    \baca-start-nonstrict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #11
     s1 * 6/4
 
     % [SpacingCommands measure 471]
-    \baca-start-nonstrict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #11
     s1 * 6/4
 
     % [SpacingCommands measure 472]
-    \baca-start-nonstrict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #264
     s1 * 3/4
 
     % [SpacingCommands measure 473]
@@ -3813,15 +3829,15 @@ SpacingCommands = {
     s1 * 2/4
 
     % [SpacingCommands measure 474]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 475]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #384
     s1 * 6/4
 
     % [SpacingCommands measure 476]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #480
     s1 * 9/4
 
     % [SpacingCommands measure 477]
@@ -3830,11 +3846,11 @@ SpacingCommands = {
     s1 * 2/4
 
     % [SpacingCommands measure 478]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 479]
-    \baca-start-nonstrict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #384
     s1 * 6/4
 
     % [SpacingCommands measure 480]
@@ -3847,47 +3863,47 @@ SpacingCommands = {
     s1 * 3/4
 
     % [SpacingCommands measure 482]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #112
     s1 * 1/4
 
     % [SpacingCommands measure 483]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #112
     s1 * 1/4
 
     % [SpacingCommands measure 484]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #288
     s1 * 6/4
 
     % [SpacingCommands measure 485]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #2304
     s1 * 1/4
 
     % [SpacingCommands measure 486]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #128
     s1 * 1/4
 
     % [SpacingCommands measure 487]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #128
     s1 * 1/4
 
     % [SpacingCommands measure 488]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #3072
     s1 * 1/4
 
     % [SpacingCommands measure 489]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #128
     s1 * 1/4
 
     % [SpacingCommands measure 490]
-    \baca-start-nonstrict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #128
     s1 * 1/4
 
     % [SpacingCommands measure 491]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #3072
     s1 * 1/4
 
     % [SpacingCommands measure 492]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #128
     s1 * 1/4
 
     % [SpacingCommands measure 493]
@@ -3895,15 +3911,15 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 494]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #112
     s1 * 1/4
 
     % [SpacingCommands measure 495]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #16
     s1 * 6/4
 
     % [SpacingCommands measure 496]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #35 #2304
     s1 * 1/4
 
     % [SpacingCommands measure 497]
@@ -3911,15 +3927,15 @@ SpacingCommands = {
     s1 * 4/4
 
     % [SpacingCommands measure 498]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #1 #24
     s1 * 5/4
 
     % [SpacingCommands measure 499]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #576
     s1 * 5/4
 
     % [SpacingCommands measure 500]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #1 #32
     s1 * 5/4
 
     % [SpacingCommands measure 501]
@@ -3927,11 +3943,11 @@ SpacingCommands = {
     s1 * 5/4
 
     % [SpacingCommands measure 502]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 5/4
 
     % [SpacingCommands measure 503]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #1 #32
     s1 * 5/4
 
     % [SpacingCommands measure 504]
@@ -3939,11 +3955,11 @@ SpacingCommands = {
     s1 * 5/4
 
     % [SpacingCommands measure 505]
-    \baca-start-strict-spacing-section #1 #32
+    \baca-start-strict-spacing-section #35 #768
     s1 * 5/4
 
     % [SpacingCommands measure 506]
-    \baca-start-strict-spacing-section #35 #768
+    \baca-start-strict-spacing-section #1 #32
     s1 * 5/4
 
     % [SpacingCommands measure 507]

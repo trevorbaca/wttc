@@ -3,6 +3,7 @@
 
 scene-xvii-title = \markup
   \scene-xvii-title-overrides
+  \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 17. }
 

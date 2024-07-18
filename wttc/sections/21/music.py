@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from wttc import library
+from wttc import library, strings
 
 #########################################################################################
 ########################################### 21 ##########################################
@@ -40,6 +40,12 @@ def GLOBALS(skips, first_measure_number):
     baca.metronome_mark(skips[3 - 1], "48", manifests=library.manifests)
     baca.metronome_mark(skips[4 - 1], "75", manifests=library.manifests)
     baca.metronome_mark(skips[7 - 1], "100", manifests=library.manifests)
+    baca.mark(
+        skips[10 - 1],
+        strings.short_fermata,
+        baca.tweak.padding(1.5, event=True),
+        site="after",
+    )
 
 
 def FL(voice, meters):

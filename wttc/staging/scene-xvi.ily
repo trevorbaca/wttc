@@ -3,6 +3,7 @@
 
 scene-xvi-title = \markup
   \scene-xvi-title-overrides
+  \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 16. }
 
@@ -97,6 +98,7 @@ scene-xvi-J = \markup
   \line { If blame there must be, where should it go? \lnum #265 }
   \vspace #2
   \adobe-italic \line { Pause. }
-  \vspace #4
+  % \vspace #4
+  \vspace #2
   \adobe-italic \line { End scene 16. } }
 

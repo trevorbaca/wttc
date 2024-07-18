@@ -3,6 +3,7 @@
 
 scene-xv-title = \markup
   \scene-xv-title-overrides
+  \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 15. }
 
@@ -16,6 +17,7 @@ scene-xv-A = \markup
 
 scene-xv-B = \markup
   \scene-xv-B-overrides
+  \wdfn
   \adobe-bold
   \line { Home. \lnum #235 }
 

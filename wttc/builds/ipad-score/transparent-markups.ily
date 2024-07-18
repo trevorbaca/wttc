@@ -38,3 +38,25 @@
 % SCENE 12
 
 \markup scene-xii-parenthesized-title-overrides = \markup \transparent \etc
+
+% SCENE 13
+
+\markup scene-xiii-parenthesized-title-overrides = \markup \transparent \etc
+\markup scene-xiii-G-overrides = \markup \transparent \etc
+
+% SCENE 16
+
+\markup scene-xvi-parenthesized-title-overrides = \markup \transparent \etc
+
+% SCENE 18
+
+\markup scene-xvii-E-overrides = \markup \transparent \etc
+
+% SCENE 19
+
+\markup scene-xix-parenthesized-title-overrides = \markup \transparent \etc
+
+% SCENE 20
+
+\markup scene-xx-B-overrides = \markup \transparent \etc
+\markup scene-xx-C-overrides = \markup \transparent \etc

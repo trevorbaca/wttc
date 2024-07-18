@@ -1723,7 +1723,7 @@ number.29.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -1995,7 +1995,7 @@ number.29.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

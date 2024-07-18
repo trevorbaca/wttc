@@ -2944,6 +2944,7 @@ def N1b(pleaves, pitches, dynamic):
         pleaves,
         baca.tweak.staff_padding(3),
         descriptor=r"\wttc-two-finger-tamburo =|",
+        left_broken_text=r"\markup \upright (tamb.)",
         rleak=True,
     )
 

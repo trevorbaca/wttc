@@ -2,15 +2,15 @@
 \include "share.ily"
 
 scene-i-title = \markup
+  \scene-i-title-overrides
   \wdfn
   \adobe-bold
-  \scene-i-title-overrides
   \line { SCENE \hspace #1 1. }
 
 scene-i-parenthesized-title = \markup
+  \scene-i-parenthesized-title-overrides
   \wdfn
   \adobe-bold
-  \scene-i-parenthesized-title-overrides
   \line { (SCENE \hspace #1 1) }
 
 scene-i-A = \markup

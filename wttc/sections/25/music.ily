@@ -541,6 +541,8 @@ number.25.Skips = {
     - \baca-start-mn-left-only "436"
       %! MEASURE_NUMBER
     \bacaStartTextSpanMN
+    \tweak padding 1.5
+    \mark \markup \smaller \smaller \musicglyph "scripts.ushortfermata"
 
       %! ANCHOR_SKIP
     % [anchor skip]
@@ -1882,7 +1884,7 @@ number.25.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -1981,7 +1983,7 @@ number.25.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2047,7 +2049,7 @@ number.25.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2116,7 +2118,7 @@ number.25.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2160,7 +2162,7 @@ number.25.Guitar.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2331,7 +2333,7 @@ number.25.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2430,7 +2432,7 @@ number.25.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2496,7 +2498,7 @@ number.25.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2565,7 +2567,7 @@ number.25.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -2609,7 +2611,7 @@ number.25.Guitar.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \wttc-two-finger-tamburo
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
+    - \tweak bound-details.left-broken.text \markup \upright (tamb.)
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

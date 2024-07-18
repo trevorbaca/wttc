@@ -76,7 +76,8 @@ scene-xix-I = \markup
   \adobe-bold
   \column {
   \line { Never mind. \lnum #306 }
-  \vspace #4
+  % \vspace #4
+  \vspace #1
   \adobe-italic
   \line { Pause. } }
 

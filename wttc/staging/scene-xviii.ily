@@ -42,6 +42,7 @@ scene-xviii-D = \markup
   \adobe-bold
   \column {
   \line { But we did not. \lnum #295 }
-  \vspace #4
+  % \vspace #4
+  \vspace #1
   \adobe-italic \line { End scene 18. } }
 

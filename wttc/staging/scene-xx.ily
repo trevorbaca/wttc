@@ -27,7 +27,8 @@ scene-xx-A = \markup
   \vspace #2
   \adobe-italic \line { Slowly. }
   \line { Is that not so? \lnum #319 }
-  \vspace #4
+  % \vspace #4
+  \vspace #2
   \adobe-italic \line { Pause. } }
 
 scene-xx-B = \markup

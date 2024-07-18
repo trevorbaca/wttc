@@ -3,6 +3,7 @@
 
 scene-xiii-title = \markup
   \scene-xiii-title-overrides
+  \wdfn
   \adobe-bold
   \line { SCENE \hspace #1 13. }
 
