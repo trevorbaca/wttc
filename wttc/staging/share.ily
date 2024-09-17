@@ -1,4 +1,4 @@
-\version "2.25.16"
+\version "2.25.19"
 
 \markup adobe-bold = \markup
   \override #'(font-name . "Adobe Garamond Pro Bold")

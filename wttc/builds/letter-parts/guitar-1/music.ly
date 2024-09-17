@@ -1,4 +1,4 @@
-\version "2.25.16"
+\version "2.25.19"
 
 part-name-markup = \markup "guitar 1 part"
 \include "../stylesheet.ily"
