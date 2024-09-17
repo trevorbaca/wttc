@@ -916,7 +916,7 @@ number.20.Guitar.1.Music = {
     % [Guitar.1.Music measure 5]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1249,7 +1249,7 @@ number.20.Guitar.2.Music = {
     % [Guitar.2.Music measure 5]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

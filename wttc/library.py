@@ -1339,6 +1339,9 @@ def B4a(pleaves, pitches, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head, dynamic)
         baca.flageolet(plt.head)
+        for pleaf in plt:
+            assert isinstance(pleaf, abjad.Note)
+            pleaf.note_head.written_pitch += abjad.NamedInterval("+P8")
 
 
 def B4b(pleaves, string_number, pitches, peaks):
@@ -2982,6 +2985,9 @@ def N3a(pleaves, pitches, dynamics):
     baca.pitches(pleaves, pitches)
     pheads = baca.select.pheads(pleaves)
     baca.flageolet(pheads)
+    for pleaf in pheads:
+        assert isinstance(pleaf, abjad.Note)
+        pleaf.note_head.written_pitch += abjad.NamedInterval("+P8")
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):

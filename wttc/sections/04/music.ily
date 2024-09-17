@@ -2342,7 +2342,7 @@ number.4.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    gs''!16
+    gs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2622,7 +2622,7 @@ number.4.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    g''16
+    g'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2638,7 +2638,7 @@ number.4.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    gf''!16
+    gf'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2724,7 +2724,7 @@ number.4.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    c''16
+    c'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2740,7 +2740,7 @@ number.4.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    b'16
+    b''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2756,7 +2756,7 @@ number.4.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    bf'!16
+    bf''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3186,7 +3186,7 @@ number.4.Guitar.2.Music = {
     % [Guitar.2.Music measure 4]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    ds''!16
+    ds'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3535,7 +3535,7 @@ number.4.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    d''16
+    d'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3549,7 +3549,7 @@ number.4.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    df''!16
+    df'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3670,7 +3670,7 @@ number.4.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    g'16
+    g''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3684,7 +3684,7 @@ number.4.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    gf'!16
+    gf''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3698,7 +3698,7 @@ number.4.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    f'16
+    f''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

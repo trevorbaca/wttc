@@ -1947,7 +1947,7 @@ number.25.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1964,7 +1964,7 @@ number.25.Guitar.1.Music = {
     % [Guitar.1.Music measure 8]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2013,7 +2013,7 @@ number.25.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2030,7 +2030,7 @@ number.25.Guitar.1.Music = {
     % [Guitar.1.Music measure 11]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2082,7 +2082,7 @@ number.25.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2099,7 +2099,7 @@ number.25.Guitar.1.Music = {
     % [Guitar.1.Music measure 13]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2193,7 +2193,7 @@ number.25.Guitar.1.Music = {
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    gs''!16
+    gs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2222,7 +2222,7 @@ number.25.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    gs''!16
+    gs'''!16
     - \flageolet
 
       %! STAFF_HIGHLIGHT
@@ -2245,7 +2245,7 @@ number.25.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    gs''!16
+    gs'''!16
     - \flageolet
 
       %! STAFF_HIGHLIGHT
@@ -2396,7 +2396,7 @@ number.25.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2413,7 +2413,7 @@ number.25.Guitar.2.Music = {
     % [Guitar.2.Music measure 8]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2462,7 +2462,7 @@ number.25.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2479,7 +2479,7 @@ number.25.Guitar.2.Music = {
     % [Guitar.2.Music measure 11]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2531,7 +2531,7 @@ number.25.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2548,7 +2548,7 @@ number.25.Guitar.2.Music = {
     % [Guitar.2.Music measure 13]
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2642,7 +2642,7 @@ number.25.Guitar.2.Music = {
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    g''16
+    g'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2671,7 +2671,7 @@ number.25.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    g''16
+    g'''16
     - \flageolet
 
       %! STAFF_HIGHLIGHT
@@ -2694,7 +2694,7 @@ number.25.Guitar.2.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    g''16
+    g'''16
     - \flageolet
 
       %! STAFF_HIGHLIGHT

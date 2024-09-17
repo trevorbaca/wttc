@@ -1070,7 +1070,7 @@ number.22.Guitar.1.Music = {
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    gs''!16
+    gs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1195,7 +1195,7 @@ number.22.Guitar.1.Music = {
 
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    gs''!16
+    gs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1322,7 +1322,7 @@ number.22.Guitar.2.Music = {
     %@% \staffHighlight lightgreen
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
-    g''16
+    g'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1515,7 +1515,7 @@ number.22.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight hotpink
-    ds''!16
+    ds'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

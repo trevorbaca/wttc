@@ -5973,7 +5973,7 @@ number.19.Guitar.1.Music = {
     \override DynamicLineSpanner.staff-padding = 3
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    fs''!16
+    fs'''!16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6897,7 +6897,7 @@ number.19.Guitar.2.Music = {
     \override DynamicLineSpanner.staff-padding = 4
       %! STAFF_HIGHLIGHT
     %@% \staffHighlight lightgreen
-    e''16
+    e'''16
     - \flageolet
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
