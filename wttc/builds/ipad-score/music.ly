@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.23"
 
 part-name-markup = \markup "iPad-formatted score"
 \include "stylesheet.ily"

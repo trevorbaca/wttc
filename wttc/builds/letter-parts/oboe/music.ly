@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.23"
 
 part-name-markup = \markup "oboe part"
 \include "../stylesheet.ily"
