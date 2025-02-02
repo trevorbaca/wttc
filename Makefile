@@ -4,6 +4,17 @@ black-check:
 black-reformat:
 	black .
 
+clean:
+	find . -name '*.pyc' | xargs rm
+	rm -Rif *.egg-info/
+	rm -Rif .cache
+	rm -Rif .tox
+	rm -Rif __pycache__
+	rm -Rif build
+	rm -Rif dist
+	rm -Rif htmlcov
+	rm -Rif prof
+
 flake_ignore = --ignore=E203,E266,E501,F811,W503
 flake_options = --isolated --max-line-length=88
 
