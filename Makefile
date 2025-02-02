@@ -39,6 +39,12 @@ isort-reformat:
 	--use-parentheses \
 	.
 
+pytest:
+	pytest .
+
+pytest-x:
+	pytest -x .
+
 reformat:
 	make black-reformat
 	make isort-reformat
