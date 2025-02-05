@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wttc"
+version = "1.0.0"
+description = "when the time comes (2021-24) for stage actor & six players"
+authors = [{ name = "Trevor Bača", email = "trevor.baca@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["abjad", "lilypond", "music composition", "music notation"]
+dependencies = [
+    "abjad>=3.21",
+    "black",
+    "flake8",
+    "isort",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/trevorbaca/wttc"
+
+[tool.setuptools.packages.find]
+where = ["."]
