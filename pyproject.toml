@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wttc"
-version = "1.0.0"
+version = "3.21"
 description = "when the time comes (2021-24) for stage actor & six players"
 authors = [{ name = "Trevor Bača", email = "trevor.baca@gmail.com" }]
 license = { text = "MIT" }
