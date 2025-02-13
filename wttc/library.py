@@ -259,7 +259,7 @@ def _reference_meters():
         "(13/4 (1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4))",
         "(15/4 (1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4 1/4))",
     )
-    return [abjad.Meter.from_rtcontainer(parser(string)[0]) for string in strings]
+    return [abjad.Meter(parser(string)[0], do_not_recurse=True) for string in strings]
 
 
 def annotate(items, n):
