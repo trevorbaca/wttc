@@ -22,5 +22,6 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/trevorbaca/wttc"
 
-[tool.setuptools.packages.find]
-where = ["."]
+[tool.setuptools]
+packages = ["wttc"]
+package-dir = { "" = "source" }
