@@ -1,4 +1,4 @@
-\version "2.25.23"
+\version "2.25.24"
 \include "share.ily"
 
 scene-vii-title = \markup
