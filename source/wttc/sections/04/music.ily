@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.4.Skips = {
+number.4.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -504,7 +505,8 @@ number.4.Skips = {
 }
 
 
-number.4.TimeSignatures = {
+number.4.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! REAPPLIED_TIME_SIGNATURE_COLOR
@@ -605,7 +607,8 @@ number.4.TimeSignatures = {
 }
 
 
-number.4.AltoFlute.Music = {
+number.4.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1462,15 +1465,19 @@ number.4.AltoFlute.Music = {
 }
 
 
-number.4.AltoFlute.Staff = <<
+number.4.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.4.AltoFlute.Music }
+    {
+        \number.4.AltoFlute.Music
+    }
 
 >>
 
 
-number.4.Oboe.Music = {
+number.4.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1995,15 +2002,19 @@ number.4.Oboe.Music = {
 }
 
 
-number.4.Oboe.Staff = <<
+number.4.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.4.Oboe.Music }
+    {
+        \number.4.Oboe.Music
+    }
 
 >>
 
 
-number.4.Guitar.1.Music = {
+number.4.Guitar.1.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
@@ -2869,15 +2880,19 @@ number.4.Guitar.1.Music = {
 }
 
 
-number.4.Guitar.1.Staff = <<
+number.4.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.4.Guitar.1.Music }
+    {
+        \number.4.Guitar.1.Music
+    }
 
 >>
 
 
-number.4.Guitar.2.Music = {
+number.4.Guitar.2.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 5/4
@@ -3826,15 +3841,19 @@ number.4.Guitar.2.Music = {
 }
 
 
-number.4.Guitar.2.Staff = <<
+number.4.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.4.Guitar.2.Music }
+    {
+        \number.4.Guitar.2.Music
+    }
 
 >>
 
 
-number.4.Violin.Music = {
+number.4.Violin.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 3/2
@@ -4864,15 +4883,19 @@ number.4.Violin.Music = {
 }
 
 
-number.4.Violin.Staff = <<
+number.4.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.4.Violin.Music }
+    {
+        \number.4.Violin.Music
+    }
 
 >>
 
 
-number.4.Cello.Music = {
+number.4.Cello.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 5/4
@@ -6302,9 +6325,12 @@ number.4.Cello.Music = {
 }
 
 
-number.4.Cello.Staff = <<
+number.4.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.4.Cello.Music }
+    {
+        \number.4.Cello.Music
+    }
 
 >>

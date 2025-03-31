@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.23.Skips = {
+number.23.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -360,7 +361,8 @@ number.23.Skips = {
 }
 
 
-number.23.TimeSignatures = {
+number.23.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -444,7 +446,8 @@ number.23.TimeSignatures = {
 }
 
 
-number.23.AltoFlute.Music = {
+number.23.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -546,15 +549,19 @@ number.23.AltoFlute.Music = {
 }
 
 
-number.23.AltoFlute.Staff = <<
+number.23.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.23.AltoFlute.Music }
+    {
+        \number.23.AltoFlute.Music
+    }
 
 >>
 
 
-number.23.Oboe.Music = {
+number.23.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -641,15 +648,19 @@ number.23.Oboe.Music = {
 }
 
 
-number.23.Oboe.Staff = <<
+number.23.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.23.Oboe.Music }
+    {
+        \number.23.Oboe.Music
+    }
 
 >>
 
 
-number.23.Guitar.1.Music.item.1 = {
+number.23.Guitar.1.Music.item.1 =
+{
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -661,7 +672,8 @@ number.23.Guitar.1.Music.item.1 = {
 }
 
 
-number.23.Guitar.1.Music.item.2 = {
+number.23.Guitar.1.Music.item.2 =
+{
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -673,7 +685,8 @@ number.23.Guitar.1.Music.item.2 = {
 }
 
 
-number.23.Guitar.1.Music = {
+number.23.Guitar.1.Music =
+{
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
     \tuplet 1/1
@@ -853,7 +866,9 @@ number.23.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.23.Guitar.1.Music.item.1 }
+        {
+            \number.23.Guitar.1.Music.item.1
+        }
 
     >>
 
@@ -893,7 +908,9 @@ number.23.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.23.Guitar.1.Music.item.2 }
+        {
+            \number.23.Guitar.1.Music.item.2
+        }
 
     >>
 
@@ -945,15 +962,19 @@ number.23.Guitar.1.Music = {
 }
 
 
-number.23.Guitar.1.Staff = <<
+number.23.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.23.Guitar.1.Music }
+    {
+        \number.23.Guitar.1.Music
+    }
 
 >>
 
 
-number.23.Guitar.2.Music.item.1 = {
+number.23.Guitar.2.Music.item.1 =
+{
 
     \override DynamicLineSpanner.staff-padding = 3
     r8
@@ -966,7 +987,8 @@ number.23.Guitar.2.Music.item.1 = {
 }
 
 
-number.23.Guitar.2.Music.item.2 = {
+number.23.Guitar.2.Music.item.2 =
+{
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -978,7 +1000,8 @@ number.23.Guitar.2.Music.item.2 = {
 }
 
 
-number.23.Guitar.2.Music.item.3 = {
+number.23.Guitar.2.Music.item.3 =
+{
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -990,7 +1013,8 @@ number.23.Guitar.2.Music.item.3 = {
 }
 
 
-number.23.Guitar.2.Music = {
+number.23.Guitar.2.Music =
+{
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
     \tuplet 1/1
@@ -1183,7 +1207,9 @@ number.23.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.23.Guitar.2.Music.item.1 }
+        {
+            \number.23.Guitar.2.Music.item.1
+        }
 
     >>
 
@@ -1219,7 +1245,9 @@ number.23.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.23.Guitar.2.Music.item.2 }
+        {
+            \number.23.Guitar.2.Music.item.2
+        }
 
     >>
 
@@ -1256,7 +1284,9 @@ number.23.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.23.Guitar.2.Music.item.3 }
+        {
+            \number.23.Guitar.2.Music.item.3
+        }
 
     >>
 
@@ -1310,15 +1340,19 @@ number.23.Guitar.2.Music = {
 }
 
 
-number.23.Guitar.2.Staff = <<
+number.23.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.23.Guitar.2.Music }
+    {
+        \number.23.Guitar.2.Music
+    }
 
 >>
 
 
-number.23.Violin.Music = {
+number.23.Violin.Music =
+{
 
     \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \rhythm { 1. }
     \tuplet 1/1
@@ -1667,15 +1701,19 @@ number.23.Violin.Music = {
 }
 
 
-number.23.Violin.Staff = <<
+number.23.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.23.Violin.Music }
+    {
+        \number.23.Violin.Music
+    }
 
 >>
 
 
-number.23.Cello.Music = {
+number.23.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2060,9 +2098,12 @@ number.23.Cello.Music = {
 }
 
 
-number.23.Cello.Staff = <<
+number.23.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.23.Cello.Music }
+    {
+        \number.23.Cello.Music
+    }
 
 >>

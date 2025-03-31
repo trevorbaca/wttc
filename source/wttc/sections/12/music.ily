@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.12.Skips = {
+number.12.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -1032,7 +1033,8 @@ number.12.Skips = {
 }
 
 
-number.12.TimeSignatures = {
+number.12.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -1226,7 +1228,8 @@ number.12.TimeSignatures = {
 }
 
 
-number.12.AltoFlute.Music = {
+number.12.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -3535,15 +3538,19 @@ number.12.AltoFlute.Music = {
 }
 
 
-number.12.AltoFlute.Staff = <<
+number.12.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.12.AltoFlute.Music }
+    {
+        \number.12.AltoFlute.Music
+    }
 
 >>
 
 
-number.12.Oboe.Music = {
+number.12.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -4579,15 +4586,19 @@ number.12.Oboe.Music = {
 }
 
 
-number.12.Oboe.Staff = <<
+number.12.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.12.Oboe.Music }
+    {
+        \number.12.Oboe.Music
+    }
 
 >>
 
 
-number.12.Guitar.1.Music = {
+number.12.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -5956,15 +5967,19 @@ number.12.Guitar.1.Music = {
 }
 
 
-number.12.Guitar.1.Staff = <<
+number.12.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.12.Guitar.1.Music }
+    {
+        \number.12.Guitar.1.Music
+    }
 
 >>
 
 
-number.12.Guitar.2.Music = {
+number.12.Guitar.2.Music =
+{
 
     % [Guitar.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -7210,15 +7225,19 @@ number.12.Guitar.2.Music = {
 }
 
 
-number.12.Guitar.2.Staff = <<
+number.12.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.12.Guitar.2.Music }
+    {
+        \number.12.Guitar.2.Music
+    }
 
 >>
 
 
-number.12.Violin.Music = {
+number.12.Violin.Music =
+{
 
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
@@ -8713,15 +8732,19 @@ number.12.Violin.Music = {
 }
 
 
-number.12.Violin.Staff = <<
+number.12.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.12.Violin.Music }
+    {
+        \number.12.Violin.Music
+    }
 
 >>
 
 
-number.12.Cello.Music = {
+number.12.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
@@ -10480,9 +10503,12 @@ number.12.Cello.Music = {
 }
 
 
-number.12.Cello.Staff = <<
+number.12.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.12.Cello.Music }
+    {
+        \number.12.Cello.Music
+    }
 
 >>

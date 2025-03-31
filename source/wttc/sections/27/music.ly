@@ -21,10 +21,14 @@
             <<
 
                 \context GlobalSkips = "Skips"
-                { \number.27.Skips }
+                {
+                    \number.27.Skips
+                }
 
                 \context GlobalSkips = "TimeSignatures"
-                { \number.27.TimeSignatures }
+                {
+                    \number.27.TimeSignatures
+                }
 
             >>
 
@@ -36,11 +40,15 @@
 
                     \tag #'AltoFlute
                     \context Staff = "AltoFlute.Staff"
-                    { \number.27.AltoFlute.Staff }
+                    {
+                        \number.27.AltoFlute.Staff
+                    }
 
                     \tag #'Oboe
                     \context Staff = "Oboe.Staff"
-                    { \number.27.Oboe.Staff }
+                    {
+                        \number.27.Oboe.Staff
+                    }
 
                 >>
 
@@ -49,11 +57,15 @@
 
                     \tag #'Guitar.1
                     \context Staff = "Guitar.1.Staff"
-                    { \number.27.Guitar.1.Staff }
+                    {
+                        \number.27.Guitar.1.Staff
+                    }
 
                     \tag #'Guitar.2
                     \context Staff = "Guitar.2.Staff"
-                    { \number.27.Guitar.2.Staff }
+                    {
+                        \number.27.Guitar.2.Staff
+                    }
 
                 >>
 
@@ -62,11 +74,15 @@
 
                     \tag #'Violin
                     \context Staff = "Violin.Staff"
-                    { \number.27.Violin.Staff }
+                    {
+                        \number.27.Violin.Staff
+                    }
 
                     \tag #'Cello
                     \context Staff = "Cello.Staff"
-                    { \number.27.Cello.Staff }
+                    {
+                        \number.27.Cello.Staff
+                    }
 
                 >>
 

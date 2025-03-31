@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.6.Skips = {
+number.6.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -188,7 +189,8 @@ number.6.Skips = {
 }
 
 
-number.6.TimeSignatures = {
+number.6.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -230,7 +232,8 @@ number.6.TimeSignatures = {
 }
 
 
-number.6.AltoFlute.Music.item.1 = {
+number.6.AltoFlute.Music.item.1 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -290,7 +293,8 @@ number.6.AltoFlute.Music.item.1 = {
 }
 
 
-number.6.AltoFlute.Music = {
+number.6.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -407,7 +411,9 @@ number.6.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.6.AltoFlute.Music.item.1 }
+        {
+            \number.6.AltoFlute.Music.item.1
+        }
 
     >>
 
@@ -446,15 +452,19 @@ number.6.AltoFlute.Music = {
 }
 
 
-number.6.AltoFlute.Staff = <<
+number.6.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.6.AltoFlute.Music }
+    {
+        \number.6.AltoFlute.Music
+    }
 
 >>
 
 
-number.6.Oboe.Music = {
+number.6.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -511,15 +521,19 @@ number.6.Oboe.Music = {
 }
 
 
-number.6.Oboe.Staff = <<
+number.6.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.6.Oboe.Music }
+    {
+        \number.6.Oboe.Music
+    }
 
 >>
 
 
-number.6.Guitar.1.Music = {
+number.6.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -601,15 +615,19 @@ number.6.Guitar.1.Music = {
 }
 
 
-number.6.Guitar.1.Staff = <<
+number.6.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.6.Guitar.1.Music }
+    {
+        \number.6.Guitar.1.Music
+    }
 
 >>
 
 
-number.6.Guitar.2.Music = {
+number.6.Guitar.2.Music =
+{
 
     % [Guitar.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -808,15 +826,19 @@ number.6.Guitar.2.Music = {
 }
 
 
-number.6.Guitar.2.Staff = <<
+number.6.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.6.Guitar.2.Music }
+    {
+        \number.6.Guitar.2.Music
+    }
 
 >>
 
 
-number.6.Violin.Music = {
+number.6.Violin.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 6/4
@@ -968,15 +990,19 @@ number.6.Violin.Music = {
 }
 
 
-number.6.Violin.Staff = <<
+number.6.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.6.Violin.Music }
+    {
+        \number.6.Violin.Music
+    }
 
 >>
 
 
-number.6.Cello.Music = {
+number.6.Cello.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 6/4
@@ -1245,9 +1271,12 @@ number.6.Cello.Music = {
 }
 
 
-number.6.Cello.Staff = <<
+number.6.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.6.Cello.Music }
+    {
+        \number.6.Cello.Music
+    }
 
 >>

@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.18.Skips = {
+number.18.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -796,7 +797,8 @@ number.18.Skips = {
 }
 
 
-number.18.TimeSignatures = {
+number.18.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -946,7 +948,8 @@ number.18.TimeSignatures = {
 }
 
 
-number.18.AltoFlute.Music = {
+number.18.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2183,15 +2186,19 @@ number.18.AltoFlute.Music = {
 }
 
 
-number.18.AltoFlute.Staff = <<
+number.18.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.18.AltoFlute.Music }
+    {
+        \number.18.AltoFlute.Music
+    }
 
 >>
 
 
-number.18.Oboe.Music = {
+number.18.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2626,15 +2633,19 @@ number.18.Oboe.Music = {
 }
 
 
-number.18.Oboe.Staff = <<
+number.18.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.18.Oboe.Music }
+    {
+        \number.18.Oboe.Music
+    }
 
 >>
 
 
-number.18.Guitar.1.Music.item.1 = {
+number.18.Guitar.1.Music.item.1 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -2648,7 +2659,8 @@ number.18.Guitar.1.Music.item.1 = {
 }
 
 
-number.18.Guitar.1.Music.item.2 = {
+number.18.Guitar.1.Music.item.2 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -2662,7 +2674,8 @@ number.18.Guitar.1.Music.item.2 = {
 }
 
 
-number.18.Guitar.1.Music.item.3 = {
+number.18.Guitar.1.Music.item.3 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -2676,7 +2689,8 @@ number.18.Guitar.1.Music.item.3 = {
 }
 
 
-number.18.Guitar.1.Music.item.4 = {
+number.18.Guitar.1.Music.item.4 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -2690,7 +2704,8 @@ number.18.Guitar.1.Music.item.4 = {
 }
 
 
-number.18.Guitar.1.Music.item.5 = {
+number.18.Guitar.1.Music.item.5 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -2704,7 +2719,8 @@ number.18.Guitar.1.Music.item.5 = {
 }
 
 
-number.18.Guitar.1.Music.item.6 = {
+number.18.Guitar.1.Music.item.6 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -2713,7 +2729,8 @@ number.18.Guitar.1.Music.item.6 = {
 }
 
 
-number.18.Guitar.1.Music = {
+number.18.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2780,7 +2797,9 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.1 }
+        {
+            \number.18.Guitar.1.Music.item.1
+        }
 
     >>
 
@@ -2822,7 +2841,9 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.2 }
+        {
+            \number.18.Guitar.1.Music.item.2
+        }
 
     >>
 
@@ -3170,7 +3191,9 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.3 }
+        {
+            \number.18.Guitar.1.Music.item.3
+        }
 
     >>
 
@@ -3212,7 +3235,9 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.4 }
+        {
+            \number.18.Guitar.1.Music.item.4
+        }
 
     >>
 
@@ -3357,7 +3382,9 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.5 }
+        {
+            \number.18.Guitar.1.Music.item.5
+        }
 
     >>
 
@@ -3394,7 +3421,9 @@ number.18.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.18.Guitar.1.Music.item.6 }
+        {
+            \number.18.Guitar.1.Music.item.6
+        }
 
     >>
 
@@ -3458,15 +3487,19 @@ number.18.Guitar.1.Music = {
 }
 
 
-number.18.Guitar.1.Staff = <<
+number.18.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.18.Guitar.1.Music }
+    {
+        \number.18.Guitar.1.Music
+    }
 
 >>
 
 
-number.18.Guitar.2.Music.item.1 = {
+number.18.Guitar.2.Music.item.1 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3480,7 +3513,8 @@ number.18.Guitar.2.Music.item.1 = {
 }
 
 
-number.18.Guitar.2.Music.item.2 = {
+number.18.Guitar.2.Music.item.2 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3494,7 +3528,8 @@ number.18.Guitar.2.Music.item.2 = {
 }
 
 
-number.18.Guitar.2.Music.item.3 = {
+number.18.Guitar.2.Music.item.3 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3508,7 +3543,8 @@ number.18.Guitar.2.Music.item.3 = {
 }
 
 
-number.18.Guitar.2.Music.item.4 = {
+number.18.Guitar.2.Music.item.4 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3517,7 +3553,8 @@ number.18.Guitar.2.Music.item.4 = {
 }
 
 
-number.18.Guitar.2.Music.item.5 = {
+number.18.Guitar.2.Music.item.5 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3526,7 +3563,8 @@ number.18.Guitar.2.Music.item.5 = {
 }
 
 
-number.18.Guitar.2.Music.item.6 = {
+number.18.Guitar.2.Music.item.6 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3540,7 +3578,8 @@ number.18.Guitar.2.Music.item.6 = {
 }
 
 
-number.18.Guitar.2.Music.item.7 = {
+number.18.Guitar.2.Music.item.7 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3549,7 +3588,8 @@ number.18.Guitar.2.Music.item.7 = {
 }
 
 
-number.18.Guitar.2.Music.item.8 = {
+number.18.Guitar.2.Music.item.8 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3558,7 +3598,8 @@ number.18.Guitar.2.Music.item.8 = {
 }
 
 
-number.18.Guitar.2.Music.item.9 = {
+number.18.Guitar.2.Music.item.9 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -3567,7 +3608,8 @@ number.18.Guitar.2.Music.item.9 = {
 }
 
 
-number.18.Guitar.2.Music = {
+number.18.Guitar.2.Music =
+{
 
     <<
 
@@ -3643,7 +3685,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.1 }
+        {
+            \number.18.Guitar.2.Music.item.1
+        }
 
     >>
 
@@ -3682,7 +3726,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.2 }
+        {
+            \number.18.Guitar.2.Music.item.2
+        }
 
     >>
 
@@ -3721,7 +3767,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.3 }
+        {
+            \number.18.Guitar.2.Music.item.3
+        }
 
     >>
 
@@ -4034,7 +4082,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.4 }
+        {
+            \number.18.Guitar.2.Music.item.4
+        }
 
     >>
 
@@ -4113,7 +4163,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.5 }
+        {
+            \number.18.Guitar.2.Music.item.5
+        }
 
     >>
 
@@ -4150,7 +4202,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.6 }
+        {
+            \number.18.Guitar.2.Music.item.6
+        }
 
     >>
 
@@ -4253,7 +4307,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.7 }
+        {
+            \number.18.Guitar.2.Music.item.7
+        }
 
     >>
 
@@ -4355,7 +4411,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.8 }
+        {
+            \number.18.Guitar.2.Music.item.8
+        }
 
     >>
 
@@ -4389,7 +4447,9 @@ number.18.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.18.Guitar.2.Music.item.9 }
+        {
+            \number.18.Guitar.2.Music.item.9
+        }
 
     >>
 
@@ -4479,15 +4539,19 @@ number.18.Guitar.2.Music = {
 }
 
 
-number.18.Guitar.2.Staff = <<
+number.18.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.18.Guitar.2.Music }
+    {
+        \number.18.Guitar.2.Music
+    }
 
 >>
 
 
-number.18.Violin.Music = {
+number.18.Violin.Music =
+{
 
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
@@ -5405,15 +5469,19 @@ number.18.Violin.Music = {
 }
 
 
-number.18.Violin.Staff = <<
+number.18.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.18.Violin.Music }
+    {
+        \number.18.Violin.Music
+    }
 
 >>
 
 
-number.18.Cello.Music = {
+number.18.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
@@ -6316,9 +6384,12 @@ number.18.Cello.Music = {
 }
 
 
-number.18.Cello.Staff = <<
+number.18.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.18.Cello.Music }
+    {
+        \number.18.Cello.Music
+    }
 
 >>

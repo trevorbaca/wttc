@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.29.Skips = {
+number.29.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -715,7 +716,8 @@ number.29.Skips = {
 }
 
 
-number.29.TimeSignatures = {
+number.29.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -814,7 +816,8 @@ number.29.TimeSignatures = {
 }
 
 
-number.29.AltoFlute.Music = {
+number.29.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1398,15 +1401,19 @@ number.29.AltoFlute.Music = {
 }
 
 
-number.29.AltoFlute.Staff = <<
+number.29.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.29.AltoFlute.Music }
+    {
+        \number.29.AltoFlute.Music
+    }
 
 >>
 
 
-number.29.Oboe.Music = {
+number.29.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1635,15 +1642,19 @@ number.29.Oboe.Music = {
 }
 
 
-number.29.Oboe.Staff = <<
+number.29.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.29.Oboe.Music }
+    {
+        \number.29.Oboe.Music
+    }
 
 >>
 
 
-number.29.Guitar.1.Music.item.1 = {
+number.29.Guitar.1.Music.item.1 =
+{
 
     \override DynamicLineSpanner.staff-padding = 3
     r4
@@ -1656,7 +1667,8 @@ number.29.Guitar.1.Music.item.1 = {
 }
 
 
-number.29.Guitar.1.Music = {
+number.29.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1799,7 +1811,9 @@ number.29.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.29.Guitar.1.Music.item.1 }
+        {
+            \number.29.Guitar.1.Music.item.1
+        }
 
     >>
 
@@ -1903,15 +1917,19 @@ number.29.Guitar.1.Music = {
 }
 
 
-number.29.Guitar.1.Staff = <<
+number.29.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.29.Guitar.1.Music }
+    {
+        \number.29.Guitar.1.Music
+    }
 
 >>
 
 
-number.29.Guitar.2.Music.item.1 = {
+number.29.Guitar.2.Music.item.1 =
+{
 
     \override DynamicLineSpanner.staff-padding = 3
     r4
@@ -1924,7 +1942,8 @@ number.29.Guitar.2.Music.item.1 = {
 }
 
 
-number.29.Guitar.2.Music = {
+number.29.Guitar.2.Music =
+{
 
     % [Guitar.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2056,7 +2075,9 @@ number.29.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.29.Guitar.2.Music.item.1 }
+        {
+            \number.29.Guitar.2.Music.item.1
+        }
 
     >>
 
@@ -2190,15 +2211,19 @@ number.29.Guitar.2.Music = {
 }
 
 
-number.29.Guitar.2.Staff = <<
+number.29.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.29.Guitar.2.Music }
+    {
+        \number.29.Guitar.2.Music
+    }
 
 >>
 
 
-number.29.Violin.Music = {
+number.29.Violin.Music =
+{
 
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2819,15 +2844,19 @@ number.29.Violin.Music = {
 }
 
 
-number.29.Violin.Staff = <<
+number.29.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.29.Violin.Music }
+    {
+        \number.29.Violin.Music
+    }
 
 >>
 
 
-number.29.Cello.Music = {
+number.29.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
@@ -3448,9 +3477,12 @@ number.29.Cello.Music = {
 }
 
 
-number.29.Cello.Staff = <<
+number.29.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.29.Cello.Music }
+    {
+        \number.29.Cello.Music
+    }
 
 >>

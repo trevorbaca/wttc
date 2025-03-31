@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.8.Skips = {
+number.8.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -339,7 +340,8 @@ number.8.Skips = {
 }
 
 
-number.8.TimeSignatures = {
+number.8.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -412,7 +414,8 @@ number.8.TimeSignatures = {
 }
 
 
-number.8.AltoFlute.Music.item.1 = {
+number.8.AltoFlute.Music.item.1 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -472,7 +475,8 @@ number.8.AltoFlute.Music.item.1 = {
 }
 
 
-number.8.AltoFlute.Music = {
+number.8.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -579,7 +583,9 @@ number.8.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.8.AltoFlute.Music.item.1 }
+        {
+            \number.8.AltoFlute.Music.item.1
+        }
 
     >>
 
@@ -878,15 +884,19 @@ number.8.AltoFlute.Music = {
 }
 
 
-number.8.AltoFlute.Staff = <<
+number.8.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.8.AltoFlute.Music }
+    {
+        \number.8.AltoFlute.Music
+    }
 
 >>
 
 
-number.8.Oboe.Music = {
+number.8.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1036,15 +1046,19 @@ number.8.Oboe.Music = {
 }
 
 
-number.8.Oboe.Staff = <<
+number.8.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.8.Oboe.Music }
+    {
+        \number.8.Oboe.Music
+    }
 
 >>
 
 
-number.8.Guitar.1.Music = {
+number.8.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1326,15 +1340,19 @@ number.8.Guitar.1.Music = {
 }
 
 
-number.8.Guitar.1.Staff = <<
+number.8.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.8.Guitar.1.Music }
+    {
+        \number.8.Guitar.1.Music
+    }
 
 >>
 
 
-number.8.Guitar.2.Music = {
+number.8.Guitar.2.Music =
+{
 
     % [Guitar.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1744,15 +1762,19 @@ number.8.Guitar.2.Music = {
 }
 
 
-number.8.Guitar.2.Staff = <<
+number.8.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.8.Guitar.2.Music }
+    {
+        \number.8.Guitar.2.Music
+    }
 
 >>
 
 
-number.8.Violin.Music = {
+number.8.Violin.Music =
+{
 
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2328,15 +2350,19 @@ number.8.Violin.Music = {
 }
 
 
-number.8.Violin.Staff = <<
+number.8.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.8.Violin.Music }
+    {
+        \number.8.Violin.Music
+    }
 
 >>
 
 
-number.8.Cello.Music = {
+number.8.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
@@ -3050,9 +3076,12 @@ number.8.Cello.Music = {
 }
 
 
-number.8.Cello.Staff = <<
+number.8.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.8.Cello.Music }
+    {
+        \number.8.Cello.Music
+    }
 
 >>

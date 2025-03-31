@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.26.Skips = {
+number.26.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -1004,7 +1005,8 @@ number.26.Skips = {
 }
 
 
-number.26.TimeSignatures = {
+number.26.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -1183,7 +1185,8 @@ number.26.TimeSignatures = {
 }
 
 
-number.26.AltoFlute.Music.item.1 = {
+number.26.AltoFlute.Music.item.1 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -1233,7 +1236,8 @@ number.26.AltoFlute.Music.item.1 = {
 }
 
 
-number.26.AltoFlute.Music.item.2 = {
+number.26.AltoFlute.Music.item.2 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -1269,7 +1273,8 @@ number.26.AltoFlute.Music.item.2 = {
 }
 
 
-number.26.AltoFlute.Music.item.3 = {
+number.26.AltoFlute.Music.item.3 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -1333,7 +1338,8 @@ number.26.AltoFlute.Music.item.3 = {
 }
 
 
-number.26.AltoFlute.Music.item.4 = {
+number.26.AltoFlute.Music.item.4 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -1377,7 +1383,8 @@ number.26.AltoFlute.Music.item.4 = {
 }
 
 
-number.26.AltoFlute.Music.item.5 = {
+number.26.AltoFlute.Music.item.5 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -1423,7 +1430,8 @@ number.26.AltoFlute.Music.item.5 = {
 }
 
 
-number.26.AltoFlute.Music = {
+number.26.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1569,7 +1577,9 @@ number.26.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.26.AltoFlute.Music.item.1 }
+        {
+            \number.26.AltoFlute.Music.item.1
+        }
 
     >>
 
@@ -1877,7 +1887,9 @@ number.26.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.26.AltoFlute.Music.item.2 }
+        {
+            \number.26.AltoFlute.Music.item.2
+        }
 
     >>
 
@@ -1955,7 +1967,9 @@ number.26.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.26.AltoFlute.Music.item.3 }
+        {
+            \number.26.AltoFlute.Music.item.3
+        }
 
     >>
 
@@ -2474,7 +2488,9 @@ number.26.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.26.AltoFlute.Music.item.4 }
+        {
+            \number.26.AltoFlute.Music.item.4
+        }
 
     >>
 
@@ -2632,7 +2648,9 @@ number.26.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.26.AltoFlute.Music.item.5 }
+        {
+            \number.26.AltoFlute.Music.item.5
+        }
 
     >>
 
@@ -2887,15 +2905,19 @@ number.26.AltoFlute.Music = {
 }
 
 
-number.26.AltoFlute.Staff = <<
+number.26.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.26.AltoFlute.Music }
+    {
+        \number.26.AltoFlute.Music
+    }
 
 >>
 
 
-number.26.Oboe.Music = {
+number.26.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -3400,15 +3422,19 @@ number.26.Oboe.Music = {
 }
 
 
-number.26.Oboe.Staff = <<
+number.26.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.26.Oboe.Music }
+    {
+        \number.26.Oboe.Music
+    }
 
 >>
 
 
-number.26.Guitar.1.Music = {
+number.26.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -3866,15 +3892,19 @@ number.26.Guitar.1.Music = {
 }
 
 
-number.26.Guitar.1.Staff = <<
+number.26.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.26.Guitar.1.Music }
+    {
+        \number.26.Guitar.1.Music
+    }
 
 >>
 
 
-number.26.Guitar.2.Music = {
+number.26.Guitar.2.Music =
+{
 
     % [Guitar.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -4392,15 +4422,19 @@ number.26.Guitar.2.Music = {
 }
 
 
-number.26.Guitar.2.Staff = <<
+number.26.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.26.Guitar.2.Music }
+    {
+        \number.26.Guitar.2.Music
+    }
 
 >>
 
 
-number.26.Violin.Music.item.1 = {
+number.26.Violin.Music.item.1 =
+{
 
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
@@ -4452,7 +4486,8 @@ number.26.Violin.Music.item.1 = {
 }
 
 
-number.26.Violin.Music.item.2 = {
+number.26.Violin.Music.item.2 =
+{
 
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
@@ -4489,7 +4524,8 @@ number.26.Violin.Music.item.2 = {
 }
 
 
-number.26.Violin.Music.item.3 = {
+number.26.Violin.Music.item.3 =
+{
 
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
@@ -4555,7 +4591,8 @@ number.26.Violin.Music.item.3 = {
 }
 
 
-number.26.Violin.Music.item.4 = {
+number.26.Violin.Music.item.4 =
+{
 
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
@@ -4602,7 +4639,8 @@ number.26.Violin.Music.item.4 = {
 }
 
 
-number.26.Violin.Music.item.5 = {
+number.26.Violin.Music.item.5 =
+{
 
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
@@ -4649,7 +4687,8 @@ number.26.Violin.Music.item.5 = {
 }
 
 
-number.26.Violin.Music = {
+number.26.Violin.Music =
+{
 
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
@@ -4797,7 +4836,9 @@ number.26.Violin.Music = {
         }
 
         \context Voice = "Violin.Music"
-        { \number.26.Violin.Music.item.1 }
+        {
+            \number.26.Violin.Music.item.1
+        }
 
     >>
 
@@ -5006,7 +5047,9 @@ number.26.Violin.Music = {
         }
 
         \context Voice = "Violin.Music"
-        { \number.26.Violin.Music.item.2 }
+        {
+            \number.26.Violin.Music.item.2
+        }
 
     >>
 
@@ -5087,7 +5130,9 @@ number.26.Violin.Music = {
         }
 
         \context Voice = "Violin.Music"
-        { \number.26.Violin.Music.item.3 }
+        {
+            \number.26.Violin.Music.item.3
+        }
 
     >>
 
@@ -5491,7 +5536,9 @@ number.26.Violin.Music = {
         }
 
         \context Voice = "Violin.Music"
-        { \number.26.Violin.Music.item.4 }
+        {
+            \number.26.Violin.Music.item.4
+        }
 
     >>
 
@@ -5575,7 +5622,9 @@ number.26.Violin.Music = {
         }
 
         \context Voice = "Violin.Music"
-        { \number.26.Violin.Music.item.5 }
+        {
+            \number.26.Violin.Music.item.5
+        }
 
     >>
 
@@ -6136,15 +6185,19 @@ number.26.Violin.Music = {
 }
 
 
-number.26.Violin.Staff = <<
+number.26.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.26.Violin.Music }
+    {
+        \number.26.Violin.Music
+    }
 
 >>
 
 
-number.26.Cello.Music = {
+number.26.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! EXPLICIT_CLEF
@@ -7374,9 +7427,12 @@ number.26.Cello.Music = {
 }
 
 
-number.26.Cello.Staff = <<
+number.26.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.26.Cello.Music }
+    {
+        \number.26.Cello.Music
+    }
 
 >>

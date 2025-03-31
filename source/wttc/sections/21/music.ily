@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.21.Skips = {
+number.21.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -332,7 +333,8 @@ number.21.Skips = {
 }
 
 
-number.21.TimeSignatures = {
+number.21.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -413,7 +415,8 @@ number.21.TimeSignatures = {
 }
 
 
-number.21.AltoFlute.Music.item.1 = {
+number.21.AltoFlute.Music.item.1 =
+{
 
     \once \override Dots.X-extent = ##f
     \voiceTwo
@@ -466,7 +469,8 @@ number.21.AltoFlute.Music.item.1 = {
 }
 
 
-number.21.AltoFlute.Music = {
+number.21.AltoFlute.Music =
+{
 
     % [AltoFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -704,7 +708,9 @@ number.21.AltoFlute.Music = {
         }
 
         \context Voice = "AltoFlute.Music"
-        { \number.21.AltoFlute.Music.item.1 }
+        {
+            \number.21.AltoFlute.Music.item.1
+        }
 
     >>
 
@@ -783,15 +789,19 @@ number.21.AltoFlute.Music = {
 }
 
 
-number.21.AltoFlute.Staff = <<
+number.21.AltoFlute.Staff =
+<<
 
     \context Voice = "AltoFlute.Music"
-    { \number.21.AltoFlute.Music }
+    {
+        \number.21.AltoFlute.Music
+    }
 
 >>
 
 
-number.21.Oboe.Music = {
+number.21.Oboe.Music =
+{
 
     % [Oboe.Music measure 1]
       %! REAPPLIED_CLEF
@@ -873,15 +883,19 @@ number.21.Oboe.Music = {
 }
 
 
-number.21.Oboe.Staff = <<
+number.21.Oboe.Staff =
+<<
 
     \context Voice = "Oboe.Music"
-    { \number.21.Oboe.Music }
+    {
+        \number.21.Oboe.Music
+    }
 
 >>
 
 
-number.21.Guitar.1.Music.item.1 = {
+number.21.Guitar.1.Music.item.1 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -895,7 +909,8 @@ number.21.Guitar.1.Music.item.1 = {
 }
 
 
-number.21.Guitar.1.Music = {
+number.21.Guitar.1.Music =
+{
 
     % [Guitar.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1076,7 +1091,9 @@ number.21.Guitar.1.Music = {
         }
 
         \context Voice = "Guitar.1.Music"
-        { \number.21.Guitar.1.Music.item.1 }
+        {
+            \number.21.Guitar.1.Music.item.1
+        }
 
     >>
 
@@ -1139,15 +1156,19 @@ number.21.Guitar.1.Music = {
 }
 
 
-number.21.Guitar.1.Staff = <<
+number.21.Guitar.1.Staff =
+<<
 
     \context Voice = "Guitar.1.Music"
-    { \number.21.Guitar.1.Music }
+    {
+        \number.21.Guitar.1.Music
+    }
 
 >>
 
 
-number.21.Guitar.2.Music.item.1 = {
+number.21.Guitar.2.Music.item.1 =
+{
 
       %! STAFF_HIGHLIGHT
     %@% \stopStaffHighlight
@@ -1161,7 +1182,8 @@ number.21.Guitar.2.Music.item.1 = {
 }
 
 
-number.21.Guitar.2.Music = {
+number.21.Guitar.2.Music =
+{
 
     % [Guitar.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1346,7 +1368,9 @@ number.21.Guitar.2.Music = {
         }
 
         \context Voice = "Guitar.2.Music"
-        { \number.21.Guitar.2.Music.item.1 }
+        {
+            \number.21.Guitar.2.Music.item.1
+        }
 
     >>
 
@@ -1428,15 +1452,19 @@ number.21.Guitar.2.Music = {
 }
 
 
-number.21.Guitar.2.Staff = <<
+number.21.Guitar.2.Staff =
+<<
 
     \context Voice = "Guitar.2.Music"
-    { \number.21.Guitar.2.Music }
+    {
+        \number.21.Guitar.2.Music
+    }
 
 >>
 
 
-number.21.Violin.Music.item.1 = {
+number.21.Violin.Music.item.1 =
+{
 
     \once \override Dots.X-extent = ##f
     \override NoteHead.style = #'harmonic-black
@@ -1491,7 +1519,8 @@ number.21.Violin.Music.item.1 = {
 }
 
 
-number.21.Violin.Music = {
+number.21.Violin.Music =
+{
 
     % [Violin.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1656,7 +1685,9 @@ number.21.Violin.Music = {
         }
 
         \context Voice = "Violin.Music"
-        { \number.21.Violin.Music.item.1 }
+        {
+            \number.21.Violin.Music.item.1
+        }
 
     >>
 
@@ -1693,15 +1724,19 @@ number.21.Violin.Music = {
 }
 
 
-number.21.Violin.Staff = <<
+number.21.Violin.Staff =
+<<
 
     \context Voice = "Violin.Music"
-    { \number.21.Violin.Music }
+    {
+        \number.21.Violin.Music
+    }
 
 >>
 
 
-number.21.Cello.Music = {
+number.21.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1915,9 +1950,12 @@ number.21.Cello.Music = {
 }
 
 
-number.21.Cello.Staff = <<
+number.21.Cello.Staff =
+<<
 
     \context Voice = "Cello.Music"
-    { \number.21.Cello.Music }
+    {
+        \number.21.Cello.Music
+    }
 
 >>
