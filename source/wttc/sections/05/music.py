@@ -66,21 +66,21 @@ def GLOBALS(skips):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     #
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "C",
         baca.tweak.padding(1.5),
         font_size=6,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "C",
         baca.tweak.extra_offset((0, -8.5)),
         font_size=6,
     )
     baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "C",
         baca.tweak.extra_offset((-4, 4)),
@@ -98,7 +98,7 @@ def GLOBALS(skips):
     wrappers = baca.override.metronome_mark_extra_offset(skips[31 - 1], (-3, 0.5))
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
     #
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[31 - 1],
         "D",
         baca.tweak.extra_offset((2, 0)),
@@ -106,14 +106,14 @@ def GLOBALS(skips):
         font_size=6,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[31 - 1],
         "D",
         baca.tweak.extra_offset((0, -8.5)),
         font_size=6,
     )
     baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[31 - 1],
         "D",
         baca.tweak.extra_offset((-6, 4)),

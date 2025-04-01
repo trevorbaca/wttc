@@ -58,14 +58,14 @@ def GLOBALS(skips, first_measure_number):
     baca.section.label_stage_numbers(skips, stage_markup)
     baca.metronome_mark(skips[1 - 1], "60", manifests=library.manifests)
     #
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "O",
         baca.tweak.padding(1.5),
         font_size=6,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "O",
         baca.tweak.extra_offset((12, -1)),
@@ -75,7 +75,7 @@ def GLOBALS(skips, first_measure_number):
     #
     baca.metronome_mark(skips[25 - 1], "100", manifests=library.manifests)
     #
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[25 - 1],
         "P",
         baca.tweak.extra_offset((3, 0)),
@@ -83,7 +83,7 @@ def GLOBALS(skips, first_measure_number):
         font_size=6,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[25 - 1],
         "P",
         baca.tweak.extra_offset((1, -8)),

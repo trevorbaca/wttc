@@ -26,15 +26,15 @@ number.4.Skips =
       %! +PARTS
 %%% - \tweak extra-offset #'(-6 . 4)
       %! +PARTS
-%%% - \baca-rehearsal-mark-markup "B" #2
+%%% - \baca-dimensionless-boxed-markup "B" #2
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(0 . -7)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "B" #6
+%%% - \baca-dimensionless-boxed-markup "B" #6
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "B" #6
+    - \baca-dimensionless-boxed-markup "B" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR

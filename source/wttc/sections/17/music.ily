@@ -24,11 +24,11 @@ number.17.Skips =
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(0 . -8)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "I" #6
+%%% - \baca-dimensionless-boxed-markup "I" #6
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "I" #6
+    - \baca-dimensionless-boxed-markup "I" #6
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! REDUNDANT_METRONOME_MARK_WITH_COLOR

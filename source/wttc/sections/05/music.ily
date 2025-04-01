@@ -20,15 +20,15 @@ number.5.Skips =
       %! +PARTS
 %%% - \tweak extra-offset #'(-4 . 4)
       %! +PARTS
-%%% - \baca-rehearsal-mark-markup "C" #2
+%%% - \baca-dimensionless-boxed-markup "C" #2
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(0 . -8.5)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "C" #6
+%%% - \baca-dimensionless-boxed-markup "C" #6
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "C" #6
+    - \baca-dimensionless-boxed-markup "C" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -807,17 +807,17 @@ number.5.Skips =
       %! +PARTS
 %%% - \tweak extra-offset #'(-6 . 4)
       %! +PARTS
-%%% - \baca-rehearsal-mark-markup "D" #2
+%%% - \baca-dimensionless-boxed-markup "D" #2
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(0 . -8.5)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "D" #6
+%%% - \baca-dimensionless-boxed-markup "D" #6
       %! +SECTION
     - \tweak extra-offset #'(2 . 0)
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "D" #6
+    - \baca-dimensionless-boxed-markup "D" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

@@ -20,11 +20,11 @@ number.26.Skips =
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(12 . -1)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "O" #6
+%%% - \baca-dimensionless-boxed-markup "O" #6
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "O" #6
+    - \baca-dimensionless-boxed-markup "O" #6
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
@@ -644,13 +644,13 @@ number.26.Skips =
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(1 . -8)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "P" #6
+%%% - \baca-dimensionless-boxed-markup "P" #6
       %! +SECTION
     - \tweak extra-offset #'(3 . 0)
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "P" #6
+    - \baca-dimensionless-boxed-markup "P" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER

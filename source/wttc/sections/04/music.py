@@ -54,21 +54,21 @@ def GLOBALS(skips):
     wrappers = baca.override.metronome_mark_extra_offset(skips[1 - 1], (-2, 0))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
     #
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "B",
         baca.tweak.padding(1.5),
         font_size=6,
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_SECTION)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "B",
         baca.tweak.extra_offset((0, -7)),
         font_size=6,
     )
     baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
-    wrappers = baca.rehearsal_mark(
+    wrappers = baca.dimensionless_boxed_markup(
         skips[1 - 1],
         "B",
         baca.tweak.extra_offset((-6, 4)),

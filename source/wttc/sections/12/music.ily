@@ -20,11 +20,11 @@ number.12.Skips =
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(0 . -8)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "G" #6
+%%% - \baca-dimensionless-boxed-markup "G" #6
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "G" #6
+    - \baca-dimensionless-boxed-markup "G" #6
     _ \scene-vii-I
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -876,11 +876,11 @@ number.12.Skips =
       %! +IPAD_SCORE
 %%% - \tweak extra-offset #'(12 . -1)
       %! +IPAD_SCORE
-%%% - \baca-rehearsal-mark-markup "H" #6
+%%% - \baca-dimensionless-boxed-markup "H" #6
       %! +SECTION
     - \tweak padding 1.5
       %! +SECTION
-    - \baca-rehearsal-mark-markup "H" #6
+    - \baca-dimensionless-boxed-markup "H" #6
       %! CLOCK_TIME
     \bacaStopTextSpanCT
       %! LOCAL_MEASURE_NUMBER
