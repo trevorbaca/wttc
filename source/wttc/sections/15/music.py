@@ -39,7 +39,7 @@ def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "150", manifests=library.manifests)
     baca.metronome_mark(skips[4 - 1], "100", manifests=library.manifests)
     baca.metronome_mark(skips[8 - 1], "75", manifests=library.manifests)
-    baca.mark(
+    baca.rehearsal_mark(
         skips[10 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),

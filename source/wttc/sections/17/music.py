@@ -53,13 +53,13 @@ def GLOBALS(skips, first_measure_number):
     )
     baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[3 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
-    baca.mark(
+    baca.rehearsal_mark(
         skips[6 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),

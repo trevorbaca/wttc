@@ -62,7 +62,7 @@ def GLOBALS(skips):
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[7 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
@@ -75,7 +75,7 @@ def GLOBALS(skips):
     )
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[13 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),

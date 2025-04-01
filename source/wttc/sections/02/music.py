@@ -37,7 +37,7 @@ def GLOBALS(skips):
     wrappers = baca.override.metronome_mark_extra_offset(skips[1 - 1], (-3, 2))
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_OBOE)
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[11 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),

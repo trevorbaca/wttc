@@ -30,7 +30,7 @@ frame = library.frame
 
 def GLOBALS(skips):
     baca.metronome_mark(skips[1 - 1], "48", manifests=library.manifests)
-    baca.mark(
+    baca.rehearsal_mark(
         skips[11 - 1],
         strings.long_fermata,
         baca.tweak.padding(1.5, event=True),

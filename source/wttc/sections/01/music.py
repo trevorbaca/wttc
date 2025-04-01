@@ -419,7 +419,7 @@ def owl(skips):
         r"\scene-i-B",
         baca.tweak.x_extent_false(),
     )
-    baca.mark(
+    baca.rehearsal_mark(
         skips[7 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),
@@ -430,7 +430,7 @@ def owl(skips):
         r"\scene-i-parenthesized-title",
         baca.tweak.x_extent_false(),
     )
-    baca.mark(
+    baca.rehearsal_mark(
         skips[9 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
@@ -473,7 +473,7 @@ def owl(skips):
         baca.tweak.x_extent_false(),
     )
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[11 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),

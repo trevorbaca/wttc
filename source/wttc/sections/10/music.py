@@ -64,7 +64,7 @@ def GLOBALS(skips, first_measure_number):
     )
     baca.tags.tag(wrappers, library.ONLY_IPAD_SCORE)
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[10 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
@@ -73,7 +73,7 @@ def GLOBALS(skips, first_measure_number):
     baca.open_volta(skips[21 - 1], first_measure_number)
     baca.double_volta(skips[22 - 1], first_measure_number)
     baca.close_volta(skips[23 - 1], first_measure_number)
-    baca.mark(
+    baca.rehearsal_mark(
         skips[22 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),

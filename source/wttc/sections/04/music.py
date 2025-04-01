@@ -76,7 +76,7 @@ def GLOBALS(skips):
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
     #
-    baca.mark(
+    baca.rehearsal_mark(
         skips[16 - 1],
         strings.short_fermata,
         baca.tweak.padding(1.5, event=True),

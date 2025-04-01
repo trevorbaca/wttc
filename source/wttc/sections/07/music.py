@@ -39,14 +39,14 @@ def GLOBALS(skips):
         (-3, 0),
     )
     baca.tags.tag(wrappers, library.ONLY_LETTER_PARTS_CELLO)
-    baca.mark(
+    baca.rehearsal_mark(
         skips[1 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
         site="after",
     )
     baca.metronome_mark(skips[2 - 1], "50", manifests=library.manifests)
-    baca.mark(
+    baca.rehearsal_mark(
         skips[2 - 1],
         strings.fermata,
         baca.tweak.padding(1.5, event=True),
