@@ -1,4 +1,4 @@
-\version "2.25.25"
+\version "2.25.26"
 #(define-markup-command
     (lnum layout props n)
     (number?)
