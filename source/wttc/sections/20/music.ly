@@ -1,4 +1,4 @@
-\version "2.25.25"
+\version "2.25.26"
 \include "../stylesheet.ily"
 \include "../../staging/scene-xiii.ily"
 \include "music.ily"
