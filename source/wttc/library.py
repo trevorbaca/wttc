@@ -825,7 +825,7 @@ def merge(
             merged_components.append(timespan.annotation)
         else:
             duration = timespan.duration
-            rests = abjad.makers.make_leaves([None], [duration], tag=tag)
+            rests = abjad.makers.make_leaves([[]], [duration], tag=tag)
             merged_components.extend(rests)
     voice = abjad.Voice(merged_components)
     components = abjad.mutate.eject_contents(voice)
