@@ -152,7 +152,8 @@ class Rhythm:
             if tuplet.multiplier == (1, 1):
                 if not abjad.get.has_indicator(tuplet, "FEATHER_BEAM_CONTAINER"):
                     abjad.mutate.extract(tuplet)
-        rmakers.force_fraction(components)
+        # rmakers.force_fraction(components)
+        force_fraction(components)
         if not do_not_beam_tuplets:
             for tuplet in abjad.select.tuplets(components):
                 rmakers.beam([tuplet])
@@ -416,7 +417,7 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     rmakers.rewrite_rest_filled(voice, tag=tag)
     rmakers.rewrite_sustained(voice, tag=tag)
     rmakers.extract_trivial(voice)
-    rmakers.force_fraction(voice)
+    # rmakers.force_fraction(voice)
     rmakers.force_diminution(voice)
     for component in voice:
         if "DUMMY_TUPLET" in abjad.get.indicators(component, str):
@@ -424,6 +425,7 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     rmakers.rewrite_meter(
         voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
+    force_fraction(components)
     components = abjad.mutate.eject_contents(voice)
     unwrapped_components = []
     for component in components:
@@ -504,6 +506,14 @@ def final_to_bar_line_true(argument):
     if argument is True:
         tweaks.append(baca.tweak.to_bar_line_true(i=-1))
     return tweaks
+
+
+def force_fraction(argument):
+    for tuplet in abjad.select.tuplets(argument):
+        overrides = abjad.override(tuplet).TupletNumber
+        if "text" not in vars(overrides):
+            tweak_string = abjad.Tuplet.tuplet_number_calc_fraction_text_tweak_string
+            abjad.tweak(tuplet, tweak_string)
 
 
 def force_repeat_tie(components, threshold=(1, 8)):
@@ -939,7 +949,8 @@ def rhythm(
         tag=tag,
         voice_name=voice.name,
     )
-    rmakers.force_fraction(voice_)
+    # rmakers.force_fraction(voice_)
+    force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components

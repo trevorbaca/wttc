@@ -298,18 +298,18 @@ def VN(voice, meters):
         note = abjad.Note("c'", voice[6].multiplied_duration)
         voice[6] = note
         tuplet_1 = abjad.Tuplet("3:2", "c'8 r4")
-        tuplet_1.force_fraction = True
+        library.force_fraction(tuplet_1)
         tuplet_2 = abjad.Tuplet("3:2", "r4 c'8")
-        tuplet_2.force_fraction = True
+        library.force_fraction(tuplet_2)
         voice[7:8] = [tuplet_1, abjad.Rest("r2"), tuplet_2]
         abjad.tie(abjad.select.notes(voice)[3:7])
         container = abjad.Container(r"c'2. \repeatTie ~ \times 2/3 { c'8 c'4 }")
         components = abjad.mutate.eject_contents(container)
-        components[-1].force_fraction = True
+        library.force_fraction(components[-1])
         library.replace_measure(voice, 4, components)
         rest = abjad.select.group_by_measure(voice)[5 - 1][0]
         tuplet = abjad.Tuplet("3:2", r"c'8 \repeatTie r4")
-        tuplet.force_fraction = True
+        library.force_fraction(tuplet)
         abjad.mutate.replace([rest], [tuplet])
         for plt in baca.select.plts(voice):
             if len(plt) == 1:
@@ -486,7 +486,7 @@ def VC(voice, meters):
         material=99,
         overlap=[-8],
     )
-    rmakers.force_fraction(voice)
+    library.force_fraction(voice)
     baca.section.append_anchor_note(voice)
 
 
