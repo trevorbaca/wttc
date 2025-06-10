@@ -294,7 +294,7 @@ def VN(voice, meters):
         voice[4][-1] = note
         note = abjad.Note("c'", voice[5].written_duration)
         voice[5] = note
-        note = abjad.Note("c'", voice[6].multiplied_duration)
+        note = abjad.Note("c'", abjad.get.duration(voice[6]))
         voice[6] = note
         tuplet_1 = abjad.Tuplet("3:2", "c'8 r4")
         library.force_fraction(tuplet_1)
