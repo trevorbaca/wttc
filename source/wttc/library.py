@@ -1331,7 +1331,7 @@ def B3(
         )
     grace_plts = baca.select.pleaves(plts, grace=True)
     baca.pitch(grace_plts, grace_pitch)
-    if abjad.get.grace(plts[0]):
+    if abjad.get.is_grace_music(plts[0]):
         plts = plts[1:]
     if hairpin_lparts is not None:
         parts = baca.select.lparts(plts, hairpin_lparts)
@@ -1431,9 +1431,9 @@ def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
         else:
             baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
-        if abjad.get.grace(pleaf):
+        if abjad.get.is_grace_music(pleaf):
             next_pleaf = pleaves[i + 1]
-            assert not abjad.get.grace(next_pleaf)
+            assert not abjad.get.is_grace_music(next_pleaf)
             abjad.tie([pleaf, next_pleaf])
     leaf = abjad.select.leaf(pleaves, 0, grace=False)
     baca.dynamic(leaf, dynamic)
