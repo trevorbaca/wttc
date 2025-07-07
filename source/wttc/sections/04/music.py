@@ -1023,7 +1023,7 @@ def ob(m):
 def group_leaves_by_staff_lines(leaves):
     pairs = itertools.groupby(
         leaves,
-        lambda _: abjad.get.effective(_, baca.StaffLines),
+        lambda _: abjad.get.effective_indicator(_, baca.StaffLines),
     )
     return pairs
 
@@ -1033,7 +1033,7 @@ def override_uneven_staff_padding(leaves, *, only_dls=False):
     tuplets = abjad.select.tuplets(components)
     for tuplet in tuplets:
         leaf = abjad.select.leaf(tuplet, 0)
-        staff_lines = abjad.get.effective(leaf, baca.StaffLines)
+        staff_lines = abjad.get.effective_indicator(leaf, baca.StaffLines)
         if staff_lines.line_count == 5:
             staff_padding = 1.25
         else:

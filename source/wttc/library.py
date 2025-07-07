@@ -563,7 +563,7 @@ def get_measures(voice, measure_numbers, *, first=1):
         groups = groups[start_index : stop_index + 1]
     time_signatures = []
     for group in groups:
-        time_signature = abjad.get.effective(group[0], abjad.TimeSignature)
+        time_signature = abjad.get.effective_indicator(group[0], abjad.TimeSignature)
         time_signatures.append(time_signature)
     assert len(groups) == len(time_signatures)
     components = abjad.sequence.flatten(groups)
