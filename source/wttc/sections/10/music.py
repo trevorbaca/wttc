@@ -302,7 +302,7 @@ def VN(voice, meters):
         library.force_fraction(tuplet_2)
         voice[7:8] = [tuplet_1, abjad.Rest("r2"), tuplet_2]
         abjad.tie(abjad.select.notes(voice)[3:7])
-        container = abjad.Container(r"c'2. \repeatTie ~ \times 2/3 { c'8 c'4 }")
+        container = abjad.Container(r"c'2. \repeatTie ~ \tuplet 3/2 { c'8 c'4 }")
         components = abjad.mutate.eject_contents(container)
         library.force_fraction(components[-1])
         library.replace_measure(voice, 4, components)
@@ -443,8 +443,8 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        voice.extend(r"r4 \times 2/3 { r8 c'8 r8 } r4 r8. <c' c'>16")
-        voice.extend(r"r2 \times 2/3 { c'8 r4 } r8. <c' c'>16 r4")
+        voice.extend(r"r4 \tuplet 3/2 { r8 c'8 r8 } r4 r8. <c' c'>16")
+        voice.extend(r"r2 \tuplet 3/2 { c'8 r4 } r8. <c' c'>16 r4")
         groups = abjad.select.group_by_measure(voice)[19 - 1 : 21 - 1]
         pleaves = baca.select.pleaves(groups)
         tupletted = baca.select.tupletted(pleaves)
@@ -460,7 +460,7 @@ def VC(voice, meters):
 
     @baca.call
     def block():
-        voice.extend(r"\times 2/3 { r4 c'8 } r2 r8. <c' c'>16 r4")
+        voice.extend(r"\tuplet 3/2 { r4 c'8 } r2 r8. <c' c'>16 r4")
         groups = abjad.select.group_by_measure(voice)[21 - 1]
         pleaves = baca.select.pleaves(groups)
         tupletted = baca.select.tupletted(pleaves)

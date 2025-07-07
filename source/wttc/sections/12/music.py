@@ -500,10 +500,10 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        voice.extend(r"r4 r4 r4 \times 3/5 { r2 c'4 c' c' }")
-        voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
-        voice.extend(r"\times 3/5 { c'4 c' c' c' c' } \times 3/5 { c' c' c' c' c' }")
-        voice.extend(r"\times 3/5 { c'4 c' c' c'2 }")
+        voice.extend(r"r4 r4 r4 \tuplet 5/3 { r2 c'4 c' c' }")
+        voice.extend(r"\tuplet 5/3 { c'4 c' c' c' c' } \tuplet 5/3 { c' c' c' c' c' }")
+        voice.extend(r"\tuplet 5/3 { c'4 c' c' c' c' } \tuplet 5/3 { c' c' c' c' c' }")
+        voice.extend(r"\tuplet 5/3 { c'4 c' c' c'2 }")
         library.annotate(voice, 3)
 
     rhythm(
@@ -514,7 +514,7 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        container = abjad.Container(2 * r"\times 3/5 { c'4 c' c' c' c' } ")
+        container = abjad.Container(2 * r"\tuplet 5/3 { c'4 c' c' c' c' } ")
         leaves = abjad.select.leaves(container)
         library.annotate(leaves[:1], 1)
         library.annotate(leaves[1:], 3)
@@ -553,7 +553,7 @@ def GT2(voice, meters):
 
     @baca.call
     def block():
-        container = abjad.Container(r"\times 3/5 { r1 c'4 }")
+        container = abjad.Container(r"\tuplet 5/3 { r1 c'4 }")
         library.annotate(container, 1)
         voice.extend(container)
 
