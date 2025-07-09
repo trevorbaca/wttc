@@ -169,7 +169,7 @@ class Rhythm:
         debug=False,
         denominator=16,
         do_not_extend=False,
-        extra_counts=(),
+        extra_counts=None,
         material=None,
         overlap=(),
     ):
