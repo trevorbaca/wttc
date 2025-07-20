@@ -102,7 +102,7 @@ def OB(voice, meters):
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
         library.annotate(container[:1], 3)
-        abjad.attach(container, plt.head)
+        abjad.attach(container, plt.get_head())
 
 
 def GT1(voice, meters):

@@ -805,7 +805,7 @@ def J2a1(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head, dynamic)
+        baca.dynamic(plt.get_head(), dynamic)
 
 
 def K1b(pleaves, dyad, alteration, peaks):
