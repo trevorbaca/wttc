@@ -1043,7 +1043,7 @@ Q2 = """
     """
 
 Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
-Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
+Q2 = " ".join([_.get_name_in_locale(locale="us") for _ in Q2_])
 
 
 def fl(m):

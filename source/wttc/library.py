@@ -693,7 +693,7 @@ def make_flute_covered_dyads(pitches):
     dyads = []
     for sounding_name in pitches.split():
         fingered_pitch = abjad.NamedPitch(sounding_name) + abjad.NamedInterval("M7")
-        fingered_name = fingered_pitch.get_name(locale="us")
+        fingered_name = fingered_pitch.get_name_in_locale(locale="us")
         dyad = f"{sounding_name}:{fingered_name}"
         dyads.append(dyad)
     string = " ".join(dyads)
@@ -1446,7 +1446,7 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
     baca.tweak.style_harmonic(target=chord.note_heads[1])
-    name = chord.note_heads[0].written_pitch.get_name(locale="us")
+    name = chord.note_heads[0].written_pitch.get_name_in_locale(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(
         pleaves,
@@ -2080,7 +2080,7 @@ def F2a1(pleaves, pitches, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.get_head(), dynamic)
     for pleaf in pleaves[4::2]:
-        pitch = abjad.NamedPitch(pleaf.written_pitch.name, arrow=abjad.UP)
+        pitch = abjad.NamedPitch(pleaf.written_pitch.get_name(), arrow=abjad.UP)
         pleaf.written_pitch = pitch
 
 
@@ -2195,7 +2195,7 @@ def F3b1(pleaves, fundamentals, dynamics):
     for pleaf, fundamental in zip(pleaves, fundamentals):
         pitch = abjad.NamedPitch(fundamental)
         fourth = pitch + abjad.NamedInterval("P4")
-        string = f'{pitch.get_name(locale="us")}:{fourth.get_name(locale="us")}'
+        string = f'{pitch.get_name_in_locale(locale="us")}:{fourth.get_name_in_locale(locale="us")}'
         baca.pitch(pleaf, string)
         baca.tweak.style_harmonic(target=pleaf.note_heads[1])
     if ">" in dynamics:
@@ -2858,7 +2858,7 @@ def M1_2(pleaves, fundamentals, hairpin):
     fundamentals = fundamentals.split()
     for fundamental in fundamentals:
         harmonic = abjad.NamedPitch(fundamental) + abjad.NamedInterval("P4")
-        dyad = f'{fundamental}:{harmonic.get_name(locale="us")}'
+        dyad = f'{fundamental}:{harmonic.get_name_in_locale(locale="us")}'
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
@@ -3014,7 +3014,7 @@ def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
         interval = abjad.NamedInterval(t)
         for pitch_name in pitches.split():
             transposed_pitch = abjad.NamedPitch(pitch_name) + interval
-            name = transposed_pitch.get_name(locale="us")
+            name = transposed_pitch.get_name_in_locale(locale="us")
             transposed_pitch_names.append(name)
         pitches = " ".join(transposed_pitch_names)
     baca.pitches(pleaves, pitches)
@@ -3251,7 +3251,7 @@ Q2 = """
     """
 
 Q2_ = [abjad.NamedPitch(_) - abjad.NamedInterval("P5") for _ in Q2.split()]
-Q2 = " ".join([_.get_name(locale="us") for _ in Q2_])
+Q2 = " ".join([_.get_name_in_locale(locale="us") for _ in Q2_])
 
 
 def still_1a(pleaves, pitch, dynamic, *, tasto=False):
