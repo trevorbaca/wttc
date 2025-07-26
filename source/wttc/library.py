@@ -888,7 +888,7 @@ def replace_obgc_main_notes_with_rests(voice):
     for obgc in abjad.select.components(voice, prototype):
         note = obgc.get_first_nongrace_leaf()
         assert isinstance(note, abjad.Note)
-        rest = abjad.Rest(note.written_duration)
+        rest = abjad.Rest(note.get_written_duration())
         abjad.mutate.replace([note], [rest])
 
 
@@ -1355,7 +1355,9 @@ def B4a(pleaves, pitches, dynamics):
         baca.flageolet(plt.get_head())
         for pleaf in plt:
             assert isinstance(pleaf, abjad.Note)
-            pleaf.note_head.written_pitch += abjad.NamedInterval("+P8")
+            written_pitch = pleaf.note_head.get_written_pitch()
+            written_pitch += abjad.NamedInterval("+P8")
+            pleaf.note_head.set_written_pitch(written_pitch)
 
 
 def B4b(pleaves, string_number, pitches, peaks):
@@ -1446,7 +1448,7 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
     baca.tweak.style_harmonic(target=chord.note_heads[1])
-    name = chord.note_heads[0].written_pitch.get_name_in_locale(locale="us")
+    name = chord.note_heads[0].get_written_pitch().get_name_in_locale(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(
         pleaves,
@@ -2080,8 +2082,8 @@ def F2a1(pleaves, pitches, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.get_head(), dynamic)
     for pleaf in pleaves[4::2]:
-        pitch = abjad.NamedPitch(pleaf.written_pitch.get_name(), arrow=abjad.UP)
-        pleaf.written_pitch = pitch
+        pitch = abjad.NamedPitch(pleaf.get_written_pitch().get_name(), arrow=abjad.UP)
+        pleaf.set_written_pitch(pitch)
 
 
 def F2b1(
@@ -2293,7 +2295,9 @@ def G2a1(pleaves, pitch, peak):
         right = len(pleaves) - left
         parts = baca.select.lparts(pleaves, [left, right])
         last_leaf = parts[-1][-1]
-        assert last_leaf.written_duration == abjad.Duration(1, 16), repr(last_leaf)
+        assert last_leaf.get_written_duration() == abjad.Duration(1, 16), repr(
+            last_leaf
+        )
         baca.hairpin(
             parts,
             swells(peak),
@@ -3001,7 +3005,9 @@ def N3a(pleaves, pitches, dynamics):
     baca.flageolet(pheads)
     for pleaf in pheads:
         assert isinstance(pleaf, abjad.Note)
-        pleaf.note_head.written_pitch += abjad.NamedInterval("+P8")
+        written_pitch = pleaf.note_head.get_written_pitch()
+        written_pitch += abjad.NamedInterval("+P8")
+        pleaf.note_head.set_written_pitch(written_pitch)
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -3071,7 +3077,9 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
     )
     nongraces = abjad.select.notes(pleaves, grace=False)
     for nongrace in nongraces:
-        nongrace.written_pitch -= 12
+        nongrace_written_pitch = nongrace.get_written_pitch()
+        nongrace_written_pitch -= 12
+        nongrace.set_written_pitch(nongrace_written_pitch)
     baca.override.dots_x_extent_false(nongraces[0])
     baca.hairpin(
         nongraces,

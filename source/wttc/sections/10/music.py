@@ -290,9 +290,9 @@ def VN(voice, meters):
             [1, -12, 1, -8, 1, -6],
             extra_counts=[-1],
         )
-        note = abjad.Note("c'", voice[4][-1].written_duration)
+        note = abjad.Note("c'", voice[4][-1].get_written_duration())
         voice[4][-1] = note
-        note = abjad.Note("c'", voice[5].written_duration)
+        note = abjad.Note("c'", voice[5].get_written_duration())
         voice[5] = note
         note = abjad.Note("c'", abjad.get.duration(voice[6]))
         voice[6] = note
