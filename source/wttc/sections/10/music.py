@@ -513,7 +513,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
         for leaf in run:
             if isinstance(leaf, abjad.Chord):
                 baca.pitch(leaf, f"{pitch_1}:{pitch_2}")
-                baca.tweak.style_harmonic(target=leaf.note_heads[1])
+                baca.tweak.style_harmonic(target=leaf.get_note_heads()[1])
             else:
                 baca.pitch(leaf, pitch_1)
         baca.spanners.trill(

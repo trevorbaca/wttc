@@ -871,7 +871,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, tssp=None):
     assert len(chords) == 1
     chord = chords[0]
     baca.pitch(chord, f"{fundamental}:{harmonic}")
-    baca.tweak.style_harmonic(target=chord.note_heads[1])
+    baca.tweak.style_harmonic(target=chord.get_note_heads()[1])
     if chord is pleaves[0]:
         note = abjad.get.leaf(chord, 1)
         abjad.tie([chord, note])
