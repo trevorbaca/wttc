@@ -149,7 +149,7 @@ class Rhythm:
         else:
             self.voice.extend(components)
         for tuplet in abjad.select.tuplets(components):
-            if tuplet.ratio == abjad.Ratio(1, 1):
+            if tuplet.get_ratio() == abjad.Ratio(1, 1):
                 if not abjad.get.has_indicator(tuplet, "FEATHER_BEAM_CONTAINER"):
                     abjad.mutate.extract(tuplet)
         force_fraction(components)
@@ -420,7 +420,7 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     rmakers.force_diminution(voice)
     for component in voice:
         if "DUMMY_TUPLET" in abjad.get.indicators(component, str):
-            component.ratio = abjad.Ratio(1, 1)
+            component.set_ratio(abjad.Ratio(1, 1))
     rmakers.rewrite_meter(
         voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
