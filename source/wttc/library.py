@@ -111,7 +111,7 @@ class Rhythm:
             do_not_rewrite_meter=do_not_rewrite_meter,
             reference_meters=_reference_meters(),
             tag=tag,
-            voice_name=self.voice.name,
+            voice_name=self.voice.get_name(),
         )
         if prefix:
             parts = abjad.select.partition_by_durations(
@@ -201,7 +201,7 @@ class Rhythm:
     def mmrests(self, *arguments, head=False):
         meters = self.meters(*arguments)
         if head:
-            music = baca.make_mmrests(meters, head=self.voice.name)
+            music = baca.make_mmrests(meters, head=self.voice.get_name())
         else:
             music = baca.make_mmrests(meters)
         self.voice.extend(music)
@@ -946,7 +946,7 @@ def rhythm(
         do_not_rewrite_meter=do_not_rewrite_meter,
         reference_meters=_reference_meters(),
         tag=tag,
-        voice_name=voice.name,
+        voice_name=voice.get_name(),
     )
     # rmakers.force_fraction(voice_)
     force_fraction(voice_)
