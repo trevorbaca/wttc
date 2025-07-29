@@ -177,7 +177,7 @@ class Rhythm:
         tag = baca.helpers.function_name(inspect.currentframe())
         if overlap:
             counts = list(overlap) + counts
-        durations = [_.get_duration() for _ in time_signatures]
+        durations = [_.duration() for _ in time_signatures]
         durations = [sum(durations)]
         durations = baca.sequence.quarters(durations)
         tuplets = rmakers.talea(
@@ -781,7 +781,7 @@ def merge(
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert abjad.get.duration(components_1) == abjad.get.duration(components_2)
-    assert abjad.get.duration(components_1) == time_signature.get_duration()
+    assert abjad.get.duration(components_1) == time_signature.duration()
     voice_1 = abjad.Voice(components_1)
     voice_2 = abjad.Voice(components_2)
     voice_1_nonrest_timespans = abjad.TimespanList()
@@ -818,7 +818,7 @@ def merge(
     nonrest_timespans = abjad.TimespanList()
     nonrest_timespans.extend(voice_1_nonrest_timespans)
     nonrest_timespans.extend(voice_2_nonrest_timespans)
-    measure_timespan = abjad.Timespan(0, time_signature.get_duration())
+    measure_timespan = abjad.Timespan(0, time_signature.duration())
     rest_timespans = abjad.TimespanList([measure_timespan])
     for nonrest_timespan in nonrest_timespans:
         rest_timespans = rest_timespans - nonrest_timespan
