@@ -886,7 +886,7 @@ def plts(leaves, material_number):
 def replace_obgc_main_notes_with_rests(voice):
     prototype = abjad.OnBeatGraceContainer
     for obgc in abjad.select.components(voice, prototype):
-        note = obgc.get_first_nongrace_leaf()
+        note = obgc.first_nongrace_leaf()
         assert isinstance(note, abjad.Note)
         rest = abjad.Rest(note.get_written_duration())
         abjad.mutate.replace([note], [rest])
