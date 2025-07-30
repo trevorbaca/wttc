@@ -1218,7 +1218,7 @@ def B1a_foo(pleaves, pitch, dynamics, *, stblf=False):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     if len(pleaves) == 1:
         baca.markup(pleaves[0], r"\baca-cov-markup", baca.tweak.staff_padding(3))
     else:
@@ -1274,8 +1274,8 @@ def B2a(pleaves, pitch, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
-        baca.laissez_vibrer(plt.get_tail())
+        baca.dynamic(plt.head(), dynamic)
+        baca.laissez_vibrer(plt.tail())
 
 
 def B2b(notes, pitch, dynamics, *, dlssp=None):
@@ -1351,8 +1351,8 @@ def B4a(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
-        baca.flageolet(plt.get_head())
+        baca.dynamic(plt.head(), dynamic)
+        baca.flageolet(plt.head())
         for pleaf in plt:
             assert isinstance(pleaf, abjad.Note)
             written_pitch = pleaf.get_note_head().get_written_pitch()
@@ -1396,7 +1396,7 @@ def B5(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def C1_final(pleaves, fundamental, harmonic, dynamics):
@@ -1415,14 +1415,14 @@ def C1_final(pleaves, fundamental, harmonic, dynamics):
         )
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
     plts = baca.select.plts(pleaves)
     done_chord_1 = False
     for plt in plts:
-        if isinstance(plt.get_head(), abjad.Chord):
+        if isinstance(plt.head(), abjad.Chord):
             if not done_chord_1:
                 baca.pitch(plt, f"{fundamental}:{harmonic_1}")
                 done_chord_1 = True
@@ -1474,9 +1474,9 @@ def C1c(pleaves, dyad, alteration, dynamics):
         baca.pitch(plt, dyad)
         for chord in plt:
             baca.tweak.style_harmonic(target=chord.get_note_heads()[1])
-        baca.triple_staccato(plt.get_head())
+        baca.triple_staccato(plt.head())
         if dynamic != "-":
-            baca.dynamic(plt.get_head(), dynamic)
+            baca.dynamic(plt.head(), dynamic)
         baca.spanners.trill(
             plt,
             baca.tweak.staff_padding(3, grob="TrillSpanner"),
@@ -1751,8 +1751,8 @@ def D4a(pleaves, pitch, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
-        baca.espressivo(plt.get_head())
+        baca.dynamic(plt.head(), dynamic)
+        baca.espressivo(plt.head())
 
 
 def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
@@ -1776,7 +1776,7 @@ def D4b(pleaves, pitch, *, dynamics=None, hairpin=None, no_spanner=False):
     if dynamics:
         dynamics = dynamics.split()
         for plt, dynamic in zip(plts, dynamics, strict=True):
-            baca.dynamic(plt.get_head(), dynamic)
+            baca.dynamic(plt.head(), dynamic)
     else:
         baca.hairpin(
             [pleaves],
@@ -2072,7 +2072,7 @@ def F1b(pleaves, chord, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def F2a1(pleaves, pitches, dynamics):
@@ -2080,7 +2080,7 @@ def F2a1(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     for pleaf in pleaves[4::2]:
         pitch = abjad.NamedPitch(pleaf.get_written_pitch().get_name(), arrow=abjad.UP)
         pleaf.set_written_pitch(pitch)
@@ -2336,7 +2336,7 @@ def G3b(pleaves, pitch, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     if len(plts) == 1:
         baca.spanners.pizzicato(
             plts,
@@ -2363,10 +2363,10 @@ def G4a(pleaves, *, once=False, up_bow=False):
     plts = baca.select.plts(pleaves)
     for plt in plts:
         bow_mark(
-            plt.get_head(),
+            plt.head(),
             baca.tweak.padding(1),
         )
-        baca.stop_on_string(plt.get_head())
+        baca.stop_on_string(plt.head())
     if once is True:
         string = '"ff"'
     else:
@@ -2386,7 +2386,7 @@ def G4b(pleaves, *, once=False):
     baca.staff_lines(rleaf, 5)
     plts = baca.select.plts(pleaves)
     for plt in plts:
-        baca.stop_on_string(plt.get_head())
+        baca.stop_on_string(plt.head())
     if once is True:
         string = '"f"'
     else:
@@ -2424,8 +2424,8 @@ def H1a(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
-        baca.stop_on_string(plt.get_tail())
+        baca.dynamic(plt.head(), dynamic)
+        baca.stop_on_string(plt.tail())
 
 
 def H1b(pleaves, pitches, dynamics):
@@ -2433,7 +2433,7 @@ def H1b(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def H2(pleaves, pitch, alteration, peaks, *, hftblt=False, tssp=5.5):
@@ -2496,7 +2496,7 @@ def I1a(pleaves, pitch, alteration, dynamics):
         )
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def I1b(pleaves, pitches, dynamic=None):
@@ -2622,9 +2622,9 @@ def J3a(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     for plt in plts:
-        baca.accent(plt.get_head())
+        baca.accent(plt.head())
 
 
 def J3b(pleaves, pitches, dynamics, falls):
@@ -2632,13 +2632,13 @@ def J3b(pleaves, pitches, dynamics, falls):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     falls = abjad.CyclicTuple(falls)
     for i, plt in enumerate(plts):
         if falls[i] == "0":
-            baca.articulation(plt.get_head(), "bendAfter #'-4")
+            baca.articulation(plt.head(), "bendAfter #'-4")
         else:
-            baca.articulation(plt.get_head(), "bendAfter #'4")
+            baca.articulation(plt.head(), "bendAfter #'4")
 
 
 def J3c(pleaves, pitches, dynamics):
@@ -2647,7 +2647,7 @@ def J3c(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     baca.spanners.pizzicato(
         pleaves,
         baca.tweak.staff_padding(3),
@@ -2723,7 +2723,7 @@ def K2d(pleaves, pitch, dynamic):
     baca.stem_tremolo(pleaves)
     plts = baca.select.plts(pleaves)
     for plt in plts:
-        baca.stop_on_string(plt.get_head())
+        baca.stop_on_string(plt.head())
     baca.dynamic(pleaves[0], dynamic)
 
 
@@ -2751,7 +2751,7 @@ def K3b(pleaves, pitch, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def L1b(
@@ -2886,7 +2886,7 @@ def M3b(pleaves, pitches, string_number, dynamics, *, staff_padding=5.5):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
     baca.glissando(pleaves, pitches)
     baca.override.note_head_style_harmonic(pleaves)
     if len(pleaves) == 1:
@@ -2926,11 +2926,11 @@ def M5a(pleaves, pitches, falls, dynamics=None):
         dynamics = len(plts) * ["-"]
     for plt, fall, dynamic in zip(plts, falls, dynamics, strict=True):
         if fall == "0":
-            baca.articulation(plt.get_tail(), "bendAfter #'-4")
+            baca.articulation(plt.tail(), "bendAfter #'-4")
         else:
             assert fall == "1"
-            baca.articulation(plt.get_tail(), "bendAfter #'4")
-        baca.dynamic(plt.get_head(), dynamic)
+            baca.articulation(plt.tail(), "bendAfter #'4")
+        baca.dynamic(plt.head(), dynamic)
 
 
 def M5b(pleaves, pitches, dynamics):
@@ -2938,8 +2938,8 @@ def M5b(pleaves, pitches, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.triple_staccato(plt.get_head())
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.triple_staccato(plt.head())
+        baca.dynamic(plt.head(), dynamic)
 
 
 def N1a(pleaves, pitches, hairpin_lparts, hairpin):
@@ -3011,7 +3011,7 @@ def N3a(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def N3b(pleaves, pitches, hairpin_lparts, hairpin, beam_positions, *, t=False):
@@ -3149,8 +3149,8 @@ def O2a(pleaves, pitch, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.espressivo(plt.get_head())
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.espressivo(plt.head())
+        baca.dynamic(plt.head(), dynamic)
     baca.spanners.covered(
         pleaves,
         baca.tweak.staff_padding(3),
@@ -3163,7 +3163,7 @@ def O3b(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.get_head(), dynamic)
+        baca.dynamic(plt.head(), dynamic)
 
 
 def O4a(pleaves, pitch, hairpin, *, rleak=False):

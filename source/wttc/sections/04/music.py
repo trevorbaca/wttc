@@ -90,7 +90,7 @@ def attach_B1b_graces(voice, *, do_not_attach_before_grace=False):
         if do_not_attach_before_grace is not True:
             container = abjad.BeforeGraceContainer("d'8")
             library.annotate(container, 1)
-            abjad.attach(container, plt.get_head())
+            abjad.attach(container, plt.head())
         container = abjad.AfterGraceContainer("e'8")
         library.annotate(container, 1)
         abjad.attach(container, plt[-1])
@@ -112,7 +112,7 @@ def FL(voice, meters):
         for plt in baca.select.plts(components)[-4:]:
             container = abjad.BeforeGraceContainer("e'16")
             library.annotate(container, 3)
-            abjad.attach(container, plt.get_head())
+            abjad.attach(container, plt.head())
         leaf = abjad.select.leaf(components, -1)
         baca.tie(leaf)
 
@@ -130,7 +130,7 @@ def FL(voice, meters):
         for plt in baca.select.plts(components)[-3:]:
             container = abjad.BeforeGraceContainer("e'16")
             library.annotate(container, 3)
-            abjad.attach(container, plt.get_head())
+            abjad.attach(container, plt.head())
         leaf = abjad.select.leaf(components, -1)
         baca.tie(leaf)
 
@@ -204,7 +204,7 @@ def FL(voice, meters):
         for plt in baca.select.plts(components)[-2:]:
             container = abjad.BeforeGraceContainer("e'16")
             library.annotate(container, 3)
-            abjad.attach(container, plt.get_head())
+            abjad.attach(container, plt.head())
 
     @baca.call
     def block():
@@ -239,7 +239,7 @@ def OB(voice, meters):
     )
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.get_head())
+        abjad.attach(container, plt.head())
     components = rhythm.make_one_beat_tuplets(
         meters(2),
         [-3, -3, 2, 3, 1, "-"],
@@ -247,7 +247,7 @@ def OB(voice, meters):
     )
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.get_head())
+        abjad.attach(container, plt.head())
     components = rhythm.make_one_beat_tuplets(
         meters(3, 4),
         [-8, 2, 1, "-"],
@@ -255,7 +255,7 @@ def OB(voice, meters):
     )
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.get_head())
+        abjad.attach(container, plt.head())
     rhythm.mmrests(5, 7)
     components = rhythm.make_one_beat_tuplets(
         meters(8, 9),
@@ -264,7 +264,7 @@ def OB(voice, meters):
     )
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.get_head())
+        abjad.attach(container, plt.head())
     rhythm.mmrests(10, 11)
     components = rhythm.make_one_beat_tuplets(
         meters(12, 13),
@@ -273,7 +273,7 @@ def OB(voice, meters):
     )
     for plt in baca.select.plts(components):
         container = abjad.BeforeGraceContainer("e'16")
-        abjad.attach(container, plt.get_head())
+        abjad.attach(container, plt.head())
     rhythm.mmrests(14, 16)
     for pleaf in baca.select.pleaves(voice):
         abjad.attach(baca.enums.NOT_YET_PITCHED, pleaf)
@@ -799,18 +799,18 @@ def B1b(pleaves, terminations, *, up_bow=False):
     plts = baca.select.plts(pleaves)
     terminations = terminations.split()
     for plt, termination in zip(plts, terminations, strict=True):
-        baca.staff_lines(plt.get_head(), 1)
+        baca.staff_lines(plt.head(), 1)
         final_leaf = abjad.get.leaf(plt[-1], 1)
         baca.staff_lines(final_leaf, 5)
         baca.staff_position(plt, 0)
         if up_bow is True:
             baca.up_bow(
-                plt.get_head(),
+                plt.head(),
                 baca.tweak.padding(1),
             )
         else:
             baca.down_bow(
-                plt.get_head(),
+                plt.head(),
                 baca.tweak.padding(1),
             )
         baca.hairpin(
@@ -886,7 +886,7 @@ def C1(pleaves, fundamental, harmonic, dynamics=None, *, tssp=None):
     if dynamics:
         dynamics_list = dynamics.split()
         for plt, dynamic in zip(plts[2:], dynamics_list, strict=True):
-            baca.dynamic(plt.get_head(), dynamic)
+            baca.dynamic(plt.head(), dynamic)
     for plt in plts[1:2]:
         assert len(plt) == 2
         baca.spanners.trill(
