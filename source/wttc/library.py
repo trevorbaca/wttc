@@ -2082,7 +2082,7 @@ def F2a1(pleaves, pitches, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head(), dynamic)
     for pleaf in pleaves[4::2]:
-        pitch = abjad.NamedPitch(pleaf.get_written_pitch().get_name(), arrow=abjad.UP)
+        pitch = abjad.NamedPitch(pleaf.get_written_pitch().name(), arrow=abjad.UP)
         pleaf.set_written_pitch(pitch)
 
 
