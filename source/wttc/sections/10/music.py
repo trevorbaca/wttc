@@ -290,9 +290,9 @@ def VN(voice, meters):
             [1, -12, 1, -8, 1, -6],
             extra_counts=[-1],
         )
-        note = abjad.Note("c'", voice[4][-1].get_written_duration())
+        note = abjad.Note("c'", voice[4][-1].written_duration())
         voice[4][-1] = note
-        note = abjad.Note("c'", voice[5].get_written_duration())
+        note = abjad.Note("c'", voice[5].written_duration())
         voice[5] = note
         note = abjad.Note("c'", abjad.get.duration(voice[6]))
         voice[6] = note
@@ -513,7 +513,7 @@ def F1c(pleaves, pitch_1, pitch_2, alteration, peaks):
         for leaf in run:
             if isinstance(leaf, abjad.Chord):
                 baca.pitch(leaf, f"{pitch_1}:{pitch_2}")
-                baca.tweak.style_harmonic(target=leaf.get_note_heads()[1])
+                baca.tweak.style_harmonic(target=leaf.note_heads()[1])
             else:
                 baca.pitch(leaf, pitch_1)
         baca.spanners.trill(

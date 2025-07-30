@@ -111,7 +111,7 @@ class Rhythm:
             do_not_rewrite_meter=do_not_rewrite_meter,
             reference_meters=_reference_meters(),
             tag=tag,
-            voice_name=self.voice.get_name(),
+            voice_name=self.voice.name(),
         )
         if prefix:
             parts = abjad.select.partition_by_durations(
@@ -149,7 +149,7 @@ class Rhythm:
         else:
             self.voice.extend(components)
         for tuplet in abjad.select.tuplets(components):
-            if tuplet.get_ratio() == abjad.Ratio(1, 1):
+            if tuplet.ratio() == abjad.Ratio(1, 1):
                 if not abjad.get.has_indicator(tuplet, "FEATHER_BEAM_CONTAINER"):
                     abjad.mutate.extract(tuplet)
         force_fraction(components)
@@ -201,7 +201,7 @@ class Rhythm:
     def mmrests(self, *arguments, head=False):
         meters = self.meters(*arguments)
         if head:
-            music = baca.make_mmrests(meters, head=self.voice.get_name())
+            music = baca.make_mmrests(meters, head=self.voice.name())
         else:
             music = baca.make_mmrests(meters)
         self.voice.extend(music)
@@ -740,7 +740,9 @@ def mask_measures(voice, items, *, first=1):
             for component in components:
                 if isinstance(component, abjad.Rest | abjad.MultimeasureRest):
                     continue
-                duration = getattr(component, "written_duration", None)
+                duration = None
+                if hasattr(component, "written_duration"):
+                    duration = component.written_duration()
                 duration = duration or abjad.get.duration(component)
                 rest = abjad.Rest(duration)
                 abjad.mutate.replace(component, rest)
@@ -888,7 +890,7 @@ def replace_obgc_main_notes_with_rests(voice):
     for obgc in abjad.select.components(voice, prototype):
         note = obgc.first_nongrace_leaf()
         assert isinstance(note, abjad.Note)
-        rest = abjad.Rest(note.get_written_duration())
+        rest = abjad.Rest(note.written_duration())
         abjad.mutate.replace([note], [rest])
 
 
@@ -946,7 +948,7 @@ def rhythm(
         do_not_rewrite_meter=do_not_rewrite_meter,
         reference_meters=_reference_meters(),
         tag=tag,
-        voice_name=voice.get_name(),
+        voice_name=voice.name(),
     )
     # rmakers.force_fraction(voice_)
     force_fraction(voice_)
@@ -1355,9 +1357,9 @@ def B4a(pleaves, pitches, dynamics):
         baca.flageolet(plt.head())
         for pleaf in plt:
             assert isinstance(pleaf, abjad.Note)
-            written_pitch = pleaf.get_note_head().get_written_pitch()
+            written_pitch = pleaf.note_head().written_pitch()
             written_pitch += abjad.NamedInterval("+P8")
-            pleaf.get_note_head().set_written_pitch(written_pitch)
+            pleaf.note_head().set_written_pitch(written_pitch)
 
 
 def B4b(pleaves, string_number, pitches, peaks):
@@ -1429,7 +1431,7 @@ def C1a(pleaves, fundamental, harmonic_1, harmonic_2, dynamic):
             else:
                 baca.pitch(plt, f"{fundamental}:{harmonic_2}")
             for pleaf in plt:
-                baca.tweak.style_harmonic(target=pleaf.get_note_heads()[1])
+                baca.tweak.style_harmonic(target=pleaf.note_heads()[1])
         else:
             baca.pitch(plt, fundamental)
     for i, pleaf in enumerate(pleaves):
@@ -1447,8 +1449,8 @@ def C1b(pleaves, dyad, alteration, peak):
     assert isinstance(chord, abjad.Chord), repr(chord)
     assert isinstance(hidden_note, abjad.Note), repr(hidden_note)
     baca.pitch(chord, dyad)
-    baca.tweak.style_harmonic(target=chord.get_note_heads()[1])
-    name = chord.get_note_heads()[0].get_written_pitch().get_name_in_locale(locale="us")
+    baca.tweak.style_harmonic(target=chord.note_heads()[1])
+    name = chord.note_heads()[0].written_pitch().get_name_in_locale(locale="us")
     baca.pitch(hidden_note, name)
     baca.spanners.trill(
         pleaves,
@@ -1473,7 +1475,7 @@ def C1c(pleaves, dyad, alteration, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.pitch(plt, dyad)
         for chord in plt:
-            baca.tweak.style_harmonic(target=chord.get_note_heads()[1])
+            baca.tweak.style_harmonic(target=chord.note_heads()[1])
         baca.triple_staccato(plt.head())
         if dynamic != "-":
             baca.dynamic(plt.head(), dynamic)
@@ -1493,7 +1495,7 @@ def C1c(pleaves, dyad, alteration, dynamics):
             baca.parenthesize(plt[1:])
             baca.untie(plt)
             for chord in plt[1:]:
-                del chord.get_note_heads()[1]
+                del chord.note_heads()[1]
 
 
 def C2a(pleaves, pitch_1, alteration, dynamic, pitch_2=None, *, hftblt=None):
@@ -2005,7 +2007,7 @@ def E3b(pleaves, double_stop, alteration, *, dynamic=None, lone=False):
     for plt in plts:
         assert len(plt) == 1
         baca.pitch(plt, double_stop)
-        baca.tweak.style_harmonic(target=plt[0].get_note_heads()[1])
+        baca.tweak.style_harmonic(target=plt[0].note_heads()[1])
         baca.spanners.trill(
             plt,
             baca.tweak.staff_padding(3, grob="TrillSpanner"),
@@ -2082,7 +2084,7 @@ def F2a1(pleaves, pitches, dynamics):
     for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head(), dynamic)
     for pleaf in pleaves[4::2]:
-        pitch = abjad.NamedPitch(pleaf.get_written_pitch().name(), arrow=abjad.UP)
+        pitch = abjad.NamedPitch(pleaf.written_pitch().name(), arrow=abjad.UP)
         pleaf.set_written_pitch(pitch)
 
 
@@ -2199,7 +2201,7 @@ def F3b1(pleaves, fundamentals, dynamics):
         fourth = pitch + abjad.NamedInterval("P4")
         string = f'{pitch.get_name_in_locale(locale="us")}:{fourth.get_name_in_locale(locale="us")}'
         baca.pitch(pleaf, string)
-        baca.tweak.style_harmonic(target=pleaf.get_note_heads()[1])
+        baca.tweak.style_harmonic(target=pleaf.note_heads()[1])
     if ">" in dynamics:
         baca.hairpin(
             pleaves,
@@ -2295,9 +2297,7 @@ def G2a1(pleaves, pitch, peak):
         right = len(pleaves) - left
         parts = baca.select.lparts(pleaves, [left, right])
         last_leaf = parts[-1][-1]
-        assert last_leaf.get_written_duration() == abjad.Duration(1, 16), repr(
-            last_leaf
-        )
+        assert last_leaf.written_duration() == abjad.Duration(1, 16), repr(last_leaf)
         baca.hairpin(
             parts,
             swells(peak),
@@ -2838,7 +2838,7 @@ def L4(pleaves, glissando, hairpin, *, staff_padding=5.5):
 
 def M1_1(pleaves, dyad, stop_pitch, hairpin, hairpin_lparts=None, *, ssp=3):
     baca.pitch(pleaves[0], dyad)
-    baca.tweak.style_harmonic(target=pleaves[0].get_note_heads()[1])
+    baca.tweak.style_harmonic(target=pleaves[0].note_heads()[1])
     baca.pitch(pleaves[1:], stop_pitch)
     baca.glissando(pleaves)
     baca.spanners.text(
@@ -2866,7 +2866,7 @@ def M1_2(pleaves, fundamentals, hairpin):
         dyads.append(dyad)
     baca.pitches(pleaves, dyads, strict=True)
     for pleaf in pleaves:
-        baca.tweak.style_harmonic(target=pleaf.get_note_heads()[1])
+        baca.tweak.style_harmonic(target=pleaf.note_heads()[1])
     for phead in baca.select.pheads(pleaves):
         baca.up_bow(phead)
 
@@ -2945,7 +2945,7 @@ def M5b(pleaves, pitches, dynamics):
 def N1a(pleaves, pitches, hairpin_lparts, hairpin):
     baca.pitches(pleaves, pitches, allow_out_of_range=True, strict=True)
     for chord in pleaves:
-        baca.tweak.style_harmonic(target=chord.get_note_heads()[0])
+        baca.tweak.style_harmonic(target=chord.note_heads()[0])
     baca.spanners.covered(
         pleaves,
         baca.tweak.staff_padding(3),
@@ -3005,9 +3005,9 @@ def N3a(pleaves, pitches, dynamics):
     baca.flageolet(pheads)
     for pleaf in pheads:
         assert isinstance(pleaf, abjad.Note)
-        written_pitch = pleaf.get_note_head().get_written_pitch()
+        written_pitch = pleaf.note_head().written_pitch()
         written_pitch += abjad.NamedInterval("+P8")
-        pleaf.get_note_head().set_written_pitch(written_pitch)
+        pleaf.note_head().set_written_pitch(written_pitch)
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
@@ -3077,7 +3077,7 @@ def O1a_foo(pleaves, pitches, hairpin, *, rleak=False):
     )
     nongraces = abjad.select.notes(pleaves, grace=False)
     for nongrace in nongraces:
-        nongrace_written_pitch = nongrace.get_written_pitch()
+        nongrace_written_pitch = nongrace.written_pitch()
         nongrace_written_pitch -= 12
         nongrace.set_written_pitch(nongrace_written_pitch)
     baca.override.dots_x_extent_false(nongraces[0])
