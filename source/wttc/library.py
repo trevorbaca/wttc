@@ -450,7 +450,7 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
         if isinstance(component, abjad.Rest):
             timespan = abjad.Timespan(start_offset, stop_offset)
             if timespan in measure_timespans:
-                mmrests = baca.make_mmrests([timespan.get_duration()])
+                mmrests = baca.make_mmrests([timespan.duration()])
                 assert len(mmrests) == 1
                 mmrest = mmrests[0]
                 unwrapped_components[i] = mmrest
@@ -827,13 +827,13 @@ def merge(
     merged_timespans.extend(voice_2_nonrest_timespans)
     merged_timespans.extend(rest_timespans)
     merged_timespans.sort()
-    assert merged_timespans.get_all_are_contiguous(), repr(merged_timespans)
+    assert merged_timespans.all_are_contiguous(), repr(merged_timespans)
     merged_components = []
     for timespan in merged_timespans:
         if isinstance(timespan.annotation, abjad.Component):
             merged_components.append(timespan.annotation)
         else:
-            duration = timespan.get_duration()
+            duration = timespan.duration()
             rests = abjad.makers.make_leaves([[]], [duration], tag=tag)
             merged_components.extend(rests)
     voice = abjad.Voice(merged_components)
