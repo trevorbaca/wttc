@@ -515,7 +515,7 @@ def force_fraction(argument):
             abjad.tweak(tuplet, tweak_string)
 
 
-def force_repeat_tie(components, threshold=(1, 8)):
+def force_repeat_tie(components, threshold=abjad.Duration(1, 8)):
 
     def inequality(item):
         return item > abjad.Duration(threshold)
