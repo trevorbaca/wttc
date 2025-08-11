@@ -791,12 +791,12 @@ def merge(
     for component in voice_1:
         if not isinstance(component, abjad.Rest | abjad.MultimeasureRest):
             timespan = abjad.get.timespan(component)
-            timespan.annotation = component
+            timespan = dataclasses.replace(timespan, annotation=component)
             voice_1_nonrest_timespans.append(timespan)
     for component in voice_2:
         if not isinstance(component, abjad.Rest | abjad.MultimeasureRest):
             timespan = abjad.get.timespan(component)
-            timespan.annotation = component
+            timespan = dataclasses.replace(timespan, annotation=component)
             voice_2_nonrest_timespans.append(timespan)
     voice_1[:] = []
     voice_2[:] = []
