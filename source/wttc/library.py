@@ -177,7 +177,7 @@ class Rhythm:
         tag = baca.helpers.function_name(inspect.currentframe())
         if overlap:
             counts = list(overlap) + counts
-        durations = [_.duration() for _ in time_signatures]
+        durations = abjad.duration.durations(time_signatures)
         durations = [sum(durations)]
         durations = baca.sequence.quarters(durations)
         tuplets = rmakers.talea(
