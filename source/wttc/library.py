@@ -744,7 +744,7 @@ def mask_measures(voice, items, *, first=1):
                 if hasattr(component, "written_duration"):
                     duration = component.written_duration()
                 duration = duration or abjad.get.duration(component)
-                rest = abjad.Rest(duration)
+                rest = abjad.Rest.from_duration(duration)
                 abjad.mutate.replace(component, rest)
             components, time_signatures = get_measures(
                 voice, measure_numbers, first=first
@@ -893,7 +893,7 @@ def replace_obgc_main_notes_with_rests(voice):
     for obgc in abjad.select.components(voice, prototype):
         note = obgc.first_nongrace_leaf()
         assert isinstance(note, abjad.Note)
-        rest = abjad.Rest(note.written_duration())
+        rest = abjad.Rest.from_duration(note.written_duration())
         abjad.mutate.replace([note], [rest])
 
 
