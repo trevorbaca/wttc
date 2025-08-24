@@ -359,9 +359,9 @@ def GT1(voice, meters):
             extra_counts=[-1],
         )
         pleaves = baca.select.pleaves(components)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[0].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
@@ -389,15 +389,15 @@ def GT1(voice, meters):
         )
         pleaves = baca.select.pleaves(components)
         rmakers.unbeam(pleaves)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[0].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[1].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[1], chord)
@@ -426,21 +426,19 @@ def GT1(voice, meters):
         )
         pleaves = baca.select.pleaves(components)
         # library.annotate(pleaves[:2], 5)
-
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[0].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[1].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[1], chord)
         baca.repeat_tie(chord)
-
         library.annotate(pleaves[2:], 2)
 
     rhythm.make_one_beat_tuplets(
@@ -528,9 +526,9 @@ def GT2(voice, meters):
         )
         rmakers.unbeam(components[0])
         pleaves = baca.select.pleaves(components)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[0].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
@@ -559,9 +557,9 @@ def GT2(voice, meters):
         )
         rmakers.unbeam(components[0])
         pleaves = baca.select.pleaves(components)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[0].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
@@ -589,15 +587,15 @@ def GT2(voice, meters):
         )
         rmakers.unbeam(components[1])
         pleaves = baca.select.pleaves(components)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[0].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
-        chord = abjad.Chord.from_pitches_and_duration(
-            abjad.pitch.pitches([0, 0]),
+        chord = abjad.Chord.from_duration_and_pitches(
             pleaves[1].written_duration(),
+            abjad.pitch.pitches([0, 0]),
         )
         library.annotate([chord], 5)
         baca.repeat_tie(chord)

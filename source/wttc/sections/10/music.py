@@ -290,16 +290,19 @@ def VN(voice, meters):
             [1, -12, 1, -8, 1, -6],
             extra_counts=[-1],
         )
-        note = abjad.Note.from_pitch_and_duration(
-            abjad.NamedPitch("c'"), voice[4][-1].written_duration()
+        note = abjad.Note.from_duration_and_pitch(
+            voice[4][-1].written_duration(),
+            abjad.NamedPitch("c'"),
         )
         voice[4][-1] = note
-        note = abjad.Note.from_pitch_and_duration(
-            abjad.NamedPitch("c'"), voice[5].written_duration()
+        note = abjad.Note.from_duration_and_pitch(
+            voice[5].written_duration(),
+            abjad.NamedPitch("c'"),
         )
         voice[5] = note
-        note = abjad.Note.from_pitch_and_duration(
-            abjad.NamedPitch("c'"), abjad.get.duration(voice[6])
+        note = abjad.Note.from_duration_and_pitch(
+            abjad.get.duration(voice[6]),
+            abjad.NamedPitch("c'"),
         )
         voice[6] = note
         tuplet_1 = abjad.Tuplet("3:2", "c'8 r4")
