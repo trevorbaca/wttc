@@ -893,7 +893,8 @@ def replace_obgc_main_notes_with_rests(voice):
     for obgc in abjad.select.components(voice, prototype):
         note = obgc.first_nongrace_leaf()
         assert isinstance(note, abjad.Note)
-        rest = abjad.Rest.from_duration(note.written_duration())
+        duration = note.written_duration()
+        rest = abjad.Rest.from_duration(duration)
         abjad.mutate.replace([note], [rest])
 
 
