@@ -840,7 +840,7 @@ def P2b(pleaves, pitch, dynamics):
     baca.pitch(pleaves, pitch)
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
-    for plt, dynamic in zip(plts, dynamics):
+    for plt, dynamic in zip(plts, dynamics, strict=True):
         baca.dynamic(plt.head(), dynamic)
         baca.flageolet(plt.head())
 

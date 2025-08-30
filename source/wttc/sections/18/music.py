@@ -374,7 +374,7 @@ def GT1(voice, meters):
         time_signatures = meters(1, 12)
         j1_measures = make_j1_measures(time_signatures)
         j3_measures = make_j3_measures(time_signatures)
-        triples = zip(j1_measures, j3_measures, time_signatures)
+        triples = zip(j1_measures, j3_measures, time_signatures, strict=True)
         merged_measures = []
         for j1_measure_list, j3_measure_list, time_signature in triples:
             merged_measure = library.merge(
@@ -527,7 +527,7 @@ def GT2(voice, meters):
         time_signatures = meters(1, 12)
         j1_measures = make_j1_measures(time_signatures)
         j3_measures = make_j3_measures(time_signatures)
-        triples = zip(j1_measures, j3_measures, time_signatures)
+        triples = zip(j1_measures, j3_measures, time_signatures, strict=True)
         merged_measures = []
         for j1_measure_list, j3_measure_list, time_signature in triples:
             merged_measure = library.merge(

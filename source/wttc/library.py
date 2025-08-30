@@ -2200,7 +2200,7 @@ def F3a(pleaves, pitches, dynamics):
 def F3b1(pleaves, fundamentals, dynamics):
     fundamentals = fundamentals.split()
     assert len(pleaves) == len(fundamentals)
-    for pleaf, fundamental in zip(pleaves, fundamentals):
+    for pleaf, fundamental in zip(pleaves, fundamentals, strict=True):
         pitch = abjad.NamedPitch(fundamental)
         fourth = pitch + abjad.NamedInterval("P4")
         string = f'{pitch.get_name_in_locale(locale="us")}:{fourth.get_name_in_locale(locale="us")}'
