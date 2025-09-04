@@ -822,7 +822,7 @@ def merge(
     nonrest_timespans.extend(voice_2_nonrest_timespans)
     measure_timespan = abjad.Timespan(
         abjad.Offset(abjad.Fraction(0)),
-        abjad.Offset(time_signature.duration().fraction()),
+        abjad.Offset(time_signature.duration().as_fraction()),
     )
     rest_timespans = abjad.TimespanList([measure_timespan])
     for nonrest_timespan in nonrest_timespans:
