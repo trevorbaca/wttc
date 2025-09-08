@@ -97,8 +97,8 @@ def FL(voice, meters):
         counts = counts + abjad.sequence.reverse(counts)
         assert counts == [3, 5, 4, 6, 5, 7, 6, 8, 8, 6, 7, 5, 6, 4, 5, 3]
         counts = library.attacks(counts)
-        assert abjad.math.weight(counts) == 88
-        assert 3 * abjad.math.weight(counts) == sixteenths
+        assert abjad.math.weight(counts, start=0) == 88
+        assert 3 * abjad.math.weight(counts, start=0) == sixteenths
         components = rhythm(meters(1, 12), 3 * counts, do_not_extend=True)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         j3_measures = abjad.select.group_by_measure(voice_)
@@ -257,8 +257,8 @@ def FL(voice, meters):
         assert counts == [4, 7, 8, 11, 12, 15, 16, 19, 20, 23, 24, 27]
         counts = counts + abjad.sequence.reverse(counts)
         counts = library.attacks(counts)
-        assert abjad.math.weight(counts) == 372
-        assert abjad.math.weight(counts) == sixteenths
+        assert abjad.math.weight(counts, start=0) == 372
+        assert abjad.math.weight(counts, start=0) == sixteenths
         components = rhythm(meters(13, 29), counts, do_not_extend=True)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
         j3_measures = abjad.select.group_by_measure(voice_)
@@ -355,7 +355,7 @@ def GT1(voice, meters):
         assert counts == [4, 5, 5, 6, 6, 7]
         counts = library.attacks(counts)
         assert counts == [1, -3, 1, -4, 1, -4, 1, -5, 1, -5, 1, -6]
-        assert twelfths == 6 * abjad.math.weight(counts)
+        assert twelfths == 6 * abjad.math.weight(counts, start=0)
         components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
@@ -431,7 +431,7 @@ def GT1(voice, meters):
         assert 9 * sum(counts) == twelfths
         counts = library.attacks(counts)
         assert counts == [1, -7, 1, -10, 1, -11]
-        assert twelfths == 9 * abjad.math.weight(counts)
+        assert twelfths == 9 * abjad.math.weight(counts, start=0)
         components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
@@ -506,7 +506,7 @@ def GT2(voice, meters):
         assert counts == [7, 6, 6, 5, 5, 4]
         counts = library.attacks(counts)
         assert counts == [1, -6, 1, -5, 1, -5, 1, -4, 1, -4, 1, -3]
-        assert twelfths == 6 * abjad.math.weight(counts)
+        assert twelfths == 6 * abjad.math.weight(counts, start=0)
         components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
@@ -587,7 +587,7 @@ def GT2(voice, meters):
         assert 9 * sum(counts) == twelfths
         counts = library.attacks(counts)
         assert counts == [1, -10, 1, -11, 1, -7]
-        assert twelfths == 9 * abjad.math.weight(counts)
+        assert twelfths == 9 * abjad.math.weight(counts, start=0)
         components = rhythm.make_one_beat_tuplets(
             time_signatures,
             counts,
@@ -724,8 +724,8 @@ def VC(voice, meters):
         assert counts == [7, 13, 8, 14, 9, 15]
         counts = library.attacks(counts)
         assert counts == [1, -6, 1, -12, 1, -7, 1, -13, 1, -8, 1, -14]
-        assert abjad.math.weight(counts) == 66
-        assert 4 * abjad.math.weight(counts) == sixteenths
+        assert abjad.math.weight(counts, start=0) == 66
+        assert 4 * abjad.math.weight(counts, start=0) == sixteenths
         components = rhythm(time_signatures, 4 * counts, do_not_extend=True)
         library.annotate(components, 3)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
@@ -751,7 +751,7 @@ def VC(voice, meters):
         assert sum(counts) == 124
         counts = library.attacks(counts)
         assert counts == [1, -7, 1, -10, 1, -11, 1, -14, 1, -15, 1, -18, 1, -19, 1, -22]
-        assert 3 * abjad.math.weight(counts) == sixteenths
+        assert 3 * abjad.math.weight(counts, start=0) == sixteenths
         components = rhythm(time_signatures, 3 * counts, do_not_extend=True)
         library.annotate(components, 3)
         voice_ = rmakers.wrap_in_time_signature_staff(components, time_signatures)
