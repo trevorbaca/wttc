@@ -48,7 +48,7 @@ def OBGC(grace_note_numerators, nongrace_note_numerator):
     return baca.rhythm.OBGC(
         grace_note_numerators,
         nongrace_note_numerator,
-        grace_leaf_duration=abjad.ValueDuration(1, 20),
+        grace_leaf_duration=abjad.Duration(1, 20),
     )
 
 
@@ -96,11 +96,11 @@ class Rhythm:
         if prefix:
             items = list(prefix) + items
             prefix_numerator = abjad.sequence.weight(prefix)
-            prefix_duration = abjad.ValueDuration(prefix_numerator, denominator)
+            prefix_duration = abjad.Duration(prefix_numerator, denominator)
         if suffix:
             items = items + list(suffix)
             suffix_numerator = abjad.sequence.weight(suffix)
-            suffix_duration = abjad.ValueDuration(suffix_numerator, denominator)
+            suffix_duration = abjad.Duration(suffix_numerator, denominator)
         if time_signatures is None:
             do_not_rewrite_meter = True
         voice_ = baca.make_rhythm(
@@ -515,7 +515,7 @@ def force_fraction(argument):
             abjad.tweak(tuplet, tweak_string)
 
 
-def force_repeat_tie(components, threshold=abjad.ValueDuration(1, 8)):
+def force_repeat_tie(components, threshold=abjad.Duration(1, 8)):
 
     def inequality(item):
         return item > threshold
@@ -1055,12 +1055,12 @@ instruments = {
 
 
 metronome_marks = {
-    "48": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 48),
-    "50": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 50),
-    "60": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 60),
-    "75": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 75),
-    "100": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 100),
-    "150": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 150),
+    "48": abjad.MetronomeMark(abjad.Duration(1, 4), 48),
+    "50": abjad.MetronomeMark(abjad.Duration(1, 4), 50),
+    "60": abjad.MetronomeMark(abjad.Duration(1, 4), 60),
+    "75": abjad.MetronomeMark(abjad.Duration(1, 4), 75),
+    "100": abjad.MetronomeMark(abjad.Duration(1, 4), 100),
+    "150": abjad.MetronomeMark(abjad.Duration(1, 4), 150),
 }
 
 
@@ -1151,7 +1151,7 @@ def A2b(
 
 def A2c(run, glissando, hairpin_lparts, hairpin):
     for plt in baca.select.plts(run):
-        if abjad.get.duration(plt) <= abjad.ValueDuration(1, 16):
+        if abjad.get.duration(plt) <= abjad.Duration(1, 16):
             baca.articulation(
                 plt,
                 r"baca-circle-bowing",
@@ -2301,9 +2301,7 @@ def G2a1(pleaves, pitch, peak):
         right = len(pleaves) - left
         parts = baca.select.lparts(pleaves, [left, right])
         last_leaf = parts[-1][-1]
-        assert last_leaf.written_duration() == abjad.ValueDuration(1, 16), repr(
-            last_leaf
-        )
+        assert last_leaf.written_duration() == abjad.Duration(1, 16), repr(last_leaf)
         baca.hairpin(
             parts,
             swells(peak),
