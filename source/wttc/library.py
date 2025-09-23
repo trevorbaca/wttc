@@ -95,11 +95,11 @@ class Rhythm:
             items = list(overlap) + items
         if prefix:
             items = list(prefix) + items
-            prefix_numerator = abjad.sequence.weight(prefix)
+            prefix_numerator = abjad.math.weight(prefix, start=0)
             prefix_duration = abjad.Duration(prefix_numerator, denominator)
         if suffix:
             items = items + list(suffix)
-            suffix_numerator = abjad.sequence.weight(suffix)
+            suffix_numerator = abjad.math.weight(suffix, start=0)
             suffix_duration = abjad.Duration(suffix_numerator, denominator)
         if time_signatures is None:
             do_not_rewrite_meter = True

@@ -331,8 +331,8 @@ def GT1(voice, meters):
         sixteenths = 4 * sum(_.numerator for _ in time_signatures)
         assert sixteenths == 264
         counts = [-12, 18, -6, 10, -12, 14, -16]
-        assert abjad.sequence.weight(counts) == 88
-        assert 3 * abjad.sequence.weight(counts) == sixteenths
+        assert abjad.math.weight(counts, start=0) == 88
+        assert 3 * abjad.math.weight(counts, start=0) == sixteenths
         counts = library.attacks(counts, n=2)
         assert counts == [-12, 2, -16, -6, 2, -8, -12, 2, -12, -16]
         counts = library.attach_obgcs(counts, [[1, 1], [1, 1, 1]])
@@ -480,8 +480,8 @@ def GT2(voice, meters):
         sixteenths = 4 * sum(_.numerator for _ in time_signatures)
         assert sixteenths == 264
         counts = [12, -18, 6, -10, 12, -14, 16]
-        assert abjad.sequence.weight(counts) == 88
-        assert 3 * abjad.sequence.weight(counts) == sixteenths
+        assert abjad.math.weight(counts, start=0) == 88
+        assert 3 * abjad.math.weight(counts, start=0) == sixteenths
         counts = library.attacks(counts, n=2)
         assert counts == [2, -10, -18, 2, -4, -10, 2, -10, -14, 2, -14]
         counts = library.attach_obgcs(counts, [[1, 1, 1], [1, 1]])

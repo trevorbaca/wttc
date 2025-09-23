@@ -83,7 +83,7 @@ def GT1(voice, meters):
                 counts_.extend([1, -(count - 1)])
             else:
                 counts_.append(count)
-        assert abjad.sequence.weight(counts_) == 78
+        assert abjad.math.weight(counts_, start=0) == 78
         left, right = abjad.sequence.split(counts_, [42, 78 - 42])
         rhythm.make_one_beat_tuplets(
             meters(6, 8),
@@ -121,7 +121,7 @@ def GT2(voice, meters):
                 counts_.extend([1, -(count - 1)])
             else:
                 counts_.append(count)
-        assert abjad.sequence.weight(counts_) == 105
+        assert abjad.math.weight(counts_, start=0) == 105
         left, right = abjad.sequence.split(counts_, [56, 105 - 56])
         rhythm(
             meters(6, 8),
