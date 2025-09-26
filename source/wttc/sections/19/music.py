@@ -801,7 +801,7 @@ def K1a(pleaves, pitches, dynamic):
     )
     plts = baca.select.plts(pleaves)
     for plt in plts[:-1]:
-        baca.breathe(plt.tail())
+        baca.breathe(plt[-1])
 
 
 def K1b1(pleaves, dyad, alteration, peaks):
@@ -851,8 +851,8 @@ def K2b(pleaves, pitch):
     baca.pitch(pleaves, pitch)
     plts = baca.select.plts(pleaves)
     for plt in plts:
-        baca.dynamic(plt.head(), "sffz")
-        baca.damp(plt.head())
+        baca.dynamic(plt[0], "sffz")
+        baca.damp(plt[0])
 
 
 def K2e(pleaves, pitch, hairpin, scp):
@@ -882,7 +882,7 @@ def L1a(
     baca.pitches(pleaves, pitches)
     plts = baca.select.plts(pleaves)
     for plt in plts[:espr]:
-        baca.espressivo(plt.head())
+        baca.espressivo(plt[0])
     if gliss is not None:
         baca.glissando(pleaves[-gliss:])
     baca.spanners.trill(
@@ -937,7 +937,7 @@ def L3a(pleaves, dyad, dynamic):
     baca.pitch(pleaves, dyad)
     plts = baca.select.plts(pleaves)
     for plt in plts:
-        baca.dynamic(plt.head(), dynamic)
+        baca.dynamic(plt[0], dynamic)
 
 
 def L3b(pleaves, pitches, hairpin, hairpin_lparts=None, *, beams=None):

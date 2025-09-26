@@ -229,7 +229,7 @@ def I3a(pleaves, pitches, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head(), dynamic)
+        baca.dynamic(plt[0], dynamic)
 
 
 def fl(m):

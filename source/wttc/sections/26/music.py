@@ -760,7 +760,7 @@ def O2b(pleaves, dynamics):
     plts = baca.select.plts(pleaves)
     dynamics = dynamics.split()
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head(), dynamic)
+        baca.dynamic(plt[0], dynamic)
     baca.staff_lines(pleaves[0], 1)
     leaf = abjad.get.leaf(pleaves[-1], 1)
     baca.staff_lines(leaf, 5)
@@ -782,13 +782,13 @@ def O4b(pleaves, dyads, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head(), dynamic)
+        baca.dynamic(plt[0], dynamic)
 
 
 def O4c(pleaves, glissando, scp_lparts, scp, hairpin_lparts, hairpin):
     plts = baca.select.plts(pleaves)
     for plt in plts[1:]:
-        baca.marcato(plt.head())
+        baca.marcato(plt[0])
     if " " in glissando:
         baca.glissando(
             pleaves,
@@ -841,8 +841,8 @@ def P2b(pleaves, pitch, dynamics):
     dynamics = dynamics.split()
     plts = baca.select.plts(pleaves)
     for plt, dynamic in zip(plts, dynamics, strict=True):
-        baca.dynamic(plt.head(), dynamic)
-        baca.flageolet(plt.head())
+        baca.dynamic(plt[0], dynamic)
+        baca.flageolet(plt[0])
 
 
 def P2c(pleaves, pitch, alteration, string_number, dynamic):

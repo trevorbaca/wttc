@@ -838,7 +838,7 @@ def D2a(pleaves, pitches, hairpin_strings):
             hairpin_string,
             rleak=True,
         )
-        baca.tenuto(plt_pair[0].head())
+        baca.tenuto(plt_pair[0][0])
 
 
 def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=False):
