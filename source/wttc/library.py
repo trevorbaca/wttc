@@ -154,8 +154,9 @@ class Rhythm:
                     abjad.mutate.extract(tuplet)
         force_fraction(components)
         if not do_not_beam_tuplets:
-            for tuplet in abjad.select.tuplets(components):
-                rmakers.beam([tuplet])
+            tuplets = abjad.select.tuplets(components)
+            leaf_lists = [abjad.select.leaves(_) for _ in tuplets]
+            rmakers.beam(leaf_lists)
         for pleaf in baca.select.pleaves(components):
             if not abjad.get.has_indicator(pleaf, Material):
                 raise Exception(f"no material for {pleaf!r}.")
