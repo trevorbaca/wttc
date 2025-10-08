@@ -522,7 +522,8 @@ def force_repeat_tie(components, threshold=abjad.Duration(1, 8)):
         return item > threshold
 
     tag = baca.helpers.function_name(inspect.currentframe())
-    rmakers.force_repeat_tie(components, threshold=inequality, tag=tag)
+    leaves = abjad.select.leaves(components)
+    rmakers.force_repeat_tie(leaves, threshold=inequality, tag=tag)
 
 
 def frame(written_n, framed_n, *, chords=False, left=False):
