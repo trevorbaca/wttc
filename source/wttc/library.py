@@ -414,8 +414,9 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
         else:
             protected_components.append(component)
     voice = rmakers.wrap_in_time_signature_staff(protected_components, time_signatures)
-    rmakers.rewrite_rest_filled(voice, tag=tag)
-    rmakers.rewrite_sustained(voice, tag=tag)
+    tuplets = abjad.select.tuplets(voice)
+    rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
+    rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice)
     rmakers.force_diminution(tuplets)
     rmakers.extract_trivial(tuplets)
