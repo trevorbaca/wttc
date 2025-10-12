@@ -1996,7 +1996,7 @@ def E2c(
 def E3a(pleaves):
     pitches = "Bb5 D6 F6 Ab6 " + 20 * "Bb6 C7 D7 C7 "
     for run in abjad.select.runs(pleaves):
-        rmakers.unbeam(run)
+        rmakers.unbeam_leaves(run)
         baca.flageolet(run)
         baca.pitches(run, pitches, allow_out_of_range=True)
         baca.override.stem_length(run[0], 22)

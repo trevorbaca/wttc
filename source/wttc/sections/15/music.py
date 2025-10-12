@@ -211,7 +211,7 @@ def vn(m):
         'o<"ff"',
         staff_padding=8,
     )
-    rmakers.unbeam(m[1][9:11])
+    rmakers.unbeam_leaves(m[1][9:11])
     library.A1b(library.pleaves(m[8, 9], 1), "E4 G#4", "pp p mp mp", hftblt=True)
 
 

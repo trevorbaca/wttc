@@ -866,8 +866,8 @@ def D2b(pleaves, dynamics, *, do_not_unbeam=False, staff_lines_1=False, upbow=Fa
             run,
             f"o<|{dynamic_}",
         )
-    if not do_not_unbeam:
-        rmakers.unbeam(pleaves)
+    if do_not_unbeam is False:
+        rmakers.unbeam_leaves(pleaves)
 
 
 def D2c(pleaves, pitch_pairs, hairpin_strings):

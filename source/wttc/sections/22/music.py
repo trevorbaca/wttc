@@ -200,7 +200,8 @@ def VN(voice, meters):
         [3, M(1, 2), -4],
         material=3,
     )
-    rmakers.unbeam(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.unbeam_leaves(leaves)
     rhythm.mmrests(9)
 
 
