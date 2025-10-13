@@ -400,7 +400,7 @@ def GT1(voice, meters):
         abjad.mutate.replace(pleaves[1], chord)
         baca.repeat_tie(chord)
         library.annotate(pleaves[2:], 2)
-        rmakers.beam([components[-1][:]])
+        rmakers.beam_runs([components[-1][:]])
 
     rhythm(
         meters(12),
@@ -529,7 +529,7 @@ def GT2(voice, meters):
         abjad.mutate.replace(pleaves[0], chord)
         library.annotate(pleaves[1:2], 1)
         library.annotate(pleaves[2:], 2)
-        rmakers.beam([components[0][:]])
+        rmakers.beam_runs([components[0][:]])
 
     rhythm(
         meters(9),
@@ -559,7 +559,7 @@ def GT2(voice, meters):
         library.annotate([chord], 5)
         abjad.mutate.replace(pleaves[0], chord)
         library.annotate(pleaves[1:], 1)
-        rmakers.beam([components[0][:]])
+        rmakers.beam_runs([components[0][:]])
 
     rhythm(
         meters(12),
@@ -595,7 +595,7 @@ def GT2(voice, meters):
         baca.repeat_tie(chord)
         abjad.mutate.replace(pleaves[1], chord)
         library.annotate(pleaves[2:], 2)
-        rmakers.beam([components[1][:]])
+        rmakers.beam_runs([components[1][:]])
 
     rhythm.make_one_beat_tuplets(
         meters(15),
