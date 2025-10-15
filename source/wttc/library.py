@@ -419,7 +419,7 @@ def clean_up_rhythmic_spelling(components, time_signatures, *, debug=False, tag=
     rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice)
     rmakers.force_diminution(tuplets)
-    rmakers.extract_trivial(tuplets)
+    rmakers.extract_trivial_tuplets(tuplets)
     for component in voice:
         if "DUMMY_TUPLET" in abjad.get.indicators(component, str):
             component.set_ratio(abjad.Ratio(1, 1))
