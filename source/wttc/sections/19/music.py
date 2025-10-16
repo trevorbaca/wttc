@@ -972,7 +972,7 @@ def L5a(pleaves, fundamental):
         "C#": "C#6 E#6 G#6 B6 " + 50 * "C#7 D#7 E#7 ",
     }
     overtones = fundamental_to_overtones[fundamental]
-    rmakers.unbeam_leaves(pleaves)
+    rmakers.detach_beams_from_leaves(pleaves)
     baca.flageolet(pleaves)
     baca.pitches(pleaves, overtones, allow_out_of_range=True)
     baca.override.stem_length(pleaves[0], 22)
@@ -1109,7 +1109,7 @@ def gt1(m):
     L3a(library.pleaves(m[36], 3), "G#2:A3", "(mp)")
     L3a(library.pleaves(m[42], 3), "G#2:A3", "(mp)")
     library.N3a(library.pleaves(m[47], 3), "F#4", "mp")
-    rmakers.unbeam_leaves(m[47][:2])
+    rmakers.detach_beams_from_leaves(m[47][:2])
     library.N1b(library.pleaves(m[47, 48], 1), "F3", "-")
 
 
@@ -1127,7 +1127,7 @@ def gt2(m):
     L3a(library.pleaves(m[36], 3), "F#2:G3", "(mp)")
     L3a(library.pleaves(m[42], 3), "F#2:G3", "(mp)")
     library.N3a(library.pleaves(m[47], 3), "E4", "mp")
-    rmakers.unbeam_leaves(m[47][:2])
+    rmakers.detach_beams_from_leaves(m[47][:2])
     library.N1b(library.pleaves(m[47, 48], 1), "C#3", "-")
 
 
@@ -1158,7 +1158,7 @@ def vn(m):
         'o<"ff"',
         staff_padding=8,
     )
-    rmakers.unbeam_leaves(m[27][9:11])
+    rmakers.detach_beams_from_leaves(m[27][9:11])
     L2b1(library.pleaves(m[30], 2), "F#4", "A4", "G5", 4, [1, 2], "o< f>o!")
     library.L2b2(
         library.pleaves(m[31, 33], 2), "G#5 G#5 E4", "A5", [1, 2], "o< f>o!", gliss=-2
@@ -1168,7 +1168,7 @@ def vn(m):
         "E6/2 G#5 B5/2 Eb5/2 Gb5/2 Bb5/2 F4/2 Ab4/3 C4 Eb4/3 G3",
         "pp>o!",
     )
-    rmakers.unbeam_leaves(m[33][:2])
+    rmakers.detach_beams_from_leaves(m[33][:2])
     library.L2b2(library.pleaves(m[35], 2), "G#5 E4", "A5", [2], "f>o!", gliss=-2)
     L3b(library.pleaves(m[36, 37], 3), Q1, "o< f>o!", [6, 18], beams=-5)
     library.L4(
@@ -1176,7 +1176,7 @@ def vn(m):
         "G3 Eb4/2 C4/2 Ab4/2 F4/2 Db5/2 Bb4/3 Gb5/3 Eb5/2 B5/3 G#5/2 E6/1",
         '"ff">o!',
     )
-    rmakers.unbeam_leaves(m[37][8:11])
+    rmakers.detach_beams_from_leaves(m[37][8:11])
     L5b(
         library.pleaves(m[39, 41], 5),
         "Eb5/2 Gb5/3 Bb4/3 F4/2 Ab4/3 C4/3 Eb4/3 G3",
@@ -1188,7 +1188,7 @@ def vn(m):
         "G3/2 Eb4/2 C4/2 Ab4/2 F4/2 Db5 Bb4 Gb5/2 Eb5 B5 G#5/2 A5",
         '"ff">o!',
     )
-    rmakers.unbeam_leaves(m[43][10:14])
+    rmakers.detach_beams_from_leaves(m[43][10:14])
     L5b(
         library.pleaves(m[45, 46], 5),
         "Gb5/3 Bb5 F4/2 Ab4/2 C4 Eb4/3 G3",
@@ -1277,7 +1277,7 @@ def vc(m):
         "Db4/2 F3 Bb3/2 D3/2 G3/2 B2/2 E3/2 G#2/3 C#3 F2/2 Bb2/2 D2",
         '"ff">o!',
     )
-    rmakers.unbeam_leaves(m[37][:2])
+    rmakers.detach_beams_from_leaves(m[37][:2])
     baca.clef(m[37][1], "bass")
     library.L1b(
         library.pleaves(m[39, 41], 1),

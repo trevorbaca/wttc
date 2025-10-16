@@ -224,7 +224,7 @@ def gt1(cache):
     baca.dynamic(abjad.select.leaf(m[2], 1, grace=False), "p")
     library.J3b(library.pleaves(m[2, 4], 3), "A#3 B3", "- pp", "11")
     library.N3a(library.pleaves(m[5], 3), "F#4", "mp")
-    rmakers.unbeam_leaves(m[5][:2])
+    rmakers.detach_beams_from_leaves(m[5][:2])
     library.N1b(library.pleaves(m[5, 6], 1), "F3", "-")
     library.J1b(library.pleaves(m[8], 1), "C#5 D#5 F5")
     #
@@ -244,7 +244,7 @@ def gt2(cache):
     baca.dynamic(abjad.select.leaf(m[2], 1, grace=False), "p")
     library.J3b(library.pleaves(m[2, 4], 3), "A#3 B3 B3", "- pp -", "111")
     library.N3a(library.pleaves(m[5], 3), "E4", "mp")
-    rmakers.unbeam_leaves(m[5][:2])
+    rmakers.detach_beams_from_leaves(m[5][:2])
     library.N1b(library.pleaves(m[5, 6], 1), "C#3", "-")
     library.J1b(library.pleaves(m[8], 1), "D5 E5 F#5")
     #

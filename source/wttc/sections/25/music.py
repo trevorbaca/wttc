@@ -363,7 +363,7 @@ def fl(m):
         [1, 3, 1, 4, 1, 1],
         "o< mp o< mp o< mp",
     )
-    rmakers.unbeam_leaves(m[8][1:3])
+    rmakers.detach_beams_from_leaves(m[8][1:3])
     N2a(library.pleaves(m[12, 14], 2), "C5 Eb5 Db5", [4, 3], "o< mf>o!")
     library.O1a_foo(
         library.pleaves(m[15], 99), "Ab C# F Gb D Gb E", "sfmp>o!", rleak=True
@@ -391,13 +391,13 @@ def gt1(m):
     library.N1b(library.pleaves(m[1, 6], 1), "Ab3 G3", "mp")
     library.N3a(library.pleaves(m[7, 8], 3), "F#4", "mf mp")
     library.N1b(library.pleaves(m[8, 9], 1), "G3", "-")
-    rmakers.unbeam_leaves(m[8][:2])
+    rmakers.detach_beams_from_leaves(m[8][:2])
     library.N3a(library.pleaves(m[10, 11], 3), "F#4", "mf mp")
     library.N1b(library.pleaves(m[11, 12], 1), "F3", "-")
-    rmakers.unbeam_leaves(m[11][:2])
+    rmakers.detach_beams_from_leaves(m[11][:2])
     library.N3a(library.pleaves(m[12, 13], 3), "F#4", "mf mp")
     library.N1b(library.pleaves(m[13, 14], 1), "F3", "-")
-    rmakers.unbeam_leaves(m[13][:2])
+    rmakers.detach_beams_from_leaves(m[13][:2])
     library.N1b(library.pleaves(m[15, 16], 1), "F#3", "p")
     library.N3a(library.pleaves(m[16, 20], 3), "G#4", "(p) - -")
 
@@ -407,13 +407,13 @@ def gt2(m):
     library.N1b(library.pleaves(m[1, 6], 1), "Bb2 C3", "mp")
     library.N3a(library.pleaves(m[7, 8], 3), "E4", "mf mp")
     library.N1b(library.pleaves(m[8, 9], 1), "C#3", "-")
-    rmakers.unbeam_leaves(m[8][:2])
+    rmakers.detach_beams_from_leaves(m[8][:2])
     library.N3a(library.pleaves(m[10, 11], 3), "E4", "mf mp")
     library.N1b(library.pleaves(m[11, 12], 1), "C#3", "-")
-    rmakers.unbeam_leaves(m[11][:2])
+    rmakers.detach_beams_from_leaves(m[11][:2])
     library.N3a(library.pleaves(m[12, 13], 3), "E4", "mf mp")
     library.N1b(library.pleaves(m[13, 14], 1), "D3", "-")
-    rmakers.unbeam_leaves(m[13][:2])
+    rmakers.detach_beams_from_leaves(m[13][:2])
     library.N1b(library.pleaves(m[15, 16], 1), "D3", "p")
     library.N3a(library.pleaves(m[16, 20], 3), "G4", "(p) - -")
 

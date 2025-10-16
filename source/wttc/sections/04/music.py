@@ -387,7 +387,7 @@ def GT1(voice, meters):
             extra_counts=[-1],
         )
         pleaves = baca.select.pleaves(components)
-        rmakers.unbeam_leaves(pleaves)
+        rmakers.detach_beams_from_leaves(pleaves)
         duration = pleaves[0].written_duration()
         pitches = abjad.pitch.pitches([0, 0])
         chord = abjad.Chord.from_duration_and_pitches(duration, pitches)
@@ -520,7 +520,7 @@ def GT2(voice, meters):
             extra_counts=[1],
         )
         leaves = abjad.select.leaves(components[0])
-        rmakers.unbeam_leaves(leaves)
+        rmakers.detach_beams_from_leaves(leaves)
         pleaves = baca.select.pleaves(components)
         duration = pleaves[0].written_duration()
         pitches = abjad.pitch.pitches([0, 0])
@@ -551,7 +551,7 @@ def GT2(voice, meters):
             extra_counts=[1],
         )
         leaves = abjad.select.leaves(components[0])
-        rmakers.unbeam_leaves(leaves)
+        rmakers.detach_beams_from_leaves(leaves)
         pleaves = baca.select.pleaves(components)
         duration = pleaves[0].written_duration()
         pitches = abjad.pitch.pitches([0, 0])
@@ -581,7 +581,7 @@ def GT2(voice, meters):
             extra_counts=[1],
         )
         leaves = abjad.select.leaves(components[1])
-        rmakers.unbeam_leaves(leaves)
+        rmakers.detach_beams_from_leaves(leaves)
         pleaves = baca.select.pleaves(components)
         duration = pleaves[0].written_duration()
         pitches = abjad.pitch.pitches([0, 0])
